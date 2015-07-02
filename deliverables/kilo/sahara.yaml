@@ -1,0 +1,11 @@
+---
+launchpad: sahara
+releases:
+  - version: 2015.1.0
+    projects:
+      - repo: openstack/sahara
+        hash: 67165c96eceb1ce3b087870934d394602f5dd959
+      - repo: openstack/sahara-extra
+        hash: ccf3e5c6faef5c2e6929a138d65f8b6425e5c84e
+      - repo: openstack/sahara-image-elements
+        hash: cea2cb1850fd17566c3bef0805179bffec6e7e91

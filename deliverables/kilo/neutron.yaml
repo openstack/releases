@@ -1,0 +1,13 @@
+---
+launchpad: neutron
+releases:
+  - version: 2015.1.0
+    projects:
+      - repo: openstack/neutron
+        hash: 7260e0e3fc2ea479e80e0962624aca7fd38a1f60
+      - repo: openstack/neutron-fwaas
+        hash: 331316624a2ab042483f446601bb3199d16028c9
+      - repo: openstack/neutron-lbaas
+        hash: 4543ea9be818da5388316be116601835303582f3
+      - repo: openstack/neutron-vpnaas
+        hash: eca9e874266f8dd22e9a76f33f763d9342465fa9

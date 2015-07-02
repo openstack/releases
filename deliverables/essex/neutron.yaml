@@ -1,0 +1,87 @@
+---
+launchpad: neutron
+releases:
+  - version: 2012.1
+    projects:
+      - repo: openstack/neutron
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-fwaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-lbaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-vpnaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/vmware-nsx
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+  - version: essex-1
+    projects:
+      - repo: openstack/neutron
+        hash: 881a6850e4b4767cb1ed3dede740b178c37733e1
+      - repo: openstack/neutron-fwaas
+        hash: 52b3c33f5a3d7833986a57133c657ec9110cfb82
+      - repo: openstack/neutron-lbaas
+        hash: 52b3c33f5a3d7833986a57133c657ec9110cfb82
+      - repo: openstack/neutron-vpnaas
+        hash: 52b3c33f5a3d7833986a57133c657ec9110cfb82
+      - repo: openstack/vmware-nsx
+        hash: d10e534ab52a9065aaec41c2a91fcc7a081675f1
+  - version: essex-2
+    projects:
+      - repo: openstack/neutron
+        hash: 990664419db04c77b945455da01864e93f143fc0
+      - repo: openstack/neutron-fwaas
+        hash: 0d1436639c0e226a13c932d0323acc6961298c45
+      - repo: openstack/neutron-lbaas
+        hash: 0d1436639c0e226a13c932d0323acc6961298c45
+      - repo: openstack/neutron-vpnaas
+        hash: 0d1436639c0e226a13c932d0323acc6961298c45
+      - repo: openstack/vmware-nsx
+        hash: 7b6f78cdc2ce1ac8cbbb3bef0b159712823213f3
+  - version: essex-3
+    projects:
+      - repo: openstack/neutron
+        hash: 9a1823d72ba84f6f98a9870970a7cd6eab25822d
+      - repo: openstack/neutron-fwaas
+        hash: 887463849a8cc1eb505b3292540deb15813e92d4
+      - repo: openstack/neutron-lbaas
+        hash: 887463849a8cc1eb505b3292540deb15813e92d4
+      - repo: openstack/neutron-vpnaas
+        hash: 887463849a8cc1eb505b3292540deb15813e92d4
+      - repo: openstack/vmware-nsx
+        hash: 5f0f9dd83da6b9d91fd5d945ead17d891d347cac
+  - version: essex-4
+    projects:
+      - repo: openstack/neutron
+        hash: 2b5d07f2f6cfc1806c2fd34f38c1a2c0de011e71
+      - repo: openstack/neutron-fwaas
+        hash: f106ca4e2d4b3b6a6def1ba315ed90eaf4a99613
+      - repo: openstack/neutron-lbaas
+        hash: f106ca4e2d4b3b6a6def1ba315ed90eaf4a99613
+      - repo: openstack/neutron-vpnaas
+        hash: f106ca4e2d4b3b6a6def1ba315ed90eaf4a99613
+      - repo: openstack/vmware-nsx
+        hash: a915d79c64927d6a0aed406ba2bd2b4f2ccd4d6a
+  - version: essex-rc1
+    projects:
+      - repo: openstack/neutron
+        hash: cd4571c66a8a9a0a77e5e85bdcba4623624966ee
+      - repo: openstack/neutron-fwaas
+        hash: cd4571c66a8a9a0a77e5e85bdcba4623624966ee
+      - repo: openstack/neutron-lbaas
+        hash: cd4571c66a8a9a0a77e5e85bdcba4623624966ee
+      - repo: openstack/neutron-vpnaas
+        hash: cd4571c66a8a9a0a77e5e85bdcba4623624966ee
+      - repo: openstack/vmware-nsx
+        hash: cd4571c66a8a9a0a77e5e85bdcba4623624966ee
+  - version: essex-rc2
+    projects:
+      - repo: openstack/neutron
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-fwaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-lbaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/neutron-vpnaas
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
+      - repo: openstack/vmware-nsx
+        hash: e587b405fd2e7396bd7968be64ed76e858185da5
