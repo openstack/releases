@@ -19,7 +19,7 @@ gen swift $REPOS/swift
 gen swift-bench $REPOS/swift-bench
 
 gen glance $REPOS/glance
-gen glance_store $REPOS/glance_store
+gen glance-store $REPOS/glance_store
 
 gen keystone $REPOS/keystone
 gen keystoneauth $REPOS/keystoneauth
