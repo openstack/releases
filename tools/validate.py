@@ -22,6 +22,7 @@ from __future__ import print_function
 
 import argparse
 import glob
+import re
 import subprocess
 import sys
 
@@ -36,13 +37,6 @@ DEFAULT_RELEASE = 'liberty'
 
 CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 
-COMMON_NAMES = set([
-    'master',
-    'HEAD',
-    'origin/master',
-    'gerrit/master',
-])
-
 
 def find_modified_deliverable_files():
     "Return a list of files modified by the most recent commit."
@@ -55,6 +49,11 @@ def find_modified_deliverable_files():
         if l.startswith('deliverables/')
     ]
     return filenames
+
+
+def is_a_hash(val):
+    "Return bool indicating if val looks like a valid hash."
+    return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
 def main():
@@ -102,7 +101,7 @@ def main():
                                      project['hash']),
                       end='')
 
-                if project['hash'] in COMMON_NAMES:
+                if not is_a_hash(project['hash']):
                     print('NOT A SHA HASH')
                     num_errors += 1
                 else:
