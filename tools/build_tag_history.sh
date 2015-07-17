@@ -1,6 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash -xe
 
-# Run as: tox -e venv -- `pwd`/tools/build_tag_history.sh
+# Run as: tox -e history
 
 TOOLSDIR=$(dirname $0)
 REPOS=/mnt/repos/openstack
@@ -25,21 +25,20 @@ gen keystone $REPOS/keystone
 gen keystoneauth $REPOS/keystoneauth
 gen keystonemiddleware $REPOS/keystonemiddleware
 gen pycadf $REPOS/pycadf
-gen python-keystone-kerberos $REPOS/python-keystone-kerberos
-gen keystoneauth-saml2 $REPOS/keystoneauth-saml2
+gen python-keystoneclient-kerberos $REPOS/python-keystoneclient-kerberos
+# NOTE(dhellmann): This launchpad project hasn't been set up yet.
+# gen python-keystoneauth-saml2 $REPOS/keystoneauth-saml2
 
 gen horizon $REPOS/horizon
-gen django_openstack_auth $REPOS/django_openstack_auth
+gen django-openstack-auth $REPOS/django_openstack_auth
 gen django-openstack-auth-kerberos $REPOS/django-openstack-auth-kerberos
 gen tuskar-ui $REPOS/tuskar-ui
-gen manlia-ui $REPOS/manila-ui
+gen manila-ui $REPOS/manila-ui
 
 gen neutron $REPOS/neutron $REPOS/neutron-fwaas $REPOS/neutron-lbaas \
     $REPOS/neutron-vpnaas $REPOS/dragonflow \
-    $REPOS/octavia $REPOS/vmware-nsx
-for d in $REPOS/networking-*; do
-    gen $(basename $d) $d
-done
+    $REPOS/octavia $REPOS/vmware-nsx \
+    $(ls -d $REPOS/networking-*)
 
 gen cinder $REPOS/cinder
 gen os-brick $REPOS/os-brick
@@ -60,15 +59,19 @@ gen bifrost $REPOS/bifrost
 gen coreos-image-builder $REPOS/coreos-image-builder
 gen ironic $REPOS/ironic
 gen ironic-inspector $REPOS/ironic-inspector
-gen ironic-lib $REPOS/ironic-lib
-gen ironic-python-agent $REPOS/ironic-python-agent
+# NOTE(dhellmann): This launchpad project hasn't been set up yet.
+# gen ironic-lib $REPOS/ironic-lib
+# NOTE(dhellmann): This launchpad project hasn't been set up yet.
+# gen ironic-python-agent $REPOS/ironic-python-agent
 
-gen tempest-lib $REPOS/tempest-lib
-gen hacking $REPOS/hacking
+# NOTE(dhellmann): This launchpad project hasn't been set up yet.
+# gen tempest-lib $REPOS/tempest-lib
+gen hacking $REPOS-dev/hacking
 gen os-testr $REPOS/os-testr
-gen bashate $REPOS/bashate
+# NOTE(dhellmann): This launchpad project hasn't been set up yet.
+# gen bashate $REPOS/bashate
 
-# TripleO ?
+TripleO ?
 
 gen zaqar $REPOS/zaqar
 
@@ -105,7 +108,7 @@ gen cue $REPOS/cue $REPOS/cue-dashboard
 
 # ALL CLIENTS
 for d in $REPOS/python-*client; do
-    gen $(basename $d) $d
+    gen $(basename $d) $d || echo "MISSING PROJECT"
 done
 
 # OSLO
@@ -113,9 +116,7 @@ OSLO_REPOS="
 automaton
 debtcollector
 futurist
-mox3
 oslo-incubator
-oslo-specs
 oslo.cache
 oslo.concurrency
 oslo.config
@@ -135,14 +136,18 @@ oslo.vmware
 oslosphinx
 oslotest
 pylockfile
-stevedore
 taskflow
-tooz
 "
 
 for repo in $OSLO_REPOS; do
     gen $repo $REPOS/$repo
 done
+
+gen python-mox3 $REPOS/mox3
+gen oslo.reports $REPOS/oslo.reports
+gen pbr ${REPOS}-dev/pbr
+gen python-stevedore $REPOS/stevedore
+gen python-tooz $REPOS/tooz
 
 # Remove things that don't look like named releases
 rm -rf deliverables/[0-9]*
