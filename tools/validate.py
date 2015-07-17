@@ -21,6 +21,7 @@
 from __future__ import print_function
 
 import argparse
+import glob
 import subprocess
 import sys
 
@@ -30,6 +31,8 @@ import yaml
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
 urllib3.disable_warnings()
+
+DEFAULT_RELEASE = 'liberty'
 
 CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 
@@ -65,6 +68,10 @@ def main():
     args = parser.parse_args()
 
     filenames = args.input or find_modified_deliverable_files()
+    if not filenames:
+        print('no modified deliverable files, validating all releases from %s'
+              % DEFAULT_RELEASE)
+        filenames = glob.glob('deliverables/' + DEFAULT_RELEASE + '/*.yaml')
 
     num_errors = 0
 
@@ -109,6 +116,9 @@ def main():
                     print('MISSING' if missing_commit else 'found')
                     if missing_commit:
                         num_errors += 1
+
+    if num_errors:
+        print('\n%s errors found' % num_errors)
 
     return 1 if num_errors else 0
 
