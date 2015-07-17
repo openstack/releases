@@ -27,6 +27,10 @@ import sys
 import requests
 import yaml
 
+# Disable warnings about insecure connections.
+from requests.packages import urllib3
+urllib3.disable_warnings()
+
 CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 
 COMMON_NAMES = set([
@@ -68,26 +72,43 @@ def main():
         print('\nChecking %s' % filename)
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
-            for release in deliverable_info['releases']:
-                for project in release['projects']:
-                    print('%s %s %s ' % (project['repo'],
-                                         release['version'],
-                                         project['hash']),
-                          end='')
 
-                    if project['hash'] in COMMON_NAMES:
-                        print('NOT A SHA HASH')
+        # Look for the launchpad project
+        try:
+            lp_name = deliverable_info['launchpad']
+        except KeyError:
+            num_errors += 1
+            print('no launchpad project name given')
+        else:
+            print('launchpad project %s ' % lp_name, end='')
+            lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
+            if (lp_resp.status_code // 100) == 4:
+                print('MISSING')
+                num_errors += 1
+            else:
+                print('found')
+
+        for release in deliverable_info['releases']:
+            for project in release['projects']:
+                print('%s %s %s ' % (project['repo'],
+                                     release['version'],
+                                     project['hash']),
+                      end='')
+
+                if project['hash'] in COMMON_NAMES:
+                    print('NOT A SHA HASH')
+                    num_errors += 1
+                else:
+                    url = CGIT_TEMPLATE % (project['repo'],
+                                           project['hash'])
+                    response = requests.get(url)
+                    missing_commit = (
+                        (response.status_code // 100 != 2)
+                        or 'Bad object id' in response.text
+                    )
+                    print('MISSING' if missing_commit else 'found')
+                    if missing_commit:
                         num_errors += 1
-                    else:
-                        url = CGIT_TEMPLATE % (project['repo'], project['hash'])
-                        response = requests.get(url)
-                        missing_commit = (
-                            (response.status_code // 100 != 2)
-                            or 'Bad object id' in response.text
-                        )
-                        print('MISSING' if missing_commit else 'found')
-                        if missing_commit:
-                            num_errors += 1
 
     return 1 if num_errors else 0
 
