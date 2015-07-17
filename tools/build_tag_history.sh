@@ -13,6 +13,13 @@ function gen {
     $TOOLSDIR/tag_history_from_lp.py $@
 }
 
+function gen_from_git {
+    $TOOLSDIR/tag_history_from_git.py $@
+}
+
+gen_from_git openstackdocstheme $REPOS/openstackdocstheme
+gen_from_git openstack-doc-tools $REPOS/openstack-doc-tools
+
 gen nova $REPOS/nova
 
 gen swift $REPOS/swift
@@ -71,7 +78,7 @@ gen os-testr $REPOS/os-testr
 # NOTE(dhellmann): This launchpad project hasn't been set up yet.
 # gen bashate $REPOS/bashate
 
-TripleO ?
+# TripleO ?
 
 gen zaqar $REPOS/zaqar
 
