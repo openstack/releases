@@ -13,6 +13,14 @@ releases:
         hash: 0d0c376d09d85a0eabeb8c9258349d1e63a5cdf0
       - repo: openstack/vmware-nsx
         hash: 0d0c376d09d85a0eabeb8c9258349d1e63a5cdf0
+      - repo: openstack/networking-cisco
+        hash: 073f1a63947a8089a94e6aac739becb84e356286
+      - repo: openstack/networking-odl
+        hash: 0d0c376d09d85a0eabeb8c9258349d1e63a5cdf0
+      - repo: openstack/networking-ofagent
+        hash: 9b7a2f11a651524ff204ecad3c889e4adf4f2ce2
+      - repo: openstack/networking-plumgrid
+        hash: c4af1c31f7531422592ba9b9a181d28e941b55ea
   - version: 2014.2.1
     projects:
       - repo: openstack/neutron
@@ -25,6 +33,14 @@ releases:
         hash: dfa4b4b9b6b19a627cfb5eb5c6ab9db4961a06ea
       - repo: openstack/vmware-nsx
         hash: dfa4b4b9b6b19a627cfb5eb5c6ab9db4961a06ea
+      - repo: openstack/networking-cisco
+        hash: 1bf94d91ae240c7bdc4761006368c0aff2323bcf
+      - repo: openstack/networking-odl
+        hash: dfa4b4b9b6b19a627cfb5eb5c6ab9db4961a06ea
+      - repo: openstack/networking-ofagent
+        hash: 2c8432c4458ce827ab10e741fbb8af183ff0b17e
+      - repo: openstack/networking-plumgrid
+        hash: 28130c207befa1e69ec6d34f256a353ad1e68c2c
   - version: 2014.2.2
     projects:
       - repo: openstack/neutron

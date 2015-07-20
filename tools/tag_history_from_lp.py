@@ -63,7 +63,8 @@ dev_null = open('/dev/null', 'w')
 
 for repo in args.repo:
     os.chdir(repo)
-    repo_short_name = 'openstack/' + os.path.basename(repo)
+    repo_namespace = os.path.basename(os.path.dirname(repo))
+    repo_short_name = repo_namespace + '/' + os.path.basename(repo)
 
     for series in project.series:
         for milestone in series.all_milestones:

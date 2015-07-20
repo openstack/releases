@@ -11,3 +11,17 @@ releases:
         hash: 4543ea9be818da5388316be116601835303582f3
       - repo: openstack/neutron-vpnaas
         hash: eca9e874266f8dd22e9a76f33f763d9342465fa9
+      - repo: openstack/networking-cisco
+        hash: 24edb9fd14584020a8b242a8b351befc5ddafb7e
+      - repo: openstack/networking-midonet
+        hash: a9b88310b7b65f478de50afa6c255f281efd4536
+  - version: 2015.1.1
+    projects:
+      - repo: openstack/networking-l2gw
+        hash: b9982add08ff975aad0a32a10c5d957b62af61ab
+      - repo: openstack/networking-odl
+        hash: cb3ebce8de2c423a8e28265fde1cdf6dec2d492a
+      - repo: openstack/networking-ofagent
+        hash: 97b3528faecbdb7d1740ff2eb1529dbe6e9dd397
+      - repo: openstack/networking-vsphere
+        hash: 5f9937cfdb9cff100db3b9eaec1fbb0feecd93c4
