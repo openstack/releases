@@ -5,3 +5,9 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 13b842ca4a7c199624c35cda26539ba896d2ee1a
+  - version: 0.3.0
+    projects:
+      - repo: openstack/os-brick
+        hash: d191180bbf0f2cf61a7e1da88467ebb7a2a388a5
+        highlights: >
+         Adds HGST, RBD, ScaleIO connectors.
