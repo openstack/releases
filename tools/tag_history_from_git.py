@@ -16,7 +16,7 @@
 
 """Import the history for the project
 
-Use launchpad as the canonical source of version numbers.
+Use git as the canonical source of version numbers.
 
 """
 
@@ -24,12 +24,28 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import argparse
+import datetime
 import os
-import re
 import subprocess
 import sys
 
 from launchpadlib.launchpad import Launchpad
+
+# From https://wiki.openstack.org/wiki/Releases
+RELEASES = [
+    ('austin', datetime.datetime(2010, 10, 21)),
+    ('bexar', datetime.datetime(2011, 2, 3)),
+    ('cactus', datetime.datetime(2011, 4, 15)),
+    ('diablo', datetime.datetime(2011, 9, 22)),
+    ('essex', datetime.datetime(2012, 4, 5)),
+    ('folsom', datetime.datetime(2012, 9, 27)),
+    ('grizzly', datetime.datetime(2013, 4, 4)),
+    ('havana', datetime.datetime(2013, 10, 17)),
+    ('icehouse', datetime.datetime(2014, 4, 17)),
+    ('juno', datetime.datetime(2014, 10, 16)),
+    ('kilo', datetime.datetime(2015, 4, 30)),
+    ('liberty', datetime.datetime(2015, 10, 15)),
+]
 
 
 def abort(code, errmsg):
@@ -37,10 +53,17 @@ def abort(code, errmsg):
     sys.exit(code)
 
 
+def date_to_release(tag_date):
+    for release, end_date in RELEASES:
+        if tag_date <= end_date:
+            return release
+    return 'UNKNOWN'
+
+
 # Argument parsing
 parser = argparse.ArgumentParser()
 parser.add_argument('project', help='launchpad project name')
-parser.add_argument('repo', nargs='+', help='repository directory')
+parser.add_argument('repo', help='repository directory')
 args = parser.parse_args()
 
 # Connect to LP
@@ -50,42 +73,39 @@ try:
 except Exception, error:
     abort(2, 'Could not connect to Launchpad: ' + str(error))
 
-# Retrieve project
-try:
-    project = launchpad.projects[args.project]
-except KeyError:
-    abort(2, '  Could not find project: %s' % args.project)
-
-series_data = {}
-BASE_URL = 'http://git.openstack.org/cgit/openstack/%s/tag/?id=%s'
-PATTERN = re.compile(r'tag name[^(]*\(([^)]*)\)', re.MULTILINE)
-
-# <tr><td>tag name</td><td>2014.1.5 (44bb894f36c58ba51b6cc64763209f4c97f89206)</td></tr>  # noqa
-
 before = os.getcwd()
 dev_null = open('/dev/null', 'w')
+repo = args.repo
+series_data = {}
 
-for repo in args.repo:
-    os.chdir(repo)
-    repo_namespace = os.path.basename(os.path.dirname(repo))
-    repo_short_name = repo_namespace + '/' + os.path.basename(repo)
+os.chdir(repo)
 
-    for series in project.series:
-        for milestone in series.all_milestones:
-            try:
-                show_output = subprocess.check_output([
-                    'git', 'show', '--no-patch', '--pretty=%H', milestone.name,
-                ], stderr=dev_null)
-                sha = show_output.rstrip().splitlines()[-1]
-            except subprocess.CalledProcessError:
-                print('did not find milestone %s tagged for %s' %
-                      (milestone.name, repo_short_name))
-                continue
-            the_series = series_data.setdefault(series.name, {})
-            the_milestone = the_series.setdefault(milestone.name, [])
-            the_milestone.append(
-                (repo_short_name, sha)
-            )
+# Retrieve the existing tags
+tags_out = subprocess.check_output(['git', 'tag'])
+tags = [t.strip() for t in tags_out.splitlines() if t.strip()]
+
+repo_namespace = os.path.basename(os.path.dirname(repo))
+repo_short_name = repo_namespace + '/' + os.path.basename(repo)
+
+for tag in tags:
+    try:
+        show_output = subprocess.check_output([
+            'git', 'show', '--no-patch', '--pretty=%H %ct', tag,
+        ], stderr=dev_null)
+        interesting = show_output.rstrip().splitlines()[-1]
+        print(tag + ' ' + interesting)
+        sha, ignore, datestr = interesting.partition(' ')
+        tag_date = datetime.datetime.utcfromtimestamp(float(datestr))
+        series_name = date_to_release(tag_date)
+    except subprocess.CalledProcessError:
+        print('did not find milestone %s tagged for %s' %
+              (tag, repo_short_name))
+        continue
+    the_series = series_data.setdefault(series_name, {})
+    the_milestone = the_series.setdefault(tag, [])
+    the_milestone.append(
+        (repo_short_name, sha)
+    )
 
 os.chdir(before)
 
