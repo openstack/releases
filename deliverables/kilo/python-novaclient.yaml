@@ -5,3 +5,9 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: e0f5072907a00d48a183dd8fc91a6cf6038ca279
+  - version: 2.23.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 13463268dbc4bb93a6d606a52e89ff3e23af1de7
+        highlights: >
+          This release fixes an import issue with oslo.i18n (bug 1468819).
