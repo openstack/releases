@@ -11,11 +11,20 @@ constituent project.
 Requesting a Release
 ====================
 
-The PTL or release liaison for a project may request a release by
-submitting a patch to this repository, adding the necessary release
-metadata to the file describing the deliverable to be released. The
-release team will review the request and provide feedback about the
-version number.
+The PTL or release liaison for a project may request a release from
+master by submitting a patch to this repository, adding the necessary
+release metadata to the file describing the deliverable to be
+released. The release team will review the request and provide
+feedback about the version number.
+
+The stable maintenance team, PTL, or release liaison for a project may
+request a release from a stable branch by submitting a patch to this
+repository, adding the necessary release metadata to the file
+describing the deliverable to be released. The release team will
+review the request and provide feedback about the version number. If
+the stable release is requested by the stable maintenance team, it
+should be acknowledged by the PTL or release liaison to ensure that
+the development team is aware of the coming change.
 
 Release Approval
 ================
