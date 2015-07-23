@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -23,8 +21,6 @@ from __future__ import print_function
 import argparse
 import glob
 import re
-import subprocess
-import sys
 
 import requests
 import yaml
@@ -33,22 +29,10 @@ import yaml
 from requests.packages import urllib3
 urllib3.disable_warnings()
 
+from openstack_releases import gitutils
+
+
 DEFAULT_RELEASE = 'liberty'
-
-CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
-
-
-def find_modified_deliverable_files():
-    "Return a list of files modified by the most recent commit."
-    results = subprocess.check_output(
-        ['git', 'show', '--name-only', '--pretty=format:']
-    )
-    filenames = [
-        l.strip()
-        for l in results.splitlines()
-        if l.startswith('deliverables/')
-    ]
-    return filenames
 
 
 def is_a_hash(val):
@@ -66,13 +50,13 @@ def main():
     )
     args = parser.parse_args()
 
-    filenames = args.input or find_modified_deliverable_files()
+    filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
         print('no modified deliverable files, validating all releases from %s'
               % DEFAULT_RELEASE)
         filenames = glob.glob('deliverables/' + DEFAULT_RELEASE + '/*.yaml')
 
-    num_errors = 0
+    errors = []
 
     for filename in filenames:
         print('\nChecking %s' % filename)
@@ -83,14 +67,14 @@ def main():
         try:
             lp_name = deliverable_info['launchpad']
         except KeyError:
-            num_errors += 1
+            errors.append('No launchpad project given in %s' % filename)
             print('no launchpad project name given')
         else:
             print('launchpad project %s ' % lp_name, end='')
             lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
             if (lp_resp.status_code // 100) == 4:
                 print('MISSING')
-                num_errors += 1
+                errors.append('Launchpad project %s does not exist' % lp_name)
             else:
                 print('found')
 
@@ -103,24 +87,24 @@ def main():
 
                 if not is_a_hash(project['hash']):
                     print('NOT A SHA HASH')
-                    num_errors += 1
-                else:
-                    url = CGIT_TEMPLATE % (project['repo'],
-                                           project['hash'])
-                    response = requests.get(url)
-                    missing_commit = (
-                        (response.status_code // 100 != 2)
-                        or 'Bad object id' in response.text
+                    errors.append(
+                        ('%(repo)s version %(version)s release from '
+                         '%(hash)r, which is not a hash') % project
                     )
-                    print('MISSING' if missing_commit else 'found')
-                    if missing_commit:
-                        num_errors += 1
+                else:
+                    exists = gitutils.commit_has_merged(
+                        project['repo'], project['hash'],
+                    )
+                    if not exists:
+                        print('MISSING')
+                        errors.append('No commit %(hash)r in %(repo)r'
+                                      % project)
+                    else:
+                        print('found')
 
-    if num_errors:
-        print('\n%s errors found' % num_errors)
+    if errors:
+        print('\n%s errors found' % len(errors))
+        for e in errors:
+            print(e)
 
-    return 1 if num_errors else 0
-
-
-if __name__ == '__main__':
-    sys.exit(main())
+    return 1 if errors else 0
