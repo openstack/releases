@@ -36,7 +36,7 @@ def find_modified_deliverable_files():
     return filenames
 
 
-def commit_has_merged(repo, hash):
+def commit_exists(repo, hash):
     """Return boolean specifying whether the hash exists in the repository.
 
     Uses a cgit query instead of looking locally to avoid cloning a

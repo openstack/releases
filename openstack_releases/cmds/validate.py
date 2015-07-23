@@ -29,10 +29,8 @@ import yaml
 from requests.packages import urllib3
 urllib3.disable_warnings()
 
+from openstack_releases import defaults
 from openstack_releases import gitutils
-
-
-DEFAULT_RELEASE = 'liberty'
 
 
 def is_a_hash(val):
@@ -53,8 +51,8 @@ def main():
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
         print('no modified deliverable files, validating all releases from %s'
-              % DEFAULT_RELEASE)
-        filenames = glob.glob('deliverables/' + DEFAULT_RELEASE + '/*.yaml')
+              % defaults.RELEASE)
+        filenames = glob.glob('deliverables/' + defaults.RELEASE + '/*.yaml')
 
     errors = []
 
@@ -92,7 +90,7 @@ def main():
                          '%(hash)r, which is not a hash') % project
                     )
                 else:
-                    exists = gitutils.commit_has_merged(
+                    exists = gitutils.commit_exists(
                         project['repo'], project['hash'],
                     )
                     if not exists:
