@@ -26,7 +26,7 @@ CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 def find_modified_deliverable_files():
     "Return a list of files modified by the most recent commit."
     results = subprocess.check_output(
-        ['git', 'show', '--name-only', '--pretty=format:']
+        ['git', 'diff', '--name-only', '--pretty=format:', 'HEAD^']
     )
     filenames = [
         l.strip()
