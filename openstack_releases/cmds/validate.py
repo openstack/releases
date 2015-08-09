@@ -19,8 +19,11 @@
 from __future__ import print_function
 
 import argparse
+import atexit
 import glob
 import re
+import shutil
+import tempfile
 
 import requests
 import yaml
@@ -41,6 +44,13 @@ def is_a_hash(val):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        '--no-cleanup',
+        dest='cleanup',
+        default=True,
+        action='store_false',
+        help='do not remove temporary files',
+    )
+    parser.add_argument(
         'input',
         nargs='*',
         help=('YAML files to validate, defaults to '
@@ -55,6 +65,19 @@ def main():
         filenames = glob.glob('deliverables/' + defaults.RELEASE + '/*.yaml')
 
     errors = []
+
+    workdir = tempfile.mkdtemp(prefix='releases-')
+    print('creating temporary files in %s' % workdir)
+
+    def cleanup_workdir():
+        if args.cleanup:
+            try:
+                shutil.rmtree(workdir)
+            except:
+                pass
+        else:
+            print('not cleaning up %s' % workdir)
+    atexit.register(cleanup_workdir)
 
     for filename in filenames:
         print('\nChecking %s' % filename)
@@ -78,9 +101,8 @@ def main():
 
         for release in deliverable_info['releases']:
             for project in release['projects']:
-                print('%s %s %s ' % (project['repo'],
-                                     release['version'],
-                                     project['hash']),
+                print('%s SHA %s ' % (project['repo'],
+                                      project['hash']),
                       end='')
 
                 if not is_a_hash(project['hash']):
@@ -90,15 +112,45 @@ def main():
                          '%(hash)r, which is not a hash') % project
                     )
                 else:
-                    exists = gitutils.commit_exists(
+                    # Report if the SHA exists or not (an error if it
+                    # does not).
+                    sha_exists = gitutils.commit_exists(
                         project['repo'], project['hash'],
                     )
-                    if not exists:
-                        print('MISSING')
+                    if not sha_exists:
+                        print('MISSING', end='')
                         errors.append('No commit %(hash)r in %(repo)r'
                                       % project)
                     else:
-                        print('found')
+                        print('found ', end='')
+                    # Report if the version has already been
+                    # tagged. We expect it to not exist, but neither
+                    # case is an error because sometimes we want to
+                    # import history and sometimes we want to make new
+                    # releases.
+                    print('version %s ' % release['version'], end='')
+                    version_exists = gitutils.commit_exists(
+                        project['repo'], release['version'],
+                    )
+                    if version_exists:
+                        actual_sha = gitutils.sha_for_tag(
+                            workdir,
+                            project['repo'],
+                            release['version'],
+                        )
+                        if actual_sha == project['hash']:
+                            print('found and matches SHA')
+                        else:
+                            print('found DIFFERENT %r' % actual_sha)
+                            errors.append(
+                                ('Version %s in %s is on '
+                                 'commit %s instead of %s') %
+                                (release['version'],
+                                 project['repo'],
+                                 actual_sha,
+                                 project['hash']))
+                    else:
+                        print('NEW')
 
     if errors:
         print('\n%s errors found' % len(errors))
