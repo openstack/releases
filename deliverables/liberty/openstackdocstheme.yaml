@@ -9,3 +9,11 @@ releases:
     projects:
       - repo: openstack/openstackdocstheme
         hash: 9587cc5fbbe1d56ec5e1abf2f29dbfc759caba0a
+  - version: 1.2.0
+    projects:
+      - repo: openstack/openstackdocstheme
+        hash: 9d5dcd59bd2f01b67598ceffca0d29453129e418
+        highlights: >
+           This adds a dynamic table of content to the sidebar and
+           buttons for next, previous, report a bug at the bottom of
+           pages.
