@@ -9,3 +9,9 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 7e4d2edc970a555b982d7081a95c6a1ada6d58de
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 1fc68877ff8c6f31867a39dbb647688db6b069c3
+        highlights: >
+          This includes Keystone v3 fix and Aodh support
