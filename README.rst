@@ -57,8 +57,10 @@ deliverable. For each release, we need to track:
 * the launchpad project name (such as ``oslo.config``)
 * the series (Kilo, Liberty, etc.)
 * for each repository
+
   * the name (such as ``openstack/oslo.config``)
   * the hash of the commit to be tagged
+
 * the version number to use
 * highlights for the release notes email (optional)
 
