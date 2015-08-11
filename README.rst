@@ -85,7 +85,7 @@ The top level of a deliverable file is a mapping with keys:
 ``releases``
   A list of the releases for the deliverable.
 
-Each release entry is a mapping with keys:
+Each `release` entry is a mapping with keys:
 
 ``version``
   The version tag for that release, to be applied to all of the member
@@ -99,7 +99,7 @@ Each release entry is a mapping with keys:
   An optional message to be included in the release note email
   announcing the release.
 
-Each project entry is a mapping with keys:
+Each `project` entry is a mapping with keys:
 
 ``repo``
   The name of the repository on git.openstack.org.
