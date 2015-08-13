@@ -54,16 +54,19 @@ def commit_exists(repo, ref):
     return not missing_commit
 
 
-def sha_for_tag(workdir, repo, version):
-    """Return the SHA for a given tag
-    """
-    # Check out the code.
+def clone_repo(workdir, repo):
+    "Check out the code."
     subprocess.check_call(
         ['zuul-cloner',
          '--workspace', workdir,
          'git://git.openstack.org',
          repo]
     )
+
+
+def sha_for_tag(workdir, repo, version):
+    """Return the SHA for a given tag
+    """
     # git log 2.3.11 -n 1 --pretty=format:%H
     try:
         actual_sha = subprocess.check_output(

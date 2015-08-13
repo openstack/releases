@@ -133,6 +133,7 @@ def main():
                         project['repo'], release['version'],
                     )
                     if version_exists:
+                        gitutils.clone_repo(workdir, project['repo'])
                         actual_sha = gitutils.sha_for_tag(
                             workdir,
                             project['repo'],
