@@ -31,6 +31,18 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 
 
+def git_log(title, git_range):
+    header = '%s %s' % (title, git_range)
+    print('\n%s' % header)
+    print('-' * len(header))
+    subprocess.check_call([
+        'git', 'log', '--no-color',
+        '--format=%h %ci %s', '--no-merges',
+        git_range,
+    ])
+    print()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -113,20 +125,35 @@ def main():
                  project['repo'],
                  ]
             )
-            header = '%s %s' % (project['repo'], git_range)
-            print('\n%s' % header)
-            print('-' * len(header))
 
-            # Show the log output.
-            log_cmd = [
-                'git', 'log', '--no-color',
-                '--format=%h %ci %s', '--no-merges',
-                git_range,
-            ]
-            subprocess.check_call(
-                log_cmd,
-                cwd=os.path.join(workdir, project['repo']),
+            # Move into the repository we just checked out.
+            os.chdir(os.path.join(workdir, project['repo']))
+
+            # Show the changes since the last release.
+            git_log('Release will include', git_range)
+
+            # If the sha for HEAD and the requested release don't
+            # match, show any unreleased changes on the branch. We ask
+            # git to give us the real SHA for the requested release in
+            # case the deliverables file has the short version of the
+            # hash.
+            head_sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
+            requested_sha = gitutils.sha_for_tag(
+                workdir,
+                project['repo'],
+                project['hash'],
             )
+            if head_sha == requested_sha:
+                print('Request releases from HEAD on %s' % branch)
+            else:
+                git_log(
+                    'Release will NOT include',
+                    '%s..%s' % (requested_sha, head_sha),
+                )
+
+            # Show more details about the commit being tagged.
             print()
+            print('git describe %s' % project['hash'])
+            subprocess.check_call(['git', 'describe', project['hash']])
 
     return 0
