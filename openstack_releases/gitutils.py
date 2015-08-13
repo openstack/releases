@@ -77,3 +77,13 @@ def sha_for_tag(workdir, repo, version):
     except subprocess.CalledProcessError:
         actual_sha = ''
     return actual_sha
+
+
+def check_ancestry(workdir, repo, old_version, sha):
+    "Check if the SHA is in the ancestry of the previous version."
+    ancestors = subprocess.check_output(
+        ['git', 'log', '--oneline', '--ancestry-path',
+         '%s..%s' % (old_version, sha)],
+        cwd=os.path.join(workdir, repo),
+    ).strip()
+    return bool(ancestors)

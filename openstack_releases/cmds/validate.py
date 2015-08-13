@@ -99,6 +99,7 @@ def main():
             else:
                 print('found')
 
+        prev_version = None
         for release in deliverable_info['releases']:
             for project in release['projects']:
                 print('%s SHA %s ' % (project['repo'],
@@ -151,7 +152,30 @@ def main():
                                  actual_sha,
                                  project['hash']))
                     else:
-                        print('NEW')
+                        print('NEW ', end='')
+                        if not prev_version:
+                            print()
+                        else:
+                            # Check to see if the commit for the new
+                            # version is in the ancestors of the
+                            # previous release, meaning it is actually
+                            # merged into the branch.
+                            is_ancestor = gitutils.check_ancestry(
+                                workdir,
+                                project['repo'],
+                                prev_version,
+                                project['hash'],
+                            )
+                            if is_ancestor:
+                                print('SHA found in descendants')
+                            else:
+                                print('SHA NOT FOUND in descendants')
+                                errors.append(
+                                    '%s %s is not a descendant of %s' % (
+                                        project['repo'], project['hash'],
+                                        prev_version)
+                                )
+            prev_version = release['version']
 
     if errors:
         print('\n%s errors found' % len(errors))
