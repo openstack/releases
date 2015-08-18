@@ -31,15 +31,14 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 
 
-def git_log(title, git_range):
+def git_log(workdir, repo, title, git_range):
     header = '%s %s' % (title, git_range)
     print('\n%s' % header)
     print('-' * len(header))
-    subprocess.check_call([
-        'git', 'log', '--no-color',
-        '--format=%h %ci %s', '--no-merges',
-        git_range,
-    ])
+    subprocess.check_call(['git', 'log', '--no-color',
+                           '--format=%h %ci %s', '--no-merges',
+                           git_range],
+                          cwd=os.path.join(workdir, repo))
     print()
 
 
@@ -126,11 +125,9 @@ def main():
                  ]
             )
 
-            # Move into the repository we just checked out.
-            os.chdir(os.path.join(workdir, project['repo']))
-
             # Show the changes since the last release.
-            git_log('Release will include', git_range)
+            git_log(workdir, project['repo'],
+                    'Release will include', git_range)
 
             # If the sha for HEAD and the requested release don't
             # match, show any unreleased changes on the branch. We ask
@@ -154,6 +151,9 @@ def main():
             # Show more details about the commit being tagged.
             print()
             print('git describe %s' % project['hash'])
-            subprocess.check_call(['git', 'describe', project['hash']])
+            subprocess.check_call(
+                ['git', 'describe', project['hash']],
+                cwd=os.path.join(workdir, project['repo']),
+            )
 
     return 0
