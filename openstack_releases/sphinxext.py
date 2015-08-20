@@ -24,14 +24,14 @@ from sphinx.util.nodes import nested_parse_with_titles
 import yaml
 
 
-def _list_table(add, headers, data):
+def _list_table(add, headers, data, title=''):
     """Build a list-table directive.
 
     :param add: Function to add one row to output.
     :param headers: List of header values.
     :param data: Iterable of row data, yielding lists or tuples with rows.
     """
-    add('.. list-table::')
+    add('.. list-table:: %s' % title)
     add('   :header-rows: 1')
     add('')
     add('   - * %s' % headers[0])
@@ -82,12 +82,14 @@ class DeliverableDirective(rst.Directive):
         most_recent = []
         for deliverable_name, filename, deliverable_info in deliverables:
             version = deliverable_info.get('releases', {})[-1].get('version', 'unreleased')
-            most_recent.append((deliverable_name, version))
-        result.append('.. rubric:: Most Recent', source_name)
-        result.append('', source_name)
-        _list_table(lambda t: result.append(t, source_name),
-                    ['Deliverable', 'Version'],
-                    most_recent,)
+            ref = ':ref:`%s-%s`' % (series, deliverable_name)
+            most_recent.append((ref, version))
+        _list_table(
+            lambda t: result.append(t, source_name),
+            ['Deliverable', 'Version'],
+            most_recent,
+            title='Most Recent',
+        )
 
         # Show the detailed history of the deliverables within the series.
 
@@ -100,6 +102,8 @@ class DeliverableDirective(rst.Directive):
 
             def _title(text, underline):
                 text = str(text)  # version numbers might be converted to floats
+                _add('.. _%s-%s:' % (series, text))
+                _add('')
                 _add(text)
                 _add(underline * len(text))
                 _add('')
