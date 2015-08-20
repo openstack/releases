@@ -111,7 +111,7 @@ class DeliverableDirective(rst.Directive):
 
             _title(deliverable_name, '=')
 
-            for release in deliverable_info.get('releases', []):
+            for release in reversed(deliverable_info.get('releases', [])):
                 app.info('[deliverables] %s release %s' %
                          (deliverable_name, release['version']))
                 _rubric(release['version'])
