@@ -17,3 +17,10 @@ releases:
            This adds a dynamic table of content to the sidebar and
            buttons for next, previous, report a bug at the bottom of
            pages.
+  - version: 1.2.1
+    projects:
+      - repo: openstack/openstackdocstheme
+        hash: 332531f776ec855d6171dbd353835f70bb5b474f
+        highlights: >
+           Fix display of metatags and "Docs Home" link,
+           remove obsolete files.
