@@ -87,3 +87,10 @@ def check_ancestry(workdir, repo, old_version, sha):
         cwd=os.path.join(workdir, repo),
     ).strip()
     return bool(ancestors)
+
+
+def get_latest_tag(workdir, repo):
+    return subprocess.check_output(
+        ['git', 'describe', '--abbrev=0'],
+        cwd=os.path.join(workdir, repo),
+    ).strip()

@@ -109,12 +109,6 @@ def main():
                       (project['repo'], new_release['version']))
                 continue
 
-            if previous_release:
-                git_range = '%s..%s' % (previous_release['version'],
-                                        project['hash'])
-            else:
-                git_range = project['hash']
-
             # Check out the code.
             subprocess.check_call(
                 ['zuul-cloner',
@@ -125,9 +119,23 @@ def main():
                  ]
             )
 
+            start_range = previous_release
+            if not start_range:
+                start_range = (
+                    gitutils.get_latest_tag(workdir, project['repo'])
+                    or
+                    None
+                )
+
+            if start_range:
+                git_range = '%s..%s' % (start_range, project['hash'])
+            else:
+                git_range = project['hash']
+
             # Show the changes since the last release.
             git_log(workdir, project['repo'],
-                    'Release will include', git_range)
+                    'Release %s will include' % new_release['version'],
+                    git_range)
 
             # If the sha for HEAD and the requested release don't
             # match, show any unreleased changes on the branch. We ask
