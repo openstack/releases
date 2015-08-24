@@ -143,10 +143,8 @@ def main():
             if head_sha == requested_sha:
                 print('Request releases from HEAD on %s' % branch)
             else:
-                git_log(
-                    'Release will NOT include',
-                    '%s..%s' % (requested_sha, head_sha),
-                )
+                git_log(workdir, project['repo'], 'Release will NOT include',
+                        '%s..%s' % (requested_sha, head_sha))
 
             # Show more details about the commit being tagged.
             print()
