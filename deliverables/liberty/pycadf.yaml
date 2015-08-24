@@ -9,3 +9,9 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 9c02245f42d544147e290d97b3cb1cac2d9028b0
+  - version: 1.1.0
+    projects:
+      - repo: openstack/pycadf
+        hash: c5dc0d9577e455f149edb5331a6e493def6928d5
+        highlights: >
+          This includes Ceilometer auditing and Barbican definitions
