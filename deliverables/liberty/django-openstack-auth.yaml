@@ -9,3 +9,11 @@ releases:
     projects:
       - repo: openstack/django_openstack_auth
         hash: 08713e4ca9eca7f30494fa3d9da34c84ace919e3
+  - version: 1.4.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 829cbee14e200fd127ec4f0e0f4d743102d8e9d1
+    highlights: >
+        This release includes support for Django 1.8
+        and configurable token hashing. Fixes PKI token
+        hashing bug.
