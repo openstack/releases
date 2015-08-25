@@ -1,0 +1,6 @@
+========
+ Diablo
+========
+
+.. deliverable::
+   :series: diablo
