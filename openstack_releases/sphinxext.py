@@ -24,7 +24,7 @@ from sphinx.util.nodes import nested_parse_with_titles
 import yaml
 
 
-def _list_table(add, headers, data, title=''):
+def _list_table(add, headers, data, title='', columns=None):
     """Build a list-table directive.
 
     :param add: Function to add one row to output.
@@ -33,6 +33,8 @@ def _list_table(add, headers, data, title=''):
     """
     add('.. list-table:: %s' % title)
     add('   :header-rows: 1')
+    if columns:
+        add('   :widths: %s' % (','.join(str(c) for c in columns)))
     add('')
     add('   - * %s' % headers[0])
     for h in headers[1:]:
@@ -88,7 +90,7 @@ class DeliverableDirective(rst.Directive):
             lambda t: result.append(t, source_name),
             ['Deliverable', 'Version'],
             most_recent,
-            title='Most Recent',
+            title='Most Recent Releases',
         )
 
         # Show the detailed history of the deliverables within the series.
@@ -115,14 +117,16 @@ class DeliverableDirective(rst.Directive):
 
             _title(deliverable_name, '=')
 
-            for release in reversed(deliverable_info.get('releases', [])):
-                app.info('[deliverables] %s release %s' %
-                         (deliverable_name, release['version']))
-                _rubric(release['version'])
-                _list_table(
-                    _add, ['Repo', 'SHA'],
-                    ((p['repo'], p['hash']) for p in release.get('projects', []))
-                )
+            app.info('[deliverables] %s' % deliverable_name)
+
+            _list_table(
+                _add,
+                ['Version', 'Repo', 'SHA'],
+                ((r['version'], p['repo'], p['hash'])
+                 for r in reversed(deliverable_info.get('releases', []))
+                 for p in r.get('projects', [])),
+                columns=[10, 40, 50],
+            )
 
         node = nodes.section()
         node.document = self.state.document
