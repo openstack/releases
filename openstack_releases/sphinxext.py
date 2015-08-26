@@ -53,6 +53,7 @@ class DeliverableDirective(rst.Directive):
     def run(self):
         env = self.state.document.settings.env
         app = env.app
+        source_name = '<' + __name__ + '>'
 
         series = self.options.get('series')
         if not series:
@@ -64,11 +65,33 @@ class DeliverableDirective(rst.Directive):
 
         result = ViewList()
 
+        # Read all of the deliverable data for the series.
+
+        deliverables = []
+
         for filename in sorted(glob.glob('deliverables/%s/*.yaml' % series)):
             app.info('[deliverables] reading %s' % filename)
-            with open(filename, 'r') as f:
-                deliverable_info = yaml.load(f.read())
             deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml ext
+            with open(filename, 'r') as f:
+                deliverables.append((deliverable_name,
+                                     filename,
+                                     yaml.load(f.read())))
+
+        # Build a table of the most recent version of each deliverable.
+
+        most_recent = []
+        for deliverable_name, filename, deliverable_info in deliverables:
+            version = deliverable_info.get('releases', {})[-1].get('version', 'unreleased')
+            most_recent.append((deliverable_name, version))
+        result.append('.. rubric:: Most Recent', source_name)
+        result.append('', source_name)
+        _list_table(lambda t: result.append(t, source_name),
+                    ['Deliverable', 'Version'],
+                    most_recent,)
+
+        # Show the detailed history of the deliverables within the series.
+
+        for deliverable_name, filename, deliverable_info in deliverables:
 
             # These closures need to be redefined in each iteration of
             # the loop because they use the filename.
@@ -89,7 +112,8 @@ class DeliverableDirective(rst.Directive):
             _title(deliverable_name, '=')
 
             for release in deliverable_info.get('releases', []):
-                app.info('[deliverables] release %s' % release['version'])
+                app.info('[deliverables] %s release %s' %
+                         (deliverable_name, release['version']))
                 _rubric(release['version'])
                 _list_table(
                     _add, ['Repo', 'SHA'],
