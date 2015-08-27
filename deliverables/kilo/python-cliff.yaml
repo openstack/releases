@@ -1,6 +1,14 @@
 ---
 launchpad: python-cliff
 releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/cliff
+        hash: 0af4aa0994db54a09a074ccc7b7e12b88d70178e
+  - version: 1.9.0
+    projects:
+      - repo: openstack/cliff
+        hash: f6e9bbd99259de2a0983fd2444e5c8a897d54b95
   - version: 1.10.0
     projects:
       - repo: openstack/cliff
@@ -17,11 +25,3 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: a280892bcedcc83a77d16bfc56d072cd2fc90230
-  - version: 1.8.0
-    projects:
-      - repo: openstack/cliff
-        hash: 0af4aa0994db54a09a074ccc7b7e12b88d70178e
-  - version: 1.9.0
-    projects:
-      - repo: openstack/cliff
-        hash: f6e9bbd99259de2a0983fd2444e5c8a897d54b95

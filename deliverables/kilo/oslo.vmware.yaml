@@ -1,6 +1,14 @@
 ---
 launchpad: oslo.vmware
 releases:
+  - version: 0.7.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 1661a0af8ce14edbfb00fed0a30a3b9135517d93
+  - version: 0.9.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: c50d927c07f8b8d578b98580d2411797bd626b9c
   - version: 0.10.0
     projects:
       - repo: openstack/oslo.vmware
@@ -17,11 +25,3 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: bd8a876482bb9d3f4df41fa4b4fe3c6cfdd4f846
-  - version: 0.7.0
-    projects:
-      - repo: openstack/oslo.vmware
-        hash: 1661a0af8ce14edbfb00fed0a30a3b9135517d93
-  - version: 0.9.0
-    projects:
-      - repo: openstack/oslo.vmware
-        hash: c50d927c07f8b8d578b98580d2411797bd626b9c

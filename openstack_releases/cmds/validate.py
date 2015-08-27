@@ -21,6 +21,7 @@ from __future__ import print_function
 import argparse
 import atexit
 import glob
+import os
 import re
 import shutil
 import tempfile
@@ -81,6 +82,9 @@ def main():
 
     for filename in filenames:
         print('\nChecking %s' % filename)
+        if not os.path.isfile(filename):
+            print("File was deleted, skipping.")
+            continue
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
