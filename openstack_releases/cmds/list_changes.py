@@ -82,6 +82,9 @@ def main():
     os.environ['PAGER'] = ''
 
     for filename in filenames:
+        if not os.path.exists(filename):
+            print('\n%s was removed, skipping' % filename)
+            continue
         print('\nChecking %s' % filename)
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
@@ -158,7 +161,7 @@ def main():
             # Show more details about the commit being tagged.
             print()
             print('git describe %s' % project['hash'])
-            subprocess.check_call(
+            subprocess.call(
                 ['git', 'describe', project['hash']],
                 cwd=os.path.join(workdir, project['repo']),
             )
