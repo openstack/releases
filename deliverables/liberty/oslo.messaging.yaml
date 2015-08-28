@@ -1,6 +1,10 @@
 ---
 launchpad: oslo.messaging
 releases:
+  - version: 1.9.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8da14f68d353786eab029d410f16ae19d902a590
   - version: 1.10.0
     projects:
       - repo: openstack/oslo.messaging
@@ -41,10 +45,6 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: ead733a2dc746924496faf865fb929b0449d0b73
-  - version: 1.9.0
-    projects:
-      - repo: openstack/oslo.messaging
-        hash: 8da14f68d353786eab029d410f16ae19d902a590
   - version: 2.0.0
     projects:
       - repo: openstack/oslo.messaging

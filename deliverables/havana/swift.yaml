@@ -1,10 +1,6 @@
 ---
 launchpad: swift
 releases:
-  - version: 1.10.0
-    projects:
-      - repo: openstack/swift
-        hash: 7accddf1c3f54f67cf29d6eb69e416f798af6e23
   - version: 1.9.0
     projects:
       - repo: openstack/swift
@@ -13,3 +9,7 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 4bd9e4584d31eb37c7e30e555daeb6b90703ee3a
+  - version: 1.10.0
+    projects:
+      - repo: openstack/swift
+        hash: 7accddf1c3f54f67cf29d6eb69e416f798af6e23

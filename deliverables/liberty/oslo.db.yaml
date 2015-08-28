@@ -1,6 +1,14 @@
 ---
 launchpad: oslo.db
 releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 04eba07c675435ea9290f6365c41103a291359a3
+  - version: 1.9.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: e36913c09903f25788c7b8ab9bb8f7d2a58d20e1
   - version: 1.10.0
     projects:
       - repo: openstack/oslo.db
@@ -13,14 +21,6 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: a9f6a2ed7644ee1130121ea2236c05ab7054a1e2
-  - version: 1.8.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 04eba07c675435ea9290f6365c41103a291359a3
-  - version: 1.9.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: e36913c09903f25788c7b8ab9bb8f7d2a58d20e1
   - version: 2.0.0
     projects:
       - repo: openstack/oslo.db

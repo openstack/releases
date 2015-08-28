@@ -1,14 +1,14 @@
 ---
 launchpad: oslo.concurrency
 releases:
-  - version: 1.10.0
-    projects:
-      - repo: openstack/oslo.concurrency
-        hash: 9a963a9555d6e22200cc9c50e27ccef02f80aa75
   - version: 1.9.0
     projects:
       - repo: openstack/oslo.concurrency
         hash: 4d7dce2ea8f0a78995bdd6bdea26dcfaf327080b
+  - version: 1.10.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 9a963a9555d6e22200cc9c50e27ccef02f80aa75
   - version: 2.0.0
     projects:
       - repo: openstack/oslo.concurrency
