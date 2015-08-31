@@ -23,3 +23,9 @@ releases:
         hash: 1a7fe6c8148701d8dd2d477e2ba2f7d0e55b4a8f
         highlights: >
          PBR changelog generator, and FC device path removal fixes.
+  - version: 0.4.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 891cf03109b3750ec05fb9b53cb48584a16114ae
+    highlights: >
+        rootwrap filter, dependency updates and bug fixes.
