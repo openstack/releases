@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import collections
 import glob
 import os.path
 
@@ -22,6 +23,8 @@ from docutils.statemachine import ViewList
 from sphinx.util.nodes import nested_parse_with_titles
 
 import yaml
+
+from openstack_releases import governance
 
 
 def _list_table(add, headers, data, title='', columns=None):
@@ -46,16 +49,35 @@ def _list_table(add, headers, data, title='', columns=None):
     add('')
 
 
+def _get_deliverable_type(deliverable_types, name):
+    if (name.startswith('python-') and not name.endswith('client')):
+        name = name[7:]
+    if (name.startswith('python-') and name.endswith('client')):
+        return 'type:library'
+    if name in deliverable_types:
+        return deliverable_types[name]
+    no_dashes = name.replace('-', '_')
+    if no_dashes in deliverable_types:
+        return deliverable_types[no_dashes]
+    return 'type:service'
+
+
 class DeliverableDirective(rst.Directive):
 
     option_spec = {
         'series': directives.unchanged,
     }
 
+    _TYPE_ORDER = [
+        'type:service',
+        'type:library',
+    ]
+
     def run(self):
         env = self.state.document.settings.env
         app = env.app
-        source_name = '<' + __name__ + '>'
+
+        team_data = governance.get_team_data()
 
         series = self.options.get('series')
         if not series:
@@ -65,25 +87,74 @@ class DeliverableDirective(rst.Directive):
                 line=self.lineno)
             return [error]
 
+        deliverable_types = {}
+        for team in (governance.Team(n, i) for n, i in team_data.items()):
+            for dn, di in team.deliverables.items():
+                for tag in di.tags:
+                    if tag.startswith('type:'):
+                        deliverable_types[dn] = tag
+
         result = ViewList()
 
         # Read all of the deliverable data for the series.
 
-        deliverables = []
+        deliverables = collections.defaultdict(list)
 
         for filename in sorted(glob.glob('deliverables/%s/*.yaml' % series)):
             app.info('[deliverables] reading %s' % filename)
-            deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml ext
+            deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
+            deliverable_type = _get_deliverable_type(
+                deliverable_types,
+                deliverable_name,
+            )
             with open(filename, 'r') as f:
-                deliverables.append((deliverable_name,
-                                     filename,
-                                     yaml.load(f.read())))
+                deliverables[deliverable_type].append(
+                    (deliverable_name,
+                     filename,
+                     yaml.load(f.read())))
+
+        for type_tag in self._TYPE_ORDER:
+            self._add_deliverables(
+                type_tag,
+                deliverables[type_tag],
+                series,
+                app,
+                result,
+            )
+
+        # NOTE(dhellmann): Useful for debugging.
+        # print('\n'.join(result))
+
+        node = nodes.section()
+        node.document = self.state.document
+        nested_parse_with_titles(self.state, result, node)
+        return node.children
+
+    _TYPE_TITLE = {
+        'type:service': 'Service Projects',
+        'type:library': 'Library Projects',
+    }
+
+    def _add_deliverables(self, type_tag, deliverables, series, app, result):
+        source_name = '<' + __name__ + '>'
+
+        if not deliverables:
+            # There are no deliverables of this type, and that's OK.
+            return
+
+        result.append('', source_name)
+        title = self._TYPE_TITLE.get(type_tag, 'Unknown Projects')
+        result.append('-' * len(title), source_name)
+        result.append(title, source_name)
+        result.append('-' * len(title), source_name)
+        result.append('', source_name)
 
         # Build a table of the most recent version of each deliverable.
 
         most_recent = []
         for deliverable_name, filename, deliverable_info in deliverables:
-            version = deliverable_info.get('releases', {})[-1].get('version', 'unreleased')
+            version = deliverable_info.get('releases', {})[-1].get(
+                'version', 'unreleased')
             ref = ':ref:`%s-%s`' % (series, deliverable_name)
             most_recent.append((ref, version))
         _list_table(
@@ -103,7 +174,7 @@ class DeliverableDirective(rst.Directive):
                 result.append(text, filename)
 
             def _title(text, underline):
-                text = str(text)  # version numbers might be converted to floats
+                text = str(text)  # version numbers might be seen as floats
                 _add('.. _%s-%s:' % (series, text))
                 _add('')
                 _add(text)
@@ -111,7 +182,7 @@ class DeliverableDirective(rst.Directive):
                 _add('')
 
             def _rubric(text):
-                text = str(text)  # version numbers might be converted to floats
+                text = str(text)  # version numbers might be seen as floats
                 _add('.. rubric:: %s' % text)
                 _add('')
 
@@ -127,11 +198,6 @@ class DeliverableDirective(rst.Directive):
                  for p in r.get('projects', [])),
                 columns=[10, 40, 50],
             )
-
-        node = nodes.section()
-        node.document = self.state.document
-        nested_parse_with_titles(self.state, result, node)
-        return node.children
 
 
 def setup(app):
