@@ -149,19 +149,22 @@ class DeliverableDirective(rst.Directive):
         result.append('-' * len(title), source_name)
         result.append('', source_name)
 
-        # Build a table of the most recent version of each deliverable.
+        # Build a table of the first and most recent versions of each
+        # deliverable.
 
         most_recent = []
         for deliverable_name, filename, deliverable_info in deliverables:
-            version = deliverable_info.get('releases', {})[-1].get(
+            earliest_version = deliverable_info.get('releases', {})[0].get(
+                'version', 'unreleased')
+            recent_version = deliverable_info.get('releases', {})[-1].get(
                 'version', 'unreleased')
             ref = ':ref:`%s-%s`' % (series, deliverable_name)
-            most_recent.append((ref, version))
+            most_recent.append((ref, earliest_version, recent_version))
         _list_table(
             lambda t: result.append(t, source_name),
-            ['Deliverable', 'Version'],
+            ['Deliverable', 'Earliest Version', 'Most Recent Version'],
             most_recent,
-            title='Most Recent Releases',
+            title='Release Summary',
         )
 
         # Show the detailed history of the deliverables within the series.
