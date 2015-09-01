@@ -161,9 +161,12 @@ def main():
             # Show more details about the commit being tagged.
             print()
             print('git describe %s' % project['hash'])
-            subprocess.call(
-                ['git', 'describe', project['hash']],
-                cwd=os.path.join(workdir, project['repo']),
-            )
+            try:
+                subprocess.check_call(
+                    ['git', 'describe', project['hash']],
+                    cwd=os.path.join(workdir, project['repo']),
+                )
+            except subprocess.CalledProcessError as e:
+                print('WARNING: Could not run git describe: %s' % e)
 
     return 0
