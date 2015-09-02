@@ -17,3 +17,9 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 072ab6cd5aa129bb052def9a1ae3e3480227ccf5
+  - version: 2.27.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: fa0c063d53e90c9dadd19958ead0f7612eb38ff2
+    highlights: >
+        Adds microversion support, dependency updates, bug fixes.
