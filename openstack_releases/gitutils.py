@@ -72,21 +72,29 @@ def sha_for_tag(workdir, repo, version):
         actual_sha = subprocess.check_output(
             ['git', 'log', str(version), '-n', '1', '--pretty=format:%H'],
             cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
         )
         actual_sha = actual_sha.strip()
-    except subprocess.CalledProcessError:
+    except subprocess.CalledProcessError as e:
+        print('ERROR getting SHA for tag %r: %s [%s]' %
+              (version, e, e.output.strip()))
         actual_sha = ''
     return actual_sha
 
 
 def check_ancestry(workdir, repo, old_version, sha):
     "Check if the SHA is in the ancestry of the previous version."
-    ancestors = subprocess.check_output(
-        ['git', 'log', '--oneline', '--ancestry-path',
-         '%s..%s' % (old_version, sha)],
-        cwd=os.path.join(workdir, repo),
-    ).strip()
-    return bool(ancestors)
+    try:
+        ancestors = subprocess.check_output(
+            ['git', 'log', '--oneline', '--ancestry-path',
+             '%s..%s' % (old_version, sha)],
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).strip()
+        return bool(ancestors)
+    except subprocess.CalledProcessError as e:
+        print('ERROR checking ancestry: %s [%s]' % (e, e.output.strip()))
+        return False
 
 
 def get_latest_tag(workdir, repo):
@@ -94,6 +102,9 @@ def get_latest_tag(workdir, repo):
         return subprocess.check_output(
             ['git', 'describe', '--abbrev=0'],
             cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
         ).strip()
-    except subprocess.CalledProcessError:
+    except subprocess.CalledProcessError as e:
+        print('WARNING failed to retrieve latest tag: %s [%s]' %
+              (e, e.output.strip()))
         return None
