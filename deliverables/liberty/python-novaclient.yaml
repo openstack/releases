@@ -23,3 +23,10 @@ releases:
         hash: fa0c063d53e90c9dadd19958ead0f7612eb38ff2
     highlights: >
         Adds microversion support, dependency updates, bug fixes.
+  - version: 2.28.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: e4b0d46c4b5b99973a7f65c294a9b73c8adfefb7
+    highlights: >
+        Allow reboot multiple servers plus key fixes for nova v2.0 on v2.1
+        support.
