@@ -30,3 +30,9 @@ releases:
     highlights: >
         Allow reboot multiple servers plus key fixes for nova v2.0 on v2.1
         support.
+  - version: 2.28.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 9e15b3d7c07d605947b8e712e36d982a0e14fb90
+    highlights: >
+        Fix quota-update bug when using v2.1 API.
