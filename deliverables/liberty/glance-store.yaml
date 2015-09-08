@@ -25,3 +25,9 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: b7d7b8ae5ecddb1f47ec6da03501a5ad2f936f1e
+  - version: 0.9.1
+    projects:
+      - repo: openstack/glance_store
+        hash: c816b38d9f12be75d989409cbab6dfefa8f49dc3
+    highlights: >
+        Fixes rbd backend import issues.
