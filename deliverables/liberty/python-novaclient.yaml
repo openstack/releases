@@ -36,3 +36,10 @@ releases:
         hash: 9e15b3d7c07d605947b8e712e36d982a0e14fb90
     highlights: >
         Fix quota-update bug when using v2.1 API.
+  - version: 2.29
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 31d4e026b447bfac43fa943176b353fcfd2800d8
+    highlights: >
+        Deprecate novaclient.client.get_client_class and
+        default v2.Client to use v2.0 when no version is given.
