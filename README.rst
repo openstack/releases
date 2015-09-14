@@ -97,7 +97,8 @@ Each `release` entry is a mapping with keys:
 
 ``highlights``
   An optional message to be included in the release note email
-  announcing the release.
+  announcing the release. (Use ``|`` to indicate a multi-line,
+  pre-formatted message.)
 
 Each `project` entry is a mapping with keys:
 
@@ -134,7 +135,7 @@ and then for the subsequent release it would be updated to contain::
        projects:
          - repo: openstack/oslo.config
            hash: 0c9113f68285f7b55ca01f0bbb5ce6cddada5023
-       highlights: >
+       highlights: |
           This release includes the change to stop importing
           from the 'oslo' namespace package.
 
