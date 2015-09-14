@@ -9,3 +9,13 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 025191af5068a853e527faeb826bd3fec40677ae
+  - version: 1.3.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 7132f5ff78af75645c3430d35094b3c9aba49200
+    highlights: >
+      Added Root support for Vertica clusters/instances.
+      Initial Implementation for Redis Clustering.
+      Added support for a Datastore Registration API
+      Subcommands now accept flavor and cluster name in addition to ids.
+      Add support for a --marker argument to the backup commands.
