@@ -1,6 +1,14 @@
 ---
 launchpad: python-novaclient
 releases:
+  - version: 2.21.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: bfd029c8ef500af705159a5f3d5fa74e39c43096
+  - version: 2.22.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 7e7764ced5f5b7c9be5504dda94c4f1286fd4c08
   - version: 2.23.0
     projects:
       - repo: openstack/python-novaclient
