@@ -29,8 +29,6 @@ import os
 import subprocess
 import sys
 
-from launchpadlib.launchpad import Launchpad
-
 # From https://wiki.openstack.org/wiki/Releases
 RELEASES = [
     ('austin', datetime.datetime(2010, 10, 21)),
@@ -66,13 +64,6 @@ parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', help='repository directory')
 args = parser.parse_args()
 
-# Connect to LP
-print("connecting to launchpad")
-try:
-    launchpad = Launchpad.login_with('openstack-releasing', 'production')
-except Exception, error:
-    abort(2, 'Could not connect to Launchpad: ' + str(error))
-
 before = os.getcwd()
 dev_null = open('/dev/null', 'w')
 repo = args.repo
@@ -88,6 +79,9 @@ repo_namespace = os.path.basename(os.path.dirname(repo))
 repo_short_name = repo_namespace + '/' + os.path.basename(repo)
 
 for tag in tags:
+    if '-' in tag:
+        print('ignoring %r' % tag)
+        continue
     try:
         show_output = subprocess.check_output([
             'git', 'show', '--no-patch', '--pretty=%H %ct', tag,
