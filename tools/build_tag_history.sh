@@ -86,7 +86,6 @@ gen sahara $REPOS/sahara $REPOS/sahara-dashboard $REPOS/sahara-extra \
     $REPOS/sahara-image-elements
 
 gen barbican $REPOS/barbican
-gen castellan $REPOS/castellan
 gen kite $REPOS/kite
 
 gen designate $REPOS/designate $REPOS/designate-dashboard
