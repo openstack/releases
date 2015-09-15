@@ -17,12 +17,12 @@ function gen_from_git {
     $TOOLSDIR/tag_history_from_git.py $@
 }
 
+CLIENT_NAMES="
+"
 
 # ALL CLIENTS
-for d in $REPOS/python-*client; do
-    if [[ $d =~ .*gantt.* ]]; then
-        continue
-    fi
+for c in $CLIENT_NAMES; do
+    d=$REPOS/$c
     gen_from_git $(basename $d) $d
 done
 
