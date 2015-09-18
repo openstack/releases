@@ -17,3 +17,10 @@ releases:
         This release includes support for Django 1.8
         and configurable token hashing. Fixes PKI token
         hashing bug.
+  - version: 2.0.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 6e2cd8deffbd60074bf036c1cecdb280f281ccd4
+    highlights: >
+        This release improves WebSSO support, and a login
+        bug related to supporting Django 1.8.
