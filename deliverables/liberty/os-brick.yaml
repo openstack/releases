@@ -29,3 +29,10 @@ releases:
         hash: 891cf03109b3750ec05fb9b53cb48584a16114ae
     highlights: >
         rootwrap filter, dependency updates and bug fixes.
+  - version: 0.5.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 5ac54d4e0c89daba1be80702ee4060a538c08754
+    highlights: >
+        Log message fixes that prevent messages from being displayed at all.
+
