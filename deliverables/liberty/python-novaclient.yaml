@@ -43,3 +43,10 @@ releases:
     highlights: >
         Deprecate novaclient.client.get_client_class and
         default v2.Client to use v2.0 when no version is given.
+  - version: 2.30.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 0f950a69e79b17172e1de853708be982f9191cf8
+    highlights: >
+        Bug fixes, v2.4 microversion support, and dependency updates.
+        The stable/liberty branch will be created from this release.
