@@ -9,3 +9,9 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 7316dd16b8850270db27c1298dcf5a2223f2f1e1
+  - version: 1.0.15
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: fb12aaea1782e8c1be2dd68b2d9b34015d64aa92
+    highlights: >
+      global-requirements sync to cap oslo.utils for bug 1494516.
