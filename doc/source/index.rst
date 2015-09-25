@@ -2,6 +2,9 @@
  OpenStack Releases
 ====================
 
+Release Series
+==============
+
 .. list-table::
    :header-rows: 1
 
@@ -32,7 +35,6 @@
    - * :doc:`releases/austin`
      * Deprecated
 
-
 .. toctree::
    :glob:
    :maxdepth: 1
@@ -50,3 +52,10 @@
    releases/cactus
    releases/bexar
    releases/austin
+
+Instructions
+============
+
+.. toctree::
+
+   instructions
