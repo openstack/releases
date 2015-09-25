@@ -20,6 +20,21 @@ the stable release is requested by the stable maintenance team, it
 should be acknowledged by the PTL or release liaison to ensure that
 the development team is aware of the coming change.
 
+#. Prepare the release request by submitting a patch to this
+   repository.
+
+#. Prepare an update to the openstack/requirements repository to
+   change upper-constraints.txt to ensure the new release is tested in
+   the gate. You may also need to update global-requirements.txt in
+   the same patch for a release with new features on which a project
+   depends (bug fix releases do not need the requirements
+   updated). Use a ``Depends-On`` tag in the commit message to tie the
+   patch to the original release request so that the requirements and
+   constraints patch will not merge until the release request merges.
+
+#. Leave a comment on the release request linking it to the
+   requirements repository update.
+
 Reviewing a Release Request
 ---------------------------
 
@@ -44,6 +59,16 @@ General notes when reviewing a release request:
     Someone from the
     `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
     team should +1 a change like this before it's approved.
+
+* Make sure there is a requirements update patch to enable use of the
+  new release. With the constraints system in place, releasing a
+  library is no longer sufficient to cause it to be used in the CI
+  systems. We must explicitly update the constraints file for
+  integration tests, and we want to ensure that the lower bounds
+  accurately reflect the versions needed to provide features for the
+  consuming applications. This latter step is difficult to do
+  accurately via a script, so we need it to be done by the person
+  releasing the library.
 
 The following rules apply mostly to stable branches and therefore a member of
 the `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
