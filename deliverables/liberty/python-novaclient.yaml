@@ -50,3 +50,9 @@ releases:
     highlights: >
         Bug fixes, v2.4 microversion support, and dependency updates.
         The stable/liberty branch will be created from this release.
+  - version: 2.30.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 3636685ede1e841ddfed73a1dfb90851f0003980
+    highlights: >
+        Fix for bug 1501435 so legacy block device mapping requests work.
