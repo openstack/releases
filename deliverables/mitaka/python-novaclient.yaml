@@ -1,0 +1,9 @@
+---
+launchpad: python-novaclient
+releases:
+  - version: 2.31.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: abd0630badaff18ca998db2feccb058e8ee75f23
+    highlights: >
+        Bug fixes; also the default service type for volumes is volumev2 now.
