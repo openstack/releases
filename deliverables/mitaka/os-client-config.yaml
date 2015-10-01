@@ -1,0 +1,10 @@
+---
+launchpad: os-client-config
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 1629ae0d1f21dfca0b3f55d23541c61a5a666aca
+    highlights: >
+      Bugfixes. Added SWITCHengines to vendor list. Properly handle
+      OS_CLOUD and OS_REGION_NAME when mixing ansible and openstackclient.
