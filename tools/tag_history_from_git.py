@@ -43,6 +43,7 @@ RELEASES = [
     ('juno', datetime.datetime(2014, 10, 16)),
     ('kilo', datetime.datetime(2015, 4, 30)),
     ('liberty', datetime.datetime(2015, 10, 15)),
+    ('mitaka', datetime.datetime(2016, 4, 7)),
 ]
 
 
