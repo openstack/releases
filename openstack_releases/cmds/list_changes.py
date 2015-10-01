@@ -31,14 +31,14 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 
 
-def git_log(workdir, repo, title, git_range):
+def git_log(workdir, repo, title, git_range, extra_args=[]):
     header = '%s %s' % (title, git_range)
     print('\n%s' % header)
     print('-' * len(header))
-    subprocess.check_call(['git', 'log', '--no-color',
-                           '--format=%h %ci %s', '--no-merges',
-                           git_range],
-                          cwd=os.path.join(workdir, repo))
+    cmd = ['git', 'log', '--no-color']
+    cmd.extend(extra_args)
+    cmd.append(git_range)
+    subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
     print()
 
 
@@ -136,10 +136,17 @@ def main():
             else:
                 git_range = project['hash']
 
-            # Show the changes since the last release.
+            # Show the changes since the last release, first as a
+            # graph view so we can check for bad merges, and then with
+            # more detail.
             git_log(workdir, project['repo'],
                     'Release %s will include' % new_release['version'],
-                    git_range)
+                    git_range,
+                    extra_args=['--graph', '--oneline', '--decorate'])
+            git_log(workdir, project['repo'],
+                    'Details Contents',
+                    git_range,
+                    extra_args=['--no-merges'])
 
             # If the sha for HEAD and the requested release don't
             # match, show any unreleased changes on the branch. We ask
@@ -156,7 +163,8 @@ def main():
                 print('Request releases from HEAD on %s' % branch)
             else:
                 git_log(workdir, project['repo'], 'Release will NOT include',
-                        '%s..%s' % (requested_sha, head_sha))
+                        '%s..%s' % (requested_sha, head_sha),
+                        extra_args=['--format=%h %ci %s'])
 
             # Show more details about the commit being tagged.
             print()
