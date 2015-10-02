@@ -24,3 +24,9 @@ releases:
     highlights: >
         This release improves WebSSO support, and a login
         bug related to supporting Django 1.8.
+  - version: 2.0.1
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 88fb89b5b787824d06b4c58337b7c960ccd0263b
+    highlights: >
+        Fixes bug that prevents using SQL DB session backends.
