@@ -8,3 +8,7 @@ releases:
     highlights: >
       Bugfixes. Added SWITCHengines to vendor list. Properly handle
       OS_CLOUD and OS_REGION_NAME when mixing ansible and openstackclient.
+  - version: 1.8.1
+    projects:
+      - repo: openstack/os-client-config
+        hash: 379962f0e8289e2db85a0eeb7b51d10cff70e67d
