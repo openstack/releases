@@ -19,6 +19,7 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import glob
 import os
 import os.path
 import shutil
@@ -31,15 +32,30 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 
 
+def header(title):
+    print('\n%s' % title)
+    print('-' * len(title))
+
+
 def git_log(workdir, repo, title, git_range, extra_args=[]):
-    header = '%s %s' % (title, git_range)
-    print('\n%s' % header)
-    print('-' * len(header))
+    header('%s %s' % (title, git_range))
     cmd = ['git', 'log', '--no-color']
     cmd.extend(extra_args)
     cmd.append(git_range)
     subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
     print()
+
+
+def git_diff(workdir, repo, git_range, file_pattern):
+    repo_dir = os.path.join(workdir, repo)
+    files = list(glob.glob(os.path.join(repo_dir,
+                                        file_pattern)))
+    if files:
+        header('Requirements Changes %s' % git_range)
+        cmd = ['git', 'diff', '-U0', '--no-color', git_range]
+        cmd.extend(f[len(repo_dir) + 1:] for f in files)
+        subprocess.check_call(cmd, cwd=repo_dir)
+        print()
 
 
 def main():
@@ -135,6 +151,9 @@ def main():
                 git_range = '%s..%s' % (start_range, project['hash'])
             else:
                 git_range = project['hash']
+
+            # Show any requirements changes in the upcoming release.
+            git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
 
             # Show the changes since the last release, first as a
             # graph view so we can check for bad merges, and then with
