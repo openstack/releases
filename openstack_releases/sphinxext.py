@@ -135,6 +135,14 @@ class DeliverableDirective(rst.Directive):
         'type:library': 'Library Projects',
     }
 
+    @staticmethod
+    def _tarball_link(version, repo):
+        return '`{v} <{s}/{n}/{n}-{v}.tar.gz>`__'.format(
+            s='http://tarballs.openstack.org',
+            v=version,
+            n=repo.rsplit('/')[-1],
+        )
+
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
 
@@ -190,8 +198,9 @@ class DeliverableDirective(rst.Directive):
 
             _list_table(
                 _add,
-                ['Version', 'Repo', 'SHA'],
-                ((r['version'], p['repo'], p['hash'])
+                ['Version', 'Repo', 'Git Commit'],
+                ((self._tarball_link(r['version'], p['repo']),
+                  p['repo'], p['hash'])
                  for r in reversed(deliverable_info.get('releases', []))
                  for p in r.get('projects', [])),
                 columns=[10, 40, 50],
