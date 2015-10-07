@@ -184,11 +184,6 @@ class DeliverableDirective(rst.Directive):
                 _add(underline * len(text))
                 _add('')
 
-            def _rubric(text):
-                text = str(text)  # version numbers might be seen as floats
-                _add('.. rubric:: %s' % text)
-                _add('')
-
             _title(deliverable_name, '=')
 
             app.info('[deliverables] %s' % deliverable_name)
