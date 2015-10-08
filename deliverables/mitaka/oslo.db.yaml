@@ -1,0 +1,10 @@
+---
+launchpad: oslo.db
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 2eae0ec7fb651b775b6a317221f820cafaf8e98e
+    highlights: >
+        This is a major version bump due to 30cb73725 which changes how one
+        installs oslo.db's database test fixtures code.
