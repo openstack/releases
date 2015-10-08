@@ -7,3 +7,10 @@ releases:
         hash: abd0630badaff18ca998db2feccb058e8ee75f23
     highlights: >
         Bug fixes; also the default service type for volumes is volumev2 now.
+  - version: 2.32.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 03f1f67ccde6f495e264da08f0bb7d707cf3ff66
+    highlights: >
+        Bug fixes and dependency updates. Note d045019 which sets the default
+        --os-compute-api-version to 2.5 for the CLI rather than 2.latest.
