@@ -1,0 +1,10 @@
+---
+launchpad: python-keystoneclient
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: e65be5dbebd17806bb595cbd88567a4dcf3390ba
+    highlights: >
+        Requirements change to exclude requests 2.8.0; bug fixes
+
