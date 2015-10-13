@@ -1,0 +1,10 @@
+---
+launchpad: keystonemiddleware
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 2074ca89b9b19c953c3fbde8915bba30a6e1e0bb
+    highlights: >
+        Requirements change to exclude requests 2.8.0; bug fixes
+
