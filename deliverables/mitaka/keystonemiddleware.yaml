@@ -7,4 +7,10 @@ releases:
         hash: 2074ca89b9b19c953c3fbde8915bba30a6e1e0bb
     highlights: >
         Requirements change to exclude requests 2.8.0; bug fixes
+  - version: 2.4.1
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: ab92a8b2a9a6b3218a2956bbf24d29918a943786
+    highlights: >
+        Requirements change to remove Webob cap
 
