@@ -10,10 +10,12 @@ Release Series
 
    - * Series
      * Status
+   - * :doc:`releases/mitaka`
+     * `Under Development <https://wiki.openstack.org/wiki/Mitaka_Release_Schedule>`__
    - * :doc:`releases/liberty`
-     * `Under Development <https://wiki.openstack.org/wiki/Liberty_Release_Schedule>`__
-   - * :doc:`releases/kilo`
      * Current stable release, security-supported
+   - * :doc:`releases/kilo`
+     * Security-supported
    - * :doc:`releases/juno`
      * Security-supported
    - * :doc:`releases/icehouse`
