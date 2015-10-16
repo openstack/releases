@@ -41,6 +41,7 @@ def abort(code, errmsg):
 parser = argparse.ArgumentParser()
 parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', nargs='+', help='repository directory')
+parser.add_argument('--series', help='series to scan')
 args = parser.parse_args()
 
 # Connect to LP
@@ -71,6 +72,9 @@ for repo in args.repo:
     repo_short_name = repo_namespace + '/' + os.path.basename(repo)
 
     for series in project.series:
+        if args.series and series.name != args.series:
+            print('skipping series %r' % series.name)
+            continue
         for milestone in series.all_milestones:
             try:
                 show_output = subprocess.check_output([
