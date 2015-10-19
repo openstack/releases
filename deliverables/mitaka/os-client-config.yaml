@@ -12,3 +12,11 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 379962f0e8289e2db85a0eeb7b51d10cff70e67d
+  - version: 1.9.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 790fac98542ba303274180831cbd9a03604a84e8
+    highlights: >
+      Cleaned up the interface around cache config and added a per-resource
+      cache config option based on nodepool needs. Added validation that
+      region names are in the provided region name list if such a list exists.
