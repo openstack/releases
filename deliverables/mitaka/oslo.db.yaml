@@ -8,3 +8,7 @@ releases:
     highlights: >
         This is a major version bump due to 30cb73725 which changes how one
         installs oslo.db's database test fixtures code.
+  - version: 3.1.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 3afd58f6ab0fc2acb1dd92f652cec48e87763cf6
