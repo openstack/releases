@@ -17,3 +17,13 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 8a877b2752162d6a2db43d7d61d6311c4f42285b
+  - version: 0.14.2
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 695dbc910d2068aff89a68d6f5aa088cc835766e
+  - version: 0.14.3
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: cfa75cec24b37acb42a851013d6689b2016754e2
+    highlights: >
+        Syncs up requirements with global-requirements in stable/juno.
