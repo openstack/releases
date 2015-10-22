@@ -80,7 +80,7 @@ repo_namespace = os.path.basename(os.path.dirname(repo))
 repo_short_name = repo_namespace + '/' + os.path.basename(repo)
 
 for tag in tags:
-    if '-' in tag:
+    if ('-' in tag) or ('rc' in tag) or ('a' in tag) or ('b' in tag):
         print('ignoring %r' % tag)
         continue
     try:
@@ -95,6 +95,9 @@ for tag in tags:
     except subprocess.CalledProcessError:
         print('did not find milestone %s tagged for %s' %
               (tag, repo_short_name))
+        continue
+    if series_name != 'liberty':
+        print('skipping releases other than liberty (%r)' % series_name)
         continue
     the_series = series_data.setdefault(series_name, {})
     the_milestone = the_series.setdefault(tag, [])
