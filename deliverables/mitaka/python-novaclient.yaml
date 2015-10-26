@@ -14,3 +14,9 @@ releases:
     highlights: >
         Bug fixes and dependency updates. Note d045019 which sets the default
         --os-compute-api-version to 2.5 for the CLI rather than 2.latest.
+  - version: 2.33.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: a5363ae0d60d41feff23f6cca44fcd7aa9fc5b8b
+    highlights: >
+        Bug fixes, dependency updates, microversion 2.6 support was added.
