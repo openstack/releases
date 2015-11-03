@@ -1,0 +1,10 @@
+---
+launchpad: python-troveclient
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: cfa8e5702a2b453034393ac153575275c4c81066
+    highlights: >
+      Cluster create now supports adding network and AZ.
+
