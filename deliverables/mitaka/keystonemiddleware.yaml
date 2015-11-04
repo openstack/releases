@@ -13,4 +13,11 @@ releases:
         hash: ab92a8b2a9a6b3218a2956bbf24d29918a943786
     highlights: >
         Requirements change to remove Webob cap
+  - version: 3.0.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: bd73df75000ded4ec0d927a2a362f97e582066f4
+    highlights: >
+        Requirements change to block keystoneclient 1.8.0;
+        Backwards-incompatible change to audit middleware.
 
