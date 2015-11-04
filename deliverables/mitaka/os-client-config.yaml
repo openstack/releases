@@ -20,3 +20,11 @@ releases:
       Cleaned up the interface around cache config and added a per-resource
       cache config option based on nodepool needs. Added validation that
       region names are in the provided region name list if such a list exists.
+  - version: 1.10.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 1b91e007fdeda8703056d50abe431e167afb9e03
+    highlights: >
+      Added methods to return Sessions and Client objects based on a given
+      config. Add Conoha public cloud. Reflect move of Auro to Neutron.
+      Moved vendor configs to json for easier sharing with other languages.
