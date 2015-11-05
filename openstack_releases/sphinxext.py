@@ -59,7 +59,7 @@ def _get_deliverable_type(deliverable_types, name):
     no_dashes = name.replace('-', '_')
     if no_dashes in deliverable_types:
         return deliverable_types[no_dashes]
-    return 'type:service'
+    return 'type:other'
 
 
 class DeliverableDirective(rst.Directive):
@@ -71,6 +71,7 @@ class DeliverableDirective(rst.Directive):
     _TYPE_ORDER = [
         'type:service',
         'type:library',
+        'type:other',
     ]
 
     def run(self):
@@ -133,6 +134,7 @@ class DeliverableDirective(rst.Directive):
     _TYPE_TITLE = {
         'type:service': 'Service Projects',
         'type:library': 'Library Projects',
+        'type:other': 'Other Projects',
     }
 
     @staticmethod
