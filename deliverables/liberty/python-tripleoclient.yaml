@@ -1,10 +1,6 @@
 ---
 launchpad: tripleo
 releases:
-  - version: 0.0.10
-    projects:
-      - repo: openstack/python-tripleoclient
-        hash: 646028f82eeaec9111c6a50ca2e57d3b14f811ba
   - version: 0.0.6
     projects:
       - repo: openstack/python-tripleoclient
@@ -21,3 +17,7 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 3ce2bd25de9b4eccaae5248aff5ca007482a0916
+  - version: 0.0.10
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 646028f82eeaec9111c6a50ca2e57d3b14f811ba
