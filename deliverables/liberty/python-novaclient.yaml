@@ -56,3 +56,10 @@ releases:
         hash: 3636685ede1e841ddfed73a1dfb90851f0003980
     highlights: >
         Fix for bug 1501435 so legacy block device mapping requests work.
+  - version: 2.30.2
+    projects:
+      - repo: openstack/python-novaclient
+        hash: dc4970728bae71f9745506190cc87b2edb36b0b8
+    highlights: >
+        Fix for bug 1500688 so users do not request API microversions that the
+        client does not yet support.
