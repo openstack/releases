@@ -28,3 +28,7 @@ releases:
       Added methods to return Sessions and Client objects based on a given
       config. Add Conoha public cloud. Reflect move of Auro to Neutron.
       Moved vendor configs to json for easier sharing with other languages.
+  - version: 1.10.1
+    projects:
+      - repo: openstack/os-client-config
+        hash: 13b6fbabeb27a346c91a9fb3a1fb86c7adbd2779
