@@ -23,6 +23,12 @@ the development team is aware of the coming change.
 #. Prepare the release request by submitting a patch to this
    repository.
 
+   * Set the first line (summary) of the commit message to the package
+     name and version being requested.
+
+   * If you are not the release liaison or PTL, have the PTL of the
+     project acknowledge the request with a +1.
+
 #. Prepare an update to the openstack/requirements repository to
    change upper-constraints.txt to ensure the new release is tested in
    the gate. You may also need to update global-requirements.txt in
@@ -69,6 +75,9 @@ General notes when reviewing a release request:
   consuming applications. This latter step is difficult to do
   accurately via a script, so we need it to be done by the person
   releasing the library.
+
+* Make sure the summary of the patch includes the deliverable name and
+  version number.
 
 The following rules apply mostly to stable branches and therefore a member of
 the `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
