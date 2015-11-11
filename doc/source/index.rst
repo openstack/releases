@@ -55,6 +55,14 @@ Release Series
    releases/bexar
    releases/austin
 
+Independent Projects
+====================
+
+.. toctree::
+   :maxdepth: 2
+
+   independent
+
 Instructions
 ============
 

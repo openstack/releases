@@ -62,7 +62,7 @@ def _get_deliverable_type(deliverable_types, name):
     return 'type:other'
 
 
-class DeliverableDirective(rst.Directive):
+class DeliverableDirectiveBase(rst.Directive):
 
     option_spec = {
         'series': directives.unchanged,
@@ -80,13 +80,8 @@ class DeliverableDirective(rst.Directive):
 
         team_data = governance.get_team_data()
 
+        # The series value is optional for some directives.
         series = self.options.get('series')
-        if not series:
-            error = self.state_machine.reporter.error(
-                'No series set for deliverable directive',
-                nodes.literal_block(self.block_text, self.block_text),
-                line=self.lineno)
-            return [error]
 
         deliverable_types = {}
         for team in (governance.Team(n, i) for n, i in team_data.items()):
@@ -101,7 +96,7 @@ class DeliverableDirective(rst.Directive):
 
         deliverables = collections.defaultdict(list)
 
-        for filename in sorted(glob.glob('deliverables/%s/*.yaml' % series)):
+        for filename in sorted(self._get_deliverables_files(series)):
             app.info('[deliverables] reading %s' % filename)
             deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
             deliverable_type = _get_deliverable_type(
@@ -209,5 +204,31 @@ class DeliverableDirective(rst.Directive):
             )
 
 
+class DeliverableDirective(DeliverableDirectiveBase):
+
+    def _get_deliverables_files(self, series):
+        return glob.glob('deliverables/%s/*.yaml' % series)
+
+    def run(self):
+        # Require a series value.
+        series = self.options.get('series')
+        if not series:
+            error = self.state_machine.reporter.error(
+                'No series set for deliverable directive',
+                nodes.literal_block(self.block_text, self.block_text),
+                line=self.lineno)
+            return [error]
+
+        return super(DeliverableDirective, self).run()
+
+
+class IndependentDeliverablesDirective(DeliverableDirectiveBase):
+
+    def _get_deliverables_files(self, series):
+        return glob.glob('deliverables/_independent/*.yaml')
+
+
 def setup(app):
     app.add_directive('deliverable', DeliverableDirective)
+    app.add_directive('independent-deliverables',
+                      IndependentDeliverablesDirective)
