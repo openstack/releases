@@ -27,3 +27,9 @@ releases:
     highlights: >
         Bug fix for backward incompatible change 2961e82bf introduced in
         2.33.0. There is also a dependency update for oslo.serialization.
+  - version: 2.35.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: e88df234dabcdf747fe2f514b11bfc46c12f357f
+    highlights: >
+        Bug fixes, small updates and testing enhancements.
