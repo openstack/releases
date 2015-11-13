@@ -42,6 +42,7 @@ Release Series
    :maxdepth: 1
    :hidden:
 
+   releases/mitaka
    releases/liberty
    releases/kilo
    releases/juno
