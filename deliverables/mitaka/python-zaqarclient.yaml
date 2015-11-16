@@ -1,0 +1,9 @@
+---
+launchpad: python-zaqarclient
+releases:
+  - version: 0.3.0
+    projects:
+       - repo: openstack/python-zaqarclient
+         hash: 647d73f491410fa173c48fb37a4a6aaad506f0a9
+    highlights: >
+        `flavor delete` command is renamed to `messaging flavor delete`
