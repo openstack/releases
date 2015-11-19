@@ -13,11 +13,11 @@ Release Series
    - * :doc:`releases/mitaka`
      * `Under Development <https://wiki.openstack.org/wiki/Mitaka_Release_Schedule>`__
    - * :doc:`releases/liberty`
-     * Current stable release, security-supported
+     * Current stable release, security-supported (EOL: 2016-11-17)
    - * :doc:`releases/kilo`
-     * Security-supported
+     * Security-supported (EOL: 2016-05-02)
    - * :doc:`releases/juno`
-     * Security-supported
+     * Security-supported (EOL: 2015-12-03)
    - * :doc:`releases/icehouse`
      * EOL
    - * :doc:`releases/havana`
