@@ -36,3 +36,10 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 59f719c931771f6fc5372ddde87c4674b3f7cd11
+  - version: 1.11.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 10e96bcb7bed2ca8eaf0185b46dbb882bd8b2b7c
+    highlights: >
+      Added parameters for handling legacy environment variables in the
+      legacy clients.
