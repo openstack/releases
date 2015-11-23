@@ -29,3 +29,9 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: f54a4770fcce6e58f247adbb3cd51fa130173373
+  - version: 2.3.2
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 600acc1881eb149273d09e44ca64b05a09320a52
+    highlights: >
+        Blocks python-keystoneclient 1.8.0 and requests 2.8.0.
