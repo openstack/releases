@@ -1,4 +1,8 @@
 ---
+# NOTE(tonyb) Be careful tagging new releases < 3.0.0 due to:
+#   https://bugs.launchpad.net/neutron/+bug/1513630
+# for more information see:
+#   https://review.openstack.org/247199
 launchpad: oslo.messaging
 releases:
   - version: 2.6.0
