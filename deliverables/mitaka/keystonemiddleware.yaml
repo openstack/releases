@@ -20,4 +20,10 @@ releases:
     highlights: >
         Requirements change to block keystoneclient 1.8.0;
         Backwards-incompatible change to audit middleware.
-
+  - version: 4.0.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: a52eb9860cb4ce69857eb97d19a54dce95e3e8a0
+    highlights: >
+        - Support for python 2.6 has been removed.
+        - Now using keystoneauth to for authentication.
