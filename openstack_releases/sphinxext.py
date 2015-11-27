@@ -135,7 +135,7 @@ class DeliverableDirectiveBase(rst.Directive):
     @staticmethod
     def _tarball_link(version, repo):
         return '`{v} <{s}/{n}/{n}-{v}.tar.gz>`__'.format(
-            s='http://tarballs.openstack.org',
+            s='https://tarballs.openstack.org',
             v=version,
             n=repo.rsplit('/')[-1],
         )
