@@ -140,10 +140,12 @@ def main():
 
             start_range = None
             if previous_release:
-                projects = previous_release['projects']
-                previous_project = next(x for x in projects
-                                        if x['repo'] == project['repo'])
-                start_range = previous_project['hash']
+                previous_project = {
+                    x['repo']: x
+                    for x in previous_release['projects']
+                }.get(project['repo'])
+                if previous_project is not None:
+                    start_range = previous_project['hash']
             if not start_range:
                 start_range = (
                     gitutils.get_latest_tag(workdir, project['repo'])
