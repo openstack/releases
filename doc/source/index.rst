@@ -11,7 +11,7 @@ Release Series
    - * Series
      * Status
    - * :doc:`releases/mitaka`
-     * `Under Development <https://wiki.openstack.org/wiki/Mitaka_Release_Schedule>`__
+     * :doc:`Under Development <schedules/mitaka>`
    - * :doc:`releases/liberty`
      * Current stable release, security-supported (EOL: 2016-11-17)
    - * :doc:`releases/kilo`
