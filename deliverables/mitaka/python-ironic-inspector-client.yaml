@@ -1,0 +1,11 @@
+---
+launchpad: python-ironic-inspector-client
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 1b2b7d78d4f3a596c6483751bbf7cb0b323cbe42
+    highlights: |
+        * New call to fetch introspection data.
+        * Support for multiple UUID's in the introspection CLI command.
+
