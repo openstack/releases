@@ -13,4 +13,9 @@ releases:
         hash: 6fce93d7c9fcf519deb24df053bcc5e169c13ab8
     highlights: >
         Requirements change to remove WebOb cap
-
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: beb62b6e1338e70d888065da5271d88824fa9ec5
+    highlights: >
+        Support for python 2.6 has been removed.

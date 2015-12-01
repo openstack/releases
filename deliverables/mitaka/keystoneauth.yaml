@@ -5,3 +5,12 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 79104aa0fe51a7c729561c111010f6dcd77ff2ad
+  - version: 2.0.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 2eb534900c4262e5a994c6dda6f8ec3f14d953e6
+    highlights: >
+        - Includes support for kerberos, SAML and ADFS plugins installed
+          by using: pip install keystoneauth1[kerberos] or
+          keystoneauth1[saml].
+        - Support for python 2.6 has been removed.
