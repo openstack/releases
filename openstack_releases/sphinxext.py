@@ -164,10 +164,15 @@ class DeliverableDirectiveBase(rst.Directive):
             recent_version = deliverable_info.get('releases', {})[-1].get(
                 'version', 'unreleased')
             ref = ':ref:`%s-%s`' % (series, deliverable_name)
-            most_recent.append((ref, earliest_version, recent_version))
+            release_notes = deliverable_info.get('release-notes')
+            if release_notes:
+                notes_link = '`release notes <%s>`__' % release_notes
+            else:
+                notes_link = ''
+            most_recent.append((ref, earliest_version, recent_version, notes_link))
         _list_table(
             lambda t: result.append(t, source_name),
-            ['Deliverable', 'Earliest Version', 'Most Recent Version'],
+            ['Deliverable', 'Earliest Version', 'Most Recent Version', 'Notes'],
             most_recent,
             title='Release Summary',
         )
@@ -193,6 +198,11 @@ class DeliverableDirectiveBase(rst.Directive):
 
             app.info('[deliverables] %s' % deliverable_name)
 
+            release_notes = deliverable_info.get('release-notes')
+            if release_notes:
+                _add('')
+                _add('Release Notes: %s' % release_notes)
+                _add('')
             _list_table(
                 _add,
                 ['Version', 'Repo', 'Git Commit'],
