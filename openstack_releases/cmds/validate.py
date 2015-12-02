@@ -114,7 +114,11 @@ def main():
                     print('NOT A SHA HASH')
                     errors.append(
                         ('%(repo)s version %(version)s release from '
-                         '%(hash)r, which is not a hash') % project
+                         '%(hash)r, which is not a hash') % {
+                             'repo': project['repo'],
+                             'hash': project['hash'],
+                             'version': release['version'],
+                             }
                     )
                 else:
                     # Report if the SHA exists or not (an error if it
