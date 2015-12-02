@@ -1,0 +1,12 @@
+---
+launchpad: os-brick
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/os-brick
+        hash: f4a9e15b18460061aaa442eee5a2d6a3c4cf9b48
+    highlights: >
+        Fixed silent failure of iSCSI login.
+        Multipath device parsing fix.
+        Addition of quobyte connector protocol.
+
