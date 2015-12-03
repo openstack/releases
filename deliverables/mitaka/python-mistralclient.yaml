@@ -1,0 +1,9 @@
+---
+launchpad: python-mistralclient
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: d20b36b55444dc87cad3e1247ad95f3ed12bd21e
+    highlights: >
+        Support openstack commands as an OpenStackClient plugin; bug fixes
