@@ -35,6 +35,7 @@ urllib3.disable_warnings()
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
+from openstack_releases import versionutils
 
 
 def is_a_hash(val):
@@ -105,6 +106,11 @@ def main():
 
         prev_version = None
         for release in deliverable_info['releases']:
+
+            for e in versionutils.validate_version(release['version']):
+                print(e)
+                errors.append(e)
+
             for project in release['projects']:
                 print('%s SHA %s ' % (project['repo'],
                                       project['hash']),
