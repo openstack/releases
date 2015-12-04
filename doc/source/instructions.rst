@@ -168,6 +168,10 @@ The top level of a deliverable file is a mapping with keys:
 ``launchpad``
   The slug name of the launchpad project, suitable for use in URLs.
 
+``release-notes``
+  The URL to the published release notes for the deliverable for the
+  series.
+
 ``releases``
   A list of the releases for the deliverable.
 
@@ -233,6 +237,7 @@ be described by ``deliverables/liberty/neutron.yaml`` containing:
 
    ---
    launchpad: neutron
+   release-notes: http://docs.openstack.org/releasenotes/neutron/liberty.html
    releases:
      - version: 7.0.0
        projects:
