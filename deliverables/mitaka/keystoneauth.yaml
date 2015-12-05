@@ -14,3 +14,10 @@ releases:
           by using: pip install keystoneauth1[kerberos] or
           keystoneauth1[saml].
         - Support for python 2.6 has been removed.
+  - version: 2.1.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 25c8c5f48454cfb09169f887f01e6e56a1640d19
+    highlights: >
+        - Corrects issue with oslo_config option compatibility with
+          deprecated and deprecated_for_removal options.
