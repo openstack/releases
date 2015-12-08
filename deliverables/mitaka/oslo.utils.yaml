@@ -21,3 +21,9 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: ac0e28b4d83c35e86e493e8f472537b4127b0c7e
+  - version: 3.2.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 479587c6d9f2fd519f1ea4c7fab3cbf2da1a92f4
+    highlights: >
+        - The netifaces library is once again a requirement
