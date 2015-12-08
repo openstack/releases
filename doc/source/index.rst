@@ -17,7 +17,7 @@ Release Series
    - * :doc:`releases/kilo`
      * Security-supported (EOL: 2016-05-02)
    - * :doc:`releases/juno`
-     * Security-supported (EOL: 2015-12-03)
+     * EOL
    - * :doc:`releases/icehouse`
      * EOL
    - * :doc:`releases/havana`
