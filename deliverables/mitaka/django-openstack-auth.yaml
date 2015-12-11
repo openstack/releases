@@ -1,0 +1,12 @@
+---
+launchpad: django-openstack-auth
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 3715a5f445254520f951a5d791fb5eeeeb2b2b57
+    highlights: >
+        This release adds support for obtaining domain scoped
+        tokens and using them in policy checks. This is required
+        for full keystone v3 support.
+
