@@ -17,7 +17,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Nov 23-27  | R-19 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Nov 30-4   | R-18 | :ref:`m-1`                |                             |
+| Nov 30-4   | R-18 | :ref:`m-1`                | :ref:`m-nova-bp-freeze`     |
 +------------+------+---------------------------+-----------------------------+
 | Dec 7-11   | R-17 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -31,7 +31,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jan 11-15  | R-12 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jan 16-22  | R-11 | :ref:`m-2`                |                             |
+| Jan 16-22  | R-11 | :ref:`m-2`                | :ref:`m-nova-npff`          |
 +------------+------+---------------------------+-----------------------------+
 | Jan 25-29  | R-10 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -208,3 +208,29 @@ TC member election
 
 Election for partially renewing Technical Committee members will happen
 during this week.
+
+Nova
+----
+
+.. _m-nova-bp-freeze:
+
+Nova Blueprint Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for getting a Nova blueprint approved for Mitaka is
+3rd December 2015. Please note this is also the deadline to get any
+Mitaka nova-specs merged.
+
+.. _m-nova-npff:
+
+Nova Non-Priority Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A non-priority feature is any feature that is not associated with one of the
+Mitaka priorities:
+http://specs.openstack.org/openstack/nova-specs/priorities/mitaka-priorities.html
+
+The deadline for non-priority feature code to be merged into master is
+21st January 2015.
+
+Please note, the Feature Freeze for priority features is aligned with :ref:`m-ff`.
