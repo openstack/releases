@@ -32,6 +32,10 @@
 | Jan 11-15  | R-12 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
 | Jan 16-22  | R-11 | :ref:`m-2`                | :ref:`m-nova-npff`          |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`m-cinder-nddeadline`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`m-cinder-spec-freeze` |
 +------------+------+---------------------------+-----------------------------+
 | Jan 25-29  | R-10 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -43,7 +47,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Feb 22-26  | R-6  | :ref:`m-final-lib`        |                             |
 +------------+------+---------------------------+-----------------------------+
-| Feb 29-4   | R-5  | :ref:`m-3`                |                             |
+| Feb 29-4   | R-5  | :ref:`m-3`                | :ref:`m-cinder-ff`          |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`m-ff`               |                             |
 |            |      +---------------------------+-----------------------------+
@@ -234,3 +238,32 @@ The deadline for non-priority feature code to be merged into master is
 21st January 2015.
 
 Please note, the Feature Freeze for priority features is aligned with :ref:`m-ff`.
+
+Cinder
+------
+
+.. _m-cinder-nddeadline:
+
+Cinder New Backend Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for getting a new backend driver added to Cinder is 19th January
+2015. All review issues must be addressed and third party CI must be reporting
+and stable with enough time for reviewers prior to the deadline. Meeting these
+requirements on the 19th does not guarantee core reviewers will have enough
+time to merge the driver.
+
+.. _m-cinder-spec-freeze:
+
+Cinder Spec/Blueprint Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Cinder specs and blueprints must be approved by 19th January 2015.
+
+.. _m-cinder-ff:
+
+Cinder Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for new features and driver functionality is 1st March 2016. Any
+changes past that date will be at the discretion of the core team.
