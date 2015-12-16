@@ -37,3 +37,9 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 88277a07d304a1f88fc08d44917852a46e2bd857
+  - version: 1.7.3
+    projects:
+      - repo: openstack/oslo.db
+        hash: c5f468d8fb237842aad54e5fdebd35a8be19df51
+    highlights: >
+        Dependency updates (caps synced from stable/kilo global-requirements).
