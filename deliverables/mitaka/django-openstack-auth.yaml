@@ -9,4 +9,11 @@ releases:
         This release adds support for obtaining domain scoped
         tokens and using them in policy checks. This is required
         for full keystone v3 support.
-
+  - version: 2.1.1
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: e7814b2b8eb7e835a076d2b59ec106ce3bf3bd71
+    highlights: >
+        This release restores backward compatibility with Liberty
+        versions of Horizon. Supports using keystoneauth rather
+        than similar functionality in keystoneclient.
