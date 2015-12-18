@@ -38,4 +38,10 @@ releases:
       - repo: openstack/python-novaclient
         hash: 6b0fe2a424630f6ebcb1cf0c42d5ac8590705875
     highlights: >
-        Bug fixes, drop legacy compatibility, microversion 2.12 support.
+        Bug fixes, drop legacy compatibility, microversion 2.9 support.
+  - version: 3.1.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 36e125a61e1f047ab9f3a2ab533050ae54232fe9
+    highlights: >
+        Bug fixes, drop py33 support, microversion 2.12 support.
