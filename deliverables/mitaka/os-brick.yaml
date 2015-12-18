@@ -9,4 +9,10 @@ releases:
         Fixed silent failure of iSCSI login.
         Multipath device parsing fix.
         Addition of quobyte connector protocol.
-
+  - version: 0.7.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 7ca487a668813c5fc0491c39eb0449464847cd73
+    highlights: >
+        Adds DRDB connector.
+        Fixes handling of IPv6 addresses.
