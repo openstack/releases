@@ -25,7 +25,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Dec 21-25  | R-15 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Dec 28-1   | R-14 |                           |                             |
+| Dec 28-1   | R-14 |                           | :ref:`m-glance-bp-freeze`   |
 +------------+------+---------------------------+-----------------------------+
 | Jan 4-8    | R-13 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -36,6 +36,8 @@
 |            |      |                           | :ref:`m-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`m-cinder-spec-freeze` |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`m-glance_store-maint` |
 +------------+------+---------------------------+-----------------------------+
 | Jan 25-29  | R-10 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -267,3 +269,24 @@ Cinder Feature Freeze
 
 The deadline for new features and driver functionality is 1st March 2016. Any
 changes past that date will be at the discretion of the core team.
+
+Glance
+------
+
+.. _m-glance-bp-freeze:
+
+Glance Blueprints Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Glance new feature requests must be approved by Jan 1st.
+
+.. _m-glance_store-maint:
+
+Glance Store maintainers deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Glance store drivers without maintainers will be marked as deprecated
+and then removed in N. Please, refer to this email thread for some
+more information:
+
+http://lists.openstack.org/pipermail/openstack-dev/2015-December/081966.html
