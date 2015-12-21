@@ -51,3 +51,9 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: cc92c92870be48d6eae57869c4989125fe2eb8e4
+  - version: 1.13.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 939862e55e42c5fafee9c2fec42b5f5fde8fc205
+    highlights: >
+      Added a simple client factory function for ease of client construction.
