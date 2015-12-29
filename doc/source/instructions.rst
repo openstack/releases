@@ -141,6 +141,7 @@ series to hold all of the metadata for all releases of that
 deliverable. For each release, we need to track:
 
 * the launchpad project name (such as ``oslo.config``)
+* the email list to receive release announcements
 * the series (Kilo, Liberty, etc.)
 * for each repository
 
@@ -171,6 +172,15 @@ The top level of a deliverable file is a mapping with keys:
 ``release-notes``
   The URL to the published release notes for the deliverable for the
   series.
+
+``send-announcements-to``
+  A string containing one or more email addresses to receive
+  announcements of new releases for the deliverable. Multiple
+  addresses should be separated by a comma (``,``) without any spaces.
+
+  Internally consumed libraries should use
+  ``openstack-dev@lists.openstack.org``. Server projects and client
+  libraries should use ``openstack-announce@lists.openstack.org``.
 
 ``releases``
   A list of the releases for the deliverable.
@@ -206,6 +216,7 @@ For example, one version of
 
    ---
    launchpad: oslo.config
+   send-announcements-to: openstack-dev@lists.openstack.org
    releases:
      - version: 1.12.0
        projects:
@@ -216,6 +227,7 @@ and then for the subsequent release it would be updated to contain::
 
    ---
    launchpad: oslo.config
+   send-announcements-to: openstack-dev@lists.openstack.org
    releases:
      - version: 1.12.0
        projects:
@@ -237,6 +249,7 @@ be described by ``deliverables/liberty/neutron.yaml`` containing:
 
    ---
    launchpad: neutron
+   send-announcements-to: openstack-announce@lists.openstack.org
    release-notes: http://docs.openstack.org/releasenotes/neutron/liberty.html
    releases:
      - version: 7.0.0
