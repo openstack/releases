@@ -1,7 +1,12 @@
 ---
 launchpad: ironic-python-agent
+send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 1.0.0
     projects:
       - repo: openstack/ironic-python-agent
         hash: 0144e79df5dab0837a55a981fa23298908af14cf
+  - version: 1.0.1
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 844ecfc5dfb2d038bda6173ebb445be58bfb7d7c
