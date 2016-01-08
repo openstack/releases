@@ -104,6 +104,21 @@ def main():
             else:
                 print('found')
 
+        # Look for an email address to receive release announcements
+        try:
+            announce_to = deliverable_info['send-announcements-to']
+        except KeyError:
+            errors.append('No send-announcements-to in %s'
+                          % filename)
+            print('no send-announcements-to found')
+        else:
+            print('send announcements to %s' % announce_to)
+            if ' ' in announce_to:
+                print('Found space in send-announcements-to: %r' %
+                      announce_to)
+                errors.append('Space in send-announcements-to (%r) for %s' %
+                              (announce_to, filename))
+
         prev_version = None
         for release in deliverable_info['releases']:
 
