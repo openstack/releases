@@ -1,5 +1,6 @@
 ---
 launchpad: python-keystoneclient
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.2.0
     projects:
@@ -21,3 +22,7 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: ec70eb02f8a5889828cde786694283240f64c5c4
+  - version: 1.3.4
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: e81856f4963d768fa286a9b2d2a40a6663810f6d
