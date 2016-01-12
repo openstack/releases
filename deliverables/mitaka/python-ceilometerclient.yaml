@@ -16,3 +16,9 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: cdb47d9646236e19208b7e49ffc6c7d42000dd89
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 25517d0226e69bbabf9679c80445746a5cab846d
+        highlights: >
+          Fixes Aodh redirect authentication
