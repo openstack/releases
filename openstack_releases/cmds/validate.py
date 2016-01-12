@@ -31,11 +31,12 @@ import yaml
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
-urllib3.disable_warnings()
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import versionutils
+
+urllib3.disable_warnings()
 
 
 def is_a_hash(val):

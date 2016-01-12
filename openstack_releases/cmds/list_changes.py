@@ -148,9 +148,7 @@ def main():
                     start_range = previous_project['hash']
             if not start_range:
                 start_range = (
-                    gitutils.get_latest_tag(workdir, project['repo'])
-                    or
-                    None
+                    gitutils.get_latest_tag(workdir, project['repo']) or None
                 )
 
             if start_range:

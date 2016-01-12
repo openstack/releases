@@ -48,8 +48,7 @@ def commit_exists(repo, ref):
     url = CGIT_TEMPLATE % (repo, ref)
     response = requests.get(url)
     missing_commit = (
-        (response.status_code // 100 != 2)
-        or 'Bad object id' in response.text
+        (response.status_code // 100 != 2) or 'Bad object id' in response.text
     )
     return not missing_commit
 
