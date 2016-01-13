@@ -28,3 +28,9 @@ releases:
     highlights: >
         - Support for python 2.6 has been removed.
         - Now using keystoneauth to for authentication.
+  - version: 4.1.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 650531310c858b3b7046ed474b7fd905cd1dc6b1
+    highlights: >
+        - Blocks requests 2.9.0 and pycadf 2.0.0.
