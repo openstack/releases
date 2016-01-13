@@ -1,5 +1,6 @@
 ---
 launchpad: designate
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.0.0
     projects:
@@ -7,3 +8,9 @@ releases:
         hash: bfe79196c9557559f351ae9a854c73ac757051ee
       - repo: openstack/designate-dashboard
         hash: f4f3dd8e20767706573fb9f98d43cd7473f73a81
+  - version: 1.0.1
+    projects:
+      - repo: openstack/designate
+        hash: b36140c9618912ee9852b272a99585324934344f
+      - repo: openstack/designate-dashboard
+        hash: 942fe66e4d00536f0f66b1b98685323142143a42
