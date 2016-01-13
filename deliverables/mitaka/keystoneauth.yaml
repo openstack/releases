@@ -22,3 +22,9 @@ releases:
     highlights: >
         - Corrects issue with oslo_config option compatibility with
           deprecated and deprecated_for_removal options.
+  - version: 2.2.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: fd6d19a35922aef9d4ed65f2a67296b30a9858c2
+    highlights: >
+        - Blocks requests 2.9.0.

@@ -20,3 +20,11 @@ releases:
         hash: beb62b6e1338e70d888065da5271d88824fa9ec5
     highlights: >
         Support for python 2.6 has been removed.
+  - version: 2.1.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 7327067f98f5e118790817f7c81e444c7fe7c25b
+    highlights: >
+        - Removed deprecated keystoneclient.middleware module.
+        - Removed deprecated keystoneclient.apiclient.exceptions module.
+        - Blocks requests 2.9.0.
