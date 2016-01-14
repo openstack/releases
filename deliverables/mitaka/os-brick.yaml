@@ -17,3 +17,11 @@ releases:
     highlights: >
         Adds DRDB connector.
         Fixes handling of IPv6 addresses.
+  - version: 0.8.0
+    projects:
+      - repo: openstack/os-brick
+        hash: a3261e3fbd7f0230eba2a205ec99906505df1c7c
+    highlights: >
+        Adds ITRI DISCO connector.
+        extend_volume API introduced.
+        Extracted local_lvm management code from Cinder.
