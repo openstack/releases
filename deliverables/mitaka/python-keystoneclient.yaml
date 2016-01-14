@@ -28,3 +28,9 @@ releases:
         - Removed deprecated keystoneclient.middleware module.
         - Removed deprecated keystoneclient.apiclient.exceptions module.
         - Blocks requests 2.9.0.
+  - version: 2.1.1
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: d20b300589863bcf165945beb129ebcc3621a14f
+    highlights: >
+        - Reverted fixes for bugs 1520244 and 1457702.
