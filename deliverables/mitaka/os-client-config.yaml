@@ -66,3 +66,9 @@ releases:
       Fixed bug where a region name could not be specified if using a cloud
       where we do not know the regions beforehand. Fixed token_endpoint in
       python-openstackclient.
+  - version: 1.14.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 8a6dd7f9bcf94931cbfa7c4acd8920e2cd437e48
+    highlights: >
+      Updated volume API default version to v2. Added support for barbican.
