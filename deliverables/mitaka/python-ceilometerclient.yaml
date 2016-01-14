@@ -22,3 +22,9 @@ releases:
         hash: 25517d0226e69bbabf9679c80445746a5cab846d
         highlights: >
           Fixes Aodh redirect authentication
+  - version: 2.2.1
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 8677de9ec764f936a476de1885ee0e08b4ece20e
+        highlights: >
+          Fixes Aodh token validation
