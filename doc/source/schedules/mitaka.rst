@@ -18,6 +18,8 @@
 | Nov 23-27  | R-19 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
 | Nov 30-4   | R-18 | :ref:`m-1`                | :ref:`m-nova-bp-freeze`     |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`m-key-bp-freeze`      |
 +------------+------+---------------------------+-----------------------------+
 | Dec 7-11   | R-17 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -34,6 +36,8 @@
 | Jan 18-22  | R-11 | :ref:`m-2`                | :ref:`m-nova-npff`          |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`m-cinder-nddeadline`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`m-key-fpdeadline`     |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`m-cinder-spec-freeze` |
 |            |      +---------------------------+-----------------------------+
@@ -290,3 +294,30 @@ and then removed in N. Please, refer to this email thread for some
 more information:
 
 http://lists.openstack.org/pipermail/openstack-dev/2015-December/081966.html
+
+Keystone
+--------
+
+.. _m-key-bp-freeze:
+
+Keystone Spec/Blueprint Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for getting a Keystone blueprint approved for Mitaka is 3rd
+December 2015. Please note this is also the deadline to get any
+Mitaka keystone-specs merged. Specs that wish to land past this deadline must
+send an email to the dev mailing list asking for an exemption.
+
+.. _m-key-fpdeadline:
+
+Keystone Feature Proposal Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All approved features must have a patch that shows most functionality ready for
+review by 18th January 2016. Approved features that do not have a patch ready
+for review by the deadline must send an email to the dev mailing list asking
+for an exemption. Approved features that miss the deadline or do not receive an
+exemption will be moved to the backlog or the first milestone of the next
+release.
+
+Please note, the Keystone Feature Freeze date is aligned with :ref:`m-ff`.
