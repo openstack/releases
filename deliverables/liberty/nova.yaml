@@ -1,8 +1,17 @@
 ---
 launchpad: nova
 release-notes: http://docs.openstack.org/releasenotes/nova/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 12.0.0
     projects:
       - repo: openstack/nova
         hash: 6df6ad3ff32f2b1fe2978df1032002548ad8eb66
+  - version: 12.0.1
+    projects:
+      - repo: openstack/nova
+        hash: cc0bc4be85b2f51fdc30dd99fa231c7e6af61485
+    highlights: >
+      - Fixes CVE-2015-7548 and CVE-2015-8749.
+      - Fixes a few regression bugs (see release notes for details).
+      - Updated translations.
