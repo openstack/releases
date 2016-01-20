@@ -121,6 +121,7 @@ def main():
                               (announce_to, filename))
 
         prev_version = None
+        prev_projects = set()
         for release in deliverable_info['releases']:
 
             for e in versionutils.validate_version(release['version']):
@@ -163,8 +164,8 @@ def main():
                     version_exists = gitutils.commit_exists(
                         project['repo'], release['version'],
                     )
+                    gitutils.clone_repo(workdir, project['repo'])
                     if version_exists:
-                        gitutils.clone_repo(workdir, project['repo'])
                         actual_sha = gitutils.sha_for_tag(
                             workdir,
                             project['repo'],
@@ -185,6 +186,9 @@ def main():
                         print('NEW ', end='')
                         if not prev_version:
                             print()
+                        elif project['repo'] not in prev_projects:
+                            print('not included in previous release for %s: %s' %
+                                  (prev_version, ', '.join(sorted(prev_projects))))
                         else:
                             # Check to see if the commit for the new
                             # version is in the ancestors of the
@@ -206,6 +210,7 @@ def main():
                                         prev_version)
                                 )
             prev_version = release['version']
+            prev_projects = set(p['repo'] for p in release['projects'])
 
     if errors:
         print('\n%s errors found' % len(errors))
