@@ -1,7 +1,12 @@
 ---
 launchpad: heat
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 5.0.0
     projects:
       - repo: openstack/heat
         hash: 4348b7ababd1048e17ec354ca38c903c908cd74e
+  - version: 5.0.1
+    projects:
+      - repo: openstack/heat
+        hash: dc8ccd8ee15bb336c4704ac1ff628bfb245a5593
