@@ -9,4 +9,9 @@ releases:
     highlights: |
         * New call to fetch introspection data.
         * Support for multiple UUID's in the introspection CLI command.
-
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: f77bd83f10835b3188c6687f8238dfc6d30183e6
+    highlights: |
+        * CLI command to fetch introspection data.
