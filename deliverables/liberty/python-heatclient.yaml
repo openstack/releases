@@ -1,5 +1,6 @@
 ---
 launchpad: python-heatclient
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 0.5.0
     projects:
@@ -17,3 +18,7 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 16951ccb2ebf866339c0c79e758b1f0abdea8a19
+  - version: 0.8.1
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 98b45c35913ab96f161ef695ff99f69a968130b5
