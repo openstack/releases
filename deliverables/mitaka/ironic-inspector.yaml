@@ -1,8 +1,13 @@
 ---
 launchpad: ironic-inspector
+release-notes: http://docs.openstack.org/releasenotes/ironic-inspector/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 2.3.0
     projects:
       - repo: openstack/ironic-inspector
         hash: 99732e5297244f9209061d6e9ac74153c1d4e71b
+  - version: 3.0.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 7e868b6201f3cb126d6d1b72e3b473d51b20010d
