@@ -1,5 +1,7 @@
 ---
 launchpad: ironic-inspector
+release-notes: http://docs.openstack.org/releasenotes/ironic-inspector/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 2.0.0
     projects:
@@ -25,3 +27,7 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 0a55de4d9f389173cd0764f1468effabd43c8211
+  - version: 2.2.3
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 23bf0b5d6afe33b50c4a11b13a8f9a6553020b63
