@@ -30,3 +30,9 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 686585fd648c982a857e6c7e44332ae381059ed7
+  - version: 1.4.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 6e801d1c0352f727660697f638c614bb51a92e12
+    highlights: >
+        Dependency updates; exposes compare_obj method in fixture module.
