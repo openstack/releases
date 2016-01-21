@@ -157,7 +157,8 @@ def main():
                 git_range = project['hash']
 
             # Show any requirements changes in the upcoming release.
-            git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
+            if start_range:
+                git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
 
             # Show the changes since the last release, first as a
             # graph view so we can check for bad merges, and then with
