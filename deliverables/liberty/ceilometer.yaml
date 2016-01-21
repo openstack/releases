@@ -1,5 +1,6 @@
 ---
 launchpad: ceilometer
+send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/ceilometer/liberty.html
 releases:
   - version: 5.0.0
@@ -10,3 +11,7 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: d8391cfc13ec8791f9daa09b37b806d2c59b26b3
+  - version: 5.0.2
+    projects:
+      - repo: openstack/ceilometer
+        hash: 5a51a3c21881d55ae2c53582f1e11218eaaeb668
