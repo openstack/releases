@@ -8,4 +8,9 @@ releases:
         hash: cfa8e5702a2b453034393ac153575275c4c81066
     highlights: >
       Cluster create now supports adding network and AZ.
-
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: c0cd9d7f72fb35e0f6e797a6b0555239f7ee56ab
+    highlights: >
+      - Cluster create AZ fixed.
