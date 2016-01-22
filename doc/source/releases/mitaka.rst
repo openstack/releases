@@ -1,10 +1,6 @@
-========
- Mitaka
-========
+=====================
+ This page has moved
+=====================
 
-Projected Release Date: 2016-04-07
-
-Release schedule: :doc:`../schedules/mitaka`
-
-.. deliverable::
-   :series: mitaka
+This page has moved as part of reorganizing the release tracking
+site. Please see :doc:`../index`.

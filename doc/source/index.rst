@@ -10,31 +10,31 @@ Release Series
 
    - * Series
      * Status
-   - * :doc:`releases/mitaka`
-     * :doc:`Under Development <schedules/mitaka>`
-   - * :doc:`releases/liberty`
+   - * :doc:`mitaka/index`
+     * :doc:`Under Development <mitaka/schedule>`
+   - * :doc:`liberty/index`
      * Current stable release, security-supported (EOL: 2016-11-17)
-   - * :doc:`releases/kilo`
+   - * :doc:`kilo/index`
      * Security-supported (EOL: 2016-05-02)
-   - * :doc:`releases/juno`
+   - * :doc:`juno/index`
      * EOL
-   - * :doc:`releases/icehouse`
+   - * :doc:`icehouse/index`
      * EOL
-   - * :doc:`releases/havana`
+   - * :doc:`havana/index`
      * EOL
-   - * :doc:`releases/grizzly`
+   - * :doc:`grizzly/index`
      * EOL
-   - * :doc:`releases/folsom`
+   - * :doc:`folsom/index`
      * EOL
-   - * :doc:`releases/essex`
+   - * :doc:`essex/index`
      * EOL
-   - * :doc:`releases/diablo`
+   - * :doc:`diablo/index`
      * EOL
-   - * :doc:`releases/cactus`
+   - * :doc:`cactus/index`
      * Deprecated
-   - * :doc:`releases/bexar`
+   - * :doc:`bexar/index`
      * Deprecated
-   - * :doc:`releases/austin`
+   - * :doc:`austin/index`
      * Deprecated
 
 .. toctree::
@@ -42,19 +42,20 @@ Release Series
    :maxdepth: 1
    :hidden:
 
-   releases/mitaka
-   releases/liberty
-   releases/kilo
-   releases/juno
-   releases/icehouse
-   releases/havana
-   releases/grizzly
-   releases/folsom
-   releases/essex
-   releases/diablo
-   releases/cactus
-   releases/bexar
-   releases/austin
+   mitaka/index
+   liberty/index
+   kilo/index
+   juno/index
+   icehouse/index
+   havana/index
+   grizzly/index
+   folsom/index
+   essex/index
+   diablo/index
+   cactus/index
+   bexar/index
+   austin/index
+   releases/*
 
 Independent Projects
 ====================

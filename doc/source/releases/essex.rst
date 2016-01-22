@@ -1,8 +1,6 @@
-=======
- Essex
-=======
+=====================
+ This page has moved
+=====================
 
-Release Notes: https://wiki.openstack.org/wiki/ReleaseNotes/Essex
-
-.. deliverable::
-   :series: essex
+This page has moved as part of reorganizing the release tracking
+site. Please see :doc:`../index`.

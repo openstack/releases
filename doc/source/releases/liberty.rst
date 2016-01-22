@@ -1,10 +1,6 @@
-=========
- Liberty
-=========
+=====================
+ This page has moved
+=====================
 
-Originally Released: 2015-10-15
-
-Release Notes: https://wiki.openstack.org/wiki/ReleaseNotes/Liberty
-
-.. deliverable::
-   :series: liberty
+This page has moved as part of reorganizing the release tracking
+site. Please see :doc:`../index`.
