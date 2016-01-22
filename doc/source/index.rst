@@ -10,6 +10,10 @@ Release Series
 
    - * Series
      * Status
+   - * :doc:`ocata/index`
+     * *Future*
+   - * :doc:`newton/index`
+     * *Future*
    - * :doc:`mitaka/index`
      * :doc:`Under Development <mitaka/schedule>`
    - * :doc:`liberty/index`
@@ -42,6 +46,8 @@ Release Series
    :maxdepth: 1
    :hidden:
 
+   ocata/index
+   newton/index
    mitaka/index
    liberty/index
    kilo/index
