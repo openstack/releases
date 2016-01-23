@@ -33,3 +33,9 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: cfa53ac438006a04217349b6e37195005e286d8e
+  - version: 4.3.1
+    projects:
+      - repo: openstack/oslo.db
+        hash: d8da96ef5a2fa7e72f85942111c08fd4061c8be9
+    highlights: >
+        Trivial bug fixes and translation updates.
