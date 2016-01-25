@@ -1,5 +1,6 @@
 ---
 launchpad: murano
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.0.0
     projects:
@@ -9,3 +10,7 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 27398464271766d8337a9dd351c62b66ebb88816
+  - version: 1.0.2
+    projects:
+      - repo: openstack/murano
+        hash: dccf9ca767ff0d9112116adce25824063e08e581
