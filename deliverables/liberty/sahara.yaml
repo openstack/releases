@@ -1,6 +1,7 @@
 ---
 launchpad: sahara
 release-notes: http://docs.openstack.org/releasenotes/sahara/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 3.0.0
     projects:
@@ -10,3 +11,11 @@ releases:
         hash: 1a284a05fbf3cc0b0ca065460b2826c227ad8023
       - repo: openstack/sahara-image-elements
         hash: 8e9f0ef254fe0c4bad8a3002b564e7f63f9b4d17
+  - version: 3.0.1
+    projects:
+      - repo: openstack/sahara
+        hash: c1f2483f62d03d292b5abea8d67a0c76c9aa3db3
+      - repo: openstack/sahara-extra
+        hash: 6e7d61566211aa0342109d50b34a8fe85b6cb9db
+      - repo: openstack/sahara-image-elements
+        hash: a4af7cdd5cbb4c6f68aceb52588b74f290ff103d
