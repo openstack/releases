@@ -1,0 +1,12 @@
+---
+launchpad: congress
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/congress
+        hash: e0be00bdb8fe1b34fc4b9edc0cbbfce8ecc13426
+  - version: 3.0.0.0b2
+    projects:
+      - repo: openstack/congress
+        hash: f23d29daafd975b9f9d0164f37feed991de3b79e
