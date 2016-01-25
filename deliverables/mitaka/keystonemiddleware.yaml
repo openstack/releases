@@ -34,3 +34,10 @@ releases:
         hash: 650531310c858b3b7046ed474b7fd905cd1dc6b1
     highlights: >
         - Blocks requests 2.9.0 and pycadf 2.0.0.
+  - version: 4.2.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 26707bdcba0d1b82ef927e2eab82f5065bc17dcb
+    highlights: >
+        - In-memory caching that was removed in 4.1.0,
+          this release reverts that change.
