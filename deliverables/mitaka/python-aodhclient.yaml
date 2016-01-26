@@ -1,0 +1,10 @@
+---
+launchpad: python-aodhclient
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 58227342270f233e4de1a523932e251c41bae23e
+        highlights: >
+          Initial release. Does not support Gnocchi rules
