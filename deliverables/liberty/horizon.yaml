@@ -1,8 +1,13 @@
 ---
 launchpad: horizon
 release-notes: http://docs.openstack.org/releasenotes/horizon/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 8.0.0
     projects:
       - repo: openstack/horizon
         hash: 593f0b78eea8efbb6d833d66acc7ab4dc852159b
+  - version: 8.0.1
+    projects:
+      - repo: openstack/horizon
+        hash: fa47798f38b2a58514b93b6613129b0dfca18f36
