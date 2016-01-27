@@ -1,6 +1,7 @@
 ---
 launchpad: neutron
 release-notes: http://docs.openstack.org/releasenotes/neutron/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.0.0
     projects:
@@ -23,3 +24,14 @@ releases:
         hash: 2adbc943ac497445eee06a645645264e3d9ba8b4
       - repo: openstack/neutron-vpnaas
         hash: f01e6a4662580892aacb632e4b50d5ccb7929e64
+
+  - version: 7.0.2
+    projects:
+      - repo: openstack/neutron
+        hash: 30b53c9cc5d1bc8bce3c5d5cda7856e28098d18b
+      - repo: openstack/neutron-fwaas
+        hash: 33c06d9c703d4dbe65a3c0d5a7f4db61d86c7e26
+      - repo: openstack/neutron-lbaas
+        hash: eb7590c78a9185112f6600aa4c9a2d45fefa85fa
+      - repo: openstack/neutron-vpnaas
+        hash: 427ba7e748ad19e230a6d04b6888331cc49ef868
