@@ -1,0 +1,10 @@
+---
+launchpad: python-designateclient
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 8f3e935f77d1e98c35e0e553c5041cc482167685
+    highlights: |
+      Added paging support to the openstack client plugin
