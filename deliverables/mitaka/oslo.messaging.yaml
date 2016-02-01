@@ -42,3 +42,15 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 3490c6fa621c1097beac32668cbb7e0df06431f3
+  - version: 4.1.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 11d7c44a3648a00f864f2608a540128a123c5b31
+    highlights: |
+        * Introduced new Pika library based driver for RabbitMQ.
+        * Group oslo_messaging_notifications added to options.
+        * ZeroMQ driver use_pub_sub by default for fanout messaging.
+        * ZeroMQ driver zmq_target_expire option configures Redis records TTL.
+        * Kombu driver reply and fanout queues now expire instead of auto-delete.
+        * Kombu driver rabbit_qos_prefetch_count option to configure messages prefetch.
+        * Kombu driver rabbit_interval_max option to configure connection retries.
