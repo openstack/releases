@@ -1,0 +1,8 @@
+---
+launchpad: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.1.22
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 90df3d00d68582e42850b951c8652e09977cb111
