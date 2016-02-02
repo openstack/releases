@@ -1,10 +1,6 @@
-======
- Juno
-======
+=====================
+ This page has moved
+=====================
 
-Originally Released: 2014-10-16
-
-Release Notes: https://wiki.openstack.org/wiki/ReleaseNotes/Juno
-
-.. deliverable::
-   :series: juno
+This page has moved as part of reorganizing the release tracking
+site. Please see :doc:`../index`.

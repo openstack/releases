@@ -1,8 +1,6 @@
-========
- Havana
-========
+=====================
+ This page has moved
+=====================
 
-Release Notes: https://wiki.openstack.org/wiki/ReleaseNotes/Havana
-
-.. deliverable::
-   :series: havana
+This page has moved as part of reorganizing the release tracking
+site. Please see :doc:`../index`.
