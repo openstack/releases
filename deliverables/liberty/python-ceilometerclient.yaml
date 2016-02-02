@@ -1,5 +1,6 @@
 ---
 launchpad: python-ceilometerclient
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.2.0
     projects:
@@ -25,3 +26,7 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: d7b9708bd0bfad7e685574b916da477c522313c4
+  - version: 1.5.2
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 7da82f4436a45336aef10b24c53f6f1e03eea42e
