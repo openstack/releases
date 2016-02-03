@@ -88,7 +88,6 @@ def check_ancestry(workdir, repo, old_version, sha):
             ['git', 'log', '--oneline', '--ancestry-path',
              '%s..%s' % (old_version, sha)],
             cwd=os.path.join(workdir, repo),
-            stderr=subprocess.STDOUT,
         ).strip()
         return bool(ancestors)
     except subprocess.CalledProcessError as e:
