@@ -17,19 +17,19 @@ Release Series
    - * :doc:`kilo/index`
      * Security-supported (EOL: 2016-05-02)
    - * :doc:`juno/index`
-     * EOL
+     * EOL: 2015-12-07
    - * :doc:`icehouse/index`
-     * EOL
+     * EOL: 2015-07-02
    - * :doc:`havana/index`
-     * EOL
+     * EOL: 2014-09-30
    - * :doc:`grizzly/index`
-     * EOL
+     * EOL: 2014-03-29
    - * :doc:`folsom/index`
-     * EOL
+     * EOL: 2013-11-19
    - * :doc:`essex/index`
-     * EOL
+     * EOL: 2013-05-06
    - * :doc:`diablo/index`
-     * EOL
+     * EOL: 2013-05-06
    - * :doc:`cactus/index`
      * Deprecated
    - * :doc:`bexar/index`
