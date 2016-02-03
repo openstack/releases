@@ -41,7 +41,11 @@ def git_log(workdir, repo, title, git_range, extra_args=[]):
     header('%s %s' % (title, git_range))
     cmd = ['git', 'log', '--no-color']
     cmd.extend(extra_args)
-    cmd.append(git_range)
+    if isinstance(git_range, str):
+        cmd.append(git_range)
+    else:
+        cmd.extend(git_range)
+    print('\n' + ' '.join(cmd) + '\n')
     subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
     print()
 
@@ -122,11 +126,13 @@ def main():
         else:
             previous_release = None
         for project in new_release['projects']:
-            if gitutils.commit_exists(project['repo'],
-                                      new_release['version']):
+            tag_exists = gitutils.commit_exists(
+                project['repo'],
+                new_release['version'],
+            )
+            if tag_exists:
                 print('%s %s exists already' %
                       (project['repo'], new_release['version']))
-                continue
 
             # Check out the code.
             subprocess.check_call(
@@ -166,11 +172,12 @@ def main():
             git_log(workdir, project['repo'],
                     'Release %s will include' % new_release['version'],
                     git_range,
-                    extra_args=['--graph', '--oneline', '--decorate'])
+                    extra_args=['--graph', '--oneline', '--decorate',
+                                '--topo-order'])
             git_log(workdir, project['repo'],
                     'Details Contents',
                     git_range,
-                    extra_args=['--no-merges'])
+                    extra_args=['--no-merges', '--topo-order'])
 
             # If the sha for HEAD and the requested release don't
             # match, show any unreleased changes on the branch. We ask
@@ -190,9 +197,54 @@ def main():
                         '%s..%s' % (requested_sha, head_sha),
                         extra_args=['--format=%h %ci %s'])
 
+            # Show any changes in the previous release but not in this
+            # release, in case someone picks an "early" SHA or a
+            # regular commit instead of the appropriate merge commit.
+            if previous_release:
+                git_log(
+                    workdir, project['repo'],
+                    'Patches in previous release but not in this one',
+                    [project['hash'],
+                     '--not',
+                     previous_release['version']],
+                    extra_args=['--topo-order', '--oneline', '--no-merges'],
+                )
+                header('New release %s includes previous release %s' %
+                       (new_release['version'], previous_release['version']))
+                if not tag_exists:
+                    subprocess.check_call(
+                        ['git', 'tag', new_release['version'],
+                         project['hash']],
+                        cwd=os.path.join(workdir, project['repo']),
+                    )
+                print('\ngit tag --contains %s\n' %
+                      previous_release['version'])
+                containing_tags = subprocess.check_output(
+                    ['git', 'tag',
+                     '--contains',
+                     previous_release['version']],
+                    cwd=os.path.join(workdir, project['repo']),
+                ).split()
+                print('Containing tags:', containing_tags)
+                if new_release['version'] not in containing_tags:
+                    print('WARNING: Missing %s' % new_release['version'])
+                else:
+                    print('Found new version %s' % new_release['version'])
+
+                is_ancestor = gitutils.check_ancestry(
+                    workdir,
+                    project['repo'],
+                    previous_release['version'],
+                    project['hash'],
+                )
+                if is_ancestor:
+                    print('SHA found in descendants')
+                else:
+                    print('SHA NOT FOUND in descendants')
+
             # Show more details about the commit being tagged.
-            print()
-            print('git describe %s' % project['hash'])
+            header('Details for commit receiving new tag')
+            print('\ngit describe %s\n' % project['hash'])
             try:
                 subprocess.check_call(
                     ['git', 'describe', project['hash']],
