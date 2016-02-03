@@ -33,4 +33,11 @@ releases:
       - repo: openstack/python-keystoneclient
         hash: d20b300589863bcf165945beb129ebcc3621a14f
     highlights: >
-        - Reverted fixes for bugs 1520244 and 1457702.
+        - Reverted fixes for bug 1520244.
+        - This release is invalid, please don't use it.
+  - version: 2.1.2
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: f5fb643f7c75ecf415cdbfc5a3bc4b01176d3e89
+    highlights: >
+        - Reverted fixes for bug 1457702.
