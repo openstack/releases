@@ -182,6 +182,11 @@ The top level of a deliverable file is a mapping with keys:
   ``openstack-dev@lists.openstack.org``. Server projects and client
   libraries should use ``openstack-announce@lists.openstack.org``.
 
+``include-pypi-link``
+  Either ``yes`` or ``no``, indicating whether the release
+  announcement should include the link to the package on
+  PyPI. Defaults to ``no``.
+
 ``releases``
   A list of the releases for the deliverable.
 
