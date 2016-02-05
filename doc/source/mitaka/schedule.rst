@@ -113,6 +113,8 @@ Libraries that are not client libraries (Oslo and others) should issue their
 final release during this week. That allows to give time for last-minute
 changes before feature freeze.
 
+Library releases resume around R-2.
+
 .. _m-3:
 
 mitaka-3 milestone
@@ -149,6 +151,8 @@ Final release for client libraries
 
 Client libraries should issue their final release during this week, to match
 feature freeze.
+
+Library releases resume around R-2.
 
 .. _m-soft-sf:
 
