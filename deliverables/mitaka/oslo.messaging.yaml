@@ -54,3 +54,7 @@ releases:
         * Kombu driver reply and fanout queues now expire instead of auto-delete.
         * Kombu driver rabbit_qos_prefetch_count option to configure messages prefetch.
         * Kombu driver rabbit_interval_max option to configure connection retries.
+  - version: 4.2.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 1cc3b9c80e948b5f7052ac76f03d31a143269cf6
