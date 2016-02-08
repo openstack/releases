@@ -4,7 +4,9 @@ html {
 /* pad after a table.
  * bug 1439918 */
 table {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  width: 100%;
+}
 
 table.docutils th {
   padding: 2px; }
