@@ -7,7 +7,7 @@ import sys
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'oslosphinx', 'openstack_releases.sphinxext']
+extensions = ['sphinx.ext.autodoc', 'openstack_releases.sphinxext']
 
 config_generator_config_file = 'config-generator.conf'
 
@@ -42,8 +42,8 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-# html_theme_path = ["."]
-# html_theme = '_theme'
+html_theme = 'releases'
+html_theme_path = ['_themes']
 html_static_path = ['static']
 
 # Output file base name for HTML help builder.
