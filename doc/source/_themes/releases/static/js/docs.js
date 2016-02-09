@@ -122,19 +122,3 @@ $('div.note > p.admonition-title').text(function(ignored_para,original) {
 $('div.warning > p.admonition-title').text(function(ignored_para,original) {
     return " "+original
 });
-
-// Gives the log a bug icon the information it needs to generate the bug in
-// Launchpad with pre-filled information such as git SHA, git.openstack.org
-// source URL, published document URL and tag.
-function logABug(bugTitle, bugProject, fieldComment, fieldTags) {
-    var lineFeed = "%0A";
-    var urlBase = "https://bugs.launchpad.net/" + bugProject + "/+filebug?field.title="
-    var currentURL = "URL: " + window.location.href;
-    var bugLink = urlBase  + encodeURIComponent(bugTitle) +
-        "&field.comment=" + lineFeed + lineFeed + "-----------------------------------" + lineFeed + fieldComment +
-        lineFeed + currentURL +
-        "&field.tags=" + fieldTags;
-    document.getElementById("logABugLink1").href=bugLink;
-    document.getElementById("logABugLink2").href=bugLink;
-    document.getElementById("logABugLink3").href=bugLink;
-}
