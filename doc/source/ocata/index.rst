@@ -2,9 +2,13 @@
  Ocata
 ========
 
-Projected Release Date: 
+Projected Release Date: TBD
 
-Release schedule: 
+.. toctree::
+   :maxdepth: 1
+
+   schedule
+
 
 .. deliverable::
    :series: ocata

@@ -4,7 +4,10 @@
 
 Projected Release Date: 
 
-Release schedule: 
+.. toctree::
+   :maxdepth: 1
+
+   schedule
 
 .. deliverable::
    :series: newton
