@@ -85,14 +85,6 @@ $('a').click(function(){
     return false;
 });
 
-// Change character image on refresh
-// Add file names and captions to doc-characters.json
-$.getJSON('/_static/js/doc-characters.json', function(data) {
-  var item = data.images[Math.floor(Math.random()*data.images.length)];
-  $('<img src="common/images/docs/' + item.image + '">').appendTo('#superuser-img');
-  $('<p>' + item.caption + '<strong>OpenStack Operator</strong></p>').appendTo('#superuser-img');
-});
-
 /* BB 150310
    openstackdocstheme provides three types of admonitions, important, note
    and warning. We decorate their title paragraphs with Font Awesome icons
