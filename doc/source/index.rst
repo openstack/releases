@@ -77,10 +77,3 @@ You can find their releases listed here:
    :maxdepth: 1
 
    independent
-
-Instructions
-============
-
-.. toctree::
-
-   instructions
