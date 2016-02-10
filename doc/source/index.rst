@@ -5,6 +5,10 @@
 Release Series
 ==============
 
+OpenStack is developed and released around 6-month cycles. After the initial
+release, additional stable point releases will be released in each release
+series. You can find the detail of the various release series here:
+
 .. list-table::
    :header-rows: 1
 
@@ -63,11 +67,14 @@ Release Series
    austin/index
    releases/*
 
-Independent Projects
-====================
+Series-Independent Releases
+===========================
+
+Some projects are released independently from the OpenStack release series.
+You can find their releases listed here:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    independent
 
