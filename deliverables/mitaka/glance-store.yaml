@@ -9,3 +9,11 @@ releases:
         hash: f1f79b898dc9f37a4161a68574feff8364f73ab3
     highlights: >
         Bug fixes, dependency updates, and removal of deprecated options.
+  - version: 0.11.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 881eeed5ad2d4613cf7a1818bc014fb888ec3df1
+    highlights: >
+        Bug fixes, dependency updates, removal of deprecated options,
+        removal of gridfs driver, deprecation of S3 driver, and documenting
+        supported drivers and their maintainers.
