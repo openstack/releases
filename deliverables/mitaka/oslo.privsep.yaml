@@ -19,3 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: a6e554bd49407c1243787a74f5c53efa06c684f2
+  - version: 1.1.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 73ec44f2d95a5873400de6b0e764d09f06eb953b
+    highlights: |
+        * Script should be named privsep-helper (not privsep_helper)
+

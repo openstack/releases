@@ -23,3 +23,9 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: 22afa47ca74b1cd5cab9b723d6e0fe1ebcd622cd
+  - version: 4.0.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 5b0824e2497b7ca94a63092057f433e14c4579b0
+    highlights: |
+        * Removed ununsed option use_syslog_rfc_format

@@ -39,3 +39,9 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 7bf82600cc7aad19120d3239b98d5aa9dff5f098
+  - version: 3.0.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 0aaeea1c12edfcc751dc508b441c36c0a1445a9c
+    highlights: |
+        * Removed deprecated log-format option

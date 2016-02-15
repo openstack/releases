@@ -59,3 +59,9 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 1cc3b9c80e948b5f7052ac76f03d31a143269cf6
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: b80fdc850dd76b3ef45b2d2deaa2d5d24678d1f8
+    highlights: |
+        * matchmaker_redis option should only be in [match_redis] section.
