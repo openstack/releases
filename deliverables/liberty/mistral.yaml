@@ -1,7 +1,13 @@
 ---
 launchpad: mistral
+release-notes: http://docs.openstack.org/releasenotes/mistral/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.0.0
     projects:
       - repo: openstack/mistral
         hash: f74ac7aa17703f5e5295042f5f4a5a785410e121
+  - version: 1.0.1
+    projects:
+      - repo: openstack/mistral
+        hash: 0e67e8474ff0fb870bceb074f3e5715501fa720b
