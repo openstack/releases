@@ -42,3 +42,7 @@ releases:
     highlights: >
         - In-memory caching that was removed in 4.1.0,
           this release reverts that change.
+  - version: 4.3.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 2dedc1cc98758621d43980ca893f6b057dc48b7b
