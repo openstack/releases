@@ -25,3 +25,10 @@ releases:
         Adds ITRI DISCO connector.
         extend_volume API introduced.
         Extracted local_lvm management code from Cinder.
+  - version: 1.0.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 44254e1e1401affd67628bbb280043ade3d460b0
+    highlights: >
+        Multipath device handling improvements.
+        Fixed issue for LUN ID's > 255.
