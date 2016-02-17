@@ -42,3 +42,10 @@ releases:
         hash: f5fb643f7c75ecf415cdbfc5a3bc4b01176d3e89
     highlights: >
         - Reverted fixes for bug 1457702.
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: aeb69f3b6d8f35cd4956e1fe03d1ef9b2cd69bf0
+    highlights: >
+        - Several classes related to authentication were deprecated in
+          favor of keystoneauth. See release notes for details.
