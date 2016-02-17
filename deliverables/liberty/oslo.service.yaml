@@ -1,5 +1,7 @@
 ---
 launchpad: oslo.service
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
 releases:
   - version: 0.1.0
     projects:
@@ -37,3 +39,7 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: fad5b04d5933ae3e08b8991d18dc51089cf9b8d1
+  - version: 0.9.1
+    projects:
+      - repo: openstack/oslo.service
+        hash: 8b6e2f64e8f82ec736a4c5b792d448ad7faf051f
