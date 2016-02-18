@@ -73,3 +73,10 @@ releases:
         hash: 8a6dd7f9bcf94931cbfa7c4acd8920e2cd437e48
     highlights: >
       Updated volume API default version to v2. Added support for barbican.
+  - version: 1.15.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 7865abc22b7289b2679f6848395d4850d544d1f0
+    highlights: >
+      Swiftclient objects are passed authentication credentials allowing
+      long lived swiftclients to reauthenticate if necessary.
