@@ -9,3 +9,9 @@ releases:
         hash: 58227342270f233e4de1a523932e251c41bae23e
         highlights: >
           Initial release. Does not support Gnocchi rules
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 8ef682fa2af4ba72137af274f739ca3918330803
+        highlights: >
+          Support Gnocchi rules
