@@ -1,0 +1,11 @@
+---
+launchpad: python-saharaclient
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.12.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 08ea638f56804168d58d5b16d87192b655df5b61
+    highlights: >
+        This release adds full support for OpenStackClient and
+        providing the renewed CLI based on it for Sahara.
