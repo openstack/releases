@@ -80,3 +80,10 @@ releases:
     highlights: >
       Swiftclient objects are passed authentication credentials allowing
       long lived swiftclients to reauthenticate if necessary.
+  - version: 1.16.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 03d5659d8b45b0450a86956147cc2d1f27be66ac
+    highlights: >
+      Update session_client factory helper function to match signature of
+      make_client factory helper function.
