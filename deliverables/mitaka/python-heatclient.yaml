@@ -7,3 +7,21 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: ae4a7615d1d0c06ddb9dd9b4497fa209dbdf7fef
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 4ce8335fa1c75955f8cb5c61948af040aba82072
+    highlights: |
+      This is the first stable release of python-heatclient. This release also
+      contains a full set of heat commands for the python-openstackclient
+      client. These new commands would not have been achieved without the help
+      of many new and existing contributors, so we would like to thank:
+
+      - Amey Bhide
+      - Bryan Jones
+      - Di XiaoLi
+      - Jason Dunsmore
+      - Kanagaraj Manickam
+      - Mark Vanderwiel
+      - Steve Baker
+      - Yingzhe Zeng
