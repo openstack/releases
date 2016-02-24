@@ -33,3 +33,11 @@ releases:
     highlights: >
         Multipath device handling improvements.
         Fixed issue for LUN ID's > 255.
+  - version: 1.1.0
+    projects:
+      - repo: openstack/os-brick
+        hash: f9b4e55db5a53b2f9356c9a11008e50c3900c141
+    highlights: >
+        - Fixes KeyError when setting the multipath ID for fibre channel.
+        - Updated dependencies.
+        - Logs multipath -ll output when parsing fails.
