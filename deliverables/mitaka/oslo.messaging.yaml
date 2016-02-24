@@ -52,9 +52,12 @@ releases:
         * Group oslo_messaging_notifications added to options.
         * ZeroMQ driver use_pub_sub by default for fanout messaging.
         * ZeroMQ driver zmq_target_expire option configures Redis records TTL.
-        * Kombu driver reply and fanout queues now expire instead of auto-delete.
-        * Kombu driver rabbit_qos_prefetch_count option to configure messages prefetch.
-        * Kombu driver rabbit_interval_max option to configure connection retries.
+        * Kombu driver reply and fanout queues now expire instead of
+          auto-delete.
+        * Kombu driver rabbit_qos_prefetch_count option to configure messages
+          prefetch.
+        * Kombu driver rabbit_interval_max option to configure connection
+          retries.
   - version: 4.2.0
     projects:
       - repo: openstack/oslo.messaging
