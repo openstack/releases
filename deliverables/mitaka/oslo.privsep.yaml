@@ -30,3 +30,9 @@ releases:
       - repo: openstack/oslo.privsep
         hash: 693213039f455a7085eee09f5d7b16d4a24eaabf
 
+  - version: 1.3.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: b531d4807a817091e63dda48765fd46dba007551
+    highlights: |
+        * Ensure fdopen uses greenio object with eventlet
