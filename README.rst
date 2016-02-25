@@ -219,6 +219,10 @@ Each `project` entry is a mapping with keys:
 ``hash``
   The SHA1 hash for the commit to receive the version tag.
 
+``tarball-base``
+  An optional name for the base of the tarball created by the
+  release. If no value is provided, it defaults to the repo base name.
+
 Examples
 ========
 

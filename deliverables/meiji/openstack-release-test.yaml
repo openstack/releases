@@ -5,20 +5,25 @@ releases:
   - version: 0.0.1.0a1
     projects:
       - repo: openstack/release-test
+        tarball-base: openstack-release-test
         hash: b87220eb8ba76c14d93362ca3d9ccfed1e2be343
   - version: 0.0.1.0b3
     projects:
       - repo: openstack/release-test
+        tarball-base: openstack-release-test
         hash: 186019bd7f725bf52c6f3aae8949b0daf42aa6d9
   - version: 0.0.1.0rc1
     projects:
       - repo: openstack/release-test
+        tarball-base: openstack-release-test
         hash: 186019bd7f725bf52c6f3aae8949b0daf42aa6d9
   - version: 0.0.1.0rc2
     projects:
       - repo: openstack/release-test
+        tarball-base: openstack-release-test
         hash: 9f48cae13a7388a6f6d1361634d320d73baef0d3
   - version: 0.0.1
     projects:
       - repo: openstack/release-test
+        tarball-base: openstack-release-test
         hash: 9f48cae13a7388a6f6d1361634d320d73baef0d3

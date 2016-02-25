@@ -133,11 +133,17 @@ class DeliverableDirectiveBase(rst.Directive):
     }
 
     @staticmethod
-    def _tarball_link(version, repo):
-        return '`{v} <{s}/{n}/{n}-{v}.tar.gz>`__'.format(
+    def _tarball_link(version, project):
+        repo_base = project['repo'].rsplit('/')[-1]
+        if 'tarball-base' in project:
+            base = project['tarball-base']
+        else:
+            base = repo_base
+        return '`{v} <{s}/{r}/{n}-{v}.tar.gz>`__'.format(
             s='https://tarballs.openstack.org',
             v=version,
-            n=repo.rsplit('/')[-1],
+            r=repo_base,
+            n=base,
         )
 
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
@@ -206,7 +212,7 @@ class DeliverableDirectiveBase(rst.Directive):
             _list_table(
                 _add,
                 ['Version', 'Repo', 'Git Commit'],
-                ((self._tarball_link(r['version'], p['repo']),
+                ((self._tarball_link(r['version'], p),
                   p['repo'], p['hash'])
                  for r in reversed(deliverable_info.get('releases', []))
                  for p in r.get('projects', [])),
