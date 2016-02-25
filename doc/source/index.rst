@@ -14,6 +14,8 @@ series. You can find the detail of the various release series here:
 
    - * Series
      * Status
+   - * :doc:`meiji/index`
+     * **Test**
    - * :doc:`ocata/index`
      * *Future*
    - * :doc:`newton/index`
@@ -50,6 +52,7 @@ series. You can find the detail of the various release series here:
    :maxdepth: 1
    :hidden:
 
+   meiji/index
    ocata/index
    newton/index
    mitaka/index
