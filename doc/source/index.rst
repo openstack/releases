@@ -14,8 +14,6 @@ series. You can find the detail of the various release series here:
 
    - * Series
      * Status
-   - * :doc:`meiji/index`
-     * **Test**
    - * :doc:`ocata/index`
      * *Future*
    - * :doc:`newton/index`
