@@ -190,25 +190,35 @@ def main():
                             print('not included in previous release for %s: %s' %
                                   (prev_version, ', '.join(sorted(prev_projects))))
                         else:
-                            # Check to see if the commit for the new
-                            # version is in the ancestors of the
-                            # previous release, meaning it is actually
-                            # merged into the branch.
-                            is_ancestor = gitutils.check_ancestry(
+                            # Check to see if we are re-tagging the same
+                            # commit with a new version.
+                            old_sha = gitutils.sha_for_tag(
                                 workdir,
                                 project['repo'],
                                 prev_version,
-                                project['hash'],
                             )
-                            if is_ancestor:
-                                print('SHA found in descendants')
+                            if old_sha == project['hash']:
+                                print('RETAGGING')
                             else:
-                                print('SHA NOT FOUND in descendants')
-                                errors.append(
-                                    '%s %s is not a descendant of %s' % (
-                                        project['repo'], project['hash'],
-                                        prev_version)
+                                # Check to see if the commit for the new
+                                # version is in the ancestors of the
+                                # previous release, meaning it is actually
+                                # merged into the branch.
+                                is_ancestor = gitutils.check_ancestry(
+                                    workdir,
+                                    project['repo'],
+                                    prev_version,
+                                    project['hash'],
                                 )
+                                if is_ancestor:
+                                    print('SHA found in descendants')
+                                else:
+                                    print('SHA NOT FOUND in descendants')
+                                    errors.append(
+                                        '%s %s is not a descendant of %s' % (
+                                            project['repo'], project['hash'],
+                                            prev_version)
+                                    )
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])
 
