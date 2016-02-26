@@ -20,8 +20,8 @@ from docutils import nodes
 from docutils.parsers import rst
 from docutils.parsers.rst import directives
 from docutils.statemachine import ViewList
+import pbr
 from sphinx.util.nodes import nested_parse_with_titles
-
 import yaml
 
 from openstack_releases import governance
@@ -60,6 +60,39 @@ def _get_deliverable_type(deliverable_types, name):
     if no_dashes in deliverable_types:
         return deliverable_types[no_dashes]
     return 'type:other'
+
+
+def _collapse_deliverable_history(app, name, info):
+    """Collapse pre-releases into their final release.
+
+    Edit the info dictionary in place.
+
+    """
+    # Collapse pre-releases into their final release.
+    releases = []
+    known_versions = set()
+    for r in reversed(info.get('releases', [])):
+        try:
+            parsed_vers = pbr.version.SemanticVersion.from_pip_string(
+                str(r['version']))
+            vers_tuple = parsed_vers.version_tuple()
+        except:
+            # If we can't parse the version, it must be some sort
+            # of made up legacy tag. Ignore the parse error
+            # and include the value in our output.
+            releases.append(r)
+        else:
+            if len(vers_tuple) != 3:
+                # This is not a normal release, so assume it
+                # is a pre-release.
+                final = parsed_vers.brief_string()
+                if final in known_versions:
+                    app.info('[deliverables] ignoring %s %s' %
+                             (name, r['version']))
+                    continue
+                releases.append(r)
+                known_versions.add(r['version'])
+    info['releases'] = list(reversed(releases))
 
 
 class DeliverableDirectiveBase(rst.Directive):
@@ -104,10 +137,12 @@ class DeliverableDirectiveBase(rst.Directive):
                 deliverable_name,
             )
             with open(filename, 'r') as f:
+                d_info = yaml.load(f.read())
+                _collapse_deliverable_history(app, deliverable_name, d_info)
                 deliverables[deliverable_type].append(
                     (deliverable_name,
                      filename,
-                     yaml.load(f.read())))
+                     d_info))
 
         for type_tag in self._TYPE_ORDER:
             self._add_deliverables(
@@ -202,7 +237,7 @@ class DeliverableDirectiveBase(rst.Directive):
 
             _title(deliverable_name, '=')
 
-            app.info('[deliverables] %s' % deliverable_name)
+            app.info('[deliverables] rendering %s' % deliverable_name)
 
             release_notes = deliverable_info.get('release-notes')
             if release_notes:
