@@ -49,3 +49,10 @@ releases:
     highlights: >
         - Several classes related to authentication were deprecated in
           favor of keystoneauth. See release notes for details.
+  - version: 2.3.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: eecfce283f272243e4b957ad9ec7c4fdfbcf12de
+    highlights: >
+        - Support for implied roles and domain specific roles APIs.
+        - Support use of `truncated` flag for list operations.
