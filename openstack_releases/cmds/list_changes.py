@@ -105,7 +105,8 @@ def main():
         if not os.path.exists(filename):
             print('\n%s was removed, skipping' % filename)
             continue
-        print('\nChecking %s' % filename)
+        print('\n' + ('=' * 80))
+        print('\nChecking %s\n' % filename)
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
@@ -131,10 +132,11 @@ def main():
                 new_release['version'],
             )
             if tag_exists:
-                print('%s %s exists already' %
+                print('%s %s exists on git server already' %
                       (project['repo'], new_release['version']))
 
             # Check out the code.
+            print('\nChecking out repository')
             subprocess.check_call(
                 ['zuul-cloner',
                  '--branch', branch,
