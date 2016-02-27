@@ -56,3 +56,9 @@ releases:
     highlights: >
         - Support for implied roles and domain specific roles APIs.
         - Support use of `truncated` flag for list operations.
+  - version: 2.3.1
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 7d57eceb19aaaca8de84a8701552715fc8153872
+    highlights: >
+        - Revert support use of `truncated` flag for list operations.
