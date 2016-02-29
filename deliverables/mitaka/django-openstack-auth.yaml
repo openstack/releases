@@ -19,3 +19,10 @@ releases:
         This release restores backward compatibility with Liberty
         versions of Horizon. Supports using keystoneauth rather
         than similar functionality in keystoneclient.
+  - version: 2.2.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 9de5d87becab6117009b1e7327bc309f5e9a9042
+    highlights: >
+        This release adds Django 1.9 support and provides several
+        bug fixes.
