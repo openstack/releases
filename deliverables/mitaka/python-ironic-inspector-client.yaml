@@ -16,3 +16,11 @@ releases:
         hash: f77bd83f10835b3188c6687f8238dfc6d30183e6
     highlights: |
         * CLI command to fetch introspection data.
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: f9a9e27b1382499c14612ed0ab6bdf76fb340a26
+    highlights: |
+        * Support for the service catalog.
+        * Support for aborting introspection.
+        * Added --wait flag to the introspection command.
