@@ -202,7 +202,13 @@ def main():
             # Show any changes in the previous release but not in this
             # release, in case someone picks an "early" SHA or a
             # regular commit instead of the appropriate merge commit.
+            previous_tag_exists = False
             if previous_release:
+                previous_tag_exists = gitutils.commit_exists(
+                    project['repo'],
+                    previous_release,
+                )
+            if previous_tag_exists:
                 git_log(
                     workdir, project['repo'],
                     'Patches in previous release but not in this one',
