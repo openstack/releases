@@ -37,6 +37,14 @@ def header(title):
     print('-' * len(title))
 
 
+def git_show(workdir, repo, title, ref):
+    header('%s %s' % (title, ref))
+    cmd = ['git', 'log', '-n', '1', '--decorate', '--format=medium', ref]
+    print('\n' + ' '.join(cmd) + '\n')
+    subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
+    print()
+
+
 def git_log(workdir, repo, title, git_range, extra_args=[]):
     header('%s %s' % (title, git_range))
     cmd = ['git', 'log', '--no-color']
@@ -164,6 +172,24 @@ def main():
             else:
                 git_range = project['hash']
 
+            # Show details about the commit being tagged.
+            header('Details for commit receiving new tag')
+            print('\ngit describe %s\n' % project['hash'])
+            try:
+                subprocess.check_call(
+                    ['git', 'describe', project['hash']],
+                    cwd=os.path.join(workdir, project['repo']),
+                )
+            except subprocess.CalledProcessError as e:
+                print('WARNING: Could not run git describe: %s' % e)
+
+            git_show(
+                workdir=workdir,
+                repo=project['repo'],
+                title='Check existing tags',
+                ref=project['hash'],
+            )
+
             # Show any requirements changes in the upcoming release.
             if start_range:
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
@@ -243,16 +269,5 @@ def main():
                     print('SHA found in descendants')
                 else:
                     print('SHA NOT FOUND in descendants')
-
-            # Show more details about the commit being tagged.
-            header('Details for commit receiving new tag')
-            print('\ngit describe %s\n' % project['hash'])
-            try:
-                subprocess.check_call(
-                    ['git', 'describe', project['hash']],
-                    cwd=os.path.join(workdir, project['repo']),
-                )
-            except subprocess.CalledProcessError as e:
-                print('WARNING: Could not run git describe: %s' % e)
 
     return 0
