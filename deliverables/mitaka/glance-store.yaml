@@ -17,3 +17,11 @@ releases:
         Bug fixes, dependency updates, removal of deprecated options,
         removal of gridfs driver, deprecation of S3 driver, and documenting
         supported drivers and their maintainers.
+  - version: 0.12.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 6c4ae678f57390ef845c446edbcce9a6f93e1927
+    highlights: >
+        Implement get, add and delete for cinder store, move VMWare & HTTP
+        drivers to requests, new config options for HTTP store, Swift
+        store supports keystone trusts and service tokens.
