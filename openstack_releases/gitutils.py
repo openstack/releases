@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import os
 import os.path
 import subprocess
 
@@ -55,12 +56,18 @@ def commit_exists(repo, ref):
 
 def clone_repo(workdir, repo):
     "Check out the code."
-    subprocess.check_call(
-        ['zuul-cloner',
-         '--workspace', workdir,
-         'git://git.openstack.org',
-         repo]
-    )
+    cmd = [
+        'zuul-cloner',
+        '--workspace', workdir,
+    ]
+    cache_dir = os.environ.get('ZUUL_CACHE_DIR', '/opt/git')
+    if cache_dir and os.path.exists(cache_dir):
+        cmd.extend(['--cache-dir', cache_dir])
+    cmd.extend([
+        'git://git.openstack.org',
+        repo,
+    ])
+    subprocess.check_call(cmd)
 
 
 def sha_for_tag(workdir, repo, version):
