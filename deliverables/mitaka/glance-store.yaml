@@ -25,3 +25,10 @@ releases:
         Implement get, add and delete for cinder store, move VMWare & HTTP
         drivers to requests, new config options for HTTP store, Swift
         store supports keystone trusts and service tokens.
+  - version: 0.13.0
+    projects:
+      - repo: openstack/glance_store
+        hash: a6bf6a7f0e74ced35219732fbf72a63d4c6ab553
+    highlights: >
+        Bug fix on swift multitenant store, new and changed config options
+        for VMWare store.
