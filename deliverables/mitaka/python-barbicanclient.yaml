@@ -1,0 +1,10 @@
+---
+launchpad: python-barbicanclient
+send-announcements-to: openstack-dev@lists.openstack.org
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 8eab42dc79c48140ed114a9251afa0a210a159f9
+    highlights: |
+        This release includes a beta preview of the unified cli plugin.
