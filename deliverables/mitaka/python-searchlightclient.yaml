@@ -1,0 +1,12 @@
+---
+launchpad: python-searchlightclient
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: e8328fd7c23ff2213488233fb3158428d3ec9664
+    highlights: |
+      This is the first release of python-searchlightclient. This release
+      contains a full set of search commands for the python-openstackclient
+      and is compatible with the Mitaka release of Searchlight.
