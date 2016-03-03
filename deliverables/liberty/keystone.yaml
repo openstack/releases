@@ -1,5 +1,6 @@
 ---
 launchpad: keystone
+send-announcements-to: openstack-dev@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/keystone/liberty.html
 releases:
   - version: 8.0.0
@@ -10,3 +11,11 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: d100184a15caba17747ade9417a0d26f46df9b30
+  - version: 8.1.0
+    projects:
+      - repo: openstack/keystone
+        hash: c665080d4a700b6d92f29c40621d83bd7365de34
+    highlights: >
+      - Add audit IDs to revocation events
+      - Escape DN in enabled query
+      - Revert "Validate domain ownership for v2 tokens" (Bug 1527759)
