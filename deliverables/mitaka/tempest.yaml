@@ -1,0 +1,17 @@
+---
+launchpad: tempest
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  # - version: "8"
+  #   projects:
+  #     - repo: openstack/tempest
+  #       hash: 600d40a30548310b96ee08d5a7a9d3541ba93343
+  # - version: "9"
+  #   projects:
+  #     - repo: openstack/tempest
+  #       hash: 9ccf77af488c3b6464356b6fab106ec78e3b7c51
+  - version: 10.0.0
+    projects:
+      - repo: openstack/tempest
+        hash: 09a60155435cfb8bfd1edb6eab3d4bec30515b8f
