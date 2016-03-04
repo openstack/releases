@@ -2,6 +2,15 @@
 launchpad: pbr
 send-announcements-to: openstack-dev@lists.openstack.org
 releases:
+  # kilo
+  - version: 0.11.1
+    projects:
+      - repo: openstack-dev/pbr
+        hash: 6e472b4905411a39e993c81c382a27ca9c771ef5
+        highlights: >
+          This includes fixes an unguarded import or testrepository which is
+          not listed as a requirement. (LP: #1375048)
+  # liberty
   - version: 1.3.0
     projects:
       - repo: openstack-dev/pbr
@@ -26,3 +35,8 @@ releases:
     projects:
       - repo: openstack-dev/pbr
         hash: daa905cad45ea89b557b6468af021270980b9c24
+  # mitaka
+  - version: 1.8.1
+    projects:
+      - repo: openstack-dev/pbr
+        hash: 36a2bf130999f06562b5eb063e1c49ae2d6e35a7
