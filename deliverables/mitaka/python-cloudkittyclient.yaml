@@ -1,0 +1,12 @@
+---
+launchpad: cloudkitty
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 55f3a3fa7568dec1d37db0a4960755f8460422a4
+    highlights: >
+      Added support for PyScripts rating module. Improved Hashmap module
+      support. Bug fixes and code quality improvement.
