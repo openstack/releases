@@ -1,9 +1,17 @@
 ---
 launchpad: ironic-ui
-send-announcements-to: jim@jimrollenhagen.com
+send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 releases:
   - version: 0.0.1
     projects:
       - repo: openstack/ironic-ui
         hash: 5f6ea0c900e98436c1fae9de4b04b7c74db6f82c
+  - version: 1.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 57837a3fd30ca19d344cbd80bd29ea04a5c30943
+    highlights: >
+      First release of the Ironic UI plugin for Horizon. View
+      bare metal nodes and node details. Apply maintenance and
+      power actions to individual nodes.
