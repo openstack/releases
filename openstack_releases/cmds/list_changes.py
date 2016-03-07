@@ -190,6 +190,25 @@ def main():
                 ref=project['hash'],
             )
 
+            head_sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
+            requested_sha = gitutils.sha_for_tag(
+                workdir,
+                project['repo'],
+                project['hash'],
+            )
+            # If the sha for HEAD and the requested release don't
+            # match, show any unreleased changes on the branch. We ask
+            # git to give us the real SHA for the requested release in
+            # case the deliverables file has the short version of the
+            # hash.
+            header('Relationship to HEAD')
+            if head_sha == requested_sha:
+                print('\nRequest releases from HEAD on %s' % branch)
+            else:
+                git_log(workdir, project['repo'], 'Release will NOT include',
+                        '%s..%s' % (requested_sha, head_sha),
+                        extra_args=['--format=%h %ci %s'])
+
             # Show any requirements changes in the upcoming release.
             if start_range:
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
@@ -206,24 +225,6 @@ def main():
                     'Details Contents',
                     git_range,
                     extra_args=['--no-merges', '--topo-order'])
-
-            # If the sha for HEAD and the requested release don't
-            # match, show any unreleased changes on the branch. We ask
-            # git to give us the real SHA for the requested release in
-            # case the deliverables file has the short version of the
-            # hash.
-            head_sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
-            requested_sha = gitutils.sha_for_tag(
-                workdir,
-                project['repo'],
-                project['hash'],
-            )
-            if head_sha == requested_sha:
-                print('Request releases from HEAD on %s' % branch)
-            else:
-                git_log(workdir, project['repo'], 'Release will NOT include',
-                        '%s..%s' % (requested_sha, head_sha),
-                        extra_args=['--format=%h %ci %s'])
 
             # Show any changes in the previous release but not in this
             # release, in case someone picks an "early" SHA or a
