@@ -15,3 +15,10 @@ releases:
       - Fixes CVE-2015-7548 and CVE-2015-8749.
       - Fixes a few regression bugs (see release notes for details).
       - Updated translations.
+  - version: 12.0.2
+    projects:
+      - repo: openstack/nova
+        hash: aa4edd349dde73739527ab793ff6209fe1907e2c
+    highlights: >
+      - Bug fixes.
+      - Updated translations.
