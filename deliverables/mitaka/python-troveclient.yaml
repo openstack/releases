@@ -22,3 +22,9 @@ releases:
     highlights: |
       - Add support for Module Maintenance Commands.
       - Add support for Guest Log File Retrieval.
+  - version: 2.1.1
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 3c71e52b408bbd6c33fca85188db2c8f156fb341
+    highlights: |
+      - Revert backward incompatible change related to slave_of
