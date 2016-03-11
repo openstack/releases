@@ -50,7 +50,6 @@ series. You can find the detail of the various release series here:
    :maxdepth: 1
    :hidden:
 
-   meiji/index
    ocata/index
    newton/index
    mitaka/index
