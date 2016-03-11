@@ -168,18 +168,24 @@ class DeliverableDirectiveBase(rst.Directive):
     }
 
     @staticmethod
-    def _tarball_link(version, project):
-        repo_base = project['repo'].rsplit('/')[-1]
-        if 'tarball-base' in project:
-            base = project['tarball-base']
-        else:
-            base = repo_base
-        return '`{v} <{s}/{r}/{n}-{v}.tar.gz>`__'.format(
-            s='https://tarballs.openstack.org',
-            v=version,
-            r=repo_base,
-            n=base,
-        )
+    def _artifact_link(mode, version, project):
+        if mode == 'tarball':
+            # Link the version number to the tarball for downloading.
+            repo_base = project['repo'].rsplit('/')[-1]
+            if 'tarball-base' in project:
+                base = project['tarball-base']
+            else:
+                base = repo_base
+            return '`{v} <{s}/{r}/{n}-{v}.tar.gz>`__'.format(
+                s='https://tarballs.openstack.org',
+                v=version,
+                r=repo_base,
+                n=base,
+            )
+        elif mode == 'none':
+            # Only show the version number.
+            return version
+        raise ValueError('Unrecognized artifact-link-mode: %r' % mode)
 
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
@@ -244,10 +250,11 @@ class DeliverableDirectiveBase(rst.Directive):
                 _add('')
                 _add('Release Notes: %s' % release_notes)
                 _add('')
+            link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
             _list_table(
                 _add,
                 ['Version', 'Repo', 'Git Commit'],
-                ((self._tarball_link(r['version'], p),
+                ((self._artifact_link(link_mode, r['version'], p),
                   p['repo'], p['hash'])
                  for r in reversed(deliverable_info.get('releases', []))
                  for p in r.get('projects', [])),
