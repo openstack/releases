@@ -44,3 +44,9 @@ releases:
         hash: c5f468d8fb237842aad54e5fdebd35a8be19df51
     highlights: >
         Dependency updates (caps synced from stable/kilo global-requirements).
+  - version: 1.7.4
+    projects:
+      - repo: openstack/oslo.db
+        hash: 974fc94a623956a5f7bf60b93d2de65259af8068
+    highlights: >
+        Dependency updates to fix bug 1555721.
