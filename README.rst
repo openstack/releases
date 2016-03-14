@@ -193,6 +193,17 @@ The top level of a deliverable file is a mapping with keys:
   announcement should include the link to the package on
   PyPI. Defaults to ``no``.
 
+``artifact-link-mode``
+  Describe how to link to artifacts produced by the project. The
+  default is ``tarball`. Valid values are:
+
+    tarball
+      Automatically generates links to version-specific files on
+      tarballs.openstack.org.
+
+    none
+      Do not link to anything, just show the version number.
+
 ``releases``
   A list of the releases for the deliverable.
 
