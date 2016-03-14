@@ -32,3 +32,13 @@ releases:
         hash: e8fc26573b336bd553fa6366f30cd242dbdec4b2
       - repo: openstack/neutron-vpnaas
         hash: a3cbe7787f3421279f0c5cdca531e09420224f4b
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: dd4f1253c951d78a5b497680dfb31317ba469a58
+      - repo: openstack/neutron-fwaas
+        hash: 22e5e7da8fd2f2419ff8d0c59d41212f78ab2000
+      - repo: openstack/neutron-lbaas
+        hash: a8c9ff6a5385c3967b6c09d5e6f9dcbbb022062f
+      - repo: openstack/neutron-vpnaas
+        hash: 946d232e05986a2b6dfdf52130ab51f859c1fbbe
