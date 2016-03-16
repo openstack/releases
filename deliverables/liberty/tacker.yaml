@@ -10,3 +10,11 @@ releases:
         hash: 61317356d10a4494e56b7eb69fd4fb3cea73e6d9
     highlights: >
       - Initial release of liberty tacker
+  - version: 0.2.1
+    projects:
+      - repo: openstack/tacker
+        hash: 502cbd6ca17a18c75655a25e7ea4d6f1e95262ee
+      - repo: openstack/tacker-horizon
+        hash: 4a6dec3420bb41cc1e8a77f134708fa6ad78d16f
+    highlights: >
+      - liberty release with various bugfixes and cleanups
