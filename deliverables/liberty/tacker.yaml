@@ -1,0 +1,12 @@
+---
+launchpad: tacker
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/tacker
+        hash: 7ae2388903fb998f467c8b57846544c6864c3c5b
+      - repo: openstack/tacker-horizon
+        hash: 61317356d10a4494e56b7eb69fd4fb3cea73e6d9
+    highlights: >
+      - Initial release of liberty tacker
