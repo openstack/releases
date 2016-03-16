@@ -1,5 +1,7 @@
 ---
 launchpad: python-glanceclient
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
 releases:
   - version: 0.18.0
     projects:
@@ -17,3 +19,7 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 86635868c1eb3aec0c065c12cb9928c613940f36
+  - version: 1.1.1
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 26d2a0f4c29d15208b426443e7a5f8570abdc323
