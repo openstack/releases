@@ -60,3 +60,10 @@ releases:
         hash: 02129aec53db765f8c55fa7f1dceea97aca103e4
         highlights: >
            Fixes for menu and sidebar.
+  - version: 1.3.0
+    projects:
+      - repo: openstack/openstackdocstheme
+        hash: acbab4cd804c7b4e43572be52106a1bb7c0e439a
+        highlights: >
+           The theme is now versionless and does not display a specific
+           release anymore.
