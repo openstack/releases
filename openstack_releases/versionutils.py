@@ -28,9 +28,9 @@ def validate_version(versionstr):
         semver = pbr.version.SemanticVersion.from_pip_string(versionstr)
     except ValueError as err:
         yield 'Invalid version: %s' % err
-
-    # Make sure pbr didn't change the version to meet the canonical form.
-    canonical = semver.release_string()
-    if canonical != versionstr:
-        yield 'Version %r does not match canonical form %r' % \
-            (versionstr, canonical)
+    else:
+        # Make sure pbr didn't change the version to meet the canonical form.
+        canonical = semver.release_string()
+        if canonical != versionstr:
+            yield 'Version %r does not match canonical form %r' % \
+                (versionstr, canonical)
