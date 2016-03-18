@@ -2,6 +2,7 @@
 launchpad: openstack-ansible
 send-announcements-to: openstack-announce@lists.openstack.org
 artifact-link-mode: none
+release-notes: http://docs.openstack.org/releasenotes/openstack-ansible/
 releases:
   - version: 11.0.0
     projects:
@@ -83,3 +84,39 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: 3f2a7c42e598f1b40dff6041ea0355ce17fe133d
+  - version: 12.0.0
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: bc52ac71e95751e136e7ffb16880e6f7654511c7
+  - version: 12.0.1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: ca5be98076dc1133cf48342ecd36d2f944488ba3
+  - version: 12.0.2
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: c0de22d61e7a897ab5bdd31a3dfebe2acd7f4d60
+  - version: 12.0.3
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 28f75e6326f9ab65d00dfcf65d3ffb2766134044
+  - version: 12.0.4
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: b031ca6fc74d6c0976045a16070f48ab0da1897f
+  - version: 12.0.5
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 53511896a9f703d750b0a508d102a1e1ac51a993
+  - version: 12.0.6
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 972b41a061be353ca7f44ddc4e3702aae3433a5d
+  - version: 12.0.7
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: b5b5f7ed112bc32fc7d37871cd9cbf43804174c4
+  - version: 12.0.8
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 0306a5f1e7c41b4476341d3de058de25389ec725
