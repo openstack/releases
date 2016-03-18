@@ -2,6 +2,18 @@
 launchpad: monasca
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/monasca-api
+        hash: 61a388ffc6230db5a093b33cf3585a3b7d38362a
+  - version: 1.0.1
+    projects:
+      - repo: openstack/monasca-api
+        hash: c3d3070e548ef7b85f875e7629672ef4bdb362c9
+  - version: 1.1.0
+    projects:
+      - repo: openstack/monasca-api
+        hash: ba74637d45d2490d8c31ed1b55b46c75f4c13ce8
   - version: 1.1.1
     projects:
       - repo: openstack/monasca-api
