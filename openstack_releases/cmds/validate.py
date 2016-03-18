@@ -22,6 +22,7 @@ import argparse
 import atexit
 import glob
 import os
+import os.path
 import re
 import shutil
 import tempfile
@@ -34,6 +35,7 @@ from requests.packages import urllib3
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
+from openstack_releases import governance
 from openstack_releases import versionutils
 
 urllib3.disable_warnings()
@@ -66,6 +68,16 @@ def main():
         print('no modified deliverable files, validating all releases from %s'
               % defaults.RELEASE)
         filenames = glob.glob('deliverables/' + defaults.RELEASE + '/*.yaml')
+
+    team_data = governance.get_team_data()
+    independent_repos = set(
+        r.name
+        for r in governance.get_repositories(
+            team_data,
+            tags=['release:independent'],
+        )
+    )
+    independent_checks = set()
 
     errors = []
 
@@ -120,6 +132,10 @@ def main():
                 errors.append('Space in send-announcements-to (%r) for %s' %
                               (announce_to, filename))
 
+        series_name = os.path.basename(
+            os.path.dirname(filename)
+        )
+
         prev_version = None
         prev_projects = set()
         for release in deliverable_info['releases']:
@@ -129,6 +145,21 @@ def main():
                 errors.append(e)
 
             for project in release['projects']:
+                # If the project is release:independent, make sure
+                # that's where the deliverable file is.
+                chk = (series_name, project['repo'])
+                if chk not in independent_checks:
+                    if project['repo'] in independent_repos:
+                        if series_name != '_independent':
+                            msg = ('%s uses the independent release model '
+                                   'and should be in the _independent '
+                                   'directory not in %s') % (project['repo'],
+                                                             filename)
+                            print(msg)
+                            errors.append(msg)
+                    independent_checks.add(chk)
+
+                # Check the SHA specified for the tag.
                 print('%s SHA %s ' % (project['repo'],
                                       project['hash']),
                       end='')
