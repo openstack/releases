@@ -2,6 +2,10 @@
 launchpad: monasca
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  - version: 0.1.13
+    projects:
+      - repo: openstack/monasca-persister
+        hash: ec2096fbbbadb554323f13fe9c5d445bff77c3d0
   - version: 0.1.14
     projects:
       - repo: openstack/monasca-persister

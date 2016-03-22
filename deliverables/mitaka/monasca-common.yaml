@@ -2,7 +2,23 @@
 launchpad: monasca
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  - version: 0.0.3
+    projects:
+      - repo: openstack/monasca-common
+        hash: d759362d71dea1f9d484f6e7195965e591c1132e
+  - version: 0.0.4
+    projects:
+      - repo: openstack/monasca-common
+        hash: c7a064c899b302e9c06e8663d3da307007e7f539
   - version: 0.0.5
     projects:
       - repo: openstack/monasca-common
         hash: acf2a3e779f6bf568d207f0c1e823e4b12960762
+  - version: 0.0.6
+    projects:
+      - repo: openstack/monasca-common
+        hash: a623b10429a7e6cf30b5d7b5c57cc3a65afc4e2a
+  - version: 0.0.7
+    projects:
+      - repo: openstack/monasca-common
+        hash: 7b20e0170d7a3ed249ef4078d4e0ce5a90497b55
