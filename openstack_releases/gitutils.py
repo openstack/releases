@@ -113,3 +113,20 @@ def get_latest_tag(workdir, repo):
         print('WARNING failed to retrieve latest tag: %s [%s]' %
               (e, e.output.strip()))
         return None
+
+
+def get_branches(workdir, repo):
+    try:
+        output = subprocess.check_output(
+            ['git', 'branch', '-a'],
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).strip()
+        return [
+            branch
+            for branch in output.split()
+        ]
+    except subprocess.CalledProcessError as e:
+        print('ERROR failed to retrieve list of branches: %s [%s]' %
+              (e, e.output.strip()))
+        return []

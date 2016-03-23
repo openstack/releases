@@ -104,7 +104,14 @@ def main():
     projects = []
     for project in last_release['projects']:
         gitutils.clone_repo(workdir, project['repo'])
-        sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
+
+        branches = gitutils.get_branches(workdir, project['repo'])
+        version = 'origin/stable/%s' % series
+        if not any(branch for branch in branches
+                   if branch.endswith(version)):
+            version = 'master'
+
+        sha = gitutils.sha_for_tag(workdir, project['repo'], version)
         projects.append({
             'repo': project['repo'],
             'hash': sha,
