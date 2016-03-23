@@ -15,3 +15,13 @@ releases:
       First release of the Ironic UI plugin for Horizon. View
       bare metal nodes and node details. Apply maintenance and
       power actions to individual nodes.
+  - version: 1.1.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 7842f3e1fcd5640b9b76db42cb0e6c58fc12db30
+    highlights: >
+      Functionality added to assign maintenance reason when
+      maintenance mode is turned on. Bugs from v1.0.0 have
+      been addressed. Success message added on node power
+      change. Node details now also takes into account custom
+      user settings. Magic search for Horizon has been implemented.
