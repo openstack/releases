@@ -41,3 +41,9 @@ releases:
         - Fixes KeyError when setting the multipath ID for fibre channel.
         - Updated dependencies.
         - Logs multipath -ll output when parsing fails.
+  - version: 1.2.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 01c7614e51eda2fb23d8aceb89693f62924a9bf9
+    highlights: >
+        - Pick up requirements update for oslo.concurrency.
