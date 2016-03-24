@@ -25,3 +25,9 @@ releases:
         * Support for the service catalog.
         * Support for aborting introspection.
         * Added --wait flag to the introspection command.
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 43ca76e550c7fcb966a5eea9907b29c0b6e80d9f
+    highlights: |
+        * Updated dependencies
