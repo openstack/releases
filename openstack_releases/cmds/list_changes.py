@@ -206,7 +206,7 @@ def main():
                 print('\nRequest releases from HEAD on %s' % branch)
             else:
                 git_log(workdir, project['repo'], 'Release will NOT include',
-                        '%s..%s' % (requested_sha, head_sha),
+                        '%s..%s~1' % (requested_sha, head_sha),
                         extra_args=['--format=%h %ci %s'])
 
             # Show any requirements changes in the upcoming release.
