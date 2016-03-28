@@ -34,3 +34,11 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 370b3d5813a10f17a0f41a90126adf88dc39db83
+  - version: 0.4.0
+    projects:
+      - repo: openstack/os-win
+        hash: 3c725a97642c36bd95078ea07bf34198ea8ae284
+    highlights: |
+      This is the first stable os-win release for Mitaka. Currently, os-win
+      is being used in the following projects: nova, cinder, ceilometer,
+      and networking-hyperv.
