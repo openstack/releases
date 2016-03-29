@@ -1,5 +1,6 @@
 ---
 launchpad: ironic
+send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/ironic/liberty.html
 releases:
   - version: 4.0.0
@@ -22,3 +23,7 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 6eb970b71cb6ae629b733ced84917d9db5afc78a
+  - version: 4.2.3
+    projects:
+      - repo: openstack/ironic
+        hash: ee5a245806446caa8a1650bf2b945777fd74b786
