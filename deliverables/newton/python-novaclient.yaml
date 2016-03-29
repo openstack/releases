@@ -1,0 +1,14 @@
+---
+launchpad: python-novaclient
+send-announcements-to: openstack-announce@lists.openstack.org,openstack-dev@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-novaclient/mitaka.html
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 8c204ac1a27f7b645e151d67ee38a4c18dd2201b
+    highlights: >
+        Fixes host-evacuate-live for the 2.25 microversion.
+        Added aggregate-show command to replace aggregate-details.
+        Adds changes-since support when listing servers.
