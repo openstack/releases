@@ -25,3 +25,10 @@ releases:
       - Mark Vanderwiel
       - Steve Baker
       - Yingzhe Zeng
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 9f7b9a582335460b7f431ced25dc6d71168c620e
+    highlights: |
+        Fixed regression descibed in the bug:
+        https://bugs.launchpad.net/python-heatclient/+bug/1560106
