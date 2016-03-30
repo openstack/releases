@@ -58,6 +58,14 @@ def git_log(workdir, repo, title, git_range, extra_args=[]):
     print()
 
 
+def git_branch_contains(workdir, repo, title, commit):
+    header('%s %s' % (title, commit))
+    cmd = ['git', 'branch', '-r', '--contains', commit]
+    print('\n' + ' '.join(cmd) + '\n')
+    subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
+    print()
+
+
 def git_diff(workdir, repo, git_range, file_pattern):
     repo_dir = os.path.join(workdir, repo)
     files = list(glob.glob(os.path.join(repo_dir,
@@ -188,6 +196,13 @@ def main():
                 repo=project['repo'],
                 title='Check existing tags',
                 ref=project['hash'],
+            )
+
+            git_branch_contains(
+                workdir=workdir,
+                repo=project['repo'],
+                title='Branches containing commit',
+                commit=project['hash'],
             )
 
             head_sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
