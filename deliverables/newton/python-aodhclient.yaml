@@ -1,0 +1,11 @@
+---
+launchpad: python-aodhclient
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.4.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 8e4a4e2a167c03020203674f73a59bde5b1b56ea
+    highlights: >
+        Merge "alarm search" functionality to "alarm list"
