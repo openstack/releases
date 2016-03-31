@@ -60,3 +60,9 @@ releases:
         hash: f9360ae6d44a656171602823d91f83d80fa67dce
     highlights: >
         Support up to microversion 2.25, and bug fixes.
+  - version: 3.3.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 0e9c46a21a2b8579794612c269cecd2c05a819ef
+    highlights: >
+        Fixes host-evacuate-live regression with microversion 2.25.
