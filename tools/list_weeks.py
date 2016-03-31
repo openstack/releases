@@ -42,7 +42,9 @@ while current < next_release_date:
 n_weeks = len(weeks)
 
 # Add the list of Mondays following the release leading up to the
-# summit.
+# summit. Increment current before entering the loop because we've
+# already used that week.
+current += week
 while current <= summit_date:
     weeks.append(current)
     current += week
