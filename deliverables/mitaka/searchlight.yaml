@@ -19,3 +19,12 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: 3d116645623968ad64fd67404b455686adf4a625
+  - version: 0.2.0.0rc2
+    projects:
+      - repo: openstack/searchlight
+        hash: 11d3d114006ad74bbeaf514aef221a44219a2ee9
+    highlights: |
+      Full text search for Nova instances, Glance images / metadefs,
+      Cinder volumes / snapshots, Neutron networks / ports / subnets / routers,
+      Designate zones / records, & Swift accounts / containers / objects.
+      In addition, Searchlight now supports zero downtime re-indexing.
