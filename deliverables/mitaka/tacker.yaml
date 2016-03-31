@@ -1,0 +1,13 @@
+---
+launchpad: tacker
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.3.0
+    projects:
+      - repo: openstack/tacker
+        hash: 5ce343274f7e93f92ead5e11d446169ed0d9f695
+      - repo: openstack/tacker-horizon
+        hash: 2b5c7d9a7973ef8636def3c3b483e7b1f17239fa
+    highlights: >
+        - First mitaka release of tacker with tosca-parser integration,
+          multisite support, EPA placement and various other enhancements
