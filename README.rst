@@ -142,6 +142,14 @@ team is responsible for taking the necessary corrective action.
 Deliverable Files
 =================
 
+Deliverable repositories for projects tagged with
+release:cycle_with_intermediatry or release:cycle_with_milestones
+should be placed in their respective releases within the
+deliverables directory. Deliverable repositories for projects tagged with
+release:indepedent should be placed in the deliverables/_independent
+directory.  Deliverable repositories tagged with release:none have no
+release and are not tracked in this repository.
+
 For deliverable set of projects, we use one YAML file per release
 series to hold all of the metadata for all releases of that
 deliverable. For each release, we need to track:
