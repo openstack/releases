@@ -141,6 +141,7 @@ def main():
 
         prev_version = None
         prev_projects = set()
+        link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
         for release in deliverable_info['releases']:
 
             for e in versionutils.validate_version(release['version']):
@@ -148,11 +149,12 @@ def main():
                 errors.append(e)
 
             for project in release['projects']:
-                # Check for release jobs.
-                for e in project_config.require_release_jobs_for_repo(
-                        zuul_layout, project['repo']):
-                    print(e)
-                    errors.append(e)
+                # Check for release jobs (if we ship a tarball)
+                if link_mode != 'none':
+                    for e in project_config.require_release_jobs_for_repo(
+                            zuul_layout, project['repo']):
+                        print(e)
+                        errors.append(e)
 
                 # If the project is release:independent, make sure
                 # that's where the deliverable file is.
