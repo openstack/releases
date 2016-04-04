@@ -72,4 +72,11 @@ def require_release_jobs_for_repo(zuul_layout, repo):
                 'nor publish-to-pypi defined for %s so no release '
                 'will be published' % (repo,)
             )
+        if ('openstack-server-release-jobs' in templates and
+                'publish-to-pypi' in templates):
+            errors.append(
+                'openstack-infra/project-config/zuul/layout.yaml has '
+                'both openstack-server-release-jobs '
+                'and publish-to-pypi defined for %s' % (repo,)
+            )
     return errors
