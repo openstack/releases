@@ -32,3 +32,11 @@ releases:
     highlights: >
         Bug fix on swift multitenant store, new and changed config options
         for VMWare store.
+  - version: 0.13.1
+    projects:
+      - repo: openstack/glance_store
+        hash: 33c08d8dec495dca2d7a9a7c44d23670aacf29d9
+    highlights: >
+        Bug fix makes glance_store swift driver tests compatible with
+        python-swiftclient 3.0.0 release. glance_store can thus be installed
+        alongside aforementioned python-swiftclient version.
