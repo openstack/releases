@@ -36,6 +36,7 @@ from requests.packages import urllib3
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
+from openstack_releases import project_config
 from openstack_releases import versionutils
 
 urllib3.disable_warnings()
@@ -68,6 +69,8 @@ def main():
         print('no modified deliverable files, validating all releases from %s'
               % defaults.RELEASE)
         filenames = glob.glob('deliverables/' + defaults.RELEASE + '/*.yaml')
+
+    zuul_layout = project_config.get_zuul_layout_data()
 
     team_data = governance.get_team_data()
     independent_repos = set(
@@ -145,6 +148,12 @@ def main():
                 errors.append(e)
 
             for project in release['projects']:
+                # Check for release jobs.
+                for e in project_config.require_release_jobs_for_repo(
+                        zuul_layout, project['repo']):
+                    print(e)
+                    errors.append(e)
+
                 # If the project is release:independent, make sure
                 # that's where the deliverable file is.
                 chk = (series_name, project['repo'])
