@@ -83,6 +83,7 @@ def main():
     independent_checks = set()
 
     errors = []
+    warnings = []
 
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
@@ -151,10 +152,14 @@ def main():
             for project in release['projects']:
                 # Check for release jobs (if we ship a tarball)
                 if link_mode != 'none':
-                    for e in project_config.require_release_jobs_for_repo(
-                            zuul_layout, project['repo']):
-                        print(e)
-                        errors.append(e)
+                    pce = project_config.require_release_jobs_for_repo(
+                        zuul_layout, project['repo'])
+                    for msg, is_error in pce:
+                        print(msg)
+                        if is_error:
+                            errors.append(msg)
+                        else:
+                            warnings.append(msg)
 
                 # If the project is release:independent, make sure
                 # that's where the deliverable file is.
@@ -264,8 +269,13 @@ def main():
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])
 
+    if warnings:
+        print('\n\n%s warnings found' % len(warnings))
+        for w in warnings:
+            print(w)
+
     if errors:
-        print('\n%s errors found' % len(errors))
+        print('\n\n%s errors found' % len(errors))
         for e in errors:
             print(e)
 

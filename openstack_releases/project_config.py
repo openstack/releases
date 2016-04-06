@@ -46,15 +46,17 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
 def require_release_jobs_for_repo(zuul_layout, repo):
     """Check the repository for release jobs.
 
-    Returns a list of error messages if there are no jobs.
+    Returns a list of tuples containing a message and a boolean
+    indicating if the message is an error.
 
     """
     errors = []
 
     if repo not in zuul_layout[_VALIDATE_KEY]:
         errors.append(
-            'did not find %s in '
-            'openstack-infra/project-config/zuul/layout.yaml' % repo
+            ('did not find %s in '
+             'openstack-infra/project-config/zuul/layout.yaml' % repo,
+             True)
         )
     else:
         p = zuul_layout[_VALIDATE_KEY][repo]
@@ -67,16 +69,18 @@ def require_release_jobs_for_repo(zuul_layout, repo):
         if not ('openstack-server-release-jobs' in templates or
                 'publish-to-pypi' in templates):
             errors.append(
-                'openstack-infra/project-config/zuul/layout.yaml has '
-                'neither openstack-server-release-jobs '
-                'nor publish-to-pypi defined for %s so no release '
-                'will be published' % (repo,)
+                ('openstack-infra/project-config/zuul/layout.yaml has '
+                 'neither openstack-server-release-jobs '
+                 'nor publish-to-pypi defined for %s so no release '
+                 'will be published' % (repo,),
+                 True)
             )
         if ('openstack-server-release-jobs' in templates and
                 'publish-to-pypi' in templates):
             errors.append(
-                'openstack-infra/project-config/zuul/layout.yaml has '
-                'both openstack-server-release-jobs '
-                'and publish-to-pypi defined for %s' % (repo,)
+                ('openstack-infra/project-config/zuul/layout.yaml has '
+                 'both openstack-server-release-jobs '
+                 'and publish-to-pypi defined for %s' % (repo,),
+                 False)
             )
     return errors
