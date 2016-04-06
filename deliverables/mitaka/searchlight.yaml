@@ -28,3 +28,7 @@ releases:
       Cinder volumes / snapshots, Neutron networks / ports / subnets / routers,
       Designate zones / records, & Swift accounts / containers / objects.
       In addition, Searchlight now supports zero downtime re-indexing.
+  - version: 0.2.0
+    projects:
+      - repo: openstack/searchlight
+        hash: 11d3d114006ad74bbeaf514aef221a44219a2ee9
