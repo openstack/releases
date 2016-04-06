@@ -18,6 +18,7 @@ import yaml
 
 
 ZUUL_LAYOUT_URL = 'http://git.openstack.org/cgit/openstack-infra/project-config/plain/zuul/layout.yaml'  # noqa
+ZUUL_LAYOUT_FILENAME = 'openstack-infra/project-config/zuul/layout.yaml'
 
 # We use this key to modify the data structure read from the zuul
 # layout file. We don't control what are valid keys there, so make it
@@ -54,8 +55,7 @@ def require_release_jobs_for_repo(zuul_layout, repo):
 
     if repo not in zuul_layout[_VALIDATE_KEY]:
         errors.append(
-            ('did not find %s in '
-             'openstack-infra/project-config/zuul/layout.yaml' % repo,
+            ('did not find %s in %s' % (repo, ZUUL_LAYOUT_FILENAME),
              True)
         )
     else:
@@ -69,10 +69,9 @@ def require_release_jobs_for_repo(zuul_layout, repo):
         if not ('openstack-server-release-jobs' in templates or
                 'publish-to-pypi' in templates):
             errors.append(
-                ('openstack-infra/project-config/zuul/layout.yaml has '
-                 'neither openstack-server-release-jobs '
+                ('%s has neither openstack-server-release-jobs '
                  'nor publish-to-pypi defined for %s so no release '
-                 'will be published' % (repo,),
+                 'will be published' % (ZUUL_LAYOUT_FILENAME, repo),
                  True)
             )
         if ('openstack-server-release-jobs' in templates and
