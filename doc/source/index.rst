@@ -17,11 +17,11 @@ series. You can find the detail of the various release series here:
    - * :doc:`ocata/index`
      * *Future*
    - * :doc:`newton/index`
-     * *Future*
+     * :doc:`Under Development <newton/schedule>`
    - * :doc:`mitaka/index`
-     * :doc:`Under Development <mitaka/schedule>`
+     * Current stable release, security-supported (EOL: TBD)
    - * :doc:`liberty/index`
-     * Current stable release, security-supported (EOL: 2016-11-17)
+     * Security-supported (EOL: 2016-11-17)
    - * :doc:`kilo/index`
      * Security-supported (EOL: 2016-05-02)
    - * :doc:`juno/index`
