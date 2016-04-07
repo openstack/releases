@@ -1,0 +1,14 @@
+---
+launchpad: os-brick
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/os-brick/mitaka.html
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 1d392b1fc9c68eb541896870d16e6f8ecbaf99c5
+    highlights: >
+        Fixed Scality backup support.
+        Fixed Sheepdog backup support.
+        Addition of reno release notes.
