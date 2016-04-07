@@ -2,7 +2,7 @@
  Mitaka
 ========
 
-Projected Release Date: 2016-04-07
+Originally Released: 2016-04-07
 
 Release schedule: :doc:`schedule`
 
