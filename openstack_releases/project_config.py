@@ -64,23 +64,10 @@ def require_release_jobs_for_repo(zuul_layout, repo):
             t['name']
             for t in p.get('template', [])
         ]
-        release_jobs = p.get('release', [])
-        found_individual_jobs = False
-        for j in release_jobs:
-            if 'tarball' in j:
-                errors.append(
-                    ('found individual tarball job %s for %s in %s' %
-                     (j, repo, ZUUL_LAYOUT_FILENAME),
-                     False)
-                )
-                found_individual_jobs = True
-        # NOTE(dhellmann): We don't want to mess around looking for
-        # individual jobs, because we want projects to use the
-        # templates, but for now only treat that case as a warning.
-        if found_individual_jobs:
-            pass
-        elif not ('openstack-server-release-jobs' in templates or
-                  'publish-to-pypi' in templates):
+        # NOTE(dhellmann): We don't mess around looking for individual
+        # jobs, because we want projects to use the templates.
+        if not ('openstack-server-release-jobs' in templates or
+                'publish-to-pypi' in templates):
             errors.append(
                 ('%s has neither openstack-server-release-jobs '
                  'nor publish-to-pypi defined for %s so no release '
