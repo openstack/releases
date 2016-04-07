@@ -1,0 +1,32 @@
+---
+launchpad: yaml2ical
+send-announcements-to: openstack-dev@lists.openstack.org
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: 0d18942d98d025b4c30eebca03819736e0dee22f
+  - version: 0.2.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: 40f12c0d63de705f7464be5dd7147884e0f1f7d4
+  - version: 0.3.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: 8bc6cf87c5edd4dd3a6252f056f9074818f6d170
+  - version: 0.4.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: ff513f9efe88138f3356412acca9980599e1bbd4
+  - version: 0.5.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: f2ac69f2e34bfe7c7778bf3cec09ee975057e3f4
+  - version: 0.6.0
+    projects:
+      - repo: openstack-infra/yaml2ical
+        hash: b14b2fb3cf3d4080c249b0c21b6232160e2af352
+    highlights: >
+      - Add a startdate to a meeting rather than starting when yaml2ical is run
+      - Adds the ability to "skip" meetings on certain dates.
+      - Add a batching function to jinja2 to tidy up generated HTML
