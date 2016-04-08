@@ -65,7 +65,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Sep 19-23  | R-2  |                           | :ref:`o-ptl-election`       |
 +------------+------+---------------------------+-----------------------------+
-| Sep 26-30  | R-1  |                           | :ref:`o-tc-nomination`      |
+| Sep 26-30  | R-1  | :ref:`n-finalrc`          | :ref:`o-tc-nomination`      |
 +------------+------+---------------------------+-----------------------------+
 | Oct 03-07  | R+0  | :ref:`n-release`          | :ref:`o-tc-election`        |
 +------------+------+---------------------------+-----------------------------+
@@ -92,7 +92,7 @@ Newton Design Summit
 newton-1 milestone
 ------------------
 
-XXX is the newton-1 milestone window for projects following the
+May 31 - June 2 is the newton-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _release:cycle-with-milestones: http://governance.openstack.org/reference/tags/release_cycle-with-milestones.html
@@ -102,7 +102,7 @@ XXX is the newton-1 milestone window for projects following the
 newton-2 milestone
 ------------------
 
-XXX is the newton-2 milestone window for projects following the
+July 12-14 is the newton-2 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _n-final-lib:
@@ -119,7 +119,7 @@ changes before feature freeze.
 newton-3 milestone
 ------------------
 
-XXX is the newton-3 milestone window for projects following the
+August 30 - Sept 1 is the newton-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _n-ff:
@@ -154,7 +154,7 @@ when RC1 is published).
 RC1 target week
 ---------------
 
-The week of XXX is the target date for projects following the
+The week of September 12 is the target date for projects following the
 `release:cycle-with-milestones`_ model to issue their first release candidate.
 
 .. _n-hard-sf:
@@ -171,7 +171,7 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of XXX is the last week to issue release candidates
+The week of September 26 is the last week to issue release candidates
 or intermediary releases before release week. On release week only
 final-release-critical releases will be accepted (at the discretion of the
 release team).
@@ -181,7 +181,7 @@ release team).
 Newton release
 --------------
 
-The Newton coordinated release will happen on XXX.
+The Newton coordinated release will happen on October 6th, 2016.
 
 
 Project-specific events
