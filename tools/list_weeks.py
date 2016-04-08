@@ -9,15 +9,15 @@ import datetime
 parser = argparse.ArgumentParser()
 parser.add_argument(
     'previous_release',
-    help='date of previous release, YYYY-MM-DD',
+    help='monday of the week of previous release, YYYY-MM-DD',
 )
 parser.add_argument(
     'next_release',
-    help='date of upcoming release, YYYY-MM-DD',
+    help='monday of the week of upcoming release, YYYY-MM-DD',
 )
 parser.add_argument(
     'summit',
-    help='date of upcoming summit after the release, YYYY-MM-DD',
+    help='monday of the week of upcoming summit after the release, YYYY-MM-DD',
 )
 args = parser.parse_args()
 
