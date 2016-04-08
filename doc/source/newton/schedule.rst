@@ -33,7 +33,9 @@
 +------------+------+---------------------------+-----------------------------+
 | Jul 04-06  | R-13 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jul 11-15  | R-12 | :ref:`n-2`                |                             |
+| Jul 11-15  | R-12 | :ref:`n-2`                | :ref:`n-cinder-nddeadline`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-cinder-spec-freeze` |
 +------------+------+---------------------------+-----------------------------+
 | Jul 18-22  | R-11 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -47,7 +49,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Aug 22-26  | R-6  | :ref:`n-final-lib`        |                             |
 +------------+------+---------------------------+-----------------------------+
-| Aug 29-02  | R-5  | :ref:`n-3`                |                             |
+| Aug 29-02  | R-5  | :ref:`n-3`                | :ref:`n-cinder-ff`          |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`n-ff`               |                             |
 |            |      +---------------------------+-----------------------------+
@@ -219,3 +221,33 @@ TC member election
 
 Election for partially renewing Technical Committee members will happen
 during this week.
+
+Cinder
+------
+
+.. _n-cinder-nddeadline:
+
+Cinder New Backend Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for getting a new backend driver added to Cinder is 12th July,
+2016. All review issues must be addressed and third party CI must be reporting
+and stable with enough time for reviewers prior to the deadline. Meeting these
+requirements on the 12th does not guarantee core reviewers will have enough
+time to merge the driver.
+
+.. _n-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder specs must be approved by 12th July, 2016.
+
+.. _n-cinder-ff:
+
+Cinder Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for new features and driver functionality is 31 August, 2016. Any
+changes past that date will be at the discretion of the core team.
+
