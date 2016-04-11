@@ -1,0 +1,13 @@
+---
+launchpad: sahara-tests
+send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/sahara-tests/index.html
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/sahara-tests
+        hash: baf526ef907789fea4ea999cae288cd0d1c6d493
+    highlights: >
+        This release is the first release of sahara tests, which includes
+        scenario framework for testing sahara. Also, sahara tests framework
+        now includes tempest plugin for testing sahara.
