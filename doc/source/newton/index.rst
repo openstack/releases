@@ -2,12 +2,9 @@
  Newton
 ========
 
-Projected Release Date: 
+Projected Release Date: 2016-10-06
 
-.. toctree::
-   :maxdepth: 1
-
-   schedule
+Release schedule: :doc:`schedule`
 
 .. deliverable::
    :series: newton
