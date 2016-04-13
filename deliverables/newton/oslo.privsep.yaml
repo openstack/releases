@@ -1,0 +1,11 @@
+---
+launchpad: oslo.privsep
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 559e035a4eb9787c3224ac8439c4454759cbdd48
+    highlights: |
+        * Switch to msgpack for serialization. Now bytes/unicode clean.
