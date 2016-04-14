@@ -8,3 +8,8 @@ Release schedule: :doc:`schedule`
 
 .. deliverable::
    :series: newton
+
+.. toctree::
+   :hidden:
+
+   schedule
