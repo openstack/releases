@@ -1,6 +1,7 @@
 ---
 launchpad: cinder
 release-notes: http://docs.openstack.org/releasenotes/cinder/liberty.html
+send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.0.0
     projects:
@@ -10,3 +11,7 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: f51ffea673de5395aee6c789b07fb44d9e801b88
+  - version: 7.0.2
+    projects:
+      - repo: openstack/cinder
+        hash: c937656c138e995f6e41f96a02db7aed1dc74722
