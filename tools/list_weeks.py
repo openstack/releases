@@ -8,6 +8,12 @@ import datetime
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
+    '--etherpad',
+    default=False,
+    action='store_true',
+    help='output in etherpad format for building the release planning doc',
+)
+parser.add_argument(
     'previous_release',
     help='monday of the week of previous release, YYYY-MM-DD',
 )
@@ -49,16 +55,21 @@ while current <= summit_date:
     weeks.append(current)
     current += week
 
-print('''
+HEADER = '''
 +-------------------+---------------------------+-----------------------------+
 | Week              | Cross-project events      | Project-specific events     |
 +============+======+===========================+=============================+
-''', end='')
+'''
 
-week_fmt = '''
+if not args.etherpad:
+    print(HEADER, end='')
+
+TABLE_FORMAT = '''
 | {:<10} | {:<4} |{:<27}|{:<29}|
 +------------+------+---------------------------+-----------------------------+
 '''.strip()
+
+ETHERPAD_FORMAT = '{} ({})'
 
 
 def show_week(week, name):
@@ -66,7 +77,10 @@ def show_week(week, name):
         week,
         week + work_week,
     )
-    print(week_fmt.format(date_range, name, '', ''))
+    if not args.etherpad:
+        print(TABLE_FORMAT.format(date_range, name, '', ''))
+    else:
+        print(ETHERPAD_FORMAT.format(name, date_range))
 
 
 # Print the date for the previous release
