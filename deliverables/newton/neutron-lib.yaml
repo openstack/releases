@@ -1,0 +1,13 @@
+---
+launchpad: neutron
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 1694d4c3b37fc988ce39cae86297c44ae557e7dd
+    highlights: |
+        * Add neutron pagination helpers
+        * No 'import neutron' hacking check
+        * Fix semver versioning for Newton
