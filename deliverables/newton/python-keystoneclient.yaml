@@ -1,0 +1,13 @@
+---
+launchpad: python-keystoneclient
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-keystoneclient/newton.html
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 60ca0ceb185592fd7bdb8ede2764ad123259b275
+    highlights: >
+        - The keystone CLI is removed.
+        - The keystoneclient.openstack.common.apiclient package is removed
