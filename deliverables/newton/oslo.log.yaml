@@ -1,0 +1,16 @@
+---
+launchpad: oslo.log
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/oslo.log/newton.html
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 3b1d0f5ffbfcde153d74c81f27b9c06d29e281e0
+    highlights: |
+        * Provides the release name for NEWTON and OCATA so that any future
+          deprecated functionality that references those can correctly
+          work.
+        * Improved test coverage.
+        * Log helper/decorator can now correctly work on static methods.
