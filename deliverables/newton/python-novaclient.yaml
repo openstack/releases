@@ -12,3 +12,11 @@ releases:
         Fixes host-evacuate-live for the 2.25 microversion.
         Added aggregate-show command to replace aggregate-details.
         Adds changes-since support when listing servers.
+  - version: 4.0.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: f6efc861b7b40c8a78743fed661053506fb1301a
+    highlights: >
+        - Deprecate volume proxy CLIs and APIs are removed.
+        - Image proxy CLIs and APIs are deprecated.
+        - The python API bindings client now defaults to the v2.1 API.
