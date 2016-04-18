@@ -71,7 +71,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Oct 10-14  | R+1  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Oct 17-21  | R+2  |                           |                             |
+| Oct 17-21  | R+2  | :ref:`n-trailing`         |                             |
 +------------+------+---------------------------+-----------------------------+
 | Oct 24-28  | R+3  | :ref:`o-design-summit`    |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -190,6 +190,13 @@ Newton release
 
 The Newton coordinated release will happen on October 6th, 2016.
 
+.. _n-trailing:
+
+Newton cycle-trailing Deadline
+------------------------------
+
+The deadline for projects using the release:cycle-trailing model that
+follow the main release cycle.
 
 Project-specific events
 =======================
