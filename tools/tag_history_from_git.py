@@ -23,6 +23,8 @@ Use git as the canonical source of version numbers.
 from __future__ import print_function
 from __future__ import unicode_literals
 
+from distutils.version import StrictVersion
+
 import argparse
 import datetime
 import os
@@ -119,7 +121,9 @@ for series, milestones in sorted(series_data.items()):
         f.write('---\n')
         f.write('launchpad: %s\n' % args.project)
         f.write('releases:\n')
-        for milestone, milestone_data in sorted(milestones.items()):
+        milestones_sorted = sorted(milestones.items(),
+                                   key=lambda x: StrictVersion(x[0]))
+        for milestone, milestone_data in milestones_sorted:
             f.write('  - version: %s\n' % milestone)
             f.write('    projects:\n')
             for repo_short_name, sha in milestone_data:
