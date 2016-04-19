@@ -1,0 +1,102 @@
+---
+launchpad: hacking
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 4e90f08824bc947b8fc968b19ff1a3729ee6a222
+  - version: 0.5.1
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 5e64a3a3774f04e2a29299698fdc3b4c72fa8040
+  - version: 0.5.2
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 54b008fafeb2aa7e95e1d14bb075c3961e797ce3
+  - version: 0.5.3
+    projects:
+      - repo: openstack-dev/hacking
+        hash: e28296ed27c7aa355f7be8cea7dc949d2cebf8da
+  - version: 0.5.4
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 99ecd73f4711d2a53829d7a5e7c61494d2f6ec38
+  - version: 0.5.5
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 87b6b5b7ddbf603817fdbfb751464fa8576a40a4
+  - version: 0.5.6
+    projects:
+      - repo: openstack-dev/hacking
+        hash: ce26036d816a4e2bd99c73c23fe794b4fc5a0a67
+  - version: 0.6.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: cf90af6281796c11bf0d98e8eb1747b09a9f663c
+  - version: 0.7.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 6e1404cb221190645c7ef66e8d77e3402cba01eb
+  - version: 0.7.1
+    projects:
+      - repo: openstack-dev/hacking
+        hash: af33512bf3bd7fb7a4934254ae9710a9d64c3a36
+  - version: 0.7.2
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 00ccb88d61cf5c6dda5c07a16be4a93b7fd6351e
+  - version: 0.8.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 2214bf033bc262934a8fc71033421e0aee82fd14
+  - version: 0.8.1
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 86ef983ce39ebee9b4426efa296eb427fd2ac852
+  - version: 0.9.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 4e300803f2ab44becbe737abdd1459aa026000c9
+  - version: 0.9.1
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 2d76161033be1682382d095588eb2ebabb52f992
+  - version: 0.9.2
+    projects:
+      - repo: openstack-dev/hacking
+        hash: e56eddf55b4e8be9826e8eb968b2893ecab7201b
+  - version: 0.9.3
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 4e258c4222d1c9ff06213ba783035802e3bdbc46
+  - version: 0.9.4
+    projects:
+      - repo: openstack-dev/hacking
+        hash: b45ac441395f06399662963a04d84c84470e14a8
+  - version: 0.9.5
+    projects:
+      - repo: openstack-dev/hacking
+        hash: 3af414c0c9e5c64cb764c0e131a876b22a0553cd
+  - version: 0.9.6
+    projects:
+      - repo: openstack-dev/hacking
+        hash: f63394c9a427bdad21bf219135eeb030c2e01145
+  - version: 0.10.0
+    projects:
+      - repo: openstack-dev/hacking
+        hash: ec6048f13558b93653091e83d8d0dc621f3cbefb
+  - version: 0.10.1
+    projects:
+      - repo: openstack-dev/hacking
+        hash: e25679be7f3b9b2f2bbea6ce5af4fcd69ba2d574
+  # NOTE(sigmavirus24): Despite several tags not existing on master, this one
+  # prevents us from creating a 0.11.0 release. Fixing this edgecase in the
+  # release management software has been scheduled for Newton (see:
+  # https://etherpad.openstack.org/p/newton-relmgt-plan) For the moment,
+  # commenting out this release is the easiest way to side-step the issue.
+  # - version: 0.10.2
+  # - projects:
+  # -   - repo: openstack-dev/hacking
+  # -     hash: bc4b1118e155784bc306c01733375ffec56b89b3
