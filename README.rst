@@ -184,8 +184,13 @@ The top level of a deliverable file is a mapping with keys:
   The slug name of the launchpad project, suitable for use in URLs.
 
 ``release-notes``
-  The URL to the published release notes for the deliverable for the
-  series.
+  The URL or URLs to the published release notes for the deliverable
+  for the series.
+
+  Deliverables contained a single repository should simply include the
+  URL to the notes for that repository. Deliverables made up of
+  multiple repositories should use a hash to map each repository name
+  to its notes URL.
 
 ``send-announcements-to``
   A string containing one or more email addresses to receive
@@ -277,22 +282,26 @@ and then for the subsequent release it would be updated to contain::
 
 For deliverables with multiple repositories, the list of projects
 would contain all of them. For example, the Neutron deliverable might
-be described by ``deliverables/liberty/neutron.yaml`` containing:
+be described by ``deliverables/mitaka/neutron.yaml`` containing:
 
 ::
 
    ---
    launchpad: neutron
    send-announcements-to: openstack-announce@lists.openstack.org
-   release-notes: http://docs.openstack.org/releasenotes/neutron/liberty.html
+   release-notes:
+     openstack/neutron: http://docs.openstack.org/releasenotes/neutron/mitaka.html
+     openstack/neutron-lbaas: http://docs.openstack.org/releasenotes/neutron-lbaas/mitaka.html
+     openstack/neutron-fwaas: http://docs.openstack.org/releasenotes/neutron-fwaas/mitaka.html
+     openstack/neutron-vpnaas: http://docs.openstack.org/releasenotes/neutron-vpnaas/mitaka.html
    releases:
-     - version: 7.0.0
-       projects:
-         - repo: openstack/neutron
-           hash: somethingunique
-         - repo: openstack/neutron-fwaas
-           hash: somethingunique
-         - repo: openstack/neutron-lbaas
-           hash: somethingunique
-         - repo: openstack/neutron-vpnaas
-           hash: somethingunique
+    - version: 8.0.0
+      projects:
+        - repo: openstack/neutron
+          hash: 3213eb124e40b130e174ac3a91067e2b196788dd
+        - repo: openstack/neutron-fwaas
+          hash: ab5622891e2b1a7631f97471f55ffb9b5235e5ee
+        - repo: openstack/neutron-lbaas
+          hash: 19b18f05037dae4bbbada848aae6421da18ab490
+        - repo: openstack/neutron-vpnaas
+          hash: a1b12601a64a2359b2224fd4406c5db008484700

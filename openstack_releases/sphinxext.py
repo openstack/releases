@@ -45,7 +45,15 @@ def _list_table(add, headers, data, title='', columns=None):
     for row in data:
         add('   - * %s' % row[0])
         for r in row[1:]:
-            add('     * %s' % r)
+            lines = str(r).splitlines()
+            if not lines:
+                # empty string
+                add('     * ')
+            else:
+                # potentially multi-line string
+                add('     * %s' % lines[0])
+                for l in lines[1:]:
+                    add('       %s' % l)
     add('')
 
 
@@ -212,10 +220,15 @@ class DeliverableDirectiveBase(rst.Directive):
                 'version', 'unreleased')
             ref = ':ref:`%s-%s`' % (series, deliverable_name)
             release_notes = deliverable_info.get('release-notes')
-            if release_notes:
-                notes_link = '`release notes <%s>`__' % release_notes
-            else:
+            if not release_notes:
                 notes_link = ''
+            elif isinstance(release_notes, dict):
+                notes_link = '\n'.join(
+                    '| `%s release notes <%s>`__' % (n.split('/')[-1], v)
+                    for n, v in sorted(release_notes.items())
+                )
+            else:
+                notes_link = '`release notes <%s>`__' % release_notes
             most_recent.append((ref, earliest_version, recent_version, notes_link))
         _list_table(
             lambda t: result.append(t, source_name),
@@ -246,9 +259,18 @@ class DeliverableDirectiveBase(rst.Directive):
             app.info('[deliverables] rendering %s' % deliverable_name)
 
             release_notes = deliverable_info.get('release-notes')
-            if release_notes:
+            if not release_notes:
+                notes_link = None
+            elif isinstance(release_notes, dict):
+                notes_link = ' | '.join(
+                    '`%s <%s>`__' % (n.split('/')[-1], v)
+                    for n, v in sorted(release_notes.items())
+                )
+            else:
+                notes_link = '`%s <%s>`__' % (deliverable_name, release_notes)
+            if notes_link:
                 _add('')
-                _add('Release Notes: %s' % release_notes)
+                _add('Release Notes: %s' % notes_link)
                 _add('')
             link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
             _list_table(
