@@ -84,7 +84,7 @@ def main():
         with open(deliverable_filename, 'r') as f:
             deliverable_info = yaml.safe_load(f)
     except (IOError, OSError) as e:
-        parser.abort(e)
+        parser.error(e)
 
     # Determine the new version number.
     last_release = deliverable_info['releases'][-1]
