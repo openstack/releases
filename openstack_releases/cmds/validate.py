@@ -261,10 +261,17 @@ def main():
                                     print('SHA found in descendants')
                                 else:
                                     print('SHA NOT FOUND in descendants')
-                                    errors.append(
-                                        '%s %s is not a descendant of %s' % (
-                                            project['repo'], project['hash'],
-                                            prev_version)
+                                    if series_name == '_independent':
+                                        save = warnings.append
+                                    else:
+                                        save = errors.append
+                                    save(
+                                        '%s %s receiving %s is not a descendant of %s' % (
+                                            project['repo'],
+                                            project['hash'],
+                                            release['version'],
+                                            prev_version,
+                                        )
                                     )
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])

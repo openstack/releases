@@ -91,15 +91,10 @@ releases:
     projects:
       - repo: openstack-dev/hacking
         hash: e25679be7f3b9b2f2bbea6ce5af4fcd69ba2d574
-  # NOTE(sigmavirus24): Despite several tags not existing on master, this one
-  # prevents us from creating a 0.11.0 release. Fixing this edgecase in the
-  # release management software has been scheduled for Newton (see:
-  # https://etherpad.openstack.org/p/newton-relmgt-plan) For the moment,
-  # commenting out this release is the easiest way to side-step the issue.
-  # - version: 0.10.2
-  # - projects:
-  # -   - repo: openstack-dev/hacking
-  # -     hash: bc4b1118e155784bc306c01733375ffec56b89b3
+  - version: 0.10.2
+    projects:
+      - repo: openstack-dev/hacking
+        hash: bc4b1118e155784bc306c01733375ffec56b89b3
   - version: 0.11.0
     projects:
       - repo: openstack-dev/hacking
