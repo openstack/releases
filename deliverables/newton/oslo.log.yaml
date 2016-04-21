@@ -14,3 +14,8 @@ releases:
           work.
         * Improved test coverage.
         * Log helper/decorator can now correctly work on static methods.
+  - version: 3.5.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 273ef5378e5493cb3434cb46aef79dfa820d641d
+    highlights: '* Remove direct dependency on babel'
