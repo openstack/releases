@@ -4,6 +4,10 @@ send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/openstack-ansible/mitaka.html
 artifact-link-mode: none
 releases:
+  - version: 11.2.14
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: b3bc3131ff607f159c7b8224d85cdfb6cfbad02e
   - version: 12.0.11
     projects:
       - repo: openstack/openstack-ansible
