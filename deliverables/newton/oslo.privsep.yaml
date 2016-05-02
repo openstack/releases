@@ -9,3 +9,7 @@ releases:
         hash: 559e035a4eb9787c3224ac8439c4454759cbdd48
     highlights: |
         * Switch to msgpack for serialization. Now bytes/unicode clean.
+  - version: 1.6.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 05ba6349880cac8542a41d14e83fbb1cba9319de

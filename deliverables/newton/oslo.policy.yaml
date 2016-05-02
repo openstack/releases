@@ -1,0 +1,11 @@
+---
+launchpad: oslo.policy
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/oslo.policy/newton.html
+releases:
+- version: 1.7.0
+  projects:
+  - repo: openstack/oslo.policy
+    hash: 93aee73d37fcaf47fd97991711a1e48a566dcc78
+  highlights: '* Support policy file in YAML'

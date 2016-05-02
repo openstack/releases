@@ -1,0 +1,16 @@
+---
+launchpad: oslo.utils
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/oslo.utils/newton.html
+releases:
+- version: 3.9.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: 3ac0253bdbacc252e1a31b97d2cc93a661bc36a5
+  highlights: |-
+    * Add importutils.import_any method
+    * Add excutils.exception_filter
+    * Add CHAPPASSWORD to list of sanitize keys
+    * Add method is_valid_cidr to netutils
+    * Provide single step check if eventlet is monkey_patched
