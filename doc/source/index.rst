@@ -100,6 +100,17 @@ series. You can find the detail of the various release series here:
    releases/*
    schedules/*
 
+Teams
+=====
+
+Deliverables organized by the team that produces them.
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   teams/*
+
 Series-Independent Releases
 ===========================
 

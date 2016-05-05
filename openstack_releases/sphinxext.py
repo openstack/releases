@@ -14,6 +14,7 @@
 
 import collections
 import glob
+import itertools
 import os.path
 
 from docutils import nodes
@@ -103,10 +104,39 @@ def _collapse_deliverable_history(app, name, info):
     info['releases'] = list(reversed(releases))
 
 
+_cached_deliverable_files = {}
+
+
+def _get_deliverable_file_content(app, deliverable_name, filename):
+    if filename in _cached_deliverable_files:
+        return _cached_deliverable_files[filename]
+    app.info('[deliverables] reading %s' % filename)
+    with open(filename, 'r') as f:
+        d_info = yaml.load(f.read())
+        _collapse_deliverable_history(app, deliverable_name, d_info)
+        _cached_deliverable_files[filename] = d_info
+        return d_info
+
+
+_all_teams = {}
+_deliverable_files_by_team = {}
+
+
+def _initialize_team_data(app):
+    team_data = governance.get_team_data()
+    for team in (governance.Team(n, i) for n, i in team_data.items()):
+        _all_teams[team.name] = team
+        _deliverable_files_by_team[team.name] = list(itertools.chain(
+            *(glob.glob('deliverables/*/%s.yaml' % dn)
+              for dn in team.deliverables)
+        ))
+
+
 class DeliverableDirectiveBase(rst.Directive):
 
     option_spec = {
         'series': directives.unchanged,
+        'team': directives.unchanged,
     }
 
     _TYPE_ORDER = [
@@ -119,47 +149,76 @@ class DeliverableDirectiveBase(rst.Directive):
         env = self.state.document.settings.env
         app = env.app
 
-        team_data = governance.get_team_data()
-
         # The series value is optional for some directives.
         series = self.options.get('series')
 
+        # If the user specifies a team, track only the deliverables
+        # for that team.
+        self.team_name = self.options.get('team')
+        self.team_deliverables = []
+
+        if self.team_name:
+            deliverables = _all_teams[self.team_name].deliverables
+            self.team_deliverables = list(deliverables.keys())
+        else:
+            deliverables = {}
+            for team in _all_teams.values():
+                deliverables.update(team.deliverables)
+
         deliverable_types = {}
-        for team in (governance.Team(n, i) for n, i in team_data.items()):
-            for dn, di in team.deliverables.items():
-                for tag in di.tags:
-                    if tag.startswith('type:'):
-                        deliverable_types[dn] = tag
+        for dn, di in deliverables.items():
+            for tag in di.tags:
+                if tag.startswith('type:'):
+                    deliverable_types[dn] = tag
 
         result = ViewList()
 
-        # Read all of the deliverable data for the series.
+        # Assemble all of the deliverable data to be displayed and
+        # build the RST representation.
 
-        deliverables = collections.defaultdict(list)
-
-        for filename in sorted(self._get_deliverables_files(series)):
-            app.info('[deliverables] reading %s' % filename)
-            deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
-            deliverable_type = _get_deliverable_type(
-                deliverable_types,
-                deliverable_name,
+        if self.team_name:
+            deliverables = []
+            for filename in sorted(self._get_deliverables_files(series)):
+                deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
+                d_info = _get_deliverable_file_content(
+                    app, deliverable_name, filename,
+                )
+                deliverables.append(
+                    (deliverable_name,
+                     filename,
+                     d_info))
+            self._add_deliverables(
+                None,
+                deliverables,
+                series,
+                app,
+                result,
             )
-            with open(filename, 'r') as f:
-                d_info = yaml.load(f.read())
-                _collapse_deliverable_history(app, deliverable_name, d_info)
+        else:
+            deliverables = collections.defaultdict(list)
+
+            for filename in sorted(self._get_deliverables_files(series)):
+                deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
+                deliverable_type = _get_deliverable_type(
+                    deliverable_types,
+                    deliverable_name,
+                )
+                d_info = _get_deliverable_file_content(
+                    app, deliverable_name, filename,
+                )
                 deliverables[deliverable_type].append(
                     (deliverable_name,
                      filename,
                      d_info))
 
-        for type_tag in self._TYPE_ORDER:
-            self._add_deliverables(
-                type_tag,
-                deliverables[type_tag],
-                series,
-                app,
-                result,
-            )
+            for type_tag in self._TYPE_ORDER:
+                self._add_deliverables(
+                    type_tag,
+                    deliverables[type_tag],
+                    series,
+                    app,
+                    result,
+                )
 
         # NOTE(dhellmann): Useful for debugging.
         # print('\n'.join(result))
@@ -203,39 +262,40 @@ class DeliverableDirectiveBase(rst.Directive):
             return
 
         result.append('', source_name)
-        title = self._TYPE_TITLE.get(type_tag, 'Unknown Projects')
-        result.append('-' * len(title), source_name)
-        result.append(title, source_name)
-        result.append('-' * len(title), source_name)
-        result.append('', source_name)
+        if type_tag is not None:
+            title = self._TYPE_TITLE.get(type_tag, 'Unknown Projects')
+            result.append('-' * len(title), source_name)
+            result.append(title, source_name)
+            result.append('-' * len(title), source_name)
+            result.append('', source_name)
 
         # Build a table of the first and most recent versions of each
         # deliverable.
-
-        most_recent = []
-        for deliverable_name, filename, deliverable_info in deliverables:
-            earliest_version = deliverable_info.get('releases', {})[0].get(
-                'version', 'unreleased')
-            recent_version = deliverable_info.get('releases', {})[-1].get(
-                'version', 'unreleased')
-            ref = ':ref:`%s-%s`' % (series, deliverable_name)
-            release_notes = deliverable_info.get('release-notes')
-            if not release_notes:
-                notes_link = ''
-            elif isinstance(release_notes, dict):
-                notes_link = '\n'.join(
-                    '| `%s release notes <%s>`__' % (n.split('/')[-1], v)
-                    for n, v in sorted(release_notes.items())
-                )
-            else:
-                notes_link = '`release notes <%s>`__' % release_notes
-            most_recent.append((ref, earliest_version, recent_version, notes_link))
-        _list_table(
-            lambda t: result.append(t, source_name),
-            ['Deliverable', 'Earliest Version', 'Most Recent Version', 'Notes'],
-            most_recent,
-            title='Release Summary',
-        )
+        if not self.team_name:
+            most_recent = []
+            for deliverable_name, filename, deliverable_info in deliverables:
+                earliest_version = deliverable_info.get('releases', {})[0].get(
+                    'version', 'unreleased')
+                recent_version = deliverable_info.get('releases', {})[-1].get(
+                    'version', 'unreleased')
+                ref = ':ref:`%s-%s`' % (series, deliverable_name)
+                release_notes = deliverable_info.get('release-notes')
+                if not release_notes:
+                    notes_link = ''
+                elif isinstance(release_notes, dict):
+                    notes_link = '\n'.join(
+                        '| `%s release notes <%s>`__' % (n.split('/')[-1], v)
+                        for n, v in sorted(release_notes.items())
+                    )
+                else:
+                    notes_link = '`release notes <%s>`__' % release_notes
+                most_recent.append((ref, earliest_version, recent_version, notes_link))
+            _list_table(
+                lambda t: result.append(t, source_name),
+                ['Deliverable', 'Earliest Version', 'Most Recent Version', 'Notes'],
+                most_recent,
+                title='Release Summary',
+            )
 
         # Show the detailed history of the deliverables within the series.
 
@@ -248,7 +308,10 @@ class DeliverableDirectiveBase(rst.Directive):
 
             def _title(text, underline):
                 text = str(text)  # version numbers might be seen as floats
-                _add('.. _%s-%s:' % (series, text))
+                if self.team_name:
+                    _add('.. _team-%s-%s:' % (series, text))
+                else:
+                    _add('.. _%s-%s:' % (series, text))
                 _add('')
                 _add(text)
                 _add(underline * len(text))
@@ -256,7 +319,8 @@ class DeliverableDirectiveBase(rst.Directive):
 
             _title(deliverable_name, '=')
 
-            app.info('[deliverables] rendering %s' % deliverable_name)
+            app.info('[deliverables] rendering %s (%s)' %
+                     (deliverable_name, series))
 
             release_notes = deliverable_info.get('release-notes')
             if not release_notes:
@@ -287,7 +351,17 @@ class DeliverableDirectiveBase(rst.Directive):
 class DeliverableDirective(DeliverableDirectiveBase):
 
     def _get_deliverables_files(self, series):
-        return glob.glob('deliverables/%s/*.yaml' % series)
+        if self.team_name:
+            # Only show the deliverables associated with the team
+            # specified.
+            return itertools.chain(
+                *(glob.glob('deliverables/%s/%s.yaml' % (series, dn))
+                  for dn in self.team_deliverables)
+            )
+        else:
+            # Show all of the deliverables for all teams producing
+            # anything in the series.
+            return glob.glob('deliverables/%s/*.yaml' % series)
 
     def run(self):
         # Require a series value.
@@ -308,7 +382,86 @@ class IndependentDeliverablesDirective(DeliverableDirectiveBase):
         return glob.glob('deliverables/_independent/*.yaml')
 
 
+class TeamDirective(rst.Directive):
+
+    option_spec = {
+        'series': directives.unchanged,
+        'name': directives.unchanged,
+    }
+
+    def run(self):
+        # If the user specifies a team, track only the deliverables
+        # for that team.
+        self.team_name = self.options.get('name')
+        if not self.team_name:
+            error = self.state_machine.reporter.error(
+                'No team name in team directive',
+                nodes.literal_block(self.block_text, self.block_text),
+                line=self.lineno)
+            return [error]
+
+        if self.team_name not in _all_teams:
+            error = self.state_machine.reporter.error(
+                'Team %r not found in governance data' % self.team_name,
+                nodes.literal_block(self.block_text, self.block_text),
+                line=self.lineno)
+            return [error]
+        team = _all_teams[self.team_name]
+        self.team_deliverables = list(team.deliverables.keys())
+
+        deliverable_files = _deliverable_files_by_team[self.team_name]
+        all_series = reversed(sorted(set(
+            os.path.basename(os.path.dirname(df))
+            for df in deliverable_files
+        )))
+
+        result = ViewList()
+
+        def _add(text):
+            result.append(text, '<team tag>')
+
+        for series in all_series:
+            _add(series.title())
+            _add('=' * len(series))
+            _add('')
+            _add('.. deliverable::')
+            _add('   :series: %s' % series)
+            _add('   :team: %s' % self.team_name)
+            _add('')
+
+        # NOTE(dhellmann): Useful for debugging.
+        # print('\n'.join(result))
+
+        node = nodes.section()
+        node.document = self.state.document
+        nested_parse_with_titles(self.state, result, node)
+        return node.children
+
+
+def _generate_team_pages(app):
+    teams_with_deliverables = []
+    for team_name in sorted(_all_teams.keys()):
+        if _deliverable_files_by_team.get(team_name):
+            teams_with_deliverables.append(team_name)
+    for team_name in teams_with_deliverables:
+        app.info('[team page] %s' % team_name)
+        slug = team_name.lower().replace('-', '_').replace(' ', '_')
+        base_file = slug + '.rst'
+        with open(os.path.join('doc/source/teams', base_file), 'w') as f:
+            f.write('=' * (len(team_name) + 2))
+            f.write('\n')
+            f.write(' %s\n' % team_name.title())
+            f.write('=' * (len(team_name) + 2))
+            f.write('\n\n')
+            f.write('.. team::\n')
+            f.write('   :name: %s\n' % team_name)
+    return
+
+
 def setup(app):
+    _initialize_team_data(app)
     app.add_directive('deliverable', DeliverableDirective)
     app.add_directive('independent-deliverables',
                       IndependentDeliverablesDirective)
+    app.add_directive('team', TeamDirective)
+    _generate_team_pages(app)
