@@ -25,7 +25,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jun 06-10  | R-17 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jun 13-17  | R-16 |                           |                             |
+| Jun 13-17  | R-16 |                           | :ref:`n-trove-spec-prop`    |
 +------------+------+---------------------------+-----------------------------+
 | Jun 20-24  | R-15 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -36,6 +36,8 @@
 | Jul 11-15  | R-12 | :ref:`n-2`                | :ref:`n-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`n-cinder-spec-freeze` |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-trove-spec-freeze`  |
 +------------+------+---------------------------+-----------------------------+
 | Jul 18-22  | R-11 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -47,11 +49,13 @@
 +------------+------+---------------------------+-----------------------------+
 | Aug 15-19  | R-7  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Aug 22-26  | R-6  | :ref:`n-final-lib`        |                             |
+| Aug 22-26  | R-6  | :ref:`n-final-lib`        | :ref:`n-trove-cl-soft`      |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-trove-guest-req`    |
 +------------+------+---------------------------+-----------------------------+
 | Aug 29-02  | R-5  | :ref:`n-3`                | :ref:`n-cinder-ff`          |
 |            |      +---------------------------+-----------------------------+
-|            |      | :ref:`n-ff`               |                             |
+|            |      | :ref:`n-ff`               | :ref:`n-trove-ff`           |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`n-final-clientlib`  |                             |
 |            |      +---------------------------+-----------------------------+
@@ -296,3 +300,52 @@ Nova priority spec approval freeze
 All priority Nova specs must be approved by August 4th, 2016. This is
 intentionally after the Nova midcycle meetup for Newton so there is some time
 for last minute adjustments to priority features.
+
+Trove
+-----
+
+The deadlines below are specific to the Trove project.
+
+.. _n-trove-spec-prop:
+
+Trove Spec Proposal Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Submit all Trove specs for the Newton release by the end of this week
+(for review) in trove-specs repository.
+
+.. _n-trove-spec-freeze:
+
+Trove Spec Freeze
+^^^^^^^^^^^^^^^^^
+
+All Trove specs for the Newton release must be approved by the end of
+this week.
+
+.. _n-trove-guest-req:
+
+Trove Guest Requirements Freeze:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Freeze the requirements for all guest agents by this date and make the
+newton requirements file for guests.
+
+.. _n-trove-cl-soft:
+
+Trove Client Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+All major features for the python-troveclient must be reviewed and
+approved by the end of this week, this gives us one additional week to
+address any issues with dependencies.
+
+.. _n-trove-ff:
+
+Trove Feature Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All major Trove features and projects for Newton must be approved by
+the end of this week.
+
+This is the deadline for the Trove server, the python-troveclient and
+all trove-dashboard changes.
