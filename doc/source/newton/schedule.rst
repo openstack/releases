@@ -21,7 +21,7 @@
 +------------+------+---------------------------+-----------------------------+
 | May 23-27  | R-19 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| May 30-03  | R-18 | :ref:`n-1`                |                             |
+| May 30-03  | R-18 | :ref:`n-1`                | :ref:`n-nova-non-prio-s-fr` |
 +------------+------+---------------------------+-----------------------------+
 | Jun 06-10  | R-17 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -29,7 +29,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jun 20-24  | R-15 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jun 27-01  | R-14 |                           |                             |
+| Jun 27-01  | R-14 |                           | :ref:`n-nova-non-prio-ff`   |
 +------------+------+---------------------------+-----------------------------+
 | Jul 04-06  | R-13 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -41,7 +41,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jul 25-29  | R-10 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Aug 01-05  | R-9  |                           |                             |
+| Aug 01-05  | R-9  |                           | :ref:`n-nova-prio-spec-frz` |
 +------------+------+---------------------------+-----------------------------+
 | Aug 08-12  | R-8  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -265,3 +265,34 @@ Cinder Feature Freeze
 The deadline for new features and driver functionality is 31 August, 2016. Any
 changes past that date will be at the discretion of the core team.
 
+Nova
+----
+
+For reference, these are the `Nova review priorities for Newton`_.
+
+.. _Nova review priorities for Newton: https://specs.openstack.org/openstack/nova-specs/priorities/newton-priorities.html
+
+.. _n-nova-non-prio-s-fr:
+
+Nova non-priority spec approval freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All non-priority Nova specs must be approved by June 2nd, 2016.
+
+.. _n-nova-non-prio-ff:
+
+Nova non-priority feature freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for non-priority features is June 30th, 2016. There may be a round
+of feature freeze exceptions but that will be at the discretion of the Nova
+core team.
+
+.. _n-nova-prio-spec-frz:
+
+Nova priority spec approval freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All priority Nova specs must be approved by August 4th, 2016. This is
+intentionally after the Nova midcycle meetup for Newton so there is some time
+for last minute adjustments to priority features.
