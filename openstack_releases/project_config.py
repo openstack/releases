@@ -66,20 +66,22 @@ def require_release_jobs_for_repo(zuul_layout, repo):
         ]
         # NOTE(dhellmann): We don't mess around looking for individual
         # jobs, because we want projects to use the templates.
-        if not ('openstack-server-release-jobs' in templates or
-                'publish-to-pypi' in templates):
+        num_release_jobs = sum(('openstack-server-release-jobs' in templates,
+                                'publish-to-pypi' in templates,
+                                'puppet-tarball-jobs' in templates))
+        if num_release_jobs == 0:
             errors.append(
-                ('%s has neither openstack-server-release-jobs '
-                 'nor publish-to-pypi defined for %s so no release '
-                 'will be published' % (ZUUL_LAYOUT_FILENAME, repo),
-                 True)
+                ('%s no release job specified, '
+                 'should be one of openstack-server-release-jobs, '
+                 'publish-to-pypi or puppet-tarball-jobs for %s '
+                 'or no release will be published'
+                 % (ZUUL_LAYOUT_FILENAME, repo), True)
             )
-        if ('openstack-server-release-jobs' in templates and
-                'publish-to-pypi' in templates):
+        elif num_release_jobs > 1:
             errors.append(
-                ('openstack-infra/project-config/zuul/layout.yaml has '
-                 'both openstack-server-release-jobs '
-                 'and publish-to-pypi defined for %s' % (repo,),
-                 False)
+                ('%s multiple release jobs specified, '
+                 'should be *one* of openstack-server-release-jobs, '
+                 'publish-to-pypi or puppet-tarball-jobs for %s '
+                 % (ZUUL_LAYOUT_FILENAME, repo), False)
             )
     return errors
