@@ -52,6 +52,8 @@
 | Aug 22-26  | R-6  | :ref:`n-final-lib`        | :ref:`n-trove-cl-soft`      |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`n-trove-guest-req`    |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-horizon-ff`         |
 +------------+------+---------------------------+-----------------------------+
 | Aug 29-02  | R-5  | :ref:`n-3`                | :ref:`n-cinder-ff`          |
 |            |      +---------------------------+-----------------------------+
@@ -349,3 +351,17 @@ the end of this week.
 
 This is the deadline for the Trove server, the python-troveclient and
 all trove-dashboard changes.
+
+Horizon
+-------
+
+The deadlines below are specific to the Horizon project.
+
+.. _n-horizon-ff:
+
+Horizon Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for Horizon features for Newton. This is a week earlier than
+the standard milestone to allow plugins time to sync before the standard
+release.
