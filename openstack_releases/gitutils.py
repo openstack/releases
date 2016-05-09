@@ -56,6 +56,9 @@ def commit_exists(repo, ref):
 
 def clone_repo(workdir, repo):
     "Check out the code."
+    dest = os.path.join(workdir, repo)
+    if os.path.exists(dest):
+        return
     cmd = [
         'zuul-cloner',
         '--workspace', workdir,
