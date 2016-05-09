@@ -1,0 +1,11 @@
+---
+launchpad: oslo.serialization
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/oslo.serialization/newton.html
+releases:
+- version: 2.5.0
+  projects:
+  - repo: openstack/oslo.serialization
+    hash: 8985675d98fd468e15a34707ec090f704b9a7761
+  highlights: '* Unified and simplified API for all serializers'
