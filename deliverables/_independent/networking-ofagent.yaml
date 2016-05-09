@@ -2,6 +2,12 @@
 launchpad: networking-ofagent
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  # kilo
+  - version: 2015.1.6
+    projects:
+      - repo: openstack/networking-ofagent
+        hash: b27a461ddcea8924d11b33f0d3aebe45ebeb0143
+  # liberty
   - version: 1.0.0
     projects:
       - repo: openstack/networking-ofagent
