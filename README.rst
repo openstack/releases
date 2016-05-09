@@ -26,26 +26,14 @@ the stable release is requested by the stable maintenance team, it
 should be acknowledged by the PTL or release liaison to ensure that
 the development team is aware of the coming change.
 
-#. Prepare the release request by submitting a patch to this
-   repository.
+Prepare the release request by submitting a patch to this
+repository.
 
-   * Set the first line (summary) of the commit message to the package
-     name and version being requested.
+ * Set the first line (summary) of the commit message to the package
+   name and version being requested.
 
-   * If you are not the release liaison or PTL, have the PTL of the
-     project acknowledge the request with a +1.
-
-#. Prepare an update to the openstack/requirements repository to
-   change upper-constraints.txt to ensure the new release is tested in
-   the gate. You may also need to update global-requirements.txt in
-   the same patch for a release with new features on which a project
-   depends (bug fix releases do not need the requirements
-   updated). Use a ``Depends-On`` tag in the commit message to tie the
-   patch to the original release request so that the requirements and
-   constraints patch will not merge until the release request merges.
-
-#. Leave a comment on the release request linking it to the
-   requirements repository update.
+ * If you are not the release liaison or PTL, have the PTL of the
+   project acknowledge the request with a +1.
 
 Reviewing a Release Request
 ---------------------------
