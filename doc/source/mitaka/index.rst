@@ -17,3 +17,8 @@ Documentation:
 
 .. deliverable::
    :series: mitaka
+
+.. toctree::
+   :hidden:
+
+   schedule
