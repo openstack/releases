@@ -14,3 +14,7 @@ releases:
     * Add CHAPPASSWORD to list of sanitize keys
     * Add method is_valid_cidr to netutils
     * Provide single step check if eventlet is monkey_patched
+- version: 3.10.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: 406c753a72c900884e07cd47ee5bc62d739f5e6a
