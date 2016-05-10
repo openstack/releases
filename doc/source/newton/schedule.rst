@@ -22,6 +22,8 @@
 | May 23-27  | R-19 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
 | May 30-03  | R-18 | :ref:`n-1`                | :ref:`n-nova-non-prio-s-fr` |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-key-spec-pfreeze`   |
 +------------+------+---------------------------+-----------------------------+
 | Jun 06-10  | R-17 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -31,13 +33,15 @@
 +------------+------+---------------------------+-----------------------------+
 | Jun 27-01  | R-14 |                           | :ref:`n-nova-non-prio-ff`   |
 +------------+------+---------------------------+-----------------------------+
-| Jul 04-06  | R-13 |                           |                             |
+| Jul 04-06  | R-13 |                           | :ref:`n-key-spec-freeze`    |
 +------------+------+---------------------------+-----------------------------+
 | Jul 11-15  | R-12 | :ref:`n-2`                | :ref:`n-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`n-cinder-spec-freeze` |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`n-trove-spec-freeze`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`n-key-fpf`            |
 +------------+------+---------------------------+-----------------------------+
 | Jul 18-22  | R-11 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -59,7 +63,7 @@
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`n-ff`               | :ref:`n-trove-ff`           |
 |            |      +---------------------------+-----------------------------+
-|            |      | :ref:`n-final-clientlib`  |                             |
+|            |      | :ref:`n-final-clientlib`  | :ref:`n-key-ff`             |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`n-soft-sf`          |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -365,3 +369,38 @@ Horizon Feature Freeze
 The deadline for Horizon features for Newton. This is a week earlier than
 the standard milestone to allow plugins time to sync before the standard
 release.
+
+Keystone
+--------
+
+.. _n-key-spec-pfreeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for proposing a Keystone specification that will land in the
+Newton development cycle.
+
+.. _n-key-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a Keystone Spec and approving a blueprint.
+
+.. _n-key-fpf:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for proposing code for an approved feature. The code must: show
+functionality and be ready for review. Approved features that miss the deadline
+will be moved to the backlog or the first milestone of the next release.
+
+.. _n-key-ff:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All approved features must be merged by this week. Please note, the Keystone
+Feature Freeze date is aligned with :ref:`n-ff`.
