@@ -23,3 +23,8 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 4f1ae84047a03dae31941cbadf55eab98fd89913
+  - version: 3.7.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: c6c114e7401d3c8650103c6fdf52f71a0bd6d6fb
+    highlights: 'Allow reload of ''debug'' option'
