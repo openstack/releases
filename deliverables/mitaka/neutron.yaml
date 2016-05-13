@@ -1,7 +1,11 @@
 ---
 launchpad: neutron
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/neutron/mitaka.html
+release-notes:
+  openstack/neutron: http://docs.openstack.org/releasenotes/neutron/mitaka.html
+  openstack/neutron-lbaas: http://docs.openstack.org/releasenotes/neutron-lbaas/mitaka.html
+  openstack/neutron-fwaas: http://docs.openstack.org/releasenotes/neutron-fwaas/mitaka.html
+  openstack/neutron-vpnaas: http://docs.openstack.org/releasenotes/neutron-vpnaas/mitaka.html
 releases:
   - version: 8.0.0.0b1
     projects:
