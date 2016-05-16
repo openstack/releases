@@ -12,3 +12,8 @@ releases:
   projects:
   - repo: openstack/oslo.middleware
     hash: ea167241d483e678a766a936d8d6208e85341184
+- version: 3.11.0
+  projects:
+  - repo: openstack/oslo.middleware
+    hash: 6f1db02ef07137907977e7437d1e2df7619a429d
+  highlights: '* Add a simple __main__ to easily show healthcheck output'

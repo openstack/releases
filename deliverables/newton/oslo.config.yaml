@@ -1,0 +1,15 @@
+---
+launchpad: oslo.config
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/oslo.config/newton.html
+releases:
+- version: 3.10.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: 6d176243f398bf7e5d6bd8a5382945f2c5e318c3
+  highlights: |-
+    * Avoid duplicate sections in generator output
+    * Don't set html_last_updated_fmt without git
+    * Improve documentation about registering entry points for
+      config generator

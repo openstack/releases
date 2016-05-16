@@ -1,0 +1,11 @@
+---
+launchpad: oslosphinx
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/oslosphinx/newton.html
+releases:
+- version: 4.4.0
+  projects:
+  - repo: openstack/oslosphinx
+    hash: c327f858e6934d2558267e91085d588077921c89
+  highlights: '* Add recent versions links to sidebar'
