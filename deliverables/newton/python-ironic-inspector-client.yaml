@@ -1,0 +1,12 @@
+---
+launchpad: python-ironic-inspector-client
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-ironic-inspector-client/unreleased.html
+releases:
+  - version: 1.7.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: de0432f4cc9be22471d29b03dad3a3aaa8a2665d
+    highlights: |
+        * Added a command to reprocess stored data.
