@@ -46,6 +46,7 @@ RELEASES = [
     ('kilo', datetime.datetime(2015, 4, 30)),
     ('liberty', datetime.datetime(2015, 10, 15)),
     ('mitaka', datetime.datetime(2016, 4, 7)),
+    ('newton', datetime.datetime(2016, 10, 6)),
 ]
 
 
@@ -97,9 +98,6 @@ for tag in tags:
     except subprocess.CalledProcessError:
         print('did not find milestone %s tagged for %s' %
               (tag, repo_short_name))
-        continue
-    if series_name != 'liberty':
-        print('skipping releases other than liberty (%r)' % series_name)
         continue
     the_series = series_data.setdefault(series_name, {})
     the_milestone = the_series.setdefault(tag, [])
