@@ -1,0 +1,11 @@
+---
+launchpad: os-vif
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/os-vif
+        hash: e5227ecbc02f4090bbb96bb766d89b6ad107c51b
+    highlights: >
+        Initial release of os-vif
