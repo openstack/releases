@@ -30,15 +30,15 @@ series. You can find the detail of the various release series here:
      * TBD
    - * :doc:`liberty/index`
      * Security-supported
-     * 2016-10-15
+     * 2015-10-15
      * 2016-11-17
    - * :doc:`kilo/index`
      * Security-supported
-     * 2016-04-30
+     * 2015-04-30
      * 2016-05-02
    - * :doc:`juno/index`
      * EOL
-     * 2016-10-16
+     * 2014-10-16
      * 2015-12-07
    - * :doc:`icehouse/index`
      * EOL
