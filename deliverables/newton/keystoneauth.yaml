@@ -1,14 +1,21 @@
 ---
 launchpad: keystoneauth
 send-announcements-to: openstack-dev@lists.openstack.org
-include-pypi-link: yes
+include-pypi-link: true
 release-notes: http://docs.openstack.org/releasenotes/keystoneauth/newton.html
 releases:
-  - version: 2.5.0
-    projects:
-      - repo: openstack/keystoneauth
-        hash: 7dd4208e5c2519fa4647fd9f36b7f67bd2f11718
-  - version: 2.6.0
-    projects:
-      - repo: openstack/keystoneauth
-        hash: d5020aed64e150c7e06705d316ba3ee074be983d
+- version: 2.5.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 7dd4208e5c2519fa4647fd9f36b7f67bd2f11718
+- version: 2.6.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: d5020aed64e150c7e06705d316ba3ee074be983d
+- version: 2.7.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: c43d9dc75bb610ce9f53524bebfdb0633c0c1147
+  highlights: |-
+    - 'Added `is_admin_project` support
+    - Added support for oauth1 auth
