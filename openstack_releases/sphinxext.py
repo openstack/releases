@@ -21,7 +21,7 @@ from docutils import nodes
 from docutils.parsers import rst
 from docutils.parsers.rst import directives
 from docutils.statemachine import ViewList
-import pbr
+import pbr.version
 from sphinx.util.nodes import nested_parse_with_titles
 import yaml
 
@@ -71,16 +71,38 @@ def _get_deliverable_type(deliverable_types, name):
     return 'type:other'
 
 
+def _version_sort_key(release):
+    """Return a value we can compare for sorting.
+
+    We can't just use SemanticVersion instances because some of the
+    legacy tags don't comply with the parser. Use a tuple of the parts
+    of the version string, converted to integers where possible to
+    avoid weird alphabetical sorting of numbers.
+
+    """
+    key = []
+    for p in str(release['version']).split('.'):
+        try:
+            key.append(int(p))
+        except ValueError:
+            key.append(p)
+    return tuple(key)
+
+
 def _collapse_deliverable_history(app, name, info):
     """Collapse pre-releases into their final release.
 
     Edit the info dictionary in place.
 
     """
+    sorted_releases = sorted(
+        info.get('releases', []),
+        key=_version_sort_key,
+    )
     # Collapse pre-releases into their final release.
     releases = []
     known_versions = set()
-    for r in reversed(info.get('releases', [])):
+    for r in reversed(sorted_releases):
         try:
             parsed_vers = pbr.version.SemanticVersion.from_pip_string(
                 str(r['version']))
