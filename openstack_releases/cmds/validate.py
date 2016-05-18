@@ -276,6 +276,45 @@ def main():
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])
 
+        # Some rules only apply to the most current release.
+        if series_name != defaults.RELEASE:
+            continue
+
+        # Rules for only the current release cycle.
+        final_release = deliverable_info['releases'][-1]
+        deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
+        expected_repos = set(
+            r.name
+            for r in governance.get_repositories(
+                team_data,
+                deliverable_name=deliverable_name,
+            )
+        )
+        if not expected_repos:
+            msg = ('unable to find deliverable %s in the governance list' %
+                   deliverable_name)
+            print(msg)
+            errors.append(msg)
+        actual_repos = set(
+            p['repo']
+            for p in final_release.get('projects', [])
+        )
+        for extra in actual_repos.difference(expected_repos):
+            msg = (
+                '%s release %s includes repository %s '
+                'that is not in the governance list' %
+                (filename, final_release['version'], extra)
+            )
+            print(msg)
+            errors.append(msg)
+        for missing in expected_repos.difference(actual_repos):
+            msg = (
+                '%s release %s is missing %s from the governance list' %
+                (filename, final_release['version'], missing)
+            )
+            print(msg)
+            errors.append(msg)
+
     if warnings:
         print('\n\n%s warnings found' % len(warnings))
         for w in warnings:
