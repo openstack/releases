@@ -143,6 +143,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'type:service',
         'type:library',
         'type:other',
+        'release:cycle-trailing',
     ]
 
     def run(self):
@@ -165,11 +166,20 @@ class DeliverableDirectiveBase(rst.Directive):
             for team in _all_teams.values():
                 deliverables.update(team.deliverables)
 
+        # Pre-populate the mapping between deliverable names and their
+        # types.
         deliverable_types = {}
         for dn, di in deliverables.items():
             for tag in di.tags:
+                # Treat the cycle-trailing model as a separate "type"
+                # so those items are all grouped together in the
+                # output.
+                if tag == 'release:cycle-trailing':
+                    deliverable_types[dn] = tag
+                    break
                 if tag.startswith('type:'):
                     deliverable_types[dn] = tag
+                    break
 
         result = ViewList()
 
@@ -232,6 +242,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'type:service': 'Service Projects',
         'type:library': 'Library Projects',
         'type:other': 'Other Projects',
+        'release:cycle-trailing': 'Projects Trailing the Release Cycle',
     }
 
     @staticmethod
