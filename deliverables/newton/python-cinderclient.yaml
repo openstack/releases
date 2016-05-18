@@ -1,0 +1,16 @@
+---
+launchpad: python-cinderclient
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-cinderclient/newton.html
+releases:
+  - version: 1.7.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 0cdcfb5988f57da80551b1a11fcd3d96d0baf1d8
+    highlights: |
+        Added support for API microversions.
+        Ability to specify --visibility and --protected when uploading
+        images to Glance.
+        Corrected migration status reset to not reset the source volume
+        state.
