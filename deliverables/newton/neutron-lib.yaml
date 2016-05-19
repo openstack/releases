@@ -11,3 +11,10 @@ releases:
         * Add neutron pagination helpers
         * No 'import neutron' hacking check
         * Fix semver versioning for Newton
+  - version: 0.2.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 45aea71d7d8037b96ff8d047947d2685c49b547a
+    highlights: |
+        * Add and clean up IPv6 constants
+        * Maintain ATTR_NOT_SPECIFIED constant with deepcopy
