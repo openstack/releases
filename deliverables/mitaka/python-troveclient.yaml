@@ -28,3 +28,9 @@ releases:
         hash: 3c71e52b408bbd6c33fca85188db2c8f156fb341
     highlights: |
       - Revert backward incompatible change related to slave_of
+  - version: 2.1.2
+    projects:
+      - repo: openstack/python-troveclient
+        hash: c758721ea2813a5c926ab22fe97e6ac64078e577
+    highlights: |
+      - Restrict python-keystoneclient <3.0.0
