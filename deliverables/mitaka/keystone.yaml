@@ -31,3 +31,12 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 3e5fca06c6b7dd6060721faa39428b133edd10f0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 238f60720d8b281fca7d3fa752e39cafdb583332
+    highlights: >
+      - Fix updated federated display_name is not returned (bug 1566494)
+      - Fix KeyError when renaming a project (bug 1565108)
+      - Fix fernet token audit IDs for v2.0 (bug 1577558)
+      - Allow 'domain' property for local.group (bug 1575057)
