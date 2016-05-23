@@ -432,8 +432,9 @@ class TeamDirective(rst.Directive):
             result.append(text, '<team tag>')
 
         for series in all_series:
-            _add(series.title())
-            _add('=' * len(series))
+            series_title = series.lstrip('_').title()
+            _add(series_title)
+            _add('=' * len(series_title))
             _add('')
             _add('.. deliverable::')
             _add('   :series: %s' % series)
