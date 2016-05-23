@@ -12,10 +12,6 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: 4981ed929613d6ad448dc9b566b458c85491c5f7
-  - version: 11.2.16
-    projects:
-      - repo: openstack/openstack-ansible
-        hash: ac7b2d68433f9560a5d401f846349c2e37751f0f
   - version: 12.0.11
     projects:
       - repo: openstack/openstack-ansible
@@ -210,3 +206,7 @@ releases:
         hash: 5d938cffa73b65503e4d06494e4bb4b5ea7cb5a9
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: 5a3e325088891f5ea86223dfddb23e74da089c6c
+  - version: 11.2.16
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: ac7b2d68433f9560a5d401f846349c2e37751f0f

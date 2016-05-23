@@ -12,14 +12,14 @@ Requesting a Release
 ====================
 
 The PTL or release liaison for a project may request a release from
-master by submitting a patch to this repository, adding the necessary
+master by submitting a patch to this repository, appending the necessary
 release metadata to the file describing the deliverable to be
 released. The release team will review the request and provide
 feedback about the version number.
 
 The stable maintenance team, PTL, or release liaison for a project may
 request a release from a stable branch by submitting a patch to this
-repository, adding the necessary release metadata to the file
+repository, appending the necessary release metadata to the file
 describing the deliverable to be released. The release team will
 review the request and provide feedback about the version number. If
 the stable release is requested by the stable maintenance team, it
@@ -28,6 +28,9 @@ the development team is aware of the coming change.
 
 Prepare the release request by submitting a patch to this
 repository.
+
+ * Always add the new release to the end of the file being edited. The
+   version numbers will be reordered for display.
 
  * Set the first line (summary) of the commit message to the package
    name and version being requested.
@@ -124,7 +127,7 @@ Deliverable repositories for projects tagged with
 release:cycle_with_intermediatry or release:cycle_with_milestones
 should be placed in their respective releases within the
 deliverables directory. Deliverable repositories for projects tagged with
-release:indepedent should be placed in the deliverables/_independent
+release:indepedent should be placed in the ``deliverables/_independent``
 directory.  Deliverable repositories tagged with release:none have no
 release and are not tracked in this repository.
 
