@@ -60,16 +60,6 @@ General notes when reviewing a release request:
     `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
     team should +1 a change like this before it's approved.
 
-* Make sure there is a requirements update patch to enable use of the
-  new release. With the constraints system in place, releasing a
-  library is no longer sufficient to cause it to be used in the CI
-  systems. We must explicitly update the constraints file for
-  integration tests, and we want to ensure that the lower bounds
-  accurately reflect the versions needed to provide features for the
-  consuming applications. This latter step is difficult to do
-  accurately via a script, so we need it to be done by the person
-  releasing the library.
-
 * Make sure the summary of the patch includes the deliverable name and
   version number.
 
