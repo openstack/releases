@@ -43,3 +43,7 @@ releases:
     highlights: >
         - auth_token can now verify revocation by audit_id (bug 1490804)
         - Blocks requests 2.9.0
+  - version: 2.3.4
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: f9cb1e40059bb64b7ee67b7d574db387080c2674
