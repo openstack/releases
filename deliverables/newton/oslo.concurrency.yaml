@@ -8,3 +8,8 @@ releases:
   projects:
   - repo: openstack/oslo.concurrency
     hash: 6bae2be9ba9d9809ac45d5e2a6bfe6422b5a87e3
+- version: 3.9.0
+  projects:
+  - repo: openstack/oslo.concurrency
+    hash: e1cde970287e84faa5d533cce9576d7dea916a8d
+  highlights: '* Add timeout option to ssh_execute'

@@ -18,3 +18,8 @@ releases:
   projects:
   - repo: openstack/oslo.utils
     hash: 406c753a72c900884e07cd47ee5bc62d739f5e6a
+- version: 3.11.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: 6cf8386cc7278a98f9ba9260d7ea61e519e93975
+  highlights: '* Move method split_path into oslo.utils'

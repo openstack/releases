@@ -18,3 +18,8 @@ releases:
     * Add the ability to skip resolving from activating
     * Add rundimentary and/or non-optimized job priorities
     * Add some basic/initial engine statistics
+- version: 2.0.0
+  projects:
+  - repo: openstack/taskflow
+    hash: 827b291cf8ab24aa79454586c86425f19245b482
+  highlights: '* Remove deprecated things for 2.0 release'
