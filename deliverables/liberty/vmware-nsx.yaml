@@ -1,7 +1,12 @@
 ---
 launchpad: vmware-nsx
+send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 1.0.0
     projects:
       - repo: openstack/vmware-nsx
         hash: 452b7aac7fd0c89a98281596a56d87467d636dc5
+  - version: 1.0.1
+    projects:
+      - repo: openstack/vmware-nsx
+        hash: 94117909b9558131aafd12d00d3e720e829d7998
