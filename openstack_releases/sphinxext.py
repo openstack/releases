@@ -71,22 +71,42 @@ def _get_deliverable_type(deliverable_types, name):
     return 'type:other'
 
 
-def _version_sort_key(release):
-    """Return a value we can compare for sorting.
+def _safe_semver(v):
+    """Get a SemanticVersion that closely represents the version string.
 
-    We can't just use SemanticVersion instances because some of the
-    legacy tags don't comply with the parser. Use a tuple of the parts
-    of the version string, converted to integers where possible to
-    avoid weird alphabetical sorting of numbers.
+    We can't always get a SemanticVersion instance because some of the
+    legacy tags don't comply with the parser. This method corrects
+    some of the more common mistakes in formatting to make it more
+    likely we can construct a SemanticVersion, even if the results
+    don't quite match the input.
 
     """
-    key = []
-    for p in str(release['version']).split('.'):
+    orig = v = str(v)
+    # Remove "v" prefixes.
+    v = v.lstrip('v')
+    # Remove any stray "." at the start or end, after the other
+    # cleanups.
+    v = v.strip('.')
+    # If we have a version with 4 positions that are all integers,
+    # drop the fourth.
+    parts = v.split('.')
+    if len(parts) > 3:
         try:
-            key.append(int(p))
+            int(parts[3])
         except ValueError:
-            key.append(p)
-    return tuple(key)
+            pass
+        else:
+            parts = parts[:3]
+        v = '.'.join(parts)
+    if v != orig:
+        print('  changed version %r to %r' % (orig, v))
+    return pbr.version.SemanticVersion.from_pip_string(v)
+
+
+def _version_sort_key(release):
+    """Return a value we can compare for sorting.
+    """
+    return _safe_semver(release['version'])
 
 
 def _collapse_deliverable_history(app, name, info):
