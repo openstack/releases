@@ -14,3 +14,9 @@ releases:
         images to Glance.
         Corrected migration status reset to not reset the source volume
         state.
+  - version: 1.7.1
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 9e19357e4beff1131492888b7f2766afb227a767
+    highlights: |
+        Fixed backward incompatible image upload command.
