@@ -32,3 +32,9 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: 11d3d114006ad74bbeaf514aef221a44219a2ee9
+  - version: 0.2.1
+    projects:
+      - repo: openstack/searchlight
+        hash: 0625a031897769250d5c78dec19b722863e71054
+    highlights: |
+      Fixes incorrect notification events and ElasticSearch 2.x bugs.
