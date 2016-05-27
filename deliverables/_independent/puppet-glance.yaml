@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-glance
-release-notes: http://git.openstack.org/cgit/openstack/puppet-glance/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-glance/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-glance/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-glance
         hash: 877ae23382d4a7606a5cc57a4fe8f207760e9cb9
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: c3721cf5102954cd4623c5425344e4572fb23d8a

@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-trove
-release-notes: http://git.openstack.org/cgit/openstack/puppet-trove/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-trove/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-trove/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-trove
         hash: 06920766b9d692bf956c9e51da71980dfa386f7a
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: da45eebe3b87b730900562188223fc6af6d23c49

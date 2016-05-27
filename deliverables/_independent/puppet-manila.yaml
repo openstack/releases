@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-manila
-release-notes: http://git.openstack.org/cgit/openstack/puppet-manila/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-manila/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-manila/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-manila
         hash: 19055a11c884b6a1d992129c992afc22e7a163c9
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: aa67e8981023eee8ba3662ff64a26b689f7c3afc

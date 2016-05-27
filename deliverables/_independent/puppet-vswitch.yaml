@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-vswitch
-release-notes: http://git.openstack.org/cgit/openstack/puppet-vswitch/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  3.1.0: http://git.openstack.org/cgit/openstack/puppet-vswitch/tree/CHANGELOG.md?h=stable/liberty
+  4.1.0: http://docs.openstack.org/releasenotes/puppet-vswitch/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 3.1.0
     projects:
       - repo: openstack/puppet-vswitch
         hash: f810f9cba7d668d978738f705d7e02aec55a4ae2
+  - version: 4.1.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: e70e3592eb404ad28d31b86cbe2fdc05bfe470ba

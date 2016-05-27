@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-openstack-extras
-release-notes: http://git.openstack.org/cgit/openstack/puppet-openstack_extras/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-openstack_extras/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-openstack_extras/mitaka.html?h=stable/liberty
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: c7002ebb4c92521cbab46158c9350d79036fbda6
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 3bb4da14d55a4ff9e3850f8121f2659e78e14862
