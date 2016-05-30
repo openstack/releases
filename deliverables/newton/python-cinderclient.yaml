@@ -20,3 +20,10 @@ releases:
         hash: 9e19357e4beff1131492888b7f2766afb227a767
     highlights: |
         Fixed backward incompatible image upload command.
+  - version: 1.8.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 623cef2d5c5d9f375c60c991f5ab9f951e9253fa
+    highlights: |
+        Fixed global modification of oslo.i18n lazy load. Added ability to
+        force delete a backup.
