@@ -1,0 +1,15 @@
+---
+launchpad: glance
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: no
+artifact-link-mode: tarball
+releases:
+  - version: 13.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: 5be7a50fe0450516937c927ad3d5658a66fe64e5
+    highlights: >
+      - Several in-tree docs updates
+      - Proper handling of 4 byte unicode chars in metadefs APIs (bug 1570789)
+      - Removal of deprecated sign-the-hash approach
+      - Removal of run_tests and related scripts
