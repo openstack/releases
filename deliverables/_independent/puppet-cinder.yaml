@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-cinder
-release-notes: http://git.openstack.org/cgit/openstack/puppet-cinder/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-cinder/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-cinder/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-cinder
         hash: ded3eb8806255d9866eddf203beee575ca847210
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 373447dd3a08280767cb08345bbaaf9e8d48905d

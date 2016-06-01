@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-openstacklib
-release-notes: http://git.openstack.org/cgit/openstack/puppet-openstacklib/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-openstacklib/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-openstacklib/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-openstacklib
         hash: 5e33a22cc9c215b6daca8b872530ed0d08ced0b6
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 5bf09ce1a53c7282bb0a12f29e9b1cc5b0e620d3

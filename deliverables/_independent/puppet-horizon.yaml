@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-horizon
-release-notes: http://git.openstack.org/cgit/openstack/puppet-horizon/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-horizon/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-horizon/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-horizon
         hash: f7f3d6c9cdb589c83b4560e2967561e83d428916
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: ae80e1e996980065c76cbbe332f885717e27aba0

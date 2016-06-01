@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-gnocchi
-release-notes: http://git.openstack.org/cgit/openstack/puppet-gnocchi/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-gnocchi/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-gnocchi/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-gnocchi
         hash: 6392ae4affacaf99cc28110faf93e4249bdf09a1
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 98c6fe07cdb36f748f4b6bec2a3de86d8b955b6e

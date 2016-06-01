@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-ironic
-release-notes: http://git.openstack.org/cgit/openstack/puppet-ironic/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-ironic/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-ironic/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-ironic
         hash: eb3bb25bd116a77ca9a72e1e7bf7a175cacdd8bc
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: b74b004585273a5b6e67447d0f8067fe76d3e89e

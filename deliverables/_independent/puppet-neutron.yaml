@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-neutron
-release-notes: http://git.openstack.org/cgit/openstack/puppet-neutron/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-neutron/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-neutron/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-neutron
         hash: 9ed90f60e56280accc0a100f8d6c0cdcbb588040
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 54af250db20fb3d41bfbc81f74788b03b682bed8

@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-aodh
-release-notes: http://git.openstack.org/cgit/openstack/puppet-aodh/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-aodh/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-aodh/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-aodh
         hash: 166ed1cb4da6205e885d812b2d8a88832c1f1ed3
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: df864cd6d2e9c9ff00c958ae7a1886ce1dc8d908

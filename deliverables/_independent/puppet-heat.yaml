@@ -1,9 +1,15 @@
 ---
 launchpad: puppet-heat
-release-notes: http://git.openstack.org/cgit/openstack/puppet-heat/tree/CHANGELOG.md?h=stable/liberty
+release-notes:
+  7.1.0: http://git.openstack.org/cgit/openstack/puppet-heat/tree/CHANGELOG.md?h=stable/liberty
+  8.1.0: http://docs.openstack.org/releasenotes/puppet-heat/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
     projects:
       - repo: openstack/puppet-heat
         hash: 5856f02112dfae1e6dc0aa156a1eb712b3579484
+  - version: 8.1.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: ab8e0d4c2579ca8bb8bd4dcfd465b6f52b080900
