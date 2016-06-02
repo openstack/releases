@@ -1,0 +1,12 @@
+---
+launchpad: mistral
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: 64afe2aa544121e00698dfcc8e080ac2bc92e608
+      - repo: openstack/mistral-dashboard
+        hash: 5725a06e077affd49eaf72d547aba717c0858479
+      - repo: openstack/mistral-extra
+        hash: a8c9c799e83786919913addbc66584b4fdf6e2b1
