@@ -32,3 +32,9 @@ releases:
     highlights: >
       Addressed bug by removing python-ironicclient from
       setup_requires.
+  - version: 1.1.2
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 09f0b88cc561e4439f1d3243ad8c2bb399a02d83
+    highlights: >
+      Use stable/mitaka branch of horizon, instead of master.
