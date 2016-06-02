@@ -1,0 +1,8 @@
+---
+launchpad: tripleo
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 9e381f509be93956c4791cac2df94bf1b5015933
