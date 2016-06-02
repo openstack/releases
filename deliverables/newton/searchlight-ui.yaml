@@ -1,0 +1,13 @@
+---
+launchpad: searchlight
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 4c004f6d86f19f963efb706d7e3d45b6bb69d26c
+    highlights: |
+      Several small changes were done to align with the Newton Horizon
+      release. These changes are not backwards compatible with previous
+      Horizon releases. Several small code organization improvements were
+      also done.
