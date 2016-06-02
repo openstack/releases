@@ -1,0 +1,15 @@
+---
+launchpad: searchlight
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/searchlight
+        hash: 7033a34c94d352b66c0ff3a519a20fdb05914985
+    highlights: >
+      - Partial Nova hypervisor search support
+      - Improvements to zero downtime re-indexing
+      - Notification events cleanup
+      - Several in-tree docs updates
+      - Change to using notification pools by default
+      - ElasticSearch 2.x support fixes
