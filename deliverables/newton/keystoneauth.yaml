@@ -19,3 +19,10 @@ releases:
   highlights: |
     - Added `is_admin_project` support
     - Added support for oauth1 auth
+- version: 2.8.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 3562dd4b6cc5d59918ea7f540d75c4f88d52ab5d
+  highlights: |
+    - Added `is_domain` support to token model
+    - Added OidcAccessToken auth plugin
