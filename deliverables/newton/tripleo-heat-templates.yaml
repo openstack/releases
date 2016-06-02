@@ -1,0 +1,8 @@
+---
+launchpad: tripleo
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: ccb46a51ac8ca59865c04b681628edbc5a167530

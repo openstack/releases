@@ -1,0 +1,8 @@
+---
+launchpad: tripleo
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: c9f35487a980a30062fbdce92a17e0dcd5cbcb05

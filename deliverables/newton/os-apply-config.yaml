@@ -1,0 +1,8 @@
+---
+launchpad: os-apply-config
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 36f24df3e79e7c0f3621e8231853342b4f89d0e8
