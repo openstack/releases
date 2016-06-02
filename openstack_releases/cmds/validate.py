@@ -136,6 +136,25 @@ def main():
                 errors.append('Space in send-announcements-to (%r) for %s' %
                               (announce_to, filename))
 
+        # Make sure the release notes page exists, if it is specified.
+        if 'release-notes' in deliverable_info:
+            notes_link = deliverable_info['release-notes']
+            if isinstance(notes_link, dict):
+                links = list(notes_link.values())
+            else:
+                links = [notes_link]
+            for link in links:
+                rn_resp = requests.get(link)
+                if (rn_resp.status_code // 100) == 2:
+                    print('Release notes at %s found' % link)
+                else:
+                    errors.append('Could not fetch release notes page %s: %s' %
+                                  (link, rn_resp.status_code))
+                    print('Found bad release notes link %s: %s' %
+                          (link, rn_resp.status_code))
+        else:
+            print('no release-notes specified')
+
         series_name = os.path.basename(
             os.path.dirname(filename)
         )
