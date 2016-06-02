@@ -9,3 +9,9 @@ releases:
         hash: 5605034fc38862b19e6d2d96aa222dafc7762060
     highlights: >
       Added a more flexible mechanism for conveying network metadata.
+  - version: 1.18.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 51b4cbee522e2bf1a2beb12425733435ff1c32d9
+    highlights: >
+      Added helper factory functions for OpenStack SDK and shade.
