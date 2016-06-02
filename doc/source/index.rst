@@ -33,7 +33,7 @@ series. You can find the detail of the various release series here:
      * 2015-10-15
      * 2016-11-17
    - * :doc:`kilo/index`
-     * Security-supported
+     * EOL
      * 2015-04-30
      * 2016-05-02
    - * :doc:`juno/index`
