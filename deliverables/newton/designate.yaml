@@ -1,0 +1,11 @@
+---
+launchpad: designate
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/designate/unreleased.html
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/designate
+        hash: f688bb22c83a1aa11bb6c893c62c96be7dfb7dcc
+      - repo: openstack/designate-dashboard
+        hash: c93239b28e1562c32d0c37e98f19809e08178d1c
