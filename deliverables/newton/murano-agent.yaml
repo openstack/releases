@@ -1,0 +1,8 @@
+---
+launchpad: murano
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/murano-agent
+        hash: a3fa7fee43a3e09e466d058b64c72a8ac3b228a6
