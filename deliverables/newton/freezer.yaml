@@ -1,0 +1,12 @@
+---
+launchpad: freezer
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/freezer
+        hash: f8010d416b1900d81759ee1eddd18d4a1846a2bc
+      - repo: openstack/freezer-api
+        hash: 525c7f12cb1810a57afdf8e6b8fefcd51b9ec44a
+      - repo: openstack/freezer-dr
+        hash: 7d7d189545db1f4da39777fab5e60359cbf917e6
