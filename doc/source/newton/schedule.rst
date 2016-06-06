@@ -66,6 +66,8 @@
 |            |      | :ref:`n-final-clientlib`  | :ref:`n-key-ff`             |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`n-soft-sf`          |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`n-rf`               |                             |
 +------------+------+---------------------------+-----------------------------+
 | Sep 05-09  | R-4  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -147,6 +149,18 @@ Feature freeze
 The newton-3 milestone marks feature freeze for projects following the
 `release:cycle-with-milestones`_ model. No featureful patch should be landed
 after this point. Exceptions may be granted by the project PTL.
+
+.. _n-rf:
+
+Requirements freeze
+-------------------
+
+After the newton-3 milestone, only critical requirements and
+constraints changes will be allowed. Freezing our requirements list
+gives packagers downstream an opportunity to catch up and prepare
+packages for everything necessary for distributions of the upcoming
+release. The requirements remain frozen until the stable branches are
+created, with the release candidates.
 
 .. _n-final-clientlib:
 
