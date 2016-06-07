@@ -164,12 +164,6 @@ def main():
         link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
         for release in deliverable_info['releases']:
 
-            for e in versionutils.validate_version(release['version']):
-                msg = ('could not validate version %r for %s: %s' %
-                       (release['version'], filename, e))
-                print(msg)
-                errors.append(msg)
-
             for project in release['projects']:
                 # Check for release jobs (if we ship a tarball)
                 if link_mode != 'none':
@@ -258,6 +252,15 @@ def main():
                             print('not included in previous release for %s: %s' %
                                   (prev_version, ', '.join(sorted(prev_projects))))
                         else:
+
+                            for e in versionutils.validate_version(
+                                    release['version']):
+                                msg = ('could not validate version %r '
+                                       'for %s: %s' %
+                                       (release['version'], filename, e))
+                                print(msg)
+                                errors.append(msg)
+
                             # Check to see if we are re-tagging the same
                             # commit with a new version.
                             old_sha = gitutils.sha_for_tag(
