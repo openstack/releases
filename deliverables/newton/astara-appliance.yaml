@@ -1,0 +1,12 @@
+---
+launchpad: astara
+send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/astara-appliance:
+    flags:
+      - no-artifact-build-job
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/astara-appliance
+        hash: c21a64ea7b3b0fbdab8592afecdd31d9b8e64a6a
