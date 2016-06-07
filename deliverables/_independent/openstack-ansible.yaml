@@ -1,5 +1,6 @@
 ---
 launchpad: openstack-ansible
+team: OpenStackAnsible
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/openstack-ansible/mitaka.html
 artifact-link-mode: none
@@ -34,7 +35,7 @@ releases:
         hash: 0361308dbbf38720f9e723de92d70d8fd0e16958
       - repo: openstack/openstack-ansible-galera_server
         hash: a0eda70cf885cfb471c74c241112d7a1dfa7f3d1
-      - repo: openstack/openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_ironic
         hash: dee159405c7eeaa2171d120187cab3f0e1307a11
       - repo: openstack/openstack-ansible-lxc_container_create
         hash: 5c2a77fc28ca7f8e35c058c243257566b014ad72
@@ -96,7 +97,7 @@ releases:
         hash: 3ca537faa39487fecabb3e898ef159a0d0534783
       - repo: openstack/openstack-ansible-galera_server
         hash: dabd3dbe5af95468acf78fb7dbd5cd2dfe9ff6f1
-      - repo: openstack/openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_ironic
         hash: db668ac1212f1a971515ad4307af4de6c7ce9358
       - repo: openstack/openstack-ansible-lxc_container_create
         hash: 548ae80ba16e2a896e7e600732d337e87593038a
@@ -158,7 +159,7 @@ releases:
         hash: 3ca537faa39487fecabb3e898ef159a0d0534783
       - repo: openstack/openstack-ansible-galera_server
         hash: dabd3dbe5af95468acf78fb7dbd5cd2dfe9ff6f1
-      - repo: openstack/openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_ironic
         hash: db668ac1212f1a971515ad4307af4de6c7ce9358
       - repo: openstack/openstack-ansible-lxc_container_create
         hash: 548ae80ba16e2a896e7e600732d337e87593038a
@@ -230,7 +231,7 @@ releases:
         hash: 5ac170e9a17988674154eed4f5a3049dafb6df11
       - repo: openstack/openstack-ansible-galera_server
         hash: 26ec8e8847a0e50baccffe1d3bc13974646f42e2
-      - repo: openstack/openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_ironic
         hash: 1906fc10f8c9c153b503efb9cc71c0d28e970015
       - repo: openstack/openstack-ansible-lxc_container_create
         hash: 533cec28371ecbee7ddb5dd7bfdea7e8b318cbad
@@ -318,7 +319,7 @@ releases:
         hash: a70643f6a01b71760b35f29acc86235a230504dd
       - repo: openstack/openstack-ansible-os_horizon
         hash: 452e4e23269dd97e484d4ae1d7050ddb52bc007b
-      - repo: openstack/openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_ironic
         hash: 1906fc10f8c9c153b503efb9cc71c0d28e970015
       - repo: openstack/openstack-ansible-os_neutron
         hash: d39b1608da5a6b10a20d8188c79d9f0febb55aae

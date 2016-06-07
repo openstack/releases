@@ -1,6 +1,11 @@
 ---
 launchpad: python-tuskarclient
+team: tripleo
 send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/python-tuskarclient:
+    flags:
+      - retired
 releases:
   - version: 0.1.18
     projects:
