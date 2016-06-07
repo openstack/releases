@@ -165,8 +165,10 @@ def main():
         for release in deliverable_info['releases']:
 
             for e in versionutils.validate_version(release['version']):
-                print(e)
-                errors.append(e)
+                msg = ('could not validate version %r for %s: %s' %
+                       (release['version'], filename, e))
+                print(msg)
+                errors.append(msg)
 
             for project in release['projects']:
                 # Check for release jobs (if we ship a tarball)
