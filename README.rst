@@ -198,6 +198,17 @@ The top level of a deliverable file is a mapping with keys:
     none
       Do not link to anything, just show the version number.
 
+``repository-settings``
+  Mapping of special settings to control the behavior for each repository, keyed
+  by the repository name.
+
+  ``flags``
+    A list of flags attached to the repository.
+
+    ``no-artifact-build-job``
+      This repository has no job for building an artifact, but should
+      be tagged anyway.
+
 ``releases``
   A list of the releases for the deliverable.
 
@@ -286,3 +297,21 @@ be described by ``deliverables/mitaka/neutron.yaml`` containing:
           hash: 19b18f05037dae4bbbada848aae6421da18ab490
         - repo: openstack/neutron-vpnaas
           hash: a1b12601a64a2359b2224fd4406c5db008484700
+
+To allow tagging for repositories without build artifacts, set the
+``no-artifact-build-job`` flag.
+
+::
+
+    ---
+    launchpad: astara
+    send-announcements-to: openstack-announce@lists.openstack.org
+    repository-settings:
+      openstack/astara-appliance:
+        flags:
+          - no-artifact-build-job
+    releases:
+      - version: 9.0.0.0b1
+        projects:
+          - repo: openstack/astara-appliance
+            hash: c21a64ea7b3b0fbdab8592afecdd31d9b8e64a6a

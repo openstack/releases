@@ -44,7 +44,7 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
     return raw
 
 
-def require_release_jobs_for_repo(zuul_layout, repo):
+def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo):
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
@@ -52,6 +52,16 @@ def require_release_jobs_for_repo(zuul_layout, repo):
 
     """
     errors = []
+
+    # Look up the flags for this repository.
+    all_settings = deliverable_info.get('repository-settings', {})
+    repo_settings = all_settings.get(repo, {})
+    flags = repo_settings.get('flags', [])
+
+    # If the repository is configured as not having an artifact to
+    # build, we don't need to check for any jobs.
+    if 'no-artifact-build-job' in flags:
+        return errors
 
     if repo not in zuul_layout[_VALIDATE_KEY]:
         errors.append(
