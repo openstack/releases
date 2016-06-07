@@ -1,5 +1,11 @@
 ---
 launchpad: murano-apps
+team: murano
+send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/murano-apps:
+    flags:
+      - no-artifact-build-job
 releases:
   - version: 1.0.0
     projects:
