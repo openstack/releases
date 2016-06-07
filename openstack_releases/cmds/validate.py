@@ -191,7 +191,7 @@ def main():
                                    'directory not in %s') % (project['repo'],
                                                              filename)
                             print(msg)
-                            errors.append(msg)
+                            warnings.append(msg)
                     independent_checks.add(chk)
 
                 # Check the SHA specified for the tag.
