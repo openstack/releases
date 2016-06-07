@@ -16,6 +16,8 @@
 import requests
 import yaml
 
+from openstack_releases import flags
+
 
 ZUUL_LAYOUT_URL = 'http://git.openstack.org/cgit/openstack-infra/project-config/plain/zuul/layout.yaml'  # noqa
 ZUUL_LAYOUT_FILENAME = 'openstack-infra/project-config/zuul/layout.yaml'
@@ -53,14 +55,14 @@ def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo):
     """
     errors = []
 
-    # Look up the flags for this repository.
-    all_settings = deliverable_info.get('repository-settings', {})
-    repo_settings = all_settings.get(repo, {})
-    flags = repo_settings.get('flags', [])
-
     # If the repository is configured as not having an artifact to
     # build, we don't need to check for any jobs.
-    if 'no-artifact-build-job' in flags:
+    if flags.has_flag(deliverable_info, repo, flags.NO_ARTIFACT_BUILD_JOB):
+        return errors
+
+    # If the repository is retired, we don't need to check for any
+    # jobs.
+    if flags.has_flag(deliverable_info, repo, flags.RETIRED):
         return errors
 
     if repo not in zuul_layout[_VALIDATE_KEY]:

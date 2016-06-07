@@ -224,6 +224,10 @@ The top level of a deliverable file is a mapping with keys:
       This repository has no job for building an artifact, but should
       be tagged anyway.
 
+    ``retired``
+      This repository is no longer used, but was present in old
+      versions of a deliverable.
+
 ``releases``
   A list of the releases for the deliverable.
 
