@@ -1,5 +1,7 @@
 ---
 launchpad: python-ironicclient
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
 releases:
   - version: 0.6.0
     projects:
@@ -17,3 +19,7 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: c9dd5e3123adb00d6275db50f7bb5a10b5f9b319
+  - version: 0.8.2
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: ae2c0995adbc71b6eed03fd11087b93acf01446a
