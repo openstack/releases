@@ -12,3 +12,10 @@ releases:
         Fixed Scality backup support.
         Fixed Sheepdog backup support.
         Addition of reno release notes.
+  - version: 1.4.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 3f8c9e1c9849eb0172abc4498ed4926c7a11876e
+    highlights: >
+        Added encryptors from Nova to share between Cinder and Nova code.
+        Switch to use privsep instead of rootwrap.
