@@ -11,3 +11,11 @@ releases:
     highlights: >
         - First mitaka release of tacker with tosca-parser integration,
           multisite support, EPA placement and various other enhancements
+  - version: 0.3.1
+    projects:
+      - repo: openstack/tacker
+        hash: 04a973be4e5106c0bf001de9054a46a4d7a88463
+      - repo: openstack/tacker-horizon
+        hash: 865ef341a8380edc243c4c43d9c7943f6c264779
+    highlights: >
+        - Bug fix release 1 for OpenStack Mitaka
