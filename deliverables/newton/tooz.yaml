@@ -16,3 +16,11 @@ releases:
   - repo: openstack/tooz
     hash: ad9ce088de976ab741a8ed4a89f701e38c721891
   highlights: '* Add a consul based driver'
+- version: 1.38.0
+  projects:
+  - repo: openstack/tooz
+    hash: 7f15e34c5269bc9ad3ecb56c9dedccd55e31032e
+  highlights: |-
+    * Using LOG.warning instead of LOG.warn
+    * Expose a heartbeat loop method
+    * Make python2 payload readable from python3 (bug)

@@ -31,3 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: ed582b108776bbbf65ce05f9581237261ce6000b
+  - version: 3.9.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 070cc7ae8de83ffa546fa49902a3a3b8da06466c
+    highlights: |-
+        * Convert unicode data to utf-8 before calling syslog.syslog()
+        * Reduce READ_FREQ and TIMEOUT for watch-file

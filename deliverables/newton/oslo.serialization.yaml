@@ -16,3 +16,10 @@ releases:
   projects:
   - repo: openstack/oslo.serialization
     hash: 0dcd9271631b2931eb37ce59b184f42c8cd9078e
+- version: 2.8.0
+  projects:
+  - repo: openstack/oslo.serialization
+    hash: 4fdaeff758c3a95cdbf99976b87cad42215307b6
+  highlights: |-
+    * Replace TypeError by ValueError in msgpackutils (so that it matches
+    jsonutils)
