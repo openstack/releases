@@ -31,3 +31,12 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 7105f888ee1f52d2a462fc0ece3130dc0d3d49f5
+  - version: 13.1.0
+    projects:
+      - repo: openstack/nova
+        hash: c8ec9ebf379c61d73c5671a75dd2a4e4ae1403fb
+    highlights: >
+      - Bug fixes, dependency updates, translation updates. Note that
+        pycrypto>=2.6 is explicitly added to requirements.txt. This was always
+        a hard runtime dependency but was missing before. Also contains
+        the fix for CVE-2015-5162 which requires oslo.concurrency>=3.7.1.
