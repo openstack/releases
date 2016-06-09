@@ -38,6 +38,21 @@ repository.
  * If you are not the release liaison or PTL, have the PTL of the
    project acknowledge the request with a +1.
 
+ * Do not used the "Depends-On" feature of zuul to make a release
+   request depend on merging another patch in your project. The
+   dependency management does not work properly in the release check
+   jobs, and the validator requires that the patch listed in your
+   deliverable file actually be merged into a proper branch.
+
+ * Do not submit multiple dependent patches for multiple
+   releases. Having a patch series with multiple releases means the
+   release team cannot properly prioritize processing them. During
+   milestone weeks, preference is given to milestone
+   releases. Releases from stable branches, independent projects, and
+   other types of releases are processed later. If your milestone
+   release request depends on a request that is deprioritized, you may
+   miss the deadline.
+
 Reviewing a Release Request
 ---------------------------
 
