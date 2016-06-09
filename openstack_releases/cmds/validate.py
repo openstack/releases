@@ -121,6 +121,14 @@ def main():
             else:
                 print('found')
 
+        # Look for the team name
+        if 'team' not in deliverable_info:
+            errors.append('No team name given in %s' % filename)
+            print('no team name given')
+        elif deliverable_info['team'] not in team_data:
+            warnings.append('Team %r in %s not in governance data' %
+                            (deliverable_info['team'], filename))
+
         # Look for an email address to receive release announcements
         try:
             announce_to = deliverable_info['send-announcements-to']

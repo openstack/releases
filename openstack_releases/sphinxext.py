@@ -12,19 +12,17 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import collections
-import glob
 import itertools
+import operator
 import os.path
 
 from docutils import nodes
 from docutils.parsers import rst
 from docutils.parsers.rst import directives
 from docutils.statemachine import ViewList
-import pbr.version
 from sphinx.util.nodes import nested_parse_with_titles
-import yaml
 
+from openstack_releases import deliverable
 from openstack_releases import governance
 
 
@@ -58,120 +56,33 @@ def _list_table(add, headers, data, title='', columns=None):
     add('')
 
 
-def _get_deliverable_type(deliverable_types, name):
-    if (name.startswith('python-') and not name.endswith('client')):
-        name = name[7:]
+def _get_deliverable_type(name, data):
     if (name.startswith('python-') and name.endswith('client')):
         return 'type:library'
-    if name in deliverable_types:
-        return deliverable_types[name]
-    no_dashes = name.replace('-', '_')
-    if no_dashes in deliverable_types:
-        return deliverable_types[no_dashes]
-    return 'type:other'
+    for tag in data.get('tags', []):
+        if tag == 'release:cycle-trailing':
+            return tag
+        if tag.startswith('type:'):
+            return tag
+    return _DEFAULT_TYPE
 
 
-def _safe_semver(v):
-    """Get a SemanticVersion that closely represents the version string.
-
-    We can't always get a SemanticVersion instance because some of the
-    legacy tags don't comply with the parser. This method corrects
-    some of the more common mistakes in formatting to make it more
-    likely we can construct a SemanticVersion, even if the results
-    don't quite match the input.
-
-    """
-    orig = v = str(v)
-    # Remove "v" prefixes.
-    v = v.lstrip('v')
-    # Remove any stray "." at the start or end, after the other
-    # cleanups.
-    v = v.strip('.')
-    # If we have a version with 4 positions that are all integers,
-    # drop the fourth.
-    parts = v.split('.')
-    if len(parts) > 3:
-        try:
-            int(parts[3])
-        except ValueError:
-            pass
-        else:
-            parts = parts[:3]
-        v = '.'.join(parts)
-    if v != orig:
-        print('  changed version %r to %r' % (orig, v))
-    return pbr.version.SemanticVersion.from_pip_string(v)
-
-
-def _version_sort_key(release):
-    """Return a value we can compare for sorting.
-    """
-    return _safe_semver(release['version'])
-
-
-def _collapse_deliverable_history(app, name, info):
-    """Collapse pre-releases into their final release.
-
-    Edit the info dictionary in place.
-
-    """
-    sorted_releases = sorted(
-        info.get('releases', []),
-        key=_version_sort_key,
-    )
-    # Collapse pre-releases into their final release.
-    releases = []
-    known_versions = set()
-    for r in reversed(sorted_releases):
-        try:
-            parsed_vers = pbr.version.SemanticVersion.from_pip_string(
-                str(r['version']))
-            vers_tuple = parsed_vers.version_tuple()
-        except:
-            # If we can't parse the version, it must be some sort
-            # of made up legacy tag. Ignore the parse error
-            # and include the value in our output.
-            releases.append(r)
-        else:
-            if len(vers_tuple) != 3:
-                # This is not a normal release, so assume it
-                # is a pre-release.
-                final = parsed_vers.brief_string()
-                if final in known_versions:
-                    app.info('[deliverables] ignoring %s %s' %
-                             (name, r['version']))
-                    continue
-                releases.append(r)
-                known_versions.add(r['version'])
-    info['releases'] = list(reversed(releases))
-
-
-_cached_deliverable_files = {}
-
-
-def _get_deliverable_file_content(app, deliverable_name, filename):
-    if filename in _cached_deliverable_files:
-        return _cached_deliverable_files[filename]
-    app.info('[deliverables] reading %s' % filename)
-    with open(filename, 'r') as f:
-        d_info = yaml.load(f.read())
-        _collapse_deliverable_history(app, deliverable_name, d_info)
-        _cached_deliverable_files[filename] = d_info
-        return d_info
-
-
+_DEFAULT_TYPE = 'type:other'
+_deliverables = None
 _all_teams = {}
-_deliverable_files_by_team = {}
+_all_deliverable_types = {}
 
 
 def _initialize_team_data(app):
+    global _deliverables
+    global _all_teams
+
+    _deliverables = deliverable.Deliverables('deliverables')
     team_data = governance.get_team_data()
-    for team in (governance.Team(n, i) for n, i in team_data.items()):
-        _all_teams[team.name] = team
-        _deliverable_files_by_team[team.name] = list(itertools.chain(
-            *(glob.glob('deliverables/*/%s.yaml' % dn)
-              for dn in team.deliverables)
-        ))
+    for tn, td in team_data.items():
+        _all_teams[tn] = td
+        for dn, dd in td['deliverables'].items():
+            _all_deliverable_types[dn] = _get_deliverable_type(dn, dd)
 
 
 class DeliverableDirectiveBase(rst.Directive):
@@ -192,81 +103,70 @@ class DeliverableDirectiveBase(rst.Directive):
         env = self.state.document.settings.env
         app = env.app
 
-        # The series value is optional for some directives.
-        series = self.options.get('series')
+        # The series value is optional for some directives. If it is
+        # present but an empty string, convert to None so the
+        # Deliverables class will treat it like a wildcard.
+        series = self.options.get('series') or None
 
         # If the user specifies a team, track only the deliverables
         # for that team.
-        self.team_name = self.options.get('team')
-        self.team_deliverables = []
-
-        if self.team_name:
-            deliverables = _all_teams[self.team_name].deliverables
-            self.team_deliverables = list(deliverables.keys())
-        else:
-            deliverables = {}
-            for team in _all_teams.values():
-                deliverables.update(team.deliverables)
-
-        # Pre-populate the mapping between deliverable names and their
-        # types.
-        deliverable_types = {}
-        for dn, di in deliverables.items():
-            for tag in di.tags:
-                # Treat the cycle-trailing model as a separate "type"
-                # so those items are all grouped together in the
-                # output.
-                if tag == 'release:cycle-trailing':
-                    deliverable_types[dn] = tag
-                    break
-                if tag.startswith('type:'):
-                    deliverable_types[dn] = tag
-                    break
+        self.team_name = self.options.get('team') or None
 
         result = ViewList()
 
         # Assemble all of the deliverable data to be displayed and
         # build the RST representation.
 
+        # get_deliverables() -> (team, series, deliverable, info)
+
         if self.team_name:
-            deliverables = []
-            for filename in sorted(self._get_deliverables_files(series)):
-                deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
-                d_info = _get_deliverable_file_content(
-                    app, deliverable_name, filename,
-                )
-                deliverables.append(
-                    (deliverable_name,
-                     filename,
-                     d_info))
-            self._add_deliverables(
-                None,
-                deliverables,
-                series,
-                app,
-                result,
+            # All deliverables are shown, in alphabetical order. They
+            # are organized by series but not type.
+            d_source = itertools.groupby(
+                sorted(_deliverables.get_deliverables(self.team_name, series)),
+                key=operator.itemgetter(1)  # the series
             )
+            for s, d in d_source:
+                self._add_deliverables(
+                    None,
+                    ((i[2], i[3]) for i in d),  # only name and info
+                    s,
+                    app,
+                    result,
+                )
         else:
-            deliverables = collections.defaultdict(list)
-
-            for filename in sorted(self._get_deliverables_files(series)):
-                deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
-                deliverable_type = _get_deliverable_type(
-                    deliverable_types,
-                    deliverable_name,
+            # Only the deliverables for the given series are
+            # shown. They are organized by type. The type is only
+            # available from the governance data, so we have to add it
+            # to the raw data before sorting and grouping.
+            raw_deliverables = (
+                (_all_deliverable_types.get(d[2], _DEFAULT_TYPE), d[2], d[3])
+                for d in _deliverables.get_deliverables(
+                    self.team_name,
+                    series,
                 )
-                d_info = _get_deliverable_file_content(
-                    app, deliverable_name, filename,
-                )
-                deliverables[deliverable_type].append(
-                    (deliverable_name,
-                     filename,
-                     d_info))
-
+            )
+            raw_deliverables = list(raw_deliverables)
+            grouped = itertools.groupby(
+                sorted(raw_deliverables),
+                key=operator.itemgetter(0),  # the deliverable type
+            )
+            # Convert the grouping iterators to a dictionary mapping
+            # type to the list of tuples with deliverable name and
+            # parsed deliverable info that _add_deliverables() needs.
+            by_type = {}
+            for deliverable_type, deliverables in grouped:
+                by_type[deliverable_type] = [
+                    (d[1], d[2])
+                    for d in deliverables
+                ]
             for type_tag in self._TYPE_ORDER:
+                if type_tag not in by_type:
+                    app.info('No %r for %s' % (type_tag, (self.team_name, series)))
+                    continue
                 self._add_deliverables(
                     type_tag,
-                    deliverables[type_tag],
+                    by_type[type_tag],
                     series,
                     app,
                     result,
@@ -310,6 +210,7 @@ class DeliverableDirectiveBase(rst.Directive):
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
 
+        deliverables = list(deliverables)  # expand any generators passed in
         if not deliverables:
             # There are no deliverables of this type, and that's OK.
             return
@@ -326,7 +227,7 @@ class DeliverableDirectiveBase(rst.Directive):
         # deliverable.
         if not self.team_name:
             most_recent = []
-            for deliverable_name, filename, deliverable_info in deliverables:
+            for deliverable_name, deliverable_info in deliverables:
                 earliest_version = deliverable_info.get('releases', {})[0].get(
                     'version', 'unreleased')
                 recent_version = deliverable_info.get('releases', {})[-1].get(
@@ -342,22 +243,25 @@ class DeliverableDirectiveBase(rst.Directive):
                     )
                 else:
                     notes_link = '`release notes <%s>`__' % release_notes
-                most_recent.append((ref, earliest_version, recent_version, notes_link))
+                most_recent.append(
+                    (ref, earliest_version, recent_version, notes_link)
+                )
             _list_table(
                 lambda t: result.append(t, source_name),
-                ['Deliverable', 'Earliest Version', 'Most Recent Version', 'Notes'],
+                ['Deliverable', 'Earliest Version',
+                 'Most Recent Version', 'Notes'],
                 most_recent,
                 title='Release Summary',
             )
 
         # Show the detailed history of the deliverables within the series.
 
-        for deliverable_name, filename, deliverable_info in deliverables:
+        for deliverable_name, deliverable_info in deliverables:
 
             # These closures need to be redefined in each iteration of
-            # the loop because they use the filename.
+            # the loop because they use the deliverable name.
             def _add(text):
-                result.append(text, filename)
+                result.append(text, '%s/%s' % (series, deliverable_name))
 
             def _title(text, underline):
                 text = str(text)  # version numbers might be seen as floats
@@ -403,19 +307,6 @@ class DeliverableDirectiveBase(rst.Directive):
 
 class DeliverableDirective(DeliverableDirectiveBase):
 
-    def _get_deliverables_files(self, series):
-        if self.team_name:
-            # Only show the deliverables associated with the team
-            # specified.
-            return itertools.chain(
-                *(glob.glob('deliverables/%s/%s.yaml' % (series, dn))
-                  for dn in self.team_deliverables)
-            )
-        else:
-            # Show all of the deliverables for all teams producing
-            # anything in the series.
-            return glob.glob('deliverables/%s/*.yaml' % series)
-
     def run(self):
         # Require a series value.
         series = self.options.get('series')
@@ -430,9 +321,7 @@ class DeliverableDirective(DeliverableDirectiveBase):
 
 
 class IndependentDeliverablesDirective(DeliverableDirectiveBase):
-
-    def _get_deliverables_files(self, series):
-        return glob.glob('deliverables/_independent/*.yaml')
+    pass
 
 
 class TeamDirective(rst.Directive):
@@ -453,20 +342,13 @@ class TeamDirective(rst.Directive):
                 line=self.lineno)
             return [error]
 
-        if self.team_name not in _all_teams:
-            error = self.state_machine.reporter.error(
-                'Team %r not found in governance data' % self.team_name,
-                nodes.literal_block(self.block_text, self.block_text),
-                line=self.lineno)
-            return [error]
-        team = _all_teams[self.team_name]
-        self.team_deliverables = list(team.deliverables.keys())
+        self.team_deliverables = _deliverables.get_team_deliverables(
+            self.team_name
+        )
 
-        deliverable_files = _deliverable_files_by_team[self.team_name]
-        all_series = reversed(sorted(set(
-            os.path.basename(os.path.dirname(df))
-            for df in deliverable_files
-        )))
+        all_series = reversed(sorted(
+            _deliverables.get_team_series(self.team_name)
+        ))
 
         result = ViewList()
 
@@ -493,10 +375,7 @@ class TeamDirective(rst.Directive):
 
 
 def _generate_team_pages(app):
-    teams_with_deliverables = []
-    for team_name in sorted(_all_teams.keys()):
-        if _deliverable_files_by_team.get(team_name):
-            teams_with_deliverables.append(team_name)
+    teams_with_deliverables = list(sorted(_deliverables.get_teams()))
     for team_name in teams_with_deliverables:
         app.info('[team page] %s' % team_name)
         slug = team_name.lower().replace('-', '_').replace(' ', '_')
