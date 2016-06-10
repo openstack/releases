@@ -8,3 +8,8 @@ releases:
   projects:
   - repo: openstack/debtcollector
     hash: c204667ed8eec848b664a41a8e5869771c5dd9a4
+- version: 1.5.0
+  projects:
+  - repo: openstack/debtcollector
+    hash: 4d766d6526e3c7cff97dc87890f5e354bb3370e1
+  highlights: '* Fix renamed_kwarg to preserve argspec'

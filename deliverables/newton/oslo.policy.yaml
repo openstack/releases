@@ -13,3 +13,11 @@ releases:
   projects:
   - repo: openstack/oslo.policy
     hash: 5a8969c97ba637a609aa98fbdd93137874e6e7d3
+- version: 1.9.0
+  projects:
+  - repo: openstack/oslo.policy
+    hash: 474c120ae6de61c1f46523baa0fef11b5e537cf8
+  highlights: |-
+    * Add equality operator to policy.RuleDefault
+    * Add policy registration and authorize method
+    * Add sample file generation script and helper methods

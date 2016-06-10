@@ -23,3 +23,10 @@ releases:
   - repo: openstack/oslo.utils
     hash: 6cf8386cc7278a98f9ba9260d7ea61e519e93975
   highlights: '* Move method split_path into oslo.utils'
+- version: 3.12.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: dfdaaa2e31296982ce4dce4a416e3d3f8b315de9
+  highlights: |-
+    * Remove deprecated method total_seconds in timeutils
+    * Fix is_valid_cidr raises TypeError

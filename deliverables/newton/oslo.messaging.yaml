@@ -16,3 +16,12 @@ releases:
   projects:
   - repo: openstack/oslo.messaging
     hash: 4b0e247d2d9d1c8eb5b9f904dd632bda9c706670
+- version: 5.3.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: a4a4a50eb736bd0955ab1a84cde6bd4c0d00a266
+  highlights: |-
+    * Refactoring of zmq client
+    * Remove deprecated get_expiration method (rabbitmq)
+    * Randomize host list connection attempts (amqp 1.0)
+    * Fix timeout in ThreadingPoller.poll (zmq)

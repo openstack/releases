@@ -12,3 +12,12 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 72dad2600488d4c49c34233db27604ed2bdcd675
+  - version: 1.10.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 91184e1047d07c8fbeee2648ec7a929858b58b89
+    highlights: |-
+        * Fix ComparableVersionedObject in python 3.4
+        * Add a pci address field
+        * Replace safe_utils.getcallargs with inspect.getcallargs
+        * Fix compare_obj() to obey missing/unset fields

@@ -13,3 +13,11 @@ releases:
     * Don't set html_last_updated_fmt without git
     * Improve documentation about registering entry points for
       config generator
+- version: 3.11.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: bb0f7e3880bd83dbb9088f3f8045152ce8e7897b
+  highlights: |-
+    * Return [] for .config_dirs when config files are not parsed
+    * Incorrect group name when deprecated_group is not specified
+    * Disallow config option name as same as attribute of ConfigOpts
