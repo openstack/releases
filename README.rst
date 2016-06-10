@@ -176,6 +176,10 @@ Deliverables File Schema
 
 The top level of a deliverable file is a mapping with keys:
 
+``team``
+  The name of the team that owns the deliverable, as listed in the
+  governance repository data files.
+
 ``launchpad``
   The slug name of the launchpad project, suitable for use in URLs.
 
