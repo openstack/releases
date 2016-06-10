@@ -1,6 +1,11 @@
 ---
 launchpad: tuskar
+team: tripleo
 send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/tuskar:
+    flags:
+      - retired
 releases:
   - version: 0.4.18
     projects:
