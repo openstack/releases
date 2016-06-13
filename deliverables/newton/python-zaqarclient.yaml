@@ -1,0 +1,13 @@
+---
+launchpad: python-zaqarclient
+team: zaqar
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 641e12e202c40aee0e999c965a665fe88968e186
+    highlights: >
+        Add the update support for queue in favor of the API change of Zaqar
+        queue update (using PATCH).
