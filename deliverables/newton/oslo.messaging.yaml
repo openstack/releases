@@ -25,3 +25,7 @@ releases:
     * Remove deprecated get_expiration method (rabbitmq)
     * Randomize host list connection attempts (amqp 1.0)
     * Fix timeout in ThreadingPoller.poll (zmq)
+- version: 5.4.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 01338c940acb591efca918dc49a7a6f449a3a764

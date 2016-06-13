@@ -21,3 +21,7 @@ releases:
         * Add a pci address field
         * Replace safe_utils.getcallargs with inspect.getcallargs
         * Fix compare_obj() to obey missing/unset fields
+  - version: 1.11.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 1d0e199c10ba0953b78b02da31db191713c47559

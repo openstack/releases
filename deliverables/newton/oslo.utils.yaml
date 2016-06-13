@@ -30,3 +30,8 @@ releases:
   highlights: |-
     * Remove deprecated method total_seconds in timeutils
     * Fix is_valid_cidr raises TypeError
+- version: 3.13.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: 98e24bedf35231431da6924ce7eee05b8a7cbec1
+  highlights: '* Allow assigning "0" to port'

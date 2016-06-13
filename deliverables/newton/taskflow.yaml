@@ -30,3 +30,7 @@ releases:
   highlights: |-
     * Split revert/execute missing args (exception) messages
     * Instead of a multiprocessing queue use sockets via asyncore
+- version: 2.2.0
+  projects:
+  - repo: openstack/taskflow
+    hash: f885bc13087f1fecbab74b762bf48fe6c1a51d48
