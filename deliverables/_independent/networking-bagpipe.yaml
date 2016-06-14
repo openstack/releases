@@ -1,0 +1,10 @@
+---
+launchpad: networking-bagpipe
+team: neutron
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  # mitaka
+  - version: 4.0.0
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 870d281eeb707fbb6c4de431d764cebb586f872e
