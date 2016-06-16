@@ -20,3 +20,13 @@ releases:
         - Deprecate volume proxy CLIs and APIs are removed.
         - Image proxy CLIs and APIs are deprecated.
         - The python API bindings client now defaults to the v2.1 API.
+  - version: 4.1.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 19ff19e1b8e632e03aff50621d200a258b2014b2
+    highlights: >
+        - Several bug fixes and support added for new microversions. The
+          highest supported microversion in this release is 2.28.
+        - A few commands now have newly deprecated options, read the change log
+          for more information.
+        - Routine dependency updates.
