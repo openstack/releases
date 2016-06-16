@@ -232,6 +232,18 @@ The top level of a deliverable file is a mapping with keys:
       This repository is no longer used, but was present in old
       versions of a deliverable.
 
+``release-type``
+  This (optional) key sets the level of validation for the versions numbers.
+
+  ``std``
+      Default: Enforces 3 digit semver version numbers in releases and allows
+      for common alpha, beta and dev releases.  This should be appropriate for
+      most OpenStack release requirements.
+
+  ``xstatic``
+      Allows a more flexible versioning in line with xstatic package guidelines
+      and requirements.
+
 ``releases``
   A list of the releases for the deliverable.
 
