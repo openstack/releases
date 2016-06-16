@@ -13,8 +13,7 @@ echo =${PROJ}= | line =
 echo " ${PROJ^}"
 echo =${PROJ}= | line =
 echo
-for s in $SERIES
-do
+for s in $SERIES ; do
     echo ${s^}
     echo $s | line =
     echo
