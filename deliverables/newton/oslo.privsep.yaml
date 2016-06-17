@@ -22,3 +22,11 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 6bcde24765add71eec180af6e036faa1d6bafa1e
+  - version: 1.9.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 9bf606327d156de52c9418d5784cd7f29e243487
+    highlights: |
+      * Adds an (optional for now) initialisation function that should
+        be called near top of main() in applications that use
+        oslo.privsep.
