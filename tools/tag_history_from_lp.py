@@ -42,6 +42,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', nargs='+', help='repository directory')
 parser.add_argument('--series', help='series to scan')
+parser.add_argument('--announce', default='openstack-dev@lists.openstack.org',
+                    help=('Where to send release announcements. '
+                          '(Default: %(default)s)'))
 args = parser.parse_args()
 
 # Connect to LP
@@ -104,6 +107,8 @@ for series, milestones in sorted(series_data.items()):
     with open(filename, 'w') as f:
         f.write('---\n')
         f.write('launchpad: %s\n' % args.project)
+        f.write('team: %s\n' % args.project)
+        f.write('send-announcements-to: %s\n' % args.announce)
         f.write('releases:\n')
         for milestone, milestone_data in sorted(milestones.items()):
             f.write('  - version: %s\n' % milestone)
