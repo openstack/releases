@@ -56,3 +56,11 @@ def validate_version(versionstr, release_type='std'):
         if canonical != versionstr:
             yield 'Version %r does not match canonical form %r' % \
                 (versionstr, canonical)
+
+
+def canonical_version(versionstr, release_type='std'):
+    """Given a version string verify it is in the canonical form."""
+    errors = list(validate_version(versionstr, release_type))
+    if errors:
+        raise ValueError(errors[-1])
+    return versionstr
