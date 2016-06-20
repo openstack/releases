@@ -3,6 +3,18 @@ launchpad: gnocchi
 team: Telemetry
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  - version: 1.0.0a1
+    projects:
+      - repo: openstack/gnocchi
+        hash: c11611c76c86c9fea94dc85bbd499857d47fbfb4
+  - version: 1.0.0rc1
+    projects:
+      - repo: openstack/gnocchi
+        hash: 0bf3b31dbf19b47f6e1bcfed01e836dc32063c3a
+  - version: 1.0.0rc2
+    projects:
+      - repo: openstack/gnocchi
+        hash: 4ed2a363a1f85f511558aeb46e35f099ad7d12fc
   - version: 1.0.0
     projects:
       - repo: openstack/gnocchi
@@ -19,3 +31,55 @@ releases:
     projects:
       - repo: openstack/gnocchi
         hash: 4b0f4ff547552fe78dad00e54160c3803bd8910c
+  - version: 1.3.0
+    projects:
+      - repo: openstack/gnocchi
+        hash: fff9b487a20ef0a076f6f5ee6900c90b8423441a
+  - version: 1.3.1
+    projects:
+      - repo: openstack/gnocchi
+        hash: eec02bac51d5abcd2361dd3ae3f44ee62a3db8c5
+  - version: 1.3.2
+    projects:
+      - repo: openstack/gnocchi
+        hash: 016fc8f31ffaf5da5919561ab918dbadbff4f0e8
+  - version: 1.3.3
+    projects:
+      - repo: openstack/gnocchi
+        hash: 7ac05b77692c4c080da16b75aaaef85453993b67
+  - version: 1.3.4
+    projects:
+      - repo: openstack/gnocchi
+        hash: cffcc4d5082c29efc789f0cf4bc81100b82c2d33
+  - version: 1.3.5
+    projects:
+      - repo: openstack/gnocchi
+        hash: fe2beaef3c94c851ac0996f01faec774aa108ba0
+  - version: 2.0.0
+    projects:
+      - repo: openstack/gnocchi
+        hash: ad78cee67d9268b39e3663b245b6183add91806d
+  - version: 2.0.1
+    projects:
+      - repo: openstack/gnocchi
+        hash: 15bda4a9759300958f9f6fab3c80d337457b9943
+  - version: 2.0.2
+    projects:
+      - repo: openstack/gnocchi
+        hash: 0c876c4eed8be8763478cb1ca494f91904ddabc8
+  - version: 2.1.0
+    projects:
+      - repo: openstack/gnocchi
+        hash: 314b110d93f613e4491b4d5aefc090d3e3fa02fd
+  - version: 2.1.1
+    projects:
+      - repo: openstack/gnocchi
+        hash: 6c49492db68e921b515c819463c58e4800ea0dc8
+  - version: 2.1.2
+    projects:
+      - repo: openstack/gnocchi
+        hash: e9b873f86889b25b7e33eaac475a45c1cfe51133
+  - version: 2.1.3
+    projects:
+      - repo: openstack/gnocchi
+        hash: 637bc7041d9ec56c8068d1bc77d70186bebf7e17
