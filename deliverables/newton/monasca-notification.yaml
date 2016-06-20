@@ -1,0 +1,9 @@
+---
+launchpad: monasca
+team: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 978dd35c49f6febc93f14ada9402995687e75e4c
