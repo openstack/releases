@@ -338,14 +338,14 @@ def main():
                 (filename, final_release['version'], extra)
             )
             print(msg)
-            errors.append(msg)
+            warnings.append(msg)
         for missing in expected_repos.difference(actual_repos):
             msg = (
                 '%s release %s is missing %s from the governance list' %
                 (filename, final_release['version'], missing)
             )
             print(msg)
-            errors.append(msg)
+            warnings.append(msg)
 
     if warnings:
         print('\n\n%s warnings found' % len(warnings))
