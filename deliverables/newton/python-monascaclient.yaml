@@ -1,0 +1,10 @@
+---
+launchpad: monasca
+team: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: c300a6bb261b93cf0e8650d3ae1761d636f91af8
