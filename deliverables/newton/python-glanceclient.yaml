@@ -1,0 +1,16 @@
+---
+launchpad: python-glanceclient
+team: glance
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 46c3792feef6f36b31e9783724b914d6740b0f84
+    highlights: >
+        - Fixes endpoint type handling during session creation and an encoding
+          issue when using v1 client.
+        - Ships the default metadata schema with the client so that certain
+          CLI help text can be displayed when server is offline.
+        - Few other bug fixes and dependency updates.
