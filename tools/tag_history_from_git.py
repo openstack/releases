@@ -66,6 +66,9 @@ def date_to_release(tag_date):
 parser = argparse.ArgumentParser()
 parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', help='repository directory')
+parser.add_argument('--announce', default='openstack-dev@lists.openstack.org',
+                    help=('Where to send release announcements. '
+                          '(Default: %(default)s)'))
 args = parser.parse_args()
 
 before = os.getcwd()
@@ -118,6 +121,8 @@ for series, milestones in sorted(series_data.items()):
     with open(filename, 'w') as f:
         f.write('---\n')
         f.write('launchpad: %s\n' % args.project)
+        f.write('team: %s\n' % args.project)
+        f.write('send-announcements-to: %s\n' % args.announce)
         f.write('releases:\n')
         milestones_sorted = sorted(milestones.items(),
                                    key=lambda x: StrictVersion(x[0]))
