@@ -102,7 +102,7 @@ for series, milestones in sorted(series_data.items()):
     if not os.path.exists(d):
         print('creating directory %s' % d)
         os.makedirs(d)
-    filename = '%s/%s.yaml' % (d, args.project)
+    filename = '%s/%s.yaml' % (d, os.path.basename(repo))
     print('creating %s' % filename)
     with open(filename, 'w') as f:
         f.write('---\n')
