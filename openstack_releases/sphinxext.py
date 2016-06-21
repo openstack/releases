@@ -95,6 +95,7 @@ class DeliverableDirectiveBase(rst.Directive):
     _TYPE_ORDER = [
         'type:service',
         'type:library',
+        'type:horizon-plugin',
         'type:other',
         'release:cycle-trailing',
     ]
@@ -182,6 +183,7 @@ class DeliverableDirectiveBase(rst.Directive):
 
     _TYPE_TITLE = {
         'type:service': 'Service Projects',
+        'type:horizon-plugin': 'Horizon Plugins',
         'type:library': 'Library Projects',
         'type:other': 'Other Projects',
         'release:cycle-trailing': 'Projects Trailing the Release Cycle',
