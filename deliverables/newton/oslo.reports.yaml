@@ -16,3 +16,8 @@ releases:
   projects:
   - repo: openstack/oslo.reports
     hash: 3804e060de1d47d5375bf9ee7dd21ca8448ded40
+- version: 1.11.0
+  projects:
+  - repo: openstack/oslo.reports
+    hash: c1c40325cde1ca97c083a5c18a5f926c91b386cd
+  highlights: '* Use file modification events instead of signal handler'

@@ -21,3 +21,13 @@ releases:
     * Return [] for .config_dirs when config files are not parsed
     * Incorrect group name when deprecated_group is not specified
     * Disallow config option name as same as attribute of ConfigOpts
+- version: 3.12.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: d8e71b9d10132a9c134ff79a4ecdc77d17d424be
+  highlights: |-
+    * Adds a new option, URIOpt
+    * Adds deprecated_since parameter
+    * Handle some native python types in config generation
+    * Support template substitution of DictOpt
+    * Allow for specifying minimal configuration (not required)
