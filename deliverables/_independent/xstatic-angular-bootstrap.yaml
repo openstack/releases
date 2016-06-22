@@ -1,0 +1,10 @@
+---
+launchpad: horizon
+team: horizon
+release-type: xstatic
+send-announcements-to: openstack-dev@lists.openstack.org
+releases:
+  - version: 0.11.0.3
+    projects:
+      - repo: openstack/xstatic-angular-bootstrap
+        hash: b581edb6975175a564fd02766aef2f9043702c80
