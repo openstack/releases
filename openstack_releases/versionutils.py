@@ -14,23 +14,45 @@
 
 from __future__ import unicode_literals
 
+import packaging.version
 import pbr.version
 
+# The keys for this dict are the valid release types for OpenStack releases.
+# The values are a three-tuple that contains:
+#  1. constructor:  The function used to convert the version string in to a
+#                   *Verion object.
+#  2. exception:    The excpetion raised by the constructor iff version string is invalid
+#                   in some way.
+#  3. canonicalise: The function used to canonicalise the *Version object.
+#                   Used to verify that the version string is already in the
+#                   canonical form
+_VALIDATORS = {'std': (pbr.version.SemanticVersion.from_pip_string,
+                       ValueError,
+                       lambda x: x.release_string()),
+               'xstatic': (packaging.version.Version,
+                           packaging.version.InvalidVersion,
+                           lambda x: str(x)),
+               }
 
-def validate_version(versionstr):
+
+def validate_version(versionstr, release_type='std'):
     """Given a version string, yield error messages if it is "bad"
 
     Apply our SemVer rules to version strings and report all issues.
 
     """
-    # Apply pbr rules
+    if release_type not in _VALIDATORS:
+        yield 'Release Type %s not valid using \'std\'' % release_type
+        release_type = 'std'
+
+    constructor, exception, canonicalise = _VALIDATORS[release_type]
     try:
-        semver = pbr.version.SemanticVersion.from_pip_string(versionstr)
-    except ValueError as err:
+        semver = constructor(versionstr)
+    except exception as err:
         yield 'Invalid version: %s' % err
     else:
-        # Make sure pbr didn't change the version to meet the canonical form.
-        canonical = semver.release_string()
+        # Make sure we didn't change the version to meet the canonical form.
+        canonical = canonicalise(semver)
         if canonical != versionstr:
             yield 'Version %r does not match canonical form %r' % \
                 (versionstr, canonical)

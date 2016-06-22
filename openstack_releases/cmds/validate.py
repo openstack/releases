@@ -129,6 +129,9 @@ def main():
             warnings.append('Team %r in %s not in governance data' %
                             (deliverable_info['team'], filename))
 
+        # Look for the release-type
+        release_type = deliverable_info.get('release-type', 'std')
+
         # Look for an email address to receive release announcements
         try:
             announce_to = deliverable_info['send-announcements-to']
@@ -262,7 +265,8 @@ def main():
                         else:
 
                             for e in versionutils.validate_version(
-                                    release['version']):
+                                    release['version'],
+                                    release_type=release_type):
                                 msg = ('could not validate version %r '
                                        'for %s: %s' %
                                        (release['version'], filename, e))
