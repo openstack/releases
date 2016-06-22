@@ -23,7 +23,7 @@ Use git as the canonical source of version numbers.
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from distutils.version import StrictVersion
+from openstack_releases.versionutils import canonical_version
 
 import argparse
 import datetime
@@ -68,6 +68,9 @@ parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', help='repository directory')
 parser.add_argument('--announce', default='openstack-dev@lists.openstack.org',
                     help=('Where to send release announcements. '
+                          '(Default: %(default)s)'))
+parser.add_argument('--release-type', dest='release_type', default='std',
+                    help=('Which release-type to use for this deliverable'
                           '(Default: %(default)s)'))
 args = parser.parse_args()
 
@@ -123,9 +126,11 @@ for series, milestones in sorted(series_data.items()):
         f.write('launchpad: %s\n' % args.project)
         f.write('team: %s\n' % args.project)
         f.write('send-announcements-to: %s\n' % args.announce)
+        f.write('release-type: %s\n' % args.release_type)
         f.write('releases:\n')
-        milestones_sorted = sorted(milestones.items(),
-                                   key=lambda x: StrictVersion(x[0]))
+        milestones_sorted = \
+            sorted(milestones.items(),
+                   key=lambda x: canonical_version(x[0], args.release_type))
         for milestone, milestone_data in milestones_sorted:
             f.write('  - version: %s\n' % milestone)
             f.write('    projects:\n')
