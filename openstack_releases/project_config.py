@@ -80,20 +80,22 @@ def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo):
         # jobs, because we want projects to use the templates.
         num_release_jobs = sum(('openstack-server-release-jobs' in templates,
                                 'publish-to-pypi' in templates,
+                                'xstatic-publish-jobs' in templates,
                                 'puppet-tarball-jobs' in templates))
         if num_release_jobs == 0:
             errors.append(
                 ('%s no release job specified, '
                  'should be one of openstack-server-release-jobs, '
-                 'publish-to-pypi or puppet-tarball-jobs for %s '
-                 'or no release will be published'
-                 % (ZUUL_LAYOUT_FILENAME, repo), True)
+                 'publish-to-pypi, xstatic-publish-jobs '
+                 'or puppet-tarball-jobs for %s or no release will be '
+                 'published' % (ZUUL_LAYOUT_FILENAME, repo), True)
             )
         elif num_release_jobs > 1:
             errors.append(
                 ('%s multiple release jobs specified, '
                  'should be *one* of openstack-server-release-jobs, '
-                 'publish-to-pypi or puppet-tarball-jobs for %s '
+                 'publish-to-pypi, xstatic-publish-jobs or '
+                 'puppet-tarball-jobs for %s '
                  % (ZUUL_LAYOUT_FILENAME, repo), False)
             )
     return errors
