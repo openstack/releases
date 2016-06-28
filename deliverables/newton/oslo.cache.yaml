@@ -16,3 +16,8 @@ releases:
   projects:
   - repo: openstack/oslo.cache
     hash: f6108b0b6603743a3dd56dcbc0f0a2590ddb5fe7
+- version: 1.10.0
+  projects:
+  - repo: openstack/oslo.cache
+    hash: 48ee6eb36dd895c518db39d6f2d799038cc37b02
+  highlights: '* Use entrypoints for backends'

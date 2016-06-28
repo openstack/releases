@@ -25,3 +25,8 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 1d0e199c10ba0953b78b02da31db191713c47559
+  - version: 1.12.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 0bb46f0a2c41c64d1a50debfc78f50627c4c8761
+    highlights: '* Add objectify decorator for readability'
