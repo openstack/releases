@@ -3,7 +3,13 @@ launchpad: networking-midonet
 team: neutron
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  # liberty
   - version: 1.0.0
     projects:
       - repo: openstack/networking-midonet
         hash: fcab0c549b47c7e145e60e5c31d48779a5f4ba87
+  # mitaka
+  - version: 2.0.0
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 77e588761736750725cc96d6a766cd751a3978a6
