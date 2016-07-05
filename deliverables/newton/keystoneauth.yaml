@@ -26,3 +26,12 @@ releases:
   highlights: |
     - Added `is_domain` support to token model
     - Added OidcAccessToken auth plugin
+- version: 2.9.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 464aaac5a2ed6da94144395f4ed848dc1ee61c45
+  highlights: |
+    - Support TOTP authentication.
+    - Kerberos and FederatedKerberos authentication is now supported,
+      the kerberos optional dependency must be installed, use
+      `pip install keystoneauth[kerberos].
