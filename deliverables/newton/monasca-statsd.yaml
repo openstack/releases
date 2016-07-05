@@ -1,0 +1,9 @@
+---
+launchpad: monasca
+team: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 60c57319a03b94b36aefd2a7545a0116af4a179c
