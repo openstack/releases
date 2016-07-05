@@ -1,0 +1,10 @@
+---
+launchpad: monasca
+team: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+artifact-link-mode: none
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 0d80a987db69076aa4338dec06231bb5b0c4b244
