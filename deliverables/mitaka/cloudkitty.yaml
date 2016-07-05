@@ -7,3 +7,24 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 56cdfe9a9e039a0cab7ca250fccb0d035e6de9da
+  - version: 0.5.1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 669a316d8102746e9848bdeb9cf0ce21fa72e541
+    highlights: |
+      Bug fixes:
+        - Resources inserted after the sample are now handled by CloudKitty.
+        - Gnocchi resource retrieval is fixed.
+        - Fixed UUID size of gnocchi resource.
+        - Better transformer stability and bug fixes.
+        - Fixed alembic contraint naming.
+        - Fixed problem with ON DELETE field disappearing after migrations on
+          SQLite backends.
+
+      Improvements:
+        - Better test coverage.
+        - Gabbi API tests on every modules.
+
+      Impacts:
+        Database migrations need to be run to correct HashMap constraints and
+        Gnocchi UUID size.
