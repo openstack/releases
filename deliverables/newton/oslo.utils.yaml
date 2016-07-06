@@ -39,3 +39,8 @@ releases:
   projects:
   - repo: openstack/oslo.utils
     hash: 1d15614c20c9ca6c3f1384ce39b92bfefcb22961
+- version: 3.15.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: 8da9b4022fbe7cc957f7c748edc01ac703aa00c3
+  highlights: '* Make mask_dict_password consistent with mask_password'
