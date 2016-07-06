@@ -27,7 +27,7 @@ series. You can find the detail of the various release series here:
    - * :doc:`mitaka/index`
      * Current stable release, security-supported
      * 2016-04-07
-     * TBD
+     * 2017-04-10
    - * :doc:`liberty/index`
      * Security-supported
      * 2015-10-15
