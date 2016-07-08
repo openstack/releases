@@ -1,0 +1,14 @@
+---
+launchpad: networking-ovn
+team: neutron
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+release-notes:
+  openstack/networking-ovn: http://docs.openstack.org/releasenotes/networking-ovn/unreleased.html
+releases:
+  - version: 1.0.0.0b2
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 58ceb208274c1383f9ce539dedbf4de14adbbb42
+    highlights: |
+        * First release of Neutron ML2 driver for OVN
