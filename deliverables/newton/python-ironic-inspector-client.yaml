@@ -11,3 +11,9 @@ releases:
         hash: de0432f4cc9be22471d29b03dad3a3aaa8a2665d
     highlights: |
         * Added a command to reprocess stored data.
+  - version: 1.8.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: fdbefc5c132b3b450a8e50fde82547f1084a20ff
+    highlights: |
+        * The rule import command now prints summary of imported rules.
