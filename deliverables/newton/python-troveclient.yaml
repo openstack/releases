@@ -10,3 +10,13 @@ releases:
         hash: 457360c69f651aea92769c9e543492d770b84595
     highlights: >
       - Client support for instance module feature.
+  - version: 2.3.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 107b60147586209d67748a2a0fe4ea15bce832bb
+    highlights: >
+      - Add support for modules in cluster-grow
+      - Add locality support for cluster
+      - Add locality support for replication
+      - Fix CLI output of datastore-show command
+      - Persist error messages and display on show
