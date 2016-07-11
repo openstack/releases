@@ -1,20 +1,24 @@
 ---
 launchpad: python-openstackclient
-team: OpenStack client
+team: 'OpenStack client'
 send-announcements-to: openstack-dev@lists.openstack.org
-include-pypi-link: yes
+include-pypi-link: true
 releases:
-  - version: 0.1.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: b4fd4ed5fc06ea277502d1ac98650ce137b2625d
-    highlights: >
-        First release of extracted modules from OpenStackClient
-  - version: 0.2.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: 408d88f31634974279e88419763a57144f11f74f
-  - version: 0.2.1
-    projects:
-      - repo: openstack/osc-lib
-        hash: 812e0741f584eaa4d12339a991d604a4a60b8b89
+- version: 0.1.0
+  projects:
+  - repo: openstack/osc-lib
+    hash: b4fd4ed5fc06ea277502d1ac98650ce137b2625d
+  highlights: |
+    First release of extracted modules from OpenStackClient
+- version: 0.2.0
+  projects:
+  - repo: openstack/osc-lib
+    hash: 408d88f31634974279e88419763a57144f11f74f
+- version: 0.2.1
+  projects:
+  - repo: openstack/osc-lib
+    hash: 812e0741f584eaa4d12339a991d604a4a60b8b89
+- version: 0.3.0
+  projects:
+  - repo: openstack/osc-lib
+    hash: 9667f426d0885ea6b497710efa7830c64a8f2e2a
