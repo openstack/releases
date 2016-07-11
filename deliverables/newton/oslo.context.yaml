@@ -16,3 +16,10 @@ releases:
   projects:
   - repo: openstack/oslo.context
     hash: 061741287a9fd90fa1664462f5ef6bb4d942f1a6
+- version: 2.6.0
+  projects:
+  - repo: openstack/oslo.context
+    hash: 9feb9db8d667bc5bc9ca43e2073227c1e8e44bbb
+  highlights: |-
+    * Handle openstack.request_id in from_environ
+    * Add is_admin_project to context

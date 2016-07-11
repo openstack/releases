@@ -16,3 +16,11 @@ releases:
   projects:
   - repo: openstack/stevedore
     hash: 01b09a5c1d683007d86fec09594db9f5787805f3
+- version: 1.16.0
+  projects:
+  - repo: openstack/stevedore
+    hash: f68325fc481a0cc2a9aa9e8b1701cdb092463b49
+  highlights: |-
+    * Fix broken link about setuptools entry points
+    * NamedExtensionManager: call a callback when some names cannot be found
+    * Fix NamedExtensionManager fails when loading failing extension in order

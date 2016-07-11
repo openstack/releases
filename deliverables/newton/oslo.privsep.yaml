@@ -30,3 +30,7 @@ releases:
       * Adds an (optional for now) initialisation function that should
         be called near top of main() in applications that use
         oslo.privsep.
+  - version: 1.10.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: e46eebfebe0b9a92858af0e1f81888475b98e1cc

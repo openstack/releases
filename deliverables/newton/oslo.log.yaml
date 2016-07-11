@@ -47,3 +47,8 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 54fbbffeb7e4f2a4e3e7b9bc9130207222dfc65d
+  - version: 3.12.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: daf64383c1d603f4323dcd734883e1e8f5b8246b
+    highlights: '* Reload log_config_append config on SIGHUP'
