@@ -33,3 +33,8 @@ releases:
   projects:
   - repo: openstack/tooz
     hash: 70d119bdc66d3a0b4cf8d99ac82117fcc89040e5
+- version: 1.41.0
+  projects:
+  - repo: openstack/tooz
+    hash: 3541e7c3937fbd41c364fa9cc6425986f8d955f4
+  highlights: '* File driver: properly handle Windows paths'

@@ -1,0 +1,19 @@
+---
+launchpad: oslo.db
+team: oslo
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+releases:
+- version: 4.8.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: fc3c23a722c8726504657cb8fd96a6b14146ee93
+  highlights: |-
+    * Remove  sqlalchemy < 1.0.0 compatibility layer
+    * Add new filter for DBDataError exception
+    * Raise DbMigrationError for invalid version
+    * Remove direct dependency on babel
+    * api: use sane default in wrap_db_retry()
+    * exc_filters: catch and translate non existent constraint on drop
+    * Deprecate config option sqlite_db for removal
+    * Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType

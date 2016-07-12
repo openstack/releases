@@ -30,3 +30,11 @@ releases:
       - repo: openstack/oslo.versionedobjects
         hash: 0bb46f0a2c41c64d1a50debfc78f50627c4c8761
     highlights: '* Add objectify decorator for readability'
+  - version: 1.13.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: b6410fe93186949550b8ce16fe64da751f353c6e
+    highlights: |-
+        * JSON schema generation for versioned objects
+        * JSON schema get_schema implementation for common fields
+        * Improved error message for Object.coerce

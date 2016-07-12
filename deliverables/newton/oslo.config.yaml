@@ -31,3 +31,10 @@ releases:
     * Handle some native python types in config generation
     * Support template substitution of DictOpt
     * Allow for specifying minimal configuration (not required)
+- version: 3.13.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: 11456e00c4152f393119c2ba33eceaa0f5d02b4d
+  highlights: |-
+    * Enabling your project for mutable-config
+    * Add Python 3.5 classifier and venv

@@ -34,3 +34,10 @@ releases:
   projects:
   - repo: openstack/taskflow
     hash: f885bc13087f1fecbab74b762bf48fe6c1a51d48
+- version: 2.3.0
+  projects:
+  - repo: openstack/taskflow
+    hash: 613181f5715d54d6ec46ee97b07e4915811f9094
+  highlights: |-
+    * Add tests to verify kwargs behavior on revert validation
+    * Make tests less dependent on transient state
