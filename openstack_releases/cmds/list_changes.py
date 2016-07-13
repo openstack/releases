@@ -209,7 +209,8 @@ def main():
                 git_range = project['hash']
 
             # Show details about the commit being tagged.
-            header('Details for commit receiving new tag')
+            header('Details for commit receiving new tag %s' %
+                   new_release['version'])
             print('\ngit describe %s\n' % project['hash'])
             try:
                 subprocess.check_call(
