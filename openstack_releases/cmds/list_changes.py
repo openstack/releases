@@ -129,13 +129,14 @@ def main():
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
-        header('team info')
+        header('Team details')
         if 'team' in deliverable_info:
             team_name = deliverable_info['team']
             team_dict = team_data.get(team_name)
             if team_dict:
                 team = governance.Team(team_name, team_dict)
                 print('found team %s' % team_name)
+                print('  PTL: %(name)s (%(irc)s)\n' % team.ptl)
                 deliverable_name = os.path.basename(filename)[:-5]  # remove .yaml
                 deliverable = team.deliverables.get(deliverable_name)
                 if deliverable:
@@ -144,6 +145,7 @@ def main():
                         print('\nrepo %s\ntags:' % repo.name)
                         for t in repo.tags:
                             print('  %s' % t)
+                        print('')
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %

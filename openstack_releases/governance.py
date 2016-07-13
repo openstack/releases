@@ -51,6 +51,14 @@ class Team(object):
     def __init__(self, name, data):
         self.name = name
         self.data = data
+        # Protectively initialize the ptl data structure in case part
+        # of it is missing from the project list, then replace any
+        # values we do have from that data.
+        self.ptl = {
+            'name': 'MISSING',
+            'irc': 'MISSING',
+        }
+        self.ptl.update(data.get('ptl', {}))
         self.deliverables = {
             dn: Deliverable(dn, di, self)
             for dn, di in self.data.get('deliverables', {}).items()
