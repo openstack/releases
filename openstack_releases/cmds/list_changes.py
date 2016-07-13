@@ -30,6 +30,7 @@ import yaml
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
+from openstack_releases import governance
 
 
 def header(title):
@@ -113,6 +114,8 @@ def main():
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)
 
+    team_data = governance.get_team_data()
+
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
     os.environ['PAGER'] = ''
@@ -125,6 +128,31 @@ def main():
         print('\nChecking %s\n' % filename)
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
+
+        header('team info')
+        if 'team' in deliverable_info:
+            team_name = deliverable_info['team']
+            team_dict = team_data.get(team_name)
+            if team_dict:
+                team = governance.Team(team_name, team_dict)
+                print('found team %s' % team_name)
+                deliverable_name = os.path.basename(filename)[:-5]  # remove .yaml
+                deliverable = team.deliverables.get(deliverable_name)
+                if deliverable:
+                    print('found deliverable %s' % deliverable_name)
+                    for rn, repo in sorted(deliverable.repositories.items()):
+                        print('\nrepo %s\ntags:' % repo.name)
+                        for t in repo.tags:
+                            print('  %s' % t)
+                else:
+                    print(('no deliverable %r found for team %r, '
+                           'cannot report on governance status') %
+                          (deliverable_name, team_name))
+            else:
+                print('no team %r found, cannot report on governance status' %
+                      team_name)
+        else:
+            print('no team name given, cannot report on governance status')
 
         series = os.path.basename(
             os.path.dirname(
