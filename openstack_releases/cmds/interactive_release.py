@@ -188,6 +188,9 @@ def maybe_create_release(release_repo_path, deliverable_info,
                     "Announcement email address: ",
                     validator=NoEmptyValidator(),
                     default=ANNOUNCE_EMAIL)
+            team = prompt("Project team: ",
+                          validator=NoEmptyValidator(),
+                          default=launchpad_project)
             include_pypi_link = yes_no_prompt("Include pypi link? ")
             newest_release = collections.OrderedDict([
                 ('launchpad', launchpad_project),
@@ -195,6 +198,7 @@ def maybe_create_release(release_repo_path, deliverable_info,
                 ('include-pypi-link', include_pypi_link),
                 ('release-notes', notes_link),
                 ('releases', []),
+                ('team', team),
             ])
         possible_hashes = []
         for sha, _descr in change_lines:
