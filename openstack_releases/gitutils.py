@@ -71,6 +71,13 @@ def clone_repo(workdir, repo):
         repo,
     ])
     subprocess.check_call(cmd)
+    # Force an update, just in case the local version is still out of
+    # date.
+    print('Updating newly cloned repository in %s' % dest)
+    subprocess.check_call(
+        ['git', 'fetch', '-v', '--tags'],
+        cwd=dest,
+    )
 
 
 def sha_for_tag(workdir, repo, version):
