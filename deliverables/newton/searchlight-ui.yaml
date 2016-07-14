@@ -12,3 +12,12 @@ releases:
       release. These changes are not backwards compatible with previous
       Horizon releases. Several small code organization improvements were
       also done.
+  - version: 1.0.0.0b2
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 19086ab8f870d30b2e95ab92c468a60317b00a40
+    highlights: |
+      Searchlight UI now makes use of newly landed Horizon
+      registered drawer and detail views for resources. It also
+      adds support for global actions (like creating an image) and
+      has started enhancing action result handling.
