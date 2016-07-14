@@ -14,3 +14,7 @@ releases:
       - Proper handling of 4 byte unicode chars in metadefs APIs (bug 1570789)
       - Removal of deprecated sign-the-hash approach
       - Removal of run_tests and related scripts
+  - version: 13.0.0.0b2
+    projects:
+      - repo: openstack/glance
+        hash: e3728d6d41e450dbefe1279eea4a56441ff9e171
