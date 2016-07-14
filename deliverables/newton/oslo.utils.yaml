@@ -44,3 +44,13 @@ releases:
   - repo: openstack/oslo.utils
     hash: 8da9b4022fbe7cc957f7c748edc01ac703aa00c3
   highlights: '* Make mask_dict_password consistent with mask_password'
+- version: 3.16.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: e1d503c6c4b2ea96cad3a7b49abc0012e8cdc8f8
+  highlights: |-
+    * Move nova extra_specs_ops to oslo.utils (and use
+      a well-defined parser to enhance its robustness
+      and more clearly define its purpose/api).
+    * Fix mask_dict_password for non string/dict type
+      key in dict.
