@@ -14,3 +14,14 @@ releases:
       - Several in-tree docs updates
       - Change to using notification pools by default
       - ElasticSearch 2.x support fixes
+  - version: 1.0.0.0b2
+    projects:
+      - repo: openstack/searchlight
+        hash: dcec06c6ca68e988fc2af09ab65ce794befd8514
+    highlights: >
+      - Nova microversion support
+      - Neutron Floating IP plugin
+      - Neutron Security Group plugin
+      - Nova API call reduction
+      - Configurable index settings
+      - Various bug fixes
