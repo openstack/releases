@@ -13,3 +13,8 @@ releases:
   - repo: openstack/futurist
     hash: 89af3a028820bdffb3bd37c43d2d00fe703fd859
   highlights: '* Begin adding our own thread pool executor'
+- version: 0.16.0
+  projects:
+  - repo: openstack/futurist
+    hash: 6d4e15a6760d8525de7789e73e61e573eaf38d78
+  highlights: '* Revert smart idleness check'
