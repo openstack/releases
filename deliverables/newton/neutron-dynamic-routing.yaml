@@ -1,0 +1,15 @@
+---
+launchpad: neutron
+team: neutron
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes:
+  http://docs.openstack.org/releasenotes/neutron-dynamic-routing/unreleased.html
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: e0b214a7d43c6e2c22fc5f182ec24b3192b64fde
+  - version: 9.0.0.0b2
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 9e0819f2d0fb31aa6875ca6b27ebc597868e8a33
