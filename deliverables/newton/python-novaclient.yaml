@@ -30,3 +30,16 @@ releases:
         - A few commands now have newly deprecated options, read the change log
           for more information.
         - Routine dependency updates.
+  - version: 5.0.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 5eb7b65f0d1aca4f62b5d5f451a99a43fd4265fc
+    highlights: >
+        - Several bug fixes and support added for new microversions. The
+          highest supported microversion in this release is 2.32.
+        - A few commands now have newly deprecated options, read the release
+          notes for more information.
+        - Some deprecated commands and support have been dropped and will now
+          result in errors if used. Read the release notes for more
+          information.
+        - Routine dependency updates.
