@@ -14,3 +14,12 @@ releases:
         - Ships the default metadata schema with the client so that certain
           CLI help text can be displayed when server is offline.
         - Few other bug fixes and dependency updates.
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 13093e019416894a4bd940d569bab4c3c0b84485
+    highlights: >
+        - Added Python 3.5 classifier as we now have a working gate job to test
+          the support.
+        - Added support to log 'x-openstack-request-id' for each api call.
+        - Updated outdated image schema in the glanceclient.
