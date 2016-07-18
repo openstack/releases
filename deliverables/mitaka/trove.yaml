@@ -41,3 +41,11 @@ releases:
         Correctly identify MongoDB processes (Bug 1570866)
         Fix issue with MySQL GTID Replication (Bug 1563574)
         Fix schema upgrade for MySQL 5.6 and MariaDB 10.1 (Bug 1473226).
+  - version: 5.1.0
+    projects:
+      - repo: openstack/trove
+        hash: 94347bd88b7d18f1f13e82d8e74e8063acde0cc8
+    highlights: >
+        Fixed module-apply issue (Bug 1571799)
+        Fixed Cassandra connection leak (Bug 1566946)
+        Requires oslo.concurrency 3.7.1
