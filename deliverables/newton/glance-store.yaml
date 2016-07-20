@@ -1,0 +1,17 @@
+---
+launchpad: glance-store
+team: glance
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.14.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 79532ea599cd0226e7176c6c7d59e04ee3b1a8ff
+    highlights: >
+      - Important connection related fix to Cinder store for uploads
+        and downloads.
+      - Setup now properly defaults project_domain_name and
+        project_domain_id for swiftclient driver.
+      - Cinder driver now uses image_size metadata instead of volume
+        size rounded up to GiB.
