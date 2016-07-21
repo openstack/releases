@@ -326,7 +326,7 @@ def main():
                 deliverable_name=deliverable_name,
             )
         )
-        if not expected_repos:
+        if link_mode != 'none' and not expected_repos:
             msg = ('unable to find deliverable %s in the governance list' %
                    deliverable_name)
             print(msg)
