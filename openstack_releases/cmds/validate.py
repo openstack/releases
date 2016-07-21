@@ -179,7 +179,8 @@ def main():
                 # Check for release jobs (if we ship a tarball)
                 if link_mode != 'none':
                     pce = project_config.require_release_jobs_for_repo(
-                        deliverable_info, zuul_layout, project['repo'])
+                        deliverable_info, zuul_layout, project['repo'],
+                        release_type)
                     for msg, is_error in pce:
                         print(msg)
                         if is_error:

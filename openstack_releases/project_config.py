@@ -46,7 +46,21 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
     return raw
 
 
-def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo):
+# Which jobs are needed for which release types.
+_RELEASE_JOBS_FOR_TYPE = {
+    'std': [
+        'openstack-server-release-jobs',
+        'publish-to-pypi',
+        'puppet-tarball-jobs',
+    ],
+    'xstatic': [
+        'xstatic-publish-jobs',
+    ],
+}
+
+
+def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo,
+                                  release_type):
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
@@ -78,24 +92,27 @@ def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo):
         ]
         # NOTE(dhellmann): We don't mess around looking for individual
         # jobs, because we want projects to use the templates.
-        num_release_jobs = sum(('openstack-server-release-jobs' in templates,
-                                'publish-to-pypi' in templates,
-                                'xstatic-publish-jobs' in templates,
-                                'puppet-tarball-jobs' in templates))
-        if num_release_jobs == 0:
-            errors.append(
-                ('%s no release job specified, '
-                 'should be one of openstack-server-release-jobs, '
-                 'publish-to-pypi, xstatic-publish-jobs '
-                 'or puppet-tarball-jobs for %s or no release will be '
-                 'published' % (ZUUL_LAYOUT_FILENAME, repo), True)
+        expected_jobs = _RELEASE_JOBS_FOR_TYPE.get(
+            release_type,
+            _RELEASE_JOBS_FOR_TYPE['std'],
+        )
+        if expected_jobs:
+            num_release_jobs = sum(
+                j in templates
+                for j in expected_jobs
             )
-        elif num_release_jobs > 1:
-            errors.append(
-                ('%s multiple release jobs specified, '
-                 'should be *one* of openstack-server-release-jobs, '
-                 'publish-to-pypi, xstatic-publish-jobs or '
-                 'puppet-tarball-jobs for %s '
-                 % (ZUUL_LAYOUT_FILENAME, repo), False)
-            )
+            if num_release_jobs == 0:
+                errors.append(
+                    ('%s no release job specified for %s, '
+                     'should be one of %r or no release will be '
+                     'published' % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
+                     True)
+                )
+            elif num_release_jobs > 1:
+                errors.append(
+                    ('%s multiple release jobs specified for %s, '
+                     'should be *one* of %r'
+                     % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
+                     False)
+                )
     return errors
