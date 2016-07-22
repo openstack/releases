@@ -1,0 +1,15 @@
+---
+launchpad: neutron
+team: neutron
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes:
+  http://docs.openstack.org/releasenotes/neutron-lbaas/unreleased.html
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: f5f7fd9f1246568a0533bb6709a614d58dfa9002
+  - version: 9.0.0.0b2
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 94b32231740bd71911768975bac16c426e59c522

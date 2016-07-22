@@ -3,33 +3,13 @@ launchpad: neutron
 team: neutron
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes:
-  openstack/neutron: http://docs.openstack.org/releasenotes/neutron/unreleased.html
-  openstack/neutron-dynamic-routing: http://docs.openstack.org/releasenotes/neutron-dynamic-routing/unreleased.html
-  openstack/neutron-fwaas: http://docs.openstack.org/releasenotes/neutron-fwaas/unreleased.html
-  openstack/neutron-lbaas: http://docs.openstack.org/releasenotes/neutron-lbaas/unreleased.html
-  openstack/neutron-vpnaas: http://docs.openstack.org/releasenotes/neutron-vpnaas/unreleased.html
+  http://docs.openstack.org/releasenotes/neutron/unreleased.html
 releases:
   - version: 9.0.0.0b1
     projects:
       - repo: openstack/neutron
         hash: 8ae7436da9c72cde949ae5b6a1706cdbff093f70
-      - repo: openstack/neutron-dynamic-routing
-        hash: e0b214a7d43c6e2c22fc5f182ec24b3192b64fde
-      - repo: openstack/neutron-fwaas
-        hash: db7b0dead622f241f3282b6b9e2a7494e2ef418b
-      - repo: openstack/neutron-lbaas
-        hash: f5f7fd9f1246568a0533bb6709a614d58dfa9002
-      - repo: openstack/neutron-vpnaas
-        hash: c759e49586bc5e9d6ed1c2f2053e4daae9844c64
   - version: 9.0.0.0b2
     projects:
       - repo: openstack/neutron
         hash: ed58510023d7bbeb2daf61bb1cbdb4e5e4537c0a
-      - repo: openstack/neutron-dynamic-routing
-        hash: 9e0819f2d0fb31aa6875ca6b27ebc597868e8a33
-      - repo: openstack/neutron-fwaas
-        hash: 03c33e6da640745a8602c435165d821f48812ead
-      - repo: openstack/neutron-lbaas
-        hash: 94b32231740bd71911768975bac16c426e59c522
-      - repo: openstack/neutron-vpnaas
-        hash: 93c88577a0109393ca3daed80e816d079296dcc4
