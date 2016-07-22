@@ -350,3 +350,16 @@ To allow tagging for repositories without build artifacts, set the
         projects:
           - repo: openstack/astara-appliance
             hash: c21a64ea7b3b0fbdab8592afecdd31d9b8e64a6a
+
+Helpers
+=======
+
+In order to help build out these files there are various command line
+based tools that come with this repository. To install these it is as
+easy as ``pip install .`` in this repository directory.
+
+* ``list-changes`` that lists the changes in a given release file.
+* ``interactive-release`` that goes through a *wizard* style set of
+  questions to produce a new or updated release of a given project or
+  set of projects.
+* (and more!)
