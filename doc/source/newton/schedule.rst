@@ -37,7 +37,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jul 11-15  | R-12 | :ref:`n-2`                | :ref:`n-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
-|            |      |                           | :ref:`n-cinder-spec-freeze` |
+|            |      | :ref:`n-mf`               | :ref:`n-cinder-spec-freeze` |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`n-trove-spec-freeze`  |
 |            |      +---------------------------+-----------------------------+
@@ -179,6 +179,18 @@ You are no longer allowed to accept proposed changes containing modifications
 in user-facing strings. Such changes should be rejected by the review team
 and postponed until the next series development opens (which should happen
 when RC1 is published).
+
+.. _n-mf:
+
+Membership Freeze
+-----------------
+
+Projects must participate in at least two milestones in order to be
+considered part of the release. Projects made official after the
+second milestone, or which fail to produce milestone releases for at
+least one of the first and second milestones as well as the third
+milestone, are therefore not considered part of the release for the
+cycle.
 
 .. _n-rc1:
 
