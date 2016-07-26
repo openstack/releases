@@ -49,7 +49,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Aug 01-05  | R-9  |                           | :ref:`n-nova-prio-spec-frz` |
 +------------+------+---------------------------+-----------------------------+
-| Aug 08-12  | R-8  |                           |                             |
+| Aug 08-12  | R-8  | :ref:`n-extra-atcs`       |                             |
 +------------+------+---------------------------+-----------------------------+
 | Aug 15-19  | R-7  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -140,6 +140,23 @@ newton-3 milestone
 
 August 30 - Sept 1 is the newton-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
+
+.. _n-extra-atcs:
+
+extra-atcs deadline
+-------------------
+
+Project teams should identify contributors who have had a significant
+impact this cycle but who would not qualify for ATC status using the
+regular process because they have not submitted a patch. Those names
+should be added to the governance repo for consideration as ATC for
+the future.
+
+Although extra ATCs can be nominated at any point, there is a deadline
+to be included in electorate for the next release cycle.  The ATC list
+needs to be approved by the TC by 25 Aug, and in order to appear on
+the TC agenda to be discussed, the proposals need to be submitted to
+the ``openstack/governance`` repository by 16 Aug.
 
 .. _n-ff:
 
