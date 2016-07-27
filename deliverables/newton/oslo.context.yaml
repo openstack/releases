@@ -23,3 +23,7 @@ releases:
   highlights: |-
     * Handle openstack.request_id in from_environ
     * Add is_admin_project to context
+- version: 2.7.0
+  projects:
+  - repo: openstack/oslo.context
+    hash: 932b4950770782fbbf64828f5a824aa752fc0dd7
