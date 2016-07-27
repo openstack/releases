@@ -10,3 +10,11 @@ releases:
         hash: e5227ecbc02f4090bbb96bb766d89b6ad107c51b
     highlights: >
         Initial release of os-vif
+  - version: 1.1.0
+    projects:
+      - repo: openstack/os-vif
+        hash: c16a74b96223cfb7bf3b6277b8c0b46c18f671fe
+    highlights: >
+        Add support for vhost-user with ovs plugin
+        Dont create extraneous linux bridge/veth pair with ovs
+        Ensure ovs bridge exists when plugging
