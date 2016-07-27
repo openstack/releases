@@ -1,5 +1,9 @@
 pbr>=1.6
 
+# NOTE(dhellmann): We pin lazr.restfulclient because there is a newer
+# release registered without a package, and that breaks things.
+lazr.restfulclient==0.13.1
+
 # NOTE(dhellmann): We pin keyring and launchpadlib because new
 # releases tend to add dependencies for GUI tools that we don't use
 keyring==7.3
