@@ -19,3 +19,14 @@ releases:
     highlights: |
         * Add and clean up IPv6 constants
         * Maintain ATTR_NOT_SPECIFIED constant with deepcopy
+  - version: 0.3.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 405f8961bdedf94074a9f5313f2ef3f5023f15ed
+    highlights: |
+        * Add validator to test integers
+        * Add tool to track migration to neutron-lib
+        * Make the constant Sentinel() class public
+        * Localized exception message hacking check
+        * Add Neutron L3 agent types
+        * Add subport validator for vlan-aware-vms
