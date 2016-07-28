@@ -35,3 +35,7 @@ releases:
     - Kerberos and FederatedKerberos authentication is now supported,
       the kerberos optional dependency must be installed, use
       `pip install keystoneauth[kerberos].
+- version: 2.10.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 86e010cc8341ccdea81305998faeb20d180033ee
