@@ -21,3 +21,7 @@ releases:
     hash: d9bd1056323605ed64e73175ce2fcbe5982ec045
   highlights: |
     - Handle EmptyCatalog exception in list federated projects (bug 1471943)
+- version: 3.3.0
+  projects:
+  - repo: openstack/python-keystoneclient
+    hash: 41129c850394e97947ec374dad8e852b5e1b33b5
