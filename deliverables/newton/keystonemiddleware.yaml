@@ -21,3 +21,7 @@ releases:
     - AuditMiddleware can support services that do not use tokens (bug 1583699)
     - Pass X_IS_ADMIN_PROJECT header (bug 1577996)
     - Determine project name from oslo config or local config (bug 1583690)
+- version: 4.7.0
+  projects:
+  - repo: openstack/keystonemiddleware
+    hash: a724cf86736765e63dc5593ed24a8a6cc15f65be
