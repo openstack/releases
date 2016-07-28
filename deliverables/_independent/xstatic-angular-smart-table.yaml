@@ -1,0 +1,10 @@
+---
+launchpad: horizon
+team: horizon
+release-type: xstatic
+send-announcements-to: openstack-dev@lists.openstack.org
+releases:
+  - version: 1.4.13.0
+    projects:
+      - repo: openstack/xstatic-angular-smart-table
+        hash: a5ace69bc0ed04b76addd5bbb6edd73f6be47662
