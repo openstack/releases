@@ -4,6 +4,7 @@ team: Puppet OpenStack
 release-notes:
   7.1.0: http://git.openstack.org/cgit/openstack/puppet-manila/tree/CHANGELOG.md?h=stable/liberty
   8.1.0: http://docs.openstack.org/releasenotes/puppet-manila/mitaka.html
+  8.2.0: http://docs.openstack.org/releasenotes/puppet-manila/mitaka.html
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 7.1.0
@@ -14,3 +15,7 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: aa67e8981023eee8ba3662ff64a26b689f7c3afc
+  - version: 8.2.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 110a0b4d02d7038ec2ed1fecc635543b42d7f0bd
