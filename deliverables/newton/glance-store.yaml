@@ -15,3 +15,10 @@ releases:
         project_domain_id for swiftclient driver.
       - Cinder driver now uses image_size metadata instead of volume
         size rounded up to GiB.
+  - version: 0.15.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 10f50da5fcd9257090ab137f4d257940bb01b44a
+    highlights: >
+      - Fixed a critical bug 1606746 that was blocking further
+        releases and failing gate of glance docs.
