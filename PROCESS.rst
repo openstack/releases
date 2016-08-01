@@ -117,6 +117,9 @@ Between Milestone-3 and RC1
    final release and import it into a Google Docs spreadsheet for
    collaborative editing and monitoring.
 
+3. Encourage release:independent projects to add the history for any
+   releases not yet listed in their deliverable file.
+
 RC1
 ===
 
