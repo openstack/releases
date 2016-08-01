@@ -17,3 +17,12 @@ releases:
     * exc_filters: catch and translate non existent constraint on drop
     * Deprecate config option sqlite_db for removal
     * Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType
+- version: 4.9.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: c5999fb2fa25bc3107ca75d7b5b6cb619118712e
+  highlights: |-
+    - Set max pool size default to 5
+    - Set a min and max on the connection_debug option
+    - Memoize sys.exc_info() before attempting a savepoint rollback
+    - Add dispose_pool() method to enginefacade context, factory

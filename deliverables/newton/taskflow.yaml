@@ -41,3 +41,11 @@ releases:
   highlights: |-
     * Add tests to verify kwargs behavior on revert validation
     * Make tests less dependent on transient state
+- version: 2.4.0
+  projects:
+  - repo: openstack/taskflow
+    hash: 8eed13c62bf1771988ead6562919b9e0eca82d31
+  highlights: |-
+    - Add Python 3.5 classifier and venv
+    - Ensure the fetching jobs does not fetch anything
+      when in a bad state

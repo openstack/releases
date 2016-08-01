@@ -17,3 +17,8 @@ releases:
   projects:
   - repo: openstack/debtcollector
     hash: d46b64a28641b5b5fd764830098ff9a26ffec872
+- version: 1.7.0
+  projects:
+  - repo: openstack/debtcollector
+    hash: 279bbcaa407b92363c820ef6710bae18a49a1da2
+  highlights: '- Add Python 3.5 classifier and venv'

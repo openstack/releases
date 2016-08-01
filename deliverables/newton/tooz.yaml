@@ -38,3 +38,11 @@ releases:
   - repo: openstack/tooz
     hash: 3541e7c3937fbd41c364fa9cc6425986f8d955f4
   highlights: '* File driver: properly handle Windows paths'
+- version: 1.42.0
+  projects:
+  - repo: openstack/tooz
+    hash: 115a39a3cf0275fb9f9f8d56cf06220ce1864fee
+  highlights: |-
+    - Clean leave group hooks when unwatching
+    - etcd: properly block when using 'wait'
+    - etcd: don't run heartbeat() concurrently

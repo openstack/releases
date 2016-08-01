@@ -52,3 +52,8 @@ releases:
       - repo: openstack/oslo.log
         hash: daf64383c1d603f4323dcd734883e1e8f5b8246b
     highlights: '* Reload log_config_append config on SIGHUP'
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 656cef3e3b495316a95d6a411685ef86e0390381
+    highlights: '- Add Python 3.5 classifier and venv'

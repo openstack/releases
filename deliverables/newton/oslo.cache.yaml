@@ -25,3 +25,8 @@ releases:
   projects:
   - repo: openstack/oslo.cache
     hash: 86bcd66f6b3359456e280b23db7d9cd1670b2804
+- version: 1.12.0
+  projects:
+  - repo: openstack/oslo.cache
+    hash: 3009e5f7be5ea8ecf050e7dea924cc95c3996b35
+  highlights: '- Add Python 3.5 classifier and venv'
