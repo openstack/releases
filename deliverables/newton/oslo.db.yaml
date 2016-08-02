@@ -26,3 +26,8 @@ releases:
     - Set a min and max on the connection_debug option
     - Memoize sys.exc_info() before attempting a savepoint rollback
     - Add dispose_pool() method to enginefacade context, factory
+- version: 4.10.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: 3277ef33f2a1f6a892f0832e2907acef7b45dc2b
+  highlights: '- Capture DatabaseError for deadlock check'
