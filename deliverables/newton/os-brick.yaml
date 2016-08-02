@@ -19,3 +19,14 @@ releases:
     highlights: >
         Added encryptors from Nova to share between Cinder and Nova code.
         Switch to use privsep instead of rootwrap.
+  - version: 1.5.0
+    projects:
+      - repo: openstack/os-brick
+        hash: cc47d81feb63671a285c46d97f7dae5ccee58501
+    highlights: >
+        Added Windows iSCSI connector.
+        Fixed attach error for multipath iSCSI encrypted volumes.
+        Fixed error parsing device path with iSCSI multipath.
+        Optimization for ScaleIO volume identification.
+        Local attach feature for RBD connector.
+        Various code cleanup.
