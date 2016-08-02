@@ -36,3 +36,8 @@ releases:
   projects:
   - repo: openstack/oslo.serialization
     hash: 7ad9a958008fc5ee442f6de3d0e6a756d62b6115
+- version: 2.12.0
+  projects:
+  - repo: openstack/oslo.serialization
+    hash: afb53323a1eb751fd1f8a542414a284902cb8f70
+  highlights: '- Add Python 3.5 classifier and venv'

@@ -33,3 +33,11 @@ releases:
   projects:
   - repo: openstack/oslo.policy
     hash: cbb0824b56397adf8f93153083a49921c0d82f98
+- version: 1.13.0
+  projects:
+  - repo: openstack/oslo.policy
+    hash: 10a81baefa25dd25d6acb8c2ad6ba3bcc868c82b
+  highlights: |-
+    - Add Python 3.5 classifier and venv
+    - Debug logging for policy file validation
+    - Add note about not all APIs support policy enforcement by user_id

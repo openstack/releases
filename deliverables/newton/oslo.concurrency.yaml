@@ -25,3 +25,8 @@ releases:
   projects:
   - repo: openstack/oslo.concurrency
     hash: f7821d9cdbb8e6ad27c5c7aa02a4110cc42777de
+- version: 3.13.0
+  projects:
+  - repo: openstack/oslo.concurrency
+    hash: 2e8d5481b1a3036e9d3e1f684b95cd123022b39f
+  highlights: '- Add Python 3.5 classifier and venv'

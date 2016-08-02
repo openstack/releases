@@ -25,3 +25,8 @@ releases:
   projects:
   - repo: openstack/oslo.reports
     hash: 4b37e3073a3f8f3af59fc63647cadce5a88bb965
+- version: 1.13.0
+  projects:
+  - repo: openstack/oslo.reports
+    hash: 329eb7cb79925c3e6319e41a7cca3b86218ea2c6
+  highlights: '- Add Python 3.5 classifier and venv'

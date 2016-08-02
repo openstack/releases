@@ -38,3 +38,8 @@ releases:
         * JSON schema generation for versioned objects
         * JSON schema get_schema implementation for common fields
         * Improved error message for Object.coerce
+  - version: 1.14.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 67ba3a08407e9126db6421155af41dec5e65b58b
+    highlights: '- Add Python 3.5 classifier and venv'

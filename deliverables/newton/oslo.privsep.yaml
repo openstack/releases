@@ -34,3 +34,8 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: e46eebfebe0b9a92858af0e1f81888475b98e1cc
+  - version: 1.11.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 108b2016a9f291ad15e2bf963c5897fd032fdb62
+    highlights: '- Drop python3.3 support in classifier'

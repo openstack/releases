@@ -38,3 +38,10 @@ releases:
   highlights: |-
     * Enabling your project for mutable-config
     * Add Python 3.5 classifier and venv
+- version: 3.14.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: b40925328e5ba9e87be42bab1ec3a41bf3d81f78
+  highlights: |-
+    - Add max_length to URIOpt
+    - Add min and max values to Float type and Opt

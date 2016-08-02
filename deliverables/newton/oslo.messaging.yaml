@@ -33,3 +33,13 @@ releases:
   projects:
   - repo: openstack/oslo.messaging
     hash: 7a0f9334db9591a085d3a5b2c55dff24b1f21511
+- version: 5.6.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 3a87803db99c6d137f96d7105f56e457ef2c7c3b
+  highlights: |-
+    - [zmq] Use json/msgpack instead of pickle
+    - Introduce TTL for idle connections
+    - Delete fanout queues on gracefully shutdown
+    - Add deprecated relnote for max_retries rabbit configuration option
+    - Add a CLI tool to manually send notifications

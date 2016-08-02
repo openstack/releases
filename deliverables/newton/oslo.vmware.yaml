@@ -28,3 +28,8 @@ releases:
   projects:
   - repo: openstack/oslo.vmware
     hash: 421b41c15b76781cc34bad16cd242a49517529ce
+- version: 2.12.0
+  projects:
+  - repo: openstack/oslo.vmware
+    hash: 37283c8689238fe0bcd038267893fc7d002d1383
+  highlights: '- Refactor image transfer'
