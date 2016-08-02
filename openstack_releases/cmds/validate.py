@@ -170,6 +170,10 @@ def main():
             os.path.dirname(filename)
         )
 
+        # Remember which entries are new so we can verify that they
+        # appear at the end of the file.
+        new_releases = {}
+
         prev_version = None
         prev_projects = set()
         link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
@@ -258,6 +262,7 @@ def main():
                                  project['hash']))
                     else:
                         print('NEW ', end='')
+                        new_releases[release['version']] = release
                         if not prev_version:
                             print()
                         elif project['repo'] not in prev_projects:
@@ -312,6 +317,14 @@ def main():
                                     )
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])
+
+        # Make sure that new entries have been appended to the file.
+        for v, nr in new_releases.items():
+            if nr != deliverable_info['releases'][-1]:
+                msg = ('new release %(version)s must be listed last, '
+                       'with one new release per patch' % nr)
+                print(msg)
+                errors.append(msg)
 
         # Some rules only apply to the most current release.
         if series_name != defaults.RELEASE:
