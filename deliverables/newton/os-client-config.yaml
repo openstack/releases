@@ -16,3 +16,9 @@ releases:
         hash: 51b4cbee522e2bf1a2beb12425733435ff1c32d9
     highlights: >
       Added helper factory functions for OpenStack SDK and shade.
+  - version: 1.19.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 8e4a1ebc97d30bcaf42a94379d499bd1689c3c51
+    highlights: >
+      Add profile deprecation setting, OSC 3.0 support
