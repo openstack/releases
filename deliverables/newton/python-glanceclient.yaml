@@ -23,3 +23,11 @@ releases:
           the support.
         - Added support to log 'x-openstack-request-id' for each api call.
         - Updated outdated image schema in the glanceclient.
+  - version: 2.3.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: cc17ca32652af69cba268ef71286ca096b1e6207
+    highlights: >
+        - Fixes a bug 1603863, after which request IDs are logged even after
+          exceptions are raised.
+        - Fixes an error that was preventing releasenotes from being built.
