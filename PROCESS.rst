@@ -147,7 +147,10 @@ Try to avoid creating more than 3 release candidates so we are not
 creating candidates that consumers are then trained to ignore. Each
 release candidate should be kept for at least 1 day, so if there is a
 proposal to create RCX but clearly a reason to create another one,
-delay RCX to include the additional patches.
+delay RCX to include the additional patches. Teams that know they will
+need additional release candidates can submit the requests and mark
+them WIP until actually ready, so the release team knows that more
+candidates are coming.
 
 1. Encourage liaisons to merge all translation patches.
 
