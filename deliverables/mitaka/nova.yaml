@@ -41,3 +41,9 @@ releases:
         pycrypto>=2.6 is explicitly added to requirements.txt. This was always
         a hard runtime dependency but was missing before. Also contains
         the fix for CVE-2015-5162 which requires oslo.concurrency>=3.7.1.
+  - version: 13.1.1
+    projects:
+      - repo: openstack/nova
+        hash: f094cb99e13848e09a9b09e089dbfb56eef4dfb6
+    highlights: >
+      - Bug fixes, dependency updates, translation updates.
