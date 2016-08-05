@@ -22,3 +22,9 @@ releases:
         hash: 8e4a1ebc97d30bcaf42a94379d499bd1689c3c51
     highlights: >
       Add profile deprecation setting, OSC 3.0 support
+  - version: 1.19.1
+    projects:
+      - repo: openstack/os-client-config
+        hash: 1d18b9193b55b727ca79d96158077e809feb1cd0
+    highlights: >
+      Fix option precedence bug introduced in 1.19.0
