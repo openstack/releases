@@ -20,3 +20,13 @@ releases:
       * Make purge supports dvr router's interface
       * Support sha256 for vpn-ikepolicy and vpn-ipsecpolicy
       * Dropped VMware NSX support
+  - version: 5.1.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 70557dc564b4b3cca2cd716a29e5e9f9be95247f
+    highlights: |-
+      * Add segment as an attribute to subnet in client
+      * Log request-id for each api call
+      * Add trunk commands to openstackclient
+      * Add Python 3.5 classifier and venv
+      * find_resource method family are available in Python binding class
