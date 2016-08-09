@@ -41,3 +41,8 @@ releases:
     - Add Python 3.5 classifier and venv
     - Debug logging for policy file validation
     - Add note about not all APIs support policy enforcement by user_id
+- version: 1.14.0
+  projects:
+  - repo: openstack/oslo.policy
+    hash: 804be5979569cc64dfef2ac2b6bc0c040d313aa0
+  highlights: '* Allow policy file to not exist'

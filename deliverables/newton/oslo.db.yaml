@@ -31,3 +31,8 @@ releases:
   - repo: openstack/oslo.db
     hash: 3277ef33f2a1f6a892f0832e2907acef7b45dc2b
   highlights: '- Capture DatabaseError for deadlock check'
+- version: 4.11.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: f3d123a34d2377a87fa0c36b6edae06fb10d7cc6
+  highlights: '* Add a hook to process newly created engines'

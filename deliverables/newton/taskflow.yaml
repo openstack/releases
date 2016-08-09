@@ -49,3 +49,8 @@ releases:
     - Add Python 3.5 classifier and venv
     - Ensure the fetching jobs does not fetch anything
       when in a bad state
+- version: 2.5.0
+  projects:
+  - repo: openstack/taskflow
+    hash: b494202315c7d418f3b95da23ea5d5dc6313824f
+  highlights: '* Change dependency management to use flavors'

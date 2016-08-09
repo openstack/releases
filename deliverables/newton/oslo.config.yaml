@@ -45,3 +45,8 @@ releases:
   highlights: |-
     - Add max_length to URIOpt
     - Add min and max values to Float type and Opt
+- version: 3.15.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: 2449197425ea5a712d93191042414c540f2656e4
+  highlights: '* Add advanced option denotation'

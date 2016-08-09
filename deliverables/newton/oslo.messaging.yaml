@@ -43,3 +43,9 @@ releases:
     - Delete fanout queues on gracefully shutdown
     - Add deprecated relnote for max_retries rabbit configuration option
     - Add a CLI tool to manually send notifications
+- version: 5.7.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: a0336c8aa19e027190623462e9190dec23531895
+  highlights: |-
+    * Move zmq driver options into its own group
