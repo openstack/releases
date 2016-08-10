@@ -43,3 +43,11 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 80ad3bc11fdc3b224cac15420174ec9ccfe71cf5
+- version: 2.11.1
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 837118393c9930d0f627783f15df67a4299d5271
+  highlights: |
+    - Fixes "space before header" issue seen in ansible deploys with
+      requests>=2.11.0, see bug 1611426.
+    - Fixes "Status code 308 missed" issue, see bug 1610914
