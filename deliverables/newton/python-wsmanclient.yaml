@@ -1,0 +1,12 @@
+---
+launchpad: python-wsmanclient
+team: ironic
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.0.1
+    projects:
+      - repo: openstack/python-wsmanclient
+        hash: 3df7701c92c2f7846daaea1394e21dbf51a9a312
+    highlights: |
+        * Initial release supporting basic WSMan operations.
