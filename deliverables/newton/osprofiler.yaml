@@ -8,3 +8,13 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: eab25741105859574ede89b0d47984b1cd3b6c3a
+  - version: 1.4.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: 8027a1d3b7e7b0d3cb7fbccecc20a173cc5b9ddb
+    highlights: |-
+      * Add backward compatible drivers structure
+      * Add OSprofiler initialization method
+      * Add overall profiler stats by operation
+      * Add connection string usage to osprofiler-cli
+      * Add MongoDB driver
