@@ -1,10 +1,14 @@
 ---
 launchpad: python-cliff
-team: OpenStack client
+team: 'OpenStack client'
 send-announcements-to: openstack-announce@lists.openstack.org
-include-pypi-link: yes
+include-pypi-link: true
 releases:
-  - version: 2.1.0
-    projects:
-      - repo: openstack/cliff
-        hash: 21f133f17ba2ec7a4b370a74bd08b536abddf1de
+- version: 2.1.0
+  projects:
+  - repo: openstack/cliff
+    hash: 21f133f17ba2ec7a4b370a74bd08b536abddf1de
+- version: 2.2.0
+  projects:
+  - repo: openstack/cliff
+    hash: 50d67088eabfde69db1d8d86d7f45f094611cf26
