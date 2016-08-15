@@ -5,7 +5,7 @@
 This document describes the relative ordering and rough timeline for
 all of the steps related to preparing the release.
 
-Before Summit (after closing prevous release)
+Before Summit (after closing previous release)
 =============================================
 
 1. Set up the release schedule for the newly opened cycle by creating
@@ -71,10 +71,19 @@ Between Milestone-2 and Milestone-3
    order to avoid having the release blocked.)
 
    1. Update ACLs for refs/heads/stable/$series so that members of
-      $project-new-branch can approve changes.
+      $project-release-branch can approve changes. The patch can be
+      generated (for all release:cycle-with-milestones deliverables) with:
+      ``aclmanager.py acls /path/to/openstack-infra/project-config $series``
 
-   2. Set the population of all $project-new-branch groups to the
-      "Release Managers" group and $project-ptl.
+   2. Set the population of all $project-release-branch groups to the
+      "Release Managers" group and $project-release. This can be done
+      (for all release:cycle-with-milestones deliverables) by running
+      ``aclmanager.py groups pre_release $user`` ($user being your Gerrit
+      username)
+
+   3. Ask the release liaisons for the affected teams to update the
+      contents of their $project-release groups. For new projects in
+      some cases they will need to get the group created by Infra.
 
 Final Library Release (week before Milestone-3)
 ===============================================
@@ -169,8 +178,12 @@ Final Release
 
 2. Reset gerrit ACLs
 
-   1. Update all of the $project-new-branch groups to have
-      $project-stable-maint as members instead of "Release Managers".
+   1. Update all of the $project-release-branch groups to have
+      $project-stable-maint as members instead of "Release Managers"
+      and $project-release. This can be done (for all
+      release:cycle-with-milestones deliverables) by running
+      ``aclmanager.py groups post_release $user`` ($user being your
+      Gerrit username)
 
    2. Remove the refs/heads/stable/$series from the project gerrit
-      ACLs.
+      ACLs. This can be done by reverting the original ACL patch.
