@@ -63,8 +63,9 @@ def git_branch_contains(workdir, repo, title, commit):
     header('%s %s' % (title, commit))
     cmd = ['git', 'branch', '-r', '--contains', commit]
     print('\n' + ' '.join(cmd) + '\n')
-    subprocess.check_call(cmd, cwd=os.path.join(workdir, repo))
-    print()
+    out = subprocess.check_output(cmd, cwd=os.path.join(workdir, repo))
+    print(out + '\n')
+    return [o.strip() for o in out.splitlines()]
 
 
 def git_diff(workdir, repo, git_range, file_pattern):
@@ -166,13 +167,17 @@ def main():
         else:
             branch = 'stable/' + series
 
-        # assume the releases are in order and take the last two
+        # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
-        if len(deliverable_info['releases']) >= 2:
-            previous_release = deliverable_info['releases'][-2]
-        else:
-            previous_release = None
+
+        # build a map between version numbers and the release details
+        by_version = {
+            str(r['version']): r
+            for r in deliverable_info['releases']
+        }
+
         for project in new_release['projects']:
+
             tag_exists = gitutils.commit_exists(
                 project['repo'],
                 new_release['version'],
@@ -182,7 +187,7 @@ def main():
                       (project['repo'], new_release['version']))
 
             # Check out the code.
-            print('\nChecking out repository')
+            print('\nChecking out repository {}'.format(project['repo']))
             subprocess.check_call(
                 ['zuul-cloner',
                  '--branch', branch,
@@ -192,18 +197,23 @@ def main():
                  ]
             )
 
-            start_range = None
+            # look at the previous tag for the parent of the commit
+            # getting the new release
+            previous_tag = gitutils.get_latest_tag(
+                workdir,
+                project['repo'],
+                '{}^'.format(project['hash'])
+            )
+            previous_release = by_version.get(previous_tag)
+
+            start_range = previous_tag
             if previous_release:
                 previous_project = {
                     x['repo']: x
                     for x in previous_release['projects']
                 }.get(project['repo'])
                 if previous_project is not None:
-                    start_range = previous_project['hash']
-            if not start_range:
-                start_range = (
-                    gitutils.get_latest_tag(workdir, project['repo']) or None
-                )
+                    start_range = previous_tag
 
             if start_range:
                 git_range = '%s..%s' % (start_range, project['hash'])
@@ -229,14 +239,32 @@ def main():
                 ref=project['hash'],
             )
 
-            git_branch_contains(
+            branches = git_branch_contains(
                 workdir=workdir,
                 repo=project['repo'],
                 title='Branches containing commit',
                 commit=project['hash'],
             )
 
-            head_sha = gitutils.sha_for_tag(workdir, project['repo'], 'HEAD')
+            header('Relationship to HEAD')
+            if series == '_independent':
+                interesting_branches = sorted(
+                    b for b in branches
+                    if '->' not in b
+                )
+                head_sha = gitutils.sha_for_tag(
+                    workdir,
+                    project['repo'],
+                    interesting_branches[0],
+                )
+                print('HEAD of {} is {}'.format(interesting_branches[0], head_sha))
+            else:
+                head_sha = gitutils.sha_for_tag(
+                    workdir,
+                    project['repo'],
+                    'HEAD',
+                )
+                print('HEAD of {} is {}'.format(branch, head_sha))
             requested_sha = gitutils.sha_for_tag(
                 workdir,
                 project['repo'],
@@ -247,12 +275,11 @@ def main():
             # git to give us the real SHA for the requested release in
             # case the deliverables file has the short version of the
             # hash.
-            header('Relationship to HEAD')
             if head_sha == requested_sha:
                 print('\nRequest releases from HEAD on %s' % branch)
             else:
                 git_log(workdir, project['repo'], 'Release will NOT include',
-                        '%s..%s~1' % (requested_sha, head_sha),
+                        '%s..%s' % (requested_sha, head_sha),
                         extra_args=['--format=%h %ci %s'])
 
             # Show any requirements changes in the upcoming release.

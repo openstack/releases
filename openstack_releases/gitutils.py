@@ -112,10 +112,13 @@ def check_ancestry(workdir, repo, old_version, sha):
         return False
 
 
-def get_latest_tag(workdir, repo):
+def get_latest_tag(workdir, repo, sha=None):
+    cmd = ['git', 'describe', '--abbrev=0']
+    if sha is not None:
+        cmd.append(sha)
     try:
         return subprocess.check_output(
-            ['git', 'describe', '--abbrev=0'],
+            cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).strip()
