@@ -36,3 +36,9 @@ releases:
     hash: e0e2deaee02b88b8565502d3f72ec2184c9768c6
   highlights: |
     First full release of OpenStackClient support library
+- version: 1.0.1
+  projects:
+  - repo: openstack/osc-lib
+    hash: ea65b90d63050a331bc039589c8bb6fc308067fa
+  highlights: |
+    Fix argument dependency bug
