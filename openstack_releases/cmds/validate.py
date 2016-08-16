@@ -180,6 +180,12 @@ def main():
         for release in deliverable_info['releases']:
 
             for project in release['projects']:
+                is_independent = (
+                    (series_name, project['repo']) in independent_checks or
+                    project['repo'] in independent_repos or
+                    series_name == '_independent'
+                )
+
                 # Check for release jobs (if we ship a tarball)
                 if link_mode != 'none':
                     pce = project_config.require_release_jobs_for_repo(
@@ -194,17 +200,15 @@ def main():
 
                 # If the project is release:independent, make sure
                 # that's where the deliverable file is.
-                chk = (series_name, project['repo'])
-                if chk not in independent_checks:
-                    if project['repo'] in independent_repos:
-                        if series_name != '_independent':
-                            msg = ('%s uses the independent release model '
-                                   'and should be in the _independent '
-                                   'directory not in %s') % (project['repo'],
-                                                             filename)
-                            print(msg)
-                            warnings.append(msg)
-                    independent_checks.add(chk)
+                if is_independent:
+                    if series_name != '_independent':
+                        msg = ('%s uses the independent release model '
+                               'and should be in the _independent '
+                               'directory not in %s') % (project['repo'],
+                                                         filename)
+                        print(msg)
+                        warnings.append(msg)
+                    independent_checks.add((series_name, project['repo']))
 
                 # Check the SHA specified for the tag.
                 print('%s SHA %s ' % (project['repo'],
@@ -288,7 +292,7 @@ def main():
                             )
                             if old_sha == project['hash']:
                                 print('RETAGGING')
-                            else:
+                            elif not is_independent:
                                 # Check to see if the commit for the new
                                 # version is in the ancestors of the
                                 # previous release, meaning it is actually
@@ -315,6 +319,9 @@ def main():
                                             prev_version,
                                         )
                                     )
+                            else:
+                                print('skipping descendant test for independent project, '
+                                      'verify branch manually')
             prev_version = release['version']
             prev_projects = set(p['repo'] for p in release['projects'])
 
