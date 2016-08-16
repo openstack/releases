@@ -42,3 +42,9 @@ releases:
     hash: ea65b90d63050a331bc039589c8bb6fc308067fa
   highlights: |
     Fix argument dependency bug
+- version: 1.0.2
+  projects:
+  - repo: openstack/osc-lib
+    hash: 1a3ff9697daba6a876d4ea57d603a17115e8ad88
+  highlights: |
+    Fix another argument dependency bug
