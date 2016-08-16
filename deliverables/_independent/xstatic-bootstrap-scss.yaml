@@ -1,0 +1,10 @@
+---
+launchpad: horizon
+team: horizon
+release-type: xstatic
+send-announcements-to: openstack-dev@lists.openstack.org
+releases:
+  - version: 3.3.7.0
+    projects:
+      - repo: openstack/xstatic-bootstrap-scss
+        hash: 577f0ce201e48aaf2d5fbf4d9799013eb108ffd3
