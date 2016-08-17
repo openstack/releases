@@ -1,0 +1,11 @@
+---
+launchpad: ironic-ui
+team: ironic
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/ironic-ui/newton.html
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 03c040bdf5019edd576a620394a63485879144a2
