@@ -243,7 +243,7 @@ def main():
                     # import history and sometimes we want to make new
                     # releases.
                     print('version %s ' % release['version'], end='')
-                    version_exists = gitutils.commit_exists(
+                    version_exists = gitutils.tag_exists(
                         project['repo'], release['version'],
                     )
                     gitutils.clone_repo(workdir, project['repo'])
@@ -254,9 +254,9 @@ def main():
                             release['version'],
                         )
                         if actual_sha == project['hash']:
-                            print('found and matches SHA')
+                            print('found and SHAs match, ')
                         else:
-                            print('found DIFFERENT %r' % actual_sha)
+                            print('found DIFFERENT %r, ' % actual_sha)
                             errors.append(
                                 ('Version %s in %s is on '
                                  'commit %s instead of %s') %
@@ -265,7 +265,7 @@ def main():
                                  actual_sha,
                                  project['hash']))
                     else:
-                        print('NEW ', end='')
+                        print('NEW VERSION, ', end='')
                         new_releases[release['version']] = release
                         if not prev_version:
                             print()

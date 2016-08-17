@@ -22,7 +22,8 @@ import requests
 from requests.packages import urllib3
 urllib3.disable_warnings()
 
-CGIT_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
+CGIT_SHA_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
+CGIT_TAG_TEMPLATE = 'http://git.openstack.org/cgit/%s/tag/?h=%s'
 
 
 def find_modified_deliverable_files():
@@ -46,7 +47,23 @@ def commit_exists(repo, ref):
     someone to fool the check.
 
     """
-    url = CGIT_TEMPLATE % (repo, ref)
+    url = CGIT_SHA_TEMPLATE % (repo, ref)
+    response = requests.get(url)
+    missing_commit = (
+        (response.status_code // 100 != 2) or 'Bad object id' in response.text
+    )
+    return not missing_commit
+
+
+def tag_exists(repo, ref):
+    """Return boolean specifying whether the reference exists in the repository.
+
+    Uses a cgit query instead of looking locally to avoid cloning a
+    repository or having Depends-On settings in a commit message allow
+    someone to fool the check.
+
+    """
+    url = CGIT_TAG_TEMPLATE % (repo, ref)
     response = requests.get(url)
     missing_commit = (
         (response.status_code // 100 != 2) or 'Bad object id' in response.text
