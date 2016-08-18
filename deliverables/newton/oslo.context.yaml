@@ -31,3 +31,8 @@ releases:
   projects:
   - repo: openstack/oslo.context
     hash: 765eaa6a5dcbfb801b2feb639951d292a3e2722d
+- version: 2.9.0
+  projects:
+  - repo: openstack/oslo.context
+    hash: 0ad0950e0637c37145bc04df2166468523f8a10a
+  highlights: '- Emit deprecation warnings when positional args passed'

@@ -47,5 +47,9 @@ releases:
   projects:
   - repo: openstack/oslo.messaging
     hash: a0336c8aa19e027190623462e9190dec23531895
-  highlights: |-
-    * Move zmq driver options into its own group
+  highlights: '* Move zmq driver options into its own group'
+- version: 5.8.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 466abcc3c207c6604af9291216462d7b413a2b8b
+  highlights: '- [zmq] Implement retries for unacknowledged CASTs'
