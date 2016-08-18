@@ -43,3 +43,16 @@ releases:
           result in errors if used. Read the release notes for more
           information.
         - Routine dependency updates.
+  - version: 5.1.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 38073cab51821e4c29a47bcc7cb33d45b112d1c3
+    highlights: >
+        - Several bug fixes and support added for new microversions. The
+          highest supported microversion in this release is 2.35.
+        - The CLI now goes directly to the Image service and Network service
+          when translating resource name to ID. For example, booting a server
+          with an image name or network name will use Glance and Neutron rather
+          than proxy through the Compute API. See the release notes for more
+          information.
+        - Routine dependency updates.
