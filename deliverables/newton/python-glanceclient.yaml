@@ -31,3 +31,13 @@ releases:
         - Fixes a bug 1603863, after which request IDs are logged even after
           exceptions are raised.
         - Fixes an error that was preventing releasenotes from being built.
+  - version: 2.4.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 5de07c339503c90634e27de342d23276a8833111
+    highlights: >
+        - Fixes bug 1587999 that allows the client to not make updates to the
+          tags for every single request, rather for only those that require
+          updates to the tags.
+        - Fixes bug 1596573 with warlock model creation that allows commands
+          like ``md-namespace-show`` to work properly.
