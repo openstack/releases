@@ -28,3 +28,11 @@ releases:
         hash: ad2c5ef5c59262a5f599d6351385a805c4b4f702
     highlights: >
       - s3 store driver has been removed.
+  - version: 0.17.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 2e712db2fce105145e13d35a44810c0770da8c80
+    highlights: >
+      - Improved help text of general configuration options and of
+        various backend store drivers.
+      - Removed deprecated exceptions.
