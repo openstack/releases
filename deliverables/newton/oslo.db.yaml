@@ -36,3 +36,11 @@ releases:
   - repo: openstack/oslo.db
     hash: f3d123a34d2377a87fa0c36b6edae06fb10d7cc6
   highlights: '* Add a hook to process newly created engines'
+- version: 4.12.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: 7ca416418472b4a1a8625f1ef7b83194d784c6da
+  highlights: |-
+    - Link enginefacade to test database provisioning
+    - Display full reason for backend not available
+    - Deprecate argument sqlite_db in method set_defaults

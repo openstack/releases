@@ -50,3 +50,8 @@ releases:
   - repo: openstack/oslo.config
     hash: 2449197425ea5a712d93191042414c540f2656e4
   highlights: '* Add advanced option denotation'
+- version: 3.16.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: d2c2b3a61158c50f2b08e1c780892392d820709e
+  highlights: '- Add Port type to allow configuration of a list of tcp/ip ports'
