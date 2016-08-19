@@ -16,6 +16,14 @@ series. You can find the detail of the various release series here:
      * Status
      * Initial Release Date
      * EOL Date
+   - * :doc:`queens/index`
+     * *Future*
+     * TBD
+     * TBD
+   - * :doc:`pike/index`
+     * *Future*
+     * TBD
+     * TBD
    - * :doc:`ocata/index`
      * *Future*
      * TBD
@@ -82,6 +90,8 @@ series. You can find the detail of the various release series here:
    :maxdepth: 1
    :hidden:
 
+   queens/index
+   pike/index
    ocata/index
    newton/index
    mitaka/index
