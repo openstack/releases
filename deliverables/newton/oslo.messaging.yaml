@@ -53,3 +53,10 @@ releases:
   - repo: openstack/oslo.messaging
     hash: 466abcc3c207c6604af9291216462d7b413a2b8b
   highlights: '- [zmq] Implement retries for unacknowledged CASTs'
+- version: 5.9.0
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 8c84f438d262b6ce00f54e4476938f9616a686b0
+  highlights: |-
+    - Amqp 1.0 dispatch router feature branch merged!
+    - [zmq] Redis unavailability is not critical
