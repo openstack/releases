@@ -34,3 +34,9 @@ releases:
         hash: 9d757b3a9a89bdd63f56ce171b7c878ded9a4cd8
     highlights: >
       Support configuration hints for dual stack neutron networks
+  - version: 1.20.1
+    projects:
+      - repo: openstack/os-client-config
+        hash: d40882eb146a314b064bb930f97f74d7082860e0
+    highlights: >
+      Fixes argument precedence issues for python-openstackclient 3.0
