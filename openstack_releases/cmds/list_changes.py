@@ -74,7 +74,11 @@ def git_diff(workdir, repo, git_range, file_pattern):
                                         file_pattern)))
     if files:
         header('Requirements Changes %s' % git_range)
-        cmd = ['git', 'diff', '-U0', '--no-color', git_range]
+        cmd = [
+            'git', 'diff', '-U0', '--no-color',
+            '--ignore-space-change', '--ignore-blank-lines',
+            git_range,
+        ]
         cmd.extend(f[len(repo_dir) + 1:] for f in files)
         subprocess.check_call(cmd, cwd=repo_dir)
         print()
