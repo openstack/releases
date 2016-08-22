@@ -41,3 +41,10 @@ releases:
           updates to the tags.
         - Fixes bug 1596573 with warlock model creation that allows commands
           like ``md-namespace-show`` to work properly.
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: d4196325eb05dadfaf62d8facbd8c6fe50f72166
+    highlights: >
+        - Reverts the bug 1587999 that results into regression in
+          openstackclient, thus fixing bug 1614971 temporarily.
