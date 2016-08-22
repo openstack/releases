@@ -36,3 +36,11 @@ releases:
       - Improved help text of general configuration options and of
         various backend store drivers.
       - Removed deprecated exceptions.
+  - version: 0.18.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 728b45d4a4573622d56bfb9ee45f6b152fce50a8
+    highlights: >
+      - Fixes bug 1614307 in VMware glance store that was failing
+        to upload images with requests>=2.11.0 that needs headers
+        passed as string or bytes.
