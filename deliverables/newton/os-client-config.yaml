@@ -28,3 +28,9 @@ releases:
         hash: 1d18b9193b55b727ca79d96158077e809feb1cd0
     highlights: >
       Fix option precedence bug introduced in 1.19.0
+  - version: 1.20.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 9d757b3a9a89bdd63f56ce171b7c878ded9a4cd8
+    highlights: >
+      Support configuration hints for dual stack neutron networks
