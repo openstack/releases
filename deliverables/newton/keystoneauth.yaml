@@ -51,3 +51,10 @@ releases:
     - Fixes "space before header" issue seen in ansible deploys with
       requests>=2.11.0, see bug 1611426.
     - Fixes "Status code 308 missed" issue, see bug 1610914
+- version: 2.12.0
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 5f34cb14d4229b8f6ec3088e04d6bfa398b2fd98
+  highlights: |
+    - TCP_KEEPCNT is disabled when using Windows Subsystem for Linux,
+      see bug 1614688.
