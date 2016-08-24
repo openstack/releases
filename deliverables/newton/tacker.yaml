@@ -1,0 +1,14 @@
+---
+launchpad: tacker
+team: tacker
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.4.0
+    projects:
+      - repo: openstack/tacker
+        hash: 4f195b8cf5cf01416f6ff4b86371aea3e140bf75
+      - repo: openstack/tacker-horizon
+        hash: 09dfbaa0048c91068ac1038b71658038e0e27b1e
+    highlights: >
+        - Intermediate newton release of tacker with auto-scaling,
+          audit-event logs and other fixes and enhancements
