@@ -1,0 +1,15 @@
+---
+launchpad: python-mistralclient
+team: mistral
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 5352695e901ba749d23a855b83167975cb201491
+    highlights: |-
+      * Add osprofiler option
+      * Add KeyCloak OpenID Connect authentication
+      * Add ID option to update Action Definition
+      * Add target cloud options
