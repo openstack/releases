@@ -1,0 +1,22 @@
+---
+launchpad: openstack-doc-tools
+team: Documentation
+send-announcements-to: openstack-dev@lists.openstack.org
+release-type: std
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/os-api-ref
+        hash: aefb125f2c87a94eed6228432e870996920e4c1e
+  - version: 0.1.1
+    projects:
+      - repo: openstack/os-api-ref
+        hash: 1160f9ce04f4808cc261db32bf169e78d6dd0349
+  - version: 0.3.0
+    projects:
+      - repo: openstack/os-api-ref
+        hash: f93c467e9acfe1a7b02fa79cd7b906de5b8302eb
+  - version: 0.4.0
+    projects:
+      - repo: openstack/os-api-ref
+        hash: 03f4e77f7ded55334f95edac289048d4f3d06ac2
