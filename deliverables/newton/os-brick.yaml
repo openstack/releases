@@ -31,3 +31,18 @@ releases:
         Optimization for ScaleIO volume identification.
         Local attach feature for RBD connector.
         Various code cleanup.
+  - version: 1.6.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 0e2a40f7468c4f67c96ebb91c417c51bbcc8952e
+    highlights: >
+        Added debug tracing.
+        Fixed iSCSI multipath cleanup.
+        Fixed for customized ceph cluster name.
+        Added connector for VMDK volumes.
+        Fixed iSCSI discovery with ISER transport.
+        Fixed FC multipath rescan.
+        Added Windows FC connector.
+        Added Windows SMBFS connector.
+        Added GPFS connector.
+        Fixed FC multipath cleanup.
