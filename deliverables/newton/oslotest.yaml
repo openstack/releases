@@ -27,3 +27,8 @@ releases:
   projects:
   - repo: openstack/oslotest
     hash: 619ee741612549c2313c98414a4656b1187a1a6d
+- version: 2.10.0
+  projects:
+  - repo: openstack/oslotest
+    hash: 0fad88599e428bdb60d52288fd6f7d69aadfbfc8
+  highlights: '- A new DisableModules fixture that removes modules from system path'
