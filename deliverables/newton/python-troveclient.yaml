@@ -20,3 +20,12 @@ releases:
       - Add locality support for replication
       - Fix CLI output of datastore-show command
       - Persist error messages and display on show
+  - version: 2.4.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 0affaf80cbde2f18904932844cb7d4ca456ce172
+    highlights: >
+      - Display more flavor information in trove flavor-list command
+      - Client side support for instance upgrade (requires OpenStack Newton Trove)
+      - Support flavor-ids with leading zero (Bug 1603187)
+      - Fix module-list failing with AccessInfoV2 error
