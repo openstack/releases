@@ -58,3 +58,11 @@ releases:
   highlights: |
     - TCP_KEEPCNT is disabled when using Windows Subsystem for Linux,
       see bug 1614688.
+- version: 2.12.1
+  projects:
+  - repo: openstack/keystoneauth
+    hash: b7b887c5192f2940073d038360a64041fc4f38cc
+  highlights: |
+    - Fixes a bug in the version discovery mechanism where a URL was
+      being improperly returned when the discovery was not successful,
+      see bug 1616720.
