@@ -44,3 +44,7 @@ releases:
     - Link enginefacade to test database provisioning
     - Display full reason for backend not available
     - Deprecate argument sqlite_db in method set_defaults
+- version: 4.13.0
+  projects:
+  - repo: openstack/oslo.db
+    hash: 87fb9cc84128fb5dceac483f892dba131c340d28
