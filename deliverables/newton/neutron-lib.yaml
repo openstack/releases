@@ -30,3 +30,17 @@ releases:
         * Localized exception message hacking check
         * Add Neutron L3 agent types
         * Add subport validator for vlan-aware-vms
+  - version: 0.4.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 705fd9090c7f38725748895f85edc66dddda5d5f
+    highlights: |
+        * Model mixins: HasId, HasProject*, HasStatusDescription
+        * Common field size constants for database columns
+        * DB utils: is_retriable, reraise_as_retryrequest
+        * Additional common exceptions
+        * Base policy: init, reset, refresh, check_is_admin, check_is_advsvc
+        * File utils: ensure_dir, replace_file
+        * Helper utils: camelize, compare_elements, dict2str, dict2tuple, diff_list_of_dict, get_random_string, parse_mappings, round_val, safe_decode_utf8, safe_sort_key, str2dict
+        * Host util: cpu_count
+        * Net util: get_hostname
