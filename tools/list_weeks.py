@@ -21,10 +21,6 @@ parser.add_argument(
     'next_release',
     help='monday of the week of upcoming release, YYYY-MM-DD',
 )
-parser.add_argument(
-    'summit',
-    help='monday of the week of upcoming summit after the release, YYYY-MM-DD',
-)
 args = parser.parse_args()
 
 
@@ -32,8 +28,6 @@ previous_release_date = datetime.datetime.strptime(
     args.previous_release, '%Y-%m-%d')
 next_release_date = datetime.datetime.strptime(
     args.next_release, '%Y-%m-%d')
-summit_date = datetime.datetime.strptime(
-    args.summit, '%Y-%m-%d')
 
 week = datetime.timedelta(weeks=1)
 work_week = datetime.timedelta(days=4)
@@ -47,13 +41,10 @@ while current < next_release_date:
 
 n_weeks = len(weeks)
 
-# Add the list of Mondays following the release leading up to the
-# summit. Increment current before entering the loop because we've
-# already used that week.
-current += week
-while current <= summit_date:
-    weeks.append(current)
+# Add weeks for the cycle-trailing deadline.
+for i in range(2):
     current += week
+    weeks.append(current)
 
 HEADER = '''
 +-------------------+---------------------------+-----------------------------+
