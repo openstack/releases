@@ -92,7 +92,7 @@
 
    All deadlines are generally the Thursday of the week on which they
    are noted above. For example, The Feature Freeze in week R-5 is on
-   8 September. Exceptions to this policy will be explicitly mentioned
+   1 September. Exceptions to this policy will be explicitly mentioned
    in the event description.
 
 Cross-project events
