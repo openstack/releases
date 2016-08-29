@@ -108,3 +108,19 @@ releases:
         hash: 5bcc99dd69eb319a107ef4f330a822995aae4069
       - repo: openstack/neutron-vpnaas
         hash: 64cdae8b7e6d9230fbc0b3f686c90f7348390c95
+  - version: 8.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: d1667a4bf52ae485a532885cf65c41d239d1b0ac
+      - repo: openstack/neutron-fwaas
+        hash: cbe18b5de196e8edb9b2528a257206c9463c714c
+      - repo: openstack/neutron-lbaas
+        hash: 799b93e09fe92ffea883238c34676c4342b9f75e
+      - repo: openstack/neutron-vpnaas
+        hash: ea355d1bc6e173cd56c6a975b88e5d5e1f901b5c
+    highlights: |-
+      * Allow min_l3_agents_per_router to equal one
+      * Fix designate dns driver for SSL based endpoints
+      * Fixed --config-dir argument for oslo.config 3.8.0
+      * OVS: Add support for IPv6 addresses as tunnel endpoints
+      * Require oslo.concurrency>=3.7.1
