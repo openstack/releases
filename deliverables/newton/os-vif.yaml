@@ -18,3 +18,9 @@ releases:
         Add support for vhost-user with ovs plugin
         Dont create extraneous linux bridge/veth pair with ovs
         Ensure ovs bridge exists when plugging
+  - version: 1.2.0
+    projects:
+      - repo: openstack/os-vif
+        hash: b088d21b91dbfda0f18b1e4886f6aa01f2c72cbe
+    highlights: >
+        Bug fixes and routine dependency updates.
