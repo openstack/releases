@@ -1,0 +1,13 @@
+---
+launchpad: python-searchlightclient
+team: searchlight
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 10708d25a7a1e80fc99d3c95dd944abd5309d2ee
+    highlights: |
+      This is the 1.0.0 release of python-searchlightclient. This release
+      contains a full set of search commands for the python-openstackclient
+      and is compatible with the Newton release of Searchlight.
