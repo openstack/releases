@@ -29,3 +29,14 @@ releases:
       - Client side support for instance upgrade (requires OpenStack Newton Trove)
       - Support flavor-ids with leading zero (Bug 1603187)
       - Fix module-list failing with AccessInfoV2 error
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 599171ade4475709ddd8544e7dfd7ee4ba4ba2a2
+    highlights: >
+      - Fix module-update with --all_datastores (Bug 1612430)
+      - Add command to delete instances in BUILD state (Bug 1579141)
+      - Add support for module ordering on apply
+      - Add --incremental flag on backup-create
+      - Expose a quota update API
+      - Implement a scheduled backup capability
