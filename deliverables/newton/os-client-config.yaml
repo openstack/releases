@@ -39,4 +39,9 @@ releases:
       - repo: openstack/os-client-config
         hash: d40882eb146a314b064bb930f97f74d7082860e0
     highlights: >
-      Fixes argument precedence issues for python-openstackclient 3.0
+  - version: 1.21.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 2b52bcf6943369fe96db3aefe2ee7473dd51b934
+    highlights: >
+      Add ability to prompt user for auth options not present
