@@ -18,3 +18,25 @@ releases:
     projects:
       - repo: openstack/glance
         hash: e3728d6d41e450dbefe1279eea4a56441ff9e171
+  - version: 13.0.0.0b3
+    projects:
+      - repo: openstack/glance
+        hash: 11cfe49b8f88f68d83028b5920891bb16792da72
+    highlights: >
+      - Deprecated the Images (Glance) v1 API
+      - Deprecated ``show_multiple_locations`` configuration option
+      - Removed downgrade support for Glance DB
+      - Glance by default supports ``vhdx`` in the list of disk formats
+      - Vast help text improvements for the Glance and glance_store
+        configuration options
+      - Configuration options are now generated and published as a part of the
+        developer docs
+      - An important bug fix for version negotiation api middleware; v2.3 is
+        the CURRENT API version that was missing in the middleware which now
+        has been added to the same
+      - Complete feature support in api-ref and further improvements to it
+      - More developer documentation
+      - s3 backend store driver support removed from Glance tree following the
+        removal of the driver from the glance_store library
+      - Adds ``CPU thread pinning`` to metadefs to be used primarily for Nova
+      - Uses new library ``cursive`` for signature verification utilities
