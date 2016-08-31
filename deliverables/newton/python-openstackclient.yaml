@@ -1,6 +1,6 @@
 ---
 launchpad: python-openstackclient
-team: OpenStack client
+team: OpenStackClient
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 releases:
@@ -28,3 +28,7 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: a08b62523fa634d5a61d85d1e9f3b89ab2d4a14e
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 8241f08ee1a67bbdaabd1026b81cc494a53530f2
