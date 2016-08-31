@@ -56,3 +56,21 @@ releases:
           than proxy through the Compute API. See the release notes for more
           information.
         - Routine dependency updates.
+  - version: 6.0.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 25117fa866b5b80f81fcb559b21525d2b107b2f7
+    highlights: >
+        - Several bug fixes and support added for new microversions. The
+          highest supported microversion in this release is 2.37.
+        - The network resource CLIs and APIs are now deprecated because
+          nova-network is deprecated.
+        - The image, baremetal and network APIs are now all capped at
+          microversion 2.35 since they result in a 404 from the Nova API after
+          microversion 2.35.
+        - The 2.37 microversion is now supported for booting a server with
+          automatically allocated networking, a.k.a get me a network. With that
+          change the "nics" kwarg is required when booting a server via the
+          Server API after microversion 2.36. The CLI will default to 'auto' if
+          nothing is specified.
+        - Routine dependency updates.
