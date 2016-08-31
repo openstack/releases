@@ -12,3 +12,11 @@ releases:
         hash: 58ceb208274c1383f9ce539dedbf4de14adbbb42
     highlights: |
         * First release of Neutron ML2 driver for OVN
+  - version: 1.0.0.0b3
+    projects:
+      - repo: openstack/networking-ovn
+        hash: c971a24d353d6cb860762e1b0835723d428dd7ba
+    highlights: |
+        * Support OVN address sets for improved port operation and security group performance
+        * Support OVN native DHCPv4
+        * Add OVN L3 router scheduler
