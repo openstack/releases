@@ -13,3 +13,9 @@ releases:
       * Add KeyCloak OpenID Connect authentication
       * Add ID option to update Action Definition
       * Add target cloud options
+  - version: 2.1.1
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: a37b5fe562a85787b74edc48c923aa6343490ec1
+    highlights: |-
+      * Remove strict dependency on osprofiler
