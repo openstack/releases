@@ -27,3 +27,15 @@ releases:
     highlights: |
         Fixed global modification of oslo.i18n lazy load. Added ability to
         force delete a backup.
+  - version: 1.9.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: e15d8e7f0920cb7cd5719d2861dea886bd6f9cb0
+    highlights: |
+        Ability to delete multiple metadata keys in one request.
+        Pagination for API v3 user messages.
+        Checking of api_version for microversion clients.
+        Added ability to update backup info.
+        Switched to using keystoneauth.
+        Command to list manageable volumes and snapshots.
+        Commands to manage generic volume groups.
