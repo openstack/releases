@@ -1,0 +1,12 @@
+---
+launchpad: python-cinderclient
+team: cinder
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: de6a13f33f87415610526781b511c9dfec8f8ad7
+    highlights: |
+      Support for local-attach and local-detach.
