@@ -7,3 +7,22 @@ releases:
     projects:
       - repo: openstack/trove
         hash: ff4904574486675cf87074bfeee06ef682554f04
+  - version: 6.0.0.0b3
+    projects:
+      - repo: openstack/trove
+        hash: 5bb5f62ae1313d82b131579004b20ae3c02a53f8
+    highlights: >
+      - Enable database log retrieval on Cassandra instances.
+      - Enable configuration option to make guest instances
+        respond to ping.
+      - Add New Relic license driver.
+      - Use SET PASSWORD and RENAME USER to reset MySQL
+        user properties.
+      - Fix MySQL GTID replication parsing of GTID's.
+      - Add vCPU's to flavor-list (Bug 1261876).
+      - Increased agent_call_high_timeout config setting to 10 minutes.  This
+        configures the length of time that the taskmanager will wait for an
+        asynchronous guest agent call to complete.
+      - Fix IniCodec to deserialize Python objects. Bug 1599656.
+      - Errors that occur in Trove are now persisted in the database
+        and are returned in the standard 'show' command.
