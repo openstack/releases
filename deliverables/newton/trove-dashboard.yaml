@@ -7,3 +7,10 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 01815715539fad40e06e974d6fdf840957051b69
+  - version: 7.0.0.0b3
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: ccc59a99aa86ad6418192bd991833e9f19d7ec3e
+    highlights: >
+      Show confirm window before instance delete.
+      Add support to display instance fault messages
