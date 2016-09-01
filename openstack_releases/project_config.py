@@ -49,6 +49,7 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
     'std': [
+        'nodejs4-publish-to-npm',
         'openstack-server-release-jobs',
         'publish-to-pypi',
         'puppet-tarball-jobs',
