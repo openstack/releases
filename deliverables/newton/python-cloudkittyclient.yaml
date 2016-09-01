@@ -1,0 +1,12 @@
+---
+launchpad: cloudkitty
+team: cloudkitty
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: b24e261143401516b8342169b6f681c8f2afec8d
+    highlights: >
+      Bug fixes and code quality improvement.
