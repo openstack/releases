@@ -45,3 +45,9 @@ releases:
         hash: 2b52bcf6943369fe96db3aefe2ee7473dd51b934
     highlights: >
       Add ability to prompt user for auth options not present
+  - version: 1.21.1
+    projects:
+      - repo: openstack/os-client-config
+        hash: 42885dc94176eecca1619d7e9c33b5ab3d9a2c0a
+    highlights: >
+      Handle YAML list in region_name
