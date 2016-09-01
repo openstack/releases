@@ -18,6 +18,22 @@ releases:
     projects:
       - repo: openstack/glance
         hash: e3728d6d41e450dbefe1279eea4a56441ff9e171
+    highlights: >
+      - Fixed a critical bug 1557495 for possible race conditions during image
+        status change
+      - Adds soft delete functionality to scrub the old non active tasks
+      - Adds backward compatibilty when using dates for filtering while listing
+        images
+      - Fixed important bug 1591004 to not set header if checksum does not
+        exist
+      - Fixed important bug 1584076 for Swift ACLs disappearing on Glance v1
+        images
+      - Policy ``default` defaults to ``role:admin`` for more secure operator
+        experience
+      - Some api-ref documentation added
+      - Developer documentation that includes notes on how to digitally sign
+        images, create release notes, etc.
+      - Fixed important bug 1585917 resulting in 500s for metadefs
   - version: 13.0.0.0b3
     projects:
       - repo: openstack/glance
