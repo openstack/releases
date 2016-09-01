@@ -17,3 +17,9 @@ releases:
         hash: fdbefc5c132b3b450a8e50fde82547f1084a20ff
     highlights: |
         * The rule import command now prints summary of imported rules.
+  - version: 1.9.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 6364bc93cd5aa67218a009ee520725b5b05f9be4
+    highlights: |
+        * Deprecates some functions in favor of `ClientV1` methods.
