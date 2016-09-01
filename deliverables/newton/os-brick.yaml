@@ -46,3 +46,9 @@ releases:
         Added Windows SMBFS connector.
         Added GPFS connector.
         Fixed FC multipath cleanup.
+  - version: 1.6.1
+    projects:
+      - repo: openstack/os-brick
+        hash: 49a89c8757aad70611a00ea9e1c78f38060bc114
+    highlights: >
+        Added connector alias for direct unit test access.
