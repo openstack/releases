@@ -98,6 +98,10 @@ Final Library Release (week before Milestone-3)
 3. Create stable/$series branches for the libraries after their final
    release is prepared using ``branch_from_yaml.sh``.
 
+4. Use the ``dashboard`` command to prepare the data for tracking the
+   final release and import it into a Google Docs spreadsheet for
+   collaborative editing and monitoring.
+
 Milestone-3
 ===========
 
@@ -122,11 +126,7 @@ Between Milestone-3 and RC1
 1. Encourage liaisons to wait as long as possible to create RC1 to
    avoid immediately having to create an RC2 with a new bug fix.
 
-2. Use the ``dashboard`` command to prepare the data for tracking the
-   final release and import it into a Google Docs spreadsheet for
-   collaborative editing and monitoring.
-
-3. Encourage release:independent projects to add the history for any
+2. Encourage release:independent projects to add the history for any
    releases not yet listed in their deliverable file.
 
 RC1
