@@ -24,3 +24,9 @@ releases:
         hash: b088d21b91dbfda0f18b1e4886f6aa01f2c72cbe
     highlights: >
         Bug fixes and routine dependency updates.
+  - version: 1.2.1
+    projects:
+      - repo: openstack/os-vif
+        hash: ac8c8376249fde6a226f57c49c370d197602fb6a
+    highlights: >
+        - Contains the fix for linuxbridge bug 1617447.
