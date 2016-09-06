@@ -49,3 +49,9 @@ releases:
         Fixed module-apply issue (Bug 1571799)
         Fixed Cassandra connection leak (Bug 1566946)
         Requires oslo.concurrency 3.7.1
+  - version: 5.1.1
+    projects:
+      - repo: openstack/trove
+        hash: 48fe09a1b3930d5ec81f162bbbf54bf68ff157a0
+    highlights: >
+        Fixes bug with guest configuration injection (Bug 1609915)
