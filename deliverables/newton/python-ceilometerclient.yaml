@@ -12,3 +12,8 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 7c6cc05ff0e9e95313384303deee69ef11929bc1
+  - version: 2.6.1
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 090e5ffc691c5d40e45ab0c20dc88032a0987b20
+    highlights: Fix handling http errors with status code > 400
