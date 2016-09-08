@@ -140,10 +140,17 @@ RC1
 1. Create stable/$series branches for projects after their RC1 is
    tagged using ``branch_from_yaml.sh``.
 
-2. Update the grenade settings in devstack-gate for the new branch. For
+2. After the minimum set of projects used by devstack have been branched, the
+   devstack branch can be created. Devstack doesn't push a tag at RC1 it is
+   just branched off of HEAD
+
+3. After devstack is branched a grenade branch can be created. As with devstack
+   it will branch from HEAD instead of a tag.
+
+4. Update the grenade settings in devstack-gate for the new branch. For
    example, https://review.openstack.org/362438.
 
-3. After all cycle-with-milestone projects have their branches
+5. After all cycle-with-milestone projects have their branches
    created, use ``make_stable_branch.sh`` to create the stable/$series
    branch for openstack/requirements. Then announce that the
    requirements freeze is lifted from master.
@@ -157,12 +164,12 @@ RC1
      and we can have divergence between the requirements being tested
      and being declared as correct.
 
-4. Create new branch specific jobs for our two branchless projects,
+6. Create new branch specific jobs for our two branchless projects,
    devstack-gate and tempest, and configure Zuul to run them on all
    changes to those projects to protect against regressions with the
    stable branches and these tools.
 
-5. Create periodic bitrot jobs for the new branch in Jenkins Job Builder
+7. Create periodic bitrot jobs for the new branch in Jenkins Job Builder
    and add them to Zuul's periodic pipeline.
 
 Between RC1 and Final
