@@ -20,3 +20,11 @@ releases:
         * Support OVN address sets for improved port operation and security group performance
         * Support OVN native DHCPv4
         * Add OVN L3 router scheduler
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 899c1ea256a1f8faa45aeb9819249cb2eb663823
+    highlights: |
+        * Support multi-provider and multi-segmented networks
+        * Support OVS 2.6 mutate transactions for improved performance
+        * Support the Neutron trunk service plugin
