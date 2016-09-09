@@ -109,7 +109,15 @@ Milestone-3
    the proposal bot.
 
 3. Create stable/$series branches for the client libraries after their
-   final release is prepared using ``branch_from_yaml.sh``.
+   final release is prepared using ``branch_from_yaml.sh``, or all
+   together by running ``batch-stable-branches`` to build the list of
+   commands. For example::
+
+     $ cd ~/repos/openstack-infra/release-tools
+     $ batch-stable-branches --releases-repo ~/repos/openstack/releases --tag type:library newton > /tmp/make_newton_lib_branches.sh
+     $ more /tmp/make_newton_lib_branches.sh
+     $ cd ~/repos/openstack-infra/project-config/jenkins/scripts/release-tools
+     $ bash -x /tmp/make_newton_lib_branches.sh 2>&1 | tee -a branch.log
 
 4. Remind PTLs/liaisons that master should be frozen except for bug
    fixes and feature work with FFEs.
