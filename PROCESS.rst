@@ -195,3 +195,7 @@ Final Release
 
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
+
+3. Update the default series name in
+   ``openstack/releases/openstack_releases/defaults.py`` to use the
+   new series name.
