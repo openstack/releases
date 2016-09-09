@@ -139,6 +139,9 @@ def main():
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
+        # By default assume the project does not use milestones.
+        uses_milestones = False
+
         header('Team details')
         if 'team' in deliverable_info:
             team_name = deliverable_info['team']
@@ -156,6 +159,7 @@ def main():
                         for t in repo.tags:
                             print('  %s' % t)
                         print('')
+                    uses_milestones = 'release:cycle-with-milestones' in repo.tags
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
@@ -165,6 +169,8 @@ def main():
                       team_name)
         else:
             print('no team name given, cannot report on governance status')
+        if uses_milestones:
+            print('uses milestones')
 
         series = os.path.basename(
             os.path.dirname(
@@ -178,6 +184,15 @@ def main():
 
         # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
+
+        # Warn if the new release looks like a milestone release but
+        # the project does not use milestones.
+        if not uses_milestones:
+            for pre_indicator in ['a', 'b', 'rc']:
+                if pre_indicator in new_release['version']:
+                    print(('WARNING: %s looks like a pre-release '
+                           'but %s does not use milestones') %
+                          (new_release['version'], deliverable_name))
 
         # build a map between version numbers and the release details
         by_version = {
