@@ -1,9 +1,92 @@
 ========================
- Ocata release schedule
+ Ocata Release Schedule
 ========================
+
+31 October 2016 - 24 February 2017 (16 weeks)
+
++-------------------+---------------------------+-----------------------------+
+| Week              | Cross-project events      | Project-specific events     |
++============+======+===========================+=============================+
+| Oct 03-07  |      | :ref:`n-release`          |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-goals-research`   |                             |
++------------+------+---------------------------+-----------------------------+
+| Oct 10-14  |      |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Oct 17-21  |      |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Oct 24-28  |      | :ref:`o-design-summit`    |                             |
++------------+------+---------------------------+-----------------------------+
+| Oct 31-04  | R-16 |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Nov 07-11  | R-15 |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Nov 14-18  | R-14 | :ref:`o-1`                |                             |
++------------+------+---------------------------+-----------------------------+
+| Nov 21-25  | R-13 |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Nov 28-02  | R-12 |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Dec 05-09  | R-11 |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Dec 12-16  | R-10 | :ref:`o-2`                |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-mf`               |                             |
++------------+------+---------------------------+-----------------------------+
+| Dec 19-23  | R-9  |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Dec 26-30  | R-8  |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Jan 02-06  | R-7  | :ref:`o-extra-atcs`       |                             |
++------------+------+---------------------------+-----------------------------+
+| Jan 09-13  | R-6  |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Jan 16-20  | R-5  | :ref:`o-final-lib`        |                             |
++------------+------+---------------------------+-----------------------------+
+| Jan 23-27  | R-4  | :ref:`o-3`                |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-ff`               |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-final-clientlib`  |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-soft-sf`          |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-rf`               |                             |
++------------+------+---------------------------+-----------------------------+
+| Jan 30-03  | R-3  | :ref:`o-rc1`              |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-hard-sf`          |                             |
++------------+------+---------------------------+-----------------------------+
+| Feb 06-10  | R-2  |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Feb 13-17  | R-1  | :ref:`o-finalrc`          |                             |
++------------+------+---------------------------+-----------------------------+
+| Feb 20-24  | R+0  | :ref:`p-ptg`              |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-release`          |                             |
++------------+------+---------------------------+-----------------------------+
+| Feb 27-03  | R+1  |                           |                             |
++------------+------+---------------------------+-----------------------------+
+| Mar 06-10  | R+2  | :ref:`o-trailing`         |                             |
++------------+------+---------------------------+-----------------------------+
+
+.. note::
+
+   All deadlines are generally the Thursday of the week on which they
+   are noted above. For example, the Feature Freeze in week R-4 is on
+   26 January. Exceptions to this policy will be explicitly mentioned
+   in the event description.
 
 Cross-project events
 ====================
+
+.. _o-goals-research:
+
+Ocata Goals Research
+--------------------
+
+Pre-cycle planning and investigation into `the community-wide goals
+for Ocata <http://governance.openstack.org/goals/ocata/index.html>`__.
 
 .. _o-design-summit:
 
@@ -12,23 +95,30 @@ Ocata Design Summit
 
 `Planning in Barcelona <https://www.openstack.org/summit/barcelona-2016/>`__
 
+.. _p-ptg:
+
+Pike Project Team Gathering (PTG)
+---------------------------------
+
+`Project team gathering <http://www.openstack.org/ptg>`__ for the Pike
+release 20-24 February 2017 in Atlanta, Georgia.
 
 .. _o-1:
 
-ocata-1 milestone
+Ocata-1 milestone
 ------------------
 
-XXX is the ocata-1 milestone window for projects following the
+17 November is the ocata-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _release:cycle-with-milestones: http://governance.openstack.org/reference/tags/release_cycle-with-milestones.html
 
 .. _o-2:
 
-ocata-2 milestone
+Ocata-2 milestone
 ------------------
 
-XXX is the ocata-2 milestone window for projects following the
+15 December is the ocata-2 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _o-final-lib:
@@ -42,11 +132,28 @@ changes before feature freeze.
 
 .. _o-3:
 
-ocata-3 milestone
+Ocata-3 milestone
 ------------------
 
-XXX is the ocata-3 milestone window for projects following the
+26 January is the ocata-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
+
+.. _o-extra-atcs:
+
+Extra-ATCs deadline
+-------------------
+
+Project teams should identify contributors who have had a significant
+impact this cycle but who would not qualify for ATC status using the
+regular process because they have not submitted a patch. Those names
+should be added to the governance repo for consideration as ATC for
+the future.
+
+Although extra ATCs can be nominated at any point, there is a deadline
+to be included in electorate for the next release cycle.  The ATC list
+needs to be approved by the TC by (TBD), and in order to appear on the
+TC agenda to be discussed, the proposals need to be submitted to the
+``openstack/governance`` repository by (TBD).
 
 .. _o-ff:
 
@@ -56,6 +163,18 @@ Feature freeze
 The ocata-3 milestone marks feature freeze for projects following the
 `release:cycle-with-milestones`_ model. No featureful patch should be landed
 after this point. Exceptions may be granted by the project PTL.
+
+.. _o-rf:
+
+Requirements freeze
+-------------------
+
+After the ocata-3 milestone, only critical requirements and
+constraints changes will be allowed. Freezing our requirements list
+gives packagers downstream an opportunity to catch up and prepare
+packages for everything necessary for distributions of the upcoming
+release. The requirements remain frozen until the stable branches are
+created, with the release candidates.
 
 .. _o-final-clientlib:
 
@@ -75,13 +194,26 @@ in user-facing strings. Such changes should be rejected by the review team
 and postponed until the next series development opens (which should happen
 when RC1 is published).
 
+.. _o-mf:
+
+Membership Freeze
+-----------------
+
+Projects must participate in at least two milestones in order to be
+considered part of the release. Projects made official after the
+second milestone, or which fail to produce milestone releases for at
+least one of the first and second milestones as well as the third
+milestone, are therefore not considered part of the release for the
+cycle.
+
 .. _o-rc1:
 
 RC1 target week
 ---------------
 
-The week of XXX is the target date for projects following the
-`release:cycle-with-milestones`_ model to issue their first release candidate.
+The week of 30 January - 3 February is the target date for projects
+following the `release:cycle-with-milestones`_ model to issue their
+first release candidate, with a deadline of 2 February.
 
 .. _o-hard-sf:
 
@@ -97,18 +229,25 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of XXX is the last week to issue release candidates
-or intermediary releases before release week. On release week only
-final-release-critical releases will be accepted (at the discretion of the
-release team).
+The week of 13-17 February is the last week to issue release
+candidates or intermediary releases before release week. During
+release week, only final-release-critical releases will be accepted
+(at the discretion of the release team).
 
 .. _o-release:
 
 Ocata release
 --------------
 
-The Ocata coordinated release will happen on XXX.
+The Ocata coordinated release will happen on 23 February.
 
+.. _o-trailing:
+
+Ocata cycle-trailing Deadline
+-----------------------------
+
+The deadline for projects using the release:cycle-trailing model that
+follow the main release cycle.
 
 Project-specific events
 =======================
@@ -118,16 +257,16 @@ Elections
 
 .. _p-ptl-nomination:
 
-P cycle PTLs self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pike PTLs self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Project team lead candidates for the Ocata cycle should announce their
 candidacy during this week.
 
 .. _p-ptl-election:
 
-Ocata cycle PTLs election
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Pike cycle PTLs election
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Election week for Project team leads (where an election must be held to
 determine the winner).
