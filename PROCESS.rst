@@ -95,7 +95,12 @@ Final Library Release (week before Milestone-3)
 2. Remind liaisons to prepare releases for client libraries at
    Milestone-3.
 
-3. Create stable/$series branches for the libraries after their final
+3. Update the feature list and allowed stable branch names in
+   devstack-gate for the new stable branch. For
+   example, https://review.openstack.org/362435 and
+   https://review.openstack.org/363084
+
+4. Create stable/$series branches for the libraries after their final
    release is prepared using ``branch_from_yaml.sh``.
 
 Milestone-3
@@ -143,7 +148,10 @@ RC1
 1. Create stable/$series branches for projects after their RC1 is
    tagged using ``branch_from_yaml.sh``.
 
-2. After all cycle-with-milestone projects have their branches
+2. Update the grenade settings in devstack-gate for the new branch. For
+   example, https://review.openstack.org/362438.
+
+3. After all cycle-with-milestone projects have their branches
    created, use ``make_stable_branch.sh`` to create the stable/$series
    branch for openstack/requirements. Then announce that the
    requirements freeze is lifted from master.
