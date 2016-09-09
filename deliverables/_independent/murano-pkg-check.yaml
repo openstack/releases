@@ -1,0 +1,9 @@
+launchpad: murano
+team: murano
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/murano-pkg-check
+        hash: 628b30fc2c8f5caefc2f1ab6282acb207bc791a2
