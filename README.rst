@@ -362,4 +362,5 @@ easy as ``pip install .`` in this repository directory.
 * ``interactive-release`` that goes through a *wizard* style set of
   questions to produce a new or updated release of a given project or
   set of projects.
-* (and more!)
+* ``missing-releases`` scans deliverable files and verifies that all
+  of the releases that should have been tagged by hand have been
