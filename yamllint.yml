@@ -2,8 +2,8 @@
 extends: default
 
 rules:
-  # 100 chars should be enough, but don't fail if a line is longer
+  # 200 chars should be enough, but don't fail if a line is longer
   line-length:
-    max: 100
+    max: 200
     level: warning
     allow-non-breakable-words: true
