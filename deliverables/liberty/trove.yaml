@@ -7,3 +7,9 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 11996635299396f181f5aec3c6825f8011d45e2c
+  - version: 4.0.1
+    projects:
+      - repo: openstack/trove
+        hash: 85e26361aa7b547ecf31f4a23d214e0c9058709c
+    highlights: >
+        Fixes bug with guest configuration injection (Bug 1609915)
