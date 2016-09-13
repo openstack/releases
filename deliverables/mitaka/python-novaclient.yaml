@@ -67,3 +67,9 @@ releases:
         hash: 0e9c46a21a2b8579794612c269cecd2c05a819ef
     highlights: >
         Fixes host-evacuate-live regression with microversion 2.25.
+  - version: 3.3.2
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 5744ac130fac2634529b9a0088f4f093341ae1a4
+    highlights: >
+        Fixes host-evacuate for microversion 2.14.
