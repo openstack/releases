@@ -23,13 +23,13 @@
 +------------+------+---------------------------+-----------------------------+
 | Nov 14-18  | R-14 | :ref:`o-1`                |                             |
 +------------+------+---------------------------+-----------------------------+
-| Nov 21-25  | R-13 |                           |                             |
+| Nov 21-25  | R-13 |                           | :ref:`o-trove-spec-prop`    |
 +------------+------+---------------------------+-----------------------------+
 | Nov 28-02  | R-12 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
 | Dec 05-09  | R-11 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Dec 12-16  | R-10 | :ref:`o-2`                |                             |
+| Dec 12-16  | R-10 | :ref:`o-2`                | :ref:`o-trove-spec-freeze`  |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-mf`               |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -41,7 +41,9 @@
 +------------+------+---------------------------+-----------------------------+
 | Jan 09-13  | R-6  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jan 16-20  | R-5  | :ref:`o-final-lib`        |                             |
+| Jan 16-20  | R-5  | :ref:`o-final-lib`        | :ref:`o-trove-client-soft`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`o-trove-guest-req`    |
 +------------+------+---------------------------+-----------------------------+
 | Jan 23-27  | R-4  | :ref:`o-3`                |                             |
 |            |      +---------------------------+-----------------------------+
@@ -286,3 +288,41 @@ TC member election
 
 Election for partially renewing Technical Committee members will happen
 during this week.
+
+Trove
+-----
+
+The deadlines below are specific to the Trove project.
+
+.. _o-trove-spec-prop:
+
+Trove Spec Proposal Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Submit all Trove specs for the release by the end of this week (for
+review) in trove-specs repository.
+
+.. _o-trove-spec-freeze:
+
+Trove Spec Freeze
+^^^^^^^^^^^^^^^^^
+
+All Trove specs for the release must be approved by the end of this
+week.
+
+.. _o-trove-guest-req:
+
+Trove Guest Requirements Freeze:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Freeze the requirements for all guest agents by this date and make the
+requirements file for guests.
+
+.. _o-trove-client-soft:
+
+Trove Client Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+All major features for the python-troveclient must be reviewed and
+approved by the end of this week, this gives us one additional week to
+address any issues with dependencies.
