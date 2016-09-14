@@ -278,12 +278,13 @@ def main():
                     b for b in branches
                     if '->' not in b
                 )
+                tag_branch = interesting_branches[0]
                 head_sha = gitutils.sha_for_tag(
                     workdir,
                     project['repo'],
-                    interesting_branches[0],
+                    tag_branch,
                 )
-                print('HEAD of {} is {}'.format(interesting_branches[0], head_sha))
+                print('HEAD of {} is {}'.format(tag_branch, head_sha))
             else:
                 head_sha = gitutils.sha_for_tag(
                     workdir,
@@ -291,6 +292,7 @@ def main():
                     'HEAD',
                 )
                 print('HEAD of {} is {}'.format(branch, head_sha))
+                tag_branch = branch
             requested_sha = gitutils.sha_for_tag(
                 workdir,
                 project['repo'],
@@ -302,7 +304,7 @@ def main():
             # case the deliverables file has the short version of the
             # hash.
             if head_sha == requested_sha:
-                print('\nRequest releases from HEAD on %s' % branch)
+                print('\nRequest releases from HEAD on %s' % tag_branch)
             else:
                 git_log(workdir, project['repo'], 'Release will NOT include',
                         '%s..%s' % (requested_sha, head_sha),
