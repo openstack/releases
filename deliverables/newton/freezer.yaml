@@ -27,3 +27,11 @@ releases:
         hash: 24b4f7240ac1ad7a06300a1edff04fc7b7ba99db
       - repo: openstack/freezer-dr
         hash: 3c6c6b8697c4a997fed52f30fd9a42f68628529b
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/freezer
+        hash: 83eff55604b40d9301320de663df53ba715f39d7
+      - repo: openstack/freezer-api
+        hash: 2ff22ec9d1701b482b07475410d7281a54cb976b
+      - repo: openstack/freezer-dr
+        hash: 3c6c6b8697c4a997fed52f30fd9a42f68628529b
