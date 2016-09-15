@@ -1,0 +1,24 @@
+---
+launchpad: cloudkitty
+team: cloudkitty
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 7f608c264e7127306d5487f545b28256ad80adc5
+    highlights: |
+      Bug fixes:
+        - Metadata from gnocchi are now carried up to storage.
+
+      Improvements:
+        - Native gnocchi storage, improves performances and enables queries
+          from gnocchi API.
+        - Per tenant HashMap rules.
+        - Better transformer code.
+        - Handle index method to handle some types of load balancers.
+        - CSV support for the report writer.
+
+      Impacts:
+        - Default port changed from 8888 to 8889 due to a conflict with zaqar.
+        - Removed database downgrade migrations.
