@@ -200,6 +200,9 @@ candidates are coming.
 3. Ensure that the final release candidate for each project is
    prepared at least one week before the final release date.
 
+4. After final releases for release:cycle-with-intermediary projects
+   are tagged, create their stable branches.
+
 Final Release
 =============
 
