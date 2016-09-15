@@ -1,0 +1,17 @@
+---
+launchpad: cloudkitty
+team: cloudkitty
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: fd06863e6312fbdd3d9a7cbf5e972fc107795d1d
+    highlights: |
+      Bug fixes:
+        - Fixed localization bugs with javascript (graph failed if , was used).
+
+      Improvements:
+        - Group name is now shown instead of the group_id.
+        - Per tenant HashMap support.
