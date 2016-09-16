@@ -1,6 +1,6 @@
 ---
 launchpad: zaqar-ui
-team: zaqar-ui
+team: zaqar
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 1.0.0.0b2
@@ -11,3 +11,7 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 6809f00c4ebb778d0878632f5396e52fdfda14cf
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 6ed5bfc0eba0e538cb29a9cea981c87c352df6a3
