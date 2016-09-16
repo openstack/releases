@@ -56,3 +56,12 @@ releases:
         removal of the driver from the glance_store library
       - Adds ``CPU thread pinning`` to metadefs to be used primarily for Nova
       - Uses new library ``cursive`` for signature verification utilities
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: ee667852f588415259bc7b5dbe07b6037da66226
+    highlights: >
+      - Bumped up Glance API minor version to 2.4
+      - Consistent order of store drivers established in auto-generated
+        configuration files and sample files shipped with Glance release
+      - Attempt to not set location on a non-active or non-queued image
