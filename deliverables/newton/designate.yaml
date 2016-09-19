@@ -23,3 +23,7 @@ releases:
       pool-manager and zone-manager services. This disabled by default,
       but can be enabled by setting ``['service:worker'].enabled`` to ``True``
       and starting ``designate-producer`` and ``designate-worker`` services.
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: cffdc7cbda3147f56b2b5cb0a49694f7b2da5d2f
