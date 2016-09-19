@@ -37,3 +37,10 @@ releases:
       - Persistent search settings
       - Translation build support
       - Various bug fixes
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 09cd21d52752051aac588e6c9f3a41298796d8a3
+    highlights: >
+      - Aggregation support
+      - Correct handling of total result count
