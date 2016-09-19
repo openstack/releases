@@ -54,3 +54,7 @@ releases:
     highlights: >
       - Properly drop a unique constraint when upgrading (bug 1572341)
       - The minimum level for oslo.concurrency has been raised to 3.7.1
+  - version: 9.2.0
+    projects:
+      - repo: openstack/keystone
+        hash: f1d9c54ef07c61cb80def5779802cc4daf45f4cb
