@@ -148,6 +148,11 @@ RC1
 1. Create stable/$series branches for projects after their RC1 is
    tagged using ``branch_from_yaml.sh``.
 
+     We do not create branches for cycle-trailing projects
+     automatically, because we anticipate more release candidates for
+     them than for other projects. Ask the PTL/liaison when they want
+     their branch created (from which RC).
+
 2. After the minimum set of projects used by devstack have been branched, the
    devstack branch can be created. Devstack doesn't push a tag at RC1 it is
    just branched off of HEAD
