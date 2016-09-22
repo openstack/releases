@@ -15,3 +15,11 @@ releases:
     projects:
       - repo: openstack/networking-calico
         hash: c435b30c442945d3441f3c3153f35ed6c441d16d
+  - version: 1.3.0
+    projects:
+      - repo: openstack/networking-calico
+        hash: bcdaded33fa1a9aadd1d66b64872bba5b62fbf4c
+        highlights: >
+           Support for host routes.
+           DHCP agent rework for correct IPv6 multiple network RA behaviour.
+           New config for DHCP agent connection to etcd.
