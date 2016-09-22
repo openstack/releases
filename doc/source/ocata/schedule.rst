@@ -31,7 +31,9 @@
 +------------+------+---------------------------+-----------------------------+
 | Dec 12-16  | R-10 | :ref:`o-2`                | :ref:`o-trove-spec-freeze`  |
 |            |      +---------------------------+-----------------------------+
-|            |      | :ref:`o-mf`               |                             |
+|            |      | :ref:`o-mf`               | :ref:`o-cinder-nddeadline`  |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`o-cinder-spec-freeze` |
 +------------+------+---------------------------+-----------------------------+
 | Dec 19-23  | R-9  |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -288,6 +290,27 @@ TC member election
 
 Election for partially renewing Technical Committee members will happen
 during this week.
+
+Cinder
+------
+
+.. _o-cinder-nddeadline:
+
+Cinder New Backend Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for getting a new backend driver added to Cinder is 14th
+December, 2016. All review issues must be addressed and third party CI
+must be reporting and stable with enough time for reviewers prior to the
+deadline. Meeting these requirements on the 14th does not guarantee core
+reviewers will have enough time to merge the driver.
+
+.. _o-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder specs must be approved by 14th December, 2016.
 
 Trove
 -----
