@@ -80,3 +80,7 @@ releases:
           - Deprecate 'guest_log_long_query_time'
           - Improve guest error reporting by calling GuestError with
             proper options
+  - version: 6.0.0.0rc2
+    projects:
+      - repo: openstack/trove
+        hash: 345a7eb196ab0b9fcfd55c2c5b6f573d9b4e2caa
