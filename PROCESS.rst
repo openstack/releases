@@ -186,8 +186,9 @@ RC1
 7. Add the new release series to the stable-compat jobs used by the Oslo
    libraries. For example, see https://review.openstack.org/375111.
 
-8. Create periodic bitrot jobs for the new branch in Jenkins Job Builder
-   and add them to Zuul's periodic pipeline.
+8. Create periodic bitrot jobs for the new branch in Jenkins Job
+   Builder and add them to Zuul's periodic pipeline. For example, see
+   https://review.openstack.org/#/c/375092.
 
 Between RC1 and Final
 =====================
