@@ -38,14 +38,14 @@ function url_exists {
 for filename in deliverables/$SERIES/*.yaml; do
     deliverable=$(basename $filename .yaml)
     echo -n $deliverable
-    if grep -q 'release-notes' $filename; then
-        echo " already linked"
-        continue
-    fi
     url="http://docs.openstack.org/releasenotes/${deliverable}/${SERIES}.html"
     if ! url_exists $url; then
         echo " no release notes page at $url"
     else
+        # Remove any existing links, since they might point to the
+        # "unreleased" page.
+        sed -i -e '/release-notes/d' $filename
+        # Add the link pointing to the series-specific page.
         sed -i -e "/releases:/i \
 release-notes: $url" $filename
         echo

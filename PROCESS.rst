@@ -201,15 +201,19 @@ need additional release candidates can submit the requests and mark
 them WIP until actually ready, so the release team knows that more
 candidates are coming.
 
-1. Encourage liaisons to merge all translation patches.
+1. Ensure that all projects that are publishing release notes have the
+   notes link included in their deliverable file. See
+   ``tools/add_release_note_links.sh``.
 
-2. When all translations and bug fixes are merged for a project,
+2. Encourage liaisons to merge all translation patches.
+
+3. When all translations and bug fixes are merged for a project,
    prepare a new release candidate.
 
-3. Ensure that the final release candidate for each project is
+4. Ensure that the final release candidate for each project is
    prepared at least one week before the final release date.
 
-4. After final releases for release:cycle-with-intermediary projects
+5. After final releases for release:cycle-with-intermediary projects
    are tagged, create their stable branches.
 
 Final Release
