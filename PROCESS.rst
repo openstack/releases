@@ -180,9 +180,13 @@ RC1
 6. Create new branch specific jobs for our two branchless projects,
    devstack-gate and tempest, and configure Zuul to run them on all
    changes to those projects to protect against regressions with the
-   stable branches and these tools.
+   stable branches and these tools. For example, see
+   https://review.openstack.org/375110.
 
-7. Create periodic bitrot jobs for the new branch in Jenkins Job Builder
+7. Add the new release series to the stable-compat jobs used by the Oslo
+   libraries. For example, see https://review.openstack.org/375111.
+
+8. Create periodic bitrot jobs for the new branch in Jenkins Job Builder
    and add them to Zuul's periodic pipeline.
 
 Between RC1 and Final
