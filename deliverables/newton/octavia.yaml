@@ -1,0 +1,19 @@
+---
+launchpad: octavia
+team: neutron
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.9.0
+    projects:
+      - repo: openstack/octavia
+        hash: fc51b73e981d31fc3b5a4d44824116c68904a87d
+    highlights: |-
+      * Significant improvements to amphora failover
+      * Significantly improved error handling
+      * Added support for networks without DHCP service
+      * Added support for IPv6 networks
+      * Security enhancements to glance image handling
+      * Security enhancements to TLS certificate and key handling
+      * Security enhancement tenant networks are in a network namespace
+      * Improved documentation
