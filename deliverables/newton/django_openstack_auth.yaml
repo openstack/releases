@@ -20,3 +20,10 @@ releases:
       attribute, redundancy handling for tenant_id usage, and a new
       setting ("TOKEN_DELETION_DISABLED") to prevent revocation of
       tokens on logout.
+  - version: 2.4.1
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 55ebf6b792571709f292cdb0d3dac228680b1961
+    highlights: >
+      This release includes test fixes, and translations for the
+      Newton release.
