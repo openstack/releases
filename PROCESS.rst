@@ -242,3 +242,6 @@ Final Release
 3. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
+
+4. Declare ``openstack/requirements`` and ``openstack/releases``
+   unfrozen.
