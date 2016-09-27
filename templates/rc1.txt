@@ -1,0 +1,32 @@
+To: openstack-dev@lists.openstack.org
+Subject: [release][PROJECT] PROJECT SERIES RC1 available
+
+Hello everyone,
+
+The release candidate for PROJECT for the end of the SERIES cycle is
+available.  You can find the source code tarball download link at
+
+  https://releases.openstack.org/SERIES/index.html
+
+Unless release-critical issues are found that warrant a release
+candidate respin, this candidate will be formally released as the
+final Newton release on DATE. You are therefore strongly encouraged to
+test and validate this tarball!
+
+Alternatively, you can directly test the stable/SERIES release branch
+at
+
+  http://git.openstack.org/cgit/openstack/PROJECT/log/?h=stable/SERIES
+
+If you find an issue that could be considered release-critical, please
+file it at
+
+  https://bugs.launchpad.net/PROJECT/+filebug
+
+and tag it *SERIES-rc-potential* to bring it to the PROJECT release
+crew's attention.
+
+Note that the "master" branch of PROJECT is now open for NEXT_SERIES
+development, and feature freeze restrictions no longer apply there!
+
+Thanks,
