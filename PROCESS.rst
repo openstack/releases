@@ -190,6 +190,9 @@ RC1
    Builder and add them to Zuul's periodic pipeline. For example, see
    https://review.openstack.org/#/c/375092.
 
+9. Add periodic bitrot jobs to tempest. For example, see
+   https://review.openstack.org/#/c/375271.
+
 Between RC1 and Final
 =====================
 
