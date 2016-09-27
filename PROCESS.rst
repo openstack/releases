@@ -245,3 +245,10 @@ Final Release
 
 4. Declare ``openstack/requirements`` and ``openstack/releases``
    unfrozen.
+
+Post-Final Release
+==================
+
+1. The week after the final release, process any late or blocked
+   release requests for deliverables for any branch (treating the new
+   series branch as stable).
