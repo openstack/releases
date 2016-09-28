@@ -27,3 +27,7 @@ releases:
         * Support multi-provider and multi-segmented networks
         * Support OVS 2.6 mutate transactions for improved performance
         * Support the Neutron trunk service plugin
+  - version: 1.0.0.0rc2
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 0d5623355642a5c79f668991aecb9980093954c4
