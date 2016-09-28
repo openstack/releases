@@ -66,3 +66,12 @@ releases:
       - Consistent order of store drivers established in auto-generated
         configuration files and sample files shipped with Glance release
       - Attempt to not set location on a non-active or non-queued image
+  - version: 13.0.0.0rc2
+    projects:
+      - repo: openstack/glance
+        hash: 4404ae6a7e2b8d96db102ada8aaf07cbc92e256b
+    highlights: >
+      - Fixed inconsistency between the names used for backend stores
+        in Glance location_strategy module and the glance_store library
+      - Added constraints around qemu-img calls used in Glance tasks
+        to address CVE-2015-5162
