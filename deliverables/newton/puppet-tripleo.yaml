@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-tripleo
-team: Puppet OpenStack
+team: tripleo
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 5.0.0.0b1
@@ -23,3 +23,7 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: cf5b71fd1d5784d946924057a6dfeb632d3b9eef
+  - version: 5.2.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: b8f8d0fbd65104a4b79ab98f26a7d8a9815dbdeb
