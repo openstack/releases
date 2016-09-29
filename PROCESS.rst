@@ -220,6 +220,15 @@ candidates are coming.
 5. After final releases for release:cycle-with-intermediary projects
    are tagged, create their stable branches.
 
+6. On the morning of the deadline for final release candidates, check
+   the list of unreleased changes for milestone projects and verify
+   with the PTLs and liaisons that they are planning a release or that
+   they do not need one.
+
+   In the release-tools repository working directory, run::
+
+     $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-milestones) 2>&1 | tee unreleased.log
+
 Final Release
 =============
 
