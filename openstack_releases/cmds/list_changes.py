@@ -24,6 +24,7 @@ import os
 import os.path
 import shutil
 import subprocess
+import sys
 import tempfile
 
 import yaml
@@ -92,6 +93,13 @@ def git_diff(workdir, repo, git_range, file_pattern):
 
 
 def main():
+    if not sys.stdout.encoding:
+        # Wrap sys.stdout with a writer that knows how to handle
+        # encoding Unicode data.
+        import codecs
+        wrapped_stdout = codecs.getwriter('UTF-8')(sys.stdout)
+        sys.stdout = wrapped_stdout
+
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--no-cleanup',
