@@ -113,9 +113,9 @@ Milestone-3
 1. Verify that all projects following release:cycle-with-intermediary
    have prepared at least one release for the cycle.
 
-2. Freeze changes to openstack/requirements by applying -2 to all open
-   patches. Ensure that reviewers do not approve changes created by
-   the proposal bot.
+2. Freeze changes to ``openstack/requirements`` by applying -2 to all
+   open patches. Ensure that reviewers do not approve changes created
+   by the proposal bot.
 
 3. Create stable/$series branches for the client libraries after their
    final release is prepared using ``branch_from_yaml.sh``, or all
@@ -165,7 +165,7 @@ RC1
 
 5. After all cycle-with-milestone projects have their branches
    created, use ``make_stable_branch.sh`` to create the stable/$series
-   branch for openstack/requirements. Then announce that the
+   branch for ``openstack/requirements``. Then announce that the
    requirements freeze is lifted from master.
 
      Note that we wait until after the other projects have branched to
@@ -247,8 +247,7 @@ Final Release
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-5. Declare ``openstack/requirements`` and ``openstack/releases``
-   unfrozen.
+5. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
