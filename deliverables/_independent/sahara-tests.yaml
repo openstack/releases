@@ -16,3 +16,17 @@ releases:
     projects:
       - repo: openstack/sahara-tests
         hash: 54fea524ba25ce36beebf8c1f50bb096eac552ae
+  - version: 0.3.0
+    highlights: >
+        All high-level tests based on tempest.lib (proper API Tempest
+        tests including the data_processing client, CLI and python client
+        tests) have been consolidated here.
+        Also, the number of those tests increased significantly.
+        Scenario tests have been enhanced with the support for the newer
+        plugins, more documentation and cleanup of EDP jobs (especially
+        Java-based), and os-client-config is used to read the credentials.
+        This release supports the Liberty, Mitaka and Newton releases of
+        OpenStack.
+    projects:
+      - repo: openstack/sahara-tests
+        hash: 4ebba66236c943ec36a0e7c6f6e583038bb321c7
