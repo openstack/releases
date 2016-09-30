@@ -163,7 +163,16 @@ RC1
 4. Update the grenade settings in devstack-gate for the new branch. For
    example, https://review.openstack.org/362438.
 
-5. After all cycle-with-milestone projects have their branches
+5. For translations, create stable-$series versions in the Zanata
+   translation server on https://translate.openstack.org for all
+   projects that the translation team wants to handle. Create new
+   translation-jobs-$series periodic jobs to import translations from
+   the Zanata translation server and propose them to projects, add
+   these jobs to all projects that have a stable-$series version.
+
+   Note this work is done by translation team.
+
+6. After all cycle-with-milestone projects have their branches
    created, use ``make_stable_branch.sh`` to create the stable/$series
    branch for ``openstack/requirements``. Then announce that the
    requirements freeze is lifted from master.
@@ -177,20 +186,20 @@ RC1
      and we can have divergence between the requirements being tested
      and being declared as correct.
 
-6. Create new branch specific jobs for our two branchless projects,
+7. Create new branch specific jobs for our two branchless projects,
    devstack-gate and tempest, and configure Zuul to run them on all
    changes to those projects to protect against regressions with the
    stable branches and these tools. For example, see
    https://review.openstack.org/375110.
 
-7. Add the new release series to the stable-compat jobs used by the Oslo
+8. Add the new release series to the stable-compat jobs used by the Oslo
    libraries. For example, see https://review.openstack.org/375111.
 
-8. Create periodic bitrot jobs for the new branch in Jenkins Job
+9. Create periodic bitrot jobs for the new branch in Jenkins Job
    Builder and add them to Zuul's periodic pipeline. For example, see
    https://review.openstack.org/#/c/375092.
 
-9. Add periodic bitrot jobs to tempest. For example, see
+10. Add periodic bitrot jobs to tempest. For example, see
    https://review.openstack.org/#/c/375271.
 
 Between RC1 and Final
