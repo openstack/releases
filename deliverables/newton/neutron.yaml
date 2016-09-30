@@ -28,3 +28,8 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 71f2d2bc90aaf9ee696cd4e4f29879ba6c5703b5
+  - version: 9.0.0
+    diff-start: 8.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 71f2d2bc90aaf9ee696cd4e4f29879ba6c5703b5
