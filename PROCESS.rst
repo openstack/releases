@@ -241,15 +241,22 @@ candidates are coming.
 Final Release
 =============
 
-1. Use ``propose-final-releases`` to tag the existing most recent
+1. Add documentation links on the series page on releases.o.o.
+   See https://review.openstack.org/#/c/381005 for an example.
+
+2. Use ``propose-final-releases`` to tag the existing most recent
    release candidates as the final release for projects using the
    cycle-with-milestone model.
 
-2. Send release announcement email to
+3. Mark series as released on releases.o.o, by updating doc/source/index.rst
+   and doc/source/$series/index.rst.
+   See https://review.openstack.org/#/c/381006 for an example.
+
+4. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``.
 
-3. Reset gerrit ACLs
+5. Reset gerrit ACLs
 
    1. Update all of the $project-release-branch groups to have
       $project-stable-maint as members instead of "Release Managers"
@@ -261,11 +268,11 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-4. Update the default series name in
+6. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-5. Declare ``openstack/releases`` unfrozen.
+7. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
