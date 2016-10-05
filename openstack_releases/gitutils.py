@@ -160,3 +160,45 @@ def get_branches(workdir, repo):
         print('ERROR failed to retrieve list of branches: %s [%s]' %
               (e, e.output.strip()))
         return []
+
+
+def get_branch_base(workdir, repo, branch):
+    "Return SHA at base of branch."
+    # http://stackoverflow.com/questions/1527234/finding-a-branch-point-with-git
+    # git rev-list $(git rev-list --first-parent ^origin/stable/newton master | tail -n1)^^!
+    #
+    # Determine the first parent.
+    cmd = [
+        'git',
+        'rev-list',
+        '--first-parent',
+        '^origin/{}'.format(branch),
+        'master',
+    ]
+    try:
+        parents = subprocess.check_output(
+            cmd,
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).strip()
+    except subprocess.CalledProcessError as e:
+        print('WARNING failed to retrieve branch base: %s [%s]' %
+              (e, e.output.strip()))
+        return None
+    parent = parents.splitlines()[-1]
+    # Now get the ^^! commit
+    cmd = [
+        'git',
+        'rev-list',
+        '{}^^!'.format(parent),
+    ]
+    try:
+        return subprocess.check_output(
+            cmd,
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).strip()
+    except subprocess.CalledProcessError as e:
+        print('WARNING failed to retrieve branch base: %s [%s]' %
+              (e, e.output.strip()))
+        return None
