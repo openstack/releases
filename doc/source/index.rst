@@ -29,11 +29,11 @@ series. You can find the detail of the various release series here:
      * 2017-02-23 (planned)
      * TBD
    - * :doc:`newton/index`
-     * :doc:`Under Development <newton/schedule>`
-     * 2016-10-06 (planned)
+     * Current stable release, security-supported
+     * 2016-10-06
      * TBD
    - * :doc:`mitaka/index`
-     * Current stable release, security-supported
+     * Security-supported
      * 2016-04-07
      * 2017-04-10
    - * :doc:`liberty/index`
