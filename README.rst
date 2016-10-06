@@ -32,6 +32,10 @@ repository.
  * Always add the new release to the end of the file being edited. The
    version numbers will be reordered for display.
 
+ * Always pick new version numbers for new releases. We do not update
+   the contents of previously tagged releases, because that confuses
+   users who have already downloaded those packages.
+
  * Set the first line (summary) of the commit message to the package
    name and version being requested.
 
@@ -117,8 +121,8 @@ team should +1 the following types of changes before they are approved.
 Release Approval
 ================
 
-Releases will only be denied during periods where there are known gate
-issues, or when releasing will introduce unwanted
+Releases will only be denied during freeze weeks, periods where there
+are known gate issues, or when releasing will introduce unwanted
 instability. Releases made late in a week may be delayed until early
 in the next week unless there is a pressing need such as a gate
 failure or security issue.
