@@ -75,3 +75,8 @@ releases:
         in Glance location_strategy module and the glance_store library
       - Added constraints around qemu-img calls used in Glance tasks
         to address CVE-2015-5162
+  - version: 13.0.0
+    diff-start: 12.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 4404ae6a7e2b8d96db102ada8aaf07cbc92e256b

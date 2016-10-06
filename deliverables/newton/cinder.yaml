@@ -24,3 +24,8 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: ab9518112137f3141739e873b19cdc0085963bc7
+  - version: 9.0.0
+    diff-start: 8.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: ab9518112137f3141739e873b19cdc0085963bc7

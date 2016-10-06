@@ -31,3 +31,9 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 0d5623355642a5c79f668991aecb9980093954c4
+  - version: 1.0.0
+    # diff-start: There is no stable/mitaka branch and this is the
+    # first release series.
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 0d5623355642a5c79f668991aecb9980093954c4
