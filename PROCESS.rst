@@ -261,11 +261,13 @@ Final Release
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-3. Send release announcement email to
+3. Approve the final release patch created earlier.
+
+4. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``.
 
-4. Reset gerrit ACLs
+5. Reset gerrit ACLs
 
    1. Update all of the $project-release-branch groups to have
       $project-stable-maint as members instead of "Release Managers"
@@ -277,11 +279,11 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-5. Update the default series name in
+6. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-6. Declare ``openstack/releases`` unfrozen.
+7. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
