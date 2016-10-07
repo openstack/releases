@@ -103,7 +103,7 @@ Final Library Release (week before Milestone-3)
 4. Create stable/$series branches for the libraries after their final
    release is prepared using ``branch_from_yaml.sh``.
 
-4. Use the ``dashboard`` command to prepare the data for tracking the
+5. Use the ``dashboard`` command to prepare the data for tracking the
    final release and import it into a Google Docs spreadsheet for
    collaborative editing and monitoring.
 
