@@ -1,0 +1,11 @@
+---
+launchpad: python-openstackclient
+team: OpenStackClient
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+release-notes: http://docs.openstack.org/releasenotes/osc-lib/unreleased.html
+releases:
+- version: 1.2.0
+  projects:
+  - repo: openstack/osc-lib
+    hash: 5099a55fa6377fba54b477cff7304ddaafa6df78
