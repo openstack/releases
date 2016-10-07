@@ -242,25 +242,30 @@ candidates are coming.
 
      $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-milestones) 2>&1 | tee unreleased.log
 
+7. As soon as the last release candidate is tagged and the freeze
+   period is entered, use ``propose-final-releases`` to tag the
+   existing most recent release candidates as the final release for
+   projects using the cycle-with-milestone model.
+
+8. Ask liaisons and PTLs of milestone-based projects to review and +1
+   the final release proposal from the previous step so their approval
+   is included in the metadata that goes onto the signed tag.
+
 Final Release
 =============
 
 1. Add documentation links on the series page on releases.o.o.
    See https://review.openstack.org/#/c/381005 for an example.
 
-2. Use ``propose-final-releases`` to tag the existing most recent
-   release candidates as the final release for projects using the
-   cycle-with-milestone model.
-
-3. Mark series as released on releases.o.o, by updating doc/source/index.rst
+2. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-4. Send release announcement email to
+3. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``.
 
-5. Reset gerrit ACLs
+4. Reset gerrit ACLs
 
    1. Update all of the $project-release-branch groups to have
       $project-stable-maint as members instead of "Release Managers"
@@ -272,11 +277,11 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-6. Update the default series name in
+5. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-7. Declare ``openstack/releases`` unfrozen.
+6. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
