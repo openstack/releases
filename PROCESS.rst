@@ -291,3 +291,30 @@ Post-Final Release
 1. The week after the final release, process any late or blocked
    release requests for deliverables for any branch (treating the new
    series branch as stable).
+
+2. The week after the final releases for milestone-based projects are
+   tagged, use ``propose-final-releases --all`` to tag the existing
+   most recent release candidates as the final release for projects
+   using the cycle-trailing model.
+
+3. Ask liaisons and PTLs of cycle-trailing projects to review and +1
+   the final release proposal from the previous step so their approval
+   is included in the metadata that goes onto the signed tag.
+
+cycle-trailing Final Release
+============================
+
+1. Two weeks after the final release for milestone-based projects,
+   approve the final release patch created earlier.
+
+2. Reset gerrit ACLs
+
+   1. Update all of the $project-release-branch for cycle-trailing
+      groups to have $project-stable-maint as members instead of
+      "Release Managers" and $project-release. This can be done (for
+      all release:cycle-with-milestones deliverables) by running
+      ``aclmanager.py groups post_release $user`` ($user being your
+      Gerrit username)
+
+   2. Remove the refs/heads/stable/$series from the project gerrit
+      ACLs. This can be done by reverting the original ACL patch.
