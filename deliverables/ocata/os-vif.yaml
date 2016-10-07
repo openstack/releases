@@ -1,0 +1,12 @@
+---
+launchpad: os-vif
+team: nova
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/os-vif
+        hash: 88c21d7d69905308f021c7546609b9c30b761806
+    highlights: >
+        - Adds Windows support for OvsPlugin.
