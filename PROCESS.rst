@@ -131,7 +131,11 @@ Milestone-3
 4. Remind PTLs/liaisons that master should be frozen except for bug
    fixes and feature work with FFEs.
 
-5. Freeze all library releases except for release-critical bugs.
+5. Remind PTL/liaisons to start preparing "prelude" release notes as
+   summaries of the content of the release so that those are merged
+   before their first release candidate.
+
+6. Freeze all library releases except for release-critical bugs.
 
 Between Milestone-3 and RC1
 ===========================
