@@ -124,3 +124,21 @@ releases:
       * Fixed --config-dir argument for oslo.config 3.8.0
       * OVS: Add support for IPv6 addresses as tunnel endpoints
       * Require oslo.concurrency>=3.7.1
+  - version: 8.3.0
+    projects:
+      - repo: openstack/neutron
+        hash: 15752052ac3dddfb1f6733d55523401c019328c8
+      - repo: openstack/neutron-lbaas
+        hash: a6102279c7061ebc6e4f144413eb52595d1604be
+    highlights: |-
+      * Introduced new ha_keepalived_state_change_server_threads option to
+        control the number of threads used by neutron-keepalived-state-change.
+      * Allow SR-IOV agent to start when number of vf is 0.
+      * Don't flush OpenFlow rules on external Open vSwitch controller
+        disconnect.
+      * Don't use exponential back-off for report_state.
+      * Allow mixing different Open vSwitch agent firewall drivers in the same
+        cloud.
+      * LBaaS: added a new 'insecure' option to control SSL certificate
+        verification.
+      * LBaaS: fixed 'lbaasv2' service plugin alias definition.
