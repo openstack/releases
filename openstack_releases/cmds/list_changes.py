@@ -319,8 +319,10 @@ def main():
                         extra_args=['--format=%h %ci %s'])
 
             # Show any requirements changes in the upcoming release.
+            # Include setup.cfg, in case the project uses "extras".
             if start_range:
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
+                git_diff(workdir, project['repo'], git_range, 'setup.cfg')
 
             # Show the changes since the last release, first as a
             # graph view so we can check for bad merges, and then with
