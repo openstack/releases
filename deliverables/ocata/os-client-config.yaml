@@ -1,0 +1,14 @@
+---
+launchpad: os-client-config
+team: OpenStack client
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/os-client-config/newton.html
+releases:
+  - version: 1.22.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 6c252384c2cff4eef68d93e33d9bf81c9b768d38
+    highlights: >
+      Fixed an attribute error caused by a name type and added a setter method
+      for configuring Session constructor wrappers.
