@@ -318,3 +318,10 @@ cycle-trailing Final Release
 
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
+
+R+4 Branch Documentation Repos
+==============================
+
+1. The documentation team waits to branch their repositories until a
+   few weeks after the final release. Be available to help with
+   creating the branches if needed.
