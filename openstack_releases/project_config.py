@@ -57,6 +57,9 @@ _RELEASE_JOBS_FOR_TYPE = {
     'xstatic': [
         'xstatic-publish-jobs',
     ],
+    'fuel': [
+        # Fuel is manually packaged by the team at Mirantis.
+    ],
 }
 
 
