@@ -1,0 +1,10 @@
+---
+launchpad: fuel
+team: fuel
+send-announcements-to: openstack-announce@lists.openstack.org
+release-type: fuel
+releases:
+  - version: 10.0.0rc1
+    projects:
+      - repo: openstack/fuel-virtualbox
+        hash: 6485241a5c22b82145e8a76c472e8f7603a346df

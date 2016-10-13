@@ -1,0 +1,10 @@
+---
+launchpad: fuel
+team: fuel
+send-announcements-to: openstack-announce@lists.openstack.org
+release-type: fuel
+releases:
+  - version: 10.0.0rc1
+    projects:
+      - repo: openstack/fuel-agent
+        hash: 8125d9ecd537825492669f5d52c68cd179143a0f

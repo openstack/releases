@@ -1,0 +1,10 @@
+---
+launchpad: fuel
+team: fuel
+send-announcements-to: openstack-announce@lists.openstack.org
+release-type: fuel
+releases:
+  - version: 10.0.0rc1
+    projects:
+      - repo: openstack/fuel-nailgun-agent
+        hash: 60173537665464db260fb93829eb8affced33535
