@@ -67,3 +67,7 @@ releases:
     - Fixes a bug in the version discovery mechanism where a URL was
       being improperly returned when the discovery was not successful,
       see bug 1616720.
+- version: 2.12.2
+  projects:
+  - repo: openstack/keystoneauth
+    hash: 10ba290b000b3fa0c88b28e61672dda4799d2f06
