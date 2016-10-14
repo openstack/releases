@@ -248,6 +248,9 @@ The top level of a deliverable file is a mapping with keys:
       Allows a more flexible versioning in line with xstatic package guidelines
       and requirements.
 
+   ``fuel``
+      The Fuel project manages its own packages.
+
 ``releases``
   A list of the releases for the deliverable.
 
