@@ -1,0 +1,10 @@
+---
+launchpad: fuel
+team: fuel
+send-announcements-to: openstack-announce@lists.openstack.org
+release-type: fuel
+releases:
+  - version: 10.0.0rc1
+    projects:
+      - repo: openstack/fuel-main
+        hash: a8c98d004fd7a2eae10ed363e17867b7a5aacbdd
