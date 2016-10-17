@@ -30,6 +30,9 @@ Between Summit and Milestone-1
 4. Start weekly countdown emails, sent on Thursday with information
    needed about the following week (deadlines, instructions, etc.).
 
+5. The week before Milestone-1, include a reminder about completing
+   the responses to community-wide goals in the countdown email.
+
 Milestone-1
 ===========
 
@@ -136,6 +139,9 @@ Milestone-3
    before their first release candidate.
 
 6. Freeze all library releases except for release-critical bugs.
+
+7. Include a reminder about completing the responses to community-wide
+   goals in the countdown email.
 
 Between Milestone-3 and RC1
 ===========================

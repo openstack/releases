@@ -22,6 +22,8 @@
 | Nov 07-11  | R-15 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
 | Nov 14-18  | R-14 | :ref:`o-1`                |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-goals-ack`        |                             |
 +------------+------+---------------------------+-----------------------------+
 | Nov 21-25  | R-13 |                           | :ref:`o-trove-spec-prop`    |
 +------------+------+---------------------------+-----------------------------+
@@ -56,6 +58,8 @@
 |            |      | :ref:`o-soft-sf`          |                             |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-rf`               |                             |
+|            |      +---------------------------+-----------------------------+
+|            |      | :ref:`o-goals-complete`   |                             |
 +------------+------+---------------------------+-----------------------------+
 | Jan 30-03  | R-3  | :ref:`o-rc1`              |                             |
 |            |      +---------------------------+-----------------------------+
@@ -117,6 +121,15 @@ Ocata-1 milestone
 
 .. _release:cycle-with-milestones: http://governance.openstack.org/reference/tags/release_cycle-with-milestones.html
 
+.. _o-goals-ack:
+
+Ocata Community Goals Acknowledgement
+-------------------------------------
+
+Teams should prepare their acknowledgement of `the community-wide
+goals for Ocata
+<http://governance.openstack.org/goals/ocata/index.html>`__.
+
 .. _o-2:
 
 Ocata-2 milestone
@@ -141,6 +154,15 @@ Ocata-3 milestone
 
 26 January is the ocata-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
+
+.. _o-goals-complete:
+
+Ocata Community Goals Completed
+-------------------------------
+
+Teams should prepare their documentation for completing `the
+community-wide goals for Ocata
+<http://governance.openstack.org/goals/ocata/index.html>`__.
 
 .. _o-extra-atcs:
 
