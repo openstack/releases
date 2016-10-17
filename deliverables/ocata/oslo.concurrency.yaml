@@ -1,0 +1,11 @@
+---
+launchpad: oslo.concurrency
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+releases:
+- version: 3.15.0
+  projects:
+  - repo: openstack/oslo.concurrency
+    hash: 9f1c2f01f0fc48aff3251b26fd9d9953015b4243
+  highlights: '* Ignore prlimit argument on Windows'
+team: oslo

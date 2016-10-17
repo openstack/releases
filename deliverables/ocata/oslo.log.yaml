@@ -1,0 +1,15 @@
+---
+launchpad: oslo.log
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+releases:
+- version: 3.17.0
+  projects:
+  - repo: openstack/oslo.log
+    hash: 297f9557e73c8c336247fde8ce2709efe4862e9e
+  highlights: |-
+    * Add a json reformatter command
+    * Add a filter to rate limit logs
+    * Use six.wraps instead of functools
+    * Default use_stderr to False
+team: oslo
