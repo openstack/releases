@@ -58,6 +58,15 @@ Notes:
 """
 
 
+def to_unicode(blob, encoding='utf8'):
+    if isinstance(blob, six.text_type):
+        return blob
+    elif isinstance(blob, six.binary_type):
+        return blob.decode(encoding)
+    else:
+        raise TypeError("Unable to convert %r to a text type" % blob)
+
+
 class NoEmptyValidator(Validator):
     def validate(self, document):
         text = document.text.strip()
@@ -105,8 +114,7 @@ def yes_no_prompt(title, default=True):
 
 def clean_changes(changes):
     for line in changes:
-        if isinstance(line, six.binary_type):
-            line = line.decode("utf8")
+        line = to_unicode(line)
         sha, descr = line.split(" ", 1)
         yield sha, descr
 
@@ -171,26 +179,28 @@ def maybe_create_release(release_repo_path, deliverable_info,
                                       " may lose comments and some existing"
                                       " yaml indenting/structure)? ")
         else:
-            notes_link = NOTES_URL_TPL % (short_project, latest_cycle)
+            notes_link = to_unicode(
+                NOTES_URL_TPL % (short_project, latest_cycle))
             notes_link = prompt(
                 "Release notes link: ",
                 validator=NoEmptyValidator(),
                 default=notes_link)
             if deliverable_info:
-                launchpad_project = deliverable_info['launchpad']
-                announce_email = deliverable_info['send-announcements-to']
+                launchpad_project = to_unicode(deliverable_info['launchpad'])
+                announce_email = to_unicode(
+                    deliverable_info['send-announcements-to'])
             else:
                 launchpad_project = prompt(
                     "Launchpad project name: ",
                     validator=NoEmptyValidator(),
-                    default=short_project)
+                    default=to_unicode(short_project))
                 announce_email = prompt(
                     "Announcement email address: ",
                     validator=NoEmptyValidator(),
                     default=ANNOUNCE_EMAIL)
             team = prompt("Project team: ",
                           validator=NoEmptyValidator(),
-                          default=launchpad_project)
+                          default=to_unicode(launchpad_project))
             include_pypi_link = yes_no_prompt("Include pypi link? ")
             newest_release = collections.OrderedDict([
                 ('launchpad', launchpad_project),
@@ -212,7 +222,7 @@ def maybe_create_release(release_repo_path, deliverable_info,
             suggested_version = ''
         version = prompt("Release version: ",
                          validator=NoEmptyValidator(),
-                         default=suggested_version)
+                         default=to_unicode(suggested_version))
         highlights = prompt("Highlights (esc then enter to"
                             " exit): ", multiline=True)
         highlights = highlights.strip()
