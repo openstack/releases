@@ -33,6 +33,7 @@ _VALIDATORS = {'std': (pbr.version.SemanticVersion.from_pip_string,
                            packaging.version.InvalidVersion,
                            lambda x: str(x)),
                }
+_VALIDATORS['fuel'] = _VALIDATORS['std']
 
 
 def validate_version(versionstr, release_type='std'):
@@ -42,7 +43,7 @@ def validate_version(versionstr, release_type='std'):
 
     """
     if release_type not in _VALIDATORS:
-        yield 'Release Type %s not valid using \'std\'' % release_type
+        yield 'Release Type %r not valid using \'std\' instead' % release_type
         release_type = 'std'
 
     constructor, exception, canonicalise = _VALIDATORS[release_type]
