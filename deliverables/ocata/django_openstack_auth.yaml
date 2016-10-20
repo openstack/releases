@@ -1,0 +1,13 @@
+---
+launchpad: django-openstack-auth
+team: horizon
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: a40234be311eae11ca22497a82a82ab404d09a7c
+    highlights: >
+      This release includes full support for Django 1.10, and removes token
+      revocation on logout and project switch.
