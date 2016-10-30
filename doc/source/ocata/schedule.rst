@@ -56,6 +56,8 @@
 | Jan 16-20  | R-5  | :ref:`o-final-lib`        | :ref:`o-trove-client-soft`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`o-trove-guest-req`    |
+|            |      |                           +-----------------------------+
+|            |      |                           | :ref:`o-horizon-ff`         |
 +------------+------+---------------------------+-----------------------------+
 | Jan 23-27  | R-4  | :ref:`o-3`                | :ref:`o-key-feature-freeze` |
 |            |      +---------------------------+-----------------------------+
@@ -400,6 +402,18 @@ Manila Driver Proposal Freeze
 
 All new Manila drivers must be proposed by 19th December, 2016.
 
+Horizon
+-------
+
+.. _o-horizon-ff:
+
+Horizon Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^
+
+Horizon will enter feature freeze a week before other projects
+to allow plugin authors an additional week to react to feature
+changes.
+
 Trove
 -----
 
@@ -423,8 +437,8 @@ week.
 
 .. _o-trove-guest-req:
 
-Trove Guest Requirements Freeze:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Trove Guest Requirements Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Freeze the requirements for all guest agents by this date and make the
 requirements file for guests.
