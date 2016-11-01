@@ -19,13 +19,15 @@
 +------------+------+---------------------------+-----------------------------+
 | Oct 31-04  | R-16 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Nov 07-11  | R-15 |                           |                             |
+| Nov 07-11  | R-15 |                           | :ref:`o-glance-spec-prop`   |
 +------------+------+---------------------------+-----------------------------+
 | Nov 14-18  | R-14 | :ref:`o-1`                | :ref:`o-nova-spec-freeze`   |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-goals-ack`        | :ref:`o-manila-spec-freeze` |
 +------------+------+---------------------------+-----------------------------+
-| Nov 21-25  | R-13 |                           | :ref:`o-trove-spec-prop`    |
+| Nov 21-25  | R-13 |                           | :ref:`o-glance-spec-freeze` |
+|            |      |                           +-----------------------------+
+|            |      |                           | :ref:`o-trove-spec-prop`    |
 +------------+------+---------------------------+-----------------------------+
 | Nov 28-02  | R-12 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -333,6 +335,29 @@ Cinder Spec Freeze
 ^^^^^^^^^^^^^^^^^^
 
 All Cinder specs must be approved by 14th December, 2016.
+
+Glance
+------
+
+The following deadlines are specific to the Glance project.
+
+.. _o-glance-spec-prop:
+
+Glance Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be
+proposed as patches to the glance-specs repository by 23:59 UTC
+on Thursday 10 November 2016.
+
+.. _o-glance-spec-freeze:
+
+Glance Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be
+merged into the glance-specs repository by 23:59 UTC on Friday
+25 November 2016.
 
 Nova
 ----
