@@ -7,4 +7,9 @@ releases:
   projects:
   - repo: openstack/oslo.config
     hash: d57e5380be1d829b15ce1ba14ce659c501fccac4
+- version: 3.19.0
+  projects:
+  - repo: openstack/oslo.config
+    hash: 30af7defd791f35c3f17609d90921d92fa7c9df0
+  highlights: '* Fixup list types handling tuples'
 team: oslo
