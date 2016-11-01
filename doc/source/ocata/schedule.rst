@@ -21,7 +21,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Nov 07-11  | R-15 |                           |                             |
 +------------+------+---------------------------+-----------------------------+
-| Nov 14-18  | R-14 | :ref:`o-1`                |                             |
+| Nov 14-18  | R-14 | :ref:`o-1`                | :ref:`o-nova-spec-freeze`   |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-goals-ack`        |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -333,6 +333,18 @@ Cinder Spec Freeze
 ^^^^^^^^^^^^^^^^^^
 
 All Cinder specs must be approved by 14th December, 2016.
+
+Nova
+----
+
+The deadlines below are specific to the Nova project.
+
+.. _o-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova specs must be approved by 17th November, 2016.
 
 Trove
 -----
