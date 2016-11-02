@@ -108,7 +108,6 @@ series. You can find the detail of the various release series here:
    bexar/index
    austin/index
    releases/*
-   schedules/*
 
 Series-Independent Releases
 ===========================
