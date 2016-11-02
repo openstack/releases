@@ -26,7 +26,7 @@ series. You can find the detail of the various release series here:
      * TBD
    - * :doc:`ocata/index`
      * :doc:`Under Development <ocata/schedule>`
-     * 2017-02-23 (planned)
+     * 2017-02-22 (planned)
      * TBD
    - * :doc:`newton/index`
      * Current stable release, security-supported

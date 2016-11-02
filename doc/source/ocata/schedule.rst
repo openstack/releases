@@ -88,10 +88,11 @@
 
 .. note::
 
-   All deadlines are generally the Thursday of the week on which they
-   are noted above. For example, the Feature Freeze in week R-4 is on
-   26 January. Exceptions to this policy will be explicitly mentioned
-   in the event description.
+   With the exception of the final release date and cycle-trailing
+   release date, deadlines are generally the Thursday of the week on
+   which they are noted above. For example, the Feature Freeze in week
+   R-4 is on 26 January. Exceptions to this policy will be explicitly
+   mentioned in the event description.
 
 Cross-project events
 ====================
@@ -273,7 +274,7 @@ release week, only final-release-critical releases will be accepted
 Ocata release
 --------------
 
-The Ocata coordinated release will happen on 23 February.
+The Ocata coordinated release will happen on 22 February.
 
 .. _o-trailing:
 
@@ -281,7 +282,7 @@ Ocata cycle-trailing Deadline
 -----------------------------
 
 The deadline for projects using the release:cycle-trailing model that
-follow the main release cycle.
+follow the main release cycle is 9 March.
 
 Project-specific events
 =======================
