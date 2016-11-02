@@ -24,6 +24,8 @@
 | Nov 14-18  | R-14 | :ref:`o-1`                | :ref:`o-nova-spec-freeze`   |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-goals-ack`        | :ref:`o-manila-spec-freeze` |
+|            |      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`o-key-spec-prop`      |
 +------------+------+---------------------------+-----------------------------+
 | Nov 21-25  | R-13 |                           | :ref:`o-glance-spec-freeze` |
 |            |      |                           +-----------------------------+
@@ -38,10 +40,12 @@
 |            |      | :ref:`o-mf`               | :ref:`o-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`o-cinder-spec-freeze` |
++            +      +---------------------------+-----------------------------+
+|            |      |                           | :ref:`o-key-spec-freeze`    |
 +------------+------+---------------------------+-----------------------------+
 | Dec 19-23  | R-9  |                           | :ref:`o-manila-drv-freeze`  |
 +------------+------+---------------------------+-----------------------------+
-| Dec 26-30  | R-8  |                           |                             |
+| Dec 26-30  | R-8  |                           | :ref:`o-key-feature-prop`   |
 +------------+------+---------------------------+-----------------------------+
 | Jan 02-06  | R-7  | :ref:`o-extra-atcs`       |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -51,7 +55,7 @@
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`o-trove-guest-req`    |
 +------------+------+---------------------------+-----------------------------+
-| Jan 23-27  | R-4  | :ref:`o-3`                |                             |
+| Jan 23-27  | R-4  | :ref:`o-3`                | :ref:`o-key-feature-freeze` |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-ff`               |                             |
 |            |      +---------------------------+-----------------------------+
@@ -422,3 +426,39 @@ Trove Client Soft Freeze
 All major features for the python-troveclient must be reviewed and
 approved by the end of this week, this gives us one additional week to
 address any issues with dependencies.
+
+Keystone
+--------
+
+The deadlines below are specific to the Keystone project.
+
+.. _o-key-spec-prop:
+
+Keystone Spec Proposal Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Submit all keystone specs for the release by the end of this week (for review)
+in keystone-specs repository.
+
+.. _o-key-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All keystone specs for the release must be approved by the end of this week.
+
+.. _o-key-feature-prop:
+
+Keystone Feature Proposal Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All major keystone features for the release must be proposed by the end of
+this week.
+
+.. _o-key-feature-freeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All major features for keystone must be reviewed and approved by the end of
+this week.
