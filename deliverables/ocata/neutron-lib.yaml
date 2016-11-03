@@ -1,0 +1,19 @@
+---
+team: neutron
+launchpad: neutron
+release-notes: http://docs.openstack.org/releasenotes/neutron-lib/unreleased.html
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: efd7a3a5fabf24891953dfcc2e838ba56ef3183f
+    highlights: |
+        * Added Keystone v3 support, removed XML format, added details about LBaas v1 removal
+        * Added multiple change for API-Ref
+        * Introduced Plugin Directory for Neutron
+        * Introduced API definition for trunk/trunk_details extensions and segments reference
+        * Deprecated method ensure_dir
+        * Enhanced valid_values to use __contains__
+        * Rehomed populate_project_info() from neutron
