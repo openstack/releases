@@ -29,3 +29,9 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas
         hash: 65287382f2f5d9f55d0f12e51a689f5229863c6b
+  - version: 9.1.0
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: bff11c5fa14bce26526d38167d5c67b1afeb45ba
+    highlights: |-
+      * Fixed lbaasv2 service plugin alias definition

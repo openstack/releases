@@ -33,3 +33,13 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 71f2d2bc90aaf9ee696cd4e4f29879ba6c5703b5
+  - version: 9.1.0
+    projects:
+      - repo: openstack/neutron
+        hash: d7a0c3ebc59645671ce261cdfa62395de5582d81
+    highlights: |-
+      * ovsfw: Add a dl_type match fo action=ct flows
+      * Extend project_id in objects dicts
+      * Add required extension to trunk_details descriptor
+      * New option for num_threads for state change server
+      * Keepalived global_defs configuration entries required to avoid DNS lookup
