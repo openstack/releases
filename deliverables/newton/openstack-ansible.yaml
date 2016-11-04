@@ -562,3 +562,75 @@ releases:
         hash: 32d18f3053c2352fac37a18e62266d17834c14d5
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: 792d39cf476e1c7c26c9a5322bfea651cd00146e
+  - version: 14.0.1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 8e6efee55b47d5631f447a58a71db6ca29742a15
+      - repo: openstack/openstack-ansible-apt_package_pinning
+        hash: 42c4c9f6164bda2b5320d1bf04f251b2355956dd
+      - repo: openstack/openstack-ansible-pip_install
+        hash: 1a5a296072fd836d7bc02e96d463b6e1b718e58f
+      - repo: openstack/openstack-ansible-galera_client
+        hash: 2e92377e9d090c81e10a6d5964823921aea413d3
+      - repo: openstack/openstack-ansible-galera_server
+        hash: ca396469cc48748905b729f408eff3350bc30f46
+      - repo: openstack/openstack-ansible-ceph_client
+        hash: 64df5f2c6a0f2d79c82d82d88936e91339b27dc8
+      - repo: openstack/openstack-ansible-haproxy_server
+        hash: 35aefbf701a85a3b6512b68d9549384fe12ceec2
+      - repo: openstack/openstack-ansible-lxc_container_create
+        hash: ce8bb99bd72689a2f0e6cd88448f197a8f2d6fde
+      - repo: openstack/openstack-ansible-lxc_hosts
+        hash: 1cfdc0ebed653658031a9e4c6390c0ff801af19a
+      - repo: openstack/openstack-ansible-memcached_server
+        hash: 75fd7d7f80e77f2113aa5a4b9fa3608ac3ffaded
+      - repo: openstack/openstack-ansible-security
+        hash: af2226fb354794af3f9aa4e1301ecd7dd5b6519a
+      - repo: openstack/openstack-ansible-openstack_hosts
+        hash: 76193ffff33863ae08bb78669bc22a064baeeac2
+      - repo: openstack/openstack-ansible-os_keystone
+        hash: daf63775ef53c22a87eed9dc278582dc4fd12efb
+      - repo: openstack/openstack-ansible-openstack_openrc
+        hash: 5ca4da5f361728aa783a761782c0b55e990d3338
+      - repo: openstack/openstack-ansible-os_aodh
+        hash: b2a0c5db80da2e98dca82ed146921bb4301daa88
+      - repo: openstack/openstack-ansible-os_ceilometer
+        hash: 6fd996e5ae522d3ed20fcf367f098d7e4a2a8533
+      - repo: openstack/openstack-ansible-os_cinder
+        hash: 4f59a0945905a07dbb2494046337439361a4473f
+      - repo: openstack/openstack-ansible-os_glance
+        hash: 6fed0535ec638201cbedea48dc07d0143c9eeaf9
+      - repo: openstack/openstack-ansible-os_gnocchi
+        hash: 20fc8da044c70ee984bfc7f2d5f27061caa9870a
+      - repo: openstack/openstack-ansible-os_heat
+        hash: 65057b9294b7265288d7c717b558a8b1c9a8c61a
+      - repo: openstack/openstack-ansible-os_horizon
+        hash: c9ac30fc6b42d16dbe965b3984b751d0acae5bfb
+      - repo: openstack/openstack-ansible-os_ironic
+        hash: 93dd916c5d5d4371be2a79721e7732d585535a0d
+      - repo: openstack/openstack-ansible-os_magnum
+        hash: ebb797d7f5bdabd4907dcbe092824f8aadf1ec27
+      - repo: openstack/openstack-ansible-os_neutron
+        hash: 00619305bfb9ff24255418ada22828e91e723c9f
+      - repo: openstack/openstack-ansible-os_nova
+        hash: 905b4a36335f3d64434b1801574e9f0a1c5b9380
+      - repo: openstack/openstack-ansible-os_rally
+        hash: 7bcdfccf88cb35e18d4cf74eed2f226fdfc9e465
+      - repo: openstack/openstack-ansible-os_sahara
+        hash: 154911b831d228561aba7e32eefec1b57228d66d
+      - repo: openstack/openstack-ansible-os_swift
+        hash: 5f8e487c2e5f0821533b3f8cd473224f30f9f4fa
+      - repo: openstack/openstack-ansible-os_tempest
+        hash: 1f313f448286c3e2acb5d1a007fb00f4d02049db
+      - repo: openstack/openstack-ansible-plugins
+        hash: a6151d573fb5a2fa8a077968307406e1ba644f05
+      - repo: openstack/openstack-ansible-rabbitmq_server
+        hash: c432c18a05566d9bb308bab375fbe303ff4872a3
+      - repo: openstack/openstack-ansible-repo_build
+        hash: 8f93c34b350dbf143a11ebf22e4bba2e17405828
+      - repo: openstack/openstack-ansible-repo_server
+        hash: d737558d28407efb9b2b20db954ef19d15bc7564
+      - repo: openstack/openstack-ansible-rsyslog_client
+        hash: 8955d0dc17fc1cd5960cd376e553588279d302d8
+      - repo: openstack/openstack-ansible-rsyslog_server
+        hash: ce152ae1f4c01df64c8695fc4511fcc727f467b3
