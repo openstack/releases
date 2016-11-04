@@ -23,7 +23,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Nov 14-18  | R-14 | :ref:`o-1`                | :ref:`o-nova-spec-freeze`   |
 |            |      +---------------------------+-----------------------------+
-|            |      | :ref:`o-goals-ack`        | :ref:`o-manila-spec-freeze` |
+|            |      | :ref:`o-goals-ack`        | :ref:`o-manila-spec-frz1`   |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`o-key-spec-prop`      |
 +------------+------+---------------------------+-----------------------------+
@@ -40,8 +40,10 @@
 |            |      | :ref:`o-mf`               | :ref:`o-cinder-nddeadline`  |
 |            |      +---------------------------+-----------------------------+
 |            |      |                           | :ref:`o-cinder-spec-freeze` |
-+            +      +---------------------------+-----------------------------+
+|            |      |                           +-----------------------------+
 |            |      |                           | :ref:`o-key-spec-freeze`    |
+|            |      |                           +-----------------------------+
+|            |      |                           | :ref:`o-manila-spec-frz2`   |
 +------------+------+---------------------------+-----------------------------+
 | Dec 19-23  | R-9  |                           | :ref:`o-manila-drv-freeze`  |
 +------------+------+---------------------------+-----------------------------+
@@ -375,12 +377,20 @@ Nova Spec Freeze
 
 All Nova specs must be approved by 17th November, 2016.
 
-.. _o-manila-spec-freeze:
+.. _o-manila-spec-frz1:
 
-Manila Spec Freeze
-^^^^^^^^^^^^^^^^^^
+Manila Low-Priority Spec Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All Manila specs must be approved by 17th November, 2016.
+All Manila specs must be approved by 17th November, 2016, unless they
+are officially designated high-priority.
+
+.. _o-manila-spec-frz2:
+
+Manila High-Priority Spec Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All high-priority Manila specs must be approved by 15th December, 2016.
 
 .. _o-manila-drv-freeze:
 
