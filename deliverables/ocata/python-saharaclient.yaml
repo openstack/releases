@@ -1,0 +1,13 @@
+---
+launchpad: python-saharaclient
+team: sahara
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: ea15f60307c5cea6b0f2f567c9b6fa67e0723946
+        highlights: >
+            Removed support of old CLI commands. OpenStackClient
+            plugin should be used.
