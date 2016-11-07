@@ -33,3 +33,12 @@ releases:
     projects:
       - repo: openstack/nova
         hash: e08cc356b0fb78163657f7a6e99572039fd58543
+  - version: 14.0.2
+    projects:
+      - repo: openstack/nova
+        hash: 867661d51bdb0cf2a6f326cb18f26bbc1f04eb15
+    highlights: >
+      - There is an idempotent database schema migration to fix a regression
+        when creating servers with very large user_data entries.
+      - A known issue is reported where WebOb>=1.6.0 is required if using the
+        placement service.
