@@ -328,8 +328,8 @@ def main():
         # Make sure that new entries have been appended to the file.
         for v, nr in new_releases.items():
             if nr != deliverable_info['releases'][-1]:
-                msg = ('new release %(version)s must be listed last, '
-                       'with one new release per patch' % nr)
+                msg = ('new release %s in %s must be listed last, '
+                       'with one new release per patch' % (nr['version'], filename))
                 print(msg)
                 errors.append(msg)
 
