@@ -27,3 +27,11 @@ releases:
     highlights: >
       This release includes test fixes, and translations for the
       Newton release.
+  - version: 2.4.2
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 08e96550a31b98b7ee3278b3b6a73e93e79ac343
+    highlights: >
+      This release removes token revocation on log out and
+      project switch, allowing long-running processes to
+      complete properly.
