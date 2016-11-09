@@ -23,7 +23,6 @@ from docutils.statemachine import ViewList
 from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
-from openstack_releases import governance
 
 
 def _list_table(add, headers, data, title='', columns=None):
@@ -56,33 +55,20 @@ def _list_table(add, headers, data, title='', columns=None):
     add('')
 
 
-def _get_deliverable_type(name, data):
-    if (name.startswith('python-') and name.endswith('client')):
-        return 'type:library'
-    for tag in data.get('tags', []):
-        if tag == 'release:cycle-trailing':
-            return tag
-        if tag.startswith('type:'):
-            return tag
-    return _DEFAULT_TYPE
+def _get_category(data):
+    model = data.get('release-model')
+    if model == 'cycle-trailing':
+        return 'cycle-trailing'
+    return data.get('type')
 
 
-_DEFAULT_TYPE = 'type:other'
 _deliverables = None
-_all_teams = {}
-_all_deliverable_types = {}
 
 
-def _initialize_team_data(app):
+def _initialize_deliverable_data(app):
     global _deliverables
-    global _all_teams
 
     _deliverables = deliverable.Deliverables('deliverables')
-    team_data = governance.get_team_data()
-    for tn, td in team_data.items():
-        _all_teams[tn] = td
-        for dn, dd in td['deliverables'].items():
-            _all_deliverable_types[dn] = _get_deliverable_type(dn, dd)
 
 
 class DeliverableDirectiveBase(rst.Directive):
@@ -92,12 +78,12 @@ class DeliverableDirectiveBase(rst.Directive):
         'team': directives.unchanged,
     }
 
-    _TYPE_ORDER = [
-        'type:service',
-        'type:library',
-        'type:horizon-plugin',
-        'type:other',
-        'release:cycle-trailing',
+    _CATEGORY_ORDER = [
+        'service',
+        'library',
+        'horizon-plugin',
+        'other',
+        'cycle-trailing',
     ]
 
     def run(self):
@@ -137,12 +123,11 @@ class DeliverableDirectiveBase(rst.Directive):
                 )
         else:
             # Only the deliverables for the given series are
-            # shown. They are organized by type. The type is only
-            # available from the governance data, so we have to add it
-            # to the raw data before sorting and grouping.
+            # shown. They are categorized by type, which we need to
+            # extract from the data.
             raw_deliverables = (
-                (_all_deliverable_types.get(d[2], _DEFAULT_TYPE), d[2], d[3])
-                for d in _deliverables.get_deliverables(
+                (_get_category(_data), _deliv_name, _data)
+                for _team, _series, _deliv_name, _data in _deliverables.get_deliverables(
                     self.team_name,
                     series,
                 )
@@ -150,24 +135,24 @@ class DeliverableDirectiveBase(rst.Directive):
             raw_deliverables = list(raw_deliverables)
             grouped = itertools.groupby(
                 sorted(raw_deliverables),
-                key=operator.itemgetter(0),  # the deliverable type
+                key=operator.itemgetter(0),  # the category
             )
             # Convert the grouping iterators to a dictionary mapping
             # type to the list of tuples with deliverable name and
             # parsed deliverable info that _add_deliverables() needs.
-            by_type = {}
-            for deliverable_type, deliverables in grouped:
-                by_type[deliverable_type] = [
+            by_category = {}
+            for deliverable_category, deliverables in grouped:
+                by_category[deliverable_category] = [
                     (d[1], d[2])
                     for d in deliverables
                 ]
-            for type_tag in self._TYPE_ORDER:
-                if type_tag not in by_type:
-                    app.info('No %r for %s' % (type_tag, (self.team_name, series)))
+            for category in self._CATEGORY_ORDER:
+                if category not in by_category:
+                    app.info('No %r for %s' % (category, (self.team_name, series)))
                     continue
                 self._add_deliverables(
-                    type_tag,
-                    by_type[type_tag],
+                    category,
+                    by_category[category],
                     series,
                     app,
                     result,
@@ -182,11 +167,11 @@ class DeliverableDirectiveBase(rst.Directive):
         return node.children
 
     _TYPE_TITLE = {
-        'type:service': 'Service Projects',
-        'type:horizon-plugin': 'Horizon Plugins',
-        'type:library': 'Library Projects',
-        'type:other': 'Other Projects',
-        'release:cycle-trailing': 'Projects Trailing the Release Cycle',
+        'service': 'Service Projects',
+        'horizon-plugin': 'Horizon Plugins',
+        'library': 'Library Projects',
+        'other': 'Other Projects',
+        'cycle-trailing': 'Projects Trailing the Release Cycle',
     }
 
     @staticmethod
@@ -394,7 +379,7 @@ def _generate_team_pages(app):
 
 
 def setup(app):
-    _initialize_team_data(app)
+    _initialize_deliverable_data(app)
     app.add_directive('deliverable', DeliverableDirective)
     app.add_directive('independent-deliverables',
                       IndependentDeliverablesDirective)
