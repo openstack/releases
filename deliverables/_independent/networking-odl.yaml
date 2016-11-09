@@ -3,6 +3,7 @@ launchpad: networking-odl
 team: neutron
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
+  # liberty
   - version: 1.0.0
     projects:
       - repo: openstack/networking-odl
@@ -11,7 +12,13 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: 5ae9d46bd373a2ecc1f606d2ccaeea0d1bd95bea
+  # mitaka
   - version: 2.0.0
     projects:
       - repo: openstack/networking-odl
         hash: d81e8e1ed9b2f53cc418f76874fffdb24286f789
+  # newton
+  - version: 3.0.0
+    projects:
+      - repo: openstack/networking-odl
+        hash: f313b7f5b3ebba5bd6f7e8e855315e1570c71f54
