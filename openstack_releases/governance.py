@@ -87,6 +87,13 @@ class Deliverable(object):
         return 'unknown'
 
     @property
+    def model(self):
+        for t in self.tags:
+            if t.startswith('release:'):
+                return t.partition(':')[-1]
+        return 'none'
+
+    @property
     def tags(self):
         return set(self.data.get('tags', [])).union(self.team.tags)
 

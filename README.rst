@@ -157,6 +157,7 @@ deliverable. For each release, we need to track:
 * the launchpad project name (such as ``oslo.config``)
 * the email list to receive release announcements
 * the series (Kilo, Liberty, etc.)
+* the release model being used
 * for each repository
 
   * the name (such as ``openstack/oslo.config``)
@@ -209,6 +210,11 @@ The top level of a deliverable file is a mapping with keys:
   Either ``yes`` or ``no``, indicating whether the release
   announcement should include the link to the package on
   PyPI. Defaults to ``no``.
+
+``release-model``
+  Identify the release model used by the deliverable. See
+  the reference section of the documentation for descriptions
+  of the valid models.
 
 ``artifact-link-mode``
   Describe how to link to artifacts produced by the project. The

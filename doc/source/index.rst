@@ -130,3 +130,12 @@ Deliverables organized by the team that produces them.
    :glob:
 
    teams/*
+
+References
+==========
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   reference/*

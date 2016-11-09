@@ -41,6 +41,13 @@ from openstack_releases import versionutils
 
 urllib3.disable_warnings()
 
+_VALID_MODELS = set([
+    'cycle-with-milestones',
+    'cycle-with-intermediary',
+    'cycle-trailing',
+    'independent',
+])
+
 
 def is_a_hash(val):
     "Return bool indicating if val looks like a valid hash."
@@ -73,14 +80,6 @@ def main():
     zuul_layout = project_config.get_zuul_layout_data()
 
     team_data = governance.get_team_data()
-    independent_repos = set(
-        r.name
-        for r in governance.get_repositories(
-            team_data,
-            tags=['release:independent'],
-        )
-    )
-    independent_checks = set()
 
     errors = []
     warnings = []
@@ -170,6 +169,21 @@ def main():
             os.path.dirname(filename)
         )
 
+        # Determine the release model. Don't require independent
+        # projects to redundantly specify that they are independent by
+        # including the value in their deliverablefile, but everyone
+        # else must provide a valid value.
+        is_independent = (series_name == '_independent')
+        if is_independent:
+            release_model = 'independent'
+        else:
+            release_model = deliverable_info.get('release-model', 'UNSPECIFIED')
+        if release_model not in _VALID_MODELS:
+            errors.append(
+                'Unknown release model %r for %s, must be one of %r' %
+                (release_model, filename, sorted(list(_VALID_MODELS)))
+            )
+
         # Remember which entries are new so we can verify that they
         # appear at the end of the file.
         new_releases = {}
@@ -180,11 +194,6 @@ def main():
         for release in deliverable_info['releases']:
 
             for project in release['projects']:
-                is_independent = (
-                    (series_name, project['repo']) in independent_checks or
-                    project['repo'] in independent_repos or
-                    series_name == '_independent'
-                )
 
                 # Check for release jobs (if we ship a tarball)
                 if link_mode != 'none':
@@ -208,7 +217,6 @@ def main():
                                                          filename)
                         print(msg)
                         warnings.append(msg)
-                    independent_checks.add((series_name, project['repo']))
 
                 # Check the SHA specified for the tag.
                 print('%s SHA %s ' % (project['repo'],
