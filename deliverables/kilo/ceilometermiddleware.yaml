@@ -2,6 +2,8 @@
 launchpad: ceilometermiddleware
 send-announcements-to: openstack-adev@lists.openstack.org
 team: Telemetry
+type: library
+release-model: cycle-with-intermediary
 releases:
   - version: 0.1.0
     projects:
