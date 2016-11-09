@@ -93,9 +93,6 @@ def git_diff(workdir, repo, git_range, file_pattern):
 
 
 def main():
-    # FIXME(dhellmann): Temporarily turn off list-changes for this
-    # series of patches.
-    return 0
     if not sys.stdout.encoding:
         # Wrap sys.stdout with a writer that knows how to handle
         # encoding Unicode data.
