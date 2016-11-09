@@ -84,7 +84,7 @@ class Deliverable(object):
         for t in self.tags:
             if t.startswith('type:'):
                 return t.partition(':')[-1]
-        return 'unknown'
+        return 'other'
 
     @property
     def model(self):

@@ -47,6 +47,12 @@ _VALID_MODELS = set([
     'cycle-trailing',
     'independent',
 ])
+_VALID_TYPES = set([
+    'horizon-plugin',
+    'library',
+    'service',
+    'other',
+])
 
 
 def is_a_hash(val):
@@ -182,6 +188,19 @@ def main():
             errors.append(
                 'Unknown release model %r for %s, must be one of %r' %
                 (release_model, filename, sorted(list(_VALID_MODELS)))
+            )
+
+        # Determine the deliverable type. Require an explicit value.
+        deliverable_type = deliverable_info.get('type')
+        if not deliverable_type:
+            errors.append(
+                'No deliverable type for %s, must be one of %r' %
+                (filename, sorted(list(_VALID_TYPES)))
+            )
+        elif deliverable_type not in _VALID_TYPES:
+            errors.append(
+                'Invalid deliverable type %r for %s, must be one of %r' %
+                (deliverable_type, filename, sorted(list(_VALID_TYPES)))
             )
 
         # Remember which entries are new so we can verify that they

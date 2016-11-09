@@ -216,6 +216,11 @@ The top level of a deliverable file is a mapping with keys:
   the reference section of the documentation for descriptions
   of the valid models.
 
+``type``
+  Categorize the deliverable based on what it does. See the reference
+  section of the documentation for descriptions of the valid
+  deliverable types.
+
 ``artifact-link-mode``
   Describe how to link to artifacts produced by the project. The
   default is ``tarball`. Valid values are:
