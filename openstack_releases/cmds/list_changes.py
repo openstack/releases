@@ -199,7 +199,7 @@ def main():
         # the project does not use milestones.
         if not uses_milestones:
             for pre_indicator in ['a', 'b', 'rc']:
-                if pre_indicator in new_release['version']:
+                if pre_indicator in str(new_release['version']):
                     print(('WARNING: %s looks like a pre-release '
                            'but %s does not use milestones') %
                           (new_release['version'], deliverable_name))
