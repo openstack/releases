@@ -1,0 +1,12 @@
+---
+launchpad: python-swiftclient
+team: swift
+type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 5a620f83e88d1b52e013cedff4bc266bcf3c292a
