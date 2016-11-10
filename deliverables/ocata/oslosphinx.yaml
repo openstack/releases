@@ -1,5 +1,8 @@
 ---
 launchpad: oslosphinx
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/oslosphinx
     hash: b82f250c2ffe58a56c53cd7a666a15f649196877
-team: oslo
-type: library
-release-model: cycle-with-intermediary

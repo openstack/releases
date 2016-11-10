@@ -1,5 +1,8 @@
 ---
 launchpad: oslo.reports
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/oslo.reports
     hash: f4bc2524c0c064fd034513fbd5c8f6dc359b3524
-team: oslo
-type: library
-release-model: cycle-with-intermediary

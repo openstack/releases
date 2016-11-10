@@ -1,5 +1,8 @@
 ---
 launchpad: debtcollector
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/debtcollector
     hash: a44b260afeb40f51a7f7ebb8a053a03496b58812
-team: oslo
-type: library
-release-model: cycle-with-intermediary

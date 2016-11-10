@@ -1,5 +1,8 @@
 ---
 launchpad: oslo.i18n
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/oslo.i18n
     hash: 7f8f771172ee41e6e14d6e95cc0b42796de8286e
-team: oslo
-type: library
-release-model: cycle-with-intermediary
