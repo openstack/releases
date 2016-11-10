@@ -1,5 +1,8 @@
 ---
 launchpad: oslo.privsep
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/oslo.privsep
     hash: 9dab41120e446fa6adf587ea90513742a8a1c2b1
-team: oslo
-type: library
-release-model: cycle-with-intermediary

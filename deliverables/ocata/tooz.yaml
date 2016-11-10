@@ -1,5 +1,8 @@
 ---
 launchpad: python-tooz
+team: oslo
+type: library
+release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 releases:
@@ -7,6 +10,3 @@ releases:
   projects:
   - repo: openstack/tooz
     hash: 4d487603023f63a5b40a74a2f9184016abe9be88
-team: oslo
-type: library
-release-model: cycle-with-intermediary
