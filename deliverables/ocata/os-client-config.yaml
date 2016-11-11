@@ -14,3 +14,9 @@ releases:
     highlights: >
       Fixed an attribute error caused by a name type and added a setter method
       for configuring Session constructor wrappers.
+  - version: 1.23.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: ba57e4f509f3ba8768027b29e9233252148f1eef
+    highlights: >
+      Add work-around for volumev3 service type, add fuga.io to vendors
