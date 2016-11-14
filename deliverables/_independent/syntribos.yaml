@@ -1,0 +1,17 @@
+---
+launchpad: syntribos
+team: Security
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+type: other
+releases:
+  - version: 0.3.0
+    projects:
+      - repo: openstack/syntribos
+        hash: a2f1d7c222ca42dc1043b41a255782101c84557c
+    highlights: |
+        * Fixing a bug due to getlogin() in syntribos
+        * Updating readme, added a `how to section`
+        * Adding extension for common utility functions
+        * Adding pause/resume feature
+        * Introducing payload and template downloading
