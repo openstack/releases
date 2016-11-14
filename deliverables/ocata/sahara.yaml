@@ -1,0 +1,17 @@
+---
+launchpad: sahara
+team: sahara
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/sahara
+        hash: 04d73360f7ff8798e684284495fe4dc264f52c23
+      - repo: openstack/sahara-dashboard
+        hash: 538dfcdfa79b3983bf6039d945d1c913a34515b2
+      - repo: openstack/sahara-extra
+        hash: a7af6c13676295462c128e6caa75fc91c6c38d98
+      - repo: openstack/sahara-image-elements
+        hash: 8ae39cea1863353d73201f2b2da4ddb74097823e
