@@ -1,0 +1,12 @@
+---
+launchpad: neutron
+team: neutron
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/neutron/unreleased.html
+releases:
+  - version: 10.0.0.0b1
+    projects:
+      - repo: openstack/neutron
+        hash: d41bed0ee674e26f58e5ffe51198260ff765ccf6
