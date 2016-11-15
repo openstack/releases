@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+send-announcements-to: openstack-announce@lists.openstack.org
+release-model: independent
+type: other
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/monasca-grafana-datasource
+        hash: 19a5c2674463af3c317b92c79f18b3609f9be96e
