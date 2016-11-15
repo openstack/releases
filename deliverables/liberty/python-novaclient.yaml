@@ -67,3 +67,9 @@ releases:
     highlights: >
         Fix for bug 1500688 so users do not request API microversions that the
         client does not yet support.
+  - version: 2.30.3
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 48a8e73b86c5d14b153e1246672a4520ea45ccaf
+    highlights: >
+        Bug fixes and blacklisted dependency versions.
