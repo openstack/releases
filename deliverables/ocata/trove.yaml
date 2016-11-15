@@ -1,0 +1,12 @@
+---
+launchpad: trove
+team: trove
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/trove/newton.html
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/trove
+        hash: 0d514081c9685de206c1fa756d9353e30d7eb658
