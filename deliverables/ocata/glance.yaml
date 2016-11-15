@@ -1,0 +1,14 @@
+---
+launchpad: glance
+team: glance
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: no
+artifact-link-mode: tarball
+release-notes: http://docs.openstack.org/releasenotes/glance/unreleased.html
+releases:
+  - version: 14.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: 51447d07d3fcee66b9824460102ed5e51138c2fb
