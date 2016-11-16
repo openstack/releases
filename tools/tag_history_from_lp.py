@@ -44,9 +44,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('project', help='launchpad project name')
 parser.add_argument('repo', nargs='+', help='repository directory')
 parser.add_argument('--series', help='series to scan')
-parser.add_argument('--announce', default='openstack-dev@lists.openstack.org',
-                    help=('Where to send release announcements. '
-                          '(Default: %(default)s)'))
 parser.add_argument('--release-type', dest='release_type', default='std',
                     help=('Which release-type to use for this deliverable '
                           '(Default: %(default)s)'))
@@ -113,7 +110,6 @@ for series, milestones in sorted(series_data.items()):
         f.write('---\n')
         f.write('launchpad: %s\n' % args.project)
         f.write('team: %s\n' % args.project)
-        f.write('send-announcements-to: %s\n' % args.announce)
         f.write('release-type: %s\n' % args.release_type)
         f.write('releases:\n')
         milestones_sorted = \
