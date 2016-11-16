@@ -1,0 +1,11 @@
+---
+launchpad: tripleo-ui
+team: tripleo
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/tripleo-ui
+        hash: 75a4c46df310bae25ccc0677bc4e065ef70bf288

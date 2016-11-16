@@ -1,0 +1,11 @@
+---
+launchpad: os-refresh-config
+team: tripleo
+type: other
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 962e02501bf4af3af7286b857115aae01264a91d

@@ -1,0 +1,11 @@
+---
+launchpad: os-collect-config
+team: tripleo
+type: other
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/os-collect-config
+        hash: e8e2f3d5f2ebc6c08383bf98e5e27c689fc6e7a1

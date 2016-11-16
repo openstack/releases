@@ -1,0 +1,11 @@
+---
+launchpad: tripleo
+team: tripleo
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: 94f02710ff06516da530c2386f2ab37fb8b8c843
