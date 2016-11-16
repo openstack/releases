@@ -1,0 +1,12 @@
+---
+launchpad: cinder
+team: cinder
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/cinder/unreleased.html
+releases:
+  - version: 10.0.0.0b1
+    projects:
+      - repo: openstack/cinder
+        hash: 327e4b85552144cd1a14ab5282990135522c03a0
