@@ -36,12 +36,18 @@ _VALIDATORS = {'std': (pbr.version.SemanticVersion.from_pip_string,
 _VALIDATORS['fuel'] = _VALIDATORS['std']
 
 
-def validate_version(versionstr, release_type='std'):
+def validate_version(versionstr, release_type='std', pre_ok=True):
     """Given a version string, yield error messages if it is "bad"
 
     Apply our SemVer rules to version strings and report all issues.
 
     """
+    if not pre_ok:
+        for pre_indicator in ['a', 'b', 'rc']:
+            if pre_indicator in versionstr:
+                yield('Version %s looks like a pre-release and the release '
+                      'model does not allow for it' % versionstr)
+
     if release_type not in _VALIDATORS:
         yield 'Release Type %r not valid using \'std\' instead' % release_type
         release_type = 'std'

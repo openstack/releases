@@ -150,14 +150,9 @@ def main():
             deliverable_info = yaml.load(f.read())
 
         # By default assume the project does not use milestones.
-        uses_milestones = False
         header('Release model')
-        if 'release-model' in deliverable_info:
-            model = deliverable_info['release-model']
-            uses_milestones = (model == 'cycle-with-milestones')
-            print(model)
-        else:
-            print('no release model specified')
+        print(deliverable_info.get('release-model',
+                                   'no release model specified'))
 
         header('Team details')
         if 'team' in deliverable_info:
@@ -198,15 +193,6 @@ def main():
 
         # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
-
-        # Warn if the new release looks like a milestone release but
-        # the project does not use milestones.
-        if not uses_milestones:
-            for pre_indicator in ['a', 'b', 'rc']:
-                if pre_indicator in str(new_release['version']):
-                    print(('WARNING: %s looks like a pre-release '
-                           'but %s does not use milestones') %
-                          (new_release['version'], deliverable_name))
 
         # build a map between version numbers and the release details
         by_version = {
