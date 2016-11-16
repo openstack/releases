@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 81547edba0715764fbca52654ead4692818c005c

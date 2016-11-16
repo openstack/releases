@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+type: service
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/monasca-api
+        hash: f469a2ea4b9d3ea40a12b2e1aab5c0da4cbc77bc

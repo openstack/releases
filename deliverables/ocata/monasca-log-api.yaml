@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+type: service
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: b53b54d159fc400f6cfe402315fad742fb3f1b08

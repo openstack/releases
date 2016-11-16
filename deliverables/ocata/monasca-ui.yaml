@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+type: horizon-plugin
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/monasca-ui
+        hash: c81b7a9a4ae3c685d969c88f77cd67c79400d09f

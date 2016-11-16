@@ -1,0 +1,11 @@
+---
+launchpad: monasca
+team: monasca
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 05a73ec2d717f9acc1435187ca9cb3c1314cba76
