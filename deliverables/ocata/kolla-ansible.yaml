@@ -1,0 +1,11 @@
+---
+launchpad: kolla-ansible
+team: kolla
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 00c068a17352f71015299ffa910e01feebf75a84
