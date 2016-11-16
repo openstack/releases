@@ -1,0 +1,12 @@
+---
+launchpad: nova
+team: nova
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/nova/unreleased.html
+releases:
+  - version: 15.0.0.0b1
+    projects:
+      - repo: openstack/nova
+        hash: 0f0d7584e0ee4772c42d0e327624005d85108edb
