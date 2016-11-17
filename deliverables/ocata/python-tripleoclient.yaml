@@ -1,0 +1,11 @@
+---
+launchpad: tripleo
+team: tripleo
+type: library
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.5.0
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 2cc4eef66060bf4fc4071c2368b59fe4df7ace14

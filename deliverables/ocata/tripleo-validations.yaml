@@ -1,0 +1,11 @@
+---
+launchpad: tripleo
+team: tripleo
+type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 5.2.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: e7192c38d1dcb6e94866057526dd106b00a9749d
