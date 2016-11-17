@@ -1,0 +1,16 @@
+---
+launchpad: mistral
+team: mistral
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/mistral/newton.html
+
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: ae141ff0133d4cf944bd84b889389da54840fb10
+      - repo: openstack/mistral-dashboard
+        hash: 6bac7a9f34b40a0e5c68637da366981831d6afbc
