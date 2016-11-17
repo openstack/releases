@@ -1,0 +1,12 @@
+---
+launchpad: searchlight
+team: searchlight
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/searchlight/unreleased.html
+releases:
+  - version: 2.0.0.0b1
+    projects:
+      - repo: openstack/searchlight
+        hash: 63544206c199f1d67ab32c2cb4a00617ab639d78
