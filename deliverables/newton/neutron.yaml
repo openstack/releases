@@ -45,3 +45,7 @@ releases:
       * Add required extension to trunk_details descriptor
       * New option for num_threads for state change server
       * Keepalived global_defs configuration entries required to avoid DNS lookup
+  - version: 9.1.1
+    projects:
+      - repo: openstack/neutron
+        hash: 23def1be5c1deb34b47b60eb8da2dc63335568ca
