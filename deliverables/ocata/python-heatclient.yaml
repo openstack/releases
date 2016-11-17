@@ -1,0 +1,12 @@
+---
+launchpad: python-heatclient
+team: heat
+type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 57f9c0490bf6a8af92ab0f7f15547a6e9af035bb
