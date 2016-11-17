@@ -1,0 +1,12 @@
+---
+launchpad: watcher
+team: watcher
+type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 0.26.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: d960977c9684ee1ec00a4338f8a70b0d848069be
