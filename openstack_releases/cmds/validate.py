@@ -47,6 +47,10 @@ _VALID_MODELS = set([
     'cycle-trailing',
     'independent',
 ])
+_USES_PREVER = set([
+    'cycle-with-milestones',
+    'cycle-trailing',
+])
 _VALID_TYPES = set([
     'horizon-plugin',
     'library',
@@ -303,7 +307,8 @@ def main():
 
                             for e in versionutils.validate_version(
                                     release['version'],
-                                    release_type=release_type):
+                                    release_type=release_type,
+                                    pre_ok=(release_model in _USES_PREVER)):
                                 msg = ('could not validate version %r '
                                        'for %s: %s' %
                                        (release['version'], filename, e))
