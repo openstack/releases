@@ -1,0 +1,11 @@
+---
+launchpad: kolla
+team: kolla
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/kolla
+        hash: 7bb88390d88aebfc257e09e7e055a09fe4121782
