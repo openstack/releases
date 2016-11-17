@@ -1,0 +1,11 @@
+---
+launchpad: puppet-octavia
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 998df3c90d6595b992c08abccf9e690ce8dfe51e

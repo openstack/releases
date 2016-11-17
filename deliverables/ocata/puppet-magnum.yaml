@@ -1,0 +1,11 @@
+---
+launchpad: puppet-magnum
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 13c2ca4763aae04ce70d84510937013ad13b5e2a

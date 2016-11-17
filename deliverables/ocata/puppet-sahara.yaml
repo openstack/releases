@@ -1,0 +1,11 @@
+---
+launchpad: puppet-sahara
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 99639c8f14e30240998dc42c93946e67651a6d71

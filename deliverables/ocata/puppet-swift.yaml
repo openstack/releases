@@ -1,0 +1,11 @@
+---
+launchpad: puppet-swift
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 8b1f4f3acb4b888707c3e01014f88dea18d181ab

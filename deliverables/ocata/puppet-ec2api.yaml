@@ -1,0 +1,11 @@
+---
+launchpad: puppet-ec2api
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 64f8b0c24d90e90e5a19b82639c6b7f39bb2e73f

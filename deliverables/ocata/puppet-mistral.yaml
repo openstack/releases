@@ -1,0 +1,11 @@
+---
+launchpad: puppet-mistral
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: e7e9f8c9e4d8b239c022fc0111e9f955dc7347d0

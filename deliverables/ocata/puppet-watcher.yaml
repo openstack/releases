@@ -1,0 +1,11 @@
+---
+launchpad: puppet-watcher
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: c19c1c71d49a5f37b951885715f8d220e168bb93

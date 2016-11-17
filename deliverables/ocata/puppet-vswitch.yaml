@@ -1,0 +1,11 @@
+---
+launchpad: puppet-vswitch
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 6c9ed3a8b525b339921548192bbffe26dc9176ab

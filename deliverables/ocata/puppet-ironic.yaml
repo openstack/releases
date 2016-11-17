@@ -1,0 +1,11 @@
+---
+launchpad: puppet-ironic
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 9b0aa85594282aca8b61d47b5782a19dc62940e4

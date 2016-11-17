@@ -1,0 +1,11 @@
+---
+launchpad: puppet-designate
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: e18a6d099cfd336bcc4a3b6d16a35e04630db92c

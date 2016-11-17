@@ -1,0 +1,11 @@
+---
+launchpad: puppet-aodh
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: c09538e605add3d6efd6db8748e7f0e78afe56fe
