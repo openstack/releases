@@ -1,0 +1,11 @@
+---
+launchpad: watcher
+team: watcher
+type: service
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.32.0
+    projects:
+      - repo: openstack/watcher
+        hash: 3ebe8ab70f1abc6df2fdd23ac057d77a12a09d3d
