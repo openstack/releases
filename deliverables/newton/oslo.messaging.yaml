@@ -67,3 +67,10 @@ releases:
   projects:
   - repo: openstack/oslo.messaging
     hash: 4f8fcb332dea7a37eefa49c15e6f3a59a9b7a436
+- version: 5.10.1
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: cc1ec4e7f3b395d5f25e7d4922e6359b58a2206a
+  highlights: |-
+    - rabbit: on reconnect set socket timeout correctly
+    - rabbit: avoid busy loop with heartbeat+eventlet
