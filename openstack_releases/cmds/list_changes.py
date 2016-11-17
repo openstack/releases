@@ -151,6 +151,13 @@ def main():
 
         # By default assume the project does not use milestones.
         uses_milestones = False
+        header('Release model')
+        if 'release-model' in deliverable_info:
+            model = deliverable_info['release-model']
+            uses_milestones = (model == 'cycle-with-milestones')
+            print(model)
+        else:
+            print('no release model specified')
 
         header('Team details')
         if 'team' in deliverable_info:
@@ -169,7 +176,6 @@ def main():
                         for t in repo.tags:
                             print('  %s' % t)
                         print('')
-                    uses_milestones = 'release:cycle-with-milestones' in repo.tags
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
@@ -179,8 +185,6 @@ def main():
                       team_name)
         else:
             print('no team name given, cannot report on governance status')
-        if uses_milestones:
-            print('uses milestones')
 
         series = os.path.basename(
             os.path.dirname(
