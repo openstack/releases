@@ -1,0 +1,12 @@
+---
+launchpad: heat
+team: heat
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/heat
+releases:
+  - version: 8.0.0.0b1
+    projects:
+      - repo: openstack/heat
+        hash: 674c34bfd23d2312f06e480ef77258af8c8fd3f8
