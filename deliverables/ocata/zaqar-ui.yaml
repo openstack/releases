@@ -1,0 +1,11 @@
+---
+launchpad: zaqar-ui
+team: zaqar
+type: horizon-plugin
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 2.0.0.0b1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 23451be5ba3809f50adbb53a3bbebc600cd6478e
