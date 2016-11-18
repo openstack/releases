@@ -1,0 +1,12 @@
+---
+launchpad: manila
+team: manila
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/manila/unreleased.html
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/manila
+        hash: 7683f2a3ca333e40c0e18ad20a21960f82f07aac
