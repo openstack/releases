@@ -1,0 +1,11 @@
+---
+launchpad: swift
+team: swift
+type: service
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 2.11.0
+    projects:
+      - repo: openstack/swift
+        hash: bf473ddc9d3fcb3a3fe516b5221a588c5b196a1d
