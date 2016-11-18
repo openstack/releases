@@ -1,0 +1,12 @@
+---
+launchpad: zaqar
+team: zaqar
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/zaqar/newton.html
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/zaqar
+        hash: cd3adce17724dcb8bd1b1cc039f825c788a69978
