@@ -1,0 +1,11 @@
+---
+launchpad: puppet-trove
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 47e28a539dd9d26656fcc9d38aa38f6926328d36

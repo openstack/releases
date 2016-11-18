@@ -1,0 +1,11 @@
+---
+launchpad: puppet-manila
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 6f1779fe25df4f1b2b4cce0313f7ac5b190f5ea8

@@ -1,0 +1,11 @@
+---
+launchpad: puppet-glance
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: d4bcd17b656278e71663e313e2547bd6585758d9

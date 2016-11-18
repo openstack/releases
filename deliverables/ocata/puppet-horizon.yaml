@@ -1,0 +1,11 @@
+---
+launchpad: puppet-horizon
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 87c06ba6070e1ec12946a43fc64cedb7300386be
