@@ -84,6 +84,7 @@ openstack/dragonflow
 openstack/kuryr
 openstack/networking-ale-omniswitch
 openstack/networking-arista
+openstack/networking-bagpipe
 openstack/networking-bgpvpn
 openstack/networking-calico
 openstack/networking-cisco
