@@ -141,21 +141,6 @@ def main():
         # Look for the release-type
         release_type = deliverable_info.get('release-type', 'std')
 
-        # Look for an email address to receive release announcements
-        try:
-            announce_to = deliverable_info['send-announcements-to']
-        except KeyError:
-            errors.append('No send-announcements-to in %s'
-                          % filename)
-            print('no send-announcements-to found')
-        else:
-            print('send announcements to %s' % announce_to)
-            if ' ' in announce_to:
-                print('Found space in send-announcements-to: %r' %
-                      announce_to)
-                errors.append('Space in send-announcements-to (%r) for %s' %
-                              (announce_to, filename))
-
         # Make sure the release notes page exists, if it is specified.
         if 'release-notes' in deliverable_info:
             notes_link = deliverable_info['release-notes']

@@ -155,7 +155,6 @@ series to hold all of the metadata for all releases of that
 deliverable. For each release, we need to track:
 
 * the launchpad project name (such as ``oslo.config``)
-* the email list to receive release announcements
 * the series (Kilo, Liberty, etc.)
 * the release model being used
 * for each repository
@@ -196,15 +195,6 @@ The top level of a deliverable file is a mapping with keys:
   URL to the notes for that repository. Deliverables made up of
   multiple repositories should use a hash to map each repository name
   to its notes URL.
-
-``send-announcements-to``
-  A string containing one or more email addresses to receive
-  announcements of new releases for the deliverable. Multiple
-  addresses should be separated by a comma (``,``) without any spaces.
-
-  Internally consumed libraries should use
-  ``openstack-dev@lists.openstack.org``. Server projects and client
-  libraries should use ``openstack-announce@lists.openstack.org``.
 
 ``include-pypi-link``
   Either ``yes`` or ``no``, indicating whether the release
@@ -300,7 +290,6 @@ For example, one version of
 
    ---
    launchpad: oslo.config
-   send-announcements-to: openstack-dev@lists.openstack.org
    releases:
      - version: 1.12.0
        projects:
@@ -311,7 +300,6 @@ and then for the subsequent release it would be updated to contain::
 
    ---
    launchpad: oslo.config
-   send-announcements-to: openstack-dev@lists.openstack.org
    releases:
      - version: 1.12.0
        projects:
@@ -333,7 +321,6 @@ be described by ``deliverables/mitaka/neutron.yaml`` containing:
 
    ---
    launchpad: neutron
-   send-announcements-to: openstack-announce@lists.openstack.org
    release-notes:
      openstack/neutron: http://docs.openstack.org/releasenotes/neutron/mitaka.html
      openstack/neutron-lbaas: http://docs.openstack.org/releasenotes/neutron-lbaas/mitaka.html
@@ -358,7 +345,6 @@ To allow tagging for repositories without build artifacts, set the
 
     ---
     launchpad: astara
-    send-announcements-to: openstack-announce@lists.openstack.org
     repository-settings:
       openstack/astara-appliance:
         flags:

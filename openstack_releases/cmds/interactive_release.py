@@ -36,7 +36,6 @@ from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
 NOTES_URL_TPL = 'http://docs.openstack.org/releasenotes/%s/%s.html'
-ANNOUNCE_EMAIL = 'openstack-dev@lists.openstack.org'
 RELEASE_INCREMENTS = {
     'bugfix': (0, 0, 1),
     'feature': (0, 1, 0),
@@ -187,24 +186,17 @@ def maybe_create_release(release_repo_path, deliverable_info,
                 default=notes_link)
             if deliverable_info:
                 launchpad_project = to_unicode(deliverable_info['launchpad'])
-                announce_email = to_unicode(
-                    deliverable_info['send-announcements-to'])
             else:
                 launchpad_project = prompt(
                     "Launchpad project name: ",
                     validator=NoEmptyValidator(),
                     default=to_unicode(short_project))
-                announce_email = prompt(
-                    "Announcement email address: ",
-                    validator=NoEmptyValidator(),
-                    default=ANNOUNCE_EMAIL)
             team = prompt("Project team: ",
                           validator=NoEmptyValidator(),
                           default=to_unicode(launchpad_project))
             include_pypi_link = yes_no_prompt("Include pypi link? ")
             newest_release = collections.OrderedDict([
                 ('launchpad', launchpad_project),
-                ('send-announcements-to', announce_email),
                 ('include-pypi-link', include_pypi_link),
                 ('release-notes', notes_link),
                 ('releases', []),
