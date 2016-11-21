@@ -95,8 +95,9 @@ def _collapse_deliverable_history(name, info):
 
 class Deliverables(object):
 
-    def __init__(self, root_dir):
+    def __init__(self, root_dir, collapse_history=True):
         self._root_dir = root_dir
+        self._collapse_history = collapse_history
 
         # Map team names to a list of all of their deliverables.
         self._team_deliverables = collections.defaultdict(set)
@@ -119,7 +120,8 @@ class Deliverables(object):
             deliverable = self._deliverable_from_filename(filename)
             with open(filename, 'r') as f:
                 d_info = yaml.load(f.read())
-                _collapse_deliverable_history(deliverable, d_info)
+                if self._collapse_history:
+                    _collapse_deliverable_history(deliverable, d_info)
             team = d_info['team']
             self._add_deliverable_file(
                 filename, series, team, deliverable, d_info,
