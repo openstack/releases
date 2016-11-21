@@ -26,7 +26,11 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 97d08d40d1c6566b87c831edd9aaea2dfd5128c5
-  - version: 9.4.1
+  #- version: 9.4.1
+  #  projects:
+  #    - repo: openstack/puppet-neutron
+  #      hash: 51ec004869ef87133b421d90c42c4790eadc041e
+  - version: 9.4.2
     projects:
       - repo: openstack/puppet-neutron
-        hash: 51ec004869ef87133b421d90c42c4790eadc041e
+        hash: 130b59cadebcd19f13d48afd23014e1f37a3468e
