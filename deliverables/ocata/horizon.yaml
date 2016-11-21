@@ -1,0 +1,12 @@
+---
+launchpad: horizon
+team: horizon
+type: service
+release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/horizon/unreleased.html
+releases:
+  - version: 11.0.0.0b1
+    projects:
+      - repo: openstack/horizon
+        hash: 2296d7120f6e9f5061a908475009921e3275d9a3
