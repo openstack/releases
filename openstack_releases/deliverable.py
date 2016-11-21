@@ -177,3 +177,26 @@ class Deliverables(object):
                 self._deliverable_from_filename(filename),
                 self._by_filename.get(filename, {}),
             )
+
+
+class Deliverable(object):
+
+    def __init__(self, team, series, name, data):
+        self.team = team
+        self.series = series
+        self.name = name
+        self._data = data
+
+    @property
+    def model(self):
+        if self.series == '_independent':
+            return 'independent'
+        return self._data.get('release-model', '').lstrip('_')
+
+    @property
+    def is_cycle_based(self):
+        return self.model.startswith('cycle-')
+
+    @property
+    def type(self):
+        return self._data.get('type', 'other')
