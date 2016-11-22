@@ -77,14 +77,6 @@ $("#toggle-definitions").click(function () {
   }
 });
 
-// Smooth scroll
-$('a').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-    return false;
-});
-
 /* BB 150310
    openstackdocstheme provides three types of admonitions, important, note
    and warning. We decorate their title paragraphs with Font Awesome icons
