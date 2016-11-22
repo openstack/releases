@@ -102,6 +102,7 @@ def main():
     print('going from %s to %s' % (last_version, new_version))
 
     projects = []
+    changes = 0
     for project in last_release['projects']:
         gitutils.clone_repo(workdir, project['repo'])
 
@@ -112,14 +113,21 @@ def main():
             version = 'master'
 
         sha = gitutils.sha_for_tag(workdir, project['repo'], version)
-        projects.append({
-            'repo': project['repo'],
-            'hash': sha,
-        })
+        if project['hash'] != sha:
+            changes += 1
+            print('advancing %s from %s to %s' % (project['repo'],
+                                                  project['hash'],
+                                                  sha))
+            projects.append({
+                'repo': project['repo'],
+                'hash': sha,
+            })
 
     # The YAML dump formatter produces results that aren't very nice
-    # to read, so we format the output ourselves.
-    with open(deliverable_filename, 'a') as f:
-        f.write(RELEASE_TEMPLATE.format(version=new_version))
-        for p in projects:
-            f.write(PROJECT_TEMPLATE.format(**p))
+    # to read, so we format the output ourselves. The file is only
+    # regenerated if there are in fact changes to be made.
+    if changes > 0:
+        with open(deliverable_filename, 'a') as f:
+            f.write(RELEASE_TEMPLATE.format(version=new_version))
+            for p in projects:
+                f.write(PROJECT_TEMPLATE.format(**p))
