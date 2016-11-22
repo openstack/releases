@@ -45,3 +45,9 @@ releases:
     highlights: >
       - Contains fix for security bug CVE-2015-5162 which requires
         oslo.concurrency>=2.6.1 to be resolved.
+  - version: 12.0.6
+    projects:
+      - repo: openstack/nova
+        hash: a967cfe37a3bc26ee8a8517d5f5dac33b35e377e
+    highlights: >
+      - Bug fixes.
