@@ -14,6 +14,9 @@
 
 from oslotest import base
 
+import fixtures
+import mock
+
 from openstack_releases.cmds import validate
 
 
@@ -306,4 +309,223 @@ class TestValidateModel(base.BaseTestCase):
             errors.append,
         )
         self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+
+class TestValidateReleases(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateReleases, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
+    def test_check_release_jobs(self, check_jobs):
+        deliverable_info = {
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+        check_jobs.assert_called_once()
+
+    def test_invalid_hash(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '0.1',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'this-is-not-a-hash'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_valid_existing(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_no_such_hash(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.0.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_mismatch_existing(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      # hash from the previous release
+                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_not_descendent(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.4.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                 ]},
+                {'version': '1.4.999',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      # a commit on stable/mitaka instead of stable/newton
+                      'hash': 'e92b85ec64ac74598983a90bd2f3e1cf232ba9d5'},
+                 ]},
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_new_not_at_end(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.3.999',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'e87dc55a48387d2b8b8c46e02a342c27995dacb1'},
+                 ]},
+                {'version': '1.4.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                 ]},
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    @mock.patch('openstack_releases.versionutils.validate_version')
+    def test_invalid_version(self, validate_version):
+        # Set up the nested validation function to produce an error,
+        # even though there is nothing else wrong with the
+        # inputs. That ensures we only get the 1 error back.
+        validate_version.configure_mock(
+            return_value=['an error goes here'],
+        )
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
         self.assertEqual(1, len(errors))

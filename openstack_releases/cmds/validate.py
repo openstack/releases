@@ -236,7 +236,7 @@ def validate_releases(deliverable_info, zuul_layout,
                 else:
                     print('Found new version {}'.format(release['version']))
                     new_releases[release['version']] = release
-                    if project['repo'] not in prev_projects:
+                    if prev_projects and project['repo'] not in prev_projects:
                         print('not included in previous release for %s: %s' %
                               (prev_version, ', '.join(sorted(prev_projects))))
                     else:
@@ -249,52 +249,58 @@ def validate_releases(deliverable_info, zuul_layout,
                                    (release['version'], e))
                             mk_error(msg)
 
-                        # Check to see if we are re-tagging the same
-                        # commit with a new version.
-                        old_sha = gitutils.sha_for_tag(
-                            workdir,
-                            project['repo'],
-                            prev_version,
-                        )
-                        if old_sha == project['hash']:
-                            print('Retagging the SHA with a new version')
-                        elif not is_independent:
-                            # Check to see if the commit for the new
-                            # version is in the ancestors of the
-                            # previous release, meaning it is actually
-                            # merged into the branch.
-                            is_ancestor = gitutils.check_ancestry(
-                                workdir,
-                                project['repo'],
-                                prev_version,
-                                project['hash'],
-                            )
-                            if not is_ancestor:
-                                if series_name == '_independent':
-                                    save = mk_warning
-                                else:
-                                    save = mk_error
-                                save(
-                                    '%s %s receiving %s '
-                                    'is not a descendant of %s' % (
-                                        project['repo'],
-                                        project['hash'],
-                                        release['version'],
-                                        prev_version,
-                                    )
-                                )
+                        if is_independent:
                             mk_warning('skipping descendant test for '
                                        'independent project, verify '
                                        'branch manually')
+
+                        elif not prev_version:
+                            mk_warning('skipping descendant test for '
+                                       'first release, verify '
+                                       'branch manually')
+
+                        else:
+                            # Check to see if we are re-tagging the same
+                            # commit with a new version.
+                            old_sha = gitutils.sha_for_tag(
+                                workdir,
+                                project['repo'],
+                                prev_version,
+                            )
+                            if old_sha == project['hash']:
+                                # FIXME(dhellmann): This needs a test.
+                                print('Retagging the SHA with a new version')
+                            else:
+                                # Check to see if the commit for the new
+                                # version is in the ancestors of the
+                                # previous release, meaning it is actually
+                                # merged into the branch.
+                                is_ancestor = gitutils.check_ancestry(
+                                    workdir,
+                                    project['repo'],
+                                    prev_version,
+                                    project['hash'],
+                                )
+                                if not is_ancestor:
+                                    mk_error(
+                                        '%s %s receiving %s '
+                                        'is not a descendant of %s' % (
+                                            project['repo'],
+                                            project['hash'],
+                                            release['version'],
+                                            prev_version,
+                                        )
+                                    )
+
         prev_version = release['version']
         prev_projects = set(p['repo'] for p in release['projects'])
 
-        # Make sure that new entries have been appended to the file.
-        for v, nr in new_releases.items():
-            if nr != deliverable_info['releases'][-1]:
-                msg = ('new release %s must be listed last, '
-                       'with one new release per patch' % nr['version'])
-                mk_error(msg)
+    # Make sure that new entries have been appended to the file.
+    for v, nr in new_releases.items():
+        if nr != deliverable_info['releases'][-1]:
+            msg = ('new release %s must be listed last, '
+                   'with one new release per patch' % nr['version'])
+            mk_error(msg)
 
 
 def validate_new_releases(deliverable_info, filename,
