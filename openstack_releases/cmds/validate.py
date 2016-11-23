@@ -85,11 +85,8 @@ def validate_team(deliverable_info, team_data, mk_warning, mk_error):
                    deliverable_info['team'])
 
 
-def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
-    """Look at the general metadata in the deliverable file.
-    """
-
-    # Make sure the release notes page exists, if it is specified.
+def validate_release_notes(deliverable_info, mk_warning, mk_error):
+    "Make sure the release notes page exists, if it is specified."
     if 'release-notes' in deliverable_info:
         notes_link = deliverable_info['release-notes']
         if isinstance(notes_link, dict):
@@ -101,8 +98,11 @@ def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
             if (rn_resp.status_code // 100) != 2:
                 mk_error('Could not fetch release notes page %s: %s' %
                          (link, rn_resp.status_code))
-    else:
-        print('no release-notes specified')
+
+
+def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
+    """Look at the general metadata in the deliverable file.
+    """
 
     # Determine the deliverable type. Require an explicit value.
     deliverable_type = deliverable_info.get('type')
@@ -379,6 +379,7 @@ def main():
 
         validate_launchpad(deliverable_info, mk_warning, mk_error)
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
+        validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_metadata(
             deliverable_info,
             team_data,

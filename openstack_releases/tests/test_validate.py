@@ -90,3 +90,70 @@ class TestValidateTeam(base.BaseTestCase):
         )
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestValidateReleaseNotes(base.BaseTestCase):
+
+    def test_no_link(self):
+        warnings = []
+        errors = []
+        validate.validate_release_notes(
+            {},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_invalid_link(self):
+        warnings = []
+        errors = []
+        validate.validate_release_notes(
+            {'release-notes': 'http://docs.openstack.org/no-such-page'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_valid_link(self):
+        warnings = []
+        errors = []
+        validate.validate_release_notes(
+            {'release-notes':
+             'http://docs.openstack.org/releasenotes/oslo.config'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_invalid_link_multi(self):
+        warnings = []
+        errors = []
+        validate.validate_release_notes(
+            {
+                'release-notes': {
+                    'openstack/releases': 'http://docs.openstack.org/no-such-page',
+                }
+            },
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_valid_link_multi(self):
+        warnings = []
+        errors = []
+        validate.validate_release_notes(
+            {
+                'release-notes': {
+                    'openstack/releases': 'http://docs.openstack.org/releasenotes/oslo.config',
+                }
+            },
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
