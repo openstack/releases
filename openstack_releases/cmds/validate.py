@@ -115,13 +115,8 @@ def validate_type(deliverable_info, mk_warning, mk_error):
         )
 
 
-def validate_releases(deliverable_info, zuul_layout,
-                      series_name,
-                      workdir,
-                      mk_warning, mk_error):
-    """Apply validation rules to the 'releases' list for the deliverable.
-    """
-
+def get_model(deliverable_info, series_name):
+    "Return the release model from the deliverable info."
     # Determine the release model. Don't require independent
     # projects to redundantly specify that they are independent by
     # including the value in their deliverablefile, but everyone
@@ -132,11 +127,47 @@ def validate_releases(deliverable_info, zuul_layout,
     else:
         release_model = deliverable_info.get('release-model',
                                              'UNSPECIFIED')
+    return release_model
+
+
+def validate_model(deliverable_info, series_name, mk_warning, mk_error):
+    "Require a valid release model"
+    release_model = get_model(deliverable_info, series_name)
     if release_model not in _VALID_MODELS:
         mk_error(
             'Unknown release model %r, must be one of %r' %
             (release_model, sorted(list(_VALID_MODELS)))
         )
+
+    # If the project is release:independent, make sure
+    # that's where the deliverable file is.
+    if release_model == 'independent' and series_name != '_independent':
+        mk_error(
+            'uses the independent release model '
+            'and should be in the _independent '
+            'directory'
+        )
+
+    # If the project is declaring some other release model, make sure
+    # it is not in h the _independent directory.
+    if series_name == '_independent':
+        model_value = deliverable_info.get('release-model',
+                                           'independent')
+        if model_value != 'independent':
+            mk_error(
+                'deliverables in the _independent directory '
+                'should all use the independent release model'
+            )
+
+
+def validate_releases(deliverable_info, zuul_layout,
+                      series_name,
+                      workdir,
+                      mk_warning, mk_error):
+    """Apply validation rules to the 'releases' list for the deliverable.
+    """
+    release_model = get_model(deliverable_info, series_name)
+    is_independent = (release_model == 'independent')
 
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
@@ -157,16 +188,6 @@ def validate_releases(deliverable_info, zuul_layout,
                     deliverable_info, zuul_layout, project['repo'],
                     release_type, mk_warning, mk_error,
                 )
-
-            # If the project is release:independent, make sure
-            # that's where the deliverable file is.
-            if is_independent:
-                if series_name != '_independent':
-                    mk_warning(
-                        '%s uses the independent release model '
-                        'and should be in the _independent '
-                        'directory' % project['repo'],
-                    )
 
             # Check the SHA specified for the tag.
             print('%s SHA %s ' % (project['repo'], project['hash']))
@@ -378,6 +399,7 @@ def main():
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)
+        validate_model(deliverable_info, series_name, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
             zuul_layout,

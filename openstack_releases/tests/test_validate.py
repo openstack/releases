@@ -193,3 +193,117 @@ class TestValidateDeliverableType(base.BaseTestCase):
         )
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestGetModel(base.BaseTestCase):
+
+    def test_no_model_series(self):
+        self.assertEqual(
+            'UNSPECIFIED',
+            validate.get_model({}, 'ocata'),
+        )
+
+    def test_no_model_independent(self):
+        self.assertEqual(
+            'independent',
+            validate.get_model({}, '_independent'),
+        )
+
+    def test_with_model_independent(self):
+        self.assertEqual(
+            'independent',
+            validate.get_model({'release-model': 'set'}, '_independent'),
+        )
+
+    def test_with_model_series(self):
+        self.assertEqual(
+            'set',
+            validate.get_model({'release-model': 'set'}, 'ocata'),
+        )
+
+
+class TestValidateModel(base.BaseTestCase):
+
+    def test_no_model_series(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {},
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_no_model_independent(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {},
+            '_independent',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_with_model_independent_match(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {'release-model': 'independent'},
+            '_independent',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_with_model_independent_nomatch(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {'release-model': 'cycle-with-intermediary'},
+            '_independent',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_with_independent_and_model(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {'release-model': 'independent'},
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_with_model_series(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {'release-model': 'cycle-with-intermediary'},
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_with_unknown_model_series(self):
+        warnings = []
+        errors = []
+        validate.validate_model(
+            {'release-model': 'not-a-model'},
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
