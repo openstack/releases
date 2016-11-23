@@ -64,31 +64,25 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
-def validate_metadata(deliverable_info, filename, team_data, warnings, errors):
+def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
     """Look at the general metadata in the deliverable file.
     """
     # Look for the launchpad project
     try:
         lp_name = deliverable_info['launchpad']
     except KeyError:
-        errors.append('No launchpad project given in %s' % filename)
-        print('no launchpad project name given')
+        mk_error('No launchpad project given')
     else:
-        print('launchpad project %s ' % lp_name, end='')
         lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         if (lp_resp.status_code // 100) == 4:
-            print('MISSING')
-            errors.append('Launchpad project %s does not exist' % lp_name)
-        else:
-            print('found')
+            mk_error('Launchpad project %s does not exist' % lp_name)
 
     # Look for the team name
     if 'team' not in deliverable_info:
-        errors.append('No team name given in %s' % filename)
-        print('no team name given')
+        mk_error('No team name given')
     elif deliverable_info['team'] not in team_data:
-        warnings.append('Team %r in %s not in governance data' %
-                        (deliverable_info['team'], filename))
+        mk_warning('Team %r not in governance data' %
+                   deliverable_info['team'])
 
     # Make sure the release notes page exists, if it is specified.
     if 'release-notes' in deliverable_info:
@@ -99,34 +93,30 @@ def validate_metadata(deliverable_info, filename, team_data, warnings, errors):
             links = [notes_link]
         for link in links:
             rn_resp = requests.get(link)
-            if (rn_resp.status_code // 100) == 2:
-                print('Release notes at %s found' % link)
-            else:
-                errors.append('Could not fetch release notes page %s: %s' %
-                              (link, rn_resp.status_code))
-                print('Found bad release notes link %s: %s' %
-                      (link, rn_resp.status_code))
+            if (rn_resp.status_code // 100) != 2:
+                mk_error('Could not fetch release notes page %s: %s' %
+                         (link, rn_resp.status_code))
     else:
         print('no release-notes specified')
 
     # Determine the deliverable type. Require an explicit value.
     deliverable_type = deliverable_info.get('type')
     if not deliverable_type:
-        errors.append(
-            'No deliverable type for %s, must be one of %r' %
-            (filename, sorted(list(_VALID_TYPES)))
+        mk_error(
+            'No deliverable type, must be one of %r' %
+            sorted(list(_VALID_TYPES))
         )
     elif deliverable_type not in _VALID_TYPES:
-        errors.append(
-            'Invalid deliverable type %r for %s, must be one of %r' %
-            (deliverable_type, filename, sorted(list(_VALID_TYPES)))
+        mk_error(
+            'Invalid deliverable type %r, must be one of %r' %
+            (deliverable_type, sorted(list(_VALID_TYPES)))
         )
 
 
 def validate_releases(deliverable_info, zuul_layout,
-                      series_name, filename,
+                      series_name,
                       workdir,
-                      warnings, errors):
+                      mk_warning, mk_error):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
 
@@ -141,9 +131,9 @@ def validate_releases(deliverable_info, zuul_layout,
         release_model = deliverable_info.get('release-model',
                                              'UNSPECIFIED')
     if release_model not in _VALID_MODELS:
-        errors.append(
-            'Unknown release model %r for %s, must be one of %r' %
-            (release_model, filename, sorted(list(_VALID_MODELS)))
+        mk_error(
+            'Unknown release model %r, must be one of %r' %
+            (release_model, sorted(list(_VALID_MODELS)))
         )
 
     # Remember which entries are new so we can verify that they
@@ -161,35 +151,26 @@ def validate_releases(deliverable_info, zuul_layout,
 
             # Check for release jobs (if we ship a tarball)
             if link_mode != 'none':
-                pce = project_config.require_release_jobs_for_repo(
+                project_config.require_release_jobs_for_repo(
                     deliverable_info, zuul_layout, project['repo'],
-                    release_type)
-                for msg, is_error in pce:
-                    print(msg)
-                    if is_error:
-                        errors.append(msg)
-                    else:
-                        warnings.append(msg)
+                    release_type, mk_warning, mk_error,
+                )
 
             # If the project is release:independent, make sure
             # that's where the deliverable file is.
             if is_independent:
                 if series_name != '_independent':
-                    msg = ('%s uses the independent release model '
-                           'and should be in the _independent '
-                           'directory not in %s') % (project['repo'],
-                                                     filename)
-                    print(msg)
-                    warnings.append(msg)
+                    mk_warning(
+                        '%s uses the independent release model '
+                        'and should be in the _independent '
+                        'directory' % project['repo'],
+                    )
 
             # Check the SHA specified for the tag.
-            print('%s SHA %s ' % (project['repo'],
-                                  project['hash']),
-                  end='')
+            print('%s SHA %s ' % (project['repo'], project['hash']))
 
             if not is_a_hash(project['hash']):
-                print('NOT A SHA HASH')
-                errors.append(
+                mk_error(
                     ('%(repo)s version %(version)s release from '
                      '%(hash)r, which is not a hash') % {
                          'repo': project['repo'],
@@ -204,17 +185,13 @@ def validate_releases(deliverable_info, zuul_layout,
                     project['repo'], project['hash'],
                 )
                 if not sha_exists:
-                    print('MISSING', end='')
-                    errors.append('No commit %(hash)r in %(repo)r'
-                                  % project)
-                else:
-                    print('found ', end='')
+                    mk_error('No commit %(hash)r in %(repo)r'
+                             % project)
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to
                 # import history and sometimes we want to make new
                 # releases.
-                print('version %s ' % release['version'], end='')
                 version_exists = gitutils.tag_exists(
                     project['repo'], release['version'],
                 )
@@ -225,11 +202,8 @@ def validate_releases(deliverable_info, zuul_layout,
                         project['repo'],
                         release['version'],
                     )
-                    if actual_sha == project['hash']:
-                        print('found and SHAs match, ')
-                    else:
-                        print('found DIFFERENT %r, ' % actual_sha)
-                        errors.append(
+                    if actual_sha != project['hash']:
+                        mk_error(
                             ('Version %s in %s is on '
                              'commit %s instead of %s') %
                             (release['version'],
@@ -237,11 +211,9 @@ def validate_releases(deliverable_info, zuul_layout,
                              actual_sha,
                              project['hash']))
                 else:
-                    print('NEW VERSION, ', end='')
+                    print('Found new version {}'.format(release['version']))
                     new_releases[release['version']] = release
-                    if not prev_version:
-                        print()
-                    elif project['repo'] not in prev_projects:
+                    if project['repo'] not in prev_projects:
                         print('not included in previous release for %s: %s' %
                               (prev_version, ', '.join(sorted(prev_projects))))
                     else:
@@ -250,11 +222,9 @@ def validate_releases(deliverable_info, zuul_layout,
                                 release['version'],
                                 release_type=release_type,
                                 pre_ok=(release_model in _USES_PREVER)):
-                            msg = ('could not validate version %r '
-                                   'for %s: %s' %
-                                   (release['version'], filename, e))
-                            print(msg)
-                            errors.append(msg)
+                            msg = ('could not validate version %r: %s' %
+                                   (release['version'], e))
+                            mk_error(msg)
 
                         # Check to see if we are re-tagging the same
                         # commit with a new version.
@@ -264,7 +234,7 @@ def validate_releases(deliverable_info, zuul_layout,
                             prev_version,
                         )
                         if old_sha == project['hash']:
-                            print('RETAGGING')
+                            print('Retagging the SHA with a new version')
                         elif not is_independent:
                             # Check to see if the commit for the new
                             # version is in the ancestors of the
@@ -276,47 +246,39 @@ def validate_releases(deliverable_info, zuul_layout,
                                 prev_version,
                                 project['hash'],
                             )
-                            if is_ancestor:
-                                print('SHA found in descendants')
-                            else:
-                                print('SHA NOT FOUND in descendants')
+                            if not is_ancestor:
                                 if series_name == '_independent':
-                                    save = warnings.append
+                                    save = mk_warning
                                 else:
-                                    save = errors.append
+                                    save = mk_error
                                 save(
-                                    '%s %s receiving %s is not a descendant of %s' % (
+                                    '%s %s receiving %s '
+                                    'is not a descendant of %s' % (
                                         project['repo'],
                                         project['hash'],
                                         release['version'],
                                         prev_version,
                                     )
                                 )
-                        else:
-                            print('skipping descendant test for independent project, '
-                                  'verify branch manually')
+                            mk_warning('skipping descendant test for '
+                                       'independent project, verify '
+                                       'branch manually')
         prev_version = release['version']
         prev_projects = set(p['repo'] for p in release['projects'])
 
         # Make sure that new entries have been appended to the file.
         for v, nr in new_releases.items():
             if nr != deliverable_info['releases'][-1]:
-                msg = ('new release %s in %s must be listed last, '
-                       'with one new release per patch' % (nr['version'], filename))
-                print(msg)
-                errors.append(msg)
+                msg = ('new release %s must be listed last, '
+                       'with one new release per patch' % nr['version'])
+                mk_error(msg)
 
 
-def validate_new_releases(deliverable_info, filename, series_name,
+def validate_new_releases(deliverable_info, filename,
                           team_data,
-                          warnings, errors):
+                          mk_warning, mk_error):
     """Apply validation rules that only apply to the current series.
     """
-    # Some rules only apply to the most current release.
-    if series_name != defaults.RELEASE:
-        return
-
-    # Rules for only the current release cycle.
     final_release = deliverable_info['releases'][-1]
     deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
     expected_repos = set(
@@ -328,29 +290,23 @@ def validate_new_releases(deliverable_info, filename, series_name,
     )
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
     if link_mode != 'none' and not expected_repos:
-        msg = ('unable to find deliverable %s in the governance list' %
-               deliverable_name)
-        print(msg)
-        errors.append(msg)
+        mk_error('unable to find deliverable %s in the governance list' %
+                 deliverable_name)
     actual_repos = set(
         p['repo']
         for p in final_release.get('projects', [])
     )
     for extra in actual_repos.difference(expected_repos):
-        msg = (
-            '%s release %s includes repository %s '
+        mk_warning(
+            'release %s includes repository %s '
             'that is not in the governance list' %
-            (filename, final_release['version'], extra)
+            (final_release['version'], extra)
         )
-        print(msg)
-        warnings.append(msg)
     for missing in expected_repos.difference(actual_repos):
-        msg = (
-            '%s release %s is missing %s from the governance list' %
-            (filename, final_release['version'], missing)
+        mk_warning(
+            'release %s is missing %s from the governance list' %
+            (final_release['version'], missing)
         )
-        print(msg)
-        warnings.append(msg)
 
 
 def main():
@@ -408,30 +364,37 @@ def main():
             os.path.dirname(filename)
         )
 
+        def mk_warning(msg):
+            print('WARNING: {}'.format(msg))
+            warnings.append('{}: {}'.format(filename, msg))
+
+        def mk_error(msg):
+            print('ERROR: {}'.format(msg))
+            errors.append('{}: {}'.format(filename, msg))
+
         validate_metadata(
             deliverable_info,
-            filename,
             team_data,
-            warnings,
-            errors,
+            mk_warning,
+            mk_error,
         )
         validate_releases(
             deliverable_info,
             zuul_layout,
             series_name,
-            filename,
             workdir,
-            warnings,
-            errors,
+            mk_warning,
+            mk_error,
         )
-        validate_new_releases(
-            deliverable_info,
-            filename,
-            series_name,
-            team_data,
-            warnings,
-            errors,
-        )
+        # Some rules only apply to the most current release.
+        if series_name == defaults.RELEASE:
+            validate_new_releases(
+                deliverable_info,
+                filename,
+                team_data,
+                mk_warning,
+                mk_error,
+            )
 
     if warnings:
         print('\n\n%s warnings found' % len(warnings))

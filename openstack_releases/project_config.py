@@ -64,29 +64,26 @@ _RELEASE_JOBS_FOR_TYPE = {
 
 
 def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo,
-                                  release_type):
+                                  release_type, mk_warning, mk_error):
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
     indicating if the message is an error.
 
     """
-    errors = []
-
     # If the repository is configured as not having an artifact to
     # build, we don't need to check for any jobs.
     if flags.has_flag(deliverable_info, repo, flags.NO_ARTIFACT_BUILD_JOB):
-        return errors
+        return
 
     # If the repository is retired, we don't need to check for any
     # jobs.
     if flags.has_flag(deliverable_info, repo, flags.RETIRED):
-        return errors
+        return
 
     if repo not in zuul_layout[_VALIDATE_KEY]:
-        errors.append(
-            ('did not find %s in %s' % (repo, ZUUL_LAYOUT_FILENAME),
-             True)
+        mk_error(
+            'did not find %s in %s' % (repo, ZUUL_LAYOUT_FILENAME),
         )
     else:
         p = zuul_layout[_VALIDATE_KEY][repo]
@@ -106,17 +103,15 @@ def require_release_jobs_for_repo(deliverable_info, zuul_layout, repo,
                 for j in expected_jobs
             )
             if num_release_jobs == 0:
-                errors.append(
-                    ('%s no release job specified for %s, '
-                     'should be one of %r or no release will be '
-                     'published' % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
-                     True)
+                mk_error(
+                    '%s no release job specified for %s, '
+                    'should be one of %r or no release will be '
+                    'published' % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
                 )
             elif num_release_jobs > 1:
-                errors.append(
-                    ('%s multiple release jobs specified for %s, '
-                     'should be *one* of %r'
-                     % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
-                     False)
+                mk_warning(
+                    '%s multiple release jobs specified for %s, '
+                    'should be *one* of %r'
+                    % (ZUUL_LAYOUT_FILENAME, repo, expected_jobs),
                 )
-    return errors
+    return
