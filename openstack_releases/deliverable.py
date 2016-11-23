@@ -14,8 +14,6 @@
 """Class for manipulating all of the deliverable data.
 """
 
-from __future__ import print_function
-
 import collections
 import glob
 import os
@@ -34,7 +32,7 @@ def _safe_semver(v):
     don't quite match the input.
 
     """
-    orig = v = str(v)
+    v = str(v)
     # Remove "v" prefixes.
     v = v.lstrip('v')
     # Remove any stray "." at the start or end, after the other
@@ -51,8 +49,6 @@ def _safe_semver(v):
         else:
             parts = parts[:3]
         v = '.'.join(parts)
-    if v != orig:
-        print('  changed version %r to %r' % (orig, v))
     return pbr.version.SemanticVersion.from_pip_string(v)
 
 
@@ -91,8 +87,6 @@ def _collapse_deliverable_history(name, info):
                 # is a pre-release.
                 final = parsed_vers.brief_string()
                 if final in known_versions:
-                    print('[deliverables] ignoring %s %s' %
-                          (name, r['version']))
                     continue
                 releases.append(r)
                 known_versions.add(r['version'])
@@ -121,7 +115,6 @@ class Deliverables(object):
     def _load_deliverable_files(self, root_dir):
         deliverable_files = glob.glob(os.path.join(root_dir, '*/*.yaml'))
         for filename in sorted(deliverable_files):
-            print('[deliverables] reading %s' % filename)
             series = self._series_from_filename(filename)
             deliverable = self._deliverable_from_filename(filename)
             with open(filename, 'r') as f:
