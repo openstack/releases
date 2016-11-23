@@ -51,3 +51,42 @@ class TestValidateLaunchpad(base.BaseTestCase):
         )
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestValidateTeam(base.BaseTestCase):
+
+    def test_no_name(self):
+        warnings = []
+        errors = []
+        validate.validate_team(
+            {},
+            {},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_invalid_name(self):
+        warnings = []
+        errors = []
+        validate.validate_team(
+            {'team': 'nonsense-name'},
+            {},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_valid_name(self):
+        warnings = []
+        errors = []
+        validate.validate_team(
+            {'team': 'oslo'},
+            {'oslo': None},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))

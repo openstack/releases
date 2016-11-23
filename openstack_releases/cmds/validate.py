@@ -76,16 +76,18 @@ def validate_launchpad(deliverable_info, mk_warning, mk_error):
             mk_error('Launchpad project %s does not exist' % lp_name)
 
 
-def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
-    """Look at the general metadata in the deliverable file.
-    """
-
-    # Look for the team name
+def validate_team(deliverable_info, team_data, mk_warning, mk_error):
+    "Look for the team name"
     if 'team' not in deliverable_info:
         mk_error('No team name given')
     elif deliverable_info['team'] not in team_data:
         mk_warning('Team %r not in governance data' %
                    deliverable_info['team'])
+
+
+def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
+    """Look at the general metadata in the deliverable file.
+    """
 
     # Make sure the release notes page exists, if it is specified.
     if 'release-notes' in deliverable_info:
@@ -376,6 +378,7 @@ def main():
             errors.append('{}: {}'.format(filename, msg))
 
         validate_launchpad(deliverable_info, mk_warning, mk_error)
+        validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_metadata(
             deliverable_info,
             team_data,
