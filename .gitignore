@@ -1,5 +1,5 @@
 /.tox/
-/releases.egg-info/
+/*.egg-info/
 /.eggs/
 /AUTHORS
 /ChangeLog
@@ -7,3 +7,6 @@
 *~
 *.pyc
 /doc/source/teams/*.rst
+/.coverage*
+/.testrepository/
+/cover/
