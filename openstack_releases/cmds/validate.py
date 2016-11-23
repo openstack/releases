@@ -64,10 +64,8 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
-def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
-    """Look at the general metadata in the deliverable file.
-    """
-    # Look for the launchpad project
+def validate_launchpad(deliverable_info, mk_warning, mk_error):
+    "Look for the launchpad project"
     try:
         lp_name = deliverable_info['launchpad']
     except KeyError:
@@ -76,6 +74,11 @@ def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
         lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         if (lp_resp.status_code // 100) == 4:
             mk_error('Launchpad project %s does not exist' % lp_name)
+
+
+def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
+    """Look at the general metadata in the deliverable file.
+    """
 
     # Look for the team name
     if 'team' not in deliverable_info:
@@ -372,6 +375,7 @@ def main():
             print('ERROR: {}'.format(msg))
             errors.append('{}: {}'.format(filename, msg))
 
+        validate_launchpad(deliverable_info, mk_warning, mk_error)
         validate_metadata(
             deliverable_info,
             team_data,
