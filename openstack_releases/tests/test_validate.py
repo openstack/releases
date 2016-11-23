@@ -157,3 +157,39 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         )
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestValidateDeliverableType(base.BaseTestCase):
+
+    def test_no_type(self):
+        warnings = []
+        errors = []
+        validate.validate_type(
+            {},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_invalid_type(self):
+        warnings = []
+        errors = []
+        validate.validate_type(
+            {'type': 'not-valid'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_valid_type(self):
+        warnings = []
+        errors = []
+        validate.validate_type(
+            {'type': 'library'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))

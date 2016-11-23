@@ -100,11 +100,8 @@ def validate_release_notes(deliverable_info, mk_warning, mk_error):
                          (link, rn_resp.status_code))
 
 
-def validate_metadata(deliverable_info, team_data, mk_warning, mk_error):
-    """Look at the general metadata in the deliverable file.
-    """
-
-    # Determine the deliverable type. Require an explicit value.
+def validate_type(deliverable_info, mk_warning, mk_error):
+    "Determine the deliverable type. Require an explicit value."
     deliverable_type = deliverable_info.get('type')
     if not deliverable_type:
         mk_error(
@@ -380,12 +377,7 @@ def main():
         validate_launchpad(deliverable_info, mk_warning, mk_error)
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_release_notes(deliverable_info, mk_warning, mk_error)
-        validate_metadata(
-            deliverable_info,
-            team_data,
-            mk_warning,
-            mk_error,
-        )
+        validate_type(deliverable_info, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
             zuul_layout,
