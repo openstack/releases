@@ -8,6 +8,12 @@ made up of individual project repositories sharing a Launchpad group
 and a version number history. Many deliverables will only have one
 constituent project.
 
+The repository is managed by the `Release Management team
+<http://governance.openstack.org/reference/projects/release-management.html>`_.
+
+.. image:: http://governance.openstack.org/badges/releases.svg
+    :target: http://governance.openstack.org/reference/tags/index.html
+
 Requesting a Release
 ====================
 
