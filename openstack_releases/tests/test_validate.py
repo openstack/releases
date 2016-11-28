@@ -857,3 +857,134 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
+
+
+class TestValidateDriverfixesBranches(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateDriverfixesBranches, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+
+    def test_unknown_series(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/abc
+            location:
+               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_location_not_a_dict(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/austin
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_location_not_a_sha(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/austin
+            location:
+               openstack/automaton: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_location_a_sha(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/austin
+            location:
+               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_location_no_such_sha(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/austin
+            location:
+               openstack/automaton: de2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
