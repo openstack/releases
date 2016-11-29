@@ -63,3 +63,10 @@ releases:
   projects:
   - repo: openstack/oslo.db
     hash: 13223e459babddd74792699b20b52843a0ff9576
+- version: 4.13.4
+  projects:
+  - repo: openstack/oslo.db
+    hash: d94b7e3e3321f2dad7ab5861040b2d91f9036a5d
+  highlights: |-
+    * Support MariaDB error 1927
+    * Backport fix exc_filters for mysql-python
