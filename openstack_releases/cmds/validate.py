@@ -216,6 +216,9 @@ def validate_releases(deliverable_info, zuul_layout,
                 if not sha_exists:
                     mk_error('No commit %(hash)r in %(repo)r'
                              % project)
+                    # No point in running extra checks if the SHA just
+                    # doesn't exist.
+                    continue
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to

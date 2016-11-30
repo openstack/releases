@@ -418,7 +418,7 @@ class TestValidateReleases(base.BaseTestCase):
             errors.append,
         )
         self.assertEqual(0, len(warnings))
-        self.assertEqual(2, len(errors))
+        self.assertEqual(1, len(errors))
 
     def test_mismatch_existing(self):
         deliverable_info = {
