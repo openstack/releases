@@ -42,7 +42,7 @@ repository.
  * If you are not the release liaison or PTL, have the PTL of the
    project acknowledge the request with a +1.
 
- * Do not used the "Depends-On" feature of zuul to make a release
+ * Do not use the "Depends-On" feature of zuul to make a release
    request depend on merging another patch in your project. The
    dependency management does not work properly in the release check
    jobs, and the validator requires that the patch listed in your
@@ -57,16 +57,57 @@ repository.
    release request depends on a request that is deprioritized, you may
    miss the deadline.
 
-Reviewing a Release Request
----------------------------
+ * RC1 tags and stable branches should be submitted together for
+   projects using the cycle-with-milestone release model.
 
-Care needs to be taken when reviewing a release request such that the version
+Requesting a Branch
+===================
+
+The PTL or release liaison for a project may request a new branch by
+submitting a patch to this repository, adding the necessary branch
+metadata to the file describing the deliverable to be released. The
+release team will review the request and provide feedback about the
+branch point and possibly the name.
+
+Prepare the branch request by submitting a patch to this repository.
+
+ * RC1 tags and stable branches should be submitted together for
+   projects using the cycle-with-milestone release model.
+
+ * Always add the new branch to the end of the list in the file being
+   edited.
+
+ * Branches should use one of the standard prefixes:
+
+   stable/ -- for stable series
+
+   feature/ -- for temporary feature branches
+
+   driverfixes/ -- for long-term driver maintenance, beyond the end of
+   the stable branch
+
+ * stable/ and driverfixes/ branch names must match a valid series
+   name.
+
+ * If you are not the release liaison or PTL, have the PTL of the
+   project acknowledge the request with a +1.
+
+ * Do not use the "Depends-On" feature of zuul to make a branch
+   request depend on merging another patch in your project. The
+   dependency management does not work properly in the release check
+   jobs, and the validator requires that the patch listed in your
+   deliverable file actually be merged into a proper branch.
+
+Reviewing a Release or Branch Request
+=====================================
+
+Care needs to be taken when reviewing a request such that the version
 proposed (1) follows semver rules and (2) will not cause issues between
 branches, particularly stable branches (at least stable branches that are not
 yet using upper-constraints checking in CI runs, which is anything before
 stable/liberty).
 
-General notes when reviewing a release request:
+General notes when reviewing a request:
 
 * Make sure you follow semantic versioning rules `semver <http://semver.org/>`_
   when picking the version number. In particular, if there is a change going
@@ -118,6 +159,9 @@ team should +1 the following types of changes before they are approved.
   version range prevents those patch-level versions from breaking each other's
   branch.
 
+* Ensure that new branches are listed at the end of the branch list in
+  the file.
+
 Release Approval
 ================
 
@@ -142,145 +186,171 @@ team is responsible for taking the necessary corrective action.
 Deliverable Files
 =================
 
-Deliverable repositories for projects tagged with
-release:cycle_with_intermediatry or release:cycle_with_milestones
-should be placed in their respective releases within the
-deliverables directory. Deliverable repositories for projects tagged with
-release:indepedent should be placed in the ``deliverables/_independent``
-directory.  Deliverable repositories tagged with release:none have no
-release and are not tracked in this repository.
+Deliverable repositories for projects using cycle_with_intermediatry
+or cycle_with_milestones should be placed in their respective releases
+within the deliverables directory. Deliverable repositories for
+projects using the indepedent release model should be placed in the
+``deliverables/_independent`` directory.
 
 For deliverable set of projects, we use one YAML file per release
-series to hold all of the metadata for all releases of that
-deliverable. For each release, we need to track:
+series to hold all of the metadata for all releases and branches of
+that deliverable. For each deliverable, we need to track:
 
 * the launchpad project name (such as ``oslo.config``)
-* the series (Kilo, Liberty, etc.)
-* the release model being used
-* for each repository
+  * the series (Kilo, Liberty, etc.)
+    * the release model being used
+      * for each repository
 
-  * the name (such as ``openstack/oslo.config``)
-  * the hash of the commit to be tagged
+* the name (such as ``openstack/oslo.config``)
+* the hash of the commit to be tagged
 
-* the version number to use
-* highlights for the release notes email (optional)
+  * the version number to use
+    * highlights for the release notes email (optional)
+      * the starting points of all branches
 
-We track this metadata for the history of all releases of the
-deliverable, so we can render a set of release history documentation.
+        We track this metadata for the history of all releases of the
+        deliverable, so we can render a set of release history documentation.
 
-The file should be named based on the deliverable to be tagged, so
-releases for ``liberty`` from the ``openstack/oslo.config`` repository
-will have a file in ``openstack/releases`` called
-``deliverables/liberty/oslo.config.yaml``. Releases of the same deliverable from
-the ``stable/kilo`` branch will be described by
-``deliverables/kilo/oslo.config.yaml``.
+        The file should be named based on the deliverable to be tagged, so
+        releases for ``liberty`` from the ``openstack/oslo.config`` repository
+        will have a file in ``openstack/releases`` called
+        ``deliverables/liberty/oslo.config.yaml``. Releases of the same deliverable from
+        the ``stable/kilo`` branch will be described by
+        ``deliverables/kilo/oslo.config.yaml``.
 
-Deliverables File Schema
-========================
+        Deliverables File Schema
+        ========================
 
-The top level of a deliverable file is a mapping with keys:
+        The top level of a deliverable file is a mapping with keys:
 
-``team``
-  The name of the team that owns the deliverable, as listed in the
-  governance repository data files.
+        ``team``
+The name of the team that owns the deliverable, as listed in the
+governance repository data files.
 
 ``launchpad``
-  The slug name of the launchpad project, suitable for use in URLs.
+The slug name of the launchpad project, suitable for use in URLs.
 
 ``release-notes``
-  The URL or URLs to the published release notes for the deliverable
-  for the series.
+The URL or URLs to the published release notes for the deliverable
+for the series.
 
-  Deliverables contained a single repository should simply include the
-  URL to the notes for that repository. Deliverables made up of
-  multiple repositories should use a hash to map each repository name
-  to its notes URL.
+Deliverables contained a single repository should simply include the
+URL to the notes for that repository. Deliverables made up of
+multiple repositories should use a hash to map each repository name
+to its notes URL.
 
 ``include-pypi-link``
-  Either ``yes`` or ``no``, indicating whether the release
-  announcement should include the link to the package on
-  PyPI. Defaults to ``no``.
+Either ``yes`` or ``no``, indicating whether the release
+announcement should include the link to the package on
+PyPI. Defaults to ``no``.
 
 ``release-model``
-  Identify the release model used by the deliverable. See
-  the reference section of the documentation for descriptions
-  of the valid models.
+Identify the release model used by the deliverable. See
+the reference section of the documentation for descriptions
+of the valid models.
 
 ``type``
-  Categorize the deliverable based on what it does. See the reference
-  section of the documentation for descriptions of the valid
-  deliverable types.
+Categorize the deliverable based on what it does. See the reference
+section of the documentation for descriptions of the valid
+deliverable types.
 
 ``artifact-link-mode``
-  Describe how to link to artifacts produced by the project. The
-  default is ``tarball`. Valid values are:
+Describe how to link to artifacts produced by the project. The
+default is ``tarball`. Valid values are:
 
-    tarball
-      Automatically generates links to version-specific files on
-      tarballs.openstack.org.
+tarball
+Automatically generates links to version-specific files on
+tarballs.openstack.org.
 
-    none
-      Do not link to anything, just show the version number.
+none
+Do not link to anything, just show the version number.
 
 ``repository-settings``
-  Mapping of special settings to control the behavior for each repository, keyed
-  by the repository name.
+Mapping of special settings to control the behavior for each repository, keyed
+by the repository name.
 
-  ``flags``
-    A list of flags attached to the repository.
+``flags``
+A list of flags attached to the repository.
 
-    ``no-artifact-build-job``
-      This repository has no job for building an artifact, but should
-      be tagged anyway.
+``no-artifact-build-job``
+This repository has no job for building an artifact, but should
+be tagged anyway.
 
-    ``retired``
-      This repository is no longer used, but was present in old
-      versions of a deliverable.
+``retired``
+This repository is no longer used, but was present in old
+versions of a deliverable.
 
 ``release-type``
-  This (optional) key sets the level of validation for the versions numbers.
+This (optional) key sets the level of validation for the versions numbers.
 
-  ``std``
-      Default: Enforces 3 digit semver version numbers in releases and allows
-      for common alpha, beta and dev releases.  This should be appropriate for
-      most OpenStack release requirements.
+``std``
+Default: Enforces 3 digit semver version numbers in releases and allows
+for common alpha, beta and dev releases.  This should be appropriate for
+most OpenStack release requirements.
 
-  ``xstatic``
-      Allows a more flexible versioning in line with xstatic package guidelines
-      and requirements.
+``xstatic``
+Allows a more flexible versioning in line with xstatic package guidelines
+and requirements.
 
-   ``fuel``
-      The Fuel project manages its own packages.
+``fuel``
+The Fuel project manages its own packages.
 
 ``releases``
-  A list of the releases for the deliverable.
+A list of the releases for the deliverable.
+
+``branches``
+A list of the branches for the deliverable.
 
 Each `release` entry is a mapping with keys:
 
 ``version``
-  The version tag for that release, to be applied to all of the member
-  projects.
+The version tag for that release, to be applied to all of the member
+projects.
 
 ``projects``
-  A list of all of the projects making up the deliverable for that
-  release.
+A list of all of the projects making up the deliverable for that
+release.
 
 ``highlights``
-  An optional message to be included in the release note email
-  announcing the release. (Use ``|`` to indicate a multi-line,
-  pre-formatted message.)
+An optional message to be included in the release note email
+announcing the release. (Use ``|`` to indicate a multi-line,
+pre-formatted message.)
 
 Each `project` entry is a mapping with keys:
 
 ``repo``
-  The name of the repository on git.openstack.org.
+The name of the repository on git.openstack.org.
 
 ``hash``
-  The SHA1 hash for the commit to receive the version tag.
+The SHA1 hash for the commit to receive the version tag.
 
 ``tarball-base``
-  An optional name for the base of the tarball created by the
-  release. If no value is provided, it defaults to the repo base name.
+An optional name for the base of the tarball created by the
+release. If no value is provided, it defaults to the repo base name.
+
+Each ``branch`` entry is a mapping with keys:
+
+``name``
+The name of the branch.
+
+``location``
+  The location value depends on the name.
+
+  If a branch name starts with stable/ then the location must be
+  either an existing version tag or the most recently added version
+  number under the releases list (allowing a tag and branch to be
+  submitted together).  All repositories associated with the version
+  (as identified by the deliverable file) will be branched from that
+  version using the name given.
+
+  If a branch name starts with feature/ then the location must be a
+  mapping between the target repository name and the SHA of a commit
+  already in the target repository.
+
+  If a branch name starts with driverfixes/ then the location must be
+  a SHA of a commit already in the target repository on the associated
+  stable branch.
+
 
 Examples
 ========
@@ -290,6 +360,10 @@ For example, one version of
 
    ---
    launchpad: oslo.config
+   branches:
+     - name: feature/random-feature-work
+       location:
+         openstack/oslo.config: 02a86d2eefeda5144ea8c39657aed24b8b0c9a39
    releases:
      - version: 1.12.0
        projects:
@@ -300,6 +374,12 @@ and then for the subsequent release it would be updated to contain::
 
    ---
    launchpad: oslo.config
+   branches:
+     - name: feature/random-feature-work
+       location:
+         openstack/oslo.config: 02a86d2eefeda5144ea8c39657aed24b8b0c9a39
+     - name: stable/newton
+       location: 1.12.1
    releases:
      - version: 1.12.0
        projects:
