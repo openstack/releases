@@ -422,10 +422,55 @@ def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
                 )
 
 
+def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_error):
+    "Apply the rules for driverfixes branches."
+    known_series = sorted(list(
+        d for d in os.listdir('deliverables')
+        if not d.startswith('_')
+    ))
+    branches = deliverable_info.get('branches', [])
+    for branch in branches:
+        prefix, series = branch['name'].split('/')
+        if prefix != 'driverfixes':
+            continue
+        location = branch['location']
+        if series not in known_series:
+            mk_error(
+                ('driverfixes branches must be named for known series '
+                 'but %s was not found in %s' % (
+                     branch['name'], known_series))
+            )
+        if not isinstance(location, dict):
+            mk_error(
+                ('branch location for %s is '
+                 'expected to be a mapping but got a %s' % (
+                     branch['name'], type(location)))
+            )
+            # The other rules aren't going to be testable, so skip them.
+            continue
+        for repo, loc in sorted(location.items()):
+            if not is_a_hash(loc):
+                mk_error(
+                    ('driverfixes branches should be created from commits by SHA '
+                     'but location %s for branch %s of %s does not look '
+                     'like a SHA' % (
+                         (loc, repo, branch['name'])))
+                )
+            if not gitutils.commit_exists(repo, loc):
+                mk_error(
+                    ('driverfixes branches should be created from merged commits '
+                     'but location %s for branch %s of %s does not exist' % (
+                         (loc, repo, branch['name'])))
+                )
+
+
 # if the branch already exists, the name is by definition valid
-# driverfixes branches map between repo names and SHA or version number
 # if the branch exists, the data in the map must match reality
-# if the branch does not exist, the references in the map must exist
+#
+# FIXME(dhellmann): these two rules become more challenging to
+# implement when we think about EOLed branches. I'm going to punt on
+# that for now, and if it turns into an issue we can think about how
+# to handle validation while still allowing branches to be deleted.
 
 
 def main():
@@ -524,6 +569,12 @@ def main():
             mk_error,
         )
         validate_feature_branches(
+            deliverable_info,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
+        validate_driverfixes_branches(
             deliverable_info,
             workdir,
             mk_warning,
