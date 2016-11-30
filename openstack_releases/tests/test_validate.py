@@ -12,10 +12,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from oslotest import base
+import textwrap
 
 import fixtures
 import mock
+from oslotest import base
+import yaml
 
 from openstack_releases.cmds import validate
 
@@ -529,3 +531,115 @@ class TestValidateReleases(base.BaseTestCase):
         )
         self.assertEqual(1, len(warnings))
         self.assertEqual(1, len(errors))
+
+
+class TestValidateNewReleases(base.BaseTestCase):
+
+    team_data_yaml = textwrap.dedent("""
+    Release Management:
+      ptl:
+        name: Doug Hellmann
+        irc: dhellmann
+        email: doug@doughellmann.com
+      irc-channel: openstack-release
+      mission: >
+        Coordinating the release of OpenStack deliverables, by defining the
+        overall development cycle, release models, publication processes,
+        versioning rules and tools, then enabling project teams to produce
+        their own releases.
+      url: https://wiki.openstack.org/wiki/Release_Management
+      tags:
+        - team:diverse-affiliation
+      deliverables:
+        release-schedule-generator:
+          repos:
+            - openstack/release-schedule-generator
+        release-test:
+          repos:
+            - openstack/release-test
+        release-tools:
+          repos:
+            - openstack-infra/release-tools
+        releases:
+          repos:
+            - openstack/releases
+        reno:
+          repos:
+            - openstack/reno
+          docs:
+            contributor: http://docs.openstack.org/developer/reno/
+        specs-cookiecutter:
+          repos:
+            - openstack-dev/specs-cookiecutter
+    """)
+
+    team_data = yaml.load(team_data_yaml)
+
+    def test_all_repos(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1000.0.0',
+                 'projects': [
+                     {'repo': 'openstack/release-test',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_new_releases(
+            deliverable_info,
+            'release-test.yaml',
+            self.team_data,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_extra_repo(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1000.0.0',
+                 'projects': [
+                     {'repo': 'openstack/release-test',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                     {'repo': 'openstack-infra/release-tools',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_new_releases(
+            deliverable_info,
+            'release-test.yaml',
+            self.team_data,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_missing_repo(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1000.0.0',
+                 'projects': [
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_new_releases(
+            deliverable_info,
+            'release-test.yaml',
+            self.team_data,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
