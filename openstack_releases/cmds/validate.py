@@ -389,8 +389,40 @@ def validate_stable_branches(deliverable_info, mk_warning, mk_error):
                      branch['name'], known_series))
             )
 
+
+def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
+    "Apply the rules for feature branches."
+    branches = deliverable_info.get('branches', [])
+    for branch in branches:
+        prefix, series = branch['name'].split('/')
+        if prefix != 'feature':
+            continue
+        location = branch['location']
+        if not isinstance(location, dict):
+            mk_error(
+                ('branch location for %s is '
+                 'expected to be a mapping but got a %s' % (
+                     branch['name'], type(location)))
+            )
+            # The other rules aren't going to be testable, so skip them.
+            continue
+        for repo, loc in sorted(location.items()):
+            if not is_a_hash(loc):
+                mk_error(
+                    ('feature branches should be created from commits by SHA '
+                     'but location %s for branch %s of %s does not look '
+                     'like a SHA' % (
+                         (loc, repo, branch['name'])))
+                )
+            if not gitutils.commit_exists(repo, loc):
+                mk_error(
+                    ('feature branches should be created from merged commits '
+                     'but location %s for branch %s of %s does not exist' % (
+                         (loc, repo, branch['name'])))
+                )
+
+
 # if the branch already exists, the name is by definition valid
-# feature branches map between repo names and SHA values
 # driverfixes branches map between repo names and SHA or version number
 # if the branch exists, the data in the map must match reality
 # if the branch does not exist, the references in the map must exist
@@ -488,6 +520,12 @@ def main():
         )
         validate_stable_branches(
             deliverable_info,
+            mk_warning,
+            mk_error,
+        )
+        validate_feature_branches(
+            deliverable_info,
+            workdir,
             mk_warning,
             mk_error,
         )
