@@ -643,3 +643,40 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestValidateBranchPrefixes(base.BaseTestCase):
+
+    def test_invalid_prefix(self):
+        deliverable_info = {
+            'branches': [
+                {'name': 'invalid/branch'},
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_branch_prefixes(
+            deliverable_info,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_valid_prefix(self):
+        warnings = []
+        errors = []
+        for prefix in validate._VALID_BRANCH_PREFIXES:
+            deliverable_info = {
+                'branches': [
+                    {'name': '%s/branch' % prefix},
+                ],
+            }
+            validate.validate_branch_prefixes(
+                deliverable_info,
+                warnings.append,
+                errors.append,
+            )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+        self.assertEqual(0, len(errors))

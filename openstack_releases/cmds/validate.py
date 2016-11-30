@@ -57,6 +57,11 @@ _VALID_TYPES = set([
     'service',
     'other',
 ])
+_VALID_BRANCH_PREFIXES = set([
+    'stable',
+    'feature',
+    'driverfixes',
+])
 
 
 def is_a_hash(val):
@@ -338,6 +343,25 @@ def validate_new_releases(deliverable_info, filename,
         )
 
 
+def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
+    "Ensure all branches have good prefixes."
+    branches = deliverable_info.get('branches', [])
+    for branch in branches:
+        prefix = branch['name'].split('/')[0]
+        if prefix not in _VALID_BRANCH_PREFIXES:
+            mk_error('branch name %s does not use a valid prefix: %s' % (
+                branch['name'], _VALID_BRANCH_PREFIXES))
+
+
+# if the branch already exists, the name is by definition valid
+# feature branches map between repo names and SHA values
+# stable branches use one of the valid series names
+# stable branches map to a single version number
+# driverfixes branches map between repo names and SHA or version number
+# if the branch exists, the data in the map must match reality
+# if the branch does not exist, the references in the map must exist
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -423,6 +447,11 @@ def main():
                 mk_warning,
                 mk_error,
             )
+        validate_branch_prefixes(
+            deliverable_info,
+            mk_warning,
+            mk_error,
+        )
 
     if warnings:
         print('\n\n%s warnings found' % len(warnings))
