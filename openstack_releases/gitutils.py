@@ -115,6 +115,26 @@ def sha_for_tag(workdir, repo, version):
     return actual_sha
 
 
+def check_branch_sha(workdir, repo, series, master, sha):
+    "Check if the SHA is in the targeted branch."
+    if series == master:
+        remote_match = 'master'
+    else:
+        remote_match = 'remotes/origin/stable/%s' % series
+    try:
+        output = subprocess.check_output(
+            ['git', 'branch', '-a', '--contains', sha],
+            cwd=os.path.join(workdir, repo),
+        ).strip()
+        for branch in output.split():
+            if branch == remote_match:
+                return True
+        return False
+    except subprocess.CalledProcessError as e:
+        print('ERROR checking SHA on branch: %s [%s]' % (e, e.output.strip()))
+        return False
+
+
 def check_ancestry(workdir, repo, old_version, sha):
     "Check if the SHA is in the ancestry of the previous version."
     try:
