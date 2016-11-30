@@ -12,6 +12,8 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from __future__ import unicode_literals
+
 import textwrap
 
 import fixtures
@@ -679,4 +681,73 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
             )
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestValidateStableBranches(base.BaseTestCase):
+
+    def test_version_in_deliverable(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+    def test_version_not_in_deliverable(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location: 1.5.1
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_unknown_series(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/abc
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))

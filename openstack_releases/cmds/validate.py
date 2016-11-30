@@ -28,6 +28,7 @@ import shutil
 import tempfile
 
 import requests
+import six
 import yaml
 
 # Disable warnings about insecure connections.
@@ -353,10 +354,43 @@ def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
                 branch['name'], _VALID_BRANCH_PREFIXES))
 
 
+def validate_stable_branches(deliverable_info, mk_warning, mk_error):
+    "Apply the rules for stable branches."
+    branches = deliverable_info.get('branches', [])
+    known_releases = list(
+        r['version']
+        for r in deliverable_info.get('releases', [])
+    )
+    known_series = sorted(list(
+        d for d in os.listdir('deliverables')
+        if not d.startswith('_')
+    ))
+    for branch in branches:
+        prefix, series = branch['name'].split('/')
+        if prefix != 'stable':
+            continue
+        if not isinstance(branch['location'], six.string_types):
+            mk_error(
+                ('branch location for %s is '
+                 'expected to be a string but got a %s' % (
+                     branch['name'], type(branch['location'])))
+            )
+        if branch['location'] not in known_releases:
+            mk_error(
+                ('stable branches must be created from existing '
+                 'tagged releases, and %s for %s is not found in the '
+                 'list of releases for this deliverable' % (
+                     branch['location'], branch['name']))
+            )
+        if series not in known_series:
+            mk_error(
+                ('stable branches must be named for known series '
+                 'but %s was not found in %s' % (
+                     branch['name'], known_series))
+            )
+
 # if the branch already exists, the name is by definition valid
 # feature branches map between repo names and SHA values
-# stable branches use one of the valid series names
-# stable branches map to a single version number
 # driverfixes branches map between repo names and SHA or version number
 # if the branch exists, the data in the map must match reality
 # if the branch does not exist, the references in the map must exist
@@ -448,6 +482,11 @@ def main():
                 mk_error,
             )
         validate_branch_prefixes(
+            deliverable_info,
+            mk_warning,
+            mk_error,
+        )
+        validate_stable_branches(
             deliverable_info,
             mk_warning,
             mk_error,
