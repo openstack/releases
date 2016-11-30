@@ -21,3 +21,12 @@ releases:
         hash: a37b5fe562a85787b74edc48c923aa6343490ec1
     highlights: |-
       * Remove strict dependency on osprofiler
+  - version: 2.1.2
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 1dcfc2c096a4610d63611bfd7d98687f3e5e2da4
+    highlights: |-
+      * Remove strict dependency on osprofiler. The previous attempt to do
+        this was incomplete.
+      * Fix a number of commands that had broken integration with
+        python-openstackclient.
