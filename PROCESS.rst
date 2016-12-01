@@ -14,6 +14,9 @@ Before Summit (after closing previous release)
 2. Create the $series-relmgt-plan and $series-relmgt-tracking
    etherpads.
 
+3. Use ``init-series`` to create stub deliverable files based on the
+   contents of the previous release.
+
 Between Summit and Milestone-1
 ==============================
 
