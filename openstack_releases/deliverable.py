@@ -183,6 +183,8 @@ class Deliverable(object):
 
     def __init__(self, team, series, name, data):
         self.team = team
+        if self.team is None:
+            self.team = data['team']
         self.series = series
         self.name = name
         self._data = data
