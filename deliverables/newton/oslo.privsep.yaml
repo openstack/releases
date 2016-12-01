@@ -50,3 +50,8 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: e400f4ecf93811f025c55cf645c462c14a9ca016
+  - version: 1.13.1
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: d186635525310548b10ad48de6327b8eb1a3e7b3
+    highlights: '- Fixes socket timeout bug 404272'
