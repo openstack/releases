@@ -202,3 +202,19 @@ class Deliverable(object):
     @property
     def type(self):
         return self._data.get('type', 'other')
+
+    @property
+    def latest_release(self):
+        rel = self._data.get('releases', [{}])[0]
+        return rel.get('version')
+
+    @property
+    def release_notes(self):
+        return self._data.get('release-notes', '')
+
+    def get_branch_location(self, name):
+        branches = self._data.get('branches', [])
+        for b in branches:
+            if b['name'] == name:
+                return b['location']
+        return None
