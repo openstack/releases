@@ -451,3 +451,5 @@ easy as ``pip install .`` in this repository directory.
 * ``make-dashboard`` produces a CSV file that can be imported into
   Google docs (or any other spreadsheet) for tracking the
   milestone-based projects at the end of the cycle
+* ``init-series`` initializes a new deliverable directory with stub
+  files based on the previous release.
