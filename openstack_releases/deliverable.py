@@ -212,6 +212,13 @@ class Deliverable(object):
     def release_notes(self):
         return self._data.get('release-notes', '')
 
+    @property
+    def versions(self):
+        return [
+            r['version']
+            for r in self._data.get('releases', [])
+        ]
+
     def get_branch_location(self, name):
         branches = self._data.get('branches', [])
         for b in branches:

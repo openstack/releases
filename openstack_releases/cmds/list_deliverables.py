@@ -61,6 +61,12 @@ def main():
         action='store_true',
         help='limit the list to deliverables without a stable branch',
     )
+    parser.add_argument(
+        '--unreleased',
+        default=False,
+        action='store_true',
+        help='limit the list to deliverables not released in the cycle',
+    )
     args = parser.parse_args()
 
     # Deal with the inconsistency of the name for the independent
@@ -85,5 +91,6 @@ def main():
         if args.no_stable_branch:
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
-
+        if args.unreleased and deliv.versions:
+            continue
         print(deliv.name)
