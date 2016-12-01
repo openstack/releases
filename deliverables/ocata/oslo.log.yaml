@@ -16,3 +16,7 @@ releases:
     * Add a filter to rate limit logs
     * Use six.wraps instead of functools
     * Default use_stderr to False
+- version: 3.18.0
+  projects:
+  - repo: openstack/oslo.log
+    hash: eca5c587a8daf6f2716ebde46490e1651d8c3c12
