@@ -197,141 +197,141 @@ series to hold all of the metadata for all releases and branches of
 that deliverable. For each deliverable, we need to track:
 
 * the launchpad project name (such as ``oslo.config``)
-  * the series (Kilo, Liberty, etc.)
-    * the release model being used
-      * for each repository
+* the series (Kilo, Liberty, etc.)
+* the release model being used
+* for each repository
 
-* the name (such as ``openstack/oslo.config``)
-* the hash of the commit to be tagged
-
+  * the name (such as ``openstack/oslo.config``)
+  * the hash of the commit to be tagged
   * the version number to use
-    * highlights for the release notes email (optional)
-      * the starting points of all branches
 
-        We track this metadata for the history of all releases of the
-        deliverable, so we can render a set of release history documentation.
+* highlights for the release notes email (optional)
+* the starting points of all branches
 
-        The file should be named based on the deliverable to be tagged, so
-        releases for ``liberty`` from the ``openstack/oslo.config`` repository
-        will have a file in ``openstack/releases`` called
-        ``deliverables/liberty/oslo.config.yaml``. Releases of the same deliverable from
-        the ``stable/kilo`` branch will be described by
-        ``deliverables/kilo/oslo.config.yaml``.
+    We track this metadata for the history of all releases of the
+    deliverable, so we can render a set of release history documentation.
 
-        Deliverables File Schema
-        ========================
+    The file should be named based on the deliverable to be tagged, so
+    releases for ``liberty`` from the ``openstack/oslo.config``
+    repository will have a file in ``openstack/releases`` called
+    ``deliverables/liberty/oslo.config.yaml``. Releases of the same
+    deliverable from the ``stable/kilo`` branch will be described by
+    ``deliverables/kilo/oslo.config.yaml``.
 
-        The top level of a deliverable file is a mapping with keys:
+Deliverables File Schema
+========================
 
-        ``team``
-The name of the team that owns the deliverable, as listed in the
-governance repository data files.
+The top level of a deliverable file is a mapping with keys:
+
+``team``
+  The name of the team that owns the deliverable, as listed in the
+  governance repository data files.
 
 ``launchpad``
-The slug name of the launchpad project, suitable for use in URLs.
+  The slug name of the launchpad project, suitable for use in URLs.
 
 ``release-notes``
-The URL or URLs to the published release notes for the deliverable
-for the series.
+  The URL or URLs to the published release notes for the deliverable
+  for the series.
 
-Deliverables contained a single repository should simply include the
-URL to the notes for that repository. Deliverables made up of
-multiple repositories should use a hash to map each repository name
-to its notes URL.
+  Deliverables contained a single repository should simply include the
+  URL to the notes for that repository. Deliverables made up of
+  multiple repositories should use a hash to map each repository name
+  to its notes URL.
 
 ``include-pypi-link``
-Either ``yes`` or ``no``, indicating whether the release
-announcement should include the link to the package on
-PyPI. Defaults to ``no``.
+  Either ``yes`` or ``no``, indicating whether the release
+  announcement should include the link to the package on
+  PyPI. Defaults to ``no``.
 
 ``release-model``
-Identify the release model used by the deliverable. See
-the reference section of the documentation for descriptions
-of the valid models.
+  Identify the release model used by the deliverable. See
+  the reference section of the documentation for descriptions
+  of the valid models.
 
 ``type``
-Categorize the deliverable based on what it does. See the reference
-section of the documentation for descriptions of the valid
-deliverable types.
+  Categorize the deliverable based on what it does. See the reference
+  section of the documentation for descriptions of the valid
+  deliverable types.
 
 ``artifact-link-mode``
-Describe how to link to artifacts produced by the project. The
-default is ``tarball`. Valid values are:
+  Describe how to link to artifacts produced by the project. The
+  default is ``tarball`. Valid values are:
 
-tarball
-Automatically generates links to version-specific files on
-tarballs.openstack.org.
+  tarball
+    Automatically generates links to version-specific files on
+    tarballs.openstack.org.
 
-none
-Do not link to anything, just show the version number.
+  none
+    Do not link to anything, just show the version number.
 
 ``repository-settings``
-Mapping of special settings to control the behavior for each repository, keyed
-by the repository name.
+  Mapping of special settings to control the behavior for each repository, keyed
+  by the repository name.
 
 ``flags``
-A list of flags attached to the repository.
+  A list of flags attached to the repository.
 
 ``no-artifact-build-job``
-This repository has no job for building an artifact, but should
-be tagged anyway.
+  This repository has no job for building an artifact, but should
+  be tagged anyway.
 
 ``retired``
-This repository is no longer used, but was present in old
-versions of a deliverable.
+  This repository is no longer used, but was present in old
+  versions of a deliverable.
 
 ``release-type``
-This (optional) key sets the level of validation for the versions numbers.
+  This (optional) key sets the level of validation for the versions numbers.
 
-``std``
-Default: Enforces 3 digit semver version numbers in releases and allows
-for common alpha, beta and dev releases.  This should be appropriate for
-most OpenStack release requirements.
+  ``std``
+    Default: Enforces 3 digit semver version numbers in releases and allows
+    for common alpha, beta and dev releases.  This should be appropriate for
+    most OpenStack release requirements.
 
-``xstatic``
-Allows a more flexible versioning in line with xstatic package guidelines
-and requirements.
+  ``xstatic``
+    Allows a more flexible versioning in line with xstatic package guidelines
+    and requirements.
 
-``fuel``
-The Fuel project manages its own packages.
+  ``fuel``
+    The Fuel project manages its own packages.
 
 ``releases``
-A list of the releases for the deliverable.
+  A list of the releases for the deliverable.
 
 ``branches``
-A list of the branches for the deliverable.
+  A list of the branches for the deliverable.
 
-Each `release` entry is a mapping with keys:
+Each ``release`` entry is a mapping with keys:
 
 ``version``
-The version tag for that release, to be applied to all of the member
-projects.
+  The version tag for that release, to be applied to all of the member
+  projects.
 
 ``projects``
-A list of all of the projects making up the deliverable for that
-release.
+  A list of all of the projects making up the deliverable for that
+  release.
 
 ``highlights``
-An optional message to be included in the release note email
-announcing the release. (Use ``|`` to indicate a multi-line,
-pre-formatted message.)
+  An optional message to be included in the release note email
+  announcing the release. (Use ``|`` to indicate a multi-line,
+  pre-formatted message.)
 
 Each `project` entry is a mapping with keys:
 
 ``repo``
-The name of the repository on git.openstack.org.
+  The name of the repository on git.openstack.org.
 
 ``hash``
-The SHA1 hash for the commit to receive the version tag.
+  The SHA1 hash for the commit to receive the version tag.
 
 ``tarball-base``
-An optional name for the base of the tarball created by the
-release. If no value is provided, it defaults to the repo base name.
+  An optional name for the base of the tarball created by the
+  release. If no value is provided, it defaults to the repo base name.
 
 Each ``branch`` entry is a mapping with keys:
 
 ``name``
-The name of the branch.
+  The name of the branch.
 
 ``location``
   The location value depends on the name.
