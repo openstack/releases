@@ -189,7 +189,7 @@ def validate_releases(deliverable_info, zuul_layout,
 
     prev_version = None
     prev_projects = set()
-    for release in deliverable_info['releases']:
+    for release in deliverable_info.get('releases', []):
 
         for project in release['projects']:
 
@@ -333,6 +333,8 @@ def validate_new_releases(deliverable_info, filename,
                           mk_warning, mk_error):
     """Apply validation rules that only apply to the current series.
     """
+    if not deliverable_info.get('releases'):
+        return
     final_release = deliverable_info['releases'][-1]
     deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
     expected_repos = set(

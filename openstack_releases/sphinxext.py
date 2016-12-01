@@ -197,7 +197,13 @@ class DeliverableDirectiveBase(rst.Directive):
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
 
-        deliverables = list(deliverables)  # expand any generators passed in
+        # expand any generators passed in and filter out deliverables
+        # with no releases
+        deliverables = list(
+            d
+            for d in deliverables
+            if d[1].get('releases')
+        )
         if not deliverables:
             # There are no deliverables of this type, and that's OK.
             return

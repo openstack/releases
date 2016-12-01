@@ -603,6 +603,26 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': []
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
 
 class TestValidateNewReleases(base.BaseTestCase):
 

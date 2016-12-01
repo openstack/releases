@@ -195,6 +195,14 @@ def main():
         else:
             branch = 'stable/' + series
 
+        # If there are no releases listed, this is probably a new
+        # deliverable file for initializing a new series. We don't
+        # need to list its changes.
+        if not deliverable_info.get('releases'):
+            header('No releases')
+            print('no releases were found, assuming an initialization file')
+            continue
+
         # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
 
