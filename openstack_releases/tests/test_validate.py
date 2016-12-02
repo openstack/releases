@@ -21,6 +21,7 @@ import mock
 from oslotest import base
 import yaml
 
+from openstack_releases import defaults
 from openstack_releases.cmds import validate
 
 
@@ -416,8 +417,8 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
-        self.assertEqual(1, len(warnings))
-        self.assertEqual(1, len(errors))
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(2, len(errors))
 
     def test_mismatch_existing(self):
         deliverable_info = {
@@ -437,6 +438,56 @@ class TestValidateReleases(base.BaseTestCase):
             deliverable_info,
             {'validate-projects-by-name': {}},
             'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_hash_from_master_used_in_stable_release(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.4.1',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      # hash from master
+                      'hash': 'ec62e6270dba8f3d6a60600876be8fd99f7c5b08'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'newton',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_hash_from_stable_used_in_master_release(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      # hash from stable/newton
+                      'hash': '95db03ed96dcd1a582936b4660b4db55ce606e49'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            defaults.RELEASE,
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -500,7 +551,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
-        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
     @mock.patch('openstack_releases.versionutils.validate_version')
@@ -531,7 +582,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
-        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
 

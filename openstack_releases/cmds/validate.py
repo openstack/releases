@@ -261,9 +261,20 @@ def validate_releases(deliverable_info, zuul_layout,
                                        'branch manually')
 
                         elif not prev_version:
-                            mk_warning('skipping descendant test for '
-                                       'first release, verify '
-                                       'branch manually')
+                            # If this is the first version in the series,
+                            # check that the commit is actually on the
+                            # targeted branch.
+                            if not gitutils.check_branch_sha(workdir,
+                                                             project['repo'],
+                                                             series_name,
+                                                             defaults.RELEASE,
+                                                             project['hash']):
+                                msg = '%s %s not present in %s branch' % (
+                                    project['repo'],
+                                    project['hash'],
+                                    series_name,
+                                    )
+                                mk_error(msg)
 
                         else:
                             # Check to see if we are re-tagging the same
