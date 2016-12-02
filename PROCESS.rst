@@ -103,8 +103,8 @@ Final Library Release (week before Milestone-3)
    example, https://review.openstack.org/362435 and
    https://review.openstack.org/363084
 
-4. Create stable/$series branches for the libraries after their final
-   release is prepared using ``branch_from_yaml.sh``.
+4. Ensure that final releases for libraries also include the
+   specification to create the stable/$series branch.
 
 5. Use the ``dashboard`` command to prepare the data for tracking the
    final release and import it into a Google Docs spreadsheet for
@@ -120,16 +120,8 @@ Milestone-3
    open patches. Ensure that reviewers do not approve changes created
    by the proposal bot.
 
-3. Create stable/$series branches for the client libraries after their
-   final release is prepared using ``branch_from_yaml.sh``, or all
-   together by running ``batch-stable-branches`` to build the list of
-   commands. For example::
-
-     $ cd ~/repos/openstack-infra/release-tools
-     $ batch-stable-branches --releases-repo ~/repos/openstack/releases --tag type:library newton > /tmp/make_newton_lib_branches.sh
-     $ more /tmp/make_newton_lib_branches.sh
-     $ cd ~/repos/openstack-infra/project-config/jenkins/scripts/release-tools
-     $ bash -x /tmp/make_newton_lib_branches.sh 2>&1 | tee -a branch.log
+3. Ensure the stable/$series branch is requested with each client
+   library final release.
 
 4. Remind PTLs/liaisons that master should be frozen except for bug
    fixes and feature work with FFEs.
@@ -155,13 +147,12 @@ Between Milestone-3 and RC1
 RC1
 ===
 
-1. Create stable/$series branches for projects after their RC1 is
-   tagged using ``branch_from_yaml.sh``.
+1. Ensure all RC1 tag requests include the info to have the
+   stable/$series branch created, too.
 
-     We do not create branches for cycle-trailing projects
-     automatically, because we anticipate more release candidates for
-     them than for other projects. Ask the PTL/liaison when they want
-     their branch created (from which RC).
+   Branches for cycle-trailing and cycle-with-intermediary projects
+   should be created when the PTL/liaison are ready, and not
+   necessarily for RC1 week.
 
 2. After the minimum set of projects used by devstack have been branched, the
    devstack branch can be created. Devstack doesn't push a tag at RC1 it is
@@ -183,7 +174,7 @@ RC1
    Note this work is done by translation team.
 
 6. After all cycle-with-milestone projects have their branches
-   created, use ``make_stable_branch.sh`` to create the stable/$series
+   created, use ``make_branch.sh`` to create the stable/$series
    branch for ``openstack/requirements``. Then announce that the
    requirements freeze is lifted from master.
 
@@ -256,6 +247,9 @@ candidates are coming.
 8. Ask liaisons and PTLs of milestone-based projects to review and +1
    the final release proposal from the previous step so their approval
    is included in the metadata that goes onto the signed tag.
+
+9. The week before final release test the release process using the
+   openstack/release-test repository.
 
 Final Release
 =============
