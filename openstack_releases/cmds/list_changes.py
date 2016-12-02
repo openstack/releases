@@ -149,10 +149,19 @@ def main():
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
+        series = os.path.basename(
+            os.path.dirname(
+                os.path.abspath(filename)
+            )
+        )
+        if series == '_independent':
+            default_model = 'independent'
+        else:
+            default_model = 'no release model specified'
+
         # By default assume the project does not use milestones.
         header('Release model')
-        print(deliverable_info.get('release-model',
-                                   'no release model specified'))
+        print(deliverable_info.get('release-model', default_model))
 
         header('Team details')
         if 'team' in deliverable_info:
@@ -181,11 +190,6 @@ def main():
         else:
             print('no team name given, cannot report on governance status')
 
-        series = os.path.basename(
-            os.path.dirname(
-                os.path.abspath(filename)
-            )
-        )
         if series == defaults.RELEASE:
             branch = 'master'
         else:
