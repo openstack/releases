@@ -37,7 +37,8 @@ def main():
     model = parser.add_mutually_exclusive_group()
     model.add_argument(
         '--model',
-        help='the release model, such as "cycle-with-milestones" or "independent"',
+        help=('the release model, such as "cycle-with-milestones"'
+              ' or "independent"'),
     )
     model.add_argument(
         '--cycle-based',
@@ -53,6 +54,12 @@ def main():
         '--deliverables-dir',
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
+    )
+    parser.add_argument(
+        '--no-stable-branch',
+        default=False,
+        action='store_true',
+        help='limit the list to deliverables without a stable branch',
     )
     args = parser.parse_args()
 
@@ -75,5 +82,8 @@ def main():
             continue
         if args.type and deliv.type != args.type:
             continue
+        if args.no_stable_branch:
+            if deliv.get_branch_location('stable/' + series) is not None:
+                continue
 
         print(deliv.name)
