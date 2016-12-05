@@ -76,9 +76,15 @@ def validate_launchpad(deliverable_info, mk_warning, mk_error):
     except KeyError:
         mk_error('No launchpad project given')
     else:
-        lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
-        if (lp_resp.status_code // 100) == 4:
-            mk_error('Launchpad project %s does not exist' % lp_name)
+        try:
+            lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
+        except requests.exceptions.ConnectionError as e:
+            # The flakey Launchpad API failed. Don't punish the user for that.
+            mk_warning('Could not verify launchpad project %s (%s)' %
+                       (lp_name, e))
+        else:
+            if (lp_resp.status_code // 100) == 4:
+                mk_error('Launchpad project %s does not exist' % lp_name)
 
 
 def validate_team(deliverable_info, team_data, mk_warning, mk_error):

@@ -38,7 +38,9 @@ class TestValidateLaunchpad(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
-    def test_invalid_launchpad_name(self):
+    @mock.patch('requests.get')
+    def test_invalid_launchpad_name(self, get):
+        get.return_value = mock.Mock(status_code=404)
         warnings = []
         errors = []
         validate.validate_launchpad(
@@ -49,7 +51,9 @@ class TestValidateLaunchpad(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
-    def test_valid_launchpad_name(self):
+    @mock.patch('requests.get')
+    def test_valid_launchpad_name(self, get):
+        get.return_value = mock.Mock(status_code=200)
         warnings = []
         errors = []
         validate.validate_launchpad(
@@ -58,6 +62,20 @@ class TestValidateLaunchpad(base.BaseTestCase):
             errors.append,
         )
         self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('requests.get')
+    def test_launchpad_timeout(self, get):
+        import requests
+        get.side_effect = requests.exceptions.ConnectionError('testing')
+        warnings = []
+        errors = []
+        validate.validate_launchpad(
+            {'launchpad': 'oslo.config'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
 
 
