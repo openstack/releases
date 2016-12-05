@@ -20,7 +20,6 @@ from __future__ import print_function
 
 import argparse
 import atexit
-import glob
 import os
 import os.path
 import re
@@ -506,9 +505,9 @@ def main():
 
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
-        print('no modified deliverable files, validating all releases from %s'
-              % defaults.RELEASE)
-        filenames = glob.glob('deliverables/' + defaults.RELEASE + '/*.yaml')
+        print('no modified deliverable files and no arguments, '
+              'skipping validation')
+        return 0
 
     zuul_layout = project_config.get_zuul_layout_data()
 
