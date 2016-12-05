@@ -24,3 +24,11 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: ce7edf1944e293960feaba26218029fc3d7cc309
+  # newton
+  - version: 3.0.0
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 691f8490317f36ec2c629c9a397c09eebf7638bd
+branches:
+  - name: stable/newton
+    location: 3.0.0
