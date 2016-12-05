@@ -6,6 +6,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/networking-ovn/newton.html
+branches:
+  - name: stable/newton
+    location: 1.0.0.0rc1
 releases:
   - version: 1.0.0.0b2
     projects:

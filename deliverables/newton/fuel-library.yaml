@@ -5,6 +5,9 @@ send-announcements-to: openstack-announce@lists.openstack.org
 type: library
 release-model: cycle-trailing
 release-type: fuel
+branches:
+  - name: stable/newton
+    location: 10.0.0
 releases:
   - version: 10.0.0rc1
     projects:

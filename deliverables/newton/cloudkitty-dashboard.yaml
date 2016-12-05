@@ -5,6 +5,9 @@ type: horizon-plugin
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/newton
+    location: 0.6.1
 releases:
   - version: 0.6.0
     projects:

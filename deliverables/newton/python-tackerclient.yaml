@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/python-tackerclient/newton.html
+branches:
+  - name: stable/newton
+    location: 0.7.0
 releases:
   - version: 0.4.0
     projects:

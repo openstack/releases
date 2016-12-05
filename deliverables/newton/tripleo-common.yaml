@@ -4,6 +4,9 @@ team: tripleo
 type: library
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/newton
+    location: 5.2.0
 releases:
   - version: 5.0.0.0b1
     projects:

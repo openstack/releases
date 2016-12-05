@@ -5,6 +5,9 @@ type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/ironic-inspector/newton.html
+branches:
+  - name: stable/newton
+    location: 4.2.0
 releases:
   - version: 3.3.0
     projects:

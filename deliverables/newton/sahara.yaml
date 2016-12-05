@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/sahara/newton.html
+branches:
+  - name: stable/newton
+    location: 5.0.0.0rc1
 releases:
   - version: 5.0.0.0b1
     projects:

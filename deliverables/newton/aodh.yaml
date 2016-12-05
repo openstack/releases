@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-intermediary
 release-notes: http://docs.openstack.org/releasenotes/aodh/newton.html
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/newton
+    location: 3.0.0
 releases:
   - version: 3.0.0.0b2
     projects:
