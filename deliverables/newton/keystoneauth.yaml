@@ -11,14 +11,17 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 7dd4208e5c2519fa4647fd9f36b7f67bd2f11718
+    tarball-base: keystoneauth1
 - version: 2.6.0
   projects:
   - repo: openstack/keystoneauth
     hash: d5020aed64e150c7e06705d316ba3ee074be983d
+    tarball-base: keystoneauth1
 - version: 2.7.0
   projects:
   - repo: openstack/keystoneauth
     hash: c43d9dc75bb610ce9f53524bebfdb0633c0c1147
+    tarball-base: keystoneauth1
   highlights: |
     - Added `is_admin_project` support
     - Added support for oauth1 auth
@@ -26,6 +29,7 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 3562dd4b6cc5d59918ea7f540d75c4f88d52ab5d
+    tarball-base: keystoneauth1
   highlights: |
     - Added `is_domain` support to token model
     - Added OidcAccessToken auth plugin
@@ -33,6 +37,7 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 464aaac5a2ed6da94144395f4ed848dc1ee61c45
+    tarball-base: keystoneauth1
   highlights: |
     - Support TOTP authentication.
     - Kerberos and FederatedKerberos authentication is now supported,
@@ -42,14 +47,17 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 86e010cc8341ccdea81305998faeb20d180033ee
+    tarball-base: keystoneauth1
 - version: 2.11.0
   projects:
   - repo: openstack/keystoneauth
     hash: 80ad3bc11fdc3b224cac15420174ec9ccfe71cf5
+    tarball-base: keystoneauth1
 - version: 2.11.1
   projects:
   - repo: openstack/keystoneauth
     hash: 837118393c9930d0f627783f15df67a4299d5271
+    tarball-base: keystoneauth1
   highlights: |
     - Fixes "space before header" issue seen in ansible deploys with
       requests>=2.11.0, see bug 1611426.
@@ -58,6 +66,7 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 5f34cb14d4229b8f6ec3088e04d6bfa398b2fd98
+    tarball-base: keystoneauth1
   highlights: |
     - TCP_KEEPCNT is disabled when using Windows Subsystem for Linux,
       see bug 1614688.
@@ -65,6 +74,7 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: b7b887c5192f2940073d038360a64041fc4f38cc
+    tarball-base: keystoneauth1
   highlights: |
     - Fixes a bug in the version discovery mechanism where a URL was
       being improperly returned when the discovery was not successful,
@@ -73,3 +83,4 @@ releases:
   projects:
   - repo: openstack/keystoneauth
     hash: 10ba290b000b3fa0c88b28e61672dda4799d2f06
+    tarball-base: keystoneauth1
