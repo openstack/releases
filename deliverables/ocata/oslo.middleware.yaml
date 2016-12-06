@@ -15,3 +15,8 @@ releases:
   projects:
   - repo: openstack/oslo.middleware
     hash: 78bffce487935845bc932e91211b6429a7aba2a1
+- version: 3.22.0
+  projects:
+  - repo: openstack/oslo.middleware
+    hash: 6feaa13610c450c8486f969703768db5319b4846
+  highlights: '- Transform healthcheck from filter to an application'

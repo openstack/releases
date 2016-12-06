@@ -5,7 +5,8 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
-release-notes: http://docs.openstack.org/releasenotes/oslo.versionedobjects/unreleased.html
+release-notes: |-
+  http://docs.openstack.org/releasenotes/oslo.versionedobjects/unreleased.html
 releases:
 - version: 1.18.0
   projects:
@@ -15,3 +16,7 @@ releases:
   projects:
   - repo: openstack/oslo.versionedobjects
     hash: 64fd31a44529113e181d7da47c7a001b9430d507
+- version: 1.20.0
+  projects:
+  - repo: openstack/oslo.versionedobjects
+    hash: 1d0de80f738b3202b33e2ab168879f31e2e20745
