@@ -14,3 +14,9 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 7296a5302b00bd066ddf6b14c7d5a9afb3b88e70
+  - version: 11.0.2
+    projects:
+      - repo: openstack/glance
+        hash: 9496b9dd83a3eb9605f93e648498d837403aab44
+    highlights: >
+        - Contains fix for CVE-2015-5162.
