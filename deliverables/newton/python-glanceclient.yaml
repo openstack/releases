@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/python-glanceclient/newton.html
+branches:
+  - name: stable/newton
+    location: 2.5.0
 releases:
   - version: 2.1.0
     projects:

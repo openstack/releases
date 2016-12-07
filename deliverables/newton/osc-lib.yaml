@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 release-notes: http://docs.openstack.org/releasenotes/osc-lib/newton.html
+branches:
+- name: stable/newton
+  location: 1.1.0
 releases:
 - version: 0.1.0
   projects:

@@ -4,6 +4,9 @@ team: swift
 type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/newton
+    location: 2.10.0
 releases:
   - version: 2.8.0
     projects:

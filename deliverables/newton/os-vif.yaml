@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/os-vif/newton.html
+branches:
+  - name: stable/newton
+    location: 1.2.0
 releases:
   - version: 1.0.0
     projects:

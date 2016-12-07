@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/watcher/newton.html
+branches:
+  - name: stable/newton
+    location: 0.29.0
 releases:
   - version: 0.27.0
     projects:

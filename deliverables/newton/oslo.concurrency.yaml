@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
 release-notes: http://docs.openstack.org/releasenotes/oslo.concurrency/newton.html
+branches:
+- name: stable/newton
+  location: 3.14.0
 releases:
 - version: 3.8.0
   projects:

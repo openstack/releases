@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/ironic/newton.html
+branches:
+  - name: stable/newton
+    location: 6.2.0
 releases:
   - version: 6.0.0
     projects:

@@ -5,6 +5,9 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/newton
+    location: 0.18.0
 releases:
   - version: 0.14.0
     projects:

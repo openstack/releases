@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org,openstack-dev@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/python-novaclient/newton.html
+branches:
+  - name: stable/newton
+    location: 6.0.0
 releases:
   - version: 3.4.0
     projects:
