@@ -15,6 +15,7 @@
 """
 
 import collections
+import copy
 import glob
 import os
 
@@ -188,6 +189,10 @@ class Deliverable(object):
         self.series = series
         self.name = name
         self._data = data
+        self.repos = set()
+        for r in self.releases:
+            for p in r['projects']:
+                self.repos.add(p['repo'])
 
     @property
     def model(self):
@@ -205,7 +210,7 @@ class Deliverable(object):
 
     @property
     def latest_release(self):
-        rel = self._data.get('releases', [{}])[0]
+        rel = (self.releases or [{}])[0]
         return rel.get('version')
 
     @property
@@ -216,8 +221,12 @@ class Deliverable(object):
     def versions(self):
         return [
             r['version']
-            for r in self._data.get('releases', [])
+            for r in self.releases
         ]
+
+    @property
+    def releases(self):
+        return copy.deepcopy(self._data.get('releases', []))
 
     def get_branch_location(self, name):
         branches = self._data.get('branches', [])
