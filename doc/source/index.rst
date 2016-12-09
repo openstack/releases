@@ -131,6 +131,41 @@ Deliverables organized by the team that produces them.
 
    teams/*
 
+Cryptographic Signatures
+========================
+
+Git tags created through our release automation are signed by
+`centrally-managed OpenPGP keys`_ maintained by the `OpenStack
+Infrastructure team`_. Detached signatures of many separate release
+artifacts are also provided using the same keys. A new key is
+created corresponding to each development cycle and rotated
+relatively early in the cycle. (Implementation completed late in the
+Newton cycle, so many early Newton artifacts have no corresponding
+signatures.)
+
+OpenStack Infrastructure root sysadmins and Release Managers publish
+their own signatures of these keys into the global keyserver
+network. Copies of the public keys can be found below along with the
+date ranges during which each key was in general use.
+
+* 2016-08-03..2016-11-22 (Newton Cycle key):
+  `key 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28`_ (details__)
+* 2016-11-22..present (Ocata Cycle key):
+  `key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`_ (details__)
+
+.. Static key files are generated with the following command:
+   ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28
+   gpg2 --armor --export-options export-clean,export-minimal \
+   --export 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ) > \
+   doc/source/static/0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28.txt
+.. _`key 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28`: _static/0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28.txt
+.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28&fingerprint=on
+.. _`key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`: _static/0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07.txt
+.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07&fingerprint=on
+
+.. _`centrally-managed OpenPGP keys`: http://docs.openstack.org/infra/system-config/signing.html
+.. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
+
 References
 ==========
 
