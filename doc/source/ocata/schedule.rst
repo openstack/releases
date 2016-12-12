@@ -380,6 +380,10 @@ Nova Spec Freeze
 
 All Nova specs must be approved by 17th November, 2016.
 
+
+Manila
+------
+
 .. _o-manila-spec-frz1:
 
 Manila Low-Priority Spec Freeze
