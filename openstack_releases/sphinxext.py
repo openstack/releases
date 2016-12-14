@@ -194,6 +194,26 @@ class DeliverableDirectiveBase(rst.Directive):
             return version
         raise ValueError('Unrecognized artifact-link-mode: %r' % mode)
 
+    @staticmethod
+    def _artifact_signature_link(mode, version, type, project):
+        if mode == 'tarball':
+            # Link the version number to the tarball for downloading.
+            repo_base = project['repo'].rsplit('/')[-1]
+            if 'tarball-base' in project:
+                base = project['tarball-base']
+            else:
+                base = repo_base
+            return '`{t} <{s}/{r}/{n}-{v}.tar.gz.asc>`__'.format(
+                s='https://tarballs.openstack.org',
+                v=version,
+                t=type,
+                r=repo_base,
+                n=base,
+            )
+        elif mode == 'none':
+            return ""
+        raise ValueError('Unrecognized artifact-link-mode: %r' % mode)
+
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
 
@@ -287,14 +307,28 @@ class DeliverableDirectiveBase(rst.Directive):
                 _add('Release Notes: %s' % notes_link)
                 _add('')
             link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+            # We have signatures for artifacts only after newton
+            if series and series[0] >= 'o':
+                headers = ['Version', 'Signature', 'Repo', 'Git Commit']
+                data = ((self._artifact_link(link_mode, r['version'], p),
+                         self._artifact_signature_link(link_mode, r['version'],
+                                                       'pgp', p),
+                         p['repo'], p['hash'])
+                        for r in reversed(deliverable_info.get('releases', []))
+                        for p in r.get('projects', []))
+                columns = [10, 10, 40, 50]
+            else:
+                headers = ['Version', 'Repo', 'Git Commit']
+                data = ((self._artifact_link(link_mode, r['version'], p),
+                         p['repo'], p['hash'])
+                        for r in reversed(deliverable_info.get('releases', []))
+                        for p in r.get('projects', []))
+                columns = [10, 40, 50]
             _list_table(
                 _add,
-                ['Version', 'Repo', 'Git Commit'],
-                ((self._artifact_link(link_mode, r['version'], p),
-                  p['repo'], p['hash'])
-                 for r in reversed(deliverable_info.get('releases', []))
-                 for p in r.get('projects', [])),
-                columns=[10, 40, 50],
+                headers=headers,
+                data=data,
+                columns=columns,
             )
 
 
