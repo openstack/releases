@@ -2,7 +2,7 @@
  Ocata
 ========
 
-Projected Release Date: TBD
+Projected Release Date: 2017-02-22
 
 .. toctree::
    :maxdepth: 1
