@@ -3,3 +3,9 @@ launchpad: tripleo
 release-model: cycle-trailing
 team: tripleo
 type: other
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 6.0.0.0b2
+    projects:
+      - repo: openstack/instack-undercloud
+        hash: 41a6c74e437538530cce7126c306f951f669ac94
