@@ -4,3 +4,9 @@ launchpad: python-designateclient
 release-model: cycle-with-intermediary
 team: designate
 type: library
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 2912647d00f6ad4f1f2dc1f62357516cd18068c2
