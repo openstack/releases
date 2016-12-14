@@ -3,3 +3,10 @@ launchpad: barbican
 release-model: cycle-with-milestones
 team: barbican
 type: service
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/barbican/unreleased.html
+releases:
+  - version: 4.0.0.0b2
+    projects:
+      - repo: openstack/barbican
+        hash: ea725053c0cc1875a066b67f3d758bcde698afe0
