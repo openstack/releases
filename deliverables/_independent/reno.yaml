@@ -3,6 +3,9 @@ launchpad: reno
 team: Release Management
 type: other
 send-announcements-to: openstack-dev@lists.openstack.org
+branches:
+  - name: stable/newton
+    location: 1.8.0
 releases:
   - version: 0.1.0
     projects:
