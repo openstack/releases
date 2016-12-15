@@ -10,3 +10,12 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 0f0d7584e0ee4772c42d0e327624005d85108edb
+  - version: 15.0.0.0b2
+    projects:
+      - repo: openstack/nova
+        hash: 450c6e5a5faff076679f714216e4d65a76172a78
+    highlights: >
+      - Cells v2 is now required to upgrade to Ocata. See the release notes for
+        details.
+      - The nova-network service will no longer start unless the environment is
+        configured for Cells v1. Deployments should be using Neutron in Ocata.
