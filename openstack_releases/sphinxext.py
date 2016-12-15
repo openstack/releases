@@ -23,6 +23,7 @@ from docutils.statemachine import ViewList
 from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
+from openstack_releases import links
 
 
 def _list_table(add, headers, data, title='', columns=None):
@@ -174,46 +175,6 @@ class DeliverableDirectiveBase(rst.Directive):
         'cycle-trailing': 'Projects Trailing the Release Cycle',
     }
 
-    @staticmethod
-    def _artifact_link(mode, version, project):
-        if mode == 'tarball':
-            # Link the version number to the tarball for downloading.
-            repo_base = project['repo'].rsplit('/')[-1]
-            if 'tarball-base' in project:
-                base = project['tarball-base']
-            else:
-                base = repo_base
-            return '`{v} <{s}/{r}/{n}-{v}.tar.gz>`__'.format(
-                s='https://tarballs.openstack.org',
-                v=version,
-                r=repo_base,
-                n=base,
-            )
-        elif mode == 'none':
-            # Only show the version number.
-            return version
-        raise ValueError('Unrecognized artifact-link-mode: %r' % mode)
-
-    @staticmethod
-    def _artifact_signature_link(mode, version, type, project):
-        if mode == 'tarball':
-            # Link the version number to the tarball for downloading.
-            repo_base = project['repo'].rsplit('/')[-1]
-            if 'tarball-base' in project:
-                base = project['tarball-base']
-            else:
-                base = repo_base
-            return '`{t} <{s}/{r}/{n}-{v}.tar.gz.asc>`__'.format(
-                s='https://tarballs.openstack.org',
-                v=version,
-                t=type,
-                r=repo_base,
-                n=base,
-            )
-        elif mode == 'none':
-            return ""
-        raise ValueError('Unrecognized artifact-link-mode: %r' % mode)
-
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
         source_name = '<' + __name__ + '>'
 
@@ -306,20 +267,22 @@ class DeliverableDirectiveBase(rst.Directive):
                 _add('')
                 _add('Release Notes: %s' % notes_link)
                 _add('')
-            link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
             # We have signatures for artifacts only after newton
             if series and series[0] >= 'o':
                 headers = ['Version', 'Signature', 'Repo', 'Git Commit']
-                data = ((self._artifact_link(link_mode, r['version'], p),
-                         self._artifact_signature_link(link_mode, r['version'],
-                                                       'pgp', p),
+                data = ((links.artifact_link(r['version'], p,
+                                             deliverable_info),
+                         links.artifact_signature_link(r['version'],
+                                                       'pgp', p,
+                                                       deliverable_info),
                          p['repo'], p['hash'])
                         for r in reversed(deliverable_info.get('releases', []))
                         for p in r.get('projects', []))
                 columns = [10, 10, 40, 50]
             else:
                 headers = ['Version', 'Repo', 'Git Commit']
-                data = ((self._artifact_link(link_mode, r['version'], p),
+                data = ((links.artifact_link(r['version'], p,
+                                             deliverable_info),
                          p['repo'], p['hash'])
                         for r in reversed(deliverable_info.get('releases', []))
                         for p in r.get('projects', []))
