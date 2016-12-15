@@ -3,3 +3,12 @@ launchpad: freezer
 release-model: cycle-with-milestones
 team: freezer
 type: service
+releases:
+  - version: 4.0.0.0b2
+    projects:
+      - repo: openstack/freezer
+        hash: 9dd69888ca3b8f61bd29c52aeb59a61b7b2664cd
+      - repo: openstack/freezer-api
+        hash: cc95b6d2124d0dbe0d67abb2f3604ec4eef4ae09
+      - repo: openstack/freezer-dr
+        hash: b4fc9a6f9e30aff7dd4fbef1cdd6a2c9d39b942e

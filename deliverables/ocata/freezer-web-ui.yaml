@@ -3,3 +3,8 @@ launchpad: freezer
 release-model: cycle-with-milestones
 team: freezer
 type: horizon-plugin
+releases:
+  - version: 4.0.0.0b2
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: a31ac2de01fbe8053a473ce9c5a3fb8f1bfeba59
