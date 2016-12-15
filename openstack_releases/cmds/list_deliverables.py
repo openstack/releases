@@ -67,11 +67,18 @@ def main():
         action='store_true',
         help='limit the list to deliverables without a stable branch',
     )
-    parser.add_argument(
+    grp = parser.add_mutually_exclusive_group()
+    grp.add_argument(
         '--unreleased',
         default=False,
         action='store_true',
         help='limit the list to deliverables not released in the cycle',
+    )
+    grp.add_argument(
+        '--missing-milestone',
+        help=('deliverables that do not have the specified milestone as '
+              'the most current release; for example 2 would look for .0b2 '
+              'in the version number (implies --model cycle-with-milestones)'),
     )
     args = parser.parse_args()
 
@@ -81,6 +88,13 @@ def main():
     if series == 'independent':
         series = '_independent'
 
+    if args.missing_milestone:
+        model = 'cycle-with-milestones'
+        version_ending = '.0b{}'.format(args.missing_milestone)
+    else:
+        model = args.model
+        version_ending = None
+
     all_deliv = deliverable.Deliverables(
         root_dir=args.deliverables_dir,
         collapse_history=False,
@@ -88,7 +102,7 @@ def main():
     for entry in all_deliv.get_deliverables(args.team, series):
         deliv = deliverable.Deliverable(*entry)
 
-        if args.model and deliv.model != args.model:
+        if model and deliv.model != model:
             continue
         if args.cycle_based and not deliv.is_cycle_based:
             continue
@@ -98,6 +112,8 @@ def main():
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
         if args.unreleased and deliv.versions:
+            continue
+        if version_ending and deliv.latest_release and deliv.latest_release.endswith(version_ending):
             continue
         if args.verbose:
             print('{:30} {:15} {}'.format(deliv.name, deliv.latest_release, deliv.team))
