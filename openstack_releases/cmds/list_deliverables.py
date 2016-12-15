@@ -22,6 +22,12 @@ from openstack_releases import deliverable
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        default=False,
+        help='show more than the deliverable name',
+    )
+    parser.add_argument(
         '--team',
         help='the name of the project team, such as "Nova" or "Oslo"',
     )
@@ -93,4 +99,7 @@ def main():
                 continue
         if args.unreleased and deliv.versions:
             continue
-        print(deliv.name)
+        if args.verbose:
+            print('{:30} {:15} {}'.format(deliv.name, deliv.latest_release, deliv.team))
+        else:
+            print(deliv.name)
