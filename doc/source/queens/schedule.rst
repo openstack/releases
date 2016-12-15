@@ -18,7 +18,7 @@ Queens Goals Research
 ---------------------
 
 Pre-cycle planning and investigation into `the community-wide goals
-for Queens <http://governance.openstack.org/goals/queens/index.html>`__.
+for Queens <https://governance.openstack.org/tc/goals/queens/index.html>`__.
 
 .. _q-design-summit:
 
@@ -42,7 +42,7 @@ Queens-1 milestone
 XXX is the Queens-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
-.. _release:cycle-with-milestones: http://governance.openstack.org/reference/tags/release_cycle-with-milestones.html
+.. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
 
 .. _q-2:
 

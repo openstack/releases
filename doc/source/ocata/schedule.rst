@@ -105,7 +105,7 @@ Ocata Goals Research
 --------------------
 
 Pre-cycle planning and investigation into `the community-wide goals
-for Ocata <http://governance.openstack.org/goals/ocata/index.html>`__.
+for Ocata <https://governance.openstack.org/tc/goals/ocata/index.html>`__.
 
 .. _o-design-summit:
 
@@ -130,7 +130,7 @@ Ocata-1 milestone
 17 November is the ocata-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
-.. _release:cycle-with-milestones: http://governance.openstack.org/reference/tags/release_cycle-with-milestones.html
+.. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
 
 .. _o-goals-ack:
 
@@ -139,7 +139,7 @@ Ocata Community Goals Acknowledgement
 
 Teams should prepare their acknowledgement of `the community-wide
 goals for Ocata
-<http://governance.openstack.org/goals/ocata/index.html>`__.
+<https://governance.openstack.org/tc/goals/ocata/index.html>`__.
 
 .. _o-2:
 
@@ -173,7 +173,7 @@ Ocata Community Goals Completed
 
 Teams should prepare their documentation for completing `the
 community-wide goals for Ocata
-<http://governance.openstack.org/goals/ocata/index.html>`__.
+<https://governance.openstack.org/tc/goals/ocata/index.html>`__.
 
 .. _o-extra-atcs:
 
