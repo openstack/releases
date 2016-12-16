@@ -13,14 +13,17 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 3d398b4d224e284773165879fc546d80e7c6015c
+        tarball-base: python-watcher
   - version: 0.28.0
     projects:
       - repo: openstack/watcher
         hash: 8635beb045c16fc3eb3487557c5e7dc2a9ab7baa
+        tarball-base: python-watcher
   - version: 0.29.0
     projects:
       - repo: openstack/watcher
         hash: 8a38c4f479b19dbb695ab4e1b4cb074d943b58e2
+        tarball-base: python-watcher
   - version: 0.30.0
     projects:
       - repo: openstack/watcher
