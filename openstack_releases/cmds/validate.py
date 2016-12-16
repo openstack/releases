@@ -37,6 +37,7 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import project_config
+from openstack_releases import pythonutils
 from openstack_releases import versionutils
 
 urllib3.disable_warnings()
@@ -62,6 +63,8 @@ _VALID_BRANCH_PREFIXES = set([
     'feature',
     'driverfixes',
 ])
+_PLEASE = ('It is too expensive to determine this value during '
+           'the site build, please set it explicitly.')
 
 
 def is_a_hash(val):
@@ -224,6 +227,31 @@ def validate_releases(deliverable_info, zuul_layout,
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
+
+                # Ensure we have a local copy of the repository so we
+                # can scan for values that are more difficult to get
+                # remotely.
+                gitutils.clone_repo(workdir, project['repo'])
+
+                # Check that the sdist name and tarball-base name match.
+                sdist = pythonutils.get_sdist_name(workdir, project['repo'])
+                if sdist is not None:
+                    expected = project.get(
+                        'tarball-base',
+                        os.path.basename(project['repo']),
+                    )
+                    if sdist != expected:
+                        if 'tarball-base' in deliverable_info:
+                            action = 'is set to'
+                        else:
+                            action = 'defaults to'
+                        mk_error(
+                            ('tarball-base for %s %s %s %r '
+                             'but the sdist name is actually %r. ' +
+                             _PLEASE)
+                            % (project['repo'], release['version'],
+                               action, expected, sdist))
+
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to
@@ -232,7 +260,6 @@ def validate_releases(deliverable_info, zuul_layout,
                 version_exists = gitutils.tag_exists(
                     project['repo'], release['version'],
                 )
-                gitutils.clone_repo(workdir, project['repo'])
                 if version_exists:
                     actual_sha = gitutils.sha_for_tag(
                         workdir,
@@ -331,6 +358,7 @@ def validate_releases(deliverable_info, zuul_layout,
 def validate_new_releases(deliverable_info, filename,
                           team_data,
                           mk_warning, mk_error):
+
     """Apply validation rules that only apply to the current series.
     """
     if not deliverable_info.get('releases'):
