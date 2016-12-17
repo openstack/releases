@@ -47,3 +47,7 @@ releases:
         when creating servers with very large user_data entries.
       - A known issue is reported where WebOb>=1.6.0 is required if using the
         placement service.
+  - version: 14.0.3
+    projects:
+      - repo: openstack/nova
+        hash: c80c8e6dbfb59c117cca53250fdc97f9a171db03
