@@ -1,0 +1,26 @@
+---
+launchpad: octavia
+team: octavia
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/octavia/mitaka.html
+branches:
+  - name: stable/mitaka
+    location: 0.8.0
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/octavia
+        hash: ecfca348904560c341e84644137b9c0aa09b3949
+    highlights: |-
+      * Adds support for Layer 7 switching and shared pools
+      * Adds active/standby load balancers
+  - version: 0.8.1
+    projects:
+      - repo: openstack/octavia
+        hash: 0181f972082c56c449b22a1de0c00de891249e4c
+    highlights: |-
+      * Resolves issues building and using amphora images
+      * Run amphora haproxy in a network namespace
