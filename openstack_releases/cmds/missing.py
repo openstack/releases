@@ -30,6 +30,7 @@ from requests.packages import urllib3
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
+from openstack_releases import links
 
 urllib3.disable_warnings()
 
@@ -39,6 +40,18 @@ def main():
     parser.add_argument(
         '--series', '-s',
         help='release series to scan',
+    )
+    parser.add_argument(
+        '--artifacts',
+        default=False,
+        action='store_true',
+        help='only scan the build artifacts',
+    )
+    parser.add_argument(
+        '--all',
+        default=False,
+        action='store_true',
+        help='scan all releases, not just most recent',
     )
     parser.add_argument(
         'input',
@@ -51,9 +64,9 @@ def main():
     if args.input:
         filenames = args.input
     elif args.series:
-        filenames = glob.glob('deliverables/%s/*.yaml' % args.series)
+        filenames = sorted(glob.glob('deliverables/%s/*.yaml' % args.series))
     else:
-        filenames = gitutils.find_modified_deliverable_files()
+        filenames = sorted(gitutils.find_modified_deliverable_files())
     if not filenames:
         print('no modified deliverable files, validating all releases from %s'
               % defaults.RELEASE)
@@ -69,7 +82,13 @@ def main():
         with open(filename, 'r') as f:
             deliverable_info = yaml.load(f.read())
 
-        for release in deliverable_info['releases']:
+        link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+
+        releases = deliverable_info.get('releases', [])
+        if not args.all:
+            releases = releases[-1:]
+
+        for release in releases:
 
             for project in release['projects']:
                 # Report if the version has already been
@@ -78,19 +97,36 @@ def main():
                 # import history and sometimes we want to make new
                 # releases.
                 print('%s %s' % (project['repo'], release['version']), end=' ')
-                version_exists = gitutils.tag_exists(
-                    project['repo'], release['version'],
-                )
-                if version_exists:
-                    print('found')
-                else:
-                    print('MISSING')
-                    errors.append(
-                        '%s missing tag %s' % (
-                            project['repo'],
-                            release['version'],
-                        )
+
+                if not args.artifacts:
+                    version_exists = gitutils.tag_exists(
+                        project['repo'], release['version'],
                     )
+                    if version_exists:
+                        print('tag:found', end=' ')
+                    else:
+                        print('tag:MISSING', end=' ')
+                        errors.append('%s missing tag %s' %
+                                      (project['repo'], release['version']))
+
+                # Look for the tarball associated with the tag and
+                # report if that exists.
+                if link_mode == 'tarball':
+                    tb_url = links.tarball_url(release['version'], project)
+                    if links.link_exists(tb_url):
+                        print('tarball:found', end=' ')
+                    else:
+                        print('tarball:MISSING\n%s' % tb_url)
+                        errors.append('%s missing tarball %s' %
+                                      (filename, tb_url))
+                    sig_url = links.signature_url(release['version'], project)
+                    if links.link_exists(sig_url):
+                        print('signature:found', end=' ')
+                    else:
+                        print('signature:MISSING\n%s' % sig_url)
+                        errors.append('%s missing signature %s' %
+                                      (filename, sig_url))
+                print()
 
     if errors:
         print('\n\n%s errors found' % len(errors))

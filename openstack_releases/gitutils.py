@@ -16,11 +16,12 @@ import os
 import os.path
 import subprocess
 
-import requests
+from openstack_releases import links
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
 urllib3.disable_warnings()
+
 
 CGIT_SHA_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 CGIT_TAG_TEMPLATE = 'http://git.openstack.org/cgit/%s/tag/?h=%s'
@@ -48,11 +49,7 @@ def commit_exists(repo, ref):
 
     """
     url = CGIT_SHA_TEMPLATE % (repo, ref)
-    response = requests.get(url)
-    missing_commit = (
-        (response.status_code // 100 != 2) or 'Bad object id' in response.text
-    )
-    return not missing_commit
+    return links.link_exists(url)
 
 
 def tag_exists(repo, ref):
@@ -64,11 +61,7 @@ def tag_exists(repo, ref):
 
     """
     url = CGIT_TAG_TEMPLATE % (repo, ref)
-    response = requests.get(url)
-    missing_commit = (
-        (response.status_code // 100 != 2) or 'Bad object id' in response.text
-    )
-    return not missing_commit
+    return links.link_exists(url)
 
 
 def clone_repo(workdir, repo):
