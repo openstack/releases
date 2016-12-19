@@ -5,6 +5,7 @@ send-announcements-to: openstack-announce@lists.openstack.org
 type: other
 release-model: cycle-trailing
 release-type: fuel
+artifact-link-mode: none
 branches:
   - name: stable/newton
     location: 10.0.0
@@ -13,8 +14,10 @@ releases:
     projects:
       - repo: openstack/fuel-menu
         hash: 1a94d657ecaca4a1b549141ee22e5bc7ca20822e
+        tarball-base: fuelmenu
   - version: 10.0.0
     # diff-start: None
     projects:
       - repo: openstack/fuel-menu
         hash: 1a94d657ecaca4a1b549141ee22e5bc7ca20822e
+        tarball-base: fuelmenu
