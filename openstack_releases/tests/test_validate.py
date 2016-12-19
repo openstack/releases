@@ -624,6 +624,120 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
 
+class TestValidateTarballBase(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateTarballBase, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+
+    @mock.patch('openstack_releases.pythonutils.get_sdist_name')
+    def test_default_ok(self, gsn):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        gsn.return_value = 'automaton'
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('openstack_releases.pythonutils.get_sdist_name')
+    def test_default_invalid(self, gsn):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        gsn.return_value = 'automaton1'
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    @mock.patch('openstack_releases.pythonutils.get_sdist_name')
+    def test_explicit_ok(self, gsn):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd',
+                      'tarball-base': 'automaton1'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        gsn.return_value = 'automaton1'
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('openstack_releases.pythonutils.get_sdist_name')
+    def test_explicit_invalid(self, gsn):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd',
+                      'tarball-base': 'does-not-match-sdist'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        gsn.return_value = 'automaton'
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+
 class TestValidateNewReleases(base.BaseTestCase):
 
     team_data_yaml = textwrap.dedent("""
