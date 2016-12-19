@@ -210,7 +210,7 @@ class Deliverable(object):
 
     @property
     def latest_release(self):
-        rel = (self.releases or [{}])[0]
+        rel = (self.releases or [{}])[-1]
         return rel.get('version')
 
     @property
