@@ -73,3 +73,10 @@ releases:
   highlights: |-
     * Support MariaDB error 1927
     * Backport fix exc_filters for mysql-python
+- version: 4.13.5
+  projects:
+  - repo: openstack/oslo.db
+    hash: 086be4ac91b17942370980a35d67d48d2e42567a
+  highlights: |-
+    * Support packet sequence wrong error
+    * exc_filters: fix deadlock detection for percona xtradb cluster
