@@ -23,3 +23,9 @@ releases:
       * Security enhancements to TLS certificate and key handling
       * Security enhancement tenant networks are in a network namespace
       * Improved documentation
+  - version: 0.9.1
+    projects:
+      - repo: openstack/octavia
+        hash: 414b4ac80aa7e8e35d70c79411900e80778a2f3e
+    highlights: |-
+      * Resolves issues building and using amphora images
