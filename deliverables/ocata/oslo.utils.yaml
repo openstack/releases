@@ -23,3 +23,8 @@ releases:
   projects:
   - repo: openstack/oslo.utils
     hash: 0e99039d4216d710411c4df67b47b4a11ef8e1b9
+- version: 3.21.0
+  projects:
+  - repo: openstack/oslo.utils
+    hash: fde88a880272e7b6e7451433725d18bf74003856
+  highlights: '- Allow ''get_all_class_names'' to pass kwargs'
