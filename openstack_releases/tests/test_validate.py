@@ -630,10 +630,10 @@ class TestValidateTarballBase(base.BaseTestCase):
         super(TestValidateTarballBase, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
 
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
-    def test_default_ok(self, gsn):
+    def test_default_ok(self, gsn, jobs):
         deliverable_info = {
-            'artifact-link-mode': 'none',
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
@@ -653,13 +653,42 @@ class TestValidateTarballBase(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
-    def test_default_invalid(self, gsn):
+    def test_ignored_link_mode_none(self, gsn, jobs):
         deliverable_info = {
             'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        gsn.return_value = 'this-is-wrong'
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
+    @mock.patch('openstack_releases.pythonutils.get_sdist_name')
+    def test_default_invalid(self, gsn, jobs):
+        deliverable_info = {
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
@@ -679,13 +708,14 @@ class TestValidateTarballBase(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
-    def test_explicit_ok(self, gsn):
+    def test_explicit_ok(self, gsn, jobs):
         deliverable_info = {
-            'artifact-link-mode': 'none',
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
@@ -706,13 +736,14 @@ class TestValidateTarballBase(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
-    def test_explicit_invalid(self, gsn):
+    def test_explicit_invalid(self, gsn, jobs):
         deliverable_info = {
-            'artifact-link-mode': 'none',
             'releases': [
                 {'version': '1.5.0',
                  'projects': [

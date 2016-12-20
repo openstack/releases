@@ -234,23 +234,25 @@ def validate_releases(deliverable_info, zuul_layout,
                 gitutils.clone_repo(workdir, project['repo'])
 
                 # Check that the sdist name and tarball-base name match.
-                sdist = pythonutils.get_sdist_name(workdir, project['repo'])
-                if sdist is not None:
-                    expected = project.get(
-                        'tarball-base',
-                        os.path.basename(project['repo']),
-                    )
-                    if sdist != expected:
-                        if 'tarball-base' in deliverable_info:
-                            action = 'is set to'
-                        else:
-                            action = 'defaults to'
-                        mk_error(
-                            ('tarball-base for %s %s %s %r '
-                             'but the sdist name is actually %r. ' +
-                             _PLEASE)
-                            % (project['repo'], release['version'],
-                               action, expected, sdist))
+                if link_mode == 'tarball':
+                    sdist = pythonutils.get_sdist_name(workdir,
+                                                       project['repo'])
+                    if sdist is not None:
+                        expected = project.get(
+                            'tarball-base',
+                            os.path.basename(project['repo']),
+                        )
+                        if sdist != expected:
+                            if 'tarball-base' in deliverable_info:
+                                action = 'is set to'
+                            else:
+                                action = 'defaults to'
+                            mk_error(
+                                ('tarball-base for %s %s %s %r '
+                                 'but the sdist name is actually %r. ' +
+                                 _PLEASE)
+                                % (project['repo'], release['version'],
+                                   action, expected, sdist))
 
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
