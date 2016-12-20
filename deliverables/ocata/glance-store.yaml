@@ -4,3 +4,17 @@ launchpad: glance-store
 release-model: cycle-with-intermediary
 team: glance
 type: library
+releases:
+  - version: 0.19.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 6982b3c2e5f08d001b53413e6277a09013fd52df
+    highlights: >
+      - Immediately raise exception when the Swift store is
+        misconfigured to use both multi-tenant Swift and
+        swift+config
+      - Store the correct URL in the database with multi-tenant
+        Swift storage
+      - Fix bug arround volume sizes in Cinder storage
+      - Allow users to specify the Cinder volume type in Cinder
+        storage configuration
