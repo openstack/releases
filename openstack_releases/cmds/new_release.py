@@ -95,8 +95,14 @@ def main():
         'major': (1, 0, 0),
     }[args.release_type]
     new_version_parts = []
+    clear = False
     for cur, inc in zip(last_version, increment):
-        new_version_parts.append(str(int(cur) + inc))
+        if clear:
+            new_version_parts.append('0')
+        else:
+            new_version_parts.append(str(int(cur) + inc))
+            if inc:
+                clear = True
     new_version = '.'.join(new_version_parts)
 
     print('going from %s to %s' % (last_version, new_version))
