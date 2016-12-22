@@ -61,7 +61,7 @@
 +------------+------+---------------------------+-----------------------------+
 | Jan 23-27  | R-4  | :ref:`o-3`                | :ref:`o-key-feature-freeze` |
 |            |      +---------------------------+-----------------------------+
-|            |      | :ref:`o-ff`               |                             |
+|            |      | :ref:`o-ff`               | :ref:`p-ptl-nomination`     |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-final-clientlib`  |                             |
 |            |      +---------------------------+-----------------------------+
@@ -71,7 +71,7 @@
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-goals-complete`   |                             |
 +------------+------+---------------------------+-----------------------------+
-| Jan 30-03  | R-3  | :ref:`o-rc1`              |                             |
+| Jan 30-03  | R-3  | :ref:`o-rc1`              | :ref:`p-ptl-election`       |
 |            |      +---------------------------+-----------------------------+
 |            |      | :ref:`o-hard-sf`          |                             |
 +------------+------+---------------------------+-----------------------------+
@@ -297,8 +297,9 @@ Elections
 Pike PTLs self-nomination
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Project team lead candidates for the Ocata cycle should announce their
-candidacy during this week.
+Project team lead candidates for the Pike cycle should announce their
+candidacy during this week. Those dates should be confirmed by the Pike
+PTL election officials.
 
 .. _p-ptl-election:
 
@@ -306,23 +307,8 @@ Pike cycle PTLs election
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Election week for Project team leads (where an election must be held to
-determine the winner).
-
-.. _p-tc-nomination:
-
-TC member self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Candidates for the partial Technical Committee member renewal should announce
-their candidacy during this week.
-
-.. _p-tc-election:
-
-TC member election
-^^^^^^^^^^^^^^^^^^
-
-Election for partially renewing Technical Committee members will happen
-during this week.
+determine the winner). Those dates should be confirmed by the Pike PTL
+election officials.
 
 Cinder
 ------
