@@ -1,0 +1,131 @@
+---
+start-week: 2016-11-07
+release-week: 2017-02-20
+cycle:
+- end: '2016-11-04'
+  start: '2016-10-31'
+  x-project:
+  - n-release
+  - o-goals-research
+- start: '2016-10-10'
+  end: '2016-10-14'
+- start: '2016-10-17'
+  end: '2016-10-21'
+- start: '2016-10-24'
+  end: '2016-10-28'
+  x-project:
+  - o-design-summit
+- start: '2016-10-31'
+  end: '2016-11-04'
+  x-project:
+  - n-release
+- end: '2016-11-11'
+  start: '2016-11-07'
+  name: R-15
+  project-specific:
+    - o-glance-spec-prop
+- end: '2016-11-18'
+  start: '2016-11-14'
+  name: R-14
+  x-project:
+  - o-1
+  - o-goals-ack
+  project-specific:
+  - o-nova-spec-freeze
+  - o-manila-spec-frz1
+  - o-key-spec-prop
+- end: '2016-11-25'
+  start: '2016-11-21'
+  name: R-13
+  project-specific:
+  - o-glance-spec-freeze
+  - o-trove-spec-prop
+- end: '2016-12-02'
+  start: '2016-11-28'
+  name: R-12
+- end: '2016-12-09'
+  start: '2016-12-05'
+  name: R-11
+  x-project:
+  - o-2
+  - o-mf
+  project-specific:
+  - o-trove-spec-freeze
+  - o-cinder-nddeadline
+  - o-cinder-spec-freeze
+  - o-key-spec-freeze
+  - o-manila-spec-frz2
+- end: '2016-12-16'
+  start: '2016-12-12'
+  name: R-10
+- end: '2016-12-23'
+  start: '2016-12-19'
+  name: R-9
+  project-specific:
+  - o-manila-drv-freeze
+- end: '2016-12-30'
+  start: '2016-12-26'
+  name: R-8
+  project-specific:
+  - o-key-feature-prop
+- end: '2017-01-06'
+  start: '2017-01-02'
+  name: R-7
+  x-project:
+  - o-extra-atcs
+- end: '2017-01-13'
+  start: '2017-01-09'
+  name: R-6
+- end: '2017-01-20'
+  start: '2017-01-16'
+  name: R-5
+  x-project:
+  - o-final-lib
+  project-specific:
+  - o-trove-client-soft
+  - o-trove-guest-req
+  - o-horizon-ff
+- end: '2017-01-27'
+  start: '2017-01-23'
+  name: R-4
+  x-project:
+  - o-3
+  - o-ff
+  - o-final-clientlib
+  - o-soft-sf
+  - o-rf
+  - o-goals-complete
+  project-specific:
+  - o-key-feature-freeze
+  - p-ptl-nomination
+- end: '2017-02-03'
+  start: '2017-01-30'
+  name: R-3
+  x-project:
+  - o-rc1
+  - o-hard-sf
+  project-specific:
+  - p-ptl-election
+- end: '2017-02-10'
+  start: '2017-02-06'
+  name: R-2
+- end: '2017-02-17'
+  start: '2017-02-13'
+  name: R-1
+  x-project:
+  - o-finalrc
+- end: '2017-02-24'
+  start: '2017-02-20'
+  name: R+0
+  x-project:
+  - o-release
+  - p-ptg0
+- end: '2017-03-03'
+  start: '2017-02-27'
+  name: R+1
+- end: '2017-03-10'
+  start: '2017-03-06'
+  name: R+2
+  x-project:
+  - o-trailing
+

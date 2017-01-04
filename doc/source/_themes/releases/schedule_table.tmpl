@@ -1,0 +1,34 @@
+.. -*- mode: rst -*-
+
+.. This template renders a schedule table using the list-table
+   directive. Named weeks ("R-x") include their names. Weeks before
+   the official start of the cycle are normally not named, but may be
+   included for reference (for example, to indicate where the cycle
+   begins relative to a summit or PTG).
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 5 30 30
+
+   - * Week
+     * 
+     * Cross-project events
+     * Project-specific events
+{%- for c in data['cycle'] %}
+   - * {{format_date(c['start'])}} - {{format_date(c['end'])}}
+     * {{c['name']}}
+{%- if not c['x-project'] %}
+     * 
+{%- else -%}
+{%- for e in c['x-project'] %}
+     {% if loop.first %}*{% else %} {% endif %} | :ref:`{{e}}`
+{%- endfor -%}
+{%- endif -%}
+{%- if not c['project-specific'] %}
+     * 
+{%- else -%}
+{%- for e in c['project-specific'] %}
+     {% if loop.first %}*{% else %} {% endif %} | :ref:`{{e}}`
+{%- endfor -%}
+{%- endif -%}
+{%- endfor -%}

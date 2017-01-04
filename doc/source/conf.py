@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import datetime
 import os
 import sys
 
@@ -7,7 +8,10 @@ import sys
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['openstack_releases.sphinxext']
+extensions = [
+    'openstack_releases.sphinxext',
+    'sphinxcontrib.datatemplates',
+]
 
 config_generator_config_file = 'config-generator.conf'
 
@@ -61,3 +65,19 @@ latex_documents = [
      '%s Documentation' % project,
      'OpenStack Foundation', 'manual'),
 ]
+
+
+def format_date(s, fmt='%b %d'):
+    # This function is used in schedule_table.tmpl
+    d = datetime.datetime.strptime(s, '%Y-%m-%d')
+    return d.strftime(fmt)
+
+
+def builder_inited(app):
+    # Make format_date visible in the template context.
+    app.builder.templates.environment.globals['format_date'] = format_date
+
+
+def setup(app):
+    app.info('initializing from conf.py')
+    app.connect('builder-inited', builder_inited)
