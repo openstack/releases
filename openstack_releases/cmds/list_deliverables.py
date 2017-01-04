@@ -80,6 +80,12 @@ def main():
               'the most current release; for example 2 would look for .0b2 '
               'in the version number (implies --model cycle-with-milestones)'),
     )
+    grp.add_argument(
+        '--missing-rc',
+        action='store_true',
+        help=('deliverables that do not have a release candidate, yet '
+              '(implies --model cycle-with-milestones)'),
+    )
     args = parser.parse_args()
 
     # Deal with the inconsistency of the name for the independent
@@ -91,6 +97,9 @@ def main():
     if args.missing_milestone:
         model = 'cycle-with-milestones'
         version_ending = '.0b{}'.format(args.missing_milestone)
+    elif args.missing_rc:
+        model = 'cycle-with-milestones'
+        version_ending = None
     else:
         model = args.model
         version_ending = None
@@ -114,6 +123,8 @@ def main():
         if args.unreleased and deliv.versions:
             continue
         if version_ending and deliv.latest_release and deliv.latest_release.endswith(version_ending):
+            continue
+        if args.missing_rc and deliv.latest_release and 'rc' in deliv.latest_release:
             continue
         if args.verbose:
             print('{:30} {:15} {}'.format(deliv.name, deliv.latest_release, deliv.team))
