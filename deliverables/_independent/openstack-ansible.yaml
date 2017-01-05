@@ -1311,3 +1311,66 @@ releases:
         hash: 3bcfed8a37a6f09b0ca2b106fb7adfcd72b1e371
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: 74cf6cd7f2bf8bb66811ba259ba66825b4cc8ea8
+  - version: 13.3.11
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 25b4d09a47a72abaf6ce5c8e0d10af096639db4f
+      - repo: openstack/openstack-ansible-apt_package_pinning
+        hash: ddeb15e7dad17e79f194cc96f6129bfd2382fe90
+      - repo: openstack/openstack-ansible-pip_install
+        hash: ccf035a2ba661ae43ec1525b00ab7648aa6e6741
+      - repo: openstack/openstack-ansible-pip_lock_down
+        hash: 7b9f04038476f2a84b529941bd69b531ecdac653
+      - repo: openstack/openstack-ansible-galera_client
+        hash: 08471c803c458246b12d3361edc00739b5444f02
+      - repo: openstack/openstack-ansible-galera_server
+        hash: a9627447c0d5504d717b63f6677ba254fc86f421
+      - repo: openstack/openstack-ansible-lxc_container_create
+        hash: d319546e4f2ee4712fe15bb2da8f976718ffbd42
+      - repo: openstack/openstack-ansible-lxc_hosts
+        hash: 0271c1ab57f2fcfd47df91a54a2763ea6f0e1022
+      - repo: openstack/openstack-ansible-memcached_server
+        hash: 99e5aee3017c95648debdbd03953e4ee295844f4
+      - repo: openstack/openstack-ansible-security
+        hash: d57be755359fae16908d6f9fce8aaf5b35af49da
+      - repo: openstack/openstack-ansible-openstack_hosts
+        hash: 48eeb134779dc51bd0d3c1374ff4090f20b1a6f6
+      - repo: openstack/openstack-ansible-os_keystone
+        hash: 4f30d3a33c18620da30ef29c29a6fe9fe4833543
+      - repo: openstack/openstack-ansible-openstack_openrc
+        hash: 4f6283ed13b92a8642e6ef355593c38a72255091
+      - repo: openstack/openstack-ansible-os_aodh
+        hash: 0c80b7c02012582228cbaa1c93e2610f0ff52abd
+      - repo: openstack/openstack-ansible-os_ceilometer
+        hash: 3a24b01d0685a3ea1153e058ad6c19003bcc48e4
+      - repo: openstack/openstack-ansible-os_cinder
+        hash: b41c5886ec11e712b0a52860b4da605676c003c8
+      - repo: openstack/openstack-ansible-os_glance
+        hash: a37ff5b624e96a0e8b5c563bed3c4bef7498f5ad
+      - repo: openstack/openstack-ansible-os_heat
+        hash: db532fe5fdd69bf4232727f4a050ebf4b99d619d
+      - repo: openstack/openstack-ansible-os_horizon
+        hash: 03b0620015dc178408271c55861c34ef4da6ee44
+      - repo: openstack/openstack-ansible-os_ironic
+        hash: 0f8353deeef5d1e79e724c5a28936aa884bad386
+        tarball-base: openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_neutron
+        hash: ae7af49d1670f5b37e64a0f0bb1590e20557d980
+      - repo: openstack/openstack-ansible-os_nova
+        hash: 385f89cfbad6f696ae462ae563c5b9b5a30a8bcd
+      - repo: openstack/openstack-ansible-os_swift
+        hash: 4d03211a961b32be92936b94bddbc9758bcd705d
+      - repo: openstack/openstack-ansible-os_tempest
+        hash: 820c3dc60f75b680e9f720b246e35a27065e0b76
+      - repo: openstack/openstack-ansible-plugins
+        hash: 6fd7a88711bd2625185547d143271a0972e95e7a
+      - repo: openstack/openstack-ansible-rabbitmq_server
+        hash: f42c9281ce7eeafcf070b37f24773cf65f8a98d8
+      - repo: openstack/openstack-ansible-repo_build
+        hash: 22c55a72b75c17df84529e09aaa51be9909c5b15
+      - repo: openstack/openstack-ansible-repo_server
+        hash: 3501cae5f1848f5f05bc1fb0b30d272f459b5a14
+      - repo: openstack/openstack-ansible-rsyslog_client
+        hash: 3bcfed8a37a6f09b0ca2b106fb7adfcd72b1e371
+      - repo: openstack/openstack-ansible-rsyslog_server
+        hash: 74cf6cd7f2bf8bb66811ba259ba66825b4cc8ea8
