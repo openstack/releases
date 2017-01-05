@@ -4,3 +4,13 @@ launchpad: python-zaqarclient
 release-model: cycle-with-intermediary
 team: zaqar
 type: library
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: cb635f50e9a3f25129e1ef2296484b77b681ad66
+    highlights: >
+      - Add support for keystone session.
+      - Add support for project doc.
+      - Add support for SSL and insecure request.
