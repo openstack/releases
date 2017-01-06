@@ -17,6 +17,26 @@ from __future__ import print_function
 import argparse
 import datetime
 
+import yaml
+
+
+def mk_entry(name, week, cross_project=None, project_specific=None):
+    d = {
+        'start': '{:%Y-%m-%d}'.format(week),
+        'end': '{:%Y-%m-%d}'.format(week + work_week),
+    }
+    if name:
+        d['name'] = name
+    if cross_project:
+        d['x-project'] = cross_project
+    if project_specific:
+        d['project-specific'] = project_specific
+    return d
+
+
+def add_cycle(name):
+    return '{}-{}'.format(args.prefix_char, name)
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -24,6 +44,10 @@ parser.add_argument(
     default=False,
     action='store_true',
     help='output in etherpad format for building the release planning doc',
+)
+parser.add_argument(
+    'prefix_char',
+    help='single letter prefix for tags',
 )
 parser.add_argument(
     'previous_release',
@@ -53,41 +77,31 @@ while current < next_release_date:
 
 n_weeks = len(weeks)
 
+cycle = [
+    # Print the date for the previous release. The event name will
+    # need to be replaced manually with the right name.
+    mk_entry('', previous_release_date,
+             cross_project=['REPLACE-WITH-PREVIOUS-RELEASE-REF']),
+]
+
+for n, w in enumerate(weeks, 1):
+    name = 'R{:<+d}'.format(n - n_weeks)
+    cross_project = []
+    if n == n_weeks:
+        cross_project.append(add_cycle('final'))
+    cycle.append(mk_entry(name, w, cross_project=cross_project))
+
 # Add weeks for the cycle-trailing deadline.
-for i in range(2):
-    current += week
-    weeks.append(current)
+current += week
+cycle.append(mk_entry('R+1', current))
+current += week
+cycle.append(mk_entry('R+2', current, cross_project=[add_cycle('trailing')]))
 
-HEADER = '''
-+-------------------+---------------------------+-----------------------------+
-| Week              | Cross-project events      | Project-specific events     |
-+============+======+===========================+=============================+
-'''
+data = {
+    'cycle': cycle,
+}
 
-if not args.etherpad:
-    print(HEADER, end='')
-
-TABLE_FORMAT = '''
-| {:<10} | {:<4} |{:<27}|{:<29}|
-+------------+------+---------------------------+-----------------------------+
-'''.strip()
-
-ETHERPAD_FORMAT = '{} ({})'
-
-
-def show_week(week, name):
-    date_range = '{:%b %d}-{:%d}'.format(
-        week,
-        week + work_week,
-    )
-    if not args.etherpad:
-        print(TABLE_FORMAT.format(date_range, name, '', ''))
-    else:
-        print(ETHERPAD_FORMAT.format(name, date_range))
-
-
-# Print the date for the previous release
-show_week(previous_release_date, '')
-
-for n, week in enumerate(weeks, 1):
-    show_week(week, 'R{:<+3d}'.format(n - n_weeks))
+print('---')
+print('start-week: {:%Y-%m-%d}'.format(weeks[0]))
+print('release-week: {:%Y-%m-%d}'.format(next_release_date))
+print(yaml.dump(data, default_flow_style=False, explicit_start=False))
