@@ -49,6 +49,16 @@ td ul {
 	margin-bottom: 0;
 }
 
+/* color alternate rows of tables to make them easier to follow across
+   the page */
+thead tr.row-odd {
+	background: #2A4E68;
+	color: white;
+}
+tr.row-odd {
+	background: #edf2f7;
+}
+
 /*Header Navigation*/
 .brand-wrapper {
     margin: 10px 0;
