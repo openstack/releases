@@ -44,6 +44,11 @@ ol.loweralpha {
     font-weight: 400;
 }
 
+/* lists within tables don't need as much margin */
+td ul {
+	margin-bottom: 0;
+}
+
 /*Header Navigation*/
 .brand-wrapper {
     margin: 10px 0;
