@@ -4,6 +4,11 @@ import datetime
 import os
 import sys
 
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+sys.path.insert(0, os.path.join(os.path.abspath('.'), '_exts'))
+
 # -- General configuration ----------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -11,6 +16,7 @@ import sys
 extensions = [
     'openstack_releases.sphinxext',
     'sphinxcontrib.datatemplates',
+    'ics',
 ]
 
 config_generator_config_file = 'config-generator.conf'

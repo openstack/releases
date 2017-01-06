@@ -8,6 +8,12 @@
    :source: schedule.yaml
    :template: schedule_table.tmpl
 
+.. ics::
+   :source: schedule.yaml
+   :name: Ocata
+
+`Subscribe to iCalendar file <schedule.ics>`__
+
 .. note::
 
    With the exception of the final release date and cycle-trailing
