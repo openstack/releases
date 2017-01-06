@@ -6,9 +6,7 @@ import os.path
 from docutils.io import FileOutput
 from docutils import nodes
 from docutils.parsers import rst
-from docutils.statemachine import ViewList
 import icalendar
-from sphinx.util.nodes import nested_parse_with_titles
 import yaml
 
 
@@ -89,19 +87,7 @@ def doctree_resolved(app, doctree, docname):
 
             event = icalendar.Event()
 
-            event.add('summary', week['name'])
-
-            start = datetime.datetime.strptime(week['start'], '%Y-%m-%d')
-            event.add('dtstart', icalendar.vDate(start.date()))
-
-            # NOTE(dhellmann): ical assumes a time of midnight, so in
-            # order to have the event span the final day of the week
-            # we have to add an extra day.
-            raw_end = datetime.datetime.strptime(week['end'], '%Y-%m-%d')
-            end = raw_end + datetime.timedelta(days=1)
-            event.add('dtend', icalendar.vDate(end.date()))
-
-            description = []
+            summary = []
             for item in week.get('x-project', []):
                 try:
                     # Look up the cross-reference name to get the
@@ -115,9 +101,32 @@ def doctree_resolved(app, doctree, docname):
                     # fail.
                     app.info('could not get title for {}: {}'.format(item, e))
                     title = item
-                description.append(title)
+                summary.append(title)
+            if summary:
+                summary_text = ' (' + '; '.join(summary) + ')'
+            else:
+                summary_text = ''
+            event.add('summary', week['name'] + summary_text)
+
+            start = datetime.datetime.strptime(week['start'], '%Y-%m-%d')
+            event.add('dtstart', icalendar.vDate(start.date()))
+
+            # NOTE(dhellmann): ical assumes a time of midnight, so in
+            # order to have the event span the final day of the week
+            # we have to add an extra day.
+            raw_end = datetime.datetime.strptime(week['end'], '%Y-%m-%d')
+            end = raw_end + datetime.timedelta(days=1)
+            event.add('dtend', icalendar.vDate(end.date()))
+
+            # Look up the cross-reference name to get the
+            # section, then add the full description to the
+            # text.
+            description = [
+                doctree.ids[item].astext()
+                for item in week.get('x-project', [])
+            ]
             if description:
-                event.add('description', ', '.join(description))
+                event.add('description', '\n\n'.join(description))
 
             cal.add_component(event)
 
