@@ -91,6 +91,11 @@ Between Milestone-2 and Milestone-3
       contents of their $project-release groups. For new projects in
       some cases they will need to get the group created by Infra.
 
+   4. Notify the Infrastructure team to `generate
+      <http://docs.openstack.org/infra/system-config/signing.html#generation`_
+      an artifact signing key (but not replace the current one yet), and
+      begin the attestation process.
+
 Final Library Release (week before Milestone-3)
 ===============================================
 
