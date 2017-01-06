@@ -7,7 +7,11 @@ Release Series
 
 OpenStack is developed and released around 6-month cycles. After the initial
 release, additional stable point releases will be released in each release
-series. You can find the detail of the various release series here:
+series. You can find the detail of the various release series here on their
+series page. Subscribe to the `combined release calendar`_ for continual
+updates.
+
+.. _combined release calendar: schedule.ics
 
 .. list-table::
    :header-rows: 1

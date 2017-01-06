@@ -67,6 +67,11 @@ class ICS(rst.Directive):
         return [node]
 
 
+_global_calendar = icalendar.Calendar()
+_global_calendar.add('prodid', '-//releases.openstack.org//EN')
+_global_calendar.add('X-WR-CALNAME', 'OpenStack Release Schedule')
+
+
 def doctree_resolved(app, doctree, docname):
     builder = app.builder
 
@@ -106,7 +111,12 @@ def doctree_resolved(app, doctree, docname):
                 summary_text = ' (' + '; '.join(summary) + ')'
             else:
                 summary_text = ''
-            event.add('summary', week['name'] + summary_text)
+            event.add(
+                'summary',
+                '{} {}{}'.format(series_name.title(),
+                                 week['name'],
+                                 summary_text),
+            )
 
             start = datetime.datetime.strptime(week['start'], '%Y-%m-%d')
             event.add('dtstart', icalendar.vDate(start.date()))
@@ -129,6 +139,7 @@ def doctree_resolved(app, doctree, docname):
                 event.add('description', '\n\n'.join(description))
 
             cal.add_component(event)
+            _global_calendar.add_component(event)
 
         output_full_name = os.path.join(
             builder.outdir,
@@ -148,7 +159,27 @@ def doctree_resolved(app, doctree, docname):
         node.parent.replace(node, [])
 
 
+def build_finished(app, exception):
+    if exception is not None:
+        return
+    builder = app.builder
+    output_full_name = os.path.join(
+        builder.outdir,
+        'schedule.ics',
+    )
+    output_dir_name = os.path.dirname(output_full_name)
+    if not os.path.exists(output_dir_name):
+        os.makedirs(output_dir_name)
+    destination = FileOutput(
+        destination_path=output_full_name,
+        encoding='utf-8',
+    )
+    app.info('generating {}'.format(output_full_name))
+    destination.write(_global_calendar.to_ical())
+
+
 def setup(app):
     app.info('initializing ICS extension')
     app.add_directive('ics', ICS)
     app.connect('doctree-resolved', doctree_resolved)
+    app.connect('build-finished', build_finished)
