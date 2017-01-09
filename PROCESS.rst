@@ -78,14 +78,19 @@ Between Milestone-2 and Milestone-3
 
    1. Update ACLs for refs/heads/stable/$series so that members of
       $project-release-branch can approve changes. The patch can be
-      generated (for all release:cycle-with-milestones deliverables) with:
-      ``aclmanager.py acls /path/to/openstack-infra/project-config $series``
+      generated (for all release:cycle-with-milestones deliverables)
+      with::
+
+        tox -e venv -- python ./tools/aclmanager.py acls /path/to/openstack-infra/project-config $series
 
    2. Set the population of all $project-release-branch groups to the
       "Release Managers" group and $project-release. This can be done
       (for all release:cycle-with-milestones deliverables) by running
-      ``aclmanager.py groups pre_release $user`` ($user being your Gerrit
-      username)
+      ``aclmanager.py``::
+
+        tox -e venv -- python ./tools/aclmanager.py groups pre_release $user
+
+      ($user being your Gerrit username)
 
    3. Ask the release liaisons for the affected teams to update the
       contents of their $project-release groups. For new projects in
