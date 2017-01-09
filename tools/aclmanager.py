@@ -23,10 +23,15 @@ import os
 import sys
 
 import requests
+from requests.packages import urllib3
 import yaml
 
 import openstack_releases
 from openstack_releases import deliverable
+
+# Turn of warnings about bad SSL config.
+# https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+urllib3.disable_warnings()
 
 GERRIT_URL = 'https://review.openstack.org/'
 
@@ -146,7 +151,7 @@ def modify_gerrit_groups(args):
     # Build the list of calls to make
     print('Computing the list of modifications')
     calls = set()
-    for team, _ in repositories_list():
+    for team, repo in repositories_list(args.deliverables_dir, args.series):
         group = '%s-release-branch' % team
         for (verb, memberformat) in actions:
             member = memberformat(team)
@@ -173,16 +178,16 @@ def main(args=sys.argv[1:]):
         default=False,
         help='do not actually do anything',
         action='store_true')
+    parser.add_argument(
+        '--deliverables-dir',
+        default=openstack_releases.deliverable_dir,
+        help='location of deliverable files',
+    )
     subparsers = parser.add_subparsers(title='commands')
 
     do_acls = subparsers.add_parser(
         'acls',
         help='patch ACL files')
-    do_acls.add_argument(
-        '--deliverables-dir',
-        default=openstack_releases.deliverable_dir,
-        help='location of deliverable files',
-    )
     do_acls.add_argument(
         'repository',
         help='location of the local project-config repository')
@@ -198,6 +203,9 @@ def main(args=sys.argv[1:]):
         'stage',
         choices=['pre_release', 'post_release'],
         help='type of modification to push')
+    do_groups.add_argument(
+        'series',
+        help='series to modify groups for')
     do_groups.add_argument(
         'username',
         help='gerrit HTTP username')
