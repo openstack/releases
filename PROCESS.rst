@@ -81,14 +81,14 @@ Between Milestone-2 and Milestone-3
       generated (for all release:cycle-with-milestones deliverables)
       with::
 
-        tox -e venv -- python ./tools/aclmanager.py acls /path/to/openstack-infra/project-config $series
+        tox -e aclmanager -- acls /path/to/openstack-infra/project-config $series
 
    2. Set the population of all $project-release-branch groups to the
       "Release Managers" group and $project-release. This can be done
       (for all release:cycle-with-milestones deliverables) by running
       ``aclmanager.py``::
 
-        tox -e venv -- python ./tools/aclmanager.py groups pre_release $user
+        tox -e aclmanager -- groups pre_release $series $user
 
       ($user being your Gerrit username)
 
