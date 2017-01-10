@@ -459,3 +459,34 @@ easy as ``pip install .`` in this repository directory.
   milestone-based projects at the end of the cycle
 * ``init-series`` initializes a new deliverable directory with stub
   files based on the previous release.
+
+tools/aclmanager.py
+-------------------
+
+A script to handle pre-release/post-release ACLs on stable/$SERIES
+branches.
+
+The 'acls' action helps to produce a patch over
+openstack-infra/project-config that inserts a specific ACL for
+stable/$SERIES.
+
+The 'groups' action helps to adjust the membership of
+$PROJ-release-branch Gerrit group, based on which stage the release
+branch is at. At pre-release we remove $PROJ-stable-maint, and add the
+$PROJ-release and Release Managers group (pre_release subaction). At
+post-release, we remove $PROJ-release and Release Managers, and add
+$PROJ-stable-maint (post_release subaction).
+
+Examples:
+
+To create the ACL patch for stable/newton:
+
+::
+
+  tox -e venv -- python ./tools/aclmanager.py acls ~/branches/openstack-infra/project-config newton
+
+To set the pre-release group membership:
+
+::
+
+  tox -e venv -- python ./tools/aclmanager.py groups pre_release ttx
