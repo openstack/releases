@@ -4,3 +4,11 @@ launchpad: os-win
 release-model: cycle-with-intermediary
 team: winstackers
 type: library
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/os-win
+        hash: af25ceea1b5a26498c11a3cae00cea4e3513d15f
+    highlights: |
+      This release includes support for creating VMs with nested
+      virtualization and trunked VLANs support.
