@@ -48,6 +48,8 @@ def repositories_list(deliverables_dir, series):
         d = deliverable.Deliverable(team, series, dname, dinfo)
         if d.model != 'cycle-with-milestones':
             continue
+        if not d.repos:
+            print('WARNING: no releases for {} in {}'.format(dname, series))
         for repo in sorted(d.repos):
             yield (d.team, repo)
 
@@ -85,10 +87,13 @@ label-Workflow = -1..+1 group {group}
     aclfiles = {}
     for team, repo in repositories_list(args.deliverables_dir, args.series):
         try:
-            aclfiles[acl[repo]] = team
+            to_update = acl[repo]
+            print('ACLs for {} owned by {} to be updated in {}'.format(
+                repo, team, to_update))
         except KeyError:
             print('No ACL file defined for %s' % repo)
-            sys.exit(1)
+            raise RuntimeError('No ACL file defined for %s' % repo)
+        aclfiles[to_update] = team
 
     for aclfn, teamname in aclfiles.items():
         newcontent = ''
