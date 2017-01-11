@@ -27,6 +27,7 @@ from requests.packages import urllib3
 import yaml
 
 import openstack_releases
+from openstack_releases import defaults
 from openstack_releases import deliverable
 
 # Turn of warnings about bad SSL config.
@@ -183,6 +184,11 @@ def main(args=sys.argv[1:]):
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
     )
+    parser.add_argument(
+        '--series',
+        default=defaults.RELEASE,
+        help='release series to use for repo/team membership',
+    )
     subparsers = parser.add_subparsers(title='commands')
 
     do_acls = subparsers.add_parser(
@@ -191,9 +197,6 @@ def main(args=sys.argv[1:]):
     do_acls.add_argument(
         'repository',
         help='location of the local project-config repository')
-    do_acls.add_argument(
-        'series',
-        help='series to generate ACL for')
     do_acls.set_defaults(func=patch_acls)
 
     do_groups = subparsers.add_parser(
@@ -203,9 +206,6 @@ def main(args=sys.argv[1:]):
         'stage',
         choices=['pre_release', 'post_release'],
         help='type of modification to push')
-    do_groups.add_argument(
-        'series',
-        help='series to modify groups for')
     do_groups.add_argument(
         'username',
         help='gerrit HTTP username')

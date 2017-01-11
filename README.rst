@@ -483,7 +483,7 @@ To create the ACL patch for stable/newton:
 
 ::
 
-  tox -e aclmanager -- acls ~/branches/openstack-infra/project-config newton
+  tox -e aclmanager -- --series newton acls ~/branches/openstack-infra/project-config
 
 To set the pre-release group membership:
 
