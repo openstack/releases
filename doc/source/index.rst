@@ -41,7 +41,7 @@ updates.
      * 2016-04-07
      * 2017-04-10
    - * :doc:`liberty/index`
-     * Security-supported
+     * EOL
      * 2015-10-15
      * 2016-11-17
    - * :doc:`kilo/index`
