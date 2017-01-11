@@ -21,14 +21,14 @@
      * 
 {%- else -%}
 {%- for e in c['x-project'] %}
-     {% if loop.first %}*{% else %} {% endif %} | :ref:`{{e}}`
+     {% if loop.first %}*{% else %} {% endif %} + :ref:`{{e}}`
 {%- endfor -%}
 {%- endif -%}
 {%- if not c['project-specific'] %}
      * 
 {%- else -%}
 {%- for e in c['project-specific'] %}
-     {% if loop.first %}*{% else %} {% endif %} | :ref:`{{e}}`
+     {% if loop.first %}*{% else %} {% endif %} + :ref:`{{e}}`
 {%- endfor -%}
 {%- endif -%}
 {%- endfor -%}
