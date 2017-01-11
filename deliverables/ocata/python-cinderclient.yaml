@@ -1,6 +1,13 @@
 ---
-include-pypi-link: true
 launchpad: python-cinderclient
-release-model: cycle-with-intermediary
 team: cinder
 type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-cinderclient/unreleased.html
+releases:
+  - version: 1.10.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 4eb63b8ef278de2e82e3b4957b95ba6fd9032e4f
