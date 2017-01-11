@@ -483,10 +483,10 @@ To create the ACL patch for stable/newton:
 
 ::
 
-  tox -e venv -- python ./tools/aclmanager.py acls ~/branches/openstack-infra/project-config newton
+  tox -e aclmanager -- acls ~/branches/openstack-infra/project-config newton
 
 To set the pre-release group membership:
 
 ::
 
-  tox -e venv -- python ./tools/aclmanager.py groups pre_release ttx
+  tox -e aclmanager -- groups pre_release ttx
