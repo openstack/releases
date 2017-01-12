@@ -72,6 +72,13 @@ _global_calendar.add('prodid', '-//releases.openstack.org//EN')
 _global_calendar.add('X-WR-CALNAME', 'OpenStack Release Schedule')
 
 
+def _format_description(node):
+    "Given a node, get its text and remove line breaks in paragraphs."
+    text = node.astext()
+    parts = text.split('\n\n')
+    return '\n\n'.join(p.replace('\n', ' ') for p in parts)
+
+
 def doctree_resolved(app, doctree, docname):
     builder = app.builder
 
@@ -132,7 +139,7 @@ def doctree_resolved(app, doctree, docname):
             # section, then add the full description to the
             # text.
             description = [
-                doctree.ids[item].astext()
+                _format_description(doctree.ids[item])
                 for item in week.get('x-project', [])
             ]
             if description:
