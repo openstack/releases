@@ -78,7 +78,7 @@ def main():
 
     for deliv in sorted(interesting_deliverables,
                         key=lambda x: (x.team, x.name)):
-        team = teams[d.team.lower()]
+        team = teams[deliv.team.lower()]
         writer.writerow(
             (deliv.team.lower(),
              deliv.type,
