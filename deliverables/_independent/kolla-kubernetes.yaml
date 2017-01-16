@@ -2,6 +2,7 @@
 launchpad: kolla-kubernetes
 team: kolla
 type: other
+release-notes: http://docs.openstack.org/releasenotes/kolla-kubernetes/
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
   - version: 0.1.0
@@ -20,3 +21,7 @@ releases:
     projects:
       - repo: openstack/kolla-kubernetes
         hash: 7e25ecd0a8356d4a9a14389e87180fcbde201cfd
+  - version: 0.4.0
+    projects:
+      - repo: openstack/kolla-kubernetes
+        hash: 8e1233c6563f633ac731ef5c58399965f6237d3a
