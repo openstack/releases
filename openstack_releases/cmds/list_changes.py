@@ -170,7 +170,8 @@ def main():
             if team_dict:
                 team = governance.Team(team_name, team_dict)
                 print('found team %s' % team_name)
-                print('  PTL: %(name)s (%(irc)s)\n' % team.ptl)
+                print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
+                print('  Liaison: %s (%s)\n' % team.liaison)
                 deliverable_name = os.path.basename(filename)[:-5]  # remove .yaml
                 deliverable = team.deliverables.get(deliverable_name)
                 if deliverable:

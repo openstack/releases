@@ -15,6 +15,8 @@
 
 import weakref
 
+from openstack_releases import wiki
+
 import requests
 import yaml
 
@@ -48,6 +50,8 @@ def get_repo_owner(team_data, repo_name):
 
 
 class Team(object):
+    _liaison_data = None
+
     def __init__(self, name, data):
         self.name = name
         self.data = data
@@ -67,6 +71,15 @@ class Team(object):
     @property
     def tags(self):
         return set(self.data.get('tags', []))
+
+    @property
+    def liaison(self):
+        if self._liaison_data is None:
+            # Only hit the wiki page one time.
+            Team._liaison_data = wiki.get_liaison_data()
+        team_liaison = self._liaison_data.get(self.name, {})
+        return (team_liaison.get('Liaison'),
+                team_liaison.get('IRC Handle'))
 
 
 class Deliverable(object):
