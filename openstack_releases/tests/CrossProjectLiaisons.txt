@@ -1,0 +1,701 @@
+Many of our cross-project teams need focused help for communicating with the other project teams. This page lists the people who have volunteered for that work.
+
+== Oslo ==
+
+There are now more projects consuming code from the Oslo incubator than we have Oslo contributors. That means we are going to need your help to make these migrations happen. We are asking for one person from each project to serve as a liaison between the project and Oslo, and to assist with integrating changes as we move code out of the incubator into libraries.
+
+* The liaison should be active in the project and familiar with the project-specific requirements for having patches accepted, but does not need to be a core reviewer or the PTL.
+* The liaison should be prepared to assist with writing and reviewing patches in their project as libraries are adopted, and with discussions of API changes to the libraries to make them easier to use within the project.
+* Liaisons should pay attention to [Oslo] tagged messages on the openstack-dev mailing list.
+* It is also useful for liaisons to be able to attend the Oslo team meeting ([[Meetings/Oslo]]) to participate in discussions and raise issues for real-time discussion.
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Douglas Mendizábal || redrobot
+|-
+| Ceilometer || Julien Danjou || jd__
+|-
+| Cinder || Jay Bryant  || jungleboyj
+|-
+| Congress || Tim Hinrichs  || thinrichs
+|-
+| Cue || Min Pae  || sputnik13
+|-
+| Designate ||  || 
+|-
+| Freezer || Saad Zaher || szaher
+|-
+| Glance || Flavio Percoco || flaper87
+|-
+| Heat || Thomas Herve || therve
+|-
+| Horizon || Kirill Zaitsev || kzaitsev_
+|-
+| Ironic || Ruby Loo  || rloo
+|-
+| Keystone || Brant Knudson || bknudson
+|-
+| Manila || Thomas Bechtold || toabctl
+|-
+| Mistral || Renat Akhmerov || rakhmerov
+|-
+| Murano ||  || 
+|-
+| Neutron || Victor Morales || electrocucaracha
+|-
+| Nova || ChangBo Guo || gcb
+|-
+| [[Octavia]] || Michael Johnson || johnsom
+|-
+| Sahara || Huichun Lu, Elise Gafford || huichun, egafford
+|-
+| Senlin || Yanyan Hu || Yanyanhu
+|-
+
+| Swift ||  || 
+|-
+| TripleO || Ben Nemec || bnemec
+|-
+| Trove || Amrith Kumar ||  amrith
+|-
+| Zaqar || Flavio Percoco || flaper87
+|-
+|}
+
+== Release management ==
+
+The Release Management Liaison is responsible for communication with the Release Management team. Its tasks are described in the project team guide: http://docs.openstack.org/project-team-guide/release-management.html . That task has been traditionally filled by the PTL, but they may now delegate this task if they wish.
+
+* By default, the liaison will be the PTL.
+* The liaison may further delegate work to other subject matter experts
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Dave McCowan || dave-mccowan
+|-
+| Ceilometer || gordon chung || gordc
+|-
+| Cinder || Sean McGinnis || smcginnis
+|-
+| Congress || Tim Hinrichs || thinrichs
+|-
+| Designate || Graham Hayes || mugsie
+|-
+| Documentation || Mariia Zlatkova & Brian Moss || ?? & bmoss
+|-
+| Freezer || Pierre Mathieu || slashme
+|-
+| Glance || Ian Cordasco || sigmavirus
+|-
+| Heat || Thomas Herve || therve
+|-
+| Horizon || David Lyle  || david-lyle
+|-
+| Ironic || Jim Rollenhagen || jroll
+|-
+| Keystone || Steve Martinelli || stevemar
+|-
+| Kolla || Jeffrey Zhang || Jeffrey4l
+|-
+| Magnum || Adrian Otto || adrian_otto
+|-
+| Manila || Ben Swartzlander || bswartz
+|-
+| Mistral || Lingxian Kong || kong
+|-
+| Murano ||Kirill Zaitsev || kzaitsev_
+|-
+| Neutron || Dariusz Smigiel || dasm
+|-
+| Nova || Sylvain Bauza || bauzas
+|-
+| OpenStack-Ansible || Jean-Philippe Evrard || evrardjp
+|-
+| Oslo || Joshua Harlow ||  harlowja
+|-
+| PuppetOpenStack || Alex Schultz ||  mwhahaha
+|-
+| Sahara || Vitaly Gridnev  || vgridnev
+|-
+| Searchlight || Steve McLellan  || sjmc7
+|-
+| Senlin || Qiming Teng  || Qiming
+|-
+| Solum || Devdatta Kulkarni  || devkulkarni
+|-
+| Swift || John Dickinson  || notmyname
+|-
+| TripleO || Emilien Macchi ||  EmilienM
+|-
+| Trove || Amrith Kumar || amrith
+|-
+| Watcher || Antoine Cabot || acabot
+|-
+| Winstackers || Claudiu Belu || claudiub
+|-
+| Zaqar || Fei Long Wang  || flwang 
+|}
+
+== QA ==
+
+There are now more projects that are being tested by Tempest, and Grenade or a part deployable by Devstack than we have QA contributors. That means we are going to need your help to keep on top of everything. We are asking for one person from each project to serve as a liaison between the project and QA, and to assist with integrating changes as we move forward.
+
+The liaison should be a core reviewer for the project, but does not need to be the PTL. The liaison should be prepared to assist with writing and reviewing patches that interact with their project, and with discussions of changes to the QA projects to make them easier to use within the project.
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Steve Heyman || hockeynut 
+|-
+| Ceilometer ||  Chris Dent || cdent
+|-
+| Cinder || Scott DAngelo and Ivan Kolodyazhny  || scottda and e0ne
+|-
+| Congress || Tim Hinrichs  || thinrichs
+|-
+| Freezer || Guillermo Garcia || m3mo
+|-
+| Glance || Nikhil Komawar  || nikhil
+|-
+| Heat || Steve Baker || stevebaker
+|-
+| Horizon || Timur Sufiev || tsufiev
+|-
+| Ironic || John Villalovos || jlvillal
+|-
+| Keystone || David Stanek || dstanek
+|-
+| Manila || Valeriy Ponomaryov || vponomaryov
+|-
+| Murano || Victor Ryzhenkin || freerunner
+|-
+| Neutron || Armando Migliaccio || armax
+|-
+| Nova || Matt Riedemann || mriedem
+|-
+| Oslo ||  Davanum Srinivas || dims 
+|-
+| Sahara || Luigi Toscano || tosky
+|-
+| Senlin || Haiwei Xu || haiwei-xu
+|-
+| Swift || Thiago da Silva || tdasilva
+|-
+| Trove || Craig Vyvial and Nirav Shah || cp16net and nshah
+|-
+| Zaqar || Fei Long Wang || flwang 
+|}
+
+== Documentation ==
+
+The OpenStack Documentation is centralized on docs.openstack.org but often there's a need for specialty information when reviewing patches or triaging doc bugs. A doc liaison should be available to triage doc bugs when the docs team members don't know enough to triage accurately, and be added to doc reviews that affect your project. You'd be notified through email when you're added either to a doc bug or a doc review. We also would appreciate attendance at the [https://wiki.openstack.org/wiki/Meetings/DocTeamMeeting weekly doc team meeting], We meet weekly in #openstack-meeting every Wednesday at alternating times for different timezones:
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Douglas Mendizábal || redrobot 
+|-
+| Ceilometer || Ildiko Vancsa || ildikov
+|-
+| Cinder || Sean Mcginnis || smcginnis 
+|-
+| Congress || Tim Hinrichs || thinrichs  
+|-
+| Designate || Graham Hayes  ||  mugsie
+|-
+| Freezer || Guillermo Garcia || m3mo
+|-
+| Glance || Alexander Bashmakov || abashmak
+|-
+| Heat || Randall Burt || randallburt
+|-
+| Horizon || Rob Cresswell || robcresswell
+|-
+| I18n || KATO Tomoyuki || katomo
+|-
+| Ironic ||  Jay Faulkner || JayF
+|-
+| Keystone || Lance Bragstad || lbragstad
+|-
+| Kolla || Steven Dake || sdake
+|-
+| Magnum || Spyros Trigazis  || strigazi
+|-
+| Manila || Ben Swartzlander || bswartz
+|-
+| Mistral || Renat Akhmerov || rakhmerov
+|-
+| Murano || Kirill Zaitsev || kzaitsev_
+|-
+| Neutron || Matthew Kassawara || Sam-I-Am 
+|-
+| Nova || Michael Still and Sean Dague (api-ref and api-guide) || mikal and sdague
+|-
+| OpenStack-Ansible || Alexandra Settle || asettle
+|-
+| Ops || Robert Starmer  || 
+|-
+| Oslo || Doug Hellmann  || dhellmann
+|-
+| Puppet OpenStack || Emilien Macchi  || EmilienM
+|-
+| Rally || Boris Pavlovic || boris-42
+|-
+| Sahara ||  Chad Roberts, Michael Ionkin || crobertsrh mionkin
+|-
+| Senlin || Cindia Blue  || lixinhui
+|-
+| Swift || John Dickinson || notmyname
+|-
+| Tripleo || Steven Hardy || shardy
+|-
+| Trove || Laurel Michaels || laurelm
+|-
+| Watcher || Antoine Cabot || acabot
+|-
+| Zaqar || Fei Long Wang || flwang
+|}
+
+== Stable Branch ==
+
+The Stable Branch Liaison is responsible for making sure backports are proposed for critical issues in their project, and make sure proposed backports
+are reviewed. They are also the contact point for stable branch release managers around point release times.
+
+* By default, the liaison will be the PTL.
+* The Stable Branch Liaison is considered a contributor to the Release Cycle Management Program and therefore is allowed to vote in its PTL election.
+* The liaison may further delegate work to other subject matter experts
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Dave McCowan || dave-mccowan
+|-
+| Ceilometer || Eoghan Glynn || eglynn
+|-
+| Cinder || Jay Bryant  || jungleboyj
+|-
+| Congress || Masahito Muroi  || masahito
+|-
+| Freezer || Pierre Mathieu || slashme
+|-
+| Heat || Zane Bitter || zaneb
+|-
+| Horizon || Matthias Runge || mrunge  
+|-
+| Ironic || Dmitry Tantsur || dtantsur 
+|-
+| Keystone || Dolph Mathews || dolphm
+|-
+| Mistral || Renat Akhmerov || rakhmerov
+|-
+| Murano || Kirill Zaitsev || kzaitsev_
+|-
+| Neutron || Ihar Hrachyshka || ihrachys
+|-
+| Nova ||  Matt Riedemann || mriedem 
+|-
+| Sahara ||  Vitaly Gridnev || vgridnev 
+|-
+| Senlin||  Qiming Teng || Qiming
+|-
+| Swift || Matthew Oliver || mattoliverau 
+|-
+| Trove || Amrith Kumar || amrith
+|-
+| Watcher || David Tardivel || dtardivel
+|-
+| Zaqar || Fei Long Wang || flwang
+|-
+|}
+
+== Vulnerability management ==
+
+The Vulnerability Management Team needs domain specialists to help assessing the impact of reported issues, coordinate the development of patches, review proposed patches and propose backports. The liaison should be familiar with the [https://security.openstack.org/vmt-process.html Vulnerability Management process] and embargo rules, and have a good grasp of security issues in software design.
+
+* The liaison should be a core reviewer for the project, but does not need to be the PTL.
+* By default, the liaison will be the PTL.
+* The liaison is the first line of contact for the Vulnerability Management team members
+* The liaison is considered a contributor to the Release Cycle Management Program and therefore is allowed to vote in election its PTL
+* The liaison may further delegate work to other subject matter experts
+* The liaison maintains the members of the $PROJECT-coresec team in Launchpad (which can be given access to embargoed vulnerabilities)
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Barbican || Douglas Mendizábal or Charles Neill || redrobot / ccneill
+|-
+| Ceilometer || Lianhao Lu or Gordon Chung || llu/gordc 
+|-
+| Cinder ||   || 
+|-
+| Congress || Masahito Muroi  || masahito 
+|-
+| Glance || Hemanth Makkapati or Nikhil Komawar  || hemanthm or nikhil 
+|-
+| Heat || Steve Hardy || shardy
+|-
+| Horizon || Rob Cresswell || robcresswell
+|-
+| Ironic || Jay Faulkner || JayF
+|-
+| Keystone || Dolph Mathews || dolphm
+|-
+| Kolla || Steven Dake || sdake
+|-
+| Murano || Victor Ryzhenkin || freerunner
+|-
+| Neutron || Armando Migliaccio || armax
+|-
+| Nova || Michael Still || mikal
+|-
+| Sahara || Michael McCune, Vitaly Gridnev || elmiko vgridnev
+|-
+| Searchlight || Travis Tripp or Steve McLellan || TravT or sjmc7
+|-
+| Senlin || Qiming Teng  || Qiming
+|-
+| Swift ||  || 
+|-
+| Trove || Amrith Kumar, Craig Vyvial or Nikhil Manchanda || amrith, cp16net or SlickNik 
+|-
+| Zaqar || Fei Long Wang || flwang 
+|-
+|}
+
+== API Working Group ==
+
+The [[API_Working_Group|API Working Group]] seeks API subject matter experts for each project  to communicate plans for API updates, review API guidelines with their project's view in mind, and review the API Working Group guidelines as they are drafted. The liaison should be familiar with the project's REST API design and future planning for changes to it.
+
+The members of the [http://specs.openstack.org/openstack/api-wg/liaisons.html API Working Group Cross-Project Liaisons] are maintained in our repo.  If you want to read the entire list of CPLs or add/remove yourself from the list, you'll need to update the [http://git.openstack.org/cgit/openstack/api-wg/tree/doc/source/liaisons.json liaisons.json] file. If you don't want to make the update yourself, please ask in #openstack-sdks on IRC and someone can make the change for you.
+
+== Logging Working Group ==
+
+The [[LogWorkingGroup|Log Working Group]] seeks experts for each project  to assist with making the logging in projects match the new [http://specs.openstack.org/openstack/openstack-specs/specs/log-guidelines.html Logging Guidelines]
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Glance || Erno Kuvaja || jokke_
+|-
+| Oslo || Doug Hellmann || dhellmann
+|-
+| Nova || John Garbutt || johnthetubaguy
+|-
+| Murano ||  ||
+|-
+| Sahara || Elise Gafford || egafford
+|}
+
+== Infra ==
+
+These are the project specific groups of people that Infra will look to ACK changes to that project's test configuration. Changes to project-config and devstack-gate should be +1'd by these groups when they are related to their project. Note that in an emergency this may not always be possible and Infra will ask for forgiveness but generally we should look for these +1s.
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Glance || Flavio Percoco, Nikhil Komawar|| flaper87, nikhil
+|-
+| Ironic || Dmitry Tantsur, Jim Rollenhagen || dtantsur, jroll
+|-
+| Kolla || Any Kolla Core Reviewer may ack an infra change on behalf of the PTL || pbourke, sdake are primary contacts
+|-
+| Neutron || Nate Johnston, Armando Migliaccio, Doug Wiegley|| njohnston, armax, dougwig
+|-
+| Documentation || Andreas Jaeger|| AJaeger
+
+|-
+| Trove || Amrith Kumar, Nikhil Manchanda || amrith, SlickNik
+
+|-
+| Murano || Victor Ryzhenkin || freerunner
+
+|-
+| Sahara || Nikita Konovalov, Vitaliy Gridnev || Nikita Konovalov, Vitaliy Gridnev
+
+|-
+| Fuel || Aleksandra Fedorova, Igor Belikov || bookwar, igorbelikov
+
+|-
+| Puppet OpenStack || Emilien Macchi || EmilienM
+
+|-
+| TripleO || Emilien Macchi || EmilienM
+|}
+
+== Product Working Group ==
+The product working group consists of product managers, technologists, and operators from a diverse set of organizations.  The group is working to aggregate user stories from the market-focused teams (Enterprise, Telco, etc.) and cross-project functional teams (e.g. logging, upgrades, etc.), partner with the development community on resourcing, and help gather data to generate a multi-release roadmap.  Most of the user stories being tracked by this team consists of items that can span multiple releases and usually have cross-project dependencies.  
+
+More information about the team can be found on the [[ProductTeam|Product WG wiki]].
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Ceilometer ||Krish Ragurham || 
+|-
+| Cinder || Shamail Tahir  || shamail
+|-
+| Glance || Nate Ziemann || nate_zman
+|-
+| Horizon || Carol Barrett || carolbarrett
+|-
+| Ironic || Yih Leong Sun || leong
+|-
+| Keystone || Megan Rossetti, Krish Raguram|| MeganR, KrishR
+|-
+| Kolla || Carol Barrett || CarolBarrett
+|-
+| Magnum || Steve Gordon  || sgordon
+|-
+| Manila ||Pete Chadwick || pchadwick
+|-
+| Neutron || Mike Cohen, Duane DeCapite || DuaneDeC7
+|-
+| Nova || Hugh Blemings || hughhalf 
+|-
+| OSClient || Megan Rossetti || MeganR
+|-
+| Stable Release|| Rochelle Grober || rockig
+|-
+| QA || Arkady Kanevsky || arkady_kanevsky
+|-
+| Rally || Arkady Kanevsky || arkady_kanevsky
+|-
+| Sahara || Elise Gafford || egafford
+|-
+| Senlin || Qiming Teng || Qiming
+|-
+| Swift || Phil Williams  || philipw
+|-
+| Tempest || Arkady Kanevsky || arkady_kanevsky
+|-
+| Trove || Amrith Kumar || amrith
+|-
+|}
+
+== I18n ==
+I18n team is responsible for making OpenStack ubiquitously accessible to people of all language backgrounds. The team have translators from all over the world to translate OpenStack into different languages. 
+
+If you want to communicate with translators in I18n team, send email to openstack-i18n@lists.openstack.org.
+
+* The liaison should be a core reviewer for the project and understand i18n status of the project.
+* The liaison should understand project release schedule very well.
+* The liaison should notify I18n team happens of important moments in the project release in time. For example, happen of soft string freeze, happen of hard string freeze, and happen of RC1 cutting.
+* The liaison should take care of translation patches to the project, and make sure the patches are successfully merged to the final release version. When the translation patch is failed, the liaison should notify I18n team.
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Astara ||  || 
+|-
+| Barbican ||  || 
+|-
+| Cinder ||   || 
+|-
+| Designate || Graham Hayes  || mugsie
+|-
+| Glance ||  || 
+|-
+| Heat ||  || 
+|-
+| Horizon || Doug Fish / Akihiro Motoki || doug-fish / amotoki
+|-
+| Ironic ||  || 
+|-
+| Keystone || || 
+|-
+| Magnum ||  Shu Muto || shu-mutou
+|-
+| Manila ||  || 
+|-
+| Monasca ||  || 
+|-
+| Murano ||  || 
+|-
+| Neutron || Akihiro Motoki || amotoki
+|-
+| Nova || Augustina Ragwitz || auggy 
+|-
+| Oslo ||  || 
+|-
+| Sahara || Nikita Konovalov || NikitaKonovalov
+|-
+| Senlin ||  || 
+|-
+| Swift ||   ||
+|-
+| Tacker ||  || 
+|-
+| Telemetry ||  || 
+|-
+| Trove ||  || 
+|-
+| Sahara || Chad Roberts || crobertsrh 
+|-
+| Zaqar ||  || 
+|-
+|}
+
+== Inter-project Liaisons ==
+
+In some cases, it is useful to have liaisons between projects. [http://lists.openstack.org/pipermail/openstack-dev/2015-April/062327.html For example, it is useful for the Nova and Neutron projects to have liaisons, because the projects have complex interactions and dependencies.] Ideally, a cross-project effort should have two members, one from each project, to facilitate communication and knowledge transfer.
+
+{| class="wikitable"
+|-
+! Projects !! Name !! IRC Handle !! Role
+|-
+| Nova / Neutron || || ||
+|-
+| || Armando Migliaccio  || armax || Neutron liaison for Nova
+|-
+| Nova / Glance || || ||
+|-
+| || Flavio Percoco, Mike Fedosin  || flaper87, mfedosin || Glance liaison for Nova
+|-
+| || Jay Pipes  || jaypipes || Nova liaison for Glance
+|-
+| Nova / Cinder || || ||
+|-
+| || Scott DAngelo || scottda || Cinder liaison for Nova
+|-
+| || Matt Riedemann || mriedem || Nova liason for Cinder
+|-
+| Nova / Ironic || John Villalovos || jlvillal || Ironic liaison for Nova
+|-
+| || Michael Davies || mrda || Ironic liaison for Nova
+|-
+| Neutron / Ironic || || ||
+|-
+| || Sukhdev Kapur  || sukhdev || Neutron liaison for Ironic
+|-
+| || Sam Betts   || sambetts  || Ironic liaison for Neutron
+|-
+| Murano / Glance || || ||
+|-
+| || Alexander Tivelkov  || ativelkov || Glance liaison for Murano, Murano liaison for Glance
+|-
+| Horizon / i18n || || ||
+|-
+| || Doug Fish  || doug-fish || Horizon liaison for i18n
+|-
+| || TBD || || Heat liaison for Sahara
+|-
+| Fuel / Puppet || || ||
+|-
+| || Alex Schultz || mwhahaha || Fuel liaison for Puppet
+|-
+| Fuel / Ironic || || ||
+|-
+| || Evgeny L || evgenyl || Fuel liaison for Ironic
+|-
+| Bareon / Ironic || || ||
+|-
+| || Evgeny L || evgenyl || Bareon liaison for Ironic
+|-
+| Magnum / Kuryr || || ||
+|-
+| || Ton Ngo || tango || Magnum liaison for Kuryr
+|-
+| || Fawad Khaliq || fawadkhaliq || Kuryr liaison for Magnum
+|}
+
+=== Etherpads ===
+
+The following is a list of etherpads that are used for inter-project liaisons, and are continuously updated.
+
+Nova - Neutron: https://etherpad.openstack.org/p/nova-neutron
+
+== Cross-Project Spec Liaisons ==
+
+The OpenStack project relies on the cross-project spec liaisons from each participating project to help with coordination and cross-project spec related tasks. See full set of [http://docs.openstack.org/project-team-guide/cross-project.html#cross-project-specification-liaisons responsibilities] The liaison defaults to the PTL, but the PTL can also delegate the responsibilities to someone else on the team by updating this tableː
+
+{| class="wikitable"
+|-
+! Project !! Liaison !! IRC Handle
+|-
+| Astara|| Ryan Petrello || ryanpetrello
+|-
+| Barbican || Douglas Mendizabal || redrobot
+|-
+| Cinder || Kendall Nelson || diablo_rojo
+|-
+| Congress || Tim Hinrichs || thinrichs
+|-
+| Cue || Min Pae || sputnik13
+|-
+| Designate || Graham hayes || mugsie
+|-
+| Dragonflow || Gal Sagie || gsagie
+|-
+| Freezer || Pierre Mahieu || slashme
+|-
+| Fuel || Andrew Woodward || xarses
+|-
+| Glance || Nikhil Komawar || nikhil
+|-
+| Heat || Rico Lin || ricolin
+|-
+| Horizon || David Lyle || david-lyle
+|-
+| Infrastructure || Matthew Wagoner || olaph
+|-
+| Ironic || Jim Rollenhagen || jroll
+|-
+| Keystone || Samuel de Medeiros Queiroz || samueldmq
+|-
+| Kolla || Swapnil Kulkarni || coolsvap
+|-
+| Kuryr || Gal Sagie || gsagie
+|-
+| Magnum || Adrian Otto || adrian_otto
+|-
+| Manila || Ben Swartzlander || bswartz
+|-
+| Mistral || Renat Akhmerov || rakhmerov
+|-
+| Monasca || Roland Hochmuth || rhochmuth
+|-
+| Murano || Kirill Zaitsev || kzaitsev_
+|-
+| Neutron || Armando Migliaccio || armax
+|-
+| Nova || Chris Dent || cdent
+|-
+| OpenStack-Ansible || Travis Truman || automagically
+|-
+| Oslo || Davanum Srinivas || dims
+|-
+| Puppet OpenStack || Alex Schultz || mwhahaha
+|-
+| Sahara || Michael McCune, Vitaly Gridnev || elmiko vgridnev
+|-
+| Searchlight || Steve McLellan || sjmc7
+|-
+| Senlin || Qiming Teng || Qiming
+|-
+| Solum || Devdatta Kulkarni || devkulkarni
+|-
+| Swift || John Dickinson || notmyname
+|-
+| Tacker || Sridhar Ramaswamy || sridhar_ram
+|-
+| Telemetry || Gordon Chung || gordc
+|-
+| Trove || Amrith Kumar || amrith
+|-
+| Watcher || Susanne Balle || sballe 
+|-
+| Zaqar || Fei Long Wang || flwang
+
+|}
