@@ -26,3 +26,9 @@ releases:
         hash: e2a593d917533424c6de39774afb8566d4f81db2
     highlights: >
       Revert removal of ksc_auth patch which broke the cliff gate.
+  - version: 1.25.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: 90c3d001b6ceb7a7b17bc3c4906c2b4746e24d44
+    highlights: >
+      Add OpenTelekomCloud to vendors
