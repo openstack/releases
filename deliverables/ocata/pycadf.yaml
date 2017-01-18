@@ -4,3 +4,12 @@ launchpad: pycadf
 release-model: cycle-with-intermediary
 team: keystone
 type: library
+send-announcements-to: openstack-dev@lists.openstack.org
+branches:
+- name: stable/ocata
+  location: 2.5.0
+releases:
+- version: 2.5.0
+  projects:
+  - repo: openstack/pycadf
+    hash: 6e7ecfae0f6f584fa78dbfe3c318c13e0afbec96
