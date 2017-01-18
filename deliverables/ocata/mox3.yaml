@@ -1,6 +1,12 @@
 ---
-include-pypi-link: true
 launchpad: python-mox3
-release-model: cycle-with-intermediary
 team: oslo
 type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: true
+releases:
+- version: 0.19.0
+  projects:
+  - repo: openstack/mox3
+    hash: 29929967d2dd1bf7200a021769d774ba35951211
