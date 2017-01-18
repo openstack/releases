@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/tooz/unreleased.html
 include-pypi-link: true
+branches:
+- name: stable/ocata
+  location: 1.48.0
 releases:
 - version: 1.44.0
   projects:

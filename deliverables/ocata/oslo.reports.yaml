@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/oslo.reports/unreleased.html
 include-pypi-link: true
+branches:
+- name: stable/ocata
+  location: 1.17.0
 releases:
 - version: 1.15.0
   projects:
