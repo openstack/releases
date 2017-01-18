@@ -21,3 +21,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 871cd1a6f271fdd2f0037f0b88a45dad97301a05
+  - version: 1.10.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 1a9b90b02956e682f842c1105e5e5dd4f5a7fe7d
+    highlights: |
+      - s390 FC device path fix for Ubuntu.
+        Add encryption provider constants.
