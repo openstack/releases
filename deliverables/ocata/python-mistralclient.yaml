@@ -4,3 +4,16 @@ launchpad: python-mistralclient
 release-model: cycle-with-intermediary
 team: mistral
 type: library
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: a7bf138e71adbfca5aeae0684e0342bada8185eb
+    highlights: >
+        - Refine openstack command cline for mistral according to
+          OpenStackClient command structure.
+        - Support filtering when query resource.
+        - Allow action executions to be cancelled.
+        - Python 3.5 is officially supported.
+        - Support specifying region name (both local and target cloud) in
+          command line.
