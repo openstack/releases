@@ -4,6 +4,9 @@ launchpad: glance-store
 release-model: cycle-with-intermediary
 team: glance
 type: library
+branches:
+  - name: stable/ocata
+    location: 0.20.0
 releases:
   - version: 0.19.0
     projects:
