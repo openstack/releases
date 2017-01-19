@@ -6,6 +6,9 @@ launchpad: neutron
 release-notes: http://docs.openstack.org/releasenotes/neutron-lib/unreleased.html
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/ocata
+    location: 1.1.0
 releases:
   - version: 1.0.0
     projects:
