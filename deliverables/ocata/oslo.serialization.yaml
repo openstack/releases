@@ -5,7 +5,8 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
-release-notes: http://docs.openstack.org/releasenotes/oslo.serialization/unreleased.html
+release-notes: |-
+  http://docs.openstack.org/releasenotes/oslo.serialization/unreleased.html
 releases:
 - version: 2.14.0
   projects:
@@ -15,3 +16,7 @@ releases:
   projects:
   - repo: openstack/oslo.serialization
     hash: 1dc9e0de3c76e526b5ab2a107458d82f3abd0a95
+- version: 2.16.0
+  projects:
+  - repo: openstack/oslo.serialization
+    hash: ac5787d0e42ba6aa1c26d2e040c9f0a1ca8cb575
