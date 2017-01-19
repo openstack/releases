@@ -5,6 +5,9 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/ocata
+    location: 1.0.0
 releases:
   - version: 0.26.0
     projects:
@@ -14,3 +17,7 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: b66834506a52fd37f7d737c5a2692fb95e8f1e1b
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: cec8ee4f153e9fa536c4158c166cf3c40e324da8
