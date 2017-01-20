@@ -21,11 +21,18 @@ from openstack_releases import deliverable
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument(
+    output_mode = parser.add_mutually_exclusive_group()
+    output_mode.add_argument(
         '-v', '--verbose',
         action='store_true',
         default=False,
         help='show more than the deliverable name',
+    )
+    output_mode.add_argument(
+        '-r', '--repos',
+        action='store_true',
+        default=False,
+        help='show the repository names not deliverable names',
     )
     parser.add_argument(
         '--team',
@@ -128,5 +135,8 @@ def main():
             continue
         if args.verbose:
             print('{:30} {:15} {}'.format(deliv.name, deliv.latest_release, deliv.team))
+        elif args.repos:
+            for r in sorted(deliv.repos):
+                print(r)
         else:
             print(deliv.name)
