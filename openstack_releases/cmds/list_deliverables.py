@@ -111,6 +111,14 @@ def main():
         model = args.model
         version_ending = None
 
+    verbose_template = '{name:30} {team:20}'
+    if not args.unreleased:
+        verbose_template += ' {latest_release:15}'
+    if not args.type:
+        verbose_template += ' {type:15}'
+    if not args.model:
+        verbose_template += ' {model:15}'
+
     all_deliv = deliverable.Deliverables(
         root_dir=args.deliverables_dir,
         collapse_history=False,
@@ -134,7 +142,13 @@ def main():
         if args.missing_rc and deliv.latest_release and 'rc' in deliv.latest_release:
             continue
         if args.verbose:
-            print('{:30} {:15} {}'.format(deliv.name, deliv.latest_release, deliv.team))
+            print(verbose_template.format(
+                name=deliv.name,
+                latest_release=deliv.latest_release,
+                team=deliv.team,
+                type=deliv.type,
+                model=deliv.model,
+            ))
         elif args.repos:
             for r in sorted(deliv.repos):
                 print(r)
