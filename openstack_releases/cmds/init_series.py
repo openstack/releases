@@ -58,6 +58,11 @@ def main():
     for team, series, name, data in old_deliverables:
         if name in new_deliverables:
             continue
+        if not data.get('releases'):
+            # There were no releases for the deliverable in the
+            # previous series, stop carrying it over.
+            print('{} skipped (no releases in {})'.format(name, args.old_series))
+            continue
         # Clean up some series-specific data that should not be copied
         # over.
         for key in ['releases', 'branches', 'release-notes']:
