@@ -126,6 +126,9 @@ def main():
     for entry in all_deliv.get_deliverables(args.team, series):
         deliv = deliverable.Deliverable(*entry)
 
+        if args.deliverable and deliv.name != args.deliverable:
+            continue
+
         if model and deliv.model != model:
             continue
         if args.cycle_based and not deliv.is_cycle_based:
