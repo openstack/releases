@@ -105,10 +105,11 @@ class Deliverables(object):
         # Map team names to a set of all the series in which they
         # produced anything.
         self._team_series = collections.defaultdict(set)
-        # Map both team and series name to a list of the deliverable
-        # files.
+        # Map team, series, and deliverable names to a list of the
+        # deliverable files.
         self._by_team_and_series = collections.defaultdict(list)
         self._by_series = collections.defaultdict(list)
+        self._by_deliverable_name = collections.defaultdict(list)
         # Map filenames to parsed content.
         self._by_filename = {}
 
@@ -143,6 +144,8 @@ class Deliverables(object):
         self._by_series[series].append(filename)
         self._team_deliverables[team].add(deliverable)
         self._team_series[team].add(series)
+        deliv = self._deliverable_from_filename(filename)
+        self._by_deliverable_name[deliv].append(filename)
 
     def get_team_deliverables(self, team):
         "Returns a list of deliverable names produced by the team."
@@ -174,6 +177,17 @@ class Deliverables(object):
         for filename in filenames:
             yield (
                 team,
+                self._series_from_filename(filename),
+                self._deliverable_from_filename(filename),
+                self._by_filename.get(filename, {}),
+            )
+
+    def get_deliverable_history(self, name):
+        """Return info associated with a deliverable name.
+        """
+        for filename in self._by_deliverable_name.get(name, []):
+            yield (
+                None,
                 self._series_from_filename(filename),
                 self._deliverable_from_filename(filename),
                 self._by_filename.get(filename, {}),
