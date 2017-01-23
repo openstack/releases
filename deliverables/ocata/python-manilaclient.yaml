@@ -4,3 +4,9 @@ launchpad: python-manilaclient
 release-model: cycle-with-intermediary
 team: manila
 type: library
+release-notes: http://docs.openstack.org/releasenotes/python-manilaclient/unreleased.html
+releases:
+  - version: 1.12.0
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: ff9963a712b66d71425a0d7e2f9392c785acd918
