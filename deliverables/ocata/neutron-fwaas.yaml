@@ -14,3 +14,12 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: c6846c33bd14456e6250f168b681460a371b1d6a
+  - version: 10.0.0.0b3
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: e7ebbebb393e1dde65f9fc545b8dbd1b5939d245
+    highlights: |-
+      * Privsep configuration for neutron-fwaas
+      * Not allow to update icmp fw_rule with port
+      * Use BRANCH constants from neutron_lib
+      * Update policy.json for FWaaS v2
