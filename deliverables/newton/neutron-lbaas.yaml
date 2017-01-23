@@ -40,3 +40,10 @@ releases:
         hash: bff11c5fa14bce26526d38167d5c67b1afeb45ba
     highlights: |-
       * Fixed lbaasv2 service plugin alias definition
+  - version: 9.2.0
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 0a32ba610e9e442544cff048a3f24c270d8a7467
+    highlights: |-
+      * HAProxy - Add host routes to the lbaas namespace
+      * Pass network MTU into namespace driver

@@ -52,3 +52,16 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 23def1be5c1deb34b47b60eb8da2dc63335568ca
+  - version: 9.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: a79da4c3107a9bbabc564b6930e6e9172f71db26
+    highlights: |-
+      * Unplug external device when delete snat namespace
+      * Kill processes when cleaning up namespaces
+      * Remove iptables nat and mangle rules for security group
+      * L3-HA: Send gratuitous ARP when new floating IP is added
+      * OVSDB: don't erase existing ovsdb managers
+      * Skip larger than /64 subnets in DHCP agent
+      * DVR: Fix race condition in creation of fip gateway
+      * Update MTU on existing devices
