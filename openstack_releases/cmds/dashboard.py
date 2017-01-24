@@ -73,6 +73,7 @@ def main():
          'Comments',
          'PTL Nick',
          'PTL Email',
+         'Liaison Nick',
          'IRC Channel')
     )
 
@@ -91,5 +92,6 @@ def main():
              '',  # Comments
              team.data['ptl']['irc'],
              team.data['ptl']['email'],
+             team.liaison[1] or '',
              team.data.get('irc-channel'))
         )
