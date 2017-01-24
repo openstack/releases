@@ -33,11 +33,11 @@ updates.
      * 2017-02-22 (planned)
      * TBD
    - * :doc:`newton/index`
-     * Current stable release, security-supported
+     * `Phase I -- Latest release`_
      * 2016-10-06
      * TBD
    - * :doc:`mitaka/index`
-     * Security-supported
+     * `Phase III -- Legacy release`_
      * 2016-04-07
      * 2017-04-10
    - * :doc:`liberty/index`
@@ -88,6 +88,10 @@ updates.
      * Deprecated
      * 2010-10-21
      *
+
+.. _Phase I -- Latest release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Phase II -- Maintained release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Phase III -- Legacy release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
 
 .. toctree::
    :glob:
