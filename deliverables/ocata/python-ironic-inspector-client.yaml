@@ -4,3 +4,13 @@ launchpad: python-ironic-inspector-client
 release-model: cycle-with-intermediary
 team: ironic
 type: library
+send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/python-ironic-inspector-client/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 1.11.0
+releases:
+  - version: 1.11.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 481a92e056f6ee14363c35ce7bce45dd0a038064
