@@ -1,13 +1,26 @@
-========================
+=======================
  Pike Release Schedule
-========================
+=======================
+
+20 February 2017 - 1 September 2017 (27 weeks)
+
+.. datatemplate::
+   :source: schedule.yaml
+   :template: schedule_table.tmpl
+
+.. ics::
+   :source: schedule.yaml
+   :name: Pike
+
+`Subscribe to iCalendar file <schedule.ics>`__
 
 .. note::
 
-   All deadlines are generally the Thursday of the week on which they
-   are noted above. For example, the Feature Freeze in week XXX is on
-   XXX. Exceptions to this policy will be explicitly mentioned
-   in the event description.
+   With the exception of the final release date and cycle-trailing
+   release date, deadlines are generally the Thursday of the week on
+   which they are noted above. For example, the Feature Freeze in week
+   R-5 is on 27 July. Exceptions to this policy will be explicitly
+   mentioned in the event description.
 
 Cross-project events
 ====================
@@ -19,14 +32,6 @@ Pike Goals Research
 
 Pre-cycle planning and investigation into `the community-wide goals
 for Pike <https://governance.openstack.org/tc/goals/pike/index.html>`__.
-
-.. _p-design-summit:
-
-Pike Design Summit
-------------------
-
-`Feedback and requirements Forum in Boston
-<https://www.openstack.org/summit/boston-2017/>`__
 
 .. _p-ptg:
 
@@ -45,6 +50,25 @@ XXX is the Pike-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
+
+.. _p-goals-ack:
+
+Pike Community Goals Acknowledgement
+------------------------------------
+
+Teams should prepare their acknowledgement of `the community-wide
+goals for Pike
+<https://governance.openstack.org/tc/goals/pike/index.html>`__.
+
+.. _p-summit:
+
+OpenStack Summit
+----------------
+
+The OpenStack Summit happens during this week in Boston, USA. It will include
+a "Forum" in which people from all parts of our community will gather to give
+feedback on the last release (Ocata) and discuss requirements for the next
+development cycle (Queens).
 
 .. _p-2:
 
@@ -70,6 +94,15 @@ Pike-3 milestone
 
 XXX is the Pike-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
+
+.. _p-goals-complete:
+
+Pike Community Goals Completed
+------------------------------
+
+Teams should prepare their documentation for completing `the
+community-wide goals for Pike
+<https://governance.openstack.org/tc/goals/pike/index.html>`__.
 
 .. _p-extra-atcs:
 
@@ -185,37 +218,3 @@ follow the main release cycle.
 Project-specific events
 =======================
 
-Elections
----------
-
-.. _q-ptl-nomination:
-
-Queens PTLs self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Project team lead candidates for the Pike cycle should announce their
-candidacy during this week.
-
-.. _q-ptl-election:
-
-Queens cycle PTLs election
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Election week for Project team leads (where an election must be held to
-determine the winner).
-
-.. _q-tc-nomination:
-
-TC member self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Candidates for the partial Technical Committee member renewal should announce
-their candidacy during this week.
-
-.. _q-tc-election:
-
-TC member election
-^^^^^^^^^^^^^^^^^^
-
-Election for partially renewing Technical Committee members will happen
-during this week.
