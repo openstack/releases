@@ -5,8 +5,15 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/ocata
+    location: 1.2.0
 releases:
   - version: 1.1.0
     projects:
       - repo: openstack/python-senlinclient
         hash: 6ac75fc72d83c78c888f0b7e214afd04f4ae3c64
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 9df5282567b67225ad3407dbfff2783c7bd75bff
