@@ -4,3 +4,11 @@ launchpad: python-muranoclient
 release-model: cycle-with-intermediary
 team: murano
 type: library
+branches:
+  - name: stable/ocata
+    location: 0.12.0
+releases:
+  - version: 0.12.0
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: d0f0929bba5fcf0b8b89085d095034d9708be7aa
