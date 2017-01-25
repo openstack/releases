@@ -3,3 +3,9 @@ launchpad: vitrage-dashboard
 release-model: cycle-with-intermediary
 team: vitrage
 type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: b932a645a04be570a4714889f1b7ea0c6fdd8888
