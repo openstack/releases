@@ -3,3 +3,8 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: horizon-plugin
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 6b00791ffba02a98c55f1defd55adb177306edd2

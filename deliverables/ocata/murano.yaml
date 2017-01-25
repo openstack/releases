@@ -3,3 +3,8 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: service
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/murano
+        hash: 3d8559b4e6af364e623691d140fa662f704c0e74
