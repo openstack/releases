@@ -4,8 +4,15 @@ release-model: cycle-with-intermediary
 team: freezer
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.2.0
 releases:
   - version: 1.1.0
     projects:
       - repo: openstack/python-freezerclient
         hash: 1197ce06b4495d75e6aa55ec302b580f0dc41639
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 454a30e77250819bd009a81714a2ddef9c06a71b
