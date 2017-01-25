@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/python-ironicclient/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 1.11.0
 releases:
   - version: 1.8.0
     projects:
@@ -19,3 +22,7 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 808a4cbfa46f741858d666878d7552c7a508766e
+  - version: 1.11.0
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: f1f10cbfe59fd2ce095b02a447d4e068d6e8579b
