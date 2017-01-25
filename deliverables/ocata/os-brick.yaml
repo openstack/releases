@@ -28,3 +28,9 @@ releases:
     highlights: |
       - s390 FC device path fix for Ubuntu.
         Add encryption provider constants.
+  - version: 1.11.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 6a180265560d5e0bab80e47ac25c15906d1165fb
+    highlights: |
+      - Fix compatiblity for Nova encryptors.
