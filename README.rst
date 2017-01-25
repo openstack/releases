@@ -195,7 +195,7 @@ Deliverable Files
 Deliverable repositories for projects using cycle_with_intermediatry
 or cycle_with_milestones should be placed in their respective releases
 within the deliverables directory. Deliverable repositories for
-projects using the indepedent release model should be placed in the
+projects using the independent release model should be placed in the
 ``deliverables/_independent`` directory.
 
 For deliverable set of projects, we use one YAML file per release
