@@ -4,3 +4,9 @@ launchpad: python-cinderclient
 release-model: cycle-with-intermediary
 team: cinder
 type: library
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.3.0
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 63a3014dec7932437a579e8cb4ba4be79609c14c
