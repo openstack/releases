@@ -14,3 +14,9 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 98d3cf24d6d7b5eca55ca19eb19bdd2e7b1975ec
+  - version: 10.0.0.0b3
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: f74bc509bd804ebbc5249e775481ad2475788c9f
+    highlights: |-
+      * Gracefully withdraw the floating IP bgp route

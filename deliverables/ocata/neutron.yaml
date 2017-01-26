@@ -14,3 +14,19 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 7b6e236c7c02f81f268bfc9c9089d523187d543e
+  - version: 10.0.0.0b3
+    projects:
+      - repo: openstack/neutron
+        hash: 4ae6790d82542738edbb531a829b60ff8a44a3fe
+    highlights: |-
+      * Server-side push notifications for ML2
+      * Allow 0 in port range for securitygrouprule object
+      * Stop using legacy facade
+      * XenAPI: Support daemon mode for rootwrap
+      * Add a ReST client for placement API
+      * Multiple OVO implementations
+      * DVR: fix csnat port missing after router update
+      * Fix netns_cleanup interrupted on rwd I/O
+      * Use neutron-lib
+      * SR-IOV: remove ml2_conf_sriov.ini from oslo-config-generator
+      * Linux Bridge: driver support for QoS egress minimum bandwidth
