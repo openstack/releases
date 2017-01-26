@@ -5,6 +5,9 @@ release-model: cycle-with-intermediary
 team: manila
 type: library
 release-notes: http://docs.openstack.org/releasenotes/python-manilaclient/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 1.14.0
 releases:
   - version: 1.12.0
     projects:
@@ -14,3 +17,7 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: c0fdf827b98c7fc39531af29bcca8096d7280cb0
+  - version: 1.14.0
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 58933a6848715bbc9beb26c018a5d8e89f94371a
