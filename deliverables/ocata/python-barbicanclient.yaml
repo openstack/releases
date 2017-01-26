@@ -1,5 +1,14 @@
 ---
 launchpad: python-barbicanclient
-release-model: cycle-with-intermediary
 team: barbican
 type: library
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 4.2.0
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 585e9c92922018345fa10a7ef93f9c09ae0413ec
