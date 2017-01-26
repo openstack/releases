@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 835a18d678ac85159e13095cadeb7b62c1652fd4
+  - version: 14.0.0.0b3
+    projects:
+      - repo: openstack/glance
+        hash: 9c7b25d6f8e91764052319e22b35cc98545eecf5
+    highlights:
+      - Community Images has now been merged into Glance and support already
+        released in python-glanceclient.
