@@ -1,0 +1,11 @@
+---
+launchpad: heat-agents
+team: heat
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: 8e6dbb11b0486c60d3d9caf20df63299d99f60d7
