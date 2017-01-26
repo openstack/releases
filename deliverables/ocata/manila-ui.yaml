@@ -3,8 +3,15 @@ launchpad: manila-ui
 release-model: cycle-with-intermediary
 team: manila
 type: horizon-plugin
+branches:
+  - name: stable/ocata
+    location: 2.7.0
 releases:
   - version: 2.6.0
     projects:
       - repo: openstack/manila-ui
         hash: 5be13b0c1bb54eab565d9a44b6f51ea5d91d8160
+  - version: 2.7.0
+    projects:
+      - repo: openstack/manila-ui
+        hash: 863e927b3cce31afbb5b2d313d648bd7e2b3fcf9
