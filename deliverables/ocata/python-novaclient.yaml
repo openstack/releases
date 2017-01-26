@@ -23,3 +23,11 @@ releases:
           removed.
         - Python 3.5 is officially supported.
         - Several deprecated commands have been removed.
+  - version: 7.1.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: f6e0128f9a66b48a24c10d532a9e4e8d7d7e94a5
+    highlights: >
+        - Several bug fixes and support added for new microversions. The
+          highest supported microversion in this release is 2.41.
+        - Add profiling support for novaclient.
