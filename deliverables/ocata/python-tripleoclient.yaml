@@ -4,6 +4,10 @@ team: tripleo
 type: library
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/python-tripleoclient/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 6.0.0
 releases:
   - version: 5.5.0
     projects:
@@ -17,3 +21,7 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 784e6373e72eef959efc3d163e400ad2a41be918
+  - version: 6.0.0
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 553e46e76a167612f53d86ad8474fce5f1f35b53
