@@ -19,3 +19,11 @@ releases:
         details.
       - The nova-network service will no longer start unless the environment is
         configured for Cells v1. Deployments should be using Neutron in Ocata.
+  - version: 15.0.0.0b3
+    projects:
+      - repo: openstack/nova
+        hash: f9d7b383a7cb12b6cd3e6117daf69b08620bf40f
+    highlights: >
+      - Several new features and dependency updates. See the release notes for
+        details.
+      - Neutron is now the default networking configuration for running Nova.
