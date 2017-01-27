@@ -1,6 +1,6 @@
 ---
-launchpad: neutron
-team: neutron
+launchpad: octavia
+team: octavia
 type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
@@ -14,3 +14,7 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas
         hash: bc8bbc6d4c8c04b9d4fb824a15c5cbcd0b007c5b
+  - version: 10.0.0.0b3
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 448ff8eab9c7e382cea0242e3121b875d95d74c6
