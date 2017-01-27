@@ -4,6 +4,9 @@ team: tripleo
 type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 6.0.0.0rc1
 releases:
   - version: 6.0.0.0b1
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: d621022954195049c96b19064f2eddd46ec95fe4
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/os-net-config
+        hash: b4ecaa5c344cc33691d91398bfa187e876e6e40d
