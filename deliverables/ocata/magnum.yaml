@@ -3,3 +3,9 @@ launchpad: magnum
 release-model: cycle-with-intermediary
 team: magnum
 type: service
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/magnum
+        hash: ae41b4511cd4519c0a313f9b51675472b9acdd0e
