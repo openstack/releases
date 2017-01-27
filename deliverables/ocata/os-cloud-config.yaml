@@ -4,6 +4,9 @@ team: tripleo
 type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 6.0.0.0rc1
 releases:
   - version: 6.0.0.0b1
     projects:
@@ -13,3 +16,10 @@ releases:
     projects:
       - repo: openstack/os-cloud-config
         hash: 9b0918551c68083e3226341cb97ddd03aa5229e6
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/os-cloud-config
+        hash: 8cbab5ceeeae52363ea8c5188b8a0604cc420e34
+    highlights: >
+      - os-cloud-config is now deprecated, and we plan to remove this project
+        in Pike.

@@ -3,3 +3,12 @@ launchpad: os-apply-config
 release-model: cycle-with-milestones
 team: tripleo
 type: other
+send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 6.0.0.0rc1
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 1bd0206930e9af8e91f7eae6878530c6a7968910
