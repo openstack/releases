@@ -4,6 +4,9 @@ launchpad: python-searchlightclient
 release-model: cycle-with-intermediary
 team: searchlight
 type: library
+branches:
+  - name: stable/ocata
+    location: 1.1.0
 releases:
   - version: 1.1.0
     projects:
