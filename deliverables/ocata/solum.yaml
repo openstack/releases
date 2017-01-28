@@ -3,3 +3,8 @@ launchpad: solum
 release-model: cycle-with-intermediary
 team: solum
 type: service
+releases:
+  - version: 5.1.0
+    projects:
+      - repo: openstack/solum
+        hash: bf193b0582cd0fd0d915bcddf64401b5cc3b5d98
