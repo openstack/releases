@@ -3,6 +3,9 @@ launchpad: python-solumclient
 release-model: cycle-with-intermediary
 team: solum
 type: other
+branches:
+  - name: stable/ocata
+    location: 2.2.0
 releases:
   - version: 2.2.0
     projects:
