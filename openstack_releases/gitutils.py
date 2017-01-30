@@ -64,30 +64,36 @@ def tag_exists(repo, ref):
     return links.link_exists(url)
 
 
-def clone_repo(workdir, repo):
+def clone_repo(workdir, repo, ref=None):
     "Check out the code."
     dest = os.path.join(workdir, repo)
-    if os.path.exists(dest):
-        return
-    cmd = [
-        'zuul-cloner',
-        '--workspace', workdir,
-    ]
-    cache_dir = os.environ.get('ZUUL_CACHE_DIR', '/opt/git')
-    if cache_dir and os.path.exists(cache_dir):
-        cmd.extend(['--cache-dir', cache_dir])
-    cmd.extend([
-        'git://git.openstack.org',
-        repo,
-    ])
-    subprocess.check_call(cmd)
-    # Force an update, just in case the local version is still out of
-    # date.
-    print('Updating newly cloned repository in %s' % dest)
-    subprocess.check_call(
-        ['git', 'fetch', '-v', '--tags'],
-        cwd=dest,
-    )
+    if not os.path.exists(dest):
+        cmd = [
+            'zuul-cloner',
+            '--workspace', workdir,
+        ]
+        cache_dir = os.environ.get('ZUUL_CACHE_DIR', '/opt/git')
+        if cache_dir and os.path.exists(cache_dir):
+            cmd.extend(['--cache-dir', cache_dir])
+        cmd.extend([
+            'git://git.openstack.org',
+            repo,
+        ])
+        subprocess.check_call(cmd)
+        # Force an update, just in case the local version is still out of
+        # date.
+        print('Updating newly cloned repository in %s' % dest)
+        subprocess.check_call(
+            ['git', 'fetch', '-v', '--tags'],
+            cwd=dest,
+        )
+    # If we were given some sort of reference, check that out.
+    if ref:
+        print('Updating %s to %s' % (repo, ref))
+        subprocess.check_call(
+            ['git', 'checkout', ref],
+            cwd=dest,
+        )
 
 
 def sha_for_tag(workdir, repo, version):
