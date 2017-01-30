@@ -488,6 +488,36 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
+    def test_hash_from_master_used_in_stable_release2(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.4.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                 ]},
+                {'version': '1.4.1',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      # hash from master
+                      'hash': 'ec62e6270dba8f3d6a60600876be8fd99f7c5b08'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'newton',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
     def test_hash_from_stable_used_in_master_release(self):
         deliverable_info = {
             'artifact-link-mode': 'none',
@@ -541,7 +571,7 @@ class TestValidateReleases(base.BaseTestCase):
             errors.append,
         )
         self.assertEqual(0, len(warnings))
-        self.assertEqual(1, len(errors))
+        self.assertEqual(2, len(errors))
 
     def test_new_not_at_end(self):
         deliverable_info = {
