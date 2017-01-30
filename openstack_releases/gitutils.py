@@ -110,10 +110,14 @@ def sha_for_tag(workdir, repo, version):
 
 def check_branch_sha(workdir, repo, series, master, sha):
     "Check if the SHA is in the targeted branch."
+    remote_match = 'remotes/origin/stable/%s' % series
     if series == master:
-        remote_match = 'master'
-    else:
-        remote_match = 'remotes/origin/stable/%s' % series
+        existing = get_branches(workdir, repo)
+        if remote_match not in existing:
+            # The stable branch for the series on master does not
+            # exist in this repository, yet, so look for the commit on
+            # the master branch.
+            remote_match = 'master'
     try:
         output = subprocess.check_output(
             ['git', 'branch', '-a', '--contains', sha],
