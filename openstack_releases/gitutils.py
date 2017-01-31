@@ -171,10 +171,26 @@ def get_branches(workdir, repo):
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).strip()
-        return [
-            branch
-            for branch in output.split()
-        ]
+        # Example output:
+        # * (no branch)
+        #   master
+        #   stable/mitaka
+        #   stable/newton
+        #   stable/ocata
+        #   remotes/origin/HEAD -> origin/master
+        #   remotes/origin/master
+        #   remotes/origin/stable/mitaka
+        #   remotes/origin/stable/newton
+        #   remotes/origin/stable/ocata
+        results = []
+        for line in output.splitlines():
+            branch = line.strip().lstrip('*').strip()
+            if branch.startswith('('):
+                continue
+            if '->' in branch:
+                continue
+            results.append(branch)
+        return results
     except subprocess.CalledProcessError as e:
         print('ERROR failed to retrieve list of branches: %s [%s]' %
               (e, e.output.strip()))
