@@ -37,6 +37,7 @@ from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import project_config
+from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import versionutils
 
@@ -291,6 +292,23 @@ def validate_releases(deliverable_info, zuul_layout,
                             msg = ('could not validate version %r: %s' %
                                    (release['version'], e))
                             mk_error(msg)
+
+                        # If this is a puppet module, ensure
+                        # that the tag and metadata file
+                        # match.
+                        if puppetutils.looks_like_a_module(workdir,
+                                                           project['repo']):
+                            puppet_ver = puppetutils.get_version(
+                                workdir, project['repo'])
+                            if puppet_ver != release['version']:
+                                mk_error(
+                                    '%s metadata contains "%s" '
+                                    'but is being tagged "%s"' % (
+                                        project['repo'],
+                                        puppet_ver,
+                                        release['version'],
+                                    )
+                                )
 
                         if is_independent:
                             mk_warning('skipping descendant test for '

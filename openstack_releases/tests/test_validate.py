@@ -624,6 +624,71 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
 
+class TestPuppetUtils(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestPuppetUtils, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+
+    @mock.patch('openstack_releases.puppetutils.get_version')
+    @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
+    def test_valid_version(self, llam, get_version):
+        llam.return_value = True
+        get_version.return_value = '99.1.0'
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('openstack_releases.puppetutils.get_version')
+    @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
+    def test_mismatched_version(self, llam, get_version):
+        llam.return_value = True
+        get_version.return_value = '99.1.0'
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.2.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+
 class TestValidateTarballBase(base.BaseTestCase):
 
     def setUp(self):
