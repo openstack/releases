@@ -5,6 +5,10 @@ type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/python-openstackclient/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 3.8.1
 releases:
   - version: 3.3.0
     projects:
