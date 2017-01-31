@@ -3,3 +3,9 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: b3341cbcb43c24ba9b177a9ee2176e305b025ffb
