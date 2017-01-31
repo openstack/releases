@@ -3,3 +3,9 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: service
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/tacker
+        hash: fec5f75bd30f265d54602d77e20d407727fecddf
