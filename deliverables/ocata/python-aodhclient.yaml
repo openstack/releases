@@ -4,6 +4,9 @@ launchpad: python-aodhclient
 release-model: cycle-with-intermediary
 team: Telemetry
 type: library
+branches:
+  - name: stable/ocata
+    location: 0.8.0
 releases:
   - version: 0.8.0
     projects:
