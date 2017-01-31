@@ -231,7 +231,7 @@ def validate_releases(deliverable_info, zuul_layout,
                 # Ensure we have a local copy of the repository so we
                 # can scan for values that are more difficult to get
                 # remotely.
-                gitutils.clone_repo(workdir, project['repo'])
+                gitutils.clone_repo(workdir, project['repo'], project['hash'])
 
                 # Check that the sdist name and tarball-base name match.
                 if link_mode == 'tarball':
