@@ -4,6 +4,9 @@ launchpad: networking-hyperv
 release-model: cycle-with-intermediary
 team: winstackers
 type: other
+branches:
+  - name: stable/ocata
+    location: 4.0.0
 releases:
   - version: 4.0.0
     projects:
