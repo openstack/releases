@@ -4,6 +4,10 @@ release-model: cycle-with-intermediary
 team: tacker
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: feature/falcon-api-framework
+    location:
+      openstack/tacker: c0eee25dd56839b789d8c96d9b75d8ac64a2c7e4
 releases:
   - version: 0.6.0
     projects:
