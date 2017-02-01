@@ -4,6 +4,9 @@ launchpad: os-win
 release-model: cycle-with-intermediary
 team: winstackers
 type: library
+branches:
+  - name: stable/ocata
+    location: 1.4.0
 releases:
   - version: 1.3.0
     projects:
