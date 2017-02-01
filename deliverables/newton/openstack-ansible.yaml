@@ -1013,3 +1013,76 @@ releases:
         hash: b122ad1282da1e881eba7c542d3da5918b61d1d9
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: ce152ae1f4c01df64c8695fc4511fcc727f467b3
+  - version: 14.0.7
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: c5e485dbb49ab95d1a4ea44f2b4a88a91f207b40
+      - repo: openstack/openstack-ansible-apt_package_pinning
+        hash: 1d1daeb3bdabbcd68c2fea5cb8d2c6a46026cd6d
+      - repo: openstack/openstack-ansible-pip_install
+        hash: 941d9198643d57f0d33531f4b9b56efe2b3121fb
+      - repo: openstack/openstack-ansible-galera_client
+        hash: 1e165b67bea6e9546344c9476e30ce35fdd9d6c6
+      - repo: openstack/openstack-ansible-galera_server
+        hash: ed0743becea14a83bffdbd5f5217b24f0d9707ec
+      - repo: openstack/openstack-ansible-ceph_client
+        hash: ca31d53afa45b1a5dc9e74f5fbc4e85a6817ac4f
+      - repo: openstack/openstack-ansible-haproxy_server
+        hash: 67390d0f3dcd0a9da6ec882591fc2565244663df
+      - repo: openstack/openstack-ansible-lxc_container_create
+        hash: ce8bb99bd72689a2f0e6cd88448f197a8f2d6fde
+      - repo: openstack/openstack-ansible-lxc_hosts
+        hash: 002d330945150385477665424254784eb0a872b9
+      - repo: openstack/openstack-ansible-memcached_server
+        hash: f6393b4a1515c065f992cfcb778824e5384908b4
+      - repo: openstack/openstack-ansible-security
+        hash: 57c00eb884b30d35c8d855a5db1dd63b9f3e6899
+      - repo: openstack/openstack-ansible-openstack_hosts
+        hash: 29dfb195f033837fb8a0f1e6bf9a8b891b221cd0
+      - repo: openstack/openstack-ansible-os_keystone
+        hash: f4eabced3e96187bf5a3ffebaac4a14d15f30619
+      - repo: openstack/openstack-ansible-openstack_openrc
+        hash: 813f82d143789341c7132e2fa2cff5bf2749c50c
+      - repo: openstack/openstack-ansible-os_aodh
+        hash: 12e5e694d0545f434ddb296764699159d6c5f506
+      - repo: openstack/openstack-ansible-os_ceilometer
+        hash: 603cfe10ca3ee5855f9af1e1cf66154d1f2e2d22
+      - repo: openstack/openstack-ansible-os_cinder
+        hash: ea761b7ce46dbaa80ee63cc2210f7c32bc12fc9c
+      - repo: openstack/openstack-ansible-os_glance
+        hash: 1998d0b57b142e9772ee2b81a416abf9e423c0d8
+      - repo: openstack/openstack-ansible-os_gnocchi
+        hash: d8be70b3381d1b74ba7cc525005e22115b7cdb8d
+      - repo: openstack/openstack-ansible-os_heat
+        hash: 0c93e7a451a56b2c85e720ee07b8ad9418fc591d
+      - repo: openstack/openstack-ansible-os_horizon
+        hash: 8a302562c4ed1d919e42934d8ff488479e3df4fb
+      - repo: openstack/openstack-ansible-os_ironic
+        hash: a2462aeda6fb85d924e40c98a946201a7d3e7f2d
+        tarball-base: openstack-ansible-ironic
+      - repo: openstack/openstack-ansible-os_magnum
+        hash: c020ec1b02474feaa4d7e073e10bff001309ee8d
+      - repo: openstack/openstack-ansible-os_neutron
+        hash: 6c70144d8f99d693347b50ff1c21b0e6451ad8d3
+      - repo: openstack/openstack-ansible-os_nova
+        hash: a7a8a97efe68a7ffdde7da4e50d87206a617c87f
+      - repo: openstack/openstack-ansible-os_rally
+        hash: c742619b746ee64f02c7caa4bab483c97f1ff16f
+      - repo: openstack/openstack-ansible-os_sahara
+        hash: dc134d686fafda2cee1398909d5f3b5a28f2e10d
+      - repo: openstack/openstack-ansible-os_swift
+        hash: ceec48d2e54de72d2eb0d6950dea7a0a18e2c828
+      - repo: openstack/openstack-ansible-os_tempest
+        hash: b828ea1bab114a65d783047fd278c62fd2403ca8
+      - repo: openstack/openstack-ansible-plugins
+        hash: 49ec964040cad9332327372e48d74ca80ac09b89
+      - repo: openstack/openstack-ansible-rabbitmq_server
+        hash: 1d77b2926223893f4e1dc2f7a5a2fc53ff77b74b
+      - repo: openstack/openstack-ansible-repo_build
+        hash: 29135b8e9f43fe79fed1e59713d20d111e607d80
+      - repo: openstack/openstack-ansible-repo_server
+        hash: 1c0f2aafb6cd19772901d4792cef5507614c95ac
+      - repo: openstack/openstack-ansible-rsyslog_client
+        hash: 820d1f02c1f0744b661029ceedeb9634dcd1cd17
+      - repo: openstack/openstack-ansible-rsyslog_server
+        hash: 59f28a27ba96b5e2eb336914671d06d34474ad60
