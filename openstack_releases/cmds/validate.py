@@ -20,6 +20,7 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import glob
 import os
 import os.path
 import re
@@ -71,6 +72,49 @@ _PLEASE = ('It is too expensive to determine this value during '
 def is_a_hash(val):
     "Return bool indicating if val looks like a valid hash."
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
+
+
+def validate_series_open(deliverable_info,
+                         series_name, filename,
+                         mk_warning, mk_error):
+    "No releases in the new series until the previous one has a branch."
+    if not deliverable_info.get('releases'):
+        return
+    if series_name == '_independent':
+        # These rules don't apply to independent projects.
+        return
+    deliverables_dir = os.path.dirname(
+        os.path.dirname(filename)
+    )
+    deliverable_base = os.path.basename(filename)
+    pattern = os.path.join(
+        deliverables_dir,
+        '*',
+        deliverable_base,
+    )
+    all_deliverable_files = list(sorted(glob.glob(pattern)))
+    idx = all_deliverable_files.index(filename)
+    if idx == 0:
+        # This is the first deliverable file.
+        return
+    previous_deliverable_file = all_deliverable_files[idx - 1]
+    previous_series = os.path.basename(
+        os.path.dirname(previous_deliverable_file)
+    )
+    expected_branch = 'stable/' + previous_series
+    with open(previous_deliverable_file, 'r') as f:
+        previous_deliverable = yaml.load(f.read())
+        if not previous_deliverable:
+            # An empty file results in None, so convert to dict to
+            # make using the value easier.
+            previous_deliverable = {}
+    for branch in previous_deliverable.get('branches', []):
+        if branch['name'] == expected_branch:
+            # Everything is OK
+            return
+    mk_error(
+        'There is no {} branch defined in {}. Is the {} series open?'.format(
+            expected_branch, previous_deliverable_file, series_name))
 
 
 def validate_launchpad(deliverable_info, mk_warning, mk_error):
@@ -624,6 +668,13 @@ def main():
                 deliverable_info,
                 filename,
                 team_data,
+                mk_warning,
+                mk_error,
+            )
+            validate_series_open(
+                deliverable_info,
+                series_name,
+                filename,
                 mk_warning,
                 mk_error,
             )
