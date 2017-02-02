@@ -6,6 +6,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/networking-ovn/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 2.0.0.0rc1
 releases:
   - version: 2.0.0.0b1
     projects:
@@ -19,3 +22,7 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: b445a510e87ef1a94e3917a094bfbbc1e1a7baab
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 318581cc829fb78ca42e855d9958f445f583b133

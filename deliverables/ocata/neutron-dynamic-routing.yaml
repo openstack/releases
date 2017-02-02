@@ -5,6 +5,9 @@ type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/neutron-dynamic-routing/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 10.0.0.0rc1
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -20,3 +23,7 @@ releases:
         hash: f74bc509bd804ebbc5249e775481ad2475788c9f
     highlights: |-
       * Gracefully withdraw the floating IP bgp route
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 24b5d7a2d7b292e2348f6d0a5b41666d0cd569c6
