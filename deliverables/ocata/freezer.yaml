@@ -3,6 +3,9 @@ launchpad: freezer
 release-model: cycle-with-milestones
 team: freezer
 type: service
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b2
     projects:
@@ -20,3 +23,13 @@ releases:
         hash: f87211145baef00183961eb58f05bf1ac02ef584
       - repo: openstack/freezer-dr
         hash: 9cac795e6fb773be478ca67f9e68f525276ce060
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/freezer
+        hash: 62e7174dbc33f0e23434ab336f2b8f45031a7259
+      - repo: openstack/freezer-api
+        hash: 52c683d51ee9ade373256135551057af41d09249
+      - repo: openstack/freezer-dr
+        hash: 170d63ae764aa44845aec08013e7d7c6a2b08053
+    highlights: >
+        - Merged the rsync engine for freezer-agent.
