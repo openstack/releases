@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/heat
+branches:
+  - name: stable/ocata
+    location: 8.0.0.0rc1
 releases:
   - version: 8.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 03e71cd6e616129e19fe0d5352dc28b74ed2b1a7
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: f0b2d1759be46c965c09693082e94cf6699734b8
