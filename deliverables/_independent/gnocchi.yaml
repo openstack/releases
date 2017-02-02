@@ -3,6 +3,9 @@ launchpad: gnocchi
 team: Telemetry
 type: other
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/3.1
+    location: 3.1.0
 releases:
   - version: 1.0.0a1
     projects:
@@ -116,3 +119,7 @@ releases:
     projects:
       - repo: openstack/gnocchi
         hash: a9c1383992ed2039cf42beee988e81113a7d33e9
+  - version: 3.1.0
+    projects:
+      - repo: openstack/gnocchi
+        hash: b3b49c87e866475c149343fd77408bef259c5534
