@@ -4,6 +4,10 @@ team: tripleo
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/tripleo-common/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 5.8.0
 releases:
   - version: 5.5.0
     projects:
@@ -17,3 +21,7 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: c7472c13d690374987cbc93d97249bec35d5810d
+  - version: 5.8.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: 23977cd4d80c6d5427ea579fb330c1b8ec302964

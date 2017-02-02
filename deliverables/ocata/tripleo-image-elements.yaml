@@ -4,6 +4,10 @@ team: tripleo
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/tripleo-image-elements/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 6.0.0.0rc1
 releases:
   - version: 6.0.0.0b1
     projects:
@@ -13,3 +17,7 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: 57a19a7267a8608a434ba05529be9fba297f6027
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 662ba3938c8565cbb6c815a37d7d0f280e2ea9ce

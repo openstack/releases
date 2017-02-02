@@ -4,6 +4,10 @@ team: tripleo
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/tripleo-puppet-elements/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 6.0.0.0rc1
 releases:
   - version: 6.0.0.0b1
     projects:
@@ -13,3 +17,7 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: a778205b0aa2d8202043f56287f7dd12c470fd85
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: 1a97231c1a694fc396b3a6eca80e90d36a864c05
