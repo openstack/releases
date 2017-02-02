@@ -64,6 +64,9 @@ _VALID_BRANCH_PREFIXES = set([
     'feature',
     'driverfixes',
 ])
+_NO_STABLE_BRANCH_CHECK = set([
+    'gnocchi',
+])
 _PLEASE = ('It is too expensive to determine this value during '
            'the site build, please set it explicitly.')
 
@@ -425,6 +428,9 @@ def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
 
 def validate_stable_branches(deliverable_info, mk_warning, mk_error):
     "Apply the rules for stable branches."
+    if ('launchpad' in deliverable_info and
+       deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
+        return
     branches = deliverable_info.get('branches', [])
     known_releases = list(
         r['version']
