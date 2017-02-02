@@ -4,6 +4,9 @@ team: watcher
 type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.0.0
 releases:
   - version: 0.32.0
     projects:
@@ -19,4 +22,9 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: ecb0e218a981814605da48e63c2c1cba8523052b
+        tarball-base: python-watcher
+  - version: 1.0.0
+    projects:
+      - repo: openstack/watcher
+        hash: 62cb8a8d298d89bd88a09d7b153cda6b32c47d6d
         tarball-base: python-watcher
