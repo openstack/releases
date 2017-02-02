@@ -3,3 +3,11 @@ launchpad: aodh
 release-model: cycle-with-intermediary
 team: Telemetry
 type: service
+branches:
+  - name: stable/ocata
+    location: 4.0.0
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: 2ad5fb78647f8017e9716292495609408e91b10c
