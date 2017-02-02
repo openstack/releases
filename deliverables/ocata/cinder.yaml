@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/cinder/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 10.0.0.0rc1
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 8890872dcc29ae8129bf601a6f3a57fc81ed2cf7
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 0cd5244686ad644ae4e68851c31f1f2ac520b0f9
