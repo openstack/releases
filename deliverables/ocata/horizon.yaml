@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/horizon/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 11.0.0.0rc1
 releases:
   - version: 11.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 2e1118149b39467d82c3b53b764a5351354c543c
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/horizon
+        hash: a3e2a1e73bc024c6a3237e63ea6ac0be5d760c9b
