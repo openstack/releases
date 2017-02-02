@@ -6,7 +6,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/mistral/unreleased.html
-
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b1
     projects:
@@ -24,5 +26,11 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 4fe662432be8c8ce0cce89e7b477d29619551bf8
+      - repo: openstack/mistral-dashboard
+        hash: b82f87021943268b2bf2a54c1fcdccb4f90fda59
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/mistral
+        hash: 1428078e03c410ea38362d2e893ccd3cc0a9f888
       - repo: openstack/mistral-dashboard
         hash: b82f87021943268b2bf2a54c1fcdccb4f90fda59
