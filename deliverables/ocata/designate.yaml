@@ -7,6 +7,9 @@ send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: no
 artifact-link-mode: tarball
 release-notes: http://docs.openstack.org/releasenotes/designate/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b2
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 9a466ed73813c406455c3c8aadcda494f78c6f08
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: b029ac9934720fde7610b4c955c002fc70f5ae42
