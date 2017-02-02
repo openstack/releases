@@ -1051,6 +1051,29 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
+    def test_can_have_independent_branches(self):
+        deliverable_data = textwrap.dedent('''
+        launchpad: gnocchi
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/abc
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
 
 class TestValidateFeatureBranches(base.BaseTestCase):
 
