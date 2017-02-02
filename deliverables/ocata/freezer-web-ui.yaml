@@ -3,6 +3,9 @@ launchpad: freezer
 release-model: cycle-with-milestones
 team: freezer
 type: horizon-plugin
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b2
     projects:
@@ -12,3 +15,7 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: df797b87dd2f432b264bd73e4af00935c376c94d
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 308b8c4d6777cc48525be9f86b335be1da53863a
