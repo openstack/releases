@@ -4,6 +4,9 @@ release-model: cycle-with-milestones
 team: designate
 type: horizon-plugin
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b2
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 6013d9849e8df07b3f597e18a9c1936251b31aeb
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: a5bae8cc95d83701fdb99c9f2ada943038e81e0e
