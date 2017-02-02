@@ -5,6 +5,9 @@ release-model: cycle-with-intermediary
 team: designate
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 2.6.0
 releases:
   - version: 2.4.0
     projects:
@@ -14,3 +17,7 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 92004a58a5ab5ddd89d3f797f16dca8abd76c9ed
+  - version: 2.6.0
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 5b8cab8079c2eea9f9d084801102ed5b036927fa
