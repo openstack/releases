@@ -5,6 +5,9 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
+branches:
+  - name: stable/ocata
+    location: 3.1.1
 releases:
   - version: 3.0.0
     projects:
@@ -21,3 +24,10 @@ releases:
       This release includes support for Keystone to Keystone Federation.
       Allowing the user to switch keystone providers. Fixes a policy short
       circuit bug where complex policy rules weren't fully specified.
+  - version: 3.1.1
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 0c195604f6e0bc214309193eb0de0a46677626a5
+    highlights: >
+      This release includes a fix for federated authentication, as well as
+      translation imports.
