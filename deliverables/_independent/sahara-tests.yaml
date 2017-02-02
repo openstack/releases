@@ -1,7 +1,7 @@
 ---
 launchpad: sahara-tests
 team: sahara
-type: tempest-plugin
+type: other
 send-announcements-to: openstack-dev@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/sahara-tests/index.html
 releases:
@@ -31,3 +31,15 @@ releases:
     projects:
       - repo: openstack/sahara-tests
         hash: 4ebba66236c943ec36a0e7c6f6e583038bb321c7
+  - version: 0.4.0
+    highlights: >
+        The amount of API and CLI tests was increased and made
+        more robusts (after-tests cleanups).
+        The scenario test framework now requires less parameters and on
+        the other side there are more parameters that can be overridden.
+        The time of each test phase is now clearly shown.
+        This release supports the Mitaka, Newton and Ocata releases of
+        OpenStack.
+    projects:
+      - repo: openstack/sahara-tests
+        hash: 02e2208f76b94d33a9c261f9ba4eb2a2ea574420
