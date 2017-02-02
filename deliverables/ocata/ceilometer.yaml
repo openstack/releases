@@ -3,3 +3,11 @@ launchpad: ceilometer
 release-model: cycle-with-intermediary
 team: Telemetry
 type: service
+branches:
+  - name: stable/ocata
+    location: 8.0.0
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: 2db686275f9bbc861c7c47ae89706d11360a0c78
