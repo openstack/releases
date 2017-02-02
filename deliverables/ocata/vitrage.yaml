@@ -4,8 +4,15 @@ release-model: cycle-with-intermediary
 team: vitrage
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.5.0
 releases:
   - version: 1.4.0
     projects:
       - repo: openstack/vitrage
         hash: 0bc1e2bb4ed6530ecdbda4ec57b84b27ca3e7faf
+  - version: 1.5.0
+    projects:
+      - repo: openstack/vitrage
+        hash: a0c00fa788ea4dcecdda95241ea85605c39794ac

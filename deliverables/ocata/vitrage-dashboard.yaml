@@ -4,8 +4,15 @@ release-model: cycle-with-intermediary
 team: vitrage
 type: horizon-plugin
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.1.1
 releases:
   - version: 1.1.0
     projects:
       - repo: openstack/vitrage-dashboard
         hash: b932a645a04be570a4714889f1b7ea0c6fdd8888
+  - version: 1.1.1
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 9a66296af5dd9ac4c17337b5db20894bc5886bdf

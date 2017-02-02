@@ -5,8 +5,15 @@ release-model: cycle-with-intermediary
 team: vitrage
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.1.1
 releases:
   - version: 1.1.0
     projects:
       - repo: openstack/python-vitrageclient
         hash: 144d8e58534d72013862bc4ab27a7b6b8e70521b
+  - version: 1.1.1
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 11e97cc0c6bd709f6c7c5367c596c2a4d7ca2daf
