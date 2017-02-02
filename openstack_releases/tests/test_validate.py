@@ -630,11 +630,13 @@ class TestPuppetUtils(base.BaseTestCase):
         super(TestPuppetUtils, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
 
+    @mock.patch('openstack_releases.gitutils.check_branch_sha')
     @mock.patch('openstack_releases.puppetutils.get_version')
     @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
-    def test_valid_version(self, llam, get_version):
+    def test_valid_version(self, llam, get_version, cbs):
         llam.return_value = True
         get_version.return_value = '99.1.0'
+        cbs.return_value = True
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
@@ -659,11 +661,13 @@ class TestPuppetUtils(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    @mock.patch('openstack_releases.gitutils.check_branch_sha')
     @mock.patch('openstack_releases.puppetutils.get_version')
     @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
-    def test_mismatched_version(self, llam, get_version):
+    def test_mismatched_version(self, llam, get_version, cbs):
         llam.return_value = True
         get_version.return_value = '99.1.0'
+        cbs.return_value = True
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
