@@ -5,6 +5,9 @@ type: horizon-plugin
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/trove-dashboard/newton.html
+branches:
+  - name: stable/ocata
+    location: 8.0.0.0rc1
 releases:
   - version: 8.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: b65ab82cb38b10278d3e355f66366c27bca83442
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 9db7430f56a286fa5ebfe59dfec72c4d122b2ddb
