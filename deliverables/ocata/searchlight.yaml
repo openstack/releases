@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/searchlight/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 2.0.0.0rc1
 releases:
   - version: 2.0.0.0b1
     projects:
@@ -23,3 +26,7 @@ releases:
       - Support for post-Elasticsearch publishing plugins
       - Increased resource type coverage
       - Improvements to CI process
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight
+        hash: e5da9bfefd0e0834b5dff2e325cbfdb4b197e165
