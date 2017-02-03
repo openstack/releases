@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/zaqar/newton.html
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: c1f51dcf68322e2d6e49ba104c9be17f02a42406
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: bbf4738e8eaaa2b4dcecd57ab619d10d84bc3652
