@@ -4,7 +4,10 @@ team: congress
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/congress/unreleased.html
+release-notes: http://docs.openstack.org/releasenotes/congress
+branches:
+  - name: stable/ocata
+    location: 5.0.0.0rc1
 releases:
   - version: 5.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/congress
         hash: ca17fa90b1961769fa1979f267872710b0fd3760
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/congress
+        hash: 54926c44114800c0112099d57e04f209191737ba
