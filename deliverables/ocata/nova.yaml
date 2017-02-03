@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/nova/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 15.0.0.0rc1
 releases:
   - version: 15.0.0.0b1
     projects:
@@ -27,3 +30,12 @@ releases:
       - Several new features and dependency updates. See the release notes for
         details.
       - Neutron is now the default networking configuration for running Nova.
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 245c54796f790cb70703f069bc429a8b9c5e0e49
+    highlights: >
+      - The Placement service is now required.
+      - 2.42 is the highest compute REST API microversion in this release.
+      - 1.4 is the highest placement REST API microversion in this release.
+      - See the release notes for more details.
