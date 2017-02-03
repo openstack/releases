@@ -1,0 +1,23 @@
+---
+include-pypi-link: true
+launchpad: neutron-lbaas-dashboard
+release-model: independent
+team: octavia
+type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 2.0.0
+releases:
+  - version: 2.0.0
+    diff-start: 1.0.0
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: 181b92c2a158f38598894053a1d2637134c11c6b
+    highlights: |-
+      * The following locales have been added: de fr id ja ko_KR ru zh_CN
+      * Improved default resource naming
+      * Improved subnet drop down lists
+      * Improved wizard help
+      * Improved loading indicators
+      * Improved load balancer list output
