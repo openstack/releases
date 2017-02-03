@@ -5,6 +5,9 @@ type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/neutron-lbaas/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 10.0.0.0rc1
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas
         hash: 448ff8eab9c7e382cea0242e3121b875d95d74c6
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 4876dcccbf8571dda461edaca442f2ccc412cd3b
