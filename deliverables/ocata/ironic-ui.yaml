@@ -4,3 +4,13 @@ launchpad: ironic-ui
 release-model: cycle-with-intermediary
 team: ironic
 type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/ironic-ui/current-series.html
+branches:
+  - name: stable/ocata
+    location: 2.2.0
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 73874c17ff7e7b246e8f864500f5baaa1b5aaca6
