@@ -4,6 +4,9 @@ team: zaqar
 type: horizon-plugin
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 2.0.0.0rc1
 releases:
   - version: 2.0.0.0b1
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: b4256ff5c2249204c740ef6d5d2308fe962634da
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 440a1032b0ce3e65444891c25e70352ff87922e7
