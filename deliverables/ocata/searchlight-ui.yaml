@@ -5,6 +5,9 @@ type: horizon-plugin
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/searchlight-ui/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 2.0.0.0rc1
 releases:
   - version: 2.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: 2920a480e6e0a29e5a3287069d74796c5a430222
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: a4bf436048dea5d1be6c49189b03152d8ddc9771
