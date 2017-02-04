@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/neutron/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 10.0.0.0rc1
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -30,3 +33,7 @@ releases:
       * Use neutron-lib
       * SR-IOV: remove ml2_conf_sriov.ini from oslo-config-generator
       * Linux Bridge: driver support for QoS egress minimum bandwidth
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: cdeb93b0b331ef3134c10c2eda098bb70f417e1f

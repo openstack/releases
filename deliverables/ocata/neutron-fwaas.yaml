@@ -5,6 +5,9 @@ type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/neutron-fwaas/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 10.0.0.0rc1
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -23,3 +26,7 @@ releases:
       * Not allow to update icmp fw_rule with port
       * Use BRANCH constants from neutron_lib
       * Update policy.json for FWaaS v2
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 8cfa2de66becce06f3e11bbab7562b11649e54c9
