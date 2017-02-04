@@ -3,6 +3,9 @@ launchpad: castellan
 team: barbican
 type: library
 send-announcements-to: openstack-dev@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 0.5.0
 releases:
   - version: 0.2.0
     projects:
@@ -12,3 +15,19 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 4fda4a749f3f908d58817c326676073aa6fcf62a
+  - version: 0.3.0
+    projects:
+      - repo: openstack/castellan
+        hash: adc5b74cc66c6c79cc54db11afd03e2e8f420390
+  - version: 0.3.1
+    projects:
+      - repo: openstack/castellan
+        hash: e6404c3d23fb95b2b3c862d6b32f424a1cbb0024
+  - version: 0.4.0
+    projects:
+      - repo: openstack/castellan
+        hash: abf5584dd0f83a5e70f8c6417f5d5e7e13f8d848
+  - version: 0.5.0
+    projects:
+      - repo: openstack/castellan
+        hash: c83eb195e3a13d9813cf7a2eed8f4fefc85df440
