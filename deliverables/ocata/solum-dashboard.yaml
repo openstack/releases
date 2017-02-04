@@ -3,6 +3,9 @@ launchpad: solum
 release-model: cycle-with-intermediary
 team: solum
 type: horizon-plugin
+branches:
+  - name: stable/ocata
+    location: 2.0.0
 releases:
   - version: 2.0.0
     projects:
