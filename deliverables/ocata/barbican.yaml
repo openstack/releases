@@ -5,6 +5,9 @@ team: barbican
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/barbican/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b2
     projects:
@@ -14,3 +17,7 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 8b93051df7f63e7343509b9c35f6a51b4b060842
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/barbican
+        hash: d0ebc6c321a840c2d3c8ae5a682d721da7b4a239
