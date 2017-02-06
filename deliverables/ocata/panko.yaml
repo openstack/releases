@@ -3,3 +3,11 @@ launchpad: panko
 release-model: cycle-with-intermediary
 team: Telemetry
 type: service
+branches:
+  - name: stable/ocata
+    location: 2.0.0
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/panko
+        hash: 7f9694f84c35ec19bc2cede5438a5ac3389cce7f
