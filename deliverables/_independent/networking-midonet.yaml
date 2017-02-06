@@ -30,6 +30,13 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 691f8490317f36ec2c629c9a397c09eebf7638bd
+  # ocata
+  - version: 4.0.0
+    projects:
+      - repo: openstack/networking-midonet
+        hash: c6acb9ea0853d7168d02318629d376c5f9a6990e
 branches:
   - name: stable/newton
     location: 3.0.0
+  - name: stable/ocata
+    location: 4.0.0
