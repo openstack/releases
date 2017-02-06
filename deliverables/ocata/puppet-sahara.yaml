@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -21,3 +24,7 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: e708fb1aad9d9931acac46cb8fccb696b7483e5b
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: e3567774c70990127e453c5193ff37e3d6d5a7fd

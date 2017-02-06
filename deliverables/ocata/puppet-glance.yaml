@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 31ca15b03792f49dea0de25c58acaf36a0164e8e
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 672c0b6560f95f4d20787490ef4624737a8bf812

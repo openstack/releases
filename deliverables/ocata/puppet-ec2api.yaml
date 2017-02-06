@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 48dc8b2b5d299d169f01bb1201c82ac2e260c24d
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: f4a82472068ba198659cf8ceb4903ac9290f910f

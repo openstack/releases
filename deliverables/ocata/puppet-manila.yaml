@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: fa721a73491ae8425d6e2327c3645f0508de0246
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: f799c2df055175c69d0be6d0b6903f7067d328d8

@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: f10834efbba53f550091f79532f8b5e0f559ac71
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: bf49b6e306196bc401a06d54dc5ae20c4dc2a8d3

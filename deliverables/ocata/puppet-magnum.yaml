@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: f8801e28fbccb5d257f8bb428c0d4b549f69d3d0
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: fdbddd178c34e7205383b89b2173f2b15cb512c5
