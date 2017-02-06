@@ -4,6 +4,9 @@ team: senlin
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 3.0.0.0rc1
 releases:
   - version: 3.0.0.0b1
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: e5a65f7788d798bc57b2ee8a7dd5b31c94dbd27e
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: c173fc95ce9b38abef91ebd692f5246ed9d9e5b1
