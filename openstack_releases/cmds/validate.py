@@ -318,7 +318,7 @@ def validate_releases(deliverable_info, zuul_layout,
                                        'independent project, verify '
                                        'branch manually')
 
-                        elif not prev_version:
+                        else:
                             # If this is the first version in the series,
                             # check that the commit is actually on the
                             # targeted branch.
@@ -334,38 +334,39 @@ def validate_releases(deliverable_info, zuul_layout,
                                     )
                                 mk_error(msg)
 
-                        else:
-                            # Check to see if we are re-tagging the same
-                            # commit with a new version.
-                            old_sha = gitutils.sha_for_tag(
-                                workdir,
-                                project['repo'],
-                                prev_version,
-                            )
-                            if old_sha == project['hash']:
-                                # FIXME(dhellmann): This needs a test.
-                                print('Retagging the SHA with a new version')
-                            else:
-                                # Check to see if the commit for the new
-                                # version is in the ancestors of the
-                                # previous release, meaning it is actually
-                                # merged into the branch.
-                                is_ancestor = gitutils.check_ancestry(
+                            if prev_version:
+                                # Check to see if we are re-tagging the same
+                                # commit with a new version.
+                                old_sha = gitutils.sha_for_tag(
                                     workdir,
                                     project['repo'],
                                     prev_version,
-                                    project['hash'],
                                 )
-                                if not is_ancestor:
-                                    mk_error(
-                                        '%s %s receiving %s '
-                                        'is not a descendant of %s' % (
-                                            project['repo'],
-                                            project['hash'],
-                                            release['version'],
-                                            prev_version,
-                                        )
+                                if old_sha == project['hash']:
+                                    # FIXME(dhellmann): This needs a test.
+                                    print('Retagging the SHA with '
+                                          'a new version')
+                                else:
+                                    # Check to see if the commit for the new
+                                    # version is in the ancestors of the
+                                    # previous release, meaning it is actually
+                                    # merged into the branch.
+                                    is_ancestor = gitutils.check_ancestry(
+                                        workdir,
+                                        project['repo'],
+                                        prev_version,
+                                        project['hash'],
                                     )
+                                    if not is_ancestor:
+                                        mk_error(
+                                            '%s %s receiving %s '
+                                            'is not a descendant of %s' % (
+                                                project['repo'],
+                                                project['hash'],
+                                                release['version'],
+                                                prev_version,
+                                            )
+                                        )
 
         prev_version = release['version']
         prev_projects = set(p['repo'] for p in release['projects'])
