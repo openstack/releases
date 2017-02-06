@@ -67,10 +67,12 @@ def git_branch_contains(workdir, repo, title, commit):
     out = subprocess.check_output(cmd, cwd=os.path.join(workdir, repo))
     print(out + '\n')
     print('\nAll branches:')
-    subprocess.check_call(
-        ['git', 'branch', '-a'],
-        cwd=os.path.join(workdir, repo),
-    )
+    for branch in gitutils.get_branches(workdir, repo):
+        print('{:<30}'.format(branch), end=' ')
+        subprocess.call(
+            ['git', 'describe', branch],
+            cwd=os.path.join(workdir, repo),
+        )
     return [o.strip() for o in out.splitlines()]
 
 
