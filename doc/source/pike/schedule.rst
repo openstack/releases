@@ -25,14 +25,16 @@ for Pike <https://governance.openstack.org/tc/goals/pike/index.html>`__.
 Pike Design Summit
 ------------------
 
-TBD
+`Feedback and requirements Forum in Boston
+<https://www.openstack.org/summit/boston-2017/>`__
 
 .. _p-ptg:
 
 Pike Project Team Gathering (PTG)
 ---------------------------------
 
-TBD
+`Project team gathering <http://www.openstack.org/ptg>`__ for the Pike
+release 20-24 February 2017 in Atlanta, Georgia.
 
 .. _p-1:
 
