@@ -201,6 +201,25 @@ def get_branches(workdir, repo):
         return []
 
 
+def branches_containing(workdir, repo, ref):
+    try:
+        output = subprocess.check_output(
+            ['git', 'branch', '-r', '--contains', ref],
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).strip()
+        # Example output:
+        #   origin/stable/ocata
+        results = []
+        for line in output.splitlines():
+            results.append(line.strip())
+        return results
+    except subprocess.CalledProcessError as e:
+        print('ERROR failed to retrieve list of branches containing %s: %s [%s]' %
+              (ref, e, e.output.strip()))
+        return []
+
+
 def get_branch_base(workdir, repo, branch):
     "Return SHA at base of branch."
     # http://stackoverflow.com/questions/1527234/finding-a-branch-point-with-git
