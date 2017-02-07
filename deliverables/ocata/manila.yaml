@@ -5,6 +5,9 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/manila/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/manila
         hash: c4da03274c1c2df23a64960e44414fa88e7f3c84
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 7579549c31c5777b9af53ea8e715feb00a070018
