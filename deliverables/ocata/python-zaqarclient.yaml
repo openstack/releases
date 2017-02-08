@@ -5,6 +5,10 @@ release-model: cycle-with-intermediary
 team: zaqar
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/python-zaqarclient/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 1.4.0
 releases:
   - version: 1.3.0
     projects:
@@ -14,3 +18,7 @@ releases:
       - Add support for keystone session.
       - Add support for project doc.
       - Add support for SSL and insecure request.
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: bdeb81fa6b37d0f484a17a18e1977fbf2b3e0de8
