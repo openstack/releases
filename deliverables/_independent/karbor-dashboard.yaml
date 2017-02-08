@@ -1,0 +1,15 @@
+---
+include-pypi-link: true
+launchpad: karbor-dashboard
+release-model: independent
+team: karbor
+type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 0.1.2
+releases:
+  - version: 0.1.2
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: be56e7bb1968243ef083f4f0f8739faa77e36e0d
