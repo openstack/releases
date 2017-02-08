@@ -532,3 +532,21 @@ tools/list_library_unreleased_changes.sh
 
 Runs list_unreleased_changes.sh for all libraries managed by any
 project.
+
+list_stable_unreleased_changes.sh
+---------------------------------
+
+Runs list_unreleased_changes.sh with the given branch for all
+repositories tagged with ``stable:follows-policy``.
+
+
+::
+
+  ./list_stable_unreleased_changes.sh stable/liberty
+
+
+is equivalent to:
+
+::
+
+  ./list_unreleased_changes.sh stable/liberty $(list-deliverables --repos --series liberty)
