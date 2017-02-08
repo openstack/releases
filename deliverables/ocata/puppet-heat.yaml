@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 241615025072d3ec83a20d5f50ea27616f3420a8
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 8b4200b4056ffe171576471f16c73acc128f9102

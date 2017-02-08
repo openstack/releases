@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 6.3.0
 releases:
   - version: 6.0.0
     projects:
@@ -21,3 +24,7 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: a9f30a2cc4cfad0e543e39cd82f7fd89acf37c40
+  - version: 6.3.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: e08a995069106b4e66e7d08623730f186d8a4f6c

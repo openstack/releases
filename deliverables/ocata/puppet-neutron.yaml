@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 0887d96ac59e5d28158c2d5756e4ae45301ab710
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: afa1634d7ff7b727f4af22a8bcb79820fb76bd1f

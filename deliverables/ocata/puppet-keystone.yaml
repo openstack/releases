@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 09d952e161cd9a0dbe82acce0199031e78c864de
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 1edc536b757ba11f09db7ff04db6ff888495bcf8

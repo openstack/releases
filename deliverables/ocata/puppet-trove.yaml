@@ -4,6 +4,9 @@ team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
 releases:
   - version: 10.0.0
     projects:
@@ -21,3 +24,7 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 82cc12da2f0654d5756a13cf7249e2261156ead4
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 9a9fca039803aad78a0915944ad1905d4bb0d704
