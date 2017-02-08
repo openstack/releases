@@ -526,3 +526,9 @@ master branch.
 
 Print the list of changes in the ``stable/kilo`` branch of all Oslo
 libraries.
+
+tools/list_library_unreleased_changes.sh
+----------------------------------------
+
+Runs list_unreleased_changes.sh for all libraries managed by any
+project.
