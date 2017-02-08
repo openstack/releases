@@ -490,3 +490,16 @@ To set the pre-release group membership:
 ::
 
   tox -e aclmanager -- groups pre_release ttx
+
+propose-final-releases
+----------------------
+
+Command to edit the deliverable files in a releases repository to
+propose final releases. The command modifies files in an existing copy
+of the repository and does not invoke git at all, so you need to
+create a branch before running it then review the output, commit the
+changes, and push the patch to gerrit.
+
+::
+
+  tox -e venv -- propose-final-releases newton ocata
