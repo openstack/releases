@@ -503,3 +503,26 @@ changes, and push the patch to gerrit.
 ::
 
   tox -e venv -- propose-final-releases newton ocata
+
+tools/list_unreleased_changes.sh
+--------------------------------
+
+Given a branch and one or more repositories, produce a list of the
+changes in those repositories since their last tag on that
+branch. This is useful for deciding if a project needs to prepare a
+release, and for predicting what the next release version should be by
+looking at the commit logs.
+
+::
+
+  ./tools/list_unreleased_changes.sh master openstack/oslo.config
+
+Print the list of changes in ``openstack/oslo.config`` along the
+master branch.
+
+::
+
+  ./tools/list_unreleased_changes.sh stable/kilo $(list-deliverables --repos --team Oslo)
+
+Print the list of changes in the ``stable/kilo`` branch of all Oslo
+libraries.
