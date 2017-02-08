@@ -24,7 +24,7 @@ choose between one of the following models.
 cycle-with-milestones
 =====================
 
-The "cycle-with-milestones" model describes projects thatproduce a
+The "cycle-with-milestones" model describes projects that produce a
 single release at the end of the cycle, with development milestones
 published at predetermined times in the cycle schedule.
 
