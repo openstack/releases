@@ -157,6 +157,16 @@ Between Milestone-3 and RC1
 2. Encourage release:independent projects to add the history for any
    releases not yet listed in their deliverable file.
 
+3. Remind projects using all release models to prepare their new
+   stable branch request around the RC1 target date.
+
+   As soon as grenade is updated for the new branch (see the RC1
+   instructions that follow), projects without stable branches may
+   start seeing issues with their grenade jobs because without the
+   stable branch the branch selection will cause the jobs to run
+   master->master instead of previous->master. At the end of Ocata
+   this caused trouble for the Ironic team, for example.
+
 RC1
 ===
 
