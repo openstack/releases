@@ -4,10 +4,10 @@ team: watcher
 type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/watcher/unreleased.html
 branches:
   - name: stable/ocata
     location: 1.0.0
+release-notes: http://docs.openstack.org/releasenotes/watcher/ocata.html
 releases:
   - version: 0.32.0
     projects:

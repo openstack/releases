@@ -2,13 +2,13 @@
 include-pypi-link: true
 launchpad: python-tackerclient
 release-model: cycle-with-intermediary
-release-notes: http://docs.openstack.org/releasenotes/python-tackerclient/unreleased.html
 team: tacker
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 0.9.0
+release-notes: http://docs.openstack.org/releasenotes/python-tackerclient/ocata.html
 releases:
   - version: 0.8.0
     projects:

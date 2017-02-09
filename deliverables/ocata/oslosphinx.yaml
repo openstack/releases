@@ -4,11 +4,11 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/oslosphinx/unreleased.html
 include-pypi-link: true
 branches:
 - name: stable/ocata
   location: 4.10.0
+release-notes: http://docs.openstack.org/releasenotes/oslosphinx/ocata.html
 releases:
 - version: 4.8.0
   projects:

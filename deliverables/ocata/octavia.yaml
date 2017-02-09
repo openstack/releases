@@ -5,10 +5,10 @@ release-model: cycle-with-intermediary
 team: octavia
 type: other
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/octavia/unreleased.html
 branches:
   - name: stable/ocata
     location: 0.10.0
+release-notes: http://docs.openstack.org/releasenotes/octavia/ocata.html
 releases:
   - version: 0.10.0
     diff-start: 0.9.0

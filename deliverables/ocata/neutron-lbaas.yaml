@@ -4,10 +4,10 @@ team: octavia
 type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/neutron-lbaas/unreleased.html
 branches:
   - name: stable/ocata
     location: 10.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/neutron-lbaas/ocata.html
 releases:
   - version: 10.0.0.0b1
     projects:

@@ -5,10 +5,10 @@ type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
-release-notes: http://docs.openstack.org/releasenotes/mistral/unreleased.html
 branches:
   - name: stable/ocata
     location: 4.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/mistral/ocata.html
 releases:
   - version: 4.0.0.0b1
     projects:
