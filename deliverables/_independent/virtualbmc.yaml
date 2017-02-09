@@ -1,9 +1,14 @@
 ---
 launchpad: virtualbmc
 team: ironic
+type: other
 send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 0.1.0
     projects:
       - repo: openstack/virtualbmc
         hash: 9f4d478bd76b5ca76b99bbebb332fcfe11480978
+  - version: 1.0.0
+    projects:
+      - repo: openstack/virtualbmc
+        hash: 38502c106d053d90a6bb7cfcd06cda004675eab5
