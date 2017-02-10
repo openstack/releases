@@ -1,0 +1,16 @@
+---
+launchpad: tricircle
+release-model: cycle-with-intermediary
+team: tricircle
+type: service
+send-announcements-to: openstack-announce@lists.openstack.org
+include-pypi-link: yes
+release-notes: http://docs.openstack.org/releasenotes/tricircle
+branches:
+  - name: stable/ocata
+    location: 3.0.0
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 9e60abfe8f1a41c361cd40b22c16655682555110
