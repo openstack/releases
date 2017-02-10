@@ -4,10 +4,10 @@ team: searchlight
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/searchlight/unreleased.html
 branches:
   - name: stable/ocata
     location: 2.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/searchlight/ocata.html
 releases:
   - version: 2.0.0.0b1
     projects:

@@ -5,10 +5,10 @@ type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
-release-notes: http://docs.openstack.org/releasenotes/networking-ovn/unreleased.html
 branches:
   - name: stable/ocata
     location: 2.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/networking-ovn/ocata.html
 releases:
   - version: 2.0.0.0b1
     projects:

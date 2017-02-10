@@ -6,10 +6,10 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: no
 artifact-link-mode: tarball
-release-notes: http://docs.openstack.org/releasenotes/glance/unreleased.html
 branches:
   - name: stable/ocata
     location: 14.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/glance/ocata.html
 releases:
   - version: 14.0.0.0b1
     projects:

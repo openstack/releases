@@ -5,11 +5,11 @@ type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
-release-notes: |-
   http://docs.openstack.org/releasenotes/oslo.serialization/unreleased.html
 branches:
 - name: stable/ocata
   location: 2.16.0
+release-notes: http://docs.openstack.org/releasenotes/oslo.serialization/ocata.html
 releases:
 - version: 2.14.0
   projects:

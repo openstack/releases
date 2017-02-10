@@ -4,10 +4,10 @@ team: heat
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/heat
 branches:
   - name: stable/ocata
     location: 8.0.0.0rc1
+release-notes: http://docs.openstack.org/releasenotes/heat/ocata.html
 releases:
   - version: 8.0.0.0b1
     projects:
