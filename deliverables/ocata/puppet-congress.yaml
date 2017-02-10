@@ -1,0 +1,14 @@
+---
+launchpad: puppet-congress
+team: Puppet OpenStack
+type: other
+release-model: cycle-trailing
+send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 10.3.0
+releases:
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 521519adec86a0f6ce09f0b595cf2191f9e4b95b
