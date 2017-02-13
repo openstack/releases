@@ -3,3 +3,13 @@ launchpad: ironic-python-agent
 release-model: cycle-with-intermediary
 team: ironic
 type: other
+send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/ironic-python-agent/current-series.html
+branches:
+  - name: stable/ocata
+    location: 2.0.0
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 47376816753ecb81cba4c3f18356c2e161f4b6c7
