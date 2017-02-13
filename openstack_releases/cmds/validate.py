@@ -471,7 +471,8 @@ def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
                 branch['name'], _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliverable_info, mk_warning, mk_error):
+def validate_stable_branches(deliverable_info, series_name,
+                             mk_warning, mk_error):
     "Apply the rules for stable branches."
     if ('launchpad' in deliverable_info and
        deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
@@ -502,12 +503,20 @@ def validate_stable_branches(deliverable_info, mk_warning, mk_error):
                  'list of releases for this deliverable' % (
                      branch['location'], branch['name']))
             )
-        if series not in known_series:
-            mk_error(
-                ('stable branches must be named for known series '
-                 'but %s was not found in %s' % (
-                     branch['name'], known_series))
-            )
+        if series_name == '_independent':
+            if series not in known_series:
+                mk_error(
+                    ('stable branches must be named for known series '
+                     'but %s was not found in %s' % (
+                         branch['name'], known_series))
+                )
+        else:
+            if series != series_name:
+                mk_error(
+                    ('cycle-based projects must match series names '
+                     'for stable branches. %s should be stable/%s' % (
+                         branch['name'], series_name))
+                )
 
 
 def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
@@ -692,6 +701,7 @@ def main():
         )
         validate_stable_branches(
             deliverable_info,
+            series_name,
             mk_warning,
             mk_error,
         )
