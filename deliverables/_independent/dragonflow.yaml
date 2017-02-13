@@ -3,8 +3,21 @@ launchpad: dragonflow
 team: dragonflow
 type: other
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/newton
+    location: 2.0.0
+  - name: stable/ocata
+    location: 3.0.0
 releases:
   - version: 1.0.0
     projects:
       - repo: openstack/dragonflow
         hash: d7997ef928391abb636b899dfcf14e9f0cb09aeb
+  - version: 2.0.0
+    projects:
+      - repo: openstack/dragonflow
+        hash: a7a738c4fe8973663b4da4774f43b3fd7048c895
+  - version: 3.0.0
+    projects:
+      - repo: openstack/dragonflow
+        hash: de74522e808a30cc8080c01a7a16ec7c9afafdff
