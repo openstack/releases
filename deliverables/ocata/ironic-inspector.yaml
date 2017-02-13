@@ -3,3 +3,13 @@ launchpad: ironic-inspector
 release-model: cycle-with-intermediary
 team: ironic
 type: other
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/ironic-inspector/current-series.html
+branches:
+  - name: stable/ocata
+    location: 5.0.0
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 7d0806b664f43e1fbaf70a6ee70c06a79901e676
