@@ -3,3 +3,13 @@ launchpad: ironic
 release-model: cycle-with-intermediary
 team: ironic
 type: service
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/ironic/current-series.html
+branches:
+  - name: stable/ocata
+    location: 7.0.0
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 2b92b53da819f32e48e963055fc08b53ead058d9
