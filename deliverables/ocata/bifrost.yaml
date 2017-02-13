@@ -3,3 +3,13 @@ launchpad: bifrost
 release-model: cycle-with-intermediary
 team: ironic
 type: other
+send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/bifrost/current-series.html
+branches:
+  - name: stable/ocata
+    location: 3.0.0
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 6c7a80e2307d4cad3120716bdd5132e868907b36
