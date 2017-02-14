@@ -4,3 +4,11 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+branches:
+  - name: stable/ocata
+    location: 1.2.0
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: eca7afa8d5a8c3cd898e81b372bdd747b47e7ad7
