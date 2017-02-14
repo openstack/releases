@@ -4,6 +4,9 @@ team: monasca
 type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.4.0
 releases:
   - version: 1.2.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: edef0475063cf4e90cec478c776ce2ef397dffd4
+  - version: 1.4.0
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: 4fcbb8e96c678bf1079eefba29c067043f27b5be
