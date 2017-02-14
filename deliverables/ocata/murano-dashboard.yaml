@@ -3,8 +3,15 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: horizon-plugin
+branches:
+  - name: stable/ocata
+    location: 3.2.0
 releases:
   - version: 3.1.0
     projects:
       - repo: openstack/murano-dashboard
         hash: 6b00791ffba02a98c55f1defd55adb177306edd2
+  - version: 3.2.0
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: dcea9d96b290b86d0e7d724dc1336fe6819a89d4

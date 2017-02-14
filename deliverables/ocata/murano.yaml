@@ -3,8 +3,15 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: service
+branches:
+  - name: stable/ocata
+    location: 3.2.0
 releases:
   - version: 3.1.0
     projects:
       - repo: openstack/murano
         hash: 3d8559b4e6af364e623691d140fa662f704c0e74
+  - version: 3.2.0
+    projects:
+      - repo: openstack/murano
+        hash: fbee4043ee1c269d90c8ec2c1f275f02f43cd4fd
