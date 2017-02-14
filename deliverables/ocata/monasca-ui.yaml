@@ -4,6 +4,9 @@ team: monasca
 type: horizon-plugin
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.5.0
 releases:
   - version: 1.3.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 46a1e0007fd20ac44bbb04d1cd8e92627bf36f6f
+  - version: 1.5.0
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 03686e0bc97200102a20fb5e2a0caa5b3d314879
