@@ -4,8 +4,15 @@ release-model: cycle-with-intermediary
 team: tacker
 type: horizon-plugin
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 0.7.0
 releases:
   - version: 0.6.0
     projects:
       - repo: openstack/tacker-horizon
         hash: b3341cbcb43c24ba9b177a9ee2176e305b025ffb
+  - version: 0.7.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 3964576fb905febc45142a793676ed47a7632ca9
