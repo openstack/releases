@@ -5,11 +5,15 @@ type: other
 release-model: cycle-trailing
 release-notes: http://docs.openstack.org/releasenotes/kolla-ansible/unreleased.html
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b1
     projects:
       - repo: openstack/kolla-ansible
         hash: 00c068a17352f71015299ffa910e01feebf75a84
+        tarball-base: kolla
   - version: 4.0.0.0b2
     projects:
       - repo: openstack/kolla-ansible
@@ -18,3 +22,7 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 700089f5b3e2c06546c7745c57beda55d77e1cb9
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 83128d682dbd9d0534e1df6901a09160c5efad8d
