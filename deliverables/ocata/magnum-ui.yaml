@@ -3,3 +3,13 @@ launchpad: magnum-ui
 release-model: cycle-with-intermediary
 team: magnum
 type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/magnum-ui/newton.html
+branches:
+  - name: stable/ocata
+    location: 2.2.0
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/magnum-ui
+        hash: 722a867ef0d5e1b7a0247ef5cf835e3398b36388
