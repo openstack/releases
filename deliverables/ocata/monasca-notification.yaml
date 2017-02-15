@@ -4,6 +4,9 @@ team: monasca
 type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.7.0
 releases:
   - version: 1.5.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: a8f2941a7fdb853f362bbc8d4e69e154afe37aed
+  - version: 1.7.0
+    projects:
+      - repo: openstack/monasca-notification
+        hash: ef9db227440c4c1396fdf9ddc61576dc44806be9
