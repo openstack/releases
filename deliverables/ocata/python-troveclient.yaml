@@ -6,6 +6,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
 release-notes: http://docs.openstack.org/releasenotes/python-troveclient/newton.html
+branches:
+  - name: stable/ocata
+    location: 2.8.0
 releases:
   - version: 2.6.0
     projects:
