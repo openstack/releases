@@ -5,6 +5,9 @@ type: other
 release-model: cycle-trailing
 release-notes: http://docs.openstack.org/releasenotes/kolla/unreleased.html
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 4.0.0.0rc1
 releases:
   - version: 4.0.0.0b1
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: d3eb84c56d591ef1b63b1f0343c481b8a08470b5
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 2a03b895d5c208cdd327de8f2789e3e168c441a5
