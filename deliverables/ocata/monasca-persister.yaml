@@ -4,6 +4,9 @@ team: monasca
 type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 1.4.0
 releases:
   - version: 1.2.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: af08d6a1b4233e71b4e75e4f67f039895d2f0fdd
+  - version: 1.4.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: ba381b409b0a14988d05f4b894b54994f3cffec8
