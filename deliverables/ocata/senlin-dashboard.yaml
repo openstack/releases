@@ -3,3 +3,12 @@ launchpad: senlin-dashboard
 release-model: cycle-with-intermediary
 team: senlin
 type: horizon-plugin
+send-announcements-to: openstack-dev@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 0.6.0
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 59eaf4d998c60474de3a098a4d08ed0e4fa0e252
