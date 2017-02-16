@@ -60,20 +60,27 @@ def git_log(workdir, repo, title, git_range, extra_args=[]):
     print()
 
 
-def git_branch_contains(workdir, repo, title, commit):
-    header('%s %s' % (title, commit))
-    cmd = ['git', 'branch', '-r', '--contains', commit]
-    print('\n' + ' '.join(cmd) + '\n')
-    out = subprocess.check_output(cmd, cwd=os.path.join(workdir, repo))
-    print(out + '\n')
-    print('\nAll branches:')
+def git_list_existing_branches(workdir, repo):
+    header('All Branches with Version Numbers')
     for branch in gitutils.get_branches(workdir, repo):
         print('{:<30}'.format(branch), end=' ')
         subprocess.call(
             ['git', 'describe', branch],
             cwd=os.path.join(workdir, repo),
         )
-    return [o.strip() for o in out.splitlines()]
+
+
+def git_branch_contains(workdir, repo, title, commit):
+    header('%s %s' % (title, commit))
+    cmd = ['git', 'branch', '-r', '--contains', commit]
+    print('\n' + ' '.join(cmd) + '\n')
+    out = subprocess.check_output(cmd, cwd=os.path.join(workdir, repo))
+    print(out)
+    return sorted(
+        o.strip()
+        for o in out.splitlines()
+        if '->' not in o
+    )
 
 
 def git_diff(workdir, repo, git_range, file_pattern):
@@ -278,6 +285,11 @@ def main():
                 ref=project['hash'],
             )
 
+            git_list_existing_branches(
+                workdir=workdir,
+                repo=project['repo'],
+            )
+
             branches = git_branch_contains(
                 workdir=workdir,
                 repo=project['repo'],
@@ -287,11 +299,7 @@ def main():
 
             header('Relationship to HEAD')
             if series == '_independent':
-                interesting_branches = sorted(
-                    b for b in branches
-                    if '->' not in b
-                )
-                tag_branch = interesting_branches[0]
+                tag_branch = branches[0]
                 head_sha = gitutils.sha_for_tag(
                     workdir,
                     project['repo'],
