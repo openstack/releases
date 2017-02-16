@@ -33,3 +33,11 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: bf223e972780e29968f4beedb290378b1b1cc887
+  # ocata
+  - version: 4.0.0
+    projects:
+      - repo: openstack/networking-odl
+        hash: 9b03645da7546d3b769a26ea6e374853ef7374c3
+branches:
+  - name: stable/ocata
+    location: 4.0.0
