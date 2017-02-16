@@ -4,6 +4,9 @@ team: swift
 type: service
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 2.13.0
 releases:
   - version: 2.11.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 462f91b040ff47b51e5397eed930785590638d69
+  - version: 2.13.0
+    projects:
+      - repo: openstack/swift
+        hash: 11bd6c82ecac8572cf9538a4d92a0361b382f1de
