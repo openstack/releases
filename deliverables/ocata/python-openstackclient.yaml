@@ -1,6 +1,7 @@
 ---
 launchpad: python-openstackclient
 team: OpenStackClient
+release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/ocata.html
 type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
@@ -8,7 +9,6 @@ include-pypi-link: yes
 branches:
   - name: stable/ocata
     location: 3.8.1
-release-notes: http://docs.openstack.org/releasenotes/python-openstackclient/ocata.html
 releases:
   - version: 3.3.0
     projects:

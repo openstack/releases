@@ -1,13 +1,13 @@
 ---
 launchpad: neutron
 team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron/ocata.html
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 10.0.0.0rc1
-release-notes: http://docs.openstack.org/releasenotes/neutron/ocata.html
 releases:
   - version: 10.0.0.0b1
     projects:

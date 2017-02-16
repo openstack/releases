@@ -1,13 +1,13 @@
 ---
 launchpad: puppet-vswitch
 team: Puppet OpenStack
+release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/ocata.html
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 6.3.0
-release-notes: http://docs.openstack.org/releasenotes/puppet-vswitch/ocata.html
 releases:
   - version: 6.0.0
     projects:

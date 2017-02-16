@@ -3,9 +3,9 @@ include-pypi-link: true
 launchpad: python-zaqarclient
 release-model: cycle-with-intermediary
 team: zaqar
+release-notes: https://docs.openstack.org/releasenotes/python-zaqarclient/ocata.html
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/python-zaqarclient/unreleased.html
 branches:
   - name: stable/ocata
     location: 1.4.0

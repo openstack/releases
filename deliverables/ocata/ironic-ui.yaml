@@ -3,9 +3,9 @@ include-pypi-link: true
 launchpad: ironic-ui
 release-model: cycle-with-intermediary
 team: ironic
+release-notes: https://docs.openstack.org/releasenotes/ironic-ui/ocata.html
 type: horizon-plugin
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/ironic-ui/current-series.html
 branches:
   - name: stable/ocata
     location: 2.2.0

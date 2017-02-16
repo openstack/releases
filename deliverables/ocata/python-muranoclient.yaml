@@ -3,11 +3,11 @@ include-pypi-link: true
 launchpad: python-muranoclient
 release-model: cycle-with-intermediary
 team: murano
+release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/ocata.html
 type: library
 branches:
   - name: stable/ocata
     location: 0.12.0
-release-notes: http://docs.openstack.org/releasenotes/python-muranoclient/ocata.html
 releases:
   - version: 0.12.0
     projects:

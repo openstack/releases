@@ -1,10 +1,10 @@
 ---
 launchpad: nova
 team: nova
+release-notes: https://docs.openstack.org/releasenotes/nova/ocata.html
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-release-notes: http://docs.openstack.org/releasenotes/nova/unreleased.html
 branches:
   - name: stable/ocata
     location: 15.0.0.0rc1

@@ -3,12 +3,12 @@ include-pypi-link: true
 launchpad: python-vitrageclient
 release-model: cycle-with-intermediary
 team: vitrage
+release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/ocata.html
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 1.1.1
-release-notes: http://docs.openstack.org/releasenotes/python-vitrageclient/ocata.html
 releases:
   - version: 1.1.0
     projects:

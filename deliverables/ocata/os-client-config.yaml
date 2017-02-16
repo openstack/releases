@@ -1,6 +1,7 @@
 ---
 launchpad: os-client-config
 team: OpenStackClient
+release-notes: https://docs.openstack.org/releasenotes/os-client-config/ocata.html
 type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
@@ -8,7 +9,6 @@ include-pypi-link: yes
 branches:
   - name: stable/ocata
     location: 1.26.0
-release-notes: http://docs.openstack.org/releasenotes/os-client-config/ocata.html
 releases:
   - version: 1.22.0
     projects:

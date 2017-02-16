@@ -1,6 +1,7 @@
 ---
 launchpad: openstack-ansible
 team: OpenStackAnsible
+release-notes: https://docs.openstack.org/releasenotes/openstack-ansible/ocata.html
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
@@ -8,7 +9,6 @@ artifact-link-mode: none
 branches:
   - name: stable/ocata
     location: 15.0.0.0rc1
-release-notes: http://docs.openstack.org/releasenotes/openstack-ansible/ocata.html
 releases:
   - version: 15.0.0.0b1
     projects:

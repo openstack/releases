@@ -1,6 +1,7 @@
 ---
 launchpad: oslo.vmware
 team: oslo
+release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/ocata.html
 type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
@@ -8,7 +9,6 @@ include-pypi-link: true
 branches:
 - name: stable/ocata
   location: 2.17.0
-release-notes: http://docs.openstack.org/releasenotes/oslo.vmware/ocata.html
 releases:
 - version: 2.15.0
   projects:

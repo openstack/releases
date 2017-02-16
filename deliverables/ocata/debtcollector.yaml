@@ -1,11 +1,11 @@
 ---
 launchpad: debtcollector
 team: oslo
+release-notes: https://docs.openstack.org/releasenotes/debtcollector/ocata.html
 type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: true
-release-notes: http://docs.openstack.org/releasenotes/debtcollector/unreleased.html
 branches:
 - name: stable/ocata
   location: 1.11.0

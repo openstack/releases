@@ -1,13 +1,13 @@
 ---
 launchpad: senlin
 team: senlin
+release-notes: https://docs.openstack.org/releasenotes/senlin/ocata.html
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 3.0.0.0rc1
-release-notes: http://docs.openstack.org/releasenotes/senlin/ocata.html
 releases:
   - version: 3.0.0.0b1
     projects:
