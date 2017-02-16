@@ -5,13 +5,16 @@ type: other
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/networking-bagpipe
 releases:
-  # mitaka
   - version: 4.0.0
     projects:
       - repo: openstack/networking-bagpipe
         hash: 870d281eeb707fbb6c4de431d764cebb586f872e
-  # newton
   - version: 5.0.0
     projects:
       - repo: openstack/networking-bagpipe
         hash: 4cf3bcdc0f0d64e9b7cfdb6f79fe62b8af6aa187
+branches:
+  - name: stable/mitaka
+    location: 4.0.0
+  - name: stable/newton
+    location: 5.0.0
