@@ -50,6 +50,7 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
 _RELEASE_JOBS_FOR_TYPE = {
     'std': [
         'nodejs4-publish-to-npm',
+        'nodejs6-publish-to-npm',
         'openstack-server-release-jobs',
         'publish-to-pypi',
         'puppet-tarball-jobs',
