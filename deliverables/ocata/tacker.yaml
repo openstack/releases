@@ -5,6 +5,8 @@ team: tacker
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
+  - name: stable/ocata
+    location: 0.7.0
   - name: feature/falcon-api-framework
     location:
       openstack/tacker: c0eee25dd56839b789d8c96d9b75d8ac64a2c7e4
@@ -13,3 +15,7 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: fec5f75bd30f265d54602d77e20d407727fecddf
+  - version: 0.7.0
+    projects:
+      - repo: openstack/tacker
+        hash: a4024984baee1fd30fb125dab53763d62388a550
