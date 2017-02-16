@@ -4,6 +4,10 @@ team: tripleo
 type: other
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
+release-notes: http://docs.openstack.org/releasenotes/tripleo-ui/unreleased.html
+branches:
+  - name: stable/ocata
+    location: 3.0.0
 releases:
   - version: 2.0.0
     projects:
@@ -13,3 +17,7 @@ releases:
     projects:
       - repo: openstack/tripleo-ui
         hash: 2dfbb0bfef1f74c2f0b3ca7471622eb5a3e8c2be
+  - version: 3.0.0
+    projects:
+      - repo: openstack/tripleo-ui
+        hash: d760973c2c661af1586b74581217119facb46795
