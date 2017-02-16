@@ -4,8 +4,15 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+branches:
+  - name: stable/ocata
+    location: 1.3.0
 releases:
   - version: 1.2.0
     projects:
       - repo: openstack/monasca-thresh
         hash: 73196d33004729b6d3538becd748928d11bde577
+  - version: 1.3.0
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 86b8634c9c428c123438a20e1d05891f6824e993
