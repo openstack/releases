@@ -1476,5 +1476,5 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             errors.append,
         )
         print(warnings, errors)
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(1, len(errors))
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
