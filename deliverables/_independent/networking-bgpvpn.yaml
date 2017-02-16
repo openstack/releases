@@ -5,7 +5,6 @@ type: other
 send-announcements-to: openstack-announce@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/networking-bgpvpn
 releases:
-  # liberty
   - version: 3.0.0
     projects:
       - repo: openstack/networking-bgpvpn
@@ -14,7 +13,6 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: f54c34e9bce5e54921216114d519451aa58d8228
-  # mitaka
   - version: 4.0.0
     projects:
       - repo: openstack/networking-bgpvpn
@@ -27,8 +25,14 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 482de4f084df3ad1262a5e674034afc7c61eb70d
-  # newton
   - version: 5.0.0
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 5165dc7d7c37ea6493b9ad2fef44c0e9d0412a20
+branches:
+  - name: stable/liberty
+    location: 3.0.0
+  - name: stable/mitaka
+    location: 4.0.0
+  - name: stable/newton
+    location: 5.0.0
