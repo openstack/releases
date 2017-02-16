@@ -39,5 +39,11 @@ releases:
       - repo: openstack/networking-odl
         hash: 9b03645da7546d3b769a26ea6e374853ef7374c3
 branches:
+  - name: stable/liberty
+    location: 1.0.0
+  - name: stable/mitaka
+    location: 2.0.0
+  - name: stable/newton
+    location: 3.0.0
   - name: stable/ocata
     location: 4.0.0
