@@ -115,7 +115,7 @@ def validate_series_open(deliverable_info,
         if branch['name'] == expected_branch:
             # Everything is OK
             return
-    mk_error(
+    mk_warning(
         'There is no {} branch defined in {}. Is the {} series open?'.format(
             expected_branch, previous_deliverable_file, series_name))
 
