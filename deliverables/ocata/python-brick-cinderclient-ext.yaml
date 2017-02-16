@@ -5,6 +5,9 @@ release-model: cycle-with-intermediary
 team: cinder
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 0.3.0
 releases:
   - version: 0.3.0
     projects:
