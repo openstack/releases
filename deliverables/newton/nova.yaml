@@ -51,3 +51,11 @@ releases:
     projects:
       - repo: openstack/nova
         hash: c80c8e6dbfb59c117cca53250fdc97f9a171db03
+  - version: 14.0.4
+    projects:
+      - repo: openstack/nova
+        hash: 642caf0c58ed0a0e0c06103d2e3ef001c1ae142f
+    highlights: >
+      - Bug fixes for placement and cells v2 to prepare for upgrading to Ocata.
+      - Online data migration to fix orphaned build requests created in Mitaka.
+      - Bug fix for the 330 main DB schema migration for upgrades from Mitaka.
