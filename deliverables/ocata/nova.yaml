@@ -39,3 +39,9 @@ releases:
       - 2.42 is the highest compute REST API microversion in this release.
       - 1.4 is the highest placement REST API microversion in this release.
       - See the release notes for more details.
+  - version: 15.0.0.0rc2
+    projects:
+      - repo: openstack/nova
+        hash: ff369899749ac3e21ed0174b40e948c78c2dc1fa
+    highlights: >
+      - Bug fixes, documentation and improved tooling for upgrading to Ocata.
