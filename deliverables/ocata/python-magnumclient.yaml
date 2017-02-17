@@ -5,8 +5,15 @@ release-model: cycle-with-intermediary
 team: magnum
 type: library
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 2.5.0
 releases:
   - version: 2.4.0
     projects:
       - repo: openstack/python-magnumclient
         hash: 7cb91456538a1a72033a5c6df55aae99ec51c8fe
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: e6329a75f9536828c07fb2b65a30df20b18092ae
