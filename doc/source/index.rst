@@ -25,11 +25,11 @@ updates.
      * TBD
      * TBD
    - * :doc:`pike/index`
-     * :doc:`Future <pike/schedule>`
+     * :doc:`Under Development <pike/schedule>`
      * TBD
      * TBD
    - * :doc:`ocata/index`
-     * :doc:`Under Development <ocata/schedule>`
+     * :doc:`Pre-release freeze <ocata/schedule>`
      * 2017-02-22 (planned)
      * TBD
    - * :doc:`newton/index`
