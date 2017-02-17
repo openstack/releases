@@ -1,9 +1,9 @@
 ---
 launchpad: congress
 team: congress
-release-notes: https://docs.openstack.org/releasenotes/congress/ocata.html
 type: service
 release-model: cycle-with-milestones
+release-notes: https://docs.openstack.org/releasenotes/congress/ocata.html
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
@@ -25,3 +25,7 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 54926c44114800c0112099d57e04f209191737ba
+  - version: 5.0.0.0rc2
+    projects:
+      - repo: openstack/congress
+        hash: d635bad1ae10d84e8542916d18af573d4b1d1280
