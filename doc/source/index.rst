@@ -25,7 +25,7 @@ updates.
      * TBD
      * TBD
    - * :doc:`pike/index`
-     * *Future*
+     * :doc:`Future <pike/schedule>`
      * TBD
      * TBD
    - * :doc:`ocata/index`
