@@ -4,6 +4,9 @@ release-model: cycle-with-intermediary
 team: magnum
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
+branches:
+  - name: stable/ocata
+    location: 4.1.0
 releases:
   - version: 4.0.0
     projects:
