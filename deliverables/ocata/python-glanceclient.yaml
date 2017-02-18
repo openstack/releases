@@ -3,11 +3,11 @@ include-pypi-link: true
 launchpad: python-glanceclient
 release-model: cycle-with-intermediary
 team: glance
+release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/ocata.html
 type: library
 branches:
   - name: stable/ocata
     location: 2.6.0
-release-notes: http://docs.openstack.org/releasenotes/python-glanceclient/ocata.html
 releases:
   - version: 2.6.0
     projects:

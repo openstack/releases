@@ -1,13 +1,13 @@
 ---
 launchpad: puppet-watcher
 team: Puppet OpenStack
+release-notes: https://docs.openstack.org/releasenotes/puppet-watcher/ocata.html
 type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 10.3.0
-release-notes: http://docs.openstack.org/releasenotes/puppet-watcher/ocata.html
 releases:
   - version: 10.0.0
     projects:

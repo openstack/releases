@@ -3,12 +3,12 @@ include-pypi-link: true
 launchpad: python-ironic-inspector-client
 release-model: cycle-with-intermediary
 team: ironic
+release-notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/ocata.html
 type: library
 send-announcements-to: openstack-dev@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 1.11.0
-release-notes: http://docs.openstack.org/releasenotes/python-ironic-inspector-client/ocata.html
 releases:
   - version: 1.11.0
     projects:

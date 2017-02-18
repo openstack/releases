@@ -1,6 +1,7 @@
 ---
 launchpad: oslo.concurrency
 team: oslo
+release-notes: https://docs.openstack.org/releasenotes/oslo.concurrency/ocata.html
 type: library
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
@@ -8,7 +9,6 @@ include-pypi-link: true
 branches:
 - name: stable/ocata
   location: 3.18.0
-release-notes: http://docs.openstack.org/releasenotes/oslo.concurrency/ocata.html
 releases:
 - version: 3.15.0
   projects:

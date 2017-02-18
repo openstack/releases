@@ -2,12 +2,12 @@
 launchpad: vitrage
 release-model: cycle-with-intermediary
 team: vitrage
+release-notes: https://docs.openstack.org/releasenotes/vitrage/ocata.html
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 1.5.0
-release-notes: http://docs.openstack.org/releasenotes/vitrage/ocata.html
 releases:
   - version: 1.4.0
     projects:

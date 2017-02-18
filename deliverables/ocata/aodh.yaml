@@ -2,11 +2,11 @@
 launchpad: aodh
 release-model: cycle-with-intermediary
 team: Telemetry
+release-notes: https://docs.openstack.org/releasenotes/aodh/ocata.html
 type: service
 branches:
   - name: stable/ocata
     location: 4.0.0
-release-notes: http://docs.openstack.org/releasenotes/aodh/ocata.html
 releases:
   - version: 4.0.0
     projects:

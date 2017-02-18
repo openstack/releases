@@ -2,6 +2,7 @@
 launchpad: designate
 release-model: cycle-with-milestones
 team: designate
+release-notes: https://docs.openstack.org/releasenotes/designate/ocata.html
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: no
@@ -9,7 +10,6 @@ artifact-link-mode: tarball
 branches:
   - name: stable/ocata
     location: 4.0.0.0rc1
-release-notes: http://docs.openstack.org/releasenotes/designate/ocata.html
 releases:
   - version: 4.0.0.0b2
     projects:

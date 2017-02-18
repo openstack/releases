@@ -3,11 +3,11 @@ include-pypi-link: true
 launchpad: python-novaclient
 release-model: cycle-with-intermediary
 team: nova
+release-notes: https://docs.openstack.org/releasenotes/python-novaclient/ocata.html
 type: library
 branches:
   - name: stable/ocata
     location: 7.1.0
-release-notes: http://docs.openstack.org/releasenotes/python-novaclient/ocata.html
 releases:
   - version: 7.0.0
     projects:

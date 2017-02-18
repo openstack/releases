@@ -1,13 +1,13 @@
 ---
 launchpad: sahara
 team: sahara
+release-notes: https://docs.openstack.org/releasenotes/sahara/ocata.html
 type: service
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 6.0.0.0rc1
-release-notes: http://docs.openstack.org/releasenotes/sahara/ocata.html
 releases:
   - version: 6.0.0.0b1
     projects:

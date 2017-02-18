@@ -3,12 +3,12 @@ include-pypi-link: true
 launchpad: octavia
 release-model: cycle-with-intermediary
 team: octavia
+release-notes: https://docs.openstack.org/releasenotes/octavia/ocata.html
 type: other
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/ocata
     location: 0.10.0
-release-notes: http://docs.openstack.org/releasenotes/octavia/ocata.html
 releases:
   - version: 0.10.0
     diff-start: 0.9.0

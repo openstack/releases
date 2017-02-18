@@ -1,13 +1,13 @@
 ---
 include-pypi-link: true
 team: neutron
+release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/ocata.html
 type: library
 launchpad: python-neutronclient
 release-model: cycle-with-intermediary
 branches:
   - name: stable/ocata
     location: 6.1.0
-release-notes: http://docs.openstack.org/releasenotes/python-neutronclient/ocata.html
 releases:
   - version: 6.1.0
     projects:
