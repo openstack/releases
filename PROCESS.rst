@@ -300,15 +300,19 @@ Final Release
 4. Add documentation links on the series page on releases.o.o.
    See https://review.openstack.org/#/c/381005 for an example.
 
-5. Mark series as released on releases.o.o, by updating doc/source/index.rst
+5. Notify the documentation team that the final release has been
+   tagged so they can update the documentation landing page. (They
+   might wait to do that until the press release is published.)
+
+6. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-6. Update the default series name in
+7. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-7. Declare ``openstack/releases`` unfrozen.
+8. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
