@@ -25,3 +25,8 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 78adc33858509cac2f597f7e38a8f5f189ad2495
+  - version: 11.0.0
+    diff-start: 10.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 78adc33858509cac2f597f7e38a8f5f189ad2495
