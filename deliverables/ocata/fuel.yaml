@@ -1,0 +1,36 @@
+---
+artifact-link-mode: none
+launchpad: fuel
+release-model: cycle-trailing
+release-type: fuel
+branches:
+  - name: stable/ocata
+    location: 11.0.0.0rc1
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - hash: 55bbc037947495db617bf167cebb62935c07900e
+        repo: openstack/fuel-menu
+      - hash: 4623d814c4209682d48238de2b6f74adccfda68a
+        repo: openstack/fuel-qa
+      - hash: 7d1bb708d1347ecf35a5f5f43c0b81de3024c203
+        repo: openstack/fuel-agent
+      - hash: 3448243ba378eace338ba818550153c586f88600
+        repo: openstack/fuel-web
+      - hash: fd0f4664b381067d04c7c26f3e634bc51ab145fe
+        repo: openstack/fuel-nailgun-agent
+      - hash: 0efc1357e5c76439ad32b13cbf1a230787af6b19
+        repo: openstack/fuel-ostf
+      - hash: b3974ca561949d1bb0e4d953b826e627cbd3f129
+        repo: openstack/fuel-virtualbox
+      - hash: 00ccb73d2dd693a598b3e8d1ff3481d744a4b9be
+        repo: openstack/fuel-main
+      - hash: c489e972ff4510e465f9a42cff8054e6f8f90dc9
+        repo: openstack/fuel-astute
+      - hash: 0de244cf7c7cb84cc45084f86c5c234b2fcc58ca
+        repo: openstack/fuel-ui
+      - hash: b2024b95e1c765e789bb3412672ff219ed7e0a5e
+        repo: openstack/fuel-library
+send-announcements-to: openstack-announce@lists.openstack.org
+team: fuel
+type: other
