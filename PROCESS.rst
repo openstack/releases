@@ -288,9 +288,11 @@ Final Release
    1. Update all of the $project-release-branch groups to have
       $project-stable-maint as members instead of "Release Managers"
       and $project-release. This can be done (for all
-      release:cycle-with-milestones deliverables) by running
-      ``aclmanager.py groups post_release $user`` ($user being your
-      Gerrit username)
+      release:cycle-with-milestones deliverables) by running::
+
+        tox -e aclmanager -- groups post_release $user
+
+      ($user being your Gerrit username)
 
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
