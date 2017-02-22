@@ -49,3 +49,14 @@ releases:
         hash: 85fd5506fad64fe87693ba5a6a31b26638f82fb6
       - repo: openstack/sahara-image-elements
         hash: 35f727613196e52eee470f1b64d24258ea700b3d
+  - version: 6.0.0
+    diff-start: 5.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: c465fa80b9b769e886ad0fb5750ed4fff17f0eaa
+      - repo: openstack/sahara-dashboard
+        hash: dccee666aa7e48ca2d14aee6512dda998b659574
+      - repo: openstack/sahara-extra
+        hash: 85fd5506fad64fe87693ba5a6a31b26638f82fb6
+      - repo: openstack/sahara-image-elements
+        hash: 35f727613196e52eee470f1b64d24258ea700b3d

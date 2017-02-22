@@ -45,3 +45,8 @@ releases:
         hash: ff369899749ac3e21ed0174b40e948c78c2dc1fa
     highlights: >
       - Bug fixes, documentation and improved tooling for upgrading to Ocata.
+  - version: 15.0.0
+    diff-start: 14.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: ff369899749ac3e21ed0174b40e948c78c2dc1fa
