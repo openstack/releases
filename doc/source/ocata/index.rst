@@ -2,18 +2,11 @@
  Ocata
 ========
 
-Schedule
-========
-
 Originally Released: 2017-02-22
 
-.. toctree::
-   :maxdepth: 1
+Release schedule: :doc:`schedule`
 
-   schedule
-
-Documentation
-=============
+Documentation:
 
 * `Ocata Manuals`_
 * `Ocata Documentation Changes`_
@@ -25,3 +18,8 @@ Documentation
 
 .. deliverable::
    :series: ocata
+
+.. toctree::
+   :hidden:
+
+   schedule
