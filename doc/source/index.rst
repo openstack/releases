@@ -29,11 +29,11 @@ updates.
      * TBD
      * TBD
    - * :doc:`ocata/index`
-     * :doc:`Pre-release freeze <ocata/schedule>`
-     * 2017-02-22 (planned)
+     * `Phase I -- Latest release`_
+     * 2017-02-22
      * TBD
    - * :doc:`newton/index`
-     * `Phase I -- Latest release`_
+     * `Phase II -- Maintained release`_
      * 2016-10-06
      * TBD
    - * :doc:`mitaka/index`
