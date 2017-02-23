@@ -47,6 +47,7 @@ RELEASES = [
     ('liberty', datetime.datetime(2015, 10, 15)),
     ('mitaka', datetime.datetime(2016, 4, 7)),
     ('newton', datetime.datetime(2016, 10, 6)),
+    ('ocata', datetime.datetime(2017, 2, 22)),
 ]
 
 
