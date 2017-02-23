@@ -3,5 +3,11 @@ include-pypi-link: true
 launchpad: python-tooz
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: https://docs.openstack.org/releasenotes/tooz/unreleased.html
 team: oslo
 type: library
+releases:
+- version: 1.49.0
+  projects:
+  - repo: openstack/tooz
+    hash: fbfa1c1162955ca13c61929d58b921dd1473427b
