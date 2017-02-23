@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Telemetry
 type: library
+releases:
+  - version: 1.0.1
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 6ba005fa6b74577647ef1c6d939e0f6f8739093b
