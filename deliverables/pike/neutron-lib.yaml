@@ -4,4 +4,20 @@ launchpad: neutron
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron-lib/unreleased.html
 type: library
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: fc38a3fe8e6fa7c75572180554a02b43a72f9af9
+    highlights: |
+        * Move BGPVPN API definition into neutron-lib
+        * Add is_extension_supported to neutron_lib
+        * rehome l3 api-def exceptions
+        * Remove support for py33, py34
+        * Update api-ref for enhanced tag mechanism
+        * Add FIP64 extension from networking-midonet
+        * Add router-interface-fip extension from networking-midonet
+        * Migrate logging-resource extension from networking-midonet
+        * API reference improvements
