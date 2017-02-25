@@ -14,6 +14,26 @@ The repository is managed by the `Release Management team
 .. image:: https://governance.openstack.org/tc/badges/releases.svg
     :target: https://governance.openstack.org/tc/reference/tags/index.html
 
+Defining a Deliverable
+======================
+
+A "deliverable" is a unit of distribution of a useful project. It may
+be a single library or several server components that are packaged
+separately but released and used together. Rather than base the
+definition on technical terms such as packaging, we use the social
+organization of the project to identify deliverables. If the contents
+of two repositories share a bug reporting tool so that bugs for the
+contents of both repositories are mixed together and use the same
+version numbers for all releases (e.g., one launchpad project), they
+are both part of the same deliverable.
+
+Within this repository, each deliverable is represented by a separate
+file within the release series directory or the _independent
+directory. The data that needs to go into each file is described in
+detail below. All automated manipulation of the deliverable is managed
+through the data file, which is reviewed by the core team when the
+patch is proposed to openstack/releases.
+
 Requesting a Release
 ====================
 
@@ -41,6 +61,44 @@ repository.
  * Always pick new version numbers for new releases. We do not update
    the contents of previously tagged releases, because that confuses
    users who have already downloaded those packages.
+
+ * Make sure you follow semantic versioning rules `semver
+   <http://semver.org/>`_ when picking the version number.
+
+   In particular, if there is a change going into this release which
+   requires a higher minimum version of a dependency, then the
+   **minor** version should be incremented.
+
+   .. note::
+
+     The exception to this rule is when the versions of a project are
+     pinned between minor versions in stable branches. In those cases
+     we frequently release global-requirements syncs with a patch
+     version to fix the target branch, e.g. stable/juno, but don't
+     increment the minor version to avoid it being used in a different
+     branch, like stable/kilo.  Someone from the `stable-maint-core
+     <https://review.openstack.org/#/admin/groups/530,members>`_ team
+     should +1 a change like this before it's approved.
+
+ * Do not increment version numbers artificially to maintain
+   consistent versions between deliverables. We expect versions of
+   compatible deliverables to drift apart over time, and made the
+   decision to embrace this by using other tools to document for users
+   which combinations of packages go together.
+
+   http://lists.openstack.org/pipermail/openstack-dev/2015-June/065992.html
+
+   If two build artifacts always need to have the same version number,
+   that implies strongly that they are part of the same deliverable
+   and should not be released separately.
+
+ * Start version numbers with 0.1.0 for unstable early editions and
+   prototypes. Switch to 1.0.0 for the first production-ready
+   release. Do not release the first version of a deliverable with a
+   number that matches the version other related deliverables
+   use. This confuses consumers about the maturity of the new
+   deliverable and about where they should find "older" versions with
+   lower numbers, which do not exist.
 
  * Set the first line (summary) of the commit message to the package
    name and version being requested.
@@ -115,20 +173,7 @@ stable/liberty).
 
 General notes when reviewing a request:
 
-* Make sure you follow semantic versioning rules `semver <http://semver.org/>`_
-  when picking the version number. In particular, if there is a change going
-  into this release which requires a higher minimum version of a dependency,
-  then the **minor** version should be incremented.
-
-  .. note:: The exception to this rule is when the versions of a project are
-    pinned between minor versions in stable branches. In those cases we
-    frequently release global-requirements syncs with a patch version to fix
-    the target branch, e.g. stable/juno, but don't increment the minor version
-    to avoid it being used in a different branch, like stable/kilo.
-    Someone from the
-    `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
-    team should +1 a change like this before it's approved.
-
+* Check the version number for SemVer, especially for libraries.
 * Make sure the summary of the patch includes the deliverable name and
   version number.
 
