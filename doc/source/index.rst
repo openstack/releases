@@ -31,11 +31,11 @@ updates.
    - * :doc:`ocata/index`
      * `Phase I -- Latest release`_
      * 2017-02-22
-     * TBD
+     * 2018-02-26
    - * :doc:`newton/index`
      * `Phase II -- Maintained release`_
      * 2016-10-06
-     * TBD
+     * 2017-10-11
    - * :doc:`mitaka/index`
      * `Phase III -- Legacy release`_
      * 2016-04-07
