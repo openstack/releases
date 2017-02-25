@@ -1035,6 +1035,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yaml.safe_load(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'ocata',
             warnings.append,
             errors.append,
         )
@@ -1057,13 +1058,14 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yaml.safe_load(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'ocata',
             warnings.append,
             errors.append,
         )
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
-    def test_unknown_series(self):
+    def test_unknown_series_cycle(self):
         deliverable_data = textwrap.dedent('''
         releases:
           - version: 1.5.0
@@ -1079,6 +1081,31 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yaml.safe_load(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_unknown_series_independent(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/abc
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            '_independent',
             warnings.append,
             errors.append,
         )
@@ -1103,6 +1130,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yaml.safe_load(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            '_independent',
             warnings.append,
             errors.append,
         )
