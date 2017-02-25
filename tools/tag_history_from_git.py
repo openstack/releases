@@ -70,6 +70,8 @@ parser.add_argument('repo', help='repository directory')
 parser.add_argument('--release-type', dest='release_type', default='std',
                     help=('Which release-type to use for this deliverable'
                           '(Default: %(default)s)'))
+parser.add_argument('--series', dest='series',
+                    help=('Which release series to use for this deliverable'))
 args = parser.parse_args()
 
 before = os.getcwd()
@@ -86,6 +88,9 @@ tags = [t.strip() for t in tags_out.splitlines() if t.strip()]
 repo_namespace = os.path.basename(os.path.dirname(repo))
 repo_short_name = repo_namespace + '/' + os.path.basename(repo)
 
+if args.series == 'independent':
+    args.series = '_independent'
+
 for tag in tags:
     if ('-' in tag) or ('rc' in tag) or ('a' in tag) or ('b' in tag):
         print('ignoring %r' % tag)
@@ -98,7 +103,7 @@ for tag in tags:
         print(tag + ' ' + interesting)
         sha, ignore, datestr = interesting.partition(' ')
         tag_date = datetime.datetime.utcfromtimestamp(float(datestr))
-        series_name = date_to_release(tag_date)
+        series_name = args.series or date_to_release(tag_date)
     except subprocess.CalledProcessError:
         print('did not find milestone %s tagged for %s' %
               (tag, repo_short_name))
