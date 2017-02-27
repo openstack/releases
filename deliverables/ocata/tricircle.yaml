@@ -2,10 +2,10 @@
 launchpad: tricircle
 release-model: cycle-with-intermediary
 team: tricircle
+release-notes: https://docs.openstack.org/releasenotes/tricircle/ocata.html
 type: service
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
-release-notes: http://docs.openstack.org/releasenotes/tricircle
 branches:
   - name: stable/ocata
     location: 3.0.0
