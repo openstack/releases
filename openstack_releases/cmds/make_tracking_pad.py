@@ -54,6 +54,15 @@ def main():
     print('Process document: http://git.openstack.org/cgit/openstack/releases/tree/PROCESS.rst')
     print()
 
+    print('First apply title formatting to all week titles. Then apply list')
+    print('format to the following content, and copy-paste it in every week:')
+    print()
+    print('Team availability notes')
+    print('Tasks')
+    print('Meeting Agenda')
+    print('Countdown email content to send this week')
+    print()
+
     for week in schedule_data['cycle']:
         if not week.get('name'):
             continue
@@ -67,10 +76,3 @@ def main():
             print(' [', ', '.join(week['x-project']), ']')
         else:
             print()
-
-        print()
-        print('Team availability notes')
-        print('Tasks')
-        print('Meeting Agenda')
-        print('Countdown email content to send this week')
-        print()
