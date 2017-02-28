@@ -279,11 +279,7 @@ Final Release
 
 1. Approve the final release patch created earlier.
 
-2. Send release announcement email to
-   ``openstack-announce@lists.openstack.org``, based on
-   ``templates/final.txt``.
-
-3. Reset gerrit ACLs
+2. Reset gerrit ACLs
 
    1. Update all of the $project-release-branch groups to have
       $project-stable-maint as members instead of "Release Managers"
@@ -297,20 +293,25 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-4. Add documentation links on the series page on releases.o.o.
+3. Add documentation links on the series page on releases.o.o.
    See https://review.openstack.org/#/c/381005 for an example.
 
-5. Notify the documentation team that the final release has been
+4. Notify the documentation team that the final release has been
    tagged so they can update the documentation landing page. (They
    might wait to do that until the press release is published.)
 
-6. Mark series as released on releases.o.o, by updating doc/source/index.rst
+5. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-7. Update the default series name in
+6. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
+
+7. Send release announcement email to
+   ``openstack-announce@lists.openstack.org``, based on
+   ``templates/final.txt``. Coordinate the timing of the email with
+   the press release from the Foundation staff.
 
 8. Declare ``openstack/releases`` unfrozen.
 
