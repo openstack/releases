@@ -4,3 +4,9 @@ launchpad: python-aodhclient
 release-model: cycle-with-intermediary
 team: Telemetry
 type: library
+releases:
+  - version: 0.9.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: eb827601af8929803285c09ead6996e6d60b14ef
+        tarball-base: aodhclient
