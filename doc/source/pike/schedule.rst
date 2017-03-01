@@ -207,12 +207,28 @@ Pike release
 
 The Pike coordinated release will happen on XXX.
 
-.. _p-trailing:
+.. _p-trailing-ff:
 
-Pike cycle-trailing Deadline
-----------------------------
+Pike cycle-trailing feature freeze
+----------------------------------
 
-The deadline for projects using the release:cycle-trailing model that
+The release deadline for projects using the release:cycle-trailing model that
+follow the main release cycle.
+
+.. _p-trailing-rc:
+
+Pike cycle-trailing RC deadline
+-------------------------------
+
+The deadline for publishing a first release candidate for projects using the
+release:cycle-trailing model that follow the main release cycle.
+
+.. _p-trailing-release:
+
+Pike cycle-trailing release deadline
+------------------------------------
+
+The release deadline for projects using the release:cycle-trailing model that
 follow the main release cycle.
 
 Project-specific events

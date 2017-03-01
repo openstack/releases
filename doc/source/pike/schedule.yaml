@@ -102,6 +102,7 @@ cycle:
   x-project:
   - p-rc1
   - p-hard-sf
+  - p-trailing-ff
 - end: '2017-08-18'
   name: R-2
   start: '2017-08-14'
@@ -115,6 +116,7 @@ cycle:
   start: '2017-08-28'
   x-project:
   - p-release
+  - p-trailing-rc
 - end: '2017-09-08'
   name: R+1
   start: '2017-09-04'
@@ -122,4 +124,4 @@ cycle:
   name: R+2
   start: '2017-09-11'
   x-project:
-  - p-trailing
+  - p-trailing-release
