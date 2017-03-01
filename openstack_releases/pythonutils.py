@@ -23,9 +23,22 @@ def get_sdist_name(workdir, repo):
     if not os.path.exists(os.path.join(dest, 'setup.py')):
         # Not a python project
         return None
-    cmd = ['python', 'setup.py', '--name']
+    use_tox = repo.endswith('/pbr')
+    if use_tox and not os.path.exists(os.path.join(dest, '.tox', 'venv')):
+        # Use tox to set up a virtualenv so we can install the
+        # dependencies for the package. This only seems to be
+        # necessary for pbr, but...
+        subprocess.check_output(
+            ['tox', '-e', 'venv', '--notest'],
+            cwd=dest,
+        )
+    if use_tox:
+        python = '.tox/venv/bin/python'
+    else:
+        python = 'python'
     # Run it once and discard the result to ensure any setup_requires
     # dependencies are installed.
+    cmd = [python, 'setup.py', '--name']
     subprocess.check_output(cmd, cwd=dest)
     # Run it again to get a clean version of the name.
     name = subprocess.check_output(cmd, cwd=dest).strip()
