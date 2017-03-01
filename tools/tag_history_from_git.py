@@ -130,10 +130,18 @@ for series, milestones in sorted(series_data.items()):
         f.write('team: %s\n' % args.project)
         f.write('release-type: %s\n' % args.release_type)
         f.write('releases:\n')
-        milestones_sorted = \
-            sorted(milestones.items(),
-                   key=lambda x: canonical_version(x[0], args.release_type))
-        for milestone, milestone_data in milestones_sorted:
+        milestones_sorted = []
+        for milestone, milestone_data in milestones.items():
+            try:
+                milestones_sorted.append(
+                    (canonical_version(milestone, args.release_type),
+                     milestone,
+                     milestone_data)
+                )
+            except ValueError as err:
+                print('Ignoring %r: %s' % (milestone, err))
+        milestones_sorted.sort()
+        for _, milestone, milestone_data in milestones_sorted:
             f.write('  - version: %s\n' % milestone)
             f.write('    projects:\n')
             for repo_short_name, sha in milestone_data:
