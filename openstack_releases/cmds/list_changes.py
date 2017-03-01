@@ -307,13 +307,16 @@ def main():
                 )
                 print('HEAD of {} is {}'.format(tag_branch, head_sha))
             else:
+                if branch in branches:
+                    tag_branch = branch
+                else:
+                    tag_branch = branches[0]
                 head_sha = gitutils.sha_for_tag(
                     workdir,
                     project['repo'],
-                    'HEAD',
+                    tag_branch,
                 )
-                print('HEAD of {} is {}'.format(branch, head_sha))
-                tag_branch = branch
+                print('HEAD of {} is {}'.format(tag_branch, head_sha))
             requested_sha = gitutils.sha_for_tag(
                 workdir,
                 project['repo'],
