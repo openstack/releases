@@ -293,7 +293,7 @@ def validate_releases(deliverable_info, zuul_layout,
                             os.path.basename(project['repo']),
                         )
                         if sdist != expected:
-                            if 'tarball-base' in deliverable_info:
+                            if 'tarball-base' in project:
                                 action = 'is set to'
                             else:
                                 action = 'defaults to'
