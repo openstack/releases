@@ -242,6 +242,8 @@ def validate_releases(deliverable_info, zuul_layout,
     prev_projects = set()
     for release in deliverable_info.get('releases', []):
 
+        print('checking %s' % release['version'])
+
         for project in release['projects']:
 
             # Check for release jobs (if we ship a tarball)
