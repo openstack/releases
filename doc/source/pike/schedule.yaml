@@ -31,6 +31,8 @@ cycle:
   start: '2017-04-10'
   x-project:
   - p-1
+  project-specific:
+  - p-manila-spec-freeze
 - end: '2017-04-21'
   name: R-19
   start: '2017-04-17'
@@ -63,6 +65,7 @@ cycle:
   project-specific:
   - p-cinder-nddeadline
   - p-cinder-spec-freeze
+  - p-manila-nddeadline
 - end: '2017-06-16'
   name: R-11
   start: '2017-06-12'
@@ -80,6 +83,8 @@ cycle:
   start: '2017-07-10'
   x-project:
   - p-extra-atcs
+  project-specific:
+  - p-manila-fpfreeze
 - end: '2017-07-21'
   name: R-6
   start: '2017-07-17'
