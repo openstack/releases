@@ -261,6 +261,27 @@ All Cinder specs must be approved by the 14th of June, 2017.
 Note: This is the Wednesday of the milestone week, while the milestone itself
 is typically targeted for Thursday.
 
+Glance
+------
+
+.. _p-glance-spec-prop:
+
+Glance Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be proposed as
+patches to the glance-specs repository by 13:59 UTC on Thursday 30 March 2017
+(that is, before the weekly Glance meeting begins).  This allows two weeks to
+make revisions and work out problems before the Glance Spec Freeze.
+
+.. _p-glance-spec-freeze:
+
+Glance Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be merged into
+the glance-specs repository by 23:59 on Friday 14 April 2017.  This is
+necessary but not sufficient condition for inclusion in the Pike release.
 
 Manila
 ------
@@ -268,7 +289,7 @@ Manila
 .. _p-manila-nddeadline:
 
 Manila New Driver Submission Deadline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The deadline for submitting new backend drivers to to Manila is 5 June 2017
 (23:59 UTC). New drivers must be substantially complete, with unit tests, and
@@ -286,8 +307,7 @@ All Manila specs must be approved by 13 Apr 2017 (23:59 UTC).
 .. _p-manila-fpfreeze:
 
 Manila Feature Proposal Freeze
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All new Manila features must be proposed and substantially complete, with unit
 tests by 10 July 2017 (23:59 UTC).
-
