@@ -261,3 +261,33 @@ All Cinder specs must be approved by the 14th of June, 2017.
 Note: This is the Wednesday of the milestone week, while the milestone itself
 is typically targeted for Thursday.
 
+
+Manila
+------
+
+.. _p-manila-nddeadline:
+
+Manila New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to to Manila is 5 June 2017
+(23:59 UTC). New drivers must be substantially complete, with unit tests, and
+passing 3rd party CI by this date. Drivers do not need to be merged until the
+feature freeze date, but drivers that don't meet this deadline will not be
+considered at all for Pike.
+
+.. _p-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs must be approved by 13 Apr 2017 (23:59 UTC).
+
+.. _p-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially complete, with unit
+tests by 10 July 2017 (23:59 UTC).
+
