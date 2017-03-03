@@ -74,7 +74,10 @@ def git_branch_contains(workdir, repo, title, commit):
     header('%s %s' % (title, commit))
     cmd = ['git', 'branch', '-r', '--contains', commit]
     print('\n' + ' '.join(cmd) + '\n')
-    out = subprocess.check_output(cmd, cwd=os.path.join(workdir, repo))
+    out = subprocess.check_output(
+        cmd,
+        cwd=os.path.join(workdir, repo),
+    ).decode('utf-8')
     print(out)
     return sorted(
         o.strip()
@@ -386,7 +389,7 @@ def main():
                      '--contains',
                      previous_release['version']],
                     cwd=os.path.join(workdir, project['repo']),
-                ).split()
+                ).decode('utf-8').split()
                 print('Containing tags:', containing_tags)
                 if new_release['version'] not in containing_tags:
                     print('WARNING: Missing %s' % new_release['version'])
