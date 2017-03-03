@@ -268,7 +268,7 @@ Manila
 .. _p-manila-nddeadline:
 
 Manila New Driver Submission Deadline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The deadline for submitting new backend drivers to to Manila is 5 June 2017
 (23:59 UTC). New drivers must be substantially complete, with unit tests, and
@@ -286,7 +286,7 @@ All Manila specs must be approved by 13 Apr 2017 (23:59 UTC).
 .. _p-manila-fpfreeze:
 
 Manila Feature Proposal Freeze
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All new Manila features must be proposed and substantially complete, with unit
 tests by 10 July 2017 (23:59 UTC).
