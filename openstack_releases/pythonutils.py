@@ -42,7 +42,7 @@ def get_sdist_name(workdir, repo):
     subprocess.check_output(cmd, cwd=dest)
     # Run it again to get a clean version of the name.
     print('Running: %s in %s' % (' '.join(cmd), dest))
-    out = subprocess.check_output(cmd, cwd=dest)
+    out = subprocess.check_output(cmd, cwd=dest).decode('utf-8')
     print('Results: %s' % (out,))
     name = out.splitlines()[-1].strip()
     return name
