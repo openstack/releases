@@ -99,6 +99,11 @@ def main():
         help=('deliverables that do not have a release candidate, yet '
               '(implies --model cycle-with-milestones)'),
     )
+    grp.add_argument(
+        '--missing-final',
+        action='store_true',
+        help='deliverables that have pre-releases but no final releases, yet',
+    )
     args = parser.parse_args()
 
     # Deal with the inconsistency of the name for the independent
@@ -112,6 +117,9 @@ def main():
         version_ending = '.0b{}'.format(args.missing_milestone)
     elif args.missing_rc:
         model = 'cycle-with-milestones'
+        version_ending = None
+    elif args.missing_final:
+        model = args.model
         version_ending = None
     else:
         model = args.model
@@ -155,6 +163,11 @@ def main():
             for t in args.tag:
                 if t not in tags:
                     continue
+        if args.missing_final and deliv.latest_release:
+            if not ('rc' in deliv.latest_release or
+                    'a' in deliv.latest_release or
+                    'b' in deliv.latest_release):
+                continue
         if args.verbose:
             print(verbose_template.format(
                 name=deliv.name,
