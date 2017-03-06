@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 0.21.0
+  projects:
+  - repo: openstack/mox3
+    hash: c9f88a280d902a44686412e73a44106cd299f9e5

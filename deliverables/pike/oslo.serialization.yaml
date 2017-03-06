@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 2.17.0
+  projects:
+  - repo: openstack/oslo.serialization
+    hash: 279da59d1736567a919bc269f6ba925ed5d1870c

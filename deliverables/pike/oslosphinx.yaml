@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 4.11.0
+  projects:
+  - repo: openstack/oslosphinx
+    hash: a800d4c3df5bba293fb7af4c5329c9538909b961

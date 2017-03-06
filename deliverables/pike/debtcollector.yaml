@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.12.0
+  projects:
+  - repo: openstack/debtcollector
+    hash: f7630fadb8582e7dd37b02565b104681891defdd

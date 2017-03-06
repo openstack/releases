@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.6.0
+  projects:
+  - repo: openstack/osprofiler
+    hash: 27e2ce7d2e7b39bc5a5dbecf6dca4add8fb4a371

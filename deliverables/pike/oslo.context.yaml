@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 2.13.0
+  projects:
+  - repo: openstack/oslo.context
+    hash: be7b1bf3319de103488c1722812a7e5f3353c9d0
