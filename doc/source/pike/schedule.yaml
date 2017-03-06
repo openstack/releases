@@ -23,6 +23,8 @@ cycle:
 - end: '2017-03-31'
   name: R-22
   start: '2017-03-27'
+  project-specific:
+  - p-glance-spec-prop
 - end: '2017-04-07'
   name: R-21
   start: '2017-04-03'
@@ -32,6 +34,7 @@ cycle:
   x-project:
   - p-1
   project-specific:
+  - p-glance-spec-freeze
   - p-manila-spec-freeze
 - end: '2017-04-21'
   name: R-19
