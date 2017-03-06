@@ -283,6 +283,39 @@ All Glance, python-glanceclient, and glance_store specs must be merged into
 the glance-specs repository by 23:59 on Friday 14 April 2017.  This is
 necessary but not sufficient condition for inclusion in the Pike release.
 
+Keystone
+--------
+
+.. _p-keystone-spec-proposal-freeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Pike must be submitted to the keystone-specs
+repository by the end of the week.
+
+.. _p-keystone-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Pike must be approved by the end of the week.
+
+.. _p-keystone-fpfreeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _p-keystone-ffreeze:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be merged by the end of the week.
+
 Manila
 ------
 
