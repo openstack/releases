@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 3.24.0
+  projects:
+  - repo: openstack/oslo.middleware
+    hash: f3e52752eabd93404c8011ba2e3ef96d22b9ec87

@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 2.10.0
+  projects:
+  - repo: openstack/taskflow
+    hash: 8017d7db50503a0a2a30d2fe7b0340044f69976a

@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.8.0
+  projects:
+  - repo: openstack/automaton
+    hash: 911ed1af8586f7da1ec4df72f58e949d6d1b4f41

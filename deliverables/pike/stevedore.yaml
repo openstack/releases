@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.21.0
+  projects:
+  - repo: openstack/stevedore
+    hash: 4abadad814477059204e213c0f5e61a1cb4417af

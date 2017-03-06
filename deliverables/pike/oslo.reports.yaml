@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.18.0
+  projects:
+  - repo: openstack/oslo.reports
+    hash: 1c6cd103f3c0e0815a77a7a58ebd1d49680df017

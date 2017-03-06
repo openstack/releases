@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 0.22.0
+  projects:
+  - repo: openstack/futurist
+    hash: 7b3687f15bb5e7ecbd372faae882f62d739f4a96

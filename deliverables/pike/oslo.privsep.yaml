@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 1.17.0
+  projects:
+  - repo: openstack/oslo.privsep
+    hash: 575eea12f86f1dc001a9dce933ab5cfb8bf6e1f1

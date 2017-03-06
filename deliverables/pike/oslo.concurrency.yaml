@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 3.19.0
+  projects:
+  - repo: openstack/oslo.concurrency
+    hash: 998c12a34a857ea63ff09f73f6e9602316bfec64

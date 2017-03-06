@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: oslo
 type: library
+releases:
+- version: 5.5.0
+  projects:
+  - repo: openstack/oslo.rootwrap
+    hash: d089ff3ee9d8725917526b69fb1959c045ccf861
