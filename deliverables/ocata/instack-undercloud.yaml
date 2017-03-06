@@ -21,3 +21,8 @@ releases:
     projects:
       - repo: openstack/instack-undercloud
         hash: e712d17078563bf8c8ded3304f38a0746fb8070b
+  - version: 6.0.0
+    diff-start: 5.0.0.0rc2
+    projects:
+      - repo: openstack/instack-undercloud
+        hash: e712d17078563bf8c8ded3304f38a0746fb8070b
