@@ -22,6 +22,8 @@ import os
 import pbr.version
 import yaml
 
+from openstack_releases import governance
+
 
 def _safe_semver(v):
     """Get a SemanticVersion that closely represents the version string.
@@ -196,6 +198,8 @@ class Deliverables(object):
 
 class Deliverable(object):
 
+    _governance_data = None
+
     def __init__(self, team, series, name, data):
         self.team = team
         if self.team is None:
@@ -207,6 +211,8 @@ class Deliverable(object):
         for r in self.releases:
             for p in r['projects']:
                 self.repos.add(p['repo'])
+        if self._governance_data is None:
+            Deliverable._governance_data = governance.get_team_data()
 
     @property
     def model(self):
@@ -248,3 +254,8 @@ class Deliverable(object):
             if b['name'] == name:
                 return b['location']
         return None
+
+    @property
+    def tags(self):
+        return governance.get_tags_for_deliverable(
+            self._governance_data, self.team, self.name)

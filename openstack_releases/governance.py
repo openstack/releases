@@ -35,6 +35,15 @@ def get_team_data(url=PROJECTS_LIST):
     return yaml.load(r.text)
 
 
+def get_tags_for_deliverable(team_data, team, name):
+    "Return the tags for the deliverable owned by the team."
+    team_info = team_data[team]
+    dinfo = team_info['deliverables'].get(name)
+    if not dinfo:
+        return set()
+    return set(dinfo.get('tags', [])).union(set(team_info.get('tags', [])))
+
+
 def get_repo_owner(team_data, repo_name):
     """Return the name of the team that owns the repository.
 

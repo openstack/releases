@@ -64,6 +64,12 @@ def main():
         help='deliverable type, such as "library" or "service"',
     )
     parser.add_argument(
+        '--tag',
+        default=[],
+        action='append',
+        help='look for one more more tags on the deliverable or team',
+    )
+    parser.add_argument(
         '--deliverables-dir',
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
@@ -144,6 +150,11 @@ def main():
             continue
         if args.missing_rc and deliv.latest_release and 'rc' in deliv.latest_release:
             continue
+        if args.tag:
+            tags = deliv.tags
+            for t in args.tag:
+                if t not in tags:
+                    continue
         if args.verbose:
             print(verbose_template.format(
                 name=deliv.name,
