@@ -311,3 +311,13 @@ Manila Feature Proposal Freeze
 
 All new Manila features must be proposed and substantially complete, with unit
 tests by 10 July 2017 (23:59 UTC).
+
+Nova
+----
+
+.. _p-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova specs must be approved by Thursday April 13th, 2017.
