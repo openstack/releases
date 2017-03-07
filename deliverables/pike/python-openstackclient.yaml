@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: OpenStackClient
 type: other
+releases:
+  - version: 3.9.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: c0a23b89b16651e0bb07adf1800aa57cbfbb564b
