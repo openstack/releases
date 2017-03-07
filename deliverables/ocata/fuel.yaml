@@ -31,6 +31,30 @@ releases:
         repo: openstack/fuel-ui
       - hash: b2024b95e1c765e789bb3412672ff219ed7e0a5e
         repo: openstack/fuel-library
+  - version: 11.0.0.0rc2
+    projects:
+      - hash: 555dbb3b0ed68abdc4cbaebb19f705b8470b68ff
+        repo: openstack/fuel-menu
+      - hash: bc002e03901e852827df8c0ad59f5bdfb398ab27
+        repo: openstack/fuel-qa
+      - hash: afb7706af7cab4f74b0f5a471eefe8eed5967137
+        repo: openstack/fuel-agent
+      - hash: 679cea82482225336d978b1e2bb77eb6375afb6b
+        repo: openstack/fuel-web
+      - hash: 626b46d8676b3bfe0f36c06a81e1f26c62f57c89
+        repo: openstack/fuel-nailgun-agent
+      - hash: dc9ed240816ba97d43e7ed19ec20d0d029ab162f
+        repo: openstack/fuel-ostf
+      - hash: 62267aa4f7fafe5af7b60b870bed7040339afd6c
+        repo: openstack/fuel-virtualbox
+      - hash: aa0e4c51d314da9adaab7ef9014e0c0a1266efe2
+        repo: openstack/fuel-main
+      - hash: 9f57f4bc14f51c4edd88528c34c47cb6bfc43989
+        repo: openstack/fuel-astute
+      - hash: 2462fb1ad9d91b26569e489b4fc7d0a6f60fb36a
+        repo: openstack/fuel-ui
+      - hash: 2731990ab9486ea076044f940a95bbcfd7fd7c9f
+        repo: openstack/fuel-library
 send-announcements-to: openstack-announce@lists.openstack.org
 team: fuel
 type: other
