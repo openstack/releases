@@ -46,7 +46,7 @@ release 20-24 February 2017 in Atlanta, Georgia.
 Pike-1 milestone
 ----------------
 
-XXX is the Pike-1 milestone window for projects following the
+13 April 2017 is the Pike-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
@@ -75,7 +75,7 @@ development cycle (Queens).
 Pike-2 milestone
 ----------------
 
-XXX is the Pike-2 milestone window for projects following the
+8 June 2017 is the Pike-2 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _p-final-lib:
@@ -92,7 +92,7 @@ changes before feature freeze.
 Pike-3 milestone
 ----------------
 
-XXX is the Pike-3 milestone window for projects following the
+27 July 2017 is the Pike-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _p-goals-complete:
@@ -177,9 +177,9 @@ cycle.
 RC1 target week
 ---------------
 
-The week of XXX - XXX is the target date for projects
+The week of 7-11 August 2017 is the target date for projects
 following the `release:cycle-with-milestones`_ model to issue their
-first release candidate, with a deadline of XXX.
+first release candidate, with a deadline of 10 August 2017.
 
 .. _p-hard-sf:
 
@@ -195,7 +195,7 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of XXX is the last week to issue release candidates or
+The week of 21 August 2017 is the last week to issue release candidates or
 intermediary releases before release week. During release week, only
 final-release-critical releases will be accepted (at the discretion of
 the release team).
@@ -205,7 +205,7 @@ the release team).
 Pike release
 ------------
 
-The Pike coordinated release will happen on XXX.
+The Pike coordinated release will happen on 30 August 2017.
 
 .. _p-trailing-ff:
 
