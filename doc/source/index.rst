@@ -19,74 +19,92 @@ updates.
    - * Series
      * Status
      * Initial Release Date
+     * Next Phase
      * EOL Date
    - * :doc:`queens/index`
      * *Future*
      * TBD
+     *
      * TBD
    - * :doc:`pike/index`
      * :doc:`Under Development <pike/schedule>`
      * TBD
+     *
      * TBD
    - * :doc:`ocata/index`
      * `Phase I -- Latest release`_
      * 2017-02-22
+     * `Phase II -- Maintained release`_ on 2017-08-28
      * 2018-02-26
    - * :doc:`newton/index`
      * `Phase II -- Maintained release`_
      * 2016-10-06
+     * `Phase III -- Legacy release`_ on 2017-08-28
      * 2017-10-11
    - * :doc:`mitaka/index`
      * `Phase III -- Legacy release`_
      * 2016-04-07
+     * End of Life
      * 2017-04-10
    - * :doc:`liberty/index`
      * EOL
      * 2015-10-15
+     *
      * 2016-11-17
    - * :doc:`kilo/index`
      * EOL
      * 2015-04-30
+     *
      * 2016-05-02
    - * :doc:`juno/index`
      * EOL
      * 2014-10-16
+     *
      * 2015-12-07
    - * :doc:`icehouse/index`
      * EOL
      * 2014-04-17
+     *
      * 2015-07-02
    - * :doc:`havana/index`
      * EOL
      * 2013-10-17
+     *
      * 2014-09-30
    - * :doc:`grizzly/index`
      * EOL
      * 2013-04-04
+     *
      * 2014-03-29
    - * :doc:`folsom/index`
      * EOL
      * 2012-09-27
+     *
      * 2013-11-19
    - * :doc:`essex/index`
      * EOL
      * 2012-04-05
+     *
      * 2013-05-06
    - * :doc:`diablo/index`
      * EOL
      * 2011-09-22
+     *
      * 2013-05-06
    - * :doc:`cactus/index`
      * Deprecated
      * 2011-04-15
-     * 
+     *
+     *
    - * :doc:`bexar/index`
      * Deprecated
      * 2011-02-03
-     * 
+     *
+     *
    - * :doc:`austin/index`
      * Deprecated
      * 2010-10-21
+     *
      *
 
 .. _Phase I -- Latest release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
