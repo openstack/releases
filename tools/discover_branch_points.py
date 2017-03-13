@@ -40,7 +40,7 @@ def _get_current_version(reporoot, branch=None):
     if branch is not None:
         cmd.append(branch)
     try:
-        result = subprocess.check_output(cmd, cwd=reporoot).strip()
+        result = subprocess.check_output(cmd, cwd=reporoot).decode('utf-8').strip()
         if '-' in result:
             # Descriptions that come after a commit look like
             # 2.0.0-1-abcde, and we want to remove the SHA value from
@@ -75,7 +75,7 @@ def _get_branch_base(reporoot, branch):
             cmd, cwd=reporoot,
             # Trap stderr so it isn't dumped into our output.
             stderr=subprocess.PIPE,
-        ).strip()
+        ).decode('utf-8').strip()
         if not parents:
             # There are no commits on the branch, yet, so we can use
             # our current-version logic.
@@ -91,7 +91,7 @@ def _get_branch_base(reporoot, branch):
         '{}^^!'.format(parent),
     ]
     try:
-        sha = subprocess.check_output(cmd, cwd=reporoot).strip()
+        sha = subprocess.check_output(cmd, cwd=reporoot).decode('utf-8').strip()
     except subprocess.CalledProcessError:
         return None
     # Now get the tag for that commit.
@@ -102,7 +102,7 @@ def _get_branch_base(reporoot, branch):
         sha,
     ]
     try:
-        return subprocess.check_output(cmd, cwd=reporoot).strip()
+        return subprocess.check_output(cmd, cwd=reporoot).decode('utf-8').strip()
     except subprocess.CalledProcessError:
         return None
 
