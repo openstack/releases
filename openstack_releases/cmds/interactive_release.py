@@ -369,7 +369,7 @@ def main():
             if not last_release:
                 print("It has never had a release.")
                 cmd = ['git', 'log', '--pretty=oneline']
-                output = subprocess.check_output(cmd, cwd=repo_path)
+                output = subprocess.check_output(cmd, cwd=repo_path).decode('utf-8')
                 output = output.strip()
                 changes = list(clean_changes(output.splitlines()))
             else:
@@ -379,7 +379,7 @@ def main():
                 print("  At sha: %s" % last_release['projects'][0]['hash'])
                 cmd = ['git', 'log', '--pretty=oneline',
                        "%s..HEAD" % last_release['projects'][0]['hash']]
-                output = subprocess.check_output(cmd, cwd=repo_path)
+                output = subprocess.check_output(cmd, cwd=repo_path).decode('utf-8')
                 output = output.strip()
                 changes = list(clean_changes(output.splitlines()))
             if changes:
