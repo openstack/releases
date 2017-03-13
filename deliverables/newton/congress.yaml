@@ -38,3 +38,11 @@ releases:
     projects:
       - repo: openstack/congress
         hash: fcccfb24dd9f999899be02430fd70305920a7104
+  - version: 4.0.1
+    projects:
+      - repo: openstack/congress
+        hash: 982b8957909248d20d98bed7658250d8586bc5d1
+    highlights: >
+      - Bug fix to allow cross-policy table reference.
+      - Bug fix to correct an incompatibility with PostgreSQL backend.
+      - Bug fix for Cinder driver to obtain data from all tenants.
