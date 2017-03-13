@@ -31,7 +31,7 @@ def find_modified_deliverable_files():
     "Return a list of files modified by the most recent commit."
     results = subprocess.check_output(
         ['git', 'diff', '--name-only', '--pretty=format:', 'HEAD^']
-    )
+    ).decode('utf-8')
     filenames = [
         l.strip()
         for l in results.splitlines()
@@ -105,7 +105,7 @@ def sha_for_tag(workdir, repo, version):
             ['git', 'log', str(version), '-n', '1', '--pretty=format:%H'],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        )
+        ).decode('utf-8')
         actual_sha = actual_sha.strip()
     except subprocess.CalledProcessError as e:
         print('ERROR getting SHA for tag %r: %s [%s]' %
@@ -128,7 +128,7 @@ def check_branch_sha(workdir, repo, series, master, sha):
         output = subprocess.check_output(
             ['git', 'branch', '-a', '--contains', sha],
             cwd=os.path.join(workdir, repo),
-        ).strip()
+        ).decode('utf-8').strip()
         for branch in output.split():
             if branch == remote_match:
                 return True
@@ -145,7 +145,7 @@ def check_ancestry(workdir, repo, old_version, sha):
             ['git', 'log', '--oneline', '--ancestry-path',
              '%s..%s' % (old_version, sha)],
             cwd=os.path.join(workdir, repo),
-        ).strip()
+        ).decode('utf-8').strip()
         return bool(ancestors)
     except subprocess.CalledProcessError as e:
         print('ERROR checking ancestry: %s [%s]' % (e, e.output.strip()))
@@ -161,7 +161,7 @@ def get_latest_tag(workdir, repo, sha=None):
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        ).strip()
+        ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
         print('WARNING failed to retrieve latest tag: %s [%s]' %
               (e, e.output.strip()))
@@ -174,7 +174,7 @@ def get_branches(workdir, repo):
             ['git', 'branch', '-a'],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        ).strip()
+        ).decode('utf-8').strip()
         # Example output:
         # * (no branch)
         #   master
@@ -207,7 +207,7 @@ def branches_containing(workdir, repo, ref):
             ['git', 'branch', '-r', '--contains', ref],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        ).strip()
+        ).decode('utf-8').strip()
         # Example output:
         #   origin/stable/ocata
         results = []
@@ -238,7 +238,7 @@ def get_branch_base(workdir, repo, branch):
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        ).strip()
+        ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
         print('WARNING failed to retrieve branch base: %s [%s]' %
               (e, e.output.strip()))
@@ -255,7 +255,7 @@ def get_branch_base(workdir, repo, branch):
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
-        ).strip()
+        ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
         print('WARNING failed to retrieve branch base: %s [%s]' %
               (e, e.output.strip()))
