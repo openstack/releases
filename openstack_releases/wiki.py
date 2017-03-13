@@ -27,7 +27,7 @@ def get_page_section(page_content, section):
         lambda x: x.lower() != section_start,
         lines,
     )
-    lines.next()  # skip the section heading
+    next(lines)  # skip the section heading
     lines = itertools.takewhile(
         lambda x: not x.startswith('== '),
         lines,
@@ -59,7 +59,7 @@ def get_wiki_table(page_content, section):
             items = [i.strip() for i in line.lstrip('|').split('||')]
             row = {
                 h: i
-                for (h, i) in itertools.izip(headings, items)
+                for (h, i) in zip(headings, items)
             }
             yield row
 
