@@ -60,7 +60,7 @@ def _get_category(data):
     model = data.get('release-model')
     if model == 'cycle-trailing':
         return 'cycle-trailing'
-    return data.get('type')
+    return data.get('type', 'other')
 
 
 _deliverables = None
@@ -126,14 +126,13 @@ class DeliverableDirectiveBase(rst.Directive):
             # Only the deliverables for the given series are
             # shown. They are categorized by type, which we need to
             # extract from the data.
-            raw_deliverables = (
+            raw_deliverables = [
                 (_get_category(_data), _deliv_name, _data)
                 for _team, _series, _deliv_name, _data in _deliverables.get_deliverables(
                     self.team_name,
                     series,
                 )
-            )
-            raw_deliverables = list(raw_deliverables)
+            ]
             grouped = itertools.groupby(
                 sorted(raw_deliverables),
                 key=operator.itemgetter(0),  # the category
