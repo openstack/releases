@@ -35,6 +35,7 @@ cycle:
   - p-1
   project-specific:
   - p-glance-spec-freeze
+  - p-keystone-spec-proposal-freeze
   - p-manila-spec-freeze
 - end: '2017-04-21'
   name: R-19
@@ -68,6 +69,7 @@ cycle:
   project-specific:
   - p-cinder-nddeadline
   - p-cinder-spec-freeze
+  - p-keystone-spec-freeze
   - p-manila-nddeadline
 - end: '2017-06-16'
   name: R-11
@@ -78,6 +80,8 @@ cycle:
 - end: '2017-06-30'
   name: R-9
   start: '2017-06-26'
+  project-specific:
+  - p-keystone-fpfreeze
 - end: '2017-07-07'
   name: R-8
   start: '2017-07-03'
@@ -103,6 +107,8 @@ cycle:
   - p-soft-sf
   - p-rf
   - p-goals-complete
+  project-specific:
+  - p-keystone-ffreeze
 - end: '2017-08-04'
   name: R-4
   start: '2017-07-31'
