@@ -57,3 +57,14 @@ releases:
         hash: 49a89c8757aad70611a00ea9e1c78f38060bc114
     highlights: >
         Added connector alias for direct unit test access.
+  - version: 1.6.2
+    projects:
+      - repo: openstack/os-brick
+        hash: b4b21f0a6deb6434f777d9ee4a58a04db8d0afd0
+    highlights: >
+        Improve compatibility with Nova connector usage.
+        Fix LUN attachment error for s390.
+        Handle encryption passphrases which were mangled in older releases.
+        Fix command execution errors w/ Unicode output.
+        Fix RBD connector IPv6 support.
+        Fix Ceph backup file descriptor leak.
