@@ -50,3 +50,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: ff369899749ac3e21ed0174b40e948c78c2dc1fa
+  - version: 15.0.1
+    projects:
+      - repo: openstack/nova
+        hash: 7ccf8d2e358623b3536c9f3e2850a75414969134
+    highlights: >
+      - Several fixes for high severity, high impact bugs introduced in the
+        15.0.0 release.
