@@ -310,7 +310,7 @@ def main():
                 )
                 print('HEAD of {} is {}'.format(tag_branch, head_sha))
             else:
-                if branch in branches:
+                if (branch in branches) or (not branches):
                     tag_branch = branch
                 else:
                     tag_branch = branches[0]
