@@ -242,7 +242,7 @@ Cinder
 Cinder New Backend Driver Deadline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The deadline for getting a new backend driver added to Cinder is the 14th of
+The deadline for getting a new backend driver added to Cinder is the 7th of
 June, 2017. All review issues must be addressed and third party CI must be
 reporting and stable with enough time for reviewers prior to the deadline.
 Meeting these requirements on the 14th does not guarantee core reviewers will
@@ -256,7 +256,7 @@ is typically targeted for Thursday.
 Cinder Spec Freeze
 ^^^^^^^^^^^^^^^^^^
 
-All Cinder specs must be approved by the 14th of June, 2017.
+All Cinder specs must be approved by the 7th of June, 2017.
 
 Note: This is the Wednesday of the milestone week, while the milestone itself
 is typically targeted for Thursday.
