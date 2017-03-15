@@ -63,11 +63,11 @@ def git_log(workdir, repo, title, git_range, extra_args=[]):
 def git_list_existing_branches(workdir, repo):
     header('All Branches with Version Numbers')
     for branch in gitutils.get_branches(workdir, repo):
-        print('{:<30}'.format(branch), end=' ')
-        subprocess.call(
+        description = subprocess.check_output(
             ['git', 'describe', branch],
             cwd=os.path.join(workdir, repo),
-        )
+        ).decode('utf-8').strip()
+        print('{:<30} {}'.format(branch, description))
 
 
 def git_branch_contains(workdir, repo, title, commit):
