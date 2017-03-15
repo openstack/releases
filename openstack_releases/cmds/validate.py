@@ -120,6 +120,28 @@ def validate_series_open(deliverable_info,
             expected_branch, previous_deliverable_file, series_name))
 
 
+def validate_series_first(deliverable_info, series_name,
+                          mk_warning, mk_error):
+    "The first release in a series needs to end with '.0'."
+    # When the releases entry is present but empty, it's value may not
+    # be a list, so we default to a list using 'or'.
+    releases = deliverable_info.get('releases') or []
+    if len(releases) != 1:
+        # We only have to check this when the first release is being
+        # applied in the file.
+        return
+    if series_name == '_independent':
+        # These rules don't apply to independent projects.
+        return
+    versionstr = releases[0]['version']
+    patchlevel = versionstr.rpartition('.')[-1]
+    if patchlevel != '0':
+        mk_error(
+            'Initial releases in a series must increment at '
+            'least the minor version. %r' % (versionstr,)
+        )
+
+
 def validate_launchpad(deliverable_info, mk_warning, mk_error):
     "Look for the launchpad project"
     try:
@@ -696,6 +718,12 @@ def main():
                 mk_warning,
                 mk_error,
             )
+        validate_series_first(
+            deliverable_info,
+            series_name,
+            mk_warning,
+            mk_error,
+        )
         validate_branch_prefixes(
             deliverable_info,
             mk_warning,
