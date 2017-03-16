@@ -21,3 +21,13 @@ releases:
         * Add router-interface-fip extension from networking-midonet
         * Migrate logging-resource extension from networking-midonet
         * API reference improvements
+  - version: 1.3.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: cd5b4765b4f91dbbc98c40fe0b47572161312dd2
+    highlights: |
+        * Synced neutron callbacks into lib
+        * Multiple API-ref changes: cleaned quotas, added QoS rule types list, corrected QoS policies
+        * Added networking-bgpvpn API reference
+        * Tweaked trunk extension to support Ironic use case
+        * Added a note about the current status of FWaaS v1
