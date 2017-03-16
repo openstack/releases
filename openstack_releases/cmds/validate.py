@@ -142,13 +142,10 @@ def validate_series_first(deliverable_info, series_name,
         )
 
 
-def validate_launchpad(deliverable_info, mk_warning, mk_error):
-    "Look for the launchpad project"
-    try:
+def validate_bugtracker(deliverable_info, mk_warning, mk_error):
+    "Look for the bugtracker info"
+    if 'launchpad' in deliverable_info:
         lp_name = deliverable_info['launchpad']
-    except KeyError:
-        mk_error('No launchpad project given')
-    else:
         try:
             lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         except requests.exceptions.ConnectionError as e:
@@ -158,6 +155,35 @@ def validate_launchpad(deliverable_info, mk_warning, mk_error):
         else:
             if (lp_resp.status_code // 100) == 4:
                 mk_error('Launchpad project %s does not exist' % lp_name)
+    elif 'storyboard' in deliverable_info:
+        try:
+            sb_id = int(deliverable_info['storyboard'])
+        except (TypeError, ValueError):
+            mk_error('Invalid storyboard ID, must be a number: %s' %
+                     deliverable_info['storyboard'])
+            return
+        try:
+            projects_resp = requests.get(
+                'https://storyboard.openstack.org/api/v1/projects'
+            )
+        except requests.exceptions.ConnectionError as e:
+            # The flakey Launchpad API failed. Don't punish the user for that.
+            mk_warning('Could not verify storyboard project %s (%s)' %
+                       (sb_id, e))
+        else:
+            if (projects_resp.status_code // 100) == 4:
+                mk_warning(
+                    'Could not verify storyboard project, API call failed.'
+                )
+            for project in projects_resp.json():
+                if sb_id == project.get('id'):
+                    break
+            else:
+                mk_error(
+                    'Did not find a storyboard project with ID %s' % sb_id
+                )
+    else:
+        mk_error('No launchpad or storyboard project given')
 
 
 def validate_team(deliverable_info, team_data, mk_warning, mk_error):
@@ -689,7 +715,7 @@ def main():
             print('ERROR: {}'.format(msg))
             errors.append('{}: {}'.format(filename, msg))
 
-        validate_launchpad(deliverable_info, mk_warning, mk_error)
+        validate_bugtracker(deliverable_info, mk_warning, mk_error)
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)

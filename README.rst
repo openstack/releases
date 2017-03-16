@@ -247,7 +247,8 @@ For deliverable set of projects, we use one YAML file per release
 series to hold all of the metadata for all releases and branches of
 that deliverable. For each deliverable, we need to track:
 
-* the launchpad project name (such as ``oslo.config``)
+* the launchpad project name (such as ``oslo.config``) or storyboard
+  project id (such as ``760``)
 * the series (Kilo, Liberty, etc.)
 * the release model being used
 * for each repository
@@ -280,6 +281,11 @@ The top level of a deliverable file is a mapping with keys:
 
 ``launchpad``
   The slug name of the launchpad project, suitable for use in URLs.
+  (Not needed for projects using storyboard.)
+
+``storyboard``
+  The ID of the storyboard project, suitable for use in URLs and API
+  calls.  (Not needed for projects using launchpad.)
 
 ``release-notes``
   The URL or URLs to the published release notes for the deliverable

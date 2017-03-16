@@ -26,12 +26,12 @@ from openstack_releases import defaults
 from openstack_releases.cmds import validate
 
 
-class TestValidateLaunchpad(base.BaseTestCase):
+class TestValidateBugTracker(base.BaseTestCase):
 
-    def test_no_launchpad_name(self):
+    def test_no_tracker(self):
         warnings = []
         errors = []
-        validate.validate_launchpad(
+        validate.validate_bugtracker(
             {},
             warnings.append,
             errors.append,
@@ -40,11 +40,11 @@ class TestValidateLaunchpad(base.BaseTestCase):
         self.assertEqual(1, len(errors))
 
     @mock.patch('requests.get')
-    def test_invalid_launchpad_name(self, get):
+    def test_launchpad_invalid_name(self, get):
         get.return_value = mock.Mock(status_code=404)
         warnings = []
         errors = []
-        validate.validate_launchpad(
+        validate.validate_bugtracker(
             {'launchpad': 'nonsense-name'},
             warnings.append,
             errors.append,
@@ -53,11 +53,11 @@ class TestValidateLaunchpad(base.BaseTestCase):
         self.assertEqual(1, len(errors))
 
     @mock.patch('requests.get')
-    def test_valid_launchpad_name(self, get):
+    def test_launchpad_valid_name(self, get):
         get.return_value = mock.Mock(status_code=200)
         warnings = []
         errors = []
-        validate.validate_launchpad(
+        validate.validate_bugtracker(
             {'launchpad': 'oslo.config'},
             warnings.append,
             errors.append,
@@ -71,13 +71,86 @@ class TestValidateLaunchpad(base.BaseTestCase):
         get.side_effect = requests.exceptions.ConnectionError('testing')
         warnings = []
         errors = []
-        validate.validate_launchpad(
+        validate.validate_bugtracker(
             {'launchpad': 'oslo.config'},
             warnings.append,
             errors.append,
         )
         self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
+
+    @mock.patch('requests.get')
+    def test_storyboard_valid_id(self, get):
+        get.return_value = mock.Mock(status_code=200)
+        get.return_value.json.return_value = [
+            {
+                "name": "openstack-infra/storyboard",
+                "created_at": "2014-03-12T17:52:19+00:00",
+                "is_active": True,
+                "updated_at": None,
+                "autocreate_branches": False,
+                "repo_url": None,
+                "id": 456,
+                "description": "OpenStack Task Tracking API",
+            },
+            {
+                "name": "openstack-infra/shade",
+                "created_at": "2015-01-07T20:56:27+00:00",
+                "is_active": True,
+                "updated_at": None,
+                "autocreate_branches": False,
+                "repo_url": None,
+                "id": 760,
+                "description": "Client library for OpenStack...",
+            }
+        ]
+        warnings = []
+        errors = []
+        validate.validate_bugtracker(
+            {'storyboard': '760'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    @mock.patch('requests.get')
+    def test_storyboard_invalid_id(self, get):
+        get.return_value = mock.Mock(status_code=200)
+        warnings = []
+        errors = []
+        validate.validate_bugtracker(
+            {'storyboard': 'name-not-id'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    @mock.patch('requests.get')
+    def test_storyboard_no_such_project(self, get):
+        get.return_value = mock.Mock(status_code=200)
+        get.return_value.json.return_value = [
+            {
+                "name": "openstack-infra/storyboard",
+                "created_at": "2014-03-12T17:52:19+00:00",
+                "is_active": True,
+                "updated_at": None,
+                "autocreate_branches": False,
+                "repo_url": None,
+                "id": 456,
+                "description": "OpenStack Task Tracking API",
+            },
+        ]
+        warnings = []
+        errors = []
+        validate.validate_bugtracker(
+            {'storyboard': '-760'},
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
 
 
 class TestValidateTeam(base.BaseTestCase):
