@@ -63,10 +63,13 @@ def git_log(workdir, repo, title, git_range, extra_args=[]):
 def git_list_existing_branches(workdir, repo):
     header('All Branches with Version Numbers')
     for branch in gitutils.get_branches(workdir, repo):
-        description = subprocess.check_output(
-            ['git', 'describe', branch],
-            cwd=os.path.join(workdir, repo),
-        ).decode('utf-8').strip()
+        try:
+            description = subprocess.check_output(
+                ['git', 'describe', branch],
+                cwd=os.path.join(workdir, repo),
+            ).decode('utf-8').strip()
+        except subprocess.CalledProcessError as exc:
+            description = exc.output
         print('{:<30} {}'.format(branch, description))
 
 
