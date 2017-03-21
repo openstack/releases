@@ -2,7 +2,7 @@
 launchpad: rally
 team: rally
 type: other
-release-notes: http://rally.readthedocs.org/en/latest/release_notes/archive.html
+release-notes: http://rally.readthedocs.io/en/latest/project_info/release_notes/archive.html
 include-pypi-link: yes
 send-announcements-to: openstack-announce@lists.openstack.org
 releases:
@@ -46,3 +46,27 @@ releases:
     projects:
       - repo: openstack/rally
         hash: b6a203d9ab646612e349906ed2016c538c5b3f89
+  - version: 0.5.0
+    projects:
+      - repo: openstack/rally
+        hash: 41b26f4ab5ac7b4f3b45308d5bb3645ace077468
+  - version: 0.6.0
+    projects:
+      - repo: openstack/rally
+        hash: b6bedc5b7807f024a76e38f29318d1c140692b7f
+  - version: 0.7.0
+    projects:
+      - repo: openstack/rally
+        hash: edb093d9be82f1bd1cd853712c911ff20b2a02bf
+  - version: 0.8.0
+    projects:
+      - repo: openstack/rally
+        hash: ed15d27b15e84e90e9b97d616ba15a56285d83d8
+  - version: 0.8.1
+    projects:
+      - repo: openstack/rally
+        hash: 2ff6423b6be2c4daf82c1021652ca2d4bbc72637
+  - version: 0.9.0
+    projects:
+      - repo: openstack/rally
+        hash: 797b1735f30368d3e2b7f7323d598b23efb95bd8
