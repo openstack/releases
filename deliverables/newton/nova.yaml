@@ -59,3 +59,10 @@ releases:
       - Bug fixes for placement and cells v2 to prepare for upgrading to Ocata.
       - Online data migration to fix orphaned build requests created in Mitaka.
       - Bug fix for the 330 main DB schema migration for upgrades from Mitaka.
+  - version: 14.0.5
+    projects:
+      - repo: openstack/nova
+        hash: c2c91ce44592fc5dc2aacee1cf7f5b5cfd2e9a0a
+    highlights: >
+      - Fix for CVE-2017-7214.
+      - Several bug fixes.
