@@ -1,0 +1,11 @@
+---
+launchpad: kuryr-libnetwork
+team: kuryr
+type: service
+release-model: independent
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 5bcaa03d55f7e70553d86575619e5b9956de9b48
