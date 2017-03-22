@@ -57,3 +57,10 @@ releases:
     highlights: >
       - Several fixes for high severity, high impact bugs introduced in the
         15.0.0 release.
+  - version: 15.0.2
+    projects:
+      - repo: openstack/nova
+        hash: acb19160d4d348e29a21ad57c61c7369352c4d1c
+    highlights: >
+      - Fix for CVE-2017-7214.
+      - Fix for retry on build error regression in 15.0.0 (bug 1671648).
