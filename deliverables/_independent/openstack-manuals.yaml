@@ -1,0 +1,14 @@
+---
+launchpad: openstack-manuals
+team: Documentation
+type: other
+release-type: openstack-manuals
+release-notes: http://docs.openstack.org/releasenotes/openstack-manuals/
+branches:
+  - name: stable/ocata
+    location: 15.0.0
+releases:
+  - version: 15.0.0
+    projects:
+      - repo: openstack/openstack-manuals
+        hash: e32d413f74160615cd7b17930f1f9224e391b223

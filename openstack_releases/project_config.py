@@ -61,6 +61,9 @@ _RELEASE_JOBS_FOR_TYPE = {
     'fuel': [
         # Fuel is manually packaged by the team at Mirantis.
     ],
+    'openstack-manuals': [
+        # openstack-manuals is not released, only generated content pushed
+    ],
 }
 
 
