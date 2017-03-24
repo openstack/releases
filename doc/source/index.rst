@@ -176,8 +176,10 @@ date ranges during which each key was in general use.
 
 * 2016-08-03..2016-11-22 (Newton Cycle key):
   `key 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28`_ (details__)
-* 2016-11-22..present (Ocata Cycle key):
+* 2016-11-22..2017-03-24 (Ocata Cycle key):
   `key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`_ (details__)
+* 2017-03-24..present (Pike Cycle key):
+  `key 0xc96bfb160752606daa0de2fa05eb5792c876df9a`_ (details__)
 
 .. Static key files are generated with the following command:
    ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28
@@ -188,6 +190,8 @@ date ranges during which each key was in general use.
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28&fingerprint=on
 .. _`key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`: _static/0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07.txt
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07&fingerprint=on
+.. _`key 0xc96bfb160752606daa0de2fa05eb5792c876df9a`: _static/0xc96bfb160752606daa0de2fa05eb5792c876df9a.txt
+.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xc96bfb160752606daa0de2fa05eb5792c876df9a&fingerprint=on
 
 .. _`centrally-managed OpenPGP keys`: http://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
