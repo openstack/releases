@@ -67,6 +67,7 @@ _VALID_BRANCH_PREFIXES = set([
 ])
 _NO_STABLE_BRANCH_CHECK = set([
     'gnocchi',
+    'rally',
 ])
 _PLEASE = ('It is too expensive to determine this value during '
            'the site build, please set it explicitly.')
