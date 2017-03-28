@@ -5,3 +5,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: ironic
 type: library
+release-notes: https://docs.openstack.org/releasenotes/python-ironicclient/unreleased.html
+releases:
+  - version: 1.12.0
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 27663efdd35b051edcfec2e197a84c14efa0c7b2
