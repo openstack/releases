@@ -65,3 +65,12 @@ releases:
       * Skip larger than /64 subnets in DHCP agent
       * DVR: Fix race condition in creation of fip gateway
       * Update MTU on existing devices
+  - version: 9.3.0
+    projects:
+      - repo: openstack/neutron
+        hash: f7ad3206034ddda1236a58704d3fb3b94336c858
+    highlights: |-
+      * openvswitch agent: add OVS_RESTARTED event
+      * Don't create HA resources until needed
+      * Bulk creation of SecurityGroups
+      * DVR: Add static routes to FIP namespace
