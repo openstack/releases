@@ -4,3 +4,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: ironic
 type: other
+release-notes: https://docs.openstack.org/releasenotes/ironic-inspector/unreleased.html
+releases:
+  - version: 5.1.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 42963fa9f75313f253527baaeda39249a89fe185
