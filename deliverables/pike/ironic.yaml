@@ -4,3 +4,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: ironic
 type: service
+release-notes: https://docs.openstack.org/releasenotes/ironic/unreleased.html
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: d78b971654c016bec8938f61234a82c56b0c382e
