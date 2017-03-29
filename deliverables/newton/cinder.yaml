@@ -46,3 +46,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 79ad4598aa0c949f8ec54359d41ddd94b7c90719
+  - version: 9.1.3
+    projects:
+      - repo: openstack/cinder
+        hash: 46799c4ff57e818fad770c5266f553a30fab6de2
+    highlights: >
+      - Raise qemu-img CPU limit to prevent image->volume download failures.
+      - Driver fixes for Solidfire, VMAX, and VNX.
