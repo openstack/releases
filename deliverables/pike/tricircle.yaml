@@ -2,6 +2,12 @@
 include-pypi-link: true
 launchpad: tricircle
 release-model: cycle-with-intermediary
-send-announcements-to: openstack-announce@lists.openstack.org
+send-announcements-to: openstack-dev@lists.openstack.org
 team: tricircle
 type: service
+release-notes: https://docs.openstack.org/releasenotes/tricircle/
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 819b3fa96a759d974dd6312bd08bd7b03925f35b
