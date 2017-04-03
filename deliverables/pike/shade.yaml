@@ -5,3 +5,11 @@ send-announcements-to: openstack-dev@lists.openstack.org
 storyboard: 760
 team: shade
 type: library
+releases:
+  - version: 1.19.0
+    projects:
+      - repo: openstack-infra/shade
+        hash: cf54ef6b9203d9afcb9c9e50ab19bad73094015d
+    highlights: >
+      Fixed a regression in heat stack normalization and added utility methods
+      to add and remove security groups from a server.
