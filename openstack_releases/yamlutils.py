@@ -38,7 +38,7 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
             'tag:yaml.org,2002:map', values, flow_style=None)
         if self.alias_key is not None:
             self.represented_objects[self.alias_key] = node
-        for key, value in six.iteritems(data):
+        for key, value in data.items():
             key_item = self.represent_data(key)
             value_item = self.represent_data(value)
             values.append((key_item, value_item))
