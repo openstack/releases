@@ -4,3 +4,14 @@ launchpad: python-novaclient
 release-model: cycle-with-intermediary
 team: nova
 type: library
+release-notes: https://docs.openstack.org/releasenotes/python-novaclient/unreleased.html
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: e1b9e76abe6731d7d3192566db2f9068a71eaad9
+    highlights: >
+        - Deprecated proxy APIs and CLIs to other services such as the
+          image, volume, baremetal and networking service, have been deleted.
+        - Log translations have been removed.
+        - Updated dependencies.
