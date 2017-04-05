@@ -31,3 +31,12 @@ releases:
         * Added networking-bgpvpn API reference
         * Tweaked trunk extension to support Ironic use case
         * Added a note about the current status of FWaaS v1
+  - version: 1.4.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 998899622e2c38948bb846bc834d49d3f3ea4542
+    highlights: |
+        * Rehomed Plugin common constants
+        * Rehomed NeutronWorker class
+        * Downgraded callback abortable event log to debug
+        * Added flush_on_subtransaction=True to engine config
