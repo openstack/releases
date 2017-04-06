@@ -1,0 +1,12 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-dev@lists.openstack.org
+team: mistral
+type: library
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 2533ecb478d0ae8819438c054baeb4d6078d82ee
