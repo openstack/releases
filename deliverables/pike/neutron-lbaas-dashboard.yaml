@@ -1,0 +1,15 @@
+---
+include-pypi-link: true
+launchpad: neutron-lbaas-dashboard
+release-model: cycle-with-milestones
+team: octavia
+type: horizon-plugin
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: e562b64d8d27c7105fe83492219779c0695a534e
+    highlights: |-
+      * Improved installation documentation
+      * Additional translation updates
