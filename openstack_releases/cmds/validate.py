@@ -96,10 +96,17 @@ def validate_series_open(deliverable_info,
         '*',
         deliverable_base,
     )
-    all_deliverable_files = list(sorted(glob.glob(pattern)))
+    # NOTE(dhellmann): When projects switch from _independent to
+    # cycle-based models, we don't want to require a
+    # stable/_independent branch, so ignore those files.
+    all_deliverable_files = [
+        name
+        for name in sorted(glob.glob(pattern))
+        if '/_independent/' not in name
+    ]
     idx = all_deliverable_files.index(filename)
     if idx == 0:
-        # This is the first deliverable file.
+        # This is the first cycle-based deliverable file.
         return
     previous_deliverable_file = all_deliverable_files[idx - 1]
     previous_series = os.path.basename(
