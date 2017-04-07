@@ -4,4 +4,14 @@ launchpad: octavia
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: octavia
-type: other
+type: service
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/octavia
+        hash: 75ebfd7137a573bd8b291b2cfed46652b710520f
+    highlights: |-
+      * Adds initial octavia v2 API for load balancers, listeners, pools,
+        members, l7policy, and l7rules
+      * Adds configuration setting for nova soft anti-affinity
+      * Allows load balancer VIP to be created on the management network
