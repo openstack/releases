@@ -1,0 +1,12 @@
+---
+include-pypi-link: yes
+launchpad: tosca-parser
+release-model: cycle-with-intermediary
+team: heat
+type: library
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 35849fcf693ed7dad6d989a57f45a12c9f93a8b0
