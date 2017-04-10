@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-cinder
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: 219ea60a20acbdde9bc3f2503302871270951bb0
+    repo: openstack/puppet-cinder
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

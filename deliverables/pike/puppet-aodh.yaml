@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-aodh
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: 18b75c43fc8c30b715cecf8cd46607dea8cdbbb4
+    repo: openstack/puppet-aodh
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

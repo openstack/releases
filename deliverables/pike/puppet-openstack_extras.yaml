@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-openstack-extras
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: d0fa1d05f17de19fc5ddc564bfeb92519f57651c
+    repo: openstack/puppet-openstack_extras
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other
