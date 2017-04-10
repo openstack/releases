@@ -143,10 +143,10 @@ def validate_series_first(deliverable_info, series_name,
         return
     versionstr = releases[0]['version']
     patchlevel = versionstr.rpartition('.')[-1]
-    if patchlevel != '0':
+    if patchlevel not in ('0', '0b1'):
         mk_error(
             'Initial releases in a series must increment at '
-            'least the minor version. %r' % (versionstr,)
+            'least the minor version or be beta versions. %r' % (versionstr,)
         )
 
 
