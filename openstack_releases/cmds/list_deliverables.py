@@ -13,6 +13,7 @@
 from __future__ import print_function
 
 import argparse
+import csv
 
 import openstack_releases
 from openstack_releases import defaults
@@ -46,6 +47,10 @@ def main():
         '--series',
         default=defaults.RELEASE,
         help='the release series, such as "newton" or "ocata"',
+    )
+    parser.add_argument(
+        '--csvfile',
+        help='Save results (same as when --verbose) to CSV file',
     )
     model = parser.add_mutually_exclusive_group()
     model.add_argument(
@@ -133,6 +138,14 @@ def main():
     if not args.model:
         verbose_template += ' {model:15}'
 
+    csvfile = None
+    if args.csvfile:
+        csvfile = open(args.csvfile, 'w')
+        fieldnames = ['name', 'latest_release', 'repo', 'hash',
+                      'team', 'type', 'model']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
     all_deliv = deliverable.Deliverables(
         root_dir=args.deliverables_dir,
         collapse_history=False,
@@ -168,7 +181,20 @@ def main():
                     'a' in deliv.latest_release or
                     'b' in deliv.latest_release):
                 continue
-        if args.verbose:
+
+        if csvfile:
+            rel = (deliv.releases or [{}])[-1]
+            for prj in rel.get('projects', [{}]):
+                writer.writerow({
+                    'name': deliv.name,
+                    'latest_release': rel.get('version', None),
+                    'repo': prj.get('repo', None),
+                    'hash': prj.get('hash', None),
+                    'team': deliv.team,
+                    'type': deliv.type,
+                    'model': deliv.model,
+                })
+        elif args.verbose:
             print(verbose_template.format(
                 name=deliv.name,
                 latest_release=deliv.latest_release,
@@ -181,3 +207,6 @@ def main():
                 print(r)
         else:
             print(deliv.name)
+
+    if csvfile:
+        csvfile.close()
