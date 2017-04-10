@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: octavia
+release-model: cycle-with-intermediary
+team: octavia
+type: library
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 970a232dc09e5142b5383bb3565b859568115e6c
+    highlights: |-
+      * Added loadbalancer list command
