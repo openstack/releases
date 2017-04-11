@@ -20,6 +20,7 @@
 import argparse
 import getpass
 import os
+import re
 import sys
 
 import requests
@@ -106,13 +107,32 @@ label-Workflow = -1..+1 group {group}
         else:
             with open(fullfilename) as aclfile:
                 hit = False
+                skip = False
                 for line in aclfile:
-                    if line.startswith("[receive]"):
+                    # Skip until start of next section if in skip mode
+                    if skip:
+                        if line.startswith('['):
+                            skip = False
+                        else:
+                            continue
+
+                    if re.match('^\[access "refs/heads/stable/[a-z]', line):
+                        # We just hit a specific stable section.
+                        # Skip the file until the next section starts.
+                        skip = True
+                        continue
+
+                    if line.startswith("[receive]") and not hit:
+                        # We reached the [receive] section: let's place
+                        # our specific stable section here.
                         newcontent += blob.format(
                             branch=args.series,
                             group=group)
                         hit = True
+
+                    # Copy the current line over
                     newcontent += line
+
                 if not hit:
                     print("Could not update %s automatically" % fullfilename)
 
