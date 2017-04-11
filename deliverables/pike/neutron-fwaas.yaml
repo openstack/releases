@@ -1,6 +1,12 @@
 ---
 launchpad: neutron
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron-fwaas/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+releases:
+  - version: 11.0.0.0b1
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 462511d09a18c48bdc89fd6dfb0d03bddb407a4a

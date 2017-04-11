@@ -1,7 +1,13 @@
 ---
-include-pypi-link: true
 launchpad: networking-midonet
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/networking-midonet/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+include-pypi-link: true
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 8e0b8e7b4c6ec5c6cb3838978939f730400d523b
