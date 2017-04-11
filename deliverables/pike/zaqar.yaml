@@ -4,3 +4,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: zaqar
 type: service
+release-notes: https://docs.openstack.org/releasenotes/zaqar/ocata.html
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/zaqar
+        hash: 5b7c69fab973f502aecf00b28e4fa114dbb64d13
