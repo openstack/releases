@@ -1,6 +1,11 @@
 ---
 launchpad: tripleo
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: e6d1aaac5745f2b32d30f3e41ba8c0a50f5b51d7
+    repo: openstack/tripleo-heat-templates
+  version: 7.0.0.0b1
 send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other

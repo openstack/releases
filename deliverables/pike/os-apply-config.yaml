@@ -1,6 +1,11 @@
 ---
 launchpad: os-apply-config
 release-model: cycle-with-milestones
+releases:
+- projects:
+  - hash: dcc453a946a98532e5f0b68ebcc52f96a56fb7cb
+    repo: openstack/os-apply-config
+  version: 7.0.0.0b1
 send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other
