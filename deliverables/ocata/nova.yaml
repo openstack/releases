@@ -64,3 +64,11 @@ releases:
     highlights: >
       - Fix for CVE-2017-7214.
       - Fix for retry on build error regression in 15.0.0 (bug 1671648).
+  - version: 15.0.3
+    projects:
+      - repo: openstack/nova
+        hash: 6d4f9f4f6cfd3e256c68addfed0c3a033b3bf957
+    highlights: >
+      - Contains fixes for regression bugs introduced in Ocata. Specifically
+        https://bugs.launchpad.net/nova/+bug/1678326 and
+        https://bugs.launchpad.net/nova/+bug/1675570.
