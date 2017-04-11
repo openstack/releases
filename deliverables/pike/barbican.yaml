@@ -4,3 +4,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: barbican
 type: service
+release-notes: https://docs.openstack.org/releasenotes/barbican/unreleased.html
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/barbican
+        hash: 2948a004d633e66251c7c0b65fdd3f09c4d654ac
