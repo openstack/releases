@@ -5,3 +5,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: zaqar
 type: library
+release-notes: https://docs.openstack.org/releasenotes/python-zaqarclient/ocata.html
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 6f8384e2b5ecd7d19b6208cf5d35a31a021b652d
