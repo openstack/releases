@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-keystone
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: f7d70a83343bdbb6138243c7922883f3cb54dfa0
+    repo: openstack/puppet-keystone
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

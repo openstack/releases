@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-gnocchi
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: acc4303d1b9480532b3b35dc06045d677f467d3e
+    repo: openstack/puppet-gnocchi
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

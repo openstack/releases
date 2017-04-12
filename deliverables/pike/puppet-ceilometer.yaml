@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-ceilometer
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: bd1ebe015f8c6819e5aaf4d9bd549de1ed556999
+    repo: openstack/puppet-ceilometer
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

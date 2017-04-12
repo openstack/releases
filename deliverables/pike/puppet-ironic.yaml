@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-ironic
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: f3ec8361fca7aaf18e9277f7bc40fee10f490adc
+    repo: openstack/puppet-ironic
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

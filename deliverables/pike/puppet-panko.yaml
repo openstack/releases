@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-panko
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: 465af9c9f677f2e72f9b5b0b749d4001d244c4b2
+    repo: openstack/puppet-panko
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other

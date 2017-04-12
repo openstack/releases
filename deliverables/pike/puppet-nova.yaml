@@ -1,6 +1,11 @@
 ---
 launchpad: puppet-nova
 release-model: cycle-trailing
+releases:
+- projects:
+  - hash: d19c93c55174246cad28a0aa64e1aeca9f960edb
+    repo: openstack/puppet-nova
+  version: 11.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: Puppet OpenStack
 type: other
