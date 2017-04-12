@@ -1,5 +1,15 @@
 ---
 launchpad: freezer
 release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
 team: freezer
 type: service
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/freezer
+        hash: bcfe5e2f5504db6964eb1e559e3f4b7ceeb09649
+      - repo: openstack/freezer-api
+        hash: 3ea8f90881d10958fb0de0a7e13fca20ef2b8415
+      - repo: openstack/freezer-dr
+        hash: 6602452386a67563543dcd3f7e01a9d99b6cb7a0
