@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: heat
 type: library
+releases:
+  - version: 1.9.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: b80166d848dd26718cfe0627bfec22774213616b
