@@ -1,5 +1,11 @@
 ---
 launchpad: freezer
 release-model: cycle-with-milestones
+send-announcements-to: openstack-announce@lists.openstack.org
 team: freezer
 type: horizon-plugin
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: b5ef5893d580dd441160fad08f93da88a1bb1da3
