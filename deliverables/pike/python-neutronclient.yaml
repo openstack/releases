@@ -1,6 +1,15 @@
 ---
 include-pypi-link: true
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/unreleased.html
+type: library
 launchpad: python-neutronclient
 release-model: cycle-with-intermediary
-team: neutron
-type: library
+releases:
+  - version: 6.2.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 06d3dfd797d964e142e89c63911d2cb9754944ed
+    highlights: |-
+      * Added CLI for BGP VPN commands
+      * Dropped Python3.4 support
