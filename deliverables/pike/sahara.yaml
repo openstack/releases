@@ -4,3 +4,14 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: sahara
 type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/sahara
+        hash: 8a51d42d03acc8bcfab60bcb461a5afaf2176cc9
+      - repo: openstack/sahara-dashboard
+        hash: b7c754483d8f968c47f149b320c276fa9a3b58c2
+      - repo: openstack/sahara-extra
+        hash: 69f1cb091098b7635bebc77ec6fa004dd387f2b3
+      - repo: openstack/sahara-image-elements
+        hash: 2113ac486199414635381eaf8a6573089e171a8f
