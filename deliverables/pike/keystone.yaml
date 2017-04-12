@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: keystone
 type: service
+releases:
+  - version: 12.0.0.0b1
+    projects:
+      - repo: openstack/keystone
+        hash: 968575a0e5ae3945e473f442488e3701fb30e6cf
