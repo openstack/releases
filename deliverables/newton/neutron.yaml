@@ -74,3 +74,13 @@ releases:
       * Don't create HA resources until needed
       * Bulk creation of SecurityGroups
       * DVR: Add static routes to FIP namespace
+  - version: 9.3.1
+    projects:
+      - repo: openstack/neutron
+        hash: e4aac689002645b837c12f23470fea5e61600a21
+    highlights: |-
+      * Fixed a bug where network delete request may hang indefinitely,
+        spinning up CPU until a port from the network is deleted
+      * Switched to 'subquery' for 1-M relationships when fetching
+        relationships from database to improve scalability
+      * Throttle SIGHUPs to keepalived to avoid data plane flips
