@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: senlin
 type: library
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 2c6dce877e3d1c74b63f9c9a4a1a7d842ec9bcd5
