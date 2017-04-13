@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: searchlight
 type: service
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/searchlight
+        hash: cb62c9997a5dbd3617adcd2d735e9deef7ab5e22

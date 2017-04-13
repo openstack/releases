@@ -4,3 +4,9 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: searchlight
 type: horizon-plugin
+release-notes: http://docs.openstack.org/releasenotes/searchlight-ui/unreleased.html
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: b3a5179896e654468f78757070f474a7ca7f2cf0
