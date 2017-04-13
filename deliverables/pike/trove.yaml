@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: trove
 type: service
+releases:
+  - version: 8.0.0.0b1
+    projects:
+      - repo: openstack/trove
+        hash: 33713436134915b74ed101027eda18b9887d3f16
