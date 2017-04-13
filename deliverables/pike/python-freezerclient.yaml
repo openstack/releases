@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: freezer
 type: library
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 4405255bee3bb78fa4082cbe4bc0913d3d3c29bc
