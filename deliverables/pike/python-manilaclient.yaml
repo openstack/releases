@@ -2,5 +2,11 @@
 include-pypi-link: true
 launchpad: python-manilaclient
 release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
 team: manila
 type: library
+releases:
+  - version: 1.15.0
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: b4f71709dc4644b069c3395260c8e318907cfb7c
