@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: designate
 type: horizon-plugin
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 8113ea0addaebe8eab2cbd0672d4d844443cf840
