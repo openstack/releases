@@ -4,3 +4,9 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: watcher
 type: service
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/watcher
+        hash: dbff4326e3ec942c06c429485e9f04ac5737f4c1
+        tarball-base: python-watcher
