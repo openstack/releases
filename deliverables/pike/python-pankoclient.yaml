@@ -1,0 +1,12 @@
+---
+include-pypi-link: true
+launchpad: python-pankoclient
+release-model: cycle-with-intermediary
+team: Telemetry
+type: library
+releases:
+  - version: 0.3.0
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: f29cdbdd2a8137f30d0866f0e080045ccdd40583
+        tarball-base: pankoclient
