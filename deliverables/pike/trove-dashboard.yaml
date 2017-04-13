@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: trove
 type: horizon-plugin
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 071394c2fd6ca3bd9cb455e053d697c4f2b9a632
