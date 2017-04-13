@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: horizon
 type: service
+releases:
+  - version: 12.0.0.0b1
+    projects:
+      - repo: openstack/horizon
+        hash: 5d5dcf3e9efc615e203134b6be63d75710d6f630
