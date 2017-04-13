@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: watcher
 type: library
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 723d39cd65e554ac1a98f30dbee7db77ed346a04
