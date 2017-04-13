@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: manila
 type: service
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/manila
+        hash: 8026623c50f6f45eb4366dac2d36f6b1790ef273
