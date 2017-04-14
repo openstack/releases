@@ -1,0 +1,24 @@
+---
+launchpad: tempest
+team: Quality Assurance
+type: other
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-dev@lists.openstack.org
+include-pypi-link: yes
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/tempest
+        hash: aff9cc072bbbb222b09a3411b203c180b493eae8
+  - version: 12.1.0
+    projects:
+      - repo: openstack/tempest
+        hash: aaff550edab124a744b2888bcf7a7d70d3abfa0c
+  - version: 12.2.0
+    projects:
+      - repo: openstack/tempest
+        hash: c59270760a9e44f4c1f2c37bc3a1bb6222cc19b6
+  - version: 13.0.0
+    projects:
+      - repo: openstack/tempest
+        hash: ad37086e6a2aec99b81ec5c938782a6a917aeea1
