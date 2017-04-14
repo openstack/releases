@@ -5,3 +5,12 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: mistral
 type: service
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: 7dafe4488bcb439f881e8a0e0c91c28a31d13617
+      - repo: openstack/mistral-dashboard
+        hash: 15303de98ccab7177a778bc0dba070267d32711b
+      - repo: openstack/mistral-extra
+        hash: d53b7ccc41260427432ae9f971748b5ae00103fa
