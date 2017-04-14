@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: Quality Assurance
 type: library
+releases:
+  - version: 16.0.0
+    projects:
+      - repo: openstack/tempest
+        hash: 517c95fcb7f6eb61550039b6bb3c51d2019662ac
