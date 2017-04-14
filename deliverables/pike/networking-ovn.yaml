@@ -1,7 +1,13 @@
 ---
-include-pypi-link: true
 launchpad: networking-ovn
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/networking-ovn/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+include-pypi-link: true
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 8a3c12860ca3345c1a9d28d4c2a9bac3bdccb690

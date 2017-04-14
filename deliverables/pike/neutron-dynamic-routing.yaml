@@ -1,6 +1,12 @@
 ---
 launchpad: neutron
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+releases:
+  - version: 11.0.0.0b1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: abeee2df89ade38843e3f8226fe25f6d7791b0f8

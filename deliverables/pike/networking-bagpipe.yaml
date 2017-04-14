@@ -1,7 +1,13 @@
 ---
-include-pypi-link: true
 launchpad: networking-bagpipe
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+include-pypi-link: true
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 14afcf7aa8e4c34cf2e95496bcd3a3bd73a2c70b

@@ -1,7 +1,13 @@
 ---
-include-pypi-link: true
 launchpad: bgpvpn
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/unreleased.html
+type: other
 release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
-team: neutron
-type: other
+include-pypi-link: true
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 26a911a1e6d0334a401720ffc9ae28b8c66bddee
