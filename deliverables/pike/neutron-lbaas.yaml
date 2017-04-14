@@ -4,3 +4,8 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 team: octavia
 type: other
+releases:
+  - version: 11.0.0.0b1
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 8a4708044c6ca23bda728eddf7f14302463928fa
