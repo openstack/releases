@@ -4,3 +4,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 5c1fd542bea2328d5468464174dfcba2097f66cd

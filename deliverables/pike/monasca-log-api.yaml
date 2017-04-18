@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: service
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: ad7b42cbbbd8ea9d0ab6dc337e7e43cdc5b6ab95

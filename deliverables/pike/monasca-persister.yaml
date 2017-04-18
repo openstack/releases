@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: other
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 8158bbcac37aee651516a71e3f3711baed6b0bcc
