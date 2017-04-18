@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: kuryr
 type: other
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 2ea1ea1a2f942d7a29e10903ac2f1ea502a5a52e
