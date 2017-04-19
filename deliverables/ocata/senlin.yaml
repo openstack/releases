@@ -34,3 +34,12 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 3278a7fc8777a6153a11987a76b1ba498ecf20e3
+  - version: 3.0.1
+    projects:
+      - repo: openstack/senlin
+        hash: ce509a040a55bcf62729c2f3934cb7df2e90a40a
+    highlights: >
+      - Fixed health registry claim issue.
+      - Fixed cluster recover action which failed to start after check.
+      - Fixed stack tagging issue.
+      - Fixed nova availability zone get/set operation.
