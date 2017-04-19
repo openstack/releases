@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: other
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/monasca-common
+        hash: b6b6251a631490beb8c7e58db4307547d23bb4af

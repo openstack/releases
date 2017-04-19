@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: library
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 3a320ee5d14e343debf97a5d06b1af8f24ed8e02

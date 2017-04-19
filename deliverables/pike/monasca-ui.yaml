@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: horizon-plugin
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 84b4a08a58a40d321aafdcce2fee608856ecc37c

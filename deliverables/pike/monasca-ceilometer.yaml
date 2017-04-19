@@ -4,3 +4,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: cf0b84f79c7949133028274a1edd4b4f66044781

@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: monasca
 type: library
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 863407242c0d88f2b7b861db30d5ebd46201dfcc
