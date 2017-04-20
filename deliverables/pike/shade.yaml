@@ -13,3 +13,10 @@ releases:
     highlights: >
       Fixed a regression in heat stack normalization and added utility methods
       to add and remove security groups from a server.
+  - version: 1.20.0
+    projects:
+      - repo: openstack-infra/shade
+        hash: 0666bed25be4b054f933158cf89dbf03feec0832
+    highlights: >
+      Updated to deal with nova-network removal in novaclient, transitioning
+      more things to REST. Shade now sets User-Agent information properly.
