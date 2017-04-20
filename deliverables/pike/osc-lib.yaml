@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: OpenStackClient
 type: library
+releases:
+- version: 1.4.0
+  projects:
+  - repo: openstack/osc-lib
+    hash: c36c9a0600221d7464b9b9b35e5e39d709fce238
