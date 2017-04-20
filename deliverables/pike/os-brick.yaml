@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: cinder
 type: library
+releases:
+  - version: 1.12.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 962fce720c5322a9f9442b10b07853689ed6e190
