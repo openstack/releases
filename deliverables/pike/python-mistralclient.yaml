@@ -5,3 +5,11 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: mistral
 type: library
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 9e6ff999c16e9f6de8acf6f7d270e36cda932168
+    highlights: >
+        - Fix region support in CLI.
+        - Accept keystone session in client.
