@@ -2,10 +2,14 @@
 launchpad: tripleo-common
 release-model: cycle-trailing
 releases:
-- projects:
+- version: 7.0.0.0b1
+  projects:
   - hash: 6dfd35f95375c671af41558e0a74c07cdbb7dc4a
     repo: openstack/tripleo-common
-  version: 7.0.0.0b1
+- version: 7.0.0
+  projects:
+  - hash: 5d35b7d174bcdd5564f187551c18da01fee938d3
+    repo: openstack/tripleo-common
 send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other
