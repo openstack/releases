@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: zun
 type: library
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: fa61ba016e95d22d71eca565c32f4a4d8bdb7d22
