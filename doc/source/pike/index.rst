@@ -2,7 +2,7 @@
  Pike
 ======
 
-Projected Release Date: TBD
+Projected Release Date: Aug 30, 2017
 
 .. toctree::
    :maxdepth: 1
