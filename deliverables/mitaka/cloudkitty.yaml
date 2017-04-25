@@ -30,3 +30,9 @@ releases:
       Impacts:
         Database migrations need to be run to correct HashMap constraints and
         Gnocchi UUID size.
+  - version: 0.5.2
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 094056c3fc78cde3210c99ec7ea13fc2c10d67ff
+    highlights: >
+      - Fix some issue of JSON serialisation
