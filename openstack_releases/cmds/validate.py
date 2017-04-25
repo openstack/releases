@@ -37,6 +37,7 @@ from requests.packages import urllib3
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
+from openstack_releases import npmutils
 from openstack_releases import project_config
 from openstack_releases import puppetutils
 from openstack_releases import pythonutils
@@ -411,6 +412,23 @@ def validate_releases(deliverable_info, zuul_layout,
                                     'but is being tagged "%s"' % (
                                         project['repo'],
                                         puppet_ver,
+                                        release['version'],
+                                    )
+                                )
+
+                        # If this is a npm module, ensure
+                        # that the tag and metadata file
+                        # match.
+                        if npmutils.looks_like_a_module(workdir,
+                                                        project['repo']):
+                            npm_ver = npmutils.get_version(
+                                workdir, project['repo'])
+                            if npm_ver != release['version']:
+                                mk_error(
+                                    '%s package.json contains "%s" '
+                                    'but is being tagged "%s"' % (
+                                        project['repo'],
+                                        npm_ver,
                                         release['version'],
                                     )
                                 )
