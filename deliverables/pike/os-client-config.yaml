@@ -5,3 +5,11 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: OpenStackClient
 type: library
+releases:
+  - version: 1.27.0
+    projects:
+      - repo: openstack/os-client-config
+        hash: f6804f6b0dec9b1322ee996972489c1118f19f90
+    highlights: >
+      Add floating IP indicator, skip yaml loading flag, some microversion
+      support, vendor updates, User-Agent support
