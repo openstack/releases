@@ -40,3 +40,14 @@ releases:
         * Rehomed NeutronWorker class
         * Downgraded callback abortable event log to debug
         * Added flush_on_subtransaction=True to engine config
+  - version: 1.5.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: a73142e977b0f5c7afc8d1ab8e4bfce66c8db75c
+    highlights: |
+        * Rehomed extra_dhcp_opt api-def.
+        * Rehomed core resource api-defs.
+        * Rehomed ``is_port_trusted`` util function.
+        * hacking: enforce log messages not being translated.
+        * fwaas: added new protocols (DCCP, SCTP).
+        * fwaas: migrated from ``public`` attribute to ``shared``.
