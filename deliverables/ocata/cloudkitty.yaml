@@ -27,3 +27,12 @@ releases:
       - Fix serialization problem in the collectors.
       - Fix many typos in the documentation.
       - Code quality improvement.
+  - version: 5.0.1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: d3604cba7093b7ba5a61529635e1cc8d8318b232
+    highlights: >
+      - Fix usage of configuration period.
+      - Fix the new usage of gnocchi.
+      - Fix the resource_type on search done by gnocchiclient.
+      - Fix gnocchi metric collection.
