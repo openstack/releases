@@ -6,22 +6,26 @@ type: other
 release-model: cycle-trailing
 send-announcements-to: openstack-announce@lists.openstack.org
 branches:
-  - name: stable/ocata
-    location: 10.3.0
+- name: stable/ocata
+  location: 10.3.0
 releases:
-  - version: 10.0.0
-    projects:
-      - repo: openstack/puppet-barbican
-        hash: 22dca9e8a35656e919957f0db9caa59478b6f8ac
-  - version: 10.1.0
-    projects:
-      - repo: openstack/puppet-barbican
-        hash: 868a799734aaaa39d1ba7f5248cdccc818bd94bc
-  - version: 10.2.0
-    projects:
-      - repo: openstack/puppet-barbican
-        hash: ae3f75130a5fdcf2d9cfc23704e206b93dd69852
-  - version: 10.3.0
-    projects:
-      - repo: openstack/puppet-barbican
-        hash: 84328e810f62829d17e5aa38aa37d229e52361a3
+- version: 10.0.0
+  projects:
+  - repo: openstack/puppet-barbican
+    hash: 22dca9e8a35656e919957f0db9caa59478b6f8ac
+- version: 10.1.0
+  projects:
+  - repo: openstack/puppet-barbican
+    hash: 868a799734aaaa39d1ba7f5248cdccc818bd94bc
+- version: 10.2.0
+  projects:
+  - repo: openstack/puppet-barbican
+    hash: ae3f75130a5fdcf2d9cfc23704e206b93dd69852
+- version: 10.3.0
+  projects:
+  - repo: openstack/puppet-barbican
+    hash: 84328e810f62829d17e5aa38aa37d229e52361a3
+- version: 10.3.1
+  projects:
+  - repo: openstack/puppet-barbican
+    hash: 02d93cb084d54d2cf123c62d7f2189334340d511
