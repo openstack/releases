@@ -1,31 +1,35 @@
 ---
-launchpad: tripleo-common
-team: tripleo
-release-notes: https://docs.openstack.org/releasenotes/tripleo-common/ocata.html
-type: other
-release-model: cycle-trailing
-send-announcements-to: openstack-announce@lists.openstack.org
 branches:
-  - name: stable/ocata
-    location: 5.8.0
+- location: 5.8.0
+  name: stable/ocata
+launchpad: tripleo-common
+release-model: cycle-trailing
+release-notes: https://docs.openstack.org/releasenotes/tripleo-common/ocata.html
 releases:
-  - version: 5.5.0
-    projects:
-      - repo: openstack/tripleo-common
-        hash: 6b29e69077c3a4acb78c0d024b6c76b85de25a58
-  - version: 5.6.0
-    projects:
-      - repo: openstack/tripleo-common
-        hash: 8affc8aafecc74c49af6593e4ec9ce1723845925
-  - version: 5.7.0
-    projects:
-      - repo: openstack/tripleo-common
-        hash: c7472c13d690374987cbc93d97249bec35d5810d
-  - version: 5.8.0
-    projects:
-      - repo: openstack/tripleo-common
-        hash: 23977cd4d80c6d5427ea579fb330c1b8ec302964
-  - version: 6.0.0
-    projects:
-      - repo: openstack/tripleo-common
-        hash: 88a547f962b0b4f9690936a82a862feaf7b8f562
+- projects:
+  - hash: 6b29e69077c3a4acb78c0d024b6c76b85de25a58
+    repo: openstack/tripleo-common
+  version: 5.5.0
+- projects:
+  - hash: 8affc8aafecc74c49af6593e4ec9ce1723845925
+    repo: openstack/tripleo-common
+  version: 5.6.0
+- projects:
+  - hash: c7472c13d690374987cbc93d97249bec35d5810d
+    repo: openstack/tripleo-common
+  version: 5.7.0
+- projects:
+  - hash: 23977cd4d80c6d5427ea579fb330c1b8ec302964
+    repo: openstack/tripleo-common
+  version: 5.8.0
+- projects:
+  - hash: 88a547f962b0b4f9690936a82a862feaf7b8f562
+    repo: openstack/tripleo-common
+  version: 6.0.0
+- projects:
+  - hash: f2a78d4b03fe29defc02783f6aab213f848c3c2e
+    repo: openstack/tripleo-common
+  version: 6.1.0
+send-announcements-to: openstack-announce@lists.openstack.org
+team: tripleo
+type: other
