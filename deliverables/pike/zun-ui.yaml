@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: zun
 type: horizon-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: cbd590935dcc8ce1896809bf7b83f21442b8e675
