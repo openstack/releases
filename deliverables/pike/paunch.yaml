@@ -1,0 +1,11 @@
+---
+launchpad: paunch
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-announce@lists.openstack.org
+team: tripleo
+type: other
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/paunch
+        hash: 508468b84da9ad95bfbcb853d0b2d1e77ee1c538
