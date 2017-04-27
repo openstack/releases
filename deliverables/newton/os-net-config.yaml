@@ -1,35 +1,39 @@
 ---
+branches:
+- location: 5.0.0
+  name: stable/newton
 launchpad: os-net-config
+release-model: cycle-with-milestones
+releases:
+- projects:
+  - hash: 60475755e3750b2d2e047578a68c8c2327bf50d7
+    repo: openstack/os-net-config
+  version: 5.0.0.0b1
+- projects:
+  - hash: 6bb8412ef3d3f163d91f2884081b743f07a78f18
+    repo: openstack/os-net-config
+  version: 5.0.0.0b2
+- projects:
+  - hash: f79d534c3e130bb539cf7ccb1d3f9586e922b9a7
+    repo: openstack/os-net-config
+  version: 5.0.0.0b3
+- projects:
+  - hash: 35823f261506f9256c1a227dd4a2770a0508c62d
+    repo: openstack/os-net-config
+  version: 5.0.0.0rc2
+- diff-start: 0.2.4
+  projects:
+  - hash: 35823f261506f9256c1a227dd4a2770a0508c62d
+    repo: openstack/os-net-config
+  version: 5.0.0
+- projects:
+  - hash: 594d3f4692bf158b041709b03cc17789698ae6f1
+    repo: openstack/os-net-config
+  version: 5.1.0
+- projects:
+  - hash: 3471ff7ba99bec5310a44e9363eafd4709d89026
+    repo: openstack/os-net-config
+  version: 5.2.0
+send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other
-release-model: cycle-with-milestones
-send-announcements-to: openstack-announce@lists.openstack.org
-branches:
-  - name: stable/newton
-    location: 5.0.0
-releases:
-  - version: 5.0.0.0b1
-    projects:
-      - repo: openstack/os-net-config
-        hash: 60475755e3750b2d2e047578a68c8c2327bf50d7
-  - version: 5.0.0.0b2
-    projects:
-      - repo: openstack/os-net-config
-        hash: 6bb8412ef3d3f163d91f2884081b743f07a78f18
-  - version: 5.0.0.0b3
-    projects:
-      - repo: openstack/os-net-config
-        hash: f79d534c3e130bb539cf7ccb1d3f9586e922b9a7
-  - version: 5.0.0.0rc2
-    projects:
-      - repo: openstack/os-net-config
-        hash: 35823f261506f9256c1a227dd4a2770a0508c62d
-  - version: 5.0.0
-    diff-start: 0.2.4
-    projects:
-      - repo: openstack/os-net-config
-        hash: 35823f261506f9256c1a227dd4a2770a0508c62d
-  - version: 5.1.0
-    projects:
-      - repo: openstack/os-net-config
-        hash: 594d3f4692bf158b041709b03cc17789698ae6f1
