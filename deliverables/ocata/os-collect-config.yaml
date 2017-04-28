@@ -1,27 +1,31 @@
 ---
+branches:
+- location: 6.0.0.0rc1
+  name: stable/ocata
 launchpad: os-collect-config
+release-model: cycle-with-milestones
+releases:
+- projects:
+  - hash: e8e2f3d5f2ebc6c08383bf98e5e27c689fc6e7a1
+    repo: openstack/os-collect-config
+  version: 6.0.0.0b1
+- projects:
+  - hash: bf7cc362d3928aedc2b48f1ffe871436b47b9483
+    repo: openstack/os-collect-config
+  version: 6.0.0.0b2
+- projects:
+  - hash: cb846967f7d8e1f0a14f53e747ea5623e0a559d8
+    repo: openstack/os-collect-config
+  version: 6.0.0.0rc1
+- diff-start: 5.0.0
+  projects:
+  - hash: cb846967f7d8e1f0a14f53e747ea5623e0a559d8
+    repo: openstack/os-collect-config
+  version: 6.0.0
+- projects:
+  - hash: 386cedabf7f38e2f8324b31d566de45457a5a04f
+    repo: openstack/os-collect-config
+  version: 6.1.0
+send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other
-release-model: cycle-with-milestones
-send-announcements-to: openstack-announce@lists.openstack.org
-branches:
-  - name: stable/ocata
-    location: 6.0.0.0rc1
-releases:
-  - version: 6.0.0.0b1
-    projects:
-      - repo: openstack/os-collect-config
-        hash: e8e2f3d5f2ebc6c08383bf98e5e27c689fc6e7a1
-  - version: 6.0.0.0b2
-    projects:
-      - repo: openstack/os-collect-config
-        hash: bf7cc362d3928aedc2b48f1ffe871436b47b9483
-  - version: 6.0.0.0rc1
-    projects:
-      - repo: openstack/os-collect-config
-        hash: cb846967f7d8e1f0a14f53e747ea5623e0a559d8
-  - version: 6.0.0
-    diff-start: 5.0.0
-    projects:
-      - repo: openstack/os-collect-config
-        hash: cb846967f7d8e1f0a14f53e747ea5623e0a559d8
