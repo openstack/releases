@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-announce@lists.openstack.org
 team: zun
 type: service
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/zun
+        hash: 1f76d65b77021841733f38d6efefee8664a23762
