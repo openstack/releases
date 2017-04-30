@@ -6,7 +6,7 @@ release-model: cycle-with-milestones
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: no
 artifact-link-mode: tarball
-release-notes: http://docs.openstack.org/releasenotes/glance/newton.html
+release-notes: https://docs.openstack.org/releasenotes/glance/newton.html
 branches:
   - name: stable/newton
     location: 13.0.0.0rc1
