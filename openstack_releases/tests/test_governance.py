@@ -51,7 +51,7 @@ Release Management:
       repos:
         - openstack/reno
       docs:
-        contributor: http://docs.openstack.org/developer/reno/
+        contributor: https://docs.openstack.org/developer/reno/
     specs-cookiecutter:
       repos:
         - openstack-dev/specs-cookiecutter

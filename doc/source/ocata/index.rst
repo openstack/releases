@@ -11,9 +11,9 @@ Documentation:
 * `Ocata Manuals`_
 * `Ocata Documentation Changes`_
 
-.. _Ocata Manuals: http://docs.openstack.org/ocata/
+.. _Ocata Manuals: https://docs.openstack.org/ocata/
 
-.. _Ocata Documentation Changes: http://docs.openstack.org/releasenotes/openstack-manuals/ocata.html
+.. _Ocata Documentation Changes: https://docs.openstack.org/releasenotes/openstack-manuals/ocata.html
 
 
 .. deliverable::

@@ -11,9 +11,9 @@ Documentation:
 * `Newton Manuals`_
 * `Newton Documentation Changes`_
 
-.. _Newton Manuals: http://docs.openstack.org/newton/
+.. _Newton Manuals: https://docs.openstack.org/newton/
 
-.. _Newton Documentation Changes: http://docs.openstack.org/releasenotes/openstack-manuals/newton.html
+.. _Newton Documentation Changes: https://docs.openstack.org/releasenotes/openstack-manuals/newton.html
 
 .. deliverable::
    :series: newton

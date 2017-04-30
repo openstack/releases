@@ -459,10 +459,10 @@ be described by ``deliverables/mitaka/neutron.yaml`` containing:
    ---
    launchpad: neutron
    release-notes:
-     openstack/neutron: http://docs.openstack.org/releasenotes/neutron/mitaka.html
-     openstack/neutron-lbaas: http://docs.openstack.org/releasenotes/neutron-lbaas/mitaka.html
-     openstack/neutron-fwaas: http://docs.openstack.org/releasenotes/neutron-fwaas/mitaka.html
-     openstack/neutron-vpnaas: http://docs.openstack.org/releasenotes/neutron-vpnaas/mitaka.html
+     openstack/neutron: https://docs.openstack.org/releasenotes/neutron/mitaka.html
+     openstack/neutron-lbaas: https://docs.openstack.org/releasenotes/neutron-lbaas/mitaka.html
+     openstack/neutron-fwaas: https://docs.openstack.org/releasenotes/neutron-fwaas/mitaka.html
+     openstack/neutron-vpnaas: https://docs.openstack.org/releasenotes/neutron-vpnaas/mitaka.html
    releases:
     - version: 8.0.0
       projects:

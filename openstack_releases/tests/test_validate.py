@@ -209,7 +209,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         warnings = []
         errors = []
         validate.validate_release_notes(
-            {'release-notes': 'http://docs.openstack.org/no-such-page'},
+            {'release-notes': 'https://docs.openstack.org/no-such-page'},
             warnings.append,
             errors.append,
         )
@@ -221,7 +221,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         errors = []
         validate.validate_release_notes(
             {'release-notes':
-             'http://docs.openstack.org/releasenotes/oslo.config'},
+             'https://docs.openstack.org/releasenotes/oslo.config'},
             warnings.append,
             errors.append,
         )
@@ -234,7 +234,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             {
                 'release-notes': {
-                    'openstack/releases': 'http://docs.openstack.org/no-such-page',
+                    'openstack/releases': 'https://docs.openstack.org/no-such-page',
                 }
             },
             warnings.append,
@@ -249,7 +249,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             {
                 'release-notes': {
-                    'openstack/releases': 'http://docs.openstack.org/releasenotes/oslo.config',
+                    'openstack/releases': 'https://docs.openstack.org/releasenotes/oslo.config',
                 }
             },
             warnings.append,
@@ -976,7 +976,7 @@ class TestValidateNewReleases(base.BaseTestCase):
           repos:
             - openstack/reno
           docs:
-            contributor: http://docs.openstack.org/developer/reno/
+            contributor: https://docs.openstack.org/developer/reno/
         specs-cookiecutter:
           repos:
             - openstack-dev/specs-cookiecutter

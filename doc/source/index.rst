@@ -107,9 +107,9 @@ updates.
      *
      *
 
-.. _Phase I -- Latest release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
-.. _Phase II -- Maintained release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
-.. _Phase III -- Legacy release: http://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Phase I -- Latest release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Phase II -- Maintained release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Phase III -- Legacy release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
 
 .. toctree::
    :glob:
@@ -193,7 +193,7 @@ date ranges during which each key was in general use.
 .. _`key 0xc96bfb160752606daa0de2fa05eb5792c876df9a`: _static/0xc96bfb160752606daa0de2fa05eb5792c876df9a.txt
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xc96bfb160752606daa0de2fa05eb5792c876df9a&fingerprint=on
 
-.. _`centrally-managed OpenPGP keys`: http://docs.openstack.org/infra/system-config/signing.html
+.. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
 
 References

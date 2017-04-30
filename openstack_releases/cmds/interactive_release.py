@@ -35,7 +35,7 @@ from tqdm import tqdm
 from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
-NOTES_URL_TPL = 'http://docs.openstack.org/releasenotes/%s/%s.html'
+NOTES_URL_TPL = 'https://docs.openstack.org/releasenotes/%s/%s.html'
 RELEASE_INCREMENTS = {
     'bugfix': (0, 0, 1),
     'feature': (0, 1, 0),

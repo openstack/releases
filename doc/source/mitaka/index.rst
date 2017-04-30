@@ -11,9 +11,9 @@ Documentation:
 * `Mitaka Manuals`_
 * `Mitaka Documentation Changes`_
 
-.. _Mitaka Manuals: http://docs.openstack.org/mitaka/
+.. _Mitaka Manuals: https://docs.openstack.org/mitaka/
 
-.. _Mitaka Documentation Changes: http://docs.openstack.org/releasenotes/openstack-manuals/mitaka.html
+.. _Mitaka Documentation Changes: https://docs.openstack.org/releasenotes/openstack-manuals/mitaka.html
 
 .. deliverable::
    :series: mitaka
