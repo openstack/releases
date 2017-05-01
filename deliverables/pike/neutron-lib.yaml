@@ -51,3 +51,9 @@ releases:
         * hacking: enforce log messages not being translated.
         * fwaas: added new protocols (DCCP, SCTP).
         * fwaas: migrated from ``public`` attribute to ``shared``.
+  - version: 1.6.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 449f079b338b817ea51b8cb44ed6d9106fed1bbc
+    highlights: |
+        * Rehomed v2 API attributes.
