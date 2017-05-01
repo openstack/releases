@@ -34,3 +34,9 @@ releases:
         - Several bug fixes and support added for new microversions. The
           highest supported microversion in this release is 2.41.
         - Add profiling support for novaclient.
+  - version: 7.1.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 0063ebce2fd8d6259c128f5d161370d40296d510
+    highlights: >
+        - Routine bug fixes.
