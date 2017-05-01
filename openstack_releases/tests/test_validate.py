@@ -1694,3 +1694,57 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
+
+    def test_beta_1(self):
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/automaton.yaml'
+        os.makedirs(series_a_dir)
+        deliverable_data = textwrap.dedent('''
+        ---
+        releases:
+          - version: 1.5.1.0b1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(deliverable_data)
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_series_first(
+            deliverable_info,
+            'a',
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_beta_2(self):
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/automaton.yaml'
+        os.makedirs(series_a_dir)
+        deliverable_data = textwrap.dedent('''
+        ---
+        releases:
+          - version: 1.5.1.0b2
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(deliverable_data)
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_series_first(
+            deliverable_info,
+            'a',
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
