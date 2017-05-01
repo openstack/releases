@@ -80,3 +80,9 @@ releases:
           Server API after microversion 2.36. The CLI will default to 'auto' if
           nothing is specified.
         - Routine dependency updates.
+  - version: 6.0.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 9c731d51e3d7417cd9ff006d884ba5e57d8bdea6
+    highlights: >
+        - Routine bug fixes.
