@@ -1,0 +1,12 @@
+---
+include-pypi-link: yes
+launchpad: heat-translator
+release-model: cycle-with-intermediary
+team: heat
+type: library
+send-announcements-to: openstack-announce@lists.openstack.org
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/heat-translator
+        hash: eddcaad0775521a19721964f745bf3e003072279
