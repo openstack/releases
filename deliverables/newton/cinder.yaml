@@ -8,6 +8,9 @@ release-notes: https://docs.openstack.org/releasenotes/cinder/newton.html
 branches:
   - name: stable/newton
     location: 9.0.0.0rc1
+  - name: driverfixes/newton
+    location:
+      openstack/cinder: 08bfc7d817f313451e619b535299121b686d7bd8
 releases:
   - version: 9.0.0.0b1
     projects:
