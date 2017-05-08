@@ -66,3 +66,9 @@ releases:
     highlights: >
       - Fix for CVE-2017-7214.
       - Several bug fixes.
+  - version: 14.0.6
+    projects:
+      - repo: openstack/nova
+        hash: 0c56c62878138c3c3d2dfc6827e4cf8f34953bea
+    highlights: >
+      - Bug fixes.
