@@ -72,3 +72,9 @@ releases:
       - Contains fixes for regression bugs introduced in Ocata. Specifically
         https://bugs.launchpad.net/nova/+bug/1678326 and
         https://bugs.launchpad.net/nova/+bug/1675570.
+  - version: 15.0.4
+    projects:
+      - repo: openstack/nova
+        hash: 506465a027dd1ba1c90949dc58297edae32da7e4
+    highlights: >
+      - Contains fixes for regression bugs introduced in Ocata.
