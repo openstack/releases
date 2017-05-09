@@ -1,0 +1,11 @@
+---
+launchpad: patrole
+release-model: cycle-with-intermediary
+send-announcements-to: openstack-dev@lists.openstack.org
+team: Quality Assurance
+type: other
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/patrole
+        hash: 13ff694f76c0f528552e0b6d1b70cb12e370e26d
