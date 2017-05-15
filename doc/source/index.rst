@@ -39,7 +39,7 @@ updates.
    - * :doc:`newton/index`
      * `Phase II -- Maintained release`_
      * 2016-10-06
-     * `Phase III -- Legacy release`_ on 2017-08-28
+     * `Phase III -- Legacy release`_ on 2017-10-09
      * 2017-10-11
    - * :doc:`mitaka/index`
      * `Phase III -- Legacy release`_
