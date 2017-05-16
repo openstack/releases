@@ -49,3 +49,10 @@ releases:
     projects:
       - repo: openstack/os-testr
         hash: 07e0b06f88b588aa579660264c78fd20fc9e0eab
+  - version: 0.8.2
+    projects:
+      - repo: openstack/os-testr
+        hash: e84d06292b3ab0600a0aeaf85dfb012652ec0b2e
+    highlights: |
+        Remove babel from requirements since its not
+        used by os-testr, and update to latest g-r.
