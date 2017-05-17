@@ -82,7 +82,7 @@ series_data = {}
 os.chdir(repo)
 
 # Retrieve the existing tags
-tags_out = subprocess.check_output(['git', 'tag'])
+tags_out = subprocess.check_output(['git', 'tag']).decode('utf-8')
 tags = [t.strip() for t in tags_out.splitlines() if t.strip()]
 
 repo_namespace = os.path.basename(os.path.dirname(repo))
@@ -98,7 +98,7 @@ for tag in tags:
     try:
         show_output = subprocess.check_output([
             'git', 'show', '--no-patch', '--pretty=%H %ct', tag,
-        ], stderr=dev_null)
+        ], stderr=dev_null).decode('utf-8')
         interesting = show_output.rstrip().splitlines()[-1]
         print(tag + ' ' + interesting)
         sha, ignore, datestr = interesting.partition(' ')
