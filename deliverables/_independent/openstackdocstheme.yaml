@@ -106,3 +106,9 @@ releases:
            Update OpenStack logo.
            Update header to match OpenStack web properties.
            Includes Login in header.
+  - version: 1.9.0
+    projects:
+      - repo: openstack/openstackdocstheme
+        hash: 3d4e8cefe9c89399f78fd2bb60dd33adc954d135
+        highlights: >
+           Update links in header to avoid 404 errors.
