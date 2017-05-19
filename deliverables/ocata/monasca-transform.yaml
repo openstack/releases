@@ -1,0 +1,14 @@
+---
+artifact-link-mode: none
+launchpad: monasca
+release-model: cycle-with-intermediary
+team: monasca
+type: other
+branches:
+  - name: stable/ocata
+    location: 0.9.0
+releases:
+  - version: 0.9.0
+    projects:
+      - repo: openstack/monasca-transform
+        hash: 8b1819b0968b1fc29dcced4d57620aa06f7d2ecf
