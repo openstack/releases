@@ -42,3 +42,22 @@ releases:
         hash: 52c683d51ee9ade373256135551057af41d09249
       - repo: openstack/freezer-dr
         hash: 170d63ae764aa44845aec08013e7d7c6a2b08053
+  - version: 4.0.1
+    projects:
+      - repo: openstack/freezer
+        hash: 527dac7e66d8e87acdd58541a6a522e320339c0f
+      - repo: openstack/freezer-api
+        hash: 7cfaeaf797846af707d13258335854c90b01bd2f
+      - repo: openstack/freezer-dr
+        hash: 3dacdc86dc5a54d340df0ed92c21789f22cef333
+    highlights: >
+      - Prevent clients from re-registering itself many times
+      - Fix session_tag flag
+      - Force swift storage to get a new client
+      - Fix running multiple jobs at the same time
+      - Fix backups of nameless volumes
+      - Fix ssh connection issue while restore
+      - Fix cinder restore issue
+      - Fix max_segment_size parameter
+      - Fix SSL connections
+      - Fix the stream generator
