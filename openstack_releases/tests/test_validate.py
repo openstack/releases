@@ -617,6 +617,30 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
+    def test_hash_from_master_used_after_default_branch_should_exist_but_does_not(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '1.0.0',
+                 'projects': [
+                     {'repo': 'openstack/releases',
+                      'hash': '8eea82428995b8f3354c0a75351fe95bbbb1135a'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'austin',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
     def test_not_descendent(self):
         deliverable_info = {
             'artifact-link-mode': 'none',
