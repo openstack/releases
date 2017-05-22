@@ -108,7 +108,7 @@ function clone_repo {
         branch="master"
     fi
     output=$({ zuul-cloner --branch "$branch" git://git.openstack.org $repo \
-               && (cd $repo && git review -s && git remote -v update \
+               && (cd $repo && git remote -v update \
                    && git fetch -v --tags); } 2>&1)
     _retval=$?
     if [ $_retval -ne 0 ] ; then
