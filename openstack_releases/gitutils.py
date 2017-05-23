@@ -114,24 +114,56 @@ def sha_for_tag(workdir, repo, version):
     return actual_sha
 
 
+def _filter_branches(output):
+    "Strip garbage from branch list output"
+    return [
+        n
+        for n in output.strip().split()
+        if '/' in n or n == 'master'
+    ]
+
+
 def check_branch_sha(workdir, repo, series, master, sha):
-    "Check if the SHA is in the targeted branch."
+    """Check if the SHA is in the targeted branch.
+
+    The SHA must appear on a stable/$series branch (if it exists) or
+    master (if stable/$series does not exist). It is up to the
+    reviewer to verify that releases from master are in a sensible
+    location relative to other existing branches.
+
+    We do not compare $series against the existing branches ordering
+    because that would prevent us from retroactively creating a stable
+    branch for a project after a later stable branch is created (i.e.,
+    if stable/N exists we could not create stable/N-1).
+
+    """
     remote_match = 'remotes/origin/stable/%s' % series
-    if series == master:
-        existing = get_branches(workdir, repo)
-        if remote_match not in existing:
-            # The stable branch for the series on master does not
-            # exist in this repository, yet, so look for the commit on
-            # the master branch.
-            remote_match = 'master'
     try:
-        output = subprocess.check_output(
-            ['git', 'branch', '-a', '--contains', sha],
-            cwd=os.path.join(workdir, repo),
-        ).decode('utf-8').strip()
-        for branch in output.split():
-            if branch == remote_match:
-                return True
+        containing_branches = _filter_branches(
+            subprocess.check_output(
+                ['git', 'branch', '-a', '--contains', sha],
+                cwd=os.path.join(workdir, repo),
+            ).decode('utf-8')
+        )
+        # If the patch is on the named branch, everything is fine.
+        if remote_match in containing_branches:
+            return True
+        # If the expected branch does not exist yet, this may be a
+        # late release attempt to create that branch or just a project
+        # that hasn't branched, yet, and is releasing from master for
+        # that series. Allow the release, as long as it is on the
+        # master branch.
+        all_branches = _filter_branches(
+            subprocess.check_output(
+                ['git', 'branch', '-a'],
+                cwd=os.path.join(workdir, repo),
+            ).decode('utf-8')
+        )
+        if (remote_match not in all_branches) and ('master' in containing_branches):
+            return True
+        # At this point we know the release is not from the required
+        # branch and it is not from master, which means it is the
+        # wrong branch and should not be allowed.
         return False
     except subprocess.CalledProcessError as e:
         print('ERROR checking SHA on branch: %s [%s]' % (e, e.output.strip()))
