@@ -20,3 +20,10 @@ releases:
     highlights: >
       Updated to deal with nova-network removal in novaclient, transitioning
       more things to REST. Shade now sets User-Agent information properly.
+  - version: 1.21.0
+    projects:
+      - repo: openstack-infra/shade
+        hash: ba0e9451e664743dbc5d24307ca5a3829ee3e91b
+    highlights: >
+      Removed neutronclient and cinderclient as dependencies. Also fixed some
+      issues with image version discovery and servers with two private IPs.
