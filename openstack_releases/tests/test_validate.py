@@ -1139,6 +1139,29 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    def test_badly_formatted_name(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: ocata
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
     def test_version_not_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
@@ -1315,6 +1338,31 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    def test_badly_formatted_name(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: abc
+            location:
+               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_feature_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
     def test_location_no_such_sha(self):
         deliverable_data = textwrap.dedent('''
         releases:
@@ -1445,6 +1493,31 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+    def test_badly_formatted_name(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: austin
+            location:
+               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
 
     def test_location_no_such_sha(self):
         deliverable_data = textwrap.dedent('''
