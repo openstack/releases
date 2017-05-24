@@ -3,8 +3,15 @@ launchpad: puppet-pacemaker
 team: Puppet OpenStack
 release-model: independent
 type: other
+branches:
+  - name: stable/0.6.x
+    location: 0.6.0
 releases:
   - version: 0.5.0
     projects:
       - repo: openstack/puppet-pacemaker
         hash: d639da88b34d834b76d8dbe7f6662cb6d6d388d7
+  - version: 0.6.0
+    projects:
+      - repo: openstack/puppet-pacemaker
+        hash: 05cb65f467153315ce7c0957feba5b0b26dda80b
