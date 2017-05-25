@@ -31,7 +31,7 @@ import os
 import subprocess
 import sys
 
-# From https://wiki.openstack.org/wiki/Releases
+# From https://releases.openstack.org
 RELEASES = [
     ('austin', datetime.datetime(2010, 10, 21)),
     ('bexar', datetime.datetime(2011, 2, 3)),
@@ -48,6 +48,7 @@ RELEASES = [
     ('mitaka', datetime.datetime(2016, 4, 7)),
     ('newton', datetime.datetime(2016, 10, 6)),
     ('ocata', datetime.datetime(2017, 2, 22)),
+    ('pike', datetime.datetime(2017, 9, 2)),
 ]
 
 
