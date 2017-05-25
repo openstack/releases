@@ -355,6 +355,26 @@ The top level of a deliverable file is a mapping with keys:
 ``releases``
   A list of the releases for the deliverable.
 
+``stable-branch-type``
+  This (optional) key sets the validation for the location associated
+  with each stable branch.
+
+  ``std``
+    Default: Requires stable branches to be created from tagged
+    releases. This is the correct branch type for most projects.
+
+    The location must be either an existing version tag or the most
+    recently added version number under the releases list (allowing a
+    tag and branch to be submitted together).  All repositories
+    associated with the version (as identified by the deliverable
+    file) will be branched from that version using the name given.
+
+  ``tagless``
+    This mode requires stable branch locations to be a mapping between
+    repository name and an existing commit, specified by the
+    hash. This mode should only be used for projects that do not tag
+    releases, such as devstack and grenade.
+
 ``branches``
   A list of the branches for the deliverable.
 
@@ -393,12 +413,8 @@ Each ``branch`` entry is a mapping with keys:
 ``location``
   The location value depends on the name.
 
-  If a branch name starts with stable/ then the location must be
-  either an existing version tag or the most recently added version
-  number under the releases list (allowing a tag and branch to be
-  submitted together).  All repositories associated with the version
-  (as identified by the deliverable file) will be branched from that
-  version using the name given.
+  If a branch name starts with stable/ then the location value depends
+  on the ``stable-branch-type`` setting.
 
   If a branch name starts with feature/ then the location must be a
   mapping between the target repository name and the SHA of a commit

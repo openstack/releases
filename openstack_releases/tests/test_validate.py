@@ -1234,6 +1234,128 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    def test_explicit_stable_branch_type(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: std
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_explicit_stable_branch_type_invalid(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: unknown
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_tagless_stable_branch_type_bad_location_type(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: tagless
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_tagless_stable_branch_type_bad_location_value(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: tagless
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location:
+              openstack/automaton: 1.5.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_tagless_stable_branch_type(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: tagless
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/ocata
+            location:
+              openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yaml.safe_load(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
 
 class TestValidateFeatureBranches(base.BaseTestCase):
 
