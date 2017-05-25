@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: ironic
 type: other
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 73a884fc41c3d28f56006db6f186bcdb1c2c97df
