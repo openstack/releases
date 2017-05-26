@@ -78,3 +78,17 @@ releases:
         hash: 506465a027dd1ba1c90949dc58297edae32da7e4
     highlights: >
       - Contains fixes for regression bugs introduced in Ocata.
+  - version: 15.0.5
+    projects:
+      - repo: openstack/nova
+        hash: 8b2f7d38ccdbbc6533930b8d4eeff4e2ff79176c
+    highlights: >
+      - Uncaps pbr in requirements.txt.
+      - High severity bug fixes:
+
+        * Bug 1673613: Properly handles special characters in database
+          connection URL when setting up cells v2 (optional in Newton).
+        * Bug 1691545: Fixes a performance regression which caused
+          high consumption of memory due to database connection switching.
+
+        See the release notes for more details.
