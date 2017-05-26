@@ -13,3 +13,9 @@ releases:
     highlights: |-
       * Added CLI for BGP VPN commands
       * Dropped Python3.4 support
+  - version: 6.3.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: ba535c695007c0b4cc6dd6e6abc252a866104bb9
+    highlights: |-
+      * Added ``global_request_id`` parameter
