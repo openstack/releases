@@ -52,3 +52,18 @@ releases:
         hash: 08bf51e99558af28e7a9ed231be9c1daeb2b76c2
     highlights: |-
       * Skip native DHCP notifications on status change
+  - version: 10.0.2
+    projects:
+      - repo: openstack/neutron
+        hash: e664e2ff04c6f34aa71a2e584c6832647ed628ed
+    highlights: |-
+      * Multiple database layer performance optimizations
+      * Fixed crash when starting Neutron OVS Agent on Windows
+      * Remove stale floating IP addresses from rfp devices
+      * Set MTU on tap devices in Linux Bridge agent
+      * Stop making IP-specific provider rules in SG code
+      * Clear QoS rules from ports without a qos policy
+      * Enforce port QoS policies for all ports
+      * Remove minimum_bandwidth_rule from rules supported by Linuxbridge agent
+      * Send both gratuitous ARP REQUESTs and REPLYs
+      * Allow port security updates even without security-groups enabled
