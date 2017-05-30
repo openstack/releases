@@ -155,7 +155,10 @@ Milestone-3
    summaries of the content of the release so that those are merged
    before their first release candidate.
 
-6. Freeze all library releases except for release-critical bugs.
+6. Freeze all cycle-based library releases except for release-critical
+   bugs. Independently-released libraries may still be released, but
+   constraint or requirement changes will be held until after the freeze
+   period.
 
 7. Include a reminder about completing the responses to community-wide
    goals in the countdown email.
