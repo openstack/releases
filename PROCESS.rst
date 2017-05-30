@@ -30,8 +30,9 @@ Between Summit and Milestone-1
 3. Encourage liaisons to ensure that their release model is set
    properly before the first milestone.
 
-4. Start weekly countdown emails, sent on Thursday with information
-   needed about the following week (deadlines, instructions, etc.).
+4. Start weekly countdown emails, sent on Thursday afternoon (US)
+   or Friday morning (EU/APAC) with information needed about the
+   following week (deadlines, instructions, etc.).
 
 5. The week before Milestone-1, include a reminder about completing
    the responses to community-wide goals in the countdown email.
@@ -50,9 +51,17 @@ Between Milestone-1 and Milestone-2
 1. Follow up with PTLs and liaisons for projects that missed the first
    milestone.
 
-2. The week before Milestone-2 include a reminder of the deadline in
-   the countdown emails. Also remind release:independent and
-   release:cycle-with-intermediary projects to prepare releases.
+2. Use the countdown emails to list which projects have not done any
+   stable release yet, to encourage them to do so.
+
+3. Use the countdown emails to list which intermediary-released (or
+   independent) projects haven't done a release yet. Remind teams that
+   we need at least one library release before milestone-2.
+
+4. The week before Milestone-2 include a reminder of the deadline in
+   the countdown emails. Mention the MembershipFreeze deadline as well.
+   List teams that still haven't done a library release yet and remind
+   them of the milestone-2 deadline.
 
 Milestone-2
 ===========
@@ -62,13 +71,16 @@ n/a
 Between Milestone-2 and Milestone-3
 ===================================
 
-1. In the countdown email immediately after Milestone-2, include a
+1. Follow up with PTLs and liaisons for projects that missed the second
+   milestone, or still haven't done their library releases yet.
+
+2. In the countdown email immediately after Milestone-2, include a
    reminder about the various freezes that happen around Milestone-3.
 
-2. Two weeks before Milestone-3, include a reminder about the final
+3. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
 
-3. Two weeks before Milestone-3, set up the gerrit ACLs for the
+4. Two weeks before Milestone-3, set up the gerrit ACLs for the
    yet-to-be-created stable/$series branches.
 
    (The timing for this is meant to postpone it until all projects
