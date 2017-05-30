@@ -566,7 +566,13 @@ def validate_stable_branches(deliverable_info, series_name,
         if not d.startswith('_')
     ))
     for branch in branches:
-        prefix, series = branch['name'].split('/')
+        try:
+            prefix, series = branch['name'].split('/')
+        except ValueError:
+            mk_error(
+                ('stable branch name expected to be stable/name '
+                 'but got %s') % (branch['name'],))
+            continue
         if prefix != 'stable':
             continue
         location = branch.get('location')
@@ -633,7 +639,13 @@ def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
     "Apply the rules for feature branches."
     branches = deliverable_info.get('branches', [])
     for branch in branches:
-        prefix, series = branch['name'].split('/')
+        try:
+            prefix, series = branch['name'].split('/')
+        except ValueError:
+            mk_error(
+                ('feature branch name expected to be feature/name '
+                 'but got %s') % (branch['name'],))
+            continue
         if prefix != 'feature':
             continue
         location = branch['location']
@@ -669,7 +681,13 @@ def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_erro
     ))
     branches = deliverable_info.get('branches', [])
     for branch in branches:
-        prefix, series = branch['name'].split('/')
+        try:
+            prefix, series = branch['name'].split('/')
+        except ValueError:
+            mk_error(
+                ('driverfixes branch name expected to be driverfixes/name '
+                 'but got %s') % (branch['name'],))
+            continue
         if prefix != 'driverfixes':
             continue
         location = branch['location']
