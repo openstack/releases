@@ -553,6 +553,9 @@ def validate_stable_branches(deliverable_info, series_name,
     if ('launchpad' in deliverable_info and
        deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
         return
+
+    branch_mode = deliverable_info.get('stable-branch-type', 'std')
+
     branches = deliverable_info.get('branches', [])
     known_releases = list(
         r['version']
@@ -566,18 +569,49 @@ def validate_stable_branches(deliverable_info, series_name,
         prefix, series = branch['name'].split('/')
         if prefix != 'stable':
             continue
-        if not isinstance(branch['location'], six.string_types):
+        location = branch.get('location')
+        if branch_mode == 'std':
+            if not isinstance(location, six.string_types):
+                mk_error(
+                    ('branch location for %s is '
+                     'expected to be a string but got a %s' % (
+                         branch['name'], type(location)))
+                )
+            if location not in known_releases:
+                mk_error(
+                    ('stable branches must be created from existing '
+                     'tagged releases, and %s for %s is not found in the '
+                     'list of releases for this deliverable' % (
+                         location, branch['name']))
+                )
+        elif branch_mode == 'tagless':
+            if not isinstance(location, dict):
+                mk_error(
+                    ('branch location for %s is '
+                     'expected to be a mapping but got a %s' % (
+                         branch['name'], type(location)))
+                )
+                # The other rules aren't going to be testable, so skip them.
+                continue
+            for repo, loc in sorted(location.items()):
+                if not is_a_hash(loc):
+                    mk_error(
+                        ('tagless stable branches should be created '
+                         'from commits by SHA but location %s for '
+                         'branch %s of %s does not look '
+                         'like a SHA' % (
+                             (loc, repo, branch['name'])))
+                    )
+                if not gitutils.commit_exists(repo, loc):
+                    mk_error(
+                        ('stable branches should be created from merged '
+                         'commits but location %s for branch %s of %s '
+                         'does not exist' % (
+                             (loc, repo, branch['name'])))
+                    )
+        else:
             mk_error(
-                ('branch location for %s is '
-                 'expected to be a string but got a %s' % (
-                     branch['name'], type(branch['location'])))
-            )
-        if branch['location'] not in known_releases:
-            mk_error(
-                ('stable branches must be created from existing '
-                 'tagged releases, and %s for %s is not found in the '
-                 'list of releases for this deliverable' % (
-                     branch['location'], branch['name']))
+                ('unrecognized stable-branch-type %r' % (branch_mode,))
             )
         if series_name == '_independent':
             if series not in known_series:
