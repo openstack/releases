@@ -54,6 +54,7 @@ _RELEASE_JOBS_FOR_TYPE = {
         'openstack-server-release-jobs',
         'publish-to-pypi',
         'puppet-tarball-jobs',
+        'puppet-release-jobs',
     ],
     'xstatic': [
         'xstatic-publish-jobs',
