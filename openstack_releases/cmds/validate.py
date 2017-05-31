@@ -341,35 +341,48 @@ def validate_releases(deliverable_info, zuul_layout,
                 # remotely.
                 gitutils.clone_repo(workdir, project['repo'], project['hash'])
 
+                version_exists = gitutils.tag_exists(
+                    project['repo'], release['version'],
+                )
+
                 # Check that the sdist name and tarball-base name match.
                 if link_mode == 'tarball':
-                    sdist = pythonutils.get_sdist_name(workdir,
-                                                       project['repo'])
-                    if sdist is not None:
-                        expected = project.get(
-                            'tarball-base',
-                            os.path.basename(project['repo']),
-                        )
-                        if sdist != expected:
-                            if 'tarball-base' in project:
-                                action = 'is set to'
-                            else:
-                                action = 'defaults to'
-                            mk_error(
-                                ('tarball-base for %s %s %s %r '
-                                 'but the sdist name is actually %r. ' +
-                                 _PLEASE)
-                                % (project['repo'], release['version'],
-                                   action, expected, sdist))
+                    try:
+                        sdist = pythonutils.get_sdist_name(workdir,
+                                                           project['repo'])
+                    except Exception as err:
+                        msg = 'Could not get the name of {} for version {}: {}'.format(
+                            project['repo'], release['version'], err)
+                        if version_exists:
+                            # If there was a problem with an existing
+                            # release, treat it as a warning so we
+                            # don't prevent new releases.
+                            mk_warning(msg)
+                        else:
+                            mk_error(msg)
+                    else:
+                        if sdist is not None:
+                            expected = project.get(
+                                'tarball-base',
+                                os.path.basename(project['repo']),
+                            )
+                            if sdist != expected:
+                                if 'tarball-base' in project:
+                                    action = 'is set to'
+                                else:
+                                    action = 'defaults to'
+                                mk_error(
+                                    ('tarball-base for %s %s %s %r '
+                                     'but the sdist name is actually %r. ' +
+                                     _PLEASE)
+                                    % (project['repo'], release['version'],
+                                       action, expected, sdist))
 
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to
                 # import history and sometimes we want to make new
                 # releases.
-                version_exists = gitutils.tag_exists(
-                    project['repo'], release['version'],
-                )
                 if version_exists:
                     actual_sha = gitutils.sha_for_tag(
                         workdir,
