@@ -1,11 +1,15 @@
 ---
 launchpad: os-collect-config
-release-model: cycle-with-milestones
+release-model: cycle-with-intermediary
 releases:
 - projects:
   - hash: 0762fcb0b5872f4fbbf6ce8e5086140c65edf185
     repo: openstack/os-collect-config
   version: 7.0.0.0b1
+- projects:
+  - hash: bf91feb19862b1431c300623ceffe6d40ba64c47
+    repo: openstack/os-collect-config
+  version: 7.0.0
 send-announcements-to: openstack-announce@lists.openstack.org
 team: tripleo
 type: other
