@@ -47,6 +47,20 @@ from openstack_releases import versionutils
 
 urllib3.disable_warnings()
 
+_CLOSED_SERIES = set([
+    'austin',
+    'bexar',
+    'cactus',
+    'diablo',
+    'essex',
+    'folsom',
+    'grizzly',
+    'havana',
+    'icehouse',
+    'juno',
+    'kilo',
+    'liberty',
+])
 _VALID_MODELS = set([
     'cycle-with-milestones',
     'cycle-with-intermediary',
@@ -809,6 +823,9 @@ def main():
         series_name = os.path.basename(
             os.path.dirname(filename)
         )
+
+        if series_name in _CLOSED_SERIES:
+            continue
 
         def mk_warning(msg):
             print('WARNING: {}'.format(msg))
