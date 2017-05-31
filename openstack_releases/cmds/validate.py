@@ -23,10 +23,12 @@ import atexit
 import glob
 import os
 import os.path
+import pkgutil
 import re
 import shutil
 import tempfile
 
+import jsonschema
 import requests
 import six
 import yaml
@@ -73,11 +75,20 @@ _NO_STABLE_BRANCH_CHECK = set([
 ])
 _PLEASE = ('It is too expensive to determine this value during '
            'the site build, please set it explicitly.')
+_SCHEMA = yaml.load(
+    pkgutil.get_data('openstack_releases', 'schema.yaml').decode('utf-8')
+)
 
 
 def is_a_hash(val):
     "Return bool indicating if val looks like a valid hash."
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
+
+
+def validate_schema(deliverable_info, mk_warning, mk_error):
+    validator = jsonschema.Draft4Validator(_SCHEMA)
+    for error in validator.iter_errors(deliverable_info):
+        mk_error(str(error))
 
 
 def validate_series_open(deliverable_info,
@@ -807,6 +818,7 @@ def main():
             print('ERROR: {}'.format(msg))
             errors.append('{}: {}'.format(filename, msg))
 
+        validate_schema(deliverable_info, mk_warning, mk_error)
         validate_bugtracker(deliverable_info, mk_warning, mk_error)
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_release_notes(deliverable_info, mk_warning, mk_error)

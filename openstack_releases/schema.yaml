@@ -1,0 +1,72 @@
+---
+$schema: "http://json-schema.org/schema#"
+$id: "http://git.openstack.org/cgit/openstack/releases/tree/README.rst"
+
+# Do not allow any properties not defined here. This lets us catch
+# typos.
+additionalProperties: false
+
+properties:
+  team:
+    type: "string"
+  launchpad:
+    type: "string"
+  storyboard:
+    type: "integer"
+  release-notes:
+    oneOf:
+      - type: "string"
+      # We don't include any details about the object form of the
+      # release notes because the keys are the repository names.
+      - type: "object"
+  include-pypi-link:
+    type: "boolean"
+  release-model:
+    type: "string"
+    enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing"]
+  type:
+    type: "string"
+    enum: ["horizon-plugin", "library", "service", "other"]
+  artifact-link-mode:
+    type: "string"
+    enum: ["tarball", "none"]
+  repository-settings:
+    # TODO(dhellmann): Need to expand this to handle the flags.
+    type: "object"
+  release-type:
+    type: "string"
+    enum: [ "std", "xstatic", "fuel" ]
+  stable-branch-type:
+    type: "string"
+    enum: [ "std", "tagless" ]
+  releases:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        version:
+          type: "string"
+        projects:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              repo:
+                type: "string"
+              hash:
+                type: "string"
+              highlights:
+                type: "string"
+              tarball-base:
+                type: "string"
+  branches:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        location:
+          oneOf:
+            - type: "string"
+            - type: "object"
