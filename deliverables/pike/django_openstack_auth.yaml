@@ -5,3 +5,11 @@ release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
 team: horizon
 type: library
+releases:
+  - version: 3.2.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: 525b76dc323db4c4e081eb5d42def6db14a84de9
+    highlights: >
+      This release inproves translation support, and raises the maximum Django
+      version
