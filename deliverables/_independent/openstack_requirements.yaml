@@ -2,10 +2,10 @@
 launchpad: openstack-requirements
 team: requirements
 type: other
-send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
 releases:
   - version: 1.0.0
     projects:
       - repo: openstack/requirements
         hash: 495027bda42431678845f40f084191623c7b2755
+        tarball-base: openstack_requirements

@@ -2,7 +2,6 @@
 launchpad: bandit
 team: Security
 type: other
-send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
 releases:
   - version: 0.9.0
@@ -85,7 +84,7 @@ releases:
     projects:
       - repo: openstack/bandit
         hash: 71df005d14235e57f8deda538177361182f36f63
-  - version: 1.0
+  - version: "1.0"
     projects:
       - repo: openstack/bandit
         hash: d653e969aedba3f44674de26afaa57309de3b389

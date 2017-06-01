@@ -4,13 +4,14 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 3.3.7.0
     projects:
       - repo: openstack/xstatic-bootstrap-scss
         hash: 577f0ce201e48aaf2d5fbf4d9799013eb108ffd3
+        tarball-base: XStatic-Bootstrap-SCSS
   - version: 3.3.7.1
     projects:
       - repo: openstack/xstatic-bootstrap-scss
         hash: 4ca4a059f89287b40441566a4a6bf32785295504
+        tarball-base: XStatic-Bootstrap-SCSS

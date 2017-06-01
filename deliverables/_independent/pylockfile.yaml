@@ -2,14 +2,15 @@
 launchpad: pylockfile
 team: oslo
 type: library
-send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
 releases:
   - version: 0.11.0
     projects:
       - repo: openstack/pylockfile
         hash: 4a7a20d91c44d2be6396be5fc64d27b0b5afa4e2
+        tarball-base: lockfile
   - version: 0.12.2
     projects:
       - repo: openstack/pylockfile
         hash: c8798cedfbc4d738c99977a07cde2de54687ac6c
+        tarball-base: lockfile

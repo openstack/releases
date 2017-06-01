@@ -2,12 +2,15 @@
 launchpad: python-keystoneclient-kerberos
 team: keystone
 type: library
-send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: true
+repository-settings:
+  openstack/python-keystoneclient-kerberos:
+    flags:
+      - retired
 releases:
-- version: 0.3.0
-  projects:
-  - repo: openstack/python-keystoneclient-kerberos
-    hash: c11563678f29726dce18aec5e54a55947941f99a
-  highlights: |
-    - Final release; this project has been deprecated in favor of keystoneauth
+  - version: 0.3.0
+    projects:
+      - repo: openstack/python-keystoneclient-kerberos
+        hash: c11563678f29726dce18aec5e54a55947941f99a
+    highlights: |
+      - Final release; this project has been deprecated in favor of keystoneauth

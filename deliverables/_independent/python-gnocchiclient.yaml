@@ -2,7 +2,10 @@
 launchpad: python-gnocchiclient
 team: Telemetry
 type: library
-send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/python-gnocchiclient:
+    flags:
+      - retired
 releases:
   - version: 1.0.0
     projects:

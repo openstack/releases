@@ -2,7 +2,10 @@
 launchpad: os-cloud-config
 team: tripleo
 type: other
-send-announcements-to: openstack-dev@lists.openstack.org
+repository-settings:
+  openstack/os-cloud-config:
+    flags:
+      - retired
 releases:
   - version: 0.2.7
     projects:

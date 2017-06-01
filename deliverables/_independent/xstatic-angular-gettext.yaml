@@ -4,9 +4,9 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 2.3.8.0
     projects:
       - repo: openstack/xstatic-angular-gettext
         hash: 6ec7c032b3a87159f14d6d2138e03d73fc8b57b0
+        tarball-base: XStatic-Angular-Gettext

@@ -1,12 +1,10 @@
 ---
 include-pypi-link: yes
 launchpad: yaql
-release-model: independent
 team: murano
 type: library
-send-announcements-to: openstack-announce@lists.openstack.org
 releases:
-  - version: 0.2
+  - version: "0.2"
     projects:
       - repo: openstack/yaql
         hash: f6f81e3ed9fdf368ac9d4c2727bcd52ccd5e3684

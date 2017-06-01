@@ -2,10 +2,13 @@
 launchpad: gnocchi
 team: Telemetry
 type: other
-send-announcements-to: openstack-announce@lists.openstack.org
 branches:
   - name: stable/3.1
     location: 3.1.0
+repository-settings:
+  openstack/gnocchi:
+    flags:
+      - retired
 releases:
   - version: 1.0.0a1
     projects:

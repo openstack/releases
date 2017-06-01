@@ -1,8 +1,12 @@
 ---
 launchpad: openstack-doc-tools
 team: Documentation
-send-announcements-to: openstack-dev@lists.openstack.org
 release-notes: http://docs.openstack.org/releasenotes/fairy-slipper/
+type: other
+repository-settings:
+  openstack/fairy-slipper:
+    flags:
+      - retired
 releases:
   - version: 0.1.0
     projects:

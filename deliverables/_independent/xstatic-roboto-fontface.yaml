@@ -4,9 +4,9 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 0.5.0.0
     projects:
       - repo: openstack/xstatic-roboto-fontface
         hash: 480b520263b01ef06bafa6026c42c410112dd1a3
+        tarball-base: XStatic-roboto-fontface

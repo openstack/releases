@@ -2,7 +2,10 @@
 launchpad: django-openstack-auth-kerberos
 team: horizon
 type: library
-send-announcements-to: openstack-dev@lists.openstack.org
+repository-settings:
+  openstack/django-openstack-auth-kerberos:
+    flags:
+      - retired
 releases:
   - version: 0.2.0
     projects:

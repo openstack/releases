@@ -2,7 +2,10 @@
 launchpad: networking-ofagent
 team: neutron
 type: other
-send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/networking-ofagent:
+    flags:
+      - retired
 releases:
   # kilo
   - version: 2015.1.6

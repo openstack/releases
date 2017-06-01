@@ -4,9 +4,9 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 3.5.17.0
     projects:
       - repo: openstack/xstatic-d3
         hash: d2c33c15a81574c5380c1825aaa4b2a2c584bd4f
+        tarball-base: XStatic-D3

@@ -4,17 +4,19 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 0.11.0.3
     projects:
       - repo: openstack/xstatic-angular-bootstrap
         hash: b581edb6975175a564fd02766aef2f9043702c80
+        tarball-base: XStatic-Angular-Bootstrap
   - version: 0.11.0.8
     projects:
       - repo: openstack/xstatic-angular-bootstrap
         hash: 7a2e73684634a979b43bd157301dd59bde967ec9
+        tarball-base: XStatic-Angular-Bootstrap
   - version: 2.2.0.0
     projects:
       - repo: openstack/xstatic-angular-bootstrap
         hash: 9d7f18344d4862f23a2b919d83914a6f4a3eec9e
+        tarball-base: XStatic-Angular-Bootstrap

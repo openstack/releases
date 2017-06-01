@@ -4,9 +4,9 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 3.3.7.0
     projects:
       - repo: openstack/xstatic-bootswatch
         hash: 49c0d56698bc14ae5e5c18cc00c3f2e290d2e724
+        tarball-base: XStatic-bootswatch

@@ -4,13 +4,14 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 2.3.1.0
     projects:
       - repo: openstack/xstatic-jsencrypt
         hash: 5526c15f91b471fdc5efc48ddcdb85c585e57077
+        tarball-base: XStatic-JSEncrypt
   - version: 2.3.1.1
     projects:
       - repo: openstack/xstatic-jsencrypt
         hash: 27ddd977cb634604d8455a242a1b43ad72a3b0f9
+        tarball-base: XStatic-JSEncrypt

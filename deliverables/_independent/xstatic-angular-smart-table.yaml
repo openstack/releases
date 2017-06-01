@@ -4,17 +4,19 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 1.4.13.0
     projects:
       - repo: openstack/xstatic-angular-smart-table
         hash: a5ace69bc0ed04b76addd5bbb6edd73f6be47662
+        tarball-base: XStatic-smart-table
   - version: 1.4.13.1
     projects:
       - repo: openstack/xstatic-angular-smart-table
         hash: 9a6a7764317d3a9db530f599d5958d3e14126551
+        tarball-base: XStatic-smart-table
   - version: 1.4.13.2
     projects:
       - repo: openstack/xstatic-angular-smart-table
         hash: 3989e1f8e350c365c7bf1074ca9026b3a851b47f
+        tarball-base: XStatic-smart-table

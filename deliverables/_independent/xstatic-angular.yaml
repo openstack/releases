@@ -4,13 +4,14 @@ team: horizon
 type: other
 release-type: xstatic
 include-pypi-link: yes
-send-announcements-to: openstack-dev@lists.openstack.org
 releases:
   - version: 1.4.10.1
     projects:
       - repo: openstack/xstatic-angular
         hash: 5a30bee80d67c0f26ecbf05726f4838dbae3f276
+        tarball-base: XStatic-Angular
   - version: 1.5.8.0
     projects:
       - repo: openstack/xstatic-angular
         hash: 8d809659b75b616461877807c937cb5fa2173b31
+        tarball-base: XStatic-Angular
