@@ -3,7 +3,10 @@ launchpad: os-cloud-config
 team: tripleo
 type: other
 release-model: cycle-with-milestones
-send-announcements-to: openstack-announce@lists.openstack.org
+repository-settings:
+  openstack/os-cloud-config:
+    flags:
+      - no-artifact-build-job
 branches:
   - name: stable/ocata
     location: 6.0.0.0rc1
