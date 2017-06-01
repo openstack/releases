@@ -3,5 +3,12 @@ include-pypi-link: true
 launchpad: os-vif
 release-model: cycle-with-intermediary
 send-announcements-to: openstack-dev@lists.openstack.org
+release-notes: https://docs.openstack.org/releasenotes/os-vif/unreleased.html
 team: nova
 type: library
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/os-vif
+        hash: 19af4386dec2eca06592c433210232cbab479633
+        tarball-base: os_vif
