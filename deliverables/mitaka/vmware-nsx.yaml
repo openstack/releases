@@ -1,8 +1,9 @@
 ---
 launchpad: vmware-nsx
 team: neutron
-send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
+type: other
+release-model: cycle-with-intermediary
 releases:
   - version: 8.0.0
     projects:

@@ -1,8 +1,9 @@
 ---
 launchpad: django-openstack-auth
 team: horizon
-send-announcements-to: openstack-dev@lists.openstack.org
 include-pypi-link: yes
+type: library
+release-model: cycle-with-intermediary
 releases:
   - version: 2.1.0
     projects:

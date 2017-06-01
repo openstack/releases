@@ -1,7 +1,8 @@
 ---
 launchpad: astara
 team: astara
-send-announcements-to: openstack-announce@lists.openstack.org
+type: horizon-plugin
+release-model: cycle-with-milestones
 releases:
   - version: 8.0.0.0b1
     projects:
