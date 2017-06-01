@@ -84,3 +84,18 @@ releases:
       * Switched to 'subquery' for 1-M relationships when fetching
         relationships from database to improve scalability
       * Throttle SIGHUPs to keepalived to avoid data plane flips
+  - version: 9.4.0
+    projects:
+      - repo: openstack/neutron
+        hash: 59c6530990f0a375d390add49dad79b9089b1231
+    highlights: |-
+      * Add support for Keepalived VRRP health check
+      * Optimized locking in DHCP agent
+      * Multiple OVSDB timeout fixes
+      * Remove stale floating IP addresses from rfp devices
+      * Dont try to apply iptables rules in a endless loop
+      * Stop killing conntrack state without CT Zone
+      * Avoid resync loop if router fails to initialize
+      * Send both gratuitous ARP REQUESTs and REPLYs
+      * Allow port security updates even without security-groups enabled
+      * Add IPv6 Prefix Delegation support for DVR
