@@ -4,3 +4,11 @@ launchpad: python-glanceclient
 release-model: cycle-with-intermediary
 team: glance
 type: library
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: d67b33b2e5fcee4545fe4ccb1e58c8d6ed12883c
+    highlights: >
+      - python-glanceclient supports Global Request ID
+      - Download with --progress fixed for 2.x and 3.y
