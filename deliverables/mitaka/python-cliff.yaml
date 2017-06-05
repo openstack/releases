@@ -3,6 +3,8 @@ launchpad: python-cliff
 team: OpenStackClient
 send-announcements-to: openstack-announce@lists.openstack.org
 include-pypi-link: yes
+release-model: cycle-with-intermediary
+type: library
 releases:
   - version: 1.16.0
     projects:
@@ -16,3 +18,7 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 94cd83f9254db3cd9eb0d58e111a2c859f2fb2b8
+  - version: 2.0.1
+    projects:
+      - repo: openstack/cliff
+        hash: 5dc9b9a88a8631a5c759f2a956db4dc266d0a3fd
