@@ -305,7 +305,10 @@ def main():
 
             header('Relationship to HEAD')
             if series == '_independent':
-                tag_branch = branches[0]
+                if branches:
+                    tag_branch = branches[0]
+                else:
+                    tag_branch = branch
                 head_sha = gitutils.sha_for_tag(
                     workdir,
                     project['repo'],
