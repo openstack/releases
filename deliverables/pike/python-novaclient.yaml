@@ -15,3 +15,11 @@ releases:
           image, volume, baremetal and networking service, have been deleted.
         - Log translations have been removed.
         - Updated dependencies.
+  - version: 9.0.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 758570397821136561bdf425b0a8ed5ab1bbd96f
+    highlights: >
+        - Support up to microversion 2.46.
+        - Add ability to set global_request_id.
+        - Updated dependencies.
