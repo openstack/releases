@@ -74,3 +74,9 @@ releases:
         hash: 5744ac130fac2634529b9a0088f4f093341ae1a4
     highlights: >
         Fixes host-evacuate for microversion 2.14.
+  - version: 3.3.3
+    projects:
+      - repo: openstack/python-novaclient
+        hash: fd45db19b6faf11443b893f941f936bd4652e76b
+    highlights: >
+        Fixes bug 1559072 when using WebOb>=1.6.0.
