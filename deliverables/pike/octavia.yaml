@@ -14,3 +14,12 @@ releases:
         members, l7policy, and l7rules
       * Adds configuration setting for nova soft anti-affinity
       * Allows load balancer VIP to be created on the management network
+  - version: 1.0.0.0b2
+    projects:
+      - repo: openstack/octavia
+        hash: b01174f0ebc4b3c77c982d6ebda95d5cf4fbd9ce
+    highlights: |-
+      * More octavia v2 API in place
+      * Adds support for PROXY protocol for backend members
+      * Adds support for health monitors agains alternate IP/Port
+      * API reference for most of the octavia v2 API
