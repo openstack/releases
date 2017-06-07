@@ -40,3 +40,9 @@ releases:
         hash: 0063ebce2fd8d6259c128f5d161370d40296d510
     highlights: >
         - Routine bug fixes.
+  - version: 7.1.2
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 2e2317bfca941e59899edda181241f320e2033f8
+    highlights: >
+        - Uncaps version constraint on pbr runtime dependency.
