@@ -4,3 +4,10 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
 type: library
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: cf2b4f31c77d0590e1034cb9327d5eda832baa08
+    highlights: >
+      Update on test requirements.
