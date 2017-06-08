@@ -5,18 +5,18 @@ release-model: cycle-with-intermediary
 team: keystone
 type: library
 releases:
-- version: 2.19.0
-  projects:
-  - repo: openstack/keystoneauth
-    hash: fdc454c154fddb415492669b3a1339f8286e2129
-    tarball-base: keystoneauth1
-- version: 2.20.0
-  projects:
-  - repo: openstack/keystoneauth
-    hash: 6cbd95bb8dd3cf1ec110f6e66ee743d5d8507fbc
-    tarball-base: keystoneauth1
-- version: 2.21.0
-  projects:
-  - repo: openstack/keystoneauth
-    hash: 0be140389bcbb2df44840af921ea8cb4f1a231d5
-    tarball-base: keystoneauth1
+  - version: 2.19.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: fdc454c154fddb415492669b3a1339f8286e2129
+        tarball-base: keystoneauth1
+  - version: 2.20.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 6cbd95bb8dd3cf1ec110f6e66ee743d5d8507fbc
+        tarball-base: keystoneauth1
+  - version: 2.21.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 0be140389bcbb2df44840af921ea8cb4f1a231d5
+        tarball-base: keystoneauth1
