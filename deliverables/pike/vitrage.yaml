@@ -3,3 +3,9 @@ launchpad: vitrage
 release-model: cycle-with-intermediary
 team: vitrage
 type: service
+release-notes: https://docs.openstack.org/releasenotes/vitrage/unreleased.html
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 92ce094eb12a0536dc47e2e9e529afe49e4395f9

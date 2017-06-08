@@ -4,3 +4,9 @@ launchpad: python-vitrageclient
 release-model: cycle-with-intermediary
 team: vitrage
 type: library
+release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/unreleased.html
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 52995bbdfe77af42d95b54eb40361ac418c39d64
