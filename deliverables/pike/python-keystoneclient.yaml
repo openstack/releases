@@ -4,3 +4,8 @@ launchpad: python-keystoneclient
 release-model: cycle-with-intermediary
 team: keystone
 type: library
+releases:
+- version: 3.11.0
+  projects:
+  - repo: openstack/python-keystoneclient
+    hash: daa99ed5fe1df548c26feff68b45bda7ac94ea25
