@@ -4,3 +4,8 @@ launchpad: python-ceilometerclient
 release-model: cycle-with-intermediary
 team: Telemetry
 type: library
+releases:
+  - version: 2.9.0
+    projects:
+      - repo: openstack/python-ceilometerclient
+        hash: 3b4e35abada626ce052f20d55c71fe12ab77052a
