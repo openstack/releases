@@ -4,3 +4,8 @@ launchpad: python-magnumclient
 release-model: cycle-with-intermediary
 team: magnum
 type: library
+releases:
+  - version: 2.6.0
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 7d5539f28e95bb2264dbc8268614ea348fb293c3
