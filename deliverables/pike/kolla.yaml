@@ -3,3 +3,8 @@ launchpad: kolla
 release-model: cycle-trailing
 team: kolla
 type: other
+releases:
+  - version: 5.0.0.0b2
+    projects:
+      - repo: openstack/kolla
+        hash: 142c3b839ef9188197b5b5c968266c1ae7dce22d
