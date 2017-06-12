@@ -23,7 +23,7 @@ properties:
     type: "boolean"
   release-model:
     type: "string"
-    enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing"]
+    enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing", "untagged"]
   type:
     type: "string"
     enum: ["horizon-plugin", "library", "service", "other"]

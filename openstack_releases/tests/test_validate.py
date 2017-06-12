@@ -751,6 +751,31 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    def test_untagged_with_releases(self):
+        deliverable_info = {
+            'release-model': 'untagged',
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.5.0',
+                 'projects': [
+                     {'repo': 'openstack/automaton',
+                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                 ]},
+            ]
+        }
+        warnings = []
+        errors = []
+        validate.validate_releases(
+            deliverable_info,
+            {'validate-projects-by-name': {}},
+            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
 
 class TestPuppetUtils(base.BaseTestCase):
 
