@@ -66,6 +66,7 @@ _VALID_MODELS = set([
     'cycle-with-intermediary',
     'cycle-trailing',
     'independent',
+    'untagged',
 ])
 _USES_PREVER = set([
     'cycle-with-milestones',
@@ -320,6 +321,10 @@ def validate_releases(deliverable_info, zuul_layout,
 
     release_type = deliverable_info.get('release-type', 'std')
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+
+    if release_model == 'untagged' and 'releases' in deliverable_info:
+        mk_error('untagged deliverables should not have a "releases" section')
+        return
 
     prev_version = None
     prev_projects = set()

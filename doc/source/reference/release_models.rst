@@ -93,3 +93,11 @@ projects.
 * "independent" projects produce releases from time to time.
 * Release tags for deliverables using this tag are managed without
   oversight from the Release Management team.
+
+.. _model-untagged:
+
+untagged
+========
+
+Some CI tools are used only from source and never tag releases, but
+need to create stable branches.

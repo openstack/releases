@@ -165,7 +165,7 @@ def main():
         if args.no_stable_branch:
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
-        if args.unreleased and deliv.versions:
+        if args.unreleased and (deliv.versions or not deliv.is_releasable):
             continue
         if version_ending and deliv.latest_release and deliv.latest_release.endswith(version_ending):
             continue

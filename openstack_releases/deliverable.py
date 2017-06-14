@@ -221,6 +221,10 @@ class Deliverable(object):
         return self._data.get('release-model', '').lstrip('_')
 
     @property
+    def is_releasable(self):
+        return self.model != 'untagged'
+
+    @property
     def is_cycle_based(self):
         return self.model.startswith('cycle-')
 
