@@ -44,3 +44,7 @@ releases:
   highlights: |-
     - [AMQP 1.0] fix getaddressinfo() IPv6 error
     - [zmq] Fix dynamic connections fanout error
+- version: 5.17.2
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 2775568e01b8429dc90fade4e38673085098da34
