@@ -91,3 +91,21 @@ releases:
           high consumption of memory due to database connection switching.
 
         See the release notes for more details.
+  - version: 15.0.6
+    projects:
+      - repo: openstack/nova
+        hash: fe329029265e10296a550fc9153b7977da4aefe2
+    highlights: >
+      - High severity bug fixes:
+
+        * Bug 1687581: When using the libvirt compute driver with attached
+          ceph-backed volumes, fallback to using nova config for
+          rbd_secret_uuid if it was not in the original volume connection
+          information from Cinder when the volume was attached.
+        * Bug 1692982: A --strict option is added to the
+          ``nova-manage cell_v2 discover_hosts`` command to fail if no hosts
+          are discovered.
+        * Bug 1696001: Handle parsing database connection URLs with query
+          string parameters during simple_cell_setup/map_cell0 commands.
+        * Bug 1689692: Fix paging over cells where the marker is found in the
+          cell0 database.
