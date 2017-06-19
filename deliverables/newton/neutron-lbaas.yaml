@@ -46,3 +46,14 @@ releases:
     highlights: |-
       * HAProxy - Add host routes to the lbaas namespace
       * Pass network MTU into namespace driver
+  - version: 9.2.1
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: bc1fb460d53135d3871364eade300f7a41252ee8
+    highlights: |-
+      * Switch HAProxy health check timeout to seconds
+      * Fix lb namespace can not be deleted
+      * Fix for error "no attribute tenant_id"
+      * Updates for tempest changes
+      * Updates for devstack changes
+      * Updates for neutron changes
