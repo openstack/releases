@@ -37,3 +37,10 @@ releases:
       * Replaced use of designateclient with direct REST calls.
       * Fixed issue with neutron endpoints that did not have trailing slashes.
       * Fixed issue with ports not having a created_at attribute.
+  - version: 1.22.1
+    projects:
+      - repo: openstack-infra/shade
+        hash: f5daebebc1fb9249c8a22a572eb2105842a21fd6
+    highlights: >
+      Fixed exception with deleting servers on clouds without floating IPs when
+      delete_ips=True is given.
