@@ -14,6 +14,7 @@ from __future__ import print_function
 
 import argparse
 import csv
+import operator
 
 import openstack_releases
 from openstack_releases import defaults
@@ -34,6 +35,13 @@ def main():
         action='store_true',
         default=False,
         help='show the repository names not deliverable names',
+    )
+    parser.add_argument(
+        '--group-by',
+        dest='group_key',
+        default=None,
+        choices=['team', 'type', 'model'],
+        help='group output by the specified value',
     )
     parser.add_argument(
         '--team',
@@ -150,8 +158,20 @@ def main():
         root_dir=args.deliverables_dir,
         collapse_history=False,
     )
-    for entry in all_deliv.get_deliverables(args.team, series):
-        deliv = deliverable.Deliverable(*entry)
+    deliv_iter = [
+        deliverable.Deliverable(*entry)
+        for entry in all_deliv.get_deliverables(args.team, series)
+    ]
+    if args.group_key:
+        deliv_iter = sorted(deliv_iter,
+                            key=operator.attrgetter(args.group_key))
+        name_fmt = '  {}'
+    else:
+        name_fmt = '{}'
+    cur_group = None
+    for deliv in deliv_iter:
+        if args.group_key:
+            deliv_group = getattr(deliv, args.group_key)
 
         if args.deliverable and deliv.name != args.deliverable:
             continue
@@ -203,10 +223,16 @@ def main():
                 model=deliv.model,
             ))
         elif args.repos:
+            if args.group_key and cur_group != deliv_group:
+                cur_group = deliv_group
+                print(cur_group)
             for r in sorted(deliv.repos):
-                print(r)
+                print(name_fmt.format(r))
         else:
-            print(deliv.name)
+            if args.group_key and cur_group != deliv_group:
+                cur_group = deliv_group
+                print(cur_group)
+            print(name_fmt.format(deliv.name))
 
     if csvfile:
         csvfile.close()
