@@ -44,3 +44,10 @@ releases:
     highlights: >
       Fixed exception with deleting servers on clouds without floating IPs when
       delete_ips=True is given.
+  - version: 1.22.2
+    projects:
+      - repo: openstack-infra/shade
+        hash: baaf4155671d98002816597e51b2c3a33fe99390
+    highlights: >
+      Fix parameter name mismatches with server creation, a weird image
+      normalization conflict and really fixed the delete_ips issue this time.
