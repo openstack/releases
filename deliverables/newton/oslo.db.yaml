@@ -79,3 +79,7 @@ releases:
   highlights: |-
     * Support packet sequence wrong error
     * exc_filters: fix deadlock detection for percona xtradb cluster
+- version: 4.13.6
+  projects:
+  - repo: openstack/oslo.db
+    hash: 37873630050f332c95bf0506aa02d47712fb454b
