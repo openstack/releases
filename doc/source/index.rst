@@ -42,9 +42,9 @@ updates.
      * `Phase III -- Legacy release`_ on 2017-10-09
      * 2017-10-11
    - * :doc:`mitaka/index`
-     * `Phase III -- Legacy release`_
+     * EOL
      * 2016-04-07
-     * End of Life
+     *
      * 2017-04-10
    - * :doc:`liberty/index`
      * EOL
