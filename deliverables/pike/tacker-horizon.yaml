@@ -3,3 +3,8 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: horizon-plugin
+releases:
+  - version: 0.9.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 9ccbabaa305dc1c0dea2190807d0d486a3a3e8e0
