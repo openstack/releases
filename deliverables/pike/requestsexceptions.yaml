@@ -4,3 +4,10 @@ release-model: cycle-with-intermediary
 storyboard: 835
 team: shade
 type: library
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack-infra/requestsexceptions
+        hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
+    highlights: >
+      Updated requirements to avoid a conflict with other OpenStack libs.
