@@ -76,3 +76,7 @@ releases:
   highlights: |-
     - rabbit: on reconnect set socket timeout correctly
     - rabbit: avoid busy loop with heartbeat+eventlet
+- version: 5.10.2
+  projects:
+  - repo: openstack/oslo.messaging
+    hash: 471312755c84337a2b63e87b4b8c5c557a2b66d1
