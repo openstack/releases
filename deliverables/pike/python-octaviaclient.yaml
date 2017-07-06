@@ -17,3 +17,9 @@ releases:
         hash: f99e89247a26fe0a3a8292e4563f75dbc702ff8d
     highlights: |-
       * Most commands are now complete
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 2d0dc10f484d2d861359d582763a811de0c914ff
+    highlights: |-
+      * Fixed a bug when creating L7 rules
