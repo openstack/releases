@@ -62,3 +62,14 @@ releases:
         hash: 0ee4f4a391bcb85583ba7a9c2035660abdab4154
     highlights: |
         * Some constants have been introduced.
+  - version: 1.8.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 4e100d90c4e48b3a628c64d97278691809877424
+    highlights: |
+        * Some plugin constants have been introduced
+        * The ML2 ``driver_api`` is now available
+        * OVO exceptions are now available for use
+        * The deprecated N523 hacking check has been removed.
+        * The ``dns-integration`` extension is now in neutron-lib
+        * QoS ``DriverBase`` class is now available
