@@ -234,6 +234,28 @@ follow the main release cycle.
 Project-specific events
 =======================
 
+Elections
+---------
+
+.. _q-ptl-nomination:
+
+Queens PTLs self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Project team lead candidates for the Queens cycle should announce their
+candidacy during this week. Those dates should be confirmed by the Pike
+PTL election officials.
+
+.. _q-ptl-election:
+
+Queens cycle PTLs election
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Election week for Project team leads (where an election must be held to
+determine the winner). Those dates should be confirmed by the Queens PTL
+election officials.
+
+
 Cinder
 ------
 
