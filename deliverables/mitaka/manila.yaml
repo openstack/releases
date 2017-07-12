@@ -4,10 +4,6 @@ team: manila
 type: service
 release-model: cycle-with-milestones
 release-notes: https://docs.openstack.org/releasenotes/manila/mitaka.html
-branches:
-  - name: driverfixes/mitaka
-    location:
-      openstack/manila: 211f691d5cc82b32c5d83b5ca4646523167a4e86
 releases:
   - version: 2.0.0.0b1
     projects:
