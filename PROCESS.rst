@@ -93,16 +93,25 @@ Between Milestone-2 and Milestone-3
       generated (for all release:cycle-with-milestones deliverables)
       with::
 
-        tox -e aclmanager -- acls /path/to/openstack-infra/project-config
+        tox -e aclmanager -- acls /path/to/project-config
 
-   2. Set the population of all $project-release-branch groups to the
+      Double-check that all references to the previous stable/$old
+      are all removed from project-config gerrit ACLs, as some may
+      have changed release models and kept stale entries::
+
+        grep stable/$old /path/to/project-config/gerrit/acls/openstack/*
+
+   2. Once the above patch merges (and only then!), set the population
+      of all $project-release-branch groups to the
       "Release Managers" group and $project-release. This can be done
       (for all release:cycle-with-milestones deliverables) by running
       ``aclmanager.py``::
 
         tox -e aclmanager -- groups pre_release $user
 
-      ($user being your Gerrit username)
+      ($user being your Gerrit username). It will prompt you for your
+      Gerrit HTTP password, which you can see/generate at
+      https://review.openstack.org/#/settings/http-password.
 
    3. Ask the release liaisons for the affected teams to update the
       contents of their $project-release groups. For new projects in
