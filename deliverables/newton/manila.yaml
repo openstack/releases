@@ -7,9 +7,6 @@ release-notes: https://docs.openstack.org/releasenotes/manila/newton.html
 branches:
   - name: stable/newton
     location: 3.0.0
-  - name: driverfixes/newton
-    location:
-      openstack/manila: c5545e861c8ee069a6e8c7b710b8813d8cb77012
 releases:
   - version: 3.0.0.0b1
     projects:
