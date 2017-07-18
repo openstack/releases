@@ -3,3 +3,10 @@ launchpad: tripleo
 release-model: cycle-trailing
 team: tripleo
 type: other
+releases:
+- version: 2.1.0
+  projects:
+  - repo: openstack/tripleo-quickstart
+    hash: 797cae92c1921f0bb1617949049e3685af016014
+  - repo: openstack/tripleo-quickstart-extras
+    hash: dd96d343cefb7e6bbd17128fb89c9211b1406c86
