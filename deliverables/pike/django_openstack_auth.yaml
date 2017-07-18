@@ -19,3 +19,10 @@ releases:
     highlights: >
       This release improves translation support, raises the maximum Django
       version, and adds support for a configurable domain dropdown on login.
+  - version: 3.4.0
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: fb76589a26288a7d7966cee1702e414919706790
+    highlights: >
+      This release includes support for Django 1.11, as well as the usual
+      bug fix and translation improvements.
