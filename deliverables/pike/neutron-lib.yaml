@@ -73,3 +73,16 @@ releases:
         * The deprecated N523 hacking check has been removed.
         * The ``dns-integration`` extension is now in neutron-lib
         * QoS ``DriverBase`` class is now available
+  - version: 1.9.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 7581af448a7aa070657acaaee60b478bf0b4dd56
+    highlights: |
+        * added VIF_TYPE_OVS_ACCELERATION for SR-IOV Open vSwitch acceleration
+        * added logging API extension definition
+        * added net-mtu API extension definition
+        * added agent API extension definition
+        * added transaction constraints to neutron_lib.Context
+        * added fwaas exceptions
+        * added auto-allocated-topology API extension definition
+        * added address-scope API extension definition
