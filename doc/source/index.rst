@@ -28,7 +28,7 @@ updates.
      * TBD
    - * :doc:`pike/index`
      * :doc:`Under Development <pike/schedule>`
-     * TBD
+     * :ref:`scheduled <p-release>`
      *
      * TBD
    - * :doc:`ocata/index`
