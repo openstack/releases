@@ -18,3 +18,10 @@ releases:
         tarball-base: os_vif
     highlights: >
         - Added hardware offload support for OVS.
+  - version: 1.7.0
+    projects:
+      - repo: openstack/os-vif
+        hash: f4329ffe1805452a790f6116d10164c3658562fa
+        tarball-base: os_vif
+    highlights: >
+        - Added multi vendor hardware offload support for OVS.
