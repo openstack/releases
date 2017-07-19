@@ -16,6 +16,7 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import os
 import shutil
 import tempfile
 
@@ -32,6 +33,13 @@ PROJECT_TEMPLATE = '''
       - repo: {repo}
         hash: {hash}
 '''.lstrip('\n')
+
+
+def get_deliverable_data(series, deliverable):
+    deliverable_filename = 'deliverables/%s/%s.yaml' % (
+        series, deliverable)
+    with open(deliverable_filename, 'r') as f:
+        return yaml.safe_load(f)
 
 
 def main():
@@ -78,16 +86,31 @@ def main():
         series = '_independent'
 
     # Load existing deliverable data.
-    deliverable_filename = 'deliverables/%s/%s.yaml' % (
-        series, args.deliverable)
     try:
-        with open(deliverable_filename, 'r') as f:
-            deliverable_info = yaml.safe_load(f)
+        deliverable_info = get_deliverable_data(
+            series, args.deliverable)
     except (IOError, OSError) as e:
         parser.error(e)
 
     # Determine the new version number.
-    last_release = deliverable_info['releases'][-1]
+    add_releases_key = False
+    try:
+        last_release = deliverable_info['releases'][-1]
+    except KeyError:
+        print('No releases for %s in %s, yet.' % (
+            args.deliverable, series))
+        if args.release_type == 'bugfix':
+            parser.error('The first release for a series must be at least a feature release to allow for stable releases from the previous series.')  # noqa
+        # Look for the version of the previous series.
+        all_series = sorted(os.listdir('deliverables'))
+        prev_series = all_series[all_series.index(series) - 1]
+        try:
+            prev_info = get_deliverable_data(
+                prev_series, args.deliverable)
+            last_release = prev_info['releases'][-1]
+            add_releases_key = True
+        except (IOError, OSError, KeyError) as e:
+            parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
     increment = {
         'bugfix': (0, 0, 1),
@@ -133,7 +156,11 @@ def main():
     # to read, so we format the output ourselves. The file is only
     # regenerated if there are in fact changes to be made.
     if changes > 0:
+        deliverable_filename = 'deliverables/%s/%s.yaml' % (
+            series, args.deliverable)
         with open(deliverable_filename, 'a') as f:
+            if add_releases_key:
+                f.write('releases:\n')
             f.write(RELEASE_TEMPLATE.format(version=new_version))
             for p in projects:
                 f.write(PROJECT_TEMPLATE.format(**p))
