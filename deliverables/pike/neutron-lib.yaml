@@ -86,3 +86,10 @@ releases:
         * added fwaas exceptions
         * added auto-allocated-topology API extension definition
         * added address-scope API extension definition
+  - version: 1.9.1
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 0ef54c347535d9329aba1e56a11a268021c79a86
+    highlights: |
+        * removed unneeded VIF_TYPE_OVS_ACCELERATION
+        * added API fault map
