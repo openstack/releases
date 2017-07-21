@@ -3,6 +3,7 @@ include-pypi-link: true
 launchpad: python-cinderclient
 release-model: cycle-with-intermediary
 team: cinder
+release-notes: https://docs.openstack.org/releasenotes/python-cinderclient/unreleased.html
 type: library
 releases:
   - version: 2.0.0
@@ -21,3 +22,12 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: e3743623c31fbc4b3a0f2f9fd608d168fec79355
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 72671fffe51898446c8671e122cd6ef11171fdb1
+    highlights: >
+        - Highest supported microversion is 3.40.
+        - Routine dependency updates.
+        - Bug fixes and new features, along with some interface changes.
+          Read the release notes for details.
