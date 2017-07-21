@@ -217,7 +217,7 @@ def main():
         elif args.verbose:
             print(verbose_template.format(
                 name=deliv.name,
-                latest_release=deliv.latest_release,
+                latest_release=deliv.latest_release or '',
                 team=deliv.team,
                 type=deliv.type,
                 model=deliv.model,
