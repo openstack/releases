@@ -1,4 +1,7 @@
 ---
+branches:
+- location: 7.2.0
+  name: stable/pike
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
@@ -10,5 +13,9 @@ releases:
   projects:
   - repo: openstack/python-tripleoclient
     hash: be2a20637a2f9726c2b3336306d7f501c988aa8e
+- version: 7.2.0
+  projects:
+  - repo: openstack/python-tripleoclient
+    hash: 11ad01782499e3e27318aecc9f01f14eb4415002
 team: tripleo
 type: library
