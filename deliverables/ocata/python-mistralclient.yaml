@@ -20,3 +20,10 @@ releases:
         - Python 3.5 is officially supported.
         - Support specifying region name (both local and target cloud) in
           command line.
+  - version: 3.0.1
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 1a3094d2245db9a848a8184817000b3c6cbacbe4
+    highlights: >
+      - Set --limit parameter by default for several commands to avoid high
+        server load.
