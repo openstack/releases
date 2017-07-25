@@ -95,8 +95,8 @@ repository.
  * Start version numbers with 0.1.0 for unstable early editions and
    prototypes. Switch to 1.0.0 for the first production-ready
    release. Do not release the first version of a deliverable with a
-   number that matches the version other related deliverables
-   use. This confuses consumers about the maturity of the new
+   number that matches the version used by other existing related
+   deliverables. This confuses consumers about the maturity of the new
    deliverable and about where they should find "older" versions with
    lower numbers, which do not exist.
 
@@ -237,13 +237,13 @@ team is responsible for taking the necessary corrective action.
 Deliverable Files
 =================
 
-Deliverable repositories for projects using cycle_with_intermediatry
+Deliverable repositories for projects using cycle_with_intermediary
 or cycle_with_milestones should be placed in their respective releases
 within the deliverables directory. Deliverable repositories for
 projects using the independent release model should be placed in the
 ``deliverables/_independent`` directory.
 
-For deliverable set of projects, we use one YAML file per release
+For a deliverable set of projects, we use one YAML file per release
 series to hold all of the metadata for all releases and branches of
 that deliverable. For each deliverable, we need to track:
 
@@ -393,7 +393,7 @@ Each ``release`` entry is a mapping with keys:
   announcing the release. (Use ``|`` to indicate a multi-line,
   pre-formatted message.)
 
-Each `project` entry is a mapping with keys:
+Each entry in the ``projects`` list is a mapping with keys:
 
 ``repo``
   The name of the repository on git.openstack.org.
@@ -405,7 +405,7 @@ Each `project` entry is a mapping with keys:
   An optional name for the base of the tarball created by the
   release. If no value is provided, it defaults to the repo base name.
 
-Each ``branch`` entry is a mapping with keys:
+Each entry in the ``branches`` list is a mapping with keys:
 
 ``name``
   The name of the branch.
