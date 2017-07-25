@@ -12,3 +12,9 @@ releases:
     highlights: >
         - Fix region support in CLI.
         - Accept keystone session in client.
+  - version: 3.1.1
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 0f2837237b11b29bee45c8724c6c9ada5f3df79b
+    highlights: >
+        - Set the default value of --limit parameter to avoid high server load.
