@@ -19,3 +19,11 @@ releases:
         hash: ba535c695007c0b4cc6dd6e6abc252a866104bb9
     highlights: |-
       * Added ``global_request_id`` parameter
+  - version: 6.4.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 3c211f30af8976d2be518c68eae14b08fba09c6a
+    highlights: |-
+      * Update the documentation link for doc migration
+      * Added SFC CLI for OSC plugin
+      * Documentation improvements
