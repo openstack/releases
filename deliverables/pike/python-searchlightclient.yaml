@@ -4,3 +4,11 @@ launchpad: python-searchlightclient
 release-model: cycle-with-intermediary
 team: searchlight
 type: library
+branches:
+  - name: stable/pike
+    location: 1.2.0
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: f9208e7273f6b5c6b7144a53fd82c2e2c7fac483
