@@ -1,0 +1,13 @@
+---
+launchpad: neutron-fwaas-dashboard
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron-fwaas-dashboard/unreleased.html
+type: horizon-plugin
+release-model: cycle-with-intermediary
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: fc62f5074abb734472aa641c26fafe01d2b3dba9
+    highlights: |-
+      * Initial release after split out from horizon
