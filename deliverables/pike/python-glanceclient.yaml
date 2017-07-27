@@ -12,3 +12,12 @@ releases:
     highlights: >
       - python-glanceclient supports Global Request ID
       - Download with --progress fixed for 2.x and 3.y
+  - version: 2.8.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 52eb529b97533876d4c558784ee4d463814c2a0d
+    highlights: >
+      - python-glanceclient supports Image Import workflow
+      - Image download optimized to fail early if no target
+      - Deprecated and inoperative --no-ssl-compression removed
+      - UnicodeEncodeError fixed for unicode values in url
