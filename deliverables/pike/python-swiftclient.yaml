@@ -4,3 +4,8 @@ launchpad: python-swiftclient
 release-model: cycle-with-intermediary
 team: swift
 type: library
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: e1945ea0fac3badd23013b5b559be1f8a79bf114
