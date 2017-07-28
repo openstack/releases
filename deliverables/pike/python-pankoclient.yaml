@@ -10,3 +10,6 @@ releases:
       - repo: openstack/python-pankoclient
         hash: f29cdbdd2a8137f30d0866f0e080045ccdd40583
         tarball-base: pankoclient
+branches:
+  - name: stable/pike
+    location: 0.3.0

@@ -51,3 +51,6 @@ releases:
     highlights: >
       Fix parameter name mismatches with server creation, a weird image
       normalization conflict and really fixed the delete_ips issue this time.
+branches:
+  - name: stable/pike
+    location: 1.22.2

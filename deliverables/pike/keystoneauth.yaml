@@ -35,3 +35,6 @@ releases:
       - repo: openstack/keystoneauth
         hash: 81363eca7903c2dc01d39b4c1569a6750ff13502
         tarball-base: keystoneauth1
+branches:
+  - name: stable/pike
+    location: 3.1.0
