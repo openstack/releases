@@ -23,3 +23,15 @@ releases:
       * Adds support for PROXY protocol for backend members
       * Adds support for health monitors agains alternate IP/Port
       * API reference for most of the octavia v2 API
+  - version: 1.0.0.0b3
+    projects:
+      - repo: openstack/octavia
+        hash: 4a067997e1a0077e658848db3d35cc62a7159d38
+    highlights: |-
+      * Finished implementation of the Octavia v2 API
+      * Added RBAC to Octavia v2 API
+      * Added new health monitor type ``TLS-HELLO``
+      * Added filtering and field selection to Octavia v2 API
+      * Finished API reference for Octavia v2 API
+      * Added uWSGI support for devstack
+      * Improved the performance of the Octavia v2 API
