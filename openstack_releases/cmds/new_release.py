@@ -21,13 +21,9 @@ import shutil
 import tempfile
 
 from openstack_releases import gitutils
+from openstack_releases import yamlutils
 
 import yaml
-
-RELEASE_TEMPLATE = '''
-  - version: {version}
-    projects:
-'''.lstrip('\n')
 
 PROJECT_TEMPLATE = '''
       - repo: {repo}
@@ -93,14 +89,16 @@ def main():
         parser.error(e)
 
     # Determine the new version number.
-    add_releases_key = False
     try:
         last_release = deliverable_info['releases'][-1]
     except KeyError:
         print('No releases for %s in %s, yet.' % (
             args.deliverable, series))
         if args.release_type == 'bugfix':
-            parser.error('The first release for a series must be at least a feature release to allow for stable releases from the previous series.')  # noqa
+            parser.error(
+                'The first release for a series must '
+                'be at least a feature release to allow '
+                'for stable releases from the previous series.')
         # Look for the version of the previous series.
         all_series = sorted(os.listdir('deliverables'))
         prev_series = all_series[all_series.index(series) - 1]
@@ -108,7 +106,7 @@ def main():
             prev_info = get_deliverable_data(
                 prev_series, args.deliverable)
             last_release = prev_info['releases'][-1]
-            add_releases_key = True
+            deliverable_info['releases'] = []
         except (IOError, OSError, KeyError) as e:
             parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
@@ -152,15 +150,13 @@ def main():
                 'hash': sha,
             })
 
-    # The YAML dump formatter produces results that aren't very nice
-    # to read, so we format the output ourselves. The file is only
-    # regenerated if there are in fact changes to be made.
+    deliverable_info['releases'].append({
+        'version': new_version,
+        'projects': projects,
+    })
+
     if changes > 0:
         deliverable_filename = 'deliverables/%s/%s.yaml' % (
             series, args.deliverable)
-        with open(deliverable_filename, 'a') as f:
-            if add_releases_key:
-                f.write('releases:\n')
-            f.write(RELEASE_TEMPLATE.format(version=new_version))
-            for p in projects:
-                f.write(PROJECT_TEMPLATE.format(**p))
+        with open(deliverable_filename, 'w', encoding='utf-8') as f:
+            f.write(yamlutils.dumps(deliverable_info))
