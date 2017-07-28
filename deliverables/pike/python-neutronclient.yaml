@@ -27,3 +27,11 @@ releases:
       * Update the documentation link for doc migration
       * Added SFC CLI for OSC plugin
       * Documentation improvements
+  - version: 6.5.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 355983d7040ec68435186513e79a0da7173078c3
+    highlights: |-
+      * CLI support for attribute renaming in FWaaS v2 API
+      * Bug fix in SFC CLI
+      * Workaround not to break neutron CLI extension UT
