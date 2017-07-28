@@ -23,10 +23,10 @@ def main():
     args = parser.parse_args()
     for filename in args.file:
         print("Reformatting %s" % filename)
-        with open(filename, 'rb') as fh:
+        with open(filename, 'r', encoding='utf-8') as fh:
             contents = yamlutils.loads(fh.read())
         contents = yamlutils.dumps(contents)
-        with open(filename, 'wb') as fh:
+        with open(filename, 'w', encoding='utf-8') as fh:
             fh.write(contents)
             if not contents.endswith("\n"):
                 fh.write("\n")

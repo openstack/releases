@@ -90,11 +90,13 @@ for str_type in [six.binary_type, six.text_type]:
 
 def dumps(obj):
     """Dump a python object -> blob and apply our pretty styling."""
-    buff = six.BytesIO()
+    buff = six.StringIO()
     yaml.dump_all([obj], buff,
-                  explicit_start=True, indent=2,
+                  explicit_start=True,
+                  indent=2,
                   default_flow_style=False,
-                  line_break="\n", Dumper=PrettySafeDumper,
+                  line_break="\n",
+                  Dumper=PrettySafeDumper,
                   allow_unicode=True)
     return buff.getvalue()
 
