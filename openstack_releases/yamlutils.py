@@ -78,6 +78,13 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
         else:
             return super(PrettySafeDumper, self).represent_undefined(data)
 
+    # Override this method to always indent. Otherwise when a list is
+    # emitted, the items nested under it are not and we have inconsistent
+    # formatting.
+    # https://stackoverflow.com/questions/25108581/python-yaml-dump-bad-indentation
+    def increase_indent(self, flow=False, indentless=False):
+        return super(PrettySafeDumper, self).increase_indent(flow, False)
+
 
 # NOTE(harlowja): at some point this may not be needed...
 # See: http://pyyaml.org/ticket/29
