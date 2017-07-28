@@ -21,3 +21,6 @@ releases:
       - Image download optimized to fail early if no target
       - Deprecated and inoperative --no-ssl-compression removed
       - UnicodeEncodeError fixed for unicode values in url
+branches:
+  - name: stable/pike
+    location: 2.8.0

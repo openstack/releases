@@ -2,10 +2,12 @@
 launchpad: ldappool
 team: keystone
 type: library
-send-announcements-to: openstack-dev@lists.openstack.org
 release-model: cycle-with-intermediary
 releases:
   - version: 2.1.0
     projects:
       - repo: openstack/ldappool
         hash: 62e08434f82b088da7c7fcc9660f397ba8d51d08
+branches:
+  - name: stable/pike
+    location: 2.1.0
