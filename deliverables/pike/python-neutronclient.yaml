@@ -35,3 +35,6 @@ releases:
       * CLI support for attribute renaming in FWaaS v2 API
       * Bug fix in SFC CLI
       * Workaround not to break neutron CLI extension UT
+branches:
+  - name: stable/pike
+    location: 6.5.0
