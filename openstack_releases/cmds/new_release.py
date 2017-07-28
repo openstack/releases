@@ -55,7 +55,7 @@ def main():
     # FIXME(dhellmann): Add milestone and rc types.
     parser.add_argument(
         'release_type',
-        choices=('bugfix', 'feature', 'major'),
+        choices=('bugfix', 'feature', 'major', 'b3'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -112,20 +112,24 @@ def main():
         except (IOError, OSError, KeyError) as e:
             parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
-    increment = {
-        'bugfix': (0, 0, 1),
-        'feature': (0, 1, 0),
-        'major': (1, 0, 0),
-    }[args.release_type]
-    new_version_parts = []
-    clear = False
-    for cur, inc in zip(last_version, increment):
-        if clear:
-            new_version_parts.append('0')
-        else:
-            new_version_parts.append(str(int(cur) + inc))
-            if inc:
-                clear = True
+    if args.release_type == 'b3':
+        new_version_parts = last_version[:-1]
+        new_version_parts.append('0b3')
+    else:
+        increment = {
+            'bugfix': (0, 0, 1),
+            'feature': (0, 1, 0),
+            'major': (1, 0, 0),
+        }[args.release_type]
+        new_version_parts = []
+        clear = False
+        for cur, inc in zip(last_version, increment):
+            if clear:
+                new_version_parts.append('0')
+            else:
+                new_version_parts.append(str(int(cur) + inc))
+                if inc:
+                    clear = True
     new_version = '.'.join(new_version_parts)
 
     print('going from %s to %s' % (last_version, new_version))
