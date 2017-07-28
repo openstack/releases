@@ -17,8 +17,7 @@ import os.path
 
 import openstack_releases
 from openstack_releases import deliverable
-
-import yaml
+from openstack_releases import yamlutils
 
 
 def main():
@@ -69,7 +68,6 @@ def main():
             if key in data:
                 del data[key]
         outfilename = os.path.join(outdir, name + '.yaml')
-        with open(outfilename, 'w') as f:
+        with open(outfilename, 'w', encoding='utf-8') as f:
             print('{} created'.format(outfilename))
-            f.write('---\n')
-            yaml.dump(data, f, default_flow_style=False)
+            f.write(yamlutils.dumps(data))
