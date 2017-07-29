@@ -3,6 +3,9 @@ launchpad: python-tricircleclient
 release-model: cycle-with-intermediary
 team: tricircle
 type: library
+branches:
+  - name: stable/pike
+    location: 0.2.0
 releases:
   - version: 0.1.0
     projects:
@@ -14,6 +17,8 @@ releases:
       - repo: openstack/python-tricircleclient
         tarball-base: tricircleclient
         hash: 7ce171728522ada352834c92da4c0aa1fbb888b4
-branches:
-  - name: stable/pike
-    location: 0.1.1
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-tricircleclient
+        tarball-base: tricircleclient
+        hash: 563f700b62de6b57671ec077293da6fa348c250a
