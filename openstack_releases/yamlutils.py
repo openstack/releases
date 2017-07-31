@@ -13,11 +13,15 @@
 #    under the License.
 
 import collections
+import re
 import textwrap
 
 import six
 import yaml
 import yamlordereddictloader
+
+
+_LIKE_A_NUMBER = re.compile('^[0-9]+.[0-9]+$')
 
 
 def _has_newline(data):
@@ -63,6 +67,8 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
         style = "plain"
         if _has_newline(data):
             style = "|"
+        elif _LIKE_A_NUMBER.match(data):
+            style = '"'
         return yaml.representer.ScalarNode('tag:yaml.org,2002:str',
                                            data, style=style)
 
