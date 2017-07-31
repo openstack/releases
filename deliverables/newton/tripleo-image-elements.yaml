@@ -1,46 +1,46 @@
 ---
 branches:
-- location: 5.0.0
-  name: stable/newton
+  - location: 5.0.0
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: 9e381f509be93956c4791cac2df94bf1b5015933
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0.0b1
-- projects:
-  - hash: 91128c19b094ef9b77ba2d5e95d63073b00e7a6b
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0.0b2
-- projects:
-  - hash: 98b9c6a5145bbcb46a6d22265f63e219199599ba
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0.0b3
-- projects:
-  - hash: 98b9c6a5145bbcb46a6d22265f63e219199599ba
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0.0rc1
-- projects:
-  - hash: c52dc5db887dc193556dc0554a5bf0c01352071e
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0.0rc2
-- diff-start: 0.9.9
-  projects:
-  - hash: c52dc5db887dc193556dc0554a5bf0c01352071e
-    repo: openstack/tripleo-image-elements
-  version: 5.0.0
-- projects:
-  - hash: acde285c69d4a265689621b47b8b3cb083057389
-    repo: openstack/tripleo-image-elements
-  version: 5.1.0
-- projects:
-  - hash: 7455be069703b620c76008600a33da2df4a57633
-    repo: openstack/tripleo-image-elements
-  version: 5.2.0
-- projects:
-  - hash: 3ecf4779585af7c4c63d841f66a8159ddfa1d645
-    repo: openstack/tripleo-image-elements
-  version: 5.3.0
+  - projects:
+      - hash: 9e381f509be93956c4791cac2df94bf1b5015933
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 91128c19b094ef9b77ba2d5e95d63073b00e7a6b
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0.0b2
+  - projects:
+      - hash: 98b9c6a5145bbcb46a6d22265f63e219199599ba
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0.0b3
+  - projects:
+      - hash: 98b9c6a5145bbcb46a6d22265f63e219199599ba
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0.0rc1
+  - projects:
+      - hash: c52dc5db887dc193556dc0554a5bf0c01352071e
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0.0rc2
+  - diff-start: 0.9.9
+    projects:
+      - hash: c52dc5db887dc193556dc0554a5bf0c01352071e
+        repo: openstack/tripleo-image-elements
+    version: 5.0.0
+  - projects:
+      - hash: acde285c69d4a265689621b47b8b3cb083057389
+        repo: openstack/tripleo-image-elements
+    version: 5.1.0
+  - projects:
+      - hash: 7455be069703b620c76008600a33da2df4a57633
+        repo: openstack/tripleo-image-elements
+    version: 5.2.0
+  - projects:
+      - hash: 3ecf4779585af7c4c63d841f66a8159ddfa1d645
+        repo: openstack/tripleo-image-elements
+    version: 5.3.0
 team: tripleo
 type: other

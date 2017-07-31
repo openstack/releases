@@ -1,15 +1,15 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 storyboard: 904
 release-notes: https://docs.openstack.org/releasenotes/os-service-types/unreleased.html
 team: os-service-types
 release-model: cycle-with-intermediary
 type: library
 releases:
-- version: 1.0.0
-  projects:
-  - repo: openstack/os-service-types
-    hash: 06fcdd8e73f83ff6cebabf23b24bc124bc6e8fcf
+  - version: 1.0.0
+    projects:
+      - repo: openstack/os-service-types
+        hash: 06fcdd8e73f83ff6cebabf23b24bc124bc6e8fcf
 branches:
-- name: stable/pike
-  location: 1.0.0
+  - name: stable/pike
+    location: 1.0.0

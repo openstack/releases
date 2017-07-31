@@ -1,31 +1,31 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/instack-undercloud/ocata.html
 releases:
-- projects:
-  - hash: 41a6c74e437538530cce7126c306f951f669ac94
-    repo: openstack/instack-undercloud
-  version: 6.0.0.0b2
-- projects:
-  - hash: a4e410597c1757e959a7d9b79af265134eef37b3
-    repo: openstack/instack-undercloud
-  version: 6.0.0.0rc1
-- projects:
-  - hash: e712d17078563bf8c8ded3304f38a0746fb8070b
-    repo: openstack/instack-undercloud
-  version: 6.0.0.0rc2
-- diff-start: 5.0.0.0rc2
-  projects:
-  - hash: e712d17078563bf8c8ded3304f38a0746fb8070b
-    repo: openstack/instack-undercloud
-  version: 6.0.0
-- projects:
-  - hash: 6790ae8b3d17e6a7aea2a7bf854763486d30c2a1
-    repo: openstack/instack-undercloud
-  version: 6.1.0
+  - projects:
+      - hash: 41a6c74e437538530cce7126c306f951f669ac94
+        repo: openstack/instack-undercloud
+    version: 6.0.0.0b2
+  - projects:
+      - hash: a4e410597c1757e959a7d9b79af265134eef37b3
+        repo: openstack/instack-undercloud
+    version: 6.0.0.0rc1
+  - projects:
+      - hash: e712d17078563bf8c8ded3304f38a0746fb8070b
+        repo: openstack/instack-undercloud
+    version: 6.0.0.0rc2
+  - diff-start: 5.0.0.0rc2
+    projects:
+      - hash: e712d17078563bf8c8ded3304f38a0746fb8070b
+        repo: openstack/instack-undercloud
+    version: 6.0.0
+  - projects:
+      - hash: 6790ae8b3d17e6a7aea2a7bf854763486d30c2a1
+        repo: openstack/instack-undercloud
+    version: 6.1.0
 team: tripleo
 type: other

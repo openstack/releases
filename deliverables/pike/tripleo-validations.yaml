@@ -2,17 +2,17 @@
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 65a52d662abc5cab1fbd2ce6248421a22c2b6d76
-    repo: openstack/tripleo-validations
-  version: 7.0.0
-- version: 7.1.0
-  projects:
-  - repo: openstack/tripleo-validations
-    hash: f3b1e39f9443dfdc068f46273f921f3e8e5c1662
-- version: 7.2.0
-  projects:
-  - repo: openstack/tripleo-validations
-    hash: 7c28e26de45453454aad5b3d9eeb101f1e2608f8
+  - projects:
+      - hash: 65a52d662abc5cab1fbd2ce6248421a22c2b6d76
+        repo: openstack/tripleo-validations
+    version: 7.0.0
+  - version: 7.1.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: f3b1e39f9443dfdc068f46273f921f3e8e5c1662
+  - version: 7.2.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 7c28e26de45453454aad5b3d9eeb101f1e2608f8
 team: tripleo
 type: other

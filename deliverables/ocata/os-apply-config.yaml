@@ -1,22 +1,22 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: os-apply-config
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: 1bd0206930e9af8e91f7eae6878530c6a7968910
-    repo: openstack/os-apply-config
-  version: 6.0.0.0rc1
-- diff-start: 5.0.0
-  projects:
-  - hash: 1bd0206930e9af8e91f7eae6878530c6a7968910
-    repo: openstack/os-apply-config
-  version: 6.0.0
-- projects:
-  - hash: ed286dcdd0eef0ea6703a73f893c03272b5ab9a5
-    repo: openstack/os-apply-config
-  version: 6.1.0
+  - projects:
+      - hash: 1bd0206930e9af8e91f7eae6878530c6a7968910
+        repo: openstack/os-apply-config
+    version: 6.0.0.0rc1
+  - diff-start: 5.0.0
+    projects:
+      - hash: 1bd0206930e9af8e91f7eae6878530c6a7968910
+        repo: openstack/os-apply-config
+    version: 6.0.0
+  - projects:
+      - hash: ed286dcdd0eef0ea6703a73f893c03272b5ab9a5
+        repo: openstack/os-apply-config
+    version: 6.1.0
 team: tripleo
 type: other

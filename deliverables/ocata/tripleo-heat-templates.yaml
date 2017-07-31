@@ -1,39 +1,39 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/tripleo-heat-templates/ocata.html
 releases:
-- projects:
-  - hash: 521779edd4dbeb65e0c62c48567dd478b3fab5a5
-    repo: openstack/tripleo-heat-templates
-  version: 6.0.0.0b1
-- projects:
-  - hash: 1e88f875239b30de24552450b623e6892941fa1e
-    repo: openstack/tripleo-heat-templates
-  version: 6.0.0.0b2
-- projects:
-  - hash: 5340f64c03902b7a76212a579bcc895d56008df3
-    repo: openstack/tripleo-heat-templates
-  version: 6.0.0.0rc1
-- projects:
-  - hash: 5f278ebc5cd3426d58c8a05c0f58309681efa055
-    repo: openstack/tripleo-heat-templates
-  version: 6.0.0.0rc2
-- diff-start: 5.0.0.0rc2
-  projects:
-  - hash: 5f278ebc5cd3426d58c8a05c0f58309681efa055
-    repo: openstack/tripleo-heat-templates
-  version: 6.0.0
-- projects:
-  - hash: 0b8fa1c7fecf0a95029a25a1e38218e55f085db6
-    repo: openstack/tripleo-heat-templates
-  version: 6.1.0
-- projects:
-  - hash: 08a89804781d63c8f234244bdd10b9149eaac8bd
-    repo: openstack/tripleo-heat-templates
-  version: 6.2.0
+  - projects:
+      - hash: 521779edd4dbeb65e0c62c48567dd478b3fab5a5
+        repo: openstack/tripleo-heat-templates
+    version: 6.0.0.0b1
+  - projects:
+      - hash: 1e88f875239b30de24552450b623e6892941fa1e
+        repo: openstack/tripleo-heat-templates
+    version: 6.0.0.0b2
+  - projects:
+      - hash: 5340f64c03902b7a76212a579bcc895d56008df3
+        repo: openstack/tripleo-heat-templates
+    version: 6.0.0.0rc1
+  - projects:
+      - hash: 5f278ebc5cd3426d58c8a05c0f58309681efa055
+        repo: openstack/tripleo-heat-templates
+    version: 6.0.0.0rc2
+  - diff-start: 5.0.0.0rc2
+    projects:
+      - hash: 5f278ebc5cd3426d58c8a05c0f58309681efa055
+        repo: openstack/tripleo-heat-templates
+    version: 6.0.0
+  - projects:
+      - hash: 0b8fa1c7fecf0a95029a25a1e38218e55f085db6
+        repo: openstack/tripleo-heat-templates
+    version: 6.1.0
+  - projects:
+      - hash: 08a89804781d63c8f234244bdd10b9149eaac8bd
+        repo: openstack/tripleo-heat-templates
+    version: 6.2.0
 team: tripleo
 type: other

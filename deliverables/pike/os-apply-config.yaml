@@ -2,13 +2,13 @@
 launchpad: os-apply-config
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: dcc453a946a98532e5f0b68ebcc52f96a56fb7cb
-    repo: openstack/os-apply-config
-  version: 7.0.0.0b1
-- projects:
-  - hash: 89b0ba7bc424e1e10fdf1d269f819a4e612f9358
-    repo: openstack/os-apply-config
-  version: 7.0.0
+  - projects:
+      - hash: dcc453a946a98532e5f0b68ebcc52f96a56fb7cb
+        repo: openstack/os-apply-config
+    version: 7.0.0.0b1
+  - projects:
+      - hash: 89b0ba7bc424e1e10fdf1d269f819a4e612f9358
+        repo: openstack/os-apply-config
+    version: 7.0.0
 team: tripleo
 type: other

@@ -1,30 +1,30 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: os-net-config
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: e479535b508b4072f64300809b824dfecc3a9182
-    repo: openstack/os-net-config
-  version: 6.0.0.0b1
-- projects:
-  - hash: d621022954195049c96b19064f2eddd46ec95fe4
-    repo: openstack/os-net-config
-  version: 6.0.0.0b2
-- projects:
-  - hash: b4ecaa5c344cc33691d91398bfa187e876e6e40d
-    repo: openstack/os-net-config
-  version: 6.0.0.0rc1
-- diff-start: 5.0.0
-  projects:
-  - hash: b4ecaa5c344cc33691d91398bfa187e876e6e40d
-    repo: openstack/os-net-config
-  version: 6.0.0
-- projects:
-  - hash: 9e3d128985ad9053e6df779f001ca8979a9bbf90
-    repo: openstack/os-net-config
-  version: 6.1.0
+  - projects:
+      - hash: e479535b508b4072f64300809b824dfecc3a9182
+        repo: openstack/os-net-config
+    version: 6.0.0.0b1
+  - projects:
+      - hash: d621022954195049c96b19064f2eddd46ec95fe4
+        repo: openstack/os-net-config
+    version: 6.0.0.0b2
+  - projects:
+      - hash: b4ecaa5c344cc33691d91398bfa187e876e6e40d
+        repo: openstack/os-net-config
+    version: 6.0.0.0rc1
+  - diff-start: 5.0.0
+    projects:
+      - hash: b4ecaa5c344cc33691d91398bfa187e876e6e40d
+        repo: openstack/os-net-config
+    version: 6.0.0
+  - projects:
+      - hash: 9e3d128985ad9053e6df779f001ca8979a9bbf90
+        repo: openstack/os-net-config
+    version: 6.1.0
 team: tripleo
 type: other

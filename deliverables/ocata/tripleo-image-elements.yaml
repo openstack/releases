@@ -1,35 +1,35 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/tripleo-image-elements/ocata.html
 releases:
-- projects:
-  - hash: 8c959cfad29aac9627badc5faa0eed05b9cc682e
-    repo: openstack/tripleo-image-elements
-  version: 6.0.0.0b1
-- projects:
-  - hash: 57a19a7267a8608a434ba05529be9fba297f6027
-    repo: openstack/tripleo-image-elements
-  version: 6.0.0.0b2
-- projects:
-  - hash: 662ba3938c8565cbb6c815a37d7d0f280e2ea9ce
-    repo: openstack/tripleo-image-elements
-  version: 6.0.0.0rc1
-- projects:
-  - hash: ad33b596a7455812933369e9185119e55f64b1b0
-    repo: openstack/tripleo-image-elements
-  version: 6.0.0.0rc2
-- diff-start: 5.0.0
-  projects:
-  - hash: ad33b596a7455812933369e9185119e55f64b1b0
-    repo: openstack/tripleo-image-elements
-  version: 6.0.0
-- projects:
-  - hash: ee2e37a997c8ddef32511d5e2c033b746340b35b
-    repo: openstack/tripleo-image-elements
-  version: 6.1.0
+  - projects:
+      - hash: 8c959cfad29aac9627badc5faa0eed05b9cc682e
+        repo: openstack/tripleo-image-elements
+    version: 6.0.0.0b1
+  - projects:
+      - hash: 57a19a7267a8608a434ba05529be9fba297f6027
+        repo: openstack/tripleo-image-elements
+    version: 6.0.0.0b2
+  - projects:
+      - hash: 662ba3938c8565cbb6c815a37d7d0f280e2ea9ce
+        repo: openstack/tripleo-image-elements
+    version: 6.0.0.0rc1
+  - projects:
+      - hash: ad33b596a7455812933369e9185119e55f64b1b0
+        repo: openstack/tripleo-image-elements
+    version: 6.0.0.0rc2
+  - diff-start: 5.0.0
+    projects:
+      - hash: ad33b596a7455812933369e9185119e55f64b1b0
+        repo: openstack/tripleo-image-elements
+    version: 6.0.0
+  - projects:
+      - hash: ee2e37a997c8ddef32511d5e2c033b746340b35b
+        repo: openstack/tripleo-image-elements
+    version: 6.1.0
 team: tripleo
 type: other

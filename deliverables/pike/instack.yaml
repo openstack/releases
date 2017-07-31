@@ -2,12 +2,12 @@
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: ec102b19a029d0ca7fcf1267656256b4023cf57e
-    repo: openstack/instack
-  version: 7.0.0
+  - projects:
+      - hash: ec102b19a029d0ca7fcf1267656256b4023cf57e
+        repo: openstack/instack
+    version: 7.0.0
 team: tripleo
 type: library
 branches:
-- name: stable/pike
-  location: 7.0.0
+  - name: stable/pike
+    location: 7.0.0

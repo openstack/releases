@@ -1,50 +1,50 @@
 ---
 branches:
-- location: 5.0.0.0rc2
-  name: stable/newton
+  - location: 5.0.0.0rc2
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: ccb46a51ac8ca59865c04b681628edbc5a167530
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0b1
-- projects:
-  - hash: 0fbe987ed46f0ddeaea05b5b5bcc56ae28b716d0
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0b2
-- projects:
-  - hash: a02cee9e3ba1311c5782365914ca0758ff413dec
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0b3
-- projects:
-  - hash: d8f3e366a0f6d5bbdfd63d9caccb3b352b5ed60e
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0rc1
-- projects:
-  - hash: 4cdc4fc67361b175d90f6b2807c26b5ee78c8282
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0rc2
-- projects:
-  - hash: d81ad3cf4235da325c831ab7dabe49390f78bfa0
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0.0rc3
-- diff-start: 2.0.0
-  projects:
-  - hash: d81ad3cf4235da325c831ab7dabe49390f78bfa0
-    repo: openstack/tripleo-heat-templates
-  version: 5.0.0
-- projects:
-  - hash: a8a500fc603b77a31135cdcd6debfccbd14afc63
-    repo: openstack/tripleo-heat-templates
-  version: 5.1.0
-- projects:
-  - hash: 6ef04176474e6b6034b4d4ae0081cb759eaa760b
-    repo: openstack/tripleo-heat-templates
-  version: 5.2.0
-- projects:
-  - hash: b0e4970a7c7bd0a8e908abe7071d700968f8a3ff
-    repo: openstack/tripleo-heat-templates
-  version: 5.3.0
+  - projects:
+      - hash: ccb46a51ac8ca59865c04b681628edbc5a167530
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 0fbe987ed46f0ddeaea05b5b5bcc56ae28b716d0
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0b2
+  - projects:
+      - hash: a02cee9e3ba1311c5782365914ca0758ff413dec
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0b3
+  - projects:
+      - hash: d8f3e366a0f6d5bbdfd63d9caccb3b352b5ed60e
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0rc1
+  - projects:
+      - hash: 4cdc4fc67361b175d90f6b2807c26b5ee78c8282
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0rc2
+  - projects:
+      - hash: d81ad3cf4235da325c831ab7dabe49390f78bfa0
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0.0rc3
+  - diff-start: 2.0.0
+    projects:
+      - hash: d81ad3cf4235da325c831ab7dabe49390f78bfa0
+        repo: openstack/tripleo-heat-templates
+    version: 5.0.0
+  - projects:
+      - hash: a8a500fc603b77a31135cdcd6debfccbd14afc63
+        repo: openstack/tripleo-heat-templates
+    version: 5.1.0
+  - projects:
+      - hash: 6ef04176474e6b6034b4d4ae0081cb759eaa760b
+        repo: openstack/tripleo-heat-templates
+    version: 5.2.0
+  - projects:
+      - hash: b0e4970a7c7bd0a8e908abe7071d700968f8a3ff
+        repo: openstack/tripleo-heat-templates
+    version: 5.3.0
 team: tripleo
 type: other

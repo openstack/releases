@@ -1,30 +1,30 @@
 ---
 branches:
-- location: 3.0.0
-  name: stable/ocata
+  - location: 3.0.0
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/tripleo-ui/ocata.html
 releases:
-- projects:
-  - hash: 75a4c46df310bae25ccc0677bc4e065ef70bf288
-    repo: openstack/tripleo-ui
-  version: 2.0.0
-- projects:
-  - hash: 2dfbb0bfef1f74c2f0b3ca7471622eb5a3e8c2be
-    repo: openstack/tripleo-ui
-  version: 2.0.1
-- projects:
-  - hash: d760973c2c661af1586b74581217119facb46795
-    repo: openstack/tripleo-ui
-  version: 3.0.0
-- projects:
-  - hash: 71187598beac90ced60d9e1de1095b3b6268db4c
-    repo: openstack/tripleo-ui
-  version: 3.1.0
-- projects:
-  - hash: 7372bbfb868dd904b3541668d13706abf0aee544
-    repo: openstack/tripleo-ui
-  version: 3.2.0
+  - projects:
+      - hash: 75a4c46df310bae25ccc0677bc4e065ef70bf288
+        repo: openstack/tripleo-ui
+    version: 2.0.0
+  - projects:
+      - hash: 2dfbb0bfef1f74c2f0b3ca7471622eb5a3e8c2be
+        repo: openstack/tripleo-ui
+    version: 2.0.1
+  - projects:
+      - hash: d760973c2c661af1586b74581217119facb46795
+        repo: openstack/tripleo-ui
+    version: 3.0.0
+  - projects:
+      - hash: 71187598beac90ced60d9e1de1095b3b6268db4c
+        repo: openstack/tripleo-ui
+    version: 3.1.0
+  - projects:
+      - hash: 7372bbfb868dd904b3541668d13706abf0aee544
+        repo: openstack/tripleo-ui
+    version: 3.2.0
 team: tripleo
 type: other

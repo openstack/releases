@@ -1,30 +1,30 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: os-refresh-config
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: 962e02501bf4af3af7286b857115aae01264a91d
-    repo: openstack/os-refresh-config
-  version: 6.0.0.0b1
-- projects:
-  - hash: e403a6bad06be5c28562ed7ee63679f24df354c6
-    repo: openstack/os-refresh-config
-  version: 6.0.0.0b2
-- projects:
-  - hash: 85e9a93481dd2081fc9cfee836eafbde50aae0ca
-    repo: openstack/os-refresh-config
-  version: 6.0.0.0rc1
-- diff-start: 5.0.0
-  projects:
-  - hash: 85e9a93481dd2081fc9cfee836eafbde50aae0ca
-    repo: openstack/os-refresh-config
-  version: 6.0.0
-- projects:
-  - hash: 5d68491b0571e53350310667fcfab6a67553c7b7
-    repo: openstack/os-refresh-config
-  version: 6.1.0
+  - projects:
+      - hash: 962e02501bf4af3af7286b857115aae01264a91d
+        repo: openstack/os-refresh-config
+    version: 6.0.0.0b1
+  - projects:
+      - hash: e403a6bad06be5c28562ed7ee63679f24df354c6
+        repo: openstack/os-refresh-config
+    version: 6.0.0.0b2
+  - projects:
+      - hash: 85e9a93481dd2081fc9cfee836eafbde50aae0ca
+        repo: openstack/os-refresh-config
+    version: 6.0.0.0rc1
+  - diff-start: 5.0.0
+    projects:
+      - hash: 85e9a93481dd2081fc9cfee836eafbde50aae0ca
+        repo: openstack/os-refresh-config
+    version: 6.0.0
+  - projects:
+      - hash: 5d68491b0571e53350310667fcfab6a67553c7b7
+        repo: openstack/os-refresh-config
+    version: 6.1.0
 team: tripleo
 type: other

@@ -1,39 +1,39 @@
 ---
 branches:
-- location: 6.0.0.0rc1
-  name: stable/ocata
+  - location: 6.0.0.0rc1
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/tripleo-puppet-elements/ocata.html
 releases:
-- projects:
-  - hash: 94f02710ff06516da530c2386f2ab37fb8b8c843
-    repo: openstack/tripleo-puppet-elements
-  version: 6.0.0.0b1
-- projects:
-  - hash: a778205b0aa2d8202043f56287f7dd12c470fd85
-    repo: openstack/tripleo-puppet-elements
-  version: 6.0.0.0b2
-- projects:
-  - hash: 1a97231c1a694fc396b3a6eca80e90d36a864c05
-    repo: openstack/tripleo-puppet-elements
-  version: 6.0.0.0rc1
-- projects:
-  - hash: bb18776dae74406fbf8bd49627abc24f8ad5952d
-    repo: openstack/tripleo-puppet-elements
-  version: 6.0.0.0rc2
-- diff-start: 5.0.0
-  projects:
-  - hash: bb18776dae74406fbf8bd49627abc24f8ad5952d
-    repo: openstack/tripleo-puppet-elements
-  version: 6.0.0
-- projects:
-  - hash: f98d819796f9aef0d8d854ffce077e541155e5e7
-    repo: openstack/tripleo-puppet-elements
-  version: 6.1.0
-- projects:
-  - hash: 1520a180ad0328905092653473a49dee619aaac8
-    repo: openstack/tripleo-puppet-elements
-  version: 6.2.0
+  - projects:
+      - hash: 94f02710ff06516da530c2386f2ab37fb8b8c843
+        repo: openstack/tripleo-puppet-elements
+    version: 6.0.0.0b1
+  - projects:
+      - hash: a778205b0aa2d8202043f56287f7dd12c470fd85
+        repo: openstack/tripleo-puppet-elements
+    version: 6.0.0.0b2
+  - projects:
+      - hash: 1a97231c1a694fc396b3a6eca80e90d36a864c05
+        repo: openstack/tripleo-puppet-elements
+    version: 6.0.0.0rc1
+  - projects:
+      - hash: bb18776dae74406fbf8bd49627abc24f8ad5952d
+        repo: openstack/tripleo-puppet-elements
+    version: 6.0.0.0rc2
+  - diff-start: 5.0.0
+    projects:
+      - hash: bb18776dae74406fbf8bd49627abc24f8ad5952d
+        repo: openstack/tripleo-puppet-elements
+    version: 6.0.0
+  - projects:
+      - hash: f98d819796f9aef0d8d854ffce077e541155e5e7
+        repo: openstack/tripleo-puppet-elements
+    version: 6.1.0
+  - projects:
+      - hash: 1520a180ad0328905092653473a49dee619aaac8
+        repo: openstack/tripleo-puppet-elements
+    version: 6.2.0
 team: tripleo
 type: other

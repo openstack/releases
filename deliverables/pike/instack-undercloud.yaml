@@ -2,21 +2,21 @@
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 4e9b43dabbd64e8db88828e20dc1a98af9076654
-    repo: openstack/instack-undercloud
-  version: 7.0.0.0b1
-- projects:
-  - hash: 4e9b43dabbd64e8db88828e20dc1a98af9076654
-    repo: openstack/instack-undercloud
-  version: 7.0.0
-- projects:
-  - hash: 578c2a94a8e6d3c628ebda4330f01e3f289d0f81
-    repo: openstack/instack-undercloud
-  version: 7.1.0
-- projects:
-  - hash: 65e5dec70ef7d27b5a3f16803dac58500b480506
-    repo: openstack/instack-undercloud
-  version: 7.2.0
+  - projects:
+      - hash: 4e9b43dabbd64e8db88828e20dc1a98af9076654
+        repo: openstack/instack-undercloud
+    version: 7.0.0.0b1
+  - projects:
+      - hash: 4e9b43dabbd64e8db88828e20dc1a98af9076654
+        repo: openstack/instack-undercloud
+    version: 7.0.0
+  - projects:
+      - hash: 578c2a94a8e6d3c628ebda4330f01e3f289d0f81
+        repo: openstack/instack-undercloud
+    version: 7.1.0
+  - projects:
+      - hash: 65e5dec70ef7d27b5a3f16803dac58500b480506
+        repo: openstack/instack-undercloud
+    version: 7.2.0
 team: tripleo
 type: other

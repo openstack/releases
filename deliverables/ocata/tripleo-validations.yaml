@@ -1,29 +1,29 @@
 ---
 branches:
-- location: 5.4.0
-  name: stable/ocata
+  - location: 5.4.0
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: e7192c38d1dcb6e94866057526dd106b00a9749d
-    repo: openstack/tripleo-validations
-  version: 5.2.0
-- projects:
-  - hash: 2a92f61346cb28e9d7b88b779f9c6e92bf3817dd
-    repo: openstack/tripleo-validations
-  version: 5.3.0
-- projects:
-  - hash: 6b928f1c15fa68172c5981fd5581853e0ac5deb0
-    repo: openstack/tripleo-validations
-  version: 5.4.0
-- projects:
-  - hash: bb22b760da9ceb5b54a802ee84370fdd260f5680
-    repo: openstack/tripleo-validations
-  version: 5.5.0
-- projects:
-  - hash: bb22b760da9ceb5b54a802ee84370fdd260f5680
-    repo: openstack/tripleo-validations
-  version: 5.6.0
+  - projects:
+      - hash: e7192c38d1dcb6e94866057526dd106b00a9749d
+        repo: openstack/tripleo-validations
+    version: 5.2.0
+  - projects:
+      - hash: 2a92f61346cb28e9d7b88b779f9c6e92bf3817dd
+        repo: openstack/tripleo-validations
+    version: 5.3.0
+  - projects:
+      - hash: 6b928f1c15fa68172c5981fd5581853e0ac5deb0
+        repo: openstack/tripleo-validations
+    version: 5.4.0
+  - projects:
+      - hash: bb22b760da9ceb5b54a802ee84370fdd260f5680
+        repo: openstack/tripleo-validations
+    version: 5.5.0
+  - projects:
+      - hash: bb22b760da9ceb5b54a802ee84370fdd260f5680
+        repo: openstack/tripleo-validations
+    version: 5.6.0
 team: tripleo
 type: other

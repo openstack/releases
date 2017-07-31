@@ -1,17 +1,17 @@
 ---
 branches:
-- location: 6.0.0
-  name: stable/ocata
+  - location: 6.0.0
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 9e1f7099b24bf51344aa1f33e0a1092730e26c11
-    repo: openstack/instack
-  version: 6.0.0
-- projects:
-  - hash: b3450717177c79b92695359c786f8b385a0691de
-    repo: openstack/instack
-  version: 6.1.0
+  - projects:
+      - hash: 9e1f7099b24bf51344aa1f33e0a1092730e26c11
+        repo: openstack/instack
+    version: 6.0.0
+  - projects:
+      - hash: b3450717177c79b92695359c786f8b385a0691de
+        repo: openstack/instack
+    version: 6.1.0
 team: tripleo
 type: library

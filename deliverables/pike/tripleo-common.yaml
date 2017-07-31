@@ -2,29 +2,29 @@
 launchpad: tripleo-common
 release-model: cycle-trailing
 releases:
-- version: 7.0.0.0b1
-  projects:
-  - hash: 6dfd35f95375c671af41558e0a74c07cdbb7dc4a
-    repo: openstack/tripleo-common
-- version: 7.0.0
-  projects:
-  - hash: 5d35b7d174bcdd5564f187551c18da01fee938d3
-    repo: openstack/tripleo-common
-- version: 7.1.0
-  projects:
-  - hash: e0d2548c083455ada75ecd358b4ec10c659cd361
-    repo: openstack/tripleo-common
-- version: 7.2.0
-  projects:
-  - hash: 0fb7b83d7aec7acd0e0a7f838bbe6d94294c1f95
-    repo: openstack/tripleo-common
-- version: 7.3.0
-  projects:
-  - hash: 5a6423b7d7bcaaf218ecc8328c7c0469c095f6c5
-    repo: openstack/tripleo-common
-- version: 7.4.0
-  projects:
-  - hash: 98ada9b30dd85ebd3be368431a51ab82541d5001
-    repo: openstack/tripleo-common
+  - version: 7.0.0.0b1
+    projects:
+      - hash: 6dfd35f95375c671af41558e0a74c07cdbb7dc4a
+        repo: openstack/tripleo-common
+  - version: 7.0.0
+    projects:
+      - hash: 5d35b7d174bcdd5564f187551c18da01fee938d3
+        repo: openstack/tripleo-common
+  - version: 7.1.0
+    projects:
+      - hash: e0d2548c083455ada75ecd358b4ec10c659cd361
+        repo: openstack/tripleo-common
+  - version: 7.2.0
+    projects:
+      - hash: 0fb7b83d7aec7acd0e0a7f838bbe6d94294c1f95
+        repo: openstack/tripleo-common
+  - version: 7.3.0
+    projects:
+      - hash: 5a6423b7d7bcaaf218ecc8328c7c0469c095f6c5
+        repo: openstack/tripleo-common
+  - version: 7.4.0
+    projects:
+      - hash: 98ada9b30dd85ebd3be368431a51ab82541d5001
+        repo: openstack/tripleo-common
 team: tripleo
 type: other

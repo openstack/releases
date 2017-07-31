@@ -2,17 +2,17 @@
 launchpad: os-collect-config
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 0762fcb0b5872f4fbbf6ce8e5086140c65edf185
-    repo: openstack/os-collect-config
-  version: 7.0.0.0b1
-- projects:
-  - hash: bf91feb19862b1431c300623ceffe6d40ba64c47
-    repo: openstack/os-collect-config
-  version: 7.0.0
-- projects:
-  - hash: 5be5fe782f4e5802c4250f4a1f7fe3b6e4f9221a
-    repo: openstack/os-collect-config
-  version: 7.1.0
+  - projects:
+      - hash: 0762fcb0b5872f4fbbf6ce8e5086140c65edf185
+        repo: openstack/os-collect-config
+    version: 7.0.0.0b1
+  - projects:
+      - hash: bf91feb19862b1431c300623ceffe6d40ba64c47
+        repo: openstack/os-collect-config
+    version: 7.0.0
+  - projects:
+      - hash: 5be5fe782f4e5802c4250f4a1f7fe3b6e4f9221a
+        repo: openstack/os-collect-config
+    version: 7.1.0
 team: tripleo
 type: other

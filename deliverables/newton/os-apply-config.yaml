@@ -1,26 +1,26 @@
 ---
 branches:
-- location: 5.0.0
-  name: stable/newton
+  - location: 5.0.0
+    name: stable/newton
 launchpad: os-apply-config
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: 36f24df3e79e7c0f3621e8231853342b4f89d0e8
-    repo: openstack/os-apply-config
-  version: 5.0.0.0b1
-- projects:
-  - hash: 69879dad8b66933f79c7e06d159ef2e91160aa1e
-    repo: openstack/os-apply-config
-  version: 5.0.0.0b2
-- diff-start: 0.1.32
-  projects:
-  - hash: 69879dad8b66933f79c7e06d159ef2e91160aa1e
-    repo: openstack/os-apply-config
-  version: 5.0.0
-- projects:
-  - hash: 13e5cdc7357f0f175a6ea8157032d9e224c5eec1
-    repo: openstack/os-apply-config
-  version: 5.1.0
+  - projects:
+      - hash: 36f24df3e79e7c0f3621e8231853342b4f89d0e8
+        repo: openstack/os-apply-config
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 69879dad8b66933f79c7e06d159ef2e91160aa1e
+        repo: openstack/os-apply-config
+    version: 5.0.0.0b2
+  - diff-start: 0.1.32
+    projects:
+      - hash: 69879dad8b66933f79c7e06d159ef2e91160aa1e
+        repo: openstack/os-apply-config
+    version: 5.0.0
+  - projects:
+      - hash: 13e5cdc7357f0f175a6ea8157032d9e224c5eec1
+        repo: openstack/os-apply-config
+    version: 5.1.0
 team: tripleo
 type: other

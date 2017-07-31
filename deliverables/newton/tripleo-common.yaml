@@ -1,45 +1,45 @@
 ---
 branches:
-- location: 5.2.0
-  name: stable/newton
+  - location: 5.2.0
+    name: stable/newton
 launchpad: tripleo-common
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 7bd80dbdf22f0693e357d9a81ee6308ad53a7a1e
-    repo: openstack/tripleo-common
-  version: 5.0.0.0b1
-- projects:
-  - hash: 7f2cefeb8b5dd5097bb00d1ce7e6f2e2cc9a3a5e
-    repo: openstack/tripleo-common
-  version: 5.0.0.0b2
-- projects:
-  - hash: 6f2d71ef7405d843a5890d40a05d8ed3370c2176
-    repo: openstack/tripleo-common
-  version: 5.0.0
-- projects:
-  - hash: 15c97e63c061a01df5b590dadd9c154b6165d718
-    repo: openstack/tripleo-common
-  version: 5.1.0
-- projects:
-  - hash: f9bd99c063289e3f86795aeb557ed27f5119e635
-    repo: openstack/tripleo-common
-  version: 5.2.0
-- projects:
-  - hash: 3163e515547f80d22ed8afcc179821b965f3abdf
-    repo: openstack/tripleo-common
-  version: 5.3.0
-- projects:
-  - hash: 6da966ce29ceedfab06099baa106882f89e5064a
-    repo: openstack/tripleo-common
-  version: 5.4.0
-- projects:
-  - hash: 07a15ae42396332ba1a49f957165235bbc3d04f3
-    repo: openstack/tripleo-common
-  version: 5.4.1
-- projects:
-  - hash: 570c5acc9e7bebeaa489821b6bb21568fb005575
-    repo: openstack/tripleo-common
-  version: 5.4.2
+  - projects:
+      - hash: 7bd80dbdf22f0693e357d9a81ee6308ad53a7a1e
+        repo: openstack/tripleo-common
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 7f2cefeb8b5dd5097bb00d1ce7e6f2e2cc9a3a5e
+        repo: openstack/tripleo-common
+    version: 5.0.0.0b2
+  - projects:
+      - hash: 6f2d71ef7405d843a5890d40a05d8ed3370c2176
+        repo: openstack/tripleo-common
+    version: 5.0.0
+  - projects:
+      - hash: 15c97e63c061a01df5b590dadd9c154b6165d718
+        repo: openstack/tripleo-common
+    version: 5.1.0
+  - projects:
+      - hash: f9bd99c063289e3f86795aeb557ed27f5119e635
+        repo: openstack/tripleo-common
+    version: 5.2.0
+  - projects:
+      - hash: 3163e515547f80d22ed8afcc179821b965f3abdf
+        repo: openstack/tripleo-common
+    version: 5.3.0
+  - projects:
+      - hash: 6da966ce29ceedfab06099baa106882f89e5064a
+        repo: openstack/tripleo-common
+    version: 5.4.0
+  - projects:
+      - hash: 07a15ae42396332ba1a49f957165235bbc3d04f3
+        repo: openstack/tripleo-common
+    version: 5.4.1
+  - projects:
+      - hash: 570c5acc9e7bebeaa489821b6bb21568fb005575
+        repo: openstack/tripleo-common
+    version: 5.4.2
 team: tripleo
 type: library

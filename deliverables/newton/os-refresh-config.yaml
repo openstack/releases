@@ -1,34 +1,34 @@
 ---
 branches:
-- location: 5.0.0
-  name: stable/newton
+  - location: 5.0.0
+    name: stable/newton
 launchpad: os-refresh-config
 release-model: cycle-with-milestones
 releases:
-- projects:
-  - hash: 08b517491f61cb17b46ea783b70ce079330294ae
-    repo: openstack/os-refresh-config
-  version: 5.0.0.0b1
-- projects:
-  - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
-    repo: openstack/os-refresh-config
-  version: 5.0.0.0b2
-- projects:
-  - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
-    repo: openstack/os-refresh-config
-  version: 5.0.0.0b3
-- diff-start: 0.1.11
-  projects:
-  - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
-    repo: openstack/os-refresh-config
-  version: 5.0.0
-- projects:
-  - hash: 8b3d3f8e12f73ddaa80f16c56c6fac948a940a14
-    repo: openstack/os-refresh-config
-  version: 5.1.0
-- projects:
-  - hash: 8b3d3f8e12f73ddaa80f16c56c6fac948a940a14
-    repo: openstack/os-refresh-config
-  version: 5.2.0
+  - projects:
+      - hash: 08b517491f61cb17b46ea783b70ce079330294ae
+        repo: openstack/os-refresh-config
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
+        repo: openstack/os-refresh-config
+    version: 5.0.0.0b2
+  - projects:
+      - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
+        repo: openstack/os-refresh-config
+    version: 5.0.0.0b3
+  - diff-start: 0.1.11
+    projects:
+      - hash: 1d828fa0dd91bb1e1824883e3202da2e8dfa148e
+        repo: openstack/os-refresh-config
+    version: 5.0.0
+  - projects:
+      - hash: 8b3d3f8e12f73ddaa80f16c56c6fac948a940a14
+        repo: openstack/os-refresh-config
+    version: 5.1.0
+  - projects:
+      - hash: 8b3d3f8e12f73ddaa80f16c56c6fac948a940a14
+        repo: openstack/os-refresh-config
+    version: 5.2.0
 team: tripleo
 type: other

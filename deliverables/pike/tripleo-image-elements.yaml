@@ -2,17 +2,17 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 683256d1f9894c062a9055beaddcf89b64ccbe5f
-    repo: openstack/tripleo-image-elements
-  version: 7.0.0.0b1
-- projects:
-  - hash: 401d86195038abd6cc4d95d89b7fcc41c4fe6f2f
-    repo: openstack/tripleo-image-elements
-  version: 7.0.0.0b2
-- projects:
-  - hash: f3f06c7704b60236fbf7a40addaf9bdd24f7867a
-    repo: openstack/tripleo-image-elements
-  version: 7.0.0.0b3
+  - projects:
+      - hash: 683256d1f9894c062a9055beaddcf89b64ccbe5f
+        repo: openstack/tripleo-image-elements
+    version: 7.0.0.0b1
+  - projects:
+      - hash: 401d86195038abd6cc4d95d89b7fcc41c4fe6f2f
+        repo: openstack/tripleo-image-elements
+    version: 7.0.0.0b2
+  - projects:
+      - hash: f3f06c7704b60236fbf7a40addaf9bdd24f7867a
+        repo: openstack/tripleo-image-elements
+    version: 7.0.0.0b3
 team: tripleo
 type: other

@@ -2,13 +2,13 @@
 launchpad: os-refresh-config
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 519606f749bb7787c040992f7c2b1baa8059ea6a
-    repo: openstack/os-refresh-config
-  version: 7.0.0.0b1
-- projects:
-  - hash: f80ee22e8c3306ce5f4bb4220c870638cced33ae
-    repo: openstack/os-refresh-config
-  version: 7.0.0
+  - projects:
+      - hash: 519606f749bb7787c040992f7c2b1baa8059ea6a
+        repo: openstack/os-refresh-config
+    version: 7.0.0.0b1
+  - projects:
+      - hash: f80ee22e8c3306ce5f4bb4220c870638cced33ae
+        repo: openstack/os-refresh-config
+    version: 7.0.0
 team: tripleo
 type: other

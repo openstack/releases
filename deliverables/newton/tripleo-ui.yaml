@@ -1,41 +1,41 @@
 ---
 branches:
-- location: 1.0.3
-  name: stable/newton
+  - location: 1.0.3
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 773e3abc7465192a339a57cb5952d1bc8afa6230
-    repo: openstack/tripleo-ui
-  version: 1.0.0
-- projects:
-  - hash: 773e3abc7465192a339a57cb5952d1bc8afa6230
-    repo: openstack/tripleo-ui
-  version: 1.0.1
-- projects:
-  - hash: 56db18b40e3765514e12797a4dd0d428b62df4fd
-    repo: openstack/tripleo-ui
-  version: 1.0.2
-- projects:
-  - hash: 29e95e6dfa8f79e877255b0f30b25f1690319204
-    repo: openstack/tripleo-ui
-  version: 1.0.3
-- projects:
-  - hash: 656117b66b2ed79f5fec5fbed8768869b9000966
-    repo: openstack/tripleo-ui
-  version: 1.0.4
-- projects:
-  - hash: fb3c3f0cb6b62f60e4883b7a4408415b2222758a
-    repo: openstack/tripleo-ui
-  version: 1.0.5
-- projects:
-  - hash: 1b4ebe72a665fc3b051e929377e54bab88d5e991
-    repo: openstack/tripleo-ui
-  version: 1.1.0
-- projects:
-  - hash: 7cbf49c29ada81a044bb22da24186a3bf113aca4
-    repo: openstack/tripleo-ui
-  version: 1.2.0
+  - projects:
+      - hash: 773e3abc7465192a339a57cb5952d1bc8afa6230
+        repo: openstack/tripleo-ui
+    version: 1.0.0
+  - projects:
+      - hash: 773e3abc7465192a339a57cb5952d1bc8afa6230
+        repo: openstack/tripleo-ui
+    version: 1.0.1
+  - projects:
+      - hash: 56db18b40e3765514e12797a4dd0d428b62df4fd
+        repo: openstack/tripleo-ui
+    version: 1.0.2
+  - projects:
+      - hash: 29e95e6dfa8f79e877255b0f30b25f1690319204
+        repo: openstack/tripleo-ui
+    version: 1.0.3
+  - projects:
+      - hash: 656117b66b2ed79f5fec5fbed8768869b9000966
+        repo: openstack/tripleo-ui
+    version: 1.0.4
+  - projects:
+      - hash: fb3c3f0cb6b62f60e4883b7a4408415b2222758a
+        repo: openstack/tripleo-ui
+    version: 1.0.5
+  - projects:
+      - hash: 1b4ebe72a665fc3b051e929377e54bab88d5e991
+        repo: openstack/tripleo-ui
+    version: 1.1.0
+  - projects:
+      - hash: 7cbf49c29ada81a044bb22da24186a3bf113aca4
+        repo: openstack/tripleo-ui
+    version: 1.2.0
 team: tripleo
 type: other

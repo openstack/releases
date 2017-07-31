@@ -1,50 +1,50 @@
 ---
 branches:
-- location: 5.0.0.0rc2
-  name: stable/newton
+  - location: 5.0.0.0rc2
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: cb69c9e4ab119a93f4ba24f285f6b5df5ca05aab
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0b1
-- projects:
-  - hash: 1ffeb4b1b6d614898895a3c90ec08f7988e39c56
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0b2
-- projects:
-  - hash: ef84a6d9e14eaf30930b7d5eaa7d1b4c534411cc
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0b3
-- projects:
-  - hash: 80a17a6319c24a6d441808399334dc83950dbec4
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0rc1
-- projects:
-  - hash: 56e65af08467cf4542c9fde393a61bf3adc3ce42
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0rc2
-- projects:
-  - hash: c115feeacf1b97070c610ca573dcfb74726a15fa
-    repo: openstack/instack-undercloud
-  version: 5.0.0.0rc3
-- diff-start: 4.0.0
-  projects:
-  - hash: c115feeacf1b97070c610ca573dcfb74726a15fa
-    repo: openstack/instack-undercloud
-  version: 5.0.0
-- projects:
-  - hash: a9047744407a993e2cb02411ad48d421440d647c
-    repo: openstack/instack-undercloud
-  version: 5.1.0
-- projects:
-  - hash: aab2dadd199a57042274a7f8771dc1774be85399
-    repo: openstack/instack-undercloud
-  version: 5.2.0
-- projects:
-  - hash: b3a7d23bfe5ad393400ac9a96ae66a628bdd43a7
-    repo: openstack/instack-undercloud
-  version: 5.3.0
+  - projects:
+      - hash: cb69c9e4ab119a93f4ba24f285f6b5df5ca05aab
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 1ffeb4b1b6d614898895a3c90ec08f7988e39c56
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0b2
+  - projects:
+      - hash: ef84a6d9e14eaf30930b7d5eaa7d1b4c534411cc
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0b3
+  - projects:
+      - hash: 80a17a6319c24a6d441808399334dc83950dbec4
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0rc1
+  - projects:
+      - hash: 56e65af08467cf4542c9fde393a61bf3adc3ce42
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0rc2
+  - projects:
+      - hash: c115feeacf1b97070c610ca573dcfb74726a15fa
+        repo: openstack/instack-undercloud
+    version: 5.0.0.0rc3
+  - diff-start: 4.0.0
+    projects:
+      - hash: c115feeacf1b97070c610ca573dcfb74726a15fa
+        repo: openstack/instack-undercloud
+    version: 5.0.0
+  - projects:
+      - hash: a9047744407a993e2cb02411ad48d421440d647c
+        repo: openstack/instack-undercloud
+    version: 5.1.0
+  - projects:
+      - hash: aab2dadd199a57042274a7f8771dc1774be85399
+        repo: openstack/instack-undercloud
+    version: 5.2.0
+  - projects:
+      - hash: b3a7d23bfe5ad393400ac9a96ae66a628bdd43a7
+        repo: openstack/instack-undercloud
+    version: 5.3.0
 team: tripleo
 type: other

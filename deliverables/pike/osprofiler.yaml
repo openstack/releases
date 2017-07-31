@@ -1,42 +1,42 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: osprofiler
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 1.6.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: 27e2ce7d2e7b39bc5a5dbecf6dca4add8fb4a371
-- version: 1.7.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: d0f5aed40500a5b237c99d92a55a9f51ecf4da02
-- version: 1.8.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: 1173576ea8d96f69789334ffb9a0f74cdecbdbcf
-- version: 1.9.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: 1a86e4fbb458db3b2ebf2889b7ee3f655cba1231
-- version: 1.9.1
-  projects:
-  - repo: openstack/osprofiler
-    hash: b5eac4316187366b4e483fc532cdc07ac189e984
-- version: 1.10.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: 46765b104dc58b8d58213771896f9e3cb253fc68
-- version: 1.10.1
-  projects:
-  - repo: openstack/osprofiler
-    hash: 343fe299bf637762f8da680d7d7b5f6117b1661b
-- version: 1.11.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: ba4732d68a4ad4cbbab282d5328b82bdda564ffd
+  - version: 1.6.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: 27e2ce7d2e7b39bc5a5dbecf6dca4add8fb4a371
+  - version: 1.7.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: d0f5aed40500a5b237c99d92a55a9f51ecf4da02
+  - version: 1.8.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: 1173576ea8d96f69789334ffb9a0f74cdecbdbcf
+  - version: 1.9.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: 1a86e4fbb458db3b2ebf2889b7ee3f655cba1231
+  - version: 1.9.1
+    projects:
+      - repo: openstack/osprofiler
+        hash: b5eac4316187366b4e483fc532cdc07ac189e984
+  - version: 1.10.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: 46765b104dc58b8d58213771896f9e3cb253fc68
+  - version: 1.10.1
+    projects:
+      - repo: openstack/osprofiler
+        hash: 343fe299bf637762f8da680d7d7b5f6117b1661b
+  - version: 1.11.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: ba4732d68a4ad4cbbab282d5328b82bdda564ffd
 branches:
-- name: stable/pike
-  location: 1.11.0
+  - name: stable/pike
+    location: 1.11.0

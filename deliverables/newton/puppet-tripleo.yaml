@@ -1,49 +1,49 @@
 ---
 branches:
-- location: 5.2.0
-  name: stable/newton
+  - location: 5.2.0
+    name: stable/newton
 launchpad: puppet-tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: f9a557f90dcb101e5709cbb09e7205dd594f9580
-    repo: openstack/puppet-tripleo
-  version: 5.0.0.0b1
-- projects:
-  - hash: d871899c6b7c6b9714b3772a492bf94140e7348e
-    repo: openstack/puppet-tripleo
-  version: 5.0.0.0b2
-- projects:
-  - hash: d30e9bcc067c432fe93519dc5971ea98866a10cb
-    repo: openstack/puppet-tripleo
-  version: 5.0.0.0b3
-- projects:
-  - hash: d30e9bcc067c432fe93519dc5971ea98866a10cb
-    repo: openstack/puppet-tripleo
-  version: 5.0.0
-- projects:
-  - hash: cf5b71fd1d5784d946924057a6dfeb632d3b9eef
-    repo: openstack/puppet-tripleo
-  version: 5.1.0
-- projects:
-  - hash: b8f8d0fbd65104a4b79ab98f26a7d8a9815dbdeb
-    repo: openstack/puppet-tripleo
-  version: 5.2.0
-- projects:
-  - hash: f90053667f8e0d4829103def235129c51786c50e
-    repo: openstack/puppet-tripleo
-  version: 5.3.0
-- projects:
-  - hash: 6a7eec3543a1dc5a0f17e12dd81d6e10b0cce08c
-    repo: openstack/puppet-tripleo
-  version: 5.4.0
-- projects:
-  - hash: 3be9575fb091582ec0666d57efc7e8158ae7c17e
-    repo: openstack/puppet-tripleo
-  version: 5.5.0
-- projects:
-  - hash: 556564782742413969c005f13158b044002427a6
-    repo: openstack/puppet-tripleo
-  version: 5.6.0
+  - projects:
+      - hash: f9a557f90dcb101e5709cbb09e7205dd594f9580
+        repo: openstack/puppet-tripleo
+    version: 5.0.0.0b1
+  - projects:
+      - hash: d871899c6b7c6b9714b3772a492bf94140e7348e
+        repo: openstack/puppet-tripleo
+    version: 5.0.0.0b2
+  - projects:
+      - hash: d30e9bcc067c432fe93519dc5971ea98866a10cb
+        repo: openstack/puppet-tripleo
+    version: 5.0.0.0b3
+  - projects:
+      - hash: d30e9bcc067c432fe93519dc5971ea98866a10cb
+        repo: openstack/puppet-tripleo
+    version: 5.0.0
+  - projects:
+      - hash: cf5b71fd1d5784d946924057a6dfeb632d3b9eef
+        repo: openstack/puppet-tripleo
+    version: 5.1.0
+  - projects:
+      - hash: b8f8d0fbd65104a4b79ab98f26a7d8a9815dbdeb
+        repo: openstack/puppet-tripleo
+    version: 5.2.0
+  - projects:
+      - hash: f90053667f8e0d4829103def235129c51786c50e
+        repo: openstack/puppet-tripleo
+    version: 5.3.0
+  - projects:
+      - hash: 6a7eec3543a1dc5a0f17e12dd81d6e10b0cce08c
+        repo: openstack/puppet-tripleo
+    version: 5.4.0
+  - projects:
+      - hash: 3be9575fb091582ec0666d57efc7e8158ae7c17e
+        repo: openstack/puppet-tripleo
+    version: 5.5.0
+  - projects:
+      - hash: 556564782742413969c005f13158b044002427a6
+        repo: openstack/puppet-tripleo
+    version: 5.6.0
 team: tripleo
 type: other

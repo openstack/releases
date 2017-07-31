@@ -1,25 +1,25 @@
 ---
 branches:
-- location: 5.0.0
-  name: stable/newton
+  - location: 5.0.0
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-with-intermediary
 releases:
-- projects:
-  - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
-    repo: openstack/instack
-  version: 5.0.0.0b1
-- projects:
-  - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
-    repo: openstack/instack
-  version: 5.0.0.0b2
-- projects:
-  - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
-    repo: openstack/instack
-  version: 5.0.0
-- projects:
-  - hash: 6e2a5dee92c49fc338620098347015eaa32c16cd
-    repo: openstack/instack
-  version: 5.1.0
+  - projects:
+      - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
+        repo: openstack/instack
+    version: 5.0.0.0b1
+  - projects:
+      - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
+        repo: openstack/instack
+    version: 5.0.0.0b2
+  - projects:
+      - hash: 5aabf5caf3c62384b1b027ca1b6f2aa3166a0ab3
+        repo: openstack/instack
+    version: 5.0.0
+  - projects:
+      - hash: 6e2a5dee92c49fc338620098347015eaa32c16cd
+        repo: openstack/instack
+    version: 5.1.0
 team: tripleo
 type: library
