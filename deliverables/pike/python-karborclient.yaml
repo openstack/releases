@@ -1,26 +1,26 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-karborclient
 release-model: cycle-with-intermediary
 team: karbor
 type: library
 releases:
-- version: 0.3.0
-  projects:
-  - repo: openstack/python-karborclient
-    hash: cd75dda7bba1875258bb113cfc61efc6d5cd2e3c
-- version: 0.4.0
-  projects:
-  - repo: openstack/python-karborclient
-    hash: 7bb1cc2c7afa6722f3cd5a1bf5dfd6856a8ab4f0
-- version: 0.5.0
-  projects:
-  - repo: openstack/python-karborclient
-    hash: 4839860b73d220c6639d62d622c95d94e55a3f6a
-- version: 0.6.0
-  projects:
-  - repo: openstack/python-karborclient
-    hash: d5842f61962b72f093b750b864ec2d0b584f671a
+  - version: 0.3.0
+    projects:
+      - repo: openstack/python-karborclient
+        hash: cd75dda7bba1875258bb113cfc61efc6d5cd2e3c
+  - version: 0.4.0
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 7bb1cc2c7afa6722f3cd5a1bf5dfd6856a8ab4f0
+  - version: 0.5.0
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 4839860b73d220c6639d62d622c95d94e55a3f6a
+  - version: 0.6.0
+    projects:
+      - repo: openstack/python-karborclient
+        hash: d5842f61962b72f093b750b864ec2d0b584f671a
 branches:
-- name: stable/pike
-  location: 0.6.0
+  - name: stable/pike
+    location: 0.6.0

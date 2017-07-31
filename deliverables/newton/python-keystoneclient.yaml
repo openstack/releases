@@ -3,42 +3,42 @@ launchpad: python-keystoneclient
 team: keystone
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/newton.html
 branches:
-- name: stable/newton
-  location: 3.5.0
+  - name: stable/newton
+    location: 3.5.0
 releases:
-- version: 3.0.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 60ca0ceb185592fd7bdb8ede2764ad123259b275
-  highlights: |
-    - The keystone CLI is removed.
-    - The keystoneclient.openstack.common.apiclient package is removed
-- version: 3.1.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 1c701864fc90ba010f189697a751806755468c70
-- version: 3.2.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: d9bd1056323605ed64e73175ce2fcbe5982ec045
-  highlights: |
-    - Handle EmptyCatalog exception in list federated projects (bug 1471943)
-- version: 3.3.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 41129c850394e97947ec374dad8e852b5e1b33b5
-- version: 3.4.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 12eac5fb73d9fd877a8fb1860daed07b16c35d5d
-- version: 3.5.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 39373aa40b085c3277fe393de0f638f12ac16d53
-- version: 3.5.1
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 7c40ff8466dc5e49f93752ecb998db864f8e5598
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 60ca0ceb185592fd7bdb8ede2764ad123259b275
+    highlights: |
+      - The keystone CLI is removed.
+      - The keystoneclient.openstack.common.apiclient package is removed
+  - version: 3.1.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 1c701864fc90ba010f189697a751806755468c70
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: d9bd1056323605ed64e73175ce2fcbe5982ec045
+    highlights: |
+      - Handle EmptyCatalog exception in list federated projects (bug 1471943)
+  - version: 3.3.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 41129c850394e97947ec374dad8e852b5e1b33b5
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 12eac5fb73d9fd877a8fb1860daed07b16c35d5d
+  - version: 3.5.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 39373aa40b085c3277fe393de0f638f12ac16d53
+  - version: 3.5.1
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 7c40ff8466dc5e49f93752ecb998db864f8e5598

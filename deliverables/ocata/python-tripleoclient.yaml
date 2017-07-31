@@ -1,34 +1,34 @@
 ---
 branches:
-- location: 6.0.0
-  name: stable/ocata
+  - location: 6.0.0
+    name: stable/ocata
 launchpad: tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/python-tripleoclient/ocata.html
 releases:
-- projects:
-  - hash: 2cc4eef66060bf4fc4071c2368b59fe4df7ace14
-    repo: openstack/python-tripleoclient
-  version: 5.5.0
-- projects:
-  - hash: 73756fce003f404d51547ab986debd40561619ce
-    repo: openstack/python-tripleoclient
-  version: 5.6.0
-- projects:
-  - hash: 784e6373e72eef959efc3d163e400ad2a41be918
-    repo: openstack/python-tripleoclient
-  version: 5.7.0
-- projects:
-  - hash: 553e46e76a167612f53d86ad8474fce5f1f35b53
-    repo: openstack/python-tripleoclient
-  version: 6.0.0
-- projects:
-  - hash: f8f29721208f5d1827f7b83eee158bd16af058bf
-    repo: openstack/python-tripleoclient
-  version: 6.1.0
-- projects:
-  - hash: 69dfe0a5ddb32c61d59e609fbda41cbd18c39147
-    repo: openstack/python-tripleoclient
-  version: 6.2.0
+  - projects:
+      - hash: 2cc4eef66060bf4fc4071c2368b59fe4df7ace14
+        repo: openstack/python-tripleoclient
+    version: 5.5.0
+  - projects:
+      - hash: 73756fce003f404d51547ab986debd40561619ce
+        repo: openstack/python-tripleoclient
+    version: 5.6.0
+  - projects:
+      - hash: 784e6373e72eef959efc3d163e400ad2a41be918
+        repo: openstack/python-tripleoclient
+    version: 5.7.0
+  - projects:
+      - hash: 553e46e76a167612f53d86ad8474fce5f1f35b53
+        repo: openstack/python-tripleoclient
+    version: 6.0.0
+  - projects:
+      - hash: f8f29721208f5d1827f7b83eee158bd16af058bf
+        repo: openstack/python-tripleoclient
+    version: 6.1.0
+  - projects:
+      - hash: 69dfe0a5ddb32c61d59e609fbda41cbd18c39147
+        repo: openstack/python-tripleoclient
+    version: 6.2.0
 team: tripleo
 type: library

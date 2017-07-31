@@ -4,28 +4,28 @@ team: keystone
 release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 releases:
-- version: 3.6.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 77e963db4635dca76fe3ff7ed40e9ad7ff172968
-- version: 3.7.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 9d51fe3009e73c9ba6d625169ddcdf79ebc8dcd5
-- version: 3.8.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: f7c1d45a04bb2b024a985b8e30245d38f2bf8442
-- version: 3.9.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 51d16fa344829aadf454faf5e0c4535a8f96a7c8
-- version: 3.10.0
-  projects:
-  - repo: openstack/python-keystoneclient
-    hash: 5e23cef55366e09c1b12d692b8666140bed8f549
+  - version: 3.6.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 77e963db4635dca76fe3ff7ed40e9ad7ff172968
+  - version: 3.7.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 9d51fe3009e73c9ba6d625169ddcdf79ebc8dcd5
+  - version: 3.8.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: f7c1d45a04bb2b024a985b8e30245d38f2bf8442
+  - version: 3.9.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 51d16fa344829aadf454faf5e0c4535a8f96a7c8
+  - version: 3.10.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 5e23cef55366e09c1b12d692b8666140bed8f549
 branches:
-- name: stable/ocata
-  location: 3.10.0
+  - name: stable/ocata
+    location: 3.10.0

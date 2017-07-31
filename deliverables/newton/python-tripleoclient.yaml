@@ -1,45 +1,45 @@
 ---
 branches:
-- location: 5.0.0
-  name: stable/newton
+  - location: 5.0.0
+    name: stable/newton
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: b9b2e4ade64b58784cc6fa9a8f1f3cb14ab18b50
-    repo: openstack/python-tripleoclient
-  version: 5.0.0.0b1
-- projects:
-  - hash: d8b00a95176ec612b8eba74855a71d3b7c127884
-    repo: openstack/python-tripleoclient
-  version: 5.0.0.0b2
-- projects:
-  - hash: b0d7ce7268da8e1dd629b423575d9f6a3de8c1aa
-    repo: openstack/python-tripleoclient
-  version: 5.0.0
-- projects:
-  - hash: bf4daeab8a3a1b346768f346dab1f1b43dc2e147
-    repo: openstack/python-tripleoclient
-  version: 5.1.0
-- projects:
-  - hash: 1b7b73125cceb58c174ea1ccb8d73463543533ae
-    repo: openstack/python-tripleoclient
-  version: 5.2.0
-- projects:
-  - hash: 2a97bf03418fde400d3cb7bb9c70abbbf5ee3355
-    repo: openstack/python-tripleoclient
-  version: 5.3.0
-- projects:
-  - hash: d35aaa1363cbb7f9d0b647f8df07cf12764f3a0d
-    repo: openstack/python-tripleoclient
-  version: 5.4.0
-- projects:
-  - hash: 18bbc46a3dfc1efbcb5650e7786875e20a2de0ef
-    repo: openstack/python-tripleoclient
-  version: 5.4.1
-- projects:
-  - hash: cfa87167c454a83f04dbb797163aeeb47502c8ee
-    repo: openstack/python-tripleoclient
-  version: 5.4.2
+  - projects:
+      - hash: b9b2e4ade64b58784cc6fa9a8f1f3cb14ab18b50
+        repo: openstack/python-tripleoclient
+    version: 5.0.0.0b1
+  - projects:
+      - hash: d8b00a95176ec612b8eba74855a71d3b7c127884
+        repo: openstack/python-tripleoclient
+    version: 5.0.0.0b2
+  - projects:
+      - hash: b0d7ce7268da8e1dd629b423575d9f6a3de8c1aa
+        repo: openstack/python-tripleoclient
+    version: 5.0.0
+  - projects:
+      - hash: bf4daeab8a3a1b346768f346dab1f1b43dc2e147
+        repo: openstack/python-tripleoclient
+    version: 5.1.0
+  - projects:
+      - hash: 1b7b73125cceb58c174ea1ccb8d73463543533ae
+        repo: openstack/python-tripleoclient
+    version: 5.2.0
+  - projects:
+      - hash: 2a97bf03418fde400d3cb7bb9c70abbbf5ee3355
+        repo: openstack/python-tripleoclient
+    version: 5.3.0
+  - projects:
+      - hash: d35aaa1363cbb7f9d0b647f8df07cf12764f3a0d
+        repo: openstack/python-tripleoclient
+    version: 5.4.0
+  - projects:
+      - hash: 18bbc46a3dfc1efbcb5650e7786875e20a2de0ef
+        repo: openstack/python-tripleoclient
+    version: 5.4.1
+  - projects:
+      - hash: cfa87167c454a83f04dbb797163aeeb47502c8ee
+        repo: openstack/python-tripleoclient
+    version: 5.4.2
 team: tripleo
 type: library
