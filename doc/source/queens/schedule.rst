@@ -2,12 +2,25 @@
  Queens Release Schedule
 =========================
 
+4 September 2017 - 2 March 2018 (26 weeks)
+
+.. datatemplate::
+   :source: schedule.yaml
+   :template: schedule_table.tmpl
+
+.. ics::
+   :source: schedule.yaml
+   :name: Queens
+
+`Subscribe to iCalendar file <schedule.ics>`__
+
 .. note::
 
-   All deadlines are generally the Thursday of the week on which they
-   are noted above. For example, the Feature Freeze in week XXX is on
-   XXX. Exceptions to this policy will be explicitly mentioned
-   in the event description.
+   With the exception of the final release date and cycle-trailing
+   release date, deadlines are generally the Thursday of the week on
+   which they are noted above. For example, the Feature Freeze in week
+   R-5 is on 25 January. Exceptions to this policy will be explicitly
+   mentioned in the event description.
 
 Cross-project events
 ====================
@@ -20,36 +33,49 @@ Queens Goals Research
 Pre-cycle planning and investigation into `the community-wide goals
 for Queens <https://governance.openstack.org/tc/goals/queens/index.html>`__.
 
-.. _q-design-summit:
-
-Queens Design Summit
---------------------
-
-TBD
-
 .. _q-ptg:
 
 Queens Project Team Gathering (PTG)
 -----------------------------------
 
-TBD
+`Project team gathering <http://www.openstack.org/ptg>`__ for the Queens
+cycle 11-15 September 2018 in Denver, Colorado.
 
 .. _q-1:
 
 Queens-1 milestone
 ------------------
 
-XXX is the Queens-1 milestone window for projects following the
+19 October 2017 is the Queens-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
+
+.. _q-goals-ack:
+
+Queens Community Goals Acknowledgement
+--------------------------------------
+
+Teams should prepare their acknowledgement of `the community-wide
+goals for 
+<https://governance.openstack.org/tc/goals/queens/index.html>`__.
+
+.. _q-summit:
+
+OpenStack Summit
+----------------
+
+The OpenStack Summit happens during this week in Sydney, Australia. It will
+include a "Forum" in which people from all parts of our community will gather
+to give feedback on the last release (Pike) and discuss requirements for the
+next development cycle (Rocky).
 
 .. _q-2:
 
 Queens-2 milestone
 ------------------
 
-XXX is the Queens-2 milestone window for projects following the
+7 December 2017 is the Queens-2 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
 .. _q-final-lib:
@@ -66,8 +92,17 @@ changes before feature freeze.
 Queens-3 milestone
 ------------------
 
-XXX is the Queens-3 milestone window for projects following the
+25 January 2018 is the Queens-3 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
+
+.. _q-goals-complete:
+
+Queens Community Goals Completed
+--------------------------------
+
+Teams should prepare their documentation for completing `the
+community-wide goals for Queens
+<https://governance.openstack.org/tc/goals/queens/index.html>`__.
 
 .. _q-extra-atcs:
 
@@ -142,9 +177,9 @@ cycle.
 RC1 target week
 ---------------
 
-The week of XXX - XXX is the target date for projects
+The week of 5 February 2018 is the target date for projects
 following the `release:cycle-with-milestones`_ model to issue their
-first release candidate, with a deadline of XXX.
+first release candidate, with a deadline of 8 February 2018.
 
 .. _q-hard-sf:
 
@@ -160,7 +195,7 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of XXX is the last week to issue release candidates or
+The week of 19 February 2018 is the last week to issue release candidates or
 intermediary releases before release week. During release week, only
 final-release-critical releases will be accepted (at the discretion of
 the release team).
@@ -170,14 +205,30 @@ the release team).
 Queens release
 --------------
 
-The Queens coordinated release will happen on XXX.
+The Queens coordinated release will happen on 28 February 2018.
 
-.. _q-trailing:
+.. _q-trailing-ff:
 
-Queens cycle-trailing Deadline
-------------------------------
+Queens cycle-trailing feature freeze
+------------------------------------
 
-The deadline for projects using the release:cycle-trailing model that
+The release deadline for projects using the release:cycle-trailing model that
+follow the main release cycle.
+
+.. _q-trailing-rc:
+
+Queens cycle-trailing RC deadline
+---------------------------------
+
+The deadline for publishing a first release candidate for projects using the
+release:cycle-trailing model that follow the main release cycle.
+
+.. _q-trailing-release:
+
+Queens cycle-trailing release deadline
+--------------------------------------
+
+The release deadline for projects using the release:cycle-trailing model that
 follow the main release cycle.
 
 Project-specific events
@@ -188,32 +239,18 @@ Elections
 
 .. _r-ptl-nomination:
 
-R-cycle PTLs self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Rocky PTLs self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Project team lead candidates for the Queens cycle should announce their
-candidacy during this week.
+candidacy during this week. Those dates should be confirmed by the Rocky
+PTL election officials.
 
 .. _r-ptl-election:
 
-R-cycle cycle PTLs election
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Election week for Project team leads (where an election must be held to
-determine the winner).
-
-.. _r-tc-nomination:
-
-TC member self-nomination
+Rocky cycle PTLs election
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Candidates for the partial Technical Committee member renewal should announce
-their candidacy during this week.
-
-.. _r-tc-election:
-
-TC member election
-^^^^^^^^^^^^^^^^^^
-
-Election for partially renewing Technical Committee members will happen
-during this week.
+Election week for Project team leads (where an election must be held to
+determine the winner). Those dates should be confirmed by the Rocky PTL
+election officials.

@@ -1,0 +1,125 @@
+---
+start-week: 2017-09-04
+release-week: 2018-02-26
+cycle:
+- end: '2017-09-01'
+  start: '2017-08-28'
+  x-project:
+  - p-release
+- end: '2017-09-08'
+  name: R-25
+  start: '2017-09-04'
+- end: '2017-09-15'
+  name: R-24
+  start: '2017-09-11'
+  x-project:
+  - q-ptg
+  - q-goals-research
+- end: '2017-09-22'
+  name: R-23
+  start: '2017-09-18'
+- end: '2017-09-29'
+  name: R-22
+  start: '2017-09-25'
+- end: '2017-10-06'
+  name: R-21
+  start: '2017-10-02'
+- end: '2017-10-13'
+  name: R-20
+  start: '2017-10-09'
+- end: '2017-10-20'
+  name: R-19
+  start: '2017-10-16'
+  x-project:
+  - q-1
+- end: '2017-10-27'
+  name: R-18
+  start: '2017-10-23'
+- end: '2017-11-03'
+  name: R-17
+  start: '2017-10-30'
+- end: '2017-11-10'
+  name: R-16
+  start: '2017-11-06'
+  x-project:
+  - q-summit
+- end: '2017-11-17'
+  name: R-15
+  start: '2017-11-13'
+- end: '2017-11-24'
+  name: R-14
+  start: '2017-11-20'
+- end: '2017-12-01'
+  name: R-13
+  start: '2017-11-27'
+- end: '2017-12-08'
+  name: R-12
+  start: '2017-12-04'
+  x-project:
+  - q-2
+  - q-mf
+- end: '2017-12-15'
+  name: R-11
+  start: '2017-12-11'
+- end: '2017-12-22'
+  name: R-10
+  start: '2017-12-18'
+- end: '2017-12-29'
+  name: R-9
+  start: '2017-12-25'
+- end: '2018-01-05'
+  name: R-8
+  start: '2018-01-01'
+- end: '2018-01-12'
+  name: R-7
+  start: '2018-01-08'
+  x-project:
+  - q-extra-atcs
+- end: '2018-01-19'
+  name: R-6
+  start: '2018-01-15'
+  x-project:
+  - q-final-lib
+- end: '2018-01-26'
+  name: R-5
+  start: '2018-01-22'
+  x-project:
+  - q-3
+  - q-ff
+  - q-final-clientlib
+  - q-soft-sf
+  - q-rf
+  - q-goals-complete
+- end: '2018-02-02'
+  name: R-4
+  start: '2018-01-29'
+- end: '2018-02-09'
+  name: R-3
+  start: '2018-02-05'
+  x-project:
+  - q-rc1
+  - q-hard-sf
+  - q-trailing-ff
+- end: '2018-02-16'
+  name: R-2
+  start: '2018-02-12'
+- end: '2018-02-23'
+  name: R-1
+  start: '2018-02-19'
+  x-project:
+  - q-finalrc
+- end: '2018-03-02'
+  name: R+0
+  start: '2018-02-26'
+  x-project:
+  - q-release
+  - q-trailing-rc
+- end: '2018-03-09'
+  name: R+1
+  start: '2018-03-05'
+- end: '2018-03-16'
+  name: R+2
+  start: '2018-03-12'
+  x-project:
+  - q-trailing-release
+
