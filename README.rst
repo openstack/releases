@@ -550,6 +550,11 @@ In order to help build out these files there are various command line
 based tools that come with this repository. To install these it is as
 easy as ``pip install .`` in this repository directory.
 
+* ``new-release`` takes arguments to describe a new release and
+  updates the deliverable file, automatically calculating the version
+  number
+* ``edit-deliverable`` takes arguments to update the contents of a
+  single deliverable file
 * ``list-changes`` that lists the changes in a given release file.
 * ``interactive-release`` that goes through a *wizard* style set of
   questions to produce a new or updated release of a given project or
