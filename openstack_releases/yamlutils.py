@@ -48,6 +48,13 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
             values.append((key_item, value_item))
         return node
 
+    def represent_bool(self, data):
+        if data:
+            value = 'yes'
+        else:
+            value = 'no'
+        return self.represent_scalar('tag:yaml.org,2002:bool', value)
+
     def choose_scalar_style(self):
         # Avoid messing up dict keys...
         if self.states[-1] == self.expect_block_mapping_simple_value:
@@ -85,6 +92,12 @@ PrettySafeDumper.add_representer(collections.OrderedDict,
                                  PrettySafeDumper.represent_ordereddict)
 PrettySafeDumper.add_representer(None,
                                  PrettySafeDumper.represent_undefined)
+
+# NOTE(dhellmann): The representer functions in the base class are
+# specified by class.method-name so we have to re-register the
+# representer for bool if we want to override it.
+PrettySafeDumper.add_representer(bool,
+                                 PrettySafeDumper.represent_bool)
 
 
 # Ensure we use our own routine here, because the style that comes by
