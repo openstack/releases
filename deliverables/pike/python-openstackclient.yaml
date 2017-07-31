@@ -4,6 +4,10 @@ launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: other
+branches:
+  - name: feature/osc4
+    location:
+      openstack/python-openstackclient: 6fdce1316563f79fa6adf6ffa6439018cc5b8e98
 releases:
   - version: 3.9.0
     projects:
