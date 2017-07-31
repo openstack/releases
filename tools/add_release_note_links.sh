@@ -24,6 +24,11 @@ fi
 
 SERIES="$1"
 
+# Set up and activate the virtualenv that contains the
+# edit-deliverable command.
+tox -e venv --notest
+source .tox/venv/bin/activate
+
 function url_exists {
     local url="$1"
 
@@ -42,17 +47,7 @@ for filename in deliverables/$SERIES/*.yaml; do
     if ! url_exists $url; then
         echo " no release notes page at $url"
     else
-        new_value="release-notes: $url"
-        if grep -q "$new_value" $filename; then
-            echo " OK"
-        else
-            # Remove any existing links, since they might point to the
-            # "unreleased" page.
-            sed -i -e '/release-notes/d' $filename
-            # Add the link pointing to the series-specific page.
-            sed -i -e "/team:.*/a \
-$new_value" $filename
-            echo " updated"
-        fi
+        echo
+        edit-deliverable $SERIES $deliverable --release-notes "$url"
     fi
 done
