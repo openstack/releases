@@ -14,7 +14,6 @@
 
 import collections
 import re
-import textwrap
 
 import six
 import yaml
@@ -34,7 +33,6 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
     """Yaml dumper that tries to not alter original formats (to much)."""
 
     BINARY_ENCODING = 'utf8'
-    MAX_LINE_LENGTH = 60
 
     def represent_ordereddict(self, data):
         values = []
@@ -66,11 +64,6 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
     def represent_string(self, data):
         if isinstance(data, six.binary_type):
             data = data.decode(self.BINARY_ENCODING)
-        # NOTE(harlowja): Try to nicely format it unless its already been
-        # formatted by someone else, which we check by seeing if newlines
-        # already exist and assume the person knew what they were doing...
-        if len(data) > self.MAX_LINE_LENGTH and not _has_newline(data):
-            data = textwrap.fill(data)
         style = "plain"
         if _has_newline(data):
             style = "|"
