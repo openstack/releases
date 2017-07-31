@@ -1,50 +1,51 @@
 ---
+branches:
+  - location: 4.25.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: oslo.db
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.db/pike.html
+releases:
+  - projects:
+      - hash: 5ab8e6944ccfd17f316bdac65a14ab749e3f5b9e
+        repo: openstack/oslo.db
+    version: 4.18.0
+  - projects:
+      - hash: 6eda25859f271cc3765e13cfb16378959af2e406
+        repo: openstack/oslo.db
+    version: 4.19.0
+  - projects:
+      - hash: 4033db19600c9168d442612af107ebd8e24e8828
+        repo: openstack/oslo.db
+    version: 4.20.0
+  - projects:
+      - hash: d5f1f288a456d89fb9f91e0fe41b962c358ded1a
+        repo: openstack/oslo.db
+    version: 4.21.0
+  - projects:
+      - hash: 7ae3af7d1d4185cc110187feb3233770bfaf4c28
+        repo: openstack/oslo.db
+    version: 4.21.1
+  - projects:
+      - hash: 821f94c5466d5e43a398a46246160d5a4b44a629
+        repo: openstack/oslo.db
+    version: 4.22.0
+  - projects:
+      - hash: c5303957300642796f6dc383657ea7c5787bd11a
+        repo: openstack/oslo.db
+    version: 4.23.0
+  - projects:
+      - hash: fe64db1d45fdf3ea9e6b9a7524d24f8626aae2af
+        repo: openstack/oslo.db
+    version: 4.24.0
+  - projects:
+      - hash: 23e431b0deb0d4b50f60f7f50f44fb5942c2fc76
+        repo: openstack/oslo.db
+    version: 4.24.1
+  - projects:
+      - hash: 5f9400d777124a7139c7b65a107f174cba7373d6
+        repo: openstack/oslo.db
+    version: 4.25.0
 team: oslo
 type: library
-releases:
-  - version: 4.18.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 5ab8e6944ccfd17f316bdac65a14ab749e3f5b9e
-  - version: 4.19.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 6eda25859f271cc3765e13cfb16378959af2e406
-  - version: 4.20.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 4033db19600c9168d442612af107ebd8e24e8828
-  - version: 4.21.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: d5f1f288a456d89fb9f91e0fe41b962c358ded1a
-  - version: 4.21.1
-    projects:
-      - repo: openstack/oslo.db
-        hash: 7ae3af7d1d4185cc110187feb3233770bfaf4c28
-  - version: 4.22.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 821f94c5466d5e43a398a46246160d5a4b44a629
-  - version: 4.23.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: c5303957300642796f6dc383657ea7c5787bd11a
-  - version: 4.24.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: fe64db1d45fdf3ea9e6b9a7524d24f8626aae2af
-  - version: 4.24.1
-    projects:
-      - repo: openstack/oslo.db
-        hash: 23e431b0deb0d4b50f60f7f50f44fb5942c2fc76
-  - version: 4.25.0
-    projects:
-      - repo: openstack/oslo.db
-        hash: 5f9400d777124a7139c7b65a107f174cba7373d6
-branches:
-  - name: stable/pike
-    location: 4.25.0

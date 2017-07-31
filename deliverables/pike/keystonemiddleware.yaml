@@ -1,22 +1,23 @@
 ---
+branches:
+  - location: 4.17.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: keystonemiddleware
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/keystonemiddleware/pike.html
+releases:
+  - projects:
+      - hash: d94c40b1e0515117fbe7d04480640641f2a2edbd
+        repo: openstack/keystonemiddleware
+    version: 4.15.0
+  - projects:
+      - hash: 5bd147435a7b7c0638e8ad1b618a64b5ab9b7e90
+        repo: openstack/keystonemiddleware
+    version: 4.16.0
+  - projects:
+      - hash: 4a72cd6c3b3139dd2b55787eff5b84741cc0a347
+        repo: openstack/keystonemiddleware
+    version: 4.17.0
 team: keystone
 type: library
-releases:
-  - version: 4.15.0
-    projects:
-      - repo: openstack/keystonemiddleware
-        hash: d94c40b1e0515117fbe7d04480640641f2a2edbd
-  - version: 4.16.0
-    projects:
-      - repo: openstack/keystonemiddleware
-        hash: 5bd147435a7b7c0638e8ad1b618a64b5ab9b7e90
-  - version: 4.17.0
-    projects:
-      - repo: openstack/keystonemiddleware
-        hash: 4a72cd6c3b3139dd2b55787eff5b84741cc0a347
-branches:
-  - name: stable/pike
-    location: 4.17.0

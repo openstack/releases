@@ -1,39 +1,35 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 9.1.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-novaclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-novaclient/pike.html
+releases:
+  - highlights: |
+      - Deprecated proxy APIs and CLIs to other services such as the
+        image, volume, baremetal and networking service, have been deleted.
+      - Log translations have been removed. - Updated dependencies.
+    projects:
+      - hash: e1b9e76abe6731d7d3192566db2f9068a71eaad9
+        repo: openstack/python-novaclient
+    version: 8.0.0
+  - highlights: |
+      - Support up to microversion 2.46. - Add ability to set global_request_id. - Updated dependencies.
+    projects:
+      - hash: 758570397821136561bdf425b0a8ed5ab1bbd96f
+        repo: openstack/python-novaclient
+    version: 9.0.0
+  - projects:
+      - hash: ddb386b2dffaf06077c2a0768c56ed5642d216dc
+        repo: openstack/python-novaclient
+    version: 9.0.1
+  - highlights: |
+      - Supports up to microversion 2.53. - Updated dependencies.
+    projects:
+      - hash: 0a53d19a7feadc329534cf04d74411fc51c29e86
+        repo: openstack/python-novaclient
+    version: 9.1.0
 team: nova
 type: library
-release-notes: https://docs.openstack.org/releasenotes/python-novaclient/unreleased.html
-releases:
-  - version: 8.0.0
-    projects:
-      - repo: openstack/python-novaclient
-        hash: e1b9e76abe6731d7d3192566db2f9068a71eaad9
-    highlights: >
-        - Deprecated proxy APIs and CLIs to other services such as the
-          image, volume, baremetal and networking service, have been deleted.
-        - Log translations have been removed.
-        - Updated dependencies.
-  - version: 9.0.0
-    projects:
-      - repo: openstack/python-novaclient
-        hash: 758570397821136561bdf425b0a8ed5ab1bbd96f
-    highlights: >
-        - Support up to microversion 2.46.
-        - Add ability to set global_request_id.
-        - Updated dependencies.
-  - version: 9.0.1
-    projects:
-      - repo: openstack/python-novaclient
-        hash: ddb386b2dffaf06077c2a0768c56ed5642d216dc
-  - version: 9.1.0
-    projects:
-      - repo: openstack/python-novaclient
-        hash: 0a53d19a7feadc329534cf04d74411fc51c29e86
-    highlights: >
-        - Supports up to microversion 2.53.
-        - Updated dependencies.
-branches:
-  - name: stable/pike
-    location: 9.1.0

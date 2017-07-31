@@ -1,21 +1,21 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 1.28.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: os-client-config
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/os-client-config/pike.html
+releases:
+  - highlights: |
+      Add floating IP indicator, skip yaml loading flag, some microversion support, vendor updates, User-Agent support
+    projects:
+      - hash: f6804f6b0dec9b1322ee996972489c1118f19f90
+        repo: openstack/os-client-config
+    version: 1.27.0
+  - projects:
+      - hash: f74902b0b9f82e221b1ae1af7f254dc2918f96b8
+        repo: openstack/os-client-config
+    version: 1.28.0
 team: OpenStackClient
 type: library
-releases:
-  - version: 1.27.0
-    projects:
-      - repo: openstack/os-client-config
-        hash: f6804f6b0dec9b1322ee996972489c1118f19f90
-    highlights: >
-      Add floating IP indicator, skip yaml loading flag, some microversion
-      support, vendor updates, User-Agent support
-  - version: 1.28.0
-    projects:
-      - repo: openstack/os-client-config
-        hash: f74902b0b9f82e221b1ae1af7f254dc2918f96b8
-branches:
-  - name: stable/pike
-    location: 1.28.0

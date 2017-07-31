@@ -1,30 +1,31 @@
 ---
+branches:
+  - location: 1.12.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: automaton
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/automaton/pike.html
+releases:
+  - projects:
+      - hash: 911ed1af8586f7da1ec4df72f58e949d6d1b4f41
+        repo: openstack/automaton
+    version: 1.8.0
+  - projects:
+      - hash: 6e9889b04ae44d9f255a5704e85e392bb937d6d7
+        repo: openstack/automaton
+    version: 1.9.0
+  - projects:
+      - hash: f33976e904237c5d65438a12166d85e070484ccf
+        repo: openstack/automaton
+    version: 1.10.0
+  - projects:
+      - hash: 6c5dbfcd09fbc96e24366fc82baa974cab7d9bf7
+        repo: openstack/automaton
+    version: 1.11.0
+  - projects:
+      - hash: d34d15737f8edefe69f9b6970f83cf63a3fd6d87
+        repo: openstack/automaton
+    version: 1.12.0
 team: oslo
 type: library
-releases:
-  - version: 1.8.0
-    projects:
-      - repo: openstack/automaton
-        hash: 911ed1af8586f7da1ec4df72f58e949d6d1b4f41
-  - version: 1.9.0
-    projects:
-      - repo: openstack/automaton
-        hash: 6e9889b04ae44d9f255a5704e85e392bb937d6d7
-  - version: 1.10.0
-    projects:
-      - repo: openstack/automaton
-        hash: f33976e904237c5d65438a12166d85e070484ccf
-  - version: 1.11.0
-    projects:
-      - repo: openstack/automaton
-        hash: 6c5dbfcd09fbc96e24366fc82baa974cab7d9bf7
-  - version: 1.12.0
-    projects:
-      - repo: openstack/automaton
-        hash: d34d15737f8edefe69f9b6970f83cf63a3fd6d87
-branches:
-  - name: stable/pike
-    location: 1.12.0

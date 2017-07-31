@@ -1,38 +1,39 @@
 ---
+branches:
+  - location: 1.22.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: oslo.privsep
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/pike.html
+releases:
+  - projects:
+      - hash: 575eea12f86f1dc001a9dce933ab5cfb8bf6e1f1
+        repo: openstack/oslo.privsep
+    version: 1.17.0
+  - projects:
+      - hash: 3c47348ced0d3ace1113ba8de8dff015792b0b89
+        repo: openstack/oslo.privsep
+    version: 1.18.0
+  - projects:
+      - hash: 1bc87fd868ad6138795b1b06e5fdef42ebe78480
+        repo: openstack/oslo.privsep
+    version: 1.19.0
+  - projects:
+      - hash: 1974564d9ac6268c39cc80b8d1c8f4064b70a55d
+        repo: openstack/oslo.privsep
+    version: 1.20.0
+  - projects:
+      - hash: 8ed579aa60f756303bd54451ab78699054ed050a
+        repo: openstack/oslo.privsep
+    version: 1.21.0
+  - projects:
+      - hash: 8c96cfd08c2976c722d6d09b54e99fabdc24ac51
+        repo: openstack/oslo.privsep
+    version: 1.21.1
+  - projects:
+      - hash: d24b988022403a6fff23422cdac73fdc7e153124
+        repo: openstack/oslo.privsep
+    version: 1.22.0
 team: oslo
 type: library
-releases:
-  - version: 1.17.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 575eea12f86f1dc001a9dce933ab5cfb8bf6e1f1
-  - version: 1.18.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 3c47348ced0d3ace1113ba8de8dff015792b0b89
-  - version: 1.19.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 1bc87fd868ad6138795b1b06e5fdef42ebe78480
-  - version: 1.20.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 1974564d9ac6268c39cc80b8d1c8f4064b70a55d
-  - version: 1.21.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 8ed579aa60f756303bd54451ab78699054ed050a
-  - version: 1.21.1
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: 8c96cfd08c2976c722d6d09b54e99fabdc24ac51
-  - version: 1.22.0
-    projects:
-      - repo: openstack/oslo.privsep
-        hash: d24b988022403a6fff23422cdac73fdc7e153124
-branches:
-  - name: stable/pike
-    location: 1.22.0

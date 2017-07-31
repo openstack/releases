@@ -1,58 +1,59 @@
 ---
+branches:
+  - location: 3.30.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: oslo.log
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.log/pike.html
+releases:
+  - projects:
+      - hash: 639404266f415de0cd805f3ae5d6c00a9e007779
+        repo: openstack/oslo.log
+    version: 3.21.0
+  - projects:
+      - hash: d58470cff2396c8b4ac422099af47e00b605f699
+        repo: openstack/oslo.log
+    version: 3.22.0
+  - projects:
+      - hash: ea489c813dc484d1f484c1f6c433b1461eac5629
+        repo: openstack/oslo.log
+    version: 3.23.0
+  - projects:
+      - hash: 3719d834c8ba35417e0a6f971411c3c482759d82
+        repo: openstack/oslo.log
+    version: 3.24.0
+  - projects:
+      - hash: 8593e2e8b7ba7e825a57160a5fe7b403316030a7
+        repo: openstack/oslo.log
+    version: 3.25.0
+  - projects:
+      - hash: ce484ec3ffbcaf69a8865a79548e3d44c91fb690
+        repo: openstack/oslo.log
+    version: 3.26.0
+  - projects:
+      - hash: 72e5c3c1e258589957011506c36dd8af0a481513
+        repo: openstack/oslo.log
+    version: 3.26.1
+  - projects:
+      - hash: a1b924d948d672a1a6f4ed3421a756dc38c3b424
+        repo: openstack/oslo.log
+    version: 3.27.0
+  - projects:
+      - hash: 34ecde516605cc2f0dfa7051ccbd8f338de0554e
+        repo: openstack/oslo.log
+    version: 3.28.0
+  - projects:
+      - hash: 527a76e4e33a980c925315dc7700afcb060c365c
+        repo: openstack/oslo.log
+    version: 3.28.1
+  - projects:
+      - hash: 4e9d16d30b97d1f4ecd0b6aa313f62ddd8236922
+        repo: openstack/oslo.log
+    version: 3.29.0
+  - projects:
+      - hash: 8bb44cdedd7715e35614044b86e71e0fc308ae8b
+        repo: openstack/oslo.log
+    version: 3.30.0
 team: oslo
 type: library
-releases:
-  - version: 3.21.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 639404266f415de0cd805f3ae5d6c00a9e007779
-  - version: 3.22.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: d58470cff2396c8b4ac422099af47e00b605f699
-  - version: 3.23.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: ea489c813dc484d1f484c1f6c433b1461eac5629
-  - version: 3.24.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 3719d834c8ba35417e0a6f971411c3c482759d82
-  - version: 3.25.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 8593e2e8b7ba7e825a57160a5fe7b403316030a7
-  - version: 3.26.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: ce484ec3ffbcaf69a8865a79548e3d44c91fb690
-  - version: 3.26.1
-    projects:
-      - repo: openstack/oslo.log
-        hash: 72e5c3c1e258589957011506c36dd8af0a481513
-  - version: 3.27.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: a1b924d948d672a1a6f4ed3421a756dc38c3b424
-  - version: 3.28.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 34ecde516605cc2f0dfa7051ccbd8f338de0554e
-  - version: 3.28.1
-    projects:
-      - repo: openstack/oslo.log
-        hash: 527a76e4e33a980c925315dc7700afcb060c365c
-  - version: 3.29.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 4e9d16d30b97d1f4ecd0b6aa313f62ddd8236922
-  - version: 3.30.0
-    projects:
-      - repo: openstack/oslo.log
-        hash: 8bb44cdedd7715e35614044b86e71e0fc308ae8b
-branches:
-  - name: stable/pike
-    location: 3.30.0

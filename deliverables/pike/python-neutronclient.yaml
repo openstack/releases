@@ -1,40 +1,39 @@
 ---
-include-pypi-link: true
-team: neutron
-release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/unreleased.html
-type: library
+branches:
+  - location: 6.5.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-neutronclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/pike.html
 releases:
-  - version: 6.2.0
-    projects:
-      - repo: openstack/python-neutronclient
-        hash: 06d3dfd797d964e142e89c63911d2cb9754944ed
-    highlights: |-
+  - highlights: |-
       * Added CLI for BGP VPN commands
       * Dropped Python3.4 support
-  - version: 6.3.0
     projects:
-      - repo: openstack/python-neutronclient
-        hash: ba535c695007c0b4cc6dd6e6abc252a866104bb9
-    highlights: |-
-      * Added ``global_request_id`` parameter
-  - version: 6.4.0
+      - hash: 06d3dfd797d964e142e89c63911d2cb9754944ed
+        repo: openstack/python-neutronclient
+    version: 6.2.0
+  - highlights: '* Added ``global_request_id`` parameter'
     projects:
-      - repo: openstack/python-neutronclient
-        hash: 3c211f30af8976d2be518c68eae14b08fba09c6a
-    highlights: |-
+      - hash: ba535c695007c0b4cc6dd6e6abc252a866104bb9
+        repo: openstack/python-neutronclient
+    version: 6.3.0
+  - highlights: |-
       * Update the documentation link for doc migration
       * Added SFC CLI for OSC plugin
       * Documentation improvements
-  - version: 6.5.0
     projects:
-      - repo: openstack/python-neutronclient
-        hash: 355983d7040ec68435186513e79a0da7173078c3
-    highlights: |-
+      - hash: 3c211f30af8976d2be518c68eae14b08fba09c6a
+        repo: openstack/python-neutronclient
+    version: 6.4.0
+  - highlights: |-
       * CLI support for attribute renaming in FWaaS v2 API
       * Bug fix in SFC CLI
       * Workaround not to break neutron CLI extension UT
-branches:
-  - name: stable/pike
-    location: 6.5.0
+    projects:
+      - hash: 355983d7040ec68435186513e79a0da7173078c3
+        repo: openstack/python-neutronclient
+    version: 6.5.0
+team: neutron
+type: library

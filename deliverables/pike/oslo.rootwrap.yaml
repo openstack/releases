@@ -1,30 +1,31 @@
 ---
+branches:
+  - location: 5.9.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: oslo.rootwrap
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.rootwrap/pike.html
+releases:
+  - projects:
+      - hash: d089ff3ee9d8725917526b69fb1959c045ccf861
+        repo: openstack/oslo.rootwrap
+    version: 5.5.0
+  - projects:
+      - hash: fc5b2a9995d2ba1f70226fe750f73f9e20d3906e
+        repo: openstack/oslo.rootwrap
+    version: 5.6.0
+  - projects:
+      - hash: ec8f632fe58b230d1001a4075b6b0ee9c4c278f3
+        repo: openstack/oslo.rootwrap
+    version: 5.7.0
+  - projects:
+      - hash: eb7ef1567da29969ded383f522b27389ad9be11a
+        repo: openstack/oslo.rootwrap
+    version: 5.8.0
+  - projects:
+      - hash: 1bd761df8e952483d4345b97a00aa327afa79b62
+        repo: openstack/oslo.rootwrap
+    version: 5.9.0
 team: oslo
 type: library
-releases:
-  - version: 5.5.0
-    projects:
-      - repo: openstack/oslo.rootwrap
-        hash: d089ff3ee9d8725917526b69fb1959c045ccf861
-  - version: 5.6.0
-    projects:
-      - repo: openstack/oslo.rootwrap
-        hash: fc5b2a9995d2ba1f70226fe750f73f9e20d3906e
-  - version: 5.7.0
-    projects:
-      - repo: openstack/oslo.rootwrap
-        hash: ec8f632fe58b230d1001a4075b6b0ee9c4c278f3
-  - version: 5.8.0
-    projects:
-      - repo: openstack/oslo.rootwrap
-        hash: eb7ef1567da29969ded383f522b27389ad9be11a
-  - version: 5.9.0
-    projects:
-      - repo: openstack/oslo.rootwrap
-        hash: 1bd761df8e952483d4345b97a00aa327afa79b62
-branches:
-  - name: stable/pike
-    location: 5.9.0

@@ -1,34 +1,35 @@
 ---
+branches:
+  - location: 1.26.0
+    name: stable/pike
 include-pypi-link: yes
 launchpad: oslo.versionedobjects
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.versionedobjects/pike.html
+releases:
+  - projects:
+      - hash: cd3573ea1fcc4a82d104103da338dab8b1d0a91c
+        repo: openstack/oslo.versionedobjects
+    version: 1.22.0
+  - projects:
+      - hash: d0376d8e3bf823d905b50f185b4d9e1ffcc59c4e
+        repo: openstack/oslo.versionedobjects
+    version: 1.23.0
+  - projects:
+      - hash: a94c060e490521caa50dc2deabc2b3a9e72e6990
+        repo: openstack/oslo.versionedobjects
+    version: 1.24.0
+  - projects:
+      - hash: ec05ef405d666f46c6c6b9372edf75d510cab6db
+        repo: openstack/oslo.versionedobjects
+    version: 1.25.0
+  - projects:
+      - hash: dcb1c0591912ac936951c220506192883f70ae76
+        repo: openstack/oslo.versionedobjects
+    version: 1.25.1
+  - projects:
+      - hash: b65e47382e3219585a1654ca2be726e564ed95d5
+        repo: openstack/oslo.versionedobjects
+    version: 1.26.0
 team: oslo
 type: library
-releases:
-  - version: 1.22.0
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: cd3573ea1fcc4a82d104103da338dab8b1d0a91c
-  - version: 1.23.0
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: d0376d8e3bf823d905b50f185b4d9e1ffcc59c4e
-  - version: 1.24.0
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: a94c060e490521caa50dc2deabc2b3a9e72e6990
-  - version: 1.25.0
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: ec05ef405d666f46c6c6b9372edf75d510cab6db
-  - version: 1.25.1
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: dcb1c0591912ac936951c220506192883f70ae76
-  - version: 1.26.0
-    projects:
-      - repo: openstack/oslo.versionedobjects
-        hash: b65e47382e3219585a1654ca2be726e564ed95d5
-branches:
-  - name: stable/pike
-    location: 1.26.0

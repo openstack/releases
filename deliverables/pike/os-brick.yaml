@@ -1,38 +1,39 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 1.15.1
+    name: stable/pike
+include-pypi-link: yes
 launchpad: os-brick
 release-model: cycle-with-intermediary
-team: cinder
-type: library
+release-notes: https://docs.openstack.org/releasenotes/os-brick/pike.html
 releases:
-  - version: 1.12.0
-    projects:
-      - repo: openstack/os-brick
-        hash: 962fce720c5322a9f9442b10b07853689ed6e190
-  - version: 1.13.0
-    projects:
-      - repo: openstack/os-brick
-        hash: c68131decf5da1bd3aa5dc037eafc57d9d02554e
-  - version: 1.13.1
-    projects:
-      - repo: openstack/os-brick
-        hash: 46daeb00586d368a05d178d84bf8e89d241be60d
-  - version: 1.14.0
-    projects:
-      - repo: openstack/os-brick
-        hash: 32ab0d1670e94c9d667207c72cfabe1d6554515f
-  - version: 1.15.0
-    projects:
-      - repo: openstack/os-brick
-        hash: a1b0dda617c915441d5cdcb8c34933bb96b31bac
-  - version: 1.15.1
-    projects:
-      - repo: openstack/os-brick
-        hash: 8e4adda001a4935bfcdd0f81209894080f041b23
-  - version: 1.15.2
-    projects:
+  - projects:
+      - hash: 962fce720c5322a9f9442b10b07853689ed6e190
+        repo: openstack/os-brick
+    version: 1.12.0
+  - projects:
+      - hash: c68131decf5da1bd3aa5dc037eafc57d9d02554e
+        repo: openstack/os-brick
+    version: 1.13.0
+  - projects:
+      - hash: 46daeb00586d368a05d178d84bf8e89d241be60d
+        repo: openstack/os-brick
+    version: 1.13.1
+  - projects:
+      - hash: 32ab0d1670e94c9d667207c72cfabe1d6554515f
+        repo: openstack/os-brick
+    version: 1.14.0
+  - projects:
+      - hash: a1b0dda617c915441d5cdcb8c34933bb96b31bac
+        repo: openstack/os-brick
+    version: 1.15.0
+  - projects:
+      - hash: 8e4adda001a4935bfcdd0f81209894080f041b23
+        repo: openstack/os-brick
+    version: 1.15.1
+  - projects:
       - repo: openstack/os-brick
         hash: 6eee11fc46205897bcd8d1eed5bfe319b504a6fa
-branches:
-  - name: stable/pike
-    location: 1.15.1
+    version: 1.15.2
+team: cinder
+type: library

@@ -1,31 +1,31 @@
 ---
+branches:
+  - location: 2.20.0
+    name: stable/pike
 include-pypi-link: yes
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/unreleased.html
 launchpad: oslo.serialization
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/pike.html
+releases:
+  - projects:
+      - hash: 279da59d1736567a919bc269f6ba925ed5d1870c
+        repo: openstack/oslo.serialization
+    version: 2.17.0
+  - projects:
+      - hash: e6764d4010a86cf6b49012daeab1c4f546b9e13e
+        repo: openstack/oslo.serialization
+    version: 2.18.0
+  - projects:
+      - hash: 05156012457e5d708595ababe8361457f8377f53
+        repo: openstack/oslo.serialization
+    version: 2.19.0
+  - projects:
+      - hash: 2a29a5e8363b43c875cf1b8694b3cf577f62b464
+        repo: openstack/oslo.serialization
+    version: 2.19.1
+  - projects:
+      - hash: bbee6d1aa13ecd99c72087a77fda1f14274d265f
+        repo: openstack/oslo.serialization
+    version: 2.20.0
 team: oslo
 type: library
-releases:
-  - version: 2.17.0
-    projects:
-      - repo: openstack/oslo.serialization
-        hash: 279da59d1736567a919bc269f6ba925ed5d1870c
-  - version: 2.18.0
-    projects:
-      - repo: openstack/oslo.serialization
-        hash: e6764d4010a86cf6b49012daeab1c4f546b9e13e
-  - version: 2.19.0
-    projects:
-      - repo: openstack/oslo.serialization
-        hash: 05156012457e5d708595ababe8361457f8377f53
-  - version: 2.19.1
-    projects:
-      - repo: openstack/oslo.serialization
-        hash: 2a29a5e8363b43c875cf1b8694b3cf577f62b464
-  - version: 2.20.0
-    projects:
-      - repo: openstack/oslo.serialization
-        hash: bbee6d1aa13ecd99c72087a77fda1f14274d265f
-branches:
-  - name: stable/pike
-    location: 2.20.0

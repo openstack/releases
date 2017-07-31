@@ -1,23 +1,23 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 3.1.1
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-mistralclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/pike.html
+releases:
+  - highlights: |
+      - Fix region support in CLI. - Accept keystone session in client.
+    projects:
+      - hash: 9e6ff999c16e9f6de8acf6f7d270e36cda932168
+        repo: openstack/python-mistralclient
+    version: 3.1.0
+  - highlights: |
+      - Set the default value of --limit parameter to avoid high server load.
+    projects:
+      - hash: 0f2837237b11b29bee45c8724c6c9ada5f3df79b
+        repo: openstack/python-mistralclient
+    version: 3.1.1
 team: mistral
 type: library
-releases:
-  - version: 3.1.0
-    projects:
-      - repo: openstack/python-mistralclient
-        hash: 9e6ff999c16e9f6de8acf6f7d270e36cda932168
-    highlights: >
-        - Fix region support in CLI.
-        - Accept keystone session in client.
-  - version: 3.1.1
-    projects:
-      - repo: openstack/python-mistralclient
-        hash: 0f2837237b11b29bee45c8724c6c9ada5f3df79b
-    highlights: >
-        - Set the default value of --limit parameter to avoid high server load.
-branches:
-  - name: stable/pike
-    location: 3.1.1

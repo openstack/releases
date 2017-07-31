@@ -1,18 +1,19 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 1.4.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-senlinclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/pike.html
+releases:
+  - projects:
+      - hash: 2c6dce877e3d1c74b63f9c9a4a1a7d842ec9bcd5
+        repo: openstack/python-senlinclient
+    version: 1.3.0
+  - projects:
+      - hash: cfdf62a47031d6ad3a8bc88ea3c25c08e04865c8
+        repo: openstack/python-senlinclient
+    version: 1.4.0
 team: senlin
 type: library
-releases:
-  - version: 1.3.0
-    projects:
-      - repo: openstack/python-senlinclient
-        hash: 2c6dce877e3d1c74b63f9c9a4a1a7d842ec9bcd5
-  - version: 1.4.0
-    projects:
-      - repo: openstack/python-senlinclient
-        hash: cfdf62a47031d6ad3a8bc88ea3c25c08e04865c8
-branches:
-  - name: stable/pike
-    location: 1.4.0

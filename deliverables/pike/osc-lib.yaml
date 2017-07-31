@@ -1,33 +1,34 @@
 ---
-include-pypi-link: true
-launchpad: python-openstackclient
-release-model: cycle-with-intermediary
-team: OpenStackClient
-type: library
-releases:
-  - version: 1.4.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: c36c9a0600221d7464b9b9b35e5e39d709fce238
-  - version: 1.5.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: aa31cbb63ddb9c9bcd5443f4fe1608870e3e9161
-  - version: 1.5.1
-    projects:
-      - repo: openstack/osc-lib
-        hash: ed8ef0df9ff3a095d53be90ce535393078bf267b
-  - version: 1.6.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: 361789fb59593e41a48d9e92a15df122ccfc9b3f
-  - version: 1.7.0
-    projects:
-      - repo: openstack/osc-lib
-        hash: 7e7cecbde3de4cbdd3908dc05cc5c934cac60082
 branches:
-  - name: stable/pike
-    location: 1.7.0
+  - location: 1.7.0
+    name: stable/pike
   - location:
       openstack/osc-lib: d84776cd03e2ed188ffd1fc4f2c2df80fc9cafc2
     name: feature/osc4
+include-pypi-link: yes
+launchpad: python-openstackclient
+release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/osc-lib/pike.html
+releases:
+  - projects:
+      - hash: c36c9a0600221d7464b9b9b35e5e39d709fce238
+        repo: openstack/osc-lib
+    version: 1.4.0
+  - projects:
+      - hash: aa31cbb63ddb9c9bcd5443f4fe1608870e3e9161
+        repo: openstack/osc-lib
+    version: 1.5.0
+  - projects:
+      - hash: ed8ef0df9ff3a095d53be90ce535393078bf267b
+        repo: openstack/osc-lib
+    version: 1.5.1
+  - projects:
+      - hash: 361789fb59593e41a48d9e92a15df122ccfc9b3f
+        repo: openstack/osc-lib
+    version: 1.6.0
+  - projects:
+      - hash: 7e7cecbde3de4cbdd3908dc05cc5c934cac60082
+        repo: openstack/osc-lib
+    version: 1.7.0
+team: OpenStackClient
+type: library

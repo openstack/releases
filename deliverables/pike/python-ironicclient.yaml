@@ -1,31 +1,31 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 1.16.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-ironicclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-ironicclient/pike.html
+releases:
+  - projects:
+      - hash: 27663efdd35b051edcfec2e197a84c14efa0c7b2
+        repo: openstack/python-ironicclient
+    version: 1.12.0
+  - projects:
+      - hash: 7cceefec2075a585e02c4f1959922ad9fcc4272c
+        repo: openstack/python-ironicclient
+    version: 1.13.0
+  - projects:
+      - hash: bd7ccdde959fff8d07560d78383d1f020019adcd
+        repo: openstack/python-ironicclient
+    version: 1.14.0
+  - projects:
+      - hash: 035aff25d384c0816176e63ec1c027fbb022f1b4
+        repo: openstack/python-ironicclient
+    version: 1.15.0
+  - projects:
+      - hash: 835c5d4c57ddb700cc50c2d7ed8eef6b177a15c2
+        repo: openstack/python-ironicclient
+    version: 1.16.0
 team: ironic
 type: library
-release-notes: https://docs.openstack.org/releasenotes/python-ironicclient/unreleased.html
-releases:
-  - version: 1.12.0
-    projects:
-      - repo: openstack/python-ironicclient
-        hash: 27663efdd35b051edcfec2e197a84c14efa0c7b2
-  - version: 1.13.0
-    projects:
-      - repo: openstack/python-ironicclient
-        hash: 7cceefec2075a585e02c4f1959922ad9fcc4272c
-  - version: 1.14.0
-    projects:
-      - repo: openstack/python-ironicclient
-        hash: bd7ccdde959fff8d07560d78383d1f020019adcd
-  - version: 1.15.0
-    projects:
-      - repo: openstack/python-ironicclient
-        hash: 035aff25d384c0816176e63ec1c027fbb022f1b4
-  - version: 1.16.0
-    projects:
-      - repo: openstack/python-ironicclient
-        hash: 835c5d4c57ddb700cc50c2d7ed8eef6b177a15c2
-branches:
-  - name: stable/pike
-    location: 1.16.0

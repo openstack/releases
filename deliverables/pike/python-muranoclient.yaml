@@ -1,18 +1,19 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 0.14.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-muranoclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/pike.html
+releases:
+  - projects:
+      - hash: cae67a4c1e16b84835fcdcba59bcac5344f98aa9
+        repo: openstack/python-muranoclient
+    version: 0.13.0
+  - projects:
+      - hash: 5cc4d2c254e01d4dfb5e806965b5f88e05ba4736
+        repo: openstack/python-muranoclient
+    version: 0.14.0
 team: murano
 type: library
-releases:
-  - version: 0.13.0
-    projects:
-      - repo: openstack/python-muranoclient
-        hash: cae67a4c1e16b84835fcdcba59bcac5344f98aa9
-  - version: 0.14.0
-    projects:
-      - repo: openstack/python-muranoclient
-        hash: 5cc4d2c254e01d4dfb5e806965b5f88e05ba4736
-branches:
-  - name: stable/pike
-    location: 0.14.0

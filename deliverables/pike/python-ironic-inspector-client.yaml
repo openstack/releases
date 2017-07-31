@@ -1,19 +1,19 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 2.0.0
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-ironic-inspector-client
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/pike.html
+releases:
+  - projects:
+      - hash: 045fd9e680f5a3153d147950c4cb866a313e15e0
+        repo: openstack/python-ironic-inspector-client
+    version: 1.12.0
+  - projects:
+      - hash: 0ccc7674d8d61f28d5c0880caab35c6eff620dc6
+        repo: openstack/python-ironic-inspector-client
+    version: 2.0.0
 team: ironic
 type: library
-release-notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/unreleased.html
-releases:
-  - version: 1.12.0
-    projects:
-      - repo: openstack/python-ironic-inspector-client
-        hash: 045fd9e680f5a3153d147950c4cb866a313e15e0
-  - version: 2.0.0
-    projects:
-      - repo: openstack/python-ironic-inspector-client
-        hash: 0ccc7674d8d61f28d5c0880caab35c6eff620dc6
-branches:
-  - name: stable/pike
-    location: 2.0.0

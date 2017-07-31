@@ -1,26 +1,27 @@
 ---
-include-pypi-link: true
+branches:
+  - location: 1.17.1
+    name: stable/pike
+include-pypi-link: yes
 launchpad: python-manilaclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-manilaclient/pike.html
+releases:
+  - projects:
+      - hash: b4f71709dc4644b069c3395260c8e318907cfb7c
+        repo: openstack/python-manilaclient
+    version: 1.15.0
+  - projects:
+      - hash: 652d31cb6c5a1f42f0bddb9a5b71597f9ba74354
+        repo: openstack/python-manilaclient
+    version: 1.16.0
+  - projects:
+      - hash: 73c31c667dc4949f6bc4668bbb9105df866762ff
+        repo: openstack/python-manilaclient
+    version: 1.17.0
+  - projects:
+      - hash: 502eb756cc724442c17e553bc4ee3f6c629ea4d1
+        repo: openstack/python-manilaclient
+    version: 1.17.1
 team: manila
 type: library
-releases:
-  - version: 1.15.0
-    projects:
-      - repo: openstack/python-manilaclient
-        hash: b4f71709dc4644b069c3395260c8e318907cfb7c
-  - version: 1.16.0
-    projects:
-      - repo: openstack/python-manilaclient
-        hash: 652d31cb6c5a1f42f0bddb9a5b71597f9ba74354
-  - version: 1.17.0
-    projects:
-      - repo: openstack/python-manilaclient
-        hash: 73c31c667dc4949f6bc4668bbb9105df866762ff
-  - version: 1.17.1
-    projects:
-      - repo: openstack/python-manilaclient
-        hash: 502eb756cc724442c17e553bc4ee3f6c629ea4d1
-branches:
-  - name: stable/pike
-    location: 1.17.1
