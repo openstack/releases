@@ -3,58 +3,58 @@ launchpad: python-tooz
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 1.43.0
+  - name: stable/newton
+    location: 1.43.0
 releases:
-- version: 1.35.0
-  projects:
-  - repo: openstack/tooz
-    hash: 82afcb54814474745bc6191f8be10b2541dc8663
-- version: 1.36.0
-  projects:
-  - repo: openstack/tooz
-    hash: de9f0beeaf19889e9812c253ac3fa1ef92ed69e6
-- version: 1.37.0
-  projects:
-  - repo: openstack/tooz
-    hash: ad9ce088de976ab741a8ed4a89f701e38c721891
-  highlights: '* Add a consul based driver'
-- version: 1.38.0
-  projects:
-  - repo: openstack/tooz
-    hash: 7f15e34c5269bc9ad3ecb56c9dedccd55e31032e
-  highlights: |-
-    * Using LOG.warning instead of LOG.warn
-    * Expose a heartbeat loop method
-    * Make python2 payload readable from python3 (bug)
-- version: 1.39.0
-  projects:
-  - repo: openstack/tooz
-    hash: 6daa485eeb3d0cf9ad3c0f354122799bafe54642
-- version: 1.40.0
-  projects:
-  - repo: openstack/tooz
-    hash: 70d119bdc66d3a0b4cf8d99ac82117fcc89040e5
-- version: 1.41.0
-  projects:
-  - repo: openstack/tooz
-    hash: 3541e7c3937fbd41c364fa9cc6425986f8d955f4
-  highlights: '* File driver: properly handle Windows paths'
-- version: 1.42.0
-  projects:
-  - repo: openstack/tooz
-    hash: 115a39a3cf0275fb9f9f8d56cf06220ce1864fee
-  highlights: |-
-    - Clean leave group hooks when unwatching
-    - etcd: properly block when using 'wait'
-    - etcd: don't run heartbeat() concurrently
-- version: 1.43.0
-  projects:
-  - repo: openstack/tooz
-    hash: 18e31db320ffda97a8c3d81d3b89132f1fb3be93
-- version: 1.43.1
-  projects:
-  - repo: openstack/tooz
-    hash: bc11f09b831dd5811d42f4845117aea2581c194e
+  - version: 1.35.0
+    projects:
+      - repo: openstack/tooz
+        hash: 82afcb54814474745bc6191f8be10b2541dc8663
+  - version: 1.36.0
+    projects:
+      - repo: openstack/tooz
+        hash: de9f0beeaf19889e9812c253ac3fa1ef92ed69e6
+  - version: 1.37.0
+    projects:
+      - repo: openstack/tooz
+        hash: ad9ce088de976ab741a8ed4a89f701e38c721891
+    highlights: '* Add a consul based driver'
+  - version: 1.38.0
+    projects:
+      - repo: openstack/tooz
+        hash: 7f15e34c5269bc9ad3ecb56c9dedccd55e31032e
+    highlights: |-
+      * Using LOG.warning instead of LOG.warn
+      * Expose a heartbeat loop method
+      * Make python2 payload readable from python3 (bug)
+  - version: 1.39.0
+    projects:
+      - repo: openstack/tooz
+        hash: 6daa485eeb3d0cf9ad3c0f354122799bafe54642
+  - version: 1.40.0
+    projects:
+      - repo: openstack/tooz
+        hash: 70d119bdc66d3a0b4cf8d99ac82117fcc89040e5
+  - version: 1.41.0
+    projects:
+      - repo: openstack/tooz
+        hash: 3541e7c3937fbd41c364fa9cc6425986f8d955f4
+    highlights: '* File driver: properly handle Windows paths'
+  - version: 1.42.0
+    projects:
+      - repo: openstack/tooz
+        hash: 115a39a3cf0275fb9f9f8d56cf06220ce1864fee
+    highlights: |-
+      - Clean leave group hooks when unwatching
+      - etcd: properly block when using 'wait'
+      - etcd: don't run heartbeat() concurrently
+  - version: 1.43.0
+    projects:
+      - repo: openstack/tooz
+        hash: 18e31db320ffda97a8c3d81d3b89132f1fb3be93
+  - version: 1.43.1
+    projects:
+      - repo: openstack/tooz
+        hash: bc11f09b831dd5811d42f4845117aea2581c194e

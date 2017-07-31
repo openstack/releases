@@ -3,66 +3,66 @@ launchpad: taskflow
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 2.6.0
+  - name: stable/newton
+    location: 2.6.0
 releases:
-- version: 1.31.0
-  projects:
-  - repo: openstack/taskflow
-    hash: e83a5642e7041a787f4057103a5727f12c599254
-- version: 1.32.0
-  projects:
-  - repo: openstack/taskflow
-    hash: fd2dc3da7e530308e42e745f944b70694502766e
-  highlights: |-
-    * Use a automaton machine for WBE request state machine
-    * Add periodic jobboard refreshing (incase of sync issues)
-    * Add the ability to skip resolving from activating
-    * Add rundimentary and/or non-optimized job priorities
-    * Add some basic/initial engine statistics
-- version: 2.0.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 827b291cf8ab24aa79454586c86425f19245b482
-  highlights: '* Remove deprecated things for 2.0 release'
-- version: 2.1.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 88fec5d4ad8e5e8efbf60085fd0f5b96724d403d
-  highlights: |-
-    * Split revert/execute missing args (exception) messages
-    * Instead of a multiprocessing queue use sockets via asyncore
-- version: 2.2.0
-  projects:
-  - repo: openstack/taskflow
-    hash: f885bc13087f1fecbab74b762bf48fe6c1a51d48
-- version: 2.3.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 613181f5715d54d6ec46ee97b07e4915811f9094
-  highlights: |-
-    * Add tests to verify kwargs behavior on revert validation
-    * Make tests less dependent on transient state
-- version: 2.4.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 8eed13c62bf1771988ead6562919b9e0eca82d31
-  highlights: |-
-    - Add Python 3.5 classifier and venv
-    - Ensure the fetching jobs does not fetch anything
-      when in a bad state
-- version: 2.5.0
-  projects:
-  - repo: openstack/taskflow
-    hash: b494202315c7d418f3b95da23ea5d5dc6313824f
-  highlights: '* Change dependency management to use flavors'
-- version: 2.6.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 7ce20e80b74c70793957e18032d7d6293a01091c
-- version: 2.6.1
-  projects:
-  - repo: openstack/taskflow
-    hash: a3ecbf00cd8a8d17816ebcd23f6f4db5fd8ee0c0
+  - version: 1.31.0
+    projects:
+      - repo: openstack/taskflow
+        hash: e83a5642e7041a787f4057103a5727f12c599254
+  - version: 1.32.0
+    projects:
+      - repo: openstack/taskflow
+        hash: fd2dc3da7e530308e42e745f944b70694502766e
+    highlights: |-
+      * Use a automaton machine for WBE request state machine
+      * Add periodic jobboard refreshing (incase of sync issues)
+      * Add the ability to skip resolving from activating
+      * Add rundimentary and/or non-optimized job priorities
+      * Add some basic/initial engine statistics
+  - version: 2.0.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 827b291cf8ab24aa79454586c86425f19245b482
+    highlights: '* Remove deprecated things for 2.0 release'
+  - version: 2.1.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 88fec5d4ad8e5e8efbf60085fd0f5b96724d403d
+    highlights: |-
+      * Split revert/execute missing args (exception) messages
+      * Instead of a multiprocessing queue use sockets via asyncore
+  - version: 2.2.0
+    projects:
+      - repo: openstack/taskflow
+        hash: f885bc13087f1fecbab74b762bf48fe6c1a51d48
+  - version: 2.3.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 613181f5715d54d6ec46ee97b07e4915811f9094
+    highlights: |-
+      * Add tests to verify kwargs behavior on revert validation
+      * Make tests less dependent on transient state
+  - version: 2.4.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 8eed13c62bf1771988ead6562919b9e0eca82d31
+    highlights: |-
+      - Add Python 3.5 classifier and venv
+      - Ensure the fetching jobs does not fetch anything
+        when in a bad state
+  - version: 2.5.0
+    projects:
+      - repo: openstack/taskflow
+        hash: b494202315c7d418f3b95da23ea5d5dc6313824f
+    highlights: '* Change dependency management to use flavors'
+  - version: 2.6.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 7ce20e80b74c70793957e18032d7d6293a01091c
+  - version: 2.6.1
+    projects:
+      - repo: openstack/taskflow
+        hash: a3ecbf00cd8a8d17816ebcd23f6f4db5fd8ee0c0

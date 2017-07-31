@@ -1,30 +1,30 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: taskflow
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 2.10.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 8017d7db50503a0a2a30d2fe7b0340044f69976a
-- version: 2.11.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 656ed3c8479f4bb263d86d6bba6eadad77073dd5
-- version: 2.12.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 0e9cfc947399178e73e13f2f417c83ec374e080b
-- version: 2.13.0
-  projects:
-  - repo: openstack/taskflow
-    hash: f07ae69d65882d15a60b515666580055c45b2e93
-- version: 2.14.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 72db32b7520c9d7b69c3f9839f531dc7582780bf
+  - version: 2.10.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 8017d7db50503a0a2a30d2fe7b0340044f69976a
+  - version: 2.11.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 656ed3c8479f4bb263d86d6bba6eadad77073dd5
+  - version: 2.12.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 0e9cfc947399178e73e13f2f417c83ec374e080b
+  - version: 2.13.0
+    projects:
+      - repo: openstack/taskflow
+        hash: f07ae69d65882d15a60b515666580055c45b2e93
+  - version: 2.14.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 72db32b7520c9d7b69c3f9839f531dc7582780bf
 branches:
-- name: stable/pike
-  location: 2.14.0
+  - name: stable/pike
+    location: 2.14.0

@@ -1,34 +1,34 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslosphinx
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 4.11.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: a800d4c3df5bba293fb7af4c5329c9538909b961
-- version: 4.12.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: 9cd021f0bd6dec6d12b0772f0a36afe10036aec4
-- version: 4.13.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: ef759e96d15562a696b59126089f4ab51e06bd6f
-- version: 4.14.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: 456bd685a6cf8f1f7952bf2126091068e04f88de
-- version: 4.15.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: 9605448df6a438fd75dadcfd315af6d4ef8436d0
-- version: 4.15.1
-  projects:
-  - repo: openstack/oslosphinx
-    hash: 1cb173e6a798906f6f205b1241625bb62fb6f8df
+  - version: 4.11.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: a800d4c3df5bba293fb7af4c5329c9538909b961
+  - version: 4.12.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: 9cd021f0bd6dec6d12b0772f0a36afe10036aec4
+  - version: 4.13.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: ef759e96d15562a696b59126089f4ab51e06bd6f
+  - version: 4.14.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: 456bd685a6cf8f1f7952bf2126091068e04f88de
+  - version: 4.15.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: 9605448df6a438fd75dadcfd315af6d4ef8436d0
+  - version: 4.15.1
+    projects:
+      - repo: openstack/oslosphinx
+        hash: 1cb173e6a798906f6f205b1241625bb62fb6f8df
 branches:
-- name: stable/pike
-  location: 4.15.1
+  - name: stable/pike
+    location: 4.15.1

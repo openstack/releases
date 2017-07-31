@@ -1,30 +1,30 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslotest
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 2.14.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 0e5eb655e3e20ee0b6643e9b55b1b9aa40032b76
-- version: 2.15.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 83797a6953df1ee4d39fb2cc33bb486aca0ed2ee
-- version: 2.16.0
-  projects:
-  - repo: openstack/oslotest
-    hash: cb641f70f48758f4f532271e81e324fd79a97a7a
-- version: 2.16.1
-  projects:
-  - repo: openstack/oslotest
-    hash: 952b6225d5134b4e18d08efb9347aa7198235a5f
-- version: 2.17.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 491d9ca9c4681b937e3e80cc09ab85a4b4903671
+  - version: 2.14.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 0e5eb655e3e20ee0b6643e9b55b1b9aa40032b76
+  - version: 2.15.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 83797a6953df1ee4d39fb2cc33bb486aca0ed2ee
+  - version: 2.16.0
+    projects:
+      - repo: openstack/oslotest
+        hash: cb641f70f48758f4f532271e81e324fd79a97a7a
+  - version: 2.16.1
+    projects:
+      - repo: openstack/oslotest
+        hash: 952b6225d5134b4e18d08efb9347aa7198235a5f
+  - version: 2.17.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 491d9ca9c4681b937e3e80cc09ab85a4b4903671
 branches:
-- name: stable/pike
-  location: 2.17.0
+  - name: stable/pike
+    location: 2.17.0

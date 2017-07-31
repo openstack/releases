@@ -3,16 +3,16 @@ launchpad: python-mox3
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 0.20.0
+  - name: stable/ocata
+    location: 0.20.0
 releases:
-- version: 0.19.0
-  projects:
-  - repo: openstack/mox3
-    hash: 29929967d2dd1bf7200a021769d774ba35951211
-- version: 0.20.0
-  projects:
-  - repo: openstack/mox3
-    hash: b3644b23537d56bfc54f887fbe33af940039ee19
+  - version: 0.19.0
+    projects:
+      - repo: openstack/mox3
+        hash: 29929967d2dd1bf7200a021769d774ba35951211
+  - version: 0.20.0
+    projects:
+      - repo: openstack/mox3
+        hash: b3644b23537d56bfc54f887fbe33af940039ee19

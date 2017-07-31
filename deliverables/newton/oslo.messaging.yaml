@@ -3,80 +3,80 @@ launchpad: oslo.messaging
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.messaging/newton.html
 branches:
-- name: stable/newton
-  location: 5.10.0
+  - name: stable/newton
+    location: 5.10.0
 releases:
-- version: 5.0.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 51f3b7b65fff6194bf1c50043bddd649ae6d19ee
-- version: 5.1.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: c1aeb97ef5b04f5648e2e15d8adeb9aad896a02f
-- version: 5.2.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 4b0e247d2d9d1c8eb5b9f904dd632bda9c706670
-- version: 5.3.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: a4a4a50eb736bd0955ab1a84cde6bd4c0d00a266
-  highlights: |-
-    * Refactoring of zmq client
-    * Remove deprecated get_expiration method (rabbitmq)
-    * Randomize host list connection attempts (amqp 1.0)
-    * Fix timeout in ThreadingPoller.poll (zmq)
-- version: 5.4.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 01338c940acb591efca918dc49a7a6f449a3a764
-- version: 5.5.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 7a0f9334db9591a085d3a5b2c55dff24b1f21511
-- version: 5.6.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 3a87803db99c6d137f96d7105f56e457ef2c7c3b
-  highlights: |-
-    - [zmq] Use json/msgpack instead of pickle
-    - Introduce TTL for idle connections
-    - Delete fanout queues on gracefully shutdown
-    - Add deprecated relnote for max_retries rabbit configuration option
-    - Add a CLI tool to manually send notifications
-- version: 5.7.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: a0336c8aa19e027190623462e9190dec23531895
-  highlights: '* Move zmq driver options into its own group'
-- version: 5.8.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 466abcc3c207c6604af9291216462d7b413a2b8b
-  highlights: '- [zmq] Implement retries for unacknowledged CASTs'
-- version: 5.9.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 8c84f438d262b6ce00f54e4476938f9616a686b0
-  highlights: |-
-    - Amqp 1.0 dispatch router feature branch merged!
-    - [zmq] Redis unavailability is not critical
-- version: 5.10.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 4f8fcb332dea7a37eefa49c15e6f3a59a9b7a436
-- version: 5.10.1
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: cc1ec4e7f3b395d5f25e7d4922e6359b58a2206a
-  highlights: |-
-    - rabbit: on reconnect set socket timeout correctly
-    - rabbit: avoid busy loop with heartbeat+eventlet
-- version: 5.10.2
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 471312755c84337a2b63e87b4b8c5c557a2b66d1
+  - version: 5.0.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 51f3b7b65fff6194bf1c50043bddd649ae6d19ee
+  - version: 5.1.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: c1aeb97ef5b04f5648e2e15d8adeb9aad896a02f
+  - version: 5.2.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 4b0e247d2d9d1c8eb5b9f904dd632bda9c706670
+  - version: 5.3.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: a4a4a50eb736bd0955ab1a84cde6bd4c0d00a266
+    highlights: |-
+      * Refactoring of zmq client
+      * Remove deprecated get_expiration method (rabbitmq)
+      * Randomize host list connection attempts (amqp 1.0)
+      * Fix timeout in ThreadingPoller.poll (zmq)
+  - version: 5.4.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 01338c940acb591efca918dc49a7a6f449a3a764
+  - version: 5.5.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 7a0f9334db9591a085d3a5b2c55dff24b1f21511
+  - version: 5.6.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 3a87803db99c6d137f96d7105f56e457ef2c7c3b
+    highlights: |-
+      - [zmq] Use json/msgpack instead of pickle
+      - Introduce TTL for idle connections
+      - Delete fanout queues on gracefully shutdown
+      - Add deprecated relnote for max_retries rabbit configuration option
+      - Add a CLI tool to manually send notifications
+  - version: 5.7.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: a0336c8aa19e027190623462e9190dec23531895
+    highlights: '* Move zmq driver options into its own group'
+  - version: 5.8.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 466abcc3c207c6604af9291216462d7b413a2b8b
+    highlights: '- [zmq] Implement retries for unacknowledged CASTs'
+  - version: 5.9.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8c84f438d262b6ce00f54e4476938f9616a686b0
+    highlights: |-
+      - Amqp 1.0 dispatch router feature branch merged!
+      - [zmq] Redis unavailability is not critical
+  - version: 5.10.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 4f8fcb332dea7a37eefa49c15e6f3a59a9b7a436
+  - version: 5.10.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: cc1ec4e7f3b395d5f25e7d4922e6359b58a2206a
+    highlights: |-
+      - rabbit: on reconnect set socket timeout correctly
+      - rabbit: avoid busy loop with heartbeat+eventlet
+  - version: 5.10.2
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 471312755c84337a2b63e87b4b8c5c557a2b66d1

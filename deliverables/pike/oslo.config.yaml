@@ -1,70 +1,70 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.config
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 3.23.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: e53c79ebbb0f31db3bdf64760551f357b50c08a7
-- version: 3.24.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: efb287a94645b15b634e8c344352696ff85c219f
-- version: 4.0.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 4cc7c6cb9bd96c986680241bbf2d3d454bcba246
-- version: 4.1.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 12fd34b963f6efa1bd8afd8ce06de33c90135f6d
-- version: 4.1.1
-  projects:
-  - repo: openstack/oslo.config
-    hash: 3290830993094d8bfebaabd499ffd825bffdb3a6
-- version: 4.2.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: f0a915f5969a815b6469f56b88f9e346e394a733
-- version: 4.3.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: d32af197a75dfae5670e6fe75f1bdb2626c75a88
-- version: 4.4.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 010e6be5f9ebf4808e63a328bd29128b9d41155e
-- version: 4.5.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 6e420e9de5958dd27e6f1a38ef9bc578dde435a2
-- version: 4.6.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 83d69f888f6c9bb89ae1e02e21b85422183efb41
-- version: 4.7.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 4848dfece9167cc310897d03df0263de4853572c
-- version: 4.8.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 938077097f3bfbaac621909774f405b101236b48
-- version: 4.9.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 608a15ea61ae846c07624e869c16d37781c2a8ce
-- version: 4.10.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 11c39ac065c36259af6ff688abe3383fab7b2f1a
-- version: 4.11.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: dfc70fa88e01b8c6ca1ab15a4b80bd33e87ced85
+  - version: 3.23.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: e53c79ebbb0f31db3bdf64760551f357b50c08a7
+  - version: 3.24.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: efb287a94645b15b634e8c344352696ff85c219f
+  - version: 4.0.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 4cc7c6cb9bd96c986680241bbf2d3d454bcba246
+  - version: 4.1.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 12fd34b963f6efa1bd8afd8ce06de33c90135f6d
+  - version: 4.1.1
+    projects:
+      - repo: openstack/oslo.config
+        hash: 3290830993094d8bfebaabd499ffd825bffdb3a6
+  - version: 4.2.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: f0a915f5969a815b6469f56b88f9e346e394a733
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: d32af197a75dfae5670e6fe75f1bdb2626c75a88
+  - version: 4.4.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 010e6be5f9ebf4808e63a328bd29128b9d41155e
+  - version: 4.5.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 6e420e9de5958dd27e6f1a38ef9bc578dde435a2
+  - version: 4.6.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 83d69f888f6c9bb89ae1e02e21b85422183efb41
+  - version: 4.7.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 4848dfece9167cc310897d03df0263de4853572c
+  - version: 4.8.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 938077097f3bfbaac621909774f405b101236b48
+  - version: 4.9.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 608a15ea61ae846c07624e869c16d37781c2a8ce
+  - version: 4.10.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 11c39ac065c36259af6ff688abe3383fab7b2f1a
+  - version: 4.11.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: dfc70fa88e01b8c6ca1ab15a4b80bd33e87ced85
 branches:
-- name: stable/pike
-  location: 4.11.0
+  - name: stable/pike
+    location: 4.11.0

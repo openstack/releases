@@ -3,58 +3,58 @@ launchpad: oslo.middleware
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 3.19.0
+  - name: stable/newton
+    location: 3.19.0
 releases:
-- version: 3.9.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: d5974a05f7aa9b8d5406003f1fb9ac6290fe6f0e
-- version: 3.10.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: ea167241d483e678a766a936d8d6208e85341184
-- version: 3.11.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 6f1db02ef07137907977e7437d1e2df7619a429d
-  highlights: '* Add a simple __main__ to easily show healthcheck output'
-- version: 3.12.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 549be72d688f838a85e2c664b9911546f52c758d
-  highlights: '* Do not add a default content type when replying'
-- version: 3.13.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: ef0cf8b37f4e9dc0db5c93c721cc1cd9a9cd9a0d
-- version: 3.14.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: c657ccb3e4e0c62f5879b9a7503e281bc6ca44a9
-- version: 3.15.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: a9f31a0b9dff622397577a0183a07f4cd604e7ae
-- version: 3.16.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 269799540a728a1c32c869a6b77394cfd45b655f
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 37d1a0f6c36bbdde22d103f8dbccefea5ec67895
-- version: 3.18.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: d57889c329b5596f75a4a98d47be46f5a04858fe
-- version: 3.19.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: ddbb2e42c0d66e01c7851f4a00df11b5a693d77c
-- version: 3.19.1
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 6c0f50c1f5f4122b31dbfe25aacdce596bf4b648
+  - version: 3.9.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: d5974a05f7aa9b8d5406003f1fb9ac6290fe6f0e
+  - version: 3.10.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: ea167241d483e678a766a936d8d6208e85341184
+  - version: 3.11.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 6f1db02ef07137907977e7437d1e2df7619a429d
+    highlights: '* Add a simple __main__ to easily show healthcheck output'
+  - version: 3.12.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 549be72d688f838a85e2c664b9911546f52c758d
+    highlights: '* Do not add a default content type when replying'
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: ef0cf8b37f4e9dc0db5c93c721cc1cd9a9cd9a0d
+  - version: 3.14.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: c657ccb3e4e0c62f5879b9a7503e281bc6ca44a9
+  - version: 3.15.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: a9f31a0b9dff622397577a0183a07f4cd604e7ae
+  - version: 3.16.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 269799540a728a1c32c869a6b77394cfd45b655f
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 37d1a0f6c36bbdde22d103f8dbccefea5ec67895
+  - version: 3.18.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: d57889c329b5596f75a4a98d47be46f5a04858fe
+  - version: 3.19.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: ddbb2e42c0d66e01c7851f4a00df11b5a693d77c
+  - version: 3.19.1
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 6c0f50c1f5f4122b31dbfe25aacdce596bf4b648

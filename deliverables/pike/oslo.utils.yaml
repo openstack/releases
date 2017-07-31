@@ -1,38 +1,38 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.utils
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 3.23.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: cdffbffecb9423bfb6f611b6ac246383324dda08
-- version: 3.24.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 6e04f882c4308ff64fa199d1b127ad225e0a30c4
-- version: 3.25.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 824adacdfc4b2fad6556a32702737284948a7059
-- version: 3.25.1
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 9e913db6ad41b3467fc9d4d4e939ae4e6f45f8c2
-- version: 3.26.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 15e014063c4273dd3892ea3edc182721e5e61fd2
-- version: 3.27.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 0f3ea232b750deff33a6106c37a169891872ee93
-- version: 3.28.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: dd1ceea294b36dc7f3e4546498b092c3fd13875f
+  - version: 3.23.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: cdffbffecb9423bfb6f611b6ac246383324dda08
+  - version: 3.24.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 6e04f882c4308ff64fa199d1b127ad225e0a30c4
+  - version: 3.25.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 824adacdfc4b2fad6556a32702737284948a7059
+  - version: 3.25.1
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 9e913db6ad41b3467fc9d4d4e939ae4e6f45f8c2
+  - version: 3.26.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 15e014063c4273dd3892ea3edc182721e5e61fd2
+  - version: 3.27.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 0f3ea232b750deff33a6106c37a169891872ee93
+  - version: 3.28.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: dd1ceea294b36dc7f3e4546498b092c3fd13875f
 branches:
-- name: stable/pike
-  location: 3.28.0
+  - name: stable/pike
+    location: 3.28.0

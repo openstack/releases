@@ -1,30 +1,30 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.context
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 2.13.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: be7b1bf3319de103488c1722812a7e5f3353c9d0
-- version: 2.14.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 79d81f62e79a54aa45d2c1eb4e38d3d625f91687
-- version: 2.15.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: d0f8de0eb6dc9b88632a6566880e4902f1597560
-- version: 2.16.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 3ce185402ede727be4759e6f64813dace6167b89
-- version: 2.17.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: e86ee74a72f7deb8f75e0ede68bba7ba520c7298
+  - version: 2.13.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: be7b1bf3319de103488c1722812a7e5f3353c9d0
+  - version: 2.14.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 79d81f62e79a54aa45d2c1eb4e38d3d625f91687
+  - version: 2.15.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: d0f8de0eb6dc9b88632a6566880e4902f1597560
+  - version: 2.16.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 3ce185402ede727be4759e6f64813dace6167b89
+  - version: 2.17.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: e86ee74a72f7deb8f75e0ede68bba7ba520c7298
 branches:
-- name: stable/pike
-  location: 2.17.0
+  - name: stable/pike
+    location: 2.17.0

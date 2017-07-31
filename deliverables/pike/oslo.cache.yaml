@@ -1,42 +1,42 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.cache
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 1.18.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: bae9b6822e02ac0b8287c16ab1081d071a94d652
-- version: 1.19.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: e9b01704056a230980bb50a2932009e11644f9e4
-- version: 1.20.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: 4badcee9f022b605228b49b51a5e338185359359
-- version: 1.21.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: 67c023c0a7fad02608a4db69bf2c12d00cc8f109
-- version: 1.22.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: e79d1ab1598c85fec384a15a7867a5eae8873f11
-- version: 1.23.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: 5ff0006de1c4e09c6254e7d2ce11dbb436c5645f
-- version: 1.24.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: 6423e08a69c128d4eb826c4e584c7ebc4f7727c1
-- version: 1.25.0
-  projects:
-  - repo: openstack/oslo.cache
-    hash: cfe395f980603040ec40f9e6cf0a98a952f981ad
+  - version: 1.18.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: bae9b6822e02ac0b8287c16ab1081d071a94d652
+  - version: 1.19.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: e9b01704056a230980bb50a2932009e11644f9e4
+  - version: 1.20.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 4badcee9f022b605228b49b51a5e338185359359
+  - version: 1.21.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 67c023c0a7fad02608a4db69bf2c12d00cc8f109
+  - version: 1.22.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: e79d1ab1598c85fec384a15a7867a5eae8873f11
+  - version: 1.23.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 5ff0006de1c4e09c6254e7d2ce11dbb436c5645f
+  - version: 1.24.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 6423e08a69c128d4eb826c4e584c7ebc4f7727c1
+  - version: 1.25.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: cfe395f980603040ec40f9e6cf0a98a952f981ad
 branches:
-- name: stable/pike
-  location: 1.25.0
+  - name: stable/pike
+    location: 1.25.0

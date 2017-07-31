@@ -4,37 +4,37 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.utils/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 3.22.0
+  - name: stable/ocata
+    location: 3.22.0
 releases:
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: e4c9a2582383c2e245522d24f7c0877410393aee
-- version: 3.18.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 042374d7415e6ca4be60cfd49f31bc94dd663154
-- version: 3.19.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 7a52daac9dfcea358bf9c821b6d11d0911e29d3e
-- version: 3.20.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 0e99039d4216d710411c4df67b47b4a11ef8e1b9
-- version: 3.21.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: fde88a880272e7b6e7451433725d18bf74003856
-  highlights: '- Allow ''get_all_class_names'' to pass kwargs'
-- version: 3.22.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: bc8c7d375b7745fdedd2869c1b1d9c896080792b
-- version: 3.22.1
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 8d2ab998e85ebf242b4fe0ab3748e0a073397712
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: e4c9a2582383c2e245522d24f7c0877410393aee
+  - version: 3.18.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 042374d7415e6ca4be60cfd49f31bc94dd663154
+  - version: 3.19.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 7a52daac9dfcea358bf9c821b6d11d0911e29d3e
+  - version: 3.20.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 0e99039d4216d710411c4df67b47b4a11ef8e1b9
+  - version: 3.21.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: fde88a880272e7b6e7451433725d18bf74003856
+    highlights: '- Allow ''get_all_class_names'' to pass kwargs'
+  - version: 3.22.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: bc8c7d375b7745fdedd2869c1b1d9c896080792b
+  - version: 3.22.1
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 8d2ab998e85ebf242b4fe0ab3748e0a073397712

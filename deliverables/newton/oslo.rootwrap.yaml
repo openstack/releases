@@ -3,36 +3,36 @@ launchpad: oslo.rootwrap
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 5.1.0
+  - name: stable/newton
+    location: 5.1.0
 releases:
-- version: 4.2.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: cba9437bb23f6396209e3206abf559bf7301e6d2
-- version: 4.3.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 7ec1e73d6aab37ecc7fae3553bc309addc18c1fe
-- version: 4.4.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 3a70d2ead1ce07be8ed3f724b548f8136046e776
-- version: 5.0.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 37c2a041d33f0fdce7ce2832398c1f60f3ee8703
-- version: 5.1.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: a46b731c8a346d9bbb0c461a64aa3fb970123c86
-- version: 5.1.1
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 36e9592359f70c720d93b460d33ea136d3945996
-- version: 5.1.2
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: af8ad2da809f68442da9aacd17a47bca342eb355
+  - version: 4.2.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: cba9437bb23f6396209e3206abf559bf7301e6d2
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 7ec1e73d6aab37ecc7fae3553bc309addc18c1fe
+  - version: 4.4.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 3a70d2ead1ce07be8ed3f724b548f8136046e776
+  - version: 5.0.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 37c2a041d33f0fdce7ce2832398c1f60f3ee8703
+  - version: 5.1.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: a46b731c8a346d9bbb0c461a64aa3fb970123c86
+  - version: 5.1.1
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 36e9592359f70c720d93b460d33ea136d3945996
+  - version: 5.1.2
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: af8ad2da809f68442da9aacd17a47bca342eb355

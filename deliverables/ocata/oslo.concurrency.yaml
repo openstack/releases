@@ -4,25 +4,25 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.concurrency/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 3.18.0
+  - name: stable/ocata
+    location: 3.18.0
 releases:
-- version: 3.15.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 9f1c2f01f0fc48aff3251b26fd9d9953015b4243
-  highlights: '* Ignore prlimit argument on Windows'
-- version: 3.16.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 3f08e9c215b4bbea5d25f15d125ee81d492c2ab3
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 7afbc993f0b59d0fc45b2738d179fd50cd486a5d
-- version: 3.18.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 7afbc993f0b59d0fc45b2738d179fd50cd486a5d
+  - version: 3.15.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 9f1c2f01f0fc48aff3251b26fd9d9953015b4243
+    highlights: '* Ignore prlimit argument on Windows'
+  - version: 3.16.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 3f08e9c215b4bbea5d25f15d125ee81d492c2ab3
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 7afbc993f0b59d0fc45b2738d179fd50cd486a5d
+  - version: 3.18.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 7afbc993f0b59d0fc45b2738d179fd50cd486a5d

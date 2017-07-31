@@ -4,33 +4,33 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.log/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 3.20.0
+  - name: stable/ocata
+    location: 3.20.0
 releases:
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.log
-    hash: 297f9557e73c8c336247fde8ce2709efe4862e9e
-  highlights: |-
-    * Add a json reformatter command
-    * Add a filter to rate limit logs
-    * Use six.wraps instead of functools
-    * Default use_stderr to False
-- version: 3.18.0
-  projects:
-  - repo: openstack/oslo.log
-    hash: eca5c587a8daf6f2716ebde46490e1651d8c3c12
-- version: 3.19.0
-  projects:
-  - repo: openstack/oslo.log
-    hash: 92f87422ad1f013b96ffdca51e6dad1737e9905f
-- version: 3.20.0
-  projects:
-  - repo: openstack/oslo.log
-    hash: 90399f9fe92e4a3096559c4ceeced776b426091b
-- version: 3.20.1
-  projects:
-  - repo: openstack/oslo.log
-    hash: 60d66d2a7f517ff22da40824cb840e6697d78dba
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 297f9557e73c8c336247fde8ce2709efe4862e9e
+    highlights: |-
+      * Add a json reformatter command
+      * Add a filter to rate limit logs
+      * Use six.wraps instead of functools
+      * Default use_stderr to False
+  - version: 3.18.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: eca5c587a8daf6f2716ebde46490e1651d8c3c12
+  - version: 3.19.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 92f87422ad1f013b96ffdca51e6dad1737e9905f
+  - version: 3.20.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 90399f9fe92e4a3096559c4ceeced776b426091b
+  - version: 3.20.1
+    projects:
+      - repo: openstack/oslo.log
+        hash: 60d66d2a7f517ff22da40824cb840e6697d78dba

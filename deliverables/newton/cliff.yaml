@@ -3,16 +3,16 @@ launchpad: python-cliff
 team: OpenStackClient
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 2.2.0
+  - name: stable/newton
+    location: 2.2.0
 releases:
-- version: 2.1.0
-  projects:
-  - repo: openstack/cliff
-    hash: 21f133f17ba2ec7a4b370a74bd08b536abddf1de
-- version: 2.2.0
-  projects:
-  - repo: openstack/cliff
-    hash: 50d67088eabfde69db1d8d86d7f45f094611cf26
+  - version: 2.1.0
+    projects:
+      - repo: openstack/cliff
+        hash: 21f133f17ba2ec7a4b370a74bd08b536abddf1de
+  - version: 2.2.0
+    projects:
+      - repo: openstack/cliff
+        hash: 50d67088eabfde69db1d8d86d7f45f094611cf26

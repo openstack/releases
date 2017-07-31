@@ -3,25 +3,25 @@ launchpad: oslosphinx
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 4.7.0
+  - name: stable/newton
+    location: 4.7.0
 releases:
-- version: 4.4.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: c327f858e6934d2558267e91085d588077921c89
-  highlights: '* Add recent versions links to sidebar'
-- version: 4.5.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: d901a7bd61db6a60e909978ffa9cd0e340519cfc
-- version: 4.6.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: e2ded8e3074d5b50802e615803d73ca4587d94f3
-- version: 4.7.0
-  projects:
-  - repo: openstack/oslosphinx
-    hash: 3bcdfc6b77212ce802763c4fadea0bed08ca42fe
+  - version: 4.4.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: c327f858e6934d2558267e91085d588077921c89
+    highlights: '* Add recent versions links to sidebar'
+  - version: 4.5.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: d901a7bd61db6a60e909978ffa9cd0e340519cfc
+  - version: 4.6.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: e2ded8e3074d5b50802e615803d73ca4587d94f3
+  - version: 4.7.0
+    projects:
+      - repo: openstack/oslosphinx
+        hash: 3bcdfc6b77212ce802763c4fadea0bed08ca42fe

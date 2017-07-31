@@ -1,46 +1,46 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.middleware
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 3.24.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: f3e52752eabd93404c8011ba2e3ef96d22b9ec87
-- version: 3.25.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 2dc2cf3c31ca14ac2d4894b1cd98a4d8e4a76b9d
-- version: 3.26.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: c61612b206c6cb2a18c312c9611df022ae1f011b
-- version: 3.27.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 6b7b1b225d28e49d710fa703d48610e30910e27b
-- version: 3.28.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 9ae8bb8055d1ae5db13f39d4d5e3b2a3947c44a5
-- version: 3.29.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 3d6505374192840b23ff6e955a4519ba99daa677
-- version: 3.29.1
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 9537eba5214622f7d2449dab846c194d0108f055
-- version: 3.29.2
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 7af4801aad4243c73eaa3d092c92d823cda89510
-- version: 3.30.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 1cf39ee5c3739c18fed78946532438550f56356f
+  - version: 3.24.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: f3e52752eabd93404c8011ba2e3ef96d22b9ec87
+  - version: 3.25.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 2dc2cf3c31ca14ac2d4894b1cd98a4d8e4a76b9d
+  - version: 3.26.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: c61612b206c6cb2a18c312c9611df022ae1f011b
+  - version: 3.27.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 6b7b1b225d28e49d710fa703d48610e30910e27b
+  - version: 3.28.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 9ae8bb8055d1ae5db13f39d4d5e3b2a3947c44a5
+  - version: 3.29.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 3d6505374192840b23ff6e955a4519ba99daa677
+  - version: 3.29.1
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 9537eba5214622f7d2449dab846c194d0108f055
+  - version: 3.29.2
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 7af4801aad4243c73eaa3d092c92d823cda89510
+  - version: 3.30.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 1cf39ee5c3739c18fed78946532438550f56356f
 branches:
-- name: stable/pike
-  location: 3.30.0
+  - name: stable/pike
+    location: 3.30.0

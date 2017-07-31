@@ -3,30 +3,30 @@ launchpad: futurist
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 0.18.0
+  - name: stable/newton
+    location: 0.18.0
 releases:
-- version: 0.14.0
-  projects:
-  - repo: openstack/futurist
-    hash: 8166a435f7286dadea32cd83bcd3285878720384
-- version: 0.15.0
-  projects:
-  - repo: openstack/futurist
-    hash: 89af3a028820bdffb3bd37c43d2d00fe703fd859
-  highlights: '* Begin adding our own thread pool executor'
-- version: 0.16.0
-  projects:
-  - repo: openstack/futurist
-    hash: 6d4e15a6760d8525de7789e73e61e573eaf38d78
-  highlights: '* Revert smart idleness check'
-- version: 0.17.0
-  projects:
-  - repo: openstack/futurist
-    hash: 72b06b5afd0b0e10e7ae9c6111827ee256ad118c
-- version: 0.18.0
-  projects:
-  - repo: openstack/futurist
-    hash: 4650a2bf3b6a9c272f2bd39fd9511ed7d8265fc7
+  - version: 0.14.0
+    projects:
+      - repo: openstack/futurist
+        hash: 8166a435f7286dadea32cd83bcd3285878720384
+  - version: 0.15.0
+    projects:
+      - repo: openstack/futurist
+        hash: 89af3a028820bdffb3bd37c43d2d00fe703fd859
+    highlights: '* Begin adding our own thread pool executor'
+  - version: 0.16.0
+    projects:
+      - repo: openstack/futurist
+        hash: 6d4e15a6760d8525de7789e73e61e573eaf38d78
+    highlights: '* Revert smart idleness check'
+  - version: 0.17.0
+    projects:
+      - repo: openstack/futurist
+        hash: 72b06b5afd0b0e10e7ae9c6111827ee256ad118c
+  - version: 0.18.0
+    projects:
+      - repo: openstack/futurist
+        hash: 4650a2bf3b6a9c272f2bd39fd9511ed7d8265fc7

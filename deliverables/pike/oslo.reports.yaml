@@ -1,34 +1,34 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.reports
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 1.18.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 1c6cd103f3c0e0815a77a7a58ebd1d49680df017
-- version: 1.19.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: cba09827c6e2f1a38d508e808ba02ba87426b9e8
-- version: 1.20.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 32e3eee34288baac4c3212ac144c40d7bbad8ff2
-- version: 1.21.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 05f4484cbcc7594d4fb709467414c6b22b0d6137
-- version: 1.21.1
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 1481aaf84e9c1b4b7f57631a59d51bdd1d439d90
-- version: 1.22.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 5e4ea9af13c8ac1d65bf150c6c8970b38d16da51
+  - version: 1.18.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 1c6cd103f3c0e0815a77a7a58ebd1d49680df017
+  - version: 1.19.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: cba09827c6e2f1a38d508e808ba02ba87426b9e8
+  - version: 1.20.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 32e3eee34288baac4c3212ac144c40d7bbad8ff2
+  - version: 1.21.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 05f4484cbcc7594d4fb709467414c6b22b0d6137
+  - version: 1.21.1
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 1481aaf84e9c1b4b7f57631a59d51bdd1d439d90
+  - version: 1.22.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 5e4ea9af13c8ac1d65bf150c6c8970b38d16da51
 branches:
-- name: stable/pike
-  location: 1.22.0
+  - name: stable/pike
+    location: 1.22.0

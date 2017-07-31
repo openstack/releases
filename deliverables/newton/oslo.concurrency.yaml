@@ -3,43 +3,43 @@ launchpad: oslo.concurrency
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.concurrency/newton.html
 branches:
-- name: stable/newton
-  location: 3.14.0
+  - name: stable/newton
+    location: 3.14.0
 releases:
-- version: 3.8.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 6bae2be9ba9d9809ac45d5e2a6bfe6422b5a87e3
-- version: 3.9.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: e1cde970287e84faa5d533cce9576d7dea916a8d
-  highlights: '* Add timeout option to ssh_execute'
-- version: 3.10.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 4c60f8e984a02f07dbdf4b3b775f5660bbc38c6a
-- version: 3.11.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: ec7be5293e9fdb823eda0d3465c449c341658446
-- version: 3.12.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: f7821d9cdbb8e6ad27c5c7aa02a4110cc42777de
-- version: 3.13.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 2e8d5481b1a3036e9d3e1f684b95cd123022b39f
-  highlights: '- Add Python 3.5 classifier and venv'
-- version: 3.14.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: ebd39214b5daaa73e7fd42c62ae8844a49d2f9bf
-- version: 3.14.1
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 9ac99b675eae255b660b03d3a1e61599d09f8316
+  - version: 3.8.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 6bae2be9ba9d9809ac45d5e2a6bfe6422b5a87e3
+  - version: 3.9.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: e1cde970287e84faa5d533cce9576d7dea916a8d
+    highlights: '* Add timeout option to ssh_execute'
+  - version: 3.10.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 4c60f8e984a02f07dbdf4b3b775f5660bbc38c6a
+  - version: 3.11.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: ec7be5293e9fdb823eda0d3465c449c341658446
+  - version: 3.12.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: f7821d9cdbb8e6ad27c5c7aa02a4110cc42777de
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 2e8d5481b1a3036e9d3e1f684b95cd123022b39f
+    highlights: '- Add Python 3.5 classifier and venv'
+  - version: 3.14.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: ebd39214b5daaa73e7fd42c62ae8844a49d2f9bf
+  - version: 3.14.1
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 9ac99b675eae255b660b03d3a1e61599d09f8316

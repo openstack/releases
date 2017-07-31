@@ -1,38 +1,38 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.vmware
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 2.18.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 145b124f2de276b8196fb9d8b286cf44e8f1d640
-- version: 2.19.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 406512a787e70bf27dbc99a7a7ce37e743c66666
-- version: 2.20.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 73782183002c3b4aac6349ee4808f034c5ed6b50
-- version: 2.21.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 49c5999903d48ec21de77bef9f9f630ee2087515
-- version: 2.22.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 5b01c09e86cefddcee90ed31735e17e8261a81e5
-- version: 2.22.1
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: c5aed4fe30a3e3d9e82ca57015668cedc1394ed1
-- version: 2.23.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 0aeed64bbb60581989436102ad68268d92024947
+  - version: 2.18.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 145b124f2de276b8196fb9d8b286cf44e8f1d640
+  - version: 2.19.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 406512a787e70bf27dbc99a7a7ce37e743c66666
+  - version: 2.20.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 73782183002c3b4aac6349ee4808f034c5ed6b50
+  - version: 2.21.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 49c5999903d48ec21de77bef9f9f630ee2087515
+  - version: 2.22.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 5b01c09e86cefddcee90ed31735e17e8261a81e5
+  - version: 2.22.1
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: c5aed4fe30a3e3d9e82ca57015668cedc1394ed1
+  - version: 2.23.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 0aeed64bbb60581989436102ad68268d92024947
 branches:
-- name: stable/pike
-  location: 2.23.0
+  - name: stable/pike
+    location: 2.23.0

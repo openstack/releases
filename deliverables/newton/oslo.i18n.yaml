@@ -3,24 +3,24 @@ launchpad: oslo.i18n
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 3.9.0
+  - name: stable/newton
+    location: 3.9.0
 releases:
-- version: 3.6.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: fb8b773cb11ea43821305c052b0eb765f0ec12a6
-- version: 3.7.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 4b33a2c0b05f384a5428e6f21f88a4ade36d5967
-- version: 3.8.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 16f40a6392610863589a7f409aeab4711f79a0f9
-- version: 3.9.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 1f8d0186075c2014fc44d6a46d9caf0d1761e6c4
+  - version: 3.6.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: fb8b773cb11ea43821305c052b0eb765f0ec12a6
+  - version: 3.7.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 4b33a2c0b05f384a5428e6f21f88a4ade36d5967
+  - version: 3.8.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 16f40a6392610863589a7f409aeab4711f79a0f9
+  - version: 3.9.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 1f8d0186075c2014fc44d6a46d9caf0d1761e6c4

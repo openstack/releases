@@ -1,70 +1,70 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.messaging
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 5.18.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: afd4ecfb420bcbf2e13a8808cc4a0092565d823b
-- version: 5.19.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 2ee6a2a48089035d5115b8addc2045fe3f6a76d8
-- version: 5.20.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 093afc2455325f0b7813b7543c8fe8ba19449157
-- version: 5.21.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 058395bc5e109f461583cf722fcee89b427185e2
-- version: 5.22.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 2461f0b4ed88297ffc00274a4d9b474f231116ba
-- version: 5.23.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 8e5e5ab21874237a0f1048d2f705bc4b1f67631a
-- version: 5.24.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: e569c92cd9d17c907ecc35e24c50c49717844bde
-- version: 5.24.1
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 831cbf8ecd87229b12177f6e449bac1859986e1c
-- version: 5.24.2
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 7678848425e2e17563e1697e8180e748738122ae
-- version: 5.25.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 268ca151dcb5e45485d19deaf7610b633aded297
-- version: 5.26.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 8b44bfd5388dea0d6e2083c7a3502949fbe887d9
-- version: 5.27.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: e6b225c5629a386a1089af9b11befe3d0414b6b8
-- version: 5.28.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 2fb4a216cc94e96db6fdb8c20ed4d278d15ba1fe
-- version: 5.29.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: cbf56b0afdd83e1393b6b3504fc34d03d58a7ad7
-- version: 5.30.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: a931af6fd5b5242796239e6134fff3ea608c9280
+  - version: 5.18.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: afd4ecfb420bcbf2e13a8808cc4a0092565d823b
+  - version: 5.19.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 2ee6a2a48089035d5115b8addc2045fe3f6a76d8
+  - version: 5.20.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 093afc2455325f0b7813b7543c8fe8ba19449157
+  - version: 5.21.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 058395bc5e109f461583cf722fcee89b427185e2
+  - version: 5.22.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 2461f0b4ed88297ffc00274a4d9b474f231116ba
+  - version: 5.23.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8e5e5ab21874237a0f1048d2f705bc4b1f67631a
+  - version: 5.24.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: e569c92cd9d17c907ecc35e24c50c49717844bde
+  - version: 5.24.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 831cbf8ecd87229b12177f6e449bac1859986e1c
+  - version: 5.24.2
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 7678848425e2e17563e1697e8180e748738122ae
+  - version: 5.25.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 268ca151dcb5e45485d19deaf7610b633aded297
+  - version: 5.26.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8b44bfd5388dea0d6e2083c7a3502949fbe887d9
+  - version: 5.27.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: e6b225c5629a386a1089af9b11befe3d0414b6b8
+  - version: 5.28.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 2fb4a216cc94e96db6fdb8c20ed4d278d15ba1fe
+  - version: 5.29.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: cbf56b0afdd83e1393b6b3504fc34d03d58a7ad7
+  - version: 5.30.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: a931af6fd5b5242796239e6134fff3ea608c9280
 branches:
-- name: stable/pike
-  location: 5.30.0
+  - name: stable/pike
+    location: 5.30.0

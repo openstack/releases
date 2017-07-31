@@ -3,38 +3,38 @@ launchpad: oslo.reports
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 1.14.0
+  - name: stable/newton
+    location: 1.14.0
 releases:
-- version: 1.8.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: aaf93641d4ae167b78cc51bc45354c475568dfdf
-- version: 1.9.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 71ce8f5f30bef41278e1ea9be94932ade8aac313
-- version: 1.10.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 3804e060de1d47d5375bf9ee7dd21ca8448ded40
-- version: 1.11.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: c1c40325cde1ca97c083a5c18a5f926c91b386cd
-  highlights: '* Use file modification events instead of signal handler'
-- version: 1.12.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 4b37e3073a3f8f3af59fc63647cadce5a88bb965
-- version: 1.13.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: 329eb7cb79925c3e6319e41a7cca3b86218ea2c6
-  highlights: '- Add Python 3.5 classifier and venv'
-- version: 1.14.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: d332969661534229feb5cbf66fa6084020ae8034
+  - version: 1.8.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: aaf93641d4ae167b78cc51bc45354c475568dfdf
+  - version: 1.9.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 71ce8f5f30bef41278e1ea9be94932ade8aac313
+  - version: 1.10.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 3804e060de1d47d5375bf9ee7dd21ca8448ded40
+  - version: 1.11.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: c1c40325cde1ca97c083a5c18a5f926c91b386cd
+    highlights: '* Use file modification events instead of signal handler'
+  - version: 1.12.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 4b37e3073a3f8f3af59fc63647cadce5a88bb965
+  - version: 1.13.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 329eb7cb79925c3e6319e41a7cca3b86218ea2c6
+    highlights: '- Add Python 3.5 classifier and venv'
+  - version: 1.14.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: d332969661534229feb5cbf66fa6084020ae8034

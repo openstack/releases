@@ -4,47 +4,47 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.messaging/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 5.17.0
+  - name: stable/ocata
+    location: 5.17.0
 releases:
-- version: 5.11.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 874a69b0cdb2ab9f107a65dd890b8563968fd109
-- version: 5.12.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: b1b3677a75fe384a9f7b1f6c1727b8a838f8926c
-- version: 5.13.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: b8d1024609e9a5d485f2decb5dcab223b303f0ec
-- version: 5.14.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 044e1bba8254ceea76a84d92f83ae9f75ea8930f
-- version: 5.15.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 2c3ae0af3c9c06c03127f6ad1403c422edda1c60
-- version: 5.16.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: ea61a810142e46a88b7120ad2899ec3b38b66516
-- version: 5.17.0
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 8424dbc7cb3f102e4a0841684c4dc14267cd3da9
-- version: 5.17.1
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 28d5df8d2e91f906403bf577456b46d2c4d6a5a4
-  highlights: |-
-    - [AMQP 1.0] fix getaddressinfo() IPv6 error
-    - [zmq] Fix dynamic connections fanout error
-- version: 5.17.2
-  projects:
-  - repo: openstack/oslo.messaging
-    hash: 2775568e01b8429dc90fade4e38673085098da34
+  - version: 5.11.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 874a69b0cdb2ab9f107a65dd890b8563968fd109
+  - version: 5.12.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: b1b3677a75fe384a9f7b1f6c1727b8a838f8926c
+  - version: 5.13.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: b8d1024609e9a5d485f2decb5dcab223b303f0ec
+  - version: 5.14.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 044e1bba8254ceea76a84d92f83ae9f75ea8930f
+  - version: 5.15.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 2c3ae0af3c9c06c03127f6ad1403c422edda1c60
+  - version: 5.16.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: ea61a810142e46a88b7120ad2899ec3b38b66516
+  - version: 5.17.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8424dbc7cb3f102e4a0841684c4dc14267cd3da9
+  - version: 5.17.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 28d5df8d2e91f906403bf577456b46d2c4d6a5a4
+    highlights: |-
+      - [AMQP 1.0] fix getaddressinfo() IPv6 error
+      - [zmq] Fix dynamic connections fanout error
+  - version: 5.17.2
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 2775568e01b8429dc90fade4e38673085098da34

@@ -1,35 +1,35 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: futurist
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 0.22.0
-  projects:
-  - repo: openstack/futurist
-    hash: 7b3687f15bb5e7ecbd372faae882f62d739f4a96
-- version: 0.23.0
-  projects:
-  - repo: openstack/futurist
-    hash: 68557fec45d095e859d4829c526392cf9dff796b
-- version: 1.0.0
-  projects:
-  - repo: openstack/futurist
-    hash: b8759972cbe9bd1ab2203c81a26805730d5a0178
-  highlights: 'Stable enough to release 1.0.0'
-- version: 1.1.0
-  projects:
-  - repo: openstack/futurist
-    hash: fba366a839288efa8f92dab607adf5550c4fa7d5
-- version: 1.2.0
-  projects:
-  - repo: openstack/futurist
-    hash: 41709d75e8157888631d5df589d217c2b871944f
-- version: 1.3.0
-  projects:
-  - repo: openstack/futurist
-    hash: 549c4aaaaa18ec2a15766fbbf852196c5934eb37
+  - version: 0.22.0
+    projects:
+      - repo: openstack/futurist
+        hash: 7b3687f15bb5e7ecbd372faae882f62d739f4a96
+  - version: 0.23.0
+    projects:
+      - repo: openstack/futurist
+        hash: 68557fec45d095e859d4829c526392cf9dff796b
+  - version: 1.0.0
+    projects:
+      - repo: openstack/futurist
+        hash: b8759972cbe9bd1ab2203c81a26805730d5a0178
+    highlights: 'Stable enough to release 1.0.0'
+  - version: 1.1.0
+    projects:
+      - repo: openstack/futurist
+        hash: fba366a839288efa8f92dab607adf5550c4fa7d5
+  - version: 1.2.0
+    projects:
+      - repo: openstack/futurist
+        hash: 41709d75e8157888631d5df589d217c2b871944f
+  - version: 1.3.0
+    projects:
+      - repo: openstack/futurist
+        hash: 549c4aaaaa18ec2a15766fbbf852196c5934eb37
 branches:
-- name: stable/pike
-  location: 1.3.0
+  - name: stable/pike
+    location: 1.3.0

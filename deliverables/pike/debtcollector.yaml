@@ -1,34 +1,34 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: debtcollector
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 1.12.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: f7630fadb8582e7dd37b02565b104681891defdd
-- version: 1.13.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 154472d821917370892a8bf8b856da73570d1c99
-- version: 1.14.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: da416d64e219ff75f82b2fd29b5709112a6b43eb
-- version: 1.15.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: d2f3f45ceb6dcf5b753e53ef8e1441efd09c2c93
-- version: 1.16.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 9d3fbc726fb4bb5699bb6eec2dfeb51cc0e762f0
-- version: 1.17.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: cd6ba6b1224e527c36e976a25c0e06d311ebb2d9
+  - version: 1.12.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: f7630fadb8582e7dd37b02565b104681891defdd
+  - version: 1.13.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 154472d821917370892a8bf8b856da73570d1c99
+  - version: 1.14.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: da416d64e219ff75f82b2fd29b5709112a6b43eb
+  - version: 1.15.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: d2f3f45ceb6dcf5b753e53ef8e1441efd09c2c93
+  - version: 1.16.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 9d3fbc726fb4bb5699bb6eec2dfeb51cc0e762f0
+  - version: 1.17.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: cd6ba6b1224e527c36e976a25c0e06d311ebb2d9
 branches:
-- name: stable/pike
-  location: 1.17.0
+  - name: stable/pike
+    location: 1.17.0

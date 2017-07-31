@@ -3,41 +3,41 @@ launchpad: oslo.context
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.context/newton.html
 branches:
-- name: stable/newton
-  location: 2.9.0
+  - name: stable/newton
+    location: 2.9.0
 releases:
-- version: 2.3.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 82ffe9ee0572fc3791dcd827cfba8484a333ad5b
-- version: 2.4.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 6e61493b5477ffc49b6e437effa27c593c15e3b0
-- version: 2.5.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 061741287a9fd90fa1664462f5ef6bb4d942f1a6
-- version: 2.6.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 9feb9db8d667bc5bc9ca43e2073227c1e8e44bbb
-  highlights: |-
-    * Handle openstack.request_id in from_environ
-    * Add is_admin_project to context
-- version: 2.7.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 932b4950770782fbbf64828f5a824aa752fc0dd7
-- version: 2.8.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 765eaa6a5dcbfb801b2feb639951d292a3e2722d
-- version: 2.9.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 0ad0950e0637c37145bc04df2166468523f8a10a
-  highlights: '- Emit deprecation warnings when positional args passed'
+  - version: 2.3.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 82ffe9ee0572fc3791dcd827cfba8484a333ad5b
+  - version: 2.4.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 6e61493b5477ffc49b6e437effa27c593c15e3b0
+  - version: 2.5.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 061741287a9fd90fa1664462f5ef6bb4d942f1a6
+  - version: 2.6.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 9feb9db8d667bc5bc9ca43e2073227c1e8e44bbb
+    highlights: |-
+      * Handle openstack.request_id in from_environ
+      * Add is_admin_project to context
+  - version: 2.7.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 932b4950770782fbbf64828f5a824aa752fc0dd7
+  - version: 2.8.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 765eaa6a5dcbfb801b2feb639951d292a3e2722d
+  - version: 2.9.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 0ad0950e0637c37145bc04df2166468523f8a10a
+    highlights: '- Emit deprecation warnings when positional args passed'

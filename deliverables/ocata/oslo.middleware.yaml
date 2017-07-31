@@ -4,33 +4,33 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.middleware/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 3.23.1
+  - name: stable/ocata
+    location: 3.23.1
 releases:
-- version: 3.20.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: cc9810787ea953ed0625284cd73423574e487b97
-- version: 3.21.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 78bffce487935845bc932e91211b6429a7aba2a1
-- version: 3.22.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 6feaa13610c450c8486f969703768db5319b4846
-  highlights: '- Transform healthcheck from filter to an application'
-- version: 3.23.0
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 5307c7e43f32ff4d3c1b3a742718f6085296fdf6
-- version: 3.23.1
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: df5c11ddcc06cd0b4f1ced99d7bdc1213e5eb646
-- version: 3.23.2
-  projects:
-  - repo: openstack/oslo.middleware
-    hash: 662f76a909325a2990c991b3d4bffcd0a78d3bdb
+  - version: 3.20.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: cc9810787ea953ed0625284cd73423574e487b97
+  - version: 3.21.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 78bffce487935845bc932e91211b6429a7aba2a1
+  - version: 3.22.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 6feaa13610c450c8486f969703768db5319b4846
+    highlights: '- Transform healthcheck from filter to an application'
+  - version: 3.23.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 5307c7e43f32ff4d3c1b3a742718f6085296fdf6
+  - version: 3.23.1
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: df5c11ddcc06cd0b4f1ced99d7bdc1213e5eb646
+  - version: 3.23.2
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 662f76a909325a2990c991b3d4bffcd0a78d3bdb

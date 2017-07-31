@@ -4,20 +4,20 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 2.16.0
+  - name: stable/ocata
+    location: 2.16.0
 releases:
-- version: 2.14.0
-  projects:
-  - repo: openstack/oslo.serialization
-    hash: 0a5dc84db777a6bc87f427d5407e999ecf1e36fc
-- version: 2.15.0
-  projects:
-  - repo: openstack/oslo.serialization
-    hash: 1dc9e0de3c76e526b5ab2a107458d82f3abd0a95
-- version: 2.16.0
-  projects:
-  - repo: openstack/oslo.serialization
-    hash: ac5787d0e42ba6aa1c26d2e040c9f0a1ca8cb575
+  - version: 2.14.0
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 0a5dc84db777a6bc87f427d5407e999ecf1e36fc
+  - version: 2.15.0
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 1dc9e0de3c76e526b5ab2a107458d82f3abd0a95
+  - version: 2.16.0
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: ac5787d0e42ba6aa1c26d2e040c9f0a1ca8cb575

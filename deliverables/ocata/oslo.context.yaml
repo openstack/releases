@@ -4,28 +4,28 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.context/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 2.12.0
+  - name: stable/ocata
+    location: 2.12.0
 releases:
-- version: 2.10.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: b60ab0fb3f0c951b14f5deab283c450694bb5e1a
-- version: 2.11.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: b788a184a05edef5b3d8a6f9ee84ea366c847196
-- version: 2.12.0
-  projects:
-  - repo: openstack/oslo.context
-    hash: 5288c6d9200acabd82f6cdc86634a34b50627252
-- version: 2.12.1
-  projects:
-  - repo: openstack/oslo.context
-    hash: 9071eb979f1c679642b566074d5716512f15b8bd
-- version: 2.12.2
-  projects:
-  - repo: openstack/oslo.context
-    hash: e39f890bb326df3aa9fcd72d43e501906e99f719
+  - version: 2.10.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: b60ab0fb3f0c951b14f5deab283c450694bb5e1a
+  - version: 2.11.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: b788a184a05edef5b3d8a6f9ee84ea366c847196
+  - version: 2.12.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: 5288c6d9200acabd82f6cdc86634a34b50627252
+  - version: 2.12.1
+    projects:
+      - repo: openstack/oslo.context
+        hash: 9071eb979f1c679642b566074d5716512f15b8bd
+  - version: 2.12.2
+    projects:
+      - repo: openstack/oslo.context
+        hash: e39f890bb326df3aa9fcd72d43e501906e99f719

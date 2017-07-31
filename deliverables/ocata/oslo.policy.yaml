@@ -4,27 +4,27 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.policy/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.18.0
+  - name: stable/ocata
+    location: 1.18.0
 releases:
-- version: 1.15.0
-  projects:
-  - repo: openstack/oslo.policy
-    hash: e4ecd85eb07d0a9b27b76b4b88308b7bfa94fada
-  highlights: |
-    - Routine dependency updates.
-    - Adds sphinxpolicygen sphinx plugin.
-- version: 1.16.0
-  projects:
-  - repo: openstack/oslo.policy
-    hash: 573c52bb1c4f67e49bcacd1c1ce5c2af672e0f76
-- version: 1.17.0
-  projects:
-  - repo: openstack/oslo.policy
-    hash: f56b767dddea4736ce6097177ee599786665141e
-- version: 1.18.0
-  projects:
-  - repo: openstack/oslo.policy
-    hash: b0621b439c8051c013617a8ce685ea5e06ef981e
+  - version: 1.15.0
+    projects:
+      - repo: openstack/oslo.policy
+        hash: e4ecd85eb07d0a9b27b76b4b88308b7bfa94fada
+    highlights: |
+      - Routine dependency updates.
+      - Adds sphinxpolicygen sphinx plugin.
+  - version: 1.16.0
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 573c52bb1c4f67e49bcacd1c1ce5c2af672e0f76
+  - version: 1.17.0
+    projects:
+      - repo: openstack/oslo.policy
+        hash: f56b767dddea4736ce6097177ee599786665141e
+  - version: 1.18.0
+    projects:
+      - repo: openstack/oslo.policy
+        hash: b0621b439c8051c013617a8ce685ea5e06ef981e

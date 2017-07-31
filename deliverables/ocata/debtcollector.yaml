@@ -4,20 +4,20 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/debtcollector/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.11.0
+  - name: stable/ocata
+    location: 1.11.0
 releases:
-- version: 1.9.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: a44b260afeb40f51a7f7ebb8a053a03496b58812
-- version: 1.10.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: bd2a83642564766d73fa4a561ba1ca1af728a3e3
-- version: 1.11.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 00d2db18a99cbc57feab5b91e6d4165f6f5de3c5
+  - version: 1.9.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: a44b260afeb40f51a7f7ebb8a053a03496b58812
+  - version: 1.10.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: bd2a83642564766d73fa4a561ba1ca1af728a3e3
+  - version: 1.11.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 00d2db18a99cbc57feab5b91e6d4165f6f5de3c5

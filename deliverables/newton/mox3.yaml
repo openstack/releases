@@ -3,24 +3,24 @@ launchpad: python-mox3
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 0.18.0
+  - name: stable/newton
+    location: 0.18.0
 releases:
-- version: 0.15.0
-  projects:
-  - repo: openstack/mox3
-    hash: a2752b8b652a8b83273dd2ce84274c844333be7a
-- version: 0.16.0
-  projects:
-  - repo: openstack/mox3
-    hash: c09ec5b1b248e489f71758e60cc3a5eb2c20c76a
-- version: 0.17.0
-  projects:
-  - repo: openstack/mox3
-    hash: 2b58961090cb9d19e33f4b6a87074b3a657d697b
-- version: 0.18.0
-  projects:
-  - repo: openstack/mox3
-    hash: 22c02dc7469d73dd873cc28ebc1b21d61cdda790
+  - version: 0.15.0
+    projects:
+      - repo: openstack/mox3
+        hash: a2752b8b652a8b83273dd2ce84274c844333be7a
+  - version: 0.16.0
+    projects:
+      - repo: openstack/mox3
+        hash: c09ec5b1b248e489f71758e60cc3a5eb2c20c76a
+  - version: 0.17.0
+    projects:
+      - repo: openstack/mox3
+        hash: 2b58961090cb9d19e33f4b6a87074b3a657d697b
+  - version: 0.18.0
+    projects:
+      - repo: openstack/mox3
+        hash: 22c02dc7469d73dd873cc28ebc1b21d61cdda790

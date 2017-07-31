@@ -3,51 +3,51 @@ launchpad: oslo.vmware
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/newton.html
 branches:
-- name: stable/newton
-  location: 2.14.0
+  - name: stable/newton
+    location: 2.14.0
 releases:
-- version: 2.6.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 54fe0925e75d93457771d7cddebf8c5aa33bf8a7
-- version: 2.7.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: af2bbfef345b30db22f4df84e3f6f7e2e174d66f
-- version: 2.8.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: bfcd07fc9ece2154261ad2bf4000cec9802fdee8
-- version: 2.9.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 1f8d09cbd0b77124613cbedd77b92eadf8fd98f8
-- version: 2.10.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 8d8a5dea4d4ab34f416ec2c54631adbac84efa71
-- version: 2.11.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 421b41c15b76781cc34bad16cd242a49517529ce
-- version: 2.12.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 37283c8689238fe0bcd038267893fc7d002d1383
-  highlights: '- Refactor image transfer'
-- version: 2.13.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 0e6c90aa06e021aa2d527a07a718f254f64cc487
-  highlights: '* Method to download file to VMware server'
-- version: 2.14.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 5fef3c8cdbf76c1389cf2d74be383bbeace36ee9
-- version: 2.14.1
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: bfd1e0ffd435e637d00ba54ec99aeafe4488eca1
+  - version: 2.6.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 54fe0925e75d93457771d7cddebf8c5aa33bf8a7
+  - version: 2.7.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: af2bbfef345b30db22f4df84e3f6f7e2e174d66f
+  - version: 2.8.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: bfcd07fc9ece2154261ad2bf4000cec9802fdee8
+  - version: 2.9.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 1f8d09cbd0b77124613cbedd77b92eadf8fd98f8
+  - version: 2.10.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 8d8a5dea4d4ab34f416ec2c54631adbac84efa71
+  - version: 2.11.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 421b41c15b76781cc34bad16cd242a49517529ce
+  - version: 2.12.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 37283c8689238fe0bcd038267893fc7d002d1383
+    highlights: '- Refactor image transfer'
+  - version: 2.13.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 0e6c90aa06e021aa2d527a07a718f254f64cc487
+    highlights: '* Method to download file to VMware server'
+  - version: 2.14.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 5fef3c8cdbf76c1389cf2d74be383bbeace36ee9
+  - version: 2.14.1
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: bfd1e0ffd435e637d00ba54ec99aeafe4488eca1

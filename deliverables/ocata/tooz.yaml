@@ -4,32 +4,32 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/tooz/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.48.0
+  - name: stable/ocata
+    location: 1.48.0
 releases:
-- version: 1.44.0
-  projects:
-  - repo: openstack/tooz
-    hash: 4d487603023f63a5b40a74a2f9184016abe9be88
-- version: 1.45.0
-  projects:
-  - repo: openstack/tooz
-    hash: ca432a0de569c0aa81d9b2a1b0410414699ae5e8
-- version: 1.46.0
-  projects:
-  - repo: openstack/tooz
-    hash: 5f905c86c9983338636eeaeaf13865230c488007
-- version: 1.47.0
-  projects:
-  - repo: openstack/tooz
-    hash: 9ad740fa1e0bd435844e7d7831199f37e9646847
-- version: 1.48.0
-  projects:
-  - repo: openstack/tooz
-    hash: e1d67a89584686e416eb0319344b943ebc064a4b
-- version: 1.48.1
-  projects:
-  - repo: openstack/tooz
-    hash: 914ddf405221280ab50af48cc6b7d581a0380033
+  - version: 1.44.0
+    projects:
+      - repo: openstack/tooz
+        hash: 4d487603023f63a5b40a74a2f9184016abe9be88
+  - version: 1.45.0
+    projects:
+      - repo: openstack/tooz
+        hash: ca432a0de569c0aa81d9b2a1b0410414699ae5e8
+  - version: 1.46.0
+    projects:
+      - repo: openstack/tooz
+        hash: 5f905c86c9983338636eeaeaf13865230c488007
+  - version: 1.47.0
+    projects:
+      - repo: openstack/tooz
+        hash: 9ad740fa1e0bd435844e7d7831199f37e9646847
+  - version: 1.48.0
+    projects:
+      - repo: openstack/tooz
+        hash: e1d67a89584686e416eb0319344b943ebc064a4b
+  - version: 1.48.1
+    projects:
+      - repo: openstack/tooz
+        hash: 914ddf405221280ab50af48cc6b7d581a0380033

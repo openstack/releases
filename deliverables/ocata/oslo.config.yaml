@@ -4,33 +4,33 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.config/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 3.22.0
+  - name: stable/ocata
+    location: 3.22.0
 releases:
-- version: 3.18.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: d57e5380be1d829b15ce1ba14ce659c501fccac4
-- version: 3.19.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 30af7defd791f35c3f17609d90921d92fa7c9df0
-  highlights: '* Fixup list types handling tuples'
-- version: 3.20.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 7a1df8bc71a8d44734404b36afbf99f1f087b8a8
-- version: 3.21.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: aed4dcd893e9c3860074655b1fc3c39bff7c7c4e
-- version: 3.22.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 3025b6f7365965aec8b76201fb6f76d163c437cb
-- version: 3.22.1
-  projects:
-  - repo: openstack/oslo.config
-    hash: d95290e1ef5fa311e2bd3965aedb3e07dd57f502
+  - version: 3.18.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: d57e5380be1d829b15ce1ba14ce659c501fccac4
+  - version: 3.19.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 30af7defd791f35c3f17609d90921d92fa7c9df0
+    highlights: '* Fixup list types handling tuples'
+  - version: 3.20.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 7a1df8bc71a8d44734404b36afbf99f1f087b8a8
+  - version: 3.21.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: aed4dcd893e9c3860074655b1fc3c39bff7c7c4e
+  - version: 3.22.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 3025b6f7365965aec8b76201fb6f76d163c437cb
+  - version: 3.22.1
+    projects:
+      - repo: openstack/oslo.config
+        hash: d95290e1ef5fa311e2bd3965aedb3e07dd57f502

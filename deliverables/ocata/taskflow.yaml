@@ -4,20 +4,20 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/taskflow/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 2.9.0
+  - name: stable/ocata
+    location: 2.9.0
 releases:
-- version: 2.7.0
-  projects:
-  - repo: openstack/taskflow
-    hash: ce0e962f72dbfecac0b4dd6789dbd6504afc9a9c
-- version: 2.8.0
-  projects:
-  - repo: openstack/taskflow
-    hash: 5a65db965165e885a24e99cb588bbe200f5859cb
-- version: 2.9.0
-  projects:
-  - repo: openstack/taskflow
-    hash: b3b659f38b7e6879f5c03d2dc0d4cae752802ee5
+  - version: 2.7.0
+    projects:
+      - repo: openstack/taskflow
+        hash: ce0e962f72dbfecac0b4dd6789dbd6504afc9a9c
+  - version: 2.8.0
+    projects:
+      - repo: openstack/taskflow
+        hash: 5a65db965165e885a24e99cb588bbe200f5859cb
+  - version: 2.9.0
+    projects:
+      - repo: openstack/taskflow
+        hash: b3b659f38b7e6879f5c03d2dc0d4cae752802ee5

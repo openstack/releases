@@ -4,28 +4,28 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/stevedore/unreleased.html
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.20.0
+  - name: stable/ocata
+    location: 1.20.0
 releases:
-- version: 1.18.0
-  projects:
-  - repo: openstack/stevedore
-    hash: 5d633cfc45750aba12c1d36d6b7b603fe3f1296e
-- version: 1.19.0
-  projects:
-  - repo: openstack/stevedore
-    hash: b43ac31d0e23111a5671fded793a1bd1ff251a2c
-- version: 1.19.1
-  projects:
-  - repo: openstack/stevedore
-    hash: 555bc479316abf8b9c5798b466f2d65deee34f50
-- version: 1.20.0
-  projects:
-  - repo: openstack/stevedore
-    hash: 6d56b58e22b75e014c274747c036f6f1ee77e4dc
-- version: 1.20.1
-  projects:
-  - repo: openstack/stevedore
-    hash: 72e7df283f5fc947370d47850a38b48af2cde7df
+  - version: 1.18.0
+    projects:
+      - repo: openstack/stevedore
+        hash: 5d633cfc45750aba12c1d36d6b7b603fe3f1296e
+  - version: 1.19.0
+    projects:
+      - repo: openstack/stevedore
+        hash: b43ac31d0e23111a5671fded793a1bd1ff251a2c
+  - version: 1.19.1
+    projects:
+      - repo: openstack/stevedore
+        hash: 555bc479316abf8b9c5798b466f2d65deee34f50
+  - version: 1.20.0
+    projects:
+      - repo: openstack/stevedore
+        hash: 6d56b58e22b75e014c274747c036f6f1ee77e4dc
+  - version: 1.20.1
+    projects:
+      - repo: openstack/stevedore
+        hash: 72e7df283f5fc947370d47850a38b48af2cde7df

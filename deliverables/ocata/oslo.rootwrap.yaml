@@ -4,28 +4,28 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.rootwrap/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 5.4.0
+  - name: stable/ocata
+    location: 5.4.0
 releases:
-- version: 5.2.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: e93f837005e0c05e48142fa4828d9428ae38d644
-- version: 5.3.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: c2f337b9b6ddf35b704d28f4a5facbbe1d37225d
-- version: 5.3.1
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 698ce0b5161e0fa4453d41eb5af05174ddfb283a
-- version: 5.4.0
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: 698ce0b5161e0fa4453d41eb5af05174ddfb283a
-- version: 5.4.1
-  projects:
-  - repo: openstack/oslo.rootwrap
-    hash: fdacd0e60817db8455b3c2f21b60e8a2130953aa
+  - version: 5.2.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: e93f837005e0c05e48142fa4828d9428ae38d644
+  - version: 5.3.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: c2f337b9b6ddf35b704d28f4a5facbbe1d37225d
+  - version: 5.3.1
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 698ce0b5161e0fa4453d41eb5af05174ddfb283a
+  - version: 5.4.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 698ce0b5161e0fa4453d41eb5af05174ddfb283a
+  - version: 5.4.1
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: fdacd0e60817db8455b3c2f21b60e8a2130953aa

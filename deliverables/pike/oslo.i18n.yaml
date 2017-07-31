@@ -1,42 +1,42 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.i18n
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 3.13.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: c103d6f682e982b1bdf474e8c8383b86f6b01c1d
-- version: 3.14.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 0fa29843f64a2ebe847e47e0fffe310a32362f86
-- version: 3.15.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: f294b2d5054f421ccf13e110b2cc67128d4bebd8
-- version: 3.15.1
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 9d76e94a7f6bf480c76ee6497760cffba626a889
-- version: 3.15.2
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: 66a3e38e8abf7d36752afd9ca7c13cd63f0e3e04
-- version: 3.15.3
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: b9eed4996137f006f4cc9c72bf60d17fd344bb4e
-- version: 3.16.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: b783b44ebad97724536a3d9b82130aa13f1fa140
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.i18n
-    hash: faa51d406e9c3e9462d88b08f6bdcc64365f3790
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: c103d6f682e982b1bdf474e8c8383b86f6b01c1d
+  - version: 3.14.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 0fa29843f64a2ebe847e47e0fffe310a32362f86
+  - version: 3.15.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: f294b2d5054f421ccf13e110b2cc67128d4bebd8
+  - version: 3.15.1
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 9d76e94a7f6bf480c76ee6497760cffba626a889
+  - version: 3.15.2
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 66a3e38e8abf7d36752afd9ca7c13cd63f0e3e04
+  - version: 3.15.3
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: b9eed4996137f006f4cc9c72bf60d17fd344bb4e
+  - version: 3.16.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: b783b44ebad97724536a3d9b82130aa13f1fa140
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: faa51d406e9c3e9462d88b08f6bdcc64365f3790
 branches:
-- name: stable/pike
-  location: 3.17.0
+  - name: stable/pike
+    location: 3.17.0

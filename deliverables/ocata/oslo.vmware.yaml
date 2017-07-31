@@ -4,24 +4,24 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 2.17.0
+  - name: stable/ocata
+    location: 2.17.0
 releases:
-- version: 2.15.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: 15f00899462846f34b50681b46774f8ec13027f9
-- version: 2.16.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: e0fb3094f2b6347f38fff009073b95e8a15bcf89
-- version: 2.17.0
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: ca17b7bd39300d30e8892ba2945005ff46e8a550
-- version: 2.17.1
-  projects:
-  - repo: openstack/oslo.vmware
-    hash: f009120b42b3e6972094106c70227fe4825141af
+  - version: 2.15.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 15f00899462846f34b50681b46774f8ec13027f9
+  - version: 2.16.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: e0fb3094f2b6347f38fff009073b95e8a15bcf89
+  - version: 2.17.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: ca17b7bd39300d30e8892ba2945005ff46e8a550
+  - version: 2.17.1
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: f009120b42b3e6972094106c70227fe4825141af

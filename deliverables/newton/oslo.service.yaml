@@ -3,45 +3,45 @@ launchpad: oslo.service
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 1.16.0
+  - name: stable/newton
+    location: 1.16.0
 releases:
-- version: 1.9.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 96ccba841685e8c976de3753b71ce3c11fccf37b
-- version: 1.10.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 760abb6de4e2eab376f05b77970dddae8df741df
-  highlights: '* Offer mutate_config_files'
-- version: 1.11.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 43343b4445ddb6c217489ab394e466d35a1d6ac2
-- version: 1.12.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 33d8b1096d91b704e5080641957524a75ef9f307
-- version: 1.13.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 3f39b9bd6cdf8ac79b5018d29b621f734f6e8bda
-- version: 1.14.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 0c3a29d139c184b5599e928c109dba7f5a5ba8ec
-- version: 1.15.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: bde278f0b11feba11509f81fc8e142faf8edbd04
-- version: 1.16.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 9df6088a41254ce6de3168dfb9d2ff5817fe93d5
-- version: 1.16.1
-  projects:
-  - repo: openstack/oslo.service
-    hash: 17a346b023554f48ff72f4e52decea002e311e81
+  - version: 1.9.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 96ccba841685e8c976de3753b71ce3c11fccf37b
+  - version: 1.10.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 760abb6de4e2eab376f05b77970dddae8df741df
+    highlights: '* Offer mutate_config_files'
+  - version: 1.11.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 43343b4445ddb6c217489ab394e466d35a1d6ac2
+  - version: 1.12.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 33d8b1096d91b704e5080641957524a75ef9f307
+  - version: 1.13.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 3f39b9bd6cdf8ac79b5018d29b621f734f6e8bda
+  - version: 1.14.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 0c3a29d139c184b5599e928c109dba7f5a5ba8ec
+  - version: 1.15.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: bde278f0b11feba11509f81fc8e142faf8edbd04
+  - version: 1.16.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 9df6088a41254ce6de3168dfb9d2ff5817fe93d5
+  - version: 1.16.1
+    projects:
+      - repo: openstack/oslo.service
+        hash: 17a346b023554f48ff72f4e52decea002e311e81

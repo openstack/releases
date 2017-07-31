@@ -1,22 +1,22 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.concurrency
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 3.19.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 998c12a34a857ea63ff09f73f6e9602316bfec64
-- version: 3.20.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 555af4b91ba3ee398cdf884daf19ffb15f475c2f
-- version: 3.21.0
-  projects:
-  - repo: openstack/oslo.concurrency
-    hash: 88583edbb478c1a157b58c95c231a0b5a741b78a
+  - version: 3.19.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 998c12a34a857ea63ff09f73f6e9602316bfec64
+  - version: 3.20.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 555af4b91ba3ee398cdf884daf19ffb15f475c2f
+  - version: 3.21.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 88583edbb478c1a157b58c95c231a0b5a741b78a
 branches:
-- name: stable/pike
-  location: 3.21.0
+  - name: stable/pike
+    location: 3.21.0

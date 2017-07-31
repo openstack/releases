@@ -1,71 +1,71 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-tooz
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/tooz/unreleased.html
 team: oslo
 type: library
 releases:
-- version: 1.49.0
-  projects:
-  - repo: openstack/tooz
-    hash: fbfa1c1162955ca13c61929d58b921dd1473427b
-- version: 1.50.0
-  projects:
-  - repo: openstack/tooz
-    hash: 6eea97c3efe6dee6c2c036a581354aaa9b8ef5fa
-- version: 1.51.0
-  projects:
-  - repo: openstack/tooz
-    hash: a73ca9f0eb5e16b31333813997dbc5b40320d57e
-- version: 1.52.0
-  projects:
-  - repo: openstack/tooz
-    hash: 54496ff8204b47faa13e7639ce11cbd8fc39a117
-- version: 1.53.0
-  projects:
-  - repo: openstack/tooz
-    hash: f624e16f6236e1a925fac3d720a8d7ceed2bf705
-- version: 1.54.0
-  projects:
-  - repo: openstack/tooz
-    hash: 9f87cf158d0aeb8e8aedfba04ecf3acdd4cfb0f6
-- version: 1.55.0
-  projects:
-  - repo: openstack/tooz
-    hash: 92c83b2b2ef7877bd448329cad5138da7746c8bf
-- version: 1.56.0
-  projects:
-  - repo: openstack/tooz
-    hash: 8ebc10ace80dbffc1f4de0b9716431aa079c450d
-- version: 1.56.1
-  projects:
-  - repo: openstack/tooz
-    hash: 17620203cb2c8e93a331875cc0e21736ec75dfc4
-- version: 1.57.0
-  projects:
-  - repo: openstack/tooz
-    hash: 6ec73a0bed7382790819151a0a84db2a8a464438
-- version: 1.57.1
-  projects:
-  - repo: openstack/tooz
-    hash: 18fdfa9de74affa974d1536bdb7678c4df68e0a6
-- version: 1.57.2
-  projects:
-  - repo: openstack/tooz
-    hash: ee66b6e4e416569cb8d51a9b19263c22c6e1f87d
-- version: 1.57.3
-  projects:
-  - repo: openstack/tooz
-    hash: e6274bdd5b36f7b114e255c258659223ba921773
-- version: 1.57.4
-  projects:
-  - repo: openstack/tooz
-    hash: 38bcf7bbdb4a5f53ac81d45f2b7c310e5ea5f4da
-- version: 1.58.0
-  projects:
-  - repo: openstack/tooz
-    hash: c2167820c89490dba39c1763e51ab663f06a13be
+  - version: 1.49.0
+    projects:
+      - repo: openstack/tooz
+        hash: fbfa1c1162955ca13c61929d58b921dd1473427b
+  - version: 1.50.0
+    projects:
+      - repo: openstack/tooz
+        hash: 6eea97c3efe6dee6c2c036a581354aaa9b8ef5fa
+  - version: 1.51.0
+    projects:
+      - repo: openstack/tooz
+        hash: a73ca9f0eb5e16b31333813997dbc5b40320d57e
+  - version: 1.52.0
+    projects:
+      - repo: openstack/tooz
+        hash: 54496ff8204b47faa13e7639ce11cbd8fc39a117
+  - version: 1.53.0
+    projects:
+      - repo: openstack/tooz
+        hash: f624e16f6236e1a925fac3d720a8d7ceed2bf705
+  - version: 1.54.0
+    projects:
+      - repo: openstack/tooz
+        hash: 9f87cf158d0aeb8e8aedfba04ecf3acdd4cfb0f6
+  - version: 1.55.0
+    projects:
+      - repo: openstack/tooz
+        hash: 92c83b2b2ef7877bd448329cad5138da7746c8bf
+  - version: 1.56.0
+    projects:
+      - repo: openstack/tooz
+        hash: 8ebc10ace80dbffc1f4de0b9716431aa079c450d
+  - version: 1.56.1
+    projects:
+      - repo: openstack/tooz
+        hash: 17620203cb2c8e93a331875cc0e21736ec75dfc4
+  - version: 1.57.0
+    projects:
+      - repo: openstack/tooz
+        hash: 6ec73a0bed7382790819151a0a84db2a8a464438
+  - version: 1.57.1
+    projects:
+      - repo: openstack/tooz
+        hash: 18fdfa9de74affa974d1536bdb7678c4df68e0a6
+  - version: 1.57.2
+    projects:
+      - repo: openstack/tooz
+        hash: ee66b6e4e416569cb8d51a9b19263c22c6e1f87d
+  - version: 1.57.3
+    projects:
+      - repo: openstack/tooz
+        hash: e6274bdd5b36f7b114e255c258659223ba921773
+  - version: 1.57.4
+    projects:
+      - repo: openstack/tooz
+        hash: 38bcf7bbdb4a5f53ac81d45f2b7c310e5ea5f4da
+  - version: 1.58.0
+    projects:
+      - repo: openstack/tooz
+        hash: c2167820c89490dba39c1763e51ab663f06a13be
 branches:
-- name: stable/pike
-  location: 1.58.0
+  - name: stable/pike
+    location: 1.58.0

@@ -4,24 +4,24 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/automaton/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.7.0
+  - name: stable/ocata
+    location: 1.7.0
 releases:
-- version: 1.5.0
-  projects:
-  - repo: openstack/automaton
-    hash: be2885f544637e6ee6139df7dc7bf937925804dd
-- version: 1.6.0
-  projects:
-  - repo: openstack/automaton
-    hash: 3c9251ccf8631cd091143ae4d69bba57ccddedfc
-- version: 1.7.0
-  projects:
-  - repo: openstack/automaton
-    hash: 05dbe3dbb0d1451635f02d936cbaac31d177863d
-- version: 1.7.1
-  projects:
-  - repo: openstack/automaton
-    hash: fe8824bb0232e5e3d267d21826f029ae9a163fe5
+  - version: 1.5.0
+    projects:
+      - repo: openstack/automaton
+        hash: be2885f544637e6ee6139df7dc7bf937925804dd
+  - version: 1.6.0
+    projects:
+      - repo: openstack/automaton
+        hash: 3c9251ccf8631cd091143ae4d69bba57ccddedfc
+  - version: 1.7.0
+    projects:
+      - repo: openstack/automaton
+        hash: 05dbe3dbb0d1451635f02d936cbaac31d177863d
+  - version: 1.7.1
+    projects:
+      - repo: openstack/automaton
+        hash: fe8824bb0232e5e3d267d21826f029ae9a163fe5

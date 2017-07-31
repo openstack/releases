@@ -1,38 +1,38 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: oslo.service
 release-model: cycle-with-intermediary
 team: oslo
 type: library
 releases:
-- version: 1.20.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 0099d768f6e87b4d1a73c24a8cbb45e2a5c23faa
-- version: 1.21.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: d10c8fe38b7180ea602d641a628ee57640a45cdd
-- version: 1.22.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 3be392497afdd802cbfcb1eb327cef5e6626f8c0
-- version: 1.23.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 8f67ed7d530770417e462d569ef413a0300c0e66
-- version: 1.24.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: ca3a40a3df93c1968a9dd4f5660abce9c8f25c41
-- version: 1.24.1
-  projects:
-  - repo: openstack/oslo.service
-    hash: 21de4a7c510ff0356c5c557d4c50bbc755052785
-- version: 1.25.0
-  projects:
-  - repo: openstack/oslo.service
-    hash: 5a8a712c26cb053cbabf49044e6831ed98a2c2d5
+  - version: 1.20.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 0099d768f6e87b4d1a73c24a8cbb45e2a5c23faa
+  - version: 1.21.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: d10c8fe38b7180ea602d641a628ee57640a45cdd
+  - version: 1.22.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 3be392497afdd802cbfcb1eb327cef5e6626f8c0
+  - version: 1.23.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 8f67ed7d530770417e462d569ef413a0300c0e66
+  - version: 1.24.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: ca3a40a3df93c1968a9dd4f5660abce9c8f25c41
+  - version: 1.24.1
+    projects:
+      - repo: openstack/oslo.service
+        hash: 21de4a7c510ff0356c5c557d4c50bbc755052785
+  - version: 1.25.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: 5a8a712c26cb053cbabf49044e6831ed98a2c2d5
 branches:
-- name: stable/pike
-  location: 1.25.0
+  - name: stable/pike
+    location: 1.25.0

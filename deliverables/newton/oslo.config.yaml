@@ -3,68 +3,68 @@ launchpad: oslo.config
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.config/newton.html
 branches:
-- name: stable/newton
-  location: 3.17.0
+  - name: stable/newton
+    location: 3.17.0
 releases:
-- version: 3.10.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 6d176243f398bf7e5d6bd8a5382945f2c5e318c3
-  highlights: |-
-    * Avoid duplicate sections in generator output
-    * Don't set html_last_updated_fmt without git
-    * Improve documentation about registering entry points for
-      config generator
-- version: 3.11.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: bb0f7e3880bd83dbb9088f3f8045152ce8e7897b
-  highlights: |-
-    * Return [] for .config_dirs when config files are not parsed
-    * Incorrect group name when deprecated_group is not specified
-    * Disallow config option name as same as attribute of ConfigOpts
-- version: 3.12.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: d8e71b9d10132a9c134ff79a4ecdc77d17d424be
-  highlights: |-
-    * Adds a new option, URIOpt
-    * Adds deprecated_since parameter
-    * Handle some native python types in config generation
-    * Support template substitution of DictOpt
-    * Allow for specifying minimal configuration (not required)
-- version: 3.13.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 11456e00c4152f393119c2ba33eceaa0f5d02b4d
-  highlights: |-
-    * Enabling your project for mutable-config
-    * Add Python 3.5 classifier and venv
-- version: 3.14.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: b40925328e5ba9e87be42bab1ec3a41bf3d81f78
-  highlights: |-
-    - Add max_length to URIOpt
-    - Add min and max values to Float type and Opt
-- version: 3.15.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 2449197425ea5a712d93191042414c540f2656e4
-  highlights: '* Add advanced option denotation'
-- version: 3.16.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: d2c2b3a61158c50f2b08e1c780892392d820709e
-  highlights: '- Add Port type to allow configuration of a list of tcp/ip ports'
-- version: 3.17.0
-  projects:
-  - repo: openstack/oslo.config
-    hash: 8db0b7c23de07a14fdd4c90905bf259e90f985d3
-- version: 3.17.1
-  projects:
-  - repo: openstack/oslo.config
-    hash: 2f2c1839b7423185a6a48e7b3ca3c3274d5ba8f3
+  - version: 3.10.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 6d176243f398bf7e5d6bd8a5382945f2c5e318c3
+    highlights: |-
+      * Avoid duplicate sections in generator output
+      * Don't set html_last_updated_fmt without git
+      * Improve documentation about registering entry points for
+        config generator
+  - version: 3.11.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: bb0f7e3880bd83dbb9088f3f8045152ce8e7897b
+    highlights: |-
+      * Return [] for .config_dirs when config files are not parsed
+      * Incorrect group name when deprecated_group is not specified
+      * Disallow config option name as same as attribute of ConfigOpts
+  - version: 3.12.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: d8e71b9d10132a9c134ff79a4ecdc77d17d424be
+    highlights: |-
+      * Adds a new option, URIOpt
+      * Adds deprecated_since parameter
+      * Handle some native python types in config generation
+      * Support template substitution of DictOpt
+      * Allow for specifying minimal configuration (not required)
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 11456e00c4152f393119c2ba33eceaa0f5d02b4d
+    highlights: |-
+      * Enabling your project for mutable-config
+      * Add Python 3.5 classifier and venv
+  - version: 3.14.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: b40925328e5ba9e87be42bab1ec3a41bf3d81f78
+    highlights: |-
+      - Add max_length to URIOpt
+      - Add min and max values to Float type and Opt
+  - version: 3.15.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 2449197425ea5a712d93191042414c540f2656e4
+    highlights: '* Add advanced option denotation'
+  - version: 3.16.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: d2c2b3a61158c50f2b08e1c780892392d820709e
+    highlights: '- Add Port type to allow configuration of a list of tcp/ip ports'
+  - version: 3.17.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 8db0b7c23de07a14fdd4c90905bf259e90f985d3
+  - version: 3.17.1
+    projects:
+      - repo: openstack/oslo.config
+        hash: 2f2c1839b7423185a6a48e7b3ca3c3274d5ba8f3

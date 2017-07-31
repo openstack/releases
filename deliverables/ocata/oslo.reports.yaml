@@ -4,24 +4,24 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/oslo.reports/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.17.0
+  - name: stable/ocata
+    location: 1.17.0
 releases:
-- version: 1.15.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: f4bc2524c0c064fd034513fbd5c8f6dc359b3524
-- version: 1.16.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: caf139164fd6c38b75d4c16f30c117e16582fe61
-- version: 1.17.0
-  projects:
-  - repo: openstack/oslo.reports
-    hash: a4181a05d13779b859056742d3dfa64e5c822117
-- version: 1.17.1
-  projects:
-  - repo: openstack/oslo.reports
-    hash: fc5e23855a9f12eb4d2826aecb7f63fdcea23da2
+  - version: 1.15.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: f4bc2524c0c064fd034513fbd5c8f6dc359b3524
+  - version: 1.16.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: caf139164fd6c38b75d4c16f30c117e16582fe61
+  - version: 1.17.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: a4181a05d13779b859056742d3dfa64e5c822117
+  - version: 1.17.1
+    projects:
+      - repo: openstack/oslo.reports
+        hash: fc5e23855a9f12eb4d2826aecb7f63fdcea23da2

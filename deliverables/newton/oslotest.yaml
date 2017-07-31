@@ -3,40 +3,40 @@ launchpad: oslotest
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 2.10.0
+  - name: stable/newton
+    location: 2.10.0
 releases:
-- version: 2.5.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 9581cd0206c708bc47dd8bee914c6e49262c00f0
-- version: 2.6.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 412073f87029ab913d979dcfc587cdb1217a714c
-- version: 2.7.0
-  projects:
-  - repo: openstack/oslotest
-    hash: a0eb1348dee20d826741ee11495d024a4148155b
-- version: 2.8.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 425d4651221d09141afd1de1367cf1ec188594ca
-  highlights: |-
-    - Add Python 3.5 classifier and venv
-    - Import mock so that it works on Python 3.x
-- version: 2.9.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 619ee741612549c2313c98414a4656b1187a1a6d
-- version: 2.10.0
-  projects:
-  - repo: openstack/oslotest
-    hash: 0fad88599e428bdb60d52288fd6f7d69aadfbfc8
-  highlights: '- A new DisableModules fixture that removes modules from system path'
-- version: 2.10.1
-  projects:
-  - repo: openstack/oslotest
-    hash: a8c5ed4008963a3436f4a4932ac544f5ee4c283b
+  - version: 2.5.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 9581cd0206c708bc47dd8bee914c6e49262c00f0
+  - version: 2.6.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 412073f87029ab913d979dcfc587cdb1217a714c
+  - version: 2.7.0
+    projects:
+      - repo: openstack/oslotest
+        hash: a0eb1348dee20d826741ee11495d024a4148155b
+  - version: 2.8.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 425d4651221d09141afd1de1367cf1ec188594ca
+    highlights: |-
+      - Add Python 3.5 classifier and venv
+      - Import mock so that it works on Python 3.x
+  - version: 2.9.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 619ee741612549c2313c98414a4656b1187a1a6d
+  - version: 2.10.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 0fad88599e428bdb60d52288fd6f7d69aadfbfc8
+    highlights: '- A new DisableModules fixture that removes modules from system path'
+  - version: 2.10.1
+    projects:
+      - repo: openstack/oslotest
+        hash: a8c5ed4008963a3436f4a4932ac544f5ee4c283b

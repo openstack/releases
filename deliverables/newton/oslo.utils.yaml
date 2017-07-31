@@ -3,62 +3,62 @@ launchpad: oslo.utils
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 3.16.0
+  - name: stable/newton
+    location: 3.16.0
 releases:
-- version: 3.9.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 3ac0253bdbacc252e1a31b97d2cc93a661bc36a5
-  highlights: |-
-    * Add importutils.import_any method
-    * Add excutils.exception_filter
-    * Add CHAPPASSWORD to list of sanitize keys
-    * Add method is_valid_cidr to netutils
-    * Provide single step check if eventlet is monkey_patched
-- version: 3.10.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 406c753a72c900884e07cd47ee5bc62d739f5e6a
-- version: 3.11.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 6cf8386cc7278a98f9ba9260d7ea61e519e93975
-  highlights: '* Move method split_path into oslo.utils'
-- version: 3.12.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: dfdaaa2e31296982ce4dce4a416e3d3f8b315de9
-  highlights: |-
-    * Remove deprecated method total_seconds in timeutils
-    * Fix is_valid_cidr raises TypeError
-- version: 3.13.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 98e24bedf35231431da6924ce7eee05b8a7cbec1
-  highlights: '* Allow assigning "0" to port'
-- version: 3.14.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 1d15614c20c9ca6c3f1384ce39b92bfefcb22961
-- version: 3.15.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 8da9b4022fbe7cc957f7c748edc01ac703aa00c3
-  highlights: '* Make mask_dict_password consistent with mask_password'
-- version: 3.16.0
-  projects:
-  - repo: openstack/oslo.utils
-    hash: e1d503c6c4b2ea96cad3a7b49abc0012e8cdc8f8
-  highlights: |-
-    * Move nova extra_specs_ops to oslo.utils (and use
-      a well-defined parser to enhance its robustness
-      and more clearly define its purpose/api).
-    * Fix mask_dict_password for non string/dict type
-      key in dict.
-- version: 3.16.1
-  projects:
-  - repo: openstack/oslo.utils
-    hash: 0aae41e0c1d3d965181b22b6fd25fb1bc0442a35
+  - version: 3.9.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 3ac0253bdbacc252e1a31b97d2cc93a661bc36a5
+    highlights: |-
+      * Add importutils.import_any method
+      * Add excutils.exception_filter
+      * Add CHAPPASSWORD to list of sanitize keys
+      * Add method is_valid_cidr to netutils
+      * Provide single step check if eventlet is monkey_patched
+  - version: 3.10.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 406c753a72c900884e07cd47ee5bc62d739f5e6a
+  - version: 3.11.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 6cf8386cc7278a98f9ba9260d7ea61e519e93975
+    highlights: '* Move method split_path into oslo.utils'
+  - version: 3.12.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: dfdaaa2e31296982ce4dce4a416e3d3f8b315de9
+    highlights: |-
+      * Remove deprecated method total_seconds in timeutils
+      * Fix is_valid_cidr raises TypeError
+  - version: 3.13.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 98e24bedf35231431da6924ce7eee05b8a7cbec1
+    highlights: '* Allow assigning "0" to port'
+  - version: 3.14.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 1d15614c20c9ca6c3f1384ce39b92bfefcb22961
+  - version: 3.15.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 8da9b4022fbe7cc957f7c748edc01ac703aa00c3
+    highlights: '* Make mask_dict_password consistent with mask_password'
+  - version: 3.16.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: e1d503c6c4b2ea96cad3a7b49abc0012e8cdc8f8
+    highlights: |-
+      * Move nova extra_specs_ops to oslo.utils (and use
+        a well-defined parser to enhance its robustness
+        and more clearly define its purpose/api).
+      * Fix mask_dict_password for non string/dict type
+        key in dict.
+  - version: 3.16.1
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 0aae41e0c1d3d965181b22b6fd25fb1bc0442a35

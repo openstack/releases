@@ -1,26 +1,26 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-cliff
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: library
 releases:
-- version: 2.5.0
-  projects:
-  - repo: openstack/cliff
-    hash: 64fe476429bd3e872a701bb6b38012c4a5141f0b
-- version: 2.6.0
-  projects:
-  - repo: openstack/cliff
-    hash: b5593752e5502d9d4561bc91213f2285345f1cf2
-- version: 2.7.0
-  projects:
-  - repo: openstack/cliff
-    hash: c548b7b44cb6108d3f20453d9b3db8f8f7e48b19
-- version: 2.8.0
-  projects:
-  - repo: openstack/cliff
-    hash: d025ad9cd35189c363e89a82395c54f504264aa7
+  - version: 2.5.0
+    projects:
+      - repo: openstack/cliff
+        hash: 64fe476429bd3e872a701bb6b38012c4a5141f0b
+  - version: 2.6.0
+    projects:
+      - repo: openstack/cliff
+        hash: b5593752e5502d9d4561bc91213f2285345f1cf2
+  - version: 2.7.0
+    projects:
+      - repo: openstack/cliff
+        hash: c548b7b44cb6108d3f20453d9b3db8f8f7e48b19
+  - version: 2.8.0
+    projects:
+      - repo: openstack/cliff
+        hash: d025ad9cd35189c363e89a82395c54f504264aa7
 branches:
-- name: stable/pike
-  location: 2.8.0
+  - name: stable/pike
+    location: 2.8.0

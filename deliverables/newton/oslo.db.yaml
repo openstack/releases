@@ -3,83 +3,83 @@ launchpad: oslo.db
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/oslo.db/newton.html
 branches:
-- name: stable/newton
-  location: 4.13.0
+  - name: stable/newton
+    location: 4.13.0
 releases:
-- version: 4.8.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: fc3c23a722c8726504657cb8fd96a6b14146ee93
-  highlights: |-
-    * Remove  sqlalchemy < 1.0.0 compatibility layer
-    * Add new filter for DBDataError exception
-    * Raise DbMigrationError for invalid version
-    * Remove direct dependency on babel
-    * api: use sane default in wrap_db_retry()
-    * exc_filters: catch and translate non existent constraint on drop
-    * Deprecate config option sqlite_db for removal
-    * Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType
-- version: 4.9.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: c5999fb2fa25bc3107ca75d7b5b6cb619118712e
-  highlights: |-
-    - Set max pool size default to 5
-    - Set a min and max on the connection_debug option
-    - Memoize sys.exc_info() before attempting a savepoint rollback
-    - Add dispose_pool() method to enginefacade context, factory
-- version: 4.10.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: 3277ef33f2a1f6a892f0832e2907acef7b45dc2b
-  highlights: '- Capture DatabaseError for deadlock check'
-- version: 4.11.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: f3d123a34d2377a87fa0c36b6edae06fb10d7cc6
-  highlights: '* Add a hook to process newly created engines'
-- version: 4.12.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: 7ca416418472b4a1a8625f1ef7b83194d784c6da
-  highlights: |-
-    - Link enginefacade to test database provisioning
-    - Display full reason for backend not available
-    - Deprecate argument sqlite_db in method set_defaults
-- version: 4.13.0
-  projects:
-  - repo: openstack/oslo.db
-    hash: 87fb9cc84128fb5dceac483f892dba131c340d28
-- version: 4.13.1
-  projects:
-  - repo: openstack/oslo.db
-    hash: 4314f3224f689c660d231183404f3af78310016e
-- version: 4.13.2
-  projects:
-  - repo: openstack/oslo.db
-    hash: bf3b21f75b94a4d8b533dd10fdeb9a64da344cf9
-- version: 4.13.3
-  projects:
-  - repo: openstack/oslo.db
-    hash: 13223e459babddd74792699b20b52843a0ff9576
-- version: 4.13.4
-  projects:
-  - repo: openstack/oslo.db
-    hash: d94b7e3e3321f2dad7ab5861040b2d91f9036a5d
-  highlights: |-
-    * Support MariaDB error 1927
-    * Backport fix exc_filters for mysql-python
-- version: 4.13.5
-  projects:
-  - repo: openstack/oslo.db
-    hash: 086be4ac91b17942370980a35d67d48d2e42567a
-  highlights: |-
-    * Support packet sequence wrong error
-    * exc_filters: fix deadlock detection for percona xtradb cluster
-- version: 4.13.6
-  projects:
-  - repo: openstack/oslo.db
-    hash: 37873630050f332c95bf0506aa02d47712fb454b
+  - version: 4.8.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: fc3c23a722c8726504657cb8fd96a6b14146ee93
+    highlights: |-
+      * Remove  sqlalchemy < 1.0.0 compatibility layer
+      * Add new filter for DBDataError exception
+      * Raise DbMigrationError for invalid version
+      * Remove direct dependency on babel
+      * api: use sane default in wrap_db_retry()
+      * exc_filters: catch and translate non existent constraint on drop
+      * Deprecate config option sqlite_db for removal
+      * Add support for LONGTEXT, MEDIUMTEXT to JsonEncodedType
+  - version: 4.9.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: c5999fb2fa25bc3107ca75d7b5b6cb619118712e
+    highlights: |-
+      - Set max pool size default to 5
+      - Set a min and max on the connection_debug option
+      - Memoize sys.exc_info() before attempting a savepoint rollback
+      - Add dispose_pool() method to enginefacade context, factory
+  - version: 4.10.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 3277ef33f2a1f6a892f0832e2907acef7b45dc2b
+    highlights: '- Capture DatabaseError for deadlock check'
+  - version: 4.11.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: f3d123a34d2377a87fa0c36b6edae06fb10d7cc6
+    highlights: '* Add a hook to process newly created engines'
+  - version: 4.12.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 7ca416418472b4a1a8625f1ef7b83194d784c6da
+    highlights: |-
+      - Link enginefacade to test database provisioning
+      - Display full reason for backend not available
+      - Deprecate argument sqlite_db in method set_defaults
+  - version: 4.13.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: 87fb9cc84128fb5dceac483f892dba131c340d28
+  - version: 4.13.1
+    projects:
+      - repo: openstack/oslo.db
+        hash: 4314f3224f689c660d231183404f3af78310016e
+  - version: 4.13.2
+    projects:
+      - repo: openstack/oslo.db
+        hash: bf3b21f75b94a4d8b533dd10fdeb9a64da344cf9
+  - version: 4.13.3
+    projects:
+      - repo: openstack/oslo.db
+        hash: 13223e459babddd74792699b20b52843a0ff9576
+  - version: 4.13.4
+    projects:
+      - repo: openstack/oslo.db
+        hash: d94b7e3e3321f2dad7ab5861040b2d91f9036a5d
+    highlights: |-
+      * Support MariaDB error 1927
+      * Backport fix exc_filters for mysql-python
+  - version: 4.13.5
+    projects:
+      - repo: openstack/oslo.db
+        hash: 086be4ac91b17942370980a35d67d48d2e42567a
+    highlights: |-
+      * Support packet sequence wrong error
+      * exc_filters: fix deadlock detection for percona xtradb cluster
+  - version: 4.13.6
+    projects:
+      - repo: openstack/oslo.db
+        hash: 37873630050f332c95bf0506aa02d47712fb454b

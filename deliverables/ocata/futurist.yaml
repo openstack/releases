@@ -4,24 +4,24 @@ team: oslo
 release-notes: https://docs.openstack.org/releasenotes/futurist/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 0.21.0
+  - name: stable/ocata
+    location: 0.21.0
 releases:
-- version: 0.19.0
-  projects:
-  - repo: openstack/futurist
-    hash: a82e6b7ef4421117e2fe8a348472bbe54afe972d
-- version: 0.20.0
-  projects:
-  - repo: openstack/futurist
-    hash: d38f4ccf02a6898d3e586a09bc1eceb3982f07fb
-- version: 0.21.0
-  projects:
-  - repo: openstack/futurist
-    hash: c23d013fe4f4c92f86883982f0abe59ba2e3e2a5
-- version: 0.21.1
-  projects:
-  - repo: openstack/futurist
-    hash: b1104b175a787bca0c5f602c4fc7c5da1180ab99
+  - version: 0.19.0
+    projects:
+      - repo: openstack/futurist
+        hash: a82e6b7ef4421117e2fe8a348472bbe54afe972d
+  - version: 0.20.0
+    projects:
+      - repo: openstack/futurist
+        hash: d38f4ccf02a6898d3e586a09bc1eceb3982f07fb
+  - version: 0.21.0
+    projects:
+      - repo: openstack/futurist
+        hash: c23d013fe4f4c92f86883982f0abe59ba2e3e2a5
+  - version: 0.21.1
+    projects:
+      - repo: openstack/futurist
+        hash: b1104b175a787bca0c5f602c4fc7c5da1180ab99

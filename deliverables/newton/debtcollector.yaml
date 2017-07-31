@@ -3,30 +3,30 @@ launchpad: debtcollector
 team: oslo
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 1.8.0
+  - name: stable/newton
+    location: 1.8.0
 releases:
-- version: 1.4.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: c204667ed8eec848b664a41a8e5869771c5dd9a4
-- version: 1.5.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 4d766d6526e3c7cff97dc87890f5e354bb3370e1
-  highlights: '* Fix renamed_kwarg to preserve argspec'
-- version: 1.6.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: d46b64a28641b5b5fd764830098ff9a26ffec872
-- version: 1.7.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 279bbcaa407b92363c820ef6710bae18a49a1da2
-  highlights: '- Add Python 3.5 classifier and venv'
-- version: 1.8.0
-  projects:
-  - repo: openstack/debtcollector
-    hash: 4e9659aaeda818e42ae9ec8ee87aa44785b83631
+  - version: 1.4.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: c204667ed8eec848b664a41a8e5869771c5dd9a4
+  - version: 1.5.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 4d766d6526e3c7cff97dc87890f5e354bb3370e1
+    highlights: '* Fix renamed_kwarg to preserve argspec'
+  - version: 1.6.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: d46b64a28641b5b5fd764830098ff9a26ffec872
+  - version: 1.7.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 279bbcaa407b92363c820ef6710bae18a49a1da2
+    highlights: '- Add Python 3.5 classifier and venv'
+  - version: 1.8.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 4e9659aaeda818e42ae9ec8ee87aa44785b83631
