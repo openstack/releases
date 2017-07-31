@@ -2,17 +2,17 @@
 launchpad: puppet-sahara
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: f75085294bfcab353e7cc22f434475094324f003
-    repo: openstack/puppet-sahara
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: ec22ffd56451c0c0109843a9632626180b3e33cb
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: 1ef010372df5a5f571b04a98d3ba4a71fdd0fc21
-team: Puppet OpenStack
+  - projects:
+      - hash: f75085294bfcab353e7cc22f434475094324f003
+        repo: openstack/puppet-sahara
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: ec22ffd56451c0c0109843a9632626180b3e33cb
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 1ef010372df5a5f571b04a98d3ba4a71fdd0fc21
+team: 'Puppet OpenStack'
 type: other

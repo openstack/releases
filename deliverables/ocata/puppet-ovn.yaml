@@ -1,34 +1,34 @@
 ---
 launchpad: puppet-ovn
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-ovn/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 9e08bba64290d031eccafd03863f67e19efb98dc
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 58030b93b8f3461a02cdda6477d04b044879be25
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 1c6927c139dadce778da5d58d45fcfa69bd93b90
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 6b444438ed26c9c95b3a42f29baf8f342d217916
-- version: 10.4.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: c964b9237bfbb5da981c7f9d09e803e188bfadc7
-- version: 10.4.1
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 2caac0cf5a47f411835386769d1cabb50be67a33
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 9e08bba64290d031eccafd03863f67e19efb98dc
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 58030b93b8f3461a02cdda6477d04b044879be25
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 1c6927c139dadce778da5d58d45fcfa69bd93b90
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 6b444438ed26c9c95b3a42f29baf8f342d217916
+  - version: 10.4.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: c964b9237bfbb5da981c7f9d09e803e188bfadc7
+  - version: 10.4.1
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 2caac0cf5a47f411835386769d1cabb50be67a33

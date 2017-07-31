@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-openstacklib
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-openstacklib/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: afd018600a34f6958606f06a377fb0a9f7cdcb6c
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: d91a4c7b3677cf3fd19695edbe5bf9ea3b880c26
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 9b365753b73549751070ddc2fc95439f1d80cb5a
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 6266100d8236062789aff2ba1920c675bd9b4830
-- version: 10.4.1
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 134c737cfd74f30dbee2170172c844e6a9e53cb6
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: afd018600a34f6958606f06a377fb0a9f7cdcb6c
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: d91a4c7b3677cf3fd19695edbe5bf9ea3b880c26
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 9b365753b73549751070ddc2fc95439f1d80cb5a
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 6266100d8236062789aff2ba1920c675bd9b4830
+  - version: 10.4.1
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 134c737cfd74f30dbee2170172c844e6a9e53cb6

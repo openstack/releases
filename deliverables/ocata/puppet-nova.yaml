@@ -1,34 +1,34 @@
 ---
 launchpad: puppet-nova
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-nova/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: c20d4aa2f87cfba17d4c9008ffd86b3d3ae4cbc3
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: d2bd6a32f5efcf8af0ded285f02d23ccabd3aff6
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-nova
-    hash: cee64d82e5eb8dbcb2772531458604f4bbc78b2d
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: dd28e733b6347b71c77a993ba086d9d102b8c11b
-- version: 10.4.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: 86a2d2d42230f8ef18ee818330d86b5e0a89a714
-- version: 10.4.1
-  projects:
-  - repo: openstack/puppet-nova
-    hash: 91072e14d9d373d1b702a60dc61b63913997eff4
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: c20d4aa2f87cfba17d4c9008ffd86b3d3ae4cbc3
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: d2bd6a32f5efcf8af0ded285f02d23ccabd3aff6
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-nova
+        hash: cee64d82e5eb8dbcb2772531458604f4bbc78b2d
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: dd28e733b6347b71c77a993ba086d9d102b8c11b
+  - version: 10.4.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 86a2d2d42230f8ef18ee818330d86b5e0a89a714
+  - version: 10.4.1
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 91072e14d9d373d1b702a60dc61b63913997eff4

@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-mistral
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-mistral/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-mistral
-    hash: e7e9f8c9e4d8b239c022fc0111e9f955dc7347d0
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-mistral
-    hash: 17d6fcfbde50704ae697940df160cf9c28b11b36
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-mistral
-    hash: 22afb8bb8480b27d8ebca889beb242348bc3a5e8
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-mistral
-    hash: ffe22835534d1e951557d778a119d592a83d9f6a
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-mistral
-    hash: fce332808e70a890aa06347d131ceffe137be3cb
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: e7e9f8c9e4d8b239c022fc0111e9f955dc7347d0
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 17d6fcfbde50704ae697940df160cf9c28b11b36
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 22afb8bb8480b27d8ebca889beb242348bc3a5e8
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: ffe22835534d1e951557d778a119d592a83d9f6a
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: fce332808e70a890aa06347d131ceffe137be3cb

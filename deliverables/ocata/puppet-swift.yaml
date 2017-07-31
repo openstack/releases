@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-swift
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-swift/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 8b1f4f3acb4b888707c3e01014f88dea18d181ab
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 9e6fff22400ababf8fcf791589e91aa70ff4baa0
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 965fdf4291d5064b80ef3789bf497413825ba7ab
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 62dff7dc160eebd6e50e6c77d4a1cca625d5bc01
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-swift
-    hash: d8dd76985e86c824d25daf03a7c4c780c9aa998e
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 8b1f4f3acb4b888707c3e01014f88dea18d181ab
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 9e6fff22400ababf8fcf791589e91aa70ff4baa0
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 965fdf4291d5064b80ef3789bf497413825ba7ab
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 62dff7dc160eebd6e50e6c77d4a1cca625d5bc01
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-swift
+        hash: d8dd76985e86c824d25daf03a7c4c780c9aa998e

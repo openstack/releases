@@ -1,18 +1,18 @@
 ---
 launchpad: puppet-tacker
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-tacker/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-tacker
-    hash: 3ad9b2c214caa97b0a11f3448e4803cc81dc24e9
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-tacker
-    hash: dae2334bda046dc32eff368bc3009b8be2af59d7
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 3ad9b2c214caa97b0a11f3448e4803cc81dc24e9
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: dae2334bda046dc32eff368bc3009b8be2af59d7

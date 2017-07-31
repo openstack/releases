@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-designate
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-designate/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-designate
-    hash: e18a6d099cfd336bcc4a3b6d16a35e04630db92c
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-designate
-    hash: 0328890f7d91af0f6a20e4f4f90b057770af8b87
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-designate
-    hash: f333cdd3755060dea940ecc5cee4f92a8fd050b0
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-designate
-    hash: a5dab778b9fcd9199daec41a2a3bcee43ef07142
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-designate
-    hash: 7536b6b992c443594f03e4201a3f1d9f42ad57b4
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: e18a6d099cfd336bcc4a3b6d16a35e04630db92c
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 0328890f7d91af0f6a20e4f4f90b057770af8b87
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: f333cdd3755060dea940ecc5cee4f92a8fd050b0
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: a5dab778b9fcd9199daec41a2a3bcee43ef07142
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 7536b6b992c443594f03e4201a3f1d9f42ad57b4

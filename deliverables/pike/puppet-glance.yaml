@@ -2,17 +2,17 @@
 launchpad: puppet-glance
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 45bd308020b7a2a5ace23c0df39b0c8b156d2375
-    repo: openstack/puppet-glance
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 36065118063ead286f7aae6c8989f4985a7ab630
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 4182ef6065bd75b8cc19874de646b2eee22aa1f6
-team: Puppet OpenStack
+  - projects:
+      - hash: 45bd308020b7a2a5ace23c0df39b0c8b156d2375
+        repo: openstack/puppet-glance
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 36065118063ead286f7aae6c8989f4985a7ab630
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 4182ef6065bd75b8cc19874de646b2eee22aa1f6
+team: 'Puppet OpenStack'
 type: other

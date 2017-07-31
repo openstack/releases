@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-heat
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 5d4603914a0031b5f9c31f655547b1f12d607ee8
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 817cd24ec0a067cf9aec3414c4c28451bca1525e
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 241615025072d3ec83a20d5f50ea27616f3420a8
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 8b4200b4056ffe171576471f16c73acc128f9102
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-heat
-    hash: f0c8277b2b650b6fdede590ca7a667eea5e40133
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 5d4603914a0031b5f9c31f655547b1f12d607ee8
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 817cd24ec0a067cf9aec3414c4c28451bca1525e
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 241615025072d3ec83a20d5f50ea27616f3420a8
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 8b4200b4056ffe171576471f16c73acc128f9102
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-heat
+        hash: f0c8277b2b650b6fdede590ca7a667eea5e40133

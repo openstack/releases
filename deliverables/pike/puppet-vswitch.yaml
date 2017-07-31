@@ -2,17 +2,17 @@
 launchpad: puppet-vswitch
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 4c9b3050aebff8f7a3acd826feeb785de6e27664
-    repo: openstack/puppet-vswitch
-  version: 7.0.0
-- version: 7.1.0
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: ee4b10535131582d883101b8c63c8ef7252d0259
-- version: 7.2.0
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: 1961ac7a0029342d17c22f019706544ee9106aa5
-team: Puppet OpenStack
+  - projects:
+      - hash: 4c9b3050aebff8f7a3acd826feeb785de6e27664
+        repo: openstack/puppet-vswitch
+    version: 7.0.0
+  - version: 7.1.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: ee4b10535131582d883101b8c63c8ef7252d0259
+  - version: 7.2.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 1961ac7a0029342d17c22f019706544ee9106aa5
+team: 'Puppet OpenStack'
 type: other

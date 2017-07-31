@@ -1,18 +1,18 @@
 ---
 launchpad: puppet-congress
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-congress/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-congress
-    hash: 521519adec86a0f6ce09f0b595cf2191f9e4b95b
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-congress
-    hash: 339fcee01e4616209a3db254c7a38fedeeaddb3c
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 521519adec86a0f6ce09f0b595cf2191f9e4b95b
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 339fcee01e4616209a3db254c7a38fedeeaddb3c

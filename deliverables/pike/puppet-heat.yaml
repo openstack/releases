@@ -2,17 +2,17 @@
 launchpad: puppet-heat
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 9cdeadec8c4b750ecb2e344458f18cc8aa8cb56c
-    repo: openstack/puppet-heat
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 441af5bb3f6b3c786e9f41582ffdcf0125f5618d
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-heat
-    hash: 380353399e028e9274b6925cfb22336bd2c18b3a
-team: Puppet OpenStack
+  - projects:
+      - hash: 9cdeadec8c4b750ecb2e344458f18cc8aa8cb56c
+        repo: openstack/puppet-heat
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 441af5bb3f6b3c786e9f41582ffdcf0125f5618d
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 380353399e028e9274b6925cfb22336bd2c18b3a
+team: 'Puppet OpenStack'
 type: other

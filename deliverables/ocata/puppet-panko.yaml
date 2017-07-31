@@ -1,22 +1,22 @@
 ---
 launchpad: puppet-panko
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-panko/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-panko
-    hash: 81f370381b1ec8354db859db297d202976239882
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-panko
-    hash: a58a42ea73197715b7a375a731fdcf619069c2ba
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-panko
-    hash: 39c49094947ace2577e4e6b3d692ab9193e2466c
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 81f370381b1ec8354db859db297d202976239882
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-panko
+        hash: a58a42ea73197715b7a375a731fdcf619069c2ba
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 39c49094947ace2577e4e6b3d692ab9193e2466c

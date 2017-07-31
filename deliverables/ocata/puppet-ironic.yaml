@@ -1,34 +1,34 @@
 ---
 launchpad: puppet-ironic
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-ironic/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: 9b0aa85594282aca8b61d47b5782a19dc62940e4
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: 633b6822f5b86753807ea263db3cd73c260badc0
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: d991f285e8554828e29353393253ff4a04077bfb
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: a71d896cfcf359746a92eeca9fd536e2de8dbdb9
-- version: 10.4.0
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: 2c376db42cf51e5688de77355764ba3c7a2d613b
-- version: 10.4.1
-  projects:
-  - repo: openstack/puppet-ironic
-    hash: ee09d11edd835cead347909764c5304252236941
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 9b0aa85594282aca8b61d47b5782a19dc62940e4
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 633b6822f5b86753807ea263db3cd73c260badc0
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: d991f285e8554828e29353393253ff4a04077bfb
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: a71d896cfcf359746a92eeca9fd536e2de8dbdb9
+  - version: 10.4.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 2c376db42cf51e5688de77355764ba3c7a2d613b
+  - version: 10.4.1
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: ee09d11edd835cead347909764c5304252236941

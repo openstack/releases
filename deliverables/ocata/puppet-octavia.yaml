@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-octavia
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-octavia/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: 998df3c90d6595b992c08abccf9e690ce8dfe51e
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: f959fe882e55f7581ad2d41ede6ee8940a6c4c12
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: 76a2df9e7290ff3d2455e145be87c33f9049be82
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: ad861e4da64bc443db944d4de32410521c723167
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: 6a6a64ca57f6fc9eb7dd975047f2afcc70144265
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 998df3c90d6595b992c08abccf9e690ce8dfe51e
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: f959fe882e55f7581ad2d41ede6ee8940a6c4c12
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 76a2df9e7290ff3d2455e145be87c33f9049be82
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: ad861e4da64bc443db944d4de32410521c723167
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 6a6a64ca57f6fc9eb7dd975047f2afcc70144265

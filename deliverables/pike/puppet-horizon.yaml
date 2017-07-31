@@ -2,17 +2,17 @@
 launchpad: puppet-horizon
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 8e00bbbd1d4cfdd9b4feb10c54c5d84f658fafcc
-    repo: openstack/puppet-horizon
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: 219a31f4beb81948ee632876caa651f07abd4e22
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: a46538e6efafc1b9c95688ff36c7505c40021ffe
-team: Puppet OpenStack
+  - projects:
+      - hash: 8e00bbbd1d4cfdd9b4feb10c54c5d84f658fafcc
+        repo: openstack/puppet-horizon
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 219a31f4beb81948ee632876caa651f07abd4e22
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: a46538e6efafc1b9c95688ff36c7505c40021ffe
+team: 'Puppet OpenStack'
 type: other

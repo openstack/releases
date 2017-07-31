@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-neutron
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-neutron/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-neutron
-    hash: b7ce1f87939625060400bafeb0523a793a3a7396
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-neutron
-    hash: 509e3a98d272bc51ae15b91967563a36ae7049ef
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-neutron
-    hash: 0887d96ac59e5d28158c2d5756e4ae45301ab710
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-neutron
-    hash: afa1634d7ff7b727f4af22a8bcb79820fb76bd1f
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-neutron
-    hash: 073f37c02e3762e2f45832b11b92935a2b3a40a3
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: b7ce1f87939625060400bafeb0523a793a3a7396
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 509e3a98d272bc51ae15b91967563a36ae7049ef
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 0887d96ac59e5d28158c2d5756e4ae45301ab710
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: afa1634d7ff7b727f4af22a8bcb79820fb76bd1f
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 073f37c02e3762e2f45832b11b92935a2b3a40a3

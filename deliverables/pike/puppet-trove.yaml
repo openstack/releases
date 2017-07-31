@@ -2,17 +2,17 @@
 launchpad: puppet-trove
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: a105fbaaf62114f10f6884e073a6e4a29eac6dc7
-    repo: openstack/puppet-trove
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 28db9f952af1d0f4e5d304e86ffab1c7dcaf5f47
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 3fdefbfb4622ebdbb348f12cdecafb0fff43a28f
-team: Puppet OpenStack
+  - projects:
+      - hash: a105fbaaf62114f10f6884e073a6e4a29eac6dc7
+        repo: openstack/puppet-trove
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 28db9f952af1d0f4e5d304e86ffab1c7dcaf5f47
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 3fdefbfb4622ebdbb348f12cdecafb0fff43a28f
+team: 'Puppet OpenStack'
 type: other

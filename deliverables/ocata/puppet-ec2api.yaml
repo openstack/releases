@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-ec2api
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-ec2api/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 64f8b0c24d90e90e5a19b82639c6b7f39bb2e73f
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 0e6c9a50b7bd6135c1fc3a29892f7bcd416eaabd
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 48dc8b2b5d299d169f01bb1201c82ac2e260c24d
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: f4a82472068ba198659cf8ceb4903ac9290f910f
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 28a8c2671e2041b445a14064f87faeb5fee2f738
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 64f8b0c24d90e90e5a19b82639c6b7f39bb2e73f
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 0e6c9a50b7bd6135c1fc3a29892f7bcd416eaabd
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 48dc8b2b5d299d169f01bb1201c82ac2e260c24d
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: f4a82472068ba198659cf8ceb4903ac9290f910f
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 28a8c2671e2041b445a14064f87faeb5fee2f738

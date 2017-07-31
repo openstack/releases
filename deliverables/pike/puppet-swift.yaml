@@ -2,17 +2,17 @@
 launchpad: puppet-swift
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: fd80ec5c49a536a98c95f40cb80c84a9c8a46a0e
-    repo: openstack/puppet-swift
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 4955428bf0fec3aba49adc063cd41ab5923e02fd
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: ccc40c93cfe9155c680da1debef8f2ee53ca017d
-team: Puppet OpenStack
+  - projects:
+      - hash: fd80ec5c49a536a98c95f40cb80c84a9c8a46a0e
+        repo: openstack/puppet-swift
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 4955428bf0fec3aba49adc063cd41ab5923e02fd
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: ccc40c93cfe9155c680da1debef8f2ee53ca017d
+team: 'Puppet OpenStack'
 type: other

@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-trove
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 47e28a539dd9d26656fcc9d38aa38f6926328d36
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 1db71b415954b815aebc92f362ae8df042104f9f
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 82cc12da2f0654d5756a13cf7249e2261156ead4
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 9a9fca039803aad78a0915944ad1905d4bb0d704
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-trove
-    hash: a7d64a85cd59db6d75ff660fac214be49d9efb9b
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 47e28a539dd9d26656fcc9d38aa38f6926328d36
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 1db71b415954b815aebc92f362ae8df042104f9f
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 82cc12da2f0654d5756a13cf7249e2261156ead4
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 9a9fca039803aad78a0915944ad1905d4bb0d704
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-trove
+        hash: a7d64a85cd59db6d75ff660fac214be49d9efb9b

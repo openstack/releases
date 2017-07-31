@@ -1,34 +1,34 @@
 ---
 branches:
-- location: 6.2.0
-  name: stable/ocata
+  - location: 6.2.0
+    name: stable/ocata
 launchpad: puppet-tripleo
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-tripleo/ocata.html
 releases:
-- projects:
-  - hash: a63f799dbfb1a6cabb1ec18d929fa682fbf30289
-    repo: openstack/puppet-tripleo
-  version: 6.0.0
-- projects:
-  - hash: 34253ecfb5c8e1f2b44567892785d2dc3af695d0
-    repo: openstack/puppet-tripleo
-  version: 6.1.0
-- projects:
-  - hash: 9ad8e263f7c6ef5304b4e8229e93c1d8add38596
-    repo: openstack/puppet-tripleo
-  version: 6.2.0
-- projects:
-  - hash: 208f068a488a9b5b3f40c64af3bb50dbbc07730e
-    repo: openstack/puppet-tripleo
-  version: 6.3.0
-- projects:
-  - hash: f9867d23c58ccbbb0d30ecd6104f7745b9fa1436
-    repo: openstack/puppet-tripleo
-  version: 6.4.0
-- projects:
-  - hash: c6de6cf78b222b89088ae2b572953be91760cba2
-    repo: openstack/puppet-tripleo
-  version: 6.5.0
+  - projects:
+      - hash: a63f799dbfb1a6cabb1ec18d929fa682fbf30289
+        repo: openstack/puppet-tripleo
+    version: 6.0.0
+  - projects:
+      - hash: 34253ecfb5c8e1f2b44567892785d2dc3af695d0
+        repo: openstack/puppet-tripleo
+    version: 6.1.0
+  - projects:
+      - hash: 9ad8e263f7c6ef5304b4e8229e93c1d8add38596
+        repo: openstack/puppet-tripleo
+    version: 6.2.0
+  - projects:
+      - hash: 208f068a488a9b5b3f40c64af3bb50dbbc07730e
+        repo: openstack/puppet-tripleo
+    version: 6.3.0
+  - projects:
+      - hash: f9867d23c58ccbbb0d30ecd6104f7745b9fa1436
+        repo: openstack/puppet-tripleo
+    version: 6.4.0
+  - projects:
+      - hash: c6de6cf78b222b89088ae2b572953be91760cba2
+        repo: openstack/puppet-tripleo
+    version: 6.5.0
 team: tripleo
 type: other

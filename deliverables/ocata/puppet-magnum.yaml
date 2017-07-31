@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-magnum
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-magnum/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-magnum
-    hash: 13c2ca4763aae04ce70d84510937013ad13b5e2a
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-magnum
-    hash: 5fdd2acb4fe1f3c2c271bec5f0a1ed2412fcc9e3
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-magnum
-    hash: f8801e28fbccb5d257f8bb428c0d4b549f69d3d0
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-magnum
-    hash: fdbddd178c34e7205383b89b2173f2b15cb512c5
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-magnum
-    hash: cd82816e973b7f3b88f80500cf99d8adc987de84
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 13c2ca4763aae04ce70d84510937013ad13b5e2a
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 5fdd2acb4fe1f3c2c271bec5f0a1ed2412fcc9e3
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: f8801e28fbccb5d257f8bb428c0d4b549f69d3d0
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: fdbddd178c34e7205383b89b2173f2b15cb512c5
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: cd82816e973b7f3b88f80500cf99d8adc987de84

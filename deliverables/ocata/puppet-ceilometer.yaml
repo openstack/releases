@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-ceilometer
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-ceilometer/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 12360108f1c11809e13ea45d389124e8d9f14983
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 2025907cc5c5f7119d825c0b56520bc77b88ce78
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: e80d90dc18d0168294ad7c4611c93b708471b02e
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 15aeb9dc9816b45548b681d5c86ced30f17895a6
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: c36add994df56f8268792cdd39bffec3694126e9
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 12360108f1c11809e13ea45d389124e8d9f14983
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 2025907cc5c5f7119d825c0b56520bc77b88ce78
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: e80d90dc18d0168294ad7c4611c93b708471b02e
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 15aeb9dc9816b45548b681d5c86ced30f17895a6
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: c36add994df56f8268792cdd39bffec3694126e9

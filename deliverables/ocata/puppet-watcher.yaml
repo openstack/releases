@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-watcher
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-watcher/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-watcher
-    hash: c19c1c71d49a5f37b951885715f8d220e168bb93
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-watcher
-    hash: dd20618ef55f85db02fbdd3f742e0da39d0c3872
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-watcher
-    hash: 79e8c00426b69e4d87aebe31d510ade35c488498
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-watcher
-    hash: 05dab8a5066d63f1e79901744371613f1f95467a
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-watcher
-    hash: 571d41a8a72661b3bd57a9f13a3302e77de5d2e7
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: c19c1c71d49a5f37b951885715f8d220e168bb93
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: dd20618ef55f85db02fbdd3f742e0da39d0c3872
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 79e8c00426b69e4d87aebe31d510ade35c488498
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 05dab8a5066d63f1e79901744371613f1f95467a
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 571d41a8a72661b3bd57a9f13a3302e77de5d2e7

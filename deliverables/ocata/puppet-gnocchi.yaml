@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-gnocchi
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-gnocchi/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-gnocchi
-    hash: 08c4e15abeb3bb3e9a9c4bc0750527eee4c2ec97
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-gnocchi
-    hash: 1f533cdc6aa0cf396e08205415fd57b415aee224
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-gnocchi
-    hash: 765ff3ff2ce4f1b956ca99160d43c419666d28b6
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-gnocchi
-    hash: cb1cebe2335197ad4530b99e1de5064ae4b0a3aa
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-gnocchi
-    hash: c2ac6f23df2aefb8900db65148dd7a08b2dd89a8
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 08c4e15abeb3bb3e9a9c4bc0750527eee4c2ec97
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 1f533cdc6aa0cf396e08205415fd57b415aee224
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 765ff3ff2ce4f1b956ca99160d43c419666d28b6
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: cb1cebe2335197ad4530b99e1de5064ae4b0a3aa
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: c2ac6f23df2aefb8900db65148dd7a08b2dd89a8

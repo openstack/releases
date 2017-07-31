@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-sahara
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-sahara/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: 99639c8f14e30240998dc42c93946e67651a6d71
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: 9f54d757fd028b33adc838a75d166b468837655a
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: e708fb1aad9d9931acac46cb8fccb696b7483e5b
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: e3567774c70990127e453c5193ff37e3d6d5a7fd
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-sahara
-    hash: 64b652aa2c279290fa4b2fd6a178e5ca3c0592f3
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 99639c8f14e30240998dc42c93946e67651a6d71
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 9f54d757fd028b33adc838a75d166b468837655a
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: e708fb1aad9d9931acac46cb8fccb696b7483e5b
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: e3567774c70990127e453c5193ff37e3d6d5a7fd
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 64b652aa2c279290fa4b2fd6a178e5ca3c0592f3

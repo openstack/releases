@@ -2,17 +2,17 @@
 launchpad: puppet-ec2api
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 02bacd26b2eea28749a241b75a75d71e754f0e54
-    repo: openstack/puppet-ec2api
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 4e7edbb45dc295b8130cd7c432bc6c6eec52e273
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-ec2api
-    hash: 657b3cee88ff57e1f6617c4491ebbe01f22e8e42
-team: Puppet OpenStack
+  - projects:
+      - hash: 02bacd26b2eea28749a241b75a75d71e754f0e54
+        repo: openstack/puppet-ec2api
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 4e7edbb45dc295b8130cd7c432bc6c6eec52e273
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 657b3cee88ff57e1f6617c4491ebbe01f22e8e42
+team: 'Puppet OpenStack'
 type: other

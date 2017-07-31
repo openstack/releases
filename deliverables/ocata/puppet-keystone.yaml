@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-keystone
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-keystone/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-keystone
-    hash: d131cdc019c609b7d943ad39a5ac89fefdddc014
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-keystone
-    hash: 07616c69c6ac1f695ce59cdc6863a5b54284a0e5
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-keystone
-    hash: 09d952e161cd9a0dbe82acce0199031e78c864de
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-keystone
-    hash: 1edc536b757ba11f09db7ff04db6ff888495bcf8
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-keystone
-    hash: 66a76064e26a8f7a9bec99e314eefb3581c8b112
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: d131cdc019c609b7d943ad39a5ac89fefdddc014
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 07616c69c6ac1f695ce59cdc6863a5b54284a0e5
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 09d952e161cd9a0dbe82acce0199031e78c864de
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 1edc536b757ba11f09db7ff04db6ff888495bcf8
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 66a76064e26a8f7a9bec99e314eefb3581c8b112

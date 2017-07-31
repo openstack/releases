@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-manila
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-manila/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 6f1779fe25df4f1b2b4cce0313f7ac5b190f5ea8
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 50fc09c38214f6a917f18ff6fe6394e747b5c92f
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: fa721a73491ae8425d6e2327c3645f0508de0246
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: f799c2df055175c69d0be6d0b6903f7067d328d8
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 6f77e846af4673f7c0242505673c554675ea35a5
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 6f1779fe25df4f1b2b4cce0313f7ac5b190f5ea8
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 50fc09c38214f6a917f18ff6fe6394e747b5c92f
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: fa721a73491ae8425d6e2327c3645f0508de0246
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: f799c2df055175c69d0be6d0b6903f7067d328d8
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 6f77e846af4673f7c0242505673c554675ea35a5

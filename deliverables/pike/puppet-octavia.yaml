@@ -2,17 +2,17 @@
 launchpad: puppet-octavia
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: e1033b6d029757302ebb18cfd62098721ea14ff2
-    repo: openstack/puppet-octavia
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: 87d98c5fc9505e693d162b0ead5eab6fa029612e
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-octavia
-    hash: fcf164292e738fc593a2a35f59e5dd4ad9a00a33
-team: Puppet OpenStack
+  - projects:
+      - hash: e1033b6d029757302ebb18cfd62098721ea14ff2
+        repo: openstack/puppet-octavia
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 87d98c5fc9505e693d162b0ead5eab6fa029612e
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: fcf164292e738fc593a2a35f59e5dd4ad9a00a33
+team: 'Puppet OpenStack'
 type: other

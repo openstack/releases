@@ -2,17 +2,17 @@
 launchpad: puppet-congress
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 0ad0eb000a3da7ec24f9817e833b94606da787c9
-    repo: openstack/puppet-congress
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-congress
-    hash: 0035a37cc654815e420648dee79d16b83a3c4b5a
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-congress
-    hash: c165c35de182fbbd24a6dd396c1488035f8a377e
-team: Puppet OpenStack
+  - projects:
+      - hash: 0ad0eb000a3da7ec24f9817e833b94606da787c9
+        repo: openstack/puppet-congress
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 0035a37cc654815e420648dee79d16b83a3c4b5a
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-congress
+        hash: c165c35de182fbbd24a6dd396c1488035f8a377e
+team: 'Puppet OpenStack'
 type: other

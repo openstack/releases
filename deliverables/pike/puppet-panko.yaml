@@ -2,17 +2,17 @@
 launchpad: puppet-panko
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 465af9c9f677f2e72f9b5b0b749d4001d244c4b2
-    repo: openstack/puppet-panko
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-panko
-    hash: b884e37f65e0a000eeb5d07a432a2d3fd9423f54
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-panko
-    hash: ff16a2a73922b9f67230f682d8f09d1e56a07079
-team: Puppet OpenStack
+  - projects:
+      - hash: 465af9c9f677f2e72f9b5b0b749d4001d244c4b2
+        repo: openstack/puppet-panko
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-panko
+        hash: b884e37f65e0a000eeb5d07a432a2d3fd9423f54
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-panko
+        hash: ff16a2a73922b9f67230f682d8f09d1e56a07079
+team: 'Puppet OpenStack'
 type: other

@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-oslo
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-oslo/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: cfe1488becbb830c55e0b01c14fdb6aaab16624e
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 417c63dcfecfd4d730946c4a754f80d83792365a
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 1e390c6fd83748ae8610ec4ec005def04b860f7f
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 8f7c7382e284a1c3d15cd75155154b113e2f1ec1
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 770beaaaa3e0cdf6bd2bb38816d405f4e78c96fc
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: cfe1488becbb830c55e0b01c14fdb6aaab16624e
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 417c63dcfecfd4d730946c4a754f80d83792365a
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 1e390c6fd83748ae8610ec4ec005def04b860f7f
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 8f7c7382e284a1c3d15cd75155154b113e2f1ec1
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 770beaaaa3e0cdf6bd2bb38816d405f4e78c96fc

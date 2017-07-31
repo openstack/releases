@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-murano
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-murano/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 56b8c0dcecf75564810eff6ad2303a5f08beff52
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 44900a04a490ca7a9ff18554125bf598257709a8
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: f10834efbba53f550091f79532f8b5e0f559ac71
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: bf49b6e306196bc401a06d54dc5ae20c4dc2a8d3
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 64fba29421fe3eaabde9685cbaac688f695a5f88
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 56b8c0dcecf75564810eff6ad2303a5f08beff52
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 44900a04a490ca7a9ff18554125bf598257709a8
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: f10834efbba53f550091f79532f8b5e0f559ac71
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: bf49b6e306196bc401a06d54dc5ae20c4dc2a8d3
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 64fba29421fe3eaabde9685cbaac688f695a5f88

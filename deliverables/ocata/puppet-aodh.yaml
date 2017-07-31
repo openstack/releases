@@ -1,34 +1,34 @@
 ---
 launchpad: puppet-aodh
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: c09538e605add3d6efd6db8748e7f0e78afe56fe
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: c52ee3b21f6370b74277d8ee87d26f1621d25dc3
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: 2d2f1b04feaeb013e75364b6d5260989cebb3f25
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: 52c3eb6eb86f57af2e6a70fc74a8a1a2ac3861c5
-- version: 10.4.0
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: 773100154f5e9eeebdd6e37abeb78b7e54b3cbe9
-- version: 10.4.1
-  projects:
-  - repo: openstack/puppet-aodh
-    hash: 1eee39f5c380212c53d34e081f6e852ccd695158
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: c09538e605add3d6efd6db8748e7f0e78afe56fe
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: c52ee3b21f6370b74277d8ee87d26f1621d25dc3
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 2d2f1b04feaeb013e75364b6d5260989cebb3f25
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 52c3eb6eb86f57af2e6a70fc74a8a1a2ac3861c5
+  - version: 10.4.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 773100154f5e9eeebdd6e37abeb78b7e54b3cbe9
+  - version: 10.4.1
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 1eee39f5c380212c53d34e081f6e852ccd695158

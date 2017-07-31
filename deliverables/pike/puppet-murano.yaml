@@ -2,17 +2,17 @@
 launchpad: puppet-murano
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 6c278abde9258969653728f3bc4a10bc2c7c1ec4
-    repo: openstack/puppet-murano
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: aa12ee45015f561293af461d3b9888f7d846a897
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: f7ddcf5d61489f480774898a5dcf7cdc5f08ffb1
-team: Puppet OpenStack
+  - projects:
+      - hash: 6c278abde9258969653728f3bc4a10bc2c7c1ec4
+        repo: openstack/puppet-murano
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: aa12ee45015f561293af461d3b9888f7d846a897
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: f7ddcf5d61489f480774898a5dcf7cdc5f08ffb1
+team: 'Puppet OpenStack'
 type: other

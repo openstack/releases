@@ -2,17 +2,17 @@
 launchpad: puppet-nova
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: d19c93c55174246cad28a0aa64e1aeca9f960edb
-    repo: openstack/puppet-nova
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: 27baec7dd0c92d10dcfba2242593a7149c3e93d2
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-nova
-    hash: dad40312ebc12c3f79ef71fc0649342c102b59fa
-team: Puppet OpenStack
+  - projects:
+      - hash: d19c93c55174246cad28a0aa64e1aeca9f960edb
+        repo: openstack/puppet-nova
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 27baec7dd0c92d10dcfba2242593a7149c3e93d2
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: dad40312ebc12c3f79ef71fc0649342c102b59fa
+team: 'Puppet OpenStack'
 type: other

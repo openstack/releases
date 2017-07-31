@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-tempest
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-tempest/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-tempest
-    hash: 185f4670cc9c4bb04ca4c7e6a7804d135ae8bd8f
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-tempest
-    hash: 69239a9a208d3a582eb6d74fd1c158c4c17cfd7f
-- version: 10.2.1
-  projects:
-  - repo: openstack/puppet-tempest
-    hash: 3ac48843b42a18d1c4c118b3f3382f424b0182d6
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-tempest
-    hash: cc671da1e0389a8951d5d9861c3c06738293cdcf
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-tempest
-    hash: 85645be3f87569e7f68ce6fdecaf754f306f609b
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 185f4670cc9c4bb04ca4c7e6a7804d135ae8bd8f
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 69239a9a208d3a582eb6d74fd1c158c4c17cfd7f
+  - version: 10.2.1
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 3ac48843b42a18d1c4c118b3f3382f424b0182d6
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: cc671da1e0389a8951d5d9861c3c06738293cdcf
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 85645be3f87569e7f68ce6fdecaf754f306f609b

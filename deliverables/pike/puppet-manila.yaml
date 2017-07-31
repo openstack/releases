@@ -2,17 +2,17 @@
 launchpad: puppet-manila
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: fff658cb6faaaec406c974f2c52428a875a22c71
-    repo: openstack/puppet-manila
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 6ac9ba225a6a2f59fa601e147cc496907acae9be
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 74267304083ea576c1f0850a618d54ffb689e5ea
-team: Puppet OpenStack
+  - projects:
+      - hash: fff658cb6faaaec406c974f2c52428a875a22c71
+        repo: openstack/puppet-manila
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 6ac9ba225a6a2f59fa601e147cc496907acae9be
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 74267304083ea576c1f0850a618d54ffb689e5ea
+team: 'Puppet OpenStack'
 type: other

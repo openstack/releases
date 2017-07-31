@@ -2,17 +2,17 @@
 launchpad: puppet-tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: f808cfa65a6aa699c5c15c9560c268b046ca7d3e
-    repo: openstack/puppet-tripleo
-  version: 7.0.0
-- version: 7.1.0
-  projects:
-  - repo: openstack/puppet-tripleo
-    hash: 1041ef2305c0261608d52ad9c727667be4e76d99
-- version: 7.2.0
-  projects:
-  - repo: openstack/puppet-tripleo
-    hash: 1fd05b4a04cfc2e24b7551861c1ece483506102a
+  - projects:
+      - hash: f808cfa65a6aa699c5c15c9560c268b046ca7d3e
+        repo: openstack/puppet-tripleo
+    version: 7.0.0
+  - version: 7.1.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 1041ef2305c0261608d52ad9c727667be4e76d99
+  - version: 7.2.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 1fd05b4a04cfc2e24b7551861c1ece483506102a
 team: tripleo
 type: other

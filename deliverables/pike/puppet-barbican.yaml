@@ -2,17 +2,17 @@
 launchpad: puppet-barbican
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: a81abcc5c458dfdb3e483b8626c8a28eaac7d20e
-    repo: openstack/puppet-barbican
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: 3920930183e293735a33c5c92aa12aa233c638c6
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: af2e61dc70e4741216bcc4705a77e2985cb54894
-team: Puppet OpenStack
+  - projects:
+      - hash: a81abcc5c458dfdb3e483b8626c8a28eaac7d20e
+        repo: openstack/puppet-barbican
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 3920930183e293735a33c5c92aa12aa233c638c6
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: af2e61dc70e4741216bcc4705a77e2985cb54894
+team: 'Puppet OpenStack'
 type: other

@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-glance
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: d4bcd17b656278e71663e313e2547bd6585758d9
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 77d8f0f46cc11bbb71ef46a2e5404e34544af610
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 31ca15b03792f49dea0de25c58acaf36a0164e8e
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 672c0b6560f95f4d20787490ef4624737a8bf812
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-glance
-    hash: 12ad1a4578b4e5cbcb1fd41cce08e758231efd62
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: d4bcd17b656278e71663e313e2547bd6585758d9
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 77d8f0f46cc11bbb71ef46a2e5404e34544af610
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 31ca15b03792f49dea0de25c58acaf36a0164e8e
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 672c0b6560f95f4d20787490ef4624737a8bf812
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 12ad1a4578b4e5cbcb1fd41cce08e758231efd62

@@ -2,17 +2,17 @@
 launchpad: puppet-ovn
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 1ef71d7e2079daa675539aafbcb707ca6ae916d7
-    repo: openstack/puppet-ovn
-  version: 11.0.0
-- version: 11.1.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: dfa22cdc83ab3c354726af78e0a2d7d8bf6f035e
-- version: 11.2.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 7458b65e4911fcb10ef5299af74155cc29cb1e6f
-team: Puppet OpenStack
+  - projects:
+      - hash: 1ef71d7e2079daa675539aafbcb707ca6ae916d7
+        repo: openstack/puppet-ovn
+    version: 11.0.0
+  - version: 11.1.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: dfa22cdc83ab3c354726af78e0a2d7d8bf6f035e
+  - version: 11.2.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 7458b65e4911fcb10ef5299af74155cc29cb1e6f
+team: 'Puppet OpenStack'
 type: other

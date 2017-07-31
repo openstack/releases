@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-vswitch
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 6.3.0
+  - name: stable/ocata
+    location: 6.3.0
 releases:
-- version: 6.0.0
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: 6c9ed3a8b525b339921548192bbffe26dc9176ab
-- version: 6.1.0
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: 5fdc306b6c00407420669450e9314b8c69fafe62
-- version: 6.2.1
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: a9f30a2cc4cfad0e543e39cd82f7fd89acf37c40
-- version: 6.3.0
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: e08a995069106b4e66e7d08623730f186d8a4f6c
-- version: 6.3.1
-  projects:
-  - repo: openstack/puppet-vswitch
-    hash: bbb7383e312ad61982a13a2af2b3ef812eeff54b
+  - version: 6.0.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 6c9ed3a8b525b339921548192bbffe26dc9176ab
+  - version: 6.1.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 5fdc306b6c00407420669450e9314b8c69fafe62
+  - version: 6.2.1
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: a9f30a2cc4cfad0e543e39cd82f7fd89acf37c40
+  - version: 6.3.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: e08a995069106b4e66e7d08623730f186d8a4f6c
+  - version: 6.3.1
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: bbb7383e312ad61982a13a2af2b3ef812eeff54b

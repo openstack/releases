@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-cinder
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-cinder
-    hash: c5c7d3c6d5da73d84ecedf699778908ce5f5d1d9
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-cinder
-    hash: 9f07b3b884033395e710d2d5580b6f5827d2a109
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-cinder
-    hash: 0bac0e554132bb61dae817c43394fce9becb1931
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-cinder
-    hash: e89706c5519965640c40673b78140ee57ca41204
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-cinder
-    hash: 9d6ccfde23eb494fb0d01493e92fc7fcc2183934
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: c5c7d3c6d5da73d84ecedf699778908ce5f5d1d9
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 9f07b3b884033395e710d2d5580b6f5827d2a109
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 0bac0e554132bb61dae817c43394fce9becb1931
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: e89706c5519965640c40673b78140ee57ca41204
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 9d6ccfde23eb494fb0d01493e92fc7fcc2183934

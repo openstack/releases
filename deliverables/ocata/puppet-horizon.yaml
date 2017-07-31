@@ -1,30 +1,30 @@
 ---
 launchpad: puppet-horizon
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/ocata.html
 type: other
 release-model: cycle-trailing
 branches:
-- name: stable/ocata
-  location: 10.3.0
+  - name: stable/ocata
+    location: 10.3.0
 releases:
-- version: 10.0.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: 87c06ba6070e1ec12946a43fc64cedb7300386be
-- version: 10.1.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: d454208d7e256c1852b78b1442d67abc6c8c5fef
-- version: 10.2.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: 047e3b5c329427a45a33d6f575f295bea56636d3
-- version: 10.3.0
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: 9467bcfd2b2ec3794313fc925cd9d6b129b35208
-- version: 10.3.1
-  projects:
-  - repo: openstack/puppet-horizon
-    hash: 8a0282c7d6fa763833118188403b25a00c7e5df5
+  - version: 10.0.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 87c06ba6070e1ec12946a43fc64cedb7300386be
+  - version: 10.1.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: d454208d7e256c1852b78b1442d67abc6c8c5fef
+  - version: 10.2.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 047e3b5c329427a45a33d6f575f295bea56636d3
+  - version: 10.3.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 9467bcfd2b2ec3794313fc925cd9d6b129b35208
+  - version: 10.3.1
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 8a0282c7d6fa763833118188403b25a00c7e5df5
