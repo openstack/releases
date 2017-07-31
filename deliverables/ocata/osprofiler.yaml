@@ -6,10 +6,10 @@ type: library
 release-model: cycle-with-intermediary
 include-pypi-link: yes
 branches:
-- name: stable/ocata
-  location: 1.5.0
+  - name: stable/ocata
+    location: 1.5.0
 releases:
-- version: 1.5.0
-  projects:
-  - repo: openstack/osprofiler
-    hash: c1d53d925e9faa9db5e91594a62406edd19e9894
+  - version: 1.5.0
+    projects:
+      - repo: openstack/osprofiler
+        hash: c1d53d925e9faa9db5e91594a62406edd19e9894

@@ -3,42 +3,42 @@ launchpad: keystonemiddleware
 team: keystone
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/keystonemiddleware/newton.html
 branches:
-- name: stable/newton
-  location: 4.9.0
+  - name: stable/newton
+    location: 4.9.0
 releases:
-- version: 4.5.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 67e1a46b1cece719b1615f09feabad6442fa6552
-- version: 4.5.1
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: f55b0334b919f89fee0b2cfe0a9994fd08c9966c
-- version: 4.6.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 29709a4aaf9f8851a11234380cc67285840f0216
-  highlights: |
-    - Support for AuditMiddleware can be installed with `pip install keystonemiddleware[audit_notifications]`
-    - AuditMiddleware can support services that do not use tokens (bug 1583699)
-    - Pass X_IS_ADMIN_PROJECT header (bug 1577996)
-    - Determine project name from oslo config or local config (bug 1583690)
-- version: 4.7.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: a724cf86736765e63dc5593ed24a8a6cc15f65be
-- version: 4.8.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 67dacadfd5f12ca5c5b2c76375e9d790643449e4
-- version: 4.9.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 5a6296cd4ec6ebcf1bf73e8ab6b9813f3e8f9d93
-- version: 4.9.1
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 675ac3effa8649d162dabe25aea6d241a6f54b2b
+  - version: 4.5.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 67e1a46b1cece719b1615f09feabad6442fa6552
+  - version: 4.5.1
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: f55b0334b919f89fee0b2cfe0a9994fd08c9966c
+  - version: 4.6.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 29709a4aaf9f8851a11234380cc67285840f0216
+    highlights: |
+      - Support for AuditMiddleware can be installed with `pip install keystonemiddleware[audit_notifications]`
+      - AuditMiddleware can support services that do not use tokens (bug 1583699)
+      - Pass X_IS_ADMIN_PROJECT header (bug 1577996)
+      - Determine project name from oslo config or local config (bug 1583690)
+  - version: 4.7.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: a724cf86736765e63dc5593ed24a8a6cc15f65be
+  - version: 4.8.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 67dacadfd5f12ca5c5b2c76375e9d790643449e4
+  - version: 4.9.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 5a6296cd4ec6ebcf1bf73e8ab6b9813f3e8f9d93
+  - version: 4.9.1
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 675ac3effa8649d162dabe25aea6d241a6f54b2b

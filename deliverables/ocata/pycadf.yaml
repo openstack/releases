@@ -1,14 +1,14 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: pycadf
 release-model: cycle-with-intermediary
 team: keystone
 type: library
 branches:
-- name: stable/ocata
-  location: 2.5.0
+  - name: stable/ocata
+    location: 2.5.0
 releases:
-- version: 2.5.0
-  projects:
-  - repo: openstack/pycadf
-    hash: 6e7ecfae0f6f584fa78dbfe3c318c13e0afbec96
+  - version: 2.5.0
+    projects:
+      - repo: openstack/pycadf
+        hash: 6e7ecfae0f6f584fa78dbfe3c318c13e0afbec96

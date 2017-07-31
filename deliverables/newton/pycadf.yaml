@@ -3,16 +3,16 @@ launchpad: pycadf
 team: keystone
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 branches:
-- name: stable/newton
-  location: 2.4.0
+  - name: stable/newton
+    location: 2.4.0
 releases:
-- version: 2.3.0
-  projects:
-  - repo: openstack/pycadf
-    hash: ec0780b19a4ab01e80451bcfc33005e3b04b96d5
-- version: 2.4.0
-  projects:
-  - repo: openstack/pycadf
-    hash: d94f1b4186011170dc8e7de47e044eac5ef46fb3
+  - version: 2.3.0
+    projects:
+      - repo: openstack/pycadf
+        hash: ec0780b19a4ab01e80451bcfc33005e3b04b96d5
+  - version: 2.4.0
+    projects:
+      - repo: openstack/pycadf
+        hash: d94f1b4186011170dc8e7de47e044eac5ef46fb3

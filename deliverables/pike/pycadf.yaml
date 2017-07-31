@@ -1,14 +1,14 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: pycadf
 release-model: cycle-with-intermediary
 team: keystone
 type: library
 releases:
-- version: 2.6.0
-  projects:
-  - repo: openstack/pycadf
-    hash: 88064cffa79dd807782eff9e167d6e7724d74171
+  - version: 2.6.0
+    projects:
+      - repo: openstack/pycadf
+        hash: 88064cffa79dd807782eff9e167d6e7724d74171
 branches:
-- name: stable/pike
-  location: 2.6.0
+  - name: stable/pike
+    location: 2.6.0

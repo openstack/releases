@@ -4,32 +4,32 @@ team: keystone
 release-notes: https://docs.openstack.org/releasenotes/keystonemiddleware/ocata.html
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 releases:
-- version: 4.10.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: b8024ff8c682037d6ad441b0c2def23447e26f2f
-- version: 4.11.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 77a7828fc1c07b121c1e24bc087c9f7789900446
-- version: 4.12.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: e0e9a0e20457532dfd8277240e43f4229564092b
-- version: 4.13.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: dfd53e55512cba6a8b7e69ac5bf7bea172dfe6b1
-- version: 4.13.1
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: abaf1b5bf718d0c59fa918ada2fb91370292f7c6
-- version: 4.14.0
-  projects:
-  - repo: openstack/keystonemiddleware
-    hash: 3a36cc2d0a8504a9df77c5a833edc50a88828252
+  - version: 4.10.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: b8024ff8c682037d6ad441b0c2def23447e26f2f
+  - version: 4.11.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 77a7828fc1c07b121c1e24bc087c9f7789900446
+  - version: 4.12.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: e0e9a0e20457532dfd8277240e43f4229564092b
+  - version: 4.13.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: dfd53e55512cba6a8b7e69ac5bf7bea172dfe6b1
+  - version: 4.13.1
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: abaf1b5bf718d0c59fa918ada2fb91370292f7c6
+  - version: 4.14.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 3a36cc2d0a8504a9df77c5a833edc50a88828252
 branches:
-- name: stable/ocata
-  location: 4.14.0
+  - name: stable/ocata
+    location: 4.14.0

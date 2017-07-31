@@ -3,57 +3,57 @@ launchpad: python-openstackclient
 team: OpenStackClient
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: true
+include-pypi-link: yes
 release-notes: https://docs.openstack.org/releasenotes/osc-lib/newton.html
 branches:
-- name: stable/newton
-  location: 1.1.0
+  - name: stable/newton
+    location: 1.1.0
 releases:
-- version: 0.1.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: b4fd4ed5fc06ea277502d1ac98650ce137b2625d
-  highlights: |
-    First release of extracted modules from OpenStackClient
-- version: 0.2.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: 408d88f31634974279e88419763a57144f11f74f
-- version: 0.2.1
-  projects:
-  - repo: openstack/osc-lib
-    hash: 812e0741f584eaa4d12339a991d604a4a60b8b89
-- version: 0.3.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: 9667f426d0885ea6b497710efa7830c64a8f2e2a
-- version: 0.4.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: a78b67ec5365caed4c0249851b504479af5ecce5
-- version: 0.4.1
-  projects:
-  - repo: openstack/osc-lib
-    hash: ef4a4f143b1f96ac8c2a685a8e1a4e96c802cb0d
-- version: 1.0.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: e0e2deaee02b88b8565502d3f72ec2184c9768c6
-  highlights: |
-    First full release of OpenStackClient support library
-- version: 1.0.1
-  projects:
-  - repo: openstack/osc-lib
-    hash: ea65b90d63050a331bc039589c8bb6fc308067fa
-  highlights: |
-    Fix argument dependency bug
-- version: 1.0.2
-  projects:
-  - repo: openstack/osc-lib
-    hash: 1a3ff9697daba6a876d4ea57d603a17115e8ad88
-  highlights: |
-    Fix another argument dependency bug
-- version: 1.1.0
-  projects:
-  - repo: openstack/osc-lib
-    hash: 9bf62fde0c69c0941e2a767fb580d98f63b1e2ef
+  - version: 0.1.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: b4fd4ed5fc06ea277502d1ac98650ce137b2625d
+    highlights: |
+      First release of extracted modules from OpenStackClient
+  - version: 0.2.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: 408d88f31634974279e88419763a57144f11f74f
+  - version: 0.2.1
+    projects:
+      - repo: openstack/osc-lib
+        hash: 812e0741f584eaa4d12339a991d604a4a60b8b89
+  - version: 0.3.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: 9667f426d0885ea6b497710efa7830c64a8f2e2a
+  - version: 0.4.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: a78b67ec5365caed4c0249851b504479af5ecce5
+  - version: 0.4.1
+    projects:
+      - repo: openstack/osc-lib
+        hash: ef4a4f143b1f96ac8c2a685a8e1a4e96c802cb0d
+  - version: 1.0.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: e0e2deaee02b88b8565502d3f72ec2184c9768c6
+    highlights: |
+      First full release of OpenStackClient support library
+  - version: 1.0.1
+    projects:
+      - repo: openstack/osc-lib
+        hash: ea65b90d63050a331bc039589c8bb6fc308067fa
+    highlights: |
+      Fix argument dependency bug
+  - version: 1.0.2
+    projects:
+      - repo: openstack/osc-lib
+        hash: 1a3ff9697daba6a876d4ea57d603a17115e8ad88
+    highlights: |
+      Fix another argument dependency bug
+  - version: 1.1.0
+    projects:
+      - repo: openstack/osc-lib
+        hash: 9bf62fde0c69c0941e2a767fb580d98f63b1e2ef

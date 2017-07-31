@@ -5,47 +5,47 @@ type: service
 release-model: cycle-with-milestones
 release-notes: https://docs.openstack.org/releasenotes/keystone/newton.html
 branches:
-- name: stable/newton
-  location: 10.0.0.0rc1
+  - name: stable/newton
+    location: 10.0.0.0rc1
 releases:
-- version: 10.0.0.0b1
-  projects:
-  - repo: openstack/keystone
-    hash: 38d3c73888d46a330d8043e230e5bd4cc6f7b6b4
-- version: 10.0.0.0b2
-  projects:
-  - repo: openstack/keystone
-    hash: 07981bddaf2630922ce3811c999d30b74dadc294
-- version: 10.0.0.0b3
-  projects:
-  - repo: openstack/keystone
-    hash: 816d26046af0482aa52a5b8faafe8ed1591cf8c6
-- version: 10.0.0.0rc1
-  projects:
-  - repo: openstack/keystone
-    hash: ab09cc3f3f35532b0731ab8b956a5dd31c92ba32
-- version: 10.0.0.0rc2
-  projects:
-  - repo: openstack/keystone
-    hash: b3fae7724db797c911bedec1e9ab1ded982691c5
-- version: 10.0.0.0rc3
-  projects:
-  - repo: openstack/keystone
-    hash: 339e7cc798aed24b7697980eb7cf8e20498d436d
-- version: 10.0.0
-  diff-start: 9.0.0.0rc1
-  projects:
-  - repo: openstack/keystone
-    hash: 339e7cc798aed24b7697980eb7cf8e20498d436d
-- version: 10.0.1
-  projects:
-  - repo: openstack/keystone
-    hash: 0f6e92ccd18e2d93dc2ecee79e57ee344ea09941
-- version: 10.0.2
-  projects:
-  - repo: openstack/keystone
-    hash: 05a129e54573b6cbda1ec095f4526f2b9ba90a90
-- version: 10.0.3
-  projects:
-  - repo: openstack/keystone
-    hash: bd49c3ef6daa474e9c84c0d8721c0f6812ee3d2c
+  - version: 10.0.0.0b1
+    projects:
+      - repo: openstack/keystone
+        hash: 38d3c73888d46a330d8043e230e5bd4cc6f7b6b4
+  - version: 10.0.0.0b2
+    projects:
+      - repo: openstack/keystone
+        hash: 07981bddaf2630922ce3811c999d30b74dadc294
+  - version: 10.0.0.0b3
+    projects:
+      - repo: openstack/keystone
+        hash: 816d26046af0482aa52a5b8faafe8ed1591cf8c6
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: ab09cc3f3f35532b0731ab8b956a5dd31c92ba32
+  - version: 10.0.0.0rc2
+    projects:
+      - repo: openstack/keystone
+        hash: b3fae7724db797c911bedec1e9ab1ded982691c5
+  - version: 10.0.0.0rc3
+    projects:
+      - repo: openstack/keystone
+        hash: 339e7cc798aed24b7697980eb7cf8e20498d436d
+  - version: 10.0.0
+    diff-start: 9.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 339e7cc798aed24b7697980eb7cf8e20498d436d
+  - version: 10.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 0f6e92ccd18e2d93dc2ecee79e57ee344ea09941
+  - version: 10.0.2
+    projects:
+      - repo: openstack/keystone
+        hash: 05a129e54573b6cbda1ec095f4526f2b9ba90a90
+  - version: 10.0.3
+    projects:
+      - repo: openstack/keystone
+        hash: bd49c3ef6daa474e9c84c0d8721c0f6812ee3d2c
