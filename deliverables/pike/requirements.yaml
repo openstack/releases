@@ -3,12 +3,8 @@ launchpad: openstack-requirements
 team: requirements
 type: other
 include-pypi-link: yes
+release-model: cycle-with-intermediary
 releases:
-  - version: 1.0.0
-    projects:
-      - repo: openstack/requirements
-        hash: 495027bda42431678845f40f084191623c7b2755
-        tarball-base: openstack_requirements
   - version: 1.1.0
     projects:
       - repo: openstack/requirements
