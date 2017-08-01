@@ -24,7 +24,7 @@ import yaml
 def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
         series, deliverable)
-    with open(deliverable_filename, 'r') as f:
+    with open(deliverable_filename, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 
