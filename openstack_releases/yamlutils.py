@@ -38,13 +38,15 @@ class PrettySafeDumper(yaml.dumper.SafeDumper):
         values = []
         node = yaml.nodes.MappingNode(
             'tag:yaml.org,2002:map', values, flow_style=None)
-        if self.alias_key is not None:
-            self.represented_objects[self.alias_key] = node
         for key, value in data.items():
             key_item = self.represent_data(key)
             value_item = self.represent_data(value)
             values.append((key_item, value_item))
         return node
+
+    def ignore_aliases(self, data):
+        # Never output alias references; always repeat the data.
+        return True
 
     def represent_bool(self, data):
         if data:
