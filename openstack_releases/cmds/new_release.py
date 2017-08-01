@@ -25,11 +25,6 @@ from openstack_releases import yamlutils
 
 import yaml
 
-PROJECT_TEMPLATE = '''
-      - repo: {repo}
-        hash: {hash}
-'''.lstrip('\n')
-
 
 def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
