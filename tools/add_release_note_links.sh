@@ -48,6 +48,6 @@ for filename in deliverables/$SERIES/*.yaml; do
         echo " no release notes page at $url"
     else
         echo
-        edit-deliverable $SERIES $deliverable --release-notes "$url"
+        edit-deliverable $SERIES $deliverable set-release-notes "$url"
     fi
 done

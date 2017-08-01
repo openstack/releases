@@ -21,6 +21,22 @@ from openstack_releases import yamlutils
 import yaml
 
 
+def release_notes(args, series, deliverable_info):
+    deliverable_info['release-notes'] = args.url
+
+
+def stable_branch(args, series, deliverable_info):
+    name = 'stable/{}'.format(series)
+    for b in deliverable_info.get('branches', []):
+        if b['name'] == name:
+            return
+    new_branch = {
+        'name': name,
+        'location': args.location,
+    }
+    deliverable_info.setdefault('branches', []).append(new_branch)
+
+
 def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
         series, deliverable)
@@ -38,10 +54,28 @@ def main():
         'deliverable',
         help='the base name of the deliverable file',
     )
-    parser.add_argument(
-        '--release-notes',
+    subparsers = parser.add_subparsers(help='commands')
+
+    relnote_parser = subparsers.add_parser(
+        'set-release-notes',
+        help='set the release-notes field',
+    )
+    relnote_parser.add_argument(
+        'url',
         help='the release-notes URL',
     )
+    relnote_parser.set_defaults(func=release_notes)
+
+    stable_branch_parser = subparsers.add_parser(
+        'add-stable-branch',
+        help='add a branch',
+    )
+    stable_branch_parser.add_argument(
+        'location',
+        help='version number',
+    )
+    stable_branch_parser.set_defaults(func=stable_branch)
+
     args = parser.parse_args()
 
     # Allow for independent projects.
@@ -56,14 +90,9 @@ def main():
     except (IOError, OSError) as e:
         parser.error(e)
 
-    changes = 0
+    args.func(args, series, deliverable_info)
 
-    if args.release_notes:
-        deliverable_info['release-notes'] = args.release_notes
-        changes += 1
-
-    if changes > 0:
-        deliverable_filename = 'deliverables/%s/%s.yaml' % (
-            series, args.deliverable)
-        with open(deliverable_filename, 'w', encoding='utf-8') as f:
-            f.write(yamlutils.dumps(deliverable_info))
+    deliverable_filename = 'deliverables/%s/%s.yaml' % (
+        series, args.deliverable)
+    with open(deliverable_filename, 'w', encoding='utf-8') as f:
+        f.write(yamlutils.dumps(deliverable_info))
