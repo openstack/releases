@@ -30,9 +30,9 @@ def _has_newline(data):
 
 
 class PrettySafeDumper(yaml.dumper.SafeDumper):
-    """Yaml dumper that tries to not alter original formats (to much)."""
+    """Yaml dumper that tries to not alter original formats (too much)."""
 
-    BINARY_ENCODING = 'utf8'
+    BINARY_ENCODING = 'utf-8'
 
     def represent_ordereddict(self, data):
         values = []
