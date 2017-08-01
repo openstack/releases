@@ -129,6 +129,11 @@ def main():
         'series',
         help='the release series, such as "newton" or "ocata"',
     )
+    parser.add_argument(
+        'deliverable',
+        nargs='+',
+        help='the deliverable name',
+    )
     args = parser.parse_args()
 
     workdir = tempfile.mkdtemp(prefix='releases-')
@@ -149,6 +154,8 @@ def main():
     )
     for entry in all_deliv.get_deliverables(None, args.series):
         deliv = deliverable.Deliverable(*entry)
+        if deliv.name not in args.deliverable:
+            continue
         if deliv.get_branch_location(branch_name) is not None:
             # the branch is already defined for this project
             sys.stderr.write('{} already has a branch {}\n'.format(
