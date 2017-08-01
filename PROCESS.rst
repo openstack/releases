@@ -221,7 +221,7 @@ RC1
    Note this work is done by translation team.
 
 6. After all cycle-with-milestone projects have their branches
-   created, use ``make_branch.sh`` to create the stable/$series
+   created, update the deliverable file to create the stable/$series
    branch for ``openstack/requirements``. Then announce that the
    requirements freeze is lifted from master.
 
