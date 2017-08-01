@@ -14,9 +14,9 @@
 """
 
 import requests
-import yaml
 
 from openstack_releases import flags
+from openstack_releases import yamlutils
 
 
 ZUUL_LAYOUT_URL = 'http://git.openstack.org/cgit/openstack-infra/project-config/plain/zuul/layout.yaml'  # noqa
@@ -36,7 +36,7 @@ def get_zuul_layout_data(url=ZUUL_LAYOUT_URL):
 
     """
     r = requests.get(url)
-    raw = yaml.safe_load(r.text)
+    raw = yamlutils.loads(r.text)
     # Add a mapping from repo name to repo settings, since that is how
     # we access this most often.
     raw[_VALIDATE_KEY] = {

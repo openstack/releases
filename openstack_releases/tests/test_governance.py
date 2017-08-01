@@ -15,8 +15,7 @@
 from oslotest import base
 
 from openstack_releases import governance
-
-import yaml
+from openstack_releases import yamlutils
 
 
 _team_data_yaml = """
@@ -57,7 +56,7 @@ Release Management:
         - openstack-dev/specs-cookiecutter
 """
 
-TEAM_DATA = yaml.load(_team_data_yaml)
+TEAM_DATA = yamlutils.loads(_team_data_yaml)
 
 
 class TestGetRepoOwner(base.BaseTestCase):

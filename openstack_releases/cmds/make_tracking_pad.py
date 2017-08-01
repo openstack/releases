@@ -17,8 +17,7 @@ import datetime
 import os.path
 
 import openstack_releases
-
-import yaml
+from openstack_releases import yamlutils
 
 
 def main():
@@ -45,7 +44,7 @@ def main():
     ))
 
     with open(schedule_filename, 'r') as f:
-        schedule_data = yaml.safe_load(f)
+        schedule_data = yamlutils.loads(f.read())
 
     print('Release Team Calendar for {}\n'.format(series.title()))
 

@@ -27,11 +27,10 @@ import subprocess
 import sys
 import tempfile
 
-import yaml
-
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
+from openstack_releases import yamlutils
 
 
 def header(title):
@@ -161,8 +160,8 @@ def main():
             continue
         print('\n' + ('=' * 80))
         print('\nChecking %s\n' % filename)
-        with open(filename, 'r') as f:
-            deliverable_info = yaml.load(f.read())
+        with open(filename, 'r', encoding='utf-8') as f:
+            deliverable_info = yamlutils.loads(f.read())
 
         series = os.path.basename(
             os.path.dirname(

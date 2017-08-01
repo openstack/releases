@@ -22,8 +22,6 @@ import re
 import shutil
 import tempfile
 
-import yaml
-
 import openstack_releases
 from openstack_releases import gitutils
 from openstack_releases import governance
@@ -146,7 +144,7 @@ def main():
         verbose('\n{}'.format(filename))
         deliverable_name = os.path.basename(filename)[:-5]
         with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_data = yaml.safe_load(f)
+            deliverable_data = yamlutils.loads(f.read())
         releases = deliverable_data.get('releases')
         if not releases:
             verbose('#  no releases')

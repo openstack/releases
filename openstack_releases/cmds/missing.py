@@ -23,14 +23,13 @@ import glob
 import os
 import os.path
 
-import yaml
-
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import links
+from openstack_releases import yamlutils
 
 urllib3.disable_warnings()
 
@@ -79,8 +78,8 @@ def main():
         if not os.path.exists(filename):
             print("File was deleted, skipping.")
             continue
-        with open(filename, 'r') as f:
-            deliverable_info = yaml.load(f.read())
+        with open(filename, 'r', encoding='utf-8') as f:
+            deliverable_info = yamlutils.loads(f.read())
 
         link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
 

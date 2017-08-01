@@ -18,8 +18,6 @@ import argparse
 
 from openstack_releases import yamlutils
 
-import yaml
-
 
 def release_notes(args, series, deliverable_info):
     deliverable_info['release-notes'] = args.url
@@ -41,7 +39,7 @@ def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
         series, deliverable)
     with open(deliverable_filename, 'r', encoding='utf-8') as f:
-        return yaml.safe_load(f)
+        return yamlutils.loads(f.read())
 
 
 def main():
