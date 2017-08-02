@@ -1,6 +1,6 @@
 ---
 launchpad: reno
-team: Release Management
+team: 'Release Management'
 type: other
 include-pypi-link: yes
 branches:
@@ -131,3 +131,7 @@ releases:
     projects:
       - repo: openstack/reno
         hash: a42a617350e36c0f09859c95ba89c64aa38009d2
+  - projects:
+      - hash: ff2ca65e5c3b5ad2f2b60c2b367b5297854537f7
+        repo: openstack/reno
+    version: 2.5.0
