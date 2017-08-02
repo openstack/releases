@@ -1,0 +1,15 @@
+---
+branches:
+  - location: 1.0.0
+    name: stable/ocata
+include-pypi-link: yes
+launchpad: openstack-requirements
+release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: 495027bda42431678845f40f084191623c7b2755
+        repo: openstack/requirements
+        tarball-base: openstack_requirements
+    version: 1.0.0
+team: requirements
+type: other
