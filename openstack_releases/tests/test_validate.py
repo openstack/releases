@@ -20,10 +20,10 @@ import textwrap
 import fixtures
 import mock
 from oslotest import base
-import yaml
 
 from openstack_releases import defaults
 from openstack_releases.cmds import validate
+from openstack_releases import yamlutils
 
 
 class TestValidateBugTracker(base.BaseTestCase):
@@ -1031,7 +1031,7 @@ class TestValidateNewReleases(base.BaseTestCase):
             - openstack-dev/specs-cookiecutter
     """)
 
-    team_data = yaml.load(team_data_yaml)
+    team_data = yamlutils.loads(team_data_yaml)
 
     def test_all_repos(self):
         deliverable_info = {
@@ -1154,7 +1154,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1177,7 +1177,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1200,7 +1200,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1223,7 +1223,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1247,7 +1247,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             '_independent',
@@ -1272,7 +1272,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             '_independent',
@@ -1296,7 +1296,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1320,7 +1320,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1344,7 +1344,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1369,7 +1369,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1394,7 +1394,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
             'ocata',
@@ -1424,7 +1424,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
             self.tmpdir,
@@ -1449,7 +1449,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
             self.tmpdir,
@@ -1474,7 +1474,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
             self.tmpdir,
@@ -1499,7 +1499,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
             self.tmpdir,
@@ -1524,7 +1524,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
             self.tmpdir,
@@ -1556,7 +1556,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1580,7 +1580,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1605,7 +1605,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1630,7 +1630,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1655,7 +1655,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1680,7 +1680,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
             self.tmpdir,
@@ -1725,7 +1725,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_open(
             deliverable_info,
             'a',
@@ -1753,7 +1753,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_open(
             deliverable_info,
             'a',
@@ -1776,7 +1776,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         ''')
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_open(
             deliverable_info,
             '_independent',
@@ -1812,7 +1812,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_open(
             deliverable_info,
             'a',
@@ -1847,7 +1847,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',
@@ -1878,7 +1878,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',
@@ -1901,7 +1901,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',
@@ -1928,7 +1928,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',
@@ -1955,7 +1955,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',
@@ -1982,7 +1982,7 @@ class TestValidateSeriesFirst(base.BaseTestCase):
             f.write(deliverable_data)
         warnings = []
         errors = []
-        deliverable_info = yaml.safe_load(deliverable_data)
+        deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_series_first(
             deliverable_info,
             'a',

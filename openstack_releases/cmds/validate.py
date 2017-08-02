@@ -31,7 +31,6 @@ import tempfile
 import jsonschema
 import requests
 import six
-import yaml
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
@@ -44,6 +43,7 @@ from openstack_releases import project_config
 from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import versionutils
+from openstack_releases import yamlutils
 
 urllib3.disable_warnings()
 
@@ -90,7 +90,7 @@ _NO_STABLE_BRANCH_CHECK = set([
 ])
 _PLEASE = ('It is too expensive to determine this value during '
            'the site build, please set it explicitly.')
-_SCHEMA = yaml.load(
+_SCHEMA = yamlutils.loads(
     pkgutil.get_data('openstack_releases', 'schema.yaml').decode('utf-8')
 )
 
@@ -141,8 +141,8 @@ def validate_series_open(deliverable_info,
         os.path.dirname(previous_deliverable_file)
     )
     expected_branch = 'stable/' + previous_series
-    with open(previous_deliverable_file, 'r') as f:
-        previous_deliverable = yaml.load(f.read())
+    with open(previous_deliverable_file, 'r', encoding='utf-8') as f:
+        previous_deliverable = yamlutils.loads(f.read())
         if not previous_deliverable:
             # An empty file results in None, so convert to dict to
             # make using the value easier.
@@ -822,8 +822,8 @@ def main():
         if not os.path.isfile(filename):
             print("File was deleted, skipping.")
             continue
-        with open(filename, 'r') as f:
-            deliverable_info = yaml.load(f.read())
+        with open(filename, 'r', encoding='utf-8') as f:
+            deliverable_info = yamlutils.loads(f.read())
 
         series_name = os.path.basename(
             os.path.dirname(filename)

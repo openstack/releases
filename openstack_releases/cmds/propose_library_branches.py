@@ -21,10 +21,9 @@ import os.path
 import shutil
 import tempfile
 
-import yaml
-
 import openstack_releases
 from openstack_releases import defaults
+from openstack_releases import yamlutils
 
 
 BRANCH_TEMPLATE = """
@@ -104,8 +103,8 @@ def main():
         deliverable_name = os.path.basename(filename)[:-5]
         if args.deliverable and deliverable_name not in args.deliverable:
             continue
-        with open(filename, 'r') as f:
-            deliverable_data = yaml.safe_load(f)
+        with open(filename, 'r', encoding='utf-8') as f:
+            deliverable_data = yamlutils.loads(f.read())
         if deliverable_data['type'] != 'library':
             continue
         verbose('\n{}'.format(filename))

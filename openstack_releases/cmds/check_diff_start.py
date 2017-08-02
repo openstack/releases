@@ -26,13 +26,12 @@ import os.path
 import shutil
 import tempfile
 
-import yaml
-
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
+from openstack_releases import yamlutils
 
 urllib3.disable_warnings()
 
@@ -83,7 +82,7 @@ def main():
             print("File was deleted, skipping.")
             continue
         with open(filename, 'r') as f:
-            deliverable_info = yaml.load(f.read())
+            deliverable_info = yamlutils.loads(f.read())
 
         branch = 'stable/' + args.prev_series
 

@@ -22,7 +22,7 @@ import glob
 import os
 import os.path
 
-import yaml
+from openstack_releases import yamlutils
 
 
 def main():
@@ -39,8 +39,8 @@ def main():
         return 1
 
     for filename in filenames:
-        with open(filename, 'r') as f:
-            deliverable_info = yaml.load(f.read())
+        with open(filename, 'r', encoding='utf-8') as f:
+            deliverable_info = yamlutils.loads(f.read())
 
         deliverable_name = os.path.splitext(os.path.basename(filename))[0]
 

@@ -20,9 +20,9 @@ import glob
 import os
 
 import pbr.version
-import yaml
 
 from openstack_releases import governance
+from openstack_releases import yamlutils
 
 
 def _safe_semver(v):
@@ -122,8 +122,8 @@ class Deliverables(object):
         for filename in sorted(deliverable_files):
             series = self._series_from_filename(filename)
             deliverable = self._deliverable_from_filename(filename)
-            with open(filename, 'r') as f:
-                d_info = yaml.load(f.read())
+            with open(filename, 'r', encoding='utf-8') as f:
+                d_info = yamlutils.loads(f.read())
                 if self._collapse_history:
                     _collapse_deliverable_history(deliverable, d_info)
             team = d_info['team']

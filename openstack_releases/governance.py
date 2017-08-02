@@ -16,9 +16,9 @@
 import weakref
 
 from openstack_releases import wiki
+from openstack_releases import yamlutils
 
 import requests
-import yaml
 
 PROJECTS_LIST = "http://git.openstack.org/cgit/openstack/governance/plain/reference/projects.yaml"  # noqa
 
@@ -32,7 +32,7 @@ def get_team_data(url=PROJECTS_LIST):
 
     """
     r = requests.get(url)
-    return yaml.load(r.text)
+    return yamlutils.loads(r.text)
 
 
 def get_tags_for_deliverable(team_data, team, name):
