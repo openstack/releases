@@ -298,6 +298,13 @@ candidates are coming.
 9. The week before final release test the release process using the
    openstack/release-test repository.
 
+10. Notify the documentation team that it should be safe to apply
+    their process to create the new release series landing pages for
+    docs.openstack.org. Their process works better if they wait until
+    most of the projects have their stable branches created, but they
+    can do the work before the final release date to avoid having to
+    synchronize with the release team on that day.
+
 Final Release
 =============
 
@@ -320,24 +327,20 @@ Final Release
 3. Add documentation links on the series page on releases.o.o.
    See https://review.openstack.org/#/c/381005 for an example.
 
-4. Notify the documentation team that the final release has been
-   tagged so they can update the documentation landing page. (They
-   might wait to do that until the press release is published.)
-
-5. Mark series as released on releases.o.o, by updating doc/source/index.rst
+4. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-6. Update the default series name in
+5. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-7. Send release announcement email to
+6. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``. Coordinate the timing of the email with
    the press release from the Foundation staff.
 
-8. Declare ``openstack/releases`` unfrozen.
+7. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
@@ -372,10 +375,3 @@ cycle-trailing Final Release
 
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
-
-R+4 Branch Documentation Repos
-==============================
-
-1. The documentation team waits to branch their repositories until a
-   few weeks after the final release. Be available to help with
-   creating the branches if needed.
