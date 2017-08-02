@@ -354,10 +354,23 @@ def validate_releases(deliverable_info, zuul_layout,
                          }
                 )
             else:
+
+                # Ensure we have a local copy of the repository so we
+                # can scan for values that are more difficult to get
+                # remotely.
+                try:
+                    gitutils.clone_repo(workdir, project['repo'], project['hash'])
+                except Exception as err:
+                    mk_error('Could not clone repository %s at %s: %s' % (
+                        project['repo'], project['hash'], err))
+                    # No point in running extra checks if we can't
+                    # clone the repository.
+                    continue
+
                 # Report if the SHA exists or not (an error if it
                 # does not).
                 sha_exists = gitutils.commit_exists(
-                    project['repo'], project['hash'],
+                    workdir, project['repo'], project['hash'],
                 )
                 if not sha_exists:
                     mk_error('No commit %(hash)r in %(repo)r'
@@ -365,11 +378,6 @@ def validate_releases(deliverable_info, zuul_layout,
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
-
-                # Ensure we have a local copy of the repository so we
-                # can scan for values that are more difficult to get
-                # remotely.
-                gitutils.clone_repo(workdir, project['repo'], project['hash'])
 
                 version_exists = gitutils.tag_exists(
                     project['repo'], release['version'],
@@ -591,7 +599,8 @@ def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
                 branch['name'], _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliverable_info, series_name,
+def validate_stable_branches(deliverable_info, workdir,
+                             series_name,
                              mk_warning, mk_error):
     "Apply the rules for stable branches."
     if ('launchpad' in deliverable_info and
@@ -652,7 +661,7 @@ def validate_stable_branches(deliverable_info, series_name,
                          'like a SHA' % (
                              (loc, repo, branch['name'])))
                     )
-                if not gitutils.commit_exists(repo, loc):
+                if not gitutils.commit_exists(workdir, repo, loc):
                     mk_error(
                         ('stable branches should be created from merged '
                          'commits but location %s for branch %s of %s '
@@ -709,7 +718,7 @@ def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
                      'like a SHA' % (
                          (loc, repo, branch['name'])))
                 )
-            if not gitutils.commit_exists(repo, loc):
+            if not gitutils.commit_exists(workdir, repo, loc):
                 mk_error(
                     ('feature branches should be created from merged commits '
                      'but location %s for branch %s of %s does not exist' % (
@@ -757,7 +766,7 @@ def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_erro
                      'like a SHA' % (
                          (loc, repo, branch['name'])))
                 )
-            if not gitutils.commit_exists(repo, loc):
+            if not gitutils.commit_exists(workdir, repo, loc):
                 mk_error(
                     ('driverfixes branches should be created from merged commits '
                      'but location %s for branch %s of %s does not exist' % (
@@ -846,6 +855,10 @@ def main():
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)
         validate_model(deliverable_info, series_name, mk_warning, mk_error)
+        # NOTE(dhellmann): A side-effect of validate_releases() is
+        # that all of the repos mentioned in the deliverable file are
+        # cloned. No validation that needs the repo to be checked out
+        # locally should happen before validate_releases() is called.
         validate_releases(
             deliverable_info,
             zuul_layout,
@@ -883,6 +896,7 @@ def main():
         )
         validate_stable_branches(
             deliverable_info,
+            workdir,
             series_name,
             mk_warning,
             mk_error,

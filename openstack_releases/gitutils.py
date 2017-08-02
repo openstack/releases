@@ -40,16 +40,13 @@ def find_modified_deliverable_files():
     return filenames
 
 
-def commit_exists(repo, ref):
+def commit_exists(workdir, repo, ref):
     """Return boolean specifying whether the reference exists in the repository.
 
-    Uses a cgit query instead of looking locally to avoid cloning a
-    repository or having Depends-On settings in a commit message allow
-    someone to fool the check.
+    The commit must exist on a named branch.
 
     """
-    url = CGIT_SHA_TEMPLATE % (repo, ref)
-    return links.link_exists(url)
+    return bool(branches_containing(workdir, repo, ref))
 
 
 def tag_exists(repo, ref):

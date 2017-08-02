@@ -15,6 +15,7 @@
 from __future__ import unicode_literals
 
 import os
+import subprocess
 import textwrap
 
 import fixtures
@@ -22,6 +23,7 @@ import mock
 from oslotest import base
 
 from openstack_releases import defaults
+from openstack_releases import gitutils
 from openstack_releases.cmds import validate
 from openstack_releases import yamlutils
 
@@ -414,6 +416,7 @@ class TestValidateReleases(base.BaseTestCase):
     def setUp(self):
         super(TestValidateReleases, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     def test_check_release_jobs(self, check_jobs):
@@ -642,19 +645,54 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
     def test_not_descendent(self):
+        # INFO(dhellmann): Unfortunately this test only works using
+        # named branches, and the available set of branches changes
+        # over time as we mark some EOL. So, start by getting a list
+        # of branches and then pick some commits that are on different
+        # branches for the test.
+        known_branches = gitutils.get_branches(
+            self.tmpdir,
+            'openstack/automaton',
+        )
+        stable_branches = list(sorted(
+            b
+            for b in known_branches
+            if b.startswith('stable/')
+        ))
+        # Pick an early branch, find the most recent tagged release,
+        # get the version, then get the sha of that commit.
+        branch1 = stable_branches[0]
+        series = branch1.rpartition('/')[-1]
+        version1 = subprocess.check_output(
+            ['git', 'describe', '--abbrev=0', branch1],
+            cwd=self.tmpdir + '/openstack/automaton',
+        ).decode('utf-8').strip()
+        commit1 = gitutils.sha_for_tag(
+            self.tmpdir,
+            'openstack/automaton',
+            version1,
+        )
+        # Pick a later branch and take the most recent commit. Make up
+        # a later verison by adding to the other version string.
+        branch2 = stable_branches[1]
+        commit2 = gitutils.sha_for_tag(
+            self.tmpdir,
+            'openstack/automaton',
+            branch2,
+        )
+        version2 = version1 + '9'
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.4.0',
+                {'version': version1,
                  'projects': [
                      {'repo': 'openstack/automaton',
-                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                      'hash': commit1},
                  ]},
-                {'version': '1.4.999',
+                {'version': version2,
                  'projects': [
                      {'repo': 'openstack/automaton',
-                      # a commit on stable/mitaka instead of stable/newton
-                      'hash': 'e92b85ec64ac74598983a90bd2f3e1cf232ba9d5'},
+                      'hash': commit2},
                  ]},
             ],
         }
@@ -663,11 +701,12 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
-            'ocata',
+            series,
             self.tmpdir,
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(2, len(errors))
 
@@ -1141,6 +1180,11 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
 
 class TestValidateStableBranches(base.BaseTestCase):
 
+    def setUp(self):
+        super(TestValidateStableBranches, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
+
     def test_version_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
@@ -1157,6 +1201,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1180,6 +1225,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1203,6 +1249,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1226,6 +1273,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1250,6 +1298,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             '_independent',
             warnings.append,
             errors.append,
@@ -1275,6 +1324,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             '_independent',
             warnings.append,
             errors.append,
@@ -1299,6 +1349,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1323,6 +1374,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1347,6 +1399,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1372,6 +1425,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1397,6 +1451,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            self.tmpdir,
             'ocata',
             warnings.append,
             errors.append,
@@ -1410,6 +1465,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def setUp(self):
         super(TestValidateFeatureBranches, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
 
     def test_location_not_a_dict(self):
         deliverable_data = textwrap.dedent('''
@@ -1541,6 +1597,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
     def setUp(self):
         super(TestValidateDriverfixesBranches, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
 
     def test_unknown_series(self):
         deliverable_data = textwrap.dedent('''
