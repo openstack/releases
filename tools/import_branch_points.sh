@@ -16,9 +16,12 @@
 
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+[[ ! -d .tox/venv ]] && tox -e venv --notest
+source .tox/venv/bin/activate
+
 $TOOLSDIR/discover_branch_points.py $@ \
 | while read deliverable series version; do
     echo $deliverable $series $version
     fname=deliverables/$series/${deliverable}.yaml
-    sed -i '' -e "/^releases:/ ibranches:\n  - name: stable/${series}\n    location: $version" $fname
+    edit-deliverable $series $deliverable add-stable-branch $version
 done
