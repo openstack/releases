@@ -27,17 +27,7 @@ import yaml
 import openstack_releases
 from openstack_releases import gitutils
 from openstack_releases import governance
-
-PROJECT_TEMPLATE = '''\
-      - repo: {repo}
-        hash: {hash}'''
-
-VERSION_TEMPLATE = '''\
-  - version: {version}
-    {diff_start_comment}diff-start: {diff_start}
-    projects:
-{projects}
-'''
+from openstack_releases import yamlutils
 
 PRE_RELEASE = re.compile('(a|b|rc)')
 
@@ -155,7 +145,7 @@ def main():
     for filename in deliverable_files:
         verbose('\n{}'.format(filename))
         deliverable_name = os.path.basename(filename)[:-5]
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             deliverable_data = yaml.safe_load(f)
         releases = deliverable_data.get('releases')
         if not releases:
@@ -195,15 +185,5 @@ def main():
         print('new version for {}: {}'.format(os.path.basename(filename),
                                               new_version))
 
-        # NOTE(dhellmann): PyYAML doesn't preserve layout when you
-        # write the data back out, so do the formatting ourselves.
-        projects = '\n'.join(PROJECT_TEMPLATE.format(**p)
-                             for p in latest_release['projects'])
-        new_block = VERSION_TEMPLATE.format(
-            version=new_version,
-            diff_start=diff_start,
-            diff_start_comment=('# ' if diff_start is None else ''),
-            projects=projects,
-        ).rstrip() + '\n'
-        with open(filename, 'a') as f:
-            f.write(new_block)
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(yamlutils.dumps(deliverable_data))
