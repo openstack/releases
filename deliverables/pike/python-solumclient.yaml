@@ -2,7 +2,7 @@
 launchpad: python-solumclient
 release-model: cycle-with-intermediary
 team: solum
-type: other
+type: library
 releases:
   - version: 2.3.0
     projects:
@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 7880ffffa872f6e6a1d7629fc389e5eb15f45194
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-solumclient
+        hash: a3b49877366da2d424328c4d15e8eafdaef976c7
+branches:
+  - name: stable/pike
+    location: 2.5.0
