@@ -229,7 +229,7 @@ def main():
 
         for project in new_release['projects']:
 
-            tag_exists = gitutils.commit_exists(
+            tag_exists = gitutils.tag_exists(
                 project['repo'],
                 new_release['version'],
             )
@@ -366,9 +366,9 @@ def main():
             # regular commit instead of the appropriate merge commit.
             previous_tag_exists = False
             if previous_release:
-                previous_tag_exists = gitutils.commit_exists(
+                previous_tag_exists = gitutils.tag_exists(
                     project['repo'],
-                    previous_release,
+                    previous_release['version'],
                 )
             if previous_tag_exists:
                 git_log(
