@@ -34,3 +34,5 @@ queries:
     query: "is:open branch:{branch} project:{project} owner:proposal-bot"
   - title: Documentation patches
     query: "is:open branch:{branch} project:{project} path:^doc/source/.*"
+  - title: Patches with release notes
+    query: "is:open branch:{branch} project:{project} path:^releasenotes/.*"
