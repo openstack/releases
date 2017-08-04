@@ -1,0 +1,36 @@
+---
+# The template string shows how to format the info for each review.
+# A review contains:
+# {'_number': 490743,
+#  'mergeable': True,
+#  'subject': 'Updated from global requirements',
+#  'project': 'openstack/congress',
+#  'owner': {'_account_id': 11131},
+#  'branch': 'master',
+#  'insertions': 1,
+#  'created': '2017-08-04 04:31:47.000000000',
+#  'deletions': 1,
+#  'id': 'openstack%2Fcongress~master~I52e06d42a25e1780984fbf37fe9cd2c7e4bc8a9f',
+#  'hashtags': [],
+#  'topic': 'openstack/requirements',
+#  'status': 'NEW',
+#  'updated': '2017-08-04 11:12:50.000000000',
+#  'change_id': 'I52e06d42a25e1780984fbf37fe9cd2c7e4bc8a9f'}
+
+template: |
+  [{status}] {subject}
+      Updated: {updated}
+      Topic: {topic}
+      https://review.openstack.org/{_number}
+   
+
+# The query items need a title, to be displayed above the output, and
+# a query string. The query string can include {branch} and {project},
+# which will be replaced with the full branch name and the git
+# repository name respectively.
+
+queries:
+  - title: Open patches from the proposal bot
+    query: "is:open branch:{branch} project:{project} owner:proposal-bot"
+  - title: Documentation patches
+    query: "is:open branch:{branch} project:{project} path:^doc/source/.*"

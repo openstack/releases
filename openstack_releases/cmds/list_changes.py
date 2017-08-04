@@ -20,12 +20,15 @@ from __future__ import print_function
 import argparse
 import atexit
 import glob
+import json
 import os
 import os.path
 import shutil
 import subprocess
 import sys
 import tempfile
+
+import requests
 
 from openstack_releases import defaults
 from openstack_releases import gitutils
@@ -104,6 +107,41 @@ def git_diff(workdir, repo, git_range, file_pattern):
             print(' '.join(cmd) + '\n')
             subprocess.check_call(cmd, cwd=repo_dir)
             print()
+
+
+def gerrit_query(*query):
+    url = 'https://review.openstack.org/changes/?q=' + '+'.join(query)
+    response = requests.get(url)
+    if response.content[:4] == b")]}'":
+        content = response.content[5:].decode('utf-8')
+        return json.loads(content)
+    else:
+        print('could not parse response from %s' % url)
+        print(repr(content))
+        raise RuntimeError('failed to parse gerrit response')
+
+
+def list_gerrit_patches(title, template, query):
+    header('{}: "{}"'.format(title, query))
+    reviews = gerrit_query(query)
+    for r in reviews:
+        print(template.format(**r))
+    print('{} results\n'.format(len(reviews)))
+
+
+def show_watched_queries(branch, repo):
+    with open('watched_queries.yml', 'r', encoding='utf-8') as f:
+        watched_queries = yamlutils.loads(f.read())
+    template = watched_queries['template']
+    for q in watched_queries['queries']:
+        list_gerrit_patches(
+            q['title'],
+            q.get('template', template),
+            q['query'].format(
+                branch=branch,
+                project=repo,
+            ),
+        )
 
 
 def main():
@@ -341,6 +379,8 @@ def main():
                 git_log(workdir, project['repo'], 'Release will NOT include',
                         '%s..%s' % (requested_sha, head_sha),
                         extra_args=['--format=%h %ci %s'])
+
+            show_watched_queries(branch, project['repo'])
 
             # Show any requirements changes in the upcoming release.
             # Include setup.cfg, in case the project uses "extras".
