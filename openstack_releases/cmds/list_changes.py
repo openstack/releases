@@ -112,7 +112,12 @@ def git_diff(workdir, repo, git_range, file_pattern):
 def gerrit_query(*query):
     url = 'https://review.openstack.org/changes/?q=' + '+'.join(query)
     response = requests.get(url)
-    if response.content[:4] == b")]}'":
+    if (response.status_code // 100) != 2:
+        raise RuntimeError(
+            'Bad HTTP response from gerrit %s: %s' %
+            (url, response.status_code)
+        )
+    elif response.content[:4] == b")]}'":
         content = response.content[5:].decode('utf-8')
         return json.loads(content)
     else:
@@ -123,10 +128,14 @@ def gerrit_query(*query):
 
 def list_gerrit_patches(title, template, query):
     header('{}: "{}"'.format(title, query))
-    reviews = gerrit_query(query)
-    for r in reviews:
-        print(template.format(**r))
-    print('{} results\n'.format(len(reviews)))
+    try:
+        reviews = gerrit_query(query)
+    except Exception as err:
+        print(err)
+    else:
+        for r in reviews:
+            print(template.format(**r))
+        print('{} results\n'.format(len(reviews)))
 
 
 def show_watched_queries(branch, repo):
