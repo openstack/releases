@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 599b9b8491ab22ea238b271c518011f45ead26c2
+  - version: 0.22.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 49c915f498fc8d91c98fcf4e07ceecdcf167fc5a
 branches:
   - name: stable/pike
     location: 0.21.0
