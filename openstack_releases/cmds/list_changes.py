@@ -136,7 +136,11 @@ def list_gerrit_patches(title, template, query):
         for r in reviews:
             if 'topic' not in r:
                 r['topic'] = ''
-            print(template.format(**r))
+            try:
+                print(template.format(**r))
+            except Exception as err:
+                print('Could not format review data: {}'.format(err))
+                print(r)
         print('{} results\n'.format(len(reviews)))
 
 
