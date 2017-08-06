@@ -27,3 +27,9 @@ releases:
     highlights: >
       - Set --limit parameter by default for several commands to avoid high
         server load.
+  - version: 3.0.2
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 615b6dc207cbd913850a34eea39fa0e2d0bdb503
+    highlights: >
+      - Fix how "--limit" is passed to the server for action executions.
