@@ -1,4 +1,6 @@
 ---
+team: mistral
+type: library
 branches:
   - location: 3.1.1
     name: stable/pike
@@ -19,5 +21,9 @@ releases:
       - hash: 0f2837237b11b29bee45c8724c6c9ada5f3df79b
         repo: openstack/python-mistralclient
     version: 3.1.1
-team: mistral
-type: library
+  - version: 3.1.2
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: e328a0570f9c485622d71bbad3a887903b83aaac
+    highlights: >
+      - Fix how "--limit" is passed to the server for action executions.
