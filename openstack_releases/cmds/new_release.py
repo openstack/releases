@@ -31,6 +31,19 @@ def get_deliverable_data(series, deliverable):
         return yamlutils.loads(f.read())
 
 
+def increment_version(old_version, increment):
+    new_version_parts = []
+    clear = False
+    for cur, inc in zip(old_version, increment):
+        if clear:
+            new_version_parts.append('0')
+        else:
+            new_version_parts.append(str(int(cur) + inc))
+            if inc:
+                clear = True
+    return new_version_parts
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -51,7 +64,7 @@ def main():
     # FIXME(dhellmann): Add milestone and rc types.
     parser.add_argument(
         'release_type',
-        choices=('bugfix', 'feature', 'major', 'b3', 'rc'),
+        choices=('bugfix', 'feature', 'major', 'milestone', 'rc'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -113,10 +126,19 @@ def main():
             parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
     first_rc = False
-    if args.release_type == 'b3':
-        new_version_parts = last_version[:-1]
-        new_version_parts.append('0b3')
+    if args.release_type == 'milestone':
         force_tag = True
+        if deliverable_info['release-model'] != 'cycle-with-milestones':
+            raise ValueError('Cannot compute RC for {} project {}'.format(
+                deliverable_info['release-model'], args.deliverable))
+        if 'b' in last_version[-1]:
+            # Not the first milestone
+            new_version_parts = last_version[:-1]
+            next_milestone = int(last_version[-1][2:]) + 1
+            new_version_parts.append('0b{}'.format(next_milestone))
+        else:
+            new_version_parts = increment_version(last_version, (1, 0, 0))
+            new_version_parts.append('0b1')
     elif args.release_type == 'rc':
         force_tag = True
         if deliverable_info['release-model'] != 'cycle-with-milestones':
@@ -136,15 +158,7 @@ def main():
             'feature': (0, 1, 0),
             'major': (1, 0, 0),
         }[args.release_type]
-        new_version_parts = []
-        clear = False
-        for cur, inc in zip(last_version, increment):
-            if clear:
-                new_version_parts.append('0')
-            else:
-                new_version_parts.append(str(int(cur) + inc))
-                if inc:
-                    clear = True
+        new_version_parts = increment_version(last_version, increment)
     new_version = '.'.join(new_version_parts)
 
     print('going from %s to %s' % (last_version, new_version))
