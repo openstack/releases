@@ -32,6 +32,15 @@ def get_deliverable_data(series, deliverable):
 
 
 def increment_version(old_version, increment):
+    """Compute the new version based on the previous value.
+
+    :param old_version: Parts of the version string for the last
+                        release.
+    :type old_version: list(str)
+    :param increment: Which positions to increment.
+    :type increment: tuple(int)
+
+    """
     new_version_parts = []
     clear = False
     for cur, inc in zip(old_version, increment):
@@ -41,6 +50,38 @@ def increment_version(old_version, increment):
             new_version_parts.append(str(int(cur) + inc))
             if inc:
                 clear = True
+    return new_version_parts
+
+
+def increment_milestone_version(old_version, release_type):
+    """Increment a version using the rules for milestone projects.
+
+    :param old_version: Parts of the version string for the last
+                        release.
+    :type old_version: list(str)
+    :param release_type: Either ``'milestone'`` or ``'rc'``.
+    :type release_type: str
+
+    """
+    if release_type == 'milestone':
+        if 'b' in old_version[-1]:
+            # Not the first milestone
+            new_version_parts = old_version[:-1]
+            next_milestone = int(old_version[-1][2:]) + 1
+            new_version_parts.append('0b{}'.format(next_milestone))
+        else:
+            new_version_parts = increment_version(old_version, (1, 0, 0))
+            new_version_parts.append('0b1')
+    elif release_type == 'rc':
+        new_version_parts = old_version[:-1]
+        if 'b' in old_version[-1]:
+            # First RC
+            new_version_parts.append('0rc1')
+        else:
+            next_rc = int(old_version[-1][3:]) + 1
+            new_version_parts.append('0rc{}'.format(next_rc))
+    else:
+        raise ValueError('Unknown release type {!r}'.format(release_type))
     return new_version_parts
 
 
@@ -126,32 +167,18 @@ def main():
             parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
     first_rc = False
-    if args.release_type == 'milestone':
+    if args.release_type in ('milestone', 'rc'):
         force_tag = True
         if deliverable_info['release-model'] != 'cycle-with-milestones':
             raise ValueError('Cannot compute RC for {} project {}'.format(
                 deliverable_info['release-model'], args.deliverable))
-        if 'b' in last_version[-1]:
-            # Not the first milestone
-            new_version_parts = last_version[:-1]
-            next_milestone = int(last_version[-1][2:]) + 1
-            new_version_parts.append('0b{}'.format(next_milestone))
-        else:
-            new_version_parts = increment_version(last_version, (1, 0, 0))
-            new_version_parts.append('0b1')
-    elif args.release_type == 'rc':
-        force_tag = True
-        if deliverable_info['release-model'] != 'cycle-with-milestones':
-            raise ValueError('Cannot compute RC for {} project {}'.format(
-                deliverable_info['release-model'], args.deliverable))
-        new_version_parts = last_version[:-1]
-        if 'b' in last_version[-1]:
-            # First RC
-            new_version_parts.append('0rc1')
+        new_version_parts = increment_milestone_version(
+            last_version, args.release_type)
+        # We are going to take some special steps for the first
+        # release candidate, so figure out if that is what this
+        # release will be.
+        if args.release_type == 'rc' and new_version_parts[-1][3:] == '1':
             first_rc = True
-        else:
-            next_rc = int(last_version[-1][3:]) + 1
-            new_version_parts.append('0rc{}'.format(next_rc))
     else:
         increment = {
             'bugfix': (0, 0, 1),
