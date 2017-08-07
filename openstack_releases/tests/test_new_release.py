@@ -18,6 +18,8 @@ from oslotest import base
 
 from openstack_releases.cmds import new_release
 
+import fixtures
+
 
 class TestIncrementVersion(base.BaseTestCase):
 
@@ -112,4 +114,134 @@ class TestIncrementMilestoneVersion(base.BaseTestCase):
                 ['2', '0', '0', '0rc1'],
                 'rc',
             ),
+        )
+
+
+class TestGetLastRelease(base.BaseTestCase):
+
+    def test_existing_releases(self):
+        deliverable_info = {
+            'releases': [
+                {'version': '1.0.0'},
+            ],
+        }
+        self.assertEqual(
+            {'version': '1.0.0'},
+            new_release.get_last_release(
+                deliverable_info,
+                'anyseries',
+                'anydeliverable',
+                'bugfix',
+            )
+        )
+
+    def test_existing_releases2(self):
+        deliverable_info = {
+            'releases': [
+                {'version': '1.0.0'},
+                {'version': '1.0.1'},
+            ],
+        }
+        self.assertEqual(
+            {'version': '1.0.1'},
+            new_release.get_last_release(
+                deliverable_info,
+                'anyseries',
+                'anydeliverable',
+                'bugfix',
+            )
+        )
+
+    def test_first_bugfix_is_error(self):
+        deliverable_info = {
+            'releases': [],
+        }
+        self.assertRaises(
+            RuntimeError,
+            new_release.get_last_release,
+            deliverable_info,
+            'anyseries',
+            'anydeliverable',
+            'bugfix',
+        )
+
+
+class TestGetLastReleaseFirstInSeries(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestGetLastReleaseFirstInSeries, self).setUp()
+        # Avoid scanning the filesystem to find the release series.
+        listdir = self.useFixture(fixtures.MockPatch('os.listdir')).mock
+        listdir.return_value = [
+            'olderseries',
+            'anyseries',
+            'newerseries',
+        ]
+        # When we look for the previous series data, return a valid
+        # set of info.
+        gdd = self.useFixture(
+            fixtures.MockPatchObject(new_release, 'get_deliverable_data')
+        ).mock
+        gdd.return_value = {
+            'releases': [
+                {'version': '1.0.1'},
+            ],
+        }
+
+    def test_empty_release_list(self):
+        deliverable_info = {
+            'releases': [],
+        }
+        self.assertEqual(
+            {'version': '1.0.1'},
+            new_release.get_last_release(
+                deliverable_info,
+                'anyseries',
+                'anydeliverable',
+                'feature',
+            )
+        )
+
+    def test_first_in_series_keyerror(self):
+        deliverable_info = {
+        }
+        self.assertEqual(
+            {'version': '1.0.1'},
+            new_release.get_last_release(
+                deliverable_info,
+                'anyseries',
+                'anydeliverable',
+                'feature',
+            )
+        )
+
+
+class TestGetLastReleaseFirstEver(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestGetLastReleaseFirstEver, self).setUp()
+        # Avoid scanning the filesystem to find the release series.
+        listdir = self.useFixture(fixtures.MockPatch('os.listdir')).mock
+        listdir.return_value = [
+            'olderseries',
+            'anyseries',
+            'newerseries',
+        ]
+        # When we look for the previous series data, return no
+        # information.
+        gdd = self.useFixture(
+            fixtures.MockPatchObject(new_release, 'get_deliverable_data')
+        ).mock
+        gdd.side_effect = IOError('test error')
+
+    def test_no_previous_release(self):
+        deliverable_info = {
+        }
+        self.assertRaises(
+            RuntimeError,
+            new_release.get_last_release,
+            deliverable_info,
+            'anyseries',
+            'anydeliverable',
+            'bugfix',
         )

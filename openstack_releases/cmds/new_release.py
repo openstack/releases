@@ -85,6 +85,30 @@ def increment_milestone_version(old_version, release_type):
     return new_version_parts
 
 
+def get_last_release(deliverable_info, series, deliverable, release_type):
+    try:
+        last_release = deliverable_info['releases'][-1]
+    except (KeyError, IndexError):
+        print('No releases for %s in %s, yet.' % (
+            deliverable, series))
+        if release_type == 'bugfix':
+            raise RuntimeError(
+                'The first release for a series must '
+                'be at least a feature release to allow '
+                'for stable releases from the previous series.')
+        # Look for the version of the previous series.
+        all_series = sorted(os.listdir('deliverables'))
+        prev_series = all_series[all_series.index(series) - 1]
+        try:
+            prev_info = get_deliverable_data(
+                prev_series, deliverable)
+            last_release = prev_info['releases'][-1]
+        except (IOError, OSError, KeyError) as e:
+            raise RuntimeError(
+                'Could not determine previous version: %s' % (e,))
+    return last_release
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -144,28 +168,17 @@ def main():
     except (IOError, OSError) as e:
         parser.error(e)
 
-    # Determine the new version number.
     try:
-        last_release = deliverable_info['releases'][-1]
-    except KeyError:
-        print('No releases for %s in %s, yet.' % (
-            args.deliverable, series))
-        if args.release_type == 'bugfix':
-            parser.error(
-                'The first release for a series must '
-                'be at least a feature release to allow '
-                'for stable releases from the previous series.')
-        # Look for the version of the previous series.
-        all_series = sorted(os.listdir('deliverables'))
-        prev_series = all_series[all_series.index(series) - 1]
-        try:
-            prev_info = get_deliverable_data(
-                prev_series, args.deliverable)
-            last_release = prev_info['releases'][-1]
-            deliverable_info['releases'] = []
-        except (IOError, OSError, KeyError) as e:
-            parser.error('Could not determine previous version: %s' % (e,))
+        last_release = get_last_release(
+            deliverable_info,
+            series,
+            args.deliverable,
+            args.release_type,
+        )
+    except RuntimeError as err:
+        parser.error(err)
     last_version = last_release['version'].split('.')
+
     first_rc = False
     if args.release_type in ('milestone', 'rc'):
         force_tag = True
@@ -187,6 +200,9 @@ def main():
         }[args.release_type]
         new_version_parts = increment_version(last_version, increment)
     new_version = '.'.join(new_version_parts)
+
+    if 'releases' not in deliverable_info:
+        deliverable_info['releases'] = []
 
     print('going from %s to %s' % (last_version, new_version))
 
