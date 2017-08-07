@@ -34,6 +34,13 @@ def get_deliverable_data(series, deliverable):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        '--force',
+        default=False,
+        action='store_true',
+        help=('force a new tag, even if the HEAD of the '
+              'branch is already tagged'),
+    )
+    parser.add_argument(
         'series',
         help='the name of the release series to scan',
     )
@@ -55,6 +62,8 @@ def main():
         help='do not remove temporary files',
     )
     args = parser.parse_args()
+
+    force_tag = args.force
 
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
@@ -106,6 +115,7 @@ def main():
     if args.release_type == 'b3':
         new_version_parts = last_version[:-1]
         new_version_parts.append('0b3')
+        force_tag = True
     else:
         increment = {
             'bugfix': (0, 0, 1),
@@ -137,7 +147,7 @@ def main():
             version = 'master'
 
         sha = gitutils.sha_for_tag(workdir, project['repo'], version)
-        if project['hash'] != sha:
+        if project['hash'] != sha or force_tag:
             changes += 1
             print('advancing %s from %s to %s' % (project['repo'],
                                                   project['hash'],
@@ -146,6 +156,9 @@ def main():
                 'repo': project['repo'],
                 'hash': sha,
             })
+        else:
+            print('{} already tagged at most recent commit, skipping'.format(
+                project['repo']))
 
     deliverable_info['releases'].append({
         'version': new_version,
