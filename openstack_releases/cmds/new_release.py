@@ -112,13 +112,6 @@ def get_last_release(deliverable_info, series, deliverable, release_type):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--force',
-        default=False,
-        action='store_true',
-        help=('force a new tag, even if the HEAD of the '
-              'branch is already tagged'),
-    )
-    parser.add_argument(
         'series',
         help='the name of the release series to scan',
     )
@@ -138,6 +131,19 @@ def main():
         default=True,
         action='store_false',
         help='do not remove temporary files',
+    )
+    parser.add_argument(
+        '--force',
+        default=False,
+        action='store_true',
+        help=('force a new tag, even if the HEAD of the '
+              'branch is already tagged'),
+    )
+    parser.add_argument(
+        '--stable-branch',
+        default=False,
+        action='store_true',
+        help='create a new stable branch from the release',
     )
     args = parser.parse_args()
 
@@ -179,7 +185,7 @@ def main():
         parser.error(err)
     last_version = last_release['version'].split('.')
 
-    first_rc = False
+    add_stable_branch = args.stable_branch
     if args.release_type in ('milestone', 'rc'):
         force_tag = True
         if deliverable_info['release-model'] != 'cycle-with-milestones':
@@ -191,7 +197,7 @@ def main():
         # release candidate, so figure out if that is what this
         # release will be.
         if args.release_type == 'rc' and new_version_parts[-1][3:] == '1':
-            first_rc = True
+            add_stable_branch = True
     else:
         increment = {
             'bugfix': (0, 0, 1),
@@ -235,7 +241,7 @@ def main():
         'version': new_version,
         'projects': projects,
     })
-    if first_rc:
+    if add_stable_branch:
         deliverable_info.setdefault('branches', []).append({
             'name': 'stable/{}'.format(series),
             'location': new_version,
