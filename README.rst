@@ -55,7 +55,7 @@ the development team is aware of the coming change.
 Prepare the release request by submitting a patch to this
 repository.
 
- * Always add the new release to the end of the file being edited. The
+ * Always add the new release to the end of the list being edited. The
    version numbers will be reordered for display.
 
  * Always pick new version numbers for new releases. We do not update
@@ -123,6 +123,58 @@ repository.
 
  * RC1 tags and stable branches should be submitted together for
    projects using the cycle-with-milestone release model.
+
+Using new-release command
+=========================
+
+The releases repository contains several tools to make working with
+the data files easier. The new-release command, for example,
+calculates new version numbers based on the semantic versioning
+information given on the command line and determines the SHA of the
+HEAD of the appropriate branch.
+
+Use the ``venv`` tox environment to run the tool, like this:
+
+::
+
+   $ tox -e venv -- new-release SERIES DELIVERABLE TYPE
+
+The SERIES value should be the release series, such as "pike".
+
+The DELIVERABLE value should be the deliverable name, such as
+"oslo.config" or "cinder".
+
+The TYPE value should be one of:
+
+  bugfix -- For a release containing only bug fixes.
+
+  feature -- For a release with a new feature, a new dependency, or a
+             change to the minimum allowed version of a dependency.
+
+  major -- For a release with a backwards-incompatible change.
+
+  milestone -- For a date-based milestone tag.
+
+  rc -- For a release candidate.
+
+new-series automatically includes a stable branch for the first
+release candidate.
+
+If the most recent release of cinder during the pike series is
+11.0.0.0b3 then running:
+
+::
+
+   $ tox -e venv -- new-release pike cinder rc
+
+detects that this is the first release candidate and updates the file
+deliverables/pike/cinder.yaml with the new release and a new stable
+branch.
+
+If a deliverable includes multiple git repositories, all of the
+repositories are included in the new release unless their HEAD version
+matches the most recent release from that repository. To re-tag in
+those cases, use the --force option.
 
 Requesting a Branch
 ===================
