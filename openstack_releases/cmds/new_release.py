@@ -51,7 +51,7 @@ def main():
     # FIXME(dhellmann): Add milestone and rc types.
     parser.add_argument(
         'release_type',
-        choices=('bugfix', 'feature', 'major', 'b3'),
+        choices=('bugfix', 'feature', 'major', 'b3', 'rc'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -112,10 +112,24 @@ def main():
         except (IOError, OSError, KeyError) as e:
             parser.error('Could not determine previous version: %s' % (e,))
     last_version = last_release['version'].split('.')
+    first_rc = False
     if args.release_type == 'b3':
         new_version_parts = last_version[:-1]
         new_version_parts.append('0b3')
         force_tag = True
+    elif args.release_type == 'rc':
+        force_tag = True
+        if deliverable_info['release-model'] != 'cycle-with-milestones':
+            raise ValueError('Cannot compute RC for {} project {}'.format(
+                deliverable_info['release-model'], args.deliverable))
+        new_version_parts = last_version[:-1]
+        if 'b' in last_version[-1]:
+            # First RC
+            new_version_parts.append('0rc1')
+            first_rc = True
+        else:
+            next_rc = int(last_version[-1][3:]) + 1
+            new_version_parts.append('0rc{}'.format(next_rc))
     else:
         increment = {
             'bugfix': (0, 0, 1),
@@ -164,6 +178,11 @@ def main():
         'version': new_version,
         'projects': projects,
     })
+    if first_rc:
+        deliverable_info.setdefault('branches', []).append({
+            'name': 'stable/{}'.format(series),
+            'location': new_version,
+        })
 
     if changes > 0:
         deliverable_filename = 'deliverables/%s/%s.yaml' % (
