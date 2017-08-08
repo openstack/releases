@@ -12,3 +12,13 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: 491c96dfaa70fae9784815ceae28285cfa2efa17
+  - projects:
+      - hash: acc972d6563fb2b0a41cfa52f85088cbd9a23783
+        repo: openstack/congress-dashboard
+    version: 1.0.0.0rc1
+    highlights:
+      - First release of Congress Horizon-plugin separate from Congress.
+      - New monitoring panel that summarizes and visualizes policy violations.
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/pike
