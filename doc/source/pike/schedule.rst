@@ -38,7 +38,7 @@ for Pike <https://governance.openstack.org/tc/goals/pike/index.html>`__.
 Pike Project Team Gathering (PTG)
 ---------------------------------
 
-`Project team gathering <http://www.openstack.org/ptg>`__ for the Pike
+`Project team gathering <https://www.openstack.org/ptg>`__ for the Pike
 release 20-24 February 2017 in Atlanta, Georgia.
 
 .. _p-1:

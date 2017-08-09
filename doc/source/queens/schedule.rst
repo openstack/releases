@@ -38,7 +38,7 @@ for Queens <https://governance.openstack.org/tc/goals/queens/index.html>`__.
 Queens Project Team Gathering (PTG)
 -----------------------------------
 
-`Project team gathering <http://www.openstack.org/ptg>`__ for the Queens
+`Project team gathering <https://www.openstack.org/ptg>`__ for the Queens
 cycle 11-15 September 2018 in Denver, Colorado.
 
 .. _q-1:
