@@ -4,6 +4,9 @@ release-model: cycle-with-intermediary
 team: vitrage
 type: service
 release-notes: https://docs.openstack.org/releasenotes/vitrage/unreleased.html
+branches:
+  - location: 1.8.0
+    name: stable/pike
 releases:
   - version: 1.6.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 4be05a297c56766b41cf93f165715d99d9a48b3f
+  - version: 1.8.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 0431b626f6779b91cc8087e14892d3534c7a9211
