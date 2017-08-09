@@ -673,7 +673,7 @@ class TestValidateReleases(base.BaseTestCase):
             version1,
         )
         # Pick a later branch and take the most recent commit. Make up
-        # a later verison by adding to the other version string.
+        # a later version by adding to the other version string.
         branch2 = stable_branches[1]
         commit2 = gitutils.sha_for_tag(
             self.tmpdir,
