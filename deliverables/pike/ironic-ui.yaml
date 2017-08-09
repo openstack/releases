@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: d14604c293aa4cee2d2e1ab8e9c023ff4988404a
+  - version: 3.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 7d4f5688d6691e7b015bc6691c1d5df04fd43b48
+branches:
+  - name: stable/pike
+    location: 3.0.0
