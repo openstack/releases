@@ -4,3 +4,11 @@ launchpad: networking-hyperv
 release-model: cycle-with-intermediary
 team: winstackers
 type: other
+branches:
+  - name: stable/pike
+    location: 5.0.0
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 400c817c337d6571e47af77ae2f33961fb69e75c
