@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 3dbefbe9009c1a06d744a11abf32b266a2dbdb88
+  - projects:
+      - hash: 5f168778c6ff2bf7539fa3d5507593fd1c78d2c0
+        repo: openstack/monasca-persister
+    version: 1.7.0
+branches:
+  - location: 1.7.0
+    name: stable/pike

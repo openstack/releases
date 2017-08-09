@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: a7e8a14c2d046ee2829f501aea889b6ffb47360c
+  - projects:
+      - hash: bb27a66517a0d5c04c5575250b1d41689dd8c49c
+        repo: openstack/monasca-ui
+    version: 1.8.0
+branches:
+  - location: 1.8.0
+    name: stable/pike

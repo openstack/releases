@@ -13,3 +13,10 @@ releases:
     projects:
       - repo: openstack/monasca-ceilometer
         hash: ed662417980c108a569d1b489595c91e762e1930
+  - projects:
+      - hash: 513e17863e6ed094f432d5e5c7dbc5750c3ffdd4
+        repo: openstack/monasca-ceilometer
+    version: 1.5.0
+branches:
+  - location: 1.5.0
+    name: stable/pike

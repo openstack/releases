@@ -9,3 +9,10 @@ releases:
     projects:
       - repo: openstack/monasca-transform
         hash: f90a31a6aa6357f8c387fde46b175ac2ba6b987a
+  - projects:
+      - hash: 255dc84a274dd044a9c9b3668e835a962eaf5ff2
+        repo: openstack/monasca-transform
+    version: 0.11.0
+branches:
+  - location: 0.11.0
+    name: stable/pike

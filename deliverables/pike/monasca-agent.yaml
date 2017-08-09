@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 79d2b884e0eb1ea2f20195a06b665f0102f172b1
+  - projects:
+      - hash: b75320bfc2ea7dd9648be3f45f82c3663a917a74
+        repo: openstack/monasca-agent
+    version: 2.2.0
+branches:
+  - location: 2.2.0
+    name: stable/pike

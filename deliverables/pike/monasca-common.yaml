@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: 41800dd195efaf99119b44a6681ec36ea7bcde38
+  - projects:
+      - hash: f51c1eda907f17b453ca9b0bab0a6dbc1cc231a4
+        repo: openstack/monasca-common
+    version: 2.3.0
+branches:
+  - location: 2.3.0
+    name: stable/pike
