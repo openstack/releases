@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 1bf5c9752ce67a216cde73a1796ce9b4e022a465
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/horizon
+        hash: 671bc7aaa36364ae4c6672ef95ec3dfc9a65745e
+branches:
+  - location: 12.0.0.0rc1
+    name: stable/pike
