@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: d59e40f4609ecb18b24713bd94fa7d2e290b431c
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: 59c6ea6617f1199d26d6e00ef431c3e5e42a7089
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/pike
