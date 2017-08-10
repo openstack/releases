@@ -8,6 +8,8 @@ branches:
   - name: feature/osc4
     location:
       openstack/python-openstackclient: 6fdce1316563f79fa6adf6ffa6439018cc5b8e98
+  - name: stable/pike
+    location: 3.12.0
 releases:
   - version: 3.9.0
     projects:
