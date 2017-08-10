@@ -3,3 +3,11 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: other
+branches:
+  - name: stable/pike
+    location: 3.3.0
+releases:
+  - version: 3.3.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: 0430611c60cc21d8e93e0ac439cee39af8f13cae
