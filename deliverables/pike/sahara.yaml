@@ -3,6 +3,9 @@ launchpad: sahara
 release-model: cycle-with-milestones
 team: sahara
 type: service
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -32,5 +35,15 @@ releases:
         hash: 9a92bcd3b708cae3ffd1015e007371574ed8537f
       - repo: openstack/sahara-extra
         hash: 54ba24e1fa65ab9484532253d4bff5b18ab0feb2
+      - repo: openstack/sahara-image-elements
+        hash: d12f6167bbb0d7e0b46821545a85bb4444de0adc
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: 42cd8bb1bbbf8931e43e076eb7fa3a8ec1da30dd
+      - repo: openstack/sahara-dashboard
+        hash: ff72312993f8a9b8e52eceee9aef22e9e227a9d3
+      - repo: openstack/sahara-extra
+        hash: dd99413cd308883fe0283282515737cee1fce7ae
       - repo: openstack/sahara-image-elements
         hash: d12f6167bbb0d7e0b46821545a85bb4444de0adc
