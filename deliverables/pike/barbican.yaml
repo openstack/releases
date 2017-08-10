@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: fdfa516a67fd845ccaf78af2e13c1653f860f842
+  - projects:
+      - hash: e6c4f8cd7363f6662c30b276140fb2b8c9132326
+        repo: openstack/barbican
+    version: 5.0.0.0rc1
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
