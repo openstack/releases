@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/monasca-kibana-plugin
         hash: 954871e5a4c219f20812f35f0f5bc18ccba8f759
+  - projects:
+      - hash: 187d5ed61c2bf52e29160213c44ebfcc13b1d4cf
+        repo: openstack/monasca-kibana-plugin
+    version: 1.1.2
+branches:
+  - location: 1.1.2
+    name: stable/pike

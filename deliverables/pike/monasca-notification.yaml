@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 824d6ebe7f2a8cf877d5afd2b42f4b4869bba71b
+  - projects:
+      - hash: 20479d1c1d88153722d91b3d4d228647940b4665
+        repo: openstack/monasca-notification
+    version: 1.10.0
+branches:
+  - location: 1.10.0
+    name: stable/pike

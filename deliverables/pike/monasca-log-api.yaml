@@ -20,3 +20,10 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: 022147484eb7940b4df8e27c13cc4f13c56decef
+  - projects:
+      - hash: b96a3feff51ab2c9320c4b4e16b72b3ece922b0d
+        repo: openstack/monasca-log-api
+    version: 2.3.0
+branches:
+  - location: 2.3.0
+    name: stable/pike
