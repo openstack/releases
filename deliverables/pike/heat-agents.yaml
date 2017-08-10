@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: bd91db747d4597eb86e6b58483624f660e465bf5
+  - version: 1.4.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: 6e8e631d3458259ef0d8b87ddd7b558b0f1f6116
+branches:
+  - name: stable/pike
+    location: 1.4.0
