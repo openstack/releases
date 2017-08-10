@@ -16,3 +16,10 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: 2cca405b1d577a6efcfba0970b8c7f8939e418a7
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 80e2babb22f2d3158dec91be1a4d291e52b54598
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/pike
