@@ -3,8 +3,15 @@ launchpad: solum
 release-model: cycle-with-intermediary
 team: solum
 type: horizon-plugin
+branches:
+  - name: stable/pike
+    location: 2.2.0
 releases:
   - version: 2.1.0
     projects:
       - repo: openstack/solum-dashboard
         hash: 0f1c3a3ac8d92ac7a34f9c69fc6ff78ecbcd534b
+  - version: 2.2.0
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: ba9037d3310af3febd6fe256d376ac80123b4fa8
