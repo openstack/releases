@@ -3,6 +3,9 @@ launchpad: searchlight
 release-model: cycle-with-milestones
 team: searchlight
 type: service
+branches:
+  - name: stable/pike
+    location: 3.0.0.0rc1
 releases:
   - version: 3.0.0.0b1
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: f949d41106aaa31c7d6c23ff1a31176a195c8ae8
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight
+        hash: a1953b7f143f3bad0928b94c1370e292de93e601

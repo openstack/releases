@@ -4,6 +4,9 @@ release-model: cycle-with-milestones
 team: searchlight
 type: horizon-plugin
 release-notes: https://docs.openstack.org/releasenotes/searchlight-ui/unreleased.html
+branches:
+  - name: stable/pike
+    location: 3.0.0.0rc1
 releases:
   - version: 3.0.0.0b1
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: 19c2d4d4ef46767ba0c9d84b8bafdde55bbe90ae
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: d52e632bf73e4e781599cf10f8ea136c90a35726
