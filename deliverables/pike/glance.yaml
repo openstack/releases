@@ -6,6 +6,9 @@ release-model: cycle-with-milestones
 team: glance
 type: service
 release-notes: https://docs.openstack.org/releasenotes/glance/unreleased.html
+branches:
+  - name: stable/pike
+    location: 15.0.0.0rc1
 releases:
   - version: 15.0.0.0b1
     projects:
@@ -19,3 +22,7 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 601ab69336cc85068d11718c424974abdd8beee9
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 2b54a8053497f2b48c74abd6128e52462178dc34
