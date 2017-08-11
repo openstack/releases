@@ -3,6 +3,9 @@ launchpad: trove
 release-model: cycle-with-milestones
 team: trove
 type: service
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 8.0.0.0b1
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/trove
         hash: fa171bd3e92d7d7b9032fc035f554dcb4621ce94
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 0fb67d459baa0fb22391b1b1da3dba5349666bb7
