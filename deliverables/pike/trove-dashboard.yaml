@@ -3,6 +3,9 @@ launchpad: trove
 release-model: cycle-with-milestones
 team: trove
 type: horizon-plugin
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 9.0.0.0b1
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 1173790b2c45ebf47c435be8b0c2382645434fc8
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 387c3358555ee539f7abbbf4875497497e12c265
