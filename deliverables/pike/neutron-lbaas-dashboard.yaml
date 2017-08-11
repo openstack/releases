@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: neutron-lbaas-dashboard
 release-model: cycle-with-milestones
 team: octavia
@@ -27,3 +27,10 @@ releases:
       * Bug fixes
       * Additional translation updates
       * Adds member status properties
+  - projects:
+      - hash: af2e607338fb904f562b3c7ef3d2643d2f7526ba
+        repo: openstack/neutron-lbaas-dashboard
+    version: 3.0.0.0rc1
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/pike
