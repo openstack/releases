@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 3f306b3f4dd2d5a13b42a6cef165278118d4903c
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 07c9e898211274defc9c139fd54c2f8313635141
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/pike
