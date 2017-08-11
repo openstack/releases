@@ -653,6 +653,16 @@ def validate_stable_branches(deliverable_info, workdir,
                 # The other rules aren't going to be testable, so skip them.
                 continue
             for repo, loc in sorted(location.items()):
+                if not is_a_hash(loc):
+                    mk_error(
+                        ('tagless stable branches should be created '
+                         'from commits by SHA but location %s for '
+                         'branch %s of %s does not look '
+                         'like a SHA' % (
+                             (loc, repo, branch['name'])))
+                    )
+                    # We can't clone the location if it isn't a SHA.
+                    continue
                 # Ensure we have a local copy of the repository so we
                 # can scan for values that are more difficult to get
                 # remotely.
@@ -664,14 +674,6 @@ def validate_stable_branches(deliverable_info, workdir,
                     # No point in running extra checks if we can't
                     # clone the repository.
                     continue
-                if not is_a_hash(loc):
-                    mk_error(
-                        ('tagless stable branches should be created '
-                         'from commits by SHA but location %s for '
-                         'branch %s of %s does not look '
-                         'like a SHA' % (
-                             (loc, repo, branch['name'])))
-                    )
                 if not gitutils.commit_exists(workdir, repo, loc):
                     mk_error(
                         ('stable branches should be created from merged '
