@@ -16,3 +16,16 @@ releases:
     projects:
       - repo: openstack/congress
         hash: afd02fb985b6d10fcdbe8ddcd32e7f14d8d012aa
+  - projects:
+      - hash: 4a9566adf6c1bb19981aee6973f5f677be5a9d7b
+        repo: openstack/congress
+    version: 6.0.0.0rc1
+    highlights:
+      - New library of useful, importable policies greatly reduces
+        barrier to use.
+      - Congress Horizon-plugin separated into congress-dashboard project,
+        with improved usability and helpful new features such as a
+        policy monitoring panel.
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/pike
