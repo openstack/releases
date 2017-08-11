@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 35cee1f52e3760d4265d8a7e9b1fe41620c2603b
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: a5338d3af5b36973f218670438356ac8287dda6d
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
