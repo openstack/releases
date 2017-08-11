@@ -4,6 +4,9 @@ release-model: cycle-with-intermediary
 team: watcher
 type: service
 release-notes: https://docs.openstack.org/releasenotes/watcher/unreleased.html
+branches:
+  - name: stable/pike
+    location: 1.4.0
 releases:
   - version: 1.1.0
     projects:
@@ -19,4 +22,9 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 5817f6833c569c7ff4d158314a47c29fddb3f110
+        tarball-base: python-watcher
+  - version: 1.4.0
+    projects:
+      - repo: openstack/watcher
+        hash: eaa09a4cfca3a1d4b5d15d1bc2c2955f8d46b403
         tarball-base: python-watcher
