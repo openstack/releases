@@ -5,6 +5,10 @@ type: other
 include-pypi-link: yes
 release-model: cycle-with-intermediary
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/requirements: b93ebaf5c5295ff29d01e374f3720bc8ea3175f6
+    name: stable/pike
 releases:
   - version: 1.1.0
     projects:
