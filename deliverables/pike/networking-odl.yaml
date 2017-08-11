@@ -4,7 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/networking-odl/unreleased.html
 type: other
 release-model: cycle-with-milestones
-include-pypi-link: true
+include-pypi-link: yes
 releases:
   - version: 11.0.0.0b1
     projects:
@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: bdbf785005b3f127b0090663af3b0d36bbc35367
+  - projects:
+      - hash: 2e78dcafa2adcdc61bdd9c9a9ca1e493dfe67b45
+        repo: openstack/networking-odl
+    version: 11.0.0.0rc1
+branches:
+  - location: 11.0.0.0rc1
+    name: stable/pike

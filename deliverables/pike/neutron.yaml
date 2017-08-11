@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: acdad9ae9dc6dd807fdc300150433d9c424f4ef9
+  - projects:
+      - hash: d225b86738a9db56bc643dfe637b1f21393ad27e
+        repo: openstack/neutron
+    version: 11.0.0.0rc1
+branches:
+  - location: 11.0.0.0rc1
+    name: stable/pike

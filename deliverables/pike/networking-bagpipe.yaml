@@ -4,7 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/unreleased.html
 type: other
 release-model: cycle-with-milestones
-include-pypi-link: true
+include-pypi-link: yes
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: bff36c3ad871a3b10c8084c51c09067f2dcbbc10
+  - projects:
+      - hash: cf335ab3ca32bad46aa8f2c92f7b8ec313fd94c2
+        repo: openstack/networking-bagpipe
+    version: 7.0.0.0rc1
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/pike

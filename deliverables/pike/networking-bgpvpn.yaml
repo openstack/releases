@@ -4,7 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/unreleased.html
 type: other
 release-model: cycle-with-milestones
-include-pypi-link: true
+include-pypi-link: yes
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: e28ec7f01ee62c6a31dd0272d86675750363c8d8
+  - projects:
+      - hash: de1c30d426cb59323fecccf0fc5ea08a5bf5409d
+        repo: openstack/networking-bgpvpn
+    version: 7.0.0.0rc1
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/pike

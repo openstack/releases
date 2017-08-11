@@ -4,7 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/networking-midonet/unreleased.html
 type: other
 release-model: cycle-with-milestones
-include-pypi-link: true
+include-pypi-link: yes
 releases:
   - version: 5.0.0.0b1
     projects:
@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: a2174ba3bdf4fef76e4a9042040903f5f3056f58
+  - projects:
+      - hash: d3743f372995eb7b5d103d9206593612fb433490
+        repo: openstack/networking-midonet
+    version: 5.0.0.0rc1
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike

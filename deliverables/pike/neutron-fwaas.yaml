@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: c7256bea099015808a36ff6ed9d2ed1ebaf8f5ed
+  - projects:
+      - hash: a6b0f95241cf313527a57a50bb4d15755a2dc396
+        repo: openstack/neutron-fwaas
+    version: 11.0.0.0rc1
+branches:
+  - location: 11.0.0.0rc1
+    name: stable/pike
