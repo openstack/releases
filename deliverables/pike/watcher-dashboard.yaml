@@ -3,6 +3,9 @@ launchpad: watcher-dashboard
 release-model: cycle-with-intermediary
 team: watcher
 type: horizon-plugin
+branches:
+  - name: stable/pike
+    location: 1.4.0
 releases:
   - version: 1.1.0
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 7015a03eb1a8c66f111925fbb1dc990b64843d11
+  - version: 1.4.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 2e7f77ad48e9f231adaa11696af23962219c014e
