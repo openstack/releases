@@ -653,6 +653,17 @@ def validate_stable_branches(deliverable_info, workdir,
                 # The other rules aren't going to be testable, so skip them.
                 continue
             for repo, loc in sorted(location.items()):
+                # Ensure we have a local copy of the repository so we
+                # can scan for values that are more difficult to get
+                # remotely.
+                try:
+                    gitutils.clone_repo(workdir, repo, loc)
+                except Exception as err:
+                    mk_error('Could not clone repository %s at %s: %s' % (
+                        repo, loc, err))
+                    # No point in running extra checks if we can't
+                    # clone the repository.
+                    continue
                 if not is_a_hash(loc):
                     mk_error(
                         ('tagless stable branches should be created '
