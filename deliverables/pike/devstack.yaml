@@ -4,3 +4,7 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack-dev/devstack: 98ab7d9646730f02983380648831aa2682abcc0c
+    name: stable/pike
