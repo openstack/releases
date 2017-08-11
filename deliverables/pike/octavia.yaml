@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: octavia
 release-model: cycle-with-milestones
 team: octavia
@@ -35,3 +35,10 @@ releases:
       * Finished API reference for Octavia v2 API
       * Added uWSGI support for devstack
       * Improved the performance of the Octavia v2 API
+  - projects:
+      - hash: e0f996dad77f0f6ca8e78b6aad4659dcdc151778
+        repo: openstack/octavia
+    version: 1.0.0.0rc1
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/pike
