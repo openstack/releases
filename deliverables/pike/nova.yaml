@@ -4,6 +4,9 @@ release-model: cycle-with-milestones
 release-notes: https://docs.openstack.org/releasenotes/nova/unreleased.html
 team: nova
 type: service
+branches:
+  - location: 16.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 16.0.0.0b1
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 23c4eb34380bdf3eece11abbe0f6ccb68c060f47
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 4cd6a3a1b473795a63f076c7986d1b48d83af99d
