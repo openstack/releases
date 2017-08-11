@@ -240,14 +240,11 @@ RC1
    stable branches and these tools. For example, see
    https://review.openstack.org/375110.
 
-8. Add the new release series to the stable-compat jobs used by the Oslo
-   libraries. For example, see https://review.openstack.org/375111.
-
-9. Create periodic bitrot jobs for the new branch in Jenkins Job
+8. Create periodic bitrot jobs for the new branch in Jenkins Job
    Builder and add them to Zuul's periodic pipeline. For example, see
    https://review.openstack.org/#/c/375092.
 
-10. Add periodic bitrot jobs to tempest. For example, see
+9. Add periodic bitrot jobs to tempest. For example, see
    https://review.openstack.org/#/c/375271.
 
 Between RC1 and Final
