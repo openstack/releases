@@ -429,9 +429,9 @@ def main():
                 git_log(
                     workdir, project['repo'],
                     'Patches in previous release but not in this one',
-                    [project['hash'],
+                    [previous_release['version'],
                      '--not',
-                     previous_release['version']],
+                     project['hash']],
                     extra_args=['--topo-order', '--oneline', '--no-merges'],
                 )
                 header('New release %s includes previous release %s' %
