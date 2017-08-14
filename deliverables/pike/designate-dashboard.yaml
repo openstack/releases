@@ -12,3 +12,11 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 19b1f1c42177b067a3ec598947c0e8f263d11b88
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 8169c4b876e05f0675a1d942b17d7d83b9f9e7d2
+
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
