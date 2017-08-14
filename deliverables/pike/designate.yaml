@@ -14,3 +14,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: accd70a656ef229a085850d358d8a4025cc3ccd2
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: edc0684ace513d2ae73f06941e0898d1e963f298
+
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
