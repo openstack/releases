@@ -3,6 +3,9 @@ launchpad: heat
 release-model: cycle-with-milestones
 team: heat
 type: service
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 9.0.0.0b1
     projects:
@@ -16,3 +19,7 @@ releases:
     projects:
       - repo: openstack/heat
         hash: cc4fdcef058370c3b779f38e8a2f4f0792f5b2de
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: 72be93556d091abc4912bf62817a27044e3cf4f1
