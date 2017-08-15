@@ -3,3 +3,12 @@ launchpad: bifrost
 release-model: cycle-with-intermediary
 team: ironic
 type: other
+release-notes: https://docs.openstack.org/releasenotes/bifrost/unreleased.html
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 944bcf0ba50fc7d9bc59f1a3a863481dfd6c89c9
+branches:
+  - name: stable/pike
+    location: 4.0.0
