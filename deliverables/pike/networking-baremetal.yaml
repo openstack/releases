@@ -1,0 +1,14 @@
+---
+launchpad: networking-baremetal
+team: ironic
+type: other
+release-model: cycle-with-intermediary
+include-pypi-link: yes
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 9208c7ccca9fad185c7ab95dfba7caff8a9e14e8
+branches:
+  - location: 0.1.0
+    name: stable/pike
