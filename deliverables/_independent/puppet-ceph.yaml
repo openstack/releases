@@ -1,9 +1,17 @@
 ---
 launchpad: puppet-ceph
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
+stable-branch-type: upstream
+branches:
+  - name: stable/jewel
+    location: 2.4.0
 releases:
   - version: 2.3.0
     projects:
       - repo: openstack/puppet-ceph
         hash: 55ae425b190787ef9871c8903941af738b50913b
+  - projects:
+      - hash: 3cc04b6900d36b83d67b95a5190a77c14c2d3a02
+        repo: openstack/puppet-ceph
+    version: 2.4.0
