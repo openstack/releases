@@ -3,8 +3,15 @@ launchpad: zun
 release-model: cycle-with-intermediary
 team: zun
 type: service
+branches:
+  - location: 0.2.0
+    name: stable/pike
 releases:
   - version: 0.1.0
     projects:
       - repo: openstack/zun
         hash: 1f76d65b77021841733f38d6efefee8664a23762
+  - version: 0.2.0
+    projects:
+      - repo: openstack/zun
+        hash: ebfea16c70ef767310c9cf4d9f41ca4ebd814533
