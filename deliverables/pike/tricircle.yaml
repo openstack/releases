@@ -22,3 +22,11 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: ac1b390fb2cf54acd04ce2e7dffba39c8a439a27
+  - version: 4.0.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 9939540c070423906ebd8aba0070713b845f868c
+
+branches:
+  - location: 4.0.0
+    name: stable/pike
