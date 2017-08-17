@@ -1,6 +1,9 @@
 ---
 launchpad: os-apply-config
 release-model: cycle-with-intermediary
+branches:
+  - location: 7.1.0
+    name: stable/pike
 releases:
   - projects:
       - hash: dcc453a946a98532e5f0b68ebcc52f96a56fb7cb
@@ -10,5 +13,9 @@ releases:
       - hash: 89b0ba7bc424e1e10fdf1d269f819a4e612f9358
         repo: openstack/os-apply-config
     version: 7.0.0
+  - projects:
+      - hash: c2e15c8424de6ee260bc7266f813030d62246945
+        repo: openstack/os-apply-config
+    version: 7.1.0
 team: tripleo
 type: other

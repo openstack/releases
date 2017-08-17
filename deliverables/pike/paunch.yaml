@@ -3,6 +3,9 @@ launchpad: paunch
 release-model: cycle-with-intermediary
 team: tripleo
 type: other
+branches:
+  - location: 1.5.0
+    name: stable/pike
 releases:
   - version: 1.0.0
     projects:

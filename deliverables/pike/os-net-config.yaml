@@ -1,6 +1,9 @@
 ---
 launchpad: os-net-config
 release-model: cycle-with-intermediary
+branches:
+  - location: 7.2.0
+    name: stable/pike
 releases:
   - projects:
       - hash: d12f1615cc006a09a232ecd7e3b75000a1af6d21
@@ -14,5 +17,9 @@ releases:
       - hash: 9ef9a7a92dc7af2a7d54affd68aaa37539296dd4
         repo: openstack/os-net-config
     version: 7.1.0
+  - projects:
+      - hash: 69fca4aa70b12d8eed2428c27deb62c46d605770
+        repo: openstack/os-net-config
+    version: 7.2.0
 team: tripleo
 type: other

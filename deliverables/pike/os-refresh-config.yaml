@@ -1,6 +1,9 @@
 ---
 launchpad: os-refresh-config
 release-model: cycle-with-intermediary
+branches:
+  - location: 7.0.0
+    name: stable/pike
 releases:
   - projects:
       - hash: 519606f749bb7787c040992f7c2b1baa8059ea6a

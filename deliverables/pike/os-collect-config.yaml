@@ -1,6 +1,9 @@
 ---
 launchpad: os-collect-config
 release-model: cycle-with-intermediary
+branches:
+  - location: 7.1.0
+    name: stable/pike
 releases:
   - projects:
       - hash: 0762fcb0b5872f4fbbf6ce8e5086140c65edf185
