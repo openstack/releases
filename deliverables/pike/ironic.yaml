@@ -4,8 +4,15 @@ release-model: cycle-with-intermediary
 team: ironic
 type: service
 release-notes: https://docs.openstack.org/releasenotes/ironic/unreleased.html
+branches:
+  - location: 9.0.0
+    name: stable/pike
 releases:
   - version: 8.0.0
     projects:
       - repo: openstack/ironic
         hash: d78b971654c016bec8938f61234a82c56b0c382e
+  - version: 9.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 9d914c85939bcbdd64c28ba9899b730c01d74df1
