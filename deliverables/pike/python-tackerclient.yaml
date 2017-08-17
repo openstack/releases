@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-tackerclient
 release-model: cycle-with-intermediary
 team: tacker
@@ -12,3 +12,4 @@ releases:
 branches:
   - name: stable/pike
     location: 0.10.0
+release-notes: https://docs.openstack.org/releasenotes/python-tackerclient/pike.html

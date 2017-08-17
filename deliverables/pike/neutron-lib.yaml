@@ -1,9 +1,9 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: neutron
 release-model: cycle-with-intermediary
 team: neutron
-release-notes: https://docs.openstack.org/releasenotes/neutron-lib/unreleased.html
+release-notes: https://docs.openstack.org/releasenotes/neutron-lib/pike.html
 type: library
 releases:
   - version: 1.2.0
@@ -11,88 +11,88 @@ releases:
       - repo: openstack/neutron-lib
         hash: fc38a3fe8e6fa7c75572180554a02b43a72f9af9
     highlights: |
-        * Move BGPVPN API definition into neutron-lib
-        * Add is_extension_supported to neutron_lib
-        * rehome l3 api-def exceptions
-        * Remove support for py33, py34
-        * Update api-ref for enhanced tag mechanism
-        * Add FIP64 extension from networking-midonet
-        * Add router-interface-fip extension from networking-midonet
-        * Migrate logging-resource extension from networking-midonet
-        * API reference improvements
+      * Move BGPVPN API definition into neutron-lib
+      * Add is_extension_supported to neutron_lib
+      * rehome l3 api-def exceptions
+      * Remove support for py33, py34
+      * Update api-ref for enhanced tag mechanism
+      * Add FIP64 extension from networking-midonet
+      * Add router-interface-fip extension from networking-midonet
+      * Migrate logging-resource extension from networking-midonet
+      * API reference improvements
   - version: 1.3.0
     projects:
       - repo: openstack/neutron-lib
         hash: cd5b4765b4f91dbbc98c40fe0b47572161312dd2
     highlights: |
-        * Synced neutron callbacks into lib
-        * Multiple API-ref changes: cleaned quotas, added QoS rule types list, corrected QoS policies
-        * Added networking-bgpvpn API reference
-        * Tweaked trunk extension to support Ironic use case
-        * Added a note about the current status of FWaaS v1
+      * Synced neutron callbacks into lib
+      * Multiple API-ref changes: cleaned quotas, added QoS rule types list, corrected QoS policies
+      * Added networking-bgpvpn API reference
+      * Tweaked trunk extension to support Ironic use case
+      * Added a note about the current status of FWaaS v1
   - version: 1.4.0
     projects:
       - repo: openstack/neutron-lib
         hash: 998899622e2c38948bb846bc834d49d3f3ea4542
     highlights: |
-        * Rehomed Plugin common constants
-        * Rehomed NeutronWorker class
-        * Downgraded callback abortable event log to debug
-        * Added flush_on_subtransaction=True to engine config
+      * Rehomed Plugin common constants
+      * Rehomed NeutronWorker class
+      * Downgraded callback abortable event log to debug
+      * Added flush_on_subtransaction=True to engine config
   - version: 1.5.0
     projects:
       - repo: openstack/neutron-lib
         hash: a73142e977b0f5c7afc8d1ab8e4bfce66c8db75c
     highlights: |
-        * Rehomed extra_dhcp_opt api-def.
-        * Rehomed core resource api-defs.
-        * Rehomed ``is_port_trusted`` util function.
-        * hacking: enforce log messages not being translated.
-        * fwaas: added new protocols (DCCP, SCTP).
-        * fwaas: migrated from ``public`` attribute to ``shared``.
+      * Rehomed extra_dhcp_opt api-def.
+      * Rehomed core resource api-defs.
+      * Rehomed ``is_port_trusted`` util function.
+      * hacking: enforce log messages not being translated.
+      * fwaas: added new protocols (DCCP, SCTP).
+      * fwaas: migrated from ``public`` attribute to ``shared``.
   - version: 1.6.0
     projects:
       - repo: openstack/neutron-lib
         hash: 449f079b338b817ea51b8cb44ed6d9106fed1bbc
     highlights: |
-        * Rehomed v2 API attributes.
+      * Rehomed v2 API attributes.
   - version: 1.7.0
     projects:
       - repo: openstack/neutron-lib
         hash: 0ee4f4a391bcb85583ba7a9c2035660abdab4154
     highlights: |
-        * Some constants have been introduced.
+      * Some constants have been introduced.
   - version: 1.8.0
     projects:
       - repo: openstack/neutron-lib
         hash: 4e100d90c4e48b3a628c64d97278691809877424
     highlights: |
-        * Some plugin constants have been introduced
-        * The ML2 ``driver_api`` is now available
-        * OVO exceptions are now available for use
-        * The deprecated N523 hacking check has been removed.
-        * The ``dns-integration`` extension is now in neutron-lib
-        * QoS ``DriverBase`` class is now available
+      * Some plugin constants have been introduced
+      * The ML2 ``driver_api`` is now available
+      * OVO exceptions are now available for use
+      * The deprecated N523 hacking check has been removed.
+      * The ``dns-integration`` extension is now in neutron-lib
+      * QoS ``DriverBase`` class is now available
   - version: 1.9.0
     projects:
       - repo: openstack/neutron-lib
         hash: 7581af448a7aa070657acaaee60b478bf0b4dd56
     highlights: |
-        * added VIF_TYPE_OVS_ACCELERATION for SR-IOV Open vSwitch acceleration
-        * added logging API extension definition
-        * added net-mtu API extension definition
-        * added agent API extension definition
-        * added transaction constraints to neutron_lib.Context
-        * added fwaas exceptions
-        * added auto-allocated-topology API extension definition
-        * added address-scope API extension definition
+      * added VIF_TYPE_OVS_ACCELERATION for SR-IOV Open vSwitch acceleration
+      * added logging API extension definition
+      * added net-mtu API extension definition
+      * added agent API extension definition
+      * added transaction constraints to neutron_lib.Context
+      * added fwaas exceptions
+      * added auto-allocated-topology API extension definition
+      * added address-scope API extension definition
   - version: 1.9.1
     projects:
       - repo: openstack/neutron-lib
         hash: 0ef54c347535d9329aba1e56a11a268021c79a86
     highlights: |
-        * removed unneeded VIF_TYPE_OVS_ACCELERATION
-        * added API fault map
+      * removed unneeded VIF_TYPE_OVS_ACCELERATION
+      * added API fault map
 branches:
   - name: stable/pike
     location: 1.9.1

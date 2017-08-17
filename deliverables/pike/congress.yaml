@@ -21,11 +21,10 @@ releases:
         repo: openstack/congress
     version: 6.0.0.0rc1
     highlights:
-      - New library of useful, importable policies greatly reduces
-        barrier to use.
-      - Congress Horizon-plugin separated into congress-dashboard project,
-        with improved usability and helpful new features such as a
-        policy monitoring panel.
+      - 'New library of useful, importable policies greatly reduces barrier to use.'
+      - 'Congress Horizon-plugin separated into congress-dashboard project, with improved
+        usability and helpful new features such as a policy monitoring panel.'
 branches:
   - location: 6.0.0.0rc1
     name: stable/pike
+release-notes: https://docs.openstack.org/releasenotes/congress/pike.html

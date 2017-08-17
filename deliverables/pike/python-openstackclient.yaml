@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
@@ -27,3 +27,4 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: f67ebce530d13c8da4ad32556d93095ab0ff0392
+release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/pike.html
