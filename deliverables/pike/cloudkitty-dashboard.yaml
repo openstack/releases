@@ -4,3 +4,14 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
 type: horizon-plugin
+branches:
+  - name: stable/pike
+    location: 6.0.0
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: ccb1c3831b9a66c98b2577d65ac0990b8e7551eb
+    highlights: >
+      - Update the requirements
+      - Fix issues created by django 1.8 dependencies
