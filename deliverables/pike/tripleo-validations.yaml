@@ -1,6 +1,9 @@
 ---
 launchpad: tripleo
 release-model: cycle-with-intermediary
+branches:
+  - name: stable/pike
+    location: 7.3.0
 releases:
   - projects:
       - hash: 65a52d662abc5cab1fbd2ce6248421a22c2b6d76
@@ -14,5 +17,9 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 7c28e26de45453454aad5b3d9eeb101f1e2608f8
+  - version: 7.3.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: ddc025d4720e9d4fe276b6a82a91c08e4d3e5e46
 team: tripleo
 type: other

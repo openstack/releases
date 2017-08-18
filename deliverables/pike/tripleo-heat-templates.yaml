@@ -1,6 +1,9 @@
 ---
 launchpad: tripleo
 release-model: cycle-trailing
+branches:
+  - name: stable/pike
+    location: 7.0.0.0rc1
 releases:
   - projects:
       - hash: e6d1aaac5745f2b32d30f3e41ba8c0a50f5b51d7
@@ -14,5 +17,9 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 4a441359fba69b754cbae1fb13c82fb7472f29b6
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 98f578b7789cb4edef1090574ab7ab854f886fed
 team: tripleo
 type: other

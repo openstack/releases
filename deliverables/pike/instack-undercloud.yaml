@@ -1,6 +1,9 @@
 ---
 launchpad: tripleo
 release-model: cycle-with-intermediary
+branches:
+  - name: stable/pike
+    location: 7.3.0
 releases:
   - projects:
       - hash: 4e9b43dabbd64e8db88828e20dc1a98af9076654
@@ -18,5 +21,9 @@ releases:
       - hash: 65e5dec70ef7d27b5a3f16803dac58500b480506
         repo: openstack/instack-undercloud
     version: 7.2.0
+  - projects:
+      - hash: 1d8ad41db9cba8f23ccba4a78f7a13405e57ef5d
+        repo: openstack/instack-undercloud
+    version: 7.3.0
 team: tripleo
 type: other
