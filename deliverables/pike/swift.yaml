@@ -4,6 +4,9 @@ release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/swift/current.html
 team: swift
 type: service
+branches:
+  - name: stable/pike
+    location: 2.15.1
 releases:
   - version: 2.14.0
     projects:
@@ -13,3 +16,7 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 340014ed224d506be5019fb4097eec9dedf3e5e1
+  - version: 2.15.1
+    projects:
+      - repo: openstack/swift
+        hash: 1f751a797997e241d5cc9a32b9307e3b9f0df4c3
