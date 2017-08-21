@@ -98,3 +98,17 @@ releases:
       * Send both gratuitous ARP REQUESTs and REPLYs
       * Allow port security updates even without security-groups enabled
       * Add IPv6 Prefix Delegation support for DVR
+  - projects:
+      - hash: 2a9844b8ca33bfcd789c2981e3b8368d2c832f72
+        repo: openstack/neutron
+    version: 9.4.1
+    highlights: |-
+      * Handle CIDR IP address in allowed address pairs
+      * Fix: set IPv6 forwarding when there's an IPv6 gw
+      * Disable RA and IPv6 forwarding on backup HA routers
+      * Drop IPv6 Router Advertisements in OVS firewall
+      * Don't add duplicate metadata rules after router update
+      * Correctly configure IPv6 addresses on upgrades
+      * Set HA network port to DOWN when l3 agent starts
+      * ovs: bubble up failures into main thread in native ofctl mode
+      * Add IPv6 default route to DHCP namespace

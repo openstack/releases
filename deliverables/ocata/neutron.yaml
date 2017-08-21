@@ -49,8 +49,7 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 08bf51e99558af28e7a9ed231be9c1daeb2b76c2
-    highlights: |-
-      * Skip native DHCP notifications on status change
+    highlights: '* Skip native DHCP notifications on status change'
   - version: 10.0.2
     projects:
       - repo: openstack/neutron
@@ -66,3 +65,18 @@ releases:
       * Remove minimum_bandwidth_rule from rules supported by Linuxbridge agent
       * Send both gratuitous ARP REQUESTs and REPLYs
       * Allow port security updates even without security-groups enabled
+  - projects:
+      - hash: 0f647edaf269a81e0dfe5a2d96da2b180467b680
+        repo: openstack/neutron
+    version: 10.0.3
+    highlights: |-
+      * Do not respond to ARP on IPv6-only interfaces
+      * DVR: Fix neutron metering agent to notify hosts hosting DVR
+      * Honor the common session options for the placement API
+      * Fix: set IPv6 forwarding when there's an IPv6 gw
+      * Disable RA and IPv6 forwarding on backup HA routers
+      * DVR: properly track SNAT traffic
+      * Drop IPv6 Router Advertisements in OVS firewall
+      * Set HA network port to DOWN when l3 agent starts
+      * ovs: bubble up failures into main thread in native ofctl mode
+      * Add IPv6 default route to DHCP namespace
