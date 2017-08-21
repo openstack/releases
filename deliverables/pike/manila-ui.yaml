@@ -17,3 +17,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 087948ae1a1e47c97d75437259c8b3577bfdf7ad
+  - version: 2.10.1
+    projects:
+      - repo: openstack/manila-ui
+        hash: 019f6b4e630232d398a595990d29524d8295028f
+branches:
+  - location: 2.10.1
+    name: stable/pike
