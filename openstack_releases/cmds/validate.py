@@ -681,11 +681,22 @@ def validate_stable_branches(deliverable_info, workdir,
                          'does not exist' % (
                              (loc, repo, branch['name'])))
                     )
+        elif branch_mode == 'upstream':
+            if not isinstance(location, six.string_types):
+                mk_error(
+                    ('branch location for %s is '
+                     'expected to be a string but got a %s' % (
+                         branch['name'], type(location)))
+                )
         else:
             mk_error(
                 ('unrecognized stable-branch-type %r' % (branch_mode,))
             )
-        if series_name == '_independent':
+        if branch_mode == 'upstream':
+            mk_warning(
+                'skipping branch name check for upstream mode'
+            )
+        elif series_name == '_independent':
             if series not in known_series:
                 mk_error(
                     ('stable branches must be named for known series '

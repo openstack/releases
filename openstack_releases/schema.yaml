@@ -38,7 +38,7 @@ properties:
     enum: [ "std", "xstatic", "fuel" ]
   stable-branch-type:
     type: "string"
-    enum: [ "std", "tagless" ]
+    enum: [ "std", "tagless", "upstream" ]
   releases:
     type: "array"
     items:

@@ -432,6 +432,10 @@ The top level of a deliverable file is a mapping with keys:
     hash. This mode should only be used for projects that do not tag
     releases, such as devstack and grenade.
 
+  ``upstream``
+    Stable branch names track upstream release names, rather than
+    OpenStack series names.
+
 ``branches``
   A list of the branches for the deliverable.
 
