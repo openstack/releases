@@ -3,3 +3,11 @@ launchpad: ceilometer
 release-model: cycle-with-intermediary
 team: Telemetry
 type: service
+releases:
+  - projects:
+      - hash: 04352f339db2eec1382b2f085651200774b56f29
+        repo: openstack/ceilometer
+    version: 9.0.0
+branches:
+  - location: 9.0.0
+    name: stable/pike
