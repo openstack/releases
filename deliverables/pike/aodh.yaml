@@ -3,3 +3,11 @@ launchpad: aodh
 release-model: cycle-with-intermediary
 team: Telemetry
 type: service
+releases:
+  - projects:
+      - hash: 48468c3f525676f8ddae2dae1e7d19006d5c4342
+        repo: openstack/aodh
+    version: 5.0.0
+branches:
+  - location: 5.0.0
+    name: stable/pike
