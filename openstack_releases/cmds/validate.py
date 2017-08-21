@@ -817,6 +817,12 @@ def main():
         help='do not remove temporary files',
     )
     parser.add_argument(
+        '--debug',
+        default=False,
+        action='store_true',
+        help='throw exception on error',
+    )
+    parser.add_argument(
         'input',
         nargs='*',
         help=('YAML files to validate, defaults to '
@@ -872,6 +878,8 @@ def main():
         def mk_error(msg):
             print('ERROR: {}'.format(msg))
             errors.append('{}: {}'.format(filename, msg))
+            if args.debug:
+                raise RuntimeError(msg)
 
         validate_schema(deliverable_info, mk_warning, mk_error)
         validate_bugtracker(deliverable_info, mk_warning, mk_error)
