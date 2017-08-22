@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 team: neutron
 release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/ocata.html
 type: library
@@ -17,3 +17,9 @@ releases:
       * Deprecated neutron CLI
       * Added FWaaS V2 commands for OSC plugin with documentation
       * Added common utilities for OSC plugin implementation
+  - projects:
+      - hash: 0c8a457da182be28d3d4d0eb33cbaeeb4156b307
+        repo: openstack/python-neutronclient
+    version: 6.1.1
+    highlights: |-
+      * Add BGP VPN OSC commands
