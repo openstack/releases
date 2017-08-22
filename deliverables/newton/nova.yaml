@@ -87,3 +87,9 @@ releases:
           high consumption of memory due to database connection switching.
 
         See the release notes for more details.
+  - version: 14.0.8
+    projects:
+      - repo: openstack/nova
+        hash: bcc88d4cad3d2a86e9e1c841a4afdb5a9d87c0f1
+    highlights: >
+      - Bug fixes.
