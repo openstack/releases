@@ -258,11 +258,6 @@ def main():
         else:
             print('no team name given, cannot report on governance status')
 
-        if series == defaults.RELEASE:
-            branch = 'master'
-        else:
-            branch = 'stable/' + series
-
         # If there are no releases listed, this is probably a new
         # deliverable file for initializing a new series. We don't
         # need to list its changes.
@@ -290,16 +285,48 @@ def main():
                 print('%s %s exists on git server already' %
                       (project['repo'], new_release['version']))
 
+            # Decide which branch we're going to try to clone. We need
+            # the repo checked out before we can tell if the stable
+            # branch really exists, but zuul-cloner will fall back to
+            # master if it doesn't.
+            if series in (defaults.RELEASE, '_independent'):
+                clone_branch = 'master'
+            else:
+                clone_branch = 'stable/' + series
+
             # Check out the code.
-            print('\nChecking out repository {}'.format(project['repo']))
+            print('\nChecking out repository {} to {}'.format(
+                project['repo'], clone_branch))
             subprocess.check_call(
                 ['zuul-cloner',
-                 '--branch', branch,
+                 '--branch', clone_branch,
                  '--workspace', workdir,
                  'git://git.openstack.org',
                  project['repo'],
                  ]
             )
+
+            # Determine which branch we should actually be looking
+            # at. Assume any series for which there is no stable
+            # branch will be on 'master'.
+            if gitutils.stable_branch_exists(workdir, project['repo'], series):
+                branch = 'stable/' + series
+            else:
+                branch = 'master'
+
+            if branch != clone_branch:
+                # Check out the repo again to the right branch if we
+                # didn't get it the first time.
+                print('\nUpdating repository {} to {}'.format(
+                    project['repo'], branch))
+                subprocess.check_call(
+                    ['zuul-cloner',
+                     '--branch', branch,
+                     '--workspace', workdir,
+                     'git://git.openstack.org',
+                     project['repo'],
+                     ]
+                )
 
             # look at the previous tag for the parent of the commit
             # getting the new release

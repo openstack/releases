@@ -120,6 +120,22 @@ def _filter_branches(output):
     ]
 
 
+def stable_branch_exists(workdir, repo, series):
+    "Does the stable/series branch exist?"
+    remote_match = 'remotes/origin/stable/%s' % series
+    try:
+        containing_branches = _filter_branches(
+            subprocess.check_output(
+                ['git', 'branch', '-a'],
+                cwd=os.path.join(workdir, repo),
+            ).decode('utf-8')
+        )
+        return (remote_match in containing_branches)
+    except subprocess.CalledProcessError as e:
+        print('ERROR checking for branch: %s [%s]' % (e, e.output.strip()))
+        return False
+
+
 def check_branch_sha(workdir, repo, series, master, sha):
     """Check if the SHA is in the targeted branch.
 
