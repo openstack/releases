@@ -3,3 +3,12 @@ launchpad: magnum-ui
 release-model: cycle-with-intermediary
 team: magnum
 type: horizon-plugin
+branches:
+  - name: stable/pike
+    location: 3.0.0
+releases:
+  - projects:
+      - hash: 91fa9c8c62b3055a52f66e61c6ac31731427c15e
+        repo: openstack/magnum-ui
+    version: 3.0.0
+release-notes: https://docs.openstack.org/releasenotes/magnum-ui/unreleased.html
