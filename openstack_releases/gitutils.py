@@ -136,7 +136,7 @@ def stable_branch_exists(workdir, repo, series):
         return False
 
 
-def check_branch_sha(workdir, repo, series, master, sha):
+def check_branch_sha(workdir, repo, series, sha):
     """Check if the SHA is in the targeted branch.
 
     The SHA must appear on a stable/$series branch (if it exists) or
