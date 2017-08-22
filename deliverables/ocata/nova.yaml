@@ -109,3 +109,11 @@ releases:
           string parameters during simple_cell_setup/map_cell0 commands.
         * Bug 1689692: Fix paging over cells where the marker is found in the
           cell0 database.
+  - version: 15.0.7
+    projects:
+      - repo: openstack/nova
+        hash: 6c67eee6f4a40c5e84beb2950c45e9fe5dcf9fd1
+    highlights: >
+      - Several bug fixes.
+      - Fixes a regression in Ocata where scheduler driver configuration
+        options were restricted without a deprecation period.
