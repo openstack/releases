@@ -3,3 +3,11 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: service
+branches:
+  - name: stable/pike
+    location: 0.8.0
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/tacker
+        hash: 54175b3f18f631f21fb1cb929712823bb3e2b05e
