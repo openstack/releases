@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: a5c3f4f0902e1d98a57cb9934562a43718f8c612
+  - projects:
+      - hash: 015f7add77f5796c15660c495da1b5f6f8ec0a74
+        repo: openstack/puppet-tempest
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 4182ef6065bd75b8cc19874de646b2eee22aa1f6
+  - projects:
+      - hash: 02ab90f67d62a7d79f16873ba531b5224c73613a
+        repo: openstack/puppet-glance
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

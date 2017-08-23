@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: a39305508133db8a7d964cafda8f8689264618e0
+  - projects:
+      - hash: 2ae0185e2f8253b0fe9c3ca8099670802470c02d
+        repo: openstack/puppet-designate
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

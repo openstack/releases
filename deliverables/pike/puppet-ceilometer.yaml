@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: ff39854f4f0c6077b0767cf7d163c8043517d103
+  - projects:
+      - hash: c64b7a7e5007d207589865c90f6cd57b7dbf86e0
+        repo: openstack/puppet-ceilometer
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

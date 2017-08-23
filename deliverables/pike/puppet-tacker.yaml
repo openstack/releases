@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: a1d4f414d2e1aaee2e5b160d6458153d57e2043f
+  - projects:
+      - hash: 3147f8b8992aac971bf9addc2ae0bf818c3e3737
+        repo: openstack/puppet-tacker
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

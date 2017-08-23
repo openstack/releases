@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: bc082235035cec6539aa57c36d9bf2004797c312
+  - projects:
+      - hash: f8dd9a0f4e738bf92e0602285c7a73cb50473044
+        repo: openstack/puppet-magnum
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

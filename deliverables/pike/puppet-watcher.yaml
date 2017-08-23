@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-watcher
         hash: 15d460cca30e7a60bf573c443c3228d6236f36cd
+  - projects:
+      - hash: a1efeb7bf1fc393ae7524cfa3daaf041c34dedfd
+        repo: openstack/puppet-watcher
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

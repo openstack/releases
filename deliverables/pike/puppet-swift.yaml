@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: ccc40c93cfe9155c680da1debef8f2ee53ca017d
+  - projects:
+      - hash: bdd01148d004005fe4fadc182a97a40d5f7f1815
+        repo: openstack/puppet-swift
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

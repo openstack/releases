@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: 1ef010372df5a5f571b04a98d3ba4a71fdd0fc21
+  - projects:
+      - hash: 7fae22a990c185bff8fa4892c82207e690caed59
+        repo: openstack/puppet-sahara
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

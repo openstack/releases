@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 657b3cee88ff57e1f6617c4491ebbe01f22e8e42
+  - projects:
+      - hash: f73cbf57efde3b5c9fe5dfae22b61900b5c1185b
+        repo: openstack/puppet-ec2api
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

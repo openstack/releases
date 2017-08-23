@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: 4a27e03c206314ef7d6d05b870c7ceebc0c05c06
+  - projects:
+      - hash: aadbcf5ae7c6c4a96efbf8323a0b175932653e55
+        repo: openstack/puppet-ironic
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike
