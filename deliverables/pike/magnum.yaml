@@ -3,3 +3,12 @@ launchpad: magnum
 release-model: cycle-with-intermediary
 team: magnum
 type: service
+release-notes: https://docs.openstack.org/releasenotes/magnum/unreleased.html
+branches:
+  - name: stable/pike
+    location: 5.0.0
+releases:
+  - projects:
+      - hash: afa32e8672a2a846eaeaa2cf9a5f1a238328e3e2
+        repo: openstack/magnum
+    version: 5.0.0
