@@ -3,3 +3,12 @@ launchpad: senlin-dashboard
 release-model: cycle-with-intermediary
 team: senlin
 type: horizon-plugin
+branches:
+  - name: stable/pike
+    location: 0.7.0
+releases:
+  - version: 0.7.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 66a1bb79f3578ab19f7eb2bbaeb312df9c259cdf
+release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/unreleased.html
