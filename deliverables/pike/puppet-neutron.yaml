@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 63a00045929fb3483866df9eea0390ebee5f52c5
+  - projects:
+      - hash: 9ab45b0dccd43f9afe4397be18be7e3cb0291609
+        repo: openstack/puppet-neutron
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

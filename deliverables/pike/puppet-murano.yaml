@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: f7ddcf5d61489f480774898a5dcf7cdc5f08ffb1
+  - projects:
+      - hash: 4a48197467769bbebf093b2b7620955bc88106f1
+        repo: openstack/puppet-murano
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

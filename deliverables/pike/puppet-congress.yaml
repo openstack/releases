@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-congress
         hash: c165c35de182fbbd24a6dd396c1488035f8a377e
+  - projects:
+      - hash: fb953cdf0d34dcaf4a51872767378f7c2e99d2fb
+        repo: openstack/puppet-congress
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

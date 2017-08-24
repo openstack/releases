@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 97f7ca4a8c4d04aec9dc36fe233d7b74ba15fc7a
+  - projects:
+      - hash: 40d572b4c6d61dc9c5bbd2dafc4696ccf0b8389e
+        repo: openstack/puppet-mistral
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: 7458b65e4911fcb10ef5299af74155cc29cb1e6f
+  - projects:
+      - hash: f67dfe8f1247e5a61335bcf656418d88cb833f01
+        repo: openstack/puppet-ovn
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

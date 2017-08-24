@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: dad40312ebc12c3f79ef71fc0649342c102b59fa
+  - projects:
+      - hash: 91edc2c2b14dff19ce948db71ea1404e24865990
+        repo: openstack/puppet-nova
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

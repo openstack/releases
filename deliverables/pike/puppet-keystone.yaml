@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: c419058823800a4a7f1c80ac46c9095e0f1c1abf
+  - projects:
+      - hash: 305c91cac00f720ad6461b442e71b52b12f9ae57
+        repo: openstack/puppet-keystone
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

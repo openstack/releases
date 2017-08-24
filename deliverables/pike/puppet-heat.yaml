@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 380353399e028e9274b6925cfb22336bd2c18b3a
+  - projects:
+      - hash: cfbfd0b14783d628dfa5695f5c3d58757eba969b
+        repo: openstack/puppet-heat
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

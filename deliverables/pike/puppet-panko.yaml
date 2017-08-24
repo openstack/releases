@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-panko
         hash: ff16a2a73922b9f67230f682d8f09d1e56a07079
+  - projects:
+      - hash: edd8ddb567549451dad80dfe8dbd3f47be79a748
+        repo: openstack/puppet-panko
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

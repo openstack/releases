@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: fe32e6c9ce485c857a2cae590753e415ae973387
+  - projects:
+      - hash: 915c8f7ac5136879608f6c2aab48bdf145a6b00d
+        repo: openstack/puppet-zaqar
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

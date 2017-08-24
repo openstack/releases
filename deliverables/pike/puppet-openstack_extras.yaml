@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: 17028c8ed1630550b5c44311dd57ae7fbcd0127d
+  - projects:
+      - hash: b09275eca0083e8eb8c22d5a25cb9a4b907e2983
+        repo: openstack/puppet-openstack_extras
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

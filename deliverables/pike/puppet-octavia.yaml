@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: fcf164292e738fc593a2a35f59e5dd4ad9a00a33
+  - projects:
+      - hash: b7fa7de2f7a7c056623f66f40028a3007cc2bbc9
+        repo: openstack/puppet-octavia
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

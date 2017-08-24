@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: af2e61dc70e4741216bcc4705a77e2985cb54894
+  - projects:
+      - hash: 8241a1d13be6c3ee6344fa46dcfc045439044e76
+        repo: openstack/puppet-barbican
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

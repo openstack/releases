@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: d5f07caaad7f60083903252b042293b016722f34
+  - projects:
+      - hash: 5ad200e9d8af200a8f50f86a2db4cf3f36ab2a4c
+        repo: openstack/puppet-oslo
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

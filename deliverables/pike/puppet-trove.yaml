@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 3fdefbfb4622ebdbb348f12cdecafb0fff43a28f
+  - projects:
+      - hash: ba0ac93b0f1f0a9b271d112a5e7a732f49c33b86
+        repo: openstack/puppet-trove
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

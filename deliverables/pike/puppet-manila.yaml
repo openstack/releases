@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 74267304083ea576c1f0850a618d54ffb689e5ea
+  - projects:
+      - hash: deaaea9a56c025edb4d33ba366603963b9924d27
+        repo: openstack/puppet-manila
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

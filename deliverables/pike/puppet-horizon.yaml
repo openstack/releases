@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: a46538e6efafc1b9c95688ff36c7505c40021ffe
+  - projects:
+      - hash: 5dd2e6b84b197cac2381e64bf96055be16cb2365
+        repo: openstack/puppet-horizon
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

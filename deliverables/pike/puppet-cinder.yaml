@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: dab970ae3b42baa2ab150cd679d97d9ff9cfe608
+  - projects:
+      - hash: aa8b4dac92ce875d7d2c71066e2c16774d9e58e3
+        repo: openstack/puppet-cinder
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

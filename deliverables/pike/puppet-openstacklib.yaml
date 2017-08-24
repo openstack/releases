@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: b0201b3411067bc1818f027b71e82d0e1b0dd573
+  - projects:
+      - hash: 79a799f5d78667b5eee81e71782e8591f2e62ecc
+        repo: openstack/puppet-openstacklib
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike

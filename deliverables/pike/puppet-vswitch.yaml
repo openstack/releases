@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: 1961ac7a0029342d17c22f019706544ee9106aa5
+  - projects:
+      - hash: d4b010db56d9a350ff48cb3b2721df3aefd4df0a
+        repo: openstack/puppet-vswitch
+    version: 7.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 7.3.0
+    name: stable/pike

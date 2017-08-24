@@ -14,5 +14,12 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 4954b5e62641087c11486821b801757a3b56b5ed
+  - projects:
+      - hash: e2ec9ed7ba90fd2330e0e3d53d940e92feecaa3f
+        repo: openstack/puppet-aodh
+    version: 11.3.0
 team: 'Puppet OpenStack'
 type: other
+branches:
+  - location: 11.3.0
+    name: stable/pike
