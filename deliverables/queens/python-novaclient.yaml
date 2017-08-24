@@ -4,3 +4,5 @@ launchpad: python-novaclient
 release-model: cycle-with-intermediary
 team: nova
 type: library
+# NOTE(tonyb): Due to merging https://review.openstack.org/493187/ on pike the
+#             first releases of novaclient for queens much be >= 9.3.0
