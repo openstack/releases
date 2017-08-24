@@ -1,6 +1,9 @@
 ---
 launchpad: tripleo-common
 release-model: cycle-trailing
+branches:
+  - name: stable/pike
+    location: 7.5.0
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -25,6 +28,10 @@ releases:
   - version: 7.4.0
     projects:
       - hash: 98ada9b30dd85ebd3be368431a51ab82541d5001
+        repo: openstack/tripleo-common
+  - version: 7.5.0
+    projects:
+      - hash: 76f2b04ca75b76e315b3c88409e82d3ae0297d15
         repo: openstack/tripleo-common
 team: tripleo
 type: other

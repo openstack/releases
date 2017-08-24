@@ -1,6 +1,9 @@
 ---
 launchpad: tripleo
 release-model: cycle-trailing
+branches:
+  - name: stable/pike
+    location: 7.0.0.0rc1
 releases:
   - projects:
       - hash: 3e072ced3147aef3a24e151d20063e5a2bc1ada0
@@ -14,5 +17,9 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: fd6165f207cb92b3b58e8cabcc796aafa993915b
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: 23884d311fe285b295bd2caa889114d0a0dce1db
 team: tripleo
 type: other
