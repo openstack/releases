@@ -47,4 +47,14 @@ releases:
         hash: dd99413cd308883fe0283282515737cee1fce7ae
       - repo: openstack/sahara-image-elements
         hash: d12f6167bbb0d7e0b46821545a85bb4444de0adc
+  - version: 7.0.0.0rc2
+    projects:
+      - repo: openstack/sahara
+        hash: 30a3b8b58867a176b502ad0e5601533655d7336b
+      - repo: openstack/sahara-dashboard
+        hash: 7394ec618343bc997e097958ac897b1a33d3cb1c
+      - repo: openstack/sahara-extra
+        hash: 557cf9fc7f6f08785eccb65c54b309a5f5113a83
+      - repo: openstack/sahara-image-elements
+        hash: 79369e39e40e1d9ba1cbca6039a3a06afbaf1685
 release-notes: https://docs.openstack.org/releasenotes/sahara/pike.html
