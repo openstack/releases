@@ -26,6 +26,11 @@ releases:
       - hash: f2dbda7a8c5a48acad36452fab3b8874e48d2e5d
         repo: openstack/networking-midonet
     version: 5.0.0.0rc2
+  - diff_start: 4.0.0
+    projects:
+      - hash: f2dbda7a8c5a48acad36452fab3b8874e48d2e5d
+        repo: openstack/networking-midonet
+    version: 5.0.0
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike

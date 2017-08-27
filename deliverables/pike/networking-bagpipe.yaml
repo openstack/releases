@@ -26,6 +26,11 @@ releases:
       - hash: 3ca04d04e233dc5a91068437923c2b042512deab
         repo: openstack/networking-bagpipe
     version: 7.0.0.0rc2
+  - diff_start: 6.0.0
+    projects:
+      - hash: 3ca04d04e233dc5a91068437923c2b042512deab
+        repo: openstack/networking-bagpipe
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/pike

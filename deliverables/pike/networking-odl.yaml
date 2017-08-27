@@ -26,6 +26,11 @@ releases:
       - hash: f2229850aa53834d0d1192646a59ed5bd68d7835
         repo: openstack/networking-odl
     version: 11.0.0.0rc2
+  - diff_start: 4.0.0
+    projects:
+      - hash: f2229850aa53834d0d1192646a59ed5bd68d7835
+        repo: openstack/networking-odl
+    version: 11.0.0
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

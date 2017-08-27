@@ -1,6 +1,6 @@
 ---
 artifact-link-mode: tarball
-include-pypi-link: false
+include-pypi-link: no
 launchpad: designate
 release-model: cycle-with-milestones
 team: designate
@@ -18,7 +18,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: edc0684ace513d2ae73f06941e0898d1e963f298
-
+  - diff_start: 4.0.0
+    projects:
+      - repo: openstack/designate
+        hash: edc0684ace513d2ae73f06941e0898d1e963f298
+    version: 5.0.0
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike

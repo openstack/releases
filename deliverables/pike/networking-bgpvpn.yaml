@@ -26,6 +26,11 @@ releases:
       - hash: e4e089ee1c99c1e9af1a2bf58cfb992d95af240a
         repo: openstack/networking-bgpvpn
     version: 7.0.0.0rc2
+  - diff_start: 6.0.0
+    projects:
+      - hash: e4e089ee1c99c1e9af1a2bf58cfb992d95af240a
+        repo: openstack/networking-bgpvpn
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/pike

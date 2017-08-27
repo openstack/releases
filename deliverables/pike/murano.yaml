@@ -24,6 +24,11 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 94ba1def6032fce03b6cc8028dffc65eb383de1d
+  - diff_start: 3.2.0
+    projects:
+      - repo: openstack/murano
+        hash: 94ba1def6032fce03b6cc8028dffc65eb383de1d
+    version: 4.0.0
 branches:
   - location: 4.0.0.0rc1
     name: stable/pike
