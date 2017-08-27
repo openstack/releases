@@ -16,15 +16,14 @@ from __future__ import print_function
 
 import argparse
 import atexit
-import glob
 import os.path
 import re
 import shutil
 import tempfile
 
 import openstack_releases
+from openstack_releases import deliverable
 from openstack_releases import gitutils
-from openstack_releases import governance
 from openstack_releases import yamlutils
 
 PRE_RELEASE = re.compile('(a|b|rc)')
@@ -111,17 +110,6 @@ def main():
 
     deliverables_dir = args.deliverables_dir
 
-    team_data = governance.get_team_data()
-    teams = [
-        governance.Team(n, i)
-        for n, i in team_data.items()
-    ]
-    deliverables = {
-        d.name: d
-        for t in teams
-        for d in t.deliverables.values()
-    }
-
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
 
@@ -135,53 +123,60 @@ def main():
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)
 
-    pattern = os.path.join(deliverables_dir,
-                           args.series, '*.yaml')
-    verbose('Scanning {}'.format(pattern))
-    deliverable_files = sorted(glob.glob(pattern))
+    verbose('Scanning {}/{}'.format(deliverables_dir, args.series))
+    all_deliv = deliverable.Deliverables(
+        root_dir=args.deliverables_dir,
+        collapse_history=False,
+    )
 
-    for filename in deliverable_files:
-        verbose('\n{}'.format(filename))
-        deliverable_name = os.path.basename(filename)[:-5]
-        with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_data = yamlutils.loads(f.read())
-        releases = deliverable_data.get('releases')
-        if not releases:
+    for entry in all_deliv.get_deliverables(None, args.series):
+        deliv = deliverable.Deliverable(*entry)
+        verbose('\n{} {}'.format(deliv.name, deliv.model))
+
+        if deliv.model == 'cycle-trailing':
+            verbose('#  {} is a cycle-trailing project'.format(
+                deliv.name))
+            if not args.all:
+                continue
+
+        if not deliv.releases:
             verbose('#  no releases')
             continue
-        latest_release = releases[-1]
+
+        latest_release = deliv.releases[-1]
         projects = latest_release.get('projects')
         if not projects:
-            verbose('#  no projects')
+            verbose('#  no projects in latest release')
             continue
         for pre_rel in ['a', 'b', 'rc']:
             if pre_rel in str(latest_release['version']):
                 break
         else:  # we did not find any pre_rel
-            verbose('#  not a release candidate')
+            verbose('#  {} was not a release candidate'.format(
+                latest_release['version']))
             continue
-        deliverable = deliverables.get(deliverable_name)
-        if deliverable and 'release:cycle-trailing' in deliverable.tags:
-            verbose('#  {} is a cycle-trailing project'.format(deliverable_name))
-            if not args.all:
-                continue
+
         # The new version is the same as the latest release version
         # without the pre-release component at the end. Make sure it
         # has 3 sets of digits.
         new_version = '.'.join(
             (latest_release['version'].split('.')[:-1] + ['0'])[:3]
         )
+
         branch = 'stable/{}'.format(args.prior_series)
         diff_start = get_prior_branch_point(
             workdir, projects[0]['repo'], branch,
         )
+
+        deliverable_data = deliv.data
         deliverable_data['releases'].append({
             'version': new_version,
             'diff_start': diff_start,
             'projects': latest_release['projects'],
         })
-        print('new version for {}: {}'.format(os.path.basename(filename),
-                                              new_version))
+        print('new version for {}: {}'.format(
+            deliv.name, new_version))
 
+        filename = os.path.join(deliverables_dir, deliv.filename)
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(yamlutils.dumps(deliverable_data))

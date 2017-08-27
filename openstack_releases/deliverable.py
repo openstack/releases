@@ -18,6 +18,7 @@ import collections
 import copy
 import glob
 import os
+import os.path
 
 import pbr.version
 
@@ -263,3 +264,11 @@ class Deliverable(object):
     def tags(self):
         return governance.get_tags_for_deliverable(
             self._governance_data, self.team, self.name)
+
+    @property
+    def filename(self):
+        return os.path.join(self.series, self.name + '.yaml')
+
+    @property
+    def data(self):
+        return copy.deepcopy(self._data)
