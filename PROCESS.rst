@@ -5,16 +5,19 @@
 This document describes the relative ordering and rough timeline for
 all of the steps related to preparing the release.
 
-Before Summit (after closing previous release)
-=============================================
+Before PTG (after closing previous release)
+===========================================
 
 1. Set up the release schedule for the newly opened cycle by creating
    the required pages in openstack/releases.
 
-2. Create the $series-relmgt-plan and $series-relmgt-tracking
+2. Update the link to the documentation on the newly opened cycle page
+   to point to the right place on docs.openstack.org.
+
+3. Create the $series-relmgt-plan and $series-relmgt-tracking
    etherpads.
 
-3. Use ``init-series`` to create stub deliverable files based on the
+4. Use ``init-series`` to create stub deliverable files based on the
    contents of the previous release.
 
 Between Summit and Milestone-1
@@ -324,23 +327,20 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-3. Add documentation links on the series page on releases.o.o.
-   See https://review.openstack.org/#/c/381005 for an example.
-
-4. Mark series as released on releases.o.o, by updating doc/source/index.rst
+3. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-5. Update the default series name in
+4. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-6. Send release announcement email to
+5. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``. Coordinate the timing of the email with
    the press release from the Foundation staff.
 
-7. Declare ``openstack/releases`` unfrozen.
+6. Declare ``openstack/releases`` unfrozen.
 
 Post-Final Release
 ==================
