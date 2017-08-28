@@ -29,8 +29,6 @@ releases:
       - repo: openstack/neutron-dynamic-routing
         hash: 2b27679fb6d690e6f65a98dfa2828bc367aa30ad
   - version: 9.0.0
-    # diff-start: There is no stable/mitaka branch, and this is the
-    # first release series.
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 2b27679fb6d690e6f65a98dfa2828bc367aa30ad
@@ -38,3 +36,7 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 6e86f362960fd6391a6b17406032582b421ab9f0
+  - projects:
+      - hash: 25e61a1868b00b0d2b946100b37844dbd48a4d1f
+        repo: openstack/neutron-dynamic-routing
+    version: 9.2.1
