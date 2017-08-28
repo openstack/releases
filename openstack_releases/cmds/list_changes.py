@@ -430,19 +430,6 @@ def main():
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
                 git_diff(workdir, project['repo'], git_range, 'setup.cfg')
 
-            # Show the changes since the last release, first as a
-            # graph view so we can check for bad merges, and then with
-            # more detail.
-            git_log(workdir, project['repo'],
-                    'Release %s will include' % new_release['version'],
-                    git_range,
-                    extra_args=['--graph', '--oneline', '--decorate',
-                                '--topo-order'])
-            git_log(workdir, project['repo'],
-                    'Details Contents',
-                    git_range,
-                    extra_args=['--no-merges', '--topo-order'])
-
             # Show any changes in the previous release but not in this
             # release, in case someone picks an "early" SHA or a
             # regular commit instead of the appropriate merge commit.
@@ -493,5 +480,18 @@ def main():
                     print('SHA found in descendants')
                 else:
                     print('SHA NOT FOUND in descendants')
+
+            # Show the changes since the last release, first as a
+            # graph view so we can check for bad merges, and then with
+            # more detail.
+            git_log(workdir, project['repo'],
+                    'Release %s will include' % new_release['version'],
+                    git_range,
+                    extra_args=['--graph', '--oneline', '--decorate',
+                                '--topo-order'])
+            git_log(workdir, project['repo'],
+                    'Details Contents',
+                    git_range,
+                    extra_args=['--no-merges', '--topo-order'])
 
     return 0
