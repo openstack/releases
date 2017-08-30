@@ -25,6 +25,11 @@ releases:
       - hash: 6d68e016c3c6116332bbba9ab072bb6dc8dc5f7f
         repo: openstack/neutron-lbaas
     version: 11.0.0
+  - projects:
+      - hash: bdea6dded5565e106bbe28e2bb7ef0b06dce322b
+        repo: openstack/neutron-lbaas
+    version: 11.0.1
+    diff-start: 10.0.0
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

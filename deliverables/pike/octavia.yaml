@@ -48,6 +48,11 @@ releases:
       - hash: 2c8cc57156dfec5329aa2f8410f396308b5dea5e
         repo: openstack/octavia
     version: 1.0.0
+  - projects:
+      - hash: cdac977f6347118eb709ad3c44a3a65247e67884
+        repo: openstack/octavia
+    version: 1.0.1
+    diff-start: 0.10.0
 branches:
   - location: 1.0.0.0rc1
     name: stable/pike
