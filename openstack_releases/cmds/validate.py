@@ -497,7 +497,6 @@ def validate_releases(deliverable_info, zuul_layout,
                             if not gitutils.check_branch_sha(workdir,
                                                              project['repo'],
                                                              series_name,
-                                                             defaults.RELEASE,
                                                              project['hash']):
                                 msg = '%s %s not present in %s branch' % (
                                     project['repo'],
