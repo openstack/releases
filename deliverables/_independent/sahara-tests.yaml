@@ -55,3 +55,14 @@ releases:
     projects:
       - repo: openstack/sahara-tests
         hash: f40c460b3637e57a8c34b18de6b931f289495302
+  - version: 0.5.0
+    highlights: >
+        The sample (node groups and cluster) templates used by various
+        Tempest-like tests have been updated to include all supported
+        versions since Newton.
+        This release supports the Newton, Ocata and Pike releases of
+        OpenStack, with a bump of few requirements (especially
+        related to Tempest).
+    projects:
+      - repo: openstack/sahara-tests
+        hash: e638bcc351b74fab5a3be6b89f5d9b8e172cbd92
