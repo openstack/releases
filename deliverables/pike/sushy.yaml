@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: f6e6d8ff7f42974df81b90bf092a9b7414ec5d4d
+  - projects:
+      - hash: 659ef88e5a51e97d4b88e605cf8844e391d1206b
+        repo: openstack/sushy
+    version: 1.1.0
 branches:
   - name: stable/pike
     location: 1.0.0
