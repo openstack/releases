@@ -2,5 +2,11 @@
 include-pypi-link: yes
 launchpad: keystoneauth
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: c14df5da19f7e3bd6d5437917a258c922217fc0b
+        repo: openstack/keystoneauth
+        tarball-base: keystoneauth1
+    version: 3.2.0
 team: keystone
 type: library
