@@ -22,8 +22,8 @@ updates.
      * Next Phase
      * EOL Date
    - * :doc:`queens/index`
-     * :doc:`Future <queens/schedule>`
-     * :ref:`proposed <q-release>`
+     * :doc:`Under Development <queens/schedule>`
+     * :ref:`scheduled <q-release>`
      *
      * TBD
    - * :doc:`pike/index`
