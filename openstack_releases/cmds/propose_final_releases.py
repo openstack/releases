@@ -171,7 +171,7 @@ def main():
         deliverable_data = deliv.data
         deliverable_data['releases'].append({
             'version': new_version,
-            'diff_start': diff_start,
+            'diff-start': diff_start,
             'projects': latest_release['projects'],
         })
         print('new version for {}: {}'.format(
