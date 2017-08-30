@@ -2,7 +2,7 @@
  Pike
 ======
 
-Projected Release Date: Aug 30, 2017
+Originally Released: 2017-08-30
 
 Release schedule: :doc:`schedule`
 

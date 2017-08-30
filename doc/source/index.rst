@@ -27,14 +27,14 @@ updates.
      *
      * TBD
    - * :doc:`pike/index`
-     * :doc:`Under Development <pike/schedule>`
-     * :ref:`scheduled <p-release>`
-     *
+     * `Phase I -- Latest release`_
+     * 2017-08-30
+     * `Phase II -- Maintained release`_ on 2018-02-26
      * TBD
    - * :doc:`ocata/index`
-     * `Phase I -- Latest release`_
+     * `Phase II -- Maintained release`_
      * 2017-02-22
-     * `Phase II -- Maintained release`_ on 2017-08-28
+     * `Phase III -- Legacy release`_ on 2018-02-26
      * 2018-02-26
    - * :doc:`newton/index`
      * `Phase II -- Maintained release`_
