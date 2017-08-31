@@ -3,6 +3,9 @@ launchpad: kolla-ansible
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 5.0.0.0b2
     projects:
@@ -12,3 +15,7 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: e9c4a5877d8cd747864c3fc5d3d3004b009c0940
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 9a520e09060bb6be00741a114a87fde31d410fa1
