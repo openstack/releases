@@ -59,6 +59,12 @@ properties:
                 type: "string"
               tarball-base:
                 type: "string"
+        diff-start:
+          type: "string"
+        highlights:
+          type: "string"
+      required: ["version", "projects"]
+      additionalProperties: False
   branches:
     type: "array"
     items:
@@ -70,3 +76,5 @@ properties:
           oneOf:
             - type: "string"
             - type: "object"
+      required: ["name", "location"]
+      additionalProperties: False
