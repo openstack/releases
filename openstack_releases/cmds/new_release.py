@@ -23,6 +23,9 @@ import tempfile
 from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
+# Release models that support release candidates.
+_USES_RCS = ['cycle-with-milestones', 'cycle-trailing']
+
 
 def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
@@ -188,7 +191,7 @@ def main():
     add_stable_branch = args.stable_branch
     if args.release_type in ('milestone', 'rc'):
         force_tag = True
-        if deliverable_info['release-model'] != 'cycle-with-milestones':
+        if deliverable_info['release-model'] not in _USES_RCS:
             raise ValueError('Cannot compute RC for {} project {}'.format(
                 deliverable_info['release-model'], args.deliverable))
         new_version_parts = increment_milestone_version(
