@@ -4,3 +4,8 @@ launchpad: stevedore
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 95f3944a60fff415ff914fff11517333287927a4
+        repo: openstack/stevedore
+    version: 1.26.0

@@ -4,3 +4,8 @@ launchpad: oslo.concurrency
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 3.22.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: a7d35ccd812a48dcb7f84bba618da3b1a291beac

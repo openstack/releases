@@ -4,3 +4,8 @@ launchpad: oslo.db
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 4.26.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: e9a9701d54ea1b708e7fc3ef68e75eb288059632

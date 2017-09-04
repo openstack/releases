@@ -4,3 +4,8 @@ launchpad: python-tooz
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 29ec8eb26addf83877be54ff9ea90e6873043620
+        repo: openstack/tooz
+    version: 1.59.0

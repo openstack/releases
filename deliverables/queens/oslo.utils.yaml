@@ -4,3 +4,8 @@ launchpad: oslo.utils
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 3.29.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 4356cb7b50f7cfe10afb67f196079e3d283545f0
