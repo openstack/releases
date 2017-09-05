@@ -332,6 +332,22 @@ def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
     return ok
 
 
+def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
+    "Verify that all repos include a .gitreview file."
+    checked = set()
+    for release in deliverable_info.get('releases', []):
+        for project in release['projects']:
+            if project['repo'] in checked:
+                continue
+            checked.add(project['repo'])
+            print('\nlooking for .gitreview in %s' % project['repo'])
+            filename = os.path.join(
+                workdir, project['repo'], '.gitreview',
+            )
+            if not os.path.exists(filename):
+                mk_error('%s has no .gitreview file' % (project['repo'],))
+
+
 def validate_releases(deliverable_info, zuul_layout,
                       series_name,
                       workdir,
@@ -915,6 +931,7 @@ def main():
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)
         validate_model(deliverable_info, series_name, mk_warning, mk_error)
+        validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
             zuul_layout,
