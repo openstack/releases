@@ -43,10 +43,19 @@ def find_modified_deliverable_files():
 def commit_exists(workdir, repo, ref):
     """Return boolean specifying whether the reference exists in the repository.
 
-    The commit must exist on a named branch.
+    The commit must have been merged into the repository, but this
+    check does not enforce any branch membership.
 
     """
-    return bool(branches_containing(workdir, repo, ref))
+    try:
+        subprocess.check_output(
+            ['git', 'show', ref],
+            cwd=os.path.join(workdir, repo),
+        ).decode('utf-8')
+    except subprocess.CalledProcessError as err:
+        print('Could not find {}: {}'.format(ref, err))
+        return False
+    return True
 
 
 def tag_exists(repo, ref):
