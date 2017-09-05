@@ -7,6 +7,9 @@ release-model: cycle-with-milestones
 branches:
   - name: stable/ocata
     location: 10.0.0.0rc1
+  - name: driverfixes/ocata
+    location:
+      openstack/cinder: 486c00794b1401077bd0c9a6071135c149382958
 releases:
   - version: 10.0.0.0b1
     projects:
