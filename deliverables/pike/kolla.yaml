@@ -3,6 +3,9 @@ launchpad: kolla
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/pike
 releases:
   - version: 5.0.0.0b2
     projects:
@@ -12,3 +15,7 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: e7a8f3f5bb3e7357e42dfb5cf550fc5f97bbc11b
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 0218697d00e183c069280fe386f498d3dc472868
