@@ -4,3 +4,8 @@ launchpad: oslo.context
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 2.18.0
+    projects:
+      - repo: openstack/oslo.context
+        hash: b1bbc6906ca66d830afc0e42b8c66c753a35ca43

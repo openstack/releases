@@ -4,3 +4,8 @@ launchpad: oslo.policy
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: cc30bf7466ade78d39a27037b0b49ee235a89ad3
+        repo: openstack/oslo.policy
+    version: 1.26.0

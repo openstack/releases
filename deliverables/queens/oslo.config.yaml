@@ -4,3 +4,8 @@ launchpad: oslo.config
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 4.12.0
+    projects:
+      - repo: openstack/oslo.config
+        hash: 7fde851f8dc7ab0a4b796c2bba0e166f226e7674

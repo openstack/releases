@@ -4,3 +4,8 @@ launchpad: oslo.privsep
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - version: 1.23.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 8b0d620880dcb4ebbc47e10a5b437039cf403dc6
