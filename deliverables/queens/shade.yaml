@@ -4,3 +4,11 @@ release-model: cycle-with-intermediary
 storyboard: 760
 team: shade
 type: library
+releases:
+  - highlights: |
+      Added support for Neutron Extensions and QoS features, and updated
+      keystone User related tasks to work properly across domains.
+    projects:
+      - hash: e42192e8393f01e825a8b8f5628f7813ae49c4bb
+        repo: openstack-infra/shade
+    version: 1.23.0
