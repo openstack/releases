@@ -306,12 +306,40 @@ def validate_model(deliverable_info, series_name, mk_warning, mk_error):
             )
 
 
+def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
+    """Clone all of the repositories for the deliverable into the workdir.
+
+    Returns boolean indicating whether all of the clones could be
+    performed as expected.
+
+    """
+    cloned = set()
+    ok = True
+    print('\nchecking out source code')
+    for release in deliverable_info.get('releases', []):
+        for project in release['projects']:
+            if project['repo'] in cloned:
+                continue
+            cloned.add(project['repo'])
+            try:
+                gitutils.clone_repo(workdir, project['repo'])
+            except Exception as err:
+                mk_error('Could not clone repository %s at %s: %s' % (
+                    project['repo'], project['hash'], err))
+                # No point in running extra checks if we can't
+                # clone the repository.
+                ok = False
+    return ok
+
+
 def validate_releases(deliverable_info, zuul_layout,
                       series_name,
                       workdir,
                       mk_warning, mk_error):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
+    print()
+
     release_model = get_model(deliverable_info, series_name)
     is_independent = (release_model == 'independent')
 
@@ -880,16 +908,13 @@ def main():
             if args.debug:
                 raise RuntimeError(msg)
 
+        clone_deliverable(deliverable_info, workdir, mk_warning, mk_error)
         validate_schema(deliverable_info, mk_warning, mk_error)
         validate_bugtracker(deliverable_info, mk_warning, mk_error)
         validate_team(deliverable_info, team_data, mk_warning, mk_error)
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)
         validate_model(deliverable_info, series_name, mk_warning, mk_error)
-        # NOTE(dhellmann): A side-effect of validate_releases() is
-        # that all of the repos mentioned in the deliverable file are
-        # cloned. No validation that needs the repo to be checked out
-        # locally should happen before validate_releases() is called.
         validate_releases(
             deliverable_info,
             zuul_layout,
