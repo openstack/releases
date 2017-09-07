@@ -254,3 +254,32 @@ Rocky cycle PTLs election
 Election week for Project team leads (where an election must be held to
 determine the winner). Those dates should be confirmed by the Rocky PTL
 election officials.
+
+Manila
+------
+
+.. _q-manila-driver-deadline:
+
+Manila New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to to Manila is 4 Dec 2017
+(23:59 UTC). New drivers must be substantially complete, with unit tests, and
+passing 3rd party CI by this date. Drivers do not need to be merged until the
+feature freeze date, but drivers that don't meet this deadline will not be
+considered at all for Queens.
+
+.. _q-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs must be approved by 19 Oct 2017 (23:59 UTC).
+
+.. _q-manila-fp-freeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially complete, with unit
+tests by 8 Jan 2018 (23:59 UTC).
