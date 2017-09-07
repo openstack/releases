@@ -56,3 +56,10 @@ releases:
     highlights: |
         Remove babel from requirements since its not
         used by os-testr, and update to latest g-r.
+  - version: 1.0.0
+    projects:
+      - repo: openstack/os-testr
+        hash: 7dd678e3720c326afb3ca7adfd01ec7324d5f5c7
+    highlights: |
+        ostestr command switched to use stestr internally instead of
+        subprocessing to testr.
