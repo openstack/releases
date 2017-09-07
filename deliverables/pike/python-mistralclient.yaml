@@ -27,3 +27,9 @@ releases:
         hash: e328a0570f9c485622d71bbad3a887903b83aaac
     highlights: |
       - Fix how "--limit" is passed to the server for action executions.
+  - version: 3.1.3
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: c33d39c152bdd48b68467d1ab2f63cbe5e337a72
+    highlights: |
+      - Enable ssl support for keycloak auth module.
