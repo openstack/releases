@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 11ad01782499e3e27318aecc9f01f14eb4415002
+  - projects:
+      - hash: 968a4da05efdcf31eab4a3327f730ec2307df384
+        repo: openstack/python-tripleoclient
+    version: 7.3.0
 team: tripleo
 type: library
 release-notes: https://docs.openstack.org/releasenotes/python-tripleoclient/pike.html
