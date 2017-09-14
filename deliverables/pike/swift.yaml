@@ -10,6 +10,9 @@ branches:
   - name: feature/deep
     location:
       openstack/swift: 21a0df4ae0e080fd9b13207dec20fb55f0b595e5
+  - name: feature/s3api
+    location:
+      openstack/swift: 00aa07249407a118be2b0029ec403d59aa12c000
 releases:
   - version: 2.14.0
     projects:
