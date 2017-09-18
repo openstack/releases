@@ -32,6 +32,8 @@ cycle:
   start: '2017-10-16'
   x-project:
   - q-1
+  project-specific:
+  - q-manila-spec-freeze
 - end: '2017-10-27'
   name: R-18
   start: '2017-10-23'
@@ -58,6 +60,8 @@ cycle:
   x-project:
   - q-2
   - q-mf
+  project-specific:
+  - q-manila-driver-deadline
 - end: '2017-12-15'
   name: R-11
   start: '2017-12-11'
@@ -75,6 +79,8 @@ cycle:
   start: '2018-01-08'
   x-project:
   - q-extra-atcs
+  project-specific:
+  - q-manila-fp-freeze
 - end: '2018-01-19'
   name: R-6
   start: '2018-01-15'
