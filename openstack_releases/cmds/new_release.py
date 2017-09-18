@@ -244,11 +244,24 @@ def main():
         'version': new_version,
         'projects': projects,
     })
+
     if add_stable_branch:
-        deliverable_info.setdefault('branches', []).append({
-            'name': 'stable/{}'.format(series),
-            'location': new_version,
-        })
+        branch_name = 'stable/{}'.format(series)
+
+        # First check if this branch is already defined
+        if 'branches' in deliverable_info:
+            for branch in deliverable_info['branches']:
+                if branch.get('name') == branch_name:
+                    print('Branch {} already existes, skipping'.format(
+                        branch_name))
+                    add_stable_branch = False
+                    break
+
+        if add_stable_branch:
+            deliverable_info.setdefault('branches', []).append({
+                'name': branch_name,
+                'location': new_version,
+            })
 
     if changes > 0:
         deliverable_filename = 'deliverables/%s/%s.yaml' % (
