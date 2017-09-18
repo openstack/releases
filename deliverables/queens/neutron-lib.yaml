@@ -4,3 +4,26 @@ launchpad: neutron
 release-model: cycle-with-intermediary
 team: neutron
 type: library
+releases:
+  - version: 1.10.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 5e6153b144512e69157df8d16da71674f9c04778
+    highlights: |
+        * The API definition for extended port bindings has been added
+        * The API definition for availability zones has been added
+        * The API definition for subnet pools has been added
+        * The API definition for allowed address pairs has been added
+        * The API definition for external networks has been added
+        * The API definition for metering has been added
+        * The API definition for extra routes has been added
+        * The API definition for L2 adjacency has been added
+        * The API definition for subnet onboarding has been added
+        * The API definition for QoS has been added
+        * The API definition for project ID has been added
+        * The API definition for L3 ext gateway mode has been added
+        * The API definition for standard attribute tags has been added
+        * The API definition for network extended MTU has been added
+        * The API definition for IP allocation has been added
+        * The API definition for L3 flavors has been added
+        * The API definition for DVR has been added
