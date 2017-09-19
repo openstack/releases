@@ -4,3 +4,8 @@ launchpad: oslo.cache
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 3b8d9c3f6c87d62e5502cf4a9ae89e4067180c1f
+        repo: openstack/oslo.cache
+    version: 1.26.0

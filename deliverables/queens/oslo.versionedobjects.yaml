@@ -4,3 +4,8 @@ launchpad: oslo.versionedobjects
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: bd51487cacaa07191c717b28007c22992cff66f9
+        repo: openstack/oslo.versionedobjects
+    version: 1.27.0
