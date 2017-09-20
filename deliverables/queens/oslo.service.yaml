@@ -4,3 +4,8 @@ launchpad: oslo.service
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 1a973c42cf606f654c5fa39f2d0564887ea970c6
+        repo: openstack/oslo.service
+    version: 1.26.0

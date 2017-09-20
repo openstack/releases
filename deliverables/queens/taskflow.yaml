@@ -4,3 +4,8 @@ launchpad: taskflow
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: f9065c4d97b99b33c2e2299f236b9c6cfe100d29
+        repo: openstack/taskflow
+    version: 2.15.0

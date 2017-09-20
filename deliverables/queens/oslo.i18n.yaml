@@ -4,3 +4,8 @@ launchpad: oslo.i18n
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: d808cf6573bbd7281766cb72656a92431f1d9d6a
+        repo: openstack/oslo.i18n
+    version: 3.18.0

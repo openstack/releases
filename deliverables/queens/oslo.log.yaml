@@ -4,3 +4,8 @@ launchpad: oslo.log
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 2c139a13bf7d9ad62a9cc8bb9e884a1986f3e3ac
+        repo: openstack/oslo.log
+    version: 3.31.0

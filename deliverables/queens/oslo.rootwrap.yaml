@@ -4,3 +4,8 @@ launchpad: oslo.rootwrap
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 371811d1409ed07ec4142e3264c7aefb0de27ad9
+        repo: openstack/oslo.rootwrap
+    version: 5.10.0

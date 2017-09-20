@@ -4,3 +4,8 @@ launchpad: oslo.reports
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: eefa87ff3c84ba17bf569cb10ee00b420e7a21f4
+        repo: openstack/oslo.reports
+    version: 1.23.0

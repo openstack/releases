@@ -4,3 +4,8 @@ launchpad: oslotest
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 77b7a18d003c99abe9c8be0f57830f78ccd55d85
+        repo: openstack/oslotest
+    version: 2.18.0
