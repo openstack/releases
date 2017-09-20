@@ -80,3 +80,12 @@ releases:
       * Set HA network port to DOWN when l3 agent starts
       * ovs: bubble up failures into main thread in native ofctl mode
       * Add IPv6 default route to DHCP namespace
+  - projects:
+      - hash: c7dde58a85fa70fdbe01644db2338666497315f6
+        repo: openstack/neutron
+    version: 10.0.4
+    highlights: |-
+      * Fixed compatibility with iptables shipped with RHEL 7.4
+      * Linuxbridge agent: detect existing IP on bridge
+      * Warn the admin of a potential OVS firewall_driver misconfiguration
+      * Enforce ethertype with IPv6 integer protocols
