@@ -231,6 +231,21 @@ Queens cycle-trailing release deadline
 The release deadline for projects using the release:cycle-trailing model that
 follow the main release cycle.
 
+.. _n-final-library-releases:
+
+Newton library releases
+-----------------------
+
+Last week for libraries to be released, integrated in upper-constraints to be tested before Newton
+EOL.
+
+.. _n-eol:
+
+Newton EOL
+----------
+
+Newton projects will be EOL'd this week.
+
 Project-specific events
 =======================
 
