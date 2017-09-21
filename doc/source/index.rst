@@ -30,7 +30,7 @@ updates.
      * `Phase I -- Latest release`_
      * 2017-08-30
      * `Phase II -- Maintained release`_ on 2018-02-26
-     * TBD
+     * 2018-09-03
    - * :doc:`ocata/index`
      * `Phase II -- Maintained release`_
      * 2017-02-22
