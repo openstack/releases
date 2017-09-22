@@ -4,3 +4,8 @@ launchpad: python-cliff
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: library
+releases:
+  - version: 2.9.0
+    projects:
+      - repo: openstack/cliff
+        hash: 8b77ece17ba32eb7ac1914418c86b5446a575673
