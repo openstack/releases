@@ -207,7 +207,7 @@ def check_ancestry(workdir, repo, old_version, sha):
 
 
 def get_latest_tag(workdir, repo, sha=None):
-    cmd = ['git', 'describe', '--abbrev=0']
+    cmd = ['git', 'describe', '--abbrev=0', '--always']
     if sha is not None:
         cmd.append(sha)
     try:
