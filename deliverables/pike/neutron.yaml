@@ -34,6 +34,19 @@ releases:
       - hash: 5212c9c563e9470ce9e6abd76bdef22fa652a9b3
         repo: openstack/neutron
     version: 11.0.0
+  - projects:
+      - hash: 6790b5c70b988d48f7f5518c24a8fe2234ac05ef
+        repo: openstack/neutron
+    version: 11.0.1
+    highlights: |-
+      * Remove duplicated ICMPv6 RA rule from iptables firewall
+      * Multiple bug fixes for router migration between DVR/HA/legacy modes
+      * Multiple API layer fixes to enhance compatibility with previous releases
+      * Fixed port binding when sriovnicswitch is used with openvswitch
+      * Fixed quota_details for resources without counting support
+      * Fixed multiple DVR bugs when setting floating IP addresses
+      * Fix port deletion when dns_integration is enabled
+      * Fixed compatibility with iptables shipped with RHEL 7.4
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike
