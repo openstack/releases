@@ -28,8 +28,17 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 8b162ba21f06272f915070473640d493dd70beec
-  - diff-start: 15.0.0.0rc1
+  - version: 16.0.0
+    diff-start: 15.0.0.0rc1
     projects:
       - repo: openstack/nova
         hash: 8b162ba21f06272f915070473640d493dd70beec
-    version: 16.0.0
+  - version: 16.0.1
+    projects:
+      - repo: openstack/nova
+        hash: edd59ae12d11db770cf7e1b0c306be34aacd3d2b
+    highlights: >
+      - Several fixes for high severity, high impact bugs introduced in the
+        16.0.0 release.
+      - The nova-conductor service now depends on [placement] credentials
+        being configured in nova.conf.
