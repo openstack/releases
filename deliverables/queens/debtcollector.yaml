@@ -4,3 +4,8 @@ launchpad: debtcollector
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: bdac534f8e26afcdb71b137634d63d3f7faeeb07
+        repo: openstack/debtcollector
+    version: 1.18.0
