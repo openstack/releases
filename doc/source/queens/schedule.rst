@@ -283,3 +283,27 @@ Manila Feature Proposal Freeze
 
 All new Manila features must be proposed and substantially complete, with unit
 tests by 8 Jan 2018 (23:59 UTC).
+
+
+Glance
+------
+
+.. _q-glance-spec-proposal-freeze:
+
+Glance Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be proposed as
+patches to the glance-specs repository by 13:00 UTC on Thursday 28 September
+2017 (that is, one hour before the weekly Glance meeting begins).  While this
+only allows one week for review and revisions before the Glance Spec Freeze,
+you can make sure you have extra review time by submitting your patch early.
+
+.. _q-glance-spec-freeze:
+
+Glance Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Glance, python-glanceclient, and glance_store specs must be merged into
+the glance-specs repository by 23:59 on Friday 6 October 2017.  This is a
+necessary but not sufficient condition for inclusion in the Queens release.
