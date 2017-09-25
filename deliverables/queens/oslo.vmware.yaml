@@ -4,3 +4,8 @@ launchpad: oslo.vmware
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: f3eab645dace5232cac7e99d6b8c0b54f4fc1894
+        repo: openstack/oslo.vmware
+    version: 2.24.0

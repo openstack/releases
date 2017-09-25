@@ -4,3 +4,8 @@ launchpad: automaton
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 0820ec002f88b8385d1e6a33b583c006dd64d57f
+        repo: openstack/automaton
+    version: 1.13.0
