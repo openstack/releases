@@ -65,6 +65,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: a931af6fd5b5242796239e6134fff3ea608c9280
+  - projects:
+      - hash: a07d852b237d229a0f4dd55fd83379c0581e44e9
+        repo: openstack/oslo.messaging
+    version: 5.30.1
 branches:
   - name: stable/pike
     location: 5.30.0
