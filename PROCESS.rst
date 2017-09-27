@@ -227,9 +227,10 @@ RC1
    Note this work is done by translation team.
 
 7. After all cycle-with-milestone projects have their branches
-   created, update the deliverable file to create the stable/$series
-   branch for ``openstack/requirements``. Then announce that the
-   requirements freeze is lifted from master.
+   created, someone from the requirements core team (preferably the
+   requirements PTL) needs to propose an update the deliverable file to
+   create the stable/$series branch for ``openstack/requirements``.
+   Then announce that the requirements freeze is lifted from master.
 
      Note that we wait until after the other projects have branched to
      create the branch for requirements because tests for the stable
