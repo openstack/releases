@@ -480,7 +480,8 @@ def validate_releases(deliverable_info, zuul_layout,
                              actual_sha,
                              project['hash']))
                 else:
-                    print('Found new version {}'.format(release['version']))
+                    print('Found new version {} for {}'.format(
+                        release['version'], project['repo']))
                     new_releases[release['version']] = release
                     if prev_projects and project['repo'] not in prev_projects:
                         print('not included in previous release for %s: %s' %
