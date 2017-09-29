@@ -423,8 +423,9 @@ def validate_releases(deliverable_info, zuul_layout,
                     # doesn't exist.
                     continue
 
-                version_exists = gitutils.tag_exists(
-                    project['repo'], release['version'],
+                # Check the presence of tag in the references
+                version_exists = gitutils.commit_exists(
+                    workdir, project['repo'], release['version'],
                 )
 
                 # Check that the sdist name and tarball-base name match.
