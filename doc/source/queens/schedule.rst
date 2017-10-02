@@ -322,3 +322,30 @@ Glance Spec Freeze
 All Glance, python-glanceclient, and glance_store specs must be merged into
 the glance-specs repository by 23:59 on Friday 6 October 2017.  This is a
 necessary but not sufficient condition for inclusion in the Queens release.
+
+Cinder
+------
+
+.. _q-cinder-driver-deadline:
+
+Cinder New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to Cinder is 4 Dec, 2017
+(23:59 UTC). New drivers must be complete, with unit tests, passing 3rd party
+CI and be merged by this date.
+
+.. _q-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder specs must be approved by 4 Dec, 2017 (23:59 UTC).
+
+.. _q-cinder-fp-freeze:
+
+Cinder Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Cinder features must be proposed and substantially complete, with unit
+tests by 19 Jan, 2018 (23:59 UTC).

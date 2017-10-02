@@ -70,6 +70,8 @@ cycle:
   - q-mf
   project-specific:
   - q-manila-driver-deadline
+  - q-cinder-driver-deadline
+  - q-cinder-spec-freeze
 - end: '2017-12-15'
   name: R-11
   start: '2017-12-11'
@@ -94,6 +96,8 @@ cycle:
   start: '2018-01-15'
   x-project:
   - q-final-lib
+  project-specific:
+  - q-cinder-fp-freeze
 - end: '2018-01-26'
   name: R-5
   start: '2018-01-22'
