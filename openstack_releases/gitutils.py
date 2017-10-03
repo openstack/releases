@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import logging
 import os
 import os.path
 import subprocess
@@ -22,6 +23,7 @@ from openstack_releases import links
 from requests.packages import urllib3
 urllib3.disable_warnings()
 
+LOG = logging.getLogger(__name__)
 
 CGIT_SHA_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
 CGIT_TAG_TEMPLATE = 'http://git.openstack.org/cgit/%s/tag/?h=%s'
@@ -53,7 +55,7 @@ def commit_exists(workdir, repo, ref):
             cwd=os.path.join(workdir, repo),
         ).decode('utf-8')
     except subprocess.CalledProcessError as err:
-        print('Could not find {}: {}'.format(ref, err))
+        LOG.error('Could not find {}: {}'.format(ref, err))
         return False
     return True
 
@@ -88,14 +90,14 @@ def clone_repo(workdir, repo, ref=None):
         subprocess.check_call(cmd)
         # Force an update, just in case the local version is still out of
         # date.
-        print('Updating newly cloned repository in %s' % dest)
+        LOG.info('Updating newly cloned repository in %s' % dest)
         subprocess.check_call(
             ['git', 'fetch', '-v', '--tags'],
             cwd=dest,
         )
     # If we were given some sort of reference, check that out.
     if ref:
-        print('Updating %s to %s' % (repo, ref))
+        LOG.info('Updating %s to %s' % (repo, ref))
         subprocess.check_call(
             ['git', 'checkout', ref],
             cwd=dest,
@@ -114,8 +116,8 @@ def sha_for_tag(workdir, repo, version):
         ).decode('utf-8')
         actual_sha = actual_sha.strip()
     except subprocess.CalledProcessError as e:
-        print('ERROR getting SHA for tag %r: %s [%s]' %
-              (version, e, e.output.strip()))
+        LOG.info('ERROR getting SHA for tag %r: %s [%s]',
+                 version, e, e.output.strip())
         actual_sha = ''
     return actual_sha
 
@@ -141,7 +143,7 @@ def stable_branch_exists(workdir, repo, series):
         )
         return (remote_match in containing_branches)
     except subprocess.CalledProcessError as e:
-        print('ERROR checking for branch: %s [%s]' % (e, e.output.strip()))
+        LOG.error('failed checking for branch: %s [%s]', e, e.output.strip())
         return False
 
 
@@ -188,7 +190,7 @@ def check_branch_sha(workdir, repo, series, sha):
         # wrong branch and should not be allowed.
         return False
     except subprocess.CalledProcessError as e:
-        print('ERROR checking SHA on branch: %s [%s]' % (e, e.output.strip()))
+        LOG.error('failed checking SHA on branch: %s [%s]' % (e, e.output.strip()))
         return False
 
 
@@ -202,7 +204,7 @@ def check_ancestry(workdir, repo, old_version, sha):
         ).decode('utf-8').strip()
         return bool(ancestors)
     except subprocess.CalledProcessError as e:
-        print('ERROR checking ancestry: %s [%s]' % (e, e.output.strip()))
+        LOG.error('failed checking ancestry: %s [%s]' % (e, e.output.strip()))
         return False
 
 
@@ -217,8 +219,8 @@ def get_latest_tag(workdir, repo, sha=None):
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
-        print('WARNING failed to retrieve latest tag: %s [%s]' %
-              (e, e.output.strip()))
+        LOG.warning('failed to retrieve latest tag: %s [%s]',
+                    e, e.output.strip())
         return None
 
 
@@ -250,8 +252,8 @@ def get_branches(workdir, repo):
             results.append(branch)
         return results
     except subprocess.CalledProcessError as e:
-        print('ERROR failed to retrieve list of branches: %s [%s]' %
-              (e, e.output.strip()))
+        LOG.error('failed to retrieve list of branches: %s [%s]',
+                  e, e.output.strip())
         return []
 
 
@@ -269,8 +271,8 @@ def branches_containing(workdir, repo, ref):
             results.append(line.strip())
         return results
     except subprocess.CalledProcessError as e:
-        print('ERROR failed to retrieve list of branches containing %s: %s [%s]' %
-              (ref, e, e.output.strip()))
+        LOG.error('failed to retrieve list of branches containing %s: %s [%s]',
+                  ref, e, e.output.strip())
         return []
 
 
@@ -294,8 +296,8 @@ def get_branch_base(workdir, repo, branch):
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
-        print('WARNING failed to retrieve branch base: %s [%s]' %
-              (e, e.output.strip()))
+        LOG.warning('failed to retrieve branch base: %s [%s]',
+                    e, e.output.strip())
         return None
     parent = parents.splitlines()[-1]
     # Now get the ^^! commit
@@ -311,6 +313,6 @@ def get_branch_base(workdir, repo, branch):
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
     except subprocess.CalledProcessError as e:
-        print('WARNING failed to retrieve branch base: %s [%s]' %
-              (e, e.output.strip()))
+        LOG.warning('failed to retrieve branch base: %s [%s]',
+                    e, e.output.strip())
         return None
