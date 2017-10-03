@@ -224,6 +224,20 @@ def get_latest_tag(workdir, repo, sha=None):
         return None
 
 
+def add_tag(workdir, repo, tag, sha):
+    cmd = ['git', 'tag', '-m', 'temporary tag', tag, sha]
+    try:
+        return subprocess.check_output(
+            cmd,
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).decode('utf-8').strip()
+    except subprocess.CalledProcessError as e:
+        LOG.warning('failed to add tag: %s [%s]',
+                    e, e.output.strip())
+        return None
+
+
 def get_branches(workdir, repo):
     try:
         output = subprocess.check_output(
