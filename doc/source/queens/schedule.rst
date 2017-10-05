@@ -323,6 +323,39 @@ All Glance, python-glanceclient, and glance_store specs must be merged into
 the glance-specs repository by 23:59 on Friday 6 October 2017.  This is a
 necessary but not sufficient condition for inclusion in the Queens release.
 
+Keystone
+--------
+
+.. _q-keystone-spec-proposal-freeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Queens must be submitted to the keystone-specs
+repository by the end of the week.
+
+.. _q-keystone-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Queens must be approved by the end of the week.
+
+.. _q-keystone-fpfreeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _q-keystone-ffreeze:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be merged by the end of the week.
+
 Cinder
 ------
 
