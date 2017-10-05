@@ -1,0 +1,26 @@
+- job:
+    name: releases-tox-list-changes
+    parent: openstack-tox
+    vars:
+      tox_envlist: list-changes
+
+- project:
+    name: openstack/releases
+    templates:
+      - openstack-python35-jobs
+    check:
+      jobs:
+        - openstack-tox-validate
+        - releases-tox-list-changes
+        - openstack-tox-pep8
+        - build-openstack-sphinx-docs
+    gate:
+      jobs:
+        - openstack-tox-validate
+        - build-openstack-sphinx-docs
+    release-post:
+      jobs:
+        - tag-releases
+        - publish-static:
+            dependencies:
+              - tag-releases
