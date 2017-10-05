@@ -21,6 +21,7 @@ import argparse
 import atexit
 import glob
 import json
+import logging
 import os
 import os.path
 import shutil
@@ -182,6 +183,14 @@ def main():
               'files changed in the latest commit'),
     )
     args = parser.parse_args()
+
+    # Set up logging, including making some loggers quiet.
+    logging.basicConfig(
+        format='%(levelname)7s:%(name)s: %(message)s',
+        stream=sys.stdout,
+        level=logging.DEBUG,
+    )
+    logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
 
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
