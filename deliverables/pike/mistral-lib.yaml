@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: bb1b87b37b5791bc4403bc57e1c79bb6a497f624
+  - version: 0.3.0
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 9c2d6d922a771449002b4ad76cbccd56c0aada86
 branches:
   - name: stable/pike
-    location: 0.2.0
+    location: 0.3.0
