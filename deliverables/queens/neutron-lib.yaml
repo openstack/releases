@@ -27,3 +27,11 @@ releases:
         * The API definition for IP allocation has been added
         * The API definition for L3 flavors has been added
         * The API definition for DVR has been added
+  - version: 1.11.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: ff5ee1720dcc8accc021c0a621b6c664fb4a50c0
+    highlights: |
+        * The API definition for VNI in BGPVPN has been added
+        * The API definition for default-subnetpools has been added
+        * The API definition for quota details has been added
