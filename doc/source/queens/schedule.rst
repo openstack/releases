@@ -349,3 +349,19 @@ Cinder Feature Proposal Freeze
 
 All new Cinder features must be proposed and substantially complete, with unit
 tests by 19 Jan, 2018 (23:59 UTC).
+
+
+Sahara
+------
+
+.. _q-sahara-plugin-deadline:
+
+Sahara Plugin Deadline
+^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new plugins or plugin versions to Sahara is
+8 Dec 2017 (23:59 UTC). The motivation for this deadline is to ensure
+sufficient time for testing plugins and ensuring their stability. Also, due to
+the unpredictable release schedule of Hadoop components, we should avoid the
+practice of delaying plugin upgrades too far into the cycle. Exemptions to this
+deadline may be granted by the PTL.
