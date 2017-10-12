@@ -12,3 +12,10 @@ releases:
       - hash: e42192e8393f01e825a8b8f5628f7813ae49c4bb
         repo: openstack-infra/shade
     version: 1.23.0
+  - highlights: |
+      Removed keystoneclient dependencies. Added support for making volumes
+      bootable and booting servers in groups. Fixed an image task upload issue.
+    projects:
+      - hash: 8a6f0f9bc3f240e2b26e727bdb20ab770cfb3a6e
+        repo: openstack-infra/shade
+    version: 1.24.0
