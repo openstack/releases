@@ -34,6 +34,7 @@ import requests
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
+from openstack_releases import release_notes
 from openstack_releases import yamlutils
 
 
@@ -502,5 +503,44 @@ def main():
                     'Details Contents',
                     git_range,
                     extra_args=['--no-merges', '--topo-order'])
+
+            # Before we try to produce the release notes we need the
+            # tag to exist in the local repository.
+            if not tag_exists:
+                header('Applying Temporary Tag')
+                gitutils.add_tag(
+                    workdir,
+                    project['repo'],
+                    new_release['version'],
+                    project['sha'],
+                )
+            header('Release Notes')
+            try:
+                first_release = len(deliverable_info.get('releases', [])) == 1
+                notes = release_notes.generate_release_notes(
+                    repo=project['repo'],
+                    repo_path=os.path.join(workdir, project['repo']),
+                    start_revision=start_range,
+                    end_revision=new_release['version'],
+                    show_dates=True,
+                    skip_requirement_merges=True,
+                    is_stable=branch.startswith('stable/'),
+                    series=series,
+                    email='test-job@openstack.org',
+                    email_from='test-job@openstack.org',
+                    email_reply_to='noreply@openstack.org',
+                    email_tags='',
+                    include_pypi_link=False,
+                    changes_only=False,
+                    first_release=first_release,
+                    repo_name=project['repo'],
+                    description='',
+                    publishing_dir_name=project['repo'],
+                )
+            except Exception as e:
+                logging.exception('Failed to produce release notes')
+            else:
+                print('\n')
+                print(notes)
 
     return 0
