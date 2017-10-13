@@ -512,7 +512,7 @@ def main():
                     workdir,
                     project['repo'],
                     new_release['version'],
-                    project['sha'],
+                    project['hash'],
                 )
             header('Release Notes')
             try:
