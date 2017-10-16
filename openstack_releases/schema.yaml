@@ -39,6 +39,8 @@ properties:
   stable-branch-type:
     type: "string"
     enum: [ "std", "tagless", "upstream" ]
+  cycle-highlights:
+    type: "string"
   releases:
     type: "array"
     items:
