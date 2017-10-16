@@ -4,6 +4,7 @@ release-model: cycle-with-intermediary
 team: vitrage
 type: service
 release-notes: https://docs.openstack.org/releasenotes/vitrage/pike.html
+release-type: python-pypi
 branches:
   - location: 1.8.0
     name: stable/pike
@@ -24,3 +25,7 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: a4d14d248dc32f1402939895fc25164a57066f2c
+  - version: 1.8.2
+    projects:
+      - repo: openstack/vitrage
+        hash: b0400e0322415df4402bae8092b9b2a1d2f79d11
