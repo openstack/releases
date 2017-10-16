@@ -447,6 +447,21 @@ def main():
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
                 git_diff(workdir, project['repo'], git_range, 'setup.cfg')
 
+            # Before we try to determine if the previous release
+            # is an ancestor or produce the release notes we need
+            # the tag to exist in the local repository.
+            if not tag_exists:
+                header('Applying Temporary Tag')
+                print('\ngit tag {version} {hash}'.format(
+                    version=new_release['version'],
+                    hash=project['hash'],
+                ))
+                subprocess.check_call(
+                    ['git', 'tag', new_release['version'],
+                     project['hash']],
+                    cwd=os.path.join(workdir, project['repo']),
+                )
+
             # Show any changes in the previous release but not in this
             # release, in case someone picks an "early" SHA or a
             # regular commit instead of the appropriate merge commit.
@@ -465,14 +480,11 @@ def main():
                      project['hash']],
                     extra_args=['--topo-order', '--oneline', '--no-merges'],
                 )
+
+                # The tag will have been added as a local tag above if
+                # it does not already exist.
                 header('New release %s includes previous release %s' %
                        (new_release['version'], previous_release['version']))
-                if not tag_exists:
-                    subprocess.check_call(
-                        ['git', 'tag', new_release['version'],
-                         project['hash']],
-                        cwd=os.path.join(workdir, project['repo']),
-                    )
                 print('\ngit tag --contains %s\n' %
                       previous_release['version'])
                 containing_tags = subprocess.check_output(
@@ -511,16 +523,8 @@ def main():
                     git_range,
                     extra_args=['--no-merges', '--topo-order'])
 
-            # Before we try to produce the release notes we need the
-            # tag to exist in the local repository.
-            if not tag_exists:
-                header('Applying Temporary Tag')
-                gitutils.add_tag(
-                    workdir,
-                    project['repo'],
-                    new_release['version'],
-                    project['hash'],
-                )
+            # The tag will have been added as a local tag above if it does
+            # not already exist.
             header('Release Notes')
             try:
                 first_release = len(deliverable_info.get('releases', [])) == 1
