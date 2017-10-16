@@ -226,18 +226,8 @@ def expand_template(contents, params):
 
 
 def run_cmd(cmd, cwd=None, encoding='utf-8'):
-    # Created since currently the 'processutils' function doesn't take a
-    # working directory, which we need in this example due to the different
-    # working directories we run programs in...
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                         cwd=cwd)
-    stdout, stderr = p.communicate()
-    if p.returncode != 0:
-        raise subprocess.ProcessExecutionError(stdout=stdout,
-                                               stderr=stderr,
-                                               exit_code=p.returncode,
-                                               cmd=cmd)
-    return stdout.decode(encoding), stderr.decode(encoding)
+    stdout = subprocess.check_output(cmd, cwd=cwd)
+    return stdout.decode(encoding)
 
 
 def is_skippable_commit(skip_requirement_merges, line):
@@ -305,7 +295,7 @@ def generate_release_notes(repo, repo_path,
     else:
         format = "--oneline"
     cmd = ["git", "log", "--no-color", format, "--no-merges", git_range]
-    stdout, stderr = run_cmd(cmd, cwd=repo_path)
+    stdout = run_cmd(cmd, cwd=repo_path)
     changes = []
     for commit_line in stdout.splitlines():
         commit_line = commit_line.strip()
@@ -322,13 +312,13 @@ def generate_release_notes(repo, repo_path,
     if requirement_files:
         cmd = ['git', 'diff', '-U0', '--no-color', git_range]
         cmd.extend(requirement_files)
-        stdout, stderr = run_cmd(cmd, cwd=repo_path)
+        stdout = run_cmd(cmd, cwd=repo_path)
         requirement_changes = [line.strip()
                                for line in stdout.splitlines() if line.strip()]
 
     # Get statistics about the range given...
     cmd = ['git', 'diff', '--stat', '--no-color', git_range]
-    stdout, stderr = run_cmd(cmd, cwd=repo_path)
+    stdout = run_cmd(cmd, cwd=repo_path)
     diff_stats = []
     for line in stdout.splitlines():
         line = line.strip()
