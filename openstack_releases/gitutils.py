@@ -248,6 +248,7 @@ def get_latest_tag(workdir, repo, sha=None):
 def add_tag(workdir, repo, tag, sha):
     cmd = ['git', 'tag', '-m', 'temporary tag', tag, sha]
     try:
+        LOG.info(' '.join(cmd))
         return subprocess.check_output(
             cmd,
             cwd=os.path.join(workdir, repo),
