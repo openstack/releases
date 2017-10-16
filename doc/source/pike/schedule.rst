@@ -49,7 +49,7 @@ Pike-1 milestone
 13 April 2017 is the Pike-1 milestone window for projects following the
 `release:cycle-with-milestones`_ model.
 
-.. _release:cycle-with-milestones: https://governance.openstack.org/tc/reference/tags/release_cycle-with-milestones.html
+.. _release:cycle-with-milestones: https://releases.openstack.org/reference/release_models.html#cycle-with-milestones
 
 .. _p-goals-ack:
 
