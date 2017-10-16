@@ -14,3 +14,10 @@ releases:
         * Adding extension for common utility functions
         * Adding pause/resume feature
         * Introducing payload and template downloading
+  - version: 0.4.0
+    projects:
+      - repo: openstack/syntribos
+        hash: c4586a374b2e02942b89bf1e9248ae00d7cd2d55
+    highlights: |
+        * Multithreaded network IO to significantly improve performance
+        * Introduced meta-variable files to simplify template creation
