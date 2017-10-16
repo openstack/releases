@@ -315,6 +315,13 @@ def main():
                  project['repo'],
                  ]
             )
+            # Set some git configuration values to allow us to perform
+            # local operations like tagging.
+            gitutils.ensure_basic_git_config(
+                workdir, project['repo'],
+                {'user.email': 'openstack-infra@lists.openstack.org',
+                 'user.name': 'OpenStack Proposal Bot'},
+            )
 
             # Determine which branch we should actually be looking
             # at. Assume any series for which there is no stable

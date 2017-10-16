@@ -72,7 +72,28 @@ def tag_exists(repo, ref):
     return links.link_exists(url)
 
 
-def clone_repo(workdir, repo, ref=None):
+def ensure_basic_git_config(workdir, repo, settings):
+    """Given a repo directory and a settings dict, set local config values
+    if those settings are not already defined.
+    """
+    dest = os.path.join(workdir, repo)
+    for key, value in settings.items():
+        LOG.info('looking for git config {}'.format(key))
+        try:
+            existing = subprocess.check_output(
+                ['git', 'config', '--get', key],
+                cwd=dest,
+            ).decode('utf-8').strip()
+            LOG.info('using existing setting of {}: {!r}'.format(key, existing))
+        except subprocess.CalledProcessError:
+            LOG.info('updating setting of {} to {!r}'.format(key, value))
+            subprocess.check_call(
+                ['git', 'config', key, value],
+                cwd=dest,
+            )
+
+
+def clone_repo(workdir, repo, ref=None, branch=None):
     "Check out the code."
     dest = os.path.join(workdir, repo)
     if not os.path.exists(dest):
