@@ -365,3 +365,13 @@ sufficient time for testing plugins and ensuring their stability. Also, due to
 the unpredictable release schedule of Hadoop components, we should avoid the
 practice of delaying plugin upgrades too far into the cycle. Exemptions to this
 deadline may be granted by the PTL.
+
+Nova
+----
+
+.. _q-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova specs must be approved by end of day Thursday October 19th, 2017.
