@@ -8,7 +8,12 @@ if [[ $# -gt 1 ]]; then
     exit 1
 fi
 
-SERIES=${1:-master}
+BRANCH=${1:-master}
+if [ "$BRANCH" = "master" ]; then
+    SERIES=$(ls -1 deliverables | sort | tail -n 1)
+else
+    SERIES=$(basename $BRANCH)
+fi
 
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
@@ -29,4 +34,4 @@ fi
 echo "Finding $SERIES library repositories..."
 repos=$(list-deliverables --repos --type library --series $SERIES)
 
-$TOOLSDIR/list_unreleased_changes.sh $SERIES $repos
+$TOOLSDIR/list_unreleased_changes.sh $BRANCH $repos
