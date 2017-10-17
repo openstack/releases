@@ -4,3 +4,8 @@ team: ironic
 type: library
 release-model: cycle-with-intermediary
 include-pypi-link: yes
+releases:
+  - projects:
+      - hash: effbee94255e98c3ada3ed0d961c3d878f3fc0a3
+        repo: openstack/ironic-lib
+    version: 2.11.0
