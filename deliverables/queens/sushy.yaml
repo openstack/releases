@@ -3,3 +3,8 @@ launchpad: sushy
 team: ironic
 type: library
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: 8fe2904a62b0f56dc3fc3fefc5a5a746911ce891
+        repo: openstack/sushy
+    version: 1.2.0
