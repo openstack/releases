@@ -101,15 +101,15 @@ function update_upper_constraints {
 }
 
 
+_functions_bindir=$(realpath $(dirname $0))
+
 function clone_repo {
     typeset repo="$1"
     typeset branch="$2"
     if [ -z "$branch" ]; then
         branch="master"
     fi
-    output=$({ zuul-cloner --branch "$branch" git://git.openstack.org $repo \
-               && (cd $repo && git remote -v update \
-                   && git fetch -v --tags); } 2>&1)
+    output=$($_functions_bindir/clone_repo.sh --branch "$branch" $repo 2>&1)
     _retval=$?
     if [ $_retval -ne 0 ] ; then
         echo "$output"

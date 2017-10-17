@@ -95,34 +95,18 @@ def ensure_basic_git_config(workdir, repo, settings):
 
 def clone_repo(workdir, repo, ref=None, branch=None):
     "Check out the code."
-    dest = os.path.join(workdir, repo)
-    if not os.path.exists(dest):
-        cmd = [
-            'zuul-cloner',
-            '--workspace', workdir,
-        ]
-        cache_dir = os.environ.get('ZUUL_CACHE_DIR', '/opt/git')
-        if cache_dir and os.path.exists(cache_dir):
-            cmd.extend(['--cache-dir', cache_dir])
-        cmd.extend([
-            'git://git.openstack.org',
-            repo,
-        ])
-        subprocess.check_call(cmd)
-        # Force an update, just in case the local version is still out of
-        # date.
-        LOG.info('Updating newly cloned repository in %s' % dest)
-        subprocess.check_call(
-            ['git', 'fetch', '-v', '--tags'],
-            cwd=dest,
-        )
-    # If we were given some sort of reference, check that out.
+    print('\nChecking out repository {} to {}'.format(
+        repo, branch or ref or 'master'))
+    cmd = [
+        './tools/clone_repo.sh',
+        '--workspace', workdir,
+    ]
     if ref:
-        LOG.info('Updating %s to %s' % (repo, ref))
-        subprocess.check_call(
-            ['git', 'checkout', ref],
-            cwd=dest,
-        )
+        cmd.extend(['--ref', ref])
+    if branch:
+        cmd.extend(['--branch', branch])
+    cmd.append(repo)
+    subprocess.check_call(cmd)
 
 
 def sha_for_tag(workdir, repo, version):

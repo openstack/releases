@@ -28,13 +28,6 @@ TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
 source $TOOLSDIR/functions
 
-if [[ -z "$VIRTUAL_ENV" ]]; then
-    if [[ ! -d $BASEDIR/.tox/venv ]]; then
-        (cd $BASEDIR && tox -e venv --notest)
-    fi
-    source $BASEDIR/.tox/venv/bin/activate
-fi
-
 # Make sure no pager is configured so the output is not blocked
 export PAGER=
 

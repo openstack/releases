@@ -31,7 +31,6 @@ import tempfile
 
 import requests
 
-from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import release_notes
@@ -295,26 +294,15 @@ def main():
                 print('%s %s exists on git server already' %
                       (project['repo'], new_release['version']))
 
-            # Decide which branch we're going to try to clone. We need
-            # the repo checked out before we can tell if the stable
-            # branch really exists, but zuul-cloner will fall back to
-            # master if it doesn't.
-            if series in (defaults.RELEASE, '_independent'):
-                clone_branch = 'master'
-            else:
-                clone_branch = 'stable/' + series
-
-            # Check out the code.
-            print('\nChecking out repository {} to {}'.format(
-                project['repo'], clone_branch))
-            subprocess.check_call(
-                ['zuul-cloner',
-                 '--branch', clone_branch,
-                 '--workspace', workdir,
-                 'git://git.openstack.org',
-                 project['repo'],
-                 ]
+            # Start by checking out master, always. We need the repo
+            # checked out before we can tell if the stable branch
+            # really exists.
+            gitutils.clone_repo(
+                workdir,
+                project['repo'],
+                branch='master',
             )
+
             # Set some git configuration values to allow us to perform
             # local operations like tagging.
             gitutils.ensure_basic_git_config(
@@ -331,18 +319,13 @@ def main():
             else:
                 branch = 'master'
 
-            if branch != clone_branch:
+            if branch != 'master':
                 # Check out the repo again to the right branch if we
                 # didn't get it the first time.
-                print('\nUpdating repository {} to {}'.format(
-                    project['repo'], branch))
-                subprocess.check_call(
-                    ['zuul-cloner',
-                     '--branch', branch,
-                     '--workspace', workdir,
-                     'git://git.openstack.org',
-                     project['repo'],
-                     ]
+                gitutils.clone_repo(
+                    workdir,
+                    project['repo'],
+                    branch=branch,
                 )
 
             # look at the previous tag for the parent of the commit
