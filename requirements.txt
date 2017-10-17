@@ -1,3 +1,13 @@
+######################################################################
+#                                                                    #
+#                          ** IMPORTANT **                           #
+#                                                                    #
+# THIS FILE IS ONLY USED BY TOX IN THE CHECK AND GATE JOBS. YOU MUST #
+# UPDATE bindep.txt TO INCLUDE ADDITIONAL PACKAGES NEEDED IN THE     #
+# POST-MERGE # JOBS SUCH AS "tag-releases".                          #
+#                                                                    #
+######################################################################
+
 pbr>=1.6
 
 # NOTE(dhellmann): We pin keyring because new releases tend to add
