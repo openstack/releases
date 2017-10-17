@@ -657,7 +657,7 @@ class TestValidateReleases(base.BaseTestCase):
         stable_branches = list(sorted(
             b
             for b in known_branches
-            if b.startswith('stable/')
+            if 'origin/' in b  # be flexible remotes/origin/, origin/, etc.
         ))
         # Pick an early branch, find the most recent tagged release,
         # get the version, then get the sha of that commit.
@@ -680,7 +680,9 @@ class TestValidateReleases(base.BaseTestCase):
             'openstack/automaton',
             branch2,
         )
-        version2 = version1 + '9'
+        # We don't want a version number like 1.13.09 because that
+        # fails the canonical-form check.
+        version2 = version1.rstrip('0') + '9'
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
