@@ -1,5 +1,11 @@
 ---
 launchpad: tripleo
 release-model: cycle-trailing
+release-type: python-pypi
 team: tripleo
 type: other
+releases:
+  - projects:
+      - hash: f8efc0bd5b32f2964aa5b05d094b751df0a7feff
+        repo: openstack/tripleo-heat-templates
+    version: 8.0.0.0b1

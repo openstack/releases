@@ -1,5 +1,11 @@
 ---
 launchpad: os-net-config
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: tripleo
 type: other
+releases:
+  - projects:
+      - hash: 44f3957b9ef1fa15797520ee1f0e3fc42e0c2b27
+        repo: openstack/os-net-config
+    version: 8.0.0
