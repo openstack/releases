@@ -5,3 +5,8 @@ release-model: cycle-with-milestones
 release-type: horizon
 team: octavia
 type: horizon-plugin
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: 6895af770777c110ce165b86f820d5e4b1afe613

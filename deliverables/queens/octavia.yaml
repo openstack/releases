@@ -2,5 +2,11 @@
 include-pypi-link: yes
 storyboard: 908
 release-model: cycle-with-milestones
+release-type: python-pypi
 team: octavia
 type: service
+releases:
+  - version: 2.0.0.0b1
+    projects:
+      - repo: openstack/octavia
+        hash: 1b84076ee61f719fec5b2c7c3d4d2cd36469ea82

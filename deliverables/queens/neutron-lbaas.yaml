@@ -5,3 +5,8 @@ release-type: neutron
 release-notes: https://docs.openstack.org/releasenotes/neutron-lbaas/unreleased.html
 team: octavia
 type: other
+releases:
+  - version: 12.0.0.0b1
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 8ee7dd2da7c3d8db588ec03b4ee0df25a7b906a9
