@@ -42,3 +42,7 @@ releases:
         16.0.0 release.
       - The nova-conductor service now depends on [placement] credentials
         being configured in nova.conf.
+  - version: 16.0.2
+    projects:
+      - repo: openstack/nova
+        hash: cb3abbdb768013e4d7182a91c8a2b26c6d725f35
