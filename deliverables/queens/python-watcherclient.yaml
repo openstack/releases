@@ -4,3 +4,8 @@ launchpad: watcher
 release-model: cycle-with-intermediary
 team: watcher
 type: library
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 0fd1b11f6d9ccc108608297e6dfb28c846152a73
