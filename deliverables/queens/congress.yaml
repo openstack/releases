@@ -3,3 +3,10 @@ launchpad: congress
 release-model: cycle-with-milestones
 team: congress
 type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/congress
+        hash: a729a0926dcf3d5fcb8ee5640ea0bb5dec85e1a7
+    highlights: |-
+      - Neutron QoS extension driver added.
