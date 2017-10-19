@@ -5,3 +5,8 @@ launchpad: glance
 release-model: cycle-with-milestones
 team: glance
 type: service
+releases:
+  - version: 16.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: 4731910f94d123129516741cca30d4a550028db1
