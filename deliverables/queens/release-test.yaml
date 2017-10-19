@@ -1,0 +1,11 @@
+---
+launchpad: nova
+team: Release Management
+type: other
+release-model: cycle-with-intermediary
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/release-test
+        hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        tarball-base: openstack-release-test
