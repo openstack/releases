@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: f3410a4475d0ef29168e9f366a204619a5e0d220
+        repo: openstack/monasca-agent
+    version: 2.3.0
