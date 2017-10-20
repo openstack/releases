@@ -1,5 +1,11 @@
 ---
 launchpad: zaqar-ui
 release-model: cycle-with-milestones
+release-type: python-service
 team: zaqar
 type: horizon-plugin
+releases:
+  - version: 4.0.0.0b1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 4b5f08288994f6b7228bb8995af4ceb70c7ab396
