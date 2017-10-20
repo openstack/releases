@@ -232,10 +232,13 @@ def main():
             print('advancing %s from %s to %s' % (project['repo'],
                                                   project['hash'],
                                                   sha))
-            projects.append({
+            new_project = {
                 'repo': project['repo'],
                 'hash': sha,
-            })
+            }
+            if 'tarball-base' in project:
+                new_project['tarball-base'] = project['tarball-base']
+            projects.append(new_project)
         else:
             print('{} already tagged at most recent commit, skipping'.format(
                 project['repo']))
