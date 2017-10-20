@@ -4,3 +4,8 @@ launchpad: tricircle
 release-model: cycle-with-intermediary
 team: tricircle
 type: service
+releases:
+  - version: 4.1.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 2b164d8dff504ad09e405db9407863daafcd9d7f
