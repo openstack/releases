@@ -82,7 +82,6 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
     'std': [
-        'openstack-server-release-jobs',    # old zuulv2 job name
         'publish-to-pypi',
         'release-openstack-server',
     ],
