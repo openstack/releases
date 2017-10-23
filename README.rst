@@ -409,6 +409,16 @@ The top level of a deliverable file is a mapping with keys:
   ``fuel``
     The Fuel project manages its own packages.
 
+  ``puppet``
+    All puppet modules should use this. If no release-type is
+    specified and the validation job can determine that a module is a
+    puppet module, it assumes a release-type of ``puppet``.
+
+  ``nodejs``
+    All nodejs modules should use this. If no release-type is
+    specified and the validation job can determine that a module is a
+    nodejs module, it assumes a release-type of ``nodejs``.
+
 ``releases``
   A list of the releases for the deliverable.
 

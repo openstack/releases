@@ -35,6 +35,8 @@ _VALIDATORS = {'std': (pbr.version.SemanticVersion.from_pip_string,
                }
 _VALIDATORS['fuel'] = _VALIDATORS['std']
 _VALIDATORS['openstack-manuals'] = _VALIDATORS['std']
+_VALIDATORS['puppet'] = _VALIDATORS['std']
+_VALIDATORS['nodejs'] = _VALIDATORS['std']
 
 
 def validate_version(versionstr, release_type='std', pre_ok=True):

@@ -422,7 +422,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_check_release_jobs(self, check_jobs):
         deliverable_info = {
             'releases': [
-                {'version': '1.5.0',
+                {'version': '99.5.0',
                  'projects': [
                      {'repo': 'openstack/automaton',
                       'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
