@@ -29,13 +29,13 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 },
             },
         }
-        zuul_layout = {
+        zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
             deliverable_info,
-            {'validate-projects-by-name': zuul_layout},
+            {'validate-projects-by-name': zuul_projects},
             'openstack/releases',
             'std',
             warnings.append,
@@ -54,13 +54,13 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 }
             }
         }
-        zuul_layout = {
+        zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
             deliverable_info,
-            {'validate-projects-by-name': zuul_layout},
+            {'validate-projects-by-name': zuul_projects},
             'openstack/releases',
             'std',
             warnings.append,
@@ -69,16 +69,16 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
-    def test_no_zuul_layout(self):
+    def test_no_zuul_projects(self):
         deliverable_info = {
         }
-        zuul_layout = {
+        zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
             deliverable_info,
-            {'validate-projects-by-name': zuul_layout},
+            {'validate-projects-by-name': zuul_projects},
             'openstack/releases',
             'std',
             warnings.append,
@@ -90,18 +90,18 @@ class TestReleaseJobsStandard(base.BaseTestCase):
     def test_one_expected_job(self):
         deliverable_info = {
         }
-        zuul_layout = {
+        zuul_projects = {
             'openstack/releases': {
-                'template': [
-                    {'name': 'publish-to-pypi'},
+                'templates': [
+                    'publish-to-pypi',
                 ],
-            }
+            },
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
             deliverable_info,
-            {'validate-projects-by-name': zuul_layout},
+            zuul_projects,
             'openstack/releases',
             'std',
             warnings.append,
@@ -114,11 +114,11 @@ class TestReleaseJobsStandard(base.BaseTestCase):
     def test_two_expected_jobs(self):
         deliverable_info = {
         }
-        zuul_layout = {
+        zuul_projects = {
             'openstack/releases': {
-                'template': [
-                    {'name': 'publish-to-pypi'},
-                    {'name': 'puppet-tarball-jobs'},
+                'templates': [
+                    'publish-to-pypi',
+                    'puppet-tarball-jobs',
                 ],
             }
         }
@@ -126,7 +126,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         errors = []
         project_config.require_release_jobs_for_repo(
             deliverable_info,
-            {'validate-projects-by-name': zuul_layout},
+            zuul_projects,
             'openstack/releases',
             'std',
             warnings.append,

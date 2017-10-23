@@ -348,7 +348,7 @@ def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
                 mk_error('%s has no .gitreview file' % (project['repo'],))
 
 
-def validate_releases(deliverable_info, zuul_layout,
+def validate_releases(deliverable_info, zuul_projects,
                       series_name,
                       workdir,
                       mk_warning, mk_error):
@@ -381,7 +381,7 @@ def validate_releases(deliverable_info, zuul_layout,
             # Check for release jobs (if we ship a tarball)
             if link_mode != 'none':
                 project_config.require_release_jobs_for_repo(
-                    deliverable_info, zuul_layout, project['repo'],
+                    deliverable_info, zuul_projects, project['repo'],
                     release_type, mk_warning, mk_error,
                 )
 
@@ -881,7 +881,7 @@ def main():
               'skipping validation')
         return 0
 
-    zuul_layout = project_config.get_zuul_layout_data()
+    zuul_projects = project_config.get_zuul_project_data()
 
     team_data = governance.get_team_data()
 
@@ -936,7 +936,7 @@ def main():
         validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
-            zuul_layout,
+            zuul_projects,
             series_name,
             workdir,
             mk_warning,
