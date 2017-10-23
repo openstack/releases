@@ -4,3 +4,8 @@ team: neutron
 type: other
 release-model: cycle-with-milestones
 include-pypi-link: yes
+releases:
+  - projects:
+      - hash: 59445dfe7c988bf0ccba9e4343397d298449a0b3
+        repo: openstack/networking-midonet
+    version: 6.0.0.0b1

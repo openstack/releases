@@ -4,3 +4,8 @@ team: neutron
 type: other
 release-model: cycle-with-milestones
 include-pypi-link: yes
+releases:
+  - projects:
+      - hash: d94693f181f83c18d0c84af02a4787575dcfecc9
+        repo: openstack/networking-bagpipe
+    version: 8.0.0.0b1

@@ -3,3 +3,8 @@ launchpad: neutron
 team: neutron
 type: other
 release-model: cycle-with-milestones
+releases:
+  - projects:
+      - hash: 073622b9df508cfb54fade4073c5243001b61a51
+        repo: openstack/neutron-fwaas
+    version: 12.0.0.0b1

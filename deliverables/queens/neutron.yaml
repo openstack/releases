@@ -3,3 +3,8 @@ launchpad: neutron
 team: neutron
 type: service
 release-model: cycle-with-milestones
+releases:
+  - projects:
+      - hash: e86dfc927209185c7f08be5b31c264b869f7cc59
+        repo: openstack/neutron
+    version: 12.0.0.0b1
