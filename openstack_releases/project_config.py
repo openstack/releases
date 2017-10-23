@@ -82,10 +82,14 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
     'std': [
-        'nodejs4-publish-to-npm',
-        'nodejs6-publish-to-npm',
         'openstack-server-release-jobs',
         'publish-to-pypi',
+    ],
+    'nodejs': [
+        'nodejs4-publish-to-npm',
+        'nodejs6-publish-to-npm',
+    ],
+    'puppet': [
         'puppet-tarball-jobs',
         'puppet-release-jobs',
     ],
@@ -162,4 +166,24 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
                         found=found_jobs,
                     ),
                 )
+            # Check to see if we found jobs we did not expect to find.
+            for wrong_type, wrong_jobs in _RELEASE_JOBS_FOR_TYPE.items():
+                if wrong_type == release_type:
+                    continue
+                bad_jobs = [
+                    j for j in wrong_jobs
+                    if j in templates
+                ]
+                if bad_jobs:
+                    mk_error(
+                        '{filename} has unexpected release jobs '
+                        '{bad_jobs!r} for release-type {wrong_type} '
+                        'but {repo} uses release-type {release_type}'.format(
+                            filename=ZUUL_PROJECTS_FILENAME,
+                            repo=repo,
+                            bad_jobs=bad_jobs,
+                            wrong_type=wrong_type,
+                            release_type=release_type,
+                        )
+                    )
     return

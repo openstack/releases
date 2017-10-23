@@ -363,7 +363,6 @@ def validate_releases(deliverable_info, zuul_projects,
     # appear at the end of the file.
     new_releases = {}
 
-    release_type = deliverable_info.get('release-type', 'std')
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
 
     if release_model == 'untagged' and 'releases' in deliverable_info:
@@ -377,13 +376,6 @@ def validate_releases(deliverable_info, zuul_projects,
         print('checking %s' % release['version'])
 
         for project in release['projects']:
-
-            # Check for release jobs (if we ship a tarball)
-            if link_mode != 'none':
-                project_config.require_release_jobs_for_repo(
-                    deliverable_info, zuul_projects, project['repo'],
-                    release_type, mk_warning, mk_error,
-                )
 
             # Check the SHA specified for the tag.
             print('%s SHA %s ' % (project['repo'], project['hash']))
@@ -489,19 +481,17 @@ def validate_releases(deliverable_info, zuul_projects,
                               (prev_version, ', '.join(sorted(prev_projects))))
                     else:
 
-                        for e in versionutils.validate_version(
-                                release['version'],
-                                release_type=release_type,
-                                pre_ok=(release_model in _USES_PREVER)):
-                            msg = ('could not validate version %r: %s' %
-                                   (release['version'], e))
-                            mk_error(msg)
+                        # We change this default to be more
+                        # language-specific before testing the release
+                        # jobs.
+                        default_release_type = 'std'
 
                         # If this is a puppet module, ensure
                         # that the tag and metadata file
                         # match.
                         if puppetutils.looks_like_a_module(workdir,
                                                            project['repo']):
+                            default_release_type = 'puppet'
                             puppet_ver = puppetutils.get_version(
                                 workdir, project['repo'])
                             if puppet_ver != release['version']:
@@ -519,6 +509,7 @@ def validate_releases(deliverable_info, zuul_projects,
                         # match.
                         if npmutils.looks_like_a_module(workdir,
                                                         project['repo']):
+                            default_release_type = 'nodejs'
                             npm_ver = npmutils.get_version(
                                 workdir, project['repo'])
                             if npm_ver != release['version']:
@@ -530,6 +521,26 @@ def validate_releases(deliverable_info, zuul_projects,
                                         release['version'],
                                     )
                                 )
+
+                        # Check for release jobs (if we ship a tarball)
+                        release_type = deliverable_info.get(
+                            'release-type',
+                            default_release_type,
+                        )
+                        if link_mode != 'none':
+                            project_config.require_release_jobs_for_repo(
+                                deliverable_info, zuul_projects,
+                                project['repo'],
+                                release_type, mk_warning, mk_error,
+                            )
+
+                        for e in versionutils.validate_version(
+                                release['version'],
+                                release_type=release_type,
+                                pre_ok=(release_model in _USES_PREVER)):
+                            msg = ('could not validate version %r: %s' %
+                                   (release['version'], e))
+                            mk_error(msg)
 
                         if is_independent:
                             mk_warning('skipping descendant test for '
