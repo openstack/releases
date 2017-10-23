@@ -133,20 +133,33 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
             _RELEASE_JOBS_FOR_TYPE['std'],
         )
         if expected_jobs:
-            num_release_jobs = sum(
-                j in templates
-                for j in expected_jobs
-            )
-            if num_release_jobs == 0:
+            found_jobs = [
+                j
+                for j in templates
+                if j in expected_jobs
+            ]
+            if len(found_jobs) == 0:
                 mk_error(
-                    '%s no release job specified for %s, '
-                    'should be one of %r or no release will be '
-                    'published' % (ZUUL_PROJECTS_FILENAME, repo, expected_jobs),
+                    '{filename} no release job specified for {repo}, '
+                    'one of {expected!r} needs to be included in {existing!r} '
+                    'or no release will be '
+                    'published'.format(
+                        filename=ZUUL_PROJECTS_FILENAME,
+                        repo=repo,
+                        expected=expected_jobs,
+                        existing=templates,
+                    ),
                 )
-            elif num_release_jobs > 1:
+            elif len(found_jobs) > 1:
                 mk_warning(
-                    '%s multiple release jobs specified for %s, '
-                    'should be *one* of %r'
-                    % (ZUUL_PROJECTS_FILENAME, repo, expected_jobs),
+                    '{filename} multiple release jobs specified for {repo}, '
+                    '{existing!r} should include *one* of '
+                    '{expected!r}, found {found!r}'.format(
+                        filename=ZUUL_PROJECTS_FILENAME,
+                        repo=repo,
+                        expected=expected_jobs,
+                        existing=templates,
+                        found=found_jobs,
+                    ),
                 )
     return
