@@ -3,3 +3,9 @@ launchpad: nova
 release-model: cycle-with-milestones
 team: nova
 type: service
+release-notes: https://docs.openstack.org/releasenotes/nova/unreleased.html
+releases:
+  - version: 17.0.0.0b1
+    projects:
+      - repo: openstack/nova
+        hash: af4703cb38580a8cb9c9b293dd4b1637f2734cad
