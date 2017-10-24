@@ -5,3 +5,8 @@ launchpad: designate
 release-model: cycle-with-milestones
 team: designate
 type: service
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/designate
+        hash: 0b64fe765e607a2b20472a4d910b58e57e09008f
