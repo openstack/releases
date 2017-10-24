@@ -34,6 +34,19 @@ from openstack_releases import yamlutils
 urllib3.disable_warnings()
 
 
+def check_url(type, url):
+    if links.link_exists(url):
+        print('  found {}'.format(type))
+    else:
+        print('  did not find {} {}'.format(type, url))
+        yield 'missing {} {}'.format(type, url)
+
+
+def check_signed_file(type, url):
+    for item_type, item in [(type, url), (type + ' signature', url + '.asc')]:
+        yield from check_url(item_type, item)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -95,16 +108,16 @@ def main():
                 # case is an error because sometimes we want to
                 # import history and sometimes we want to make new
                 # releases.
-                print('%s %s' % (project['repo'], release['version']), end=' ')
+                print('%s %s' % (project['repo'], release['version']))
 
                 if not args.artifacts:
                     version_exists = gitutils.tag_exists(
                         project['repo'], release['version'],
                     )
                     if version_exists:
-                        print('tag:found', end=' ')
+                        print('  tag:found')
                     else:
-                        print('tag:MISSING', end=' ')
+                        print('  tag:MISSING')
                         errors.append('%s missing tag %s' %
                                       (project['repo'], release['version']))
 
@@ -112,19 +125,45 @@ def main():
                 # report if that exists.
                 if link_mode == 'tarball':
                     tb_url = links.tarball_url(release['version'], project)
-                    if links.link_exists(tb_url):
-                        print('tarball:found', end=' ')
-                    else:
-                        print('tarball:MISSING\n%s' % tb_url)
-                        errors.append('%s missing tarball %s' %
-                                      (filename, tb_url))
-                    sig_url = links.signature_url(release['version'], project)
-                    if links.link_exists(sig_url):
-                        print('signature:found', end=' ')
-                    else:
-                        print('signature:MISSING\n%s' % sig_url)
-                        errors.append('%s missing signature %s' %
-                                      (filename, sig_url))
+                    errors.extend(check_signed_file('tarball', tb_url))
+                    wheel_2_errors = list(
+                        check_url(
+                            'python 2 wheel',
+                            links.wheel_py2_url(release['version'], project)
+                        )
+                    )
+                    wheel_both_errors = list(
+                        check_url(
+                            'python 2/3 wheel',
+                            links.wheel_both_url(release['version'], project)
+                        )
+                    )
+                    # We only expect to find one wheel. Look for both,
+                    # and minimize what we report as errors.
+                    if wheel_2_errors and wheel_both_errors:
+                        # We have neither wheel.
+                        errors.extend(wheel_2_errors)
+                        errors.extend(wheel_both_errors)
+                    elif not wheel_both_errors:
+                        # We have the "both" wheel, so check for the
+                        # signature file.
+                        errors.extend(
+                            check_url(
+                                'python 2/3 wheel signature',
+                                links.wheel_both_url(release['version'],
+                                                     project) + '.asc',
+                            )
+                        )
+                    elif not wheel_2_errors:
+                        # We have the py2 wheel, so check for the
+                        # signature file.
+                        errors.extend(
+                            check_url(
+                                'python 2 wheel signature',
+                                links.wheel_py2_url(release['version'],
+                                                    project) + '.asc',
+                            )
+                        )
                 print()
 
     if errors:

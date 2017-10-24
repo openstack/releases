@@ -42,6 +42,28 @@ def tarball_url(version, project):
     )
 
 
+def wheel_py2_url(version, project):
+    repo_base = project['repo'].rsplit('/')[-1]
+    base = project.get('tarball-base', repo_base)
+    return '{s}/{r}/{n}-{v}-py2-none-any.whl'.format(
+        s='https://tarballs.openstack.org',
+        v=version,
+        r=repo_base,
+        n=base,
+    )
+
+
+def wheel_both_url(version, project):
+    repo_base = project['repo'].rsplit('/')[-1]
+    base = project.get('tarball-base', repo_base)
+    return '{s}/{r}/{n}-{v}-py2.py3-none-any.whl'.format(
+        s='https://tarballs.openstack.org',
+        v=version,
+        r=repo_base,
+        n=base,
+    )
+
+
 def artifact_link(version, project, deliverable_info):
     mode = deliverable_info.get('artifact-link-mode', 'tarball')
     if mode == 'tarball':
