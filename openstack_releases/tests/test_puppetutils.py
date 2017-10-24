@@ -77,22 +77,6 @@ class TestModuleDetection(base.BaseTestCase):
                 '.', 'openstack/puppet-watcher')
         self.assertTrue(is_mod)
 
-    def test_actually_python(self):
-
-        def exists(name):
-            if name.endswith('setup.py'):
-                return True
-            if name.endswith('metadata.json'):
-                return True
-            if name.endswith('manifests'):
-                return True
-            return False
-
-        with mock.patch('os.path.exists', exists):
-            is_mod = puppetutils.looks_like_a_module(
-                '.', 'openstack/puppet-watcher')
-        self.assertFalse(is_mod)
-
 
 class TestGetMetadata(base.BaseTestCase):
 

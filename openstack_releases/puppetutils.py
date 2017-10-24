@@ -18,8 +18,6 @@ import os.path
 
 def looks_like_a_module(workdir, repo):
     "Does the directory look like it contains a puppet module?"
-    if os.path.exists(os.path.join(workdir, repo, 'setup.py')):
-        return False
     if not os.path.exists(os.path.join(workdir, repo, 'metadata.json')):
         return False
     return any([

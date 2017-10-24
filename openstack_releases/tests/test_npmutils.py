@@ -48,19 +48,6 @@ class TestModuleDetection(base.BaseTestCase):
                 '.', 'openstack/monasca-kibana-plugin')
         self.assertTrue(is_mod)
 
-    def test_actually_python(self):
-
-        def exists(name):
-            if name.endswith('package.json'):
-                return True
-            if name.endswith('setup.py'):
-                return True
-
-        with mock.patch('os.path.exists', exists):
-            is_mod = npmutils.looks_like_a_module(
-                '.', 'openstack/monasca-kibana-plugin')
-        self.assertFalse(is_mod)
-
 
 class TestGetMetadata(base.BaseTestCase):
 
