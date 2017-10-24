@@ -18,8 +18,6 @@ import os.path
 
 def looks_like_a_module(workdir, repo):
     "Does the directory look like it contains an npm module?"
-    if os.path.exists(os.path.join(workdir, repo, 'setup.py')):
-        return False
     return os.path.exists(os.path.join(workdir, repo, 'package.json'))
 
 
