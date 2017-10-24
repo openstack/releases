@@ -2,6 +2,9 @@
 launchpad: nova
 team: 'Release Management'
 type: other
+branches:
+  - name: stable/queens
+    location: 0.10.2
 release-model: cycle-with-milestones
 releases:
   - version: 0.8.0
