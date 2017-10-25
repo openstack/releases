@@ -83,9 +83,13 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 _RELEASE_JOBS_FOR_TYPE = {
     'std': [
         'publish-to-pypi',
-        'publish-to-pypi-neutron',
-        'publish-to-pypi-horizon',
         'release-openstack-server',
+    ],
+    'neutron': [
+        'publish-to-pypi-neutron',
+    ],
+    'horizon': [
+        'publish-to-pypi-horizon',
     ],
     'nodejs': [
         'nodejs4-publish-to-npm',

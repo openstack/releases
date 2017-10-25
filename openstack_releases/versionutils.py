@@ -21,8 +21,8 @@ import pbr.version
 # The values are a three-tuple that contains:
 #  1. constructor:  The function used to convert the version string in to a
 #                   *Verion object.
-#  2. exception:    The excpetion raised by the constructor iff version string is invalid
-#                   in some way.
+#  2. exception:    The exception raised by the constructor iff version
+#                   string is invalid in some way.
 #  3. canonicalise: The function used to canonicalise the *Version object.
 #                   Used to verify that the version string is already in the
 #                   canonical form
@@ -37,6 +37,8 @@ _VALIDATORS['fuel'] = _VALIDATORS['std']
 _VALIDATORS['openstack-manuals'] = _VALIDATORS['std']
 _VALIDATORS['puppet'] = _VALIDATORS['std']
 _VALIDATORS['nodejs'] = _VALIDATORS['std']
+_VALIDATORS['neutron'] = _VALIDATORS['std']
+_VALIDATORS['horizon'] = _VALIDATORS['std']
 
 
 def validate_version(versionstr, release_type='std', pre_ok=True):
