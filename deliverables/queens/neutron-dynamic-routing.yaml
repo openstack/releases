@@ -3,3 +3,8 @@ launchpad: neutron
 team: neutron
 type: other
 release-model: cycle-with-milestones
+releases:
+  - projects:
+      - hash: e71d151668f44f7d3e63cdba84c22bbcb7868370
+        repo: openstack/neutron-dynamic-routing
+    version: 12.0.0.0b1

@@ -4,3 +4,8 @@ team: neutron
 type: other
 release-model: cycle-with-milestones
 include-pypi-link: yes
+releases:
+  - projects:
+      - hash: cfa54af57e6c39f5296d444e5afa2c591956f6da
+        repo: openstack/networking-ovn
+    version: 4.0.0.0b1
