@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 804ab3e552771a50bbef3dfacdec0d1fa0573406
+  - version: 1.11.1
+    projects:
+      - repo: openstack/python-heatclient
+        hash: d558d6173970736fde63526da6824d391ada6042
 branches:
   - name: stable/pike
     location: 1.11.0
