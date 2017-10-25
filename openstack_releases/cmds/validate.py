@@ -486,11 +486,38 @@ def validate_releases(deliverable_info, zuul_projects,
                         # jobs.
                         default_release_type = 'std'
 
+                        # If we have an explicit release type, we can
+                        # bypass some of the checks for languages
+                        # other than python.
+                        explicit_release_type = deliverable_info.get(
+                            'release-type',
+                        )
+                        if explicit_release_type:
+                            print('found explicit release-type {!r}'.format(
+                                explicit_release_type))
+                        else:
+                            print('release-type not given, '
+                                  'determining automatically')
+
+                        is_puppet = (
+                            explicit_release_type == 'puppet' or
+                            ((not explicit_release_type) and
+                             puppetutils.looks_like_a_module(workdir,
+                                                             project['repo']))
+                        )
+
+                        is_nodejs = (
+                            explicit_release_type == 'nodejs' or
+                            ((not explicit_release_type) and
+                             npmutils.looks_like_a_module(workdir,
+                                                          project['repo']))
+                        )
+
                         # If this is a puppet module, ensure
                         # that the tag and metadata file
                         # match.
-                        if puppetutils.looks_like_a_module(workdir,
-                                                           project['repo']):
+                        if is_puppet:
+                            print('applying puppet version rules')
                             default_release_type = 'puppet'
                             puppet_ver = puppetutils.get_version(
                                 workdir, project['repo'])
@@ -507,8 +534,8 @@ def validate_releases(deliverable_info, zuul_projects,
                         # If this is a npm module, ensure
                         # that the tag and metadata file
                         # match.
-                        if npmutils.looks_like_a_module(workdir,
-                                                        project['repo']):
+                        if is_nodejs:
+                            print('applying nodejs version rules')
                             default_release_type = 'nodejs'
                             npm_ver = npmutils.get_version(
                                 workdir, project['repo'])
