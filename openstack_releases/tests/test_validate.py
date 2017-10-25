@@ -15,7 +15,6 @@
 from __future__ import unicode_literals
 
 import os
-import subprocess
 import textwrap
 
 import fixtures
@@ -416,7 +415,7 @@ class TestValidateReleases(base.BaseTestCase):
     def setUp(self):
         super(TestValidateReleases, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     def test_check_release_jobs(self, check_jobs):
@@ -424,8 +423,9 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '99.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -434,11 +434,12 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
-            'ocata',
+            'queens',
             self.tmpdir,
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
         check_jobs.assert_called_once()
@@ -449,8 +450,9 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '0.1',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'this-is-not-a-hash'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'this-is-not-a-hash',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -464,6 +466,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -471,10 +474,11 @@ class TestValidateReleases(base.BaseTestCase):
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.5.0',
+                {'version': '0.8.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -488,6 +492,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
@@ -497,8 +502,9 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '99.0.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -512,6 +518,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -519,11 +526,11 @@ class TestValidateReleases(base.BaseTestCase):
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.5.0',
+                {'version': '0.8.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
+                     {'repo': 'openstack/release-test',
                       # hash from the previous release
-                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                      'hash': '88af0f601895d54fb0a45b796cdd045a2b3636a3'},
                  ]}
             ],
         }
@@ -532,11 +539,12 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
-            'ocata',
+            'newton',
             self.tmpdir,
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -544,11 +552,12 @@ class TestValidateReleases(base.BaseTestCase):
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.4.1',
+                {'version': '0.8.1',
                  'projects': [
-                     {'repo': 'openstack/automaton',
+                     {'repo': 'openstack/release-test',
                       # hash from master
-                      'hash': 'ec62e6270dba8f3d6a60600876be8fd99f7c5b08'},
+                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -562,6 +571,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -569,16 +579,18 @@ class TestValidateReleases(base.BaseTestCase):
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.4.0',
+                {'version': '0.8.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                      'tarball-base': 'openstack-release-test'},
                  ]},
-                {'version': '1.4.1',
+                {'version': '0.8.1',
                  'projects': [
-                     {'repo': 'openstack/automaton',
+                     {'repo': 'openstack/release-test',
                       # hash from master
-                      'hash': 'ec62e6270dba8f3d6a60600876be8fd99f7c5b08'},
+                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -592,6 +604,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -601,9 +614,10 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '99.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
+                     {'repo': 'openstack/release-test',
                       # hash from stable/newton
-                      'hash': '95db03ed96dcd1a582936b4660b4db55ce606e49'},
+                      'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -617,6 +631,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -641,61 +656,28 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
     def test_not_descendent(self):
-        # INFO(dhellmann): Unfortunately this test only works using
-        # named branches, and the available set of branches changes
-        # over time as we mark some EOL. So, start by getting a list
-        # of branches and then pick some commits that are on different
-        # branches for the test.
-        known_branches = gitutils.get_branches(
-            self.tmpdir,
-            'openstack/automaton',
-        )
-        stable_branches = list(sorted(
-            b
-            for b in known_branches
-            if 'origin/' in b  # be flexible remotes/origin/, origin/, etc.
-        ))
-        # Pick an early branch, find the most recent tagged release,
-        # get the version, then get the sha of that commit.
-        branch1 = stable_branches[0]
-        series = branch1.rpartition('/')[-1]
-        version1 = subprocess.check_output(
-            ['git', 'describe', '--abbrev=0', branch1],
-            cwd=self.tmpdir + '/openstack/automaton',
-        ).decode('utf-8').strip()
-        commit1 = gitutils.sha_for_tag(
-            self.tmpdir,
-            'openstack/automaton',
-            version1,
-        )
-        # Pick a later branch and take the most recent commit. Make up
-        # a later version by adding to the other version string.
-        branch2 = stable_branches[1]
-        commit2 = gitutils.sha_for_tag(
-            self.tmpdir,
-            'openstack/automaton',
-            branch2,
-        )
-        # We don't want a version number like 1.13.09 because that
-        # fails the canonical-form check.
-        version2 = version1.rstrip('0') + '9'
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': version1,
+                # hash from stable/meiji
+                {'version': '0.0.2',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': commit1},
+                     {'repo': 'openstack/release-test',
+                      'hash': '9f48cae13a7388a6f6d1361634d320d73baef0d3',
+                      'tarball-base': 'openstack-release-test'},
                  ]},
-                {'version': version2,
+                # hash from stable/newton
+                {'version': '0.0.9',  # 0.0.3 already exists
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': commit2},
-                 ]},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
+                      'tarball-base': 'openstack-release-test'},
+                 ]}
             ],
         }
         warnings = []
@@ -703,7 +685,7 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
-            series,
+            'meiji',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -716,15 +698,17 @@ class TestValidateReleases(base.BaseTestCase):
         deliverable_info = {
             'artifact-link-mode': 'none',
             'releases': [
-                {'version': '1.3.999',
+                {'version': '0.8.1',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'e87dc55a48387d2b8b8c46e02a342c27995dacb1'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                      'tarball-base': 'openstack-release-test'},
                  ]},
-                {'version': '1.4.0',
+                {'version': '0.7.2',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'c6278ba1a8167447a5f52bdb92c2790abc5d0f87'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                      'tarball-base': 'openstack-release-test'},
                  ]},
             ],
         }
@@ -738,6 +722,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -754,8 +739,8 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '99.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
                  ]}
             ],
         }
@@ -769,6 +754,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -789,6 +775,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
@@ -799,8 +786,8 @@ class TestValidateReleases(base.BaseTestCase):
             'releases': [
                 {'version': '99.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
                  ]},
             ]
         }
@@ -814,6 +801,7 @@ class TestValidateReleases(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
 
@@ -900,14 +888,14 @@ class TestValidateTarballBase(base.BaseTestCase):
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
                  ]}
             ],
         }
         warnings = []
         errors = []
-        gsn.return_value = 'automaton'
+        gsn.return_value = 'release-test'
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
@@ -928,8 +916,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
                  ]}
             ],
         }
@@ -955,14 +943,14 @@ class TestValidateTarballBase(base.BaseTestCase):
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
                  ]}
             ],
         }
         warnings = []
         errors = []
-        gsn.return_value = 'automaton1'
+        gsn.return_value = 'openstack-release-test'
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
@@ -982,15 +970,15 @@ class TestValidateTarballBase(base.BaseTestCase):
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd',
-                      'tarball-base': 'automaton1'},
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
         warnings = []
         errors = []
-        gsn.return_value = 'automaton1'
+        gsn.return_value = 'openstack-release-test'
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
@@ -1010,15 +998,15 @@ class TestValidateTarballBase(base.BaseTestCase):
             'releases': [
                 {'version': '1.5.0',
                  'projects': [
-                     {'repo': 'openstack/automaton',
-                      'hash': 'be2885f544637e6ee6139df7dc7bf937925804dd',
+                     {'repo': 'openstack/release-test',
+                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
                       'tarball-base': 'does-not-match-sdist'},
                  ]}
             ],
         }
         warnings = []
         errors = []
-        gsn.return_value = 'automaton'
+        gsn.return_value = 'openstack-release-test'
         validate.validate_releases(
             deliverable_info,
             {'validate-projects-by-name': {}},
@@ -1081,7 +1069,8 @@ class TestValidateNewReleases(base.BaseTestCase):
                 {'version': '1000.0.0',
                  'projects': [
                      {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -1104,9 +1093,11 @@ class TestValidateNewReleases(base.BaseTestCase):
                 {'version': '1000.0.0',
                  'projects': [
                      {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
                      {'repo': 'openstack-infra/release-tools',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1'},
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }
@@ -1185,18 +1176,18 @@ class TestValidateStableBranches(base.BaseTestCase):
     def setUp(self):
         super(TestValidateStableBranches, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
 
     def test_version_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1214,13 +1205,13 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: ocata
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1238,13 +1229,13 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_version_not_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 1.5.1
+            location: 0.0.4
         ''')
         warnings = []
         errors = []
@@ -1262,13 +1253,13 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_unknown_series_cycle(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/abc
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1287,13 +1278,13 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_unknown_series_independent(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/abc
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1311,15 +1302,17 @@ class TestValidateStableBranches(base.BaseTestCase):
 
     def test_can_have_independent_branches(self):
         deliverable_data = textwrap.dedent('''
+        # NOTE(dhellmann): This launchpad setting is required.
+        # See validate._NO_STABLE_BRANCH_CHECK.
         launchpad: gnocchi
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/abc
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1331,6 +1324,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
@@ -1338,13 +1332,13 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: std
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1363,13 +1357,13 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: unknown
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1388,13 +1382,13 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1413,14 +1407,14 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
             location:
-              openstack/automaton: 1.5.0
+              openstack/release-test: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1439,14 +1433,14 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
             location:
-              openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+              openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
         warnings = []
         errors = []
@@ -1467,18 +1461,18 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def setUp(self):
         super(TestValidateFeatureBranches, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
 
     def test_location_not_a_dict(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: feature/abc
-            location: 1.5.0
+            location: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1496,14 +1490,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def test_location_not_a_sha(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: feature/abc
             location:
-               openstack/automaton: 1.5.0
+               openstack/release-test: 0.0.3
         ''')
         warnings = []
         errors = []
@@ -1521,14 +1515,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def test_location_a_sha(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: feature/abc
             location:
-               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+               openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
         warnings = []
         errors = []
@@ -1546,14 +1540,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: abc
             location:
-               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
+               openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
         warnings = []
         errors = []
@@ -1571,14 +1565,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
     def test_location_no_such_sha(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 1.5.0
+          - version: 0.0.3
             projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: feature/abc
             location:
-               openstack/automaton: de2885f544637e6ee6139df7dc7bf937925804dd
+               openstack/release-test: de2885f544637e6ee6139df7dc7bf937925804dd
         ''')
         warnings = []
         errors = []
