@@ -13,6 +13,7 @@
 #    under the License.
 
 import requests
+import wheel.bdist_wheel
 
 
 def link_exists(url):
@@ -49,7 +50,7 @@ def wheel_py2_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=base,
+        n=wheel.bdist_wheel.safer_name(base),
     )
 
 
@@ -60,7 +61,7 @@ def wheel_both_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=base,
+        n=wheel.bdist_wheel.safer_name(base),
     )
 
 
