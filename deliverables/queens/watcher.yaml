@@ -3,3 +3,9 @@ launchpad: watcher
 release-model: cycle-with-intermediary
 team: watcher
 type: service
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/watcher
+        hash: 84fb7423f115ee293071313729a9cdf4d2ed7f75
+        tarball-base: python-watcher
