@@ -43,6 +43,7 @@ cycle:
   project-specific:
   - q-manila-spec-freeze
   - q-nova-spec-freeze
+  - q-keystone-spec-proposal-freeze
 - end: '2017-10-27'
   name: R-18
   start: '2017-10-23'
@@ -74,12 +75,15 @@ cycle:
   - q-cinder-driver-deadline
   - q-cinder-spec-freeze
   - q-sahara-plugin-deadline
+  - q-keystone-spec-freeze
 - end: '2017-12-15'
   name: R-11
   start: '2017-12-11'
 - end: '2017-12-22'
   name: R-10
   start: '2017-12-18'
+  project-specific:
+  - q-keystone-fpfreeze
 - end: '2017-12-29'
   name: R-9
   start: '2017-12-25'
@@ -110,6 +114,8 @@ cycle:
   - q-soft-sf
   - q-rf
   - q-goals-complete
+  project-specific:
+  - q-keystone-ffreeze
 - end: '2018-02-02'
   name: R-4
   start: '2018-01-29'
