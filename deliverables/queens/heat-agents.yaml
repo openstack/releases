@@ -1,5 +1,11 @@
 ---
 launchpad: heat-agents
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: heat
 type: other
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: 9dad9eefd75954cd21460d54da99452cd2dd578f
