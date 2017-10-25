@@ -3,3 +3,8 @@ launchpad: barbican
 release-model: cycle-with-milestones
 team: barbican
 type: service
+releases:
+  - projects:
+      - hash: ccc6843967cf783cfc3d7998b8a19512920b9944
+        repo: openstack/barbican
+    version: 6.0.0.0b1
