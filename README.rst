@@ -419,6 +419,16 @@ The top level of a deliverable file is a mapping with keys:
     specified and the validation job can determine that a module is a
     nodejs module, it assumes a release-type of ``nodejs``.
 
+  ``neutron``
+    For projects using the PyPI publishing variant that installs
+    neutron in order to build the package. Typically used by neutron
+    plugins.
+
+  ``horizon``
+    For projects using the PyPI publishing variant that installs
+    horizon in order to build the package. Typically used by horizon
+    plugins.
+
 ``releases``
   A list of the releases for the deliverable.
 
