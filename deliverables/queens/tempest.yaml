@@ -4,3 +4,8 @@ launchpad: tempest
 release-model: cycle-with-intermediary
 team: 'Quality Assurance'
 type: other
+releases:
+  - version: 17.1.0
+    projects:
+      - repo: openstack/tempest
+        hash: fbd26cf12483c9e7bd9587cdc75507a658c48e41
