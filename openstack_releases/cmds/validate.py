@@ -374,7 +374,9 @@ def validate_release_type(deliverable_info,
                           workdir,
                           mk_warning,
                           mk_error):
-    """Apply validation rules for the deliverable based on 'release-type'.
+    """Apply validation rules for the deliverable based on 'release-type'
+    to the most recent release of a deliverable.
+
     """
 
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
@@ -386,26 +388,26 @@ def validate_release_type(deliverable_info,
         print('no releases listed, skipping release-type checks')
         return
 
-    for release in deliverable_info.get('releases', []):
-        for project in release['projects']:
+    release = deliverable_info['releases'][-1]
+    for project in release['projects']:
 
-            print('checking release-type for {}'.format(project['repo']))
+        print('checking release-type for {}'.format(project['repo']))
 
-            release_type, was_explicit = get_release_type(
-                deliverable_info, project, workdir,
-            )
-            if was_explicit:
-                print('found explicit release-type {!r}'.format(
-                    release_type))
-            else:
-                print('release-type not given, '
-                      'guessing {!r}'.format(release_type))
+        release_type, was_explicit = get_release_type(
+            deliverable_info, project, workdir,
+        )
+        if was_explicit:
+            print('found explicit release-type {!r}'.format(
+                release_type))
+        else:
+            print('release-type not given, '
+                  'guessing {!r}'.format(release_type))
 
-            project_config.require_release_jobs_for_repo(
-                deliverable_info, zuul_projects,
-                project['repo'],
-                release_type, mk_warning, mk_error,
-            )
+        project_config.require_release_jobs_for_repo(
+            deliverable_info, zuul_projects,
+            project['repo'],
+            release_type, mk_warning, mk_error,
+        )
 
 
 def validate_releases(deliverable_info, zuul_projects,
