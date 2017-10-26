@@ -823,6 +823,25 @@ class TestGetReleaseType(base.BaseTestCase):
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
 
+    def test_server(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'type': 'server',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('python-server', False), (release_type, explicit))
+
     def test_implicit_pypi(self):
         deliverable_info = {
             'artifact-link-mode': 'none',
