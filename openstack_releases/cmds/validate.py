@@ -359,6 +359,9 @@ def get_release_type(deliverable_info, project, workdir):
     if deliverable_info.get('type') == 'library':
         return ('python-pypi', False)
 
+    if deliverable_info.get('type') == 'service':
+        return ('python-server', False)
+
     if deliverable_info.get('include-pypi-link', False):
         return ('python-pypi', False)
 
