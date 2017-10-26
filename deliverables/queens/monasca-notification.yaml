@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 2092e4185c26a0153951906382e7acec4e29fc29
+        repo: openstack/monasca-notification
+    version: 1.11.0

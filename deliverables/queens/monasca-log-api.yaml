@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: service
+releases:
+  - projects:
+      - hash: 1c6e5db9715d98f4dcac5f327dc77b8bc7fc789c
+        repo: openstack/monasca-log-api
+    version: 2.4.0

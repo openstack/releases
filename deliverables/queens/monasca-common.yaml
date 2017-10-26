@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 94e0a059b562508d6ddd3f91fa0bbbdb51b3a375
+        repo: openstack/monasca-common
+    version: 2.4.0

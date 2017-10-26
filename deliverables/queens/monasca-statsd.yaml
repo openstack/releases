@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: library
+releases:
+  - projects:
+      - hash: 55e415b9274042e931968ea7619253e19f9fabc4
+        repo: openstack/monasca-statsd
+    version: 1.8.0

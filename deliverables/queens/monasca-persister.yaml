@@ -3,3 +3,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 66fe6f98c079490d2d5de4c161da1d8b3801cda4
+        repo: openstack/monasca-persister
+    version: 1.8.0

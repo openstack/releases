@@ -4,3 +4,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 5a5a980cbff8e70e2f1f046b98838600e76235b6
+        repo: openstack/monasca-transform
+    version: 0.12.0
