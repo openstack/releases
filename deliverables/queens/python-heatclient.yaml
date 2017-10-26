@@ -4,3 +4,8 @@ launchpad: python-heatclient
 release-model: cycle-with-intermediary
 team: heat
 type: library
+releases:
+  - version: 1.12.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 868f3b80b7c701607b644afd19e320a9f35e0cfc
