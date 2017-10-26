@@ -4,3 +4,8 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: library
+releases:
+  - projects:
+      - hash: d81d2119fb90702d4ff497b29f5619ccf1d8ae04
+        repo: openstack/python-monascaclient
+    version: 1.8.0
