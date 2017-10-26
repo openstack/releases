@@ -823,10 +823,10 @@ class TestGetReleaseType(base.BaseTestCase):
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
 
-    def test_server(self):
+    def test_service(self):
         deliverable_info = {
             'artifact-link-mode': 'none',
-            'type': 'server',
+            'type': 'service',
             'releases': [
                 {'version': '99.1.0',
                  'projects': [
@@ -840,7 +840,7 @@ class TestGetReleaseType(base.BaseTestCase):
             deliverable_info['releases'][0]['projects'][0],
             self.tmpdir,
         )
-        self.assertEqual(('python-server', False), (release_type, explicit))
+        self.assertEqual(('python-service', False), (release_type, explicit))
 
     def test_implicit_pypi(self):
         deliverable_info = {
@@ -878,7 +878,7 @@ class TestGetReleaseType(base.BaseTestCase):
             deliverable_info['releases'][0]['projects'][0],
             self.tmpdir,
         )
-        self.assertEqual(('python-server', False), (release_type, explicit))
+        self.assertEqual(('python-service', False), (release_type, explicit))
 
     @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
     def test_puppet(self, llam):
@@ -940,7 +940,7 @@ class TestGetReleaseType(base.BaseTestCase):
             deliverable_info['releases'][0]['projects'][0],
             self.tmpdir,
         )
-        self.assertEqual(('python-server', False), (release_type, explicit))
+        self.assertEqual(('python-service', False), (release_type, explicit))
 
 
 class TestPuppetUtils(base.BaseTestCase):

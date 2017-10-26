@@ -397,13 +397,13 @@ The top level of a deliverable file is a mapping with keys:
 ``release-type``
   This (optional) key sets the level of validation for the versions numbers.
 
-  ``python-server``
+  ``python-service``
     Default: Enforces 3 digit semver version numbers in releases and allows
     for common alpha, beta and dev releases.  This should be appropriate for
     most OpenStack component release requirements.
 
   ``python-pypi``
-    Like ``python-server`` but requires the jobs to publish the component
+    Like ``python-service`` but requires the jobs to publish the component
     to the Python Package Index (PyPI).
 
   ``xstatic``

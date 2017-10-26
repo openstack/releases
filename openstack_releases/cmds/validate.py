@@ -360,7 +360,7 @@ def get_release_type(deliverable_info, project, workdir):
         return ('python-pypi', False)
 
     if deliverable_info.get('type') == 'service':
-        return ('python-server', False)
+        return ('python-service', False)
 
     if deliverable_info.get('include-pypi-link', False):
         return ('python-pypi', False)
@@ -371,7 +371,7 @@ def get_release_type(deliverable_info, project, workdir):
     if npmutils.looks_like_a_module(workdir, project['repo']):
         return ('nodejs', False)
 
-    return ('python-server', False)
+    return ('python-service', False)
 
 
 def validate_release_type(deliverable_info,
