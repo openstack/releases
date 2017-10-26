@@ -2023,3 +2023,75 @@ releases:
         hash: 56ca566ef024603b2fbfd3d0b7af6d844e26884a
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: 27e47df8ad22f01d0a8905ec35ff3bfa916dc89b
+  - version: 14.2.10
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 7267d212f7f9c1b8c36f599c84d53d75753275d3
+      - repo: openstack/ansible-hardening
+        hash: 31bfec7b28d60518a31fcc16a10904b701b4ba40
+      - repo: openstack/openstack-ansible-apt_package_pinning
+        hash: 806846afdcd3c183351d57f65dbd336af7116285
+      - repo: openstack/openstack-ansible-pip_install
+        hash: be971e3ea52e3fc85d89ad7319c174fa8f309c39
+      - repo: openstack/openstack-ansible-galera_client
+        hash: 6b547f735b702c3f074aea45e6d481122bade7d2
+      - repo: openstack/openstack-ansible-galera_server
+        hash: 75c71d5b181b304a97e24a15d960c6f2cd7be92e
+      - repo: openstack/openstack-ansible-ceph_client
+        hash: bd8688eebbb3d2d18115373718977594532c1b21
+      - repo: openstack/openstack-ansible-haproxy_server
+        hash: e19b41c9bf4454ba93ee57403b76e29de831dba8
+      - repo: openstack/openstack-ansible-lxc_container_create
+        hash: 50335c061b64ed6c486c4a940ebf98465faef9a3
+      - repo: openstack/openstack-ansible-lxc_hosts
+        hash: bcd4cc07483d58573738aa5b2d1d7dc1c45c0288
+      - repo: openstack/openstack-ansible-memcached_server
+        hash: f56f01cdc0943d428a191e69cdf7ced1ede6b000
+      - repo: openstack/openstack-ansible-openstack_hosts
+        hash: 6736419cfd04ec7d66f1d136a66dd6f42e061e3c
+      - repo: openstack/openstack-ansible-os_keystone
+        hash: 308497e1e005f4867010464f431ddd72b7a149b4
+      - repo: openstack/openstack-ansible-openstack_openrc
+        hash: 1194efff07031146e7a33682a77d4894ad8d9131
+      - repo: openstack/openstack-ansible-os_aodh
+        hash: 79173d9f307573ccc49d82d79168d2dcd839b9eb
+      - repo: openstack/openstack-ansible-os_ceilometer
+        hash: ee6257fa4f51ce23b57273f674b543236b658a42
+      - repo: openstack/openstack-ansible-os_cinder
+        hash: 480bc09f07089b92161a3b00654abb383ee16a7f
+      - repo: openstack/openstack-ansible-os_glance
+        hash: d1fb3365b9371fbb520cfcb25117244d5d36df40
+      - repo: openstack/openstack-ansible-os_gnocchi
+        hash: a646e0e070f8ea70070b4546da656ea965901c26
+      - repo: openstack/openstack-ansible-os_heat
+        hash: 3143369ce31d76af13101d25d344d794e7876aea
+      - repo: openstack/openstack-ansible-os_horizon
+        hash: e1668a64e20d4f4eb81b35348dd25f250725ba2a
+      - repo: openstack/openstack-ansible-os_ironic
+        hash: 8b1e8562f56f803dc18db58cb69e2cf83c86ec31
+      - repo: openstack/openstack-ansible-os_magnum
+        hash: e8a90f7cfff2efdcef84c3a136576e1375cffdd6
+      - repo: openstack/openstack-ansible-os_neutron
+        hash: 1d6839bb72b8c99405113a598c48e5d206b8ab51
+      - repo: openstack/openstack-ansible-os_nova
+        hash: 91677876e5cf5de7305437d4dcffe4263f0701c5
+      - repo: openstack/openstack-ansible-os_rally
+        hash: 4f51d029e116fb5463778e8fe37ceafe15fef0f2
+      - repo: openstack/openstack-ansible-os_sahara
+        hash: aeb5cdc728eea8f8a63fd29443e0be911ea2e6c1
+      - repo: openstack/openstack-ansible-os_swift
+        hash: f628d085c9b4879e9df111baaa108381ddbb7ed9
+      - repo: openstack/openstack-ansible-os_tempest
+        hash: 80c72fca423f4629c916efbe0e6a4f4a070b06a0
+      - repo: openstack/openstack-ansible-plugins
+        hash: 5f81bc9caac5d7c754b9de5de716ab7aa5d08ac2
+      - repo: openstack/openstack-ansible-rabbitmq_server
+        hash: f2d110a1fae658edfc790d6d1a00cf481f51e9f2
+      - repo: openstack/openstack-ansible-repo_build
+        hash: f9a5539596a2d55804b8e9e1e1376794808c00cd
+      - repo: openstack/openstack-ansible-repo_server
+        hash: 7a9faeef35a30a76ada085da3821cb64b6d2ac6e
+      - repo: openstack/openstack-ansible-rsyslog_client
+        hash: f696f698d4630e3972be13223ac7a925aeb7fd17
+      - repo: openstack/openstack-ansible-rsyslog_server
+        hash: 33cb3bb57324c6e13d9f8f911a4be3fa302df749
