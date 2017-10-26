@@ -26,22 +26,23 @@ import pbr.version
 #  3. canonicalise: The function used to canonicalise the *Version object.
 #                   Used to verify that the version string is already in the
 #                   canonical form
-_VALIDATORS = {'std': (pbr.version.SemanticVersion.from_pip_string,
-                       ValueError,
-                       lambda x: x.release_string()),
+_VALIDATORS = {'python-server': (pbr.version.SemanticVersion.from_pip_string,
+                                 ValueError,
+                                 lambda x: x.release_string()),
                'xstatic': (packaging.version.Version,
                            packaging.version.InvalidVersion,
                            lambda x: str(x)),
                }
-_VALIDATORS['fuel'] = _VALIDATORS['std']
-_VALIDATORS['openstack-manuals'] = _VALIDATORS['std']
-_VALIDATORS['puppet'] = _VALIDATORS['std']
-_VALIDATORS['nodejs'] = _VALIDATORS['std']
-_VALIDATORS['neutron'] = _VALIDATORS['std']
-_VALIDATORS['horizon'] = _VALIDATORS['std']
+_VALIDATORS['fuel'] = _VALIDATORS['python-server']
+_VALIDATORS['openstack-manuals'] = _VALIDATORS['python-server']
+_VALIDATORS['puppet'] = _VALIDATORS['python-server']
+_VALIDATORS['nodejs'] = _VALIDATORS['python-server']
+_VALIDATORS['neutron'] = _VALIDATORS['python-server']
+_VALIDATORS['horizon'] = _VALIDATORS['python-server']
+_VALIDATORS['python-pypi'] = _VALIDATORS['python-server']
 
 
-def validate_version(versionstr, release_type='std', pre_ok=True):
+def validate_version(versionstr, release_type='python-server', pre_ok=True):
     """Given a version string, yield error messages if it is "bad"
 
     Apply our SemVer rules to version strings and report all issues.
@@ -54,8 +55,8 @@ def validate_version(versionstr, release_type='std', pre_ok=True):
                       'model does not allow for it' % versionstr)
 
     if release_type not in _VALIDATORS:
-        yield 'Release Type %r not valid using \'std\' instead' % release_type
-        release_type = 'std'
+        yield 'Release Type %r not valid using \'python-server\' instead' % release_type
+        release_type = 'python-server'
 
     constructor, exception, canonicalise = _VALIDATORS[release_type]
     try:
@@ -70,7 +71,7 @@ def validate_version(versionstr, release_type='std', pre_ok=True):
                 (versionstr, canonical)
 
 
-def canonical_version(versionstr, release_type='std'):
+def canonical_version(versionstr, release_type='python-server'):
     """Given a version string verify it is in the canonical form."""
     errors = list(validate_version(versionstr, release_type))
     if errors:

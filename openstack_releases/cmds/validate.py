@@ -348,6 +348,66 @@ def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
                 mk_error('%s has no .gitreview file' % (project['repo'],))
 
 
+def get_release_type(deliverable_info, project, workdir):
+    """Return tuple with release type and boolean indicating whether it
+    was explicitly set.
+
+    """
+    if 'release-type' in deliverable_info:
+        return (deliverable_info['release-type'], True)
+
+    if deliverable_info.get('type') == 'library':
+        return ('python-pypi', False)
+
+    if puppetutils.looks_like_a_module(workdir, project['repo']):
+        return ('puppet', False)
+
+    if npmutils.looks_like_a_module(workdir, project['repo']):
+        return ('nodejs', False)
+
+    return ('python-server', False)
+
+
+def validate_release_type(deliverable_info,
+                          zuul_projects,
+                          series_name,
+                          workdir,
+                          mk_warning,
+                          mk_error):
+    """Apply validation rules for the deliverable based on 'release-type'.
+    """
+
+    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+    if link_mode == 'none':
+        print('link-mode is "none", skipping release-type checks')
+        return
+
+    if not deliverable_info.get('releases'):
+        print('no releases listed, skipping release-type checks')
+        return
+
+    for release in deliverable_info.get('releases', []):
+        for project in release['projects']:
+
+            print('checking release-type for {}'.format(project['repo']))
+
+            release_type, was_explicit = get_release_type(
+                deliverable_info, project, workdir,
+            )
+            if was_explicit:
+                print('found explicit release-type {!r}'.format(
+                    release_type))
+            else:
+                print('release-type not given, '
+                      'guessing {!r}'.format(release_type))
+
+            project_config.require_release_jobs_for_repo(
+                deliverable_info, zuul_projects,
+                project['repo'],
+                release_type, mk_warning, mk_error,
+            )
+
+
 def validate_releases(deliverable_info, zuul_projects,
                       series_name,
                       workdir,
@@ -481,44 +541,21 @@ def validate_releases(deliverable_info, zuul_projects,
                               (prev_version, ', '.join(sorted(prev_projects))))
                     else:
 
-                        # We change this default to be more
-                        # language-specific before testing the release
-                        # jobs.
-                        default_release_type = 'std'
-
-                        # If we have an explicit release type, we can
-                        # bypass some of the checks for languages
-                        # other than python.
-                        explicit_release_type = deliverable_info.get(
-                            'release-type',
+                        release_type, was_explicit = get_release_type(
+                            deliverable_info, project, workdir,
                         )
-                        if explicit_release_type:
+                        if was_explicit:
                             print('found explicit release-type {!r}'.format(
-                                explicit_release_type))
+                                release_type))
                         else:
                             print('release-type not given, '
-                                  'determining automatically')
-
-                        is_puppet = (
-                            explicit_release_type == 'puppet' or
-                            ((not explicit_release_type) and
-                             puppetutils.looks_like_a_module(workdir,
-                                                             project['repo']))
-                        )
-
-                        is_nodejs = (
-                            explicit_release_type == 'nodejs' or
-                            ((not explicit_release_type) and
-                             npmutils.looks_like_a_module(workdir,
-                                                          project['repo']))
-                        )
+                                  'guessing {!r}'.format(release_type))
 
                         # If this is a puppet module, ensure
                         # that the tag and metadata file
                         # match.
-                        if is_puppet:
+                        if release_type == 'puppet':
                             print('applying puppet version rules')
-                            default_release_type = 'puppet'
                             puppet_ver = puppetutils.get_version(
                                 workdir, project['repo'])
                             if puppet_ver != release['version']:
@@ -534,9 +571,8 @@ def validate_releases(deliverable_info, zuul_projects,
                         # If this is a npm module, ensure
                         # that the tag and metadata file
                         # match.
-                        if is_nodejs:
+                        if release_type == 'nodejs':
                             print('applying nodejs version rules')
-                            default_release_type = 'nodejs'
                             npm_ver = npmutils.get_version(
                                 workdir, project['repo'])
                             if npm_ver != release['version']:
@@ -548,18 +584,6 @@ def validate_releases(deliverable_info, zuul_projects,
                                         release['version'],
                                     )
                                 )
-
-                        # Check for release jobs (if we ship a tarball)
-                        release_type = deliverable_info.get(
-                            'release-type',
-                            default_release_type,
-                        )
-                        if link_mode != 'none':
-                            project_config.require_release_jobs_for_repo(
-                                deliverable_info, zuul_projects,
-                                project['repo'],
-                                release_type, mk_warning, mk_error,
-                            )
 
                         for e in versionutils.validate_version(
                                 release['version'],
@@ -971,6 +995,14 @@ def main():
         validate_release_notes(deliverable_info, mk_warning, mk_error)
         validate_type(deliverable_info, mk_warning, mk_error)
         validate_model(deliverable_info, series_name, mk_warning, mk_error)
+        validate_release_type(
+            deliverable_info,
+            zuul_projects,
+            series_name,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
         validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
         validate_releases(
             deliverable_info,

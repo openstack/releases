@@ -19,15 +19,15 @@ from openstack_releases import versionutils
 
 class TestValidateVersion(base.BaseTestCase):
 
-    def test_valid_std(self):
+    def test_valid_python_server(self):
         errors = list(versionutils.validate_version('1.2.3'))
         self.assertEqual(0, len(errors))
 
-    def test_invalid_std(self):
+    def test_invalid_python_server(self):
         errors = list(versionutils.validate_version('1.2.3.4'))
         self.assertEqual(1, len(errors))
 
-    def test_empty_std(self):
+    def test_empty_python_server(self):
         errors = list(versionutils.validate_version(''))
         self.assertEqual(1, len(errors))
 

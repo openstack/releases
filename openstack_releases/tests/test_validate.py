@@ -417,33 +417,6 @@ class TestValidateReleases(base.BaseTestCase):
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
 
-    @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
-    def test_check_release_jobs(self, check_jobs):
-        deliverable_info = {
-            'releases': [
-                {'version': '99.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
-        warnings = []
-        errors = []
-        validate.validate_releases(
-            deliverable_info,
-            {'validate-projects-by-name': {}},
-            'queens',
-            self.tmpdir,
-            warnings.append,
-            errors.append,
-        )
-        print(warnings, errors)
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(0, len(errors))
-        check_jobs.assert_called_once()
-
     def test_invalid_hash(self):
         deliverable_info = {
             'artifact-link-mode': 'none',
@@ -804,6 +777,113 @@ class TestValidateReleases(base.BaseTestCase):
         print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(1, len(errors))
+
+
+class TestGetReleaseType(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestGetReleaseType, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+
+    def test_explicit(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'release-type': 'explicitly-set',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('explicitly-set', True), (release_type, explicit))
+
+    def test_library(self):
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'type': 'library',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('python-pypi', False), (release_type, explicit))
+
+    @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
+    def test_puppet(self, llam):
+        llam.return_value = True
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('puppet', False), (release_type, explicit))
+
+    @mock.patch('openstack_releases.npmutils.looks_like_a_module')
+    def test_nodejs(self, llam):
+        llam.return_value = True
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('nodejs', False), (release_type, explicit))
+
+    @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
+    @mock.patch('openstack_releases.npmutils.looks_like_a_module')
+    def test_python_server(self, nllam, pllam):
+        pllam.return_value = False
+        nllam.return_value = False
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'releases': [
+                {'version': '99.1.0',
+                 'projects': [
+                     {'repo': 'openstack/puppet-watcher',
+                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                 ]}
+            ],
+        }
+        release_type, explicit = validate.get_release_type(
+            deliverable_info,
+            deliverable_info['releases'][0]['projects'][0],
+            self.tmpdir,
+        )
+        self.assertEqual(('python-server', False), (release_type, explicit))
 
 
 class TestPuppetUtils(base.BaseTestCase):

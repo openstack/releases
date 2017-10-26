@@ -35,7 +35,8 @@ properties:
     type: "object"
   release-type:
     type: "string"
-    enum: [ "std", "xstatic", "fuel", "nodejs", "puppet", "neutron", "horizon" ]
+    enum: [ "python-server", "python-pypi", "xstatic", "fuel",
+            "nodejs", "puppet", "neutron", "horizon" ]
   stable-branch-type:
     type: "string"
     enum: [ "std", "tagless", "upstream" ]

@@ -103,7 +103,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
             deliverable_info,
             zuul_projects,
             'openstack/releases',
-            'std',
+            'python-pypi',
             warnings.append,
             errors.append,
         )
@@ -128,7 +128,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
             deliverable_info,
             zuul_projects,
             'openstack/releases',
-            'std',
+            'python-pypi',
             warnings.append,
             errors.append,
         )

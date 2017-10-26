@@ -81,9 +81,11 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
-    'std': [
-        'publish-to-pypi',
+    'python-server': [
         'release-openstack-server',
+    ],
+    'python-pypi': [
+        'publish-to-pypi',
     ],
     'neutron': [
         'publish-to-pypi-neutron',
@@ -140,7 +142,7 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
         # jobs, because we want projects to use the templates.
         expected_jobs = _RELEASE_JOBS_FOR_TYPE.get(
             release_type,
-            _RELEASE_JOBS_FOR_TYPE['std'],
+            _RELEASE_JOBS_FOR_TYPE['python-server'],
         )
         if expected_jobs:
             found_jobs = [
