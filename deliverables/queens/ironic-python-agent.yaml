@@ -1,5 +1,11 @@
 ---
 launchpad: ironic-python-agent
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: ironic
 type: other
+releases:
+  - projects:
+      - hash: 79568eecbf2237e0b35cee03370fc7bb94687d4c
+        repo: openstack/ironic-python-agent
+    version: 3.0.0
