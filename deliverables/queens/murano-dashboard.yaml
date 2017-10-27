@@ -1,5 +1,11 @@
 ---
 launchpad: murano
 release-model: cycle-with-milestones
+release-type: python-pypi
 team: murano
 type: horizon-plugin
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 0b47b88760951261eb4a4b1c41d2cb944d7bf7b1
