@@ -1,5 +1,9 @@
 ---
 launchpad: designate-dashboard
 release-model: cycle-with-milestones
+# NOTE(dhellmann): Be explicit about using the release type
+# instead of relying on automatically detecting it, to avoid the npm
+# version checking logic.
+release-type: python-service
 team: designate
 type: horizon-plugin
