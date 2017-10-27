@@ -3,3 +3,8 @@ launchpad: tripleo
 release-model: cycle-trailing
 team: tripleo
 type: library
+releases:
+  - projects:
+      - hash: d8e2ad26940e5fe83140e60f5ef8509775da3463
+        repo: openstack/python-tripleoclient
+    version: 8.0.0

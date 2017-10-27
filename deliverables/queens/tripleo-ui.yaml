@@ -3,3 +3,8 @@ launchpad: tripleo
 release-model: cycle-trailing
 team: tripleo
 type: other
+releases:
+  - projects:
+      - hash: 6a8e03409e3f8f91a8bca4cd25b93006171a02ae
+        repo: openstack/tripleo-ui
+    version: 8.0.0

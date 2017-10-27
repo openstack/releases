@@ -1,5 +1,11 @@
 ---
 launchpad: os-apply-config
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: tripleo
 type: other
+releases:
+  - projects:
+      - hash: 8db1c024eee51cc994e19ec44b6d3a141d070ec5
+        repo: openstack/os-apply-config
+    version: 8.0.0

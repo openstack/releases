@@ -3,3 +3,8 @@ launchpad: tripleo
 release-model: cycle-with-intermediary
 team: tripleo
 type: library
+releases:
+  - projects:
+      - hash: 34c8b7148e0fd0717d7ade755d003a1f3d70b68d
+        repo: openstack/instack
+    version: 8.0.0
