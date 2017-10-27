@@ -348,6 +348,13 @@ def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
                 mk_error('%s has no .gitreview file' % (project['repo'],))
 
 
+_TYPE_TO_RELEASE_TYPE = {
+    'library': 'python-pypi',
+    'service': 'python-service',
+    'horizon-plugin': 'horizon',
+}
+
+
 def get_release_type(deliverable_info, project, workdir):
     """Return tuple with release type and boolean indicating whether it
     was explicitly set.
@@ -356,11 +363,9 @@ def get_release_type(deliverable_info, project, workdir):
     if 'release-type' in deliverable_info:
         return (deliverable_info['release-type'], True)
 
-    if deliverable_info.get('type') == 'library':
-        return ('python-pypi', False)
-
-    if deliverable_info.get('type') == 'service':
-        return ('python-service', False)
+    from_type = _TYPE_TO_RELEASE_TYPE.get(deliverable_info.get('type'))
+    if from_type is not None:
+        return (from_type, False)
 
     if deliverable_info.get('include-pypi-link', False):
         return ('python-pypi', False)
