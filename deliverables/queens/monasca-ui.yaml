@@ -1,6 +1,7 @@
 ---
 launchpad: monasca
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: monasca
 type: horizon-plugin
 releases:
@@ -8,3 +9,7 @@ releases:
       - hash: 1c0bb61672d07b60c9e36da3638a2fe65025a9f4
         repo: openstack/monasca-ui
     version: 1.9.0
+  - projects:
+      - hash: dd6e09b01d072110fdb39a9662221977c89dd729
+        repo: openstack/monasca-ui
+    version: 1.10.0
