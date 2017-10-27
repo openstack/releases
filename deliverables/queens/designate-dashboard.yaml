@@ -7,3 +7,8 @@ release-model: cycle-with-milestones
 release-type: python-service
 team: designate
 type: horizon-plugin
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 6213e7534f2c197bd2c577bd183d0bd53bf89857
