@@ -315,6 +315,9 @@ that deliverable. For each deliverable, we need to track:
   * the version number to use
 
 * highlights for the release notes email (optional)
+* cycle highlights that will be published to
+  ``releases.openstack.org/$SERIES/highlights.html`` (optional, and for
+  cycle_with_intermediary amd cycle_with_milestone projects only)
 * the starting points of all branches
 
     We track this metadata for the history of all releases of the
@@ -370,7 +373,7 @@ The top level of a deliverable file is a mapping with keys:
 
 ``artifact-link-mode``
   Describe how to link to artifacts produced by the project. The
-  default is ``tarball`. Valid values are:
+  default is ``tarball``. Valid values are:
 
   tarball
     Automatically generates links to version-specific files on
@@ -380,8 +383,8 @@ The top level of a deliverable file is a mapping with keys:
     Do not link to anything, just show the version number.
 
 ``repository-settings``
-  Mapping of special settings to control the behavior for each repository, keyed
-  by the repository name.
+  Mapping of special settings to control the behavior for each repository,
+  keyed by the repository name.
 
 ``flags``
   A list of flags attached to the repository.
@@ -459,6 +462,11 @@ The top level of a deliverable file is a mapping with keys:
   ``upstream``
     Stable branch names track upstream release names, rather than
     OpenStack series names.
+
+``cycle-highlights``
+  RST formatted notes of some of the top new features or changes you would like
+  to point out for this release cycle. These highlights are compiled per team
+  and published to ``releases.openstack.org/$SERIES/highlights.html``.
 
 ``branches``
   A list of the branches for the deliverable.

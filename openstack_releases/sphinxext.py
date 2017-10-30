@@ -380,10 +380,65 @@ def _generate_team_pages(app):
     return
 
 
+class HighlightsDirective(rst.Directive):
+    """Directive to pull series highlights into docs output."""
+
+    option_spec = {
+        'series': directives.unchanged,
+    }
+
+    def _get_deliverable_highlights(self, series):
+        """Collects the highlights for the series.
+
+        :param series: The series to extract highlights from.
+        :returns: The available highlights for the series.
+        """
+        series_highlights = {}
+        series_deliverables = _deliverables.get_deliverables(None, series)
+        for deliv in series_deliverables:
+            series_info = deliv[3]
+            highlights = series_info.get('cycle-highlights')
+            if highlights:
+                # Add highlights to any existing notes already collected
+                notes = series_highlights.get(series_info['team'])
+                series_highlights[series_info['team']] = '{}{}\n\n'.format(
+                    notes, highlights)
+
+        return series_highlights
+
+    def run(self):
+        env = self.state.document.settings.env
+        app = env.app
+
+        # Get the series we are reporting on
+        series = self.options.get('series')
+        if not series:
+            raise self.error('series value must be set to a valid cycle name.')
+
+        result = ViewList()
+        series_highlights = self._get_deliverable_highlights(series)
+        source_name = '<{}>'.format(__name__)
+
+        for team in series_highlights.keys():
+            app.info('[highlights] rendering %s highlights for %s' %
+                     (team.title(), series))
+
+            result.append(team.title(), source_name)
+            result.append('-' * len(team), source_name)
+            result.append(series_highlights[team], source_name)
+            result.append('', source_name)
+
+        node = nodes.section()
+        node.document = self.state.document
+        nested_parse_with_titles(self.state, result, node)
+        return node.children
+
+
 def setup(app):
     _initialize_deliverable_data(app)
     app.add_directive('deliverable', DeliverableDirective)
     app.add_directive('independent-deliverables',
                       IndependentDeliverablesDirective)
     app.add_directive('team', TeamDirective)
+    app.add_directive('serieshighlights', HighlightsDirective)
     _generate_team_pages(app)
