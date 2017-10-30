@@ -13,3 +13,9 @@ releases:
       - hash: 04daafefc151f53304e8e92536afc64bc3fb757c
         repo: openstack/oslo.utils
     version: 3.30.0
+  - projects:
+      - hash: 750ed3277134e2a1953ae9ea6763e089b2104710
+        repo: openstack/oslo.utils
+    version: 3.31.0
+    highlights: >
+      Add method to compute a file's checksum to fileutils
