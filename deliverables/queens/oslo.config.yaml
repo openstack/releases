@@ -21,3 +21,9 @@ releases:
       - hash: 36aded18660fc4d515aaabfc7bf1afbfb65e6411
         repo: openstack/oslo.config
     version: 4.13.2
+  - projects:
+      - hash: a3e7f8aa172f68bafd973206c9529773bbc16672
+        repo: openstack/oslo.config
+    version: 5.0.0
+    highlights: >
+        Remove the parameter enforce_type from set_override and set_default
