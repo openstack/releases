@@ -33,3 +33,9 @@ releases:
         hash: c33d39c152bdd48b68467d1ab2f63cbe5e337a72
     highlights: |
       - Enable ssl support for keycloak auth module.
+  - version: 3.1.4
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 291501ae6dc16f20ed53af975840d6c3ef3acc7b
+    highlights: >
+      - Don't perform authentication for help and bash completion.
