@@ -3,3 +3,8 @@ launchpad: puppet-watcher
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: dbd519cb3f67287033c061ab28002d0feb70a8d2
+        repo: openstack/puppet-watcher
+    version: 12.0.0

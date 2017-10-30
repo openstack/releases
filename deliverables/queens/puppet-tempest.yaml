@@ -3,3 +3,8 @@ launchpad: puppet-tempest
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 90ad1a7e44945c37d5dbd06ea94e497c63600ff6
+        repo: openstack/puppet-tempest
+    version: 12.0.0

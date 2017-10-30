@@ -3,3 +3,8 @@ launchpad: puppet-sahara
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: a5748fbf9829f9d5c5d2a3128f15d8720c6fb30d
+        repo: openstack/puppet-sahara
+    version: 12.0.0

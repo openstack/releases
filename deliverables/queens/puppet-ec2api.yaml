@@ -3,3 +3,8 @@ launchpad: puppet-ec2api
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: e795ab9db8d87b0b2168315ff665de06cceaf40a
+        repo: openstack/puppet-ec2api
+    version: 12.0.0

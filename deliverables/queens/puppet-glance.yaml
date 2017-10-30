@@ -3,3 +3,8 @@ launchpad: puppet-glance
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 2ae39c293c19a2dae7d72fabb87b34df7f0aea74
+        repo: openstack/puppet-glance
+    version: 12.0.0

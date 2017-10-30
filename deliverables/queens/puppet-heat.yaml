@@ -3,3 +3,8 @@ launchpad: puppet-heat
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 47a56135af8a1ec293433d372f9aeec0f9d2a246
+        repo: openstack/puppet-heat
+    version: 12.0.0

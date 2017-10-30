@@ -3,3 +3,8 @@ launchpad: puppet-mistral
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 1e60b1e1c17dd27621cf12f95a1315691de0e5c8
+        repo: openstack/puppet-mistral
+    version: 12.0.0

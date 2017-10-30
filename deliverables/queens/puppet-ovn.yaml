@@ -3,3 +3,8 @@ launchpad: puppet-ovn
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: dccaec0b98f24558fcc63896b347f9d14a6afae3
+        repo: openstack/puppet-ovn
+    version: 12.0.0
