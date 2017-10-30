@@ -30,6 +30,10 @@ releases:
       - hash: 7524a44ebb13b76cf42adee0bfff4d999f8dfbb5
         repo: openstack/cinder
     version: 11.0.0
+  - projects:
+      - repo: openstack/cinder
+        hash: 7cc8d0ea63cc19aefcc0844ce455aead44297c21
+    version: 11.0.1
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike
