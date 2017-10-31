@@ -3,6 +3,7 @@ include-pypi-link: yes
 launchpad: mistral
 release-model: cycle-with-milestones
 team: mistral
+release-type: python-pypi
 type: service
 releases:
   - version: 5.0.0.0b1
@@ -50,6 +51,14 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 6e720669598be09acdae72e54a891a068fd64c5e
+      - repo: openstack/mistral-dashboard
+        hash: f3b819d9d484c728284f788693559a0f4b51b3f9
+      - repo: openstack/mistral-extra
+        hash: ab93854e49ea225dd5e35eeb12adb08f774c9543
+  - version: 5.2.0
+    projects:
+      - repo: openstack/mistral
+        hash: b7d133dd4abfdb9898dc4b839ea0499925148e76
       - repo: openstack/mistral-dashboard
         hash: f3b819d9d484c728284f788693559a0f4b51b3f9
       - repo: openstack/mistral-extra
