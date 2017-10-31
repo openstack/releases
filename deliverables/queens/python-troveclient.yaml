@@ -4,3 +4,9 @@ launchpad: python-troveclient
 release-model: cycle-with-intermediary
 team: trove
 type: library
+releases:
+  - version: 2.13.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 1d3e516dea5448f2230354d1457f488b34a2bd4d
+release-notes: https://docs.openstack.org/releasenotes/python-troveclient/unreleased.html
