@@ -4,3 +4,8 @@ launchpad: os-brick
 release-model: cycle-with-intermediary
 team: cinder
 type: library
+releases:
+  - projects:
+      - hash: c1f1786307d8acfdcae5c6ea3f38c98f627ec9e4
+        repo: openstack/os-brick
+    version: 2.0.0
