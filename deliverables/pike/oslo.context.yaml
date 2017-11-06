@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: e86ee74a72f7deb8f75e0ede68bba7ba520c7298
+  - projects:
+      - hash: f4b6914db02e6bcf0de4a97bbc3dc85dd6e06d91
+        repo: openstack/oslo.context
+    version: 2.17.1
 branches:
   - name: stable/pike
     location: 2.17.0
