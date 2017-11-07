@@ -3,3 +3,8 @@ launchpad: manila
 release-model: cycle-with-milestones
 team: manila
 type: service
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/manila
+        hash: cd77c128b0bf9f0f9b64a4084ff85b8799be799b
