@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/swift/current.html
 team: swift
 type: service
+releases:
+  - version: 2.16.0
+    projects:
+      - repo: openstack/swift
+        hash: 1ff3f1e3e877091f372a9109187a3ce4cf4414dd
