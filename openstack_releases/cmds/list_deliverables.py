@@ -194,9 +194,14 @@ def main():
             continue
         if args.tag:
             tags = deliv.tags
+            ignore = False
             for t in args.tag:
                 if t not in tags:
-                    continue
+                    ignore = True
+                    break
+            if ignore:
+                continue
+
         tag_str = '(' + ', '.join(deliv.tags) + ')'
 
         if args.missing_final and deliv.latest_release:
