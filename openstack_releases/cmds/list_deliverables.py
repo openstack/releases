@@ -145,6 +145,7 @@ def main():
         verbose_template += ' {type:15}'
     if not args.model:
         verbose_template += ' {model:15}'
+    verbose_template += ' {tags}'
 
     csvfile = None
     if args.csvfile:
@@ -196,6 +197,8 @@ def main():
             for t in args.tag:
                 if t not in tags:
                     continue
+        tag_str = '(' + ', '.join(deliv.tags) + ')'
+
         if args.missing_final and deliv.latest_release:
             if not ('rc' in deliv.latest_release or
                     'a' in deliv.latest_release or
@@ -221,6 +224,7 @@ def main():
                 team=deliv.team,
                 type=deliv.type,
                 model=deliv.model,
+                tags=tag_str,
             ))
         elif args.repos:
             if args.group_key and cur_group != deliv_group:
