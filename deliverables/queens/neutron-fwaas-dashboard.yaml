@@ -3,3 +3,8 @@ launchpad: neutron-fwaas-dashboard
 team: neutron
 type: horizon-plugin
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: cbe6a60aa1a5e30e1aa40ea4963674ec22a011af
+        repo: openstack/neutron-fwaas-dashboard
+    version: 1.1.0
