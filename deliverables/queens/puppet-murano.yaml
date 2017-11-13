@@ -3,3 +3,8 @@ launchpad: puppet-murano
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 9f05b278ae19bb1de5b98859e916cace95ac36fe
+        repo: openstack/puppet-murano
+    version: 12.0.0

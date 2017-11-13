@@ -3,3 +3,8 @@ launchpad: puppet-tacker
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: cb2cbc6177a63ebdf0612945064b4a7cdaad93a8
+        repo: openstack/puppet-tacker
+    version: 12.0.0

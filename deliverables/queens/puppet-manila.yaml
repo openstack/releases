@@ -3,3 +3,8 @@ launchpad: puppet-manila
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 1eb6daa91278abf3841514676ab87168c61c758b
+        repo: openstack/puppet-manila
+    version: 12.0.0

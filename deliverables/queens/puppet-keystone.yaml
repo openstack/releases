@@ -3,3 +3,8 @@ launchpad: puppet-keystone
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 069edd02f0237968040381625cb69c9eaa33395b
+        repo: openstack/puppet-keystone
+    version: 12.0.0

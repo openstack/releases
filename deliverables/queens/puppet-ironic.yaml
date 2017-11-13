@@ -3,3 +3,8 @@ launchpad: puppet-ironic
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: f4cf0aa7b6dec9694bbaba2c79522e0c521b391d
+        repo: openstack/puppet-ironic
+    version: 12.0.0

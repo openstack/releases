@@ -3,3 +3,8 @@ launchpad: puppet-congress
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 80af639fb30d2adf8d11469f573cf486224d4787
+        repo: openstack/puppet-congress
+    version: 12.0.0

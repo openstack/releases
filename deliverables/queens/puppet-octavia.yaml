@@ -3,3 +3,8 @@ launchpad: puppet-octavia
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 1dd9d73fd8780de84c9a20ccb345121f7c33c1d4
+        repo: openstack/puppet-octavia
+    version: 12.0.0

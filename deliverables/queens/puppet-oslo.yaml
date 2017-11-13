@@ -3,3 +3,8 @@ launchpad: puppet-oslo
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: 695c050b61a51fc06986d3443cfbb1a487f63010
+        repo: openstack/puppet-oslo
+    version: 12.0.0

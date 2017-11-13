@@ -3,3 +3,8 @@ launchpad: puppet-zaqar
 release-model: cycle-trailing
 team: 'Puppet OpenStack'
 type: other
+releases:
+  - projects:
+      - hash: c9ab343df0270071857bb5c77bcda57ae2c02d49
+        repo: openstack/puppet-zaqar
+    version: 12.0.0
