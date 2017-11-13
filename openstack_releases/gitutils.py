@@ -109,6 +109,20 @@ def clone_repo(workdir, repo, ref=None, branch=None):
     subprocess.check_call(cmd)
 
 
+def safe_clone_repo(workdir, repo, ref, mk_error):
+    """Ensure we have a local copy of the repository so we
+    can scan for values that are more difficult to get
+    remotely.
+    """
+    try:
+        clone_repo(workdir, repo, ref)
+    except Exception as err:
+        mk_error('Could not clone repository %s at %s: %s' % (
+            repo, ref, err))
+        return False
+    return True
+
+
 def sha_for_tag(workdir, repo, version):
     """Return the SHA for a given tag
     """

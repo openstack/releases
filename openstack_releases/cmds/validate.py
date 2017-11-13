@@ -321,13 +321,8 @@ def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
             if project['repo'] in cloned:
                 continue
             cloned.add(project['repo'])
-            try:
-                gitutils.clone_repo(workdir, project['repo'])
-            except Exception as err:
-                mk_error('Could not clone repository %s at %s: %s' % (
-                    project['repo'], project['hash'], err))
-                # No point in running extra checks if we can't
-                # clone the repository.
+            if not gitutils.safe_clone_repo(workdir, project['repo'],
+                                            project['hash'], mk_error):
                 ok = False
     return ok
 
@@ -472,16 +467,8 @@ def validate_releases(deliverable_info, zuul_projects,
                 )
             else:
 
-                # Ensure we have a local copy of the repository so we
-                # can scan for values that are more difficult to get
-                # remotely.
-                try:
-                    gitutils.clone_repo(workdir, project['repo'], project['hash'])
-                except Exception as err:
-                    mk_error('Could not clone repository %s at %s: %s' % (
-                        project['repo'], project['hash'], err))
-                    # No point in running extra checks if we can't
-                    # clone the repository.
+                if not gitutils.safe_clone_repo(workdir, project['repo'],
+                                                project['hash'], mk_error):
                     continue
 
                 # Report if the SHA exists or not (an error if it
@@ -773,17 +760,8 @@ def validate_stable_branches(deliverable_info, workdir,
                 )
             else:
                 for project in known_releases[location]['projects']:
-                    # Ensure we have a local copy of the repository so we
-                    # can scan for values that are more difficult to get
-                    # remotely.
-                    try:
-                        gitutils.clone_repo(workdir, project['repo'],
-                                            project['hash'])
-                    except Exception as err:
-                        mk_error('Could not clone repository %s at %s: %s' % (
-                            project['repo'], project['hash'], err))
-                        # No point in running extra checks if we can't
-                        # clone the repository.
+                    if not gitutils.safe_clone_repo(workdir, project['repo'],
+                                                    project['hash'], mk_error):
                         continue
                     _require_gitreview(workdir, project['repo'], mk_error)
         elif branch_mode == 'tagless':
@@ -806,16 +784,7 @@ def validate_stable_branches(deliverable_info, workdir,
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
-                # Ensure we have a local copy of the repository so we
-                # can scan for values that are more difficult to get
-                # remotely.
-                try:
-                    gitutils.clone_repo(workdir, repo, loc)
-                except Exception as err:
-                    mk_error('Could not clone repository %s at %s: %s' % (
-                        repo, loc, err))
-                    # No point in running extra checks if we can't
-                    # clone the repository.
+                if not gitutils.safe_clone_repo(workdir, repo, loc, mk_error):
                     continue
                 _require_gitreview(workdir, repo, mk_error)
                 if not gitutils.commit_exists(workdir, repo, loc):
