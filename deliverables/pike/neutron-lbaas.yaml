@@ -3,6 +3,7 @@ launchpad: octavia
 release-model: cycle-with-milestones
 team: octavia
 type: other
+release-type: neutron
 releases:
   - version: 11.0.0.0b1
     projects:
@@ -30,6 +31,10 @@ releases:
         repo: openstack/neutron-lbaas
     version: 11.0.1
     diff-start: 10.0.0
+  - projects:
+      - hash: 81cf553215c158f0fa8238f6cd2ff5655d0e79cd
+        repo: openstack/neutron-lbaas
+    version: 11.0.2
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike
