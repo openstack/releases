@@ -13,3 +13,9 @@ releases:
       - hash: eb544da5a8b9c92a21d2da31d58c127e28b8df10
         repo: openstack/oslotest
     version: 2.18.1
+  - projects:
+      - hash: 507553bc4642723347bf57f2481c0eab9b28aa89
+        repo: openstack/oslotest
+    version: 3.0.0
+    highlights: >
+        Remove module oslotest.mockpatch
