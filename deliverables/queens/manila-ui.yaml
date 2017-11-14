@@ -2,4 +2,10 @@
 launchpad: manila-ui
 release-model: cycle-with-intermediary
 team: manila
+release-type: horizon
 type: horizon-plugin
+releases:
+  - version: 2.11.0
+    projects:
+      - repo: openstack/manila-ui
+        hash: b844e49872ec48ac862d0efcc00ae6b5f4b5aff3
