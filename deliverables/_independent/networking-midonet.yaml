@@ -3,6 +3,7 @@ launchpad: networking-midonet
 team: neutron
 type: other
 release-notes: https://docs.openstack.org/releasenotes/networking-midonet/
+release-type: neutron
 releases:
   # liberty
   - version: 1.0.0
@@ -34,6 +35,15 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: c6acb9ea0853d7168d02318629d376c5f9a6990e
+  # ocata
+  - version: 4.1.0
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 2a4f619829fc6125b5658b75dac8ebabab6e6711
+    highlights: |-
+      * Compatibility with Neutron FWaaS 10.1.0.  (Bug 1659760)
+      * Fix live migration issues.  (Bug 1718177)
+
 branches:
   - name: stable/newton
     location: 3.0.0
