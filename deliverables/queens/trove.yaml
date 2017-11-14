@@ -3,3 +3,8 @@ launchpad: trove
 release-model: cycle-with-milestones
 team: trove
 type: service
+releases:
+  - projects:
+      - hash: d7b773d2b07f0c95909ef73c4644a63f09fd82c3
+        repo: openstack/trove
+    version: 9.0.0.0b1
