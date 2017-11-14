@@ -332,6 +332,15 @@ def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
     return ok
 
 
+def _require_gitreview(workdir, repo, mk_error):
+    print('\nlooking for .gitreview in %s' % repo)
+    filename = os.path.join(
+        workdir, repo, '.gitreview',
+    )
+    if not os.path.exists(filename):
+        mk_error('%s has no .gitreview file' % (repo,))
+
+
 def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
     "Verify that all repos include a .gitreview file."
     checked = set()
@@ -340,12 +349,11 @@ def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
             if project['repo'] in checked:
                 continue
             checked.add(project['repo'])
-            print('\nlooking for .gitreview in %s' % project['repo'])
-            filename = os.path.join(
-                workdir, project['repo'], '.gitreview',
+            version_exists = gitutils.commit_exists(
+                workdir, project['repo'], release['version'],
             )
-            if not os.path.exists(filename):
-                mk_error('%s has no .gitreview file' % (project['repo'],))
+            if not version_exists:
+                _require_gitreview(workdir, project['repo'], mk_error)
 
 
 _TYPE_TO_RELEASE_TYPE = {
@@ -730,10 +738,10 @@ def validate_stable_branches(deliverable_info, workdir,
     branch_mode = deliverable_info.get('stable-branch-type', 'std')
 
     branches = deliverable_info.get('branches', [])
-    known_releases = list(
-        r['version']
+    known_releases = {
+        r['version']: r
         for r in deliverable_info.get('releases', [])
-    )
+    }
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
@@ -763,6 +771,21 @@ def validate_stable_branches(deliverable_info, workdir,
                      'list of releases for this deliverable' % (
                          location, branch['name']))
                 )
+            else:
+                for project in known_releases[location]['projects']:
+                    # Ensure we have a local copy of the repository so we
+                    # can scan for values that are more difficult to get
+                    # remotely.
+                    try:
+                        gitutils.clone_repo(workdir, project['repo'],
+                                            project['hash'])
+                    except Exception as err:
+                        mk_error('Could not clone repository %s at %s: %s' % (
+                            project['repo'], project['hash'], err))
+                        # No point in running extra checks if we can't
+                        # clone the repository.
+                        continue
+                    _require_gitreview(workdir, project['repo'], mk_error)
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
                 mk_error(
@@ -794,6 +817,7 @@ def validate_stable_branches(deliverable_info, workdir,
                     # No point in running extra checks if we can't
                     # clone the repository.
                     continue
+                _require_gitreview(workdir, repo, mk_error)
                 if not gitutils.commit_exists(workdir, repo, loc):
                     mk_error(
                         ('stable branches should be created from merged '
@@ -868,6 +892,7 @@ def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
                      'but location %s for branch %s of %s does not exist' % (
                          (loc, repo, branch['name'])))
                 )
+            _require_gitreview(workdir, repo, mk_error)
 
 
 def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_error):
@@ -916,6 +941,7 @@ def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_erro
                      'but location %s for branch %s of %s does not exist' % (
                          (loc, repo, branch['name'])))
                 )
+            _require_gitreview(workdir, repo, mk_error)
 
 
 # if the branch already exists, the name is by definition valid
