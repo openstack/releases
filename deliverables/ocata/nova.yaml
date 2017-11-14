@@ -117,3 +117,7 @@ releases:
       - Several bug fixes.
       - Fixes a regression in Ocata where scheduler driver configuration
         options were restricted without a deprecation period.
+  - version: 15.0.8
+    projects:
+      - repo: openstack/nova
+        hash: ffd4f72d16dacd6ca1e703f9bab37b8917d253e7
