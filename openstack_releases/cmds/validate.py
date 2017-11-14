@@ -997,12 +997,12 @@ def main():
                 raise RuntimeError(msg)
 
         clone_deliverable(deliverable_info, workdir, mk_warning, mk_error)
-        # validate_schema(deliverable_info, mk_warning, mk_error)
-        # validate_bugtracker(deliverable_info, mk_warning, mk_error)
-        # validate_team(deliverable_info, team_data, mk_warning, mk_error)
-        # validate_release_notes(deliverable_info, mk_warning, mk_error)
-        # validate_type(deliverable_info, mk_warning, mk_error)
-        # validate_model(deliverable_info, series_name, mk_warning, mk_error)
+        validate_schema(deliverable_info, mk_warning, mk_error)
+        validate_bugtracker(deliverable_info, mk_warning, mk_error)
+        validate_team(deliverable_info, team_data, mk_warning, mk_error)
+        validate_release_notes(deliverable_info, mk_warning, mk_error)
+        validate_type(deliverable_info, mk_warning, mk_error)
+        validate_model(deliverable_info, series_name, mk_warning, mk_error)
         validate_release_type(
             deliverable_info,
             zuul_projects,
