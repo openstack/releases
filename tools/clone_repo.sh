@@ -43,6 +43,8 @@ Options:
 
   -h -- Print help.
 
+  -v -- Verbose output (turn on set -x).
+
   --workspace -- The name of the parent directory where the cloned
                  repo should be put.
 
@@ -68,7 +70,7 @@ BRANCH="master"
 REF=""
 UPSTREAM="git://git.openstack.org"
 
-OPTS=`getopt -o h --long branch:,cache-dir:,ref:,upstream:,workspace: -n $0 -- "$@"`
+OPTS=`getopt -o hv --long branch:,cache-dir:,ref:,upstream:,workspace: -n $0 -- "$@"`
 if [ $? != 0 ] ; then
     echo "Failed parsing options." >&2
     print_help
@@ -80,6 +82,9 @@ while true; do
         -h)
             print_help
             exit 0
+            ;;
+        -v)
+            set -x
             ;;
         --branch)
             BRANCH="$2"
@@ -127,7 +132,6 @@ if [ ! -d "$WORKSPACE" ]; then
     exit 1
 fi
 
-set -x
 set -e
 
 cache_remote="$CACHE_DIR/$REPO"
