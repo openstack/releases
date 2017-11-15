@@ -21,11 +21,13 @@ from __future__ import print_function
 import argparse
 import atexit
 import glob
+import logging
 import os
 import os.path
 import pkgutil
 import re
 import shutil
+import sys
 import tempfile
 
 import jsonschema
@@ -944,6 +946,14 @@ def main():
               'files changed in the latest commit'),
     )
     args = parser.parse_args()
+
+    # Set up logging, including making some loggers quiet.
+    logging.basicConfig(
+        format='%(levelname)s:%(name)s: %(message)s',
+        stream=sys.stdout,
+        level=logging.DEBUG,
+    )
+    logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
 
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:

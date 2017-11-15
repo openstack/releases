@@ -106,6 +106,7 @@ def clone_repo(workdir, repo, ref=None, branch=None):
     if branch:
         cmd.extend(['--branch', branch])
     cmd.append(repo)
+    LOG.info(' '.join(cmd))
     subprocess.check_call(cmd)
 
 
@@ -190,7 +191,10 @@ def check_branch_sha(workdir, repo, series, sha):
         )
         # If the patch is on the named branch, everything is fine.
         if remote_match in containing_branches:
+            LOG.debug('found %s branch', remote_match)
             return True
+        LOG.debug('did not find %s in branches containing %s: %s',
+                  remote_match, sha, containing_branches)
         # If the expected branch does not exist yet, this may be a
         # late release attempt to create that branch or just a project
         # that hasn't branched, yet, and is releasing from master for
@@ -203,10 +207,12 @@ def check_branch_sha(workdir, repo, series, sha):
             ).decode('utf-8')
         )
         if (remote_match not in all_branches) and ('master' in containing_branches):
+            LOG.debug('did not find %s but SHA is on master', remote_match)
             return True
         # At this point we know the release is not from the required
         # branch and it is not from master, which means it is the
         # wrong branch and should not be allowed.
+        LOG.debug('did not find SHA on %s or master', remote_match)
         return False
     except subprocess.CalledProcessError as e:
         LOG.error('failed checking SHA on branch: %s [%s]' % (e, e.output.strip()))
