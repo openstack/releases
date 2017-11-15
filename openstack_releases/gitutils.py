@@ -206,13 +206,20 @@ def check_branch_sha(workdir, repo, series, sha):
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8')
         )
-        if (remote_match not in all_branches) and ('master' in containing_branches):
-            LOG.debug('did not find %s but SHA is on master', remote_match)
-            return True
+        if remote_match not in all_branches:
+            if 'master' in containing_branches:
+                LOG.debug('did not find %s but SHA is on master',
+                          remote_match)
+                return True
+            if 'origin/master' in containing_branches:
+                LOG.debug('did not find %s but SHA is on origin/master',
+                          remote_match)
+                return True
         # At this point we know the release is not from the required
         # branch and it is not from master, which means it is the
         # wrong branch and should not be allowed.
-        LOG.debug('did not find SHA on %s or master', remote_match)
+        LOG.debug('did not find SHA on %s or master or origin/master',
+                  remote_match)
         return False
     except subprocess.CalledProcessError as e:
         LOG.error('failed checking SHA on branch: %s [%s]' % (e, e.output.strip()))
