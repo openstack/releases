@@ -36,6 +36,12 @@ def main():
         default=False,
         help='show the repository names not deliverable names',
     )
+    output_mode.add_argument(
+        '-a', '--all-releases',
+        action='store_true',
+        default=False,
+        help='show all of the releases for each deliverable',
+    )
     parser.add_argument(
         '--group-by',
         dest='group_key',
@@ -222,6 +228,16 @@ def main():
                     'type': deliv.type,
                     'model': deliv.model,
                 })
+        elif args.all_releases:
+            for r in deliv.releases:
+                print(verbose_template.format(
+                    name=deliv.name,
+                    latest_release=r.get('version', ''),
+                    team=deliv.team,
+                    type=deliv.type,
+                    model=deliv.model,
+                    tags=tag_str,
+                ))
         elif args.verbose:
             print(verbose_template.format(
                 name=deliv.name,
