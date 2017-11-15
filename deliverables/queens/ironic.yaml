@@ -3,3 +3,8 @@ launchpad: ironic
 release-model: cycle-with-intermediary
 team: ironic
 type: service
+releases:
+  - projects:
+      - hash: 0d944da575b8d493e5fef9ee63262b8ea5da44b8
+        repo: openstack/ironic
+    version: 9.2.0
