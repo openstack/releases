@@ -23,6 +23,10 @@ releases:
         hash: 2d0dc10f484d2d861359d582763a811de0c914ff
     highlights: |-
       * Fixed a bug when creating L7 rules
+  - version: 1.2.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 40ba02434a4abc62f237d8756fa1ce53a9037b70
 branches:
   - name: stable/pike
     location: 1.1.0
