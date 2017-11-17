@@ -83,6 +83,7 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 _RELEASE_JOBS_FOR_TYPE = {
     'python-service': [
         'release-openstack-server',
+        'publish-to-pypi',
     ],
     'python-pypi': [
         'publish-to-pypi',
@@ -178,9 +179,11 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
             for wrong_type, wrong_jobs in _RELEASE_JOBS_FOR_TYPE.items():
                 if wrong_type == release_type:
                     continue
+                # "bad" jobs are any that are attached to the repo but
+                # are not supported by the release-type of the repo
                 bad_jobs = [
                     j for j in wrong_jobs
-                    if j in templates
+                    if j in templates and j not in expected_jobs
                 ]
                 if bad_jobs:
                     mk_error(
