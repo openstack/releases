@@ -47,6 +47,10 @@ releases:
       * Fixed multiple DVR bugs when setting floating IP addresses
       * Fix port deletion when dns_integration is enabled
       * Fixed compatibility with iptables shipped with RHEL 7.4
+  - projects:
+      - hash: 0c3d3c48a73f97cb5924a5fbfce9726a7097ae2e
+        repo: openstack/neutron
+    version: 11.0.2
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike
