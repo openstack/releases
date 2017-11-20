@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: eaf2aa6cfe8abc5f8e086d88d98a8e24d8f8a8b5
+  - projects:
+      - hash: 124e9296fe79412b510c73b35936a6be91267d18
+        repo: openstack/castellan
+    version: 0.12.1
 branches:
   - name: stable/pike
     location: 0.12.0
