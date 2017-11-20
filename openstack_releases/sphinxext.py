@@ -400,7 +400,7 @@ class HighlightsDirective(rst.Directive):
             highlights = series_info.get('cycle-highlights')
             if highlights:
                 # Add highlights to any existing notes already collected
-                notes = series_highlights.get(series_info['team'])
+                notes = series_highlights.get(series_info['team'], '')
                 series_highlights[series_info['team']] = '{}{}\n\n'.format(
                     notes, highlights)
 
@@ -415,6 +415,9 @@ class HighlightsDirective(rst.Directive):
         if not series:
             raise self.error('series value must be set to a valid cycle name.')
 
+        app.info('[series-highlights] gathering highlights for {}'.format(
+            series))
+
         result = ViewList()
         series_highlights = self._get_deliverable_highlights(series)
         source_name = '<{}>'.format(__name__)
@@ -427,6 +430,9 @@ class HighlightsDirective(rst.Directive):
             result.append('-' * len(team), source_name)
             result.append(series_highlights[team], source_name)
             result.append('', source_name)
+
+        # NOTE(dhellmann): Useful for debugging.
+        # print('\n'.join(result))
 
         node = nodes.section()
         node.document = self.state.document
