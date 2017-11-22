@@ -9,3 +9,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: c5ce9a6cf6c23af3d4fd33990ce3010244db2e32
+  - version: 2.6.0
+    projects:
+      - repo: openstack/os-win
+        hash: 6ab9f17bfe90ee8dff4c8414e5ff5797f3e46778
+    highlights: |
+      This release includes support for retrieving the available SR-IOV VFs
+      and enabling SR-IOV on VMs' vswitch ports.
