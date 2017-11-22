@@ -317,7 +317,8 @@ that deliverable. For each deliverable, we need to track:
 * highlights for the release notes email (optional)
 * cycle highlights that will be published to
   ``releases.openstack.org/$SERIES/highlights.html`` (optional, and for
-  cycle_with_intermediary amd cycle_with_milestone projects only)
+  cycle-with-intermediary, cycle-with-milestones, and cycle-trailing projects
+  only)
 * the starting points of all branches
 
     We track this metadata for the history of all releases of the
