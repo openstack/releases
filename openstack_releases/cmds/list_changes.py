@@ -29,8 +29,10 @@ import subprocess
 import sys
 import tempfile
 
+import pyfiglet
 import requests
 
+from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import release_notes
@@ -40,6 +42,10 @@ from openstack_releases import yamlutils
 def header(title):
     print('\n%s' % title)
     print('-' * len(title))
+
+
+def banner(text):
+    pyfiglet.print_figlet(text, font='banner', width=120)
 
 
 def git_show(workdir, repo, title, ref):
@@ -235,6 +241,8 @@ def main():
         else:
             default_model = 'no release model specified'
 
+        stable_branch = series not in ['_independent', defaults.RELEASE]
+
         # By default assume the project does not use milestones.
         header('Release model')
         print(deliverable_info.get('release-model', default_model))
@@ -253,10 +261,14 @@ def main():
                 if deliverable:
                     print('found deliverable %s' % deliverable_name)
                     for rn, repo in sorted(deliverable.repositories.items()):
+                        follows_stable_policy = 'stable:follows-policy' in repo.tags
                         print('\nrepo %s\ntags:' % repo.name)
                         for t in repo.tags:
                             print('  %s' % t)
                         print('')
+                        if stable_branch and follows_stable_policy:
+                            banner('Needs Stable Policy Review')
+                            print()
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
