@@ -21,3 +21,9 @@ releases:
     highlights: |
         * Multithreaded network IO to significantly improve performance
         * Introduced meta-variable files to simplify template creation
+  - version: 0.5.0
+    projects:
+      - repo: openstack/syntribos
+        hash: 575348df936525c2d9c4f1d735950259bb6179ca
+    highlights: |
+        * Fixed bugs involving payload downloading
