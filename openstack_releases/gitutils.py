@@ -108,6 +108,8 @@ def clone_repo(workdir, repo, ref=None, branch=None):
     cmd.append(repo)
     LOG.info(' '.join(cmd))
     subprocess.check_call(cmd)
+    dest = os.path.join(workdir, repo)
+    return dest
 
 
 def safe_clone_repo(workdir, repo, ref, mk_error):

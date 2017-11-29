@@ -48,11 +48,9 @@ def validate_version(versionstr, release_type='python-service', pre_ok=True):
     Apply our SemVer rules to version strings and report all issues.
 
     """
-    if not pre_ok:
-        for pre_indicator in ['a', 'b', 'rc']:
-            if pre_indicator in versionstr:
-                yield('Version %s looks like a pre-release and the release '
-                      'model does not allow for it' % versionstr)
+    if not pre_ok and looks_like_preversion(versionstr):
+        yield('Version %s looks like a pre-release and the release '
+              'model does not allow for it' % versionstr)
 
     if release_type not in _VALIDATORS:
         yield 'Release Type %r not valid using \'python-service\' instead' % release_type
@@ -77,3 +75,11 @@ def canonical_version(versionstr, release_type='python-service'):
     if errors:
         raise ValueError(errors[-1])
     return versionstr
+
+
+def looks_like_preversion(versionstr):
+    "Return boolean indicating if the version appears to be a pre-version."
+    for pre_indicator in ['a', 'b', 'rc']:
+        if pre_indicator in versionstr:
+            return True
+    return False
