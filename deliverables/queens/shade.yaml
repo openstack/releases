@@ -19,3 +19,10 @@ releases:
       - hash: 8a6f0f9bc3f240e2b26e727bdb20ab770cfb3a6e
         repo: openstack-infra/shade
     version: 1.24.0
+  - highlights: |
+      Added helper methods for working in alternate auth contexts. Clean up
+      unneeded objects created as part of image uploads.
+    projects:
+      - hash: e11ecfaf98d220596ad013af42b25bbb8326df8b
+        repo: openstack-infra/shade
+    version: 1.25.0
