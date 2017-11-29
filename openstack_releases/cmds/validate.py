@@ -44,6 +44,7 @@ from openstack_releases import npmutils
 from openstack_releases import project_config
 from openstack_releases import puppetutils
 from openstack_releases import pythonutils
+from openstack_releases import requirements
 from openstack_releases import versionutils
 from openstack_releases import yamlutils
 
@@ -359,6 +360,8 @@ _TYPE_TO_RELEASE_TYPE = {
     'horizon-plugin': 'horizon',
 }
 
+_PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
+
 
 def get_release_type(deliverable_info, project, workdir):
     """Return tuple with release type and boolean indicating whether it
@@ -594,6 +597,26 @@ def validate_releases(deliverable_info, zuul_projects,
                                         release['version'],
                                     )
                                 )
+
+                        # If we know the previous version and the
+                        # project is a python deliverable make sure
+                        # the requirements haven't changed in a way
+                        # not reflecting the version.
+                        if prev_version and release_type in _PYTHON_RELEASE_TYPES:
+                            # For the master branch, enforce the
+                            # rules. For other branches just warn if
+                            # the rules are broken because there are
+                            # cases where we do need to support point
+                            # releases with requirements updates.
+                            if series_name == defaults.RELEASE:
+                                report = mk_error
+                            else:
+                                report = mk_warning
+                            requirements.find_bad_lower_bound_increases(
+                                workdir, project['repo'],
+                                prev_version, release['version'], project['hash'],
+                                report,
+                            )
 
                         for e in versionutils.validate_version(
                                 release['version'],
