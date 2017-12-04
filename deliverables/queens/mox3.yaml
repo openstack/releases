@@ -4,3 +4,8 @@ launchpad: python-mox3
 release-model: cycle-with-intermediary
 team: oslo
 type: library
+releases:
+  - projects:
+      - hash: 9f2bbc229c6894c0804b6c8da1f1a6fedc986938
+        repo: openstack/mox3
+    version: 0.24.0
