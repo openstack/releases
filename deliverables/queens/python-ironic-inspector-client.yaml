@@ -4,3 +4,8 @@ launchpad: python-ironic-inspector-client
 release-model: cycle-with-intermediary
 team: ironic
 type: library
+releases:
+  - projects:
+      - hash: e4ceea7a96f9b446fbe3b230ffce1d920a883324
+        repo: openstack/python-ironic-inspector-client
+    version: 3.0.0
