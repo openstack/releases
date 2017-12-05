@@ -3,3 +3,8 @@ launchpad: freezer
 release-model: cycle-with-intermediary
 team: freezer
 type: library
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 0b1e11a316640cfa2c2bb297a6b9e11acbc70d96
