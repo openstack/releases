@@ -3,3 +3,8 @@ launchpad: searchlight
 release-model: cycle-with-milestones
 team: searchlight
 type: service
+releases:
+  - version: 4.0.0.0b2
+    projects:
+      - repo: openstack/searchlight
+        hash: 5f17d4270fb3606dfbb776fab6142968830462df
