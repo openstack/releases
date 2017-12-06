@@ -3,3 +3,8 @@ launchpad: karbor
 release-model: cycle-with-intermediary
 team: karbor
 type: service
+releases:
+  - projects:
+      - hash: 84f83a3d7082366180ee443f1d2f05f6d925f8b0
+        repo: openstack/karbor
+    version: 0.6.0
