@@ -3,3 +3,9 @@ launchpad: congress
 release-model: cycle-with-milestones
 team: congress
 type: horizon-plugin
+release-type: python-pypi
+releases:
+  - version: 2.0.0.0b2
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: f580326ff5f7d593d33ca4b7fe1e80444dfa98af
