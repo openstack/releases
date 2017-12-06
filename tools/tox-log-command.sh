@@ -17,7 +17,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-cmd="$1"
+cmd=$(basename "$1" | cut -f1 -d.)
 shift
 
 if [ -z "$LOGDIR" ]; then
