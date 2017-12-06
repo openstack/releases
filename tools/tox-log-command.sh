@@ -18,7 +18,6 @@
 #    under the License.
 
 cmd=$(basename "$1" | cut -f1 -d.)
-shift
 
 if [ -z "$LOGDIR" ]; then
     echo "LOGDIR variable not set."
@@ -29,4 +28,7 @@ logfile="$LOGDIR/$cmd-results.log"
 
 echo "Logging $cmd output to $logfile"
 
-$cmd "$@" 2>&1 | tee "$logfile"
+# Fail if any part of the pipe fails.
+set -o pipefail
+
+$@ 2>&1 | tee "$logfile"
