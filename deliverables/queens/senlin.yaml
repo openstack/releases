@@ -3,3 +3,8 @@ launchpad: senlin
 release-model: cycle-with-milestones
 team: senlin
 type: service
+releases:
+  - projects:
+      - hash: cca084d903508e096fa301820e6a9d077f6df76e
+        repo: openstack/senlin
+    version: 5.0.0.0b2
