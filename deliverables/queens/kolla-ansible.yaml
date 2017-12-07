@@ -3,3 +3,8 @@ launchpad: kolla-ansible
 release-model: cycle-trailing
 team: kolla
 type: other
+releases:
+  - version: 6.0.0.0b2
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 4d8816a045ded6e465b482d3e697b9b4b6b1a6d3
