@@ -23,7 +23,10 @@ from docutils.statemachine import ViewList
 from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
+from openstack_releases import governance
 from openstack_releases import links
+
+_TEAM_DATA = governance.get_team_data()
 
 
 def _list_table(add, headers, data, title='', columns=None):
@@ -426,8 +429,17 @@ class HighlightsDirective(rst.Directive):
             app.info('[highlights] rendering %s highlights for %s' %
                      (team.title(), series))
 
-            result.append(team.title(), source_name)
-            result.append('-' * len(team), source_name)
+            tdata = _TEAM_DATA.get(team, {})
+            title = team.title()
+            if tdata.get('service'):
+                title = "{} - {}".format(title, tdata['service'])
+            result.append(title, source_name)
+            result.append('-' * len(title), source_name)
+            if tdata.get('mission'):
+                result.append(tdata['mission'], source_name)
+                result.append('', source_name)
+            result.append('**Notes:**', source_name)
+            result.append('', source_name)
             result.append(series_highlights[team], source_name)
             result.append('', source_name)
 
