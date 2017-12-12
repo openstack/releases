@@ -1,5 +1,6 @@
 ---
 launchpad: monasca
+release-type: nodejs
 team: monasca
 type: other
 releases:
@@ -15,3 +16,7 @@ releases:
       - hash: 286ffd7dca3e75935471af64f913ac6892485126
         repo: openstack/monasca-grafana-datasource
     version: 1.2.0
+  - projects:
+      - hash: 7f0b8621cbd39341bd948ffd28e3beb5a4f12084
+        repo: openstack/monasca-grafana-datasource
+    version: 1.2.1
