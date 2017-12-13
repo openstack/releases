@@ -4,3 +4,8 @@ launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: library
+releases:
+  - projects:
+      - hash: a8e71b0565e94cdd47d0550ada2555dca45a85d5
+        repo: openstack/osc-lib
+    version: 1.8.0
