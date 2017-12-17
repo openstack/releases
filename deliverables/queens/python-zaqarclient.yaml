@@ -4,3 +4,8 @@ launchpad: python-zaqarclient
 release-model: cycle-with-intermediary
 team: zaqar
 type: library
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: a2bc819589c4d606e7ded3b500275d0ef9e405ec
