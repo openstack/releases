@@ -1,5 +1,11 @@
 ---
 launchpad: karbor-dashboard
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: karbor
 type: horizon-plugin
+releases:
+  - projects:
+      - hash: 761570ef879603188e546bc324ea883228c31114
+        repo: openstack/karbor-dashboard
+    version: 0.5.0
