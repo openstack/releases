@@ -10,11 +10,16 @@
       jobs:
         - openstack-tox-validate
         - releases-tox-list-changes
-        - build-openstack-sphinx-docs
+        - build-openstack-sphinx-docs:
+            vars:
+              sphinx_python: python3
+
     gate:
       jobs:
         - openstack-tox-validate
-        - build-openstack-sphinx-docs
+        - build-openstack-sphinx-docs:
+            vars:
+              sphinx_python: python3
     release-post:
       jobs:
         - tag-releases
