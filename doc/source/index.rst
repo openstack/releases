@@ -21,6 +21,11 @@ updates.
      * Initial Release Date
      * Next Phase
      * EOL Date
+   - * :doc:`rocky/index`
+     * :doc:`Future <rocky/schedule>`
+     * :ref:`proposed <r-release>`
+     *
+     * TBD
    - * :doc:`queens/index`
      * :doc:`Under Development <queens/schedule>`
      * :ref:`scheduled <q-release>`
@@ -116,6 +121,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   rocky/index
    queens/index
    pike/index
    ocata/index
