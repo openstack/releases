@@ -17,9 +17,25 @@ the cycle. Other projects trail the main release deadline, waiting for
 the final releases of components on which they rely.
 
 A given deliverable can't have more than one model. It therefore must
-choose between one of the following models.
+choose between one of the following models. A number of rules apply
+based on what the deliverable is and which bucket of the OpenStack map
+it falls in:
 
-.. _model-cycle-with-milestones:
+* Components appearing in the *openstack* bucket in the `OpenStack map`_
+  form the main components of an OpenStack cloud, and therefore should follow
+  the release cycle. They need to pick between `cycle-with-milestones`_
+  or `cycle-with-intermediary`_ models.
+* Only deployment or lifecycle-management components are allowed to trail
+  the cycle. Therefore only components appearing in the
+  *openstack-lifecyclemanagement* bucket on the `OpenStack map`_ are
+  allowed to use the `cycle-trailing`_ model.
+* Libraries cannot use RCs or trail the release. They need to pick between
+  `cycle-with-intermediary`_ and `independent`_ release models based on how
+  much they are tied to OpenStack or more generally-useful.
+
+.. _`OpenStack map`: https://www.openstack.org/openstack-map
+
+.. _cycle-with-milestones:
 
 cycle-with-milestones
 =====================
@@ -36,7 +52,7 @@ published at predetermined times in the cycle schedule.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
-.. _model-cycle-with-intermediary:
+.. _cycle-with-intermediary:
 
 cycle-with-intermediary
 =======================
@@ -52,7 +68,7 @@ release to match the end of the cycle.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
-.. _model-cycle-trailing:
+.. _cycle-trailing:
 
 cycle-trailing
 ==============
@@ -60,17 +76,7 @@ cycle-trailing
 The "cycle-trailing" model describes projects that follow the release
 cycle, but because they rely on the other projects being completed may
 not always publish their final release at the same time as those
-projects. For example, projects related to packaging or deploying
-OpenStack components need the final releases of those components to be
-available before they can run their own final tests.
-
-.. warning::
-
-   This release model is not intended for use by components that have
-   programmatic dependencies on each other, such as one service that
-   calls another or a library used by multiple services. It is
-   intended for use by projects that truly cannot complete their work
-   without "final" versions of their dependencies.
+projects.
 
 * "cycle-trailing" projects commit to produce a release no later than
   2 weeks after the end of the 6-month development cycle.
@@ -80,7 +86,7 @@ available before they can run their own final tests.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
-.. _model-independent:
+.. _independent:
 
 independent
 ===========
@@ -94,7 +100,7 @@ projects.
 * Release tags for deliverables using this tag are managed without
   oversight from the Release Management team.
 
-.. _model-untagged:
+.. _untagged:
 
 untagged
 ========
