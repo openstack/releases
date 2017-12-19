@@ -9,3 +9,9 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: 57e0e5bd5c187dd2130655110cedd36e5ece9765
+  - version: 0.3.1
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: bd842add76784d6adb62283c6f8168d30946cd87
+        highlights: |-
+          - Fixed backward compatibility issue in 0.3.0.
