@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 6b6c4843eae25bb4d323134d6e210af2162a4b3f
+  - projects:
+      - hash: d78acec4d18c971a9e40b3c8e268505aefd339c7
+        repo: openstack/python-monascaclient
+    version: 1.7.1
 branches:
   - name: stable/pike
     location: 1.7.0
