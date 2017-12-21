@@ -8,3 +8,9 @@ releases:
       - hash: 37b2111435649cf9cc11c403b10544510022297e
         repo: openstack/monasca-api
     version: 2.3.0
+  - projects:
+      - hash: 5d1c8921e75a9d81fff5a556360d15c596505f5a
+        repo: openstack/monasca-api
+    version: 2.4.0
+    highlights: |-
+      * Add support for Apache Cassandra as time series database
