@@ -252,12 +252,22 @@ Project-specific events
 Elections
 ---------
 
+.. _r-email-deadline:
+
+Election Email Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date. Electorate
+rolls are generated after this date and ballots will be sent to the
+listed gerrit email address. 
+
 .. _r-ptl-nomination:
 
 Rocky PTLs self-nomination
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Project team lead candidates for the Queens cycle should announce their
+Project team lead candidates for the Rocky cycle should announce their
 candidacy during this week. Those dates should be confirmed by the Rocky
 PTL election officials.
 
