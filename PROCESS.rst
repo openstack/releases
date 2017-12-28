@@ -121,7 +121,7 @@ Between Milestone-2 and Milestone-3
       some cases they will need to get the group created by Infra.
 
    4. Notify the Infrastructure team to `generate
-      <https://docs.openstack.org/infra/system-config/signing.html#generation`_
+      <https://docs.openstack.org/infra/system-config/signing.html#generation>`_
       an artifact signing key (but not replace the current one yet), and
       begin the attestation process.
 
@@ -252,7 +252,7 @@ RC1
    https://review.openstack.org/#/c/375092.
 
 10. Add periodic bitrot jobs to tempest. For example, see
-   https://review.openstack.org/#/c/375271.
+    https://review.openstack.org/#/c/375271.
 
 Between RC1 and Final
 =====================
