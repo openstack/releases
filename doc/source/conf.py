@@ -62,6 +62,8 @@ htmlhelp_basename = '%sdoc' % project
 git_cmd = "git log --pretty=format:'%ad, commit %h' --date=local -n1"
 html_last_updated_fmt = os.popen(git_cmd).read()
 
+html_extra_path = ['_extra']
+
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
 # [howto/manual]).
