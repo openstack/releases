@@ -1,5 +1,6 @@
 ---
 launchpad: designate-dashboard
+release-type: horizon
 release-model: cycle-with-milestones
 team: designate
 type: horizon-plugin
@@ -21,6 +22,10 @@ releases:
       - repo: openstack/designate-dashboard
         hash: 8169c4b876e05f0675a1d942b17d7d83b9f9e7d2
     version: 5.0.0
+  - version: 5.0.1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: bc128a7c29a427933fc4ca94a7510ef8c97e5206
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
