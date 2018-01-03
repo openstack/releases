@@ -3,3 +3,12 @@ launchpad: kuryr-kubernetes
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+releases:
+  - version: 0.3.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 04d46d016f8f583e48b6480a15feca38c63ae801
+    highlights: |
+      * Introduced port pools feature.
+      * Support for running in containers as K8s network addon.
+      * Introduced kuryr-daemon service.
