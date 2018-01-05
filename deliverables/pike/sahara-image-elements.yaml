@@ -1,0 +1,17 @@
+---
+launchpad: sahara
+release-model: cycle-with-milestones
+release-type: python-pypi
+team: sahara
+type: other
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 79369e39e40e1d9ba1cbca6039a3a06afbaf1685
+  - version: 7.0.1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 078a5b7e9df7fea40e2584c61d0e7dff0afbf6ac
+repository-settings:
+  openstack/sahara-image-elements: {}
