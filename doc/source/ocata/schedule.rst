@@ -54,7 +54,7 @@ Ocata-1 milestone
 ------------------
 
 17 November is the ocata-1 milestone window for projects following the
-:ref:`model-cycle-with-milestones` model.
+:ref:`cycle-with-milestones` model.
 
 .. _o-goals-ack:
 
@@ -71,7 +71,7 @@ Ocata-2 milestone
 ------------------
 
 15 December is the ocata-2 milestone window for projects following the
-:ref:`model-cycle-with-milestones` model.
+:ref:`cycle-with-milestones` model.
 
 .. _o-final-lib:
 
@@ -88,7 +88,7 @@ Ocata-3 milestone
 ------------------
 
 26 January is the ocata-3 milestone window for projects following the
-:ref:`model-cycle-with-milestones` model.
+:ref:`cycle-with-milestones` model.
 
 .. _o-goals-complete:
 
@@ -122,7 +122,7 @@ Feature freeze
 --------------
 
 The ocata-3 milestone marks feature freeze for projects following the
-:ref:`model-cycle-with-milestones` model. No featureful patch should be landed
+:ref:`cycle-with-milestones` model. No featureful patch should be landed
 after this point. Exceptions may be granted by the project PTL.
 
 .. _o-rf:
@@ -173,7 +173,7 @@ RC1 target week
 ---------------
 
 The week of 30 January - 3 February is the target date for projects
-following the :ref:`model-cycle-with-milestones` model to issue their
+following the :ref:`cycle-with-milestones` model to issue their
 first release candidate, with a deadline of 2 February.
 
 .. _o-hard-sf:
