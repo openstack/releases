@@ -16,17 +16,14 @@ releases:
     projects:
       - repo: openstack/openstackdocstheme
         hash: 9d5dcd59bd2f01b67598ceffca0d29453129e418
-        highlights: >
-           This adds a dynamic table of content to the sidebar and
-           buttons for next, previous, report a bug at the bottom of
-           pages.
+        highlights: |
+          This adds a dynamic table of content to the sidebar and buttons for next, previous, report a bug at the bottom of pages.
   - version: 1.2.1
     projects:
       - repo: openstack/openstackdocstheme
         hash: 332531f776ec855d6171dbd353835f70bb5b474f
-        highlights: >
-           Fix display of metatags and "Docs Home" link,
-           remove obsolete files.
+        highlights: |
+          Fix display of metatags and "Docs Home" link, remove obsolete files.
   - version: 1.2.2
     projects:
       - repo: openstack/openstackdocstheme
@@ -39,42 +36,38 @@ releases:
     projects:
       - repo: openstack/openstackdocstheme
         hash: f1cb61e26d0c9a2e44448800972e5456087f9d5a
-        highlights: >
-           Links for Liberty release.
+        highlights: |
+          Links for Liberty release.
   - version: 1.2.5
     projects:
       - repo: openstack/openstackdocstheme
         hash: 06a856a457e99b0a53468c45909c53a6201e3f04
-        highlights: >
-           Add Google Analytics JavaScript tracking snippet code
-           and overall improvements of the layout.
+        highlights: |
+          Add Google Analytics JavaScript tracking snippet code and overall improvements of the layout.
   - version: 1.2.6
     projects:
       - repo: openstack/openstackdocstheme
         hash: 83ff2ba6bbe6caa12fe8e9a456d4b982bb441e49
-        highlights: >
-           Allow to set bug report project. Make Google Analytics
-           tracking optional.
+        highlights: |
+          Allow to set bug report project. Make Google Analytics tracking optional.
   - version: 1.2.7
     projects:
       - repo: openstack/openstackdocstheme
         hash: 02129aec53db765f8c55fa7f1dceea97aca103e4
-        highlights: >
-           Fixes for menu and sidebar.
+        highlights: |
+          Fixes for menu and sidebar.
   - version: 1.3.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: acbab4cd804c7b4e43572be52106a1bb7c0e439a
-        highlights: >
-           The theme is now versionless and does not display a specific
-           release anymore.
+        highlights: |
+          The theme is now versionless and does not display a specific release anymore.
   - version: 1.4.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: 70f6ed6a41beea6c18a5fcdeb53f495d02901c02
-        highlights: >
-           Preparation for API documentation navigation and reference display.
-           Fixes CSS bugs and improves display and usability.
+        highlights: |
+          Preparation for API documentation navigation and reference display. Fixes CSS bugs and improves display and usability.
   - version: 1.5.0
     projects:
       - repo: openstack/openstackdocstheme
@@ -87,36 +80,32 @@ releases:
     projects:
       - repo: openstack/openstackdocstheme
         hash: 58823b338cbeffeacce5b524269a5e6f194bbce9
-        highlights: >
-           Adds a checklist to the doc bug template.
+        highlights: |
+          Adds a checklist to the doc bug template.
   - version: 1.7.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: 96669d2de786bfb430512d6e6537a6b8c0163c81
-        highlights: >
-           Update PDF styling.
-           Update to jQuery 3.1.1.
-           Add custom search.html page.
+        highlights: |
+          Update PDF styling. Update to jQuery 3.1.1. Add custom search.html page.
   - version: 1.8.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: 51c6f621effd1fa3e958a50d204ce967284f38b2
-        highlights: >
-           Update OpenStack logo.
-           Update header to match OpenStack web properties.
-           Includes Login in header.
+        highlights: |
+          Update OpenStack logo. Update header to match OpenStack web properties. Includes Login in header.
   - version: 1.9.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: 3d4e8cefe9c89399f78fd2bb60dd33adc954d135
-        highlights: >
-           Update links in header to avoid 404 errors.
+        highlights: |
+          Update links in header to avoid 404 errors.
   - version: 1.10.0
     projects:
       - repo: openstack/openstackdocstheme
         hash: 73ac4e1a8e2be0f6941af691c89efe0876cf6e31
-        highlights: >
-           Replace Google site search by Swiftype search.
+        highlights: |
+          Replace Google site search by Swiftype search.
   - version: 1.11.0
     projects:
       - repo: openstack/openstackdocstheme
@@ -149,3 +138,7 @@ releases:
     projects:
       - repo: openstack/openstackdocstheme
         hash: 1eaa00b89d301bf3021bdbf6559250bdc07444a7
+  - projects:
+      - hash: fb520fd55129f8e5940b4959b99a5defb9a83bf0
+        repo: openstack/openstackdocstheme
+    version: 1.18.0
