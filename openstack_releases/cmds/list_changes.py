@@ -442,6 +442,8 @@ def main():
             if start_range:
                 git_diff(workdir, project['repo'], git_range, '*requirements*.txt',
                          'Requirements Changes %s' % git_range)
+                git_diff(workdir, project['repo'], git_range, 'doc/requirements.txt',
+                         'Doc Requirements Changes %s' % git_range)
                 git_diff(workdir, project['repo'], git_range, 'setup.cfg',
                          'setup.cfg Changes %s' % git_range)
                 git_diff(workdir, project['repo'], git_range, 'bindep.txt',
