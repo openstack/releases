@@ -1,0 +1,13 @@
+---
+launchpad: tripleo
+release-type: python-pypi
+branches:
+  - name: stable/pike
+    location: 1.0.0
+releases:
+  - projects:
+      - hash: 0f37163303a00936b56522e2cc3310e38b87a343
+        repo: openstack/tripleo-upgrade
+    version: 1.0.0
+team: tripleo
+type: other
