@@ -23,3 +23,9 @@ releases:
       - hash: d17e3d220d1417658363047d6da63a8fb105f676
         repo: openstack/oslotest
     version: 3.1.0
+  - projects:
+      - hash: 4f7f49a58628df35800b0f0fd209f4e04fc40832
+        repo: openstack/oslotest
+    version: 3.2.0
+    highlights: |
+      Adds oslotest.mock_fixture module
