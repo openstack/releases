@@ -35,3 +35,21 @@ releases:
         * The API definition for VNI in BGPVPN has been added
         * The API definition for default-subnetpools has been added
         * The API definition for quota details has been added
+  - version: 1.12.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: cd07c7bc095f41670fb3813e55b659fe943ded1b
+    highlights: |
+        * Speed up mac address generation in net_utils
+        * Add a new method ha_state_change to L3 agent extension
+        * Add DCCP, SCTP and UDP-Lite to validated protos for port ranges
+        * Move rbac-policy callback into neutron-lib
+        * Add the multi provider net extension api definition
+        * Add the IPinIP protocol
+        * Class methods and sub resources in base api ext
+        * Rehome the qos default api def
+        * Rehome service type api def
+        * Add default value as none for vni attribute in bgpvpn resource
+        * Fix port comparison in port range validation
+        * Rehome placement client to neutron-lib
+        * Rehome vlantransparent api def
