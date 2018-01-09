@@ -4,3 +4,8 @@ launchpad: python-designateclient
 release-model: cycle-with-intermediary
 team: designate
 type: library
+releases:
+  - version: 2.8.0
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 1a3632cf5748db837b6d85b1f8d40eeae0a270c6
