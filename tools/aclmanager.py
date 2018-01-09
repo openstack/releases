@@ -37,9 +37,7 @@ urllib3.disable_warnings()
 
 GERRIT_URL = 'https://review.openstack.org/'
 
-EXCEPTIONS = ['openstack/training-labs',
-              'openstack/murano-apps',
-              'openstack/trove-image-builder']
+EXCEPTIONS = ['openstack/release-test']
 
 
 def repositories_list(deliverables_dir, series):
@@ -52,7 +50,8 @@ def repositories_list(deliverables_dir, series):
         if not d.repos:
             print('WARNING: no releases for {} in {}'.format(dname, series))
         for repo in sorted(d.repos):
-            yield (d.team, repo)
+            if repo not in EXCEPTIONS:
+                yield (d.team, repo)
 
 
 def patch_acls(args):
