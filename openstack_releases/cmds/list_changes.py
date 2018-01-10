@@ -77,9 +77,22 @@ def git_list_existing_branches(workdir, repo):
                 ['git', 'describe', branch],
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8').strip()
+            tag = description.partition('-')[0]  # strip to the real tag value
         except subprocess.CalledProcessError as exc:
-            description = exc.output.decode('utf-8')
-        print('{:<30} {}'.format(branch, description))
+            description = exc.output.decode('utf-8').strip()
+            tag = ''
+        if not tag:
+            print('{:<30} {:<20}'.format(branch, description))
+        else:
+            try:
+                date = subprocess.check_output(
+                    ['git', 'log', '-1', '--pretty=format:%ar', tag],
+                    cwd=os.path.join(workdir, repo),
+                ).decode('utf-8').strip()
+            except subprocess.CalledProcessError as exc:
+                date = exc.output.decode('utf-8')
+            print('{:<30} {:<20} {:<12} {}'.format(
+                branch, description, tag, date))
 
 
 def git_branch_contains(workdir, repo, title, commit):
