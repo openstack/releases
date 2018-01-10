@@ -78,7 +78,7 @@ def git_list_existing_branches(workdir, repo):
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8').strip()
         except subprocess.CalledProcessError as exc:
-            description = exc.output
+            description = exc.output.decode('utf-8')
         print('{:<30} {}'.format(branch, description))
 
 
