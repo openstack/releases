@@ -121,8 +121,9 @@ label-Workflow = -1..+1 group {group}
                         skip = True
                         continue
 
-                    if line.startswith("[receive]") and not hit:
-                        # We reached the [receive] section: let's place
+                    if ((line.startswith("[receive]") or
+                            line.startswith('[access "refs/tag')) and not hit):
+                        # We reached the a later section: let's place
                         # our specific stable section here.
                         newcontent += blob.format(
                             branch=args.series,
