@@ -4,6 +4,7 @@ team: nova
 type: library
 release-model: cycle-with-intermediary
 include-pypi-link: yes
+release-notes: https://docs.openstack.org/releasenotes/os-traits/unreleased.html
 releases:
   - version: 0.4.0
     projects:
@@ -11,3 +12,7 @@ releases:
         hash: 7d771c5b9106b04e92d8061b94c76e5dc774de08
     highlights: >
         - Adds support for filtering traits by a suffix.
+  - version: 0.5.0
+    projects:
+      - repo: openstack/os-traits
+        hash: e0a3a6ef1e36fb8a62970050959d33676cf41bc1
