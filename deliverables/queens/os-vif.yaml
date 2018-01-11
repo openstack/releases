@@ -2,5 +2,12 @@
 include-pypi-link: yes
 launchpad: os-vif
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/os-vif/unreleased.html
 team: nova
 type: library
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/os-vif
+        hash: dff9093ab682d798e6165840cfae234f2a5372f5
+        tarball-base: os_vif
