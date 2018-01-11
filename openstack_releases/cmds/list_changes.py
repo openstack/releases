@@ -111,12 +111,13 @@ def git_branch_contains(workdir, repo, title, commit):
     )
 
 
-def git_diff(workdir, repo, git_range, file_pattern):
+def git_diff(workdir, repo, git_range, file_pattern, title=''):
     repo_dir = os.path.join(workdir, repo)
     files = list(glob.glob(os.path.join(repo_dir,
                                         file_pattern)))
     if files:
-        header('Requirements Changes %s' % git_range)
+        if title:
+            header(title)
         for f in files:
             cmd = [
                 'git', 'diff', '-U0', '--no-color',
@@ -452,8 +453,10 @@ def main():
             # Show any requirements changes in the upcoming release.
             # Include setup.cfg, in case the project uses "extras".
             if start_range:
-                git_diff(workdir, project['repo'], git_range, '*requirements*.txt')
-                git_diff(workdir, project['repo'], git_range, 'setup.cfg')
+                git_diff(workdir, project['repo'], git_range, '*requirements*.txt',
+                         'Requirements Changes %s' % git_range)
+                git_diff(workdir, project['repo'], git_range, 'setup.cfg',
+                         'setup.cfg Changes %s' % git_range)
 
             # Before we try to determine if the previous release
             # is an ancestor or produce the release notes we need
