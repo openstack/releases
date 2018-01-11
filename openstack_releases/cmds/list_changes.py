@@ -457,6 +457,8 @@ def main():
                          'Requirements Changes %s' % git_range)
                 git_diff(workdir, project['repo'], git_range, 'setup.cfg',
                          'setup.cfg Changes %s' % git_range)
+                git_diff(workdir, project['repo'], git_range, 'bindep.txt',
+                         'bindep.txt Changes %s' % git_range)
 
             # Before we try to determine if the previous release
             # is an ancestor or produce the release notes we need
