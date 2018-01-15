@@ -1,0 +1,12 @@
+---
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+launchpad: python-openstacksdk
+team: OpenStackSDK
+type: library
+releases:
+  - projects:
+      - hash: 8daa33e3848fffc4b0656f7954b57ab499c71f2d
+        repo: openstack/python-openstacksdk
+        tarball-base: openstacksdk
+    version: 0.10.0
