@@ -86,7 +86,7 @@ class Team(object):
         if self._liaison_data is None:
             # Only hit the wiki page one time.
             Team._liaison_data = wiki.get_liaison_data()
-        team_liaison = self._liaison_data.get(self.name, {})
+        team_liaison = self._liaison_data.get(self.name.lower(), {})
         return (team_liaison.get('Liaison'),
                 team_liaison.get('IRC Handle'))
 
