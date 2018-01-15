@@ -2,7 +2,11 @@
 include-pypi-link: yes
 launchpad: python-novaclient
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-novaclient/unreleased.html
 team: nova
 type: library
-# NOTE(tonyb): Due to merging https://review.openstack.org/493187/ on pike the
-#             first releases of novaclient for queens much be >= 9.3.0
+releases:
+  - version: 10.0.0
+    projects:
+      - hash: fefc3ba723865307f4cc2ca287eb59faa4e8a5b1
+        repo: openstack/python-novaclient
