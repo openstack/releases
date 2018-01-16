@@ -4,3 +4,8 @@ launchpad: python-muranoclient
 release-model: cycle-with-intermediary
 team: murano
 type: library
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 5ab3573a9c89fec6c9c128b04df25be76fb9224b
