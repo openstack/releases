@@ -69,7 +69,13 @@ Between Milestone-1 and Milestone-2
 Milestone-2
 ===========
 
-n/a
+1. Run the following to get a report of which libraries have unreleased
+   changes::
+
+     tools/list_library_unreleased_changes.sh
+
+   Filter out libraries that have insignificant changes (Updates to .gitreview,
+   etc.) and include list in the weekly countdown email.
 
 Between Milestone-2 and Milestone-3
 ===================================
@@ -82,6 +88,12 @@ Between Milestone-2 and Milestone-3
 
 3. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
+
+   1. Run the command from milestone-2 again to get a list of libraries::
+
+        tools/list_library_unreleased_changes.sh
+
+   2. Include list of unreleased libraries in the email to increase visibility.
 
 4. Two weeks before Milestone-3, set up the gerrit ACLs for the
    yet-to-be-created stable/$series branches.
