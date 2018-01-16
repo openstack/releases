@@ -3,3 +3,8 @@ launchpad: python-solumclient
 release-model: cycle-with-intermediary
 team: solum
 type: library
+releases:
+  - version: 2.6.0
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 686481bafc61e6c93e046d589ca57052ccf44e0b
