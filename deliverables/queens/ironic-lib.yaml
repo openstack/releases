@@ -9,3 +9,10 @@ releases:
       - hash: effbee94255e98c3ada3ed0d961c3d878f3fc0a3
         repo: openstack/ironic-lib
     version: 2.11.0
+  - projects:
+      - hash: 831c55bf125c5b2b386fcb82d80877d511d54306
+        repo: openstack/ironic-lib
+    version: 2.12.0
+branches:
+  - name: stable/queens
+    location: 2.12.0
