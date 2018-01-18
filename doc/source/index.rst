@@ -42,10 +42,10 @@ updates.
      * `Phase III -- Legacy release`_ on 2018-02-26
      * 2018-02-26
    - * :doc:`newton/index`
-     * `Phase II -- Maintained release`_
+     * EOL
      * 2016-10-06
-     * `Phase III -- Legacy release`_ on 2017-10-09
-     * 2017-10-11
+     *
+     * 2017-10-25
    - * :doc:`mitaka/index`
      * EOL
      * 2016-04-07
