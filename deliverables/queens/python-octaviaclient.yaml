@@ -4,8 +4,15 @@ storyboard: 911
 release-model: cycle-with-intermediary
 team: octavia
 type: library
+branches:
+  - name: stable/queens
+    location: 1.4.0
 releases:
   - version: 1.3.0
     projects:
       - repo: openstack/python-octaviaclient
         hash: 922edce32a18a21ac48c00bcbea184b04e54749f
+  - version: 1.4.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 830e49fb0528718e8c6cea0e0828248849044133
