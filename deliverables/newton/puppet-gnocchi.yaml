@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-gnocchi/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: ea4db7ef4001650f27894a39d6f9497b1ecf9fd5
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: 7e76abfc6a73f252a4eee01d6db19c7af75027df
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: beedcd61d7f1ed490d1db287c43be37b2c9d81f6
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: 56a890bf1f4e55ae60682a2faf8e2d3505bb6c44
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: 3bbc651b4328e7f895e50d8a927db1e1e9a289d7
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: 3c089d961c06a7337861198c04228cee964e9f9d
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-gnocchi
-        hash: e45b5d3b2c556e64a966475b79e34c6d92bc6857
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: ea4db7ef4001650f27894a39d6f9497b1ecf9fd5
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: 7e76abfc6a73f252a4eee01d6db19c7af75027df
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: beedcd61d7f1ed490d1db287c43be37b2c9d81f6
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: 56a890bf1f4e55ae60682a2faf8e2d3505bb6c44
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: 3bbc651b4328e7f895e50d8a927db1e1e9a289d7
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: 3c089d961c06a7337861198c04228cee964e9f9d
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: e45b5d3b2c556e64a966475b79e34c6d92bc6857
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-gnocchi
+    hash: 2e65e82992f5911fdc5a7995df3c096763df2f43

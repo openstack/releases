@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-tempest/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: 315d08db93c5538a42d6ef2944f2536047f3cb90
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: adee4407cd4083614073611aea7eaa3b64832f63
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: 913c1596f538976d75ea585bec0c5be2538765cc
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: f84c551e43dea07d40876fe292236b6dcd0f43db
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: 31097f2247ac5f29ec96feddc16d3734d1c12747
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-tempest
-        hash: 83c229fad4085289f361ed53817732d2787fdff8
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: 315d08db93c5538a42d6ef2944f2536047f3cb90
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: adee4407cd4083614073611aea7eaa3b64832f63
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: 913c1596f538976d75ea585bec0c5be2538765cc
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: f84c551e43dea07d40876fe292236b6dcd0f43db
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: 31097f2247ac5f29ec96feddc16d3734d1c12747
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: 83c229fad4085289f361ed53817732d2787fdff8
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-tempest
+    hash: fec3622b8186fe35a6f5e1a336a0bff732781391

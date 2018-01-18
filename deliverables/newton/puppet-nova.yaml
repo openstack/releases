@@ -5,50 +5,54 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-nova/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 0d4d3de6f33bfc627578afa6456c022036d4e469
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 9232b22c384c311014157fc1cac798998212da2b
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: d2a2df67e058aa6f305d14605ed2d13b533dd1fb
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: a306b35e02a5c9455b3c6181022c51b59a4cff78
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 29d44cdf26e18a14b64cad61ffe9725a25d0f0ca
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 67b6dbb2825086f59932e8a9862611817c4c99fd
-  - version: 9.5.1
-    projects:
-      - repo: openstack/puppet-nova
-        hash: e3fe6dc353a4f5cd96b42367630f0b8ee2274d14
-  - version: 9.5.2
-    projects:
-      - repo: openstack/puppet-nova
-        hash: be54105fdadaec13cfc03166c620ca638a660f2e
-  - version: 9.5.3
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 7d213452907b623be24fdabbde9385ac5d70a7ec
-  - version: 9.5.4
-    projects:
-      - repo: openstack/puppet-nova
-        hash: e984629807c71a04e885785ae76176d1929f946b
-  - version: 9.6.0
-    projects:
-      - repo: openstack/puppet-nova
-        hash: 957a815ddf32b01d64b69430f2d54d41b9084f9a
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 0d4d3de6f33bfc627578afa6456c022036d4e469
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 9232b22c384c311014157fc1cac798998212da2b
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: d2a2df67e058aa6f305d14605ed2d13b533dd1fb
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: a306b35e02a5c9455b3c6181022c51b59a4cff78
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 29d44cdf26e18a14b64cad61ffe9725a25d0f0ca
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 67b6dbb2825086f59932e8a9862611817c4c99fd
+- version: 9.5.1
+  projects:
+  - repo: openstack/puppet-nova
+    hash: e3fe6dc353a4f5cd96b42367630f0b8ee2274d14
+- version: 9.5.2
+  projects:
+  - repo: openstack/puppet-nova
+    hash: be54105fdadaec13cfc03166c620ca638a660f2e
+- version: 9.5.3
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 7d213452907b623be24fdabbde9385ac5d70a7ec
+- version: 9.5.4
+  projects:
+  - repo: openstack/puppet-nova
+    hash: e984629807c71a04e885785ae76176d1929f946b
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 957a815ddf32b01d64b69430f2d54d41b9084f9a
+- version: 9.7.0
+  projects:
+  - repo: openstack/puppet-nova
+    hash: 924cc8d3f107ea746073098c1eadd29b287706bc

@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_extras/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: f9aebcab90762f7681cee5f18ffcea3417ce2e1a
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: a2987b434ce0fa14c7e714655f3c425d6b24cf62
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: 39c1ab278bd6304260cd621bc80e9f25169859a6
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: a0d95cc4191a2b66d1044ec8993c9fe776bad59e
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: eaca03bdae67b6e6cc86cec56f99d8dc14275e4e
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-openstack_extras
-        hash: 5ea8ac8bb99cb47ccee979e47a15f08f49d13ce8
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: f9aebcab90762f7681cee5f18ffcea3417ce2e1a
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: a2987b434ce0fa14c7e714655f3c425d6b24cf62
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: 39c1ab278bd6304260cd621bc80e9f25169859a6
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: a0d95cc4191a2b66d1044ec8993c9fe776bad59e
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: eaca03bdae67b6e6cc86cec56f99d8dc14275e4e
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: 5ea8ac8bb99cb47ccee979e47a15f08f49d13ce8
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-openstack_extras
+    hash: 76d527dd8a9dd48090068261416a521e434f5b2c

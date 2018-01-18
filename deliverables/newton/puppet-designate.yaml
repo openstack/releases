@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-designate/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: 741eb698eeda48e3e2275ec42a717a44146d9335
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: 39c0d279c9053f0f7e51e554c91bb6032b526a0d
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: b935c00cfbbd9e8800a5400909a12a2b43727e31
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: 2c47f084db64952e8265d776f1ae13bced085ac9
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: 3ae6f896b126fc11f4ff28df8bf93bf5db1df700
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-designate
-        hash: 3f40defa8998c27b1ce55c24b509d1cea6f00ba0
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 741eb698eeda48e3e2275ec42a717a44146d9335
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 39c0d279c9053f0f7e51e554c91bb6032b526a0d
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: b935c00cfbbd9e8800a5400909a12a2b43727e31
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 2c47f084db64952e8265d776f1ae13bced085ac9
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 3ae6f896b126fc11f4ff28df8bf93bf5db1df700
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 3f40defa8998c27b1ce55c24b509d1cea6f00ba0
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-designate
+    hash: 357bec6586cef20265be9991a52f2445c6a21aa5
