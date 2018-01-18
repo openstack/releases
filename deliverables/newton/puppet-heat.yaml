@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: 749cd2481adc1927d3bb625a17259e0e63df9ce0
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: 3740fc9372c4514ed84d184e52e7d7232162fc50
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: e1c43b8f5a2a12626c81ca6bd3901b9b5b44f3ea
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: 182371cd71164ce86fde278703117c46957cb466
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: 18afefc46fe9417bc622b23a9b51d6f15e039177
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-heat
-        hash: f107762c3518222d344077a68cc6cd014732fb43
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-heat
-        hash: 3081de486620556dc4e2a4103a1f8f46e73a564a
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 749cd2481adc1927d3bb625a17259e0e63df9ce0
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 3740fc9372c4514ed84d184e52e7d7232162fc50
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: e1c43b8f5a2a12626c81ca6bd3901b9b5b44f3ea
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 182371cd71164ce86fde278703117c46957cb466
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 18afefc46fe9417bc622b23a9b51d6f15e039177
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-heat
+    hash: f107762c3518222d344077a68cc6cd014732fb43
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 3081de486620556dc4e2a4103a1f8f46e73a564a
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-heat
+    hash: 262222aba919eb5c8fccf925ead50c3d6febedaf

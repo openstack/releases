@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-keystone/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: 6cbdce249d7d00f7922a3735bf89897274ec1f87
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: 633c1a4d207876eff3ce8f9d5da5052617fe504d
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: afe07b415518d371a31b35aab2a97f2760aea8f2
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: 3ceb12fd98c8b0d621f7aaaec7dcb35527bc411b
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: 276e432046faba94046799c4b709310a615dd1c6
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-keystone
-        hash: 005134fc6c43d439d72a7973665d1585035aeeec
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 6cbdce249d7d00f7922a3735bf89897274ec1f87
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 633c1a4d207876eff3ce8f9d5da5052617fe504d
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: afe07b415518d371a31b35aab2a97f2760aea8f2
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 3ceb12fd98c8b0d621f7aaaec7dcb35527bc411b
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 276e432046faba94046799c4b709310a615dd1c6
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 005134fc6c43d439d72a7973665d1585035aeeec
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-keystone
+    hash: 6070eb460b4c7da3a8dd80af39e243c221c15dee

@@ -1,46 +1,50 @@
 ---
 launchpad: puppet-horizon
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: b7e52d35fa8f6643aac8a6da4462ef9f6e3ea5a0
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: 29386c1f9ee5541639422ddf89fd0b39ce3145f7
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: be6f352eb28312171fd16f6b21f1df86928c7148
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: f1d1f77b311a15b7d278bc975880fd5fcb79d117
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: ad7531cce33bef350211e3f0f492b192a2a8972e
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: 20fb08a9476f0390e96240906af3a8dbb607143d
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: c53f2b65f8fbdd2f90aafc29563e44de07b68c98
-  - version: 9.6.0
-    projects:
-      - repo: openstack/puppet-horizon
-        hash: 938bcf8b01095d3e6d6d42c9198cf3895846d83a
-  - projects:
-      - hash: adddd32a21115144b9be658529dfbf9e5106fac5
-        repo: openstack/puppet-horizon
-    version: 9.7.0
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: b7e52d35fa8f6643aac8a6da4462ef9f6e3ea5a0
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: 29386c1f9ee5541639422ddf89fd0b39ce3145f7
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: be6f352eb28312171fd16f6b21f1df86928c7148
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: f1d1f77b311a15b7d278bc975880fd5fcb79d117
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: ad7531cce33bef350211e3f0f492b192a2a8972e
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: 20fb08a9476f0390e96240906af3a8dbb607143d
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: c53f2b65f8fbdd2f90aafc29563e44de07b68c98
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: 938bcf8b01095d3e6d6d42c9198cf3895846d83a
+- projects:
+  - hash: adddd32a21115144b9be658529dfbf9e5106fac5
+    repo: openstack/puppet-horizon
+  version: 9.7.0
+- version: 9.8.0
+  projects:
+  - repo: openstack/puppet-horizon
+    hash: 57b8061902b4665fb03d8ff9e2daaee01accd5a6

@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-sahara/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: 9ebaebd759e846e3b9d69200113049270d83e2d1
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: 1c9504b18d7a376e25053b751845ee20ee26e6af
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: c0c5884ffae86c4da02e6d7555acaae4e26d98cc
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: ab964dbbfb17d8bbfd2f335a58646b2b8d4ff1cd
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: 80979d6ddfed0f3d14d15d13d55fe01c701e00ee
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-sahara
-        hash: 578b80bee12662d00821d2836d16d87b5d9ff214
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: 9ebaebd759e846e3b9d69200113049270d83e2d1
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: 1c9504b18d7a376e25053b751845ee20ee26e6af
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: c0c5884ffae86c4da02e6d7555acaae4e26d98cc
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: ab964dbbfb17d8bbfd2f335a58646b2b8d4ff1cd
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: 80979d6ddfed0f3d14d15d13d55fe01c701e00ee
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: 578b80bee12662d00821d2836d16d87b5d9ff214
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-sahara
+    hash: fb98f5c2e10501f1cf0fc542a726102047ac0b65

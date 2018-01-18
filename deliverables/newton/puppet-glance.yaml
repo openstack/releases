@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: 7651c49cac81b772e138d265ab33ee3447bebd9f
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: e2c322095a3f89e19582aee3f6c0352209f589cf
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: 96aa59d31c6b15c9869701a42d651a7512a9b0a1
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: 3676f7b48683be442d8c5c850d702df5751b72bb
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: 3aa4b0b9a365c6581ea77cdb65620373cc9413ed
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: b59fc5506a5446eb84f606aed65e97e709b3f902
-  - version: 9.6.0
-    projects:
-      - repo: openstack/puppet-glance
-        hash: 3dd595c449c5e0af1955d508b7a0386fba884516
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 7651c49cac81b772e138d265ab33ee3447bebd9f
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: e2c322095a3f89e19582aee3f6c0352209f589cf
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 96aa59d31c6b15c9869701a42d651a7512a9b0a1
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 3676f7b48683be442d8c5c850d702df5751b72bb
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 3aa4b0b9a365c6581ea77cdb65620373cc9413ed
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: b59fc5506a5446eb84f606aed65e97e709b3f902
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 3dd595c449c5e0af1955d508b7a0386fba884516
+- version: 9.7.0
+  projects:
+  - repo: openstack/puppet-glance
+    hash: 0bc5e31fd2403e9ccaac89e9d8fde8f78eea67f2

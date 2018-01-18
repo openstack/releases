@@ -5,30 +5,34 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-mistral/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: 9afbc1e5331a3ce7372dbcbdd763a5eee3c588a0
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: f667f33c3c4bc93d42eb874ae548d6d47bf661b8
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: 6ff2ed937f4db9d19c4e00105c7e01915e25666c
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: b65b1844c5fb965789bfa52c0c7d545d527a1f23
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: 67b2f4f6fae662a9bf9b9e486b17caa4c795c7b6
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-mistral
-        hash: cae479cd2c46cb24db8c54c7514fe68f1b67251d
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: 9afbc1e5331a3ce7372dbcbdd763a5eee3c588a0
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: f667f33c3c4bc93d42eb874ae548d6d47bf661b8
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: 6ff2ed937f4db9d19c4e00105c7e01915e25666c
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: b65b1844c5fb965789bfa52c0c7d545d527a1f23
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: 67b2f4f6fae662a9bf9b9e486b17caa4c795c7b6
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: cae479cd2c46cb24db8c54c7514fe68f1b67251d
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-mistral
+    hash: d18e0b40580831c2b5fcf003c676ea6b0f1e32be

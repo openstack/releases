@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/newton.html
 branches:
-  - name: stable/newton
-    location: 5.4.0
+- name: stable/newton
+  location: 5.4.0
 releases:
-  - version: 5.0.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: 9f2b56cfa822ee3a4fbe8c5e9e0df9a46e8cd76c
-  - version: 5.1.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: 78032ea0b7416c4092231bc9d104a1cd8dba8bb1
-  - version: 5.2.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: fb6445971b60e719752bbc1ee9961fea8d348a58
-  - version: 5.2.1
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: 4db3bb17caec3e2290f8e54a5ce9196b7cf2e50b
-  - version: 5.3.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: e5684e5ac7f213b96d0fbc9e4efa6730730a5cbf
-  - version: 5.4.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: 3f5e1fb3e4bb8aa7b7362ddadf9fa18230f5bbf3
-  - version: 5.5.0
-    projects:
-      - repo: openstack/puppet-vswitch
-        hash: f40d2757cf04e3a08c617b50383358ed2c6da157
+- version: 5.0.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: 9f2b56cfa822ee3a4fbe8c5e9e0df9a46e8cd76c
+- version: 5.1.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: 78032ea0b7416c4092231bc9d104a1cd8dba8bb1
+- version: 5.2.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: fb6445971b60e719752bbc1ee9961fea8d348a58
+- version: 5.2.1
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: 4db3bb17caec3e2290f8e54a5ce9196b7cf2e50b
+- version: 5.3.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: e5684e5ac7f213b96d0fbc9e4efa6730730a5cbf
+- version: 5.4.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: 3f5e1fb3e4bb8aa7b7362ddadf9fa18230f5bbf3
+- version: 5.5.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: f40d2757cf04e3a08c617b50383358ed2c6da157
+- version: 5.6.0
+  projects:
+  - repo: openstack/puppet-vswitch
+    hash: 0aacc19d2accda96ce20d7c1efd63e56d49637b0

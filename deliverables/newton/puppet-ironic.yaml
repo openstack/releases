@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-ironic/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: 00bd863046b91f6a0f21d622793ea6ef71274569
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: 44885ec20e01d024cb1b7d5e6c8c745e1be3a02e
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: 04dbd09b5ec99ba9745212f86801e8d3a0d49c4c
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: d7724c729aeed330cf325b32fdd1a1b8b55a42e9
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: 461f4486b43ff7a3785983c8dfa483dfbea7452b
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: 13fda5e379719956f498d5dd998404c4f5f7b5d8
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-ironic
-        hash: ff154c25a0cf5a9fde5195f8d4f4337ff7d7a97d
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 00bd863046b91f6a0f21d622793ea6ef71274569
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 44885ec20e01d024cb1b7d5e6c8c745e1be3a02e
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 04dbd09b5ec99ba9745212f86801e8d3a0d49c4c
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: d7724c729aeed330cf325b32fdd1a1b8b55a42e9
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 461f4486b43ff7a3785983c8dfa483dfbea7452b
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 13fda5e379719956f498d5dd998404c4f5f7b5d8
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: ff154c25a0cf5a9fde5195f8d4f4337ff7d7a97d
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-ironic
+    hash: 60515b4a8db4be837d80c87fe9f1ce6cf942e76c

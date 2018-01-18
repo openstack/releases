@@ -5,38 +5,42 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-neutron/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 671cc33195dd769813a77f54148b23762dcc85c5
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: d591774c5409d59f3b4d9dd1989225585fe27392
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 0864d4f306d37d5fc6d60b5f851eff9f305803c9
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 7ccc7c4f47a5b1e4caa9c6fca0f71bd5ad0263d5
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 97d08d40d1c6566b87c831edd9aaea2dfd5128c5
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 671cc33195dd769813a77f54148b23762dcc85c5
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: d591774c5409d59f3b4d9dd1989225585fe27392
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 0864d4f306d37d5fc6d60b5f851eff9f305803c9
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 7ccc7c4f47a5b1e4caa9c6fca0f71bd5ad0263d5
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 97d08d40d1c6566b87c831edd9aaea2dfd5128c5
   # - version: 9.4.1
   #   projects:
   #     - repo: openstack/puppet-neutron
   #       hash: 51ec004869ef87133b421d90c42c4790eadc041e
-  - version: 9.4.2
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 130b59cadebcd19f13d48afd23014e1f37a3468e
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-neutron
-        hash: 24c3d0d3261d6fd60977d48d456597f0d86c3443
+- version: 9.4.2
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 130b59cadebcd19f13d48afd23014e1f37a3468e
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 24c3d0d3261d6fd60977d48d456597f0d86c3443
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-neutron
+    hash: 15161bba99a05c760faca56a7395223b1c489519

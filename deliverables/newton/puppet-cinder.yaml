@@ -5,34 +5,38 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: cac2312f417f398016c52efe7b7567302c5ddb20
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: c99098602ae585f1dd3e6fd7649b26f4c24af599
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: e14e4f4179e6f836682e37c56e91a72d4ab63407
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: d611f48bb86b5aae874f0aa491a2a6a73e4294a3
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: 2b9fc6b801ffa5097ac1a05483e1cc7275966ea8
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: 328a06651e262d55117b78d7778e3688af7aad1c
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-cinder
-        hash: 3f2b95e7ef298b1bec52e63d05a8109b1f6785ac
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: cac2312f417f398016c52efe7b7567302c5ddb20
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: c99098602ae585f1dd3e6fd7649b26f4c24af599
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: e14e4f4179e6f836682e37c56e91a72d4ab63407
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: d611f48bb86b5aae874f0aa491a2a6a73e4294a3
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: 2b9fc6b801ffa5097ac1a05483e1cc7275966ea8
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: 328a06651e262d55117b78d7778e3688af7aad1c
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: 3f2b95e7ef298b1bec52e63d05a8109b1f6785ac
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-cinder
+    hash: ab72a94c7a07c2014638c81fd68f1341016c347b

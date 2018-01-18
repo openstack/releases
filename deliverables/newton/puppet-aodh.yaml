@@ -5,38 +5,42 @@ type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/newton.html
 branches:
-  - name: stable/newton
-    location: 9.4.0
+- name: stable/newton
+  location: 9.4.0
 releases:
-  - version: 9.0.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 72d2693f706aa44b40b3223c125f03c20406d15b
-  - version: 9.1.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 6be2fef658d399324191c5e4a87bd43ea7be1692
-  - version: 9.2.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: c97577c0ff52aa5e3570a98107fcc39629d73951
-  - version: 9.3.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 0605b7edeca864f144edc07baf483f73bf0812e7
-  - version: 9.4.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: e3adfe4fc571763292f337fdd8a63f0f172843c7
-  - version: 9.4.1
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 71d5f609145cffed594142ce3451d9ebaf01f4d5
-  - version: 9.5.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 0ec76c62a3039f68630184486ccbf27c12f3dbbb
-  - version: 9.6.0
-    projects:
-      - repo: openstack/puppet-aodh
-        hash: 3182b9276618b70d1b8aa5f50c1918adf96bfc0a
+- version: 9.0.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 72d2693f706aa44b40b3223c125f03c20406d15b
+- version: 9.1.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 6be2fef658d399324191c5e4a87bd43ea7be1692
+- version: 9.2.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: c97577c0ff52aa5e3570a98107fcc39629d73951
+- version: 9.3.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 0605b7edeca864f144edc07baf483f73bf0812e7
+- version: 9.4.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: e3adfe4fc571763292f337fdd8a63f0f172843c7
+- version: 9.4.1
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 71d5f609145cffed594142ce3451d9ebaf01f4d5
+- version: 9.5.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 0ec76c62a3039f68630184486ccbf27c12f3dbbb
+- version: 9.6.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 3182b9276618b70d1b8aa5f50c1918adf96bfc0a
+- version: 9.7.0
+  projects:
+  - repo: openstack/puppet-aodh
+    hash: 83de272d2adbfc1b676d8ab629569da70e05d19f
