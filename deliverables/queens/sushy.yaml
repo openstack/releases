@@ -8,3 +8,10 @@ releases:
       - hash: 8fe2904a62b0f56dc3fc3fefc5a5a746911ce891
         repo: openstack/sushy
     version: 1.2.0
+  - projects:
+      - hash: a31d7a40c324ad81308aec5ed33daf9f3650f88e
+        repo: openstack/sushy
+    version: 1.3.0
+branches:
+  - name: stable/queens
+    location: 1.3.0
