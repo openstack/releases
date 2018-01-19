@@ -4,6 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/networking-ovn/unreleased.html
 type: other
 release-model: cycle-with-milestones
+release-type: neutron
 include-pypi-link: yes
 releases:
   - version: 3.0.0.0b1
@@ -27,6 +28,10 @@ releases:
       - hash: c350f88950ddbd510b823bdbc326e1726ea33fb5
         repo: openstack/networking-ovn
     version: 3.0.0
+  - projects:
+      - hash: e403d537da96be8d8fea2dea76e39f771087a89c
+        repo: openstack/networking-ovn
+    version: 3.0.1
 branches:
   - location: 3.0.0.0rc1
     name: stable/pike
