@@ -13,3 +13,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 6fdb1a5f09cd85854bf175d1de4cd9059b65bce1
+  - version: 1.1.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 9a51618f48045f898be1d2176f6abca32e3c9112
+branches:
+  - name: stable/queens
+    location: 1.1.0
