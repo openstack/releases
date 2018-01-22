@@ -28,3 +28,6 @@ releases:
       Adds VHD attach / detach, which can be used for adding support for
       volume backup support for the Windows SMB Cinder driver.
       Removes deprecated methods (vmutils) and exception.
+branches:
+  - name: stable/queens
+    location: 3.0.0

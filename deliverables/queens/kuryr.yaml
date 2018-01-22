@@ -9,3 +9,6 @@ releases:
       - repo: openstack/kuryr
         hash: da736d115bfeb10c9adf8d019696203bba5cbf8d
         tarball-base: kuryr-lib
+branches:
+  - name: stable/queens
+    location: 0.7.0
