@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 1.10.0
+    name: stable/queens
 include-pypi-link: yes
 launchpad: monasca
 release-model: cycle-with-intermediary
@@ -13,3 +16,7 @@ releases:
       - hash: d7f6fb2d83f8a40e5d630b9feefc6584f80b5f0e
         repo: openstack/python-monascaclient
     version: 1.9.0
+  - projects:
+      - hash: 5ea9035011a82a1f68be8cf9513e4eb0d67ac41d
+        repo: openstack/python-monascaclient
+    version: 1.10.0
