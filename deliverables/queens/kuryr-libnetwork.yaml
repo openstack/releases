@@ -8,3 +8,10 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: 849adac0b1c3eab449714d3547c9705cc9365dbf
+  - version: 1.0.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: ed19c143f448414ff26f59b9bccea820aaf4e473
+branches:
+  - name: stable/queens
+    location: 1.0.0
