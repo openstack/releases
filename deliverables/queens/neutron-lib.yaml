@@ -53,3 +53,13 @@ releases:
         * Fix port comparison in port range validation
         * Rehome placement client to neutron-lib
         * Rehome vlantransparent api def
+  - version: 1.13.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: dcf96cd351a18ba96cffe77efc0a39e5c2071d3c
+    highlights: |
+        * Rehome sorting API definition
+        * Rehome QoS rule type API definition
+        * Rehomed router service type API definition
+        * Adopt to new oslo.context code to remove deprecation warnings
+        * Add events and resources for L3 flavors
