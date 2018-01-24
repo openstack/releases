@@ -13,3 +13,10 @@ releases:
       - hash: bf4d0ca25b0917dbe52c4a17e6603fa2f0b583e1
         repo: openstack/python-brick-cinderclient-ext
     version: 0.7.0
+  - projects:
+      - hash: 0dd07cfa1959b110425d60147d5f8b247a322bdf
+        repo: openstack/python-brick-cinderclient-ext
+    version: 0.8.0
+branches:
+  - name: stable/queens
+    location: 0.8.0
