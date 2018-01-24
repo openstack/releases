@@ -13,3 +13,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: abd6d8a0cb4a7d59b4d1cce39d63804600929d97
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: a1b6eed54cb92713e5847a6b033a4e33eb1fa860
+branches:
+  - name: stable/queens
+    location: 1.6.0
