@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 3.15.0
+    name: stable/queens
 include-pypi-link: yes
 launchpad: python-keystoneclient
 release-model: cycle-with-intermediary
@@ -9,3 +12,7 @@ releases:
       - hash: 2bea645ccc0723d69f10c771b73b5894223feedf
         repo: openstack/python-keystoneclient
     version: 3.14.0
+  - projects:
+      - hash: 1e8c9302fc055f78964f3eaef32e09dae89eb2fa
+        repo: openstack/python-keystoneclient
+    version: 3.15.0
