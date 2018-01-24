@@ -1,7 +1,12 @@
 ---
+branches:
+  - location: 1.0.0
+    name: stable/queens
 include-pypi-link: yes
 launchpad: placement-osc-plugin
 release-model: cycle-with-intermediary
+# TODO(mriedem): Need to add the release notes link once the publishing job
+# is setup on the repo.
 team: nova
 type: library
 releases:
@@ -9,3 +14,7 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 2c538f3ea00928f8248b8b59dbdbd806caa43b06
+  - version: 1.0.0
+    projects:
+      - repo: openstack/osc-placement
+        hash: c486b1fea99ece5d3f7c7b2da469102d81b24186
