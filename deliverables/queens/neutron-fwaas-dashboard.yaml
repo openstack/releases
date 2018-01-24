@@ -8,3 +8,10 @@ releases:
       - hash: cbe6a60aa1a5e30e1aa40ea4963674ec22a011af
         repo: openstack/neutron-fwaas-dashboard
     version: 1.1.0
+  - projects:
+      - hash: e467da55dd9a49eb794c6ef0e2d51c6993dfdb11
+        repo: openstack/neutron-fwaas-dashboard
+    version: 1.2.0
+branches:
+  - name: stable/queens
+    location: 1.2.0
