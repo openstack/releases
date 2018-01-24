@@ -80,6 +80,7 @@ def main():
     )
     parser.add_argument(
         '--type',
+        action='append',
         help='deliverable type, such as "library" or "service"',
     )
     parser.add_argument(
@@ -187,7 +188,7 @@ def main():
             continue
         if args.cycle_based and not deliv.is_cycle_based:
             continue
-        if args.type and deliv.type != args.type:
+        if args.type and deliv.type not in args.type:
             continue
         if args.no_stable_branch:
             if deliv.get_branch_location('stable/' + series) is not None:
