@@ -65,6 +65,12 @@ def main():
         dest='types',
     )
     parser.add_argument(
+        '--dry-run', '-n',
+        default=False,
+        action='store_true',
+        help='report what action would be taken but do not take it',
+    )
+    parser.add_argument(
         'deliverable',
         nargs='*',
         default=[],
@@ -98,6 +104,7 @@ def main():
                            args.series, '*.yaml')
     verbose('Scanning {}'.format(pattern))
     deliverable_files = sorted(glob.glob(pattern))
+    new_branch = 'stable/' + args.series
 
     for filename in deliverable_files:
         deliverable_name = os.path.basename(filename)[:-5]
@@ -113,14 +120,25 @@ def main():
             print('{} has no releases, not branching'.format(
                 deliverable_name))
             continue
-        if 'branches' in deliverable_data:
-            print('{} already has branches'.format(deliverable_name))
+        if 'branches' not in deliverable_data:
+            deliverable_data['branches'] = []
+        skip = False
+        for b in deliverable_data['branches']:
+            if b['name'] == new_branch:
+                print('{} already has branch {}'.format(
+                    deliverable_name, new_branch))
+                skip = True
+        if skip:
             continue
+
         latest_release = releases[-1]
 
-        deliverable_data['branches'].append({
-            'name': 'stable/' + args.series,
-            'location': latest_release['version'],
-        })
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(yamlutils.dumps(deliverable_data))
+        print('{} new branch {} at {}'.format(
+            deliverable_name, new_branch, latest_release['version']))
+        if not args.dry_run:
+            deliverable_data['branches'].append({
+                'name': new_branch,
+                'location': latest_release['version'],
+            })
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(yamlutils.dumps(deliverable_data))
