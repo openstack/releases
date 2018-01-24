@@ -65,6 +65,13 @@ def main():
         help='the name of the release series to work on (%(default)s)'
     )
     parser.add_argument(
+        '--include-clients',
+        action='append_const',
+        const='client-library',
+        default=['library'],
+        dest='types',
+    )
+    parser.add_argument(
         'deliverable',
         nargs='*',
         default=[],
@@ -105,7 +112,7 @@ def main():
             continue
         with open(filename, 'r', encoding='utf-8') as f:
             deliverable_data = yamlutils.loads(f.read())
-        if deliverable_data['type'] != 'library':
+        if deliverable_data['type'] not in args.types:
             continue
         verbose('\n{}'.format(filename))
         releases = deliverable_data.get('releases')

@@ -20,12 +20,22 @@ library
 =======
 
 This deliverable type indicates that a project is a library,
-middleware, client, or other piece of software that is used to build
+middleware, or other piece of software that is used to build
 another project and does not, by itself, provide a long-running
 service or stand-alone tool.
 
 * The repository contains software used as a library for the loose and
   commonly-understood definition of "library".
+
+.. _`type-client-library`:
+
+client-library
+==============
+
+This deliverable type indicates that a project is a library containing
+a client for an OpenStack service that is intended to be consumed by
+other OpenStack services (so not a general-purpose user client such as
+``shade``).
 
 .. _`type-service`:
 
