@@ -26,13 +26,6 @@ from openstack_releases import defaults
 from openstack_releases import yamlutils
 
 
-BRANCH_TEMPLATE = """
-branches:
-  - name: stable/{series}
-    location: {version}
-"""
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -125,11 +118,9 @@ def main():
             continue
         latest_release = releases[-1]
 
-        # NOTE(dhellmann): PyYAML doesn't preserve layout when you
-        # write the data back out, so do the formatting ourselves.
-        new_block = BRANCH_TEMPLATE.format(
-            version=latest_release['version'],
-            series=args.series,
-        ).strip() + '\n'
-        with open(filename, 'a') as f:
-            f.write(new_block)
+        deliverable_data['branches'].append({
+            'name': 'stable/' + args.series,
+            'location': latest_release['version'],
+        })
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(yamlutils.dumps(deliverable_data))
