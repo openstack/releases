@@ -4,3 +4,15 @@ launchpad: python-vitrageclient
 release-model: cycle-with-intermediary
 team: vitrage
 type: library
+branches:
+  - location: 2.0.0
+    name: stable/queens
+releases:
+  - version: 2.0.0
+    projects:
+      - hash: 7fd3400c536cb4f245b389642fd82f962fbdb2bd
+        repo: openstack/python-vitrageclient
+    highlights: |
+      - Introduced template version 2
+      - New API for template add and template delete
+      - New API for webhook registration on Vitrage alarms
