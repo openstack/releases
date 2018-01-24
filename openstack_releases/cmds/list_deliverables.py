@@ -17,6 +17,7 @@ import csv
 import operator
 
 import openstack_releases
+from openstack_releases.cmds import validate
 from openstack_releases import defaults
 from openstack_releases import deliverable
 
@@ -81,6 +82,7 @@ def main():
     parser.add_argument(
         '--type',
         action='append',
+        choices=list(sorted(validate._VALID_TYPES)),
         help='deliverable type, such as "library" or "service"',
     )
     parser.add_argument(
