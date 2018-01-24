@@ -3,6 +3,7 @@ include-pypi-link: yes
 storyboard: 908
 release-model: cycle-with-milestones
 release-type: python-pypi
+release-notes: https://docs.openstack.org/releasenotes/octavia/unreleased.html
 team: octavia
 type: service
 releases:
@@ -14,3 +15,7 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 82d9f44c620cf8a5d4a144bcd3540c538fb8a8de
+  - projects:
+      - hash: 205a5b7be315e0843a220f962afd1c415fea1fd1
+        repo: openstack/octavia
+    version: 2.0.0.0b3
