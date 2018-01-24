@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 2.9.1
+    name: stable/queens
 include-pypi-link: yes
 launchpad: python-glanceclient
 release-model: cycle-with-intermediary
@@ -9,5 +12,9 @@ releases:
       - hash: cf62e1635d6ca6b025829e8bbf6294cb8a1fd982
         repo: openstack/python-glanceclient
     version: 2.9.0
+  - projects:
+      - hash: b982516fc14ad26ae1c9eb6124130b655d169527
+        repo: openstack/python-glanceclient
+    version: 2.9.1
 team: glance
 type: library
