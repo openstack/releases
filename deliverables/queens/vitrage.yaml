@@ -3,3 +3,13 @@ launchpad: vitrage
 release-model: cycle-with-intermediary
 team: vitrage
 type: service
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 728523a886ae5c5cdd912dff04f7f6eb35e2e624
+    highlights: |
+      - Introduced template version 2 including several enhancements
+      - Added support for template add and template delete API
+      - Parallel evaluation of Vitrage templates
+      - Added support for webhook registration on Vitrage alarms
