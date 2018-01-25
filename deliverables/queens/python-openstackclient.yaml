@@ -4,8 +4,15 @@ launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: other
+branches:
+  - name: stable/queens
+    location: 3.14.0
 releases:
   - version: 3.13.0
     projects:
       - repo: openstack/python-openstackclient
         hash: 8c5f7555698491c3a0b44fe6c3fee50d0189f2d6
+  - version: 3.14.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: fbee4eb76285ac8fc623b15b49c1d4efd5a71fc1
