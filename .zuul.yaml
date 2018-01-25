@@ -5,7 +5,6 @@
       tox_envlist: list-changes
 
 - project:
-    name: openstack/releases
     check:
       jobs:
         - openstack-tox-validate
