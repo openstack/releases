@@ -8,11 +8,16 @@
     name: openstack/releases
     check:
       jobs:
-        - openstack-tox-validate
-        - releases-tox-list-changes
+        - openstack-tox-validate:
+            vars:
+              zuul_site_upload_logs: true
+        - releases-tox-list-changes:
+            vars:
+              zuul_site_upload_logs: true
         - build-openstack-sphinx-docs:
             vars:
               sphinx_python: python3
+              zuul_site_upload_logs: true
 
     gate:
       jobs:
