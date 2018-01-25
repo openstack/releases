@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 9.1.0
+    name: stable/queens
 launchpad: tripleo
 release-model: cycle-trailing
 release-type: python-pypi
@@ -18,3 +21,7 @@ releases:
         repo: openstack/python-tripleoclient
     version: 9.0.0
     highlights: 'Old baremetal commands are now removed.'
+  - projects:
+      - hash: b1a0e2228ad3e1bc51c607453b6ec5cf941c90fe
+        repo: openstack/python-tripleoclient
+    version: 9.1.0
