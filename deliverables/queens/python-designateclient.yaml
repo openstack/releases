@@ -9,3 +9,11 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 1a3632cf5748db837b6d85b1f8d40eeae0a270c6
+  - projects:
+      - hash: 65cc2922677c33e2c7259095e21901d1b80e373d
+        repo: openstack/python-designateclient
+    version: 2.9.0
+
+branches:
+  - name: stable/queens
+    location: 2.9.0
