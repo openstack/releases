@@ -1,0 +1,11 @@
+---
+launchpad: senlin
+release-model: cycle-with-intermediary
+team: senlin
+type: horizon-plugin
+release-type: python-pypi
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 4afb7e1ab4c324e70f924df370971d7e30ec3bf6
