@@ -4,3 +4,11 @@ launchpad: blazar
 release-model: cycle-with-intermediary
 team: blazar
 type: library
+releases:
+  - projects:
+      - hash: 037f74de1f48b90dc25c5812b16543a6fccedfc1
+        repo: openstack/python-blazarclient
+    version: 1.0.0
+branches:
+  - name: stable/queens
+    location: 1.0.0
