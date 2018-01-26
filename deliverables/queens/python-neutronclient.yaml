@@ -9,3 +9,10 @@ releases:
       - hash: 50b5b29b1acf5c60a6e4f9cf33ec482336a0e68b
         repo: openstack/python-neutronclient
     version: 6.6.0
+  - projects:
+      - hash: 95d64cef778f154353086a3b77269cc41d48be62
+        repo: openstack/python-neutronclient
+    version: 6.7.0
+branches:
+  - location: 6.7.0
+    name: stable/queens
