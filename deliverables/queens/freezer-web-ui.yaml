@@ -1,6 +1,7 @@
 ---
 launchpad: freezer
 release-model: cycle-with-milestones
+release-type: python-service
 team: freezer
 type: horizon-plugin
 releases:
@@ -8,3 +9,7 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: ea53eea02319f12904a84fa379f088cab68608d1
+  - version: 6.0.0.0b3
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 67465501393b3be2f76b5ada4b3128237eeb54df
