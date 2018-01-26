@@ -546,7 +546,7 @@ def main():
                 notes = release_notes.generate_release_notes(
                     repo=project['repo'],
                     repo_path=os.path.join(workdir, project['repo']),
-                    start_revision=start_range,
+                    start_revision=new_release.get('diff-start', start_range),
                     end_revision=new_release['version'],
                     show_dates=True,
                     skip_requirement_merges=True,
