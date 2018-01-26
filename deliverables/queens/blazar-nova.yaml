@@ -3,3 +3,12 @@ launchpad: blazar
 release-model: cycle-with-intermediary
 team: blazar
 type: library
+release-type: python-pypi
+releases:
+  - projects:
+      - hash: 43a031921d8fb84da43a6642ed290bdfd52f65b5
+        repo: openstack/blazar-nova
+    version: 1.0.0
+branches:
+  - name: stable/queens
+    location: 1.0.0
