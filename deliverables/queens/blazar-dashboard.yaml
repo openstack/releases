@@ -3,3 +3,9 @@ launchpad: blazar
 release-model: cycle-with-intermediary
 team: blazar
 type: horizon-plugin
+release-type: horizon
+releases:
+  - projects:
+      - hash: edbd5aad834727c838325f39d798deecaac9b24c
+        repo: openstack/blazar-dashboard
+    version: 1.0.0
