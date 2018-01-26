@@ -4,3 +4,8 @@ launchpad: networking-hyperv
 release-model: cycle-with-intermediary
 team: winstackers
 type: other
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 893048dd2e3ca3d3a57584e22f5d3de1d4884870
