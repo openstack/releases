@@ -1,10 +1,7 @@
 ---
 launchpad: designate-dashboard
 release-model: cycle-with-milestones
-# NOTE(dhellmann): Be explicit about using the release type
-# instead of relying on automatically detecting it, to avoid the npm
-# version checking logic.
-release-type: python-service
+release-type: horizon
 team: designate
 type: horizon-plugin
 releases:
@@ -16,3 +13,7 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 642edf494b0f12e05de69b98a4a9fd618950ba4f
+  - version: 6.0.0.0b3
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: f42275dc342aaf580db1d559ebd67ef33d58715f
