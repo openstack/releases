@@ -11,3 +11,11 @@ releases:
         repo: openstack/python-openstacksdk
         tarball-base: openstacksdk
     version: 0.10.0
+  - projects:
+      - hash: 26e14550fed4cb82ca0af17c71cb5674c3bef12d
+        repo: openstack/python-openstacksdk
+        tarball-base: openstacksdk
+    version: 0.11.0
+branches:
+  - name: stable/queens
+    location: 0.11.0
