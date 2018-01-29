@@ -29,6 +29,7 @@ from requests.packages import urllib3
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import links
+from openstack_releases import pythonutils
 from openstack_releases import yamlutils
 
 urllib3.disable_warnings()
@@ -164,6 +165,19 @@ def main():
                                                     project) + '.asc',
                             )
                         )
+
+                    sdist_name = pythonutils.guess_sdist_name(project)
+                    pypi_info = pythonutils.get_pypi_info(sdist_name)
+                    if release['version'] not in pypi_info.get('releases', {}):
+                        msg = ('{} dist with version {} '
+                               'not uploaded to PyPI').format(
+                                   sdist_name, release['version'])
+                        print('  {}'.format(msg))
+                        errors.append(msg)
+                    else:
+                        print('  found version {} on PyPI'.format(
+                            release['version']))
+
                 print()
 
     if errors:

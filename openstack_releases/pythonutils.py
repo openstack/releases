@@ -12,9 +12,14 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import logging
 import os
 import os.path
 import subprocess
+
+import requests
+
+LOG = logging.getLogger(__name__)
 
 
 def get_sdist_name(workdir, repo):
@@ -46,3 +51,18 @@ def get_sdist_name(workdir, repo):
     print('Results: %s' % (out,))
     name = out.splitlines()[-1].strip()
     return name
+
+
+def guess_sdist_name(project):
+    "Guess the name without checking out the repo."
+    repo_base = project['repo'].rsplit('/')[-1]
+    base = project.get('tarball-base', repo_base)
+    return base
+
+
+def get_pypi_info(dist_name):
+    "Return PyPI information for the distribution."
+    LOG.debug('looking at PyPI for {}'.format(dist_name))
+    url = 'https://pypi.python.org/pypi/{}/json'.format(dist_name)
+    LOG.debug(url)
+    return requests.get(url).json()
