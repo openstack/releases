@@ -9,6 +9,11 @@ releases:
       - hash: 037f74de1f48b90dc25c5812b16543a6fccedfc1
         repo: openstack/python-blazarclient
     version: 1.0.0
+  - projects:
+      - hash: 2563e6b90501ca465ef506dee0b92f033b3f1c92
+        repo: openstack/python-blazarclient
+    version: 1.0.1
+    diff-start: 0.3.1
 branches:
   - name: stable/queens
     location: 1.0.0
