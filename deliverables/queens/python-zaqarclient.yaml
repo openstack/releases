@@ -9,3 +9,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: a2bc819589c4d606e7ded3b500275d0ef9e405ec
+  - version: 1.9.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: c1689bf02c03f3598a54dc972d8a128ecd4294ad
+branches:
+  - name: stable/queens
+    location: 1.9.0
