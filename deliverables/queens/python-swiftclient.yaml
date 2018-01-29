@@ -5,3 +5,11 @@ release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-swiftclient/current.html
 team: swift
 type: library
+releases:
+  - version: 3.5.0
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: b91651eba09ed43903c55f24e3a1a52aefeea75f
+branches:
+  - name: stable/queens
+    location: 3.5.0
