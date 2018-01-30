@@ -97,6 +97,7 @@ _RELEASE_JOBS_FOR_TYPE = {
     'nodejs': [
         'nodejs4-publish-to-npm',
         'nodejs6-publish-to-npm',
+        'nodejs8-publish-to-npm',
     ],
     'puppet': [
         'puppet-tarball-jobs',
