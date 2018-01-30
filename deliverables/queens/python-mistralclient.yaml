@@ -4,3 +4,13 @@ type: library
 include-pypi-link: yes
 launchpad: python-mistralclient
 release-model: cycle-with-intermediary
+branches:
+  - location: 3.2.0
+    name: stable/queens
+releases:
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 69e8925b20ecf08647c1091d8928479c72533422
+    highlights: >
+      - Fixed TARGET_ authentication parameters
