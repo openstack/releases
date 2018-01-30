@@ -1,0 +1,11 @@
+---
+launchpad: neutron
+team: neutron
+type: other
+release-model: cycle-with-intermediary
+release-type: neutron
+releases:
+  - projects:
+      - hash: 1ec25e8f6ffca003ba123f14a52350f4203a7e82
+        repo: openstack/neutron-vpnaas
+    version: 12.0.0
