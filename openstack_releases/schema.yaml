@@ -26,7 +26,7 @@ properties:
     enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing", "untagged"]
   type:
     type: "string"
-    enum: ["horizon-plugin", "library", "service", "other"]
+    enum: ["horizon-plugin", "library", "client-library", "service", "other"]
   artifact-link-mode:
     type: "string"
     enum: ["tarball", "none"]

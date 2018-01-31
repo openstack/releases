@@ -78,6 +78,7 @@ _USES_PREVER = set([
 _VALID_TYPES = set([
     'horizon-plugin',
     'library',
+    'client-library',
     'service',
     'other',
 ])

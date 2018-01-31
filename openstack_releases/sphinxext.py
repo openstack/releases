@@ -84,6 +84,7 @@ class DeliverableDirectiveBase(rst.Directive):
 
     _CATEGORY_ORDER = [
         'service',
+        'client-library',
         'library',
         'horizon-plugin',
         'other',
@@ -173,6 +174,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'service': 'Service Projects',
         'horizon-plugin': 'Horizon Plugins',
         'library': 'Library Projects',
+        'client-library': 'Service Client Projects',
         'other': 'Other Projects',
         'cycle-trailing': 'Projects Trailing the Release Cycle',
     }
