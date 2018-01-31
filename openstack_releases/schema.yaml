@@ -60,8 +60,11 @@ properties:
                 type: "string"
               highlights:
                 type: "string"
+              comment:
+                type: "string"
               tarball-base:
                 type: "string"
+            additionalProperties: False
         diff-start:
           type: "string"
         highlights:

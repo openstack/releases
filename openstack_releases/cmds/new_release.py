@@ -88,6 +88,16 @@ def increment_milestone_version(old_version, release_type):
     return new_version_parts
 
 
+def get_last_series_info(series, deliverable):
+    all_series = sorted(os.listdir('deliverables'))
+    prev_series = all_series[all_series.index(series) - 1]
+    try:
+        return get_deliverable_data(prev_series, deliverable)
+    except (IOError, OSError, KeyError) as e:
+        raise RuntimeError(
+            'Could not determine previous version: %s' % (e,))
+
+
 def get_last_release(deliverable_info, series, deliverable, release_type):
     try:
         last_release = deliverable_info['releases'][-1]
@@ -100,15 +110,8 @@ def get_last_release(deliverable_info, series, deliverable, release_type):
                 'be at least a feature release to allow '
                 'for stable releases from the previous series.')
         # Look for the version of the previous series.
-        all_series = sorted(os.listdir('deliverables'))
-        prev_series = all_series[all_series.index(series) - 1]
-        try:
-            prev_info = get_deliverable_data(
-                prev_series, deliverable)
-            last_release = prev_info['releases'][-1]
-        except (IOError, OSError, KeyError) as e:
-            raise RuntimeError(
-                'Could not determine previous version: %s' % (e,))
+        prev_info = get_last_series_info(series, deliverable)
+        last_release = prev_info['releases'][-1]
     return last_release
 
 
@@ -125,7 +128,8 @@ def main():
     # FIXME(dhellmann): Add milestone and rc types.
     parser.add_argument(
         'release_type',
-        choices=('bugfix', 'feature', 'major', 'milestone', 'rc'),
+        choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
+                 'procedural'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -150,6 +154,7 @@ def main():
     )
     args = parser.parse_args()
 
+    is_procedural = args.release_type == 'procedural'
     force_tag = args.force
 
     workdir = tempfile.mkdtemp(prefix='releases-')
@@ -188,7 +193,7 @@ def main():
         parser.error(err)
     last_version = last_release['version'].split('.')
 
-    add_stable_branch = args.stable_branch
+    add_stable_branch = args.stable_branch or is_procedural
     if args.release_type in ('milestone', 'rc'):
         force_tag = True
         if deliverable_info['release-model'] not in _USES_RCS:
@@ -201,6 +206,48 @@ def main():
         # release will be.
         if args.release_type == 'rc' and new_version_parts[-1][3:] == '1':
             add_stable_branch = True
+
+    elif args.release_type == 'procedural':
+        # NOTE(dhellmann): We always compute the new version based on
+        # the highest version on the branch, rather than the branch
+        # base. If the differences are only patch levels the results
+        # do not change, but if there was a minor version update then
+        # the new version needs to be incremented based on that.
+        new_version_parts = increment_version(last_version, (0, 1, 0))
+
+        # NOTE(dhellmann): Save the SHAs for the commits where the
+        # branch was created in each repo, even though that is
+        # unlikely to be the same as the last_version, because commits
+        # further down the stable branch will not be in the history of
+        # the master branch and so we can't tag them as part of the
+        # new series *AND* we always want stable branches created from
+        # master.
+        prev_info = get_last_series_info(series, args.deliverable)
+        for b in prev_info['branches']:
+            if b['name'].startswith('stable/'):
+                last_branch_base = b['location'].split('.')
+                break
+        else:
+            raise ValueError(
+                'Could not find a version in branch before {}'.format(
+                    series)
+            )
+        if last_version != last_branch_base:
+            print('WARNING: last_version {} branch base {}'.format(
+                '.'.join(last_version), '.'.join(last_branch_base)))
+        for r in prev_info['releases']:
+            if r['version'] == '.'.join(last_branch_base):
+                last_version_hashes = {
+                    p['repo']: p['hash']
+                    for p in r['projects']
+                }
+                break
+        else:
+            raise ValueError(
+                ('Could not find SHAs for tag '
+                 '{} in old deliverable file').format(
+                    '.'.join(last_version))
+            )
     else:
         increment = {
             'bugfix': (0, 0, 1),
@@ -208,6 +255,7 @@ def main():
             'major': (1, 0, 0),
         }[args.release_type]
         new_version_parts = increment_version(last_version, increment)
+
     new_version = '.'.join(new_version_parts)
 
     if 'releases' not in deliverable_info:
@@ -218,16 +266,38 @@ def main():
     projects = []
     changes = 0
     for project in last_release['projects']:
-        gitutils.clone_repo(workdir, project['repo'])
 
-        branches = gitutils.get_branches(workdir, project['repo'])
-        version = 'origin/stable/%s' % series
-        if not any(branch for branch in branches
-                   if branch.endswith(version)):
-            version = 'master'
+        if args.release_type == 'procedural':
+            # Always use the last tagged hash, which should be coming
+            # from the previous series.
+            sha = last_version_hashes[project['repo']]
 
-        sha = gitutils.sha_for_tag(workdir, project['repo'], version)
-        if project['hash'] != sha or force_tag:
+        else:
+            # Figure out the hash for the HEAD of the branch.
+            gitutils.clone_repo(workdir, project['repo'])
+
+            branches = gitutils.get_branches(workdir, project['repo'])
+            version = 'origin/stable/%s' % series
+            if not any(branch for branch in branches
+                       if branch.endswith(version)):
+                version = 'master'
+
+            sha = gitutils.sha_for_tag(workdir, project['repo'], version)
+
+        if is_procedural:
+            changes += 1
+            print('re-tagging %s at %s (%s)' % (project['repo'], sha,
+                                                last_release['version']))
+            new_project = {
+                'repo': project['repo'],
+                'hash': sha,
+                'comment': 'procedural tag to support creating stable branch',
+            }
+            if 'tarball-base' in project:
+                new_project['tarball-base'] = project['tarball-base']
+            projects.append(new_project)
+
+        elif project['hash'] != sha or force_tag:
             changes += 1
             print('advancing %s from %s to %s' % (project['repo'],
                                                   project['hash'],
@@ -239,6 +309,7 @@ def main():
             if 'tarball-base' in project:
                 new_project['tarball-base'] = project['tarball-base']
             projects.append(new_project)
+
         else:
             print('{} already tagged at most recent commit, skipping'.format(
                 project['repo']))
@@ -261,6 +332,7 @@ def main():
                     break
 
         if add_stable_branch:
+            print('adding stable branch at {}'.format(new_version))
             deliverable_info.setdefault('branches', []).append({
                 'name': branch_name,
                 'location': new_version,
