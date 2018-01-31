@@ -4,3 +4,11 @@ launchpad: pycadf
 release-model: cycle-with-intermediary
 team: keystone
 type: library
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/pycadf
+        hash: 21e59eabf4e112d2aab90aac6d6b2883952bd365
+branches:
+  - name: stable/queens
+    location: 2.7.0
