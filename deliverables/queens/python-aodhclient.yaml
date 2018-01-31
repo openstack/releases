@@ -10,3 +10,6 @@ releases:
       - repo: openstack/python-aodhclient
         hash: 86ac8fd3d31f19a88443a15609a2642c98a6cf7f
         tarball-base: aodhclient
+branches:
+  - location: 1.0.0
+    name: stable/queens
