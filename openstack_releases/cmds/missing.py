@@ -103,40 +103,42 @@ def main():
 
         for release in releases:
 
+            version = release['version']
+
             for project in release['projects']:
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to
                 # import history and sometimes we want to make new
                 # releases.
-                print('%s %s' % (project['repo'], release['version']))
+                print('%s %s' % (project['repo'], version))
 
                 if not args.artifacts:
                     version_exists = gitutils.tag_exists(
-                        project['repo'], release['version'],
+                        project['repo'], version,
                     )
                     if version_exists:
                         print('  tag:found')
                     else:
                         print('  tag:MISSING')
                         errors.append('%s missing tag %s' %
-                                      (project['repo'], release['version']))
+                                      (project['repo'], version))
 
                 # Look for the tarball associated with the tag and
                 # report if that exists.
                 if link_mode == 'tarball':
-                    tb_url = links.tarball_url(release['version'], project)
+                    tb_url = links.tarball_url(version, project)
                     errors.extend(check_signed_file('tarball', tb_url))
                     wheel_2_errors = list(
                         check_url(
                             'python 2 wheel',
-                            links.wheel_py2_url(release['version'], project)
+                            links.wheel_py2_url(version, project)
                         )
                     )
                     wheel_both_errors = list(
                         check_url(
                             'python 2/3 wheel',
-                            links.wheel_both_url(release['version'], project)
+                            links.wheel_both_url(version, project)
                         )
                     )
                     # We only expect to find one wheel. Look for both,
@@ -151,7 +153,7 @@ def main():
                         errors.extend(
                             check_url(
                                 'python 2/3 wheel signature',
-                                links.wheel_both_url(release['version'],
+                                links.wheel_both_url(version,
                                                      project) + '.asc',
                             )
                         )
@@ -161,22 +163,22 @@ def main():
                         errors.extend(
                             check_url(
                                 'python 2 wheel signature',
-                                links.wheel_py2_url(release['version'],
+                                links.wheel_py2_url(version,
                                                     project) + '.asc',
                             )
                         )
 
                     sdist_name = pythonutils.guess_sdist_name(project)
                     pypi_info = pythonutils.get_pypi_info(sdist_name)
-                    if release['version'] not in pypi_info.get('releases', {}):
+                    if version not in pypi_info.get('releases', {}):
                         msg = ('{} dist with version {} '
                                'not uploaded to PyPI').format(
-                                   sdist_name, release['version'])
+                                   sdist_name, version)
                         print('  {}'.format(msg))
                         errors.append(msg)
                     else:
                         print('  found version {} on PyPI'.format(
-                            release['version']))
+                            version))
 
                 print()
 
