@@ -4,3 +4,11 @@ launchpad: python-searchlightclient
 release-model: cycle-with-intermediary
 team: searchlight
 type: client-library
+releases:
+  - projects:
+      - hash: dd1f2331b12bc407781f38d847fdeafd9492f195
+        repo: openstack/python-searchlightclient
+    version: 1.3.0
+branches:
+  - location: 1.3.0
+    name: stable/queens
