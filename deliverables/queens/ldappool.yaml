@@ -3,3 +3,11 @@ launchpad: ldappool
 team: keystone
 type: library
 release-model: cycle-with-intermediary
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/ldappool
+        hash: 90aaa0831e3676f363bf6642efab4eae4d5b9a44
+branches:
+  - name: stable/queens
+    location: 2.2.0
