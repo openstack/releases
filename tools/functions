@@ -56,10 +56,10 @@ function get_last_tag {
     # Print the most recent tag for a ref. If no ref is specified, the
     # currently checked out branch is examined.
     local ref="$1"
-    if ! git describe --abbrev=0 --first-parent ${ref} >/dev/null 2>&1; then
+    if ! git describe --abbrev=0 ${ref} >/dev/null 2>&1; then
         echo ""
     else
-        git describe --abbrev=0 --first-parent ${ref}
+        git describe --abbrev=0 ${ref}
     fi
 }
 
