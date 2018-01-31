@@ -150,7 +150,7 @@ def main():
     verbose_template = '{name:30} {team:20}'
     if not args.unreleased:
         verbose_template += ' {latest_release:15}'
-    if not args.type:
+    if len(args.type) != 1:
         verbose_template += ' {type:15}'
     if not args.model:
         verbose_template += ' {model:15}'
