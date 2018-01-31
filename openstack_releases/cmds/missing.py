@@ -179,6 +179,17 @@ def main():
                     else:
                         print('  found version {} on PyPI'.format(
                             version))
+                        expected_types = set(['bdist_wheel', 'sdist'])
+                        actual_types = set(
+                            r['packagetype']
+                            for r in pypi_info['releases'][version]
+                        )
+                        for actual in actual_types:
+                            print('  found {} on PyPI'.format(actual))
+                        for missing in expected_types.difference(actual_types):
+                            msg = '{} not found on PyPI'.format(missing)
+                            print('  {}'.format(msg))
+                            errors.append(msg)
 
                 print()
 
