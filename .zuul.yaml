@@ -4,12 +4,6 @@
     vars:
       tox_envlist: list-changes
 
-# We only want one job publishing to the releases website at a time,
-# otherwise we will clobber part of the output.
-- semaphore:
-    name: static-publish-releases
-    max: 1
-
 - project:
     name: openstack/releases
     check:
@@ -37,4 +31,3 @@
         - publish-static:
             dependencies:
               - tag-releases
-            semaphore: static-publish-releases
