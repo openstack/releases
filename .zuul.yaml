@@ -27,9 +27,7 @@
               sphinx_python: python3
     release-post:
       jobs:
-        - tag-releases:
-            vars:
-              zuul_site_upload_logs: true
+        - tag-releases
         - publish-static:
             dependencies:
               - tag-releases
