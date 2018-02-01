@@ -40,3 +40,9 @@ releases:
 branches:
   - name: stable/queens
     location: 0.11.0
+cycle-highlights:
+  - Merged code from shade, os-client-config and openstacksdk into a single
+    library.
+  - Added support for making direct REST calls to all OpenStack services.
+  - Updated pagination support to support all existing forms of pagination.
+    Pagination now works automatically behind the scenes.
