@@ -5,3 +5,11 @@ release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/os-client-config
 team: OpenStackSDK
 type: library
+releases:
+  - projects:
+      - hash: ed71a5994f747951c737b16e300ed9dec54a4750
+        repo: openstack/os-client-config
+    version: 1.29.0
+branches:
+  - name: stable/queens
+    location: 1.29.0
