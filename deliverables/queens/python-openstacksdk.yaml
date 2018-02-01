@@ -21,6 +21,14 @@ releases:
         repo: openstack/python-openstacksdk
         tarball-base: openstacksdk
     version: 0.11.1
+  - projects:
+      - hash: a65b18eab0aa6db51ec365801d2cd5b076e65647
+        repo: openstack/python-openstacksdk
+        tarball-base: openstacksdk
+    version: 0.11.2
+    highlights: |
+      Fixed a bug related to duplicate valid query parameters that manifested
+      in some openstackclient neutron commands.
 branches:
   - name: stable/queens
     location: 0.11.0
