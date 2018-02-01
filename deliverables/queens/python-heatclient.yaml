@@ -17,10 +17,3 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: c821f148d876ff42d5c7ca5a9a7d8666a43795c8
-  - projects:
-      - hash: 2ce6aa19a3a8936bc7c9737efadacbb4ae737dab
-        repo: openstack/python-heatclient
-    version: 1.14.0
-branches:
-  - location: 1.14.0
-    name: stable/queens
