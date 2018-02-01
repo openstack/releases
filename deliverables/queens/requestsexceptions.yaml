@@ -4,12 +4,3 @@ release-model: cycle-with-intermediary
 storyboard: 835
 team: OpenStackSDK
 type: library
-releases:
-  - projects:
-      - comment: 'procedural tag to support creating stable branch'
-        hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
-        repo: openstack-infra/requestsexceptions
-    version: 1.4.0
-branches:
-  - location: 1.4.0
-    name: stable/queens

@@ -3,12 +3,3 @@ launchpad: python-tricircleclient
 release-model: cycle-with-intermediary
 team: tricircle
 type: client-library
-releases:
-  - projects:
-      - hash: fb3b78942c9f0e8d96a6c4f451d51a8cfc38ee9a
-        repo: openstack/python-tricircleclient
-        tarball-base: tricircleclient
-    version: 0.3.0
-branches:
-  - location: 0.3.0
-    name: stable/queens
