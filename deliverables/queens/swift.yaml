@@ -9,3 +9,27 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 1ff3f1e3e877091f372a9109187a3ce4cf4414dd
+  - version: 2.17.0
+    projects:
+      - repo: openstack/swift
+        hash: 32d1b3246f6e5fd6176d2af1c22a3ac6d0fe6a17
+cycle-highlights:
+  - Added symlink objects support. Symlink objects reference one other
+    object in the cluster. Read requests pass through the symlink on to
+    the target objects. Write requests act on the symlink itself.
+  - Added support for inline data segments in Static Large Object (SLO)
+    manifests. These data segments do not refer to another object in the
+    system but are included directly in the manifest. When using data
+    segments instead of small objects in the cluster, users will much
+    improved performance on reads. The data segments can also be used to
+    construct composite file formats (like .tar) without needing to create
+    objects in the cluster for boilerplate data.
+  - Added checksum to object extended attributes. This provides better
+    durability guarantees for data stored in the system.
+  - The object expiry functionality was greatly improved to be much more
+    efficient with cluster resources, especially when operating on
+    erasure code objects.
+  - The tempurl digest algorithm is now configurable, and Swift added
+    support for both SHA-256 and SHA-512. Supported tempurl digests
+    are exposed to clients in ``/info``. Additionally, tempurl signatures
+    can now be base64 encoded.
