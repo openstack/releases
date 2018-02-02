@@ -137,6 +137,12 @@ Between Milestone-2 and Milestone-3
       an artifact signing key (but not replace the current one yet), and
       begin the attestation process.
 
+5. Two weeks before milestone 3, warn cycle-with-intermediary projects
+   without any releases that the release team will tag HEAD of master
+   for their project if they have not prepared a release by the
+   following week so that there is a fallback release to use for the
+   cycle and as a place to create their stable branch.
+
 Final Library Release (week before Milestone-3)
 ===============================================
 
@@ -158,6 +164,9 @@ Final Library Release (week before Milestone-3)
 5. Use the ``make-dashboard`` command to prepare the data for tracking
    the final release and import it into a Google Docs spreadsheet for
    collaborative editing and monitoring.
+
+6. Tag HEAD of master for any cycle-with-intermediary project without
+   any releases. Do not create branches for non-library projects.
 
 Milestone-3
 ===========
@@ -205,6 +214,11 @@ Between Milestone-3 and RC1
    stable branch the branch selection will cause the jobs to run
    master->master instead of previous->master. At the end of Ocata
    this caused trouble for the Ironic team, for example.
+
+4. Warn cycle-with-intermediary projects that have releases more than
+   2 months old that we will use their existing release as a point for
+   branching if they have not prepared a newer release by the RC1
+   deadline.
 
 RC1
 ===
