@@ -38,14 +38,23 @@ def main():
         print('no deliverable files found under {}'.format(args.series))
         return 1
 
+    missing = []
     for filename in filenames:
         with open(filename, 'r', encoding='utf-8') as f:
             deliverable_info = yamlutils.loads(f.read())
 
         deliverable_name = os.path.splitext(os.path.basename(filename))[0]
 
+        if not deliverable_info.get('releases'):
+            missing.append(deliverable_name)
+            continue
+
         # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
         print('{}==={}'.format(deliverable_name, new_release['version']))
+
+    # print out any deliverables without releases
+    if missing:
+        print('\nMissing releases:\n  {}'.format('\n  '.join(missing)))
 
     return 0
