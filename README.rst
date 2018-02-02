@@ -386,16 +386,16 @@ The top level of a deliverable file is a mapping with keys:
   Mapping of special settings to control the behavior for each repository,
   keyed by the repository name.
 
-``flags``
-  A list of flags attached to the repository.
+  ``flags``
+    A list of flags attached to the repository.
 
-``no-artifact-build-job``
-  This repository has no job for building an artifact, but should
-  be tagged anyway.
+    ``no-artifact-build-job``
+      This repository has no job for building an artifact, but should
+      be tagged anyway.
 
-``retired``
-  This repository is no longer used, but was present in old
-  versions of a deliverable.
+    ``retired``
+      This repository is no longer used, but was present in old
+      versions of a deliverable.
 
 ``release-type``
   This (optional) key sets the level of validation for the versions numbers.
