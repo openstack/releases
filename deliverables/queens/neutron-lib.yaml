@@ -10,59 +10,60 @@ releases:
       - repo: openstack/neutron-lib
         hash: 5e6153b144512e69157df8d16da71674f9c04778
     highlights: |
-        * The API definition for extended port bindings has been added
-        * The API definition for availability zones has been added
-        * The API definition for subnet pools has been added
-        * The API definition for allowed address pairs has been added
-        * The API definition for external networks has been added
-        * The API definition for metering has been added
-        * The API definition for extra routes has been added
-        * The API definition for L2 adjacency has been added
-        * The API definition for subnet onboarding has been added
-        * The API definition for QoS has been added
-        * The API definition for project ID has been added
-        * The API definition for L3 ext gateway mode has been added
-        * The API definition for standard attribute tags has been added
-        * The API definition for network extended MTU has been added
-        * The API definition for IP allocation has been added
-        * The API definition for L3 flavors has been added
-        * The API definition for DVR has been added
+      * The API definition for extended port bindings has been added
+      * The API definition for availability zones has been added
+      * The API definition for subnet pools has been added
+      * The API definition for allowed address pairs has been added
+      * The API definition for external networks has been added
+      * The API definition for metering has been added
+      * The API definition for extra routes has been added
+      * The API definition for L2 adjacency has been added
+      * The API definition for subnet onboarding has been added
+      * The API definition for QoS has been added
+      * The API definition for project ID has been added
+      * The API definition for L3 ext gateway mode has been added
+      * The API definition for standard attribute tags has been added
+      * The API definition for network extended MTU has been added
+      * The API definition for IP allocation has been added
+      * The API definition for L3 flavors has been added
+      * The API definition for DVR has been added
   - version: 1.11.0
     projects:
       - repo: openstack/neutron-lib
         hash: ff5ee1720dcc8accc021c0a621b6c664fb4a50c0
     highlights: |
-        * The API definition for VNI in BGPVPN has been added
-        * The API definition for default-subnetpools has been added
-        * The API definition for quota details has been added
+      * The API definition for VNI in BGPVPN has been added
+      * The API definition for default-subnetpools has been added
+      * The API definition for quota details has been added
   - version: 1.12.0
     projects:
       - repo: openstack/neutron-lib
         hash: cd07c7bc095f41670fb3813e55b659fe943ded1b
     highlights: |
-        * Speed up mac address generation in net_utils
-        * Add a new method ha_state_change to L3 agent extension
-        * Add DCCP, SCTP and UDP-Lite to validated protos for port ranges
-        * Move rbac-policy callback into neutron-lib
-        * Add the multi provider net extension api definition
-        * Add the IPinIP protocol
-        * Class methods and sub resources in base api ext
-        * Rehome the qos default api def
-        * Rehome service type api def
-        * Add default value as none for vni attribute in bgpvpn resource
-        * Fix port comparison in port range validation
-        * Rehome placement client to neutron-lib
-        * Rehome vlantransparent api def
+      * Speed up mac address generation in net_utils
+      * Add a new method ha_state_change to L3 agent extension
+      * Add DCCP, SCTP and UDP-Lite to validated protos for port ranges
+      * Move rbac-policy callback into neutron-lib
+      * Add the multi provider net extension api definition
+      * Add the IPinIP protocol
+      * Class methods and sub resources in base api ext
+      * Rehome the qos default api def
+      * Rehome service type api def
+      * Add default value as none for vni attribute in bgpvpn resource
+      * Fix port comparison in port range validation
+      * Rehome placement client to neutron-lib
+      * Rehome vlantransparent api def
   - version: 1.13.0
     projects:
       - repo: openstack/neutron-lib
         hash: dcf96cd351a18ba96cffe77efc0a39e5c2071d3c
     highlights: |
-        * Rehome sorting API definition
-        * Rehome QoS rule type API definition
-        * Rehomed router service type API definition
-        * Adopt to new oslo.context code to remove deprecation warnings
-        * Add events and resources for L3 flavors
+      * Rehome sorting API definition
+      * Rehome QoS rule type API definition
+      * Rehomed router service type API definition
+      * Adopt to new oslo.context code to remove deprecation warnings
+      * Add events and resources for L3 flavors
 branches:
   - name: stable/queens
     location: 1.13.0
+release-notes: https://docs.openstack.org/releasenotes/neutron-lib/queens.html
