@@ -81,6 +81,7 @@ def main():
     )
     parser.add_argument(
         '--type',
+        default=[],
         action='append',
         choices=list(sorted(validate._VALID_TYPES)),
         help='deliverable type, such as "library" or "service"',
