@@ -86,6 +86,10 @@ def main():
 
         branch = 'stable/' + args.prev_series
 
+        if not deliverable_info.get('releases'):
+            print('  no releases')
+            continue
+
         # assume the releases are in order and take the last one
         new_release = deliverable_info['releases'][-1]
         print('version {}'.format(new_release['version']))
