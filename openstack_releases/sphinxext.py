@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from collections import defaultdict
 import itertools
 import operator
 import os.path
@@ -398,16 +399,13 @@ class HighlightsDirective(rst.Directive):
         :param series: The series to extract highlights from.
         :returns: The available highlights for the series.
         """
-        series_highlights = {}
+        series_highlights = defaultdict(list)
         series_deliverables = _deliverables.get_deliverables(None, series)
         for deliv in series_deliverables:
             series_info = deliv[3]
-            highlights = series_info.get('cycle-highlights')
-            if highlights:
-                # Add highlights to any existing notes already collected
-                notes = series_highlights.get(series_info['team'], '')
-                series_highlights[series_info['team']] = '{}{}\n\n'.format(
-                    notes, highlights)
+            highlights = series_info.get('cycle-highlights', [])
+            for item in highlights:
+                series_highlights[series_info['team']].append(item)
 
         return series_highlights
 
@@ -442,7 +440,8 @@ class HighlightsDirective(rst.Directive):
                 result.append('', source_name)
             result.append('**Notes:**', source_name)
             result.append('', source_name)
-            result.append(series_highlights[team], source_name)
+            for item in series_highlights[team]:
+                result.append('- {}'.format(item), source_name)
             result.append('', source_name)
 
         # NOTE(dhellmann): Useful for debugging.

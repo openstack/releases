@@ -41,7 +41,9 @@ properties:
     type: "string"
     enum: [ "std", "tagless", "upstream" ]
   cycle-highlights:
-    type: "string"
+    type: "array"
+    items:
+      type: "string"
   releases:
     type: "array"
     items:
