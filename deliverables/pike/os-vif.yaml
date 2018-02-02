@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: os-vif
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/os-vif/pike.html
@@ -16,15 +16,15 @@ releases:
       - repo: openstack/os-vif
         hash: 2a09ede8fb15df6c3ef520d1107437df1d16aa89
         tarball-base: os_vif
-    highlights: >
-        - Added hardware offload support for OVS.
+    highlights: |
+      - Added hardware offload support for OVS.
   - version: 1.7.0
     projects:
       - repo: openstack/os-vif
         hash: f4329ffe1805452a790f6116d10164c3658562fa
         tarball-base: os_vif
-    highlights: >
-        - Added multi vendor hardware offload support for OVS.
+    highlights: |
+      - Added multi vendor hardware offload support for OVS.
 branches:
   - name: stable/pike
     location: 1.7.0
