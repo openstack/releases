@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-mistralclient
 release-model: cycle-with-intermediary
 team: mistral
@@ -12,24 +12,25 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: a7bf138e71adbfca5aeae0684e0342bada8185eb
-    highlights: >
-        - Refine openstack command cline for mistral according to
-          OpenStackClient command structure.
-        - Support filtering when query resource.
-        - Allow action executions to be cancelled.
-        - Python 3.5 is officially supported.
-        - Support specifying region name (both local and target cloud) in
-          command line.
+    highlights: |
+      - Refine openstack command cline for mistral according to
+        OpenStackClient command structure.
+      - Support filtering when query resource.
+      - Allow action executions to be cancelled.
+      - Python 3.5 is officially supported.
+      - Support specifying region name (both local and target cloud) in
+        command line.
   - version: 3.0.1
     projects:
       - repo: openstack/python-mistralclient
         hash: 1a3094d2245db9a848a8184817000b3c6cbacbe4
-    highlights: >
+    highlights: |
       - Set --limit parameter by default for several commands to avoid high
         server load.
   - version: 3.0.2
     projects:
       - repo: openstack/python-mistralclient
         hash: 615b6dc207cbd913850a34eea39fa0e2d0bdb503
-    highlights: >
+    highlights: |
       - Fix how "--limit" is passed to the server for action executions.
+release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/ocata.html
