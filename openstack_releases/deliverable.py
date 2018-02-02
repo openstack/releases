@@ -208,10 +208,16 @@ class Deliverable(object):
         self.series = series
         self.name = name
         self._data = data
-        self.repos = set()
+        repos = set(self._data.get('repository-settings', {}).keys())
+        # NOTE(dhellmann): We do this next bit for legacy deliverable
+        # files without the repository-settings sections. We should be
+        # able to remove this after the T series is opened because at
+        # that point all actively validated deliverable files will
+        # have this data.
         for r in self.releases:
             for p in r['projects']:
-                self.repos.add(p['repo'])
+                repos.add(p['repo'])
+        self.repos = sorted(list(repos))
         if self._governance_data is None:
             Deliverable._governance_data = governance.get_team_data()
 
