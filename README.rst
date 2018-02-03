@@ -314,7 +314,6 @@ that deliverable. For each deliverable, we need to track:
   * the hash of the commit to be tagged
   * the version number to use
 
-* highlights for the release notes email (optional)
 * cycle highlights that will be published to
   ``releases.openstack.org/$SERIES/highlights.html`` (optional, and for
   cycle-with-intermediary, cycle-with-milestones, and cycle-trailing projects
@@ -465,9 +464,11 @@ The top level of a deliverable file is a mapping with keys:
     OpenStack series names.
 
 ``cycle-highlights``
-  RST formatted notes of some of the top new features or changes you would like
-  to point out for this release cycle. These highlights are compiled per team
-  and published to ``releases.openstack.org/$SERIES/highlights.html``.
+  A list of plain-text bullet points describing some of the top new
+  features or changes you would like to point out for this release
+  cycle. Minimal RST markup is supported. These highlights are
+  compiled per team and published to
+  ``releases.openstack.org/$SERIES/highlights.html``.
 
 ``branches``
   A list of the branches for the deliverable.
