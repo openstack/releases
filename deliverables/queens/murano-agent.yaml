@@ -3,3 +3,11 @@ launchpad: murano
 release-model: cycle-with-intermediary
 team: murano
 type: other
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: 4cce39afb58257f525cd355e0f413d64d68d05d6
+branches:
+  - name: stable/queens
+    location: 3.4.0
