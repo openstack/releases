@@ -1,0 +1,10 @@
+---
+launchpad: devstack
+release-model: untagged
+team: Quality Assurance
+type: other
+stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: 83acf1400e7da8019785b1703f5053874cf92792
+    name: stable/queens
