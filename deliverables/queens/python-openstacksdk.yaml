@@ -29,6 +29,14 @@ releases:
     highlights: |
       Fixed a bug related to duplicate valid query parameters that manifested
       in some openstackclient neutron commands.
+  - projects:
+      - hash: 8cdf409c3d6fc3639e85292c5692f92031b4a172
+        repo: openstack/python-openstacksdk
+        tarball-base: openstacksdk
+    version: 0.11.3
+    highlights: |
+      Fixed a bug related to missing valid query parameters that manifested
+      in some openstackclient neutron commands.
 branches:
   - name: stable/queens
     location: 0.11.0
