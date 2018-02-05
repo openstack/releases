@@ -424,11 +424,16 @@ def validate_release_type(deliverable_info,
             print('release-type not given, '
                   'guessing {!r}'.format(release_type))
 
-        project_config.require_release_jobs_for_repo(
-            deliverable_info, zuul_projects,
-            project['repo'],
-            release_type, mk_warning, mk_error,
+        version_exists = gitutils.commit_exists(
+            workdir, project['repo'], release['version'],
         )
+
+        if not version_exists:
+            project_config.require_release_jobs_for_repo(
+                deliverable_info, zuul_projects,
+                project['repo'],
+                release_type, mk_warning, mk_error,
+            )
 
 
 def validate_releases(deliverable_info, zuul_projects,
