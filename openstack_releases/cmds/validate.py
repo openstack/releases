@@ -100,12 +100,18 @@ _SCHEMA = yamlutils.loads(
 )
 
 
+def header(title):
+    print('\n%s' % title)
+    print('-' * len(title))
+
+
 def is_a_hash(val):
     "Return bool indicating if val looks like a valid hash."
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
 def validate_schema(deliverable_info, mk_warning, mk_error):
+    header('Validate Schema')
     validator = jsonschema.Draft4Validator(_SCHEMA)
     for error in validator.iter_errors(deliverable_info):
         mk_error(str(error))
@@ -115,10 +121,13 @@ def validate_series_open(deliverable_info,
                          series_name, filename,
                          mk_warning, mk_error):
     "No releases in the new series until the previous one has a branch."
+    header('Validate Series Open')
     if not deliverable_info.get('releases'):
+        print('no releases, skipping')
         return
     if series_name == '_independent':
         # These rules don't apply to independent projects.
+        print('rule does not apply to independent projects')
         return
     deliverables_dir = os.path.dirname(
         os.path.dirname(filename)
@@ -164,15 +173,18 @@ def validate_series_open(deliverable_info,
 def validate_series_first(deliverable_info, series_name,
                           mk_warning, mk_error):
     "The first release in a series needs to end with '.0'."
+    header('Validate Series First')
     # When the releases entry is present but empty, it's value may not
     # be a list, so we default to a list using 'or'.
     releases = deliverable_info.get('releases') or []
     if len(releases) != 1:
         # We only have to check this when the first release is being
         # applied in the file.
+        print('not the first release')
         return
     if series_name == '_independent':
         # These rules don't apply to independent projects.
+        print('rule does not apply to independent projects')
         return
     versionstr = releases[0]['version']
     patchlevel = versionstr.rpartition('.')[-1]
@@ -185,6 +197,7 @@ def validate_series_first(deliverable_info, series_name,
 
 def validate_bugtracker(deliverable_info, mk_warning, mk_error):
     "Look for the bugtracker info"
+    header('Validate Bug Tracker')
     if 'launchpad' in deliverable_info:
         lp_name = deliverable_info['launchpad']
         try:
@@ -229,6 +242,7 @@ def validate_bugtracker(deliverable_info, mk_warning, mk_error):
 
 def validate_team(deliverable_info, team_data, mk_warning, mk_error):
     "Look for the team name"
+    header('Validate Team')
     if 'team' not in deliverable_info:
         mk_error('No team name given')
     elif deliverable_info['team'] not in team_data:
@@ -238,21 +252,25 @@ def validate_team(deliverable_info, team_data, mk_warning, mk_error):
 
 def validate_release_notes(deliverable_info, mk_warning, mk_error):
     "Make sure the release notes page exists, if it is specified."
-    if 'release-notes' in deliverable_info:
-        notes_link = deliverable_info['release-notes']
-        if isinstance(notes_link, dict):
-            links = list(notes_link.values())
-        else:
-            links = [notes_link]
-        for link in links:
-            rn_resp = requests.get(link)
-            if (rn_resp.status_code // 100) != 2:
-                mk_error('Could not fetch release notes page %s: %s' %
-                         (link, rn_resp.status_code))
+    header('Validate Release Notes')
+    if 'release-notes' not in deliverable_info:
+        print('no release-notes given')
+        return
+    notes_link = deliverable_info['release-notes']
+    if isinstance(notes_link, dict):
+        links = list(notes_link.values())
+    else:
+        links = [notes_link]
+    for link in links:
+        rn_resp = requests.get(link)
+        if (rn_resp.status_code // 100) != 2:
+            mk_error('Could not fetch release notes page %s: %s' %
+                     (link, rn_resp.status_code))
 
 
 def validate_type(deliverable_info, mk_warning, mk_error):
     "Determine the deliverable type. Require an explicit value."
+    header('Validate Type')
     deliverable_type = deliverable_info.get('type')
     if not deliverable_type:
         mk_error(
@@ -283,6 +301,7 @@ def get_model(deliverable_info, series_name):
 
 def validate_model(deliverable_info, series_name, mk_warning, mk_error):
     "Require a valid release model"
+    header('Validate Model')
     release_model = get_model(deliverable_info, series_name)
     if release_model not in _VALID_MODELS:
         mk_error(
@@ -343,6 +362,7 @@ def _require_gitreview(workdir, repo, mk_error):
 
 def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
     "Verify that all repos include a .gitreview file."
+    header('Validate .gitreview')
     checked = set()
     for release in deliverable_info.get('releases', []):
         for project in release['projects']:
@@ -399,6 +419,7 @@ def validate_release_type(deliverable_info,
     to the most recent release of a deliverable.
 
     """
+    header('Validate release-type')
 
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
     if link_mode == 'none':
@@ -442,7 +463,7 @@ def validate_releases(deliverable_info, zuul_projects,
                       mk_warning, mk_error):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
-    print()
+    header('Validate Releases')
 
     release_model = get_model(deliverable_info, series_name)
     is_independent = (release_model == 'independent')
@@ -461,7 +482,7 @@ def validate_releases(deliverable_info, zuul_projects,
     prev_projects = set()
     for release in deliverable_info.get('releases', []):
 
-        print('checking %s' % release['version'])
+        print('\nchecking %s' % release['version'])
 
         for project in release['projects']:
 
@@ -704,8 +725,11 @@ def validate_new_releases(deliverable_info, deliverable_name,
 
     """Apply validation rules that only apply to the current series.
     """
+    header('Validate New Releases')
     if not deliverable_info.get('releases'):
+        print('no releases, skipping')
         return
+
     final_release = deliverable_info['releases'][-1]
     expected_repos = set(
         r.name
@@ -755,6 +779,7 @@ def validate_new_releases(deliverable_info, deliverable_name,
 
 def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
     "Ensure all branches have good prefixes."
+    header('Validate Branch Prefixes')
     branches = deliverable_info.get('branches', [])
     for branch in branches:
         prefix = branch['name'].split('/')[0]
@@ -777,8 +802,10 @@ def validate_stable_branches(deliverable_info,
                              series_name,
                              mk_warning, mk_error):
     "Apply the rules for stable branches."
+    header('Validate Stable Branches')
     if ('launchpad' in deliverable_info and
        deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
+        print('rule does not apply to this repo, skipping')
         return
 
     branches = deliverable_info.get('branches', [])
@@ -895,6 +922,7 @@ def validate_feature_branches(deliverable_info,
                               workdir,
                               mk_warning, mk_error):
     "Apply the rules for feature branches."
+    header('Validate Feature Branches')
     branches = deliverable_info.get('branches', [])
 
     d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
@@ -943,6 +971,7 @@ def validate_driverfixes_branches(deliverable_info,
                                   workdir,
                                   mk_warning, mk_error):
     "Apply the rules for driverfixes branches."
+    header('Validate driverfixes Branches')
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
@@ -1162,14 +1191,14 @@ def main():
             mk_error,
         )
 
-    if warnings:
-        print('\n\n%s warnings found' % len(warnings))
-        for w in warnings:
-            print(w)
+    header('Summary')
 
-    if errors:
-        print('\n\n%s errors found' % len(errors))
-        for e in errors:
-            print(e)
+    print('\n\n%s warnings found' % len(warnings))
+    for w in warnings:
+        print(w)
+
+    print('\n\n%s errors found' % len(errors))
+    for e in errors:
+        print(e)
 
     return 1 if errors else 0
