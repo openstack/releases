@@ -472,6 +472,58 @@ def validate_release_type(deliverable_info,
             )
 
 
+def validate_tarball_base(deliverable_info,
+                          workdir,
+                          mk_warning, mk_error):
+
+    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+
+    if link_mode != 'tarball':
+        print('rule does not apply for link-mode {}, skipping'.format(
+            link_mode))
+        return
+    if not deliverable_info.get('releases'):
+        print('no releases, skipping')
+        return
+
+    release = deliverable_info['releases'][-1]
+    for project in release['projects']:
+        version_exists = gitutils.commit_exists(
+            workdir, project['repo'], release['version'],
+        )
+        # Check that the sdist name and tarball-base name match.
+        try:
+            sdist = pythonutils.get_sdist_name(workdir,
+                                               project['repo'])
+        except Exception as err:
+            msg = 'Could not get the name of {} for version {}: {}'.format(
+                project['repo'], release['version'], err)
+            if version_exists:
+                # If there was a problem with an existing
+                # release, treat it as a warning so we
+                # don't prevent new releases.
+                mk_warning(msg)
+            else:
+                mk_error(msg)
+        else:
+            if sdist is not None:
+                expected = project.get(
+                    'tarball-base',
+                    os.path.basename(project['repo']),
+                )
+                if sdist != expected:
+                    if 'tarball-base' in project:
+                        action = 'is set to'
+                    else:
+                        action = 'defaults to'
+                    mk_error(
+                        ('tarball-base for %s %s %s %r '
+                         'but the sdist name is actually %r. ' +
+                         _PLEASE)
+                        % (project['repo'], release['version'],
+                           action, expected, sdist))
+
+
 def validate_releases(deliverable_info, zuul_projects,
                       series_name,
                       workdir,
@@ -486,8 +538,6 @@ def validate_releases(deliverable_info, zuul_projects,
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
     new_releases = {}
-
-    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
 
     if release_model == 'untagged' and 'releases' in deliverable_info:
         mk_error('untagged deliverables should not have a "releases" section')
@@ -555,39 +605,6 @@ def validate_releases(deliverable_info, zuul_projects,
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
-
-                # Check that the sdist name and tarball-base name match.
-                if link_mode == 'tarball':
-                    try:
-                        sdist = pythonutils.get_sdist_name(workdir,
-                                                           project['repo'])
-                    except Exception as err:
-                        msg = 'Could not get the name of {} for version {}: {}'.format(
-                            project['repo'], release['version'], err)
-                        if version_exists:
-                            # If there was a problem with an existing
-                            # release, treat it as a warning so we
-                            # don't prevent new releases.
-                            mk_warning(msg)
-                        else:
-                            mk_error(msg)
-                    else:
-                        if sdist is not None:
-                            expected = project.get(
-                                'tarball-base',
-                                os.path.basename(project['repo']),
-                            )
-                            if sdist != expected:
-                                if 'tarball-base' in project:
-                                    action = 'is set to'
-                                else:
-                                    action = 'defaults to'
-                                mk_error(
-                                    ('tarball-base for %s %s %s %r '
-                                     'but the sdist name is actually %r. ' +
-                                     _PLEASE)
-                                    % (project['repo'], release['version'],
-                                       action, expected, sdist))
 
                 print('Found new version {} for {}'.format(
                     release['version'], project['repo']))
@@ -1152,6 +1169,12 @@ def main():
             deliverable_info,
             zuul_projects,
             series_name,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
+        validate_tarball_base(
+            deliverable_info,
             workdir,
             mk_warning,
             mk_error,

@@ -1034,10 +1034,14 @@ class TestValidateTarballBase(base.BaseTestCase):
         warnings = []
         errors = []
         gsn.return_value = 'release-test'
-        validate.validate_releases(
+        validate.clone_deliverable(
             deliverable_info,
-            {'validate-projects-by-name': {}},
-            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        validate.validate_tarball_base(
+            deliverable_info,
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1062,10 +1066,14 @@ class TestValidateTarballBase(base.BaseTestCase):
         warnings = []
         errors = []
         gsn.return_value = 'this-is-wrong'
-        validate.validate_releases(
+        validate.clone_deliverable(
             deliverable_info,
-            {'validate-projects-by-name': {}},
-            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        validate.validate_tarball_base(
+            deliverable_info,
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1089,10 +1097,14 @@ class TestValidateTarballBase(base.BaseTestCase):
         warnings = []
         errors = []
         gsn.return_value = 'openstack-release-test'
-        validate.validate_releases(
+        validate.clone_deliverable(
             deliverable_info,
-            {'validate-projects-by-name': {}},
-            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        validate.validate_tarball_base(
+            deliverable_info,
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1117,10 +1129,14 @@ class TestValidateTarballBase(base.BaseTestCase):
         warnings = []
         errors = []
         gsn.return_value = 'openstack-release-test'
-        validate.validate_releases(
+        validate.clone_deliverable(
             deliverable_info,
-            {'validate-projects-by-name': {}},
-            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        validate.validate_tarball_base(
+            deliverable_info,
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1145,10 +1161,14 @@ class TestValidateTarballBase(base.BaseTestCase):
         warnings = []
         errors = []
         gsn.return_value = 'openstack-release-test'
-        validate.validate_releases(
+        validate.clone_deliverable(
             deliverable_info,
-            {'validate-projects-by-name': {}},
-            'ocata',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        validate.validate_tarball_base(
+            deliverable_info,
             self.tmpdir,
             warnings.append,
             errors.append,
