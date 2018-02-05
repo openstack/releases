@@ -3,3 +3,11 @@ launchpad: zun
 release-model: cycle-with-intermediary
 team: zun
 type: service
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/zun
+        hash: 2121dab9c24cfd319c6192326c5275197c8c907e
+branches:
+  - name: stable/queens
+    location: 1.0.0
