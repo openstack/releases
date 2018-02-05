@@ -170,6 +170,21 @@ def validate_series_open(deliverable_info,
             expected_branch, previous_deliverable_file, series_name))
 
 
+def deprecate_release_highlights(deliverable_info,
+                                 mk_warning, mk_error):
+    "No releases in the new series until the previous one has a branch."
+    header('Deprecate Release Highlights')
+    if not deliverable_info.get('releases'):
+        return
+    last_release = deliverable_info['releases'][-1]
+    if 'highlights' in last_release:
+        mk_error(
+            'The per-release "highlights" feature is deprecated. '
+            'Please use "cycle-highlights" for marketing notes '
+            'and reno for release notes.'
+        )
+
+
 def validate_series_first(deliverable_info, series_name,
                           mk_warning, mk_error):
     "The first release in a series needs to end with '.0'."
@@ -1154,6 +1169,11 @@ def main():
                 deliverable_info,
                 series_name,
                 filename,
+                mk_warning,
+                mk_error,
+            )
+            deprecate_release_highlights(
+                deliverable_info,
                 mk_warning,
                 mk_error,
             )
