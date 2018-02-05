@@ -4,3 +4,11 @@ launchpad: ironic-ui
 release-model: cycle-with-intermediary
 team: ironic
 type: horizon-plugin
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 931996a268b1c7a41468f6402dc277928a7866ea
+branches:
+  - name: stable/queens
+    location: 3.1.0
