@@ -4,3 +4,11 @@ release-model: cycle-with-intermediary
 team: Telemetry
 type: service
 release-notes: https://docs.openstack.org/releasenotes/ceilometer/unreleased.html
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: 46aee0a86424004290249a2d7c37157ab853f994
+branches:
+  - name: stable/queens
+    location: 10.0.0
