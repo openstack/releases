@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-glanceclient
 release-model: cycle-with-intermediary
 team: glance
@@ -13,9 +13,8 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 9afb56c875c3fdc001f1b5e09c1126a008940e6c
-    highlights: >
-      - python-glanceclient supports Community Images
-      - Request IDs are now accessible for all objects returned via
+    highlights: |
+      - python-glanceclient supports Community Images - Request IDs are now accessible for all objects returned via
         the client API
       - The ``ploop`` and ``vhdx`` disk formats are now supported in
         glanceclient
@@ -23,3 +22,5 @@ releases:
         on both Python 2 and Python 3
       - glanceclient has migrated from using python-keystoneclient to
         keystoneauth1
+repository-settings:
+  openstack/python-glanceclient: {}

@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: networking-hyperv
 release-model: cycle-with-intermediary
 team: winstackers
@@ -12,3 +12,5 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 83f8a20c82434fb4b90c2e0c30779a361f2c7944
+repository-settings:
+  openstack/networking-hyperv: {}

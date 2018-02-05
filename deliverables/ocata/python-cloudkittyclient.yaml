@@ -12,12 +12,7 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 2fe71f729ad689e54ebaf00c575387f0ef4d73ed
-    highlights: >
-      Change in the numerotation of the versions to use OpenStack's style.
-      Possibility to get total/summary for all tenants.
-      Possibility to gather summary by resource or tenant.
-      Possibility to request the API to know the available metrics.
-      Possibility to change the priority of rating modules.
-      Added default behaviour to fetch dataframe on the current month.
-      Added support for the OpenStack unified client.
-      Bug fixes and code quality improvement.
+    highlights: |
+      Change in the numerotation of the versions to use OpenStack's style. Possibility to get total/summary for all tenants. Possibility to gather summary by resource or tenant. Possibility to request the API to know the available metrics. Possibility to change the priority of rating modules. Added default behaviour to fetch dataframe on the current month. Added support for the OpenStack unified client. Bug fixes and code quality improvement.
+repository-settings:
+  openstack/python-cloudkittyclient: {}

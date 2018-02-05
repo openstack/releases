@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-designateclient
 release-model: cycle-with-intermediary
 team: designate
@@ -20,3 +20,5 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 5b8cab8079c2eea9f9d084801102ed5b036927fa
+repository-settings:
+  openstack/python-designateclient: {}

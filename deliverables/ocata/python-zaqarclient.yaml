@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-zaqarclient
 release-model: cycle-with-intermediary
 team: zaqar
@@ -13,11 +13,11 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: cb635f50e9a3f25129e1ef2296484b77b681ad66
-    highlights: >
-      - Add support for keystone session.
-      - Add support for project doc.
-      - Add support for SSL and insecure request.
+    highlights: |
+      - Add support for keystone session. - Add support for project doc. - Add support for SSL and insecure request.
   - version: 1.4.0
     projects:
       - repo: openstack/python-zaqarclient
         hash: bdeb81fa6b37d0f484a17a18e1977fbf2b3e0de8
+repository-settings:
+  openstack/python-zaqarclient: {}
