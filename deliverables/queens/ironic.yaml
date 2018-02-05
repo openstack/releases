@@ -12,3 +12,6 @@ releases:
       - hash: 76945299a86babcda300b073e1604ac0aeeb13d3
         repo: openstack/ironic
     version: 10.0.0
+cycle-highlights:
+  - Finished implementation of Ironic Rescue Mode. Users can repair instances,
+    troubleshoot misconfigured nodes, lost SSH keys, etc.

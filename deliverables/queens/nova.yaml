@@ -17,3 +17,6 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 81f0ca1352d4aa12717573b95586de60141c8e0e
+cycle-highlights:
+  - Added support for vGPUs. Experimental feature with some caveats, but admins
+    can now define flavors that request vGPU resources.
