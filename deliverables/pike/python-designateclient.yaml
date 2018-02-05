@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-designateclient
 release-model: cycle-with-intermediary
 team: designate
@@ -12,3 +12,5 @@ releases:
 branches:
   - name: stable/pike
     location: 2.7.0
+repository-settings:
+  openstack/python-designateclient: {}

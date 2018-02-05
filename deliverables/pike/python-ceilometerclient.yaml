@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-ceilometerclient
 release-model: cycle-with-intermediary
 team: Telemetry
@@ -12,3 +12,7 @@ releases:
 branches:
   - name: stable/pike
     location: 2.9.0
+repository-settings:
+  openstack/python-ceilometerclient:
+    flags:
+      - retired

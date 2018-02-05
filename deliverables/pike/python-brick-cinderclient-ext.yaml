@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-cinderclient
 release-model: cycle-with-intermediary
 team: cinder
@@ -16,3 +16,5 @@ releases:
 branches:
   - name: stable/pike
     location: 0.5.0
+repository-settings:
+  openstack/python-brick-cinderclient-ext: {}

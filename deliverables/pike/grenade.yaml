@@ -1,10 +1,12 @@
 ---
 launchpad: grenade
 release-model: untagged
-team: Quality Assurance
+team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
 branches:
   - location:
       openstack-dev/grenade: 1e3a981a6cf6216daa60fcd7583ad6e9cb1cefcc
     name: stable/pike
+repository-settings:
+  openstack-dev/grenade: {}

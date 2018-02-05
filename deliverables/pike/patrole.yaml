@@ -1,7 +1,7 @@
 ---
 launchpad: patrole
 release-model: cycle-with-intermediary
-team: Quality Assurance
+team: 'Quality Assurance'
 type: other
 releases:
   - version: 0.1.0
@@ -12,3 +12,5 @@ releases:
     projects:
       - repo: openstack/patrole
         hash: 45fffa50e0020d4a34b1c3eac4b553522bf5fb35
+repository-settings:
+  openstack/patrole: {}
