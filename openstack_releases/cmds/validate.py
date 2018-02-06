@@ -80,6 +80,7 @@ _VALID_TYPES = set([
     'library',
     'client-library',
     'service',
+    'tempest-plugin',
     'other',
 ])
 _VALID_BRANCH_PREFIXES = set([
@@ -748,9 +749,14 @@ def validate_stable_branches(deliverable_info, workdir,
        deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
         return
 
+    branches = deliverable_info.get('branches', [])
+
+    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+        mk_error('Tempest plugins do not support branching.')
+        return
+
     branch_mode = deliverable_info.get('stable-branch-type', 'std')
 
-    branches = deliverable_info.get('branches', [])
     known_releases = {
         r['version']: r
         for r in deliverable_info.get('releases', [])
@@ -854,6 +860,11 @@ def validate_stable_branches(deliverable_info, workdir,
 def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
     "Apply the rules for feature branches."
     branches = deliverable_info.get('branches', [])
+
+    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+        mk_error('Tempest plugins do not support branching.')
+        return
+
     for branch in branches:
         try:
             prefix, series = branch['name'].split('/')
@@ -897,6 +908,11 @@ def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_erro
         if not d.startswith('_')
     ))
     branches = deliverable_info.get('branches', [])
+
+    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+        mk_error('Tempest plugins do not support branching.')
+        return
+
     for branch in branches:
         try:
             prefix, series = branch['name'].split('/')
