@@ -693,7 +693,7 @@ def validate_releases(deliverable_info, zuul_projects,
             mk_error(msg)
 
 
-def validate_new_releases(deliverable_info, filename,
+def validate_new_releases(deliverable_info, deliverable_name,
                           team_data,
                           mk_warning, mk_error):
 
@@ -702,7 +702,6 @@ def validate_new_releases(deliverable_info, filename,
     if not deliverable_info.get('releases'):
         return
     final_release = deliverable_info['releases'][-1]
-    deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
     expected_repos = set(
         r.name
         for r in governance.get_repositories(
@@ -741,7 +740,17 @@ def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
                 branch['name'], _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliverable_info, workdir,
+def _guess_deliverable_type(deliverable_name, deliverable_info):
+    if 'tempest-plugin' in deliverable_name:
+        return 'tempest-plugin'
+    if 'type' in deliverable_info:
+        return deliverable_info['type']
+    return 'other'
+
+
+def validate_stable_branches(deliverable_info,
+                             deliverable_name,
+                             workdir,
                              series_name,
                              mk_warning, mk_error):
     "Apply the rules for stable branches."
@@ -751,7 +760,8 @@ def validate_stable_branches(deliverable_info, workdir,
 
     branches = deliverable_info.get('branches', [])
 
-    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+    d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
+    if d_type == 'tempest-plugin' and branches:
         mk_error('Tempest plugins do not support branching.')
         return
 
@@ -857,11 +867,15 @@ def validate_stable_branches(deliverable_info, workdir,
                 )
 
 
-def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
+def validate_feature_branches(deliverable_info,
+                              deliverable_name,
+                              workdir,
+                              mk_warning, mk_error):
     "Apply the rules for feature branches."
     branches = deliverable_info.get('branches', [])
 
-    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+    d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
+    if d_type == 'tempest-plugin' and branches:
         mk_error('Tempest plugins do not support branching.')
         return
 
@@ -901,7 +915,10 @@ def validate_feature_branches(deliverable_info, workdir, mk_warning, mk_error):
             _require_gitreview(workdir, repo, mk_error)
 
 
-def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_error):
+def validate_driverfixes_branches(deliverable_info,
+                                  deliverable_name,
+                                  workdir,
+                                  mk_warning, mk_error):
     "Apply the rules for driverfixes branches."
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
@@ -909,7 +926,8 @@ def validate_driverfixes_branches(deliverable_info, workdir, mk_warning, mk_erro
     ))
     branches = deliverable_info.get('branches', [])
 
-    if deliverable_info.get('type', 'other') == 'tempest-plugin' and branches:
+    d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
+    if d_type == 'tempest-plugin' and branches:
         mk_error('Tempest plugins do not support branching.')
         return
 
@@ -1032,6 +1050,7 @@ def main():
         series_name = os.path.basename(
             os.path.dirname(filename)
         )
+        deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
 
         if series_name in _CLOSED_SERIES:
             continue
@@ -1074,7 +1093,7 @@ def main():
         if series_name == defaults.RELEASE:
             validate_new_releases(
                 deliverable_info,
-                filename,
+                deliverable_name,
                 team_data,
                 mk_warning,
                 mk_error,
@@ -1099,6 +1118,7 @@ def main():
         )
         validate_stable_branches(
             deliverable_info,
+            deliverable_name,
             workdir,
             series_name,
             mk_warning,
@@ -1106,12 +1126,14 @@ def main():
         )
         validate_feature_branches(
             deliverable_info,
+            deliverable_name,
             workdir,
             mk_warning,
             mk_error,
         )
         validate_driverfixes_branches(
             deliverable_info,
+            deliverable_name,
             workdir,
             mk_warning,
             mk_error,

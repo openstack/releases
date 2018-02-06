@@ -1215,7 +1215,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         errors = []
         validate.validate_new_releases(
             deliverable_info,
-            'release-test.yaml',
+            'release-test',
             self.team_data,
             warnings.append,
             errors.append,
@@ -1242,7 +1242,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         errors = []
         validate.validate_new_releases(
             deliverable_info,
-            'release-test.yaml',
+            'release-test',
             self.team_data,
             warnings.append,
             errors.append,
@@ -1263,11 +1263,12 @@ class TestValidateNewReleases(base.BaseTestCase):
         errors = []
         validate.validate_new_releases(
             deliverable_info,
-            'release-test.yaml',
+            'release-test',
             self.team_data,
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
 
@@ -1331,6 +1332,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1355,6 +1357,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1379,6 +1382,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1403,6 +1407,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1428,6 +1433,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             '_independent',
             warnings.append,
@@ -1456,6 +1462,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             '_independent',
             warnings.append,
@@ -1482,6 +1489,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1507,6 +1515,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1532,6 +1541,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1558,6 +1568,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1584,6 +1595,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1610,6 +1622,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_stable_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             'ocata',
             warnings.append,
@@ -1642,6 +1655,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1667,6 +1681,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1692,6 +1707,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1717,6 +1733,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1742,6 +1759,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1768,6 +1786,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_feature_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1801,6 +1820,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1825,6 +1845,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1850,6 +1871,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1875,6 +1897,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1900,6 +1923,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1925,6 +1949,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -1951,6 +1976,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         deliverable_info = yamlutils.loads(deliverable_data)
         validate.validate_driverfixes_branches(
             deliverable_info,
+            'name',
             self.tmpdir,
             warnings.append,
             errors.append,
@@ -2260,3 +2286,33 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         print(warnings, errors)
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
+
+
+class TestGuessDeliverableType(base.BaseTestCase):
+
+    def test_explicit(self):
+        self.assertEqual(
+            'the-type',
+            validate._guess_deliverable_type(
+                'name',
+                {'type': 'the-type'},
+            ),
+        )
+
+    def test_implicit_tempest_plugin(self):
+        self.assertEqual(
+            'tempest-plugin',
+            validate._guess_deliverable_type(
+                'foo-tempest-plugin',
+                {},
+            ),
+        )
+
+    def test_default_other(self):
+        self.assertEqual(
+            'other',
+            validate._guess_deliverable_type(
+                'name',
+                {},
+            ),
+        )
