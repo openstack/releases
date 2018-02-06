@@ -19,5 +19,18 @@ releases:
       - hash: 205a5b7be315e0843a220f962afd1c415fea1fd1
         repo: openstack/octavia
     version: 2.0.0.0b3
+  - projects:
+      - hash: 0146961653f5f09f32d7186c6c7d67cddc7627c0
+        repo: openstack/octavia
+    version: 2.0.0.0rc1
+branches:
+  - location: 2.0.0.0rc1
+    name: stable/queens
+cycle-highlights:
+  - Added the ability to batch update pool members.
+  - A Neutron Quality of Service (QoS) policy can now be applied to Octavia
+    load balancers.
+  - Octavia now supports using Castellan and PKCS12 bundles for TLS
+    termination.
 repository-settings:
   openstack/octavia: {}

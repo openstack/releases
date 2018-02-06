@@ -18,5 +18,18 @@ releases:
       - hash: d024d4262f3474ea211bc572776ea812b5643420
         repo: openstack/neutron-lbaas
     version: 12.0.0.0b3
+  - projects:
+      - hash: 4cf67c4898ba104c430a6c0da4b5e13801e6722e
+        repo: openstack/neutron-lbaas
+    version: 12.0.0.0rc1
+branches:
+  - location: 12.0.0.0rc1
+    name: stable/queens
+cycle-highlights:
+  - The neutron-lbaas and neutron-lbaas-dashboard projects are now deprecated.
+    Please see the FAQ at
+    https://wiki.openstack.org/wiki/Neutron/LBaaS/Deprecation
+  - Neutron-lbaas now includes a proxy plugin that forwards all API requests
+    to the Octavia API.
 repository-settings:
   openstack/neutron-lbaas: {}
