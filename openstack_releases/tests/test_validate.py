@@ -1592,6 +1592,32 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
+    def test_tempest_plugin(self):
+        deliverable_data = textwrap.dedent('''
+        type: tempest-plugin
+        releases:
+          - version: 0.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/ocata
+            location:
+              openstack/release-test: 0.0.3
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_stable_branches(
+            deliverable_info,
+            self.tmpdir,
+            'ocata',
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
 
 class TestValidateFeatureBranches(base.BaseTestCase):
 
@@ -1710,6 +1736,32 @@ class TestValidateFeatureBranches(base.BaseTestCase):
           - name: feature/abc
             location:
                openstack/release-test: de2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_feature_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_tempest_plugin(self):
+        deliverable_data = textwrap.dedent('''
+        type: tempest-plugin
+        releases:
+          - version: 0.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: feature/abc
+            location:
+               openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
         warnings = []
         errors = []
@@ -1867,6 +1919,32 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
           - name: driverfixes/austin
             location:
                openstack/automaton: de2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_driverfixes_branches(
+            deliverable_info,
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
+
+    def test_tempest_plugin(self):
+        deliverable_data = textwrap.dedent('''
+        type: tempest-plugin
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: driverfixes/austin
+            location:
+               openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
         warnings = []
         errors = []
