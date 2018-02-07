@@ -2418,3 +2418,84 @@ class TestGuessDeliverableType(base.BaseTestCase):
                 {},
             ),
         )
+
+
+class TestValidateBranchPoints(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateBranchPoints, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
+
+    def test_branch_does_not_exist(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 0.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/ocata
+            location: 0.0.3
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_branch_points(
+            deliverable_info,
+            'name',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_branch_is_correct(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 0.8.0
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        branches:
+          - name: stable/newton
+            location: 0.8.0
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_branch_points(
+            deliverable_info,
+            'name',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_branch_moved(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 0.12.0
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        branches:
+          - name: stable/meiji
+            location: 0.12.0  # this comes after the meiji branch
+                              # was created at 0.0.2
+        ''')
+        warnings = []
+        errors = []
+        deliverable_info = yamlutils.loads(deliverable_data)
+        validate.validate_branch_points(
+            deliverable_info,
+            'name',
+            self.tmpdir,
+            warnings.append,
+            errors.append,
+        )
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))

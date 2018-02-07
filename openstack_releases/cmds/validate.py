@@ -1055,6 +1055,104 @@ def validate_driverfixes_branches(deliverable_info,
             _require_gitreview(workdir, repo, mk_error)
 
 
+def validate_branch_points(deliverable_info,
+                           deliverable_name,
+                           workdir,
+                           mk_warning,
+                           mk_error):
+    # Make sure the branch points given are on the expected branches.
+
+    known_releases = {
+        r['version']: r
+        for r in deliverable_info.get('releases', [])
+    }
+    branch_mode = deliverable_info.get('stable-branch-type', 'std')
+
+    for branch in deliverable_info.get('branches', []):
+        header('Validate Branch Points: {}'.format(branch['name']))
+        try:
+            prefix, series = branch['name'].split('/')
+        except ValueError:
+            print('could not parse the branch name, skipping')
+            continue
+
+        if prefix == 'feature':
+            print('rule does not apply to feature branches')
+            continue
+
+        elif prefix == 'stable':
+            expected = set([
+                'master',
+                branch['name'],
+            ])
+        else:
+            # driverfixes
+            expected = set([
+                branch['name'],
+                'stable/' + series,
+            ])
+
+        if prefix == 'stable' and branch_mode == 'std':
+            # location is a version string, so we need to build the
+            # map ourselves
+            print('using hashes from release {}'.format(branch['location']))
+            release = known_releases[branch['location']]
+            location = {
+                p['repo']: p['hash']
+                for p in release['projects']
+            }
+        else:
+            location = branch['location']
+
+        for repo, hash in sorted(location.items()):
+            print('\n{}'.format(repo))
+            existing_branches = sorted([
+                (b.partition('/origin/')[-1]
+                 if b.startswith('remotes/origin/')
+                 else b)
+                for b in gitutils.get_branches(workdir, repo)
+            ])
+
+            # Remove the remote name prefix if it is present in the
+            # branch name.
+            containing = set(
+                c.partition('/')[-1] if c.startswith('origin/') else c
+                for c in gitutils.branches_containing(
+                    workdir, repo, hash)
+            )
+
+            print('found {} on branches {} in {}'.format(
+                hash, containing, repo))
+
+            for missing in expected.difference(containing):
+                if missing not in existing_branches:
+                    print('branch {} does not exist in {}, skipping'.format(
+                        branch['name'], repo))
+                    continue
+
+                if branch['name'] in existing_branches:
+                    # The branch already exists but there is something
+                    # wrong with the specification. This probably
+                    # means someone tried to update the branch setting
+                    # after creating the branch, so phrase the error
+                    # message to reflect that.
+                    mk_error(
+                        '{} branch exists in {} and does not seem '
+                        'to have been created from {}'.format(
+                            branch['name'], repo, hash),
+                    )
+                else:
+                    # The branch does not exist and the proposed point
+                    # to create it is not on the expected source
+                    # branch, so phrase the error message to reflect
+                    # that.
+                    mk_error(
+                        'commit {} is not on the {} branch '
+                        'but it is listed as the branch point for '
+                        '{} to be created'.format(
+                            hash, missing, branch['name']))
+
+
 # if the branch already exists, the name is by definition valid
 # if the branch exists, the data in the map must match reality
 #
@@ -1225,6 +1323,13 @@ def main():
             mk_error,
         )
         validate_driverfixes_branches(
+            deliverable_info,
+            deliverable_name,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
+        validate_branch_points(
             deliverable_info,
             deliverable_name,
             workdir,
