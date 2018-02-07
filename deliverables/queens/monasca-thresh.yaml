@@ -4,3 +4,11 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 31a65144c18319fd5229f00decd2a1911a23c6c7
+        repo: openstack/monasca-thresh
+    version: 1.5.0
+branches:
+  - location: 1.5.0
+    name: stable/queens
