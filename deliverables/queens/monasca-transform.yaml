@@ -13,3 +13,10 @@ releases:
       - hash: 4de903facb181a5f422c8d144d0b2fce50f35891
         repo: openstack/monasca-transform
     version: 0.13.0
+  - projects:
+      - hash: 867a68fbb56a8ef5cb0a72dd2037cee6ef10a525
+        repo: openstack/monasca-transform
+    version: 0.14.0
+branches:
+  - location: 0.14.0
+    name: stable/queens

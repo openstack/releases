@@ -9,3 +9,10 @@ releases:
       - hash: 031a8b6c87bfdb9c76f6ca1d2f6eec922f8e0c07
         repo: openstack/monasca-ceilometer
     version: 1.6.0
+  - projects:
+      - hash: e81be04ef7e8bdd7d789d5a5ebe1a96f59c8a3c1
+        repo: openstack/monasca-ceilometer
+    version: 1.7.0
+branches:
+  - location: 1.7.0
+    name: stable/queens
