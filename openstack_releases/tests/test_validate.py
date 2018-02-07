@@ -1340,8 +1340,8 @@ class TestValidateNewReleases(base.BaseTestCase):
             errors.append,
         )
         print(warnings, errors)
-        self.assertEqual(1, len(warnings))
-        self.assertEqual(0, len(errors))
+        self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(errors))
 
     def test_missing_repo_info(self):
         # The tag is missing a repository that is in

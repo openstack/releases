@@ -793,9 +793,7 @@ def validate_new_releases(deliverable_info, deliverable_name,
     repository_settings = deliverable_info.get('repository-settings', {})
     for repo in actual_repos:
         if repo not in repository_settings:
-            # TODO(dhellmann): Turn this into a warning after the T
-            # series is open.
-            mk_warning(
+            mk_error(
                 'release %s includes repository %s '
                 'that is not in the repository-settings section' %
                 (final_release['version'], repo)
