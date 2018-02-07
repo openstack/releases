@@ -213,7 +213,7 @@ def main():
 
     # Set up logging, including making some loggers quiet.
     logging.basicConfig(
-        format='%(levelname)7s:%(name)s: %(message)s',
+        format='%(levelname)7s: %(message)s',
         stream=sys.stdout,
         level=logging.DEBUG,
     )
