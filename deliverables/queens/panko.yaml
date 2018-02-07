@@ -4,3 +4,8 @@ release-model: cycle-with-intermediary
 team: Telemetry
 type: service
 release-notes: https://docs.openstack.org/releasenotes/panko/unreleased.html
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/panko
+        hash: 849a579b3a8c88da722be2a7b46514b8c0115ee8
