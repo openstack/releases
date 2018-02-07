@@ -3,6 +3,9 @@ launchpad: vitrage-dashboard
 release-model: cycle-with-intermediary
 team: vitrage
 type: horizon-plugin
+branches:
+  - location: 1.4.1
+    name: stable/queens
 releases:
   - version: 1.4.0
     projects:
@@ -10,3 +13,7 @@ releases:
         hash: 546014e7e4dda133e4277f2d6f2de716237e3a2a
     highlights: |
       - Added an alarm count banner in Horizon
+  - version: 1.4.1
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 3df18819d90ed3910b383493c8a0cc9c4b4ee7e6
