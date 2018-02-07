@@ -18,6 +18,7 @@ import os.path
 import subprocess
 
 from openstack_releases import links
+from openstack_releases import processutils
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
@@ -31,7 +32,7 @@ CGIT_TAG_TEMPLATE = 'http://git.openstack.org/cgit/%s/tag/?h=%s'
 
 def find_modified_deliverable_files():
     "Return a list of files modified by the most recent commit."
-    results = subprocess.check_output(
+    results = processutils.check_output(
         ['git', 'diff', '--name-only', '--pretty=format:', 'HEAD^']
     ).decode('utf-8')
     filenames = [
@@ -50,11 +51,11 @@ def commit_exists(workdir, repo, ref):
 
     """
     try:
-        subprocess.check_output(
+        processutils.check_output(
             ['git', 'show', ref],
             cwd=os.path.join(workdir, repo),
         ).decode('utf-8')
-    except subprocess.CalledProcessError as err:
+    except processutils.CalledProcessError as err:
         LOG.error('Could not find {}: {}'.format(ref, err))
         return False
     return True
@@ -80,14 +81,14 @@ def ensure_basic_git_config(workdir, repo, settings):
     for key, value in settings.items():
         LOG.info('looking for git config {}'.format(key))
         try:
-            existing = subprocess.check_output(
+            existing = processutils.check_output(
                 ['git', 'config', '--get', key],
                 cwd=dest,
             ).decode('utf-8').strip()
             LOG.info('using existing setting of {}: {!r}'.format(key, existing))
-        except subprocess.CalledProcessError:
+        except processutils.CalledProcessError:
             LOG.info('updating setting of {} to {!r}'.format(key, value))
-            subprocess.check_call(
+            processutils.check_call(
                 ['git', 'config', key, value],
                 cwd=dest,
             )
@@ -106,8 +107,7 @@ def clone_repo(workdir, repo, ref=None, branch=None):
     if branch:
         cmd.extend(['--branch', branch])
     cmd.append(repo)
-    LOG.info(' '.join(cmd))
-    subprocess.check_call(cmd)
+    processutils.check_call(cmd)
     dest = os.path.join(workdir, repo)
     return dest
 
@@ -131,13 +131,13 @@ def sha_for_tag(workdir, repo, version):
     """
     # git log 2.3.11 -n 1 --pretty=format:%H
     try:
-        actual_sha = subprocess.check_output(
+        actual_sha = processutils.check_output(
             ['git', 'log', str(version), '-n', '1', '--pretty=format:%H'],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).decode('utf-8')
         actual_sha = actual_sha.strip()
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.info('ERROR getting SHA for tag %r: %s [%s]',
                  version, e, e.output.strip())
         actual_sha = ''
@@ -158,13 +158,13 @@ def stable_branch_exists(workdir, repo, series):
     remote_match = 'remotes/origin/stable/%s' % series
     try:
         containing_branches = _filter_branches(
-            subprocess.check_output(
+            processutils.check_output(
                 ['git', 'branch', '-a'],
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8')
         )
         return (remote_match in containing_branches)
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.error('failed checking for branch: %s [%s]', e, e.output.strip())
         return False
 
@@ -186,7 +186,7 @@ def check_branch_sha(workdir, repo, series, sha):
     remote_match = 'remotes/origin/stable/%s' % series
     try:
         containing_branches = _filter_branches(
-            subprocess.check_output(
+            processutils.check_output(
                 ['git', 'branch', '-a', '--contains', sha],
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8')
@@ -203,7 +203,7 @@ def check_branch_sha(workdir, repo, series, sha):
         # that series. Allow the release, as long as it is on the
         # master branch.
         all_branches = _filter_branches(
-            subprocess.check_output(
+            processutils.check_output(
                 ['git', 'branch', '-a'],
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8')
@@ -223,7 +223,7 @@ def check_branch_sha(workdir, repo, series, sha):
         LOG.debug('did not find SHA on %s or master or origin/master',
                   remote_match)
         return False
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.error('failed checking SHA on branch: %s [%s]' % (e, e.output.strip()))
         return False
 
@@ -231,13 +231,13 @@ def check_branch_sha(workdir, repo, series, sha):
 def check_ancestry(workdir, repo, old_version, sha):
     "Check if the SHA is in the ancestry of the previous version."
     try:
-        ancestors = subprocess.check_output(
+        ancestors = processutils.check_output(
             ['git', 'log', '--oneline', '--ancestry-path',
              '%s..%s' % (old_version, sha)],
             cwd=os.path.join(workdir, repo),
         ).decode('utf-8').strip()
         return bool(ancestors)
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.error('failed checking ancestry: %s [%s]' % (e, e.output.strip()))
         return False
 
@@ -247,12 +247,12 @@ def get_latest_tag(workdir, repo, sha=None):
     if sha is not None:
         cmd.append(sha)
     try:
-        return subprocess.check_output(
+        return processutils.check_output(
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.warning('failed to retrieve latest tag: %s [%s]',
                     e, e.output.strip())
         return None
@@ -262,12 +262,12 @@ def add_tag(workdir, repo, tag, sha):
     cmd = ['git', 'tag', '-m', 'temporary tag', tag, sha]
     try:
         LOG.info(' '.join(cmd))
-        return subprocess.check_output(
+        return processutils.check_output(
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.warning('failed to add tag: %s [%s]',
                     e, e.output.strip())
         return None
@@ -275,7 +275,7 @@ def add_tag(workdir, repo, tag, sha):
 
 def get_branches(workdir, repo):
     try:
-        output = subprocess.check_output(
+        output = processutils.check_output(
             ['git', 'branch', '-a'],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
@@ -300,7 +300,7 @@ def get_branches(workdir, repo):
                 continue
             results.append(branch)
         return results
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.error('failed to retrieve list of branches: %s [%s]',
                   e, e.output.strip())
         return []
@@ -308,7 +308,7 @@ def get_branches(workdir, repo):
 
 def branches_containing(workdir, repo, ref):
     try:
-        output = subprocess.check_output(
+        output = processutils.check_output(
             ['git', 'branch', '-r', '--contains', ref],
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
@@ -319,7 +319,7 @@ def branches_containing(workdir, repo, ref):
         for line in output.splitlines():
             results.append(line.strip())
         return results
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.error('failed to retrieve list of branches containing %s: %s [%s]',
                   ref, e, e.output.strip())
         return []
@@ -339,12 +339,12 @@ def get_branch_base(workdir, repo, branch):
         'master',
     ]
     try:
-        parents = subprocess.check_output(
+        parents = processutils.check_output(
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.warning('failed to retrieve branch base: %s [%s]',
                     e, e.output.strip())
         return None
@@ -356,12 +356,12 @@ def get_branch_base(workdir, repo, branch):
         '{}^^!'.format(parent),
     ]
     try:
-        return subprocess.check_output(
+        return processutils.check_output(
             cmd,
             cwd=os.path.join(workdir, repo),
             stderr=subprocess.STDOUT,
         ).decode('utf-8').strip()
-    except subprocess.CalledProcessError as e:
+    except processutils.CalledProcessError as e:
         LOG.warning('failed to retrieve branch base: %s [%s]',
                     e, e.output.strip())
         return None

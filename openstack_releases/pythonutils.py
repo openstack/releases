@@ -15,9 +15,10 @@
 import logging
 import os
 import os.path
-import subprocess
 
 import requests
+
+from openstack_releases import processutils
 
 LOG = logging.getLogger(__name__)
 
@@ -33,7 +34,7 @@ def get_sdist_name(workdir, repo):
         # Use tox to set up a virtualenv so we can install the
         # dependencies for the package. This only seems to be
         # necessary for pbr, but...
-        subprocess.check_output(
+        processutils.check_output(
             ['tox', '-e', 'venv', '--notest'],
             cwd=dest,
         )
@@ -44,10 +45,10 @@ def get_sdist_name(workdir, repo):
     # Run it once and discard the result to ensure any setup_requires
     # dependencies are installed.
     cmd = [python, 'setup.py', '--name']
-    subprocess.check_output(cmd, cwd=dest)
+    processutils.check_output(cmd, cwd=dest)
     # Run it again to get a clean version of the name.
     print('Running: %s in %s' % (' '.join(cmd), dest))
-    out = subprocess.check_output(cmd, cwd=dest).decode('utf-8')
+    out = processutils.check_output(cmd, cwd=dest).decode('utf-8')
     print('Results: %s' % (out,))
     name = out.splitlines()[-1].strip()
     return name

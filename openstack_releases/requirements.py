@@ -17,11 +17,11 @@
 
 import logging
 import os.path
-import subprocess
 
 import pkg_resources
 
 from openstack_releases import gitutils
+from openstack_releases import processutils
 from openstack_releases import pythonutils
 from openstack_releases import versionutils
 
@@ -89,7 +89,7 @@ def get_min_specifier(specifier_set):
 def get_requirements_at_ref(workdir, repo, ref):
     "Check out the repo at the ref and load the list of requirements."
     dest = gitutils.clone_repo(workdir, repo, ref=ref)
-    subprocess.check_call(['python', 'setup.py', 'sdist'], cwd=dest)
+    processutils.check_call(['python', 'setup.py', 'sdist'], cwd=dest)
     sdist_name = pythonutils.get_sdist_name(workdir, repo)
     requirements_filename = os.path.join(
         dest, sdist_name + '.egg-info', 'requires.txt',
