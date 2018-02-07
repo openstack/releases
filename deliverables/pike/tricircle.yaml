@@ -1,10 +1,10 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: tricircle
 release-model: cycle-with-intermediary
 team: tricircle
 type: service
-release-notes: https://docs.openstack.org/releasenotes/tricircle/
+release-notes: https://docs.openstack.org/releasenotes/tricircle/pike.html
 releases:
   - version: 3.1.0
     projects:
@@ -26,7 +26,6 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 9939540c070423906ebd8aba0070713b845f868c
-
 branches:
   - location: 4.0.0
     name: stable/pike
