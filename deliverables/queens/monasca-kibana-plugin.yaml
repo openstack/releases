@@ -3,5 +3,13 @@ launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
 type: other
+releases:
+  - projects:
+      - hash: 209b830334309b0b11dd85c0ff9e4617c762abdc
+        repo: openstack/monasca-kibana-plugin
+    version: 1.2.0
+branches:
+  - location: 1.2.0
+    name: stable/queens
 repository-settings:
   openstack/monasca-kibana-plugin: {}
