@@ -317,6 +317,8 @@ def main():
             for r in deliverable_info['releases']
         }
 
+        repository_settings = deliverable_info.get('repository-settings', {})
+
         for project in new_release['projects']:
 
             tag_exists = gitutils.tag_exists(
@@ -326,6 +328,14 @@ def main():
             if tag_exists:
                 print('%s %s exists on git server already' %
                       (project['repo'], new_release['version']))
+                if args.shortcut:
+                    print('skipping further processing')
+                    continue
+
+            project_settings = repository_settings.get(project['repo'], {})
+            flags = project_settings.get('flags', {})
+            if 'retired' in flags:
+                print('%s is retired' % (project['repo'],))
                 if args.shortcut:
                     print('skipping further processing')
                     continue
