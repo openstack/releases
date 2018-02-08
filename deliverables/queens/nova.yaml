@@ -4,6 +4,9 @@ release-model: cycle-with-milestones
 team: nova
 type: service
 release-notes: https://docs.openstack.org/releasenotes/nova/unreleased.html
+branches:
+  - location: 17.0.0.0rc1
+    name: stable/queens
 releases:
   - version: 17.0.0.0b1
     projects:
@@ -17,8 +20,29 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 81f0ca1352d4aa12717573b95586de60141c8e0e
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 5caca24dc79e3942b26e00ff1e0b8e7a320a947f
 cycle-highlights:
-  - Added support for vGPUs. Experimental feature with some caveats, but admins
-    can now define flavors that request vGPU resources.
+  - |
+    The performance of listing instances across a multi-cell cells v2
+    deployment has been improved and the results are now merge sorted.
+  - |
+    Rescheduling during a server create or resize operation is now supported
+    in a split-MQ multi-cell cells v2 deployment.
+  - |
+    The libvirt compute driver supports volume multi-attach when using the
+    2.60 compute API microversion. See the Cinder admin guide for more details
+    on volume multi-attach support in Queens.
+  - |
+    Added support for vGPUs. Experimental feature with some caveats, but admins
+    can now define flavors that request vGPU resources. See `admin guide
+    <https://docs.openstack.org/nova/latest/admin/virtual-gpu.html>`_ for more
+    details.
+  - |
+    Traits-based scheduling is now available for the ironic compute driver.
+    For more details, see the `ironic docs for scheduling based on traits
+    <https://docs.openstack.org/ironic/latest/install/configure-nova-flavors.html#scheduling-based-on-traits>`_.
 repository-settings:
   openstack/nova: {}
