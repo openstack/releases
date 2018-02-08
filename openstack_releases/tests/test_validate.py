@@ -800,7 +800,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('explicitly-set', True), (release_type, explicit))
@@ -819,7 +819,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
@@ -838,7 +838,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
@@ -857,7 +857,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
@@ -876,7 +876,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
@@ -896,7 +896,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('puppet', False), (release_type, explicit))
@@ -916,7 +916,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('nodejs', False), (release_type, explicit))
@@ -938,7 +938,7 @@ class TestGetReleaseType(base.BaseTestCase):
         }
         release_type, explicit = validate.get_release_type(
             deliverable_info,
-            deliverable_info['releases'][0]['projects'][0],
+            deliverable_info['releases'][0]['projects'][0]['repo'],
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
