@@ -20,6 +20,22 @@ releases:
         hash: 6942ff6d5706fe27a644d21a15b27b9990c54a5e
       - repo: openstack/freezer-dr
         hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/freezer
+        hash: 70e10d1051c7524bdd5d0126ae57ab49f54f2fca
+      - repo: openstack/freezer-api
+        hash: c24cd2be67848b2e7de08f311383c9ff39730f35
+      - repo: openstack/freezer-dr
+        hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
+cycle-highlights:
+  - Bug fixes
+  - Policy in code
+  - Improving and publishing docs
+  - moving to freezer-tempest-plugin
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
