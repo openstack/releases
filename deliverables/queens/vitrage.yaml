@@ -3,6 +3,9 @@ launchpad: vitrage
 release-model: cycle-with-intermediary
 team: vitrage
 type: service
+branches:
+  - location: 2.1.0
+    name: stable/queens
 releases:
   - version: 2.0.0
     projects:
@@ -13,5 +16,9 @@ releases:
       - Added support for template add and template delete API
       - Parallel evaluation of Vitrage templates
       - Added support for webhook registration on Vitrage alarms
+  - version: 2.1.0
+    projects:
+      - repo: openstack/vitrage
+        hash: f14977e8a28753917e48b98ac5d6ab5263e7aa96
 repository-settings:
   openstack/vitrage: {}
