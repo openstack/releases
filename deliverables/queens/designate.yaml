@@ -19,5 +19,16 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 09a46c0c138dbb8e0017ce9573bf3815340f6ad0
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 97393a1b8c37e4ef1204d5e8f86692fe09a8a1cf
+cycle-highlights:
+  - Removed legacy V1 API interface
+  - Policy files are now just overrides to default rules
+  - Accessible upgrades - DNS Queries will keep resolving during update
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/designate: {}
