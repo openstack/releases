@@ -12,5 +12,12 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: b48ec95d4f5e785a602a6bfa0b15e7cb97fbabfd
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 509ec5ab2eb3399b594748e4a028f3012b65c07d
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/searchlight-ui: {}
