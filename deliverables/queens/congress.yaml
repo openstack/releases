@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/congress
         hash: d9f6b258f7b66b556aef5c919dae0679db2067cf
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/congress
+        hash: b15aa16c7f3042a50aa506822867d5c36738e545
 repository-settings:
   openstack/congress: {}
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/queens
