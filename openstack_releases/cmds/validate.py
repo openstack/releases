@@ -524,6 +524,48 @@ def validate_tarball_base(deliverable_info,
                            action, expected, sdist))
 
 
+def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
+                              mk_warning, mk_error):
+
+    header('Validate PyPI Permissions')
+
+    for repo in deliverable_info['repository-settings'].keys():
+
+        job_templates = zuul_projects.get(repo, {}).get('templates', [])
+
+        # Look for jobs that appear to be talking about publishing to
+        # PyPI. There are variations.
+        pypi_jobs = [
+            j
+            for j in job_templates
+            if 'pypi' in j
+        ]
+
+        if not pypi_jobs:
+            print('rule does not apply to repos not publishing to PyPI')
+            continue
+
+        print('{} publishes to PyPI via {}'.format(repo, pypi_jobs))
+
+        try:
+            sdist = pythonutils.get_sdist_name(workdir, repo)
+        except Exception as err:
+            mk_warning(
+                'Could not determine the sdist name '
+                'for {} to check PyPI permissions: {}'.format(
+                    repo, err)
+            )
+            continue
+
+        uploaders = pythonutils.get_pypi_uploaders(sdist)
+        if 'openstackci' not in uploaders:
+            mk_error(
+                'openstackci does not have permission to upload packages '
+                'for {}. Current owners include: {}'.format(
+                    sdist, ', '.join(sorted(uploaders)))
+            )
+
+
 def validate_releases(deliverable_info, zuul_projects,
                       series_name,
                       workdir,
@@ -1256,6 +1298,13 @@ def main():
             deliverable_info,
             zuul_projects,
             series_name,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
+        validate_pypi_permissions(
+            deliverable_info,
+            zuul_projects,
             workdir,
             mk_warning,
             mk_error,
