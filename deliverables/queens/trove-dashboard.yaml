@@ -12,5 +12,12 @@ releases:
       - hash: 683bcdc0b0385fde23e22dcf2f6841b7a5242bb4
         repo: openstack/trove-dashboard
     version: 10.0.0.0b3
+  - projects:
+      - hash: bd33e730f52889a6979e7d751e6732ce06806774
+        repo: openstack/trove-dashboard
+    version: 10.0.0.0rc1
 repository-settings:
   openstack/trove-dashboard: {}
+branches:
+  - location: 10.0.0.0rc1
+    name: stable/queens
