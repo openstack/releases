@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 944bcf0ba50fc7d9bc59f1a3a863481dfd6c89c9
+  - projects:
+      - hash: 3ab2358a3539b2a99146ba7297400bb0958a0093
+        repo: openstack/bifrost
+    version: 4.0.1
 branches:
   - name: stable/pike
     location: 4.0.0
