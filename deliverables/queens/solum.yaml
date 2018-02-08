@@ -8,5 +8,12 @@ releases:
     projects:
       - repo: openstack/solum
         hash: a0ee3a2a3635f66cd41b93599b8fe036ddb1e500
+  - version: 5.5.1
+    projects:
+      - repo: openstack/solum
+        hash: fb4878589b9bc27eeb4857deaa7ab12287236302
+branches:
+  - location: 5.5.1
+    name: stable/queens
 repository-settings:
   openstack/solum: {}
