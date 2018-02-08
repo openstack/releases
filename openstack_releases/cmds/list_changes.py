@@ -197,6 +197,13 @@ def main():
         help='do not remove temporary files',
     )
     parser.add_argument(
+        '--no-shortcut',
+        dest='shortcut',
+        default=True,
+        action='store_false',
+        help='if a tag has been applied, skip the repo',
+    )
+    parser.add_argument(
         'input',
         nargs='*',
         help=('YAML files to validate, defaults to '
@@ -319,6 +326,9 @@ def main():
             if tag_exists:
                 print('%s %s exists on git server already' %
                       (project['repo'], new_release['version']))
+                if args.shortcut:
+                    print('skipping further processing')
+                    continue
 
             # Start by checking out master, always. We need the repo
             # checked out before we can tell if the stable branch
