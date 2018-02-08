@@ -3,6 +3,9 @@ launchpad: keystone
 release-model: cycle-with-milestones
 team: keystone
 type: service
+branches:
+  - location: 13.0.0.0rc1
+    name: stable/queens
 releases:
   - version: 13.0.0.0b1
     projects:
@@ -16,5 +19,20 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 48486544f32ac627dbee9d7af879b42ed3ec7b54
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 30afb87247b6f6b7afbe431139e3471a2739aa1a
+cycle-highlights:
+  - |
+    Keystone now offers a better story for applications interacting with
+    OpenStack APIs with the use of `application credentials <http://specs.openstack.org/openstack/keystone-specs/specs/keystone/queens/application-credentials.html>`_.
+  - |
+    A new assignment type has been added to allow for more secure RBAC called
+    `system scope <http://specs.openstack.org/openstack/keystone-specs/specs/keystone/queens/system-scope.html>`_.
+  - |
+    Keystone introduced an experimental unified limits API to help improve
+    quota enforcement, see the `documentation <https://docs.openstack.org/keystone/latest/admin/identity-unified-limits.html>`_
+    for more information.
 repository-settings:
   openstack/keystone: {}
