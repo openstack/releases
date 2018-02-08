@@ -9,6 +9,11 @@ releases:
       - hash: 43a031921d8fb84da43a6642ed290bdfd52f65b5
         repo: openstack/blazar-nova
     version: 1.0.0
+  - projects:
+      - repo: openstack/blazar-nova
+        hash: ce1adf582508aea7d24bbd08720307d4b97d5e02
+    version: 1.0.1
+    diff-start: 0.3.0
 branches:
   - name: stable/queens
     location: 1.0.0
