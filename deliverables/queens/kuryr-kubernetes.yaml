@@ -8,9 +8,17 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 04d46d016f8f583e48b6480a15feca38c63ae801
-    highlights: |
-      * Introduced port pools feature.
-      * Support for running in containers as K8s network addon.
-      * Introduced kuryr-daemon service.
+  - version: 0.4.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: e5f03218d60c36f150597316df107fc19f7b9448
+branches:
+  - location: 0.4.0
+    name: stable/queens
+cycle-highlights:
+  - Introduced port pools feature.
+  - Support for running in containers as K8s network addon.
+  - Introduced kuryr-daemon service.
+  - Introduced liveness and readiness probes for kuryr-controller.
 repository-settings:
   openstack/kuryr-kubernetes: {}
