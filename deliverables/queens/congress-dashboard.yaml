@@ -13,5 +13,12 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: 1e12c93aec41b2eb771471118db55c48dcc96f23
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 247f4d70b3b471dc26c1e4a047e8e3a5610eb9b7
 repository-settings:
   openstack/congress-dashboard: {}
+branches:
+  - location: 2.0.0.0rc1
+    name: stable/queens
