@@ -16,5 +16,12 @@ releases:
     projects:
       - repo: openstack/manila
         hash: a07d5229704841d5a8a6333b375ece4b6e0f9269
+  - projects:
+      - hash: 6368a9e887f5f3e51c8013c94fd92565279fb3e7
+        repo: openstack/manila
+    version: 6.0.0.0rc1
 repository-settings:
   openstack/manila: {}
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
