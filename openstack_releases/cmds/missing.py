@@ -127,8 +127,16 @@ def main():
                 # Look for the tarball associated with the tag and
                 # report if that exists.
                 if link_mode == 'tarball':
+
                     tb_url = links.tarball_url(version, project)
                     errors.extend(check_signed_file('tarball', tb_url))
+
+                    sdist_name = pythonutils.guess_sdist_name(project)
+                    pypi_info = pythonutils.get_pypi_info(sdist_name)
+                    if not pypi_info:
+                        print('  apparently not a python module')
+                        continue
+
                     wheel_2_errors = list(
                         check_url(
                             'python 2 wheel',
@@ -168,8 +176,6 @@ def main():
                             )
                         )
 
-                    sdist_name = pythonutils.guess_sdist_name(project)
-                    pypi_info = pythonutils.get_pypi_info(sdist_name)
                     if version not in pypi_info.get('releases', {}):
                         msg = ('{} dist with version {} '
                                'not uploaded to PyPI').format(

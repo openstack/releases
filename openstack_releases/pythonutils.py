@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import json
 import logging
 import os
 import os.path
@@ -66,4 +67,7 @@ def get_pypi_info(dist_name):
     LOG.debug('looking at PyPI for {}'.format(dist_name))
     url = 'https://pypi.python.org/pypi/{}/json'.format(dist_name)
     LOG.debug(url)
-    return requests.get(url).json()
+    try:
+        return requests.get(url).json()
+    except json.decoder.JSONDecodeError:
+        return {}
