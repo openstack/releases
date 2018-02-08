@@ -504,6 +504,31 @@ def validate_releases(deliverable_info, zuul_projects,
                                                 project['hash'], mk_error):
                     continue
 
+                # Report if the version has already been
+                # tagged. We expect it to not exist, but neither
+                # case is an error because sometimes we want to
+                # import history and sometimes we want to make new
+                # releases.
+                version_exists = gitutils.commit_exists(
+                    workdir, project['repo'], release['version'],
+                )
+                if version_exists:
+                    actual_sha = gitutils.sha_for_tag(
+                        workdir,
+                        project['repo'],
+                        release['version'],
+                    )
+                    if actual_sha != project['hash']:
+                        mk_error(
+                            ('Version %s in %s is on '
+                             'commit %s instead of %s') %
+                            (release['version'],
+                             project['repo'],
+                             actual_sha,
+                             project['hash']))
+                    print('tag exists, skipping further validation')
+                    continue
+
                 # Report if the SHA exists or not (an error if it
                 # does not).
                 sha_exists = gitutils.commit_exists(
@@ -515,11 +540,6 @@ def validate_releases(deliverable_info, zuul_projects,
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
-
-                # Check the presence of tag in the references
-                version_exists = gitutils.commit_exists(
-                    workdir, project['repo'], release['version'],
-                )
 
                 # Check that the sdist name and tarball-base name match.
                 if link_mode == 'tarball':
@@ -554,159 +574,139 @@ def validate_releases(deliverable_info, zuul_projects,
                                     % (project['repo'], release['version'],
                                        action, expected, sdist))
 
-                # Report if the version has already been
-                # tagged. We expect it to not exist, but neither
-                # case is an error because sometimes we want to
-                # import history and sometimes we want to make new
-                # releases.
-                if version_exists:
-                    actual_sha = gitutils.sha_for_tag(
-                        workdir,
-                        project['repo'],
-                        release['version'],
-                    )
-                    if actual_sha != project['hash']:
-                        mk_error(
-                            ('Version %s in %s is on '
-                             'commit %s instead of %s') %
-                            (release['version'],
-                             project['repo'],
-                             actual_sha,
-                             project['hash']))
+                print('Found new version {} for {}'.format(
+                    release['version'], project['repo']))
+                new_releases[release['version']] = release
+                if prev_projects and project['repo'] not in prev_projects:
+                    print('not included in previous release for %s: %s' %
+                          (prev_version, ', '.join(sorted(prev_projects))))
                 else:
-                    print('Found new version {} for {}'.format(
-                        release['version'], project['repo']))
-                    new_releases[release['version']] = release
-                    if prev_projects and project['repo'] not in prev_projects:
-                        print('not included in previous release for %s: %s' %
-                              (prev_version, ', '.join(sorted(prev_projects))))
+
+                    release_type, was_explicit = get_release_type(
+                        deliverable_info, project, workdir,
+                    )
+                    if was_explicit:
+                        print('found explicit release-type {!r}'.format(
+                            release_type))
                     else:
+                        print('release-type not given, '
+                              'guessing {!r}'.format(release_type))
 
-                        release_type, was_explicit = get_release_type(
-                            deliverable_info, project, workdir,
-                        )
-                        if was_explicit:
-                            print('found explicit release-type {!r}'.format(
-                                release_type))
-                        else:
-                            print('release-type not given, '
-                                  'guessing {!r}'.format(release_type))
-
-                        # If this is a puppet module, ensure
-                        # that the tag and metadata file
-                        # match.
-                        if release_type == 'puppet':
-                            print('applying puppet version rules')
-                            puppet_ver = puppetutils.get_version(
-                                workdir, project['repo'])
-                            if puppet_ver != release['version']:
-                                mk_error(
-                                    '%s metadata contains "%s" '
-                                    'but is being tagged "%s"' % (
-                                        project['repo'],
-                                        puppet_ver,
-                                        release['version'],
-                                    )
+                    # If this is a puppet module, ensure
+                    # that the tag and metadata file
+                    # match.
+                    if release_type == 'puppet':
+                        print('applying puppet version rules')
+                        puppet_ver = puppetutils.get_version(
+                            workdir, project['repo'])
+                        if puppet_ver != release['version']:
+                            mk_error(
+                                '%s metadata contains "%s" '
+                                'but is being tagged "%s"' % (
+                                    project['repo'],
+                                    puppet_ver,
+                                    release['version'],
                                 )
-
-                        # If this is a npm module, ensure
-                        # that the tag and metadata file
-                        # match.
-                        if release_type == 'nodejs':
-                            print('applying nodejs version rules')
-                            npm_ver = npmutils.get_version(
-                                workdir, project['repo'])
-                            if npm_ver != release['version']:
-                                mk_error(
-                                    '%s package.json contains "%s" '
-                                    'but is being tagged "%s"' % (
-                                        project['repo'],
-                                        npm_ver,
-                                        release['version'],
-                                    )
-                                )
-
-                        # If we know the previous version and the
-                        # project is a python deliverable make sure
-                        # the requirements haven't changed in a way
-                        # not reflecting the version.
-                        if prev_version and release_type in _PYTHON_RELEASE_TYPES:
-                            # For the master branch, enforce the
-                            # rules. For other branches just warn if
-                            # the rules are broken because there are
-                            # cases where we do need to support point
-                            # releases with requirements updates.
-                            if series_name == defaults.RELEASE:
-                                report = mk_error
-                            else:
-                                report = mk_warning
-                            requirements.find_bad_lower_bound_increases(
-                                workdir, project['repo'],
-                                prev_version, release['version'], project['hash'],
-                                report,
                             )
 
-                        for e in versionutils.validate_version(
-                                release['version'],
-                                release_type=release_type,
-                                pre_ok=(release_model in _USES_PREVER)):
-                            msg = ('could not validate version %r: %s' %
-                                   (release['version'], e))
+                    # If this is a npm module, ensure
+                    # that the tag and metadata file
+                    # match.
+                    if release_type == 'nodejs':
+                        print('applying nodejs version rules')
+                        npm_ver = npmutils.get_version(
+                            workdir, project['repo'])
+                        if npm_ver != release['version']:
+                            mk_error(
+                                '%s package.json contains "%s" '
+                                'but is being tagged "%s"' % (
+                                    project['repo'],
+                                    npm_ver,
+                                    release['version'],
+                                )
+                            )
+
+                    # If we know the previous version and the
+                    # project is a python deliverable make sure
+                    # the requirements haven't changed in a way
+                    # not reflecting the version.
+                    if prev_version and release_type in _PYTHON_RELEASE_TYPES:
+                        # For the master branch, enforce the
+                        # rules. For other branches just warn if
+                        # the rules are broken because there are
+                        # cases where we do need to support point
+                        # releases with requirements updates.
+                        if series_name == defaults.RELEASE:
+                            report = mk_error
+                        else:
+                            report = mk_warning
+                        requirements.find_bad_lower_bound_increases(
+                            workdir, project['repo'],
+                            prev_version, release['version'], project['hash'],
+                            report,
+                        )
+
+                    for e in versionutils.validate_version(
+                            release['version'],
+                            release_type=release_type,
+                            pre_ok=(release_model in _USES_PREVER)):
+                        msg = ('could not validate version %r: %s' %
+                               (release['version'], e))
+                        mk_error(msg)
+
+                    if is_independent:
+                        mk_warning('skipping descendant test for '
+                                   'independent project, verify '
+                                   'branch manually')
+
+                    else:
+                        # If this is the first version in the series,
+                        # check that the commit is actually on the
+                        # targeted branch.
+                        if not gitutils.check_branch_sha(workdir,
+                                                         project['repo'],
+                                                         series_name,
+                                                         project['hash']):
+                            msg = '%s %s not present in %s branch' % (
+                                project['repo'],
+                                project['hash'],
+                                series_name,
+                                )
                             mk_error(msg)
 
-                        if is_independent:
-                            mk_warning('skipping descendant test for '
-                                       'independent project, verify '
-                                       'branch manually')
-
-                        else:
-                            # If this is the first version in the series,
-                            # check that the commit is actually on the
-                            # targeted branch.
-                            if not gitutils.check_branch_sha(workdir,
-                                                             project['repo'],
-                                                             series_name,
-                                                             project['hash']):
-                                msg = '%s %s not present in %s branch' % (
-                                    project['repo'],
-                                    project['hash'],
-                                    series_name,
-                                    )
-                                mk_error(msg)
-
-                            if prev_version:
-                                # Check to see if we are re-tagging the same
-                                # commit with a new version.
-                                old_sha = gitutils.sha_for_tag(
+                        if prev_version:
+                            # Check to see if we are re-tagging the same
+                            # commit with a new version.
+                            old_sha = gitutils.sha_for_tag(
+                                workdir,
+                                project['repo'],
+                                prev_version,
+                            )
+                            if old_sha == project['hash']:
+                                # FIXME(dhellmann): This needs a test.
+                                print('Retagging the SHA with '
+                                      'a new version')
+                            else:
+                                # Check to see if the commit for the new
+                                # version is in the ancestors of the
+                                # previous release, meaning it is actually
+                                # merged into the branch.
+                                is_ancestor = gitutils.check_ancestry(
                                     workdir,
                                     project['repo'],
                                     prev_version,
+                                    project['hash'],
                                 )
-                                if old_sha == project['hash']:
-                                    # FIXME(dhellmann): This needs a test.
-                                    print('Retagging the SHA with '
-                                          'a new version')
-                                else:
-                                    # Check to see if the commit for the new
-                                    # version is in the ancestors of the
-                                    # previous release, meaning it is actually
-                                    # merged into the branch.
-                                    is_ancestor = gitutils.check_ancestry(
-                                        workdir,
-                                        project['repo'],
-                                        prev_version,
-                                        project['hash'],
-                                    )
-                                    if not is_ancestor:
-                                        mk_error(
-                                            '%s %s receiving %s '
-                                            'is not a descendant of %s' % (
-                                                project['repo'],
-                                                project['hash'],
-                                                release['version'],
-                                                prev_version,
-                                            )
+                                if not is_ancestor:
+                                    mk_error(
+                                        '%s %s receiving %s '
+                                        'is not a descendant of %s' % (
+                                            project['repo'],
+                                            project['hash'],
+                                            release['version'],
+                                            prev_version,
                                         )
+                                    )
 
         prev_version = release['version']
         prev_projects = set(p['repo'] for p in release['projects'])
