@@ -425,7 +425,7 @@ class HighlightsDirective(rst.Directive):
         series_highlights = self._get_deliverable_highlights(series)
         source_name = '<{}>'.format(__name__)
 
-        for team in sorted(series_highlights.keys()):
+        for team in sorted(series_highlights.keys(), key=lambda x: x.lower()):
             app.info('[highlights] rendering %s highlights for %s' %
                      (team.title(), series))
 
