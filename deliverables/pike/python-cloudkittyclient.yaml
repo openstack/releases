@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
@@ -9,8 +9,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: cf2b4f31c77d0590e1034cb9327d5eda832baa08
-    highlights: >
+    highlights: |
       Update on test requirements.
 branches:
   - name: stable/pike
     location: 1.1.0
+repository-settings:
+  openstack/python-cloudkittyclient: {}

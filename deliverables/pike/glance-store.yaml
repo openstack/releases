@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: glance-store
 release-model: cycle-with-intermediary
 team: glance
@@ -16,3 +16,5 @@ releases:
 branches:
   - name: stable/pike
     location: 0.21.0
+repository-settings:
+  openstack/glance_store: {}

@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-pankoclient
 release-model: cycle-with-intermediary
 team: Telemetry
@@ -13,3 +13,5 @@ releases:
 branches:
   - name: stable/pike
     location: 0.3.0
+repository-settings:
+  openstack/python-pankoclient: {}

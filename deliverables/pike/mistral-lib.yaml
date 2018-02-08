@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: mistral
 release-model: cycle-with-intermediary
 team: mistral
@@ -32,3 +32,5 @@ releases:
 branches:
   - name: stable/pike
     location: 0.3.0
+repository-settings:
+  openstack/mistral-lib: {}
