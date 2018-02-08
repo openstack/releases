@@ -1,0 +1,15 @@
+---
+launchpad: bifrost
+release-model: cycle-with-intermediary
+team: ironic
+type: other
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 03a6511f539bd53bc7f57e68a7b2773b54a43619
+branches:
+  - name: stable/queens
+    location: 5.0.0
+repository-settings:
+  openstack/bifrost: {}
