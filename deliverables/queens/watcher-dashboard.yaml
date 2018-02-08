@@ -4,6 +4,9 @@ release-model: cycle-with-intermediary
 release-type: python-pypi
 team: watcher
 type: horizon-plugin
+branches:
+  - name: stable/queens
+    location: 1.8.0
 releases:
   - version: 1.5.0
     projects:
@@ -17,5 +20,9 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 1aae6fe0aa44363606cbfb23d35df9ee5da14615
+  - version: 1.8.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 191d2dbd3ea1591146106385271ed9c86f7e7c14
 repository-settings:
   openstack/watcher-dashboard: {}
