@@ -13,5 +13,12 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: 67465501393b3be2f76b5ada4b3128237eeb54df
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 5c990707ea4aea9358d037e6989d7babb013501f
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/freezer-web-ui: {}
