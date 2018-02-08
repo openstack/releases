@@ -5,6 +5,15 @@ launchpad: glance
 release-model: cycle-with-milestones
 team: glance
 type: service
+branches:
+  - name: stable/queens
+    location: 16.0.0.0rc1
+cycle-highlights:
+  - Introduced the Image API v2.6, including interoperable image import
+  - Added a new import-method, 'web-download'
+  - Added import plugin scaffolding and a new import plugin that
+    injects image metadata upon import
+  - Updated the glance-manage and glance-scrubber tools
 releases:
   - version: 16.0.0.0b1
     projects:
@@ -18,5 +27,9 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 631add1ba849eac67ecb36ea4c90b57a300a96fa
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: d027102b2e8c41740f4f832868e634bc35cfc1cb
 repository-settings:
   openstack/glance: {}
