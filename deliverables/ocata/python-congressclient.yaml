@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-congressclient
 release-model: cycle-with-intermediary
 team: congress
@@ -12,3 +12,5 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: ab2eea35d535b4cb136f3c410d4b1f6280100ebb
+repository-settings:
+  openstack/python-congressclient: {}

@@ -17,8 +17,8 @@ releases:
       - repo: openstack/python-heatclient
         hash: 725dbf764fa876977a5ca19a2a1e082a25494eb8
     highlights: |
-        Fixed regression described in the bug:
-        https://bugs.launchpad.net/python-heatclient/+bug/1643507
+      Fixed regression described in the bug:
+      https://bugs.launchpad.net/python-heatclient/+bug/1643507
   - version: 1.7.0
     projects:
       - repo: openstack/python-heatclient
@@ -35,3 +35,5 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 082f728d179dc2bba64e9821eaec18f429aa15fd
+repository-settings:
+  openstack/python-heatclient: {}

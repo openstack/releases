@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-aodhclient
 release-model: cycle-with-intermediary
 team: Telemetry
@@ -13,3 +13,5 @@ releases:
       - repo: openstack/python-aodhclient
         hash: 2f7a9c4dac8683c5c91455c3eb421592e6be2a37
         tarball-base: aodhclient
+repository-settings:
+  openstack/python-aodhclient: {}

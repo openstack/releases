@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: glance-store
 release-model: cycle-with-intermediary
 team: glance
@@ -12,16 +12,17 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 6982b3c2e5f08d001b53413e6277a09013fd52df
-    highlights: >
+    highlights: |
       - Immediately raise exception when the Swift store is
         misconfigured to use both multi-tenant Swift and
         swift+config
       - Store the correct URL in the database with multi-tenant
         Swift storage
-      - Fix bug around volume sizes in Cinder storage
-      - Allow users to specify the Cinder volume type in Cinder
+      - Fix bug around volume sizes in Cinder storage - Allow users to specify the Cinder volume type in Cinder
         storage configuration
   - version: 0.20.0
     projects:
       - repo: openstack/glance_store
         hash: ee6840c92e637384061b9c8d213a81352466995e
+repository-settings:
+  openstack/glance_store: {}

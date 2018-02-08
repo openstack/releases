@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-cinderclient
 release-model: cycle-with-intermediary
 team: cinder
@@ -12,3 +12,5 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 63a3014dec7932437a579e8cb4ba4be79609c14c
+repository-settings:
+  openstack/python-brick-cinderclient-ext: {}

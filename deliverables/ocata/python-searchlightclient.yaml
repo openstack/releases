@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-searchlightclient
 release-model: cycle-with-intermediary
 team: searchlight
@@ -12,3 +12,5 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: 85497f478f3a4ea1a06c2136d197ff479f47fb60
+repository-settings:
+  openstack/python-searchlightclient: {}
