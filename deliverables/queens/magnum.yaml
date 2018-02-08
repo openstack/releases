@@ -1,0 +1,15 @@
+---
+launchpad: magnum
+release-model: cycle-with-intermediary
+team: magnum
+type: service
+releases:
+  - projects:
+      - hash: 710192a63fd36186e9669cc2ac00dca2cc4fcc81
+        repo: openstack/magnum
+    version: 6.0.0
+branches:
+  - name: stable/queens
+    location: 6.0.0
+repository-settings:
+  openstack/magnum: {}
