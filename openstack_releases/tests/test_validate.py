@@ -177,6 +177,7 @@ class TestValidateTeam(base.BaseTestCase):
             warnings.append,
             errors.append,
         )
+        print(warnings, errors)
         self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
 
@@ -1200,8 +1201,13 @@ class TestValidateNewReleases(base.BaseTestCase):
     team_data = yamlutils.loads(team_data_yaml)
 
     def test_all_repos(self):
+        # The repos in the tag, governance, and repository-settings
+        # match.
         deliverable_info = {
             'artifact-link-mode': 'none',
+            'repository-settings': {
+                'openstack/release-test': {},
+            },
             'releases': [
                 {'version': '1000.0.0',
                  'projects': [
@@ -1223,9 +1229,14 @@ class TestValidateNewReleases(base.BaseTestCase):
         self.assertEqual(0, len(warnings))
         self.assertEqual(0, len(errors))
 
-    def test_extra_repo(self):
+    def test_extra_repo_gov(self):
+        # The tag includes a repo not in governance.
         deliverable_info = {
             'artifact-link-mode': 'none',
+            'repository-settings': {
+                'openstack/release-test': {},
+                'openstack-infra/release-tools': {},
+            },
             'releases': [
                 {'version': '1000.0.0',
                  'projects': [
@@ -1250,12 +1261,83 @@ class TestValidateNewReleases(base.BaseTestCase):
         self.assertEqual(1, len(warnings))
         self.assertEqual(0, len(errors))
 
-    def test_missing_repo(self):
+    def test_missing_repo_gov(self):
+        # The tag is missing a repo in governance.
         deliverable_info = {
             'artifact-link-mode': 'none',
+            'repository-settings': {
+                'openstack/release-test': {},
+                'openstack/made-up-name': {},
+            },
             'releases': [
                 {'version': '1000.0.0',
                  'projects': [
+                     {'repo': 'openstack/release-test',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
+                     {'repo': 'openstack/made-up-name',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_new_releases(
+            deliverable_info,
+            'release-test',
+            self.team_data,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_extra_repo_info(self):
+        # The tag has a repo not in repository-settings or governance
+        # (2 warnings).
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'repository-settings': {
+            },
+            'releases': [
+                {'version': '1000.0.0',
+                 'projects': [
+                     {'repo': 'openstack/release-test',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
+                 ]}
+            ],
+        }
+        warnings = []
+        errors = []
+        validate.validate_new_releases(
+            deliverable_info,
+            'release-test',
+            self.team_data,
+            warnings.append,
+            errors.append,
+        )
+        print(warnings, errors)
+        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(errors))
+
+    def test_missing_repo_info(self):
+        # The tag is missing a repository that is in
+        # repository-settings.
+        deliverable_info = {
+            'artifact-link-mode': 'none',
+            'repository-settings': {
+                'openstack/release-test': {},
+                'openstack-infra/release-tools': {},
+            },
+            'releases': [
+                {'version': '1000.0.0',
+                 'projects': [
+                     {'repo': 'openstack/release-test',
+                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                      'tarball-base': 'openstack-release-test'},
                  ]}
             ],
         }

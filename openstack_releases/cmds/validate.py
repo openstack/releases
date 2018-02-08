@@ -725,9 +725,27 @@ def validate_new_releases(deliverable_info, deliverable_name,
         )
     for missing in expected_repos.difference(actual_repos):
         mk_warning(
-            'release %s is missing %s from the governance list' %
-            (final_release['version'], missing)
+            'release %s is missing %s, '
+            'which appears in the governance list: %s' %
+            (final_release['version'], missing, expected_repos)
         )
+    repository_settings = deliverable_info.get('repository-settings', {})
+    for repo in actual_repos:
+        if repo not in repository_settings:
+            # TODO(dhellmann): Turn this into a warning after the T
+            # series is open.
+            mk_warning(
+                'release %s includes repository %s '
+                'that is not in the repository-settings section' %
+                (final_release['version'], repo)
+            )
+    for missing in repository_settings.keys():
+        if missing not in actual_repos:
+            mk_warning(
+                'release %s is missing %s, '
+                'which appears in the repository-settings list' %
+                (final_release['version'], missing)
+            )
 
 
 def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
