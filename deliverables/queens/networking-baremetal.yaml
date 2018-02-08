@@ -1,0 +1,16 @@
+---
+launchpad: networking-baremetal
+team: ironic
+type: other
+release-model: cycle-with-intermediary
+include-pypi-link: yes
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: deb466b66c70cf8866c869267dfc89a8d6a84fe4
+branches:
+  - location: 1.0.0
+    name: stable/queens
+repository-settings:
+  openstack/networking-baremetal: {}
