@@ -7,16 +7,11 @@
 - project:
     check:
       jobs:
-        - openstack-tox-validate:
-            vars:
-              zuul_site_upload_logs: true
-        - releases-tox-list-changes:
-            vars:
-              zuul_site_upload_logs: true
+        - openstack-tox-validate
+        - releases-tox-list-changes
         - build-openstack-sphinx-docs:
             vars:
               sphinx_python: python3
-              zuul_site_upload_logs: true
 
     gate:
       jobs:
