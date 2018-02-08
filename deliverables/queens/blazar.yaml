@@ -1,6 +1,7 @@
 ---
 launchpad: blazar
 release-model: cycle-with-milestones
+release-notes: https://docs.openstack.org/releasenotes/blazar/unreleased.html
 team: blazar
 type: service
 releases:
@@ -12,5 +13,15 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 3c4f0644bd164b5f83224609d013c7b6bec8d3ee
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: a72e60dc3417f7c486eb2af04a0f0b66d03eebb4
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/queens
+cycle-highlights:
+  - Support resource monitoring. Blazar can react resource failures
+    happened in its freepool.
 repository-settings:
   openstack/blazar: {}
