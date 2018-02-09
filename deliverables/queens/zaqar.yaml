@@ -16,5 +16,12 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 14de6dc7f934b5bbe26df96a4971b8dbf30adbc3
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: f605dd9bae5c43811bcf32962825d8f65b60d6e6
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/zaqar: {}
