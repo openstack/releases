@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 9f9ae41d451cbf1dcf4d0951517a700b8d5db6b8
+  - version: 1.5.3
+    projects:
+      - repo: openstack/heat-agents
+        hash: ad804626c464d176c350f5e9232da22ca900dff1
+branches:
+  - name: stable/queens
+    location: 1.5.3
 repository-settings:
   openstack/heat-agents: {}
