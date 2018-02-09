@@ -16,5 +16,12 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: ddfdb0c925f502c90759442b6b1e6d71730f6aba
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: fbd7abb754318e1633d19409e2e5eaad74282801
+branches:
+  - name: stable/queens
+    location: 8.0.0.0rc1
 repository-settings:
   openstack/sahara: {}
