@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 8ed70a8322f78c7298c9c685143a1f916603ba0c
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: ffa0c5d512ff49698a53e491aa9e7747d92930f2
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/queens
 repository-settings:
   openstack/zaqar-ui: {}
