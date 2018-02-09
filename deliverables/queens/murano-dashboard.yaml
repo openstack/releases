@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: c3af64c5e63aca0f0b997e88e886d6ac71a5d20a
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 973b898cac5d831f06470dd1cc2a421fce06585b
 repository-settings:
   openstack/murano-dashboard: {}
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/queens
