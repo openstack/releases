@@ -3,5 +3,13 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: horizon-plugin
+branches:
+  - name: stable/queens
+    location: 0.11.0
+releases:
+  - projects:
+      - hash: d61d76a0e7b788ef08ed9367a79d7f8aaa61c8f3
+        repo: openstack/tacker-horizon
+    version: 0.11.0
 repository-settings:
   openstack/tacker-horizon: {}
