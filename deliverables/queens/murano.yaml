@@ -16,5 +16,12 @@ releases:
     projects:
       - repo: openstack/murano
         hash: d7a54d69f9107d79ff12f39d9ccf996426601cc4
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: 6339730c5509f8f1ee2f4aa9e09573687d6e96ca
 repository-settings:
   openstack/murano: {}
+branches:
+  - location: 5.0.0.0rc1
+    name: stable/queens
