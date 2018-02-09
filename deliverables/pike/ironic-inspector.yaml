@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 0d289393153b03bfbe5e8c5b99f4c043cf991b6c
+  - projects:
+      - hash: c5c460eac0d27e945f4cd2cc305b47ed62b6eada
+        repo: openstack/ironic-inspector
+    version: 6.0.1
 branches:
   - location: 6.0.0
     name: stable/pike
