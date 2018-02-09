@@ -16,8 +16,18 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: f1eba8073d9c25f7453911f0c7141959b2e0848c
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/horizon
+        hash: c2b5c642ee36d05ad0aa72ae9588ed4098607356
+branches:
+  - location: 13.0.0.0rc1
+    name: stable/queens
 cycle-highlights:
-  - Introduced drag and drop UI for Heat Orchestration Templates (HOT).
-    Previously only took plaintext files.
+  - Migrated the Roles and Key Pairs panels to be AngularJS panels
+  - Use server side filtering across the UI
+  - Added support for MKS consoles, Neutron Trunks, and loading multiple policy files
+  - Updated all project related documentation
+  - Moved Heat dashboard into a seperate Horizon plugin and merged Django OpenStack Auth into Horizon
 repository-settings:
   openstack/horizon: {}
