@@ -18,5 +18,12 @@ releases:
       - hash: 0f6c9548c4fcff858e38d704a49f31568c50a744
         repo: openstack/networking-odl
     version: 12.0.0.0b3
+  - projects:
+      - hash: ff80c7decc196cae5d7940aabbf14e5c37a94335
+        repo: openstack/networking-odl
+    version: 12.0.0.0rc1
 repository-settings:
   openstack/networking-odl: {}
+branches:
+  - location: 12.0.0.0rc1
+    name: stable/queens
