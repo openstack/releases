@@ -17,5 +17,21 @@ releases:
       - hash: c26d282af240a29c3fc9575b9f9a520137941531
         repo: openstack/networking-bagpipe
     version: 8.0.0.0b3
+  - projects:
+      - hash: 81589f55f2a9fa7bf3bf39d4318c68a868cc75cf
+        repo: openstack/networking-bagpipe
+    version: 8.0.0.0rc1
 repository-settings:
   openstack/networking-bagpipe: {}
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/queens
+cycle-highlights:
+  - The agent extension for BGPVPN was refactored to use
+    new extensible RPCs, and now covers most the BGPVPN API
+    including the bgpvpn-routes-control extension.
+  - The ML2 implementation now works with the vxlan type
+    driver.
+  - The project now provides a driver for the networking-sfc
+    project, internally relying on BGP VPNs to setup service
+    chains.
