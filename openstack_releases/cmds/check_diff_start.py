@@ -68,10 +68,7 @@ def main():
 
     def cleanup_workdir():
         if args.cleanup:
-            try:
-                shutil.rmtree(workdir)
-            except:
-                pass
+            shutil.rmtree(workdir, True)
         else:
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)

@@ -21,9 +21,9 @@ import fixtures
 import mock
 from oslotest import base
 
+from openstack_releases.cmds import validate
 from openstack_releases import defaults
 from openstack_releases import gitutils
-from openstack_releases.cmds import validate
 from openstack_releases import yamlutils
 
 

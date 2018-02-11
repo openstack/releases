@@ -106,11 +106,8 @@ def main():
 
     def cleanup_workdir():
         if args.cleanup:
-            try:
-                verbose('cleaning up temporary files in {}'.format(workdir))
-                shutil.rmtree(workdir)
-            except:
-                pass
+            verbose('cleaning up temporary files in {}'.format(workdir))
+            shutil.rmtree(workdir, True)
         else:
             print('not cleaning up {}'.format(workdir))
     atexit.register(cleanup_workdir)
