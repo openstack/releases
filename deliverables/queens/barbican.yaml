@@ -16,5 +16,12 @@ releases:
       - hash: 3d3ea33e8bd6435f442aed696bb70337d9b08265
         repo: openstack/barbican
     version: 6.0.0.0b3
+  - projects:
+      - hash: 5b525f6b0a7cf5342a9ffa3ca3618028d6d53649
+        repo: openstack/barbican
+    version: 6.0.0.0rc1
 repository-settings:
   openstack/barbican: {}
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
