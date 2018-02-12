@@ -35,6 +35,8 @@ import requests
 from openstack_releases import defaults
 from openstack_releases import gitutils
 from openstack_releases import governance
+from openstack_releases import hound
+from openstack_releases import pythonutils
 from openstack_releases import release_notes
 from openstack_releases import yamlutils
 
@@ -180,6 +182,11 @@ def show_watched_queries(branch, repo):
         )
 
 
+def show_dependency_listings(package_name, official_repos):
+    header('Users of {}'.format(package_name))
+    hound.show_dependency_listings(package_name, official_repos)
+
+
 def main():
     if not sys.stdout.encoding:
         # Wrap sys.stdout with a writer that knows how to handle
@@ -238,6 +245,10 @@ def main():
     atexit.register(cleanup_workdir)
 
     team_data = governance.get_team_data()
+    official_repos = set(
+        r.name
+        for r in governance.get_repositories(team_data)
+    )
 
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
@@ -588,5 +599,11 @@ def main():
             else:
                 print('\n')
                 print(notes)
+
+            if 'library' in deliverable_info.get('type', 'other'):
+                show_dependency_listings(
+                    pythonutils.guess_sdist_name(project),
+                    official_repos,
+                )
 
     return 0
