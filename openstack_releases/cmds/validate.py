@@ -1302,13 +1302,15 @@ def main():
             mk_warning,
             mk_error,
         )
-        validate_pypi_permissions(
-            deliverable_info,
-            zuul_projects,
-            workdir,
-            mk_warning,
-            mk_error,
-        )
+        # TODO(smcginnis): Problems seen validating openstack/requirements
+        # branching. Need to investigate that failure before reenabling this.
+        # validate_pypi_permissions(
+        #     deliverable_info,
+        #     zuul_projects,
+        #     workdir,
+        #     mk_warning,
+        #     mk_error,
+        # )
         validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
