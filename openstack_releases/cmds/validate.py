@@ -400,7 +400,7 @@ _TYPE_TO_RELEASE_TYPE = {
 _PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
 
 
-def get_release_type(deliverable_info, project, workdir):
+def get_release_type(deliverable_info, repo, workdir):
     """Return tuple with release type and boolean indicating whether it
     was explicitly set.
 
@@ -415,10 +415,10 @@ def get_release_type(deliverable_info, project, workdir):
     if deliverable_info.get('include-pypi-link', False):
         return ('python-pypi', False)
 
-    if puppetutils.looks_like_a_module(workdir, project['repo']):
+    if puppetutils.looks_like_a_module(workdir, repo):
         return ('puppet', False)
 
-    if npmutils.looks_like_a_module(workdir, project['repo']):
+    if npmutils.looks_like_a_module(workdir, repo):
         return ('nodejs', False)
 
     return ('python-service', False)
@@ -451,7 +451,7 @@ def validate_release_type(deliverable_info,
         print('checking release-type for {}'.format(project['repo']))
 
         release_type, was_explicit = get_release_type(
-            deliverable_info, project, workdir,
+            deliverable_info, project['repo'], workdir,
         )
         if was_explicit:
             print('found explicit release-type {!r}'.format(
@@ -615,7 +615,7 @@ def validate_releases(deliverable_info, zuul_projects,
                 else:
 
                     release_type, was_explicit = get_release_type(
-                        deliverable_info, project, workdir,
+                        deliverable_info, project['repo'], workdir,
                     )
                     if was_explicit:
                         print('found explicit release-type {!r}'.format(
