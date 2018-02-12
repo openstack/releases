@@ -27,11 +27,9 @@ branches:
   - location: 8.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - The agent extension for BGPVPN was refactored to use
-    new extensible RPCs, and now covers most the BGPVPN API
-    including the bgpvpn-routes-control extension.
-  - The ML2 implementation now works with the vxlan type
-    driver.
-  - The project now provides a driver for the networking-sfc
-    project, internally relying on BGP VPNs to setup service
-    chains.
+  - 'The agent extension for BGPVPN was refactored to use new extensible RPCs, and
+    now covers most the BGPVPN API including the bgpvpn-routes-control extension.'
+  - 'The ML2 implementation now works with the vxlan type driver.'
+  - 'The project now provides a driver for the networking-sfc project, internally
+    relying on BGP VPNs to setup service chains.'
+release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/queens.html

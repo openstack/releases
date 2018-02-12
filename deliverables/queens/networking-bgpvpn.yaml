@@ -27,11 +27,12 @@ branches:
   - location: 8.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - This release introduces a new API extension 'bgpvpn-routes-control' that offers.
+  - 'This release introduces a new API extension ''bgpvpn-routes-control'' that offers.
     fine-grained control of route advertisements in BGPVPNs, including API-defined
-    static routes, and inter-BGPVPN route leaking.
-  - This release introduces a new API extension 'bgpvpn-vni' that allows to control
-    the VXLAN VNI used for E-VPN.
-  - The BGPVPN reference driver has been refactored to use more extensible RPC messages.
-  - The BGPVPN reference driver and now implements E-VPN for OVS (linuxbridge was already
-    supported).
+    static routes, and inter-BGPVPN route leaking.'
+  - 'This release introduces a new API extension ''bgpvpn-vni'' that allows to control
+    the VXLAN VNI used for E-VPN.'
+  - 'The BGPVPN reference driver has been refactored to use more extensible RPC messages.'
+  - 'The BGPVPN reference driver and now implements E-VPN for OVS (linuxbridge was
+    already supported).'
+release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/queens.html

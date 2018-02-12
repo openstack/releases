@@ -29,10 +29,10 @@ releases:
       - repo: openstack/freezer-dr
         hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
 cycle-highlights:
-  - Bug fixes
-  - Policy in code
-  - Improving and publishing docs
-  - moving to freezer-tempest-plugin
+  - 'Bug fixes'
+  - 'Policy in code'
+  - 'Improving and publishing docs'
+  - 'moving to freezer-tempest-plugin'
 branches:
   - location: 6.0.0.0rc1
     name: stable/queens
@@ -40,3 +40,4 @@ repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
   openstack/freezer-dr: {}
+release-notes: https://docs.openstack.org/releasenotes/freezer/queens.html
