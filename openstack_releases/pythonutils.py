@@ -16,6 +16,7 @@ import json
 import logging
 import os
 import os.path
+import xmlrpc.client
 
 import requests
 
@@ -71,3 +72,14 @@ def get_pypi_info(dist_name):
         return requests.get(url).json()
     except json.decoder.JSONDecodeError:
         return {}
+
+
+def get_pypi_uploaders(dist_name):
+    client = xmlrpc.client.ServerProxy('https://pypi.python.org/pypi')
+    roles = client.package_roles(dist_name)
+    uploaders = set(
+        acct
+        for role, acct in roles
+        if role in ('Owner', 'Maintainer')
+    )
+    return uploaders
