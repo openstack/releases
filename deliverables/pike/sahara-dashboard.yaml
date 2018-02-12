@@ -1,0 +1,16 @@
+---
+launchpad: sahara
+release-model: cycle-with-milestones
+team: sahara
+type: horizon-plugin
+releases:
+  - projects:
+      - repo: openstack/sahara-dashboard
+        hash: 7394ec618343bc997e097958ac897b1a33d3cb1c
+    version: 7.0.0
+  - projects:
+      - repo: openstack/sahara-dashboard
+        hash: d56477dba6f4073ab4df6126bb489743779a3270
+    version: 7.0.1
+repository-settings:
+  openstack/sahara-dashboard: {}
