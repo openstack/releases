@@ -28,6 +28,10 @@ releases:
       - hash: 4a9566adf6c1bb19981aee6973f5f677be5a9d7b
         repo: openstack/congress
     version: 6.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/congress
+        hash: 8b18f0574a6619279b7fc6169f74f2bbea0e30f1
 branches:
   - location: 6.0.0.0rc1
     name: stable/pike
