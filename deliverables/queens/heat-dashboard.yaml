@@ -12,5 +12,12 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: cf178ef7a254ae17bb16e76baf1cd641cf553d97
+  - version: 1.0.2
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 56e3c1f76acce4530cb5e37b263d10a3a4913ab4
+branches:
+  - name: stable/queens
+    location: 1.0.2
 repository-settings:
   openstack/heat-dashboard: {}
