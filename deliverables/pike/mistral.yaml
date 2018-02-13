@@ -71,6 +71,14 @@ releases:
         hash: f3b819d9d484c728284f788693559a0f4b51b3f9
       - repo: openstack/mistral-extra
         hash: ab93854e49ea225dd5e35eeb12adb08f774c9543
+  - version: 5.2.2
+    projects:
+      - repo: openstack/mistral
+        hash: 13497ae3e1ec94e47faa16fa781aa96c2e411fe9
+      - repo: openstack/mistral-dashboard
+        hash: f3b819d9d484c728284f788693559a0f4b51b3f9
+      - repo: openstack/mistral-extra
+        hash: ca7fce0394c5c36ad873318850a95dce6d50cc88
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
