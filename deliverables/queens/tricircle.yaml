@@ -17,5 +17,14 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 1cbc3bb2c05fcd90a1a447be2e27e00199bb9277
+  - version: 5.0.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 147a38f5731cc6c549a8002fb19bc79c7a3e31f9
+branches:
+  - location: 5.0.0
+    name: stable/queens
 repository-settings:
   openstack/tricircle: {}
+cycle-highlights:
+  - Basic support for LBaas and QoS in Tricircle
