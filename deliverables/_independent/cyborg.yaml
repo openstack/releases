@@ -1,0 +1,14 @@
+---
+launchpad: openstack-cyborg
+team: cyborg
+type: service
+branches:
+  - name: stable/queens
+    location: 0.1.0
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/cyborg
+        hash: a437d5668035c44d6164fe7b46b069e4ed4544e9
+repository-settings:
+  openstack/cyborg: {}
