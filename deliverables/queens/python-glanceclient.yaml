@@ -6,9 +6,7 @@ include-pypi-link: yes
 launchpad: python-glanceclient
 release-model: cycle-with-intermediary
 releases:
-  - highlights: |
-      - Multiple bugfixes, specially to interfacing with image import
-    projects:
+  - projects:
       - hash: cf62e1635d6ca6b025829e8bbf6294cb8a1fd982
         repo: openstack/python-glanceclient
     version: 2.9.0

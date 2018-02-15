@@ -6,31 +6,19 @@ storyboard: 760
 team: OpenStackSDK
 type: library
 releases:
-  - highlights: |
-      Added support for Neutron Extensions and QoS features, and updated
-      keystone User related tasks to work properly across domains.
-    projects:
+  - projects:
       - hash: e42192e8393f01e825a8b8f5628f7813ae49c4bb
         repo: openstack-infra/shade
     version: 1.23.0
-  - highlights: |
-      Removed keystoneclient dependencies. Added support for making volumes
-      bootable and booting servers in groups. Fixed an image task upload issue.
-    projects:
+  - projects:
       - hash: 8a6f0f9bc3f240e2b26e727bdb20ab770cfb3a6e
         repo: openstack-infra/shade
     version: 1.24.0
-  - highlights: |
-      Added helper methods for working in alternate auth contexts. Clean up
-      unneeded objects created as part of image uploads.
-    projects:
+  - projects:
       - hash: e11ecfaf98d220596ad013af42b25bbb8326df8b
         repo: openstack-infra/shade
     version: 1.25.0
-  - highlights: |
-      Removed the last of the use of the OpenStack python client libraries
-      in favor of direct REST calls through keystoneauth.
-    projects:
+  - projects:
       - hash: d8d0fca288b5da8f27096e474ff6b52095fa69cb
         repo: openstack-infra/shade
     version: 1.26.0

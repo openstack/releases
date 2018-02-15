@@ -13,21 +13,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 6ab9f17bfe90ee8dff4c8414e5ff5797f3e46778
-    highlights: |
-      This release includes support for retrieving the available SR-IOV VFs
-      and enabling SR-IOV on VMs' vswitch ports.
   - version: 3.0.0
     projects:
       - repo: openstack/os-win
         hash: 204156f69d580e1ddbf3359b3995d2b9f9b76444
-    highlights: |
-      Includes the processutils module, which can be used to group parent and
-      child processes into jobs, ensuring that when the parent process is
-      killed, the child processes are killed as well. Additionally, resource
-      limits can be set on jobs.
-      Adds VHD attach / detach, which can be used for adding support for
-      volume backup support for the Windows SMB Cinder driver.
-      Removes deprecated methods (vmutils) and exception.
 branches:
   - name: stable/queens
     location: 3.0.0

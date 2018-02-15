@@ -9,8 +9,6 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 075cb4993d7dcd51a9e8928571e27d88e213b0fc
-    highlights: |
-      Drop py34 target. Remove log translations. Delete unused directory.
 branches:
   - name: stable/queens
     location: 1.2.0
