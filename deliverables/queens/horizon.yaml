@@ -24,10 +24,12 @@ branches:
   - location: 13.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - Migrated the Roles and Key Pairs panels to be AngularJS panels
-  - Use server side filtering across the UI
-  - Added support for MKS consoles, Neutron Trunks, and loading multiple policy files
-  - Updated all project related documentation
-  - Moved Heat dashboard into a seperate Horizon plugin and merged Django OpenStack Auth into Horizon
+  - 'Migrated the Roles and Key Pairs panels to be AngularJS panels'
+  - 'Use server side filtering across the UI'
+  - 'Added support for MKS consoles, Neutron Trunks, and loading multiple policy files'
+  - 'Updated all project related documentation'
+  - 'Moved Heat dashboard into a seperate Horizon plugin and merged Django OpenStack
+    Auth into Horizon'
 repository-settings:
   openstack/horizon: {}
+release-notes: https://docs.openstack.org/releasenotes/horizon/queens.html

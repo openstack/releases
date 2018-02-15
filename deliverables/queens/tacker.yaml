@@ -12,9 +12,10 @@ releases:
       - repo: openstack/tacker
         hash: 3b404d8dacbd60f2e4b15adae57f1d9142142912
 cycle-highlights:
-  - Support containerised vnf support to Kubernetes VIM
-  - Support vnffg updation
-  - Support monitoring the vnf with private zabbix
-  - Support for multiple classifiers per chain through VNFFG templates
+  - 'Support containerised vnf support to Kubernetes VIM'
+  - 'Support vnffg updation'
+  - 'Support monitoring the vnf with private zabbix'
+  - 'Support for multiple classifiers per chain through VNFFG templates'
 repository-settings:
   openstack/tacker: {}
+release-notes: https://docs.openstack.org/releasenotes/tacker/queens.html

@@ -5,7 +5,7 @@ launchpad: designate
 release-model: cycle-with-milestones
 team: designate
 type: service
-release-notes: https://docs.openstack.org/releasenotes/designate/unreleased.html
+release-notes: https://docs.openstack.org/releasenotes/designate/queens.html
 releases:
   - version: 6.0.0.0b1
     projects:
@@ -24,9 +24,9 @@ releases:
       - repo: openstack/designate
         hash: 97393a1b8c37e4ef1204d5e8f86692fe09a8a1cf
 cycle-highlights:
-  - Removed legacy V1 API interface
-  - Policy files are now just overrides to default rules
-  - Accessible upgrades - DNS Queries will keep resolving during update
+  - 'Removed legacy V1 API interface'
+  - 'Policy files are now just overrides to default rules'
+  - 'Accessible upgrades - DNS Queries will keep resolving during update'
 branches:
   - location: 6.0.0.0rc1
     name: stable/queens

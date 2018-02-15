@@ -22,9 +22,10 @@ branches:
   - location: 9.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - Currency for operating system level; full support for Xenial
-  - Currency for databases; MySQL 5.7, Vertica 9.0, Cassandra 3.11
-  - Currency of databases; DB2 11.1, Postgres 9.6
-  - Implement root-enable/root-disable for Redis
-  - Add support for the IBM Power architecture
-  - Migration to Zuul v3, policy-in-code, keystone v2 deprecation
+  - 'Currency for operating system level; full support for Xenial'
+  - 'Currency for databases; MySQL 5.7, Vertica 9.0, Cassandra 3.11'
+  - 'Currency of databases; DB2 11.1, Postgres 9.6'
+  - 'Implement root-enable/root-disable for Redis'
+  - 'Add support for the IBM Power architecture'
+  - 'Migration to Zuul v3, policy-in-code, keystone v2 deprecation'
+release-notes: https://docs.openstack.org/releasenotes/trove/queens.html

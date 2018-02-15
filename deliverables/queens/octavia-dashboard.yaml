@@ -2,7 +2,7 @@
 include-pypi-link: yes
 storyboard: 909
 release-model: cycle-with-milestones
-release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/unreleased.html
+release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/queens.html
 release-type: horizon
 team: octavia
 type: horizon-plugin
@@ -27,8 +27,8 @@ branches:
   - location: 1.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - The initial release of the Octavia dashboard for Horizon includes
-    significantly improved load balancer detail pages and workflows compared
-    to the, now deprecated, neutron-lbaas-dashboard.
+  - 'The initial release of the Octavia dashboard for Horizon includes significantly
+    improved load balancer detail pages and workflows compared to the, now deprecated,
+    neutron-lbaas-dashboard.'
 repository-settings:
   openstack/octavia-dashboard: {}
