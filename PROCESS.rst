@@ -268,10 +268,13 @@ RC1
      and being declared as correct.
 
 8. Create new branch specific jobs for our two branchless projects,
-   devstack-gate and tempest, and configure Zuul to run them on all
+   devstack-gate and tempest, and configure both repos to run them on all
    changes to those projects to protect against regressions with the
-   stable branches and these tools. For example, see
-   https://review.openstack.org/375110.
+   stable branches and these tools. The jobs are defined in the tempest
+   repository, for example, see https://review.openstack.org/521888.
+   Tempest runs the jobs in the check pipeline only, voting;
+   devstack-gate runs them in check pipeline only, non-voting, for example
+   see https://review.openstack.org/545144.
 
 9. Create periodic bitrot jobs for the new branch in Jenkins Job
    Builder and add them to Zuul's periodic pipeline. For example, see
