@@ -276,9 +276,9 @@ RC1
    devstack-gate runs them in check pipeline only, non-voting, for example
    see https://review.openstack.org/545144.
 
-9. Create periodic bitrot jobs for the new branch in Jenkins Job
-   Builder and add them to Zuul's periodic pipeline. For example, see
-   https://review.openstack.org/#/c/375092.
+9. Add the new branch to the list of branches in the periodic-stable job
+   templates in openstack-zuul-jobs. For example, see
+   https://review.openstack.org/545268/.
 
 10. Add periodic bitrot jobs to tempest. For example, see
     https://review.openstack.org/#/c/375271.
