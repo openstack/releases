@@ -557,8 +557,18 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
             )
             continue
 
+        # Names like "openstack_requirements" are translated to
+        # "openstack-requirements" in the PyPI API.
+        sdist = sdist.replace('_', '-')
+        print('sdist name {!r}'.format(sdist))
+
         uploaders = pythonutils.get_pypi_uploaders(sdist)
-        if 'openstackci' not in uploaders:
+        if not uploaders:
+            mk_error(
+                'could not find users with permission to upload packages '
+                'for {}. Is the sdist name correct?'.format(sdist)
+            )
+        elif 'openstackci' not in uploaders:
             mk_error(
                 'openstackci does not have permission to upload packages '
                 'for {}. Current owners include: {}'.format(
@@ -1302,15 +1312,13 @@ def main():
             mk_warning,
             mk_error,
         )
-        # TODO(smcginnis): Problems seen validating openstack/requirements
-        # branching. Need to investigate that failure before reenabling this.
-        # validate_pypi_permissions(
-        #     deliverable_info,
-        #     zuul_projects,
-        #     workdir,
-        #     mk_warning,
-        #     mk_error,
-        # )
+        validate_pypi_permissions(
+            deliverable_info,
+            zuul_projects,
+            workdir,
+            mk_warning,
+            mk_error,
+        )
         validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
         validate_releases(
             deliverable_info,
