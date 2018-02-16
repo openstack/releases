@@ -1,0 +1,24 @@
+---
+launchpad: sahara
+release-model: cycle-with-intermediary
+team: sahara
+type: library
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 85fd5506fad64fe87693ba5a6a31b26638f82fb6
+  - version: 6.0.1
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+  - version: 6.0.2
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+  - version: 6.0.3
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+repository-settings:
+  openstack/sahara-extra: {}
