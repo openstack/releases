@@ -1,0 +1,12 @@
+---
+team: Infrastructure
+type: library
+storyboard: 456
+include-pypi-link: yes
+repository-settings:
+  openstack-infra/python-storyboardclient: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - hash: 911834599aadf28fb21bf2bb7bc1d190d8ec3e18
+        repo: openstack-infra/python-storyboardclient
