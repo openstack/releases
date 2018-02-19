@@ -3,6 +3,7 @@ launchpad: designate
 team: designate
 type: other
 include-pypi-link: yes
+release-type: python-pypi
 releases:
   - version: 0.1.0
     projects:
@@ -16,3 +17,9 @@ releases:
     projects:
       - repo: openstack/designate-tempest-plugin
         hash: ba1288637e40f938b39f6ff10127217cdc9300e6
+  - version: 0.4.0
+    projects:
+      - repo: openstack/designate-tempest-plugin
+        hash: bbc01e351086f11ae7387ca0593f67e13d90a395
+repository-settings:
+  openstack/designate-tempest-plugin: {}
