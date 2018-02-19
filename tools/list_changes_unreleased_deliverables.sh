@@ -15,7 +15,7 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
 fi
 
 # Figure out the current series from the releases directory.
-current_series=$(python -c 'import openstack_releases.defaults; print openstack_releases.defaults.RELEASE')
+current_series=$(python -c 'import openstack_releases.defaults; print(openstack_releases.defaults.RELEASE)')
 if [ -z "$current_series" ]; then
     echo "Could not determine the current release series."
     exit 1
