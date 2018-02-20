@@ -119,7 +119,7 @@ _RELEASE_JOBS_FOR_TYPE = {
 
 
 def require_release_jobs_for_repo(deliv, zuul_projects, repo,
-                                  release_type, mk_warning, mk_error):
+                                  release_type, messages):
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
@@ -140,7 +140,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
         return
 
     if repo.name not in zuul_projects:
-        mk_error(
+        messages.error(
             'did not find %s in %s' % (repo.name, ZUUL_PROJECTS_FILENAME),
         )
     else:
@@ -159,7 +159,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                 if j in expected_jobs
             ]
             if len(found_jobs) == 0:
-                mk_error(
+                messages.error(
                     '{filename} no release job specified for {repo}, '
                     'one of {expected!r} needs to be included in {existing!r} '
                     'or no release will be '
@@ -171,7 +171,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                     ),
                 )
             elif len(found_jobs) > 1:
-                mk_warning(
+                messages.warning(
                     '{filename} multiple release jobs specified for {repo}, '
                     '{existing!r} should include *one* of '
                     '{expected!r}, found {found!r}'.format(
@@ -193,7 +193,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                     if j in templates and j not in expected_jobs
                 ]
                 if bad_jobs:
-                    mk_error(
+                    messages.error(
                         '{filename} has unexpected release jobs '
                         '{bad_jobs!r} for release-type {wrong_type} '
                         'but {repo} uses release-type {release_type}'.format(

@@ -14,11 +14,16 @@
 
 from oslotest import base
 
+from openstack_releases.cmds import validate
 from openstack_releases import deliverable
 from openstack_releases import project_config
 
 
 class TestReleaseJobsStandard(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.msg = validate.MessageCollector()
 
     def test_no_artifact_flag(self):
         deliv = deliverable.Deliverable(
@@ -37,18 +42,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         )
         zuul_projects = {
         }
-        warnings = []
-        errors = []
         project_config.require_release_jobs_for_repo(
             deliv,
             {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            warnings.append,
-            errors.append,
+            self.msg,
         )
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(0, len(errors))
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
 
     def test_retired_flag(self):
         deliv = deliverable.Deliverable(
@@ -67,18 +69,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         )
         zuul_projects = {
         }
-        warnings = []
-        errors = []
         project_config.require_release_jobs_for_repo(
             deliv,
             {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            warnings.append,
-            errors.append,
+            self.msg,
         )
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(0, len(errors))
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
 
     def test_no_zuul_projects(self):
         deliv = deliverable.Deliverable(
@@ -93,18 +92,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         )
         zuul_projects = {
         }
-        warnings = []
-        errors = []
         project_config.require_release_jobs_for_repo(
             deliv,
             {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            warnings.append,
-            errors.append,
+            self.msg,
         )
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(1, len(errors))
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(1, len(self.msg.errors))
 
     def test_one_expected_job(self):
         deliv = deliverable.Deliverable(
@@ -124,19 +120,16 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 ],
             },
         }
-        warnings = []
-        errors = []
         project_config.require_release_jobs_for_repo(
             deliv,
             zuul_projects,
             deliv.repos[0],
             'python-pypi',
-            warnings.append,
-            errors.append,
+            self.msg,
         )
-        print(warnings, errors)
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(0, len(errors))
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
 
     def test_two_expected_jobs(self):
         deliv = deliverable.Deliverable(
@@ -157,15 +150,12 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 ],
             }
         }
-        warnings = []
-        errors = []
         project_config.require_release_jobs_for_repo(
             deliv,
             zuul_projects,
             deliv.repos[0],
             'python-pypi',
-            warnings.append,
-            errors.append,
+            self.msg,
         )
-        self.assertEqual(0, len(warnings))
-        self.assertEqual(1, len(errors))
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(1, len(self.msg.errors))
