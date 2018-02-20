@@ -27,3 +27,7 @@ releases:
         hash: 9d9b477708fdce08db162a9bf3723cf7ee0df267
     highlights: Set the status code and error detail on exception
                 raise for status code > 400
+repository-settings:
+  openstack/python-ceilometerclient:
+    flags:
+      - retired
