@@ -4,19 +4,19 @@ team: cinder
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: 0.0
+  - version: "0.0"
     projects:
       - repo: openstack/python-cinderclient
         hash: 471704df644eced17026c280b0aab9e549718e14
-  - version: 0.1
+  - version: "0.1"
     projects:
       - repo: openstack/python-cinderclient
         hash: 08e1714c57f8efa1404d2bca065742b909b37a33
-  - version: 0.2
+  - version: "0.2"
     projects:
       - repo: openstack/python-cinderclient
         hash: 8e48619f96eb4d51c0f05b66ddf73b1338c99f3c
-  - version: 1.0.0
+  - version: "1.0.0"
     projects:
       - repo: openstack/python-cinderclient
         hash: 2e6be694c17d505bf52e339bccf6848776493ffe

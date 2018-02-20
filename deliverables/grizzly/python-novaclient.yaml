@@ -4,23 +4,23 @@ team: nova
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: 2.10.0
+  - version: "2.10.0"
     projects:
       - repo: openstack/python-novaclient
         hash: 18deaf47918e5baa655fabb9776d294571363608
-  - version: 2.11.0
+  - version: "2.11.0"
     projects:
       - repo: openstack/python-novaclient
         hash: 0933c64251b24e1558676ef7f9d6ab446e386fea
-  - version: 2.11.1
+  - version: "2.11.1"
     projects:
       - repo: openstack/python-novaclient
         hash: 132465231a1517aa79c5fad0eb4949a7e02bd763
-  - version: 2.12.0
+  - version: "2.12.0"
     projects:
       - repo: openstack/python-novaclient
         hash: 655765a5eac161be8209e62950ecde7b4da84d1a
-  - version: 2.13.0
+  - version: "2.13.0"
     projects:
       - repo: openstack/python-novaclient
         hash: 5073b8080ad28bc45c22acc748919cfb2695533b

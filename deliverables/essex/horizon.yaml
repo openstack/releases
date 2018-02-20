@@ -4,15 +4,15 @@ team: horizon
 type: service
 release-model: cycle-with-milestones
 releases:
-  - version: 2012.1
+  - version: "2012.1"
     projects:
       - repo: openstack/horizon
         hash: a58db8503b17ec8efc5e07658a5da0e66e2b0345
-  - version: 2012.1.1
+  - version: "2012.1.1"
     projects:
       - repo: openstack/horizon
         hash: ae9034c9e9a837e40f161e8337a48c0abdcf90a1
-  - version: 2012.1.3
+  - version: "2012.1.3"
     projects:
       - repo: openstack/horizon
         hash: b67f21f9b49316c32c716430540ce41688d7081d

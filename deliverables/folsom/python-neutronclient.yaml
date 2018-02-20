@@ -4,19 +4,19 @@ team: neutron
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: 0.1.0
+  - version: "0.1.0"
     projects:
       - repo: openstack/python-neutronclient
         hash: 50c46f61d1a76b5429c20ad61203afedc7c508bb
-  - version: 0.1.1
+  - version: "0.1.1"
     projects:
       - repo: openstack/python-neutronclient
         hash: d955740671000b2b915c8c6717d12a5e52f3b89e
-  - version: 2.0
+  - version: "2.0"
     projects:
       - repo: openstack/python-neutronclient
         hash: 67fbdeaee961f6034180d4a53dbf8e36132291b8
-  - version: 2.1
+  - version: "2.1"
     projects:
       - repo: openstack/python-neutronclient
         hash: bc7ba5e19d4e9039146ca37f77a0b232522cddc8

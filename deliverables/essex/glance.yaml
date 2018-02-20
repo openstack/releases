@@ -4,15 +4,15 @@ team: glance
 type: service
 release-model: cycle-with-milestones
 releases:
-  - version: 2012.1
+  - version: "2012.1"
     projects:
       - repo: openstack/glance
         hash: f460a99baee6e37b624c070527f70d4a868b6223
-  - version: 2012.1.1
+  - version: "2012.1.1"
     projects:
       - repo: openstack/glance
         hash: 11c7e948eedbca0ebc2d9b3b94ad89b20d341609
-  - version: 2012.1.2
+  - version: "2012.1.2"
     projects:
       - repo: openstack/glance
         hash: a9fa1838c8bdf072fc6a9a8c390970953aa3cb32
