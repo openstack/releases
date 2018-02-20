@@ -36,7 +36,12 @@ class TestValidateBugTracker(base.BaseTestCase):
 
     def test_no_tracker(self):
         validate.validate_bugtracker(
-            {},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -46,7 +51,12 @@ class TestValidateBugTracker(base.BaseTestCase):
     def test_launchpad_invalid_name(self, get):
         get.return_value = mock.Mock(status_code=404)
         validate.validate_bugtracker(
-            {'launchpad': 'nonsense-name'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'launchpad': 'nonsense-name'},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -56,7 +66,12 @@ class TestValidateBugTracker(base.BaseTestCase):
     def test_launchpad_valid_name(self, get):
         get.return_value = mock.Mock(status_code=200)
         validate.validate_bugtracker(
-            {'launchpad': 'oslo.config'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'launchpad': 'oslo.config'},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -67,7 +82,12 @@ class TestValidateBugTracker(base.BaseTestCase):
         import requests
         get.side_effect = requests.exceptions.ConnectionError('testing')
         validate.validate_bugtracker(
-            {'launchpad': 'oslo.config'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'launchpad': 'oslo.config'},
+            ),
             self.msg,
         )
         self.assertEqual(1, len(self.msg.warnings))
@@ -99,21 +119,16 @@ class TestValidateBugTracker(base.BaseTestCase):
             }
         ]
         validate.validate_bugtracker(
-            {'storyboard': '760'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'storyboard': '760'},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
-
-    @mock.patch('requests.get')
-    def test_storyboard_invalid_id(self, get):
-        get.return_value = mock.Mock(status_code=200)
-        validate.validate_bugtracker(
-            {'storyboard': 'name-not-id'},
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
 
     @mock.patch('requests.get')
     def test_storyboard_no_such_project(self, get):
@@ -131,7 +146,12 @@ class TestValidateBugTracker(base.BaseTestCase):
             },
         ]
         validate.validate_bugtracker(
-            {'storyboard': '-760'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'storyboard': '-760'},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
