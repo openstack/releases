@@ -7,7 +7,8 @@
 - project:
     check:
       jobs:
-        - openstack-tox-validate
+        - openstack-tox-validate:
+            voting: false
         - releases-tox-list-changes
         - build-openstack-sphinx-docs:
             vars:
@@ -15,7 +16,6 @@
 
     gate:
       jobs:
-        - openstack-tox-validate
         - build-openstack-sphinx-docs:
             vars:
               sphinx_python: python3
