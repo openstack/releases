@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-cinder
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-cinder/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 2c26a062dd8088f18984d15fc4de68dced393975
+repository-settings:
+  openstack/puppet-cinder: {}

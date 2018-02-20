@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-trove
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-trove/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 706e354af035570f53c808621fef4372c166c0f4
+repository-settings:
+  openstack/puppet-trove: {}

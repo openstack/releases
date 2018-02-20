@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-neutron
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-neutron/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 80c1c153e14e17a6bc65da8c06d6038b2464d443
+repository-settings:
+  openstack/puppet-neutron: {}

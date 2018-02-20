@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: neutron-lbaas-dashboard
 team: octavia
 type: horizon-plugin
@@ -12,10 +12,5 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas-dashboard
         hash: 181b92c2a158f38598894053a1d2637134c11c6b
-    highlights: |-
-      * The following locales have been added: de fr id ja ko_KR ru zh_CN
-      * Improved default resource naming
-      * Improved subnet drop down lists
-      * Improved wizard help
-      * Improved loading indicators
-      * Improved load balancer list output
+repository-settings:
+  openstack/neutron-lbaas-dashboard: {}

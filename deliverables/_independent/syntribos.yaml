@@ -8,22 +8,13 @@ releases:
     projects:
       - repo: openstack/syntribos
         hash: a2f1d7c222ca42dc1043b41a255782101c84557c
-    highlights: |
-        * Fixing a bug due to getlogin() in syntribos
-        * Updating readme, added a `how to section`
-        * Adding extension for common utility functions
-        * Adding pause/resume feature
-        * Introducing payload and template downloading
   - version: 0.4.0
     projects:
       - repo: openstack/syntribos
         hash: c4586a374b2e02942b89bf1e9248ae00d7cd2d55
-    highlights: |
-        * Multithreaded network IO to significantly improve performance
-        * Introduced meta-variable files to simplify template creation
   - version: 0.5.0
     projects:
       - repo: openstack/syntribos
         hash: 575348df936525c2d9c4f1d735950259bb6179ca
-    highlights: |
-        * Fixed bugs involving payload downloading
+repository-settings:
+  openstack/syntribos: {}

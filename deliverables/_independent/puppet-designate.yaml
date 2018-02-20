@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-designate
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-designate/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: b35282c1e9196605e55a717ed1e128427ae2dbf8
+repository-settings:
+  openstack/puppet-designate: {}

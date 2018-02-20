@@ -14,3 +14,7 @@ releases:
       - repo: openstack/pylockfile
         hash: c8798cedfbc4d738c99977a07cde2de54687ac6c
         tarball-base: lockfile
+repository-settings:
+  openstack/pylockfile:
+    flags:
+      -retired

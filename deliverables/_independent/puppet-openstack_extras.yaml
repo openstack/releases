@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-openstack-extras
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-openstack_extras/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: c4692d504f1a0c98a744260b555f4fe6863914e5
+repository-settings:
+  openstack/puppet-openstack_extras: {}

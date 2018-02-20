@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-murano
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-murano/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 365b36b66608b90fe349d423fd5c40161da129f3
+repository-settings:
+  openstack/puppet-murano: {}

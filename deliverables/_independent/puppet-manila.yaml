@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-manila
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-manila/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 110a0b4d02d7038ec2ed1fecc635543b42d7f0bd
+repository-settings:
+  openstack/puppet-manila: {}

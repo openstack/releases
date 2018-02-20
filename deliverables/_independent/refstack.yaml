@@ -2,7 +2,6 @@
 launchpad: refstack
 team: RefStack
 type: service
-
 releases:
   - version: 1.0.0
     projects:
@@ -20,3 +19,5 @@ releases:
     projects:
       - repo: openstack/refstack
         hash: c78ce638e3a51dbb62d333a2e0a6595b5e2a42af
+repository-settings:
+  openstack/refstack: {}

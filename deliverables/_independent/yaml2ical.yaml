@@ -28,10 +28,6 @@ releases:
     projects:
       - repo: openstack-infra/yaml2ical
         hash: b14b2fb3cf3d4080c249b0c21b6232160e2af352
-    highlights: >
-      - Add a startdate to a meeting rather than starting when yaml2ical is run
-      - Adds the ability to "skip" meetings on certain dates.
-      - Add a batching function to jinja2 to tidy up generated HTML
   - version: 0.6.1
     projects:
       - repo: openstack-infra/yaml2ical
@@ -40,5 +36,5 @@ releases:
     projects:
       - repo: openstack-infra/yaml2ical
         hash: 2bc859072ffd3a6687084f98ab356bcaff27c830
-    highlights: >
-      - Add a "adhoc" frequency for items that should not generate iCal events
+repository-settings:
+  openstack-infra/yaml2ical: {}

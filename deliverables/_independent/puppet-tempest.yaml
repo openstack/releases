@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-tempest
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-tempest/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 64afed10b0fe2bece09f1968f2db0574738f2f04
+repository-settings:
+  openstack/puppet-tempest: {}

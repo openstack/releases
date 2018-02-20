@@ -8,61 +8,25 @@ releases:
     projects:
       - repo: openstack/sahara-tests
         hash: baf526ef907789fea4ea999cae288cd0d1c6d493
-    highlights: >
-        This release is the first release of sahara tests, which includes
-        scenario framework for testing sahara. Also, sahara tests framework
-        now includes tempest plugin for testing sahara.
   - version: 0.2.0
     projects:
       - repo: openstack/sahara-tests
         hash: 54fea524ba25ce36beebf8c1f50bb096eac552ae
   - version: 0.3.0
-    highlights: >
-        All high-level tests based on tempest.lib (proper API Tempest
-        tests including the data_processing client, CLI and python client
-        tests) have been consolidated here.
-        Also, the number of those tests increased significantly.
-        Scenario tests have been enhanced with the support for the newer
-        plugins, more documentation and cleanup of EDP jobs (especially
-        Java-based), and os-client-config is used to read the credentials.
-        This release supports the Liberty, Mitaka and Newton releases of
-        OpenStack.
     projects:
       - repo: openstack/sahara-tests
         hash: 4ebba66236c943ec36a0e7c6f6e583038bb321c7
   - version: 0.4.0
-    highlights: >
-        The amount of API and CLI tests was increased and made
-        more robusts (after-tests cleanups).
-        The scenario test framework now requires less parameters and on
-        the other side there are more parameters that can be overridden.
-        The time of each test phase is now clearly shown.
-        This release supports the Mitaka, Newton and Ocata releases of
-        OpenStack.
     projects:
       - repo: openstack/sahara-tests
         hash: 02e2208f76b94d33a9c261f9ba4eb2a2ea574420
   - version: 0.4.1
-    highlights: >
-        The sample (node groups and cluster) templates used by various
-        Tempest-like tests have been updated to include all supported
-        versions since Mitaka.
-        The CLI tests received new tests and various fixes.
-        The Tempest plugin does not depend anymore on the unstable
-        Tempest scenario manager.
-        This release supports the Mitaka, Newton and Ocata releases of
-        OpenStack.
     projects:
       - repo: openstack/sahara-tests
         hash: f40c460b3637e57a8c34b18de6b931f289495302
   - version: 0.5.0
-    highlights: >
-        The sample (node groups and cluster) templates used by various
-        Tempest-like tests have been updated to include all supported
-        versions since Newton.
-        This release supports the Newton, Ocata and Pike releases of
-        OpenStack, with a bump of few requirements (especially
-        related to Tempest).
     projects:
       - repo: openstack/sahara-tests
         hash: e638bcc351b74fab5a3be6b89f5d9b8e172cbd92
+repository-settings:
+  openstack/sahara-tests: {}

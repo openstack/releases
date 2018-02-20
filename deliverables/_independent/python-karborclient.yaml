@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-karborclient
 team: karbor
 type: library
@@ -11,3 +11,5 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 5217c987e3fd3583e5c95e4e1c09171d4e719170
+repository-settings:
+  openstack/python-karborclient: {}

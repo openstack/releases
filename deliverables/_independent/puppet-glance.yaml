@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-glance
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-glance/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 659f1deabb8b5af6aa9764c8733f5b43357d860d
+repository-settings:
+  openstack/puppet-glance: {}

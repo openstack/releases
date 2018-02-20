@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-ceilometer
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-ceilometer/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: d1669c086b598ce15290198177a7b5ccb43e5bba
+repository-settings:
+  openstack/puppet-ceilometer: {}

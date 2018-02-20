@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-ironic
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-ironic/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: edec46c7e59df3198123daa76f76bea11da93533
+repository-settings:
+  openstack/puppet-ironic: {}

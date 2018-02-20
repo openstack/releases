@@ -4,10 +4,6 @@ team: kolla
 type: other
 release-notes: https://docs.openstack.org/releasenotes/kolla/mitaka.html
 releases:
-  # - version: 1.0.0
-  #   projects:
-  #     - repo: openstack/kolla
-  #       hash: 1a1958f209d69abfdc6634d687824f1ace62a626
   - version: 1.1.0
     projects:
       - repo: openstack/kolla
@@ -64,3 +60,5 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 79fd649114acecaa2c6159ff43b6dd428df425db
+repository-settings:
+  openstack/kolla: {}

@@ -19,14 +19,9 @@ releases:
     projects:
       - repo: openstack/networking-calico
         hash: bcdaded33fa1a9aadd1d66b64872bba5b62fbf4c
-        highlights: >
-           Support for host routes.
-           DHCP agent rework for correct IPv6 multiple network RA behaviour.
-           New config for DHCP agent connection to etcd.
   - version: 1.3.1
     projects:
       - repo: openstack/networking-calico
         hash: fc7f8e829373284e1dfc516637ae8ee42f838c2e
-        highlights: >
-           OpenStack coexistence with other orchestrators using Calico.
-           Make Neutron driver more resilient to Etcd connection outage.
+repository-settings:
+  openstack/networking-calico: {}

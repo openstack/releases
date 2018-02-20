@@ -1,6 +1,6 @@
 ---
 launchpad: hacking
-team: Quality Assurance
+team: 'Quality Assurance'
 type: other
 include-pypi-link: yes
 releases:
@@ -32,10 +32,6 @@ releases:
     projects:
       - repo: openstack-dev/hacking
         hash: ce26036d816a4e2bd99c73c23fe794b4fc5a0a67
-  # - version: 0.6.0
-  #   projects:
-  #     - repo: openstack-dev/hacking
-  #       hash: cf90af6281796c11bf0d98e8eb1747b09a9f663c
   - version: 0.7.0
     projects:
       - repo: openstack-dev/hacking
@@ -120,3 +116,5 @@ releases:
     projects:
       - repo: openstack-dev/hacking
         hash: d842b77cab8ea1ac76c006b7d99455c835475549
+repository-settings:
+  openstack-dev/hacking: {}

@@ -5,7 +5,6 @@ type: other
 release-notes: https://docs.openstack.org/releasenotes/networking-odl/
 include-pypi-link: yes
 releases:
-  # liberty
   - version: 1.0.0
     projects:
       - repo: openstack/networking-odl
@@ -14,12 +13,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: 5ae9d46bd373a2ecc1f606d2ccaeea0d1bd95bea
-  # mitaka
   - version: 2.0.0
     projects:
       - repo: openstack/networking-odl
         hash: d81e8e1ed9b2f53cc418f76874fffdb24286f789
-  # newton
   - version: 3.0.0
     projects:
       - repo: openstack/networking-odl
@@ -32,7 +29,6 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: bf223e972780e29968f4beedb290378b1b1cc887
-  # ocata
   - version: 4.0.0
     projects:
       - repo: openstack/networking-odl
@@ -46,3 +42,5 @@ branches:
     location: 3.0.0
   - name: stable/ocata
     location: 4.0.0
+repository-settings:
+  openstack/networking-odl: {}

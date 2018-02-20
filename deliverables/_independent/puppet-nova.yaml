@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-nova
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-notes:
   8.1.0: http://docs.openstack.org/releasenotes/puppet-nova/mitaka.html
@@ -18,3 +18,5 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: 3ec47ae7ae47459e28e647a4beea0ab6885cba15
+repository-settings:
+  openstack/puppet-nova: {}
