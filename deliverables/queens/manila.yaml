@@ -20,6 +20,19 @@ releases:
       - hash: 6368a9e887f5f3e51c8013c94fd92565279fb3e7
         repo: openstack/manila
     version: 6.0.0.0rc1
+  - projects:
+      - hash: 4a40da15fe0e9688c363371fd998ef7c3ba321ee
+        repo: openstack/manila
+    version: 6.0.0.0rc2
+cycle-highlights:
+  - |
+    Added drivers for Infinidat, MapR-FS, and Veritas
+    back ends.
+  - |
+    Added APIs for listing export locations per share and per
+    share instance.
+  - |
+    Added IPv6 support for Dell-EMC and NetApp back ends.
 repository-settings:
   openstack/manila: {}
 branches:
