@@ -257,6 +257,10 @@ class Deliverable(object):
         for name, repo in sorted(self._repos.items()):
             yield repo
 
+    @property
+    def known_repo_names(self):
+        return set(self._repos.keys())
+
     def get_repo(self, name):
         return self._repos[name]
 

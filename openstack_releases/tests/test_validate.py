@@ -202,7 +202,12 @@ class TestValidateReleaseNotes(base.BaseTestCase):
 
     def test_no_link(self):
         validate.validate_release_notes(
-            {},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -210,7 +215,14 @@ class TestValidateReleaseNotes(base.BaseTestCase):
 
     def test_invalid_link(self):
         validate.validate_release_notes(
-            {'release-notes': 'https://docs.openstack.org/no-such-page'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={
+                    'release-notes': 'https://docs.openstack.org/no-such-page',
+                },
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -218,8 +230,13 @@ class TestValidateReleaseNotes(base.BaseTestCase):
 
     def test_valid_link(self):
         validate.validate_release_notes(
-            {'release-notes':
-             'https://docs.openstack.org/releasenotes/oslo.config'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={'release-notes':
+                      'https://docs.openstack.org/releasenotes/oslo.config'},
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -227,11 +244,41 @@ class TestValidateReleaseNotes(base.BaseTestCase):
 
     def test_invalid_link_multi(self):
         validate.validate_release_notes(
-            {
-                'release-notes': {
-                    'openstack/releases': 'https://docs.openstack.org/no-such-page',
-                }
-            },
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={
+                    'repository-settings': {
+                        'openstack/releases': {},
+                    },
+                    'release-notes': {
+                        'openstack/releases':
+                        'https://docs.openstack.org/no-such-page',
+                    }
+                },
+            ),
+            self.msg,
+        )
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(1, len(self.msg.errors))
+
+    def test_unknown_repo(self):
+        validate.validate_release_notes(
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={
+                    'repository-settings': {
+                        'openstack/release-test': {},
+                    },
+                    'release-notes': {
+                        'openstack/oslo.config':
+                        'https://docs.openstack.org/releasenotes/oslo.config',
+                    }
+                },
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -239,42 +286,20 @@ class TestValidateReleaseNotes(base.BaseTestCase):
 
     def test_valid_link_multi(self):
         validate.validate_release_notes(
-            {
-                'release-notes': {
-                    'openstack/releases': 'https://docs.openstack.org/releasenotes/oslo.config',
-                }
-            },
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
-
-
-class TestValidateDeliverableType(base.BaseTestCase):
-
-    def setUp(self):
-        super().setUp()
-        self.msg = validate.MessageCollector()
-
-    def test_no_type(self):
-        validate.validate_type(
-            {},
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
-
-    def test_invalid_type(self):
-        validate.validate_type(
-            {'type': 'not-valid'},
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
-
-    def test_valid_type(self):
-        validate.validate_type(
-            {'type': 'library'},
+            deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='name',
+                data={
+                    'repository-settings': {
+                        'openstack/releases': {},
+                    },
+                    'release-notes': {
+                        'openstack/releases':
+                        'https://docs.openstack.org/releasenotes/oslo.config',
+                    },
+                },
+            ),
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))

@@ -252,14 +252,24 @@ def validate_team(deliv, team_data, messages):
     LOG.debug('owned by team {}'.format(deliv.team))
 
 
-def validate_release_notes(deliverable_info, messages):
+def validate_release_notes(deliv, messages):
     "Make sure the release notes page exists, if it is specified."
     header('Validate Release Notes')
-    if 'release-notes' not in deliverable_info:
+    notes_link = deliv.release_notes
+    if not notes_link:
         print('no release-notes given')
         return
-    notes_link = deliverable_info['release-notes']
     if isinstance(notes_link, dict):
+        # Dictionary mapping repositories to links. We don't want any
+        # repositories that are not known, so check that as well as
+        # the actual links.
+        for repo_name in sorted(notes_link.keys()):
+            if repo_name not in deliv.known_repo_names:
+                messages.error(
+                    'linking to release notes for unknown '
+                    'repository {}'.format(
+                        repo_name)
+                )
         links = list(notes_link.values())
     else:
         links = [notes_link]
@@ -268,22 +278,8 @@ def validate_release_notes(deliverable_info, messages):
         if (rn_resp.status_code // 100) != 2:
             messages.error('Could not fetch release notes page %s: %s' %
                            (link, rn_resp.status_code))
-
-
-def validate_type(deliverable_info, messages):
-    "Determine the deliverable type. Require an explicit value."
-    header('Validate Type')
-    deliverable_type = deliverable_info.get('type')
-    if not deliverable_type:
-        messages.error(
-            'No deliverable type, must be one of %r' %
-            sorted(list(_VALID_TYPES))
-        )
-    elif deliverable_type not in _VALID_TYPES:
-        messages.error(
-            'Invalid deliverable type %r, must be one of %r' %
-            (deliverable_type, sorted(list(_VALID_TYPES)))
-        )
+        else:
+            LOG.debug('{} OK'.format(link))
 
 
 def get_model(deliverable_info, series_name):
@@ -1327,11 +1323,11 @@ def main():
             name=deliverable_name,
             data=deliverable_info,
         )
+
         clone_deliverable(deliv, workdir, messages)
         validate_bugtracker(deliv, messages)
         validate_team(deliv, team_data, messages)
-        validate_release_notes(deliverable_info, messages)
-        validate_type(deliverable_info, messages)
+        validate_release_notes(deliv, messages)
         validate_model(deliverable_info, series_name, messages)
         validate_release_type(
             deliverable_info,
