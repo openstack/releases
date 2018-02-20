@@ -13,14 +13,9 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: 1a2820da3ea70e2c39960875e4b5af13c6354df8
-    highlights: |-
-      * Deprecated neutron CLI
-      * Added FWaaS V2 commands for OSC plugin with documentation
-      * Added common utilities for OSC plugin implementation
   - projects:
       - hash: 0c8a457da182be28d3d4d0eb33cbaeeb4156b307
         repo: openstack/python-neutronclient
     version: 6.1.1
-    highlights: '* Add BGP VPN OSC commands'
 repository-settings:
   openstack/python-neutronclient: {}

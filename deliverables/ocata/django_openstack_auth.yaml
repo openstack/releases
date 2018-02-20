@@ -12,19 +12,13 @@ releases:
     projects:
       - repo: openstack/django_openstack_auth
         hash: a40234be311eae11ca22497a82a82ab404d09a7c
-    highlights: |
-      This release includes full support for Django 1.10, and removes token revocation on logout and project switch.
   - version: 3.1.0
     projects:
       - repo: openstack/django_openstack_auth
         hash: ea208c774f6707d50b72a72c14d76a5ed0177bc9
-    highlights: |
-      This release includes support for Keystone to Keystone Federation. Allowing the user to switch keystone providers. Fixes a policy short circuit bug where complex policy rules weren't fully specified.
   - version: 3.1.1
     projects:
       - repo: openstack/django_openstack_auth
         hash: 0c195604f6e0bc214309193eb0de0a46677626a5
-    highlights: |
-      This release includes a fix for federated authentication, as well as translation imports.
 repository-settings:
   openstack/django_openstack_auth: {}

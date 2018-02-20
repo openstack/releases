@@ -20,18 +20,6 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 4ae6790d82542738edbb531a829b60ff8a44a3fe
-    highlights: |-
-      * Server-side push notifications for ML2
-      * Allow 0 in port range for securitygrouprule object
-      * Stop using legacy facade
-      * XenAPI: Support daemon mode for rootwrap
-      * Add a ReST client for placement API
-      * Multiple OVO implementations
-      * DVR: fix csnat port missing after router update
-      * Fix netns_cleanup interrupted on rwd I/O
-      * Use neutron-lib
-      * SR-IOV: remove ml2_conf_sriov.ini from oslo-config-generator
-      * Linux Bridge: driver support for QoS egress minimum bandwidth
   - version: 10.0.0.0rc1
     projects:
       - repo: openstack/neutron
@@ -49,45 +37,17 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 08bf51e99558af28e7a9ed231be9c1daeb2b76c2
-    highlights: '* Skip native DHCP notifications on status change'
   - version: 10.0.2
     projects:
       - repo: openstack/neutron
         hash: e664e2ff04c6f34aa71a2e584c6832647ed628ed
-    highlights: |-
-      * Multiple database layer performance optimizations
-      * Fixed crash when starting Neutron OVS Agent on Windows
-      * Remove stale floating IP addresses from rfp devices
-      * Set MTU on tap devices in Linux Bridge agent
-      * Stop making IP-specific provider rules in SG code
-      * Clear QoS rules from ports without a qos policy
-      * Enforce port QoS policies for all ports
-      * Remove minimum_bandwidth_rule from rules supported by Linuxbridge agent
-      * Send both gratuitous ARP REQUESTs and REPLYs
-      * Allow port security updates even without security-groups enabled
   - projects:
       - hash: 0f647edaf269a81e0dfe5a2d96da2b180467b680
         repo: openstack/neutron
     version: 10.0.3
-    highlights: |-
-      * Do not respond to ARP on IPv6-only interfaces
-      * DVR: Fix neutron metering agent to notify hosts hosting DVR
-      * Honor the common session options for the placement API
-      * Fix: set IPv6 forwarding when there's an IPv6 gw
-      * Disable RA and IPv6 forwarding on backup HA routers
-      * DVR: properly track SNAT traffic
-      * Drop IPv6 Router Advertisements in OVS firewall
-      * Set HA network port to DOWN when l3 agent starts
-      * ovs: bubble up failures into main thread in native ofctl mode
-      * Add IPv6 default route to DHCP namespace
   - projects:
       - hash: c7dde58a85fa70fdbe01644db2338666497315f6
         repo: openstack/neutron
     version: 10.0.4
-    highlights: |-
-      * Fixed compatibility with iptables shipped with RHEL 7.4
-      * Linuxbridge agent: detect existing IP on bridge
-      * Warn the admin of a potential OVS firewall_driver misconfiguration
-      * Enforce ethertype with IPv6 integer protocols
 repository-settings:
   openstack/neutron: {}

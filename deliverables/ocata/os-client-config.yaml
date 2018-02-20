@@ -13,26 +13,18 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 6c252384c2cff4eef68d93e33d9bf81c9b768d38
-    highlights: |
-      Fixed an attribute error caused by a name type and added a setter method for configuring Session constructor wrappers.
   - version: 1.23.0
     projects:
       - repo: openstack/os-client-config
         hash: ba57e4f509f3ba8768027b29e9233252148f1eef
-    highlights: |
-      Add work-around for volumev3 service type, add fuga.io to vendors
   - version: 1.24.0
     projects:
       - repo: openstack/os-client-config
         hash: e2a593d917533424c6de39774afb8566d4f81db2
-    highlights: |
-      Revert removal of ksc_auth patch which broke the cliff gate.
   - version: 1.25.0
     projects:
       - repo: openstack/os-client-config
         hash: 90c3d001b6ceb7a7b17bc3c4906c2b4746e24d44
-    highlights: |
-      Add OpenTelekomCloud to vendors
   - version: 1.26.0
     projects:
       - repo: openstack/os-client-config

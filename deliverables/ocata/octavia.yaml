@@ -14,17 +14,5 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: c3345e46573cb6c618cb9447fade2e255b6f5589
-    highlights: |-
-      * Added support for CentOS, Fedora, RHEL amphora images
-      * Added oslo policy support to octavia v1 API
-      * Added quota support to octavia v1 API
-      * Amphora is now using python 3.5 by default
-      * Adds distribution ID option to diskimage-create.sh
-      * Enable IPv6 for the load balancer management network
-      * Added support for systemd based amphora images
-      * Add a new octavia v1 API to list loadbalancer statistics
-      * Add MTU configuraion when plugging vip or network
-      * Update listener stats to include error count
-      * Add support for PKCS7 bundles and encrypted keys
 repository-settings:
   openstack/octavia: {}

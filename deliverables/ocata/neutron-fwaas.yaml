@@ -20,11 +20,6 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: e7ebbebb393e1dde65f9fc545b8dbd1b5939d245
-    highlights: |-
-      * Privsep configuration for neutron-fwaas
-      * Not allow to update icmp fw_rule with port
-      * Use BRANCH constants from neutron_lib
-      * Update policy.json for FWaaS v2
   - version: 10.0.0.0rc1
     projects:
       - repo: openstack/neutron-fwaas
@@ -46,8 +41,5 @@ releases:
       - hash: 1f76429d87327e1d1d70a7a0211098c76f9f4688
         repo: openstack/neutron-fwaas
     version: 10.1.0
-    highlights: |-
-      * ConntrackNetlink driver to delete conntrack entries
-      * Enable to configure conntrack driver
 repository-settings:
   openstack/neutron-fwaas: {}

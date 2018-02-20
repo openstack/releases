@@ -14,22 +14,15 @@ releases:
       - repo: openstack/os-vif
         hash: 88c21d7d69905308f021c7546609b9c30b761806
         tarball-base: os_vif
-    highlights: |
-      - Adds Windows support for OvsPlugin.
   - version: 1.4.0
     projects:
       - repo: openstack/os-vif
         hash: 9a14c18c2163f8f90c797150d12e11b2aad8c1ee
         tarball-base: os_vif
-    highlights: |
-      - Improves MTU support. - Adds support for vhost-user reconnect and
-        extends vhost-user support to fastpath stack.
   - version: 1.4.1
     projects:
       - repo: openstack/os-vif
         hash: f5f2071fe551c127e9ecafb8a44baf44b9b92d9b
         tarball-base: os_vif
-    highlights: |
-      - Bug fix for Windows and pbr dependency update.
 repository-settings:
   openstack/os-vif: {}

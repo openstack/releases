@@ -16,31 +16,18 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 450c6e5a5faff076679f714216e4d65a76172a78
-    highlights: |
-      - Cells v2 is now required to upgrade to Ocata. See the release notes for
-        details.
-      - The nova-network service will no longer start unless the environment is
-        configured for Cells v1. Deployments should be using Neutron in Ocata.
   - version: 15.0.0.0b3
     projects:
       - repo: openstack/nova
         hash: f9d7b383a7cb12b6cd3e6117daf69b08620bf40f
-    highlights: |
-      - Several new features and dependency updates. See the release notes for
-        details.
-      - Neutron is now the default networking configuration for running Nova.
   - version: 15.0.0.0rc1
     projects:
       - repo: openstack/nova
         hash: 245c54796f790cb70703f069bc429a8b9c5e0e49
-    highlights: |
-      - The Placement service is now required. - 2.42 is the highest compute REST API microversion in this release. - 1.4 is the highest placement REST API microversion in this release. - See the release notes for more details.
   - version: 15.0.0.0rc2
     projects:
       - repo: openstack/nova
         hash: ff369899749ac3e21ed0174b40e948c78c2dc1fa
-    highlights: |
-      - Bug fixes, documentation and improved tooling for upgrading to Ocata.
   - version: 15.0.0
     diff-start: 14.0.0.0rc1
     projects:
@@ -50,67 +37,30 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 7ccf8d2e358623b3536c9f3e2850a75414969134
-    highlights: |
-      - Several fixes for high severity, high impact bugs introduced in the
-        15.0.0 release.
   - version: 15.0.2
     projects:
       - repo: openstack/nova
         hash: acb19160d4d348e29a21ad57c61c7369352c4d1c
-    highlights: |
-      - Fix for CVE-2017-7214. - Fix for retry on build error regression in 15.0.0 (bug 1671648).
   - version: 15.0.3
     projects:
       - repo: openstack/nova
         hash: 6d4f9f4f6cfd3e256c68addfed0c3a033b3bf957
-    highlights: |
-      - Contains fixes for regression bugs introduced in Ocata. Specifically
-        https://bugs.launchpad.net/nova/+bug/1678326 and
-        https://bugs.launchpad.net/nova/+bug/1675570.
   - version: 15.0.4
     projects:
       - repo: openstack/nova
         hash: 506465a027dd1ba1c90949dc58297edae32da7e4
-    highlights: |
-      - Contains fixes for regression bugs introduced in Ocata.
   - version: 15.0.5
     projects:
       - repo: openstack/nova
         hash: 8b2f7d38ccdbbc6533930b8d4eeff4e2ff79176c
-    highlights: |
-      - Uncaps pbr in requirements.txt. - High severity bug fixes:
-
-        * Bug 1673613: Properly handles special characters in database
-          connection URL when setting up cells v2 (optional in Newton).
-        * Bug 1691545: Fixes a performance regression which caused
-          high consumption of memory due to database connection switching.
-
-        See the release notes for more details.
   - version: 15.0.6
     projects:
       - repo: openstack/nova
         hash: fe329029265e10296a550fc9153b7977da4aefe2
-    highlights: |
-      - High severity bug fixes:
-
-        * Bug 1687581: When using the libvirt compute driver with attached
-          ceph-backed volumes, fallback to using nova config for
-          rbd_secret_uuid if it was not in the original volume connection
-          information from Cinder when the volume was attached.
-        * Bug 1692982: A --strict option is added to the
-          ``nova-manage cell_v2 discover_hosts`` command to fail if no hosts
-          are discovered.
-        * Bug 1696001: Handle parsing database connection URLs with query
-          string parameters during simple_cell_setup/map_cell0 commands.
-        * Bug 1689692: Fix paging over cells where the marker is found in the
-          cell0 database.
   - version: 15.0.7
     projects:
       - repo: openstack/nova
         hash: 6c67eee6f4a40c5e84beb2950c45e9fe5dcf9fd1
-    highlights: |
-      - Several bug fixes. - Fixes a regression in Ocata where scheduler driver configuration
-        options were restricted without a deprecation period.
   - version: 15.0.8
     projects:
       - repo: openstack/nova

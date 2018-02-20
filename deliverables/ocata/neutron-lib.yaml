@@ -13,27 +13,9 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: efd7a3a5fabf24891953dfcc2e838ba56ef3183f
-    highlights: |
-      * Added Keystone v3 support, removed XML format, added details about LBaas v1 removal
-      * Added multiple change for API-Ref
-      * Introduced Plugin Directory for Neutron
-      * Introduced API definition for trunk/trunk_details extensions and segments reference
-      * Deprecated method ensure_dir
-      * Enhanced valid_values to use __contains__
-      * Rehomed populate_project_info() from neutron
   - version: 1.1.0
     projects:
       - repo: openstack/neutron-lib
         hash: 9b3ea8f29f8ddb27575b79a77183d1ac2224ff01
-    highlights: |
-      * Added multiple changes for API-Ref (FWaaS v2)
-      * Rehomed agent extension abstract classes from neutron
-      * Rehomed get_random_mac to neutron_lib.utils.net from neutron
-      * Rehomed ServicePluginBase
-      * Rehomed a number of API definitions
-      * The constants EXPAND_BRANCH and CONTRACT_BRANCH are now available in neutron_lib.db.constants.
-      * A converter convert_ip_to_canonical_format has been added to neutron-lib which allows IPv6 addresses to be stored and displayed in canonical format.
-      * OpenStack dev hacking check H904 is now enabled in tox.ini via the enable-extensions configuration property. Neutron-lib adopters should also enable this hacking check in their tox.ini.
-      * Made neutron context available in neutron-lib
 repository-settings:
   openstack/neutron-lib: {}

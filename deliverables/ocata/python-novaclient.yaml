@@ -13,37 +13,17 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 69d05c6774b9244ee1c6b7f8283f87422bb51b34
-    highlights: |
-      - Several bug fixes and support added for new microversions. The
-        highest supported microversion in this release is 2.40.
-      - The internal HTTPClient has been removed and the internal Keystone v3
-        based SessionClient is always used now. As such, there are several
-        deprecated arguments which are now unused when calling the top level
-        novaclient.client.Client factory method.
-      - Additional options are added to help with filtering and paging of
-        flavors and server group resources.
-      - Support for non-Keystone auth systems via stevedore hooks has been
-        removed.
-      - Python 3.5 is officially supported. - Several deprecated commands have been removed.
   - version: 7.1.0
     projects:
       - repo: openstack/python-novaclient
         hash: f6e0128f9a66b48a24c10d532a9e4e8d7d7e94a5
-    highlights: |
-      - Several bug fixes and support added for new microversions. The
-        highest supported microversion in this release is 2.41.
-      - Add profiling support for novaclient.
   - version: 7.1.1
     projects:
       - repo: openstack/python-novaclient
         hash: 0063ebce2fd8d6259c128f5d161370d40296d510
-    highlights: |
-      - Routine bug fixes.
   - version: 7.1.2
     projects:
       - repo: openstack/python-novaclient
         hash: 2e2317bfca941e59899edda181241f320e2033f8
-    highlights: |
-      - Uncaps version constraint on pbr runtime dependency.
 repository-settings:
   openstack/python-novaclient: {}

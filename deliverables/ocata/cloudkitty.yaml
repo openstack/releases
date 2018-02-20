@@ -12,13 +12,9 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 31845a888f7adf992667e5753ca45149ba5f13eb
-    highlights: |
-      - Update/Refactor/Improvement of the documentation. - Change in the numerotation of the versions to use OpenStack's style. - Possibility to expose total/summary for all tenants. - Possibility to gather summary by resource or tenant. - Possibility to request the API to know the available metrics. - Possibility to change the priority of rating modules. - Added default behaviour to fetch dataframe on the current month. - Switch to keystone v3 in cloudkitty's devstack plugin. - Addition of releases notes. - Improvement in the policy management. - Fix serialization problem in the collectors. - Fix many typos in the documentation. - Code quality improvement.
   - version: 5.0.1
     projects:
       - repo: openstack/cloudkitty
         hash: d3604cba7093b7ba5a61529635e1cc8d8318b232
-    highlights: |
-      - Fix usage of configuration period. - Fix the new usage of gnocchi. - Fix the resource_type on search done by gnocchiclient. - Fix gnocchi metric collection.
 repository-settings:
   openstack/cloudkitty: {}

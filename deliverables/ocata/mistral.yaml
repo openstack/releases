@@ -50,14 +50,10 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 3d8ebf1bf343ae188b01f70bc5b833e14eccae77
-    highlights: |
-      - Fixes memory leak related to cached lookups. - Add missing Swift actions in actions mapping file. - Do not evaluate expressions in workflow environment as required.
   - version: 4.0.2
     projects:
       - repo: openstack/mistral
         hash: ce3bec77804c491cc560d77b2c3227fc806952d3
-    highlights: |
-      - Fix work of task() without task name within on-clause cases.
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
