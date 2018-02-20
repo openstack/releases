@@ -13,11 +13,14 @@
 """Work with the project-config repository.
 """
 
+import logging
+
 import requests
 
-from openstack_releases import flags
 from openstack_releases import yamlutils
 
+
+LOG = logging.getLogger()
 
 ZUUL_PROJECTS_URL = 'http://git.openstack.org/cgit/openstack-infra/project-config/plain/zuul.d/projects.yaml'  # noqa
 ZUUL_PROJECTS_FILENAME = 'openstack-infra/project-config/zuul.d/projects.yaml'
@@ -115,7 +118,7 @@ _RELEASE_JOBS_FOR_TYPE = {
 }
 
 
-def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
+def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                                   release_type, mk_warning, mk_error):
     """Check the repository for release jobs.
 
@@ -125,20 +128,23 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
     """
     # If the repository is configured as not having an artifact to
     # build, we don't need to check for any jobs.
-    if flags.has_flag(deliverable_info, repo, flags.NO_ARTIFACT_BUILD_JOB):
+    if repo.no_artifact_build_job:
+        LOG.debug('{} has no-artifact-build-job set, skipping'.format(
+            repo.name))
         return
 
     # If the repository is retired, we don't need to check for any
     # jobs.
-    if flags.has_flag(deliverable_info, repo, flags.RETIRED):
+    if repo.is_retired:
+        LOG.debug('{} is retired, skipping'.format(repo.name))
         return
 
-    if repo not in zuul_projects:
+    if repo.name not in zuul_projects:
         mk_error(
-            'did not find %s in %s' % (repo, ZUUL_PROJECTS_FILENAME),
+            'did not find %s in %s' % (repo.name, ZUUL_PROJECTS_FILENAME),
         )
     else:
-        p = zuul_projects[repo]
+        p = zuul_projects[repo.name]
         templates = p.get('templates', [])
         # NOTE(dhellmann): We don't mess around looking for individual
         # jobs, because we want projects to use the templates.
@@ -159,7 +165,7 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
                     'or no release will be '
                     'published'.format(
                         filename=ZUUL_PROJECTS_FILENAME,
-                        repo=repo,
+                        repo=repo.name,
                         expected=expected_jobs,
                         existing=templates,
                     ),
@@ -170,7 +176,7 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
                     '{existing!r} should include *one* of '
                     '{expected!r}, found {found!r}'.format(
                         filename=ZUUL_PROJECTS_FILENAME,
-                        repo=repo,
+                        repo=repo.name,
                         expected=expected_jobs,
                         existing=templates,
                         found=found_jobs,
@@ -192,7 +198,7 @@ def require_release_jobs_for_repo(deliverable_info, zuul_projects, repo,
                         '{bad_jobs!r} for release-type {wrong_type} '
                         'but {repo} uses release-type {release_type}'.format(
                             filename=ZUUL_PROJECTS_FILENAME,
-                            repo=repo,
+                            repo=repo.name,
                             bad_jobs=bad_jobs,
                             wrong_type=wrong_type,
                             release_type=release_type,

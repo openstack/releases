@@ -380,11 +380,12 @@ _TYPE_TO_RELEASE_TYPE = {
 _PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
 
 
-def get_release_type(deliverable_info, repo, workdir):
+def legacy_get_release_type(deliverable_info, repo, workdir):
     """Return tuple with release type and boolean indicating whether it
     was explicitly set.
 
     """
+    # TODO(dhellmann): Delete this function after validate_releases is updated.
     if 'release-type' in deliverable_info:
         return (deliverable_info['release-type'], True)
 
@@ -404,9 +405,32 @@ def get_release_type(deliverable_info, repo, workdir):
     return ('python-service', False)
 
 
-def validate_release_type(deliverable_info,
+def get_release_type(deliv, repo, workdir):
+    """Return tuple with release type and boolean indicating whether it
+    was explicitly set.
+
+    """
+    if deliv.release_type is not None:
+        return (deliv.release_type, True)
+
+    from_type = _TYPE_TO_RELEASE_TYPE.get(deliv.type)
+    if from_type is not None:
+        return (from_type, False)
+
+    if deliv.include_pypi_link:
+        return ('python-pypi', False)
+
+    if puppetutils.looks_like_a_module(workdir, repo.name):
+        return ('puppet', False)
+
+    if npmutils.looks_like_a_module(workdir, repo.name):
+        return ('nodejs', False)
+
+    return ('python-service', False)
+
+
+def validate_release_type(deliv,
                           zuul_projects,
-                          series_name,
                           workdir,
                           messages):
     """Apply validation rules for the deliverable based on 'release-type'
@@ -415,39 +439,42 @@ def validate_release_type(deliverable_info,
     """
     header('Validate release-type')
 
-    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
-    if link_mode == 'none':
-        print('link-mode is "none", skipping release-type checks')
+    if deliv.artifact_link_mode == 'none':
+        LOG.info('link-mode is "none", skipping release-type checks')
         return
 
-    if not deliverable_info.get('releases'):
-        print('no releases listed, skipping release-type checks')
+    if not deliv.releases:
+        LOG.info('no releases listed, skipping release-type checks')
         return
 
-    release = deliverable_info['releases'][-1]
-    for project in release['projects']:
+    release = deliv.releases[-1]
+    for project in release.projects:
 
-        print('checking release-type for {}'.format(project['repo']))
+        LOG.info('checking release-type for {}'.format(project.repo.name))
 
         release_type, was_explicit = get_release_type(
-            deliverable_info, project['repo'], workdir,
+            deliv, project.repo.name, workdir,
         )
         if was_explicit:
-            print('found explicit release-type {!r}'.format(
+            LOG.info('found explicit release-type {!r}'.format(
                 release_type))
         else:
-            print('release-type not given, '
-                  'guessing {!r}'.format(release_type))
+            LOG.info('release-type not given, '
+                     'guessing {!r}'.format(release_type))
 
         version_exists = gitutils.commit_exists(
-            workdir, project['repo'], release['version'],
+            workdir, project.repo.name, release.version,
         )
 
         if not version_exists:
+            LOG.info('new version {}, checking release jobs'.format(
+                release.version))
             project_config.require_release_jobs_for_repo(
-                deliverable_info, zuul_projects,
-                project['repo'],
-                release_type, messages,
+                deliv,
+                zuul_projects,
+                project.repo,
+                release_type,
+                messages,
             )
 
 
@@ -655,7 +682,7 @@ def validate_releases(deliverable_info, zuul_projects,
                           (prev_version, ', '.join(sorted(prev_projects))))
                 else:
 
-                    release_type, was_explicit = get_release_type(
+                    release_type, was_explicit = legacy_get_release_type(
                         deliverable_info, project['repo'], workdir,
                     )
                     if was_explicit:
@@ -1327,9 +1354,8 @@ def main():
         validate_release_notes(deliv, messages)
         validate_model(deliv, series_name, messages)
         validate_release_type(
-            deliverable_info,
+            deliv,
             zuul_projects,
-            series_name,
             workdir,
             messages,
         )

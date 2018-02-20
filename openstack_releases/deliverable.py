@@ -213,6 +213,34 @@ class Repo(object):
     def is_retired(self):
         return 'retired' in self.flags
 
+    @property
+    def no_artifact_build_job(self):
+        return 'no-artifact-build-job' in self.flags
+
+
+class ReleaseProject(object):
+
+    def __init__(self, repo, hash, release):
+        self._repo = repo
+        self.repo = release.deliv.get_repo(repo)
+        self.hash = hash
+        self.release = weakref.proxy(release)
+
+
+class Release(object):
+
+    def __init__(self, version, projects, deliv):
+        self.version = version
+        self.deliv = weakref.proxy(deliv)
+        self._projects = {
+            p['repo']: ReleaseProject(release=self, **p)
+            for p in projects
+        }
+
+    @property
+    def projects(self):
+        return sorted(self._projects.values(), key=lambda p: p.repo.name)
+
 
 class Deliverable(object):
 
@@ -231,9 +259,9 @@ class Deliverable(object):
         # able to remove this after the T series is opened because at
         # that point all actively validated deliverable files will
         # have this data.
-        for r in self.releases:
-            for p in r['projects']:
-                repos.add(p['repo'])
+        for r in data.get('releases', []):
+            for p in r.get('projects', []):
+                repos.add(p.get('repo'))
         self._repos = {
             r: Repo(
                 name=r,
@@ -254,8 +282,7 @@ class Deliverable(object):
 
     @property
     def repos(self):
-        for name, repo in sorted(self._repos.items()):
-            yield repo
+        return sorted(self._repos.values(), key=lambda r: r.name)
 
     @property
     def known_repo_names(self):
@@ -287,6 +314,10 @@ class Deliverable(object):
         return self._data.get('type', 'other')
 
     @property
+    def artifact_link_mode(self):
+        return self._data.get('artifact-link-mode', 'tarball')
+
+    @property
     def latest_release(self):
         rel = (self.releases or [{}])[-1]
         return rel.get('version')
@@ -294,6 +325,14 @@ class Deliverable(object):
     @property
     def release_notes(self):
         return self._data.get('release-notes', '')
+
+    @property
+    def release_type(self):
+        return self._data.get('release-type', None)
+
+    @property
+    def include_pypi_link(self):
+        return self._data.get('include-pypi-link', False)
 
     @property
     def versions(self):
@@ -304,7 +343,10 @@ class Deliverable(object):
 
     @property
     def releases(self):
-        return copy.deepcopy(self._data.get('releases', []))
+        return [
+            Release(deliv=self, **r)
+            for r in self._data.get('releases', [])
+        ]
 
     def get_branch_location(self, name):
         branches = self._data.get('branches', [])
