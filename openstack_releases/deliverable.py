@@ -19,6 +19,7 @@ import copy
 import glob
 import os
 import os.path
+import weakref
 
 import pbr.version
 
@@ -197,6 +198,22 @@ class Deliverables(object):
             )
 
 
+class Repo(object):
+
+    def __init__(self, name, data, deliv):
+        self.name = name
+        self._data = data
+        self.deliv = weakref.proxy(deliv)
+
+    @property
+    def flags(self):
+        return self._data.get('flags', [])
+
+    @property
+    def is_retired(self):
+        return 'retired' in self.flags
+
+
 class Deliverable(object):
 
     _governance_data = None
@@ -217,9 +234,24 @@ class Deliverable(object):
         for r in self.releases:
             for p in r['projects']:
                 repos.add(p['repo'])
-        self.repos = sorted(list(repos))
+        self._repos = {
+            r: Repo(
+                name=r,
+                data=self._data.get('repository-settings', {}).get(r, {}),
+                deliv=self,
+            )
+            for r in sorted(repos)
+        }
         if self._governance_data is None:
             Deliverable._governance_data = governance.get_team_data()
+
+    @property
+    def repos(self):
+        for name, repo in sorted(self._repos.items()):
+            yield repo
+
+    def get_repo(self, name):
+        return self._repos[name]
 
     @property
     def model(self):
