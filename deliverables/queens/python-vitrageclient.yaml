@@ -12,10 +12,11 @@ releases:
     projects:
       - hash: 7fd3400c536cb4f245b389642fd82f962fbdb2bd
         repo: openstack/python-vitrageclient
-    highlights: |
-      - Introduced template version 2
-      - New API for template add and template delete
-      - New API for webhook registration on Vitrage alarms
 release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/queens.html
 repository-settings:
   openstack/python-vitrageclient: {}
+cycle-highlights:
+  - New API for template management (add/delete template) allows users to
+    change the alarm deduction and RCA rules more easily. The new rules are
+    immediately applied on existing resources and alarms.
+  - New API for webhook registration on Vitrage alarms.
