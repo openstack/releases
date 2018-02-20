@@ -1120,6 +1120,11 @@ def validate_branch_points(deliverable_info,
     }
     branch_mode = deliverable_info.get('stable-branch-type', 'std')
 
+    # Check for 'upstream' branches. These track upstream release names and
+    # do not align with OpenStack series names.
+    if branch_mode == 'upstream':
+        return
+
     for branch in deliverable_info.get('branches', []):
         header('Validate Branch Points: {}'.format(branch['name']))
         try:
