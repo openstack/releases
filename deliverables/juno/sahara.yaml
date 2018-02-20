@@ -4,7 +4,7 @@ team: sahara
 type: service
 release-model: cycle-with-milestones
 releases:
-  - version: 2014.2
+  - version: "2014.2"
     projects:
       - repo: openstack/sahara
         hash: 3630ccffb25f66e2efc9297b0ecb852f8d932363
@@ -12,19 +12,19 @@ releases:
         hash: 6706e1998f9c7b60091f92bbc1f1c1d5e5e0f5f1
       - repo: openstack/sahara-image-elements
         hash: 51c33744acf87bbedc68fecf7f44d96e15bf90bd
-  - version: 2014.2.1
+  - version: "2014.2.1"
     projects:
       - repo: openstack/sahara
         hash: 2b5f1e6b528b8676e83114cb1db723fc893ffb0f
-  - version: 2014.2.2
+  - version: "2014.2.2"
     projects:
       - repo: openstack/sahara
         hash: 945fa72ed01ecabf5a260a676c9d98e8377b45af
-  - version: 2014.2.3
+  - version: "2014.2.3"
     projects:
       - repo: openstack/sahara
         hash: 0d7e25d48a233e44a18244258294c1ab89f7019b
-  - version: 2014.2.4
+  - version: "2014.2.4"
     projects:
       - repo: openstack/sahara
         hash: bf4edbad4128ed238b929eed7471a06770c3da93

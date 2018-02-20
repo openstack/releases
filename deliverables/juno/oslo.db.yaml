@@ -4,15 +4,15 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: 1.0.0
+  - version: "1.0.0"
     projects:
       - repo: openstack/oslo.db
         hash: cc7ae9fecc705924c4dc1d8d104338afc0e2437e
-  - version: 1.0.1
+  - version: "1.0.1"
     projects:
       - repo: openstack/oslo.db
         hash: 2849f1bdca0c39b342d434c06cdc23dc6cf946f4
-  - version: 1.0.2
+  - version: "1.0.2"
     projects:
       - repo: openstack/oslo.db
         hash: 0bb1e236daae53a3f5b4b88761d7b19f7961ed6c
