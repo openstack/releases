@@ -18,6 +18,7 @@ import os
 import os.path
 import xmlrpc.client
 
+from packaging import utils as packaging_utils
 import requests
 
 from openstack_releases import processutils
@@ -65,8 +66,9 @@ def guess_sdist_name(project):
 
 def get_pypi_info(dist_name):
     "Return PyPI information for the distribution."
-    LOG.debug('looking at PyPI for {}'.format(dist_name))
-    url = 'https://pypi.python.org/pypi/{}/json'.format(dist_name)
+    canonical_name = packaging_utils.canonicalize_name(dist_name)
+    LOG.debug('looking at PyPI for {!r}'.format(canonical_name))
+    url = 'https://pypi.python.org/pypi/{}/json'.format(canonical_name)
     LOG.debug(url)
     try:
         return requests.get(url).json()
@@ -74,12 +76,22 @@ def get_pypi_info(dist_name):
         return {}
 
 
-def get_pypi_uploaders(dist_name):
+def _get_pypi_roles(dist_name):
     client = xmlrpc.client.ServerProxy('https://pypi.python.org/pypi')
-    roles = client.package_roles(dist_name)
+    LOG.debug('retrieving roles for {!r}'.format(
+        dist_name))
+    return client.package_roles(dist_name)
+
+
+def get_pypi_uploaders(dist_name):
+    roles = _get_pypi_roles(dist_name)
+    if not roles:
+        canonical_name = packaging_utils.canonicalize_name(dist_name)
+        roles = _get_pypi_roles(canonical_name)
     uploaders = set(
         acct
         for role, acct in roles
         if role in ('Owner', 'Maintainer')
     )
+    LOG.debug('found: {}'.format(sorted(uploaders)))
     return uploaders
