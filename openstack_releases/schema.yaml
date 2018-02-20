@@ -34,6 +34,8 @@ properties:
     type: "object"
     properties:
       additionalProperties: False
+      pypi-name:
+        type: "string"
       flags:
         type: "array"
         items:

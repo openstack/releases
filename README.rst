@@ -397,6 +397,12 @@ The top level of a deliverable file is a mapping with keys:
       This repository is no longer used, but was present in old
       versions of a deliverable.
 
+  ``pypi-name``
+    An optional name for the deliverable on pypi.python.org.  This
+    value is only needed if the name on PyPI does not match the
+    canonicalized output of ``python setup.py --name``, such as if it
+    uses capitalized letters ("DragonFlow" instead of "dragonflow").
+
 ``release-type``
   This (optional) key sets the level of validation for the versions numbers.
 

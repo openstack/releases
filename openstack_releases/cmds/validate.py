@@ -529,7 +529,7 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
 
     header('Validate PyPI Permissions')
 
-    for repo in deliverable_info['repository-settings'].keys():
+    for repo, repo_settings in deliverable_info['repository-settings'].items():
 
         job_templates = zuul_projects.get(repo, {}).get('templates', [])
 
@@ -547,35 +547,40 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
 
         print('{} publishes to PyPI via {}'.format(repo, pypi_jobs))
 
-        try:
-            sdist = pythonutils.get_sdist_name(workdir, repo)
-        except Exception as err:
-            mk_warning(
-                'Could not determine the sdist name '
-                'for {} to check PyPI permissions: {}'.format(
-                    repo, err)
-            )
-            continue
+        pypi_name = repo_settings.get('pypi-name')
 
-        print('sdist name {!r}'.format(sdist))
-        uploaders = pythonutils.get_pypi_uploaders(sdist)
+        if not pypi_name:
+            try:
+                sdist = pythonutils.get_sdist_name(workdir, repo)
+            except Exception as err:
+                mk_warning(
+                    'Could not determine the sdist name '
+                    'for {} to check PyPI permissions: {}'.format(
+                        repo, err)
+                )
+                continue
+
+            print('using sdist name as pypi-name {!r}'.format(sdist))
+            pypi_name = sdist
+
+        uploaders = pythonutils.get_pypi_uploaders(pypi_name)
         if not uploaders:
             # Names like "openstack_requirements" are translated to
             # "openstack-requirements" in the PyPI API.
-            sdist = sdist.replace('_', '-')
-            print('retrying with sdist name {!r}'.format(sdist))
-            uploaders = pythonutils.get_pypi_uploaders(sdist)
+            alt_name = pypi_name.replace('_', '-')
+            print('retrying with pypi_name name {!r}'.format(alt_name))
+            uploaders = pythonutils.get_pypi_uploaders(alt_name)
 
         if not uploaders:
             mk_error(
                 'could not find users with permission to upload packages '
-                'for {}. Is the sdist name correct?'.format(sdist)
+                'for {}. Is the sdist name correct?'.format(pypi_name)
             )
         elif 'openstackci' not in uploaders:
             mk_error(
                 'openstackci does not have permission to upload packages '
                 'for {}. Current owners include: {}'.format(
-                    sdist, ', '.join(sorted(uploaders)))
+                    pypi_name, ', '.join(sorted(uploaders)))
             )
 
 
