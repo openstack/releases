@@ -34,9 +34,6 @@ releases:
       - hash: 352dce5cc2cdbcf033c67b7f5ac6d5ed9c2702c5
         repo: openstack/neutron-fwaas
     version: 11.0.1
-    highlights: |-
-      * Fix router update on L3 agent restart
-      * Update policy on rule addition/removal
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

@@ -7,31 +7,19 @@ launchpad: python-neutronclient
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/pike.html
 releases:
-  - highlights: |-
-      * Added CLI for BGP VPN commands
-      * Dropped Python3.4 support
-    projects:
+  - projects:
       - hash: 06d3dfd797d964e142e89c63911d2cb9754944ed
         repo: openstack/python-neutronclient
     version: 6.2.0
-  - highlights: '* Added ``global_request_id`` parameter'
-    projects:
+  - projects:
       - hash: ba535c695007c0b4cc6dd6e6abc252a866104bb9
         repo: openstack/python-neutronclient
     version: 6.3.0
-  - highlights: |-
-      * Update the documentation link for doc migration
-      * Added SFC CLI for OSC plugin
-      * Documentation improvements
-    projects:
+  - projects:
       - hash: 3c211f30af8976d2be518c68eae14b08fba09c6a
         repo: openstack/python-neutronclient
     version: 6.4.0
-  - highlights: |-
-      * CLI support for attribute renaming in FWaaS v2 API
-      * Bug fix in SFC CLI
-      * Workaround not to break neutron CLI extension UT
-    projects:
+  - projects:
       - hash: 355983d7040ec68435186513e79a0da7173078c3
         repo: openstack/python-neutronclient
     version: 6.5.0

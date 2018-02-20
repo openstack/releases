@@ -9,19 +9,6 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 033bba1c52ebd7971ebea846670a86e2fc3cdcc2
-    highlights: |
-      This release removes a configuration option (force_volume_utils_v1),
-      and the ISCSIInitiatorCLIUtils, which were deprecated since Mitaka.
-      os_win.utilsfactory.get_iscsi_initiator_utils will return
-      ISCSITargetUtils instead.
-      IOThread has been removed, as it was not used since Mitaka.
-      LiveMigrationUtils will no longer create a planned VM when
-      live_migrate_vm is called. Callers are expected to create one, if
-      necessary (e.g.: if ISCSI volume attached). This behaviour has been
-      enforced in nova since Newton.
-      NetworkUtils now has the set_vswitch_port_profile_id method, which is
-      required for new Windows Server 2016 Network Controller.
-      Adds utils required for nova-assisted volume snapshots.
   - version: 2.0.1
     projects:
       - repo: openstack/os-win

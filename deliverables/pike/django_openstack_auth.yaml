@@ -9,26 +9,18 @@ releases:
     projects:
       - repo: openstack/django_openstack_auth
         hash: 525b76dc323db4c4e081eb5d42def6db14a84de9
-    highlights: |
-      This release inproves translation support, and raises the maximum Django version
   - version: 3.3.0
     projects:
       - repo: openstack/django_openstack_auth
         hash: c15dfe5acd58efa0c5c27dd19de5d4ef2a880c36
-    highlights: |
-      This release improves translation support, raises the maximum Django version, and adds support for a configurable domain dropdown on login.
   - version: 3.4.0
     projects:
       - repo: openstack/django_openstack_auth
         hash: fb76589a26288a7d7966cee1702e414919706790
-    highlights: |
-      This release includes support for Django 1.11, as well as the usual bug fix and translation improvements.
   - version: 3.5.0
     projects:
       - repo: openstack/django_openstack_auth
         hash: 2ca726c68e92b6aaec0e7b0d6a425063972b870b
-    highlights: |
-      This release increases requirements to allow Django 1.11, and adds support for a DEFAULT_SERVICE_REGIONS setting.
 branches:
   - name: stable/pike
     location: 3.5.0

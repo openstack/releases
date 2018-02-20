@@ -7,19 +7,11 @@ launchpad: python-glanceclient
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/pike.html
 releases:
-  - highlights: |
-      - python-glanceclient supports Global Request ID
-      - Download with --progress fixed for 2.x and 3.y
-    projects:
+  - projects:
       - hash: d67b33b2e5fcee4545fe4ccb1e58c8d6ed12883c
         repo: openstack/python-glanceclient
     version: 2.7.0
-  - highlights: |
-      - python-glanceclient supports Image Import workflow
-      - Image download optimized to fail early if no target
-      - Deprecated and inoperative --no-ssl-compression removed
-      - UnicodeEncodeError fixed for unicode values in url
-    projects:
+  - projects:
       - hash: 52eb529b97533876d4c558784ee4d463814c2a0d
         repo: openstack/python-glanceclient
     version: 2.8.0

@@ -9,15 +9,11 @@ launchpad: python-mistralclient
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/pike.html
 releases:
-  - highlights: |
-      - Fix region support in CLI. - Accept keystone session in client.
-    projects:
+  - projects:
       - hash: 9e6ff999c16e9f6de8acf6f7d270e36cda932168
         repo: openstack/python-mistralclient
     version: 3.1.0
-  - highlights: |
-      - Set the default value of --limit parameter to avoid high server load.
-    projects:
+  - projects:
       - hash: 0f2837237b11b29bee45c8724c6c9ada5f3df79b
         repo: openstack/python-mistralclient
     version: 3.1.1
@@ -25,19 +21,13 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: e328a0570f9c485622d71bbad3a887903b83aaac
-    highlights: |
-      - Fix how "--limit" is passed to the server for action executions.
   - version: 3.1.3
     projects:
       - repo: openstack/python-mistralclient
         hash: c33d39c152bdd48b68467d1ab2f63cbe5e337a72
-    highlights: |
-      - Enable ssl support for keycloak auth module.
   - version: 3.1.4
     projects:
       - repo: openstack/python-mistralclient
         hash: 291501ae6dc16f20ed53af975840d6c3ef3acc7b
-    highlights: |
-      - Don't perform authentication for help and bash completion.
 repository-settings:
   openstack/python-mistralclient: {}

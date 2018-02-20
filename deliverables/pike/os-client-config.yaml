@@ -7,9 +7,7 @@ launchpad: os-client-config
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/os-client-config/pike.html
 releases:
-  - highlights: |
-      Add floating IP indicator, skip yaml loading flag, some microversion support, vendor updates, User-Agent support
-    projects:
+  - projects:
       - hash: f6804f6b0dec9b1322ee996972489c1118f19f90
         repo: openstack/os-client-config
     version: 1.27.0

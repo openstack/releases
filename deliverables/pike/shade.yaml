@@ -6,44 +6,27 @@ include-pypi-link: yes
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/shade/pike.html
 releases:
-  - highlights: |
-      Fixed a regression in heat stack normalization and added utility methods to add and remove security groups from a server.
-    projects:
+  - projects:
       - hash: cf54ef6b9203d9afcb9c9e50ab19bad73094015d
         repo: openstack-infra/shade
     version: 1.19.0
-  - highlights: |
-      Updated to deal with nova-network removal in novaclient, transitioning more things to REST. Shade now sets User-Agent information properly.
-    projects:
+  - projects:
       - hash: 0666bed25be4b054f933158cf89dbf03feec0832
         repo: openstack-infra/shade
     version: 1.20.0
-  - highlights: |
-      Removed neutronclient and cinderclient as dependencies. Also fixed some issues with image version discovery and servers with two private IPs.
-    projects:
+  - projects:
       - hash: ba0e9451e664743dbc5d24307ca5a3829ee3e91b
         repo: openstack-infra/shade
     version: 1.21.0
-  - highlights: |-
-      * Removed unneeded calls made when deleting servers with floating ips.
-      * Added pagination support for volume listing.
-      * Replaced use of novaclient with direct REST calls.
-      * Replaced use of designateclient with direct REST calls.
-      * Fixed issue with neutron endpoints that did not have trailing slashes.
-      * Fixed issue with ports not having a created_at attribute.
-    projects:
+  - projects:
       - hash: c547f1b47a81bc4cc1920d3480630305a842be9c
         repo: openstack-infra/shade
     version: 1.22.0
-  - highlights: |
-      Fixed exception with deleting servers on clouds without floating IPs when delete_ips=True is given.
-    projects:
+  - projects:
       - hash: f5daebebc1fb9249c8a22a572eb2105842a21fd6
         repo: openstack-infra/shade
     version: 1.22.1
-  - highlights: |
-      Fix parameter name mismatches with server creation, a weird image normalization conflict and really fixed the delete_ips issue this time.
-    projects:
+  - projects:
       - hash: baaf4155671d98002816597e51b2c3a33fe99390
         repo: openstack-infra/shade
     version: 1.22.2
