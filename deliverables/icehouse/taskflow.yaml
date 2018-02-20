@@ -4,7 +4,7 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: 0.1
+  - version: "0.1"
     projects:
       - repo: openstack/taskflow
         hash: a80479b340a4fd6e557aa9547707c9867ff72526
@@ -20,7 +20,7 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: a4f88963f991829aee891045ef5790e16a42df43
-  - version: 0.2
+  - version: "0.2"
     projects:
       - repo: openstack/taskflow
         hash: 7b54ac40de0d5d383721a7a09fa0e3e376fa10ba
