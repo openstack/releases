@@ -557,12 +557,15 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
             )
             continue
 
-        # Names like "openstack_requirements" are translated to
-        # "openstack-requirements" in the PyPI API.
-        sdist = sdist.replace('_', '-')
         print('sdist name {!r}'.format(sdist))
-
         uploaders = pythonutils.get_pypi_uploaders(sdist)
+        if not uploaders:
+            # Names like "openstack_requirements" are translated to
+            # "openstack-requirements" in the PyPI API.
+            sdist = sdist.replace('_', '-')
+            print('retrying with sdist name {!r}'.format(sdist))
+            uploaders = pythonutils.get_pypi_uploaders(sdist)
+
         if not uploaders:
             mk_error(
                 'could not find users with permission to upload packages '
