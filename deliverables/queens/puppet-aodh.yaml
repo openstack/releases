@@ -16,5 +16,12 @@ releases:
       - hash: 416d8442d53d4ec9adf6ec7512bd55321eae4dfa
         repo: openstack/puppet-aodh
     version: 12.2.0
+  - projects:
+      - hash: ea7ba6cd9aa9ea545e2f114c0f66663eeeb992a9
+        repo: openstack/puppet-aodh
+    version: 12.3.0
 repository-settings:
   openstack/puppet-aodh: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

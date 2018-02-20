@@ -16,5 +16,12 @@ releases:
       - hash: 383240b3b22de6654e0b38c7ea87baa1597816e5
         repo: openstack/puppet-sahara
     version: 12.2.0
+  - projects:
+      - hash: ce8b22988042a446ab2974372b29e10bfeb472f3
+        repo: openstack/puppet-sahara
+    version: 12.3.0
 repository-settings:
   openstack/puppet-sahara: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

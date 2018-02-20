@@ -20,5 +20,12 @@ releases:
       - hash: 801dee599ff0e9c313df6e4dbfb19385e94590a0
         repo: openstack/puppet-glance
     version: 12.3.0
+  - projects:
+      - hash: 2bf53faf1e30a0312e422680f031f9abaa7270d1
+        repo: openstack/puppet-glance
+    version: 12.4.0
 repository-settings:
   openstack/puppet-glance: {}
+branches:
+  - location: 12.4.0
+    name: stable/queens

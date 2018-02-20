@@ -1,0 +1,15 @@
+---
+launchpad: puppet-cloudkitty
+release-model: cycle-trailing
+team: 'Puppet OpenStack'
+type: other
+releases:
+  - projects:
+      - hash: 128f85a2ee48109d5143ae181f67b93b22ee8d42
+        repo: openstack/puppet-cloudkitty
+    version: 1.0.0
+repository-settings:
+  openstack/puppet-cloudkitty: {}
+branches:
+  - location: 1.0.0
+    name: stable/queens

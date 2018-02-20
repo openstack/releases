@@ -16,5 +16,12 @@ releases:
       - hash: 20dd37ee7902a329da0c00f9f32f93f64f86b69b
         repo: openstack/puppet-zaqar
     version: 12.2.0
+  - projects:
+      - hash: 7a96aa311e32fba97dcd6a738cb665a83a0cb7c0
+        repo: openstack/puppet-zaqar
+    version: 12.3.0
 repository-settings:
   openstack/puppet-zaqar: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

@@ -16,5 +16,12 @@ releases:
       - hash: a8a2fe98c30567ed72e3a66046b098d23d36341e
         repo: openstack/puppet-octavia
     version: 12.2.0
+  - projects:
+      - hash: c0cb342c70b664126c419c9264626a4fe1667162
+        repo: openstack/puppet-octavia
+    version: 12.3.0
 repository-settings:
   openstack/puppet-octavia: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

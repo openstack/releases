@@ -16,5 +16,12 @@ releases:
       - hash: af4cf377053297d68e7013919161598e096c0929
         repo: openstack/puppet-panko
     version: 12.2.0
+  - projects:
+      - hash: 179bf963f2f032ef54c5f9566fd06e38befb57ae
+        repo: openstack/puppet-panko
+    version: 12.3.0
 repository-settings:
   openstack/puppet-panko: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

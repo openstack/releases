@@ -1,0 +1,15 @@
+---
+launchpad: puppet-rally
+release-model: cycle-trailing
+team: 'Puppet OpenStack'
+type: other
+releases:
+  - projects:
+      - hash: 73389bb6b2db06eb76f3caa1d9799f5fe9406f98
+        repo: openstack/puppet-rally
+    version: 0.1.0
+repository-settings:
+  openstack/puppet-rally: {}
+branches:
+  - location: 0.1.0
+    name: stable/queens

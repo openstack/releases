@@ -16,5 +16,12 @@ releases:
       - hash: 944ace58ae19426fc455e2c1cbdcf68108ac656a
         repo: openstack/puppet-tacker
     version: 12.2.0
+  - projects:
+      - hash: bdf5d33bba19b50c6f614f6eb155dbb7a23cfaba
+        repo: openstack/puppet-tacker
+    version: 12.3.0
 repository-settings:
   openstack/puppet-tacker: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

@@ -16,5 +16,12 @@ releases:
       - hash: 1aea3c824c656e9ab1c5480b6e07173f82db2405
         repo: openstack/puppet-congress
     version: 12.2.0
+  - projects:
+      - hash: 581da6cf4f3e59d08afc33763b61c80f3f50f166
+        repo: openstack/puppet-congress
+    version: 12.3.0
 repository-settings:
   openstack/puppet-congress: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

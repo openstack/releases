@@ -16,5 +16,12 @@ releases:
       - hash: 277828c164cd6b6d5c22f4bae6b8adfecb2c0fba
         repo: openstack/puppet-cinder
     version: 12.2.0
+  - projects:
+      - hash: 0b2d64598e5ac4d730e74e4b5bc646b7550be0a2
+        repo: openstack/puppet-cinder
+    version: 12.3.0
 repository-settings:
   openstack/puppet-cinder: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

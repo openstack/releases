@@ -16,5 +16,12 @@ releases:
       - hash: 99a4ed0a18d456b2d5d6c2518730b0a4f3068891
         repo: openstack/puppet-mistral
     version: 12.2.0
+  - projects:
+      - hash: 9bc1b605781054a19ce2252636188d51837d64e6
+        repo: openstack/puppet-mistral
+    version: 12.3.0
 repository-settings:
   openstack/puppet-mistral: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

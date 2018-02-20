@@ -20,5 +20,12 @@ releases:
       - hash: de58ee918c88034d58f354e6512bed8257daa099
         repo: openstack/puppet-swift
     version: 12.2.0
+  - projects:
+      - hash: d981ea9dea38ee0417c07d198e33339677ec346e
+        repo: openstack/puppet-swift
+    version: 12.3.0
 repository-settings:
   openstack/puppet-swift: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

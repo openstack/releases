@@ -1,0 +1,15 @@
+---
+launchpad: puppet-monasca
+release-model: cycle-trailing
+team: 'Puppet OpenStack'
+type: other
+releases:
+  - projects:
+      - hash: 1dc9d678da87f7f32c507642e5b7a000589412e8
+        repo: openstack/puppet-monasca
+    version: 1.1.0
+repository-settings:
+  openstack/puppet-monasca: {}
+branches:
+  - location: 1.1.0
+    name: stable/queens

@@ -16,5 +16,12 @@ releases:
       - hash: e9ecb08def8691074fc8c9bbbc97c1fb4d8b56d3
         repo: openstack/puppet-ec2api
     version: 12.2.0
+  - projects:
+      - hash: e161565a019b6929ed037bb2007aaa47ab2c2126
+        repo: openstack/puppet-ec2api
+    version: 12.3.0
 repository-settings:
   openstack/puppet-ec2api: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

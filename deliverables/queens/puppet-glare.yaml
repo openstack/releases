@@ -1,0 +1,15 @@
+---
+launchpad: puppet-glare
+release-model: cycle-trailing
+team: 'Puppet OpenStack'
+type: other
+releases:
+  - projects:
+      - hash: 913815e03ddfe49b9ade30adf84882c1095235fe
+        repo: openstack/puppet-glare
+    version: 1.0.0
+repository-settings:
+  openstack/puppet-glare: {}
+branches:
+  - location: 1.0.0
+    name: stable/queens
