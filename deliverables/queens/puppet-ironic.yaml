@@ -16,5 +16,12 @@ releases:
       - hash: dd2b63c6f6336a870dd39756ef3d9e0224f96b45
         repo: openstack/puppet-ironic
     version: 12.2.0
+  - projects:
+      - hash: 0a36e13e8d65cd533a228cb042ce15c1e344f26e
+        repo: openstack/puppet-ironic
+    version: 12.3.0
 repository-settings:
   openstack/puppet-ironic: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

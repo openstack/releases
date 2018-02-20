@@ -16,5 +16,12 @@ releases:
       - hash: 1ff7029745984fd8f1b9256b65ab2eca937068d7
         repo: openstack/puppet-tempest
     version: 12.2.0
+  - projects:
+      - hash: f8335b96ff78a9f6e8f0a5509e1640bd837fab6c
+        repo: openstack/puppet-tempest
+    version: 12.3.0
 repository-settings:
   openstack/puppet-tempest: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

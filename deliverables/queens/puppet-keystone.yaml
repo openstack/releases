@@ -16,5 +16,12 @@ releases:
       - hash: 4cdfe9d0915647fdc37b483b4fa409176f58659f
         repo: openstack/puppet-keystone
     version: 12.2.0
+  - projects:
+      - hash: 03a84a07db9f15180bb4a99a94bab0cc76a7dfb2
+        repo: openstack/puppet-keystone
+    version: 12.3.0
 repository-settings:
   openstack/puppet-keystone: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

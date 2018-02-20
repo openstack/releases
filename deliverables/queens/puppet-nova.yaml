@@ -16,5 +16,12 @@ releases:
       - hash: 7a1931cd63eeabf53b2472f47681e33dc29980bf
         repo: openstack/puppet-nova
     version: 12.2.0
+  - projects:
+      - hash: 6ddc6152fdb6093d926f303a2969d1aa9a4d3393
+        repo: openstack/puppet-nova
+    version: 12.3.0
 repository-settings:
   openstack/puppet-nova: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

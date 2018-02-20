@@ -16,5 +16,12 @@ releases:
       - hash: 4d9b494a3b672458988d6ee1d9e7fb5ca5c8c0b3
         repo: openstack/puppet-manila
     version: 12.2.0
+  - projects:
+      - hash: 129c7398599621207ab92126399199c859d5b15a
+        repo: openstack/puppet-manila
+    version: 12.3.0
 repository-settings:
   openstack/puppet-manila: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

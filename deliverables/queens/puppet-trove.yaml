@@ -16,5 +16,12 @@ releases:
       - hash: d5a6346274c9c14307178be2e0df46a34af89c4f
         repo: openstack/puppet-trove
     version: 12.2.0
+  - projects:
+      - hash: 7abbf2147284b2978b7d283707a706b4075d7c47
+        repo: openstack/puppet-trove
+    version: 12.3.0
 repository-settings:
   openstack/puppet-trove: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

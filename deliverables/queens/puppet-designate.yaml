@@ -16,5 +16,12 @@ releases:
       - hash: 0a523b565beb8ad97eabf9fb162abd4a9d612db4
         repo: openstack/puppet-designate
     version: 12.2.0
+  - projects:
+      - hash: bce868fbb5499414ceb45b09fdbb18d13306f3eb
+        repo: openstack/puppet-designate
+    version: 12.3.0
 repository-settings:
   openstack/puppet-designate: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

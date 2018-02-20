@@ -16,5 +16,12 @@ releases:
       - hash: 12107fdd80944e35fc8f3b28dc07446bc20c1788
         repo: openstack/puppet-openstacklib
     version: 12.2.0
+  - projects:
+      - hash: a371dcdc2e8f47af0848edc9baad69246dd944dc
+        repo: openstack/puppet-openstacklib
+    version: 12.3.0
 repository-settings:
   openstack/puppet-openstacklib: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens

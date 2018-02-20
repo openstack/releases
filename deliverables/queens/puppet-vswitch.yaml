@@ -16,5 +16,12 @@ releases:
       - hash: 2c74666058470d22565b0e52fba1d74001162ae1
         repo: openstack/puppet-vswitch
     version: 8.2.0
+  - projects:
+      - hash: 7f7f588a06130d966b1e0b8cea8de10121d112fd
+        repo: openstack/puppet-vswitch
+    version: 8.3.0
 repository-settings:
   openstack/puppet-vswitch: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens

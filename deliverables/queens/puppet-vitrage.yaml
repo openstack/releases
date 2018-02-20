@@ -16,5 +16,12 @@ releases:
       - hash: 85b2177e7710913ad9b12ef2996032644991520f
         repo: openstack/puppet-vitrage
     version: 2.2.0
+  - projects:
+      - hash: 74bc6fc779b210ca3fb20ed1e70ed06b03659d9c
+        repo: openstack/puppet-vitrage
+    version: 2.3.0
 repository-settings:
   openstack/puppet-vitrage: {}
+branches:
+  - location: 2.3.0
+    name: stable/queens

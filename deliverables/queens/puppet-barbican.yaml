@@ -16,5 +16,12 @@ releases:
       - hash: eef142e7a99fffae8a6768144716e28ca56827e3
         repo: openstack/puppet-barbican
     version: 12.2.0
+  - projects:
+      - hash: 3b5a50a6061a76c0564411db0bc4a979038b11a1
+        repo: openstack/puppet-barbican
+    version: 12.3.0
 repository-settings:
   openstack/puppet-barbican: {}
+branches:
+  - location: 12.3.0
+    name: stable/queens
