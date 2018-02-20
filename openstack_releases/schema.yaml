@@ -6,6 +6,9 @@ $id: "http://git.openstack.org/cgit/openstack/releases/tree/README.rst"
 # typos.
 additionalProperties: false
 
+required:
+  - team
+
 properties:
   team:
     type: "string"

@@ -164,18 +164,14 @@ class TestValidateTeam(base.BaseTestCase):
         super().setUp()
         self.msg = validate.MessageCollector()
 
-    def test_no_name(self):
-        validate.validate_team(
-            {},
-            {},
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
-
     def test_invalid_name(self):
         validate.validate_team(
-            {'team': 'nonsense-name'},
+            deliverable.Deliverable(
+                team='nonsense-name',
+                series='series',
+                name='name',
+                data={},
+            ),
             {},
             self.msg,
         )
@@ -185,7 +181,12 @@ class TestValidateTeam(base.BaseTestCase):
 
     def test_valid_name(self):
         validate.validate_team(
-            {'team': 'oslo'},
+            deliverable.Deliverable(
+                team='oslo',
+                series='series',
+                name='name',
+                data={},
+            ),
             {'oslo': None},
             self.msg,
         )

@@ -243,14 +243,13 @@ def validate_bugtracker(deliv, messages):
         messages.error('No launchpad or storyboard project given')
 
 
-def validate_team(deliverable_info, team_data, messages):
+def validate_team(deliv, team_data, messages):
     "Look for the team name"
     header('Validate Team')
-    if 'team' not in deliverable_info:
-        messages.error('No team name given')
-    elif deliverable_info['team'] not in team_data:
+    if deliv.team not in team_data:
         messages.warning('Team %r not in governance data' %
-                         deliverable_info['team'])
+                         deliv.team)
+    LOG.debug('owned by team {}'.format(deliv.team))
 
 
 def validate_release_notes(deliverable_info, messages):
@@ -1330,7 +1329,7 @@ def main():
         )
         clone_deliverable(deliv, workdir, messages)
         validate_bugtracker(deliv, messages)
-        validate_team(deliverable_info, team_data, messages)
+        validate_team(deliv, team_data, messages)
         validate_release_notes(deliverable_info, messages)
         validate_type(deliverable_info, messages)
         validate_model(deliverable_info, series_name, messages)
