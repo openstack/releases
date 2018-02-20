@@ -242,8 +242,6 @@ class Deliverable(object):
             )
             for r in sorted(repos)
         }
-        if self._governance_data is None:
-            Deliverable._governance_data = governance.get_team_data()
 
     @property
     def repos(self):
@@ -300,6 +298,8 @@ class Deliverable(object):
 
     @property
     def tags(self):
+        if self._governance_data is None:
+            Deliverable._governance_data = governance.get_team_data()
         return governance.get_tags_for_deliverable(
             self._governance_data, self.team, self.name)
 
