@@ -277,7 +277,7 @@ class Branch(object):
 
     def __init__(self, name, location, data, deliv):
         self.name = name
-        self._location = location
+        self.location = location
         self.deliv = weakref.proxy(deliv)
         self._data = data
 
@@ -287,6 +287,10 @@ class Branch(object):
     @property
     def prefix(self):
         return self.name.split('/')[0]
+
+    @property
+    def series(self):
+        return self.name.split('/')[1]
 
 
 @functools.total_ordering
@@ -398,6 +402,8 @@ class Deliverable(object):
 
     @property
     def type(self):
+        if 'tempest-plugin' in self.name:
+            return 'tempest-plugin'
         return self._data.get('type', 'other')
 
     @property
@@ -458,6 +464,10 @@ class Deliverable(object):
     @property
     def data(self):
         return copy.deepcopy(self._data)
+
+    @property
+    def stable_branch_type(self):
+        return self._data.get('stable-branch-type', 'std')
 
     def __eq__(self, other):
         return self.name == other.name
