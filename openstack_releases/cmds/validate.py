@@ -789,59 +789,57 @@ def validate_releases(deliv, zuul_projects,
             messages.error(msg)
 
 
-def validate_new_releases(deliverable_info, deliverable_name,
-                          team_data,
-                          messages):
+def validate_new_releases(deliv, team_data, messages):
 
     """Apply validation rules that only apply to the current series.
     """
     header('Validate New Releases')
-    if not deliverable_info.get('releases'):
-        print('no releases, skipping')
+
+    if not deliv.is_released:
+        LOG.info('no releases, skipping')
         return
 
-    final_release = deliverable_info['releases'][-1]
+    final_release = deliv.releases[-1]
     expected_repos = set(
         r.name
         for r in governance.get_repositories(
             team_data,
-            deliverable_name=deliverable_name,
+            deliverable_name=deliv.name,
         )
     )
-    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
+    link_mode = deliv.artifact_link_mode
     if link_mode != 'none' and not expected_repos:
         messages.error('unable to find deliverable %s in the governance list' %
-                       deliverable_name)
+                       deliv.name)
     actual_repos = set(
-        p['repo']
-        for p in final_release.get('projects', [])
+        p.repo.name
+        for p in final_release.projects
     )
     for extra in actual_repos.difference(expected_repos):
         messages.warning(
             'release %s includes repository %s '
             'that is not in the governance list' %
-            (final_release['version'], extra)
+            (final_release.version, extra)
         )
     for missing in expected_repos.difference(actual_repos):
         messages.warning(
             'release %s is missing %s, '
             'which appears in the governance list: %s' %
-            (final_release['version'], missing, expected_repos)
+            (final_release.version, missing, expected_repos)
         )
-    repository_settings = deliverable_info.get('repository-settings', {})
     for repo in actual_repos:
-        if repo not in repository_settings:
+        if repo not in deliv.known_repo_names:
             messages.error(
                 'release %s includes repository %s '
                 'that is not in the repository-settings section' %
-                (final_release['version'], repo)
+                (final_release.version, repo)
             )
-    for missing in repository_settings.keys():
+    for missing in deliv.known_repo_names:
         if missing not in actual_repos:
             messages.warning(
                 'release %s is missing %s, '
                 'which appears in the repository-settings list' %
-                (final_release['version'], missing)
+                (final_release.version, missing)
             )
 
 
@@ -1339,8 +1337,7 @@ def main():
         # Some rules only apply to the most current release.
         if series_name == defaults.RELEASE:
             validate_new_releases(
-                deliverable_info,
-                deliverable_name,
+                deliv,
                 team_data,
                 messages,
             )

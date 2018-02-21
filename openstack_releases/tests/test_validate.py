@@ -1293,23 +1293,27 @@ class TestValidateNewReleases(base.BaseTestCase):
     def test_all_repos(self):
         # The repos in the tag, governance, and repository-settings
         # match.
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'repository-settings': {
-                'openstack/release-test': {},
-            },
-            'releases': [
-                {'version': '1000.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'artifact-link-mode': 'none',
+                'repository-settings': {
+                    'openstack/release-test': {},
+                },
+                'releases': [
+                    {'version': '1000.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_new_releases(
-            deliverable_info,
-            'release-test',
+            deliv,
             self.team_data,
             self.msg,
         )
@@ -1318,27 +1322,31 @@ class TestValidateNewReleases(base.BaseTestCase):
 
     def test_extra_repo_gov(self):
         # The tag includes a repo not in governance.
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'repository-settings': {
-                'openstack/release-test': {},
-                'openstack-infra/release-tools': {},
-            },
-            'releases': [
-                {'version': '1000.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                     {'repo': 'openstack-infra/release-tools',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'artifact-link-mode': 'none',
+                'repository-settings': {
+                    'openstack/release-test': {},
+                    'openstack-infra/release-tools': {},
+                },
+                'releases': [
+                    {'version': '1000.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                         {'repo': 'openstack-infra/release-tools',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_new_releases(
-            deliverable_info,
-            'release-test',
+            deliv,
             self.team_data,
             self.msg,
         )
@@ -1347,27 +1355,31 @@ class TestValidateNewReleases(base.BaseTestCase):
 
     def test_missing_repo_gov(self):
         # The tag is missing a repo in governance.
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'repository-settings': {
-                'openstack/release-test': {},
-                'openstack/made-up-name': {},
-            },
-            'releases': [
-                {'version': '1000.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                     {'repo': 'openstack/made-up-name',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'artifact-link-mode': 'none',
+                'repository-settings': {
+                    'openstack/release-test': {},
+                    'openstack/made-up-name': {},
+                },
+                'releases': [
+                    {'version': '1000.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                         {'repo': 'openstack/made-up-name',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_new_releases(
-            deliverable_info,
-            'release-test',
+            deliv,
             self.team_data,
             self.msg,
         )
@@ -1378,22 +1390,26 @@ class TestValidateNewReleases(base.BaseTestCase):
     def test_extra_repo_info(self):
         # The tag has a repo not in repository-settings or governance
         # (2 warnings).
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'repository-settings': {
-            },
-            'releases': [
-                {'version': '1000.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'artifact-link-mode': 'none',
+                'repository-settings': {
+                },
+                'releases': [
+                    {'version': '1000.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_new_releases(
-            deliverable_info,
-            'release-test',
+            deliv,
             self.team_data,
             self.msg,
         )
@@ -1404,24 +1420,28 @@ class TestValidateNewReleases(base.BaseTestCase):
     def test_missing_repo_info(self):
         # The tag is missing a repository that is in
         # repository-settings.
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'repository-settings': {
-                'openstack/release-test': {},
-                'openstack-infra/release-tools': {},
-            },
-            'releases': [
-                {'version': '1000.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'artifact-link-mode': 'none',
+                'repository-settings': {
+                    'openstack/release-test': {},
+                    'openstack-infra/release-tools': {},
+                },
+                'releases': [
+                    {'version': '1000.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '685da43147c3bedc24906d5a26839550f2e962b1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_new_releases(
-            deliverable_info,
-            'release-test',
+            deliv,
             self.team_data,
             self.msg,
         )
