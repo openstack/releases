@@ -1851,10 +1851,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
           - name: feature/abc
             location: 0.0.3
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1874,10 +1878,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             location:
                openstack/release-test: 0.0.3
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1897,10 +1905,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             location:
                openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1920,10 +1932,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             location:
                openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1943,10 +1959,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             location:
                openstack/release-test: de2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1967,10 +1987,14 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             location:
                openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_feature_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
