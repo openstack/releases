@@ -45,7 +45,6 @@ from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import requirements
 from openstack_releases import versionutils
-from openstack_releases import yamlutils
 
 LOG = logging.getLogger()
 
@@ -102,18 +101,18 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
-def validate_series_open(deliverable_info,
-                         series_name, filename,
-                         messages):
+def validate_series_open(deliv, filename, messages):
     "No releases in the new series until the previous one has a branch."
     header('Validate Series Open')
-    if not deliverable_info.get('releases'):
-        print('no releases, skipping')
+
+    if not deliv.is_released:
+        LOG.info('no releases, skipping')
         return
-    if series_name == '_independent':
-        # These rules don't apply to independent projects.
-        print('rule does not apply to independent projects')
+
+    if deliv.is_independent:
+        LOG.info('rule does not apply to independent projects')
         return
+
     deliverables_dir = os.path.dirname(
         os.path.dirname(filename)
     )
@@ -134,25 +133,28 @@ def validate_series_open(deliverable_info,
     idx = all_deliverable_files.index(filename)
     if idx == 0:
         # This is the first cycle-based deliverable file.
+        LOG.debug('this is the first cycle-based version of this deliverable')
         return
+
     previous_deliverable_file = all_deliverable_files[idx - 1]
     previous_series = os.path.basename(
         os.path.dirname(previous_deliverable_file)
     )
     expected_branch = 'stable/' + previous_series
-    with open(previous_deliverable_file, 'r', encoding='utf-8') as f:
-        previous_deliverable = yamlutils.loads(f.read())
-        if not previous_deliverable:
-            # An empty file results in None, so convert to dict to
-            # make using the value easier.
-            previous_deliverable = {}
-    for branch in previous_deliverable.get('branches', []):
-        if branch['name'] == expected_branch:
+    previous_deliverable = deliverable.Deliverable.read_file(
+        previous_deliverable_file
+    )
+    for branch in previous_deliverable.branches:
+        if branch.name == expected_branch:
             # Everything is OK
+            LOG.debug('found branch {} in {}'.format(
+                branch.name,
+                previous_deliverable_file,
+            ))
             return
     messages.warning(
         'There is no {} branch defined in {}. Is the {} series open?'.format(
-            expected_branch, previous_deliverable_file, series_name))
+            expected_branch, previous_deliverable_file, deliv.series))
 
 
 def deprecate_release_highlights(deliverable_info,
@@ -1329,8 +1331,7 @@ def main():
                 messages,
             )
             validate_series_open(
-                deliv._data,
-                deliv.series,
+                deliv,
                 filename,
                 messages,
             )

@@ -273,6 +273,18 @@ class Release(object):
         return self.version == other.version
 
 
+class Branch(object):
+
+    def __init__(self, name, location, data, deliv):
+        self.name = name
+        self._location = location
+        self.deliv = weakref.proxy(deliv)
+        self._data = data
+
+    def __eq__(self, other):
+        return self.version == other.version
+
+
 @functools.total_ordering
 class Deliverable(object):
 
@@ -310,6 +322,15 @@ class Deliverable(object):
                 deliv=self,
             )
             for r in self._data.get('releases', [])
+        ]
+        self._branches = [
+            Branch(
+                name=b['name'],
+                location=b['location'],
+                data=b,
+                deliv=self,
+            )
+            for b in self._data.get('branches', [])
         ]
 
     @classmethod
@@ -407,6 +428,10 @@ class Deliverable(object):
     @property
     def releases(self):
         return self._releases
+
+    @property
+    def branches(self):
+        return self._branches
 
     def get_branch_location(self, name):
         branches = self._data.get('branches', [])

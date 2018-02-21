@@ -2121,10 +2121,14 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(branch_data)
         with open(series_b_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='b',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_open(
-            deliverable_info,
-            'a',
+            deliv,
             series_b_filename,
             self.msg,
         )
@@ -2146,10 +2150,14 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         ''')
         with open(series_b_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='b',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_open(
-            deliverable_info,
-            'a',
+            deliv,
             series_b_filename,
             self.msg,
         )
@@ -2166,10 +2174,14 @@ class TestValidateSeriesOpen(base.BaseTestCase):
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='independent',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_open(
-            deliverable_info,
-            '_independent',
+            deliv,
             'filename',  # not used
             self.msg,
         )
@@ -2199,10 +2211,14 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(branch_data)
         with open(series_b_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='b',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_open(
-            deliverable_info,
-            'a',
+            deliv,
             series_b_filename,
             self.msg,
         )
