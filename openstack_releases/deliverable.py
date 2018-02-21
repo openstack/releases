@@ -80,7 +80,7 @@ def _collapse_deliverable_history(name, info):
             parsed_vers = pbr.version.SemanticVersion.from_pip_string(
                 str(r['version']))
             vers_tuple = parsed_vers.version_tuple()
-        except:
+        except Exception:
             # If we can't parse the version, it must be some sort
             # of made up legacy tag. Ignore the parse error
             # and include the value in our output.

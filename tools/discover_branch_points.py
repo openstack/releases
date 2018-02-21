@@ -140,10 +140,7 @@ def main():
 
     def cleanup_workdir():
         if args.cleanup:
-            try:
-                shutil.rmtree(workdir)
-            except:
-                pass
+            shutil.rmtree(workdir, True)
     atexit.register(cleanup_workdir)
 
     branch_name = 'origin/stable/' + args.series
