@@ -1104,7 +1104,7 @@ class TestValidateTarballBase(base.BaseTestCase):
             self.msg,
         )
         validate.validate_tarball_base(
-            deliv.data,
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1137,7 +1137,7 @@ class TestValidateTarballBase(base.BaseTestCase):
             self.msg,
         )
         validate.validate_tarball_base(
-            deliv.data,
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1169,7 +1169,7 @@ class TestValidateTarballBase(base.BaseTestCase):
             self.msg,
         )
         validate.validate_tarball_base(
-            deliv.data,
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1202,7 +1202,7 @@ class TestValidateTarballBase(base.BaseTestCase):
             self.msg,
         )
         validate.validate_tarball_base(
-            deliv.data,
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -1235,7 +1235,7 @@ class TestValidateTarballBase(base.BaseTestCase):
             self.msg,
         )
         validate.validate_tarball_base(
-            deliv.data,
+            deliv,
             self.tmpdir,
             self.msg,
         )

@@ -451,32 +451,29 @@ def validate_release_type(deliv,
             )
 
 
-def validate_tarball_base(deliverable_info,
-                          workdir,
-                          messages):
+def validate_tarball_base(deliv, workdir, messages):
 
-    link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
-
-    if link_mode != 'tarball':
-        print('rule does not apply for link-mode {}, skipping'.format(
-            link_mode))
-        return
-    if not deliverable_info.get('releases'):
-        print('no releases, skipping')
+    if deliv.artifact_link_mode != 'tarball':
+        LOG.info('rule does not apply for link-mode {}, skipping'.format(
+            deliv.artifact_link_mode))
         return
 
-    release = deliverable_info['releases'][-1]
-    for project in release['projects']:
+    if not deliv.is_released:
+        LOG.info('no releases, skipping')
+        return
+
+    release = deliv.releases[-1]
+    for project in release.projects:
         version_exists = gitutils.commit_exists(
-            workdir, project['repo'], release['version'],
+            workdir, project.repo.name, release.version,
         )
         # Check that the sdist name and tarball-base name match.
         try:
             sdist = pythonutils.get_sdist_name(workdir,
-                                               project['repo'])
+                                               project.repo.name)
         except Exception as err:
             msg = 'Could not get the name of {} for version {}: {}'.format(
-                project['repo'], release['version'], err)
+                project.repo.name, release.version, err)
             if version_exists:
                 # If there was a problem with an existing
                 # release, treat it as a warning so we
@@ -486,12 +483,10 @@ def validate_tarball_base(deliverable_info,
                 messages.error(msg)
         else:
             if sdist is not None:
-                expected = project.get(
-                    'tarball-base',
-                    os.path.basename(project['repo']),
-                )
+                tarball_base = project.tarball_base
+                expected = tarball_base or os.path.basename(project.repo.name)
                 if sdist != expected:
-                    if 'tarball-base' in project:
+                    if tarball_base:
                         action = 'is set to'
                     else:
                         action = 'defaults to'
@@ -499,7 +494,7 @@ def validate_tarball_base(deliverable_info,
                         ('tarball-base for %s %s %s %r '
                          'but the sdist name is actually %r. ' +
                          _PLEASE)
-                        % (project['repo'], release['version'],
+                        % (project.repo.name, release.version,
                            action, expected, sdist))
 
 
@@ -1340,11 +1335,7 @@ def main():
             workdir,
             messages,
         )
-        validate_tarball_base(
-            deliverable_info,
-            workdir,
-            messages,
-        )
+        validate_tarball_base(deliv, workdir, messages)
         # Some rules only apply to the most current release.
         if series_name == defaults.RELEASE:
             validate_new_releases(
