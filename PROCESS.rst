@@ -267,21 +267,18 @@ RC1
      and we can have divergence between the requirements being tested
      and being declared as correct.
 
-8. Create new branch specific jobs for our two branchless projects,
-   devstack-gate and tempest, and configure both repos to run them on all
-   changes to those projects to protect against regressions with the
-   stable branches and these tools. The jobs are defined in the tempest
-   repository, for example, see https://review.openstack.org/521888.
-   Tempest runs the jobs in the check pipeline only, voting;
-   devstack-gate runs them in check pipeline only, non-voting, for example
-   see https://review.openstack.org/545144.
+8. In the tempest repo, create new branch specific jobs for our two branchless
+   projects, devstack-gate and tempest. Configure tempest to run them on all
+   changes, voting. Configure tempest to run them as periodic bitrot jobs as
+   well. All this can be done in one tempest patch, like for example, see
+   https://review.openstack.org/521888.
+   Configure devstack-gate to run the new jobs in check pipeline only,
+   non-voting, for example see https://review.openstack.org/545144.
 
 9. Add the new branch to the list of branches in the periodic-stable job
    templates in openstack-zuul-jobs. For example, see
    https://review.openstack.org/545268/.
 
-10. Add periodic bitrot jobs to tempest. For example, see
-    https://review.openstack.org/#/c/375271.
 
 Between RC1 and Final
 =====================
