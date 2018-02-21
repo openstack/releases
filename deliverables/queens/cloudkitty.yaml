@@ -1,0 +1,22 @@
+---
+include-pypi-link: yes
+launchpad: cloudkitty
+release-model: cycle-with-intermediary
+team: cloudkitty
+type: service
+branches:
+  - name: stable/queens
+    location: 7.0.0
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 15d0a7dd0543f00fa3886d287b980e65b346d949
+cycle-highlights:
+  - Addition/Evolution of collectors (Monasca and Ceph Object Storage)
+  - Split metrology configuration from CK config file
+  - Manage metrics units in yaml configuration
+  - Deprecate the ceilometer collector
+repository-settings:
+  openstack/cloudkitty: {}
+release-notes: https://docs.openstack.org/releasenotes/cloudkitty/unreleased.html
