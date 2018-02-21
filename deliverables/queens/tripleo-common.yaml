@@ -25,5 +25,27 @@ releases:
       - hash: c28e8cbb8a96035344cb5107020a35668fa0adda
         repo: openstack/tripleo-common
     version: 8.4.0
+cycle-highlights:
+  - |
+    config-download: Ability to use Ansible to apply the cloud configuration.
+    Ansible can be used to replace the communication and transport of the
+    configuration deployment data between Heat and the Heat agent
+    (os-collect-config) on the cloud nodes.
+  - |
+    Fast Forward Upgrades: Preview release of support for upgrading from Newton to Queens.
+  - |
+    UI improvements: Node registration form has been streamlined. Custom roles
+    selection improvements and improved management abilities.
+  - |
+    IPsec support: Enabled support to deploy overclouds with network encryption
+    for service-to-service communication with IPSEC.
+  - |
+    Instance HA: Added support for deployment of Instance HA that automates the
+    evacuation of an instance whenever its host Compute node fails.
+  - |
+    Realtime support: Support for realtime compute nodes as well as real-time
+    roles for NFV deployments.
+  - |
+    Octavia support: Added support to deploy Octavia in the overcloud.
 repository-settings:
   openstack/tripleo-common: {}
