@@ -276,21 +276,6 @@ def validate_release_notes(deliv, messages):
             LOG.debug('{} OK'.format(link))
 
 
-def get_model(deliverable_info, series_name):
-    "Return the release model from the deliverable info."
-    # Determine the release model. Don't require independent
-    # projects to redundantly specify that they are independent by
-    # including the value in their deliverablefile, but everyone
-    # else must provide a valid value.
-    is_independent = (series_name == '_independent')
-    if is_independent:
-        release_model = 'independent'
-    else:
-        release_model = deliverable_info.get('release-model',
-                                             'UNSPECIFIED')
-    return release_model
-
-
 def validate_model(deliv, series_name, messages):
     "Require a valid release model"
     header('Validate Model')
@@ -391,31 +376,6 @@ _TYPE_TO_RELEASE_TYPE = {
 }
 
 _PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
-
-
-def legacy_get_release_type(deliverable_info, repo, workdir):
-    """Return tuple with release type and boolean indicating whether it
-    was explicitly set.
-
-    """
-    # TODO(dhellmann): Delete this function after validate_releases is updated.
-    if 'release-type' in deliverable_info:
-        return (deliverable_info['release-type'], True)
-
-    from_type = _TYPE_TO_RELEASE_TYPE.get(deliverable_info.get('type'))
-    if from_type is not None:
-        return (from_type, False)
-
-    if deliverable_info.get('include-pypi-link', False):
-        return ('python-pypi', False)
-
-    if puppetutils.looks_like_a_module(workdir, repo):
-        return ('puppet', False)
-
-    if npmutils.looks_like_a_module(workdir, repo):
-        return ('nodejs', False)
-
-    return ('python-service', False)
 
 
 def get_release_type(deliv, repo, workdir):
@@ -607,7 +567,7 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
                 sorted(uploaders), pypi_name))
 
 
-def validate_releases(deliverable_info, zuul_projects,
+def validate_releases(deliv, zuul_projects,
                       series_name,
                       workdir,
                       messages):
@@ -615,15 +575,11 @@ def validate_releases(deliverable_info, zuul_projects,
     """
     header('Validate Releases')
 
-    # TODO(dhellmann): delete get_model
-    release_model = get_model(deliverable_info, series_name)
-    is_independent = (release_model == 'independent')
-
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
     new_releases = {}
 
-    if release_model == 'untagged' and 'releases' in deliverable_info:
+    if deliv.model == 'untagged' and deliv.is_released:
         messages.error(
             'untagged deliverables should not have a "releases" section'
         )
@@ -631,27 +587,27 @@ def validate_releases(deliverable_info, zuul_projects,
 
     prev_version = None
     prev_projects = set()
-    for release in deliverable_info.get('releases', []):
+    for release in deliv.releases:
 
-        print('\nchecking %s' % release['version'])
+        LOG.info('checking {}'.format(release.version))
 
-        for project in release['projects']:
+        for project in release.projects:
 
             # Check the SHA specified for the tag.
-            print('%s SHA %s ' % (project['repo'], project['hash']))
+            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
-            if not is_a_hash(project['hash']):
+            if not is_a_hash(project.hash):
                 messages.error(
                     ('%(repo)s version %(version)s release from '
                      '%(hash)r, which is not a hash') % {
-                         'repo': project['repo'],
-                         'hash': project['hash'],
-                         'version': release['version']}
+                         'repo': project.repo.name,
+                         'hash': project.hash,
+                         'version': release.version}
                 )
             else:
 
-                if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                                project['hash'], messages):
+                if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                                project.hash, messages):
                     continue
 
                 # Report if the version has already been
@@ -660,69 +616,70 @@ def validate_releases(deliverable_info, zuul_projects,
                 # import history and sometimes we want to make new
                 # releases.
                 version_exists = gitutils.commit_exists(
-                    workdir, project['repo'], release['version'],
+                    workdir, project.repo.name, release.version,
                 )
                 if version_exists:
                     actual_sha = gitutils.sha_for_tag(
                         workdir,
-                        project['repo'],
-                        release['version'],
+                        project.repo.name,
+                        release.version,
                     )
-                    if actual_sha != project['hash']:
+                    if actual_sha != project.hash:
                         messages.error(
                             ('Version %s in %s is on '
                              'commit %s instead of %s') %
-                            (release['version'],
-                             project['repo'],
+                            (release.version,
+                             project.repo.name,
                              actual_sha,
-                             project['hash']))
+                             project.hash))
                     print('tag exists, skipping further validation')
                     continue
 
                 # Report if the SHA exists or not (an error if it
                 # does not).
                 sha_exists = gitutils.commit_exists(
-                    workdir, project['repo'], project['hash'],
+                    workdir, project.repo.name, project.hash,
                 )
                 if not sha_exists:
                     messages.error('No commit %(hash)r in %(repo)r'
-                                   % project)
+                                   % {'hash': project.hash,
+                                      'repo': project.repo.name})
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
 
-                print('Found new version {} for {}'.format(
-                    release['version'], project['repo']))
-                new_releases[release['version']] = release
-                if prev_projects and project['repo'] not in prev_projects:
-                    print('not included in previous release for %s: %s' %
-                          (prev_version, ', '.join(sorted(prev_projects))))
+                LOG.info('Found new version {} for {}'.format(
+                    release.version, project.repo))
+                new_releases[release.version] = release
+                if prev_projects and project.repo.name not in prev_projects:
+                    LOG.debug('not included in previous release for %s: %s' %
+                              (prev_version, ', '.join(sorted(prev_projects))))
                 else:
 
-                    release_type, was_explicit = legacy_get_release_type(
-                        deliverable_info, project['repo'], workdir,
+                    release_type, was_explicit = get_release_type(
+                        deliv, project.repo, workdir,
                     )
                     if was_explicit:
-                        print('found explicit release-type {!r}'.format(
+                        LOG.debug('found explicit release-type {!r}'.format(
                             release_type))
                     else:
-                        print('release-type not given, '
-                              'guessing {!r}'.format(release_type))
+                        LOG.debug('release-type not given, '
+                                  'guessing {!r}'.format(release_type))
 
                     # If this is a puppet module, ensure
                     # that the tag and metadata file
                     # match.
                     if release_type == 'puppet':
-                        print('applying puppet version rules')
+                        LOG.info('applying puppet version rules')
                         puppet_ver = puppetutils.get_version(
-                            workdir, project['repo'])
-                        if puppet_ver != release['version']:
+                            workdir, project.repo.name)
+                        if puppet_ver != release.version:
                             messages.error(
                                 '%s metadata contains "%s" '
                                 'but is being tagged "%s"' % (
-                                    project['repo'],
+                                    project.repo.name,
                                     puppet_ver,
-                                    release['version'],
+                                    release.version,
                                 )
                             )
 
@@ -730,16 +687,16 @@ def validate_releases(deliverable_info, zuul_projects,
                     # that the tag and metadata file
                     # match.
                     if release_type == 'nodejs':
-                        print('applying nodejs version rules')
+                        LOG.info('applying nodejs version rules')
                         npm_ver = npmutils.get_version(
-                            workdir, project['repo'])
-                        if npm_ver != release['version']:
+                            workdir, project.repo.name)
+                        if npm_ver != release.version:
                             messages.error(
                                 '%s package.json contains "%s" '
                                 'but is being tagged "%s"' % (
-                                    project['repo'],
+                                    project.repo.name,
                                     npm_ver,
-                                    release['version'],
+                                    release.version,
                                 )
                             )
 
@@ -758,20 +715,20 @@ def validate_releases(deliverable_info, zuul_projects,
                         else:
                             report = messages.warning
                         requirements.find_bad_lower_bound_increases(
-                            workdir, project['repo'],
-                            prev_version, release['version'], project['hash'],
+                            workdir, project.repo.name,
+                            prev_version, release.version, project.hash,
                             report,
                         )
 
                     for e in versionutils.validate_version(
-                            release['version'],
+                            release.version,
                             release_type=release_type,
-                            pre_ok=(release_model in _USES_PREVER)):
+                            pre_ok=(deliv.model in _USES_PREVER)):
                         msg = ('could not validate version %r: %s' %
-                               (release['version'], e))
+                               (release.version, e))
                         messages.error(msg)
 
-                    if is_independent:
+                    if deliv.is_independent:
                         messages.warning('skipping descendant test for '
                                          'independent project, verify '
                                          'branch manually')
@@ -781,12 +738,12 @@ def validate_releases(deliverable_info, zuul_projects,
                         # check that the commit is actually on the
                         # targeted branch.
                         if not gitutils.check_branch_sha(workdir,
-                                                         project['repo'],
+                                                         project.repo.name,
                                                          series_name,
-                                                         project['hash']):
+                                                         project.hash):
                             msg = '%s %s not present in %s branch' % (
-                                project['repo'],
-                                project['hash'],
+                                project.repo.name,
+                                project.hash,
                                 series_name,
                             )
                             messages.error(msg)
@@ -796,13 +753,13 @@ def validate_releases(deliverable_info, zuul_projects,
                             # commit with a new version.
                             old_sha = gitutils.sha_for_tag(
                                 workdir,
-                                project['repo'],
+                                project.repo.name,
                                 prev_version,
                             )
-                            if old_sha == project['hash']:
+                            if old_sha == project.hash:
                                 # FIXME(dhellmann): This needs a test.
-                                print('Retagging the SHA with '
-                                      'a new version')
+                                LOG.info('Retagging the SHA with '
+                                         'a new version')
                             else:
                                 # Check to see if the commit for the new
                                 # version is in the ancestors of the
@@ -810,29 +767,30 @@ def validate_releases(deliverable_info, zuul_projects,
                                 # merged into the branch.
                                 is_ancestor = gitutils.check_ancestry(
                                     workdir,
-                                    project['repo'],
+                                    project.repo.name,
                                     prev_version,
-                                    project['hash'],
+                                    project.hash,
                                 )
                                 if not is_ancestor:
                                     messages.error(
                                         '%s %s receiving %s '
                                         'is not a descendant of %s' % (
-                                            project['repo'],
-                                            project['hash'],
-                                            release['version'],
+                                            project.repo.name,
+                                            project.hash,
+                                            release.version,
                                             prev_version,
                                         )
                                     )
 
-        prev_version = release['version']
-        prev_projects = set(p['repo'] for p in release['projects'])
+        prev_version = release.version
+        prev_projects = set(p.repo.name for p in release.projects)
 
     # Make sure that new entries have been appended to the file.
     for v, nr in new_releases.items():
-        if nr != deliverable_info['releases'][-1]:
+        print('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
+        if nr != deliv.releases[-1]:
             msg = ('new release %s must be listed last, '
-                   'with one new release per patch' % nr['version'])
+                   'with one new release per patch' % nr.version)
             messages.error(msg)
 
 
@@ -1376,7 +1334,7 @@ def main():
         )
         validate_gitreview(deliv, workdir, messages)
         validate_releases(
-            deliverable_info,
+            deliv,
             zuul_projects,
             series_name,
             workdir,

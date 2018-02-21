@@ -306,37 +306,6 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.errors))
 
 
-class TestGetModel(base.BaseTestCase):
-
-    def setUp(self):
-        super().setUp()
-        self.msg = validate.MessageCollector()
-
-    def test_no_model_series(self):
-        self.assertEqual(
-            'UNSPECIFIED',
-            validate.get_model({}, 'ocata'),
-        )
-
-    def test_no_model_independent(self):
-        self.assertEqual(
-            'independent',
-            validate.get_model({}, '_independent'),
-        )
-
-    def test_with_model_independent(self):
-        self.assertEqual(
-            'independent',
-            validate.get_model({'release-model': 'set'}, '_independent'),
-        )
-
-    def test_with_model_series(self):
-        self.assertEqual(
-            'set',
-            validate.get_model({'release-model': 'set'}, 'ocata'),
-        )
-
-
 class TestValidateModel(base.BaseTestCase):
 
     def setUp(self):
@@ -438,19 +407,24 @@ class TestValidateReleases(base.BaseTestCase):
         self.msg = validate.MessageCollector()
 
     def test_invalid_hash(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.1',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'this-is-not-a-hash',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'this-is-not-a-hash',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -461,19 +435,24 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_valid_existing(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.8.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -484,19 +463,24 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.errors))
 
     def test_no_such_hash(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.0.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -507,19 +491,24 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_mismatch_existing(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.8.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      # hash from the previous release
-                      'hash': '88af0f601895d54fb0a45b796cdd045a2b3636a3'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          # hash from the previous release
+                          'hash': '88af0f601895d54fb0a45b796cdd045a2b3636a3'},
+                     ]}
+                ],
+            },
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'newton',
             self.tmpdir,
@@ -530,20 +519,25 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_hash_from_master_used_in_stable_release(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.8.1',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      # hash from master
-                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          # hash from master
+                          'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'newton',
             self.tmpdir,
@@ -554,26 +548,31 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_hash_from_master_used_in_stable_release2(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.8.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'openstack-release-test'},
-                 ]},
-                {'version': '0.8.1',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      # hash from master
-                      'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                    {'version': '0.8.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          # hash from master
+                          'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'newton',
             self.tmpdir,
@@ -584,20 +583,25 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_hash_from_stable_used_in_master_release(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      # hash from stable/newton
-                      'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          # hash from stable/newton
+                          'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             defaults.RELEASE,
             self.tmpdir,
@@ -608,18 +612,23 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
     def test_hash_from_master_used_after_default_branch_should_exist_but_does_not(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '1.0.0',
-                 'projects': [
-                     {'repo': 'openstack/releases',
-                      'hash': '8eea82428995b8f3354c0a75351fe95bbbb1135a'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '1.0.0',
+                     'projects': [
+                         {'repo': 'openstack/releases',
+                          'hash': '8eea82428995b8f3354c0a75351fe95bbbb1135a'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'austin',
             self.tmpdir,
@@ -630,27 +639,32 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.errors))
 
     def test_not_descendent(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                # hash from stable/meiji
-                {'version': '0.0.2',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': '9f48cae13a7388a6f6d1361634d320d73baef0d3',
-                      'tarball-base': 'openstack-release-test'},
-                 ]},
-                # hash from stable/newton
-                {'version': '0.0.9',  # 0.0.3 already exists
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    # hash from stable/meiji
+                    {'version': '0.0.2',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '9f48cae13a7388a6f6d1361634d320d73baef0d3',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                    # hash from stable/newton
+                    {'version': '0.0.9',  # 0.0.3 already exists
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a8185a9a6c934567f2f8b7543136274dda78ddd3',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'meiji',
             self.tmpdir,
@@ -661,25 +675,30 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(2, len(self.msg.errors))
 
     def test_new_not_at_end(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '0.8.1',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'openstack-release-test'},
-                 ]},
-                {'version': '0.7.2',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'openstack-release-test'},
-                 ]},
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                    {'version': '0.7.2',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -697,18 +716,23 @@ class TestValidateReleases(base.BaseTestCase):
         validate_version.configure_mock(
             return_value=['an error goes here'],
         )
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -721,12 +745,17 @@ class TestValidateReleases(base.BaseTestCase):
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
         # data. That's OK.
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': []
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -737,19 +766,24 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.errors))
 
     def test_untagged_with_releases(self):
-        deliverable_info = {
-            'release-model': 'untagged',
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                 ]},
-            ]
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'release-model': 'untagged',
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]},
+                ]
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -979,18 +1013,23 @@ class TestPuppetUtils(base.BaseTestCase):
         llam.return_value = True
         get_version.return_value = '99.1.0'
         cbs.return_value = True
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
@@ -1007,18 +1046,23 @@ class TestPuppetUtils(base.BaseTestCase):
         llam.return_value = True
         get_version.return_value = '99.1.0'
         cbs.return_value = True
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.2.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.2.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            }
+        )
         validate.validate_releases(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': {}},
             'ocata',
             self.tmpdir,
