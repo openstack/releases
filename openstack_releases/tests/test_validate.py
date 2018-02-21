@@ -2521,40 +2521,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.errors))
 
 
-class TestGuessDeliverableType(base.BaseTestCase):
-
-    def setUp(self):
-        super().setUp()
-        self.msg = validate.MessageCollector()
-
-    def test_explicit(self):
-        self.assertEqual(
-            'the-type',
-            validate._guess_deliverable_type(
-                'name',
-                {'type': 'the-type'},
-            ),
-        )
-
-    def test_implicit_tempest_plugin(self):
-        self.assertEqual(
-            'tempest-plugin',
-            validate._guess_deliverable_type(
-                'foo-tempest-plugin',
-                {},
-            ),
-        )
-
-    def test_default_other(self):
-        self.assertEqual(
-            'other',
-            validate._guess_deliverable_type(
-                'name',
-                {},
-            ),
-        )
-
-
 class TestValidateBranchPoints(base.BaseTestCase):
 
     def setUp(self):
