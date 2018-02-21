@@ -1290,29 +1290,16 @@ def main():
 
         messages.set_filename(filename)
 
-        with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_info = yamlutils.loads(f.read())
+        deliv = deliverable.Deliverable.read_file(filename)
 
-        series_name = os.path.basename(
-            os.path.dirname(filename)
-        ).lstrip('_')
-        deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
-
-        if series_name in _CLOSED_SERIES:
+        if deliv.series in _CLOSED_SERIES:
             continue
-
-        deliv = deliverable.Deliverable(
-            team=None,  # extracted from the info automatically
-            series=series_name,
-            name=deliverable_name,
-            data=deliverable_info,
-        )
 
         clone_deliverable(deliv, workdir, messages)
         validate_bugtracker(deliv, messages)
         validate_team(deliv, team_data, messages)
         validate_release_notes(deliv, messages)
-        validate_model(deliv, series_name, messages)
+        validate_model(deliv, deliv.series, messages)
         validate_release_type(
             deliv,
             zuul_projects,
@@ -1329,59 +1316,59 @@ def main():
         validate_releases(
             deliv,
             zuul_projects,
-            series_name,
+            deliv.series,
             workdir,
             messages,
         )
         validate_tarball_base(deliv, workdir, messages)
         # Some rules only apply to the most current release.
-        if series_name == defaults.RELEASE:
+        if deliv.series == defaults.RELEASE:
             validate_new_releases(
                 deliv,
                 team_data,
                 messages,
             )
             validate_series_open(
-                deliverable_info,
-                series_name,
+                deliv._data,
+                deliv.series,
                 filename,
                 messages,
             )
             deprecate_release_highlights(
-                deliverable_info,
+                deliv._data,
                 messages,
             )
         validate_series_first(
-            deliverable_info,
-            series_name,
+            deliv._data,
+            deliv.series,
             messages,
         )
         validate_branch_prefixes(
-            deliverable_info,
+            deliv._data,
             messages,
         )
         validate_stable_branches(
-            deliverable_info,
-            deliverable_name,
+            deliv._data,
+            deliv.name,
             workdir,
-            series_name,
+            deliv.series,
             messages,
         )
         validate_feature_branches(
-            deliverable_info,
-            deliverable_name,
+            deliv._data,
+            deliv.name,
             workdir,
             messages,
         )
         validate_driverfixes_branches(
-            deliverable_info,
-            deliverable_name,
+            deliv._data,
+            deliv.name,
             workdir,
             messages,
         )
         validate_branch_points(
-            deliverable_info,
-            deliverable_name,
+            deliv._data,
+            deliv.name,
             workdir,
             messages,
         )
