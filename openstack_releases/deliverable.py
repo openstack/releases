@@ -299,6 +299,15 @@ class Deliverable(object):
             )
             for r in sorted(repos)
         }
+        self._releases = [
+            Release(
+                version=r['version'],
+                projects=r['projects'],
+                data=r,
+                deliv=self,
+            )
+            for r in self._data.get('releases', [])
+        ]
 
     @property
     def launchpad_id(self):
@@ -377,15 +386,7 @@ class Deliverable(object):
 
     @property
     def releases(self):
-        return [
-            Release(
-                version=r['version'],
-                projects=r['projects'],
-                data=r,
-                deliv=self,
-            )
-            for r in self._data.get('releases', [])
-        ]
+        return self._releases
 
     def get_branch_location(self, name):
         branches = self._data.get('branches', [])
