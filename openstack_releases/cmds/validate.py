@@ -157,23 +157,22 @@ def validate_series_open(deliv, filename, messages):
             expected_branch, previous_deliverable_file, deliv.series))
 
 
-def validate_series_first(deliverable_info, series_name,
-                          messages):
+def validate_series_first(deliv, series_name, messages):
     "The first release in a series needs to end with '.0'."
     header('Validate Series First')
-    # When the releases entry is present but empty, it's value may not
-    # be a list, so we default to a list using 'or'.
-    releases = deliverable_info.get('releases') or []
+
+    if deliv.is_independent:
+        LOG.info('rule does not apply to independent projects')
+        return
+
+    releases = deliv.releases
     if len(releases) != 1:
         # We only have to check this when the first release is being
         # applied in the file.
-        print('not the first release')
+        LOG.info('this rule only applies to the first release in a series')
         return
-    if series_name == '_independent':
-        # These rules don't apply to independent projects.
-        print('rule does not apply to independent projects')
-        return
-    versionstr = releases[0]['version']
+
+    versionstr = releases[0].version
     patchlevel = versionstr.rpartition('.')[-1]
     if not (patchlevel == '0' or patchlevel.startswith('0b')):
         messages.error(
@@ -1321,7 +1320,7 @@ def main():
                 messages,
             )
         validate_series_first(
-            deliv._data,
+            deliv,
             deliv.series,
             messages,
         )
