@@ -2061,11 +2061,8 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             name='name',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_series_open(
-            deliv,
-            series_b_filename,
-            self.ctx,
-        )
+        self.ctx.set_filename(series_b_filename)
+        validate.validate_series_open(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -2090,11 +2087,8 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             name='name',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_series_open(
-            deliv,
-            series_b_filename,
-            self.ctx,
-        )
+        self.ctx.set_filename(series_b_filename)
+        validate.validate_series_open(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -2114,11 +2108,8 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             name='name',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_series_open(
-            deliv,
-            'filename',  # not used
-            self.ctx,
-        )
+        self.ctx.set_filename('filename')  # not used
+        validate.validate_series_open(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -2151,11 +2142,8 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             name='name',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_series_open(
-            deliv,
-            series_b_filename,
-            self.ctx,
-        )
+        self.ctx.set_filename(series_b_filename)
+        validate.validate_series_open(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(1, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))

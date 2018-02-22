@@ -101,7 +101,7 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
-def validate_series_open(deliv, filename, context):
+def validate_series_open(deliv, context):
     "No releases in the new series until the previous one has a branch."
     header('Validate Series Open')
 
@@ -114,9 +114,9 @@ def validate_series_open(deliv, filename, context):
         return
 
     deliverables_dir = os.path.dirname(
-        os.path.dirname(filename)
+        os.path.dirname(context.filename)
     )
-    deliverable_base = os.path.basename(filename)
+    deliverable_base = os.path.basename(context.filename)
     pattern = os.path.join(
         deliverables_dir,
         '*',
@@ -130,7 +130,7 @@ def validate_series_open(deliv, filename, context):
         for name in sorted(glob.glob(pattern))
         if '/_independent/' not in name
     ]
-    idx = all_deliverable_files.index(filename)
+    idx = all_deliverable_files.index(context.filename)
     if idx == 0:
         # This is the first cycle-based deliverable file.
         LOG.debug('this is the first cycle-based version of this deliverable')
@@ -1375,11 +1375,7 @@ def main():
         # Some rules only apply to the most current release.
         if deliv.series == defaults.RELEASE:
             validate_new_releases(deliv, context)
-            validate_series_open(
-                deliv,
-                filename,
-                context,
-            )
+            validate_series_open(deliv, context)
         validate_series_first(deliv, context)
         validate_branch_prefixes(deliv, context)
         validate_stable_branches(deliv, context)
