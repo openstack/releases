@@ -731,6 +731,37 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_releases(
+            deliv,
+            {'validate-projects-by-name': {}},
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
+
+
+class TestValidateVersionNumbers(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
+        self.msg = validate.MessageCollector()
+
     @mock.patch('openstack_releases.versionutils.validate_version')
     def test_invalid_version(self, validate_version):
         # Set up the nested validation function to produce an error,
@@ -754,37 +785,14 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_version_numbers(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
         self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
-
-    def test_no_releases(self):
-        # When we initialize a new series, we won't have any release
-        # data. That's OK.
-        deliv = deliverable.Deliverable(
-            team='team',
-            series='ocata',
-            name='name',
-            data={
-                'artifact-link-mode': 'none',
-                'releases': []
-            }
-        )
-        validate.validate_releases(
-            deliv,
-            {'validate-projects-by-name': {}},
-            self.tmpdir,
-            self.msg,
-        )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
 
 
 class TestGetReleaseType(base.BaseTestCase):
@@ -1021,9 +1029,8 @@ class TestPuppetUtils(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_version_numbers(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -1053,9 +1060,8 @@ class TestPuppetUtils(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_version_numbers(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
