@@ -736,16 +736,48 @@ def validate_version_numbers(deliv, workdir, messages):
         prev_version = release.version
 
 
+def validate_new_releases_at_end(deliv, workdir, messages):
+    "New releases must be added to the end of the list."
+    header('Validate New Releases At End')
+
+    # Remember which entries are new so we can verify that they
+    # appear at the end of the file.
+    new_releases = {}
+
+    for release in deliv.releases:
+
+        for project in release.projects:
+
+            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                            project.hash, messages):
+                continue
+
+            version_exists = gitutils.commit_exists(
+                workdir, project.repo.name, release.version,
+            )
+            if version_exists:
+                LOG.debug('tag exists, skipping further validation')
+                continue
+
+            LOG.info('Found new version {} for {}'.format(
+                release.version, project.repo))
+            new_releases[release.version] = release
+
+    # Make sure that new entries have been appended to the file.
+    for v, nr in new_releases.items():
+        LOG.info('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
+        if nr != deliv.releases[-1]:
+            msg = ('new release %s must be listed last, '
+                   'with one new release per patch' % nr.version)
+            messages.error(msg)
+
+
 def validate_releases(deliv, zuul_projects,
                       workdir,
                       messages):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
     header('Validate Releases')
-
-    # Remember which entries are new so we can verify that they
-    # appear at the end of the file.
-    new_releases = {}
 
     prev_version = None
     for release in deliv.releases:
@@ -769,7 +801,6 @@ def validate_releases(deliv, zuul_projects,
 
             LOG.info('Found new version {} for {}'.format(
                 release.version, project.repo))
-            new_releases[release.version] = release
 
             if deliv.is_independent:
                 messages.warning('skipping descendant test for '
@@ -826,14 +857,6 @@ def validate_releases(deliv, zuul_projects,
                             )
 
         prev_version = release.version
-
-    # Make sure that new entries have been appended to the file.
-    for v, nr in new_releases.items():
-        print('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
-        if nr != deliv.releases[-1]:
-            msg = ('new release %s must be listed last, '
-                   'with one new release per patch' % nr.version)
-            messages.error(msg)
 
 
 def validate_new_releases(deliv, team_data, messages):
@@ -1343,6 +1366,7 @@ def main():
         validate_release_sha_exists(deliv, workdir, messages)
         validate_existing_tags(deliv, workdir, messages)
         validate_version_numbers(deliv, workdir, messages)
+        validate_new_releases_at_end(deliv, workdir, messages)
         validate_releases(
             deliv,
             zuul_projects,
