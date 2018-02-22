@@ -478,15 +478,15 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
 
-class TestValidateReleases(base.BaseTestCase):
+class TestValidateExistingTags(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateReleases, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.msg = validate.MessageCollector()
 
-    def test_valid_existing(self):
+    def test_valid(self):
         deliv = deliverable.Deliverable(
             team='team',
             series='ocata',
@@ -503,9 +503,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_releases(
+        validate.validate_existing_tags(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -513,7 +512,7 @@ class TestValidateReleases(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
 
-    def test_mismatch_existing(self):
+    def test_mismatch(self):
         deliv = deliverable.Deliverable(
             team='team',
             series='newton',
@@ -530,15 +529,23 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_releases(
+        validate.validate_existing_tags(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
         self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
+
+
+class TestValidateReleases(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateReleases, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
+        self.msg = validate.MessageCollector()
 
     def test_hash_from_master_used_in_stable_release(self):
         deliv = deliverable.Deliverable(

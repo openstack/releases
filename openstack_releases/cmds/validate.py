@@ -594,19 +594,11 @@ def validate_release_sha_exists(deliv, workdir, messages):
                                   'repo': project.repo.name})
 
 
-def validate_releases(deliv, zuul_projects,
-                      workdir,
-                      messages):
+def validate_existing_tags(deliv, workdir, messages):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
-    header('Validate Releases')
+    header('Validate Existing Tags')
 
-    # Remember which entries are new so we can verify that they
-    # appear at the end of the file.
-    new_releases = {}
-
-    prev_version = None
-    prev_projects = set()
     for release in deliv.releases:
 
         LOG.info('checking {}'.format(release.version))
@@ -641,20 +633,39 @@ def validate_releases(deliv, zuul_projects,
                          project.repo.name,
                          actual_sha,
                          project.hash))
-                print('tag exists, skipping further validation')
+                LOG.info('tag exists')
+
+
+def validate_releases(deliv, zuul_projects,
+                      workdir,
+                      messages):
+    """Apply validation rules to the 'releases' list for the deliverable.
+    """
+    header('Validate Releases')
+
+    # Remember which entries are new so we can verify that they
+    # appear at the end of the file.
+    new_releases = {}
+
+    prev_version = None
+    prev_projects = set()
+    for release in deliv.releases:
+
+        LOG.info('checking {}'.format(release.version))
+
+        for project in release.projects:
+
+            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
+
+            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                            project.hash, messages):
                 continue
 
-            # Report if the SHA exists or not (an error if it
-            # does not).
-            sha_exists = gitutils.commit_exists(
-                workdir, project.repo.name, project.hash,
+            version_exists = gitutils.commit_exists(
+                workdir, project.repo.name, release.version,
             )
-            if not sha_exists:
-                messages.error('No commit %(hash)r in %(repo)r'
-                               % {'hash': project.hash,
-                                  'repo': project.repo.name})
-                # No point in running extra checks if the SHA just
-                # doesn't exist.
+            if version_exists:
+                LOG.debug('tag exists, skipping further validation')
                 continue
 
             LOG.info('Found new version {} for {}'.format(
@@ -1308,6 +1319,7 @@ def main():
         )
         validate_gitreview(deliv, workdir, messages)
         validate_release_sha_exists(deliv, workdir, messages)
+        validate_existing_tags(deliv, workdir, messages)
         validate_releases(
             deliv,
             zuul_projects,
