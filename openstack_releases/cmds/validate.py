@@ -772,21 +772,23 @@ def validate_new_releases_at_end(deliv, workdir, messages):
             messages.error(msg)
 
 
-def validate_releases(deliv, zuul_projects,
-                      workdir,
-                      messages):
-    """Apply validation rules to the 'releases' list for the deliverable.
-    """
-    header('Validate Releases')
+def validate_release_branch_membership(deliv, workdir, messages):
+    "Commits being tagged need to be on the right branch."
+    header('Validate Release Branch Membership')
+
+    if deliv.is_independent:
+        messages.warning('skipping descendant test for '
+                         'independent project, verify '
+                         'branch manually')
+        return
 
     prev_version = None
+
     for release in deliv.releases:
 
         LOG.info('checking {}'.format(release.version))
 
         for project in release.projects:
-
-            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
                                             project.hash, messages):
@@ -802,59 +804,53 @@ def validate_releases(deliv, zuul_projects,
             LOG.info('Found new version {} for {}'.format(
                 release.version, project.repo))
 
-            if deliv.is_independent:
-                messages.warning('skipping descendant test for '
-                                 'independent project, verify '
-                                 'branch manually')
+            # If this is the first version in the series,
+            # check that the commit is actually on the
+            # targeted branch.
+            if not gitutils.check_branch_sha(workdir,
+                                             project.repo.name,
+                                             deliv.series,
+                                             project.hash):
+                msg = '%s %s not present in %s branch' % (
+                    project.repo.name,
+                    project.hash,
+                    deliv.series,
+                )
+                messages.error(msg)
 
-            else:
-                # If this is the first version in the series,
-                # check that the commit is actually on the
-                # targeted branch.
-                if not gitutils.check_branch_sha(workdir,
-                                                 project.repo.name,
-                                                 deliv.series,
-                                                 project.hash):
-                    msg = '%s %s not present in %s branch' % (
-                        project.repo.name,
-                        project.hash,
-                        deliv.series,
-                    )
-                    messages.error(msg)
-
-                if prev_version:
-                    # Check to see if we are re-tagging the same
-                    # commit with a new version.
-                    old_sha = gitutils.sha_for_tag(
+            if prev_version:
+                # Check to see if we are re-tagging the same
+                # commit with a new version.
+                old_sha = gitutils.sha_for_tag(
+                    workdir,
+                    project.repo.name,
+                    prev_version,
+                )
+                if old_sha == project.hash:
+                    # FIXME(dhellmann): This needs a test.
+                    LOG.info('Retagging the SHA with '
+                             'a new version')
+                else:
+                    # Check to see if the commit for the new
+                    # version is in the ancestors of the
+                    # previous release, meaning it is actually
+                    # merged into the branch.
+                    is_ancestor = gitutils.check_ancestry(
                         workdir,
                         project.repo.name,
                         prev_version,
+                        project.hash,
                     )
-                    if old_sha == project.hash:
-                        # FIXME(dhellmann): This needs a test.
-                        LOG.info('Retagging the SHA with '
-                                 'a new version')
-                    else:
-                        # Check to see if the commit for the new
-                        # version is in the ancestors of the
-                        # previous release, meaning it is actually
-                        # merged into the branch.
-                        is_ancestor = gitutils.check_ancestry(
-                            workdir,
-                            project.repo.name,
-                            prev_version,
-                            project.hash,
-                        )
-                        if not is_ancestor:
-                            messages.error(
-                                '%s %s receiving %s '
-                                'is not a descendant of %s' % (
-                                    project.repo.name,
-                                    project.hash,
-                                    release.version,
-                                    prev_version,
-                                )
+                    if not is_ancestor:
+                        messages.error(
+                            '%s %s receiving %s '
+                            'is not a descendant of %s' % (
+                                project.repo.name,
+                                project.hash,
+                                release.version,
+                                prev_version,
                             )
+                        )
 
         prev_version = release.version
 
@@ -1367,12 +1363,7 @@ def main():
         validate_existing_tags(deliv, workdir, messages)
         validate_version_numbers(deliv, workdir, messages)
         validate_new_releases_at_end(deliv, workdir, messages)
-        validate_releases(
-            deliv,
-            zuul_projects,
-            workdir,
-            messages,
-        )
+        validate_release_branch_membership(deliv, workdir, messages)
         validate_tarball_base(deliv, workdir, messages)
         # Some rules only apply to the most current release.
         if deliv.series == defaults.RELEASE:
