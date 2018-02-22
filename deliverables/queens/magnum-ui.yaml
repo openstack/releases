@@ -1,0 +1,15 @@
+---
+launchpad: magnum-ui
+release-model: cycle-with-intermediary
+team: magnum
+type: horizon-plugin
+branches:
+  - name: stable/queens
+    location: 4.0.0
+releases:
+  - projects:
+      - hash: 7a9e3f754d5af80abb25f437aa9c0da18b4400b9
+        repo: openstack/magnum-ui
+    version: 4.0.0
+repository-settings:
+  openstack/magnum-ui: {}
