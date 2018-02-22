@@ -101,7 +101,7 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
-def validate_series_open(deliv, filename, messages):
+def validate_series_open(deliv, filename, context):
     "No releases in the new series until the previous one has a branch."
     header('Validate Series Open')
 
@@ -152,12 +152,12 @@ def validate_series_open(deliv, filename, messages):
                 previous_deliverable_file,
             ))
             return
-    messages.warning(
+    context.warning(
         'There is no {} branch defined in {}. Is the {} series open?'.format(
             expected_branch, previous_deliverable_file, deliv.series))
 
 
-def validate_series_first(deliv, messages):
+def validate_series_first(deliv, context):
     "The first release in a series needs to end with '.0'."
     header('Validate Series First')
 
@@ -175,13 +175,13 @@ def validate_series_first(deliv, messages):
     versionstr = releases[0].version
     patchlevel = versionstr.rpartition('.')[-1]
     if not (patchlevel == '0' or patchlevel.startswith('0b')):
-        messages.error(
+        context.error(
             'Initial releases in a series must increment at '
             'least the minor version or be beta versions. %r' % (versionstr,)
         )
 
 
-def validate_bugtracker(deliv, messages):
+def validate_bugtracker(deliv, context):
     "Look for the bugtracker info"
     header('Validate Bug Tracker')
     lp_name = deliv.launchpad_id
@@ -191,11 +191,11 @@ def validate_bugtracker(deliv, messages):
             lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         except requests.exceptions.ConnectionError as e:
             # The flakey Launchpad API failed. Don't punish the user for that.
-            messages.warning('Could not verify launchpad project %s (%s)' %
-                             (lp_name, e))
+            context.warning('Could not verify launchpad project %s (%s)' %
+                            (lp_name, e))
         else:
             if (lp_resp.status_code // 100) == 4:
-                messages.error('Launchpad project %s does not exist' % lp_name)
+                context.error('Launchpad project %s does not exist' % lp_name)
         LOG.debug('launchpad project ID {}'.format(lp_name))
     elif sb_id:
         try:
@@ -204,35 +204,35 @@ def validate_bugtracker(deliv, messages):
             )
         except requests.exceptions.ConnectionError as e:
             # The flakey Launchpad API failed. Don't punish the user for that.
-            messages.warning('Could not verify storyboard project %s (%s)' %
-                             (sb_id, e))
+            context.warning('Could not verify storyboard project %s (%s)' %
+                            (sb_id, e))
         else:
             if (projects_resp.status_code // 100) == 4:
-                messages.warning(
+                context.warning(
                     'Could not verify storyboard project, API call failed.'
                 )
             for project in projects_resp.json():
                 if sb_id == project.get('id'):
                     break
             else:
-                messages.error(
+                context.error(
                     'Did not find a storyboard project with ID %s' % sb_id
                 )
             LOG.debug('storyboard project ID {}'.format(sb_id))
     else:
-        messages.error('No launchpad or storyboard project given')
+        context.error('No launchpad or storyboard project given')
 
 
-def validate_team(deliv, team_data, messages):
+def validate_team(deliv, context):
     "Look for the team name"
     header('Validate Team')
-    if deliv.team not in team_data:
-        messages.warning('Team %r not in governance data' %
-                         deliv.team)
+    if deliv.team not in context.team_data:
+        context.warning('Team %r not in governance data' %
+                        deliv.team)
     LOG.debug('owned by team {}'.format(deliv.team))
 
 
-def validate_release_notes(deliv, messages):
+def validate_release_notes(deliv, context):
     "Make sure the release notes page exists, if it is specified."
     header('Validate Release Notes')
     notes_link = deliv.release_notes
@@ -245,7 +245,7 @@ def validate_release_notes(deliv, messages):
         # the actual links.
         for repo_name in sorted(notes_link.keys()):
             if repo_name not in deliv.known_repo_names:
-                messages.error(
+                context.error(
                     'linking to release notes for unknown '
                     'repository {}'.format(
                         repo_name)
@@ -256,13 +256,13 @@ def validate_release_notes(deliv, messages):
     for link in links:
         rn_resp = requests.get(link)
         if (rn_resp.status_code // 100) != 2:
-            messages.error('Could not fetch release notes page %s: %s' %
-                           (link, rn_resp.status_code))
+            context.error('Could not fetch release notes page %s: %s' %
+                          (link, rn_resp.status_code))
         else:
             LOG.debug('{} OK'.format(link))
 
 
-def validate_model(deliv, messages):
+def validate_model(deliv, context):
     "Require a valid release model"
     header('Validate Model')
 
@@ -271,14 +271,14 @@ def validate_model(deliv, messages):
     if not deliv.is_independent and not deliv.model:
         # If the deliverable is not independent it must declare a
         # release model.
-        messages.error(
+        context.error(
             'no release-model specified',
         )
 
     if deliv.model == 'independent' and deliv.series != 'independent':
         # If the project is release:independent, make sure
         # that's where the deliverable file is.
-        messages.error(
+        context.error(
             'uses the independent release model '
             'and should be in the _independent '
             'directory'
@@ -290,19 +290,19 @@ def validate_model(deliv, messages):
     # 'independent' for deliverables in that series.
     model_value = deliv.data.get('release-model', 'independent')
     if deliv.series == 'independent' and model_value != 'independent':
-        messages.error(
+        context.error(
             'deliverables in the _independent directory '
             'should all use the independent release model'
         )
 
     if deliv.model == 'untagged' and deliv.is_released:
-        messages.error(
+        context.error(
             'untagged deliverables should not have a "releases" section'
         )
         return
 
 
-def clone_deliverable(deliv, workdir, messages):
+def clone_deliverable(deliv, workdir, context):
     """Clone all of the repositories for the deliverable into the workdir.
 
     Returns boolean indicating whether all of the clones could be
@@ -319,23 +319,23 @@ def clone_deliverable(deliv, workdir, messages):
             LOG.info('{} is retired, skipping clone'.format(repo.name))
             continue
         if not gitutils.safe_clone_repo(workdir, repo.name,
-                                        'master', messages):
+                                        'master', context):
             ok = False
     return ok
 
 
-def _require_gitreview(workdir, repo, messages):
+def _require_gitreview(workdir, repo, context):
     print('\nlooking for .gitreview in %s' % repo)
     filename = os.path.join(
         workdir, repo, '.gitreview',
     )
     if not os.path.exists(filename):
-        messages.error('%s has no .gitreview file' % (repo,))
+        context.error('%s has no .gitreview file' % (repo,))
     else:
         LOG.debug('found {}'.format(filename))
 
 
-def validate_gitreview(deliv, workdir, messages):
+def validate_gitreview(deliv, workdir, context):
     "All repos must include a .gitreview file for new releases."
     header('Validate .gitreview')
     checked = set()
@@ -355,8 +355,8 @@ def validate_gitreview(deliv, workdir, messages):
                 LOG.debug('checking {} at {} for {}'.format(
                     project.repo.name, project.hash, release.version))
                 gitutils.safe_clone_repo(
-                    workdir, project.repo.name, project.hash, messages)
-                _require_gitreview(workdir, project.repo.name, messages)
+                    workdir, project.repo.name, project.hash, context)
+                _require_gitreview(workdir, project.repo.name, context)
             else:
                 LOG.debug('version {} exists, skipping'.format(
                     release.version))
@@ -394,10 +394,7 @@ def get_release_type(deliv, repo, workdir):
     return ('python-service', False)
 
 
-def validate_release_type(deliv,
-                          zuul_projects,
-                          workdir,
-                          messages):
+def validate_release_type(deliv, workdir, context):
     """Apply validation rules for the deliverable based on 'release-type'
     to the most recent release of a deliverable.
 
@@ -436,14 +433,14 @@ def validate_release_type(deliv,
                 release.version))
             project_config.require_release_jobs_for_repo(
                 deliv,
-                zuul_projects,
+                context.zuul_projects,
                 project.repo,
                 release_type,
-                messages,
+                context,
             )
 
 
-def validate_tarball_base(deliv, workdir, messages):
+def validate_tarball_base(deliv, workdir, context):
 
     if deliv.artifact_link_mode != 'tarball':
         LOG.info('rule does not apply for link-mode {}, skipping'.format(
@@ -470,9 +467,9 @@ def validate_tarball_base(deliv, workdir, messages):
                 # If there was a problem with an existing
                 # release, treat it as a warning so we
                 # don't prevent new releases.
-                messages.warning(msg)
+                context.warning(msg)
             else:
-                messages.error(msg)
+                context.error(msg)
         else:
             if sdist is not None:
                 tarball_base = project.tarball_base
@@ -482,7 +479,7 @@ def validate_tarball_base(deliv, workdir, messages):
                         action = 'is set to'
                     else:
                         action = 'defaults to'
-                    messages.error(
+                    context.error(
                         ('tarball-base for %s %s %s %r '
                          'but the sdist name is actually %r. ' +
                          _PLEASE)
@@ -490,14 +487,14 @@ def validate_tarball_base(deliv, workdir, messages):
                            action, expected, sdist))
 
 
-def validate_pypi_permissions(deliv, zuul_projects, workdir,
-                              messages):
+def validate_pypi_permissions(deliv, workdir, context):
 
     header('Validate PyPI Permissions')
 
     for repo in deliv.repos:
 
-        job_templates = zuul_projects.get(repo.name, {}).get('templates', [])
+        job_templates = context.zuul_projects.get(repo.name, {}).get(
+            'templates', [])
         LOG.debug('{} has job templates {}'.format(repo.name, job_templates))
 
         # Look for jobs that appear to be talking about publishing to
@@ -520,7 +517,7 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
             try:
                 sdist = pythonutils.get_sdist_name(workdir, repo.name)
             except Exception as err:
-                messages.warning(
+                context.warning(
                     'Could not determine the sdist name '
                     'for {} to check PyPI permissions: {}'.format(
                         repo.name, err)
@@ -539,12 +536,12 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
             uploaders = pythonutils.get_pypi_uploaders(alt_name)
 
         if not uploaders:
-            messages.error(
+            context.error(
                 'could not find users with permission to upload packages '
                 'for {}. Is the sdist name correct?'.format(pypi_name)
             )
         elif 'openstackci' not in uploaders:
-            messages.error(
+            context.error(
                 'openstackci does not have permission to upload packages '
                 'for {}. Current owners include: {}'.format(
                     pypi_name, ', '.join(sorted(uploaders)))
@@ -554,7 +551,7 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
                 sorted(uploaders), pypi_name))
 
 
-def validate_release_sha_exists(deliv, workdir, messages):
+def validate_release_sha_exists(deliv, workdir, context):
     "Ensure the hashes exist."
     header('Validate Release SHA')
 
@@ -568,7 +565,7 @@ def validate_release_sha_exists(deliv, workdir, messages):
             LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not is_a_hash(project.hash):
-                messages.error(
+                context.error(
                     ('%(repo)s version %(version)s release from '
                      '%(hash)r, which is not a hash') % {
                          'repo': project.repo.name,
@@ -578,7 +575,7 @@ def validate_release_sha_exists(deliv, workdir, messages):
                 continue
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                            project.hash, messages):
+                                            project.hash, context):
                 continue
 
             LOG.debug('successfully cloned {}'.format(project.hash))
@@ -589,12 +586,12 @@ def validate_release_sha_exists(deliv, workdir, messages):
                 workdir, project.repo.name, project.hash,
             )
             if not sha_exists:
-                messages.error('No commit %(hash)r in %(repo)r'
-                               % {'hash': project.hash,
-                                  'repo': project.repo.name})
+                context.error('No commit %(hash)r in %(repo)r'
+                              % {'hash': project.hash,
+                                 'repo': project.repo.name})
 
 
-def validate_existing_tags(deliv, workdir, messages):
+def validate_existing_tags(deliv, workdir, context):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
     header('Validate Existing Tags')
@@ -608,7 +605,7 @@ def validate_existing_tags(deliv, workdir, messages):
             LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                            project.hash, messages):
+                                            project.hash, context):
                 continue
 
             # Report if the version has already been
@@ -626,7 +623,7 @@ def validate_existing_tags(deliv, workdir, messages):
                     release.version,
                 )
                 if actual_sha != project.hash:
-                    messages.error(
+                    context.error(
                         ('Version %s in %s is on '
                          'commit %s instead of %s') %
                         (release.version,
@@ -636,7 +633,7 @@ def validate_existing_tags(deliv, workdir, messages):
                 LOG.info('tag exists')
 
 
-def validate_version_numbers(deliv, workdir, messages):
+def validate_version_numbers(deliv, workdir, context):
     "Ensure the version numbers make sense."
     header('Validate Version Numbers')
 
@@ -648,7 +645,7 @@ def validate_version_numbers(deliv, workdir, messages):
         for project in release.projects:
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                            project.hash, messages):
+                                            project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -679,7 +676,7 @@ def validate_version_numbers(deliv, workdir, messages):
                 puppet_ver = puppetutils.get_version(
                     workdir, project.repo.name)
                 if puppet_ver != release.version:
-                    messages.error(
+                    context.error(
                         '%s metadata contains "%s" '
                         'but is being tagged "%s"' % (
                             project.repo.name,
@@ -696,7 +693,7 @@ def validate_version_numbers(deliv, workdir, messages):
                 npm_ver = npmutils.get_version(
                     workdir, project.repo.name)
                 if npm_ver != release.version:
-                    messages.error(
+                    context.error(
                         '%s package.json contains "%s" '
                         'but is being tagged "%s"' % (
                             project.repo.name,
@@ -716,9 +713,9 @@ def validate_version_numbers(deliv, workdir, messages):
                 # cases where we do need to support point
                 # releases with requirements updates.
                 if deliv.series == defaults.RELEASE:
-                    report = messages.error
+                    report = context.error
                 else:
-                    report = messages.warning
+                    report = context.warning
                 requirements.find_bad_lower_bound_increases(
                     workdir, project.repo.name,
                     prev_version, release.version, project.hash,
@@ -731,12 +728,12 @@ def validate_version_numbers(deliv, workdir, messages):
                     pre_ok=(deliv.model in _USES_PREVER)):
                 msg = ('could not validate version %r: %s' %
                        (release.version, e))
-                messages.error(msg)
+                context.error(msg)
 
         prev_version = release.version
 
 
-def validate_new_releases_at_end(deliv, workdir, messages):
+def validate_new_releases_at_end(deliv, workdir, context):
     "New releases must be added to the end of the list."
     header('Validate New Releases At End')
 
@@ -749,7 +746,7 @@ def validate_new_releases_at_end(deliv, workdir, messages):
         for project in release.projects:
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                            project.hash, messages):
+                                            project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -769,17 +766,17 @@ def validate_new_releases_at_end(deliv, workdir, messages):
         if nr != deliv.releases[-1]:
             msg = ('new release %s must be listed last, '
                    'with one new release per patch' % nr.version)
-            messages.error(msg)
+            context.error(msg)
 
 
-def validate_release_branch_membership(deliv, workdir, messages):
+def validate_release_branch_membership(deliv, workdir, context):
     "Commits being tagged need to be on the right branch."
     header('Validate Release Branch Membership')
 
     if deliv.is_independent:
-        messages.warning('skipping descendant test for '
-                         'independent project, verify '
-                         'branch manually')
+        context.warning('skipping descendant test for '
+                        'independent project, verify '
+                        'branch manually')
         return
 
     prev_version = None
@@ -791,7 +788,7 @@ def validate_release_branch_membership(deliv, workdir, messages):
         for project in release.projects:
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                            project.hash, messages):
+                                            project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -816,7 +813,7 @@ def validate_release_branch_membership(deliv, workdir, messages):
                     project.hash,
                     deliv.series,
                 )
-                messages.error(msg)
+                context.error(msg)
 
             if prev_version:
                 # Check to see if we are re-tagging the same
@@ -842,7 +839,7 @@ def validate_release_branch_membership(deliv, workdir, messages):
                         project.hash,
                     )
                     if not is_ancestor:
-                        messages.error(
+                        context.error(
                             '%s %s receiving %s '
                             'is not a descendant of %s' % (
                                 project.repo.name,
@@ -855,7 +852,7 @@ def validate_release_branch_membership(deliv, workdir, messages):
         prev_version = release.version
 
 
-def validate_new_releases(deliv, team_data, messages):
+def validate_new_releases(deliv, context):
 
     """Apply validation rules that only apply to the current series.
     """
@@ -869,56 +866,56 @@ def validate_new_releases(deliv, team_data, messages):
     expected_repos = set(
         r.name
         for r in governance.get_repositories(
-            team_data,
+            context.team_data,
             deliverable_name=deliv.name,
         )
     )
     link_mode = deliv.artifact_link_mode
     if link_mode != 'none' and not expected_repos:
-        messages.error('unable to find deliverable %s in the governance list' %
-                       deliv.name)
+        context.error('unable to find deliverable %s in the governance list' %
+                      deliv.name)
     actual_repos = set(
         p.repo.name
         for p in final_release.projects
     )
     for extra in actual_repos.difference(expected_repos):
-        messages.warning(
+        context.warning(
             'release %s includes repository %s '
             'that is not in the governance list' %
             (final_release.version, extra)
         )
     for missing in expected_repos.difference(actual_repos):
-        messages.warning(
+        context.warning(
             'release %s is missing %s, '
             'which appears in the governance list: %s' %
             (final_release.version, missing, expected_repos)
         )
     for repo in actual_repos:
         if repo not in deliv.known_repo_names:
-            messages.error(
+            context.error(
                 'release %s includes repository %s '
                 'that is not in the repository-settings section' %
                 (final_release.version, repo)
             )
     for missing in deliv.known_repo_names:
         if missing not in actual_repos:
-            messages.warning(
+            context.warning(
                 'release %s is missing %s, '
                 'which appears in the repository-settings list' %
                 (final_release.version, missing)
             )
 
 
-def validate_branch_prefixes(deliv, messages):
+def validate_branch_prefixes(deliv, context):
     "Ensure all branches have good prefixes."
     header('Validate Branch Prefixes')
     for branch in deliv.branches:
         if branch.prefix not in _VALID_BRANCH_PREFIXES:
-            messages.error('branch name %s does not use a valid prefix: %s' % (
+            context.error('branch name %s does not use a valid prefix: %s' % (
                 branch.name, _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliv, workdir, messages):
+def validate_stable_branches(deliv, workdir, context):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
 
@@ -927,7 +924,7 @@ def validate_stable_branches(deliv, workdir, messages):
         return
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
-        messages.error('Tempest plugins do not support branching.')
+        context.error('Tempest plugins do not support branching.')
         return
 
     branch_mode = deliv.stable_branch_type
@@ -944,7 +941,7 @@ def validate_stable_branches(deliv, workdir, messages):
         try:
             prefix, series = branch.name.split('/')
         except ValueError:
-            messages.error(
+            context.error(
                 ('stable branch name expected to be stable/name '
                  'but got %s') % (branch.name,))
             continue
@@ -957,13 +954,13 @@ def validate_stable_branches(deliv, workdir, messages):
 
         if branch_mode == 'std':
             if not isinstance(location, six.string_types):
-                messages.error(
+                context.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
                          branch.name, type(location)))
                 )
             if location not in known_releases:
-                messages.error(
+                context.error(
                     ('stable branches must be created from existing '
                      'tagged releases, and %s for %s is not found in the '
                      'list of releases for this deliverable' % (
@@ -972,7 +969,7 @@ def validate_stable_branches(deliv, workdir, messages):
 
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
-                messages.error(
+                context.error(
                     ('branch location for %s is '
                      'expected to be a mapping but got a %s' % (
                          branch.name, type(location)))
@@ -981,7 +978,7 @@ def validate_stable_branches(deliv, workdir, messages):
                 continue
             for repo, loc in sorted(location.items()):
                 if not is_a_hash(loc):
-                    messages.error(
+                    context.error(
                         ('tagless stable branches should be created '
                          'from commits by SHA but location %s for '
                          'branch %s of %s does not look '
@@ -990,10 +987,10 @@ def validate_stable_branches(deliv, workdir, messages):
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
-                if not gitutils.safe_clone_repo(workdir, repo, loc, messages):
+                if not gitutils.safe_clone_repo(workdir, repo, loc, context):
                     continue
                 if not gitutils.commit_exists(workdir, repo, loc):
-                    messages.error(
+                    context.error(
                         ('stable branches should be created from merged '
                          'commits but location %s for branch %s of %s '
                          'does not exist' % (
@@ -1002,25 +999,25 @@ def validate_stable_branches(deliv, workdir, messages):
 
         elif branch_mode == 'upstream':
             if not isinstance(location, six.string_types):
-                messages.error(
+                context.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
                          branch.name, type(location)))
                 )
 
         else:
-            messages.error(
+            context.error(
                 ('unrecognized stable-branch-type %r' % (branch_mode,))
             )
 
         if branch_mode == 'upstream':
-            messages.warning(
+            context.warning(
                 'skipping branch name check for upstream mode'
             )
 
         elif deliv.is_independent:
             if series not in known_series:
-                messages.error(
+                context.error(
                     ('stable branches must be named for known series '
                      'but %s was not found in %s' % (
                          branch.name, known_series))
@@ -1028,26 +1025,26 @@ def validate_stable_branches(deliv, workdir, messages):
 
         else:
             if series != deliv.series:
-                messages.error(
+                context.error(
                     ('cycle-based projects must match series names '
                      'for stable branches. %s should be stable/%s' % (
                          branch.name, deliv.series))
                 )
 
 
-def validate_feature_branches(deliv, workdir, messages):
+def validate_feature_branches(deliv, workdir, context):
     "Apply the rules for feature branches."
     header('Validate Feature Branches')
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
-        messages.error('Tempest plugins do not support branching.')
+        context.error('Tempest plugins do not support branching.')
         return
 
     for branch in deliv.branches:
         try:
             prefix, series = branch.name.split('/')
         except ValueError:
-            messages.error(
+            context.error(
                 ('feature branch name expected to be feature/name '
                  'but got %s') % (branch.name,))
             continue
@@ -1059,7 +1056,7 @@ def validate_feature_branches(deliv, workdir, messages):
         location = branch.location
 
         if not isinstance(location, dict):
-            messages.error(
+            context.error(
                 ('branch location for %s is '
                  'expected to be a mapping but got a %s' % (
                      branch.name, type(location)))
@@ -1069,26 +1066,26 @@ def validate_feature_branches(deliv, workdir, messages):
 
         for repo, loc in sorted(location.items()):
             if not is_a_hash(loc):
-                messages.error(
+                context.error(
                     ('feature branches should be created from commits by SHA '
                      'but location %s for branch %s of %s does not look '
                      'like a SHA' % (
                          (loc, repo, branch.name)))
                 )
             if not gitutils.commit_exists(workdir, repo, loc):
-                messages.error(
+                context.error(
                     ('feature branches should be created from merged commits '
                      'but location %s for branch %s of %s does not exist' % (
                          (loc, repo, branch.name)))
                 )
 
 
-def validate_driverfixes_branches(deliv, workdir, messages):
+def validate_driverfixes_branches(deliv, workdir, context):
     "Apply the rules for driverfixes branches."
     header('Validate driverfixes Branches')
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
-        messages.error('Tempest plugins do not support branching.')
+        context.error('Tempest plugins do not support branching.')
         return
 
     known_series = sorted(list(
@@ -1100,7 +1097,7 @@ def validate_driverfixes_branches(deliv, workdir, messages):
         try:
             prefix, series = branch.name.split('/')
         except ValueError:
-            messages.error(
+            context.error(
                 ('driverfixes branch name expected to be driverfixes/name '
                  'but got %s') % (branch.name,))
             continue
@@ -1111,7 +1108,7 @@ def validate_driverfixes_branches(deliv, workdir, messages):
             continue
 
         if series not in known_series:
-            messages.error(
+            context.error(
                 ('driverfixes branches must be named for known series '
                  'but %s was not found in %s' % (
                      branch.name, known_series))
@@ -1119,7 +1116,7 @@ def validate_driverfixes_branches(deliv, workdir, messages):
 
         location = branch.location
         if not isinstance(location, dict):
-            messages.error(
+            context.error(
                 ('branch location for %s is '
                  'expected to be a mapping but got a %s' % (
                      branch.name, type(location)))
@@ -1129,23 +1126,23 @@ def validate_driverfixes_branches(deliv, workdir, messages):
 
         for repo, loc in sorted(location.items()):
             if not is_a_hash(loc):
-                messages.error(
+                context.error(
                     ('driverfixes branches should be created from commits by '
                      'SHA but location %s for branch %s of %s does not look '
                      'like a SHA' % (
                          (loc, repo, branch.name)))
                 )
             if not gitutils.commit_exists(workdir, repo, loc):
-                messages.error(
+                context.error(
                     ('driverfixes branches should be created from merged '
                      'commits but location %s for branch %s of %s does not '
                      'exist' % (
                          (loc, repo, branch.name)))
                 )
-            _require_gitreview(workdir, repo, messages)
+            _require_gitreview(workdir, repo, context)
 
 
-def validate_branch_points(deliv, workdir, messages):
+def validate_branch_points(deliv, workdir, context):
     "Make sure the branch points given are on the expected branches."
 
     # Check for 'upstream' branches. These track upstream release names and
@@ -1215,7 +1212,7 @@ def validate_branch_points(deliv, workdir, messages):
                     # means someone tried to update the branch setting
                     # after creating the branch, so phrase the error
                     # message to reflect that.
-                    messages.error(
+                    context.error(
                         '{} branch exists in {} and does not seem '
                         'to have been created from {}'.format(
                             branch.name, repo, hash),
@@ -1225,7 +1222,7 @@ def validate_branch_points(deliv, workdir, messages):
                     # to create it is not on the expected source
                     # branch, so phrase the error message to reflect
                     # that.
-                    messages.error(
+                    context.error(
                         'commit {} is not on the {} branch '
                         'but it is listed as the branch point for '
                         '{} to be created'.format(
@@ -1241,7 +1238,10 @@ def validate_branch_points(deliv, workdir, messages):
 # to handle validation while still allowing branches to be deleted.
 
 
-class MessageCollector(object):
+class ValidationContext(object):
+
+    _zuul_projects = None
+    _team_data = None
 
     def __init__(self, debug=False):
         self.warnings = []
@@ -1272,6 +1272,18 @@ class MessageCollector(object):
         print('\n\n%s errors found' % len(self.errors))
         for e in self.errors:
             print(e)
+
+    @property
+    def zuul_projects(self):
+        if not self._zuul_projects:
+            self._zuul_projects = project_config.get_zuul_project_data()
+        return self._zuul_projects
+
+    @property
+    def team_data(self):
+        if not self._team_data:
+            self._team_data = governance.get_team_data()
+        return self._team_data
 
 
 def main():
@@ -1311,9 +1323,7 @@ def main():
               'skipping validation')
         return 0
 
-    zuul_projects = project_config.get_zuul_project_data()
-
-    team_data = governance.get_team_data()
+    context = ValidationContext(debug=args.debug)
 
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
@@ -1325,8 +1335,6 @@ def main():
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)
 
-    messages = MessageCollector(debug=args.debug)
-
     for filename in filenames:
         print('\nChecking %s' % filename)
 
@@ -1334,78 +1342,75 @@ def main():
             print("File was deleted, skipping.")
             continue
 
-        messages.set_filename(filename)
+        context.set_filename(filename)
 
         deliv = deliverable.Deliverable.read_file(filename)
 
         if deliv.series in _CLOSED_SERIES:
             continue
 
-        clone_deliverable(deliv, workdir, messages)
-        validate_bugtracker(deliv, messages)
-        validate_team(deliv, team_data, messages)
-        validate_release_notes(deliv, messages)
-        validate_model(deliv, messages)
+        clone_deliverable(deliv, workdir, context)
+        validate_bugtracker(deliv, context)
+        validate_team(deliv, context)
+        validate_release_notes(deliv, context)
+        validate_model(deliv, context)
         validate_release_type(
             deliv,
-            zuul_projects,
             workdir,
-            messages,
+            context,
         )
         validate_pypi_permissions(
             deliv,
-            zuul_projects,
             workdir,
-            messages,
+            context,
         )
-        validate_gitreview(deliv, workdir, messages)
-        validate_release_sha_exists(deliv, workdir, messages)
-        validate_existing_tags(deliv, workdir, messages)
-        validate_version_numbers(deliv, workdir, messages)
-        validate_new_releases_at_end(deliv, workdir, messages)
-        validate_release_branch_membership(deliv, workdir, messages)
-        validate_tarball_base(deliv, workdir, messages)
+        validate_gitreview(deliv, workdir, context)
+        validate_release_sha_exists(deliv, workdir, context)
+        validate_existing_tags(deliv, workdir, context)
+        validate_version_numbers(deliv, workdir, context)
+        validate_new_releases_at_end(deliv, workdir, context)
+        validate_release_branch_membership(deliv, workdir, context)
+        validate_tarball_base(deliv, workdir, context)
         # Some rules only apply to the most current release.
         if deliv.series == defaults.RELEASE:
             validate_new_releases(
                 deliv,
-                team_data,
-                messages,
+                context,
             )
             validate_series_open(
                 deliv,
                 filename,
-                messages,
+                context,
             )
         validate_series_first(
             deliv,
-            messages,
+            context,
         )
         validate_branch_prefixes(
             deliv,
-            messages,
+            context,
         )
         validate_stable_branches(
             deliv,
             workdir,
-            messages,
+            context,
         )
         validate_feature_branches(
             deliv,
             workdir,
-            messages,
+            context,
         )
         validate_driverfixes_branches(
             deliv,
             workdir,
-            messages,
+            context,
         )
         validate_branch_points(
             deliv,
             workdir,
-            messages,
+            context,
         )
 
-    messages.show_summary()
+    context.show_summary()
 
-    return 1 if messages.errors else 0
+    return 1 if context.errors else 0

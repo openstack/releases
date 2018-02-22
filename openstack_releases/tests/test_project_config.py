@@ -23,7 +23,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_no_artifact_flag(self):
         deliv = deliverable.Deliverable(
@@ -40,17 +40,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 },
             },
         )
-        zuul_projects = {
-        }
+        self.ctx._zuul_projects = {'validate-projects-by-name': {}}
         project_config.require_release_jobs_for_repo(
             deliv,
-            {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_retired_flag(self):
         deliv = deliverable.Deliverable(
@@ -67,17 +65,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 }
             },
         )
-        zuul_projects = {
-        }
+        self.ctx._zuul_projects = {'validate-projects-by-name': {}}
         project_config.require_release_jobs_for_repo(
             deliv,
-            {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_no_zuul_projects(self):
         deliv = deliverable.Deliverable(
@@ -90,17 +86,15 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 },
             },
         )
-        zuul_projects = {
-        }
+        self.ctx._zuul_projects = {'validate-projects-by-name': {}}
         project_config.require_release_jobs_for_repo(
             deliv,
-            {'validate-projects-by-name': zuul_projects},
             deliv.repos[0],
             'std',
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_one_expected_job(self):
         deliv = deliverable.Deliverable(
@@ -113,7 +107,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 },
             },
         )
-        zuul_projects = {
+        self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
                     'publish-to-pypi',
@@ -122,14 +116,13 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         }
         project_config.require_release_jobs_for_repo(
             deliv,
-            zuul_projects,
             deliv.repos[0],
             'python-pypi',
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_two_expected_jobs(self):
         deliv = deliverable.Deliverable(
@@ -142,7 +135,7 @@ class TestReleaseJobsStandard(base.BaseTestCase):
                 },
             },
         )
-        zuul_projects = {
+        self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
                     'publish-to-pypi',
@@ -152,10 +145,9 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         }
         project_config.require_release_jobs_for_repo(
             deliv,
-            zuul_projects,
             deliv.repos[0],
             'python-pypi',
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
