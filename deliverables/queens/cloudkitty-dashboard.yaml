@@ -1,0 +1,16 @@
+---
+include-pypi-link: yes
+launchpad: cloudkitty
+release-model: cycle-with-intermediary
+team: cloudkitty
+type: horizon-plugin
+branches:
+  - name: stable/queens
+    location: 7.0.0
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 91b85be715a9a56f07087feb967885118bc949d9
+repository-settings:
+  openstack/cloudkitty-dashboard: {}
