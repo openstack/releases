@@ -1065,61 +1065,46 @@ def validate_driverfixes_branches(deliv, workdir, messages):
             _require_gitreview(workdir, repo, messages)
 
 
-def validate_branch_points(deliverable_info,
-                           deliverable_name,
-                           workdir,
-                           messages):
-    # Make sure the branch points given are on the expected branches.
-
-    known_releases = {
-        r['version']: r
-        for r in deliverable_info.get('releases', [])
-    }
-    branch_mode = deliverable_info.get('stable-branch-type', 'std')
+def validate_branch_points(deliv, workdir, messages):
+    "Make sure the branch points given are on the expected branches."
 
     # Check for 'upstream' branches. These track upstream release names and
     # do not align with OpenStack series names.
-    if branch_mode == 'upstream':
+    if deliv.stable_branch_type == 'upstream':
+        LOG.debug('this project follows upstream branching conventions, '
+                  'skipping')
         return
 
-    for branch in deliverable_info.get('branches', []):
-        header('Validate Branch Points: {}'.format(branch['name']))
+    for branch in deliv.branches:
+        header('Validate Branch Points: {}'.format(branch.name))
         try:
-            prefix, series = branch['name'].split('/')
+            prefix, series = branch.name.split('/')
         except ValueError:
             print('could not parse the branch name, skipping')
             continue
 
         if prefix == 'feature':
-            print('rule does not apply to feature branches')
+            LOG.debug('{} is a feature branch, rule does not apply'.format(
+                branch.name))
             continue
 
         elif prefix == 'stable':
             expected = set([
                 'master',
-                branch['name'],
+                branch.name,
             ])
+
         else:
             # driverfixes
             expected = set([
-                branch['name'],
+                branch.name,
                 'stable/' + series,
             ])
 
-        if prefix == 'stable' and branch_mode == 'std':
-            # location is a version string, so we need to build the
-            # map ourselves
-            print('using hashes from release {}'.format(branch['location']))
-            release = known_releases[branch['location']]
-            location = {
-                p['repo']: p['hash']
-                for p in release['projects']
-            }
-        else:
-            location = branch['location']
+        location = branch.get_repo_map()
 
         for repo, hash in sorted(location.items()):
-            print('\n{}'.format(repo))
+            LOG.debug('{}'.format(repo))
             existing_branches = sorted([
                 (b.partition('/origin/')[-1]
                  if b.startswith('remotes/origin/')
@@ -1135,16 +1120,16 @@ def validate_branch_points(deliverable_info,
                     workdir, repo, hash)
             )
 
-            print('found {} on branches {} in {}'.format(
+            LOG.debug('found {} on branches {} in {}'.format(
                 hash, containing, repo))
 
             for missing in expected.difference(containing):
                 if missing not in existing_branches:
-                    print('branch {} does not exist in {}, skipping'.format(
-                        branch['name'], repo))
+                    LOG.debug('branch {} does not exist in {}, '
+                              'skipping'.format(branch.name, repo))
                     continue
 
-                if branch['name'] in existing_branches:
+                if branch.name in existing_branches:
                     # The branch already exists but there is something
                     # wrong with the specification. This probably
                     # means someone tried to update the branch setting
@@ -1153,7 +1138,7 @@ def validate_branch_points(deliverable_info,
                     messages.error(
                         '{} branch exists in {} and does not seem '
                         'to have been created from {}'.format(
-                            branch['name'], repo, hash),
+                            branch.name, repo, hash),
                     )
                 else:
                     # The branch does not exist and the proposed point
@@ -1164,7 +1149,7 @@ def validate_branch_points(deliverable_info,
                         'commit {} is not on the {} branch '
                         'but it is listed as the branch point for '
                         '{} to be created'.format(
-                            hash, missing, branch['name']))
+                            hash, missing, branch.name))
 
 
 # if the branch already exists, the name is by definition valid
@@ -1340,8 +1325,7 @@ def main():
             messages,
         )
         validate_branch_points(
-            deliv._data,
-            deliv.name,
+            deliv,
             workdir,
             messages,
         )

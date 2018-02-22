@@ -2540,10 +2540,14 @@ class TestValidateBranchPoints(base.BaseTestCase):
           - name: stable/ocata
             location: 0.0.3
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_branch_points(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2561,10 +2565,14 @@ class TestValidateBranchPoints(base.BaseTestCase):
           - name: stable/newton
             location: 0.8.0
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_branch_points(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2583,10 +2591,14 @@ class TestValidateBranchPoints(base.BaseTestCase):
             location: 0.12.0  # this comes after the meiji branch
                               # was created at 0.0.2
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='meiji',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_branch_points(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
