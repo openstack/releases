@@ -38,7 +38,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={},
             ),
@@ -53,7 +53,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'launchpad': 'nonsense-name'},
             ),
@@ -68,7 +68,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'launchpad': 'oslo.config'},
             ),
@@ -84,7 +84,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'launchpad': 'oslo.config'},
             ),
@@ -121,7 +121,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'storyboard': '760'},
             ),
@@ -148,7 +148,7 @@ class TestValidateBugTracker(base.BaseTestCase):
         validate.validate_bugtracker(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'storyboard': '-760'},
             ),
@@ -169,7 +169,7 @@ class TestValidateTeam(base.BaseTestCase):
         validate.validate_team(
             deliverable.Deliverable(
                 team='nonsense-name',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={},
             ),
@@ -184,7 +184,7 @@ class TestValidateTeam(base.BaseTestCase):
         validate.validate_team(
             deliverable.Deliverable(
                 team='oslo',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={},
             ),
@@ -204,7 +204,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={},
             ),
@@ -217,7 +217,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={
                     'release-notes': 'https://docs.openstack.org/no-such-page',
@@ -232,7 +232,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={'release-notes':
                       'https://docs.openstack.org/releasenotes/oslo.config'},
@@ -246,7 +246,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={
                     'repository-settings': {
@@ -267,7 +267,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={
                     'repository-settings': {
@@ -288,7 +288,7 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='name',
                 data={
                     'repository-settings': {
@@ -819,7 +819,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_explicit(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -843,7 +843,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_library(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -867,7 +867,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_service(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -891,7 +891,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_implicit_pypi(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -915,7 +915,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_pypi_false(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -941,7 +941,7 @@ class TestGetReleaseType(base.BaseTestCase):
         llam.return_value = True
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -966,7 +966,7 @@ class TestGetReleaseType(base.BaseTestCase):
         llam.return_value = True
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -993,7 +993,7 @@ class TestGetReleaseType(base.BaseTestCase):
         nllam.return_value = False
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -1057,7 +1057,7 @@ class TestPuppetUtils(base.BaseTestCase):
         cbs.return_value = True
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -1087,7 +1087,7 @@ class TestValidateTarballBase(base.BaseTestCase):
     def test_default_ok(self, gsn, jobs):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'releases': [
@@ -1111,7 +1111,7 @@ class TestValidateTarballBase(base.BaseTestCase):
     def test_ignored_link_mode_none(self, gsn, jobs):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -1136,7 +1136,7 @@ class TestValidateTarballBase(base.BaseTestCase):
     def test_default_invalid(self, gsn, jobs):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'releases': [
@@ -1160,7 +1160,7 @@ class TestValidateTarballBase(base.BaseTestCase):
     def test_explicit_ok(self, gsn, jobs):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'releases': [
@@ -1185,7 +1185,7 @@ class TestValidateTarballBase(base.BaseTestCase):
     def test_explicit_invalid(self, gsn, jobs):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'releases': [
@@ -1258,7 +1258,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         # match.
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'artifact-link-mode': 'none',
@@ -1283,7 +1283,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         # The tag includes a repo not in governance.
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'artifact-link-mode': 'none',
@@ -1312,7 +1312,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         # The tag is missing a repo in governance.
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'artifact-link-mode': 'none',
@@ -1343,7 +1343,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         # (2 warnings).
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'artifact-link-mode': 'none',
@@ -1369,7 +1369,7 @@ class TestValidateNewReleases(base.BaseTestCase):
         # repository-settings.
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'artifact-link-mode': 'none',
@@ -1402,7 +1402,7 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
     def test_invalid_prefix(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series=defaults.RELEASE,
             name='release-test',
             data={
                 'branches': [
@@ -1419,7 +1419,7 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
         for prefix in validate._VALID_BRANCH_PREFIXES:
             deliv = deliverable.Deliverable(
                 team='team',
-                series='series',
+                series=defaults.RELEASE,
                 name='release-test',
                 data={
                     'branches': [
@@ -2117,7 +2117,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
     def test_no_stable_branch(self):
         series_a_dir = self.tmpdir + '/a'
         series_a_filename = series_a_dir + '/automaton.yaml'
-        series_b_dir = self.tmpdir + '/b'
+        series_b_dir = self.tmpdir + '/' + defaults.RELEASE
         series_b_filename = series_b_dir + '/automaton.yaml'
         os.makedirs(series_a_dir)
         os.makedirs(series_b_dir)
@@ -2138,7 +2138,7 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             f.write(deliverable_data)
         deliv = deliverable.Deliverable(
             team='team',
-            series='b',
+            series=defaults.RELEASE,
             name='name',
             data=yamlutils.loads(deliverable_data),
         )
