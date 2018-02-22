@@ -554,6 +554,46 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
                 sorted(uploaders), pypi_name))
 
 
+def validate_release_sha_exists(deliv, workdir, messages):
+    "Ensure the hashes exist."
+    header('Validate Release SHA')
+
+    for release in deliv.releases:
+
+        LOG.info('checking {}'.format(release.version))
+
+        for project in release.projects:
+
+            # Check the SHA specified for the tag.
+            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
+
+            if not is_a_hash(project.hash):
+                messages.error(
+                    ('%(repo)s version %(version)s release from '
+                     '%(hash)r, which is not a hash') % {
+                         'repo': project.repo.name,
+                         'hash': project.hash,
+                         'version': release.version}
+                )
+                continue
+
+            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                            project.hash, messages):
+                continue
+
+            LOG.debug('successfully cloned {}'.format(project.hash))
+
+            # Report if the SHA exists or not (an error if it
+            # does not).
+            sha_exists = gitutils.commit_exists(
+                workdir, project.repo.name, project.hash,
+            )
+            if not sha_exists:
+                messages.error('No commit %(hash)r in %(repo)r'
+                               % {'hash': project.hash,
+                                  'repo': project.repo.name})
+
+
 def validate_releases(deliv, zuul_projects,
                       workdir,
                       messages):
@@ -573,194 +613,183 @@ def validate_releases(deliv, zuul_projects,
 
         for project in release.projects:
 
-            # Check the SHA specified for the tag.
             LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
-            if not is_a_hash(project.hash):
-                messages.error(
-                    ('%(repo)s version %(version)s release from '
-                     '%(hash)r, which is not a hash') % {
-                         'repo': project.repo.name,
-                         'hash': project.hash,
-                         'version': release.version}
+            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                            project.hash, messages):
+                continue
+
+            # Report if the version has already been
+            # tagged. We expect it to not exist, but neither
+            # case is an error because sometimes we want to
+            # import history and sometimes we want to make new
+            # releases.
+            version_exists = gitutils.commit_exists(
+                workdir, project.repo.name, release.version,
+            )
+            if version_exists:
+                actual_sha = gitutils.sha_for_tag(
+                    workdir,
+                    project.repo.name,
+                    release.version,
                 )
+                if actual_sha != project.hash:
+                    messages.error(
+                        ('Version %s in %s is on '
+                         'commit %s instead of %s') %
+                        (release.version,
+                         project.repo.name,
+                         actual_sha,
+                         project.hash))
+                print('tag exists, skipping further validation')
+                continue
+
+            # Report if the SHA exists or not (an error if it
+            # does not).
+            sha_exists = gitutils.commit_exists(
+                workdir, project.repo.name, project.hash,
+            )
+            if not sha_exists:
+                messages.error('No commit %(hash)r in %(repo)r'
+                               % {'hash': project.hash,
+                                  'repo': project.repo.name})
+                # No point in running extra checks if the SHA just
+                # doesn't exist.
+                continue
+
+            LOG.info('Found new version {} for {}'.format(
+                release.version, project.repo))
+            new_releases[release.version] = release
+            if prev_projects and project.repo.name not in prev_projects:
+                LOG.debug('not included in previous release for %s: %s' %
+                          (prev_version, ', '.join(sorted(prev_projects))))
             else:
 
-                if not gitutils.safe_clone_repo(workdir, project.repo.name,
-                                                project.hash, messages):
-                    continue
-
-                # Report if the version has already been
-                # tagged. We expect it to not exist, but neither
-                # case is an error because sometimes we want to
-                # import history and sometimes we want to make new
-                # releases.
-                version_exists = gitutils.commit_exists(
-                    workdir, project.repo.name, release.version,
+                release_type, was_explicit = get_release_type(
+                    deliv, project.repo, workdir,
                 )
-                if version_exists:
-                    actual_sha = gitutils.sha_for_tag(
-                        workdir,
-                        project.repo.name,
-                        release.version,
-                    )
-                    if actual_sha != project.hash:
-                        messages.error(
-                            ('Version %s in %s is on '
-                             'commit %s instead of %s') %
-                            (release.version,
-                             project.repo.name,
-                             actual_sha,
-                             project.hash))
-                    print('tag exists, skipping further validation')
-                    continue
-
-                # Report if the SHA exists or not (an error if it
-                # does not).
-                sha_exists = gitutils.commit_exists(
-                    workdir, project.repo.name, project.hash,
-                )
-                if not sha_exists:
-                    messages.error('No commit %(hash)r in %(repo)r'
-                                   % {'hash': project.hash,
-                                      'repo': project.repo.name})
-                    # No point in running extra checks if the SHA just
-                    # doesn't exist.
-                    continue
-
-                LOG.info('Found new version {} for {}'.format(
-                    release.version, project.repo))
-                new_releases[release.version] = release
-                if prev_projects and project.repo.name not in prev_projects:
-                    LOG.debug('not included in previous release for %s: %s' %
-                              (prev_version, ', '.join(sorted(prev_projects))))
+                if was_explicit:
+                    LOG.debug('found explicit release-type {!r}'.format(
+                        release_type))
                 else:
+                    LOG.debug('release-type not given, '
+                              'guessing {!r}'.format(release_type))
 
-                    release_type, was_explicit = get_release_type(
-                        deliv, project.repo, workdir,
-                    )
-                    if was_explicit:
-                        LOG.debug('found explicit release-type {!r}'.format(
-                            release_type))
-                    else:
-                        LOG.debug('release-type not given, '
-                                  'guessing {!r}'.format(release_type))
-
-                    # If this is a puppet module, ensure
-                    # that the tag and metadata file
-                    # match.
-                    if release_type == 'puppet':
-                        LOG.info('applying puppet version rules')
-                        puppet_ver = puppetutils.get_version(
-                            workdir, project.repo.name)
-                        if puppet_ver != release.version:
-                            messages.error(
-                                '%s metadata contains "%s" '
-                                'but is being tagged "%s"' % (
-                                    project.repo.name,
-                                    puppet_ver,
-                                    release.version,
-                                )
+                # If this is a puppet module, ensure
+                # that the tag and metadata file
+                # match.
+                if release_type == 'puppet':
+                    LOG.info('applying puppet version rules')
+                    puppet_ver = puppetutils.get_version(
+                        workdir, project.repo.name)
+                    if puppet_ver != release.version:
+                        messages.error(
+                            '%s metadata contains "%s" '
+                            'but is being tagged "%s"' % (
+                                project.repo.name,
+                                puppet_ver,
+                                release.version,
                             )
-
-                    # If this is a npm module, ensure
-                    # that the tag and metadata file
-                    # match.
-                    if release_type == 'nodejs':
-                        LOG.info('applying nodejs version rules')
-                        npm_ver = npmutils.get_version(
-                            workdir, project.repo.name)
-                        if npm_ver != release.version:
-                            messages.error(
-                                '%s package.json contains "%s" '
-                                'but is being tagged "%s"' % (
-                                    project.repo.name,
-                                    npm_ver,
-                                    release.version,
-                                )
-                            )
-
-                    # If we know the previous version and the
-                    # project is a python deliverable make sure
-                    # the requirements haven't changed in a way
-                    # not reflecting the version.
-                    if prev_version and release_type in _PYTHON_RELEASE_TYPES:
-                        # For the master branch, enforce the
-                        # rules. For other branches just warn if
-                        # the rules are broken because there are
-                        # cases where we do need to support point
-                        # releases with requirements updates.
-                        if deliv.series == defaults.RELEASE:
-                            report = messages.error
-                        else:
-                            report = messages.warning
-                        requirements.find_bad_lower_bound_increases(
-                            workdir, project.repo.name,
-                            prev_version, release.version, project.hash,
-                            report,
                         )
 
-                    for e in versionutils.validate_version(
-                            release.version,
-                            release_type=release_type,
-                            pre_ok=(deliv.model in _USES_PREVER)):
-                        msg = ('could not validate version %r: %s' %
-                               (release.version, e))
+                # If this is a npm module, ensure
+                # that the tag and metadata file
+                # match.
+                if release_type == 'nodejs':
+                    LOG.info('applying nodejs version rules')
+                    npm_ver = npmutils.get_version(
+                        workdir, project.repo.name)
+                    if npm_ver != release.version:
+                        messages.error(
+                            '%s package.json contains "%s" '
+                            'but is being tagged "%s"' % (
+                                project.repo.name,
+                                npm_ver,
+                                release.version,
+                            )
+                        )
+
+                # If we know the previous version and the
+                # project is a python deliverable make sure
+                # the requirements haven't changed in a way
+                # not reflecting the version.
+                if prev_version and release_type in _PYTHON_RELEASE_TYPES:
+                    # For the master branch, enforce the
+                    # rules. For other branches just warn if
+                    # the rules are broken because there are
+                    # cases where we do need to support point
+                    # releases with requirements updates.
+                    if deliv.series == defaults.RELEASE:
+                        report = messages.error
+                    else:
+                        report = messages.warning
+                    requirements.find_bad_lower_bound_increases(
+                        workdir, project.repo.name,
+                        prev_version, release.version, project.hash,
+                        report,
+                    )
+
+                for e in versionutils.validate_version(
+                        release.version,
+                        release_type=release_type,
+                        pre_ok=(deliv.model in _USES_PREVER)):
+                    msg = ('could not validate version %r: %s' %
+                           (release.version, e))
+                    messages.error(msg)
+
+                if deliv.is_independent:
+                    messages.warning('skipping descendant test for '
+                                     'independent project, verify '
+                                     'branch manually')
+
+                else:
+                    # If this is the first version in the series,
+                    # check that the commit is actually on the
+                    # targeted branch.
+                    if not gitutils.check_branch_sha(workdir,
+                                                     project.repo.name,
+                                                     deliv.series,
+                                                     project.hash):
+                        msg = '%s %s not present in %s branch' % (
+                            project.repo.name,
+                            project.hash,
+                            deliv.series,
+                        )
                         messages.error(msg)
 
-                    if deliv.is_independent:
-                        messages.warning('skipping descendant test for '
-                                         'independent project, verify '
-                                         'branch manually')
-
-                    else:
-                        # If this is the first version in the series,
-                        # check that the commit is actually on the
-                        # targeted branch.
-                        if not gitutils.check_branch_sha(workdir,
-                                                         project.repo.name,
-                                                         deliv.series,
-                                                         project.hash):
-                            msg = '%s %s not present in %s branch' % (
-                                project.repo.name,
-                                project.hash,
-                                deliv.series,
-                            )
-                            messages.error(msg)
-
-                        if prev_version:
-                            # Check to see if we are re-tagging the same
-                            # commit with a new version.
-                            old_sha = gitutils.sha_for_tag(
+                    if prev_version:
+                        # Check to see if we are re-tagging the same
+                        # commit with a new version.
+                        old_sha = gitutils.sha_for_tag(
+                            workdir,
+                            project.repo.name,
+                            prev_version,
+                        )
+                        if old_sha == project.hash:
+                            # FIXME(dhellmann): This needs a test.
+                            LOG.info('Retagging the SHA with '
+                                     'a new version')
+                        else:
+                            # Check to see if the commit for the new
+                            # version is in the ancestors of the
+                            # previous release, meaning it is actually
+                            # merged into the branch.
+                            is_ancestor = gitutils.check_ancestry(
                                 workdir,
                                 project.repo.name,
                                 prev_version,
+                                project.hash,
                             )
-                            if old_sha == project.hash:
-                                # FIXME(dhellmann): This needs a test.
-                                LOG.info('Retagging the SHA with '
-                                         'a new version')
-                            else:
-                                # Check to see if the commit for the new
-                                # version is in the ancestors of the
-                                # previous release, meaning it is actually
-                                # merged into the branch.
-                                is_ancestor = gitutils.check_ancestry(
-                                    workdir,
-                                    project.repo.name,
-                                    prev_version,
-                                    project.hash,
-                                )
-                                if not is_ancestor:
-                                    messages.error(
-                                        '%s %s receiving %s '
-                                        'is not a descendant of %s' % (
-                                            project.repo.name,
-                                            project.hash,
-                                            release.version,
-                                            prev_version,
-                                        )
+                            if not is_ancestor:
+                                messages.error(
+                                    '%s %s receiving %s '
+                                    'is not a descendant of %s' % (
+                                        project.repo.name,
+                                        project.hash,
+                                        release.version,
+                                        prev_version,
                                     )
+                                )
 
         prev_version = release.version
         prev_projects = set(p.repo.name for p in release.projects)
@@ -1278,6 +1307,7 @@ def main():
             messages,
         )
         validate_gitreview(deliv, workdir, messages)
+        validate_release_sha_exists(deliv, workdir, messages)
         validate_releases(
             deliv,
             zuul_projects,
