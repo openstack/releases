@@ -408,10 +408,7 @@ class TestValidateModel(base.BaseTestCase):
                 ]
             }
         )
-        validate.validate_model(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_model(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -421,9 +418,8 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_invalid_hash(self):
         deliv = deliverable.Deliverable(
@@ -442,11 +438,7 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_release_sha_exists(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_sha_exists(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -468,11 +460,7 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_release_sha_exists(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_sha_exists(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -489,11 +477,7 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_release_sha_exists(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_sha_exists(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -503,9 +487,8 @@ class TestValidateExistingTags(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_valid(self):
         deliv = deliverable.Deliverable(
@@ -524,11 +507,7 @@ class TestValidateExistingTags(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_existing_tags(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_existing_tags(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -550,11 +529,7 @@ class TestValidateExistingTags(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_existing_tags(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_existing_tags(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -571,11 +546,7 @@ class TestValidateExistingTags(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_existing_tags(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_existing_tags(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -585,9 +556,8 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_hash_from_master_used_in_stable_release(self):
         deliv = deliverable.Deliverable(
@@ -607,11 +577,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -640,11 +606,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -667,11 +629,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -692,11 +650,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -726,11 +680,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(2, len(self.ctx.errors))
@@ -747,11 +697,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_release_branch_membership(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_release_branch_membership(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -761,9 +707,8 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -777,11 +722,7 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_new_releases_at_end(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_new_releases_at_end(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -809,11 +750,7 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases_at_end(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_new_releases_at_end(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -823,9 +760,8 @@ class TestValidateVersionNumbers(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     @mock.patch('openstack_releases.versionutils.validate_version')
     def test_invalid_version(self, validate_version):
@@ -850,11 +786,7 @@ class TestValidateVersionNumbers(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_version_numbers(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_version_numbers(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -871,11 +803,7 @@ class TestValidateVersionNumbers(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_version_numbers(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_version_numbers(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1115,11 +1043,7 @@ class TestPuppetUtils(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_version_numbers(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_version_numbers(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1146,11 +1070,7 @@ class TestPuppetUtils(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_version_numbers(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_version_numbers(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1160,7 +1080,6 @@ class TestValidateTarballBase(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
@@ -1181,16 +1100,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             },
         )
         gsn.return_value = 'release-test'
-        validate.clone_deliverable(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
-        validate.validate_tarball_base(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.clone_deliverable(deliv, self.ctx)
+        validate.validate_tarball_base(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1214,16 +1125,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             }
         )
         gsn.return_value = 'this-is-wrong'
-        validate.clone_deliverable(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
-        validate.validate_tarball_base(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.clone_deliverable(deliv, self.ctx)
+        validate.validate_tarball_base(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1246,16 +1149,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             }
         )
         gsn.return_value = 'openstack-release-test'
-        validate.clone_deliverable(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
-        validate.validate_tarball_base(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.clone_deliverable(deliv, self.ctx)
+        validate.validate_tarball_base(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1279,16 +1174,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             }
         )
         gsn.return_value = 'openstack-release-test'
-        validate.clone_deliverable(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
-        validate.validate_tarball_base(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.clone_deliverable(deliv, self.ctx)
+        validate.validate_tarball_base(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1312,16 +1199,8 @@ class TestValidateTarballBase(base.BaseTestCase):
             }
         )
         gsn.return_value = 'openstack-release-test'
-        validate.clone_deliverable(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
-        validate.validate_tarball_base(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.clone_deliverable(deliv, self.ctx)
+        validate.validate_tarball_base(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1396,10 +1275,7 @@ class TestValidateNewReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_new_releases(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1428,10 +1304,7 @@ class TestValidateNewReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_new_releases(deliv, self.ctx)
         self.assertEqual(1, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1460,10 +1333,7 @@ class TestValidateNewReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_new_releases(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(1, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1489,10 +1359,7 @@ class TestValidateNewReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_new_releases(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1520,10 +1387,7 @@ class TestValidateNewReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_new_releases(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_new_releases(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(1, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1547,10 +1411,7 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_branch_prefixes(
-            deliv,
-            self.ctx,
-        )
+        validate.validate_branch_prefixes(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1567,10 +1428,7 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
                     ],
                 }
             )
-            validate.validate_branch_prefixes(
-                deliv,
-                self.ctx,
-            )
+            validate.validate_branch_prefixes(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1579,9 +1437,8 @@ class TestValidateStableBranches(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_version_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
@@ -1600,11 +1457,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1625,11 +1478,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1650,11 +1499,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1675,11 +1520,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1701,11 +1542,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1730,11 +1567,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -1757,11 +1590,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1783,11 +1612,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1809,11 +1634,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1836,11 +1657,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1863,11 +1680,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
@@ -1890,11 +1703,7 @@ class TestValidateStableBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_stable_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_stable_branches(deliv, self.ctx)
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
@@ -1903,9 +1712,8 @@ class TestValidateFeatureBranches(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_location_not_a_dict(self):
         deliverable_data = textwrap.dedent('''
@@ -1924,11 +1732,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1951,11 +1755,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -1978,11 +1778,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -2005,11 +1801,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2032,11 +1824,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2060,11 +1848,7 @@ class TestValidateFeatureBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_feature_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_feature_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2074,9 +1858,8 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/automaton')
 
     def test_unknown_series(self):
         deliverable_data = textwrap.dedent('''
@@ -2096,11 +1879,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2122,11 +1901,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2149,11 +1924,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2176,11 +1947,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
@@ -2203,11 +1970,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2230,11 +1993,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2258,11 +2017,7 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
-        validate.validate_driverfixes_branches(
-            deliv,
-            self.tmpdir,
-            self.ctx,
-        )
+        validate.validate_driverfixes_branches(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
@@ -2586,9 +2341,8 @@ class TestValidateBranchPoints(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
 
     def test_branch_does_not_exist(self):
         deliverable_data = textwrap.dedent('''
@@ -2609,7 +2363,6 @@ class TestValidateBranchPoints(base.BaseTestCase):
         )
         validate.validate_branch_points(
             deliv,
-            self.tmpdir,
             self.ctx,
         )
         self.assertEqual(0, len(self.ctx.warnings))
@@ -2634,7 +2387,6 @@ class TestValidateBranchPoints(base.BaseTestCase):
         )
         validate.validate_branch_points(
             deliv,
-            self.tmpdir,
             self.ctx,
         )
         self.assertEqual(0, len(self.ctx.warnings))
@@ -2660,7 +2412,6 @@ class TestValidateBranchPoints(base.BaseTestCase):
         )
         validate.validate_branch_points(
             deliv,
-            self.tmpdir,
             self.ctx,
         )
         self.assertEqual(0, len(self.ctx.warnings))
