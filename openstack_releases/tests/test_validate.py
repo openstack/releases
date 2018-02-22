@@ -391,6 +391,31 @@ class TestValidateModel(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
 
+    def test_untagged_with_releases(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'release-model': 'untagged',
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]},
+                ]
+            }
+        )
+        validate.validate_model(
+            deliv,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(1, len(self.msg.errors))
+
 
 class TestValidateReleases(base.BaseTestCase):
 
@@ -746,33 +771,6 @@ class TestValidateReleases(base.BaseTestCase):
         self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
-
-    def test_untagged_with_releases(self):
-        deliv = deliverable.Deliverable(
-            team='team',
-            series='ocata',
-            name='name',
-            data={
-                'release-model': 'untagged',
-                'artifact-link-mode': 'none',
-                'releases': [
-                    {'version': '99.5.0',
-                     'projects': [
-                         {'repo': 'openstack/release-test',
-                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                     ]},
-                ]
-            }
-        )
-        validate.validate_releases(
-            deliv,
-            {'validate-projects-by-name': {}},
-            self.tmpdir,
-            self.msg,
-        )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
 
 
 class TestGetReleaseType(base.BaseTestCase):
