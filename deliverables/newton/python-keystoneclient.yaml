@@ -13,9 +13,6 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 60ca0ceb185592fd7bdb8ede2764ad123259b275
-    highlights: |
-      - The keystone CLI is removed.
-      - The keystoneclient.openstack.common.apiclient package is removed
   - version: 3.1.0
     projects:
       - repo: openstack/python-keystoneclient
@@ -24,8 +21,6 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: d9bd1056323605ed64e73175ce2fcbe5982ec045
-    highlights: |
-      - Handle EmptyCatalog exception in list federated projects (bug 1471943)
   - version: 3.3.0
     projects:
       - repo: openstack/python-keystoneclient
@@ -42,3 +37,5 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 7c40ff8466dc5e49f93752ecb998db864f8e5598
+repository-settings:
+  openstack/python-keystoneclient: {}

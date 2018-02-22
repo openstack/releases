@@ -14,7 +14,9 @@ releases:
       - repo: openstack/fuel-astute
         hash: 11ec66899ec09319b31ca21df43a4f0ac3e07c97
   - version: 10.0.0
-    diff-start: '6.0'
+    diff-start: "6.0"
     projects:
       - repo: openstack/fuel-astute
         hash: 11ec66899ec09319b31ca21df43a4f0ac3e07c97
+repository-settings:
+  openstack/fuel-astute: {}

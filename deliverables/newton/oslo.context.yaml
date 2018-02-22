@@ -25,9 +25,6 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 9feb9db8d667bc5bc9ca43e2073227c1e8e44bbb
-    highlights: |-
-      * Handle openstack.request_id in from_environ
-      * Add is_admin_project to context
   - version: 2.7.0
     projects:
       - repo: openstack/oslo.context
@@ -40,4 +37,5 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 0ad0950e0637c37145bc04df2166468523f8a10a
-    highlights: '- Emit deprecation warnings when positional args passed'
+repository-settings:
+  openstack/oslo.context: {}

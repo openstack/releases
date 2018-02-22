@@ -1,42 +1,44 @@
 ---
 launchpad: puppet-ceilometer
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-ceilometer/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 17f8be5bac4b8817e6bd71557b6a86d6500f1de7
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 08f764bd38e99d012a1fd16e5032fe36da458015
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: f1814fc266daccd38904e48bd217cd74d6b5bda5
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 666106a8b1a8f3a088927f1e5d1d83f01989474f
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 125919bf58c97195358507452f4e7b1128d11fb9
-- version: 9.4.1
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 007ff0f54ac9269d7962360088b52b50a62acb9a
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: 8d2093ecd086e6a8dd05e03631bbc3f6528e8a8c
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-ceilometer
-    hash: acb6aa652ed0646024c385586e76067529088072
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 17f8be5bac4b8817e6bd71557b6a86d6500f1de7
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 08f764bd38e99d012a1fd16e5032fe36da458015
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: f1814fc266daccd38904e48bd217cd74d6b5bda5
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 666106a8b1a8f3a088927f1e5d1d83f01989474f
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 125919bf58c97195358507452f4e7b1128d11fb9
+  - version: 9.4.1
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 007ff0f54ac9269d7962360088b52b50a62acb9a
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 8d2093ecd086e6a8dd05e03631bbc3f6528e8a8c
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: acb6aa652ed0646024c385586e76067529088072
+repository-settings:
+  openstack/puppet-ceilometer: {}

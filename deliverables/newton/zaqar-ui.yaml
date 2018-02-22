@@ -20,8 +20,8 @@ releases:
       - repo: openstack/zaqar-ui
         hash: 6ed5bfc0eba0e538cb29a9cea981c87c352df6a3
   - version: 1.0.0
-    # diff-start: There is no stable/newton branch and this is the
-    # first release series.
     projects:
       - repo: openstack/zaqar-ui
         hash: 6ed5bfc0eba0e538cb29a9cea981c87c352df6a3
+repository-settings:
+  openstack/zaqar-ui: {}

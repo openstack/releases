@@ -13,46 +13,33 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 5605034fc38862b19e6d2d96aa222dafc7762060
-    highlights: >
-      Added a more flexible mechanism for conveying network metadata.
   - version: 1.18.0
     projects:
       - repo: openstack/os-client-config
         hash: 51b4cbee522e2bf1a2beb12425733435ff1c32d9
-    highlights: >
-      Added helper factory functions for OpenStack SDK and shade.
   - version: 1.19.0
     projects:
       - repo: openstack/os-client-config
         hash: 8e4a1ebc97d30bcaf42a94379d499bd1689c3c51
-    highlights: >
-      Add profile deprecation setting, OSC 3.0 support
   - version: 1.19.1
     projects:
       - repo: openstack/os-client-config
         hash: 1d18b9193b55b727ca79d96158077e809feb1cd0
-    highlights: >
-      Fix option precedence bug introduced in 1.19.0
   - version: 1.20.0
     projects:
       - repo: openstack/os-client-config
         hash: 9d757b3a9a89bdd63f56ce171b7c878ded9a4cd8
-    highlights: >
-      Support configuration hints for dual stack neutron networks
   - version: 1.20.1
     projects:
       - repo: openstack/os-client-config
         hash: d40882eb146a314b064bb930f97f74d7082860e0
-    highlights: >
   - version: 1.21.0
     projects:
       - repo: openstack/os-client-config
         hash: 2b52bcf6943369fe96db3aefe2ee7473dd51b934
-    highlights: >
-      Add ability to prompt user for auth options not present
   - version: 1.21.1
     projects:
       - repo: openstack/os-client-config
         hash: 42885dc94176eecca1619d7e9c33b5ab3d9a2c0a
-    highlights: >
-      Handle YAML list in region_name
+repository-settings:
+  openstack/os-client-config: {}

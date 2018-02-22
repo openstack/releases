@@ -12,48 +12,18 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: 7033a34c94d352b66c0ff3a519a20fdb05914985
-    highlights: >
-      - Partial Nova hypervisor search support
-      - Improvements to zero downtime re-indexing
-      - Notification events cleanup
-      - Several in-tree docs updates
-      - Change to using notification pools by default
-      - ElasticSearch 2.x support fixes
   - version: 1.0.0.0b2
     projects:
       - repo: openstack/searchlight
         hash: dcec06c6ca68e988fc2af09ab65ce794befd8514
-    highlights: >
-      - Nova microversion support
-      - Neutron Floating IP plugin
-      - Neutron Security Group plugin
-      - Nova API call reduction
-      - Configurable index settings
-      - Various bug fixes
   - version: 1.0.0.0b3
     projects:
       - repo: openstack/searchlight
         hash: fd641c1f6be1695726ea265b4763003797656ce0
-    highlights: >
-      - Support for ElasticSearch aggregation queries
-      - Nova Server Group plugin
-      - Nova Flavor plugin
-      - Nova notification optimizations to reduce API callbacks
-      - Bulk indexing performance improvements (parralellization)
-      - Optional indexing of region name for multi-region search deployments
-      - Zero downtime ElasticSearch mapping updates without API callbacks
-      - Ability to leverage existing service policy files (phase 1)
-      - Facets now include total doc counts
-      - Initial support for OpenStack API Ref
-      - Searchlight architecture and deployment overview documentation
-      - Various bug fixes
   - version: 1.0.0.0rc1
     projects:
       - repo: openstack/searchlight
         hash: 9beed68ca8d55772caaa7d36c95cf86678071a2b
-    highlights: >
-      - Better handling of nested objects
-      - Various bug fixes
   - version: 1.0.0.0rc2
     projects:
       - repo: openstack/searchlight
@@ -63,3 +33,5 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: 58b7ed19707d3d866df8cd243bc12c7186e2ccc0
+repository-settings:
+  openstack/searchlight: {}

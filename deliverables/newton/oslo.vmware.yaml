@@ -37,12 +37,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 37283c8689238fe0bcd038267893fc7d002d1383
-    highlights: '- Refactor image transfer'
   - version: 2.13.0
     projects:
       - repo: openstack/oslo.vmware
         hash: 0e6c90aa06e021aa2d527a07a718f254f64cc487
-    highlights: '* Method to download file to VMware server'
   - version: 2.14.0
     projects:
       - repo: openstack/oslo.vmware
@@ -51,3 +49,5 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: bfd1e0ffd435e637d00ba54ec99aeafe4488eca1
+repository-settings:
+  openstack/oslo.vmware: {}

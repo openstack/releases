@@ -12,17 +12,9 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: fd06863e6312fbdd3d9a7cbf5e972fc107795d1d
-    highlights: |
-      Bug fixes:
-        - Fixed localization bugs with javascript (graph failed if , was used).
-
-      Improvements:
-        - Group name is now shown instead of the group_id.
-        - Per tenant HashMap support.
   - version: 0.6.1
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 6b2ea6e3e52eb778c04a68f0169d4831a0285823
-    highlights: |
-      Bug fixes:
-        - Typo fixed in the README file
+repository-settings:
+  openstack/cloudkitty-dashboard: {}

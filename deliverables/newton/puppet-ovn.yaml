@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-ovn
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-ovn/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 4529c53975bf700d5dc096b5597d3df29441fbd4
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 20dd2ed2063a33ace16322cbac1b264db65e8217
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 57ce569c1c648346f37172b226d38b68e7990e0b
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: dd1a05295df8a8401cac68d14b44b2246adea0a5
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 35fd3718b81bb711512f21492dc511f90d121934
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: fe4233e7d5f953be5dfd9c549030f2624fdda48f
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-ovn
-    hash: 43032c399144acbec8323d6e89678aac1dc6c095
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 4529c53975bf700d5dc096b5597d3df29441fbd4
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 20dd2ed2063a33ace16322cbac1b264db65e8217
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 57ce569c1c648346f37172b226d38b68e7990e0b
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: dd1a05295df8a8401cac68d14b44b2246adea0a5
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 35fd3718b81bb711512f21492dc511f90d121934
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: fe4233e7d5f953be5dfd9c549030f2624fdda48f
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 43032c399144acbec8323d6e89678aac1dc6c095
+repository-settings:
+  openstack/puppet-ovn: {}

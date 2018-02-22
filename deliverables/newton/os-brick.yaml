@@ -13,57 +13,25 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 1d392b1fc9c68eb541896870d16e6f8ecbaf99c5
-    highlights: >
-        Fixed Scality backup support.
-        Fixed Sheepdog backup support.
-        Addition of reno release notes.
   - version: 1.4.0
     projects:
       - repo: openstack/os-brick
         hash: 3f8c9e1c9849eb0172abc4498ed4926c7a11876e
-    highlights: >
-        Added encryptors from Nova to share between Cinder and Nova code.
-        Switch to use privsep instead of rootwrap.
   - version: 1.5.0
     projects:
       - repo: openstack/os-brick
         hash: cc47d81feb63671a285c46d97f7dae5ccee58501
-    highlights: >
-        Added Windows iSCSI connector.
-        Fixed attach error for multipath iSCSI encrypted volumes.
-        Fixed error parsing device path with iSCSI multipath.
-        Optimization for ScaleIO volume identification.
-        Local attach feature for RBD connector.
-        Various code cleanup.
   - version: 1.6.0
     projects:
       - repo: openstack/os-brick
         hash: 0e2a40f7468c4f67c96ebb91c417c51bbcc8952e
-    highlights: >
-        Added debug tracing.
-        Fixed iSCSI multipath cleanup.
-        Fixed for customized ceph cluster name.
-        Added connector for VMDK volumes.
-        Fixed iSCSI discovery with ISER transport.
-        Fixed FC multipath rescan.
-        Added Windows FC connector.
-        Added Windows SMBFS connector.
-        Added GPFS connector.
-        Fixed FC multipath cleanup.
   - version: 1.6.1
     projects:
       - repo: openstack/os-brick
         hash: 49a89c8757aad70611a00ea9e1c78f38060bc114
-    highlights: >
-        Added connector alias for direct unit test access.
   - version: 1.6.2
     projects:
       - repo: openstack/os-brick
         hash: b4b21f0a6deb6434f777d9ee4a58a04db8d0afd0
-    highlights: >
-        Improve compatibility with Nova connector usage.
-        Fix LUN attachment error for s390.
-        Handle encryption passphrases which were mangled in older releases.
-        Fix command execution errors w/ Unicode output.
-        Fix RBD connector IPv6 support.
-        Fix Ceph backup file descriptor leak.
+repository-settings:
+  openstack/os-brick: {}

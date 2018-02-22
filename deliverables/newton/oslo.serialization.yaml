@@ -12,7 +12,6 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: 8985675d98fd468e15a34707ec090f704b9a7761
-    highlights: '* Unified and simplified API for all serializers'
   - version: 2.6.0
     projects:
       - repo: openstack/oslo.serialization
@@ -25,9 +24,6 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: 4fdaeff758c3a95cdbf99976b87cad42215307b6
-    highlights: |-
-      * Replace TypeError by ValueError in msgpackutils (so that it matches
-      jsonutils)
   - version: 2.9.0
     projects:
       - repo: openstack/oslo.serialization
@@ -44,12 +40,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: afb53323a1eb751fd1f8a542414a284902cb8f70
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 2.13.0
     projects:
       - repo: openstack/oslo.serialization
         hash: 1f86a66a364398133fa3e7c473ae974e0ac41d04
-    highlights: '* Fix serialization of binary strings in Python3'
   - version: 2.13.1
     projects:
       - repo: openstack/oslo.serialization
@@ -58,3 +52,5 @@ releases:
       - hash: e85a6706ae8a0e607e87028110170daa5043f237
         repo: openstack/oslo.serialization
     version: 2.13.2
+repository-settings:
+  openstack/oslo.serialization: {}

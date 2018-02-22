@@ -12,39 +12,21 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 79532ea599cd0226e7176c6c7d59e04ee3b1a8ff
-    highlights: >
-      - Important connection related fix to Cinder store for uploads
-        and downloads.
-      - Setup now properly defaults project_domain_name and
-        project_domain_id for swiftclient driver.
-      - Cinder driver now uses image_size metadata instead of volume
-        size rounded up to GiB.
   - version: 0.15.0
     projects:
       - repo: openstack/glance_store
         hash: 10f50da5fcd9257090ab137f4d257940bb01b44a
-    highlights: >
-      - Fixed a critical bug 1606746 that was blocking further
-        releases and failing gate of glance docs.
   - version: 0.16.0
     projects:
       - repo: openstack/glance_store
         hash: ad2c5ef5c59262a5f599d6351385a805c4b4f702
-    highlights: >
-      - s3 store driver has been removed.
   - version: 0.17.0
     projects:
       - repo: openstack/glance_store
         hash: 2e712db2fce105145e13d35a44810c0770da8c80
-    highlights: >
-      - Improved help text of general configuration options and of
-        various backend store drivers.
-      - Removed deprecated exceptions.
   - version: 0.18.0
     projects:
       - repo: openstack/glance_store
         hash: 728b45d4a4573622d56bfb9ee45f6b152fce50a8
-    highlights: >
-      - Fixes bug 1614307 in VMware glance store that was failing
-        to upload images with requests>=2.11.0 that needs headers
-        passed as string or bytes.
+repository-settings:
+  openstack/glance_store: {}

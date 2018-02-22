@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-openstacklib
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-openstacklib/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 6a89264e8e06e8c7432f339e61f4e0ff66dd33ba
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: e4253e04b5101b28dd60dae6904148b548a78f30
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 7c889eccbee0c057a8776de1e17b2633a508edb7
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 081c6f91e7445d51bd6cd915006d0bad6a4ba28c
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: adf3ce3d1da3dab867ccb44a9c4bd208f1845654
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: b7d99359eea9eafa861c2aec73566b19afdc0fca
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-openstacklib
-    hash: 149398b176043c633fb7af32c49f639c60db0ca7
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 6a89264e8e06e8c7432f339e61f4e0ff66dd33ba
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: e4253e04b5101b28dd60dae6904148b548a78f30
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 7c889eccbee0c057a8776de1e17b2633a508edb7
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 081c6f91e7445d51bd6cd915006d0bad6a4ba28c
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: adf3ce3d1da3dab867ccb44a9c4bd208f1845654
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: b7d99359eea9eafa861c2aec73566b19afdc0fca
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 149398b176043c633fb7af32c49f639c60db0ca7
+repository-settings:
+  openstack/puppet-openstacklib: {}

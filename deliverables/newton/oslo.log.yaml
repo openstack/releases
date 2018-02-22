@@ -13,17 +13,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 3b1d0f5ffbfcde153d74c81f27b9c06d29e281e0
-    highlights: |
-        * Provides the release name for NEWTON and OCATA so that any future
-          deprecated functionality that references those can correctly
-          work.
-        * Improved test coverage.
-        * Log helper/decorator can now correctly work on static methods.
   - version: 3.5.0
     projects:
       - repo: openstack/oslo.log
         hash: 273ef5378e5493cb3434cb46aef79dfa820d641d
-    highlights: '* Remove direct dependency on babel'
   - version: 3.6.0
     projects:
       - repo: openstack/oslo.log
@@ -32,7 +25,6 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: c6c114e7401d3c8650103c6fdf52f71a0bd6d6fb
-    highlights: 'Allow reload of ''debug'' option'
   - version: 3.8.0
     projects:
       - repo: openstack/oslo.log
@@ -41,9 +33,6 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 070cc7ae8de83ffa546fa49902a3a3b8da06466c
-    highlights: |-
-        * Convert unicode data to utf-8 before calling syslog.syslog()
-        * Reduce READ_FREQ and TIMEOUT for watch-file
   - version: 3.10.0
     projects:
       - repo: openstack/oslo.log
@@ -56,12 +45,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: daf64383c1d603f4323dcd734883e1e8f5b8246b
-    highlights: '* Reload log_config_append config on SIGHUP'
   - version: 3.13.0
     projects:
       - repo: openstack/oslo.log
         hash: 656cef3e3b495316a95d6a411685ef86e0390381
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 3.14.0
     projects:
       - repo: openstack/oslo.log
@@ -78,3 +65,5 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: a6efc0e714171d4f5ec8baef46cc8734fb4139dc
+repository-settings:
+  openstack/oslo.log: {}

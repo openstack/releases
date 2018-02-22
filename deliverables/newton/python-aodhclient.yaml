@@ -13,15 +13,11 @@ releases:
       - repo: openstack/python-aodhclient
         hash: 8e4a4e2a167c03020203674f73a59bde5b1b56ea
         tarball-base: aodhclient
-    highlights: >
-        Merge "alarm search" functionality to "alarm list"
   - version: 0.5.0
     projects:
       - repo: openstack/python-aodhclient
         hash: e336b63edf9027d20509810cdde5d8830d260fae
         tarball-base: aodhclient
-    highlights: >
-        Add OSC support
   - version: 0.6.0
     projects:
       - repo: openstack/python-aodhclient
@@ -32,3 +28,5 @@ releases:
       - repo: openstack/python-aodhclient
         hash: 9ea45584f214c1e4582c77911783fb3485bec88a
         tarball-base: aodhclient
+repository-settings:
+  openstack/python-aodhclient: {}

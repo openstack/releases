@@ -17,44 +17,17 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: ec20f7f85c3a8ecd788536401eeeb0fef4ef18c2
-    highlights: |-
-      * Base OSC plugin support
-      * Fixed --insecure not taking effect when specified
-      * Add no-shared option to qos-policy-update command
-      * Make purge supports dvr router's interface
-      * Support sha256 for vpn-ikepolicy and vpn-ipsecpolicy
-      * Dropped VMware NSX support
   - version: 5.1.0
     projects:
       - repo: openstack/python-neutronclient
         hash: 70557dc564b4b3cca2cd716a29e5e9f9be95247f
-    highlights: |-
-      * Add segment as an attribute to subnet in client
-      * Log request-id for each api call
-      * Add trunk commands to openstackclient
-      * Add Python 3.5 classifier and venv
-      * find_resource method family are available in Python binding class
   - version: 6.0.0
     projects:
       - repo: openstack/python-neutronclient
         hash: f53d6241987bbf6c261069e0a62ebabcc0a83c67
-    highlights: |-
-      * quota-default-show support
-      * Add quota support for LB and Listeners
-      * quota-update to return an error msg for 0 args
-      * support for Bulk Delete
-      * Add 'shared' option to neutron address-scope-update
-      * Add auto-allocated-topology-delete to delete the auto allocated topology
-      * Add description/timestamps to network trunk commands
-      * Remove case dependency for user parameter inputs
-      * Improve help messages for NeutronClient
-      * Remove deprecated admin-state-down from lbaas-member-update
-      * Add flavor argument to router
-      * Add QoS egress minimum bandwidth rule
   - projects:
       - hash: c899a2ea3f8175091faf74f8847cb84f340ae820
         repo: openstack/python-neutronclient
     version: 6.0.1
-    highlights: |-
-      * Added --enable-snat option for router-gateway-set
-      * Handle keystoneauth exceptions in retry logic
+repository-settings:
+  openstack/python-neutronclient: {}

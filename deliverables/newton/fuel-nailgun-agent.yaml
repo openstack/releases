@@ -14,7 +14,9 @@ releases:
       - repo: openstack/fuel-nailgun-agent
         hash: 60173537665464db260fb93829eb8affced33535
   - version: 10.0.0
-    diff-start: '9.0'
+    diff-start: "9.0"
     projects:
       - repo: openstack/fuel-nailgun-agent
         hash: 60173537665464db260fb93829eb8affced33535
+repository-settings:
+  openstack/fuel-nailgun-agent: {}

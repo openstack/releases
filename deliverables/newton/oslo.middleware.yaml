@@ -20,12 +20,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 6f1db02ef07137907977e7437d1e2df7619a429d
-    highlights: '* Add a simple __main__ to easily show healthcheck output'
   - version: 3.12.0
     projects:
       - repo: openstack/oslo.middleware
         hash: 549be72d688f838a85e2c664b9911546f52c758d
-    highlights: '* Do not add a default content type when replying'
   - version: 3.13.0
     projects:
       - repo: openstack/oslo.middleware
@@ -58,3 +56,5 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 6c0f50c1f5f4122b31dbfe25aacdce596bf4b648
+repository-settings:
+  openstack/oslo.middleware: {}

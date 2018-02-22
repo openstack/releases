@@ -12,8 +12,6 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 559e035a4eb9787c3224ac8439c4454759cbdd48
-    highlights: |
-        * Switch to msgpack for serialization. Now bytes/unicode clean.
   - version: 1.6.0
     projects:
       - repo: openstack/oslo.privsep
@@ -30,10 +28,6 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 9bf606327d156de52c9418d5784cd7f29e243487
-    highlights: |
-      * Adds an (optional for now) initialisation function that should
-        be called near top of main() in applications that use
-        oslo.privsep.
   - version: 1.10.0
     projects:
       - repo: openstack/oslo.privsep
@@ -42,12 +36,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 108b2016a9f291ad15e2bf963c5897fd032fdb62
-    highlights: '- Drop python3.3 support in classifier'
   - version: 1.12.0
     projects:
       - repo: openstack/oslo.privsep
         hash: 30d962bfd74879c7886f877933bbb6b39de71455
-    highlights: '- Fixes logging bug 1593743'
   - version: 1.13.0
     projects:
       - repo: openstack/oslo.privsep
@@ -56,9 +48,9 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: d186635525310548b10ad48de6327b8eb1a3e7b3
-    highlights: '- Fixes socket timeout bug 404272'
   - version: 1.13.2
     projects:
       - repo: openstack/oslo.privsep
         hash: 928b08f112b976da50fbed4e4376957ed76d58ba
-    highlights: '- Fixes CONF.config_dir bug 1616240'
+repository-settings:
+  openstack/oslo.privsep: {}

@@ -41,12 +41,6 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: d7a0c3ebc59645671ce261cdfa62395de5582d81
-    highlights: |-
-      * ovsfw: Add a dl_type match fo action=ct flows
-      * Extend project_id in objects dicts
-      * Add required extension to trunk_details descriptor
-      * New option for num_threads for state change server
-      * Keepalived global_defs configuration entries required to avoid DNS lookup
   - version: 9.1.1
     projects:
       - repo: openstack/neutron
@@ -55,60 +49,21 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: a79da4c3107a9bbabc564b6930e6e9172f71db26
-    highlights: |-
-      * Unplug external device when delete snat namespace
-      * Kill processes when cleaning up namespaces
-      * Remove iptables nat and mangle rules for security group
-      * L3-HA: Send gratuitous ARP when new floating IP is added
-      * OVSDB: don't erase existing ovsdb managers
-      * Skip larger than /64 subnets in DHCP agent
-      * DVR: Fix race condition in creation of fip gateway
-      * Update MTU on existing devices
   - version: 9.3.0
     projects:
       - repo: openstack/neutron
         hash: f7ad3206034ddda1236a58704d3fb3b94336c858
-    highlights: |-
-      * openvswitch agent: add OVS_RESTARTED event
-      * Don't create HA resources until needed
-      * Bulk creation of SecurityGroups
-      * DVR: Add static routes to FIP namespace
   - version: 9.3.1
     projects:
       - repo: openstack/neutron
         hash: e4aac689002645b837c12f23470fea5e61600a21
-    highlights: |-
-      * Fixed a bug where network delete request may hang indefinitely,
-        spinning up CPU until a port from the network is deleted
-      * Switched to 'subquery' for 1-M relationships when fetching
-        relationships from database to improve scalability
-      * Throttle SIGHUPs to keepalived to avoid data plane flips
   - version: 9.4.0
     projects:
       - repo: openstack/neutron
         hash: 59c6530990f0a375d390add49dad79b9089b1231
-    highlights: |-
-      * Add support for Keepalived VRRP health check
-      * Optimized locking in DHCP agent
-      * Multiple OVSDB timeout fixes
-      * Remove stale floating IP addresses from rfp devices
-      * Dont try to apply iptables rules in a endless loop
-      * Stop killing conntrack state without CT Zone
-      * Avoid resync loop if router fails to initialize
-      * Send both gratuitous ARP REQUESTs and REPLYs
-      * Allow port security updates even without security-groups enabled
-      * Add IPv6 Prefix Delegation support for DVR
   - projects:
       - hash: 2a9844b8ca33bfcd789c2981e3b8368d2c832f72
         repo: openstack/neutron
     version: 9.4.1
-    highlights: |-
-      * Handle CIDR IP address in allowed address pairs
-      * Fix: set IPv6 forwarding when there's an IPv6 gw
-      * Disable RA and IPv6 forwarding on backup HA routers
-      * Drop IPv6 Router Advertisements in OVS firewall
-      * Don't add duplicate metadata rules after router update
-      * Correctly configure IPv6 addresses on upgrades
-      * Set HA network port to DOWN when l3 agent starts
-      * ovs: bubble up failures into main thread in native ofctl mode
-      * Add IPv6 default route to DHCP namespace
+repository-settings:
+  openstack/neutron: {}

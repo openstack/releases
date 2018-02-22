@@ -12,43 +12,18 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: 4c004f6d86f19f963efb706d7e3d45b6bb69d26c
-    highlights: |
-      Several small changes were done to align with the Newton Horizon
-      release. These changes are not backwards compatible with previous
-      Horizon releases. Several small code organization improvements were
-      also done.
   - version: 1.0.0.0b2
     projects:
       - repo: openstack/searchlight-ui
         hash: 19086ab8f870d30b2e95ab92c468a60317b00a40
-    highlights: |
-      Searchlight UI now makes use of newly landed Horizon
-      registered drawer and detail views for resources. It also
-      adds support for global actions (like creating an image) and
-      has started enhancing action result handling.
   - version: 1.0.0.0b3
     projects:
       - repo: openstack/searchlight-ui
         hash: 32eabd5a2a42ceb20f66c48b96e9901057124cac
-    highlights: >
-      - Nova instance actions, summary, and detail views
-      - Nova hypervisor and server group summary views
-      - Cinder volumes and snapshots summary view
-      - Glance images summary view
-      - Neutron network, ports, routers, security groups, subnets summary views
-      - Dynamic polling / progress based on resource status and last action
-      - Live search toggle (continuous query mode)
-      - Sort by relavancy, last updated, alphabetical
-      - Persistent search settings
-      - Translation build support
-      - Various bug fixes
   - version: 1.0.0.0rc1
     projects:
       - repo: openstack/searchlight-ui
         hash: 09cd21d52752051aac588e6c9f3a41298796d8a3
-    highlights: >
-      - Aggregation support
-      - Correct handling of total result count
   - version: 1.0.0.0rc2
     projects:
       - repo: openstack/searchlight-ui
@@ -66,3 +41,5 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: d94a65507b59336504bc68fbefe6b9f610a7cba2
+repository-settings:
+  openstack/searchlight-ui: {}

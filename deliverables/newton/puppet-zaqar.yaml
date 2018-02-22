@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-zaqar
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-zaqar/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: 3c49546f0a9e85d3e05cecfc2bb9b568fec5e9b2
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: 8ea7a5c9318d79c7cd9a709ef1013b1f5c40f9f8
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: 1b127300d789ea0995afd96bfe7a63e6337eae00
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: 157b95cf9a573d73da0330aedb5dcb60bacbf356
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: c34d1b6642a0f8fcea9e83278179213030828022
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: a3c78095fb0e815ffb2f5d555ce72d9ff4d3f56e
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-zaqar
-    hash: 5cd58429073ba3898648f4acbd263881a61b81f0
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 3c49546f0a9e85d3e05cecfc2bb9b568fec5e9b2
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 8ea7a5c9318d79c7cd9a709ef1013b1f5c40f9f8
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 1b127300d789ea0995afd96bfe7a63e6337eae00
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 157b95cf9a573d73da0330aedb5dcb60bacbf356
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: c34d1b6642a0f8fcea9e83278179213030828022
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: a3c78095fb0e815ffb2f5d555ce72d9ff4d3f56e
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 5cd58429073ba3898648f4acbd263881a61b81f0
+repository-settings:
+  openstack/puppet-zaqar: {}

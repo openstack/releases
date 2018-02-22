@@ -41,11 +41,6 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 867661d51bdb0cf2a6f326cb18f26bbc1f04eb15
-    highlights: >
-      - There is an idempotent database schema migration to fix a regression
-        when creating servers with very large user_data entries.
-      - A known issue is reported where WebOb>=1.6.0 is required if using the
-        placement service.
   - version: 14.0.3
     projects:
       - repo: openstack/nova
@@ -54,45 +49,22 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 642caf0c58ed0a0e0c06103d2e3ef001c1ae142f
-    highlights: >
-      - Bug fixes for placement and cells v2 to prepare for upgrading to Ocata.
-      - Online data migration to fix orphaned build requests created in Mitaka.
-      - Bug fix for the 330 main DB schema migration for upgrades from Mitaka.
   - version: 14.0.5
     projects:
       - repo: openstack/nova
         hash: c2c91ce44592fc5dc2aacee1cf7f5b5cfd2e9a0a
-    highlights: >
-      - Fix for CVE-2017-7214.
-      - Several bug fixes.
   - version: 14.0.6
     projects:
       - repo: openstack/nova
         hash: 0c56c62878138c3c3d2dfc6827e4cf8f34953bea
-    highlights: >
-      - Bug fixes.
   - version: 14.0.7
     projects:
       - repo: openstack/nova
         hash: d756b78e303753e1b88e0691aa0fd13d2edaf1f0
-    highlights: >
-      - High severity bug fixes:
-
-        * Bug 1673613: Properly handles special characters in database
-          connection URL when setting up cells v2 (optional in Newton).
-        * Bug 1656673: Fixes "nova-manage cell_v2 simple_cell_setup" to
-          default the cell0 database name in the cell0 connection URL to be
-          "nova_cell0" rather than "nova_api_cell0" (optional in Newton).
-        * Bug 1691545: Fixes a performance regression which caused
-          high consumption of memory due to database connection switching.
-
-        See the release notes for more details.
   - version: 14.0.8
     projects:
       - repo: openstack/nova
         hash: bcc88d4cad3d2a86e9e1c841a4afdb5a9d87c0f1
-    highlights: >
-      - Bug fixes.
   - version: 14.0.9
     projects:
       - repo: openstack/nova
@@ -105,3 +77,5 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 808d36475103e373f1deb3344b6829ce68d6cdd5
+repository-settings:
+  openstack/nova: {}

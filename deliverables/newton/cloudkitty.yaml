@@ -11,29 +11,9 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 7f608c264e7127306d5487f545b28256ad80adc5
-    highlights: |
-      Bug fixes:
-        - Metadata from gnocchi are now carried up to storage.
-
-      Improvements:
-        - Native gnocchi storage, improves performances and enables queries
-          from gnocchi API.
-        - Per tenant HashMap rules.
-        - Better transformer code.
-        - Handle index method to handle some types of load balancers.
-        - CSV support for the report writer.
-
-      Impacts:
-        - Default port changed from 8888 to 8889 due to a conflict with zaqar.
-        - Removed database downgrade migrations.
   - version: 0.6.1
     projects:
       - repo: openstack/cloudkitty
         hash: 772ba65266708fb0945842f68a39bc2ebcc9ef67
-    highlights: |
-      Bug fixes:
-        - Fix the ceilometer collector for network.
-        - Fix non existing volume type in the gnocchi collector.
-        - Fix the unit for images size.
-        - Fix the consistency on the gnocchi storage.
-        - Fix many typos in the documentation.
+repository-settings:
+  openstack/cloudkitty: {}

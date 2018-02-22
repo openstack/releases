@@ -21,8 +21,8 @@ releases:
       - repo: openstack/panko
         hash: b36774b5341a66884ec0db1782a51ecdf8bf0673
   - version: 1.0.0
-    # diff-start: There is no stable/mitaka branch and this is the
-    # first release series.
     projects:
       - repo: openstack/panko
         hash: b36774b5341a66884ec0db1782a51ecdf8bf0673
+repository-settings:
+  openstack/panko: {}

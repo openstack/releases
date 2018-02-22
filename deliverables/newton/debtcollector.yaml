@@ -16,7 +16,6 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: 4d766d6526e3c7cff97dc87890f5e354bb3370e1
-    highlights: '* Fix renamed_kwarg to preserve argspec'
   - version: 1.6.0
     projects:
       - repo: openstack/debtcollector
@@ -25,8 +24,9 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: 279bbcaa407b92363c820ef6710bae18a49a1da2
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 1.8.0
     projects:
       - repo: openstack/debtcollector
         hash: 4e9659aaeda818e42ae9ec8ee87aa44785b83631
+repository-settings:
+  openstack/debtcollector: {}

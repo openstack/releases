@@ -24,19 +24,13 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: f68325fc481a0cc2a9aa9e8b1701cdb092463b49
-    highlights: |-
-      * Fix broken link about setuptools entry points
-      * NamedExtensionManager: call a callback when some names cannot be found
-      * Fix NamedExtensionManager fails when loading failing extension in order
   - version: 1.17.0
     projects:
       - repo: openstack/stevedore
         hash: 0c6b78cf88378e497050553e02d5367500613e73
-    highlights: |-
-      - Add Python 3.5 classifier and venv
-      - Make error reporting for extension loading quieter
   - version: 1.17.1
     projects:
       - repo: openstack/stevedore
         hash: 62398ed4a3376b52e0934a9e23b88bea60404972
-    highlights: '- Fixed bug 1611387 to not emit warnings when loading hooks by default.'
+repository-settings:
+  openstack/stevedore: {}

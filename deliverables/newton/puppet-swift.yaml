@@ -1,58 +1,60 @@
 ---
 launchpad: puppet-swift
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-swift/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: fbc530a9d3912ccaaa00df463237d1339e88be52
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 089c5a241c424ed6b9eb0c47376d8ba952876890
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 3eb1b82a4d9f8196c1600d1005a5e39310bf2cd6
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: a39f3b37b26547137abc804a12dc5fd4be5a61bd
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 05cdc8f877778d7b0e33be2bd8f2f88034f8dd3e
-- version: 9.4.1
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 5860dd4a3f6e485654c91fca9a1996141f6b03bd
-- version: 9.4.2
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 5b9f67d745970fbe20de1c6938eab3471a112ccb
-- version: 9.4.3
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 0c493cdc0dfe5996e0cd7cef45a4dc9fdea11606
-- version: 9.4.4
-  projects:
-  - repo: openstack/puppet-swift
-    hash: f75979a613b1cc745e95498f10c69c4a421f271e
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 1d4afc04b479b7b376e00e217086ae96eb69a18b
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: d42438428504ead7aac68e49289c03e97ca099fa
-- version: 9.7.0
-  projects:
-  - repo: openstack/puppet-swift
-    hash: 122ada45bfc80f9ad963c0161d1ff59267068eaf
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: fbc530a9d3912ccaaa00df463237d1339e88be52
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 089c5a241c424ed6b9eb0c47376d8ba952876890
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 3eb1b82a4d9f8196c1600d1005a5e39310bf2cd6
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: a39f3b37b26547137abc804a12dc5fd4be5a61bd
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 05cdc8f877778d7b0e33be2bd8f2f88034f8dd3e
+  - version: 9.4.1
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 5860dd4a3f6e485654c91fca9a1996141f6b03bd
+  - version: 9.4.2
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 5b9f67d745970fbe20de1c6938eab3471a112ccb
+  - version: 9.4.3
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 0c493cdc0dfe5996e0cd7cef45a4dc9fdea11606
+  - version: 9.4.4
+    projects:
+      - repo: openstack/puppet-swift
+        hash: f75979a613b1cc745e95498f10c69c4a421f271e
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 1d4afc04b479b7b376e00e217086ae96eb69a18b
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: d42438428504ead7aac68e49289c03e97ca099fa
+  - version: 9.7.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 122ada45bfc80f9ad963c0161d1ff59267068eaf
+repository-settings:
+  openstack/puppet-swift: {}

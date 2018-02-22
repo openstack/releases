@@ -22,11 +22,6 @@ releases:
     projects:
       - repo: openstack/designate
         hash: c8fa7ef289ed2cb722d803f377199982ddcceb7b
-    highlights: |
-      Added support for the new worker model, which will replace both
-      pool-manager and zone-manager services. This disabled by default,
-      but can be enabled by setting ``['service:worker'].enabled`` to ``True``
-      and starting ``designate-producer`` and ``designate-worker`` services.
   - version: 3.0.0.0rc1
     projects:
       - repo: openstack/designate
@@ -44,3 +39,6 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 7d7d71ee2439098ce79869e5c44411697697a371
+repository-settings:
+  openstack/designate: {}
+  openstack/designate-dashboard: {}

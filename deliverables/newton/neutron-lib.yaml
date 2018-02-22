@@ -12,39 +12,17 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 1694d4c3b37fc988ce39cae86297c44ae557e7dd
-    highlights: |
-        * Add neutron pagination helpers
-        * No 'import neutron' hacking check
-        * Fix semver versioning for Newton
   - version: 0.2.0
     projects:
       - repo: openstack/neutron-lib
         hash: 45aea71d7d8037b96ff8d047947d2685c49b547a
-    highlights: |
-        * Add and clean up IPv6 constants
-        * Maintain ATTR_NOT_SPECIFIED constant with deepcopy
   - version: 0.3.0
     projects:
       - repo: openstack/neutron-lib
         hash: 405f8961bdedf94074a9f5313f2ef3f5023f15ed
-    highlights: |
-        * Add validator to test integers
-        * Add tool to track migration to neutron-lib
-        * Make the constant Sentinel() class public
-        * Localized exception message hacking check
-        * Add Neutron L3 agent types
-        * Add subport validator for vlan-aware-vms
   - version: 0.4.0
     projects:
       - repo: openstack/neutron-lib
         hash: 705fd9090c7f38725748895f85edc66dddda5d5f
-    highlights: |
-        * Model mixins: HasId, HasProject*, HasStatusDescription
-        * Common field size constants for database columns
-        * DB utils: is_retriable, reraise_as_retryrequest
-        * Additional common exceptions
-        * Base policy: init, reset, refresh, check_is_admin, check_is_advsvc
-        * File utils: ensure_dir, replace_file
-        * Helper utils: camelize, compare_elements, dict2str, dict2tuple, diff_list_of_dict, get_random_string, parse_mappings, round_val, safe_decode_utf8, safe_sort_key, str2dict
-        * Host util: cpu_count
-        * Net util: get_hostname
+repository-settings:
+  openstack/neutron-lib: {}

@@ -12,15 +12,12 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 4f195b8cf5cf01416f6ff4b86371aea3e140bf75
-    highlights: >
-        - Intermediate newton release of tacker with auto-scaling,
-          audit-event logs and other fixes and enhancements
   - version: 0.5.0
     projects:
       - repo: openstack/tacker
         hash: 3596172ee6bff1c6ac98503415860f897d82ef35
       - repo: openstack/tacker-horizon
         hash: 4c84696280434e761fabe2fca7d80fe18fb6a78a
-    highlights: >
-        - Final Newton release of tacker with VNFFG, external alarm
-          monitoring and other enhancements
+repository-settings:
+  openstack/tacker: {}
+  openstack/tacker-horizon: {}

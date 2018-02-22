@@ -13,79 +13,33 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 8c204ac1a27f7b645e151d67ee38a4c18dd2201b
-    highlights: >
-        Fixes host-evacuate-live for the 2.25 microversion.
-        Added aggregate-show command to replace aggregate-details.
-        Adds changes-since support when listing servers.
   - version: 4.0.0
     projects:
       - repo: openstack/python-novaclient
         hash: f6efc861b7b40c8a78743fed661053506fb1301a
-    highlights: >
-        - Deprecate volume proxy CLIs and APIs are removed.
-        - Image proxy CLIs and APIs are deprecated.
-        - The python API bindings client now defaults to the v2.1 API.
   - version: 4.1.0
     projects:
       - repo: openstack/python-novaclient
         hash: 19ff19e1b8e632e03aff50621d200a258b2014b2
-    highlights: >
-        - Several bug fixes and support added for new microversions. The
-          highest supported microversion in this release is 2.28.
-        - A few commands now have newly deprecated options, read the change log
-          for more information.
-        - Routine dependency updates.
   - version: 5.0.0
     projects:
       - repo: openstack/python-novaclient
         hash: 5eb7b65f0d1aca4f62b5d5f451a99a43fd4265fc
-    highlights: >
-        - Several bug fixes and support added for new microversions. The
-          highest supported microversion in this release is 2.32.
-        - A few commands now have newly deprecated options, read the release
-          notes for more information.
-        - Some deprecated commands and support have been dropped and will now
-          result in errors if used. Read the release notes for more
-          information.
-        - Routine dependency updates.
   - version: 5.1.0
     projects:
       - repo: openstack/python-novaclient
         hash: 38073cab51821e4c29a47bcc7cb33d45b112d1c3
-    highlights: >
-        - Several bug fixes and support added for new microversions. The
-          highest supported microversion in this release is 2.35.
-        - The CLI now goes directly to the Image service and Network service
-          when translating resource name to ID. For example, booting a server
-          with an image name or network name will use Glance and Neutron rather
-          than proxy through the Compute API. See the release notes for more
-          information.
-        - Routine dependency updates.
   - version: 6.0.0
     projects:
       - repo: openstack/python-novaclient
         hash: 25117fa866b5b80f81fcb559b21525d2b107b2f7
-    highlights: >
-        - Several bug fixes and support added for new microversions. The
-          highest supported microversion in this release is 2.37.
-        - The network resource CLIs and APIs are now deprecated because
-          nova-network is deprecated.
-        - The image, baremetal and network APIs are now all capped at
-          microversion 2.35 since they result in a 404 from the Nova API after
-          microversion 2.35.
-        - The 2.37 microversion is now supported for booting a server with
-          automatically allocated networking, a.k.a get me a network. With that
-          change the "nics" kwarg is required when booting a server via the
-          Server API after microversion 2.36. The CLI will default to 'auto' if
-          nothing is specified.
-        - Routine dependency updates.
   - version: 6.0.1
     projects:
       - repo: openstack/python-novaclient
         hash: 9c731d51e3d7417cd9ff006d884ba5e57d8bdea6
-    highlights: >
-        - Routine bug fixes.
   - version: 6.0.2
     projects:
       - repo: openstack/python-novaclient
         hash: 41aeb89cae68a0e2ce03a248226488d4ba2ea8af
+repository-settings:
+  openstack/python-novaclient: {}

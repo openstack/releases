@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-oslo
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-oslo/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 4dc92c61d92625ada4ba397c67534fcdac82fde8
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 84f814d0478bd4eb9cae00d603f460684e161496
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 7d80bb50b33181dd06d502ac977626706e7e92c0
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: ea7bba2e4bc4c43df6f237f7eff30e9db90d2de4
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: ea577516fd8158a9e01c2eabdb2bad3688339cd3
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: 8cbfbcfb0c9f1e1b469895cb00a19c4675b7d1b7
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-oslo
-    hash: b29d8a4f76c1157d6258eddd56ca26ff44892d40
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 4dc92c61d92625ada4ba397c67534fcdac82fde8
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 84f814d0478bd4eb9cae00d603f460684e161496
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 7d80bb50b33181dd06d502ac977626706e7e92c0
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: ea7bba2e4bc4c43df6f237f7eff30e9db90d2de4
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: ea577516fd8158a9e01c2eabdb2bad3688339cd3
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 8cbfbcfb0c9f1e1b469895cb00a19c4675b7d1b7
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: b29d8a4f76c1157d6258eddd56ca26ff44892d40
+repository-settings:
+  openstack/puppet-oslo: {}

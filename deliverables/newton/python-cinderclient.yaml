@@ -13,34 +13,17 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 0cdcfb5988f57da80551b1a11fcd3d96d0baf1d8
-    highlights: |
-        Added support for API microversions.
-        Ability to specify --visibility and --protected when uploading
-        images to Glance.
-        Corrected migration status reset to not reset the source volume
-        state.
   - version: 1.7.1
     projects:
       - repo: openstack/python-cinderclient
         hash: 9e19357e4beff1131492888b7f2766afb227a767
-    highlights: |
-        Fixed backward incompatible image upload command.
   - version: 1.8.0
     projects:
       - repo: openstack/python-cinderclient
         hash: 623cef2d5c5d9f375c60c991f5ab9f951e9253fa
-    highlights: |
-        Fixed global modification of oslo.i18n lazy load. Added ability to
-        force delete a backup.
   - version: 1.9.0
     projects:
       - repo: openstack/python-cinderclient
         hash: e15d8e7f0920cb7cd5719d2861dea886bd6f9cb0
-    highlights: |
-        Ability to delete multiple metadata keys in one request.
-        Pagination for API v3 user messages.
-        Checking of api_version for microversion clients.
-        Added ability to update backup info.
-        Switched to using keystoneauth.
-        Command to list manageable volumes and snapshots.
-        Commands to manage generic volume groups.
+repository-settings:
+  openstack/python-cinderclient: {}

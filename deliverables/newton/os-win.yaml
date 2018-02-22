@@ -16,9 +16,6 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 5e78a0ba995517e833861bdef277be7a73bb7107
-    highlights: |
-      This release includes support for various Windows DNS operations,
-      needed for designate.
   - version: 1.2.0
     projects:
       - repo: openstack/os-win
@@ -31,3 +28,5 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 4eb64bc790236b05ca2c561d53e72a0ff4745f14
+repository-settings:
+  openstack/os-win: {}

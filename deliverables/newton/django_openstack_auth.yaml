@@ -12,30 +12,17 @@ releases:
     projects:
       - repo: openstack/django_openstack_auth
         hash: dd56c4e8bdb646338a7f66c32233002c3f5228be
-    highlights: >
-      This release improves URL handling of Keystones auth url, and
-      includes translation imports.
   - version: 2.4.0
     projects:
       - repo: openstack/django_openstack_auth
         hash: 6c8a1d49a84ac82ffc98f105f24091cabce88984
-    highlights: >
-      This release includes support for Keystones "is_admin_project"
-      attribute, redundancy handling for tenant_id usage, and a new
-      setting ("TOKEN_DELETION_DISABLED") to prevent revocation of
-      tokens on logout.
   - version: 2.4.1
     projects:
       - repo: openstack/django_openstack_auth
         hash: 55ebf6b792571709f292cdb0d3dac228680b1961
-    highlights: >
-      This release includes test fixes, and translations for the
-      Newton release.
   - version: 2.4.2
     projects:
       - repo: openstack/django_openstack_auth
         hash: 08e96550a31b98b7ee3278b3b6a73e93e79ac343
-    highlights: >
-      This release removes token revocation on log out and
-      project switch, allowing long-running processes to
-      complete properly.
+repository-settings:
+  openstack/django_openstack_auth: {}

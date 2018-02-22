@@ -25,7 +25,6 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 48ee6eb36dd895c518db39d6f2d799038cc37b02
-    highlights: '* Use entrypoints for backends'
   - version: 1.11.0
     projects:
       - repo: openstack/oslo.cache
@@ -34,7 +33,6 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 3009e5f7be5ea8ecf050e7dea924cc95c3996b35
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 1.13.0
     projects:
       - repo: openstack/oslo.cache
@@ -47,3 +45,5 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: ff5bbb96d73a83c1e25759c42a30f01608de5b8a
+repository-settings:
+  openstack/oslo.cache: {}
