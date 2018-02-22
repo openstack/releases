@@ -21,6 +21,7 @@ from __future__ import print_function
 import argparse
 import atexit
 import glob
+import inspect
 import logging
 import os
 import os.path
@@ -107,7 +108,6 @@ def is_a_hash(val):
 
 def validate_series_open(deliv, context):
     "No releases in the new series until the previous one has a branch."
-    header('Validate Series Open')
 
     if deliv.series != defaults.RELEASE:
         print('this rule only applies to the most current series, skipping')
@@ -168,7 +168,6 @@ def validate_series_open(deliv, context):
 
 def validate_series_first(deliv, context):
     "The first release in a series needs to end with '.0'."
-    header('Validate Series First')
 
     if deliv.is_independent:
         print('rule does not apply to independent projects')
@@ -192,7 +191,6 @@ def validate_series_first(deliv, context):
 
 def validate_bugtracker(deliv, context):
     "Does the bug tracker info link to something that exists?"
-    header('Validate Bug Tracker')
     lp_name = deliv.launchpad_id
     sb_id = deliv.storyboard_id
     if lp_name:
@@ -234,7 +232,6 @@ def validate_bugtracker(deliv, context):
 
 def validate_team(deliv, context):
     "Look for the team name in the governance data."
-    header('Validate Team')
     if deliv.team not in context.team_data:
         context.warning('Team %r not in governance data' %
                         deliv.team)
@@ -244,7 +241,6 @@ def validate_team(deliv, context):
 
 def validate_release_notes(deliv, context):
     "Make sure the release notes page exists, if it is specified."
-    header('Validate Release Notes')
     notes_link = deliv.release_notes
 
     if not notes_link:
@@ -276,7 +272,6 @@ def validate_release_notes(deliv, context):
 
 def validate_model(deliv, context):
     "Require a valid release model"
-    header('Validate Model')
 
     LOG.debug('release model {}'.format(deliv.model))
 
@@ -323,7 +318,6 @@ def clone_deliverable(deliv, context):
     """
     cloned = set()
     ok = True
-    header('Checking out source code')
     for repo in deliv.repos:
         if repo.name in cloned:
             continue
@@ -349,7 +343,6 @@ def _require_gitreview(repo, context):
 
 def validate_gitreview(deliv, context):
     "All repos must include a .gitreview file for new releases."
-    header('Validate .gitreview')
     checked = set()
     for release in deliv.releases:
         for project in release.projects:
@@ -397,7 +390,6 @@ def get_release_type(deliv, repo, workdir):
 
 def validate_release_type(deliv, context):
     "Does the most recent release comply with the rules for the release-type?"
-    header('Validate release-type')
 
     if deliv.artifact_link_mode == 'none':
         print('link-mode is "none", skipping release-type checks')
@@ -440,8 +432,6 @@ def validate_release_type(deliv, context):
 
 def validate_tarball_base(deliv, context):
     "Does tarball-base match the expected value?"
-
-    header('Validate tarball-base')
 
     if deliv.artifact_link_mode != 'tarball':
         print('rule does not apply for link-mode {}, skipping'.format(
@@ -493,8 +483,6 @@ def validate_tarball_base(deliv, context):
 
 def validate_pypi_permissions(deliv, context):
     "Do we have permission to upload to PyPI?"
-
-    header('Validate PyPI Permissions')
 
     for repo in deliv.repos:
 
@@ -558,7 +546,6 @@ def validate_pypi_permissions(deliv, context):
 
 def validate_release_sha_exists(deliv, context):
     "Ensure the hashes for each release exist."
-    header('Validate Release SHA Exists')
 
     for release in deliv.releases:
 
@@ -598,7 +585,6 @@ def validate_release_sha_exists(deliv, context):
 
 def validate_existing_tags(deliv, context):
     "Ensure tags that exist point to the SHAs listed."
-    header('Validate Existing Tags')
 
     for release in deliv.releases:
 
@@ -645,7 +631,6 @@ def validate_existing_tags(deliv, context):
 
 def validate_version_numbers(deliv, context):
     "Ensure the version numbers are valid."
-    header('Validate Version Numbers')
 
     prev_version = None
     for release in deliv.releases:
@@ -751,7 +736,6 @@ def validate_version_numbers(deliv, context):
 
 def validate_new_releases_at_end(deliv, context):
     "New releases must be added to the end of the list."
-    header('Validate New Releases At End')
 
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
@@ -789,7 +773,6 @@ def validate_new_releases_at_end(deliv, context):
 
 def validate_release_branch_membership(deliv, context):
     "Commits being tagged need to be on the right branch."
-    header('Validate Release Branch Membership')
 
     if deliv.is_independent:
         context.warning('skipping descendant test for '
@@ -876,7 +859,6 @@ def validate_release_branch_membership(deliv, context):
 
 def validate_new_releases(deliv, context):
     "Apply validation rules that only apply to the current series."
-    header('Validate New Releases')
 
     if deliv.series != defaults.RELEASE:
         print('this rule only applies to the most current series, skipping')
@@ -932,7 +914,6 @@ def validate_new_releases(deliv, context):
 
 def validate_branch_prefixes(deliv, context):
     "Ensure all branch names have good prefixes."
-    header('Validate Branch Prefixes')
     for branch in deliv.branches:
         if branch.prefix not in _VALID_BRANCH_PREFIXES:
             context.error('branch name %s does not use a valid prefix: %s' % (
@@ -941,7 +922,6 @@ def validate_branch_prefixes(deliv, context):
 
 def validate_stable_branches(deliv, context):
     "Apply the rules for stable branches."
-    header('Validate Stable Branches')
 
     if deliv.launchpad_id in _NO_STABLE_BRANCH_CHECK:
         print('rule does not apply to this repo, skipping')
@@ -1059,7 +1039,6 @@ def validate_stable_branches(deliv, context):
 
 def validate_feature_branches(deliv, context):
     "Apply the rules for feature branches."
-    header('Validate Feature Branches')
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
         context.error('Tempest plugins do not support branching.')
@@ -1107,7 +1086,6 @@ def validate_feature_branches(deliv, context):
 
 def validate_driverfixes_branches(deliv, context):
     "Apply the rules for driverfixes branches."
-    header('Validate driverfixes Branches')
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
         context.error('Tempest plugins do not support branching.')
@@ -1169,8 +1147,6 @@ def validate_driverfixes_branches(deliv, context):
 
 def validate_branch_points(deliv, context):
     "Make sure the branch points given are on the expected branches."
-
-    header("Validate Branch Points")
 
     # Check for 'upstream' branches. These track upstream release names and
     # do not align with OpenStack series names.
@@ -1383,28 +1359,34 @@ def main():
             print('File is part of a closed series, skipping')
             continue
 
-        clone_deliverable(deliv, context)
-        validate_bugtracker(deliv, context)
-        validate_team(deliv, context)
-        validate_release_notes(deliv, context)
-        validate_model(deliv, context)
-        validate_release_type(deliv, context)
-        validate_pypi_permissions(deliv, context)
-        validate_gitreview(deliv, context)
-        validate_release_sha_exists(deliv, context)
-        validate_existing_tags(deliv, context)
-        validate_version_numbers(deliv, context)
-        validate_new_releases_at_end(deliv, context)
-        validate_release_branch_membership(deliv, context)
-        validate_tarball_base(deliv, context)
-        validate_new_releases(deliv, context)
-        validate_series_open(deliv, context)
-        validate_series_first(deliv, context)
-        validate_branch_prefixes(deliv, context)
-        validate_stable_branches(deliv, context)
-        validate_feature_branches(deliv, context)
-        validate_driverfixes_branches(deliv, context)
-        validate_branch_points(deliv, context)
+        checks = [
+            clone_deliverable,
+            validate_bugtracker,
+            validate_team,
+            validate_release_notes,
+            validate_model,
+            validate_release_type,
+            validate_pypi_permissions,
+            validate_gitreview,
+            validate_release_sha_exists,
+            validate_existing_tags,
+            validate_version_numbers,
+            validate_new_releases_at_end,
+            validate_release_branch_membership,
+            validate_tarball_base,
+            validate_new_releases,
+            validate_series_open,
+            validate_series_first,
+            validate_branch_prefixes,
+            validate_stable_branches,
+            validate_feature_branches,
+            validate_driverfixes_branches,
+            validate_branch_points,
+        ]
+        for check in checks:
+            title = inspect.getdoc(check).splitlines()[0].strip()
+            header(title)
+            check(deliv, context)
 
     context.show_summary()
 
