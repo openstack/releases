@@ -10,41 +10,26 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 2074ca89b9b19c953c3fbde8915bba30a6e1e0bb
-    highlights: >
-        Requirements change to exclude requests 2.8.0; bug fixes
   - version: 2.4.1
     projects:
       - repo: openstack/keystonemiddleware
         hash: ab92a8b2a9a6b3218a2956bbf24d29918a943786
-    highlights: >
-        Requirements change to remove Webob cap
   - version: 3.0.0
     projects:
       - repo: openstack/keystonemiddleware
         hash: bd73df75000ded4ec0d927a2a362f97e582066f4
-    highlights: >
-        Requirements change to block keystoneclient 1.8.0;
-        Backwards-incompatible change to audit middleware.
   - version: 4.0.0
     projects:
       - repo: openstack/keystonemiddleware
         hash: a52eb9860cb4ce69857eb97d19a54dce95e3e8a0
-    highlights: >
-        - Support for python 2.6 has been removed.
-        - Now using keystoneauth to for authentication.
   - version: 4.1.0
     projects:
       - repo: openstack/keystonemiddleware
         hash: 650531310c858b3b7046ed474b7fd905cd1dc6b1
-    highlights: >
-        - Blocks requests 2.9.0 and pycadf 2.0.0.
   - version: 4.2.0
     projects:
       - repo: openstack/keystonemiddleware
         hash: 26707bdcba0d1b82ef927e2eab82f5065bc17dcb
-    highlights: >
-        - In-memory caching that was removed in 4.1.0,
-          this release reverts that change.
   - version: 4.3.0
     projects:
       - repo: openstack/keystonemiddleware
@@ -57,3 +42,5 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 0997d4471d1b0a4b12ba84f322ff4405f5ebd9f5
+repository-settings:
+  openstack/keystonemiddleware: {}

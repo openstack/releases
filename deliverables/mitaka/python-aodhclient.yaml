@@ -10,19 +10,21 @@ releases:
       - repo: openstack/python-aodhclient
         hash: 58227342270f233e4de1a523932e251c41bae23e
         tarball-base: aodhclient
-        highlights: >
+        highlights: |
           Initial release. Does not support Gnocchi rules
   - version: 0.2.0
     projects:
       - repo: openstack/python-aodhclient
         hash: 8ef682fa2af4ba72137af274f739ca3918330803
         tarball-base: aodhclient
-        highlights: >
+        highlights: |
           Support Gnocchi rules
   - version: 0.3.0
     projects:
       - repo: openstack/python-aodhclient
         hash: cf4fa714ec43278515a42e7dd08f4d4cf7893fe7
         tarball-base: aodhclient
-        highlights: >
+        highlights: |
           Support Composite rules
+repository-settings:
+  openstack/python-aodhclient: {}

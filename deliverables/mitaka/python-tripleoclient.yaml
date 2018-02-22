@@ -2,15 +2,15 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: a1453248389678fed3ac951e7a9ffcb476b70def
-    repo: openstack/python-tripleoclient
-  version: 2.1.0
-- projects:
-  - hash: c7d4a2d14e24221029a83d3ce82e7c60083eebac
-    repo: openstack/python-tripleoclient
-  highlights: >
-    - Last release for Mitaka version.
-  version: 2.2.0
+  - projects:
+      - hash: a1453248389678fed3ac951e7a9ffcb476b70def
+        repo: openstack/python-tripleoclient
+    version: 2.1.0
+  - projects:
+      - hash: c7d4a2d14e24221029a83d3ce82e7c60083eebac
+        repo: openstack/python-tripleoclient
+    version: 2.2.0
 team: tripleo
 type: library
+repository-settings:
+  openstack/python-tripleoclient: {}

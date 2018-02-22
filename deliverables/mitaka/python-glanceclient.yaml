@@ -13,16 +13,9 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 22a03fd475d1807dee41b24291862f1bdc361273
-    highlights: >
-        Dropped support for both py26, py33 and pypy. Improved
-        handling of HTTP errors from the server and removed
-        monkey-patching of getsockopt. Several improvements on
-        the test suite.
   - version: 2.0.1
     projects:
       - repo: openstack/python-glanceclient
         hash: 99ca367083459b698f052c56a1e73492dafcc383
-    highlights: >
-        - Fixes endpoint type handling during session creation and an encoding
-          issue when using v1 client.
-        - Few other bug fixes and dependency updates.
+repository-settings:
+  openstack/python-glanceclient: {}

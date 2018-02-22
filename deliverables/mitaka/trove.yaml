@@ -25,8 +25,6 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 48a4004d70f7317b5a7a3c814dbcc7b554fdcf8a
-    highlights: >
-        Includes changes to support Routes 2.3.
   - version: 5.0.0
     projects:
       - repo: openstack/trove
@@ -35,28 +33,17 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 29ec2164798e030600568d0e6a5f5b7aecacbd2f
-    highlights: >
-        Reuse Cassandra connections (Bug 1566946)
-        Correct notifications from guest (Bug 1577848)
-        Do not remove roo user on disable (Bug 1549600)
-        Correctly identify MongoDB processes (Bug 1570866)
-        Fix issue with MySQL GTID Replication (Bug 1563574)
-        Fix schema upgrade for MySQL 5.6 and MariaDB 10.1 (Bug 1473226).
   - version: 5.1.0
     projects:
       - repo: openstack/trove
         hash: 94347bd88b7d18f1f13e82d8e74e8063acde0cc8
-    highlights: >
-        Fixed module-apply issue (Bug 1571799)
-        Fixed Cassandra connection leak (Bug 1566946)
-        Requires oslo.concurrency 3.7.1
   - version: 5.1.1
     projects:
       - repo: openstack/trove
         hash: 48fe09a1b3930d5ec81f162bbbf54bf68ff157a0
-    highlights: >
-        Fixes bug with guest configuration injection (Bug 1609915)
   - version: 5.1.2
     projects:
       - repo: openstack/trove
         hash: 77cb8a9cf5be346c893576455f3564684badfee5
+repository-settings:
+  openstack/trove: {}

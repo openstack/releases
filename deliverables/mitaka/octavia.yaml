@@ -13,13 +13,9 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: ecfca348904560c341e84644137b9c0aa09b3949
-    highlights: |-
-      * Adds support for Layer 7 switching and shared pools
-      * Adds active/standby load balancers
   - version: 0.8.1
     projects:
       - repo: openstack/octavia
         hash: 0181f972082c56c449b22a1de0c00de891249e4c
-    highlights: |-
-      * Resolves issues building and using amphora images
-      * Run amphora haproxy in a network namespace
+repository-settings:
+  openstack/octavia: {}

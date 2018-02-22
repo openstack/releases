@@ -9,12 +9,9 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: d20b36b55444dc87cad3e1247ad95f3ed12bd21e
-    highlights: >
-        Support openstack commands as an OpenStackClient plugin; bug fixes
   - version: 2.0.0
     projects:
       - repo: openstack/python-mistralclient
         hash: 9e5f946797369ee411f93a37f64ff9542dcee4fa
-    highlights: >
-        Bug fixes, drop py26&py33 support, resource sharing feature CLI,
-        support workflow uuid in CLI, env update for execution and task.
+repository-settings:
+  openstack/python-mistralclient: {}

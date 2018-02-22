@@ -37,24 +37,14 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 238f60720d8b281fca7d3fa752e39cafdb583332
-    highlights: >
-      - Fix updated federated display_name is not returned (bug 1566494)
-      - Fix KeyError when renaming a project (bug 1565108)
-      - Fix fernet token audit IDs for v2.0 (bug 1577558)
-      - Allow 'domain' property for local.group (bug 1575057)
   - version: 9.0.2
     projects:
       - repo: openstack/keystone
         hash: 6dee3ac6a927751db820c716245411c5cf029e3a
-    highlights: >
-      - Fixed an issue where the tar file was not published.
   - version: 9.1.0
     projects:
       - repo: openstack/keystone
         hash: a4be3399eec5eac6bbcd5540b4b057e8a9f562d2
-    highlights: >
-      - Properly drop a unique constraint when upgrading (bug 1572341)
-      - The minimum level for oslo.concurrency has been raised to 3.7.1
   - version: 9.2.0
     projects:
       - repo: openstack/keystone
@@ -63,3 +53,5 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: a1cc77e72dbad29a14313965df73eab439c705ee
+repository-settings:
+  openstack/keystone: {}

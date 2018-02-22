@@ -9,12 +9,9 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 647d73f491410fa173c48fb37a4a6aaad506f0a9
-    highlights: >
-        `flavor delete` command is renamed to `messaging flavor delete`
   - version: 1.0.0
     projects:
       - repo: openstack/python-zaqarclient
         hash: 3152321c7ab8be1828432a0c39083db05dd6a355
-    highlights: >
-        Dropped support for both py26 and py33. Filled all
-        the functions gaps for v1.1 and v2 and fixed some bugs.
+repository-settings:
+  openstack/python-zaqarclient: {}

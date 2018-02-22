@@ -10,73 +10,49 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: abd0630badaff18ca998db2feccb058e8ee75f23
-    highlights: >
-        Bug fixes; also the default service type for volumes is volumev2 now.
   - version: 2.32.0
     projects:
       - repo: openstack/python-novaclient
         hash: 03f1f67ccde6f495e264da08f0bb7d707cf3ff66
-    highlights: >
-        Bug fixes and dependency updates. Note d045019 which sets the default
-        --os-compute-api-version to 2.5 for the CLI rather than 2.latest.
   - version: 2.33.0
     projects:
       - repo: openstack/python-novaclient
         hash: a5363ae0d60d41feff23f6cca44fcd7aa9fc5b8b
-    highlights: >
-        Bug fixes, dependency updates, microversion 2.6 support was added.
   - version: 2.34.0
     projects:
       - repo: openstack/python-novaclient
         hash: bba1d6ece49f235197216e031bb156901c11e744
-    highlights: >
-        Bug fix for backward incompatible change 2961e82bf introduced in
-        2.33.0. There is also a dependency update for oslo.serialization.
   - version: 2.35.0
     projects:
       - repo: openstack/python-novaclient
         hash: e88df234dabcdf747fe2f514b11bfc46c12f357f
-    highlights: >
-        Bug fixes, small updates and testing enhancements.
   - version: 3.0.0
     projects:
       - repo: openstack/python-novaclient
         hash: 6b0fe2a424630f6ebcb1cf0c42d5ac8590705875
-    highlights: >
-        Bug fixes, drop legacy compatibility, microversion 2.9 support.
   - version: 3.1.0
     projects:
       - repo: openstack/python-novaclient
         hash: 36e125a61e1f047ab9f3a2ab533050ae54232fe9
-    highlights: >
-        Bug fixes, drop py33 support, microversion 2.12 support.
   - version: 3.2.0
     projects:
       - repo: openstack/python-novaclient
         hash: 7d05f540eac29a6e899212b00595888cc06e73ed
-    highlights: >
-        Bug fixes, dependency updates, and minor cleanups.
   - version: 3.3.0
     projects:
       - repo: openstack/python-novaclient
         hash: f9360ae6d44a656171602823d91f83d80fa67dce
-    highlights: >
-        Support up to microversion 2.25, and bug fixes.
   - version: 3.3.1
     projects:
       - repo: openstack/python-novaclient
         hash: 0e9c46a21a2b8579794612c269cecd2c05a819ef
-    highlights: >
-        Fixes host-evacuate-live regression with microversion 2.25.
   - version: 3.3.2
     projects:
       - repo: openstack/python-novaclient
         hash: 5744ac130fac2634529b9a0088f4f093341ae1a4
-    highlights: >
-        Fixes host-evacuate for microversion 2.14.
   - version: 3.3.3
     projects:
       - repo: openstack/python-novaclient
         hash: fd45db19b6faf11443b893f941f936bd4652e76b
-    highlights: >
-        Fixes bug 1559072 when using WebOb>=1.6.0.
+repository-settings:
+  openstack/python-novaclient: {}

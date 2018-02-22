@@ -10,9 +10,6 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 2eae0ec7fb651b775b6a317221f820cafaf8e98e
-    highlights: >
-        This is a major version bump due to 30cb73725 which changes how one
-        installs oslo.db's database test fixtures code.
   - version: 3.1.0
     projects:
       - repo: openstack/oslo.db
@@ -41,8 +38,6 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: d8da96ef5a2fa7e72f85942111c08fd4061c8be9
-    highlights: >
-        Trivial bug fixes and translation updates.
   - version: 4.4.0
     projects:
       - repo: openstack/oslo.db
@@ -63,3 +58,5 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 7b633804c5e8269a461e80fa1a27ddb7106e5405
+repository-settings:
+  openstack/oslo.db: {}

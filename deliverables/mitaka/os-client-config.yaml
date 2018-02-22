@@ -10,9 +10,6 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 1629ae0d1f21dfca0b3f55d23541c61a5a666aca
-    highlights: >
-      Bugfixes. Added SWITCHengines to vendor list. Properly handle
-      OS_CLOUD and OS_REGION_NAME when mixing ansible and openstackclient.
   - version: 1.8.1
     projects:
       - repo: openstack/os-client-config
@@ -21,18 +18,10 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 790fac98542ba303274180831cbd9a03604a84e8
-    highlights: >
-      Cleaned up the interface around cache config and added a per-resource
-      cache config option based on nodepool needs. Added validation that
-      region names are in the provided region name list if such a list exists.
   - version: 1.10.0
     projects:
       - repo: openstack/os-client-config
         hash: 1b91e007fdeda8703056d50abe431e167afb9e03
-    highlights: >
-      Added methods to return Sessions and Client objects based on a given
-      config. Add Conoha public cloud. Reflect move of Auro to Neutron.
-      Moved vendor configs to json for easier sharing with other languages.
   - version: 1.10.1
     projects:
       - repo: openstack/os-client-config
@@ -45,9 +34,6 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 10e96bcb7bed2ca8eaf0185b46dbb882bd8b2b7c
-    highlights: >
-      Added parameters for handling legacy environment variables in the
-      legacy clients.
   - version: 1.11.1
     projects:
       - repo: openstack/os-client-config
@@ -60,33 +46,21 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: 939862e55e42c5fafee9c2fec42b5f5fde8fc205
-    highlights: >
-      Added a simple client factory function for ease of client construction.
   - version: 1.13.1
     projects:
       - repo: openstack/os-client-config
         hash: f8c270113579e655fba519a3592a05d982653780
-    highlights: >
-      Fixed bug where a region name could not be specified if using a cloud
-      where we do not know the regions beforehand. Fixed token_endpoint in
-      python-openstackclient.
   - version: 1.14.0
     projects:
       - repo: openstack/os-client-config
         hash: 8a6dd7f9bcf94931cbfa7c4acd8920e2cd437e48
-    highlights: >
-      Updated volume API default version to v2. Added support for barbican.
   - version: 1.15.0
     projects:
       - repo: openstack/os-client-config
         hash: 7865abc22b7289b2679f6848395d4850d544d1f0
-    highlights: >
-      Swiftclient objects are passed authentication credentials allowing
-      long lived swiftclients to reauthenticate if necessary.
   - version: 1.16.0
     projects:
       - repo: openstack/os-client-config
         hash: 03d5659d8b45b0450a86956147cc2d1f27be66ac
-    highlights: >
-      Update session_client factory helper function to match signature of
-      make_client factory helper function.
+repository-settings:
+  openstack/os-client-config: {}

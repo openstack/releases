@@ -25,8 +25,6 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 73ec44f2d95a5873400de6b0e764d09f06eb953b
-    highlights: |
-        * Script should be named privsep-helper (not privsep_helper)
   - version: 1.2.0
     projects:
       - repo: openstack/oslo.privsep
@@ -35,9 +33,9 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: b531d4807a817091e63dda48765fd46dba007551
-    highlights: |
-        * Ensure fdopen uses greenio object with eventlet
   - version: 1.4.0
     projects:
       - repo: openstack/oslo.privsep
         hash: f6340f7c73a7b0e8366729126d3b5e7ce9044440
+repository-settings:
+  openstack/oslo.privsep: {}

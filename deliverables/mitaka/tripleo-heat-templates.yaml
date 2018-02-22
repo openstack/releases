@@ -2,15 +2,15 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 690b94e2b60ee2d196a26a959126a36b13a237a3
-    repo: openstack/tripleo-heat-templates
-  version: 2.1.0
-- projects:
-  - hash: 37ff9b31f285f9ab2aa57e113858cb46afc9b5c3
-    repo: openstack/tripleo-heat-templates
-  highlights: >
-    - Last release for Mitaka version.
-  version: 2.2.0
+  - projects:
+      - hash: 690b94e2b60ee2d196a26a959126a36b13a237a3
+        repo: openstack/tripleo-heat-templates
+    version: 2.1.0
+  - projects:
+      - hash: 37ff9b31f285f9ab2aa57e113858cb46afc9b5c3
+        repo: openstack/tripleo-heat-templates
+    version: 2.2.0
 team: tripleo
 type: other
+repository-settings:
+  openstack/tripleo-heat-templates: {}

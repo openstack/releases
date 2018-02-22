@@ -16,26 +16,16 @@ releases:
       - repo: openstack/keystoneauth
         hash: 2eb534900c4262e5a994c6dda6f8ec3f14d953e6
         tarball-base: keystoneauth1
-    highlights: >
-        - Includes support for kerberos, SAML and ADFS plugins installed
-          by using: pip install keystoneauth1[kerberos] or
-          keystoneauth1[saml].
-        - Support for python 2.6 has been removed.
   - version: 2.1.0
     projects:
       - repo: openstack/keystoneauth
         hash: 25c8c5f48454cfb09169f887f01e6e56a1640d19
         tarball-base: keystoneauth1
-    highlights: >
-        - Corrects issue with oslo_config option compatibility with
-          deprecated and deprecated_for_removal options.
   - version: 2.2.0
     projects:
       - repo: openstack/keystoneauth
         hash: fd6d19a35922aef9d4ed65f2a67296b30a9858c2
         tarball-base: keystoneauth1
-    highlights: >
-        - Blocks requests 2.9.0.
   - version: 2.3.0
     projects:
       - repo: openstack/keystoneauth
@@ -61,3 +51,5 @@ releases:
       - repo: openstack/keystoneauth
         hash: 13054e8b6d4e04c19ce24a3c8fcca320333c45fa
         tarball-base: keystoneauth1
+repository-settings:
+  openstack/keystoneauth: {}
