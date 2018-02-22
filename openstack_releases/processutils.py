@@ -38,10 +38,10 @@ def check_call(*popenargs, timeout=None, **kwargs):
     cmd = kwargs.get("args")
     if cmd is None:
         cmd = popenargs[0]
-    LOG.info('$ {}'.format(' '.join(cmd)))
+    LOG.debug('$ {}'.format(' '.join(cmd)))
 
     completed = subprocess.run(*popenargs, **kwargs)
-    _multi_line_log(logging.INFO, completed.stdout.decode('utf-8'))
+    _multi_line_log(logging.DEBUG, completed.stdout.decode('utf-8'))
 
     if completed.returncode:
         raise subprocess.CalledProcessError(completed.returncode, cmd)
@@ -65,7 +65,7 @@ def check_output(*popenargs, timeout=None, **kwargs):
     cmd = kwargs.get("args")
     if cmd is None:
         cmd = popenargs[0]
-    LOG.info('$ {}'.format(' '.join(cmd)))
+    LOG.debug('$ {}'.format(' '.join(cmd)))
 
     if 'stderr' not in kwargs:
         kwargs['stderr'] = subprocess.PIPE
