@@ -17,12 +17,14 @@ import csv
 import operator
 
 import openstack_releases
-from openstack_releases.cmds import validate
 from openstack_releases import defaults
 from openstack_releases import deliverable
+from openstack_releases import schema
 
 
 def main():
+    deliverable_schema = schema.Schema()
+
     parser = argparse.ArgumentParser()
     output_mode = parser.add_mutually_exclusive_group()
     output_mode.add_argument(
@@ -72,6 +74,7 @@ def main():
         '--model',
         help=('the release model, such as "cycle-with-milestones"'
               ' or "independent"'),
+        choices=sorted(deliverable_schema.release_models + ['independent']),
     )
     model.add_argument(
         '--cycle-based',
@@ -83,7 +86,7 @@ def main():
         '--type',
         default=[],
         action='append',
-        choices=list(sorted(validate._VALID_TYPES)),
+        choices=sorted(deliverable_schema.release_types),
         help='deliverable type, such as "library" or "service"',
     )
     parser.add_argument(
