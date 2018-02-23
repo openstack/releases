@@ -4,7 +4,9 @@ team: glance
 type: service
 release-model: cycle-with-milestones
 releases:
-  - version: "0.1.7"
+  - version: 0.1.7
     projects:
       - repo: openstack/glance
         hash: c9d3211caa2f7b0532300f6bcfafe736cf5b1481
+repository-settings:
+  openstack/glance: {}
