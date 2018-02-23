@@ -4,11 +4,13 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "1.4.0"
+  - version: 1.4.0
     projects:
       - repo: openstack/oslo.messaging
         hash: 6ea3b12492e86f9e8d109fc3490cc4d3a0edd8b6
-  - version: "1.4.2"
+  - version: 1.4.2
     projects:
       - repo: openstack/oslo.messaging
         hash: 01a789313dcf5c1eb652c2df53ce955d6bb38fd6
+repository-settings:
+  openstack/oslo.messaging: {}

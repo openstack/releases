@@ -4,11 +4,13 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "1.0.0"
+  - version: 1.0.0
     projects:
       - repo: openstack/oslo.utils
         hash: 6a123fce93895e92004ce9d5bd8dee3c3642cf41
-  - version: "1.4.1"
+  - version: 1.4.1
     projects:
       - repo: openstack/oslo.utils
         hash: 7eeccd87699acd11b93058bd4e4cbeb801c70986
+repository-settings:
+  openstack/oslo.utils: {}

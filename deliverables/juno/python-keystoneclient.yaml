@@ -4,43 +4,45 @@ team: keystone
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.8.0"
+  - version: 0.8.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: db8da0de2e982b4bdb622eee8aa04f05fc9cb646
-  - version: "0.9.0"
+  - version: 0.9.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: dee03a6503bfa82d7300fe5df76cfa25bd5b63d2
-  - version: "0.10.0"
+  - version: 0.10.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: c9ae9d1fa267653c1779a9a17613bd287f1297a3
-  - version: "0.10.1"
+  - version: 0.10.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: e58f7999f9011c7810b61483f8389713dfa7c72a
-  - version: "0.11.0"
+  - version: 0.11.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: 0b06683be6d13d21dfffa19be46e1159edb9fce0
-  - version: "0.11.1"
+  - version: 0.11.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: 79d1eec35aad874a7c08ff22c39260884a5524ba
-  - version: "0.11.2"
+  - version: 0.11.2
     projects:
       - repo: openstack/python-keystoneclient
         hash: 6d85d182a2cbd50f0e6a8477c97a84e149addbce
-  - version: "1.0.0"
+  - version: 1.0.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: 10860db5f155052ca0d353ce9058e1c16eec8437
-  - version: "1.1.0"
+  - version: 1.1.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: 4ee6e3302ae53c8858c0e48c27a46c292e771afb
-  - version: "1.1.1"
+  - version: 1.1.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: 04543e7c9ca0ed9935e75e913cd51531a6245b7e
+repository-settings:
+  openstack/python-keystoneclient: {}

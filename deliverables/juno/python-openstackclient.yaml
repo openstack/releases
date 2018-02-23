@@ -4,11 +4,13 @@ team: OpenStackClient
 type: other
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.4.0"
+  - version: 0.4.0
     projects:
       - repo: openstack/python-openstackclient
         hash: a732bfae491f8189f234e1bd5c2cbbff3daab4bc
-  - version: "0.4.1"
+  - version: 0.4.1
     projects:
       - repo: openstack/python-openstackclient
         hash: 696c9676bcc89d139d18b67e609eb694f110dc62
+repository-settings:
+  openstack/python-openstackclient: {}

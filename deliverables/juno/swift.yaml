@@ -4,15 +4,17 @@ team: swift
 type: service
 release-model: cycle-with-intermediary
 releases:
-  - version: "2.0.0"
+  - version: 2.0.0
     projects:
       - repo: openstack/swift
         hash: bfa9139649c0ac7f75e8c9503cb04d06f7bae0b9
-  - version: "2.1.0"
+  - version: 2.1.0
     projects:
       - repo: openstack/swift
         hash: 8d02147d04a41477383de8e13bea6ac3fd2cade0
-  - version: "2.2.0"
+  - version: 2.2.0
     projects:
       - repo: openstack/swift
         hash: 2e8261a4dc0d0af0c4a46478b81e167bcf02220b
+repository-settings:
+  openstack/swift: {}

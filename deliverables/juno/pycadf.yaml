@@ -4,15 +4,17 @@ team: keystone
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.6.0"
+  - version: 0.6.0
     projects:
       - repo: openstack/pycadf
         hash: 52727bcea3a98e72331e748ce5f9e3a111a64cd1
-  - version: "0.6.1"
+  - version: 0.6.1
     projects:
       - repo: openstack/pycadf
         hash: b9c1d41b83e2f5937a69070df8dd7c12439e333a
-  - version: "0.6.2"
+  - version: 0.6.2
     projects:
       - repo: openstack/pycadf
         hash: b9c1d41b83e2f5937a69070df8dd7c12439e333a
+repository-settings:
+  openstack/pycadf: {}

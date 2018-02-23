@@ -4,7 +4,9 @@ team: oslo
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.6.0"
+  - version: 0.6.0
     projects:
       - repo: openstack/oslo.vmware
         hash: 047d62c4bbd01a951f77a1a4a75fb2b3d8ce23ee
+repository-settings:
+  openstack/oslo.vmware: {}
