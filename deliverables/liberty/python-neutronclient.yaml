@@ -20,8 +20,5 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: c1701c1d289beed3710b17653e386bb3fbffb0c7
-    highlights: |
-        Fix bug 1517818 so that RBAC commands do not look up names.
-        Fix bug 1505170 of handling parent resources
-        in the client command extension.
-        Fix python3 unit test breakage (bug 1499004).
+repository-settings:
+  openstack/python-neutronclient: {}

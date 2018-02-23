@@ -28,8 +28,5 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: c167dda40cc65fe437a12b815ef91bbde4efb6bb
-    highlights: |
-      Default to Cinder API v2. Support for listing all tenants in backup-list.
-      Ability to clone consistency groups. Trigger non-disruptive mode when
-      doing backups. Get the progress status of a volume being migrated between
-      different pools or storage backends.
+repository-settings:
+  openstack/python-cinderclient: {}

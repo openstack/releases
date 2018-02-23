@@ -17,20 +17,9 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: c665080d4a700b6d92f29c40621d83bd7365de34
-    highlights: >
-      - Add audit IDs to revocation events
-      - Escape DN in enabled query
-      - Revert "Validate domain ownership for v2 tokens" (Bug 1527759)
-# NOTE(dhellmann): The 8.1.1 tarball job failed because of an
-# issue with the tox.ini file, so ignore that release as
-# invalid.
-#  - version: 8.1.1
-#    projects:
-#      - repo: openstack/keystone
-#        hash: 26240963712541d215d414fa71596cccc60dd7ce
   - version: 8.1.2
     projects:
       - repo: openstack/keystone
         hash: 6bf21f3660658c8916365aa51bfd6fc61fbd7121
-    highlights: >
-      - Fixed an issue where the tar file was not published.
+repository-settings:
+  openstack/keystone: {}

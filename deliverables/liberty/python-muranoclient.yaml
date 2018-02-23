@@ -8,10 +8,6 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 6029f64aa9e4acd0509e6531fc60c3652f3fc9de
-  # - version: 0.6.1.0
-  #   projects:
-  #     - repo: openstack/python-muranoclient
-  #       hash: c0c0a77c56f379ba6a08664e13643d38533468c0
   - version: 0.6.2
     projects:
       - repo: openstack/python-muranoclient
@@ -36,3 +32,5 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 369056a1f6021349f91dea1662c0bc36ccb2f155
+repository-settings:
+  openstack/python-muranoclient: {}

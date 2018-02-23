@@ -32,13 +32,9 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 4552013e113445691fb7d8316c8cb950325b0656
-    highlights: >
-        - Blocks oslo.utils 2.6.0, and requests 2.8.0 and 2.9.0
-        - Fixes bug: 1503459
   - version: 1.7.4
     projects:
       - repo: openstack/python-keystoneclient
         hash: 1da2c545c3c9099eedf81ebc8b95ab08b311a8c0
-    highlights: >
-        - Swap the order of username deprecation
-        - Mark password/secret options as secret
+repository-settings:
+  openstack/python-keystoneclient: {}
