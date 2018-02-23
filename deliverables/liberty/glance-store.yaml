@@ -33,18 +33,13 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: c816b38d9f12be75d989409cbab6dfefa8f49dc3
-    highlights: >
-        Fixes rbd backend import issues.
   - version: 0.9.2
     projects:
       - repo: openstack/glance_store
         hash: 7b13ce62b46c327b90e6b8c0eb85a1f2c8dec217
-    highlights: >
-        Fixes swift driver issue with radosgw, improves
-        vmware driver error handling, Improves
-        GlanceStoreException implementation, catches invalid
-        URL with http driver
   - version: 0.9.3
     projects:
       - repo: openstack/glance_store
         hash: 4cd5332604ae8973db45e519dd5a486e76617073
+repository-settings:
+  openstack/glance_store: {}

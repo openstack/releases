@@ -24,51 +24,33 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: fa0c063d53e90c9dadd19958ead0f7612eb38ff2
-    highlights: >
-        Adds microversion support, dependency updates, bug fixes.
   - version: 2.28.0
     projects:
       - repo: openstack/python-novaclient
         hash: e4b0d46c4b5b99973a7f65c294a9b73c8adfefb7
-    highlights: >
-        Allow reboot multiple servers plus key fixes for nova v2.0 on v2.1
-        support.
   - version: 2.28.1
     projects:
       - repo: openstack/python-novaclient
         hash: 9e15b3d7c07d605947b8e712e36d982a0e14fb90
-    highlights: >
-        Fix quota-update bug when using v2.1 API.
   - version: 2.29.0
     projects:
       - repo: openstack/python-novaclient
         hash: 31d4e026b447bfac43fa943176b353fcfd2800d8
-    highlights: >
-        Deprecate novaclient.client.get_client_class and
-        default v2.Client to use v2.0 when no version is given.
   - version: 2.30.0
     projects:
       - repo: openstack/python-novaclient
         hash: 0f950a69e79b17172e1de853708be982f9191cf8
-    highlights: >
-        Bug fixes, v2.4 microversion support, and dependency updates.
-        The stable/liberty branch will be created from this release.
   - version: 2.30.1
     projects:
       - repo: openstack/python-novaclient
         hash: 3636685ede1e841ddfed73a1dfb90851f0003980
-    highlights: >
-        Fix for bug 1501435 so legacy block device mapping requests work.
   - version: 2.30.2
     projects:
       - repo: openstack/python-novaclient
         hash: dc4970728bae71f9745506190cc87b2edb36b0b8
-    highlights: >
-        Fix for bug 1500688 so users do not request API microversions that the
-        client does not yet support.
   - version: 2.30.3
     projects:
       - repo: openstack/python-novaclient
         hash: 48a8e73b86c5d14b153e1246672a4520ea45ccaf
-    highlights: >
-        Bug fixes and blacklisted dependency versions.
+repository-settings:
+  openstack/python-novaclient: {}

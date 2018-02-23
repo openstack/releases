@@ -13,40 +13,25 @@ releases:
     projects:
       - repo: openstack/nova
         hash: cc0bc4be85b2f51fdc30dd99fa231c7e6af61485
-    highlights: >
-      - Fixes CVE-2015-7548 and CVE-2015-8749.
-      - Fixes a few regression bugs (see release notes for details).
-      - Updated translations.
   - version: 12.0.2
     projects:
       - repo: openstack/nova
         hash: aa4edd349dde73739527ab793ff6209fe1907e2c
-    highlights: >
-      - Bug fixes.
-      - Updated translations.
   - version: 12.0.3
     projects:
       - repo: openstack/nova
         hash: 6fdf1c87b1149e8b395eaa9f4cbf27263cf96ac6
-    highlights: >
-      - Several bug fixes.
-      - Fixes CVE 2016-2140.
   - version: 12.0.4
     projects:
       - repo: openstack/nova
         hash: ebbbcc6b110be9599f7c4ffbefc1ff8f1945c874
-    highlights: >
-      - Bug fixes.
   - version: 12.0.5
     projects:
       - repo: openstack/nova
         hash: f680157175706563c34afc3cd8c998de97c4347a
-    highlights: >
-      - Contains fix for security bug CVE-2015-5162 which requires
-        oslo.concurrency>=2.6.1 to be resolved.
   - version: 12.0.6
     projects:
       - repo: openstack/nova
         hash: a967cfe37a3bc26ee8a8517d5f5dac33b35e377e
-    highlights: >
-      - Bug fixes.
+repository-settings:
+  openstack/nova: {}

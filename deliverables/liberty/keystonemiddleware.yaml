@@ -36,16 +36,13 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 600acc1881eb149273d09e44ca64b05a09320a52
-    highlights: >
-        Blocks python-keystoneclient 1.8.0 and requests 2.8.0.
   - version: 2.3.3
     projects:
       - repo: openstack/keystonemiddleware
         hash: 182f4461f26f236df98a47381314c6f46809c945
-    highlights: >
-        - auth_token can now verify revocation by audit_id (bug 1490804)
-        - Blocks requests 2.9.0
   - version: 2.3.4
     projects:
       - repo: openstack/keystonemiddleware
         hash: f9cb1e40059bb64b7ee67b7d574db387080c2674
+repository-settings:
+  openstack/keystonemiddleware: {}
