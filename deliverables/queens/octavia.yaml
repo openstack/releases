@@ -27,6 +27,11 @@ releases:
       - hash: 08387c78c897c97aad72f3eb6ae0702fbc9a3058
         repo: openstack/octavia
     version: 2.0.0.0rc2
+  - diff-start: 1.0.0.0rc1
+    projects:
+      - hash: 08387c78c897c97aad72f3eb6ae0702fbc9a3058
+        repo: openstack/octavia
+    version: 2.0.0
 branches:
   - location: 2.0.0.0rc1
     name: stable/queens

@@ -23,6 +23,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 97393a1b8c37e4ef1204d5e8f86692fe09a8a1cf
+  - diff-start: 5.0.0
+    projects:
+      - repo: openstack/designate
+        hash: 97393a1b8c37e4ef1204d5e8f86692fe09a8a1cf
+    version: 6.0.0
 cycle-highlights:
   - 'Removed legacy V1 API interface'
   - 'Policy files are now just overrides to default rules'

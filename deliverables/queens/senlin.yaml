@@ -16,6 +16,11 @@ releases:
       - hash: 7f83d7995d1b19274b64aabc383c1cee68f33f17
         repo: openstack/senlin
     version: 5.0.0.0rc1
+  - diff-start: 4.0.0
+    projects:
+      - hash: 7f83d7995d1b19274b64aabc383c1cee68f33f17
+        repo: openstack/senlin
+    version: 5.0.0
 branches:
   - location: 5.0.0.0rc1
     name: stable/queens
