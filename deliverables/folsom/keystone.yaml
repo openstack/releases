@@ -8,15 +8,17 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 8154492da3d8b6e0e71eb7dcb5e2e3b06ddb09a7
-  - version: "2012.2.1"
+  - version: 2012.2.1
     projects:
       - repo: openstack/keystone
         hash: f9d4766249a72d8f88d75dcf1575b28dd3496681
-  - version: "2012.2.3"
+  - version: 2012.2.3
     projects:
       - repo: openstack/keystone
         hash: ec7b94d2ef008b716f4cc3d7c1fc7e8150858eeb
-  - version: "2012.2.4"
+  - version: 2012.2.4
     projects:
       - repo: openstack/keystone
         hash: 776a04838017624420e304371235c5298fb7e1d2
+repository-settings:
+  openstack/keystone: {}
