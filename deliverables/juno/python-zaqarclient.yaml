@@ -4,19 +4,21 @@ team: zaqar
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.0.1"
+  - version: 0.0.1
     projects:
       - repo: openstack/python-zaqarclient
         hash: 9e5323500646c98db712a1c322dd4342cd1d708a
-  - version: "0.0.2"
+  - version: 0.0.2
     projects:
       - repo: openstack/python-zaqarclient
         hash: b9cd1104ed1fcea707b6ea780d37adccb1db53aa
-  - version: "0.0.3"
+  - version: 0.0.3
     projects:
       - repo: openstack/python-zaqarclient
         hash: 1ce9c55efe62d036d694c18faec77e1372390a89
-  - version: "0.1.0"
+  - version: 0.1.0
     projects:
       - repo: openstack/python-zaqarclient
         hash: 277779098cc6c40ad31ddace9529e933c17aec45
+repository-settings:
+  openstack/python-zaqarclient: {}

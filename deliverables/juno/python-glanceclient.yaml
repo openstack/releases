@@ -4,29 +4,29 @@ team: glance
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.13.0"
+  - version: 0.13.0
     projects:
       - repo: openstack/python-glanceclient
         hash: caa1a54fd9e69bc2a3fe43157a9805a71c2ef1a3
-  - version: "0.13.1"
+  - version: 0.13.1
     projects:
       - repo: openstack/python-glanceclient
         hash: caa1a54fd9e69bc2a3fe43157a9805a71c2ef1a3
-  - version: "0.14.0"
+  - version: 0.14.0
     projects:
       - repo: openstack/python-glanceclient
         hash: 33dcea81b2f2ac5f643c0153c5a70cfec2008555
-  - version: "0.14.1"
+  - version: 0.14.1
     projects:
       - repo: openstack/python-glanceclient
         hash: 8a877b2752162d6a2db43d7d61d6311c4f42285b
-  - version: "0.14.2"
+  - version: 0.14.2
     projects:
       - repo: openstack/python-glanceclient
         hash: 695dbc910d2068aff89a68d6f5aa088cc835766e
-  - version: "0.14.3"
+  - version: 0.14.3
     projects:
       - repo: openstack/python-glanceclient
         hash: cfa75cec24b37acb42a851013d6689b2016754e2
-    highlights: >
-        Syncs up requirements with global-requirements in stable/juno.
+repository-settings:
+  openstack/python-glanceclient: {}

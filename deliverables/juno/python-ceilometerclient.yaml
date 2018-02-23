@@ -4,19 +4,19 @@ team: Telemetry
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "1.0.11"
+  - version: 1.0.11
     projects:
       - repo: openstack/python-ceilometerclient
         hash: ae69fb0f975c485d14fc039ff4389439aa78e7eb
-  - version: "1.0.12"
+  - version: 1.0.12
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 7316dd16b8850270db27c1298dcf5a2223f2f1e1
-  - version: "1.0.15"
+  - version: 1.0.15
     projects:
       - repo: openstack/python-ceilometerclient
         hash: fb12aaea1782e8c1be2dd68b2d9b34015d64aa92
-    highlights: >
+    highlights: |
       global-requirements sync to cap oslo.utils for bug 1494516.
 repository-settings:
   openstack/python-ceilometerclient:
