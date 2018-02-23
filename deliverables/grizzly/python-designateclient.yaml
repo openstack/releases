@@ -4,11 +4,13 @@ team: designate
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.0.1"
+  - version: 0.0.1
     projects:
       - repo: openstack/python-designateclient
         hash: d9737b5b2aa25fa424aaa699c3335881ecb2aa4a
-  - version: "0.0.2"
+  - version: 0.0.2
     projects:
       - repo: openstack/python-designateclient
         hash: fbf8714df61d38f2606609d78bab663b04f323ca
+repository-settings:
+  openstack/python-designateclient: {}
