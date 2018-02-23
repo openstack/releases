@@ -4,7 +4,9 @@ team: swift
 type: service
 release-model: cycle-with-intermediary
 releases:
-  - version: "1.1.0"
+  - version: 1.1.0
     projects:
       - repo: openstack/swift
         hash: f494fc37a6a7e502a49fe177de7a412d4063cd0b
+repository-settings:
+  openstack/swift: {}
