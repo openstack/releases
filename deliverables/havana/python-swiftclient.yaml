@@ -4,23 +4,25 @@ team: swift
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "1.4.0"
+  - version: 1.4.0
     projects:
       - repo: openstack/python-swiftclient
         hash: 2d97609a52bef2f437c15ff72dced29663c570ff
-  - version: "1.5.0"
+  - version: 1.5.0
     projects:
       - repo: openstack/python-swiftclient
         hash: 94d7c2318100bfdcaf42ecb2fb7ecd82ebfbef69
-  - version: "1.6.0"
+  - version: 1.6.0
     projects:
       - repo: openstack/python-swiftclient
         hash: 0278998398cbe0caeb5237b30e316c0a59669c87
-  - version: "1.7.0"
+  - version: 1.7.0
     projects:
       - repo: openstack/python-swiftclient
         hash: 68dde8dd514e4eef89aafa6c1c93e065045c3cbd
-  - version: "1.8.0"
+  - version: 1.8.0
     projects:
       - repo: openstack/python-swiftclient
         hash: 1aa85960fdbf6e570a55821c2361a0747e21a72a
+repository-settings:
+  openstack/python-swiftclient: {}

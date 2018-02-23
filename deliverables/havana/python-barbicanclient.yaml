@@ -4,7 +4,9 @@ team: barbican
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "v0.4.0"
+  - version: v0.4.0
     projects:
       - repo: openstack/python-barbicanclient
         hash: ac5078433f237f2be09cb995c8440f61c6052335
+repository-settings:
+  openstack/python-barbicanclient: {}

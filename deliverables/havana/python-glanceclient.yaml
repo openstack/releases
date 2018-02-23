@@ -4,11 +4,13 @@ team: glance
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.10.0"
+  - version: 0.10.0
     projects:
       - repo: openstack/python-glanceclient
         hash: eb47b55dbd078aea4eedcc70ad44d189510c6644
-  - version: "0.11.0"
+  - version: 0.11.0
     projects:
       - repo: openstack/python-glanceclient
         hash: a1c5305c6264105794b70b248fb87f8ac89ecb41
+repository-settings:
+  openstack/python-glanceclient: {}

@@ -4,11 +4,11 @@ team: sahara
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.2.2"
+  - version: 0.2.2
     projects:
       - repo: openstack/python-saharaclient
         hash: 702bf8583b5c10180eb50ce623a0e132b12ba4d4
-  - version: "0.2.2.rc3"
+  - version: 0.2.2.rc3
     projects:
       - repo: openstack/python-saharaclient
         hash: 702bf8583b5c10180eb50ce623a0e132b12ba4d4
@@ -16,31 +16,33 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 6781f002c546c14d1c754f6da69b4235a10b48af
-  - version: "0.3.rc1"
+  - version: 0.3.rc1
     projects:
       - repo: openstack/python-saharaclient
         hash: c5f519ef0e4f6a41b34f61a43104f2cae6dbfae7
-  - version: "0.3.rc2"
+  - version: 0.3.rc2
     projects:
       - repo: openstack/python-saharaclient
         hash: 98e6cf05a19866dd76858c4d24a5feb55d7b8a8a
-  - version: "0.3.rc3"
+  - version: 0.3.rc3
     projects:
       - repo: openstack/python-saharaclient
         hash: 0ced8f06fd3d4267b323a6ed756710eb1af0edfa
-  - version: "0.3.rc4"
+  - version: 0.3.rc4
     projects:
       - repo: openstack/python-saharaclient
         hash: 8dbf5b85ce8b701ef57c3dd9b5b668bd99d78e7a
-  - version: "0.3a1"
+  - version: 0.3a1
     projects:
       - repo: openstack/python-saharaclient
         hash: 2554d3da7fcfdd725b379f3822212b708ac67501
-  - version: "0.3a2"
+  - version: 0.3a2
     projects:
       - repo: openstack/python-saharaclient
         hash: 188ab8e66d01fbaa0c4c3739ca3a61b7ef848b8b
-  - version: "0.3a3"
+  - version: 0.3a3
     projects:
       - repo: openstack/python-saharaclient
         hash: 5d4f7d1a3d456353e44caea8462f841f0154d97e
+repository-settings:
+  openstack/python-saharaclient: {}

@@ -8,19 +8,21 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 3c373acb008b2a9b1c422fa1bbd5755db6092378
-  - version: "2013.2.1"
+  - version: 2013.2.1
     projects:
       - repo: openstack/nova
         hash: a4ffc064a8acb3a5a4b9e7d65233d3fc4055fd5f
-  - version: "2013.2.2"
+  - version: 2013.2.2
     projects:
       - repo: openstack/nova
         hash: bcdc81319444474bef8c4140d58ec34ab45d8377
-  - version: "2013.2.3"
+  - version: 2013.2.3
     projects:
       - repo: openstack/nova
         hash: feedcb240807cdfa354d27ebe3a4b7f416504a62
-  - version: "2013.2.4"
+  - version: 2013.2.4
     projects:
       - repo: openstack/nova
         hash: 312ccad26ea7156f125114179f0cb06191da8e99
+repository-settings:
+  openstack/nova: {}
