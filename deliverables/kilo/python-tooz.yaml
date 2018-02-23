@@ -2,15 +2,15 @@
 launchpad: python-tooz
 team: oslo
 releases:
-  - version: '0.10'
+  - version: "0.10"
     projects:
       - repo: openstack/tooz
         hash: a2216e383e78b08324e5f873a35376b57cf29d3f
-  - version: '0.11'
+  - version: "0.11"
     projects:
       - repo: openstack/tooz
         hash: 405dfec672cd036ab4905cd27c1bbd8180cb8228
-  - version: '0.12'
+  - version: "0.12"
     projects:
       - repo: openstack/tooz
         hash: 5edf2b3db33a42b646fe923580debff6b58a1122
@@ -30,3 +30,5 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 4251e1ea72bf4574629aaae701166da5ea2c6413
+repository-settings:
+  openstack/tooz: {}
