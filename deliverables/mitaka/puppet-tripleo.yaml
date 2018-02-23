@@ -2,15 +2,15 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: 648f2b5509a807483b218ddfaad21fd3b06a11ab
-    repo: openstack/puppet-tripleo
-  version: 0.4.0
-- projects:
-  - hash: 98382b9459b2a4ad2b4c64e4dab6c7db26ff0e21
-    repo: openstack/puppet-tripleo
-  highlights: >
-    - Last release for Mitaka version.
-  version: 1.1.0
+  - projects:
+      - hash: 648f2b5509a807483b218ddfaad21fd3b06a11ab
+        repo: openstack/puppet-tripleo
+    version: 0.4.0
+  - projects:
+      - hash: 98382b9459b2a4ad2b4c64e4dab6c7db26ff0e21
+        repo: openstack/puppet-tripleo
+    version: 1.1.0
 team: tripleo
 type: other
+repository-settings:
+  openstack/puppet-tripleo: {}

@@ -33,12 +33,9 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: f9a5424a47439ae251ce024a0627c3e156a30872
-    highlights: >
-        - Bug fixes, dependency updates, translation updates. New
-          requirement on oslo.concurrency>=3.7.1.
   - version: 8.1.1
     projects:
       - repo: openstack/cinder
         hash: 9aaaf7e2e9d0f607d85af383212b8de9dd1e5813
-    highlights: >
-        - Bug fixes, translation updates.
+repository-settings:
+  openstack/cinder: {}

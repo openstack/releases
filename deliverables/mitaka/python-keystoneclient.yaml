@@ -10,62 +10,41 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: e65be5dbebd17806bb595cbd88567a4dcf3390ba
-    highlights: >
-        Requirements change to exclude requests 2.8.0; bug fixes
   - version: 1.8.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: 6fce93d7c9fcf519deb24df053bcc5e169c13ab8
-    highlights: >
-        Requirements change to remove WebOb cap
   - version: 2.0.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: beb62b6e1338e70d888065da5271d88824fa9ec5
-    highlights: >
-        Support for python 2.6 has been removed.
   - version: 2.1.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: 7327067f98f5e118790817f7c81e444c7fe7c25b
-    highlights: >
-        - Removed deprecated keystoneclient.middleware module.
-        - Removed deprecated keystoneclient.apiclient.exceptions module.
-        - Blocks requests 2.9.0.
   - version: 2.1.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: d20b300589863bcf165945beb129ebcc3621a14f
-    highlights: >
-        - Reverted fixes for bug 1520244.
-        - This release is invalid, please don't use it.
   - version: 2.1.2
     projects:
       - repo: openstack/python-keystoneclient
         hash: f5fb643f7c75ecf415cdbfc5a3bc4b01176d3e89
-    highlights: >
-        - Reverted fixes for bug 1457702.
   - version: 2.2.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: aeb69f3b6d8f35cd4956e1fe03d1ef9b2cd69bf0
-    highlights: >
-        - Several classes related to authentication were deprecated in
-          favor of keystoneauth. See release notes for details.
   - version: 2.3.0
     projects:
       - repo: openstack/python-keystoneclient
         hash: eecfce283f272243e4b957ad9ec7c4fdfbcf12de
-    highlights: >
-        - Support for implied roles and domain specific roles APIs.
-        - Support use of `truncated` flag for list operations.
   - version: 2.3.1
     projects:
       - repo: openstack/python-keystoneclient
         hash: 7d57eceb19aaaca8de84a8701552715fc8153872
-    highlights: >
-        - Revert support use of `truncated` flag for list operations.
   - version: 2.3.2
     projects:
       - repo: openstack/python-keystoneclient
         hash: a0c67b860b3c5ff6f5fbb0e406dcbc3fd7aa9f88
+repository-settings:
+  openstack/python-keystoneclient: {}

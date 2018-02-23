@@ -9,30 +9,21 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: cfa8e5702a2b453034393ac153575275c4c81066
-    highlights: >
-      Cluster create now supports adding network and AZ.
   - version: 2.0.0
     projects:
       - repo: openstack/python-troveclient
         hash: c0cd9d7f72fb35e0f6e797a6b0555239f7ee56ab
-    highlights: >
-      - Cluster create AZ fixed.
   - version: 2.1.0
     projects:
       - repo: openstack/python-troveclient
         hash: 9165c47123255fc76e86901117d9591226d5f992
-    highlights: |
-      - Add support for Module Maintenance Commands.
-      - Add support for Guest Log File Retrieval.
   - version: 2.1.1
     projects:
       - repo: openstack/python-troveclient
         hash: 3c71e52b408bbd6c33fca85188db2c8f156fb341
-    highlights: |
-      - Revert backward incompatible change related to slave_of
   - version: 2.1.2
     projects:
       - repo: openstack/python-troveclient
         hash: c758721ea2813a5c926ab22fe97e6ac64078e577
-    highlights: |
-      - Restrict python-keystoneclient <3.0.0
+repository-settings:
+  openstack/python-troveclient: {}

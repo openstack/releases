@@ -13,30 +13,17 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 57837a3fd30ca19d344cbd80bd29ea04a5c30943
-    highlights: >
-      First release of the Ironic UI plugin for Horizon. View
-      bare metal nodes and node details. Apply maintenance and
-      power actions to individual nodes.
   - version: 1.1.0
     projects:
       - repo: openstack/ironic-ui
         hash: 7842f3e1fcd5640b9b76db42cb0e6c58fc12db30
-    highlights: >
-      Functionality added to assign maintenance reason when
-      maintenance mode is turned on. Bugs from v1.0.0 have
-      been addressed. Success message added on node power
-      change. Node details now also takes into account custom
-      user settings. Magic search for Horizon has been implemented.
   - version: 1.1.1
     projects:
       - repo: openstack/ironic-ui
         hash: fc0f89198139635389dc41c173f73b17d0fcaac4
-    highlights: >
-      Addressed bug by removing python-ironicclient from
-      setup_requires.
   - version: 1.1.2
     projects:
       - repo: openstack/ironic-ui
         hash: 09f0b88cc561e4439f1d3243ad8c2bb399a02d83
-    highlights: >
-      Use stable/mitaka branch of horizon, instead of master.
+repository-settings:
+  openstack/ironic-ui: {}

@@ -2,15 +2,15 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: f16d44d828ed92217107c2da8950acf0651a5b0b
-    repo: openstack/tripleo-common
-  version: 2.1.0
-- projects:
-  - hash: 3de7e0a8e5a59012e42bdc53e16cd935b785763b
-    repo: openstack/tripleo-common
-  highlights: >
-    - Last release for Mitaka version.
-  version: 2.2.0
+  - projects:
+      - hash: f16d44d828ed92217107c2da8950acf0651a5b0b
+        repo: openstack/tripleo-common
+    version: 2.1.0
+  - projects:
+      - hash: 3de7e0a8e5a59012e42bdc53e16cd935b785763b
+        repo: openstack/tripleo-common
+    version: 2.2.0
 team: tripleo
 type: library
+repository-settings:
+  openstack/tripleo-common: {}

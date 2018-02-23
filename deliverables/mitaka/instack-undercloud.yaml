@@ -2,19 +2,19 @@
 launchpad: tripleo
 release-model: cycle-trailing
 releases:
-- projects:
-  - hash: ddac9f33735964aaeb65e2b52d221bae94bd8553
-    repo: openstack/instack-undercloud
-  version: 4.1.0
-- projects:
-  - hash: 1375d1da8ef909586a1f5dcae159edc33d05c6c1
-    repo: openstack/instack-undercloud
-  version: 4.2.0
-- projects:
-  - hash: a957f0e38dbbceb86adba8f9e18250b55e4de452
-    repo: openstack/instack-undercloud
-  highlights: >
-    - Last release for Mitaka version.
-  version: 4.2.1
+  - projects:
+      - hash: ddac9f33735964aaeb65e2b52d221bae94bd8553
+        repo: openstack/instack-undercloud
+    version: 4.1.0
+  - projects:
+      - hash: 1375d1da8ef909586a1f5dcae159edc33d05c6c1
+        repo: openstack/instack-undercloud
+    version: 4.2.0
+  - projects:
+      - hash: a957f0e38dbbceb86adba8f9e18250b55e4de452
+        repo: openstack/instack-undercloud
+    version: 4.2.1
 team: tripleo
 type: other
+repository-settings:
+  openstack/instack-undercloud: {}

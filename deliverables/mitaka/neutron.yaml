@@ -119,30 +119,12 @@ releases:
         hash: 799b93e09fe92ffea883238c34676c4342b9f75e
       - repo: openstack/neutron-vpnaas
         hash: ea355d1bc6e173cd56c6a975b88e5d5e1f901b5c
-    highlights: |-
-      * Allow min_l3_agents_per_router to equal one
-      * Fix designate dns driver for SSL based endpoints
-      * Fixed --config-dir argument for oslo.config 3.8.0
-      * OVS: Add support for IPv6 addresses as tunnel endpoints
-      * Require oslo.concurrency>=3.7.1
   - version: 8.3.0
     projects:
       - repo: openstack/neutron
         hash: 15752052ac3dddfb1f6733d55523401c019328c8
       - repo: openstack/neutron-lbaas
         hash: a6102279c7061ebc6e4f144413eb52595d1604be
-    highlights: |-
-      * Introduced new ha_keepalived_state_change_server_threads option to
-        control the number of threads used by neutron-keepalived-state-change.
-      * Allow SR-IOV agent to start when number of vf is 0.
-      * Don't flush OpenFlow rules on external Open vSwitch controller
-        disconnect.
-      * Don't use exponential back-off for report_state.
-      * Allow mixing different Open vSwitch agent firewall drivers in the same
-        cloud.
-      * LBaaS: added a new 'insecure' option to control SSL certificate
-        verification.
-      * LBaaS: fixed 'lbaasv2' service plugin alias definition.
   - version: 8.4.0
     projects:
       - repo: openstack/neutron
@@ -153,9 +135,8 @@ releases:
         hash: efacaecfba9d18960b54cd8fefba36e0e4f2126f
       - repo: openstack/neutron-vpnaas
         hash: 035f12f9900ff322f5cbb2b134ba4ca26f7fa022
-    highlights: |-
-      * XenAPI: add support for conntrack with XenServer
-      * Callbacks: Make the value of FLOATING_IP match with api resource
-      * LBaaS: HAProxy - Add host routes to the lbaas namespace
-      * LBaaS: Set HTTP status code to 409 for LBs in PENDING*
-      * LBaaS: Allow setting "insecure" in neutron_lbaas.conf
+repository-settings:
+  openstack/neutron: {}
+  openstack/neutron-fwaas: {}
+  openstack/neutron-lbaas: {}
+  openstack/neutron-vpnaas: {}

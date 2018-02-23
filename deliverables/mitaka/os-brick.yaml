@@ -10,43 +10,25 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: f4a9e15b18460061aaa442eee5a2d6a3c4cf9b48
-    highlights: >
-        Fixed silent failure of iSCSI login.
-        Multipath device parsing fix.
-        Addition of quobyte connector protocol.
   - version: 0.7.0
     projects:
       - repo: openstack/os-brick
         hash: 7ca487a668813c5fc0491c39eb0449464847cd73
-    highlights: >
-        Adds DRDB connector.
-        Fixes handling of IPv6 addresses.
   - version: 0.8.0
     projects:
       - repo: openstack/os-brick
         hash: a3261e3fbd7f0230eba2a205ec99906505df1c7c
-    highlights: >
-        Adds ITRI DISCO connector.
-        extend_volume API introduced.
-        Extracted local_lvm management code from Cinder.
   - version: 1.0.0
     projects:
       - repo: openstack/os-brick
         hash: 44254e1e1401affd67628bbb280043ade3d460b0
-    highlights: >
-        Multipath device handling improvements.
-        Fixed issue for LUN ID's > 255.
   - version: 1.1.0
     projects:
       - repo: openstack/os-brick
         hash: f9b4e55db5a53b2f9356c9a11008e50c3900c141
-    highlights: >
-        - Fixes KeyError when setting the multipath ID for fibre channel.
-        - Updated dependencies.
-        - Logs multipath -ll output when parsing fails.
   - version: 1.2.0
     projects:
       - repo: openstack/os-brick
         hash: 01c7614e51eda2fb23d8aceb89693f62924a9bf9
-    highlights: >
-        - Pick up requirements update for oslo.concurrency.
+repository-settings:
+  openstack/os-brick: {}

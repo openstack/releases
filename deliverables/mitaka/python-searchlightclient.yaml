@@ -8,14 +8,9 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: e8328fd7c23ff2213488233fb3158428d3ec9664
-    highlights: |
-      This is the first release of python-searchlightclient. This release
-      contains a full set of search commands for the python-openstackclient
-      and is compatible with the Mitaka release of Searchlight.
   - version: 0.2.1
     projects:
       - repo: openstack/python-searchlightclient
         hash: 72c67e4d421a4d334454a4356c02258b6f1c5366
-    highlights: |
-      Updated requirements and README. Compatible with the Mitaka release
-      of Searchlight.
+repository-settings:
+  openstack/python-searchlightclient: {}

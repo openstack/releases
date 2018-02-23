@@ -14,16 +14,13 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: 937826c46ac8dad2b2ae8703632ec02357bc2bde
-    highlights: >
-        Support major Mitaka features, bug fixes
   - version: 4.1.1
     projects:
       - repo: openstack/python-neutronclient
         hash: 8fe5386a006992bdf606872d5e8ad57e60786c50
-    highlights: >
-        Fix a critical bug that neutronclient python binding raises
-        an exception when lazy translation is enabled.
   - version: 4.1.2
     projects:
       - repo: openstack/python-neutronclient
         hash: c464316957f9c4b158331d080263fb02f1f17066
+repository-settings:
+  openstack/python-neutronclient: {}

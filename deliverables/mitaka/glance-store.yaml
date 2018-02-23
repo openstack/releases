@@ -9,36 +9,21 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: f1f79b898dc9f37a4161a68574feff8364f73ab3
-    highlights: >
-        Bug fixes, dependency updates, and removal of deprecated options.
   - version: 0.11.0
     projects:
       - repo: openstack/glance_store
         hash: 881eeed5ad2d4613cf7a1818bc014fb888ec3df1
-    highlights: >
-        Bug fixes, dependency updates, removal of deprecated options,
-        removal of gridfs driver, deprecation of S3 driver, and documenting
-        supported drivers and their maintainers.
   - version: 0.12.0
     projects:
       - repo: openstack/glance_store
         hash: 6c4ae678f57390ef845c446edbcce9a6f93e1927
-    highlights: >
-        Implement get, add and delete for cinder store, move VMWare & HTTP
-        drivers to requests, new config options for HTTP store, Swift
-        store supports keystone trusts and service tokens.
   - version: 0.13.0
     projects:
       - repo: openstack/glance_store
         hash: a6bf6a7f0e74ced35219732fbf72a63d4c6ab553
-    highlights: >
-        Bug fix on swift multitenant store, new and changed config options
-        for VMWare store.
   - version: 0.13.1
     projects:
       - repo: openstack/glance_store
         hash: 33c08d8dec495dca2d7a9a7c44d23670aacf29d9
-    highlights: >
-        Bug fix makes glance_store swift driver tests compatible with
-        python-swiftclient 3.0.0 release. glance_store can thus be installed
-        alongside aforementioned python-swiftclient version.
+repository-settings:
+  openstack/glance_store: {}

@@ -1,8 +1,4 @@
 ---
-# NOTE(tonyb) Be careful tagging new releases < 3.0.0 due to:
-#   https://bugs.launchpad.net/neutron/+bug/1513630
-# for more information see:
-#   https://review.openstack.org/247199
 launchpad: oslo.messaging
 team: oslo
 type: library
@@ -49,17 +45,6 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 11d7c44a3648a00f864f2608a540128a123c5b31
-    highlights: |
-        * Introduced new Pika library based driver for RabbitMQ.
-        * Group oslo_messaging_notifications added to options.
-        * ZeroMQ driver use_pub_sub by default for fanout messaging.
-        * ZeroMQ driver zmq_target_expire option configures Redis records TTL.
-        * Kombu driver reply and fanout queues now expire instead of
-          auto-delete.
-        * Kombu driver rabbit_qos_prefetch_count option to configure messages
-          prefetch.
-        * Kombu driver rabbit_interval_max option to configure connection
-          retries.
   - version: 4.2.0
     projects:
       - repo: openstack/oslo.messaging
@@ -68,8 +53,6 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: b80fdc850dd76b3ef45b2d2deaa2d5d24678d1f8
-    highlights: |
-        * matchmaker_redis option should only be in [match_redis] section.
   - version: 4.4.0
     projects:
       - repo: openstack/oslo.messaging
@@ -90,3 +73,5 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: ceda1f653630071c121d8c137f834be22a156fa3
+repository-settings:
+  openstack/oslo.messaging: {}

@@ -9,7 +9,7 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 7be79a22f151c35b86e747d3eb9af78f0fbea06b
-        highlights: >
+        highlights: |
           This drops support for v1 api and adds keystone session support
   - version: 2.0.1
     projects:
@@ -23,13 +23,13 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 25517d0226e69bbabf9679c80445746a5cab846d
-        highlights: >
+        highlights: |
           Fixes Aodh redirect authentication
   - version: 2.2.1
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 8677de9ec764f936a476de1885ee0e08b4ece20e
-        highlights: >
+        highlights: |
           Fixes Aodh token validation
   - version: 2.3.0
     projects:

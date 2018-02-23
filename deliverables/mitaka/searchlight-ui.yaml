@@ -8,9 +8,5 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: fb500c343bf17c35de200503a943bed2d44d3d2e
-    highlights: |
-      This is the first release of the searchlight ui. This release
-      contains a search panel for the Horizon project dashboard.
-      It is compatible with the Mitaka release of Searchlight with
-      cross resource search for Nova instances, Glance images, Cinder,
-      Swift, Designate, Neutron networks, subnets, routers, & ports.
+repository-settings:
+  openstack/searchlight-ui: {}
