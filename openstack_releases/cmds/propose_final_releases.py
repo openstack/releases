@@ -169,11 +169,13 @@ def main():
         )
 
         deliverable_data = deliv.data
-        deliverable_data['releases'].append({
+        release_data = {
             'version': new_version,
-            'diff-start': diff_start,
             'projects': latest_release['projects'],
-        })
+        }
+        if diff_start:
+            release_data['diff-start'] = diff_start
+        deliverable_data['releases'].append(release_data)
         print('new version for {}: {}'.format(
             deliv.name, new_version))
 
