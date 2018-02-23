@@ -16,9 +16,11 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import logging
 import os.path
 import re
 import shutil
+import sys
 import tempfile
 
 import openstack_releases
@@ -107,6 +109,14 @@ def main():
     else:
         def verbose(msg):
             pass
+
+    # Set up logging, including making some loggers quiet.
+    logging.basicConfig(
+        format='%(levelname)7s: %(message)s',
+        stream=sys.stdout,
+        level=logging.DEBUG if args.verbose else logging.INFO,
+    )
+    logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
 
     deliverables_dir = args.deliverables_dir
 
