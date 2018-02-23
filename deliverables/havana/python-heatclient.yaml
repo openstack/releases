@@ -4,15 +4,17 @@ team: heat
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.2.3"
+  - version: 0.2.3
     projects:
       - repo: openstack/python-heatclient
         hash: 3f1b15cdce172e3d66720b4503eaae0d11a563f6
-  - version: "0.2.4"
+  - version: 0.2.4
     projects:
       - repo: openstack/python-heatclient
         hash: 2c05c73a6b7137a428111bb52b97087aac1c43a0
-  - version: "0.2.5"
+  - version: 0.2.5
     projects:
       - repo: openstack/python-heatclient
         hash: 96dbb0911c8d139a5b3fe64af82783cf81790ff8
+repository-settings:
+  openstack/python-heatclient: {}

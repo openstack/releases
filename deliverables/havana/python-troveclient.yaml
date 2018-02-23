@@ -4,19 +4,21 @@ team: trove
 type: library
 release-model: cycle-with-intermediary
 releases:
-  - version: "0.1.3"
+  - version: 0.1.3
     projects:
       - repo: openstack/python-troveclient
         hash: 9916c8f2733b683d859770d05dacd2c9c82912d7
-  - version: "0.1.4"
+  - version: 0.1.4
     projects:
       - repo: openstack/python-troveclient
         hash: aa024468a85904838e0e7d9537eeaf7801d1d5d5
-  - version: "1.0.0"
+  - version: 1.0.0
     projects:
       - repo: openstack/python-troveclient
         hash: 06e7ba45863517fe1bd270c93508057c4a3bad1b
-  - version: "1.0.1"
+  - version: 1.0.1
     projects:
       - repo: openstack/python-troveclient
         hash: 802802c02f1cee63ee4f578641a83cbd293b7be2
+repository-settings:
+  openstack/python-troveclient: {}
