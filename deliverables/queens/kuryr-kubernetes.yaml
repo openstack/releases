@@ -20,9 +20,10 @@ branches:
   - location: 0.4.0
     name: stable/queens
 cycle-highlights:
-  - Introduced port pools feature.
-  - Support for running in containers as K8s network addon.
-  - Introduced kuryr-daemon service.
-  - Introduced liveness and readiness probes for kuryr-controller.
+  - 'Introduced port pools feature.'
+  - 'Support for running in containers as K8s network addon.'
+  - 'Introduced kuryr-daemon service.'
+  - 'Introduced liveness and readiness probes for kuryr-controller.'
 repository-settings:
   openstack/kuryr-kubernetes: {}
+release-notes: https://docs.openstack.org/releasenotes/kuryr-kubernetes/queens.html

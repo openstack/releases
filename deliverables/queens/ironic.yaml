@@ -24,11 +24,12 @@ branches:
   - location: 10.1.0
     name: stable/queens
 cycle-highlights:
-  - Introduced API to get, set and unset traits on nodes.
-  - Introduced new ansible deploy interface.
-  - Finished implementation of rescue mode. Users can repair instances,
-    troubleshoot misconfigured nodes, lost SSH keys, etc.
-  - Added support for routed networks when using flat networking.
-  - Deprecated classic drivers in favor of hardware types.
+  - 'Introduced API to get, set and unset traits on nodes.'
+  - 'Introduced new ansible deploy interface.'
+  - 'Finished implementation of rescue mode. Users can repair instances, troubleshoot
+    misconfigured nodes, lost SSH keys, etc.'
+  - 'Added support for routed networks when using flat networking.'
+  - 'Deprecated classic drivers in favor of hardware types.'
 repository-settings:
   openstack/ironic: {}
+release-notes: https://docs.openstack.org/releasenotes/ironic/queens.html

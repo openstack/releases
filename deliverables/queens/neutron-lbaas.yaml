@@ -26,10 +26,9 @@ branches:
   - location: 12.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - 'The neutron-lbaas and neutron-lbaas-dashboard projects are now deprecated.
-    Please see the FAQ at
-    https://wiki.openstack.org/wiki/Neutron/LBaaS/Deprecation'
-  - 'Neutron-lbaas now includes a proxy plugin that forwards all API requests
-    to the Octavia API.'
+  - 'The neutron-lbaas and neutron-lbaas-dashboard projects are now deprecated. Please
+    see the FAQ at https://wiki.openstack.org/wiki/Neutron/LBaaS/Deprecation'
+  - 'Neutron-lbaas now includes a proxy plugin that forwards all API requests to the
+    Octavia API.'
 repository-settings:
   openstack/neutron-lbaas: {}
