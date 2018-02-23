@@ -24,27 +24,16 @@ releases:
       - repo: openstack/keystoneauth
         hash: c43d9dc75bb610ce9f53524bebfdb0633c0c1147
         tarball-base: keystoneauth1
-    highlights: |
-      - Added `is_admin_project` support
-      - Added support for oauth1 auth
   - version: 2.8.0
     projects:
       - repo: openstack/keystoneauth
         hash: 3562dd4b6cc5d59918ea7f540d75c4f88d52ab5d
         tarball-base: keystoneauth1
-    highlights: |
-      - Added `is_domain` support to token model
-      - Added OidcAccessToken auth plugin
   - version: 2.9.0
     projects:
       - repo: openstack/keystoneauth
         hash: 464aaac5a2ed6da94144395f4ed848dc1ee61c45
         tarball-base: keystoneauth1
-    highlights: |
-      - Support TOTP authentication.
-      - Kerberos and FederatedKerberos authentication is now supported,
-        the kerberos optional dependency must be installed, use
-        `pip install keystoneauth[kerberos].
   - version: 2.10.0
     projects:
       - repo: openstack/keystoneauth
@@ -60,27 +49,16 @@ releases:
       - repo: openstack/keystoneauth
         hash: 837118393c9930d0f627783f15df67a4299d5271
         tarball-base: keystoneauth1
-    highlights: |
-      - Fixes "space before header" issue seen in ansible deploys with
-        requests>=2.11.0, see bug 1611426.
-      - Fixes "Status code 308 missed" issue, see bug 1610914
   - version: 2.12.0
     projects:
       - repo: openstack/keystoneauth
         hash: 5f34cb14d4229b8f6ec3088e04d6bfa398b2fd98
         tarball-base: keystoneauth1
-    highlights: |
-      - TCP_KEEPCNT is disabled when using Windows Subsystem for Linux,
-        see bug 1614688.
   - version: 2.12.1
     projects:
       - repo: openstack/keystoneauth
         hash: b7b887c5192f2940073d038360a64041fc4f38cc
         tarball-base: keystoneauth1
-    highlights: |
-      - Fixes a bug in the version discovery mechanism where a URL was
-        being improperly returned when the discovery was not successful,
-        see bug 1616720.
   - version: 2.12.2
     projects:
       - repo: openstack/keystoneauth
@@ -91,3 +69,5 @@ releases:
       - repo: openstack/keystoneauth
         hash: 912d99bdf0f20ddc544dd05656a5ac28ec9acaac
         tarball-base: keystoneauth1
+repository-settings:
+  openstack/keystoneauth: {}

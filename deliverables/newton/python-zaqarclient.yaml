@@ -12,12 +12,9 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 641e12e202c40aee0e999c965a665fe88968e186
-    highlights: >
-        Add the update support for queue in favor of the API change of Zaqar
-        queue update (using PATCH).
   - version: 1.2.0
     projects:
       - repo: openstack/python-zaqarclient
         hash: 03fe685473ff1c18d414e90847766e4d749964da
-    highlights: >
-        Add support for websocket transport.
+repository-settings:
+  openstack/python-zaqarclient: {}

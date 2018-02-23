@@ -37,27 +37,17 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas
         hash: bff11c5fa14bce26526d38167d5c67b1afeb45ba
-    highlights: |-
-      * Fixed lbaasv2 service plugin alias definition
   - version: 9.2.0
     projects:
       - repo: openstack/neutron-lbaas
         hash: 0a32ba610e9e442544cff048a3f24c270d8a7467
-    highlights: |-
-      * HAProxy - Add host routes to the lbaas namespace
-      * Pass network MTU into namespace driver
   - version: 9.2.1
     projects:
       - repo: openstack/neutron-lbaas
         hash: bc1fb460d53135d3871364eade300f7a41252ee8
-    highlights: |-
-      * Switch HAProxy health check timeout to seconds
-      * Fix lb namespace can not be deleted
-      * Fix for error "no attribute tenant_id"
-      * Updates for tempest changes
-      * Updates for devstack changes
-      * Updates for neutron changes
   - version: 9.2.2
     projects:
       - repo: openstack/neutron-lbaas
         hash: d53ee411fb263467ab72e6c9cfef79590274aaf3
+repository-settings:
+  openstack/neutron-lbaas: {}

@@ -13,22 +13,13 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: fc51b73e981d31fc3b5a4d44824116c68904a87d
-    highlights: |-
-      * Significant improvements to amphora failover
-      * Significantly improved error handling
-      * Added support for networks without DHCP service
-      * Added support for IPv6 networks
-      * Security enhancements to glance image handling
-      * Security enhancements to TLS certificate and key handling
-      * Security enhancement tenant networks are in a network namespace
-      * Improved documentation
   - version: 0.9.1
     projects:
       - repo: openstack/octavia
         hash: 414b4ac80aa7e8e35d70c79411900e80778a2f3e
-    highlights: |-
-      * Resolves issues building and using amphora images
   - version: 0.9.2
     projects:
       - repo: openstack/octavia
         hash: a74008c9a4c166cf9c87a445d0c8bab49fe1badb
+repository-settings:
+  openstack/octavia: {}

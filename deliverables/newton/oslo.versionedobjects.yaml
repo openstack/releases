@@ -20,11 +20,6 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 91184e1047d07c8fbeee2648ec7a929858b58b89
-    highlights: |-
-        * Fix ComparableVersionedObject in python 3.4
-        * Add a pci address field
-        * Replace safe_utils.getcallargs with inspect.getcallargs
-        * Fix compare_obj() to obey missing/unset fields
   - version: 1.11.0
     projects:
       - repo: openstack/oslo.versionedobjects
@@ -33,20 +28,14 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 0bb46f0a2c41c64d1a50debfc78f50627c4c8761
-    highlights: '* Add objectify decorator for readability'
   - version: 1.13.0
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: b6410fe93186949550b8ce16fe64da751f353c6e
-    highlights: |-
-        * JSON schema generation for versioned objects
-        * JSON schema get_schema implementation for common fields
-        * Improved error message for Object.coerce
   - version: 1.14.0
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 67ba3a08407e9126db6421155af41dec5e65b58b
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 1.15.0
     projects:
       - repo: openstack/oslo.versionedobjects
@@ -63,3 +52,5 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 9f33bd4c74949ebe42bffe39c529aa6a1c94e531
+repository-settings:
+  openstack/oslo.versionedobjects: {}

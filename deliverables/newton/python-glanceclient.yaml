@@ -13,43 +13,21 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 46c3792feef6f36b31e9783724b914d6740b0f84
-    highlights: >
-        - Fixes endpoint type handling during session creation and an encoding
-          issue when using v1 client.
-        - Ships the default metadata schema with the client so that certain
-          CLI help text can be displayed when server is offline.
-        - Few other bug fixes and dependency updates.
   - version: 2.2.0
     projects:
       - repo: openstack/python-glanceclient
         hash: 13093e019416894a4bd940d569bab4c3c0b84485
-    highlights: >
-        - Added Python 3.5 classifier as we now have a working gate job to test
-          the support.
-        - Added support to log 'x-openstack-request-id' for each api call.
-        - Updated outdated image schema in the glanceclient.
   - version: 2.3.0
     projects:
       - repo: openstack/python-glanceclient
         hash: cc17ca32652af69cba268ef71286ca096b1e6207
-    highlights: >
-        - Fixes a bug 1603863, after which request IDs are logged even after
-          exceptions are raised.
-        - Fixes an error that was preventing releasenotes from being built.
   - version: 2.4.0
     projects:
       - repo: openstack/python-glanceclient
         hash: 5de07c339503c90634e27de342d23276a8833111
-    highlights: >
-        - Fixes bug 1587999 that allows the client to not make updates to the
-          tags for every single request, rather for only those that require
-          updates to the tags.
-        - Fixes bug 1596573 with warlock model creation that allows commands
-          like ``md-namespace-show`` to work properly.
   - version: 2.5.0
     projects:
       - repo: openstack/python-glanceclient
         hash: d4196325eb05dadfaf62d8facbd8c6fe50f72166
-    highlights: >
-        - Reverts the bug 1587999 that results into regression in
-          openstackclient, thus fixing bug 1614971 temporarily.
+repository-settings:
+  openstack/python-glanceclient: {}

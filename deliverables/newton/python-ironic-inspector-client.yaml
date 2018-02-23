@@ -13,21 +13,17 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: de0432f4cc9be22471d29b03dad3a3aaa8a2665d
-    highlights: |
-        * Added a command to reprocess stored data.
   - version: 1.8.0
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: fdbefc5c132b3b450a8e50fde82547f1084a20ff
-    highlights: |
-        * The rule import command now prints summary of imported rules.
   - version: 1.9.0
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 6364bc93cd5aa67218a009ee520725b5b05f9be4
-    highlights: |
-        * Deprecates some functions in favor of `ClientV1` methods.
   - version: 1.10.0
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 0eae82e24f943ac4e5caffe06a36c2cbe4c79a6e
+repository-settings:
+  openstack/python-ironic-inspector-client: {}

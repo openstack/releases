@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-trove
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: d6bb8e7152a596c1cb967fab6cbcb893a05bcbd6
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 84ccd56ae13533e0a0d8e51aa9c50f9476644b76
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 61de1417ce318e07d0729a8acbb1e425fb0eaec8
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: e874207b39094228d9ec4c896c2a59398ac5ba2e
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 29facdf424b72036b28df411cc07a360f170c38a
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 1fb091bdb1b26105f81ac867c5e33c2d8866f596
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-trove
-    hash: 72be6fe6c9402051802765b0e25eedfc8f2fd2e2
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: d6bb8e7152a596c1cb967fab6cbcb893a05bcbd6
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 84ccd56ae13533e0a0d8e51aa9c50f9476644b76
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 61de1417ce318e07d0729a8acbb1e425fb0eaec8
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: e874207b39094228d9ec4c896c2a59398ac5ba2e
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 29facdf424b72036b28df411cc07a360f170c38a
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 1fb091bdb1b26105f81ac867c5e33c2d8866f596
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 72be6fe6c9402051802765b0e25eedfc8f2fd2e2
+repository-settings:
+  openstack/puppet-trove: {}

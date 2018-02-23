@@ -41,14 +41,9 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 982b8957909248d20d98bed7658250d8586bc5d1
-    highlights: >
-      - Bug fix to allow cross-policy table reference.
-      - Bug fix to correct an incompatibility with PostgreSQL backend.
-      - Bug fix for Cinder driver to obtain data from all tenants.
   - version: 4.1.0
     projects:
       - repo: openstack/congress
         hash: ad610130f5e5102a9fb682e5975b4e4bc0857387
-    highlights: >
-      - Fix to allow Congress startup despite data source creation failure
-      - Bug fix to avoid config generation failure due to deprecated option
+repository-settings:
+  openstack/congress: {}

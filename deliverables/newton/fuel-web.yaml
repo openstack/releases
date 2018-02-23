@@ -14,7 +14,9 @@ releases:
       - repo: openstack/fuel-web
         hash: b0e9d4f1aaed71ba39537dd12d794f7d69535617
   - version: 10.0.0
-    diff-start: '5.0'
+    diff-start: "5.0"
     projects:
       - repo: openstack/fuel-web
         hash: b0e9d4f1aaed71ba39537dd12d794f7d69535617
+repository-settings:
+  openstack/fuel-web: {}

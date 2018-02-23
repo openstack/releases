@@ -13,31 +13,21 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 58ceb208274c1383f9ce539dedbf4de14adbbb42
-    highlights: |
-        * First release of Neutron ML2 driver for OVN
   - version: 1.0.0.0b3
     projects:
       - repo: openstack/networking-ovn
         hash: c971a24d353d6cb860762e1b0835723d428dd7ba
-    highlights: |
-        * Support OVN address sets for improved port operation and security group performance
-        * Support OVN native DHCPv4
-        * Add OVN L3 router scheduler
   - version: 1.0.0.0rc1
     projects:
       - repo: openstack/networking-ovn
         hash: 899c1ea256a1f8faa45aeb9819249cb2eb663823
-    highlights: |
-        * Support multi-provider and multi-segmented networks
-        * Support OVS 2.6 mutate transactions for improved performance
-        * Support the Neutron trunk service plugin
   - version: 1.0.0.0rc2
     projects:
       - repo: openstack/networking-ovn
         hash: 0d5623355642a5c79f668991aecb9980093954c4
   - version: 1.0.0
-    # diff-start: There is no stable/mitaka branch and this is the
-    # first release series.
     projects:
       - repo: openstack/networking-ovn
         hash: 0d5623355642a5c79f668991aecb9980093954c4
+repository-settings:
+  openstack/networking-ovn: {}

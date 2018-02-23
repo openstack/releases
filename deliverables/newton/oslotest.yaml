@@ -24,9 +24,6 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: 425d4651221d09141afd1de1367cf1ec188594ca
-    highlights: |-
-      - Add Python 3.5 classifier and venv
-      - Import mock so that it works on Python 3.x
   - version: 2.9.0
     projects:
       - repo: openstack/oslotest
@@ -35,8 +32,9 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: 0fad88599e428bdb60d52288fd6f7d69aadfbfc8
-    highlights: '- A new DisableModules fixture that removes modules from system path'
   - version: 2.10.1
     projects:
       - repo: openstack/oslotest
         hash: a8c5ed4008963a3436f4a4932ac544f5ee4c283b
+repository-settings:
+  openstack/oslotest: {}

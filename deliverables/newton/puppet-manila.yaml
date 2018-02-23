@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-manila
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-manila/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 5bc648777eddcbc143e56b1c0a54f8df6c55894d
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: d799e07494a3d436008dbae73ab14a6ed4500128
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 40377a79c1e4e2ecd040a15da0b1f6a2fd00e07c
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: abbee8236ad70c89a473bc803c83e7762522c2f8
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 259071bd95c5f3341c7e4a8a998558ab28ce42d1
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: db4e38f00dd29f2cb10bd61fb4fe4c942b665e25
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-manila
-    hash: 19ba83f0edda2f5099b77ae645e8807f7e09a59a
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 5bc648777eddcbc143e56b1c0a54f8df6c55894d
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: d799e07494a3d436008dbae73ab14a6ed4500128
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 40377a79c1e4e2ecd040a15da0b1f6a2fd00e07c
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: abbee8236ad70c89a473bc803c83e7762522c2f8
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 259071bd95c5f3341c7e4a8a998558ab28ce42d1
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: db4e38f00dd29f2cb10bd61fb4fe4c942b665e25
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 19ba83f0edda2f5099b77ae645e8807f7e09a59a
+repository-settings:
+  openstack/puppet-manila: {}

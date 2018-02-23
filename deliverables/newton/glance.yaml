@@ -14,73 +14,26 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 5be7a50fe0450516937c927ad3d5658a66fe64e5
-    highlights: >
-      - Several in-tree docs updates
-      - Proper handling of 4 byte unicode chars in metadefs APIs (bug 1570789)
-      - Removal of deprecated sign-the-hash approach
-      - Removal of run_tests and related scripts
   - version: 13.0.0.0b2
     projects:
       - repo: openstack/glance
         hash: e3728d6d41e450dbefe1279eea4a56441ff9e171
-    highlights: >
-      - Fixed a critical bug 1557495 for possible race conditions during image
-        status change
-      - Adds soft delete functionality to scrub the old non active tasks
-      - Adds backward compatibilty when using dates for filtering while listing
-        images
-      - Fixed important bug 1591004 to not set header if checksum does not
-        exist
-      - Fixed important bug 1584076 for Swift ACLs disappearing on Glance v1
-        images
-      - Policy ``default` defaults to ``role:admin`` for more secure operator
-        experience
-      - Some api-ref documentation added
-      - Developer documentation that includes notes on how to digitally sign
-        images, create release notes, etc.
-      - Fixed important bug 1585917 resulting in 500s for metadefs
   - version: 13.0.0.0b3
     projects:
       - repo: openstack/glance
         hash: 11cfe49b8f88f68d83028b5920891bb16792da72
-    highlights: >
-      - Deprecated the Images (Glance) v1 API
-      - Deprecated ``show_multiple_locations`` configuration option
-      - Removed downgrade support for Glance DB
-      - Glance by default supports ``vhdx`` in the list of disk formats
-      - Vast help text improvements for the Glance and glance_store
-        configuration options
-      - Configuration options are now generated and published as a part of the
-        developer docs
-      - An important bug fix for version negotiation api middleware; v2.3 is
-        the CURRENT API version that was missing in the middleware which now
-        has been added to the same
-      - Complete feature support in api-ref and further improvements to it
-      - More developer documentation
-      - s3 backend store driver support removed from Glance tree following the
-        removal of the driver from the glance_store library
-      - Adds ``CPU thread pinning`` to metadefs to be used primarily for Nova
-      - Uses new library ``cursive`` for signature verification utilities
   - version: 13.0.0.0rc1
     projects:
       - repo: openstack/glance
         hash: ee667852f588415259bc7b5dbe07b6037da66226
-    highlights: >
-      - Bumped up Glance API minor version to 2.4
-      - Consistent order of store drivers established in auto-generated
-        configuration files and sample files shipped with Glance release
-      - Attempt to not set location on a non-active or non-queued image
   - version: 13.0.0.0rc2
     projects:
       - repo: openstack/glance
         hash: 4404ae6a7e2b8d96db102ada8aaf07cbc92e256b
-    highlights: >
-      - Fixed inconsistency between the names used for backend stores
-        in Glance location_strategy module and the glance_store library
-      - Added constraints around qemu-img calls used in Glance tasks
-        to address CVE-2015-5162
   - version: 13.0.0
     diff-start: 12.0.0.0rc1
     projects:
       - repo: openstack/glance
         hash: 4404ae6a7e2b8d96db102ada8aaf07cbc92e256b
+repository-settings:
+  openstack/glance: {}

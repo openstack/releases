@@ -1,6 +1,6 @@
 ---
 launchpad: puppet-ceph
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 releases:
@@ -20,3 +20,5 @@ releases:
     projects:
       - repo: openstack/puppet-ceph
         hash: 806513c604897d7429ff7687850e5506657003d5
+repository-settings:
+  openstack/puppet-ceph: {}

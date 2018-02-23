@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-murano
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-murano/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 211531372ec52496957ce454c3cc98914ea6f9fd
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: c5540fbb514d4d9baacc94c05cfd7d08c5ce7b92
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 973190454654c5daf9f773a1c95619f132313ce3
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: a3cd7ef663a82d0865dfc6400ecbadc9c78badcd
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: 3842db036321e6ea9c5c0a3995666ed60cd964f5
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: ea616d16677ef9c1c071ccff7ef06e50553546f2
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-murano
-    hash: a34fcac63a9b6b04fdae68f638b6637e286d5b43
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 211531372ec52496957ce454c3cc98914ea6f9fd
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: c5540fbb514d4d9baacc94c05cfd7d08c5ce7b92
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 973190454654c5daf9f773a1c95619f132313ce3
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: a3cd7ef663a82d0865dfc6400ecbadc9c78badcd
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 3842db036321e6ea9c5c0a3995666ed60cd964f5
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: ea616d16677ef9c1c071ccff7ef06e50553546f2
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: a34fcac63a9b6b04fdae68f638b6637e286d5b43
+repository-settings:
+  openstack/puppet-murano: {}

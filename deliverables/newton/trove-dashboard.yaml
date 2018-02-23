@@ -16,19 +16,10 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: ccc59a99aa86ad6418192bd991833e9f19d7ec3e
-    highlights: >
-      Show confirm window before instance delete.
-      Add support to display instance fault messages
   - version: 7.0.0.0rc1
     projects:
       - repo: openstack/trove-dashboard
         hash: ce995f514a051a065f6a2edeaa92e5601c8bf2df
-    highlights: >
-      - Support configuration groups in the dashboard.
-      - Add availability zone to launch instance dialog.
-      - Add instance and cluster support for affinity/anti-affinity.
-      - Add NIC to cluster grow dialog.
-      - Add support for instance datastore-flavors mapping.
   - version: 7.0.0.0rc2
     projects:
       - repo: openstack/trove-dashboard
@@ -46,3 +37,5 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: d8cfa94dfd968daedb1b71d1cd2c3f66a1e45440
+repository-settings:
+  openstack/trove-dashboard: {}

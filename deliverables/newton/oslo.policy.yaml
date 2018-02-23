@@ -13,7 +13,6 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 93aee73d37fcaf47fd97991711a1e48a566dcc78
-    highlights: '* Support policy file in YAML'
   - version: 1.8.0
     projects:
       - repo: openstack/oslo.policy
@@ -22,10 +21,6 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 474c120ae6de61c1f46523baa0fef11b5e537cf8
-    highlights: |-
-      * Add equality operator to policy.RuleDefault
-      * Add policy registration and authorize method
-      * Add sample file generation script and helper methods
   - version: 1.10.0
     projects:
       - repo: openstack/oslo.policy
@@ -42,12 +37,9 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 10a81baefa25dd25d6acb8c2ad6ba3bcc868c82b
-    highlights: |-
-      - Add Python 3.5 classifier and venv
-      - Debug logging for policy file validation
-      - Add note about not all APIs support policy enforcement by user_id
   - version: 1.14.0
     projects:
       - repo: openstack/oslo.policy
         hash: 804be5979569cc64dfef2ac2b6bc0c040d313aa0
-    highlights: '* Allow policy file to not exist'
+repository-settings:
+  openstack/oslo.policy: {}

@@ -14,28 +14,20 @@ releases:
       - repo: openstack/os-vif
         hash: e5227ecbc02f4090bbb96bb766d89b6ad107c51b
         tarball-base: os_vif
-    highlights: >
-        Initial release of os-vif
   - version: 1.1.0
     projects:
       - repo: openstack/os-vif
         hash: c16a74b96223cfb7bf3b6277b8c0b46c18f671fe
         tarball-base: os_vif
-    highlights: >
-        Add support for vhost-user with ovs plugin
-        Dont create extraneous linux bridge/veth pair with ovs
-        Ensure ovs bridge exists when plugging
   - version: 1.2.0
     projects:
       - repo: openstack/os-vif
         hash: b088d21b91dbfda0f18b1e4886f6aa01f2c72cbe
         tarball-base: os_vif
-    highlights: >
-        Bug fixes and routine dependency updates.
   - version: 1.2.1
     projects:
       - repo: openstack/os-vif
         hash: ac8c8376249fde6a226f57c49c370d197602fb6a
         tarball-base: os_vif
-    highlights: >
-        - Contains the fix for linuxbridge bug 1617447.
+repository-settings:
+  openstack/os-vif: {}

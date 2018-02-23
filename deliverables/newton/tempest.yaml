@@ -1,6 +1,6 @@
 ---
 launchpad: tempest
-team: Quality Assurance
+team: 'Quality Assurance'
 type: other
 release-model: cycle-with-intermediary
 include-pypi-link: yes
@@ -21,3 +21,6 @@ releases:
     projects:
       - repo: openstack/tempest
         hash: ad37086e6a2aec99b81ec5c938782a6a917aeea1
+repository-settings:
+  openstack/tempest:
+    pypi-name: Tempest

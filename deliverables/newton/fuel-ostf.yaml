@@ -14,7 +14,9 @@ releases:
       - repo: openstack/fuel-ostf
         hash: 876bee75728ec19a629e9fe91a10599eabe6161c
   - version: 10.0.0
-    diff-start: '6.0'
+    diff-start: "6.0"
     projects:
       - repo: openstack/fuel-ostf
         hash: 876bee75728ec19a629e9fe91a10599eabe6161c
+repository-settings:
+  openstack/fuel-ostf: {}

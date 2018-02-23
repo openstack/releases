@@ -24,7 +24,6 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: c1c40325cde1ca97c083a5c18a5f926c91b386cd
-    highlights: '* Use file modification events instead of signal handler'
   - version: 1.12.0
     projects:
       - repo: openstack/oslo.reports
@@ -33,8 +32,9 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: 329eb7cb79925c3e6319e41a7cca3b86218ea2c6
-    highlights: '- Add Python 3.5 classifier and venv'
   - version: 1.14.0
     projects:
       - repo: openstack/oslo.reports
         hash: d332969661534229feb5cbf66fa6084020ae8034
+repository-settings:
+  openstack/oslo.reports: {}

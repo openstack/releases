@@ -1,38 +1,40 @@
 ---
 launchpad: puppet-barbican
-team: Puppet OpenStack
+team: 'Puppet OpenStack'
 type: other
 release-model: cycle-trailing
 release-notes: https://docs.openstack.org/releasenotes/puppet-barbican/newton.html
 branches:
-- name: stable/newton
-  location: 9.4.0
+  - name: stable/newton
+    location: 9.4.0
 releases:
-- version: 9.0.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: 62db37cc72daf2d1fc5fd94e52a3e7f3b38290bf
-- version: 9.1.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: c86deaadcff5779de92f58882bee3c6d30fd4b3a
-- version: 9.2.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: 74d7196d0661e108d5ed1c82091690c667c0b624
-- version: 9.3.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: a0437e48c40f45a69f8bca23cfe666e0884c746a
-- version: 9.4.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: 60e616811320607aba649a342ab50015fff491cc
-- version: 9.5.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: ec668dedbfde1373eb26175d8ffc8d9005842d1d
-- version: 9.6.0
-  projects:
-  - repo: openstack/puppet-barbican
-    hash: 333dc5088ebbb5c2a48598fd9f2ebc6a9d95e5b5
+  - version: 9.0.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 62db37cc72daf2d1fc5fd94e52a3e7f3b38290bf
+  - version: 9.1.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: c86deaadcff5779de92f58882bee3c6d30fd4b3a
+  - version: 9.2.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 74d7196d0661e108d5ed1c82091690c667c0b624
+  - version: 9.3.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: a0437e48c40f45a69f8bca23cfe666e0884c746a
+  - version: 9.4.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 60e616811320607aba649a342ab50015fff491cc
+  - version: 9.5.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: ec668dedbfde1373eb26175d8ffc8d9005842d1d
+  - version: 9.6.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 333dc5088ebbb5c2a48598fd9f2ebc6a9d95e5b5
+repository-settings:
+  openstack/puppet-barbican: {}

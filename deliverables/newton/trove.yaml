@@ -16,74 +16,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 5bb5f62ae1313d82b131579004b20ae3c02a53f8
-    highlights: >
-      - Enable database log retrieval on Cassandra instances.
-      - Enable configuration option to make guest instances
-        respond to ping.
-      - Add New Relic license driver.
-      - Use SET PASSWORD and RENAME USER to reset MySQL
-        user properties.
-      - Fix MySQL GTID replication parsing of GTID's.
-      - Add vCPU's to flavor-list (Bug 1261876).
-      - Increased agent_call_high_timeout config setting to 10 minutes.  This
-        configures the length of time that the taskmanager will wait for an
-        asynchronous guest agent call to complete.
-      - Fix IniCodec to deserialize Python objects. Bug 1599656.
-      - Errors that occur in Trove are now persisted in the database
-        and are returned in the standard 'show' command.
   - version: 6.0.0.0rc1
     projects:
       - repo: openstack/trove
         hash: 472159b2d4ada19d6d14cae7f40b2422b59dfd7a
-    highlights: >
-        features:
-          - Add support for configuration group management for DB2
-            Express-C.
-          - Add support for full online backup and restore for DB2
-            Express-C by enabling archive logging.
-          - The reset-status command will set the task and status of
-            an instance to ERROR after which it can be deleted.
-          - The force-delete command will allow the deletion of an
-            instance even if the instance is stuck in BUILD state.
-          - The --incremental flag for backup-create will add the
-            ability to create incremental backup based on last full or
-            incremental backup. If no full or incremental backup
-            exists a new full backup will be created.
-          - New instance upgrade API supports upgrading an instance of
-            a datastore to a new datastore version.  Includes
-            implementation for MySQL family of databases.
-          - A locality flag was added to the trove ReST API to allow a
-            user to specify whether the instances of a cluster should
-            be on the same hypervisor (affinity) or on different
-            hypervisors (anti-affinity).
-          - Support for standard WAL based streaming replication for
-            postgresql guests. Sets up read-only hot standby servers.
-          - New quota management APIs for reviewing and changing the
-            quota for a particular tenant.  Requires admin privileges.
-          - Add disk column in flavor-list (Bug 1617987).
-          - Add vCPU column in flavor-list (Bug 1261876).
-          - Add support for scheduled backups through Mistral.
-          - Add log retreival capability for Cassandra datastores.
-          - Add New Relic license driver.
-          - Add PostgreSQL Incremental Backup and Restore.
-        fixes:
-          - Applying a module again will now relect the update name,
-            type, datastore and datastore_version values. (Bug 1611525)
-          - Updating a module with all_datastores and
-            all_datastore_versions now works correctly. (Bug 1612430)
-          - Close the race condition window in user-list call. (Bug
-            1617464)
-          - Fix bug regarding specification of volume-type on cluster
-            create (Bug 1623005)
-          - Insulate TroveContext from oslo.context changes (Bug
-            1551468)
-          - Improve logging of errors from the Guest (Bug 1618922)
-          - Deprecate guest_log_long_query_time (Bug 1542485)
-          - Insulate TroveContext from oslo.context changes
-          - Separate database and user create in prepare
-          - Deprecate 'guest_log_long_query_time'
-          - Improve guest error reporting by calling GuestError with
-            proper options
   - version: 6.0.0.0rc2
     projects:
       - repo: openstack/trove
@@ -93,3 +29,5 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 345a7eb196ab0b9fcfd55c2c5b6f573d9b4e2caa
+repository-settings:
+  openstack/trove: {}

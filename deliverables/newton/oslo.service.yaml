@@ -16,7 +16,6 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 760abb6de4e2eab376f05b77970dddae8df741df
-    highlights: '* Offer mutate_config_files'
   - version: 1.11.0
     projects:
       - repo: openstack/oslo.service
@@ -45,3 +44,5 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 17a346b023554f48ff72f4e52decea002e311e81
+repository-settings:
+  openstack/oslo.service: {}

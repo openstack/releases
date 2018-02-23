@@ -13,8 +13,6 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: b4fd4ed5fc06ea277502d1ac98650ce137b2625d
-    highlights: |
-      First release of extracted modules from OpenStackClient
   - version: 0.2.0
     projects:
       - repo: openstack/osc-lib
@@ -39,21 +37,17 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: e0e2deaee02b88b8565502d3f72ec2184c9768c6
-    highlights: |
-      First full release of OpenStackClient support library
   - version: 1.0.1
     projects:
       - repo: openstack/osc-lib
         hash: ea65b90d63050a331bc039589c8bb6fc308067fa
-    highlights: |
-      Fix argument dependency bug
   - version: 1.0.2
     projects:
       - repo: openstack/osc-lib
         hash: 1a3ff9697daba6a876d4ea57d603a17115e8ad88
-    highlights: |
-      Fix another argument dependency bug
   - version: 1.1.0
     projects:
       - repo: openstack/osc-lib
         hash: 9bf62fde0c69c0941e2a767fb580d98f63b1e2ef
+repository-settings:
+  openstack/osc-lib: {}

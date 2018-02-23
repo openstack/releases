@@ -64,8 +64,7 @@ releases:
         hash: 9e3d6a516a097731579a29a970320baacc3a375c
       - repo: openstack/freezer-dr
         hash: a8ba5850e8fe16d8244a1c314ebe074735352795
-    highlights: >
-      - Fix manifest upload with ceph backend
-      - Fixing max_retries Fixing max_retries
-      - Fix sessions: session_tag
-      - Preventing clients from registering itself multiple times
+repository-settings:
+  openstack/freezer: {}
+  openstack/freezer-api: {}
+  openstack/freezer-dr: {}

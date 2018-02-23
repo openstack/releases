@@ -14,7 +14,9 @@ releases:
       - repo: openstack/fuel-main
         hash: a8c98d004fd7a2eae10ed363e17867b7a5aacbdd
   - version: 10.0.0
-    diff-start: '3.2'
+    diff-start: "3.2"
     projects:
       - repo: openstack/fuel-main
         hash: a8c98d004fd7a2eae10ed363e17867b7a5aacbdd
+repository-settings:
+  openstack/fuel-main: {}
