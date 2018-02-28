@@ -22,24 +22,24 @@ updates.
      * Next Phase
      * EOL Date
    - * :doc:`rocky/index`
-     * :doc:`Future <rocky/schedule>`
-     * :ref:`proposed <r-release>`
+     * :doc:`Under Development <rocky/schedule>`
+     * :ref:`scheduled <r-release>`
      *
      * TBD
    - * :doc:`queens/index`
-     * :doc:`Under Development <queens/schedule>`
-     * :ref:`scheduled <q-release>`
-     *
-     * TBD
-   - * :doc:`pike/index`
      * `Phase I -- Latest release`_
+     * 2018-02-28
+     * `Phase II -- Maintained release`_ on 2018-08-27
+     * 2019-02-25
+   - * :doc:`pike/index`
+     * `Phase II -- Maintained release`_
      * 2017-08-30
-     * `Phase II -- Maintained release`_ on 2018-02-26
+     * `Phase III -- Legacy release`_ on 2018-02-26
      * 2018-09-03
    - * :doc:`ocata/index`
-     * `Phase II -- Maintained release`_
+     * EOL
      * 2017-02-22
-     * `Phase III -- Legacy release`_ on 2018-02-26
+     *
      * 2018-02-26
    - * :doc:`newton/index`
      * EOL

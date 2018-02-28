@@ -2,7 +2,7 @@
  Queens
 ========
 
-Projected Release Date: 28 February 2018
+Originally Released: 28 February 2018
 
 .. toctree::
    :maxdepth: 1
