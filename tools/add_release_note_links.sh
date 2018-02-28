@@ -42,12 +42,18 @@ function url_exists {
 
 for filename in deliverables/$SERIES/*.yaml; do
     deliverable=$(basename $filename .yaml)
-    echo -n $deliverable
-    url="https://docs.openstack.org/releasenotes/${deliverable}/${SERIES}.html"
-    if ! url_exists $url; then
-        echo " no release notes page at $url"
+    echo -n "$deliverable "
+    base="https://docs.openstack.org/releasenotes/${deliverable}"
+    main_url="${base}/index.html"
+    if ! url_exists $main_url; then
+        echo "no notes at all, skipping"
+        continue
+    fi
+    series_url="${base}/${SERIES}.html"
+    if ! url_exists $series_url; then
+        echo "no release notes page at $series_url"
     else
-        echo
-        edit-deliverable $SERIES $deliverable set-release-notes "$url"
+        echo "OK"
+        edit-deliverable $SERIES $deliverable set-release-notes "$series_url"
     fi
 done
