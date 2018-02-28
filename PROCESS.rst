@@ -354,20 +354,27 @@ Final Release
    2. Remove the refs/heads/stable/$series from the project gerrit
       ACLs. This can be done by reverting the original ACL patch.
 
-3. Mark series as released on releases.o.o, by updating doc/source/index.rst
+3. Run the missing-releases script to check for missing tarballs on the
+   release page before the announcement::
+
+      tox -e venv -- missing-releases --series $SERIES
+
+4. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-4. Update the default series name in
+5. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-5. Send release announcement email to
+6. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``. Coordinate the timing of the email with
    the press release from the Foundation staff.
 
-6. Declare ``openstack/releases`` unfrozen.
+7. Send an email to the openstack-dev list to point to the official
+   release announcement, and declare ``openstack/releases`` unfrozen for
+   releases on the new series.
 
 Post-Final Release
 ==================
