@@ -27,6 +27,11 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 43f122be13736f15fbc38cb6e6ce29545f784c86
+  - diff-start: 9.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: 43f122be13736f15fbc38cb6e6ce29545f784c86
+    version: 10.0.0
 repository-settings:
   openstack/heat: {}
 release-notes: https://docs.openstack.org/releasenotes/heat/queens.html

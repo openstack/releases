@@ -28,6 +28,11 @@ releases:
       - hash: be8580b350c34c91494cb553eb15e6b61ef250b7
         repo: openstack/manila
     version: 6.0.0.0rc3
+  - diff-start: 5.0.0
+    projects:
+      - hash: be8580b350c34c91494cb553eb15e6b61ef250b7
+        repo: openstack/manila
+    version: 6.0.0
 cycle-highlights:
   - |
     Added drivers for Infinidat, MapR-FS, and Veritas

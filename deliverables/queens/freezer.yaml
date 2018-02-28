@@ -28,6 +28,15 @@ releases:
         hash: c24cd2be67848b2e7de08f311383c9ff39730f35
       - repo: openstack/freezer-dr
         hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
+  - diff-start: 5.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 70e10d1051c7524bdd5d0126ae57ab49f54f2fca
+      - repo: openstack/freezer-api
+        hash: c24cd2be67848b2e7de08f311383c9ff39730f35
+      - repo: openstack/freezer-dr
+        hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
+    version: 6.0.0
 cycle-highlights:
   - 'Bug fixes'
   - 'Policy in code'

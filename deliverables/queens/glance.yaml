@@ -39,6 +39,11 @@ releases:
     projects:
       - repo: openstack/glance
         hash: ceb8b9a67dd3d714ec5b876df56e03f001ad6ae6
+  - diff-start: 15.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: ceb8b9a67dd3d714ec5b876df56e03f001ad6ae6
+    version: 16.0.0
 repository-settings:
   openstack/glance: {}
 release-notes: https://docs.openstack.org/releasenotes/glance/queens.html

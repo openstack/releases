@@ -22,6 +22,11 @@ releases:
       - hash: c56d3f3e2254d752cae05dbc728ab354eae101fd
         repo: openstack/neutron-lbaas-dashboard
     version: 4.0.0.0rc1
+  - diff-start: 3.0.0
+    projects:
+      - hash: c56d3f3e2254d752cae05dbc728ab354eae101fd
+        repo: openstack/neutron-lbaas-dashboard
+    version: 4.0.0
 branches:
   - location: 4.0.0.0rc1
     name: stable/queens
