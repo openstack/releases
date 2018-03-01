@@ -43,8 +43,8 @@ def main():
     )
 
     new_deliverables = set(
-        name
-        for team, series, name, data in
+        deliv.name
+        for deliv in
         all_deliv.get_deliverables(None, args.new_series)
     )
 
@@ -54,20 +54,22 @@ def main():
         os.mkdir(outdir)
 
     old_deliverables = all_deliv.get_deliverables(None, args.old_series)
-    for team, series, name, data in old_deliverables:
-        if name in new_deliverables:
+    for deliv in old_deliverables:
+        if deliv.name in new_deliverables:
             continue
-        if not data.get('releases') and not data.get('branches'):
+        if not deliv.is_released and not deliv.branches:
             # There were no releases for the deliverable in the
             # previous series, stop carrying it over.
-            print('{} skipped (no releases in {})'.format(name, args.old_series))
+            print('{} skipped (no releases in {})'.format(
+                deliv.name, args.old_series))
             continue
         # Clean up some series-specific data that should not be copied
         # over.
+        raw_data = deliv.data
         for key in ['releases', 'branches', 'release-notes']:
-            if key in data:
-                del data[key]
-        outfilename = os.path.join(outdir, name + '.yaml')
+            if key in raw_data:
+                del raw_data[key]
+        outfilename = os.path.join(outdir, deliv.name + '.yaml')
         with open(outfilename, 'w', encoding='utf-8') as f:
             print('{} created'.format(outfilename))
-            f.write(yamlutils.dumps(data))
+            f.write(yamlutils.dumps(raw_data))
