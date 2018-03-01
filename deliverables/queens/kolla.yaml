@@ -3,6 +3,9 @@ launchpad: kolla
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 releases:
   - version: 6.0.0.0b2
     projects:
@@ -12,5 +15,13 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 0c9e0b8c00ca329ac95f306fd830d4a4309d9bfa
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 91ad86c8810653218c1777db2f6967dd38c6ca43
+cycle-highlights:
+  - Upgrade to ceph luminous
+  - Add almanach, certmonger, ceph-nfs, ptp, rsyslog, sensu and tripleo ui image
+  - Support to squash newly built layers into a single new layer
 repository-settings:
   openstack/kolla: {}
