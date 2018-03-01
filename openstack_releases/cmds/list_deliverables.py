@@ -172,10 +172,7 @@ def main():
         root_dir=args.deliverables_dir,
         collapse_history=False,
     )
-    deliv_iter = [
-        deliverable.Deliverable(*entry)
-        for entry in all_deliv.get_deliverables(args.team, series)
-    ]
+    deliv_iter = list(all_deliv.get_deliverables(args.team, series))
     if args.group_key:
         deliv_iter = sorted(deliv_iter,
                             key=operator.attrgetter(args.group_key))
