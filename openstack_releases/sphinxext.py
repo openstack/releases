@@ -60,11 +60,11 @@ def _list_table(add, headers, data, title='', columns=None):
     add('')
 
 
-def _get_category(data):
-    model = data.get('release-model')
+def _get_category(deliv):
+    model = deliv.model
     if model == 'cycle-trailing':
         return 'cycle-trailing'
-    return data.get('type', 'other')
+    return deliv.type
 
 
 _deliverables = None
@@ -117,12 +117,12 @@ class DeliverableDirectiveBase(rst.Directive):
             # are organized by series but not type.
             d_source = itertools.groupby(
                 sorted(_deliverables.get_deliverables(self.team_name, series)),
-                key=operator.itemgetter(1)  # the series
+                key=operator.attrgetter('series')
             )
             for s, d in d_source:
                 self._add_deliverables(
                     None,
-                    ((i[2], i[3]) for i in d),  # only name and info
+                    d,
                     s,
                     app,
                     result,
@@ -132,8 +132,8 @@ class DeliverableDirectiveBase(rst.Directive):
             # shown. They are categorized by type, which we need to
             # extract from the data.
             raw_deliverables = [
-                (_get_category(_data), _deliv_name, _data)
-                for _team, _series, _deliv_name, _data in _deliverables.get_deliverables(
+                (_get_category(deliv), deliv)
+                for deliv in _deliverables.get_deliverables(
                     self.team_name,
                     series,
                 )
@@ -148,12 +148,13 @@ class DeliverableDirectiveBase(rst.Directive):
             by_category = {}
             for deliverable_category, deliverables in grouped:
                 by_category[deliverable_category] = [
-                    (d[1], d[2])
+                    d[1]
                     for d in deliverables
                 ]
             for category in self._CATEGORY_ORDER:
                 if category not in by_category:
-                    app.info('No %r for %s' % (category, (self.team_name, series)))
+                    app.info('No %r for %s' % (category,
+                                               (self.team_name, series)))
                     continue
                 self._add_deliverables(
                     category,
@@ -185,11 +186,11 @@ class DeliverableDirectiveBase(rst.Directive):
 
         # expand any generators passed in and filter out deliverables
         # with no releases
-        deliverables = list(
+        deliverables = [
             d
             for d in deliverables
-            if d[1].get('releases')
-        )
+            if d.releases
+        ]
         if not deliverables:
             # There are no deliverables of this type, and that's OK.
             return
@@ -206,13 +207,11 @@ class DeliverableDirectiveBase(rst.Directive):
         # deliverable.
         if not self.team_name:
             most_recent = []
-            for deliverable_name, deliverable_info in deliverables:
-                earliest_version = deliverable_info.get('releases', {})[0].get(
-                    'version', 'unreleased')
-                recent_version = deliverable_info.get('releases', {})[-1].get(
-                    'version', 'unreleased')
-                ref = ':ref:`%s-%s`' % (series, deliverable_name)
-                release_notes = deliverable_info.get('release-notes')
+            for deliv in deliverables:
+                earliest_version = deliv.earliest_release
+                recent_version = deliv.latest_release
+                ref = ':ref:`%s-%s`' % (series, deliv.name)
+                release_notes = deliv.release_notes
                 if not release_notes:
                     notes_link = ''
                 elif isinstance(release_notes, dict):
@@ -235,12 +234,12 @@ class DeliverableDirectiveBase(rst.Directive):
 
         # Show the detailed history of the deliverables within the series.
 
-        for deliverable_name, deliverable_info in deliverables:
+        for deliv in deliverables:
 
             # These closures need to be redefined in each iteration of
             # the loop because they use the deliverable name.
             def _add(text):
-                result.append(text, '%s/%s' % (series, deliverable_name))
+                result.append(text, '%s/%s' % (series, deliv.name))
 
             def _title(text, underline):
                 text = str(text)  # version numbers might be seen as floats
@@ -253,12 +252,12 @@ class DeliverableDirectiveBase(rst.Directive):
                 _add(underline * len(text))
                 _add('')
 
-            _title(deliverable_name, '=')
+            _title(deliv.name, '=')
 
             app.info('[deliverables] rendering %s (%s)' %
-                     (deliverable_name, series))
+                     (deliv.name, series))
 
-            release_notes = deliverable_info.get('release-notes')
+            release_notes = deliv.release_notes
             if not release_notes:
                 notes_link = None
             elif isinstance(release_notes, dict):
@@ -267,7 +266,7 @@ class DeliverableDirectiveBase(rst.Directive):
                     for n, v in sorted(release_notes.items())
                 )
             else:
-                notes_link = '`%s <%s>`__' % (deliverable_name, release_notes)
+                notes_link = '`%s <%s>`__' % (deliv.name, release_notes)
             if notes_link:
                 _add('')
                 _add('Release Notes: %s' % notes_link)
@@ -275,22 +274,21 @@ class DeliverableDirectiveBase(rst.Directive):
             # We have signatures for artifacts only after newton
             if series and series[0] >= 'o':
                 headers = ['Version', 'Signature', 'Repo', 'Git Commit']
-                data = ((links.artifact_link(r['version'], p,
-                                             deliverable_info),
-                         links.artifact_signature_link(r['version'],
+                data = ((links.artifact_link(r.version, p, deliv),
+                         links.artifact_signature_link(r.version,
                                                        'pgp', p,
-                                                       deliverable_info),
-                         p['repo'], p['hash'])
-                        for r in reversed(deliverable_info.get('releases', []))
-                        for p in r.get('projects', []))
+                                                       deliv),
+                         p.repo, p.hash)
+                        for r in reversed(deliv.releases)
+                        for p in r.projects)
                 columns = [10, 10, 40, 50]
             else:
                 headers = ['Version', 'Repo', 'Git Commit']
-                data = ((links.artifact_link(r['version'], p,
-                                             deliverable_info),
-                         p['repo'], p['hash'])
-                        for r in reversed(deliverable_info.get('releases', []))
-                        for p in r.get('projects', []))
+                data = ((links.artifact_link(r.version, p,
+                                             deliv),
+                         p.repo, p.hash)
+                        for r in reversed(deliv.releases)
+                        for p in r.projects)
                 columns = [10, 40, 50]
             _list_table(
                 _add,
@@ -402,10 +400,9 @@ class HighlightsDirective(rst.Directive):
         series_highlights = defaultdict(list)
         series_deliverables = _deliverables.get_deliverables(None, series)
         for deliv in series_deliverables:
-            series_info = deliv[3]
-            highlights = series_info.get('cycle-highlights', [])
+            highlights = deliv.cycle_highlights
             for item in highlights:
-                series_highlights[series_info['team']].append(item)
+                series_highlights[deliv.team].append(item)
 
         return series_highlights
 
