@@ -149,8 +149,7 @@ def main():
         root_dir=args.deliverables_dir,
         collapse_history=False,
     )
-    for entry in all_deliv.get_deliverables(None, args.series):
-        deliv = deliverable.Deliverable(*entry)
+    for deliv in all_deliv.get_deliverables(None, args.series):
         if deliv.name not in args.deliverable:
             continue
         if deliv.get_branch_location(branch_name) is not None:
