@@ -119,8 +119,7 @@ def main():
         root_dir=args.deliverables_dir,
         collapse_history=False,
     )
-    for entry in all_deliv.get_deliverables(args.team, series):
-        deliv = deliverable.Deliverable(*entry)
+    for deliv in all_deliv.get_deliverables(args.team, series):
         branch_loc = deliv.get_branch_location(branch)
         if branch_loc is None:
             verbose('No stable branch for {}'.format(deliv.name))
