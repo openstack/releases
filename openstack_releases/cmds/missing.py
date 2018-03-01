@@ -27,10 +27,10 @@ import os.path
 from requests.packages import urllib3
 
 from openstack_releases import defaults
+from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import links
 from openstack_releases import pythonutils
-from openstack_releases import yamlutils
 
 urllib3.disable_warnings()
 
@@ -92,47 +92,46 @@ def main():
         if not os.path.exists(filename):
             print("File was deleted, skipping.")
             continue
-        with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_info = yamlutils.loads(f.read())
+        deliv = deliverable.Deliverable.read_file(filename)
 
-        link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
-
-        releases = deliverable_info.get('releases', [])
+        releases = deliv.releases
         if not args.all:
             releases = releases[-1:]
 
         for release in releases:
 
-            version = release['version']
+            version = release.version
 
-            for project in release['projects']:
+            for project in release.projects:
                 # Report if the version has already been
                 # tagged. We expect it to not exist, but neither
                 # case is an error because sometimes we want to
                 # import history and sometimes we want to make new
                 # releases.
-                print('%s %s' % (project['repo'], version))
+                print('\n%s %s' % (project.repo.name, version))
 
                 if not args.artifacts:
                     version_exists = gitutils.tag_exists(
-                        project['repo'], version,
+                        project.repo.name, version,
                     )
                     if version_exists:
-                        print('  tag:found')
+                        print('  found tag')
                     else:
-                        print('  tag:MISSING')
+                        print('  did not find tag')
                         errors.append('%s missing tag %s' %
-                                      (project['repo'], version))
+                                      (project.repo.name, version))
 
                 # Look for the tarball associated with the tag and
                 # report if that exists.
-                if link_mode == 'tarball':
+                if deliv.artifact_link_mode == 'tarball':
 
                     tb_url = links.tarball_url(version, project)
                     errors.extend(check_signed_file('tarball', tb_url))
 
-                    sdist_name = pythonutils.guess_sdist_name(project)
-                    pypi_info = pythonutils.get_pypi_info(sdist_name)
+                    pypi_name = project.repo.pypi_name
+                    if not pypi_name:
+                        pypi_name = project.guess_sdist_name()
+                    pypi_info = pythonutils.get_pypi_info(pypi_name)
                     if not pypi_info:
                         print('  apparently not a python module')
                         continue
@@ -179,7 +178,7 @@ def main():
                     if version not in pypi_info.get('releases', {}):
                         msg = ('{} dist with version {} '
                                'not uploaded to PyPI').format(
-                                   sdist_name, version)
+                                   pypi_name, version)
                         print('  {}'.format(msg))
                         errors.append(msg)
                     else:
@@ -196,8 +195,6 @@ def main():
                             msg = '{} not found on PyPI'.format(missing)
                             print('  {}'.format(msg))
                             errors.append(msg)
-
-                print()
 
     if errors:
         print('\n\n%s errors found' % len(errors))
