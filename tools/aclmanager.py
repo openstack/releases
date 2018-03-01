@@ -43,12 +43,11 @@ EXCEPTIONS = ['openstack/release-test']
 def repositories_list(deliverables_dir, series):
     """Yields (team, repo) tuples for cycle-with-milestones deliverables"""
     deliverables = deliverable.Deliverables(deliverables_dir)
-    for team, series, dname, dinfo in deliverables.get_deliverables(None, series):
-        d = deliverable.Deliverable(team, series, dname, dinfo)
+    for d in deliverables.get_deliverables(None, series):
         if d.model != 'cycle-with-milestones':
             continue
         if not d.repos:
-            print('WARNING: no releases for {} in {}'.format(dname, series))
+            print('WARNING: no releases for {} in {}'.format(d.name, d.series))
         for repo in sorted(d.repos):
             if repo not in EXCEPTIONS:
                 yield (d.team, repo)
