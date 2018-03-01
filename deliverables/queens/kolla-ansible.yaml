@@ -3,6 +3,9 @@ launchpad: kolla-ansible
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
 releases:
   - version: 6.0.0.0b2
     projects:
@@ -12,5 +15,20 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 02fa35dc8ebc7da8e115c61bf90aacd30cff8b30
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 84724b54628e8b2418990178b0166a68e8030436
+cycle-highlights:
+  - |
+    Implemented support for using ansible-vault passwords in kolla-ansible
+    command to decrypt ``/etc/kolla/passwords.yml``.
+  - Allow use of separate backends for oslo.messaging rpc and notification.
+  - Implement cephfs service
+  - Add vitrage ansible role
+  - Implement minimal downtime for keystone and cinder service
+  - |
+    Add ``use_preconfigured_databases`` flag in order to add support for
+    previously created databases / users
 repository-settings:
   openstack/kolla-ansible: {}
