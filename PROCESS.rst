@@ -161,11 +161,7 @@ Final Library Release (week before Milestone-3)
 4. Ensure that final releases for libraries also include the
    specification to create the stable/$series branch.
 
-5. Use the ``make-dashboard`` command to prepare the data for tracking
-   the final release and import it into a Google Docs spreadsheet for
-   collaborative editing and monitoring.
-
-6. Tag HEAD of master for any cycle-with-intermediary project without
+5. Tag HEAD of master for any cycle-with-intermediary project without
    any releases. Do not create branches for non-library projects.
 
 Milestone-3
