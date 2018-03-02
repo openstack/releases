@@ -17,5 +17,12 @@ releases:
       - hash: fd700723853aec79362dd7c9a03fa49d021cd3fd
         repo: openstack/tripleo-image-elements
     version: 8.0.0.0b3
+  - projects:
+      - hash: 13f1dd451d93d0efd2278223f2ac477b01f3b885
+        repo: openstack/tripleo-image-elements
+    version: 8.0.0.0rc1
 repository-settings:
   openstack/tripleo-image-elements: {}
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/queens

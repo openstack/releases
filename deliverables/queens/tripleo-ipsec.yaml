@@ -17,5 +17,12 @@ releases:
       - hash: 00e9224b7e1425ef5f93074ee88e1543930cbe7e
         repo: openstack/tripleo-ipsec
     version: 8.0.2
+  - projects:
+      - hash: 61eac5e734f97ecf3ee2c176530174e7955aeabe
+        repo: openstack/tripleo-ipsec
+    version: 8.1.0
+branches:
+  - name: stable/queens
+    location: 8.1.0
 repository-settings:
   openstack/tripleo-ipsec: {}

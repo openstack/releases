@@ -17,5 +17,12 @@ releases:
       - hash: 131a42685437bccbf0fb53b85d71de471c08cff7
         repo: openstack/tripleo-ui
     version: 8.2.0
+  - projects:
+      - hash: 2a5536ef93c9f714142bacf1bdf10731734a5bbe
+        repo: openstack/tripleo-ui
+    version: 8.3.0
 repository-settings:
   openstack/tripleo-ui: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens

@@ -17,5 +17,12 @@ releases:
       - hash: 2f3e003ac32176f441ead1a571c3be41ed9db03d
         repo: openstack/tripleo-puppet-elements
     version: 8.0.0.0b3
+  - projects:
+      - hash: c38d7ff551673d74b3e15415939555e8258936b5
+        repo: openstack/tripleo-puppet-elements
+    version: 8.0.0.0rc1
 repository-settings:
   openstack/tripleo-puppet-elements: {}
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/queens

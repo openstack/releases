@@ -17,6 +17,13 @@ releases:
       - hash: e2d2344abb75f2c8c475eaad74fd4f6bdee689cd
         repo: openstack/paunch
     version: 2.2.0
+  - projects:
+      - hash: b533f8f5ac4305424274496d695d23e24ee6859f
+        repo: openstack/paunch
+    version: 2.3.0
 repository-settings:
   openstack/paunch: {}
 release-notes: https://docs.openstack.org/releasenotes/paunch/queens.html
+branches:
+  - location: 2.3.0
+    name: stable/queens

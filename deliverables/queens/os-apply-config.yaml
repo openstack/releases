@@ -17,5 +17,12 @@ releases:
       - hash: 775d6dc6ddc16c31566b18b5054203c79b00e8d1
         repo: openstack/os-apply-config
     version: 8.2.0
+  - projects:
+      - hash: 81baf73ae89a7dd5a15869986ea3b8adf5187680
+        repo: openstack/os-apply-config
+    version: 8.3.0
 repository-settings:
   openstack/os-apply-config: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens
