@@ -16,5 +16,12 @@ releases:
       - hash: 768733344563356083e12d92e47aead35f8354a7
         repo: openstack/puppet-tripleo
     version: 8.2.0
+  - projects:
+      - hash: b3d0b2f25a120501e1dafa9e0c289bc5630dbc29
+        repo: openstack/puppet-tripleo
+    version: 8.3.0
 repository-settings:
   openstack/puppet-tripleo: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens

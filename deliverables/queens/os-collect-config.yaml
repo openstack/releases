@@ -17,5 +17,12 @@ releases:
       - hash: 5f2835e7a049d128623fa07ba1d9b103284348f8
         repo: openstack/os-collect-config
     version: 8.2.0
+  - projects:
+      - hash: 4e48cfa2cc5b373e1660972a9b7f412c3a4697de
+        repo: openstack/os-collect-config
+    version: 8.3.0
 repository-settings:
   openstack/os-collect-config: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens

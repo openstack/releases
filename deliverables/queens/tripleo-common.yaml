@@ -25,6 +25,10 @@ releases:
       - hash: c28e8cbb8a96035344cb5107020a35668fa0adda
         repo: openstack/tripleo-common
     version: 8.4.0
+  - projects:
+      - hash: 14857e2902e24842d441e3d26c61143ce0d5b9de
+        repo: openstack/tripleo-common
+    version: 8.5.0
 cycle-highlights:
   - |
     config-download: Ability to use Ansible to apply the cloud configuration.
@@ -49,3 +53,6 @@ cycle-highlights:
     Octavia support: Added support to deploy Octavia in the overcloud.
 repository-settings:
   openstack/tripleo-common: {}
+branches:
+  - location: 8.5.0
+    name: stable/queens

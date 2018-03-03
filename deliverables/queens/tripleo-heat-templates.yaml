@@ -17,5 +17,12 @@ releases:
       - hash: 5926cbaa90ca0c608af00ec8d6d5b7be90f5af32
         repo: openstack/tripleo-heat-templates
     version: 8.0.0.0b3
+  - projects:
+      - hash: 1c00b6ecaedf4530e8de18ec3bce3f69f07c3f7b
+        repo: openstack/tripleo-heat-templates
+    version: 8.0.0.0rc1
 repository-settings:
   openstack/tripleo-heat-templates: {}
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/queens

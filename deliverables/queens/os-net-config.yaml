@@ -17,5 +17,12 @@ releases:
       - hash: 123ddf0df4e0a5d95952c47dc9fe1021427a4209
         repo: openstack/os-net-config
     version: 8.2.0
+  - projects:
+      - hash: 108941640d74268eb932386e32f7e6df40c74180
+        repo: openstack/os-net-config
+    version: 8.3.0
 repository-settings:
   openstack/os-net-config: {}
+branches:
+  - location: 8.3.0
+    name: stable/queens
