@@ -1,0 +1,15 @@
+---
+launchpad: masakari-monitors
+team: masakari
+type: other
+branches:
+  - name: stable/queens
+    location: 5.0.0
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 41653bc9535b2eef278153b59b6a662b6ee1083d
+        tarball-base: masakari-monitors
+repository-settings:
+  openstack/masakari-monitors: {}
