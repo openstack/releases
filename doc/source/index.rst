@@ -34,7 +34,7 @@ updates.
    - * :doc:`pike/index`
      * `Phase II -- Maintained release`_
      * 2017-08-30
-     * `Phase III -- Legacy release`_ on 2018-02-26
+     * `Phase III -- Legacy release`_ on 2018-08-27
      * 2018-09-03
    - * :doc:`ocata/index`
      * EOL
