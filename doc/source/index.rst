@@ -37,10 +37,10 @@ updates.
      * `Phase III -- Legacy release`_ on 2018-08-27
      * 2018-09-03
    - * :doc:`ocata/index`
-     * EOL
+     * `Phase III -- Legacy release`_
      * 2017-02-22
      *
-     * 2018-02-26
+     * 2018-08-27
    - * :doc:`newton/index`
      * EOL
      * 2016-10-06
