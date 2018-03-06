@@ -76,7 +76,9 @@ def main():
         for key in IGNORE:
             if key in raw_data:
                 del raw_data[key]
-        outfilename = os.path.join(outdir, deliv.name + '.yaml')
+        outfilename = os.path.abspath(
+            os.path.join(outdir, deliv.name + '.yaml')
+        )
         with open(outfilename, 'w', encoding='utf-8') as f:
             print('{} created'.format(outfilename))
             f.write(yamlutils.dumps(raw_data))
