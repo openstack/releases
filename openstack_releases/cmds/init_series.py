@@ -19,6 +19,13 @@ import openstack_releases
 from openstack_releases import deliverable
 from openstack_releases import yamlutils
 
+IGNORE = [
+    'releases',
+    'branches',
+    'release-notes',
+    'cycle-highlights',
+]
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -66,7 +73,7 @@ def main():
         # Clean up some series-specific data that should not be copied
         # over.
         raw_data = deliv.data
-        for key in ['releases', 'branches', 'release-notes']:
+        for key in IGNORE:
             if key in raw_data:
                 del raw_data[key]
         outfilename = os.path.join(outdir, deliv.name + '.yaml')
