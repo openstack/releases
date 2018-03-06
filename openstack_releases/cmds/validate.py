@@ -361,7 +361,7 @@ def validate_gitreview(deliv, context):
                     project.repo.name, project.hash, release.version))
                 gitutils.safe_clone_repo(
                     context.workdir, project.repo.name, project.hash, context)
-                _require_gitreview(context.workdir, project.repo.name, context)
+                _require_gitreview(project.repo.name, context)
             else:
                 print('version {} exists, skipping'.format(
                     release.version))
@@ -405,7 +405,7 @@ def validate_release_type(deliv, context):
         LOG.debug('checking release-type for {}'.format(project.repo.name))
 
         release_type, was_explicit = get_release_type(
-            deliv, project.repo.name, context.workdir,
+            deliv, project.repo, context.workdir,
         )
         if was_explicit:
             LOG.debug('found explicit release-type {!r}'.format(
@@ -423,7 +423,6 @@ def validate_release_type(deliv, context):
                 release.version))
             project_config.require_release_jobs_for_repo(
                 deliv,
-                context.zuul_projects,
                 project.repo,
                 release_type,
                 context,
