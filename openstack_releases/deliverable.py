@@ -224,11 +224,16 @@ class Repo(object):
 
 class ReleaseProject(object):
 
-    def __init__(self, repo, hash, release):
+    def __init__(self, repo, hash, data, release=None):
         self._repo = repo
         self.repo = release.deliv.get_repo(repo)
         self.hash = hash
+        self._data = data
         self.release = weakref.proxy(release)
+
+    @property
+    def tarball_base(self):
+        return self._data.get('tarball-base')
 
 
 class Release(object):
@@ -237,7 +242,7 @@ class Release(object):
         self.version = version
         self.deliv = weakref.proxy(deliv)
         self._projects = {
-            p['repo']: ReleaseProject(release=self, **p)
+            p['repo']: ReleaseProject(p['repo'], p['hash'], p, self)
             for p in projects
         }
 
