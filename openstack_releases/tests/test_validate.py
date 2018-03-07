@@ -320,7 +320,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            'ocata',
             self.msg,
         )
         self.msg.show_summary()
@@ -335,7 +334,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -349,7 +347,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'independent'},
             ),
-            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -363,7 +360,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'cycle-with-intermediary'},
             ),
-            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -377,7 +373,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'independent'},
             ),
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -391,7 +386,6 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'cycle-with-intermediary'},
             ),
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -426,7 +420,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -454,7 +447,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -482,7 +474,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -493,7 +484,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_mismatch_existing(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='newton',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -510,7 +501,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'newton',
             self.tmpdir,
             self.msg,
         )
@@ -521,7 +511,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_hash_from_master_used_in_stable_release(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='newton',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -539,7 +529,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'newton',
             self.tmpdir,
             self.msg,
         )
@@ -550,7 +539,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_hash_from_master_used_in_stable_release2(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='newton',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -574,7 +563,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'newton',
             self.tmpdir,
             self.msg,
         )
@@ -585,7 +573,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_hash_from_stable_used_in_master_release(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series=defaults.RELEASE,
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -603,7 +591,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            defaults.RELEASE,
             self.tmpdir,
             self.msg,
         )
@@ -614,7 +601,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_hash_from_master_used_after_default_branch_should_exist_but_does_not(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='austin',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -630,7 +617,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'austin',
             self.tmpdir,
             self.msg,
         )
@@ -641,7 +627,7 @@ class TestValidateReleases(base.BaseTestCase):
     def test_not_descendent(self):
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='meiji',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -666,7 +652,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'meiji',
             self.tmpdir,
             self.msg,
         )
@@ -700,7 +685,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -734,7 +718,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -757,7 +740,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -785,7 +767,6 @@ class TestValidateReleases(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -1015,7 +996,7 @@ class TestPuppetUtils(base.BaseTestCase):
         cbs.return_value = True
         deliv = deliverable.Deliverable(
             team='team',
-            series='series',
+            series='ocata',
             name='name',
             data={
                 'artifact-link-mode': 'none',
@@ -1031,7 +1012,6 @@ class TestPuppetUtils(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -1064,7 +1044,6 @@ class TestPuppetUtils(base.BaseTestCase):
         validate.validate_releases(
             deliv,
             {'validate-projects-by-name': {}},
-            'ocata',
             self.tmpdir,
             self.msg,
         )
@@ -1524,7 +1503,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1550,7 +1528,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1576,13 +1553,12 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
-    def test_unknown_series_cycle(self):
+    def test_mismatched_series_cycle(self):
         deliverable_data = textwrap.dedent('''
         releases:
           - version: 0.0.3
@@ -1590,19 +1566,18 @@ class TestValidateStableBranches(base.BaseTestCase):
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
-          - name: stable/abc
+          - name: stable/def
             location: 0.0.3
         ''')
         deliv = deliverable.Deliverable(
             team='team',
-            series='ocata',
+            series='abc',
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.msg.show_summary()
@@ -1629,7 +1604,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'independent',
             self.msg,
         )
         self.msg.show_summary()
@@ -1659,7 +1633,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'independent',
             self.msg,
         )
         self.msg.show_summary()
@@ -1687,7 +1660,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1714,7 +1686,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1741,7 +1712,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1769,7 +1739,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1797,7 +1766,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1825,7 +1793,6 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -2368,7 +2335,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()
@@ -2401,7 +2367,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()
@@ -2426,7 +2391,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()
@@ -2455,7 +2419,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()
@@ -2484,7 +2447,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()
@@ -2513,7 +2475,6 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            'a',
             self.msg,
         )
         self.msg.show_summary()

@@ -157,7 +157,7 @@ def validate_series_open(deliv, filename, messages):
             expected_branch, previous_deliverable_file, deliv.series))
 
 
-def validate_series_first(deliv, series_name, messages):
+def validate_series_first(deliv, messages):
     "The first release in a series needs to end with '.0'."
     header('Validate Series First')
 
@@ -262,7 +262,7 @@ def validate_release_notes(deliv, messages):
             LOG.debug('{} OK'.format(link))
 
 
-def validate_model(deliv, series_name, messages):
+def validate_model(deliv, messages):
     "Require a valid release model"
     header('Validate Model')
 
@@ -549,7 +549,6 @@ def validate_pypi_permissions(deliv, zuul_projects, workdir,
 
 
 def validate_releases(deliv, zuul_projects,
-                      series_name,
                       workdir,
                       messages):
     """Apply validation rules to the 'releases' list for the deliverable.
@@ -691,7 +690,7 @@ def validate_releases(deliv, zuul_projects,
                         # the rules are broken because there are
                         # cases where we do need to support point
                         # releases with requirements updates.
-                        if series_name == defaults.RELEASE:
+                        if deliv.series == defaults.RELEASE:
                             report = messages.error
                         else:
                             report = messages.warning
@@ -720,12 +719,12 @@ def validate_releases(deliv, zuul_projects,
                         # targeted branch.
                         if not gitutils.check_branch_sha(workdir,
                                                          project.repo.name,
-                                                         series_name,
+                                                         deliv.series,
                                                          project.hash):
                             msg = '%s %s not present in %s branch' % (
                                 project.repo.name,
                                 project.hash,
-                                series_name,
+                                deliv.series,
                             )
                             messages.error(msg)
 
@@ -838,7 +837,7 @@ def validate_branch_prefixes(deliv, messages):
                 branch.name, _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliv, workdir, series_name, messages):
+def validate_stable_branches(deliv, workdir, messages):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
 
@@ -938,7 +937,7 @@ def validate_stable_branches(deliv, workdir, series_name, messages):
                 'skipping branch name check for upstream mode'
             )
 
-        elif series_name == '_independent':
+        elif deliv.is_independent:
             if series not in known_series:
                 messages.error(
                     ('stable branches must be named for known series '
@@ -947,11 +946,11 @@ def validate_stable_branches(deliv, workdir, series_name, messages):
                 )
 
         else:
-            if series != series_name:
+            if series != deliv.series:
                 messages.error(
                     ('cycle-based projects must match series names '
                      'for stable branches. %s should be stable/%s' % (
-                         branch.name, series_name))
+                         branch.name, deliv.series))
                 )
 
 
@@ -1265,7 +1264,7 @@ def main():
         validate_bugtracker(deliv, messages)
         validate_team(deliv, team_data, messages)
         validate_release_notes(deliv, messages)
-        validate_model(deliv, deliv.series, messages)
+        validate_model(deliv, messages)
         validate_release_type(
             deliv,
             zuul_projects,
@@ -1282,7 +1281,6 @@ def main():
         validate_releases(
             deliv,
             zuul_projects,
-            deliv.series,
             workdir,
             messages,
         )
@@ -1301,7 +1299,6 @@ def main():
             )
         validate_series_first(
             deliv,
-            deliv.series,
             messages,
         )
         validate_branch_prefixes(
@@ -1311,7 +1308,6 @@ def main():
         validate_stable_branches(
             deliv,
             workdir,
-            deliv.series,
             messages,
         )
         validate_feature_branches(
