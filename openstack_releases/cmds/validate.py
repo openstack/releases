@@ -846,66 +846,64 @@ def _guess_deliverable_type(deliverable_name, deliverable_info):
     return 'other'
 
 
-def validate_stable_branches(deliverable_info,
-                             deliverable_name,
-                             workdir,
-                             series_name,
-                             messages):
+def validate_stable_branches(deliv, workdir, series_name, messages):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
-    if ('launchpad' in deliverable_info and
-       deliverable_info['launchpad'] in _NO_STABLE_BRANCH_CHECK):
-        print('rule does not apply to this repo, skipping')
+
+    if deliv.launchpad_id in _NO_STABLE_BRANCH_CHECK:
+        LOG.info('rule does not apply to this repo, skipping')
         return
 
-    branches = deliverable_info.get('branches', [])
-
-    d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
-    if d_type == 'tempest-plugin' and branches:
+    if deliv.type == 'tempest-plugin' and deliv.branches:
         messages.error('Tempest plugins do not support branching.')
         return
 
-    branch_mode = deliverable_info.get('stable-branch-type', 'std')
+    branch_mode = deliv.stable_branch_type
 
     known_releases = {
-        r['version']: r
-        for r in deliverable_info.get('releases', [])
+        r.version: r
+        for r in deliv.releases
     }
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
     ))
-    for branch in branches:
+    for branch in deliv.branches:
         try:
-            prefix, series = branch['name'].split('/')
+            prefix, series = branch.name.split('/')
         except ValueError:
             messages.error(
                 ('stable branch name expected to be stable/name '
-                 'but got %s') % (branch['name'],))
+                 'but got %s') % (branch.name,))
             continue
         if prefix != 'stable':
+            LOG.debug('{} is not a stable branch, skipping'.format(
+                branch.name))
             continue
-        location = branch.get('location')
+
+        location = branch.location
+
         if branch_mode == 'std':
             if not isinstance(location, six.string_types):
                 messages.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
-                         branch['name'], type(location)))
+                         branch.name, type(location)))
                 )
             if location not in known_releases:
                 messages.error(
                     ('stable branches must be created from existing '
                      'tagged releases, and %s for %s is not found in the '
                      'list of releases for this deliverable' % (
-                         location, branch['name']))
+                         location, branch.name))
                 )
+
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
                 messages.error(
                     ('branch location for %s is '
                      'expected to be a mapping but got a %s' % (
-                         branch['name'], type(location)))
+                         branch.name, type(location)))
                 )
                 # The other rules aren't going to be testable, so skip them.
                 continue
@@ -916,7 +914,7 @@ def validate_stable_branches(deliverable_info,
                          'from commits by SHA but location %s for '
                          'branch %s of %s does not look '
                          'like a SHA' % (
-                             (loc, repo, branch['name'])))
+                             (loc, repo, branch.name)))
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
@@ -927,36 +925,41 @@ def validate_stable_branches(deliverable_info,
                         ('stable branches should be created from merged '
                          'commits but location %s for branch %s of %s '
                          'does not exist' % (
-                             (loc, repo, branch['name'])))
+                             (loc, repo, branch.name)))
                     )
+
         elif branch_mode == 'upstream':
             if not isinstance(location, six.string_types):
                 messages.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
-                         branch['name'], type(location)))
+                         branch.name, type(location)))
                 )
+
         else:
             messages.error(
                 ('unrecognized stable-branch-type %r' % (branch_mode,))
             )
+
         if branch_mode == 'upstream':
             messages.warning(
                 'skipping branch name check for upstream mode'
             )
+
         elif series_name == '_independent':
             if series not in known_series:
                 messages.error(
                     ('stable branches must be named for known series '
                      'but %s was not found in %s' % (
-                         branch['name'], known_series))
+                         branch.name, known_series))
                 )
+
         else:
             if series != series_name:
                 messages.error(
                     ('cycle-based projects must match series names '
                      'for stable branches. %s should be stable/%s' % (
-                         branch['name'], series_name))
+                         branch.name, series_name))
                 )
 
 
@@ -1327,8 +1330,7 @@ def main():
             messages,
         )
         validate_stable_branches(
-            deliv._data,
-            deliv.name,
+            deliv,
             workdir,
             deliv.series,
             messages,
