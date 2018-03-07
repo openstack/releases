@@ -303,8 +303,8 @@ class Deliverable(object):
         # able to remove this after the T series is opened because at
         # that point all actively validated deliverable files will
         # have this data.
-        for r in data.get('releases', []):
-            for p in r.get('projects', []):
+        for r in data.get('releases') or []:
+            for p in r.get('projects') or []:
                 repos.add(p.get('repo'))
         self._repos = {
             r: Repo(
@@ -321,7 +321,7 @@ class Deliverable(object):
                 data=r,
                 deliv=self,
             )
-            for r in self._data.get('releases', [])
+            for r in self._data.get('releases') or []
         ]
         self._branches = [
             Branch(
@@ -330,7 +330,7 @@ class Deliverable(object):
                 data=b,
                 deliv=self,
             )
-            for b in self._data.get('branches', [])
+            for b in self._data.get('branches') or []
         ]
 
     @classmethod
