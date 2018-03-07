@@ -636,16 +636,9 @@ def validate_existing_tags(deliv, workdir, messages):
                 LOG.info('tag exists')
 
 
-def validate_releases(deliv, zuul_projects,
-                      workdir,
-                      messages):
-    """Apply validation rules to the 'releases' list for the deliverable.
-    """
-    header('Validate Releases')
-
-    # Remember which entries are new so we can verify that they
-    # appear at the end of the file.
-    new_releases = {}
+def validate_version_numbers(deliv, workdir, messages):
+    "Ensure the version numbers make sense."
+    header('Validate Version Numbers')
 
     prev_version = None
     for release in deliv.releases:
@@ -653,8 +646,6 @@ def validate_releases(deliv, zuul_projects,
         LOG.info('checking {}'.format(release.version))
 
         for project in release.projects:
-
-            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not gitutils.safe_clone_repo(workdir, project.repo.name,
                                             project.hash, messages):
@@ -669,7 +660,6 @@ def validate_releases(deliv, zuul_projects,
 
             LOG.info('Found new version {} for {}'.format(
                 release.version, project.repo))
-            new_releases[release.version] = release
 
             release_type, was_explicit = get_release_type(
                 deliv, project.repo, workdir,
@@ -742,6 +732,44 @@ def validate_releases(deliv, zuul_projects,
                 msg = ('could not validate version %r: %s' %
                        (release.version, e))
                 messages.error(msg)
+
+        prev_version = release.version
+
+
+def validate_releases(deliv, zuul_projects,
+                      workdir,
+                      messages):
+    """Apply validation rules to the 'releases' list for the deliverable.
+    """
+    header('Validate Releases')
+
+    # Remember which entries are new so we can verify that they
+    # appear at the end of the file.
+    new_releases = {}
+
+    prev_version = None
+    for release in deliv.releases:
+
+        LOG.info('checking {}'.format(release.version))
+
+        for project in release.projects:
+
+            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
+
+            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+                                            project.hash, messages):
+                continue
+
+            version_exists = gitutils.commit_exists(
+                workdir, project.repo.name, release.version,
+            )
+            if version_exists:
+                LOG.debug('tag exists, skipping further validation')
+                continue
+
+            LOG.info('Found new version {} for {}'.format(
+                release.version, project.repo))
+            new_releases[release.version] = release
 
             if deliv.is_independent:
                 messages.warning('skipping descendant test for '
@@ -1314,6 +1342,7 @@ def main():
         validate_gitreview(deliv, workdir, messages)
         validate_release_sha_exists(deliv, workdir, messages)
         validate_existing_tags(deliv, workdir, messages)
+        validate_version_numbers(deliv, workdir, messages)
         validate_releases(
             deliv,
             zuul_projects,
