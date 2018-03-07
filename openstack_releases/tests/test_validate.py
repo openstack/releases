@@ -477,6 +477,27 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_release_sha_exists(
+            deliv,
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
+
 
 class TestValidateExistingTags(base.BaseTestCase):
 
@@ -538,11 +559,32 @@ class TestValidateExistingTags(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_existing_tags(
+            deliv,
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
 
-class TestValidateReleases(base.BaseTestCase):
+
+class TestValidateReleaseBranchMembership(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateReleases, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.msg = validate.MessageCollector()
@@ -565,9 +607,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -599,9 +640,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -627,9 +667,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -653,9 +692,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -688,9 +726,8 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -710,9 +747,8 @@ class TestValidateReleases(base.BaseTestCase):
                 'releases': []
             }
         )
-        validate.validate_releases(
+        validate.validate_release_branch_membership(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
@@ -728,6 +764,27 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.msg = validate.MessageCollector()
+
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_new_releases_at_end(
+            deliv,
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
 
     def test_not_at_end(self):
         deliv = deliverable.Deliverable(
@@ -802,11 +859,32 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_version_numbers(
+            deliv,
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(0, len(self.msg.errors))
+
 
 class TestGetReleaseType(base.BaseTestCase):
 
     def setUp(self):
-        super(TestGetReleaseType, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.msg = validate.MessageCollector()
 
