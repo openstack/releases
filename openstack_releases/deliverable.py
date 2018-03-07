@@ -266,9 +266,13 @@ class Deliverable(object):
 
     @property
     def model(self):
-        if self.series == '_independent':
+        if self.is_independent:
             return 'independent'
-        return self._data.get('release-model', '').lstrip('_')
+        return self._data.get('release-model', '')
+
+    @property
+    def is_independent(self):
+        return self.series == 'independent'
 
     @property
     def is_releasable(self):

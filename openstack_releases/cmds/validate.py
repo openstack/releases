@@ -65,13 +65,6 @@ _CLOSED_SERIES = set([
     'kilo',
     'liberty',
 ])
-_VALID_MODELS = set([
-    'cycle-with-milestones',
-    'cycle-with-intermediary',
-    'cycle-trailing',
-    'independent',
-    'untagged',
-])
 _USES_PREVER = set([
     'cycle-with-milestones',
     'cycle-trailing',
@@ -297,35 +290,38 @@ def get_model(deliverable_info, series_name):
     return release_model
 
 
-def validate_model(deliverable_info, series_name, messages):
+def validate_model(deliv, series_name, messages):
     "Require a valid release model"
     header('Validate Model')
-    release_model = get_model(deliverable_info, series_name)
-    if release_model not in _VALID_MODELS:
+
+    if not deliv.is_independent and not deliv.model:
+        # If the deliverable is not independent it must declare a
+        # release model.
         messages.error(
-            'Unknown release model %r, must be one of %r' %
-            (release_model, sorted(list(_VALID_MODELS)))
+            'no release-model specified',
         )
 
-    # If the project is release:independent, make sure
-    # that's where the deliverable file is.
-    if release_model == 'independent' and series_name != '_independent':
+    if deliv.model == 'independent' and deliv.series != 'independent':
+        # If the project is release:independent, make sure
+        # that's where the deliverable file is.
         messages.error(
             'uses the independent release model '
             'and should be in the _independent '
             'directory'
         )
 
-    # If the project is declaring some other release model, make sure
-    # it is not in h the _independent directory.
-    if series_name == '_independent':
-        model_value = deliverable_info.get('release-model',
-                                           'independent')
-        if model_value != 'independent':
-            messages.error(
-                'deliverables in the _independent directory '
-                'should all use the independent release model'
-            )
+    # If the project is declaring some other release model, make
+    # sure it is not in the _independent directory.  We have to
+    # bypass the model property because that always returns
+    # 'independent' for deliverables in that series.
+    model_value = deliv.data.get('release-model', 'independent')
+    if deliv.series == 'independent' and model_value != 'independent':
+        messages.error(
+            'deliverables in the _independent directory '
+            'should all use the independent release model'
+        )
+
+    LOG.debug('release model {}'.format(deliv.model))
 
 
 def clone_deliverable(deliv, workdir, messages):
@@ -575,6 +571,7 @@ def validate_releases(deliverable_info, zuul_projects,
     """
     header('Validate Releases')
 
+    # TODO(dhellmann): delete get_model
     release_model = get_model(deliverable_info, series_name)
     is_independent = (release_model == 'independent')
 
@@ -1328,7 +1325,7 @@ def main():
         validate_bugtracker(deliv, messages)
         validate_team(deliv, team_data, messages)
         validate_release_notes(deliv, messages)
-        validate_model(deliverable_info, series_name, messages)
+        validate_model(deliv, series_name, messages)
         validate_release_type(
             deliverable_info,
             zuul_projects,

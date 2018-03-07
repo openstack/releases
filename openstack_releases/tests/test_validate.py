@@ -345,17 +345,28 @@ class TestValidateModel(base.BaseTestCase):
 
     def test_no_model_series(self):
         validate.validate_model(
-            {},
+            deliverable.Deliverable(
+                team='team',
+                series='ocata',
+                name='name',
+                data={},
+            ),
             'ocata',
             self.msg,
         )
+        self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
 
     def test_no_model_independent(self):
         validate.validate_model(
-            {},
-            '_independent',
+            deliverable.Deliverable(
+                team='team',
+                series='independent',
+                name='name',
+                data={},
+            ),
+            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -363,8 +374,13 @@ class TestValidateModel(base.BaseTestCase):
 
     def test_with_model_independent_match(self):
         validate.validate_model(
-            {'release-model': 'independent'},
-            '_independent',
+            deliverable.Deliverable(
+                team='team',
+                series='independent',
+                name='name',
+                data={'release-model': 'independent'},
+            ),
+            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -372,8 +388,13 @@ class TestValidateModel(base.BaseTestCase):
 
     def test_with_model_independent_nomatch(self):
         validate.validate_model(
-            {'release-model': 'cycle-with-intermediary'},
-            '_independent',
+            deliverable.Deliverable(
+                team='team',
+                series='independent',
+                name='name',
+                data={'release-model': 'cycle-with-intermediary'},
+            ),
+            'independent',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -381,7 +402,12 @@ class TestValidateModel(base.BaseTestCase):
 
     def test_with_independent_and_model(self):
         validate.validate_model(
-            {'release-model': 'independent'},
+            deliverable.Deliverable(
+                team='team',
+                series='ocata',
+                name='name',
+                data={'release-model': 'independent'},
+            ),
             'ocata',
             self.msg,
         )
@@ -390,21 +416,17 @@ class TestValidateModel(base.BaseTestCase):
 
     def test_with_model_series(self):
         validate.validate_model(
-            {'release-model': 'cycle-with-intermediary'},
+            deliverable.Deliverable(
+                team='team',
+                series='ocata',
+                name='name',
+                data={'release-model': 'cycle-with-intermediary'},
+            ),
             'ocata',
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
-
-    def test_with_unknown_model_series(self):
-        validate.validate_model(
-            {'release-model': 'not-a-model'},
-            'ocata',
-            self.msg,
-        )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
 
 
 class TestValidateReleases(base.BaseTestCase):
