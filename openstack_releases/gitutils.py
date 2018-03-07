@@ -112,7 +112,7 @@ def clone_repo(workdir, repo, ref=None, branch=None):
     return dest
 
 
-def safe_clone_repo(workdir, repo, ref, mk_error):
+def safe_clone_repo(workdir, repo, ref, messages):
     """Ensure we have a local copy of the repository so we
     can scan for values that are more difficult to get
     remotely.
@@ -120,8 +120,9 @@ def safe_clone_repo(workdir, repo, ref, mk_error):
     try:
         clone_repo(workdir, repo, ref)
     except Exception as err:
-        mk_error('Could not clone repository %s at %s: %s' % (
-            repo, ref, err))
+        messages.error(
+            'Could not clone repository %s at %s: %s' % (
+                repo, ref, err))
         return False
     return True
 

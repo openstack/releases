@@ -107,7 +107,7 @@ def is_a_hash(val):
 
 def validate_series_open(deliverable_info,
                          series_name, filename,
-                         mk_warning, mk_error):
+                         messages):
     "No releases in the new series until the previous one has a branch."
     header('Validate Series Open')
     if not deliverable_info.get('releases'):
@@ -153,20 +153,20 @@ def validate_series_open(deliverable_info,
         if branch['name'] == expected_branch:
             # Everything is OK
             return
-    mk_warning(
+    messages.warning(
         'There is no {} branch defined in {}. Is the {} series open?'.format(
             expected_branch, previous_deliverable_file, series_name))
 
 
 def deprecate_release_highlights(deliverable_info,
-                                 mk_warning, mk_error):
+                                 messages):
     "No releases in the new series until the previous one has a branch."
     header('Deprecate Release Highlights')
     if not deliverable_info.get('releases'):
         return
     last_release = deliverable_info['releases'][-1]
     if 'highlights' in last_release:
-        mk_error(
+        messages.error(
             'The per-release "highlights" feature is deprecated. '
             'Please use "cycle-highlights" for marketing notes '
             'and reno for release notes.'
@@ -174,7 +174,7 @@ def deprecate_release_highlights(deliverable_info,
 
 
 def validate_series_first(deliverable_info, series_name,
-                          mk_warning, mk_error):
+                          messages):
     "The first release in a series needs to end with '.0'."
     header('Validate Series First')
     # When the releases entry is present but empty, it's value may not
@@ -192,13 +192,13 @@ def validate_series_first(deliverable_info, series_name,
     versionstr = releases[0]['version']
     patchlevel = versionstr.rpartition('.')[-1]
     if not (patchlevel == '0' or patchlevel.startswith('0b')):
-        mk_error(
+        messages.error(
             'Initial releases in a series must increment at '
             'least the minor version or be beta versions. %r' % (versionstr,)
         )
 
 
-def validate_bugtracker(deliverable_info, mk_warning, mk_error):
+def validate_bugtracker(deliverable_info, messages):
     "Look for the bugtracker info"
     header('Validate Bug Tracker')
     if 'launchpad' in deliverable_info:
@@ -207,17 +207,17 @@ def validate_bugtracker(deliverable_info, mk_warning, mk_error):
             lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         except requests.exceptions.ConnectionError as e:
             # The flakey Launchpad API failed. Don't punish the user for that.
-            mk_warning('Could not verify launchpad project %s (%s)' %
-                       (lp_name, e))
+            messages.warning('Could not verify launchpad project %s (%s)' %
+                             (lp_name, e))
         else:
             if (lp_resp.status_code // 100) == 4:
-                mk_error('Launchpad project %s does not exist' % lp_name)
+                messages.error('Launchpad project %s does not exist' % lp_name)
     elif 'storyboard' in deliverable_info:
         try:
             sb_id = int(deliverable_info['storyboard'])
         except (TypeError, ValueError):
-            mk_error('Invalid storyboard ID, must be a number: %s' %
-                     deliverable_info['storyboard'])
+            messages.error('Invalid storyboard ID, must be a number: %s' %
+                           deliverable_info['storyboard'])
             return
         try:
             projects_resp = requests.get(
@@ -225,35 +225,35 @@ def validate_bugtracker(deliverable_info, mk_warning, mk_error):
             )
         except requests.exceptions.ConnectionError as e:
             # The flakey Launchpad API failed. Don't punish the user for that.
-            mk_warning('Could not verify storyboard project %s (%s)' %
-                       (sb_id, e))
+            messages.warning('Could not verify storyboard project %s (%s)' %
+                             (sb_id, e))
         else:
             if (projects_resp.status_code // 100) == 4:
-                mk_warning(
+                messages.warning(
                     'Could not verify storyboard project, API call failed.'
                 )
             for project in projects_resp.json():
                 if sb_id == project.get('id'):
                     break
             else:
-                mk_error(
+                messages.error(
                     'Did not find a storyboard project with ID %s' % sb_id
                 )
     else:
-        mk_error('No launchpad or storyboard project given')
+        messages.error('No launchpad or storyboard project given')
 
 
-def validate_team(deliverable_info, team_data, mk_warning, mk_error):
+def validate_team(deliverable_info, team_data, messages):
     "Look for the team name"
     header('Validate Team')
     if 'team' not in deliverable_info:
-        mk_error('No team name given')
+        messages.error('No team name given')
     elif deliverable_info['team'] not in team_data:
-        mk_warning('Team %r not in governance data' %
-                   deliverable_info['team'])
+        messages.warning('Team %r not in governance data' %
+                         deliverable_info['team'])
 
 
-def validate_release_notes(deliverable_info, mk_warning, mk_error):
+def validate_release_notes(deliverable_info, messages):
     "Make sure the release notes page exists, if it is specified."
     header('Validate Release Notes')
     if 'release-notes' not in deliverable_info:
@@ -267,21 +267,21 @@ def validate_release_notes(deliverable_info, mk_warning, mk_error):
     for link in links:
         rn_resp = requests.get(link)
         if (rn_resp.status_code // 100) != 2:
-            mk_error('Could not fetch release notes page %s: %s' %
-                     (link, rn_resp.status_code))
+            messages.error('Could not fetch release notes page %s: %s' %
+                           (link, rn_resp.status_code))
 
 
-def validate_type(deliverable_info, mk_warning, mk_error):
+def validate_type(deliverable_info, messages):
     "Determine the deliverable type. Require an explicit value."
     header('Validate Type')
     deliverable_type = deliverable_info.get('type')
     if not deliverable_type:
-        mk_error(
+        messages.error(
             'No deliverable type, must be one of %r' %
             sorted(list(_VALID_TYPES))
         )
     elif deliverable_type not in _VALID_TYPES:
-        mk_error(
+        messages.error(
             'Invalid deliverable type %r, must be one of %r' %
             (deliverable_type, sorted(list(_VALID_TYPES)))
         )
@@ -302,12 +302,12 @@ def get_model(deliverable_info, series_name):
     return release_model
 
 
-def validate_model(deliverable_info, series_name, mk_warning, mk_error):
+def validate_model(deliverable_info, series_name, messages):
     "Require a valid release model"
     header('Validate Model')
     release_model = get_model(deliverable_info, series_name)
     if release_model not in _VALID_MODELS:
-        mk_error(
+        messages.error(
             'Unknown release model %r, must be one of %r' %
             (release_model, sorted(list(_VALID_MODELS)))
         )
@@ -315,7 +315,7 @@ def validate_model(deliverable_info, series_name, mk_warning, mk_error):
     # If the project is release:independent, make sure
     # that's where the deliverable file is.
     if release_model == 'independent' and series_name != '_independent':
-        mk_error(
+        messages.error(
             'uses the independent release model '
             'and should be in the _independent '
             'directory'
@@ -327,13 +327,13 @@ def validate_model(deliverable_info, series_name, mk_warning, mk_error):
         model_value = deliverable_info.get('release-model',
                                            'independent')
         if model_value != 'independent':
-            mk_error(
+            messages.error(
                 'deliverables in the _independent directory '
                 'should all use the independent release model'
             )
 
 
-def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
+def clone_deliverable(deliverable_info, workdir, messages):
     """Clone all of the repositories for the deliverable into the workdir.
 
     Returns boolean indicating whether all of the clones could be
@@ -349,21 +349,21 @@ def clone_deliverable(deliverable_info, workdir, mk_warning, mk_error):
                 continue
             cloned.add(project['repo'])
             if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                            project['hash'], mk_error):
+                                            project['hash'], messages):
                 ok = False
     return ok
 
 
-def _require_gitreview(workdir, repo, mk_error):
+def _require_gitreview(workdir, repo, messages):
     print('\nlooking for .gitreview in %s' % repo)
     filename = os.path.join(
         workdir, repo, '.gitreview',
     )
     if not os.path.exists(filename):
-        mk_error('%s has no .gitreview file' % (repo,))
+        messages.error('%s has no .gitreview file' % (repo,))
 
 
-def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
+def validate_gitreview(deliverable_info, workdir, messages):
     "Verify that all repos include a .gitreview file."
     header('Validate .gitreview')
     checked = set()
@@ -376,7 +376,7 @@ def validate_gitreview(deliverable_info, workdir, mk_warning, mk_error):
                 workdir, project['repo'], release['version'],
             )
             if not version_exists:
-                _require_gitreview(workdir, project['repo'], mk_error)
+                _require_gitreview(workdir, project['repo'], messages)
 
 
 _TYPE_TO_RELEASE_TYPE = {
@@ -416,8 +416,7 @@ def validate_release_type(deliverable_info,
                           zuul_projects,
                           series_name,
                           workdir,
-                          mk_warning,
-                          mk_error):
+                          messages):
     """Apply validation rules for the deliverable based on 'release-type'
     to the most recent release of a deliverable.
 
@@ -456,13 +455,13 @@ def validate_release_type(deliverable_info,
             project_config.require_release_jobs_for_repo(
                 deliverable_info, zuul_projects,
                 project['repo'],
-                release_type, mk_warning, mk_error,
+                release_type, messages,
             )
 
 
 def validate_tarball_base(deliverable_info,
                           workdir,
-                          mk_warning, mk_error):
+                          messages):
 
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
 
@@ -490,9 +489,9 @@ def validate_tarball_base(deliverable_info,
                 # If there was a problem with an existing
                 # release, treat it as a warning so we
                 # don't prevent new releases.
-                mk_warning(msg)
+                messages.warning(msg)
             else:
-                mk_error(msg)
+                messages.error(msg)
         else:
             if sdist is not None:
                 expected = project.get(
@@ -504,7 +503,7 @@ def validate_tarball_base(deliverable_info,
                         action = 'is set to'
                     else:
                         action = 'defaults to'
-                    mk_error(
+                    messages.error(
                         ('tarball-base for %s %s %s %r '
                          'but the sdist name is actually %r. ' +
                          _PLEASE)
@@ -513,7 +512,7 @@ def validate_tarball_base(deliverable_info,
 
 
 def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
-                              mk_warning, mk_error):
+                              messages):
 
     header('Validate PyPI Permissions')
 
@@ -541,7 +540,7 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
             try:
                 sdist = pythonutils.get_sdist_name(workdir, repo)
             except Exception as err:
-                mk_warning(
+                messages.warning(
                     'Could not determine the sdist name '
                     'for {} to check PyPI permissions: {}'.format(
                         repo, err)
@@ -560,12 +559,12 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
             uploaders = pythonutils.get_pypi_uploaders(alt_name)
 
         if not uploaders:
-            mk_error(
+            messages.error(
                 'could not find users with permission to upload packages '
                 'for {}. Is the sdist name correct?'.format(pypi_name)
             )
         elif 'openstackci' not in uploaders:
-            mk_error(
+            messages.error(
                 'openstackci does not have permission to upload packages '
                 'for {}. Current owners include: {}'.format(
                     pypi_name, ', '.join(sorted(uploaders)))
@@ -575,7 +574,7 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
 def validate_releases(deliverable_info, zuul_projects,
                       series_name,
                       workdir,
-                      mk_warning, mk_error):
+                      messages):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
     header('Validate Releases')
@@ -588,7 +587,9 @@ def validate_releases(deliverable_info, zuul_projects,
     new_releases = {}
 
     if release_model == 'untagged' and 'releases' in deliverable_info:
-        mk_error('untagged deliverables should not have a "releases" section')
+        messages.error(
+            'untagged deliverables should not have a "releases" section'
+        )
         return
 
     prev_version = None
@@ -603,18 +604,17 @@ def validate_releases(deliverable_info, zuul_projects,
             print('%s SHA %s ' % (project['repo'], project['hash']))
 
             if not is_a_hash(project['hash']):
-                mk_error(
+                messages.error(
                     ('%(repo)s version %(version)s release from '
                      '%(hash)r, which is not a hash') % {
                          'repo': project['repo'],
                          'hash': project['hash'],
-                         'version': release['version'],
-                         }
+                         'version': release['version']}
                 )
             else:
 
                 if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                                project['hash'], mk_error):
+                                                project['hash'], messages):
                     continue
 
                 # Report if the version has already been
@@ -632,7 +632,7 @@ def validate_releases(deliverable_info, zuul_projects,
                         release['version'],
                     )
                     if actual_sha != project['hash']:
-                        mk_error(
+                        messages.error(
                             ('Version %s in %s is on '
                              'commit %s instead of %s') %
                             (release['version'],
@@ -648,8 +648,8 @@ def validate_releases(deliverable_info, zuul_projects,
                     workdir, project['repo'], project['hash'],
                 )
                 if not sha_exists:
-                    mk_error('No commit %(hash)r in %(repo)r'
-                             % project)
+                    messages.error('No commit %(hash)r in %(repo)r'
+                                   % project)
                     # No point in running extra checks if the SHA just
                     # doesn't exist.
                     continue
@@ -680,7 +680,7 @@ def validate_releases(deliverable_info, zuul_projects,
                         puppet_ver = puppetutils.get_version(
                             workdir, project['repo'])
                         if puppet_ver != release['version']:
-                            mk_error(
+                            messages.error(
                                 '%s metadata contains "%s" '
                                 'but is being tagged "%s"' % (
                                     project['repo'],
@@ -697,7 +697,7 @@ def validate_releases(deliverable_info, zuul_projects,
                         npm_ver = npmutils.get_version(
                             workdir, project['repo'])
                         if npm_ver != release['version']:
-                            mk_error(
+                            messages.error(
                                 '%s package.json contains "%s" '
                                 'but is being tagged "%s"' % (
                                     project['repo'],
@@ -717,9 +717,9 @@ def validate_releases(deliverable_info, zuul_projects,
                         # cases where we do need to support point
                         # releases with requirements updates.
                         if series_name == defaults.RELEASE:
-                            report = mk_error
+                            report = messages.error
                         else:
-                            report = mk_warning
+                            report = messages.warning
                         requirements.find_bad_lower_bound_increases(
                             workdir, project['repo'],
                             prev_version, release['version'], project['hash'],
@@ -732,12 +732,12 @@ def validate_releases(deliverable_info, zuul_projects,
                             pre_ok=(release_model in _USES_PREVER)):
                         msg = ('could not validate version %r: %s' %
                                (release['version'], e))
-                        mk_error(msg)
+                        messages.error(msg)
 
                     if is_independent:
-                        mk_warning('skipping descendant test for '
-                                   'independent project, verify '
-                                   'branch manually')
+                        messages.warning('skipping descendant test for '
+                                         'independent project, verify '
+                                         'branch manually')
 
                     else:
                         # If this is the first version in the series,
@@ -751,8 +751,8 @@ def validate_releases(deliverable_info, zuul_projects,
                                 project['repo'],
                                 project['hash'],
                                 series_name,
-                                )
-                            mk_error(msg)
+                            )
+                            messages.error(msg)
 
                         if prev_version:
                             # Check to see if we are re-tagging the same
@@ -778,7 +778,7 @@ def validate_releases(deliverable_info, zuul_projects,
                                     project['hash'],
                                 )
                                 if not is_ancestor:
-                                    mk_error(
+                                    messages.error(
                                         '%s %s receiving %s '
                                         'is not a descendant of %s' % (
                                             project['repo'],
@@ -796,12 +796,12 @@ def validate_releases(deliverable_info, zuul_projects,
         if nr != deliverable_info['releases'][-1]:
             msg = ('new release %s must be listed last, '
                    'with one new release per patch' % nr['version'])
-            mk_error(msg)
+            messages.error(msg)
 
 
 def validate_new_releases(deliverable_info, deliverable_name,
                           team_data,
-                          mk_warning, mk_error):
+                          messages):
 
     """Apply validation rules that only apply to the current series.
     """
@@ -820,20 +820,20 @@ def validate_new_releases(deliverable_info, deliverable_name,
     )
     link_mode = deliverable_info.get('artifact-link-mode', 'tarball')
     if link_mode != 'none' and not expected_repos:
-        mk_error('unable to find deliverable %s in the governance list' %
-                 deliverable_name)
+        messages.error('unable to find deliverable %s in the governance list' %
+                       deliverable_name)
     actual_repos = set(
         p['repo']
         for p in final_release.get('projects', [])
     )
     for extra in actual_repos.difference(expected_repos):
-        mk_warning(
+        messages.warning(
             'release %s includes repository %s '
             'that is not in the governance list' %
             (final_release['version'], extra)
         )
     for missing in expected_repos.difference(actual_repos):
-        mk_warning(
+        messages.warning(
             'release %s is missing %s, '
             'which appears in the governance list: %s' %
             (final_release['version'], missing, expected_repos)
@@ -841,28 +841,28 @@ def validate_new_releases(deliverable_info, deliverable_name,
     repository_settings = deliverable_info.get('repository-settings', {})
     for repo in actual_repos:
         if repo not in repository_settings:
-            mk_error(
+            messages.error(
                 'release %s includes repository %s '
                 'that is not in the repository-settings section' %
                 (final_release['version'], repo)
             )
     for missing in repository_settings.keys():
         if missing not in actual_repos:
-            mk_warning(
+            messages.warning(
                 'release %s is missing %s, '
                 'which appears in the repository-settings list' %
                 (final_release['version'], missing)
             )
 
 
-def validate_branch_prefixes(deliverable_info, mk_waring, mk_error):
+def validate_branch_prefixes(deliverable_info, messages):
     "Ensure all branches have good prefixes."
     header('Validate Branch Prefixes')
     branches = deliverable_info.get('branches', [])
     for branch in branches:
         prefix = branch['name'].split('/')[0]
         if prefix not in _VALID_BRANCH_PREFIXES:
-            mk_error('branch name %s does not use a valid prefix: %s' % (
+            messages.error('branch name %s does not use a valid prefix: %s' % (
                 branch['name'], _VALID_BRANCH_PREFIXES))
 
 
@@ -878,7 +878,7 @@ def validate_stable_branches(deliverable_info,
                              deliverable_name,
                              workdir,
                              series_name,
-                             mk_warning, mk_error):
+                             messages):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
     if ('launchpad' in deliverable_info and
@@ -890,7 +890,7 @@ def validate_stable_branches(deliverable_info,
 
     d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
     if d_type == 'tempest-plugin' and branches:
-        mk_error('Tempest plugins do not support branching.')
+        messages.error('Tempest plugins do not support branching.')
         return
 
     branch_mode = deliverable_info.get('stable-branch-type', 'std')
@@ -907,7 +907,7 @@ def validate_stable_branches(deliverable_info,
         try:
             prefix, series = branch['name'].split('/')
         except ValueError:
-            mk_error(
+            messages.error(
                 ('stable branch name expected to be stable/name '
                  'but got %s') % (branch['name'],))
             continue
@@ -916,13 +916,13 @@ def validate_stable_branches(deliverable_info,
         location = branch.get('location')
         if branch_mode == 'std':
             if not isinstance(location, six.string_types):
-                mk_error(
+                messages.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
                          branch['name'], type(location)))
                 )
             if location not in known_releases:
-                mk_error(
+                messages.error(
                     ('stable branches must be created from existing '
                      'tagged releases, and %s for %s is not found in the '
                      'list of releases for this deliverable' % (
@@ -931,12 +931,12 @@ def validate_stable_branches(deliverable_info,
             else:
                 for project in known_releases[location]['projects']:
                     if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                                    project['hash'], mk_error):
+                                                    project['hash'], messages):
                         continue
-                    _require_gitreview(workdir, project['repo'], mk_error)
+                    _require_gitreview(workdir, project['repo'], messages)
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
-                mk_error(
+                messages.error(
                     ('branch location for %s is '
                      'expected to be a mapping but got a %s' % (
                          branch['name'], type(location)))
@@ -945,7 +945,7 @@ def validate_stable_branches(deliverable_info,
                 continue
             for repo, loc in sorted(location.items()):
                 if not is_a_hash(loc):
-                    mk_error(
+                    messages.error(
                         ('tagless stable branches should be created '
                          'from commits by SHA but location %s for '
                          'branch %s of %s does not look '
@@ -954,11 +954,11 @@ def validate_stable_branches(deliverable_info,
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
-                if not gitutils.safe_clone_repo(workdir, repo, loc, mk_error):
+                if not gitutils.safe_clone_repo(workdir, repo, loc, messages):
                     continue
-                _require_gitreview(workdir, repo, mk_error)
+                _require_gitreview(workdir, repo, messages)
                 if not gitutils.commit_exists(workdir, repo, loc):
-                    mk_error(
+                    messages.error(
                         ('stable branches should be created from merged '
                          'commits but location %s for branch %s of %s '
                          'does not exist' % (
@@ -966,29 +966,29 @@ def validate_stable_branches(deliverable_info,
                     )
         elif branch_mode == 'upstream':
             if not isinstance(location, six.string_types):
-                mk_error(
+                messages.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
                          branch['name'], type(location)))
                 )
         else:
-            mk_error(
+            messages.error(
                 ('unrecognized stable-branch-type %r' % (branch_mode,))
             )
         if branch_mode == 'upstream':
-            mk_warning(
+            messages.warning(
                 'skipping branch name check for upstream mode'
             )
         elif series_name == '_independent':
             if series not in known_series:
-                mk_error(
+                messages.error(
                     ('stable branches must be named for known series '
                      'but %s was not found in %s' % (
                          branch['name'], known_series))
                 )
         else:
             if series != series_name:
-                mk_error(
+                messages.error(
                     ('cycle-based projects must match series names '
                      'for stable branches. %s should be stable/%s' % (
                          branch['name'], series_name))
@@ -998,21 +998,21 @@ def validate_stable_branches(deliverable_info,
 def validate_feature_branches(deliverable_info,
                               deliverable_name,
                               workdir,
-                              mk_warning, mk_error):
+                              messages):
     "Apply the rules for feature branches."
     header('Validate Feature Branches')
     branches = deliverable_info.get('branches', [])
 
     d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
     if d_type == 'tempest-plugin' and branches:
-        mk_error('Tempest plugins do not support branching.')
+        messages.error('Tempest plugins do not support branching.')
         return
 
     for branch in branches:
         try:
             prefix, series = branch['name'].split('/')
         except ValueError:
-            mk_error(
+            messages.error(
                 ('feature branch name expected to be feature/name '
                  'but got %s') % (branch['name'],))
             continue
@@ -1020,7 +1020,7 @@ def validate_feature_branches(deliverable_info,
             continue
         location = branch['location']
         if not isinstance(location, dict):
-            mk_error(
+            messages.error(
                 ('branch location for %s is '
                  'expected to be a mapping but got a %s' % (
                      branch['name'], type(location)))
@@ -1029,25 +1029,25 @@ def validate_feature_branches(deliverable_info,
             continue
         for repo, loc in sorted(location.items()):
             if not is_a_hash(loc):
-                mk_error(
+                messages.error(
                     ('feature branches should be created from commits by SHA '
                      'but location %s for branch %s of %s does not look '
                      'like a SHA' % (
                          (loc, repo, branch['name'])))
                 )
             if not gitutils.commit_exists(workdir, repo, loc):
-                mk_error(
+                messages.error(
                     ('feature branches should be created from merged commits '
                      'but location %s for branch %s of %s does not exist' % (
                          (loc, repo, branch['name'])))
                 )
-            _require_gitreview(workdir, repo, mk_error)
+            _require_gitreview(workdir, repo, messages)
 
 
 def validate_driverfixes_branches(deliverable_info,
                                   deliverable_name,
                                   workdir,
-                                  mk_warning, mk_error):
+                                  messages):
     "Apply the rules for driverfixes branches."
     header('Validate driverfixes Branches')
     known_series = sorted(list(
@@ -1058,14 +1058,14 @@ def validate_driverfixes_branches(deliverable_info,
 
     d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
     if d_type == 'tempest-plugin' and branches:
-        mk_error('Tempest plugins do not support branching.')
+        messages.error('Tempest plugins do not support branching.')
         return
 
     for branch in branches:
         try:
             prefix, series = branch['name'].split('/')
         except ValueError:
-            mk_error(
+            messages.error(
                 ('driverfixes branch name expected to be driverfixes/name '
                  'but got %s') % (branch['name'],))
             continue
@@ -1073,13 +1073,13 @@ def validate_driverfixes_branches(deliverable_info,
             continue
         location = branch['location']
         if series not in known_series:
-            mk_error(
+            messages.error(
                 ('driverfixes branches must be named for known series '
                  'but %s was not found in %s' % (
                      branch['name'], known_series))
             )
         if not isinstance(location, dict):
-            mk_error(
+            messages.error(
                 ('branch location for %s is '
                  'expected to be a mapping but got a %s' % (
                      branch['name'], type(location)))
@@ -1088,26 +1088,26 @@ def validate_driverfixes_branches(deliverable_info,
             continue
         for repo, loc in sorted(location.items()):
             if not is_a_hash(loc):
-                mk_error(
-                    ('driverfixes branches should be created from commits by SHA '
-                     'but location %s for branch %s of %s does not look '
+                messages.error(
+                    ('driverfixes branches should be created from commits by '
+                     'SHA but location %s for branch %s of %s does not look '
                      'like a SHA' % (
                          (loc, repo, branch['name'])))
                 )
             if not gitutils.commit_exists(workdir, repo, loc):
-                mk_error(
-                    ('driverfixes branches should be created from merged commits '
-                     'but location %s for branch %s of %s does not exist' % (
+                messages.error(
+                    ('driverfixes branches should be created from merged '
+                     'commits but location %s for branch %s of %s does not '
+                     'exist' % (
                          (loc, repo, branch['name'])))
                 )
-            _require_gitreview(workdir, repo, mk_error)
+            _require_gitreview(workdir, repo, messages)
 
 
 def validate_branch_points(deliverable_info,
                            deliverable_name,
                            workdir,
-                           mk_warning,
-                           mk_error):
+                           messages):
     # Make sure the branch points given are on the expected branches.
 
     known_releases = {
@@ -1189,7 +1189,7 @@ def validate_branch_points(deliverable_info,
                     # means someone tried to update the branch setting
                     # after creating the branch, so phrase the error
                     # message to reflect that.
-                    mk_error(
+                    messages.error(
                         '{} branch exists in {} and does not seem '
                         'to have been created from {}'.format(
                             branch['name'], repo, hash),
@@ -1199,7 +1199,7 @@ def validate_branch_points(deliverable_info,
                     # to create it is not on the expected source
                     # branch, so phrase the error message to reflect
                     # that.
-                    mk_error(
+                    messages.error(
                         'commit {} is not on the {} branch '
                         'but it is listed as the branch point for '
                         '{} to be created'.format(
@@ -1213,6 +1213,39 @@ def validate_branch_points(deliverable_info,
 # implement when we think about EOLed branches. I'm going to punt on
 # that for now, and if it turns into an issue we can think about how
 # to handle validation while still allowing branches to be deleted.
+
+
+class MessageCollector(object):
+
+    def __init__(self, debug=False):
+        self.warnings = []
+        self.errors = []
+        self.debug = debug
+        self.filename = None
+
+    def set_filename(self, filename):
+        self.filename = filename
+
+    def warning(self, msg):
+        print('WARNING: {}'.format(msg))
+        self.warnings.append('{}: {}'.format(self.filename, msg))
+
+    def error(self, msg):
+        print('ERROR: {}'.format(msg))
+        self.errors.append('{}: {}'.format(self.filename, msg))
+        if self.debug:
+            raise RuntimeError(msg)
+
+    def show_summary(self):
+        header('Summary')
+
+        print('\n\n%s warnings found' % len(self.warnings))
+        for w in self.warnings:
+            print(w)
+
+        print('\n\n%s errors found' % len(self.errors))
+        for e in self.errors:
+            print(e)
 
 
 def main():
@@ -1256,9 +1289,6 @@ def main():
 
     team_data = governance.get_team_data()
 
-    errors = []
-    warnings = []
-
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
 
@@ -1269,67 +1299,59 @@ def main():
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)
 
+    messages = MessageCollector(debug=args.debug)
+
     for filename in filenames:
         print('\nChecking %s' % filename)
+
         if not os.path.isfile(filename):
             print("File was deleted, skipping.")
             continue
+
+        messages.set_filename(filename)
+
         with open(filename, 'r', encoding='utf-8') as f:
             deliverable_info = yamlutils.loads(f.read())
 
         series_name = os.path.basename(
             os.path.dirname(filename)
-        )
+        ).lstrip('_')
         deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
 
         if series_name in _CLOSED_SERIES:
             continue
 
-        def mk_warning(msg):
-            print('WARNING: {}'.format(msg))
-            warnings.append('{}: {}'.format(filename, msg))
-
-        def mk_error(msg):
-            print('ERROR: {}'.format(msg))
-            errors.append('{}: {}'.format(filename, msg))
-            if args.debug:
-                raise RuntimeError(msg)
-
-        clone_deliverable(deliverable_info, workdir, mk_warning, mk_error)
-        validate_bugtracker(deliverable_info, mk_warning, mk_error)
-        validate_team(deliverable_info, team_data, mk_warning, mk_error)
-        validate_release_notes(deliverable_info, mk_warning, mk_error)
-        validate_type(deliverable_info, mk_warning, mk_error)
-        validate_model(deliverable_info, series_name, mk_warning, mk_error)
+        clone_deliverable(deliverable_info, workdir, messages)
+        validate_bugtracker(deliverable_info, messages)
+        validate_team(deliverable_info, team_data, messages)
+        validate_release_notes(deliverable_info, messages)
+        validate_type(deliverable_info, messages)
+        validate_model(deliverable_info, series_name, messages)
         validate_release_type(
             deliverable_info,
             zuul_projects,
             series_name,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_pypi_permissions(
             deliverable_info,
             zuul_projects,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
-        validate_gitreview(deliverable_info, workdir, mk_warning, mk_error)
+        validate_gitreview(deliverable_info, workdir, messages)
         validate_releases(
             deliverable_info,
             zuul_projects,
             series_name,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_tarball_base(
             deliverable_info,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
         # Some rules only apply to the most current release.
         if series_name == defaults.RELEASE:
@@ -1337,70 +1359,53 @@ def main():
                 deliverable_info,
                 deliverable_name,
                 team_data,
-                mk_warning,
-                mk_error,
+                messages,
             )
             validate_series_open(
                 deliverable_info,
                 series_name,
                 filename,
-                mk_warning,
-                mk_error,
+                messages,
             )
             deprecate_release_highlights(
                 deliverable_info,
-                mk_warning,
-                mk_error,
+                messages,
             )
         validate_series_first(
             deliverable_info,
             series_name,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_branch_prefixes(
             deliverable_info,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_stable_branches(
             deliverable_info,
             deliverable_name,
             workdir,
             series_name,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_feature_branches(
             deliverable_info,
             deliverable_name,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_driverfixes_branches(
             deliverable_info,
             deliverable_name,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
         validate_branch_points(
             deliverable_info,
             deliverable_name,
             workdir,
-            mk_warning,
-            mk_error,
+            messages,
         )
 
-    header('Summary')
+    messages.show_summary()
 
-    print('\n\n%s warnings found' % len(warnings))
-    for w in warnings:
-        print(w)
-
-    print('\n\n%s errors found' % len(errors))
-    for e in errors:
-        print(e)
-
-    return 1 if errors else 0
+    return 1 if messages.errors else 0
