@@ -36,6 +36,7 @@ import six
 from requests.packages import urllib3
 
 from openstack_releases import defaults
+from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import npmutils
@@ -45,6 +46,8 @@ from openstack_releases import pythonutils
 from openstack_releases import requirements
 from openstack_releases import versionutils
 from openstack_releases import yamlutils
+
+LOG = logging.getLogger()
 
 urllib3.disable_warnings()
 
@@ -333,7 +336,7 @@ def validate_model(deliverable_info, series_name, messages):
             )
 
 
-def clone_deliverable(deliverable_info, workdir, messages):
+def clone_deliverable(deliv, workdir, messages):
     """Clone all of the repositories for the deliverable into the workdir.
 
     Returns boolean indicating whether all of the clones could be
@@ -342,15 +345,16 @@ def clone_deliverable(deliverable_info, workdir, messages):
     """
     cloned = set()
     ok = True
-    print('\nchecking out source code')
-    for release in deliverable_info.get('releases', []):
-        for project in release['projects']:
-            if project['repo'] in cloned:
-                continue
-            cloned.add(project['repo'])
-            if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                            project['hash'], messages):
-                ok = False
+    header('Checking out source code')
+    for repo in deliv.repos:
+        if repo.name in cloned:
+            continue
+        if repo.is_retired:
+            LOG.info('{} is retired, skipping clone'.format(repo.name))
+            continue
+        if not gitutils.safe_clone_repo(workdir, repo.name,
+                                        'master', messages):
+            ok = False
     return ok
 
 
@@ -1321,7 +1325,13 @@ def main():
         if series_name in _CLOSED_SERIES:
             continue
 
-        clone_deliverable(deliverable_info, workdir, messages)
+        deliv = deliverable.Deliverable(
+            team=None,  # extracted from the info automatically
+            series=series_name,
+            name=deliverable_name,
+            data=deliverable_info,
+        )
+        clone_deliverable(deliv, workdir, messages)
         validate_bugtracker(deliverable_info, messages)
         validate_team(deliverable_info, team_data, messages)
         validate_release_notes(deliverable_info, messages)

@@ -23,6 +23,7 @@ from oslotest import base
 
 from openstack_releases.cmds import validate
 from openstack_releases import defaults
+from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
@@ -930,23 +931,28 @@ class TestValidateTarballBase(base.BaseTestCase):
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
     def test_default_ok(self, gsn, jobs):
-        deliverable_info = {
-            'releases': [
-                {'version': '1.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            },
+        )
         gsn.return_value = 'release-test'
         validate.clone_deliverable(
-            deliverable_info,
+            deliv,
             self.tmpdir,
             self.msg,
         )
         validate.validate_tarball_base(
-            deliverable_info,
+            deliv.data,
             self.tmpdir,
             self.msg,
         )
@@ -957,24 +963,29 @@ class TestValidateTarballBase(base.BaseTestCase):
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
     def test_ignored_link_mode_none(self, gsn, jobs):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '1.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
         gsn.return_value = 'this-is-wrong'
         validate.clone_deliverable(
-            deliverable_info,
+            deliv,
             self.tmpdir,
             self.msg,
         )
         validate.validate_tarball_base(
-            deliverable_info,
+            deliv.data,
             self.tmpdir,
             self.msg,
         )
@@ -985,23 +996,28 @@ class TestValidateTarballBase(base.BaseTestCase):
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
     def test_default_invalid(self, gsn, jobs):
-        deliverable_info = {
-            'releases': [
-                {'version': '1.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
         gsn.return_value = 'openstack-release-test'
         validate.clone_deliverable(
-            deliverable_info,
+            deliv,
             self.tmpdir,
             self.msg,
         )
         validate.validate_tarball_base(
-            deliverable_info,
+            deliv.data,
             self.tmpdir,
             self.msg,
         )
@@ -1012,24 +1028,29 @@ class TestValidateTarballBase(base.BaseTestCase):
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
     def test_explicit_ok(self, gsn, jobs):
-        deliverable_info = {
-            'releases': [
-                {'version': '1.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'openstack-release-test'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
         gsn.return_value = 'openstack-release-test'
         validate.clone_deliverable(
-            deliverable_info,
+            deliv,
             self.tmpdir,
             self.msg,
         )
         validate.validate_tarball_base(
-            deliverable_info,
+            deliv.data,
             self.tmpdir,
             self.msg,
         )
@@ -1040,24 +1061,29 @@ class TestValidateTarballBase(base.BaseTestCase):
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
     def test_explicit_invalid(self, gsn, jobs):
-        deliverable_info = {
-            'releases': [
-                {'version': '1.5.0',
-                 'projects': [
-                     {'repo': 'openstack/release-test',
-                      'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
-                      'tarball-base': 'does-not-match-sdist'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'does-not-match-sdist'},
+                     ]}
+                ],
+            }
+        )
         gsn.return_value = 'openstack-release-test'
         validate.clone_deliverable(
-            deliverable_info,
+            deliv,
             self.tmpdir,
             self.msg,
         )
         validate.validate_tarball_base(
-            deliverable_info,
+            deliv.data,
             self.tmpdir,
             self.msg,
         )
