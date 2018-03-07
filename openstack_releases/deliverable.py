@@ -292,6 +292,16 @@ class Branch(object):
     def series(self):
         return self.name.split('/')[1]
 
+    def get_repo_map(self):
+        "Return mapping between repo and hash."
+        if isinstance(self.location, dict):
+            return self.location
+        release = self.deliv.get_release(self.location)
+        return {
+            p.repo.name: p.hash
+            for p in release.projects
+        }
+
 
 @functools.total_ordering
 class Deliverable(object):
@@ -438,6 +448,12 @@ class Deliverable(object):
     @property
     def releases(self):
         return self._releases
+
+    def get_release(self, version):
+        for r in self.releases:
+            if r.version == version:
+                return r
+        raise ValueError('Unknown version {}'.format(version))
 
     @property
     def branches(self):
