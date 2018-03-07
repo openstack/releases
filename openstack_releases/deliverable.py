@@ -16,6 +16,7 @@
 
 import collections
 import copy
+import functools
 import glob
 import os
 import os.path
@@ -198,6 +199,7 @@ class Deliverables(object):
             )
 
 
+@functools.total_ordering
 class Repo(object):
 
     def __init__(self, name, data, deliv):
@@ -221,7 +223,17 @@ class Repo(object):
     def pypi_name(self):
         return self._data.get('pypi-name')
 
+    def __eq__(self, other):
+        return self.name == other.name
 
+    def __gt__(self, other):
+        return self.name > other.name
+
+    def __str__(self):
+        return self.name
+
+
+@functools.total_ordering
 class ReleaseProject(object):
 
     def __init__(self, repo, hash, data, release=None):
@@ -235,12 +247,19 @@ class ReleaseProject(object):
     def tarball_base(self):
         return self._data.get('tarball-base')
 
+    def __eq__(self, other):
+        return self.repo == other.repo
+
+    def __gt__(self, other):
+        return self.repo > other.repo
+
 
 class Release(object):
 
-    def __init__(self, version, projects, deliv):
+    def __init__(self, version, projects, data, deliv):
         self.version = version
         self.deliv = weakref.proxy(deliv)
+        self._data = data
         self._projects = {
             p['repo']: ReleaseProject(p['repo'], p['hash'], p, self)
             for p in projects
@@ -248,9 +267,10 @@ class Release(object):
 
     @property
     def projects(self):
-        return sorted(self._projects.values(), key=lambda p: p.repo.name)
+        return sorted(self._projects.values())
 
 
+@functools.total_ordering
 class Deliverable(object):
 
     _governance_data = None
@@ -291,7 +311,7 @@ class Deliverable(object):
 
     @property
     def repos(self):
-        return sorted(self._repos.values(), key=lambda r: r.name)
+        return sorted(self._repos.values())
 
     @property
     def known_repo_names(self):
@@ -315,6 +335,10 @@ class Deliverable(object):
         return self.model != 'untagged'
 
     @property
+    def is_released(self):
+        return len(self._data.get('releases', [])) > 0
+
+    @property
     def is_cycle_based(self):
         return self.model.startswith('cycle-')
 
@@ -328,8 +352,9 @@ class Deliverable(object):
 
     @property
     def latest_release(self):
-        rel = (self.releases or [{}])[-1]
-        return rel.get('version')
+        if not self.is_released:
+            return ''
+        return self.releases[-1].version
 
     @property
     def release_notes(self):
@@ -353,7 +378,12 @@ class Deliverable(object):
     @property
     def releases(self):
         return [
-            Release(deliv=self, **r)
+            Release(
+                version=r['version'],
+                projects=r['projects'],
+                data=r,
+                deliv=self,
+            )
             for r in self._data.get('releases', [])
         ]
 
@@ -378,3 +408,12 @@ class Deliverable(object):
     @property
     def data(self):
         return copy.deepcopy(self._data)
+
+    def __eq__(self, other):
+        return self.name == other.name
+
+    def __gt__(self, other):
+        return self.name > other.name
+
+    def __str__(self):
+        return self.name
