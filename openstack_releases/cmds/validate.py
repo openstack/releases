@@ -353,23 +353,35 @@ def _require_gitreview(workdir, repo, messages):
     )
     if not os.path.exists(filename):
         messages.error('%s has no .gitreview file' % (repo,))
+    else:
+        LOG.debug('found {}'.format(filename))
 
 
-def validate_gitreview(deliverable_info, workdir, messages):
-    "Verify that all repos include a .gitreview file."
+def validate_gitreview(deliv, workdir, messages):
+    "All repos must include a .gitreview file for new releases."
     header('Validate .gitreview')
     checked = set()
-    for release in deliverable_info.get('releases', []):
-        for project in release['projects']:
-            if project['repo'] in checked:
+    for release in deliv.releases:
+        for project in release.projects:
+            if project.repo.name in checked:
                 continue
-            checked.add(project['repo'])
+            checked.add(project.repo.name)
+            if project.repo.is_retired:
+                LOG.debug('{} is retired, skipping'.format(
+                    project.repo.name))
+                continue
             version_exists = gitutils.commit_exists(
-                workdir, project['repo'], release['version'],
+                workdir, project.repo.name, release.version,
             )
             if not version_exists:
-                _require_gitreview(workdir, project['repo'], messages)
-
+                LOG.debug('checking {} at {} for {}'.format(
+                    project.repo.name, project.hash, release.version))
+                gitutils.safe_clone_repo(
+                    workdir, project.repo.name, project.hash, messages)
+                _require_gitreview(workdir, project.repo.name, messages)
+            else:
+                LOG.debug('version {} exists, skipping'.format(
+                    release.version))
 
 _TYPE_TO_RELEASE_TYPE = {
     'library': 'python-pypi',
@@ -952,12 +964,6 @@ def validate_stable_branches(deliverable_info,
                      'list of releases for this deliverable' % (
                          location, branch['name']))
                 )
-            else:
-                for project in known_releases[location]['projects']:
-                    if not gitutils.safe_clone_repo(workdir, project['repo'],
-                                                    project['hash'], messages):
-                        continue
-                    _require_gitreview(workdir, project['repo'], messages)
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
                 messages.error(
@@ -980,7 +986,6 @@ def validate_stable_branches(deliverable_info,
                     continue
                 if not gitutils.safe_clone_repo(workdir, repo, loc, messages):
                     continue
-                _require_gitreview(workdir, repo, messages)
                 if not gitutils.commit_exists(workdir, repo, loc):
                     messages.error(
                         ('stable branches should be created from merged '
@@ -1065,7 +1070,6 @@ def validate_feature_branches(deliverable_info,
                      'but location %s for branch %s of %s does not exist' % (
                          (loc, repo, branch['name'])))
                 )
-            _require_gitreview(workdir, repo, messages)
 
 
 def validate_driverfixes_branches(deliverable_info,
@@ -1369,7 +1373,7 @@ def main():
             workdir,
             messages,
         )
-        validate_gitreview(deliverable_info, workdir, messages)
+        validate_gitreview(deliv, workdir, messages)
         validate_releases(
             deliverable_info,
             zuul_projects,
