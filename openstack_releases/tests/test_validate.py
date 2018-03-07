@@ -2248,9 +2248,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
@@ -2276,9 +2281,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
@@ -2296,9 +2306,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
@@ -2320,9 +2335,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
@@ -2344,9 +2364,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
@@ -2368,9 +2393,14 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         ''')
         with open(series_a_filename, 'w') as f:
             f.write(deliverable_data)
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_series_first(
-            deliverable_info,
+            deliv,
             'a',
             self.msg,
         )
