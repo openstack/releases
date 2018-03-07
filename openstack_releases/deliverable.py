@@ -244,6 +244,15 @@ class Deliverable(object):
         }
 
     @property
+    def launchpad_id(self):
+        return self._data.get('launchpad')
+
+    @property
+    def storyboard_id(self):
+        sb_id = self._data.get('storyboard')
+        return int(sb_id) if sb_id else None
+
+    @property
     def repos(self):
         for name, repo in sorted(self._repos.items()):
             yield repo

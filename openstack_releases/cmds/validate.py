@@ -201,11 +201,12 @@ def validate_series_first(deliverable_info, series_name,
         )
 
 
-def validate_bugtracker(deliverable_info, messages):
+def validate_bugtracker(deliv, messages):
     "Look for the bugtracker info"
     header('Validate Bug Tracker')
-    if 'launchpad' in deliverable_info:
-        lp_name = deliverable_info['launchpad']
+    lp_name = deliv.launchpad_id
+    sb_id = deliv.storyboard_id
+    if lp_name:
         try:
             lp_resp = requests.get('https://api.launchpad.net/1.0/' + lp_name)
         except requests.exceptions.ConnectionError as e:
@@ -215,13 +216,8 @@ def validate_bugtracker(deliverable_info, messages):
         else:
             if (lp_resp.status_code // 100) == 4:
                 messages.error('Launchpad project %s does not exist' % lp_name)
-    elif 'storyboard' in deliverable_info:
-        try:
-            sb_id = int(deliverable_info['storyboard'])
-        except (TypeError, ValueError):
-            messages.error('Invalid storyboard ID, must be a number: %s' %
-                           deliverable_info['storyboard'])
-            return
+        LOG.debug('launchpad project ID {}'.format(lp_name))
+    elif sb_id:
         try:
             projects_resp = requests.get(
                 'https://storyboard.openstack.org/api/v1/projects'
@@ -242,6 +238,7 @@ def validate_bugtracker(deliverable_info, messages):
                 messages.error(
                     'Did not find a storyboard project with ID %s' % sb_id
                 )
+            LOG.debug('storyboard project ID {}'.format(sb_id))
     else:
         messages.error('No launchpad or storyboard project given')
 
@@ -1332,7 +1329,7 @@ def main():
             data=deliverable_info,
         )
         clone_deliverable(deliv, workdir, messages)
-        validate_bugtracker(deliverable_info, messages)
+        validate_bugtracker(deliv, messages)
         validate_team(deliverable_info, team_data, messages)
         validate_release_notes(deliverable_info, messages)
         validate_type(deliverable_info, messages)
