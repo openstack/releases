@@ -269,6 +269,9 @@ class Release(object):
     def projects(self):
         return sorted(self._projects.values())
 
+    def __eq__(self, other):
+        return self.version == other.version
+
 
 @functools.total_ordering
 class Deliverable(object):
