@@ -417,10 +417,10 @@ class TestValidateModel(base.BaseTestCase):
         self.assertEqual(1, len(self.msg.errors))
 
 
-class TestValidateReleases(base.BaseTestCase):
+class TestValidateReleaseSHAExists(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateReleases, self).setUp()
+        super(TestValidateReleaseSHAExists, self).setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
         self.msg = validate.MessageCollector()
@@ -442,15 +442,49 @@ class TestValidateReleases(base.BaseTestCase):
                 ],
             },
         )
-        validate.validate_releases(
+        validate.validate_release_sha_exists(
             deliv,
-            {'validate-projects-by-name': {}},
             self.tmpdir,
             self.msg,
         )
         self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(1, len(self.msg.errors))
+
+    def test_no_such_hash(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
+        validate.validate_release_sha_exists(
+            deliv,
+            self.tmpdir,
+            self.msg,
+        )
+        self.msg.show_summary()
+        self.assertEqual(0, len(self.msg.warnings))
+        self.assertEqual(1, len(self.msg.errors))
+
+
+class TestValidateReleases(base.BaseTestCase):
+
+    def setUp(self):
+        super(TestValidateReleases, self).setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
+        self.msg = validate.MessageCollector()
 
     def test_valid_existing(self):
         deliv = deliverable.Deliverable(
@@ -478,33 +512,6 @@ class TestValidateReleases(base.BaseTestCase):
         self.msg.show_summary()
         self.assertEqual(0, len(self.msg.warnings))
         self.assertEqual(0, len(self.msg.errors))
-
-    def test_no_such_hash(self):
-        deliv = deliverable.Deliverable(
-            team='team',
-            series='ocata',
-            name='name',
-            data={
-                'artifact-link-mode': 'none',
-                'releases': [
-                    {'version': '99.0.0',
-                     'projects': [
-                         {'repo': 'openstack/release-test',
-                          'hash': 'de2885f544637e6ee6139df7dc7bf937925804dd',
-                          'tarball-base': 'openstack-release-test'},
-                     ]}
-                ],
-            },
-        )
-        validate.validate_releases(
-            deliv,
-            {'validate-projects-by-name': {}},
-            self.tmpdir,
-            self.msg,
-        )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
 
     def test_mismatch_existing(self):
         deliv = deliverable.Deliverable(
