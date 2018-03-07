@@ -266,6 +266,8 @@ def validate_model(deliv, messages):
     "Require a valid release model"
     header('Validate Model')
 
+    LOG.debug('release model {}'.format(deliv.model))
+
     if not deliv.is_independent and not deliv.model:
         # If the deliverable is not independent it must declare a
         # release model.
@@ -293,7 +295,11 @@ def validate_model(deliv, messages):
             'should all use the independent release model'
         )
 
-    LOG.debug('release model {}'.format(deliv.model))
+    if deliv.model == 'untagged' and deliv.is_released:
+        messages.error(
+            'untagged deliverables should not have a "releases" section'
+        )
+        return
 
 
 def clone_deliverable(deliv, workdir, messages):
@@ -558,12 +564,6 @@ def validate_releases(deliv, zuul_projects,
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
     new_releases = {}
-
-    if deliv.model == 'untagged' and deliv.is_released:
-        messages.error(
-            'untagged deliverables should not have a "releases" section'
-        )
-        return
 
     prev_version = None
     prev_projects = set()
