@@ -64,6 +64,7 @@ _CLOSED_SERIES = set([
     'juno',
     'kilo',
     'liberty',
+    'mitaka',
 ])
 _USES_PREVER = set([
     'cycle-with-milestones',
