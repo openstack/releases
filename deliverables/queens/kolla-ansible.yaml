@@ -23,12 +23,13 @@ cycle-highlights:
   - |
     Implemented support for using ansible-vault passwords in kolla-ansible
     command to decrypt ``/etc/kolla/passwords.yml``.
-  - Allow use of separate backends for oslo.messaging rpc and notification.
-  - Implement cephfs service
-  - Add vitrage ansible role
-  - Implement minimal downtime for keystone and cinder service
+  - 'Allow use of separate backends for oslo.messaging rpc and notification.'
+  - 'Implement cephfs service'
+  - 'Add vitrage ansible role'
+  - 'Implement minimal downtime for keystone and cinder service'
   - |
     Add ``use_preconfigured_databases`` flag in order to add support for
     previously created databases / users
 repository-settings:
   openstack/kolla-ansible: {}
+release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/queens.html
