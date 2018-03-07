@@ -530,14 +530,15 @@ def validate_tarball_base(deliverable_info,
                            action, expected, sdist))
 
 
-def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
+def validate_pypi_permissions(deliv, zuul_projects, workdir,
                               messages):
 
     header('Validate PyPI Permissions')
 
-    for repo, repo_settings in deliverable_info['repository-settings'].items():
+    for repo in deliv.repos:
 
-        job_templates = zuul_projects.get(repo, {}).get('templates', [])
+        job_templates = zuul_projects.get(repo.name, {}).get('templates', [])
+        LOG.debug('{} has job templates {}'.format(repo.name, job_templates))
 
         # Look for jobs that appear to be talking about publishing to
         # PyPI. There are variations.
@@ -548,25 +549,25 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
         ]
 
         if not pypi_jobs:
-            print('rule does not apply to repos not publishing to PyPI')
+            LOG.info('rule does not apply to repos not publishing to PyPI')
             continue
 
-        print('{} publishes to PyPI via {}'.format(repo, pypi_jobs))
+        LOG.info('{} publishes to PyPI via {}'.format(repo.name, pypi_jobs))
 
-        pypi_name = repo_settings.get('pypi-name')
+        pypi_name = repo.pypi_name
 
         if not pypi_name:
             try:
-                sdist = pythonutils.get_sdist_name(workdir, repo)
+                sdist = pythonutils.get_sdist_name(workdir, repo.name)
             except Exception as err:
                 messages.warning(
                     'Could not determine the sdist name '
                     'for {} to check PyPI permissions: {}'.format(
-                        repo, err)
+                        repo.name, err)
                 )
                 continue
 
-            print('using sdist name as pypi-name {!r}'.format(sdist))
+            LOG.debug('using sdist name as pypi-name {!r}'.format(sdist))
             pypi_name = sdist
 
         uploaders = pythonutils.get_pypi_uploaders(pypi_name)
@@ -574,7 +575,7 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
             # Names like "openstack_requirements" are translated to
             # "openstack-requirements" in the PyPI API.
             alt_name = pypi_name.replace('_', '-')
-            print('retrying with pypi_name name {!r}'.format(alt_name))
+            LOG.debug('retrying with pypi_name name {!r}'.format(alt_name))
             uploaders = pythonutils.get_pypi_uploaders(alt_name)
 
         if not uploaders:
@@ -588,6 +589,9 @@ def validate_pypi_permissions(deliverable_info, zuul_projects, workdir,
                 'for {}. Current owners include: {}'.format(
                     pypi_name, ', '.join(sorted(uploaders)))
             )
+        else:
+            LOG.debug('found {} able to upload to {}'.format(
+                sorted(uploaders), pypi_name))
 
 
 def validate_releases(deliverable_info, zuul_projects,
@@ -1360,7 +1364,7 @@ def main():
             messages,
         )
         validate_pypi_permissions(
-            deliverable_info,
+            deliv,
             zuul_projects,
             workdir,
             messages,

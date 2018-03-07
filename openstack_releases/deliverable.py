@@ -217,6 +217,10 @@ class Repo(object):
     def no_artifact_build_job(self):
         return 'no-artifact-build-job' in self.flags
 
+    @property
+    def pypi_name(self):
+        return self._data.get('pypi-name')
+
 
 class ReleaseProject(object):
 
