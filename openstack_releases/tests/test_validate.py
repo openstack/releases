@@ -2023,10 +2023,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2045,10 +2049,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
           - name: driverfixes/austin
             location: 1.5.0
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2068,10 +2076,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: 1.5.0
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2091,10 +2103,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2114,10 +2130,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2137,10 +2157,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: de2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )
@@ -2161,10 +2185,14 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
             location:
                openstack/automaton: be2885f544637e6ee6139df7dc7bf937925804dd
         ''')
-        deliverable_info = yamlutils.loads(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
         validate.validate_driverfixes_branches(
-            deliverable_info,
-            'name',
+            deliv,
             self.tmpdir,
             self.msg,
         )

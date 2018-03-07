@@ -1011,62 +1011,64 @@ def validate_feature_branches(deliv, workdir, messages):
                 )
 
 
-def validate_driverfixes_branches(deliverable_info,
-                                  deliverable_name,
-                                  workdir,
-                                  messages):
+def validate_driverfixes_branches(deliv, workdir, messages):
     "Apply the rules for driverfixes branches."
     header('Validate driverfixes Branches')
+
+    if deliv.type == 'tempest-plugin' and deliv.branches:
+        messages.error('Tempest plugins do not support branching.')
+        return
+
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
     ))
-    branches = deliverable_info.get('branches', [])
 
-    d_type = _guess_deliverable_type(deliverable_name, deliverable_info)
-    if d_type == 'tempest-plugin' and branches:
-        messages.error('Tempest plugins do not support branching.')
-        return
-
-    for branch in branches:
+    for branch in deliv.branches:
         try:
-            prefix, series = branch['name'].split('/')
+            prefix, series = branch.name.split('/')
         except ValueError:
             messages.error(
                 ('driverfixes branch name expected to be driverfixes/name '
-                 'but got %s') % (branch['name'],))
+                 'but got %s') % (branch.name,))
             continue
+
         if prefix != 'driverfixes':
+            LOG.debug('{} is not a driverfixes branch, skipping'.format(
+                branch.name))
             continue
-        location = branch['location']
+
         if series not in known_series:
             messages.error(
                 ('driverfixes branches must be named for known series '
                  'but %s was not found in %s' % (
-                     branch['name'], known_series))
+                     branch.name, known_series))
             )
+
+        location = branch.location
         if not isinstance(location, dict):
             messages.error(
                 ('branch location for %s is '
                  'expected to be a mapping but got a %s' % (
-                     branch['name'], type(location)))
+                     branch.name, type(location)))
             )
             # The other rules aren't going to be testable, so skip them.
             continue
+
         for repo, loc in sorted(location.items()):
             if not is_a_hash(loc):
                 messages.error(
                     ('driverfixes branches should be created from commits by '
                      'SHA but location %s for branch %s of %s does not look '
                      'like a SHA' % (
-                         (loc, repo, branch['name'])))
+                         (loc, repo, branch.name)))
                 )
             if not gitutils.commit_exists(workdir, repo, loc):
                 messages.error(
                     ('driverfixes branches should be created from merged '
                      'commits but location %s for branch %s of %s does not '
                      'exist' % (
-                         (loc, repo, branch['name'])))
+                         (loc, repo, branch.name)))
                 )
             _require_gitreview(workdir, repo, messages)
 
@@ -1341,8 +1343,7 @@ def main():
             messages,
         )
         validate_driverfixes_branches(
-            deliv._data,
-            deliv.name,
+            deliv,
             workdir,
             messages,
         )
