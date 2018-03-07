@@ -327,7 +327,7 @@ class Deliverable(object):
 
     @property
     def known_repo_names(self):
-        return set(self._repos.keys())
+        return set(self._data.get('repository-settings', {}).keys())
 
     def get_repo(self, name):
         return self._repos[name]
