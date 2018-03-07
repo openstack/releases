@@ -312,6 +312,23 @@ class Deliverable(object):
             for r in self._data.get('releases', [])
         ]
 
+    @classmethod
+    def read_file(cls, filename):
+        with open(filename, 'r', encoding='utf-8') as f:
+            data = yamlutils.loads(f.read())
+
+        series_name = os.path.basename(
+            os.path.dirname(filename)
+        ).lstrip('_')
+        deliverable_name = os.path.basename(filename)[:-5]  # strip .yaml
+
+        return cls(
+            team=None,  # extracted from the info automatically
+            series=series_name,
+            name=deliverable_name,
+            data=data or {},  # if the file is empty yaml returns None
+        )
+
     @property
     def launchpad_id(self):
         return self._data.get('launchpad')
