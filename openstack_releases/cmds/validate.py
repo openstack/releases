@@ -829,15 +829,13 @@ def validate_new_releases(deliv, team_data, messages):
             )
 
 
-def validate_branch_prefixes(deliverable_info, messages):
+def validate_branch_prefixes(deliv, messages):
     "Ensure all branches have good prefixes."
     header('Validate Branch Prefixes')
-    branches = deliverable_info.get('branches', [])
-    for branch in branches:
-        prefix = branch['name'].split('/')[0]
-        if prefix not in _VALID_BRANCH_PREFIXES:
+    for branch in deliv.branches:
+        if branch.prefix not in _VALID_BRANCH_PREFIXES:
             messages.error('branch name %s does not use a valid prefix: %s' % (
-                branch['name'], _VALID_BRANCH_PREFIXES))
+                branch.name, _VALID_BRANCH_PREFIXES))
 
 
 def _guess_deliverable_type(deliverable_name, deliverable_info):
@@ -1325,7 +1323,7 @@ def main():
             messages,
         )
         validate_branch_prefixes(
-            deliv._data,
+            deliv,
             messages,
         )
         validate_stable_branches(

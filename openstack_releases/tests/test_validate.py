@@ -1457,13 +1457,19 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
         self.msg = validate.MessageCollector()
 
     def test_invalid_prefix(self):
-        deliverable_info = {
-            'branches': [
-                {'name': 'invalid/branch'},
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='release-test',
+            data={
+                'branches': [
+                    {'name': 'invalid/branch',
+                     'location': ''},
+                ],
+            }
+        )
         validate.validate_branch_prefixes(
-            deliverable_info,
+            deliv,
             self.msg,
         )
         self.assertEqual(0, len(self.msg.warnings))
@@ -1471,13 +1477,19 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
 
     def test_valid_prefix(self):
         for prefix in validate._VALID_BRANCH_PREFIXES:
-            deliverable_info = {
-                'branches': [
-                    {'name': '%s/branch' % prefix},
-                ],
-            }
+            deliv = deliverable.Deliverable(
+                team='team',
+                series='series',
+                name='release-test',
+                data={
+                    'branches': [
+                        {'name': '%s/branch' % prefix,
+                         'location': ''},
+                    ],
+                }
+            )
             validate.validate_branch_prefixes(
-                deliverable_info,
+                deliv,
                 self.msg,
             )
         self.assertEqual(0, len(self.msg.warnings))

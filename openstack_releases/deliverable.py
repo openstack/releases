@@ -284,6 +284,10 @@ class Branch(object):
     def __eq__(self, other):
         return self.version == other.version
 
+    @property
+    def prefix(self):
+        return self.name.split('/')[0]
+
 
 @functools.total_ordering
 class Deliverable(object):
