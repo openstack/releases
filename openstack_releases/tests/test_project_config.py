@@ -14,29 +14,35 @@
 
 from oslotest import base
 
+from openstack_releases import deliverable
 from openstack_releases import project_config
 
 
 class TestReleaseJobsStandard(base.BaseTestCase):
 
     def test_no_artifact_flag(self):
-        deliverable_info = {
-            'repository-settings': {
-                'openstack/releases': {
-                    'flags': [
-                        'no-artifact-build-job',
-                    ],
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'repository-settings': {
+                    'openstack/releases': {
+                        'flags': [
+                            'no-artifact-build-job',
+                        ],
+                    },
                 },
             },
-        }
+        )
         zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': zuul_projects},
-            'openstack/releases',
+            deliv.repos[0],
             'std',
             warnings.append,
             errors.append,
@@ -45,23 +51,28 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
     def test_retired_flag(self):
-        deliverable_info = {
-            'repository-settings': {
-                'openstack/releases': {
-                    'flags': [
-                        'retired',
-                    ]
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'repository-settings': {
+                    'openstack/releases': {
+                        'flags': [
+                            'retired',
+                        ]
+                    }
                 }
-            }
-        }
+            },
+        )
         zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': zuul_projects},
-            'openstack/releases',
+            deliv.repos[0],
             'std',
             warnings.append,
             errors.append,
@@ -70,16 +81,24 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
     def test_no_zuul_projects(self):
-        deliverable_info = {
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'repository-settings': {
+                    'openstack/releases': {},
+                },
+            },
+        )
         zuul_projects = {
         }
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
-            deliverable_info,
+            deliv,
             {'validate-projects-by-name': zuul_projects},
-            'openstack/releases',
+            deliv.repos[0],
             'std',
             warnings.append,
             errors.append,
@@ -88,8 +107,16 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         self.assertEqual(1, len(errors))
 
     def test_one_expected_job(self):
-        deliverable_info = {
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'repository-settings': {
+                    'openstack/releases': {},
+                },
+            },
+        )
         zuul_projects = {
             'openstack/releases': {
                 'templates': [
@@ -100,9 +127,9 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
-            deliverable_info,
+            deliv,
             zuul_projects,
-            'openstack/releases',
+            deliv.repos[0],
             'python-pypi',
             warnings.append,
             errors.append,
@@ -112,8 +139,16 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         self.assertEqual(0, len(errors))
 
     def test_two_expected_jobs(self):
-        deliverable_info = {
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'repository-settings': {
+                    'openstack/releases': {},
+                },
+            },
+        )
         zuul_projects = {
             'openstack/releases': {
                 'templates': [
@@ -125,9 +160,9 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         warnings = []
         errors = []
         project_config.require_release_jobs_for_repo(
-            deliverable_info,
+            deliv,
             zuul_projects,
-            'openstack/releases',
+            deliv.repos[0],
             'python-pypi',
             warnings.append,
             errors.append,

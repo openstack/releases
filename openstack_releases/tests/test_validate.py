@@ -768,96 +768,121 @@ class TestGetReleaseType(base.BaseTestCase):
         self.msg = validate.MessageCollector()
 
     def test_explicit(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'release-type': 'explicitly-set',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'release-type': 'explicitly-set',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('explicitly-set', True), (release_type, explicit))
 
     def test_library(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'type': 'library',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'type': 'library',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
 
     def test_service(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'type': 'service',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'type': 'service',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
 
     def test_implicit_pypi(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'include-pypi-link': True,
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'include-pypi-link': True,
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('python-pypi', False), (release_type, explicit))
 
     def test_pypi_false(self):
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'include-pypi-link': False,
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'include-pypi-link': False,
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
@@ -865,19 +890,24 @@ class TestGetReleaseType(base.BaseTestCase):
     @mock.patch('openstack_releases.puppetutils.looks_like_a_module')
     def test_puppet(self, llam):
         llam.return_value = True
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('puppet', False), (release_type, explicit))
@@ -885,19 +915,24 @@ class TestGetReleaseType(base.BaseTestCase):
     @mock.patch('openstack_releases.npmutils.looks_like_a_module')
     def test_nodejs(self, llam):
         llam.return_value = True
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('nodejs', False), (release_type, explicit))
@@ -907,19 +942,24 @@ class TestGetReleaseType(base.BaseTestCase):
     def test_python_server(self, nllam, pllam):
         pllam.return_value = False
         nllam.return_value = False
-        deliverable_info = {
-            'artifact-link-mode': 'none',
-            'releases': [
-                {'version': '99.1.0',
-                 'projects': [
-                     {'repo': 'openstack/puppet-watcher',
-                      'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
-                 ]}
-            ],
-        }
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.1.0',
+                     'projects': [
+                         {'repo': 'openstack/puppet-watcher',
+                          'hash': '1e7baef27139f69a83e1fe28686bb72ee7e1d6fa'},
+                     ]}
+                ],
+            },
+        )
         release_type, explicit = validate.get_release_type(
-            deliverable_info,
-            deliverable_info['releases'][0]['projects'][0]['repo'],
+            deliv,
+            deliv.releases[0].projects[0].repo,
             self.tmpdir,
         )
         self.assertEqual(('python-service', False), (release_type, explicit))
