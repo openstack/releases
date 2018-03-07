@@ -838,14 +838,6 @@ def validate_branch_prefixes(deliv, messages):
                 branch.name, _VALID_BRANCH_PREFIXES))
 
 
-def _guess_deliverable_type(deliverable_name, deliverable_info):
-    if 'tempest-plugin' in deliverable_name:
-        return 'tempest-plugin'
-    if 'type' in deliverable_info:
-        return deliverable_info['type']
-    return 'other'
-
-
 def validate_stable_branches(deliv, workdir, series_name, messages):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
