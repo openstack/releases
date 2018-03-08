@@ -65,27 +65,39 @@ _CLOSED_SERIES = set([
     'liberty',
     'mitaka',
 ])
+
 _USES_PREVER = set([
     'cycle-with-milestones',
     'cycle-trailing',
 ])
+
 _VALID_BRANCH_PREFIXES = set([
     'stable',
     'feature',
     'driverfixes',
 ])
+
 _NO_STABLE_BRANCH_CHECK = set([
     'gnocchi',
     'rally',
     'puppet-pacemaker',  # tracks upstream version
 ])
+
+_TYPE_TO_RELEASE_TYPE = {
+    'library': 'python-pypi',
+    'service': 'python-service',
+    'horizon-plugin': 'horizon',
+}
+
+_PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
+
 _PLEASE = ('It is too expensive to determine this value during '
            'the site build, please set it explicitly.')
 
 
-def header(title):
+def header(title, underline='-'):
     print('\n%s' % title)
-    print('-' * len(title))
+    print(underline * len(title))
 
 
 def is_a_hash(val):
@@ -178,7 +190,7 @@ def validate_series_first(deliv, context):
 
 
 def validate_bugtracker(deliv, context):
-    "Look for the bugtracker info"
+    "Does the bug tracker info link to something that exists?"
     header('Validate Bug Tracker')
     lp_name = deliv.launchpad_id
     sb_id = deliv.storyboard_id
@@ -220,7 +232,7 @@ def validate_bugtracker(deliv, context):
 
 
 def validate_team(deliv, context):
-    "Look for the team name"
+    "Look for the team name in the governance data."
     header('Validate Team')
     if deliv.team not in context.team_data:
         context.warning('Team %r not in governance data' %
@@ -232,9 +244,11 @@ def validate_release_notes(deliv, context):
     "Make sure the release notes page exists, if it is specified."
     header('Validate Release Notes')
     notes_link = deliv.release_notes
+
     if not notes_link:
-        print('no release-notes given')
+        LOG.debug('no release-notes given, skipping')
         return
+
     if isinstance(notes_link, dict):
         # Dictionary mapping repositories to links. We don't want any
         # repositories that are not known, so check that as well as
@@ -321,7 +335,7 @@ def clone_deliverable(deliv, context):
 
 
 def _require_gitreview(repo, context):
-    print('\nlooking for .gitreview in %s' % repo)
+    LOG.info('looking for .gitreview in %s' % repo)
     filename = os.path.join(
         context.workdir, repo, '.gitreview',
     )
@@ -357,20 +371,9 @@ def validate_gitreview(deliv, context):
                 LOG.debug('version {} exists, skipping'.format(
                     release.version))
 
-_TYPE_TO_RELEASE_TYPE = {
-    'library': 'python-pypi',
-    'service': 'python-service',
-    'horizon-plugin': 'horizon',
-}
-
-_PYTHON_RELEASE_TYPES = ['python-service', 'python-pypi', 'neutron', 'horizon']
-
 
 def get_release_type(deliv, repo, workdir):
-    """Return tuple with release type and boolean indicating whether it
-    was explicitly set.
-
-    """
+    "Return tuple with release type and whether it was explicitly set."
     if deliv.release_type is not None:
         return (deliv.release_type, True)
 
@@ -391,10 +394,7 @@ def get_release_type(deliv, repo, workdir):
 
 
 def validate_release_type(deliv, context):
-    """Apply validation rules for the deliverable based on 'release-type'
-    to the most recent release of a deliverable.
-
-    """
+    "Does the most recent release comply with the rules for the release-type?"
     header('Validate release-type')
 
     if deliv.artifact_link_mode == 'none':
@@ -437,6 +437,9 @@ def validate_release_type(deliv, context):
 
 
 def validate_tarball_base(deliv, context):
+    "Does tarball-base match the expected value?"
+
+    header('Validate tarball-base')
 
     if deliv.artifact_link_mode != 'tarball':
         LOG.info('rule does not apply for link-mode {}, skipping'.format(
@@ -484,6 +487,7 @@ def validate_tarball_base(deliv, context):
 
 
 def validate_pypi_permissions(deliv, context):
+    "Do we have permission to upload to PyPI?"
 
     header('Validate PyPI Permissions')
 
@@ -548,8 +552,8 @@ def validate_pypi_permissions(deliv, context):
 
 
 def validate_release_sha_exists(deliv, context):
-    "Ensure the hashes exist."
-    header('Validate Release SHA')
+    "Ensure the hashes for each release exist."
+    header('Validate Release SHA Exists')
 
     for release in deliv.releases:
 
@@ -588,8 +592,7 @@ def validate_release_sha_exists(deliv, context):
 
 
 def validate_existing_tags(deliv, context):
-    """Apply validation rules to the 'releases' list for the deliverable.
-    """
+    "Ensure tags that exist point to the SHAs listed."
     header('Validate Existing Tags')
 
     for release in deliv.releases:
@@ -612,25 +615,30 @@ def validate_existing_tags(deliv, context):
             version_exists = gitutils.commit_exists(
                 context.workdir, project.repo.name, release.version,
             )
-            if version_exists:
-                actual_sha = gitutils.sha_for_tag(
-                    context.workdir,
-                    project.repo.name,
-                    release.version,
-                )
-                if actual_sha != project.hash:
-                    context.error(
-                        ('Version %s in %s is on '
-                         'commit %s instead of %s') %
-                        (release.version,
-                         project.repo.name,
-                         actual_sha,
-                         project.hash))
-                LOG.info('tag exists')
+            if not version_exists:
+                LOG.info('{} does not have {} tag yet'.format(
+                    project.repo.name, release.version))
+                continue
+
+            actual_sha = gitutils.sha_for_tag(
+                context.workdir,
+                project.repo.name,
+                release.version,
+            )
+            if actual_sha != project.hash:
+                context.error(
+                    ('Version %s in %s is on '
+                     'commit %s instead of %s') %
+                    (release.version,
+                     project.repo.name,
+                     actual_sha,
+                     project.hash))
+            else:
+                LOG.debug('tag exists and is correct')
 
 
 def validate_version_numbers(deliv, context):
-    "Ensure the version numbers make sense."
+    "Ensure the version numbers are valid."
     header('Validate Version Numbers')
 
     prev_version = None
@@ -849,9 +857,7 @@ def validate_release_branch_membership(deliv, context):
 
 
 def validate_new_releases(deliv, context):
-
-    """Apply validation rules that only apply to the current series.
-    """
+    "Apply validation rules that only apply to the current series."
     header('Validate New Releases')
 
     if deliv.series != defaults.RELEASE:
@@ -907,7 +913,7 @@ def validate_new_releases(deliv, context):
 
 
 def validate_branch_prefixes(deliv, context):
-    "Ensure all branches have good prefixes."
+    "Ensure all branch names have good prefixes."
     header('Validate Branch Prefixes')
     for branch in deliv.branches:
         if branch.prefix not in _VALID_BRANCH_PREFIXES:
@@ -1146,6 +1152,8 @@ def validate_driverfixes_branches(deliv, context):
 def validate_branch_points(deliv, context):
     "Make sure the branch points given are on the expected branches."
 
+    header("Validate Branch Points")
+
     # Check for 'upstream' branches. These track upstream release names and
     # do not align with OpenStack series names.
     if deliv.stable_branch_type == 'upstream':
@@ -1158,7 +1166,7 @@ def validate_branch_points(deliv, context):
         try:
             prefix, series = branch.name.split('/')
         except ValueError:
-            print('could not parse the branch name, skipping')
+            LOG.debug('could not parse the branch name, skipping')
             continue
 
         if prefix == 'feature':
@@ -1269,11 +1277,11 @@ class ValidationContext(object):
         self.filename = filename
 
     def warning(self, msg):
-        print('WARNING: {}'.format(msg))
+        LOG.warning(msg)
         self.warnings.append('{}: {}'.format(self.filename, msg))
 
     def error(self, msg):
-        print('ERROR: {}'.format(msg))
+        LOG.error(msg)
         self.errors.append('{}: {}'.format(self.filename, msg))
         if self.debug:
             raise RuntimeError(msg)
@@ -1335,8 +1343,8 @@ def main():
 
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
-        print('no modified deliverable files and no arguments, '
-              'skipping validation')
+        LOG.debug('no modified deliverable files and no arguments, '
+                  'skipping validation')
         return 0
 
     context = ValidationContext(
@@ -1345,10 +1353,10 @@ def main():
     )
 
     for filename in filenames:
-        print('\nChecking %s' % filename)
+        header('Checking %s' % filename, '=')
 
         if not os.path.isfile(filename):
-            print("File was deleted, skipping.")
+            LOG.info("File was deleted, skipping.")
             continue
 
         context.set_filename(filename)
@@ -1356,6 +1364,7 @@ def main():
         deliv = deliverable.Deliverable.read_file(filename)
 
         if deliv.series in _CLOSED_SERIES:
+            LOG.info('File is part of a closed series, skipping')
             continue
 
         clone_deliverable(deliv, context)
