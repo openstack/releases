@@ -302,7 +302,7 @@ def validate_model(deliv, context):
         return
 
 
-def clone_deliverable(deliv, workdir, context):
+def clone_deliverable(deliv, context):
     """Clone all of the repositories for the deliverable into the workdir.
 
     Returns boolean indicating whether all of the clones could be
@@ -318,16 +318,16 @@ def clone_deliverable(deliv, workdir, context):
         if repo.is_retired:
             LOG.info('{} is retired, skipping clone'.format(repo.name))
             continue
-        if not gitutils.safe_clone_repo(workdir, repo.name,
+        if not gitutils.safe_clone_repo(context.workdir, repo.name,
                                         'master', context):
             ok = False
     return ok
 
 
-def _require_gitreview(workdir, repo, context):
+def _require_gitreview(repo, context):
     print('\nlooking for .gitreview in %s' % repo)
     filename = os.path.join(
-        workdir, repo, '.gitreview',
+        context.workdir, repo, '.gitreview',
     )
     if not os.path.exists(filename):
         context.error('%s has no .gitreview file' % (repo,))
@@ -335,7 +335,7 @@ def _require_gitreview(workdir, repo, context):
         LOG.debug('found {}'.format(filename))
 
 
-def validate_gitreview(deliv, workdir, context):
+def validate_gitreview(deliv, context):
     "All repos must include a .gitreview file for new releases."
     header('Validate .gitreview')
     checked = set()
@@ -349,14 +349,14 @@ def validate_gitreview(deliv, workdir, context):
                     project.repo.name))
                 continue
             version_exists = gitutils.commit_exists(
-                workdir, project.repo.name, release.version,
+                context.workdir, project.repo.name, release.version,
             )
             if not version_exists:
                 LOG.debug('checking {} at {} for {}'.format(
                     project.repo.name, project.hash, release.version))
                 gitutils.safe_clone_repo(
-                    workdir, project.repo.name, project.hash, context)
-                _require_gitreview(workdir, project.repo.name, context)
+                    context.workdir, project.repo.name, project.hash, context)
+                _require_gitreview(context.workdir, project.repo.name, context)
             else:
                 LOG.debug('version {} exists, skipping'.format(
                     release.version))
@@ -394,7 +394,7 @@ def get_release_type(deliv, repo, workdir):
     return ('python-service', False)
 
 
-def validate_release_type(deliv, workdir, context):
+def validate_release_type(deliv, context):
     """Apply validation rules for the deliverable based on 'release-type'
     to the most recent release of a deliverable.
 
@@ -415,7 +415,7 @@ def validate_release_type(deliv, workdir, context):
         LOG.info('checking release-type for {}'.format(project.repo.name))
 
         release_type, was_explicit = get_release_type(
-            deliv, project.repo.name, workdir,
+            deliv, project.repo.name, context.workdir,
         )
         if was_explicit:
             LOG.info('found explicit release-type {!r}'.format(
@@ -425,7 +425,7 @@ def validate_release_type(deliv, workdir, context):
                      'guessing {!r}'.format(release_type))
 
         version_exists = gitutils.commit_exists(
-            workdir, project.repo.name, release.version,
+            context.workdir, project.repo.name, release.version,
         )
 
         if not version_exists:
@@ -440,7 +440,7 @@ def validate_release_type(deliv, workdir, context):
             )
 
 
-def validate_tarball_base(deliv, workdir, context):
+def validate_tarball_base(deliv, context):
 
     if deliv.artifact_link_mode != 'tarball':
         LOG.info('rule does not apply for link-mode {}, skipping'.format(
@@ -454,11 +454,11 @@ def validate_tarball_base(deliv, workdir, context):
     release = deliv.releases[-1]
     for project in release.projects:
         version_exists = gitutils.commit_exists(
-            workdir, project.repo.name, release.version,
+            context.workdir, project.repo.name, release.version,
         )
         # Check that the sdist name and tarball-base name match.
         try:
-            sdist = pythonutils.get_sdist_name(workdir,
+            sdist = pythonutils.get_sdist_name(context.workdir,
                                                project.repo.name)
         except Exception as err:
             msg = 'Could not get the name of {} for version {}: {}'.format(
@@ -487,7 +487,7 @@ def validate_tarball_base(deliv, workdir, context):
                            action, expected, sdist))
 
 
-def validate_pypi_permissions(deliv, workdir, context):
+def validate_pypi_permissions(deliv, context):
 
     header('Validate PyPI Permissions')
 
@@ -515,7 +515,7 @@ def validate_pypi_permissions(deliv, workdir, context):
 
         if not pypi_name:
             try:
-                sdist = pythonutils.get_sdist_name(workdir, repo.name)
+                sdist = pythonutils.get_sdist_name(context.workdir, repo.name)
             except Exception as err:
                 context.warning(
                     'Could not determine the sdist name '
@@ -551,7 +551,7 @@ def validate_pypi_permissions(deliv, workdir, context):
                 sorted(uploaders), pypi_name))
 
 
-def validate_release_sha_exists(deliv, workdir, context):
+def validate_release_sha_exists(deliv, context):
     "Ensure the hashes exist."
     header('Validate Release SHA')
 
@@ -574,7 +574,7 @@ def validate_release_sha_exists(deliv, workdir, context):
                 )
                 continue
 
-            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
                 continue
 
@@ -583,7 +583,7 @@ def validate_release_sha_exists(deliv, workdir, context):
             # Report if the SHA exists or not (an error if it
             # does not).
             sha_exists = gitutils.commit_exists(
-                workdir, project.repo.name, project.hash,
+                context.workdir, project.repo.name, project.hash,
             )
             if not sha_exists:
                 context.error('No commit %(hash)r in %(repo)r'
@@ -591,7 +591,7 @@ def validate_release_sha_exists(deliv, workdir, context):
                                  'repo': project.repo.name})
 
 
-def validate_existing_tags(deliv, workdir, context):
+def validate_existing_tags(deliv, context):
     """Apply validation rules to the 'releases' list for the deliverable.
     """
     header('Validate Existing Tags')
@@ -604,7 +604,7 @@ def validate_existing_tags(deliv, workdir, context):
 
             LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
 
-            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
                 continue
 
@@ -614,11 +614,11 @@ def validate_existing_tags(deliv, workdir, context):
             # import history and sometimes we want to make new
             # releases.
             version_exists = gitutils.commit_exists(
-                workdir, project.repo.name, release.version,
+                context.workdir, project.repo.name, release.version,
             )
             if version_exists:
                 actual_sha = gitutils.sha_for_tag(
-                    workdir,
+                    context.workdir,
                     project.repo.name,
                     release.version,
                 )
@@ -633,7 +633,7 @@ def validate_existing_tags(deliv, workdir, context):
                 LOG.info('tag exists')
 
 
-def validate_version_numbers(deliv, workdir, context):
+def validate_version_numbers(deliv, context):
     "Ensure the version numbers make sense."
     header('Validate Version Numbers')
 
@@ -644,12 +644,12 @@ def validate_version_numbers(deliv, workdir, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
-                workdir, project.repo.name, release.version,
+                context.workdir, project.repo.name, release.version,
             )
             if version_exists:
                 LOG.debug('tag exists, skipping further validation')
@@ -659,7 +659,7 @@ def validate_version_numbers(deliv, workdir, context):
                 release.version, project.repo))
 
             release_type, was_explicit = get_release_type(
-                deliv, project.repo, workdir,
+                deliv, project.repo, context.workdir,
             )
             if was_explicit:
                 LOG.debug('found explicit release-type {!r}'.format(
@@ -674,7 +674,7 @@ def validate_version_numbers(deliv, workdir, context):
             if release_type == 'puppet':
                 LOG.info('applying puppet version rules')
                 puppet_ver = puppetutils.get_version(
-                    workdir, project.repo.name)
+                    context.workdir, project.repo.name)
                 if puppet_ver != release.version:
                     context.error(
                         '%s metadata contains "%s" '
@@ -691,7 +691,7 @@ def validate_version_numbers(deliv, workdir, context):
             if release_type == 'nodejs':
                 LOG.info('applying nodejs version rules')
                 npm_ver = npmutils.get_version(
-                    workdir, project.repo.name)
+                    context.workdir, project.repo.name)
                 if npm_ver != release.version:
                     context.error(
                         '%s package.json contains "%s" '
@@ -717,7 +717,7 @@ def validate_version_numbers(deliv, workdir, context):
                 else:
                     report = context.warning
                 requirements.find_bad_lower_bound_increases(
-                    workdir, project.repo.name,
+                    context.workdir, project.repo.name,
                     prev_version, release.version, project.hash,
                     report,
                 )
@@ -733,7 +733,7 @@ def validate_version_numbers(deliv, workdir, context):
         prev_version = release.version
 
 
-def validate_new_releases_at_end(deliv, workdir, context):
+def validate_new_releases_at_end(deliv, context):
     "New releases must be added to the end of the list."
     header('Validate New Releases At End')
 
@@ -745,12 +745,12 @@ def validate_new_releases_at_end(deliv, workdir, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
-                workdir, project.repo.name, release.version,
+                context.workdir, project.repo.name, release.version,
             )
             if version_exists:
                 LOG.debug('tag exists, skipping further validation')
@@ -769,7 +769,7 @@ def validate_new_releases_at_end(deliv, workdir, context):
             context.error(msg)
 
 
-def validate_release_branch_membership(deliv, workdir, context):
+def validate_release_branch_membership(deliv, context):
     "Commits being tagged need to be on the right branch."
     header('Validate Release Branch Membership')
 
@@ -787,12 +787,12 @@ def validate_release_branch_membership(deliv, workdir, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(workdir, project.repo.name,
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
-                workdir, project.repo.name, release.version,
+                context.workdir, project.repo.name, release.version,
             )
             if version_exists:
                 LOG.debug('tag exists, skipping further validation')
@@ -804,7 +804,7 @@ def validate_release_branch_membership(deliv, workdir, context):
             # If this is the first version in the series,
             # check that the commit is actually on the
             # targeted branch.
-            if not gitutils.check_branch_sha(workdir,
+            if not gitutils.check_branch_sha(context.workdir,
                                              project.repo.name,
                                              deliv.series,
                                              project.hash):
@@ -819,7 +819,7 @@ def validate_release_branch_membership(deliv, workdir, context):
                 # Check to see if we are re-tagging the same
                 # commit with a new version.
                 old_sha = gitutils.sha_for_tag(
-                    workdir,
+                    context.workdir,
                     project.repo.name,
                     prev_version,
                 )
@@ -833,7 +833,7 @@ def validate_release_branch_membership(deliv, workdir, context):
                     # previous release, meaning it is actually
                     # merged into the branch.
                     is_ancestor = gitutils.check_ancestry(
-                        workdir,
+                        context.workdir,
                         project.repo.name,
                         prev_version,
                         project.hash,
@@ -915,7 +915,7 @@ def validate_branch_prefixes(deliv, context):
                 branch.name, _VALID_BRANCH_PREFIXES))
 
 
-def validate_stable_branches(deliv, workdir, context):
+def validate_stable_branches(deliv, context):
     "Apply the rules for stable branches."
     header('Validate Stable Branches')
 
@@ -987,9 +987,10 @@ def validate_stable_branches(deliv, workdir, context):
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
-                if not gitutils.safe_clone_repo(workdir, repo, loc, context):
+                if not gitutils.safe_clone_repo(context.workdir, repo, loc,
+                                                context):
                     continue
-                if not gitutils.commit_exists(workdir, repo, loc):
+                if not gitutils.commit_exists(context.workdir, repo, loc):
                     context.error(
                         ('stable branches should be created from merged '
                          'commits but location %s for branch %s of %s '
@@ -1032,7 +1033,7 @@ def validate_stable_branches(deliv, workdir, context):
                 )
 
 
-def validate_feature_branches(deliv, workdir, context):
+def validate_feature_branches(deliv, context):
     "Apply the rules for feature branches."
     header('Validate Feature Branches')
 
@@ -1072,7 +1073,7 @@ def validate_feature_branches(deliv, workdir, context):
                      'like a SHA' % (
                          (loc, repo, branch.name)))
                 )
-            if not gitutils.commit_exists(workdir, repo, loc):
+            if not gitutils.commit_exists(context.workdir, repo, loc):
                 context.error(
                     ('feature branches should be created from merged commits '
                      'but location %s for branch %s of %s does not exist' % (
@@ -1080,7 +1081,7 @@ def validate_feature_branches(deliv, workdir, context):
                 )
 
 
-def validate_driverfixes_branches(deliv, workdir, context):
+def validate_driverfixes_branches(deliv, context):
     "Apply the rules for driverfixes branches."
     header('Validate driverfixes Branches')
 
@@ -1132,17 +1133,17 @@ def validate_driverfixes_branches(deliv, workdir, context):
                      'like a SHA' % (
                          (loc, repo, branch.name)))
                 )
-            if not gitutils.commit_exists(workdir, repo, loc):
+            if not gitutils.commit_exists(context.workdir, repo, loc):
                 context.error(
                     ('driverfixes branches should be created from merged '
                      'commits but location %s for branch %s of %s does not '
                      'exist' % (
                          (loc, repo, branch.name)))
                 )
-            _require_gitreview(workdir, repo, context)
+            _require_gitreview(repo, context)
 
 
-def validate_branch_points(deliv, workdir, context):
+def validate_branch_points(deliv, context):
     "Make sure the branch points given are on the expected branches."
 
     # Check for 'upstream' branches. These track upstream release names and
@@ -1186,7 +1187,7 @@ def validate_branch_points(deliv, workdir, context):
                 (b.partition('/origin/')[-1]
                  if b.startswith('remotes/origin/')
                  else b)
-                for b in gitutils.get_branches(workdir, repo)
+                for b in gitutils.get_branches(context.workdir, repo)
             ])
 
             # Remove the remote name prefix if it is present in the
@@ -1194,7 +1195,7 @@ def validate_branch_points(deliv, workdir, context):
             containing = set(
                 c.partition('/')[-1] if c.startswith('origin/') else c
                 for c in gitutils.branches_containing(
-                    workdir, repo, hash)
+                    context.workdir, repo, hash)
             )
 
             LOG.debug('found {} on branches {} in {}'.format(
@@ -1243,11 +1244,26 @@ class ValidationContext(object):
     _zuul_projects = None
     _team_data = None
 
-    def __init__(self, debug=False):
+    def __init__(self, debug=False, cleanup=True):
         self.warnings = []
         self.errors = []
         self.debug = debug
+        self.cleanup = cleanup
         self.filename = None
+        self._setup_workdir()
+
+    def _setup_workdir(self):
+        workdir = tempfile.mkdtemp(prefix='releases-')
+        LOG.debug('creating temporary files in {}'.format(workdir))
+
+        def cleanup_workdir():
+            if self.cleanup:
+                shutil.rmtree(workdir, True)
+            else:
+                print('not cleaning up %s' % workdir)
+        atexit.register(cleanup_workdir)
+
+        self.workdir = workdir
 
     def set_filename(self, filename):
         self.filename = filename
@@ -1323,17 +1339,10 @@ def main():
               'skipping validation')
         return 0
 
-    context = ValidationContext(debug=args.debug)
-
-    workdir = tempfile.mkdtemp(prefix='releases-')
-    print('creating temporary files in %s' % workdir)
-
-    def cleanup_workdir():
-        if args.cleanup:
-            shutil.rmtree(workdir, True)
-        else:
-            print('not cleaning up %s' % workdir)
-    atexit.register(cleanup_workdir)
+    context = ValidationContext(
+        debug=args.debug,
+        cleanup=args.cleanup,
+    )
 
     for filename in filenames:
         print('\nChecking %s' % filename)
@@ -1349,67 +1358,34 @@ def main():
         if deliv.series in _CLOSED_SERIES:
             continue
 
-        clone_deliverable(deliv, workdir, context)
+        clone_deliverable(deliv, context)
         validate_bugtracker(deliv, context)
         validate_team(deliv, context)
         validate_release_notes(deliv, context)
         validate_model(deliv, context)
-        validate_release_type(
-            deliv,
-            workdir,
-            context,
-        )
-        validate_pypi_permissions(
-            deliv,
-            workdir,
-            context,
-        )
-        validate_gitreview(deliv, workdir, context)
-        validate_release_sha_exists(deliv, workdir, context)
-        validate_existing_tags(deliv, workdir, context)
-        validate_version_numbers(deliv, workdir, context)
-        validate_new_releases_at_end(deliv, workdir, context)
-        validate_release_branch_membership(deliv, workdir, context)
-        validate_tarball_base(deliv, workdir, context)
+        validate_release_type(deliv, context)
+        validate_pypi_permissions(deliv, context)
+        validate_gitreview(deliv, context)
+        validate_release_sha_exists(deliv, context)
+        validate_existing_tags(deliv, context)
+        validate_version_numbers(deliv, context)
+        validate_new_releases_at_end(deliv, context)
+        validate_release_branch_membership(deliv, context)
+        validate_tarball_base(deliv, context)
         # Some rules only apply to the most current release.
         if deliv.series == defaults.RELEASE:
-            validate_new_releases(
-                deliv,
-                context,
-            )
+            validate_new_releases(deliv, context)
             validate_series_open(
                 deliv,
                 filename,
                 context,
             )
-        validate_series_first(
-            deliv,
-            context,
-        )
-        validate_branch_prefixes(
-            deliv,
-            context,
-        )
-        validate_stable_branches(
-            deliv,
-            workdir,
-            context,
-        )
-        validate_feature_branches(
-            deliv,
-            workdir,
-            context,
-        )
-        validate_driverfixes_branches(
-            deliv,
-            workdir,
-            context,
-        )
-        validate_branch_points(
-            deliv,
-            workdir,
-            context,
-        )
+        validate_series_first(deliv, context)
+        validate_branch_prefixes(deliv, context)
+        validate_stable_branches(deliv, context)
+        validate_feature_branches(deliv, context)
+        validate_driverfixes_branches(deliv, context)
+        validate_branch_points(deliv, context)
 
     context.show_summary()
 
