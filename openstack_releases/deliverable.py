@@ -180,7 +180,7 @@ class Deliverables(object):
         else:
             filenames = self._by_team_and_series[(team, series)]
         for filename in filenames:
-            yield (
+            yield Deliverable(
                 team,
                 self._series_from_filename(filename),
                 self._deliverable_from_filename(filename),
@@ -223,6 +223,10 @@ class Repo(object):
     def pypi_name(self):
         return self._data.get('pypi-name')
 
+    @property
+    def base_name(self):
+        return self.name.rsplit('/')[-1]
+
     def __eq__(self, other):
         return self.name == other.name
 
@@ -246,6 +250,9 @@ class ReleaseProject(object):
     @property
     def tarball_base(self):
         return self._data.get('tarball-base')
+
+    def guess_sdist_name(self):
+        return self.tarball_base or self.repo.base_name
 
     def __eq__(self, other):
         return self.repo == other.repo
@@ -421,6 +428,12 @@ class Deliverable(object):
         return self._data.get('artifact-link-mode', 'tarball')
 
     @property
+    def earliest_release(self):
+        if not self.is_released:
+            return ''
+        return self.releases[0].version
+
+    @property
     def latest_release(self):
         if not self.is_released:
             return ''
@@ -484,6 +497,10 @@ class Deliverable(object):
     @property
     def stable_branch_type(self):
         return self._data.get('stable-branch-type', 'std')
+
+    @property
+    def cycle_highlights(self):
+        return self._data.get('cycle-highlights', [])
 
     def __eq__(self, other):
         return self.name == other.name

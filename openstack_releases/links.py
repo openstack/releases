@@ -33,8 +33,8 @@ def link_exists(url):
 
 
 def tarball_url(version, project):
-    repo_base = project['repo'].rsplit('/')[-1]
-    base = project.get('tarball-base', repo_base)
+    repo_base = project.repo.base_name
+    base = project.tarball_base or repo_base
     return '{s}/{r}/{n}-{v}.tar.gz'.format(
         s='https://tarballs.openstack.org',
         v=version,
@@ -44,8 +44,8 @@ def tarball_url(version, project):
 
 
 def wheel_py2_url(version, project):
-    repo_base = project['repo'].rsplit('/')[-1]
-    base = project.get('tarball-base', repo_base)
+    repo_base = project.repo.base_name
+    base = project.tarball_base or repo_base
     return '{s}/{r}/{n}-{v}-py2-none-any.whl'.format(
         s='https://tarballs.openstack.org',
         v=version,
@@ -55,8 +55,8 @@ def wheel_py2_url(version, project):
 
 
 def wheel_both_url(version, project):
-    repo_base = project['repo'].rsplit('/')[-1]
-    base = project.get('tarball-base', repo_base)
+    repo_base = project.repo.base_name
+    base = project.tarball_base or repo_base
     return '{s}/{r}/{n}-{v}-py2.py3-none-any.whl'.format(
         s='https://tarballs.openstack.org',
         v=version,
@@ -65,8 +65,8 @@ def wheel_both_url(version, project):
     )
 
 
-def artifact_link(version, project, deliverable_info):
-    mode = deliverable_info.get('artifact-link-mode', 'tarball')
+def artifact_link(version, project, deliv):
+    mode = deliv.artifact_link_mode
     if mode == 'tarball':
         # Link the version number to the tarball for downloading.
         url = tarball_url(version, project)
@@ -82,8 +82,8 @@ def signature_url(version, project):
     return tb_url + '.asc'
 
 
-def artifact_signature_link(version, type, project, deliverable_info):
-    mode = deliverable_info.get('artifact-link-mode', 'tarball')
+def artifact_signature_link(version, type, project, deliv):
+    mode = deliv.artifact_link_mode
     if mode == 'tarball':
         url = signature_url(version, project)
         # Link the signature type to the tarball for downloading.
