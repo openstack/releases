@@ -522,13 +522,6 @@ def validate_pypi_permissions(deliv, context):
 
         uploaders = pythonutils.get_pypi_uploaders(pypi_name)
         if not uploaders:
-            # Names like "openstack_requirements" are translated to
-            # "openstack-requirements" in the PyPI API.
-            alt_name = pypi_name.replace('_', '-')
-            LOG.debug('retrying with pypi_name name {!r}'.format(alt_name))
-            uploaders = pythonutils.get_pypi_uploaders(alt_name)
-
-        if not uploaders:
             context.error(
                 'could not find users with permission to upload packages '
                 'for {}. Is the sdist name correct?'.format(pypi_name)
