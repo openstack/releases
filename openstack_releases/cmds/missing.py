@@ -128,6 +128,10 @@ def main():
                     tb_url = links.tarball_url(version, project)
                     errors.extend(check_signed_file('tarball', tb_url))
 
+                    if 'a' in version or 'b' in version or 'rc' in version:
+                        print('  pre-releases are not uploaded to PyPI')
+                        continue
+
                     pypi_name = project.repo.pypi_name
                     if not pypi_name:
                         pypi_name = project.guess_sdist_name()
