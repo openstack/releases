@@ -4,5 +4,10 @@ launchpad: os-win
 release-model: cycle-with-intermediary
 team: winstackers
 type: library
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/os-win
+        hash: 6a5325be766368a1523c4f66b371c06fbdd789ec
 repository-settings:
   openstack/os-win: {}
