@@ -37,6 +37,8 @@ def get_team_data(url=PROJECTS_LIST):
 
 def get_tags_for_deliverable(team_data, team, name):
     "Return the tags for the deliverable owned by the team."
+    if team not in team_data:
+        return set()
     team_info = team_data[team]
     dinfo = team_info['deliverables'].get(name)
     if not dinfo:
