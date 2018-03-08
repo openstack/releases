@@ -69,14 +69,6 @@ _USES_PREVER = set([
     'cycle-with-milestones',
     'cycle-trailing',
 ])
-_VALID_TYPES = set([
-    'horizon-plugin',
-    'library',
-    'client-library',
-    'service',
-    'tempest-plugin',
-    'other',
-])
 _VALID_BRANCH_PREFIXES = set([
     'stable',
     'feature',
