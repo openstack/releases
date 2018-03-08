@@ -110,15 +110,15 @@ def validate_series_open(deliv, context):
     header('Validate Series Open')
 
     if deliv.series != defaults.RELEASE:
-        LOG.info('this rule only applies to the most current series, skipping')
+        print('this rule only applies to the most current series, skipping')
         return
 
     if not deliv.is_released:
-        LOG.info('no releases, skipping')
+        print('no releases, skipping')
         return
 
     if deliv.is_independent:
-        LOG.info('rule does not apply to independent projects')
+        print('rule does not apply to independent projects')
         return
 
     deliverables_dir = os.path.dirname(
@@ -141,7 +141,8 @@ def validate_series_open(deliv, context):
     idx = all_deliverable_files.index(context.filename)
     if idx == 0:
         # This is the first cycle-based deliverable file.
-        LOG.debug('this is the first cycle-based version of this deliverable')
+        print('this is the first cycle-based version of this deliverable, '
+              'skipping further checks')
         return
 
     previous_deliverable_file = all_deliverable_files[idx - 1]
@@ -155,7 +156,7 @@ def validate_series_open(deliv, context):
     for branch in previous_deliverable.branches:
         if branch.name == expected_branch:
             # Everything is OK
-            LOG.debug('found branch {} in {}'.format(
+            print('found branch {} in {}'.format(
                 branch.name,
                 previous_deliverable_file,
             ))
@@ -170,14 +171,14 @@ def validate_series_first(deliv, context):
     header('Validate Series First')
 
     if deliv.is_independent:
-        LOG.info('rule does not apply to independent projects')
+        print('rule does not apply to independent projects')
         return
 
     releases = deliv.releases
     if len(releases) != 1:
         # We only have to check this when the first release is being
         # applied in the file.
-        LOG.info('this rule only applies to the first release in a series')
+        print('this rule only applies to the first release in a series')
         return
 
     versionstr = releases[0].version
@@ -204,7 +205,7 @@ def validate_bugtracker(deliv, context):
         else:
             if (lp_resp.status_code // 100) == 4:
                 context.error('Launchpad project %s does not exist' % lp_name)
-        LOG.debug('launchpad project ID {}'.format(lp_name))
+        print('launchpad project ID {} OK'.format(lp_name))
     elif sb_id:
         try:
             projects_resp = requests.get(
@@ -226,7 +227,7 @@ def validate_bugtracker(deliv, context):
                 context.error(
                     'Did not find a storyboard project with ID %s' % sb_id
                 )
-            LOG.debug('storyboard project ID {}'.format(sb_id))
+            print('storyboard project ID {} OK'.format(sb_id))
     else:
         context.error('No launchpad or storyboard project given')
 
@@ -237,7 +238,8 @@ def validate_team(deliv, context):
     if deliv.team not in context.team_data:
         context.warning('Team %r not in governance data' %
                         deliv.team)
-    LOG.debug('owned by team {}'.format(deliv.team))
+    else:
+        print('owned by team {}'.format(deliv.team))
 
 
 def validate_release_notes(deliv, context):
@@ -246,7 +248,7 @@ def validate_release_notes(deliv, context):
     notes_link = deliv.release_notes
 
     if not notes_link:
-        LOG.debug('no release-notes given, skipping')
+        print('no release-notes given, skipping')
         return
 
     if isinstance(notes_link, dict):
@@ -269,7 +271,7 @@ def validate_release_notes(deliv, context):
             context.error('Could not fetch release notes page %s: %s' %
                           (link, rn_resp.status_code))
         else:
-            LOG.debug('{} OK'.format(link))
+            print('{} OK'.format(link))
 
 
 def validate_model(deliv, context):
@@ -335,14 +337,14 @@ def clone_deliverable(deliv, context):
 
 
 def _require_gitreview(repo, context):
-    LOG.info('looking for .gitreview in %s' % repo)
+    LOG.debug('looking for .gitreview in %s' % repo)
     filename = os.path.join(
         context.workdir, repo, '.gitreview',
     )
     if not os.path.exists(filename):
         context.error('%s has no .gitreview file' % (repo,))
     else:
-        LOG.debug('found {}'.format(filename))
+        print('found {}'.format(filename))
 
 
 def validate_gitreview(deliv, context):
@@ -355,7 +357,7 @@ def validate_gitreview(deliv, context):
                 continue
             checked.add(project.repo.name)
             if project.repo.is_retired:
-                LOG.debug('{} is retired, skipping'.format(
+                print('{} is retired, skipping'.format(
                     project.repo.name))
                 continue
             version_exists = gitutils.commit_exists(
@@ -368,7 +370,7 @@ def validate_gitreview(deliv, context):
                     context.workdir, project.repo.name, project.hash, context)
                 _require_gitreview(context.workdir, project.repo.name, context)
             else:
-                LOG.debug('version {} exists, skipping'.format(
+                print('version {} exists, skipping'.format(
                     release.version))
 
 
@@ -398,34 +400,34 @@ def validate_release_type(deliv, context):
     header('Validate release-type')
 
     if deliv.artifact_link_mode == 'none':
-        LOG.info('link-mode is "none", skipping release-type checks')
+        print('link-mode is "none", skipping release-type checks')
         return
 
     if not deliv.releases:
-        LOG.info('no releases listed, skipping release-type checks')
+        print('no releases listed, skipping release-type checks')
         return
 
     release = deliv.releases[-1]
     for project in release.projects:
 
-        LOG.info('checking release-type for {}'.format(project.repo.name))
+        LOG.debug('checking release-type for {}'.format(project.repo.name))
 
         release_type, was_explicit = get_release_type(
             deliv, project.repo.name, context.workdir,
         )
         if was_explicit:
-            LOG.info('found explicit release-type {!r}'.format(
+            LOG.debug('found explicit release-type {!r}'.format(
                 release_type))
         else:
-            LOG.info('release-type not given, '
-                     'guessing {!r}'.format(release_type))
+            LOG.debug('release-type not given, '
+                      'guessing {!r}'.format(release_type))
 
         version_exists = gitutils.commit_exists(
             context.workdir, project.repo.name, release.version,
         )
 
         if not version_exists:
-            LOG.info('new version {}, checking release jobs'.format(
+            LOG.debug('new version {}, checking release jobs'.format(
                 release.version))
             project_config.require_release_jobs_for_repo(
                 deliv,
@@ -442,12 +444,12 @@ def validate_tarball_base(deliv, context):
     header('Validate tarball-base')
 
     if deliv.artifact_link_mode != 'tarball':
-        LOG.info('rule does not apply for link-mode {}, skipping'.format(
+        print('rule does not apply for link-mode {}, skipping'.format(
             deliv.artifact_link_mode))
         return
 
     if not deliv.is_released:
-        LOG.info('no releases, skipping')
+        print('no releases, skipping')
         return
 
     release = deliv.releases[-1]
@@ -484,6 +486,9 @@ def validate_tarball_base(deliv, context):
                          _PLEASE)
                         % (project.repo.name, release.version,
                            action, expected, sdist))
+                else:
+                    print('{!r} matches expected {!r}'.format(
+                        sdist, expected))
 
 
 def validate_pypi_permissions(deliv, context):
@@ -506,10 +511,10 @@ def validate_pypi_permissions(deliv, context):
         ]
 
         if not pypi_jobs:
-            LOG.info('rule does not apply to repos not publishing to PyPI')
+            print('rule does not apply to repos not publishing to PyPI')
             continue
 
-        LOG.info('{} publishes to PyPI via {}'.format(repo.name, pypi_jobs))
+        LOG.debug('{} publishes to PyPI via {}'.format(repo.name, pypi_jobs))
 
         pypi_name = repo.pypi_name
 
@@ -547,7 +552,7 @@ def validate_pypi_permissions(deliv, context):
                     pypi_name, ', '.join(sorted(uploaders)))
             )
         else:
-            LOG.debug('found {} able to upload to {}'.format(
+            print('found {} able to upload to {}'.format(
                 sorted(uploaders), pypi_name))
 
 
@@ -557,12 +562,12 @@ def validate_release_sha_exists(deliv, context):
 
     for release in deliv.releases:
 
-        LOG.info('checking {}'.format(release.version))
+        LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
 
             # Check the SHA specified for the tag.
-            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
+            LOG.debug('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not is_a_hash(project.hash):
                 context.error(
@@ -578,7 +583,7 @@ def validate_release_sha_exists(deliv, context):
                                             project.hash, context):
                 continue
 
-            LOG.debug('successfully cloned {}'.format(project.hash))
+            print('successfully cloned {}'.format(project.hash))
 
             # Report if the SHA exists or not (an error if it
             # does not).
@@ -597,11 +602,11 @@ def validate_existing_tags(deliv, context):
 
     for release in deliv.releases:
 
-        LOG.info('checking {}'.format(release.version))
+        LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
 
-            LOG.info('{} SHA {}'.format(project.repo.name, project.hash))
+            LOG.debug('{} SHA {}'.format(project.repo.name, project.hash))
 
             if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
                                             project.hash, context):
@@ -616,7 +621,7 @@ def validate_existing_tags(deliv, context):
                 context.workdir, project.repo.name, release.version,
             )
             if not version_exists:
-                LOG.info('{} does not have {} tag yet'.format(
+                print('{} does not have {} tag yet, skipping'.format(
                     project.repo.name, release.version))
                 continue
 
@@ -634,7 +639,8 @@ def validate_existing_tags(deliv, context):
                      actual_sha,
                      project.hash))
             else:
-                LOG.debug('tag exists and is correct')
+                print('{} tag exists and is correct for {}'.format(
+                    release.version, project.repo.name))
 
 
 def validate_version_numbers(deliv, context):
@@ -644,7 +650,7 @@ def validate_version_numbers(deliv, context):
     prev_version = None
     for release in deliv.releases:
 
-        LOG.info('checking {}'.format(release.version))
+        LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
 
@@ -656,10 +662,10 @@ def validate_version_numbers(deliv, context):
                 context.workdir, project.repo.name, release.version,
             )
             if version_exists:
-                LOG.debug('tag exists, skipping further validation')
+                print('tag exists, skipping further validation')
                 continue
 
-            LOG.info('Found new version {} for {}'.format(
+            LOG.debug('Found new version {} for {}'.format(
                 release.version, project.repo))
 
             release_type, was_explicit = get_release_type(
@@ -676,7 +682,7 @@ def validate_version_numbers(deliv, context):
             # that the tag and metadata file
             # match.
             if release_type == 'puppet':
-                LOG.info('applying puppet version rules')
+                LOG.debug('applying puppet version rules')
                 puppet_ver = puppetutils.get_version(
                     context.workdir, project.repo.name)
                 if puppet_ver != release.version:
@@ -693,7 +699,7 @@ def validate_version_numbers(deliv, context):
             # that the tag and metadata file
             # match.
             if release_type == 'nodejs':
-                LOG.info('applying nodejs version rules')
+                LOG.debug('applying nodejs version rules')
                 npm_ver = npmutils.get_version(
                     context.workdir, project.repo.name)
                 if npm_ver != release.version:
@@ -726,6 +732,7 @@ def validate_version_numbers(deliv, context):
                     report,
                 )
 
+            had_error = False
             for e in versionutils.validate_version(
                     release.version,
                     release_type=release_type,
@@ -733,6 +740,11 @@ def validate_version_numbers(deliv, context):
                 msg = ('could not validate version %r: %s' %
                        (release.version, e))
                 context.error(msg)
+                had_error = True
+
+            if not had_error:
+                print('{} for {} OK'.format(
+                    release.version, project.repo.name))
 
         prev_version = release.version
 
@@ -757,20 +769,22 @@ def validate_new_releases_at_end(deliv, context):
                 context.workdir, project.repo.name, release.version,
             )
             if version_exists:
-                LOG.debug('tag exists, skipping further validation')
+                print('tag exists, skipping further validation')
                 continue
 
-            LOG.info('Found new version {} for {}'.format(
+            LOG.debug('Found new version {} for {}'.format(
                 release.version, project.repo))
             new_releases[release.version] = release
 
     # Make sure that new entries have been appended to the file.
     for v, nr in new_releases.items():
-        LOG.info('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
+        LOG.debug('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
         if nr != deliv.releases[-1]:
             msg = ('new release %s must be listed last, '
                    'with one new release per patch' % nr.version)
             context.error(msg)
+        else:
+            print('OK')
 
 
 def validate_release_branch_membership(deliv, context):
@@ -787,7 +801,7 @@ def validate_release_branch_membership(deliv, context):
 
     for release in deliv.releases:
 
-        LOG.info('checking {}'.format(release.version))
+        LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
 
@@ -799,10 +813,10 @@ def validate_release_branch_membership(deliv, context):
                 context.workdir, project.repo.name, release.version,
             )
             if version_exists:
-                LOG.debug('tag exists, skipping further validation')
+                print('tag exists, skipping further validation')
                 continue
 
-            LOG.info('Found new version {} for {}'.format(
+            LOG.debug('Found new version {} for {}'.format(
                 release.version, project.repo))
 
             # If this is the first version in the series,
@@ -819,39 +833,43 @@ def validate_release_branch_membership(deliv, context):
                 )
                 context.error(msg)
 
-            if prev_version:
-                # Check to see if we are re-tagging the same
-                # commit with a new version.
-                old_sha = gitutils.sha_for_tag(
+            if not prev_version:
+                print('no ancestry check for first version in a series')
+                continue
+
+            # Check to see if we are re-tagging the same
+            # commit with a new version.
+            old_sha = gitutils.sha_for_tag(
+                context.workdir,
+                project.repo.name,
+                prev_version,
+            )
+            if old_sha == project.hash:
+                # FIXME(dhellmann): This needs a test.
+                LOG.debug('The SHA is being retagged with a new version')
+            else:
+                # Check to see if the commit for the new
+                # version is in the ancestors of the
+                # previous release, meaning it is actually
+                # merged into the branch.
+                is_ancestor = gitutils.check_ancestry(
                     context.workdir,
                     project.repo.name,
                     prev_version,
+                    project.hash,
                 )
-                if old_sha == project.hash:
-                    # FIXME(dhellmann): This needs a test.
-                    LOG.info('Retagging the SHA with '
-                             'a new version')
-                else:
-                    # Check to see if the commit for the new
-                    # version is in the ancestors of the
-                    # previous release, meaning it is actually
-                    # merged into the branch.
-                    is_ancestor = gitutils.check_ancestry(
-                        context.workdir,
-                        project.repo.name,
-                        prev_version,
-                        project.hash,
-                    )
-                    if not is_ancestor:
-                        context.error(
-                            '%s %s receiving %s '
-                            'is not a descendant of %s' % (
-                                project.repo.name,
-                                project.hash,
-                                release.version,
-                                prev_version,
-                            )
+                if not is_ancestor:
+                    context.error(
+                        '%s %s receiving %s '
+                        'is not a descendant of %s' % (
+                            project.repo.name,
+                            project.hash,
+                            release.version,
+                            prev_version,
                         )
+                    )
+                else:
+                    print('ancestry OK')
 
         prev_version = release.version
 
@@ -861,11 +879,11 @@ def validate_new_releases(deliv, context):
     header('Validate New Releases')
 
     if deliv.series != defaults.RELEASE:
-        LOG.info('this rule only applies to the most current series, skipping')
+        print('this rule only applies to the most current series, skipping')
         return
 
     if not deliv.is_released:
-        LOG.info('no releases, skipping')
+        print('no releases, skipping')
         return
 
     final_release = deliv.releases[-1]
@@ -926,7 +944,7 @@ def validate_stable_branches(deliv, context):
     header('Validate Stable Branches')
 
     if deliv.launchpad_id in _NO_STABLE_BRANCH_CHECK:
-        LOG.info('rule does not apply to this repo, skipping')
+        print('rule does not apply to this repo, skipping')
         return
 
     if deliv.type == 'tempest-plugin' and deliv.branches:
@@ -952,7 +970,7 @@ def validate_stable_branches(deliv, context):
                  'but got %s') % (branch.name,))
             continue
         if prefix != 'stable':
-            LOG.debug('{} is not a stable branch, skipping'.format(
+            print('{} is not a stable branch, skipping'.format(
                 branch.name))
             continue
 
@@ -1056,7 +1074,7 @@ def validate_feature_branches(deliv, context):
                  'but got %s') % (branch.name,))
             continue
         if prefix != 'feature':
-            LOG.debug('{} is not a feature branch, skipping'.format(
+            print('{} is not a feature branch, skipping'.format(
                 branch.name))
             continue
 
@@ -1110,7 +1128,7 @@ def validate_driverfixes_branches(deliv, context):
             continue
 
         if prefix != 'driverfixes':
-            LOG.debug('{} is not a driverfixes branch, skipping'.format(
+            print('{} is not a driverfixes branch, skipping'.format(
                 branch.name))
             continue
 
@@ -1157,21 +1175,19 @@ def validate_branch_points(deliv, context):
     # Check for 'upstream' branches. These track upstream release names and
     # do not align with OpenStack series names.
     if deliv.stable_branch_type == 'upstream':
-        LOG.debug('this project follows upstream branching conventions, '
-                  'skipping')
+        print('this project follows upstream branching conventions, skipping')
         return
 
     for branch in deliv.branches:
-        header('Validate Branch Points: {}'.format(branch.name))
+        LOG.debug('checking branch {!r}'.format(branch.name))
         try:
             prefix, series = branch.name.split('/')
         except ValueError:
-            LOG.debug('could not parse the branch name, skipping')
+            print('could not parse the branch name, skipping')
             continue
 
         if prefix == 'feature':
-            LOG.debug('{} is a feature branch, rule does not apply'.format(
-                branch.name))
+            print('these rules do not apply to feature branches, skipping')
             continue
 
         elif prefix == 'stable':
@@ -1190,7 +1206,7 @@ def validate_branch_points(deliv, context):
         location = branch.get_repo_map()
 
         for repo, hash in sorted(location.items()):
-            LOG.debug('{}'.format(repo))
+            LOG.debug('checking repo {}'.format(repo))
             existing_branches = sorted([
                 (b.partition('/origin/')[-1]
                  if b.startswith('remotes/origin/')
@@ -1211,8 +1227,8 @@ def validate_branch_points(deliv, context):
 
             for missing in expected.difference(containing):
                 if missing not in existing_branches:
-                    LOG.debug('branch {} does not exist in {}, '
-                              'skipping'.format(branch.name, repo))
+                    print('branch {} does not exist in {}, '
+                          'skipping'.format(branch.name, repo))
                     continue
 
                 if branch.name in existing_branches:
@@ -1343,8 +1359,8 @@ def main():
 
     filenames = args.input or gitutils.find_modified_deliverable_files()
     if not filenames:
-        LOG.debug('no modified deliverable files and no arguments, '
-                  'skipping validation')
+        LOG.warning('no modified deliverable files and no arguments, '
+                    'skipping validation')
         return 0
 
     context = ValidationContext(
@@ -1356,7 +1372,7 @@ def main():
         header('Checking %s' % filename, '=')
 
         if not os.path.isfile(filename):
-            LOG.info("File was deleted, skipping.")
+            print("File was deleted, skipping.")
             continue
 
         context.set_filename(filename)
@@ -1364,7 +1380,7 @@ def main():
         deliv = deliverable.Deliverable.read_file(filename)
 
         if deliv.series in _CLOSED_SERIES:
-            LOG.info('File is part of a closed series, skipping')
+            print('File is part of a closed series, skipping')
             continue
 
         clone_deliverable(deliv, context)

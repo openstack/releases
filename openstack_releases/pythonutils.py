@@ -49,9 +49,9 @@ def get_sdist_name(workdir, repo):
     cmd = [python, 'setup.py', '--name']
     processutils.check_output(cmd, cwd=dest)
     # Run it again to get a clean version of the name.
-    print('Running: %s in %s' % (' '.join(cmd), dest))
+    LOG.debug('Running: %s in %s' % (' '.join(cmd), dest))
     out = processutils.check_output(cmd, cwd=dest).decode('utf-8')
-    print('Results: %s' % (out,))
+    LOG.debug('Results: %s' % (out,))
     name = out.splitlines()[-1].strip()
     return name
 

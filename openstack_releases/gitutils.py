@@ -96,7 +96,7 @@ def ensure_basic_git_config(workdir, repo, settings):
 
 def clone_repo(workdir, repo, ref=None, branch=None):
     "Check out the code."
-    print('\nChecking out repository {} to {}'.format(
+    LOG.debug('Checking out repository {} to {}'.format(
         repo, branch or ref or 'master'))
     cmd = [
         './tools/clone_repo.sh',
