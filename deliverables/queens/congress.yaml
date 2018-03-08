@@ -35,16 +35,15 @@ branches:
   - location: 7.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - 'Mistral Integration: Congress can now trigger workflows according to
-    operator-defined policy. From sending emails to running ansible playbooks,
-    Congress and Mistral can take infrastructure automation and fault-recovery
-    to the next level.'
+  - 'Mistral Integration: Congress can now trigger workflows according to operator-defined
+    policy. From sending emails to running ansible playbooks, Congress and Mistral
+    can take infrastructure automation and fault-recovery to the next level.'
   - 'Config Validation: To help operators catch improper, insecure, or incompatible
-    configurations across the Stack, the new configuration validation facility
-    enables Congress to monitor service configurations according to policy.'
-  - 'Tag-based Security: To help operators secure and manage self-service
-    infrastructure, Congress now supports enforcement of application-based network
-    security policies based on tags and other semantic information.'
+    configurations across the Stack, the new configuration validation facility enables
+    Congress to monitor service configurations according to policy.'
+  - 'Tag-based Security: To help operators secure and manage self-service infrastructure,
+    Congress now supports enforcement of application-based network security policies
+    based on tags and other semantic information.'
   - 'Bug Fixes: As with every release, we continue to make Congress more robust and
     stable than ever.'
 release-notes: https://docs.openstack.org/releasenotes/congress/queens.html
