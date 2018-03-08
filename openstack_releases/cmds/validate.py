@@ -105,6 +105,10 @@ def validate_series_open(deliv, context):
     "No releases in the new series until the previous one has a branch."
     header('Validate Series Open')
 
+    if deliv.series != defaults.RELEASE:
+        LOG.info('this rule only applies to the most current series, skipping')
+        return
+
     if not deliv.is_released:
         LOG.info('no releases, skipping')
         return
@@ -858,6 +862,10 @@ def validate_new_releases(deliv, context):
     """
     header('Validate New Releases')
 
+    if deliv.series != defaults.RELEASE:
+        LOG.info('this rule only applies to the most current series, skipping')
+        return
+
     if not deliv.is_released:
         LOG.info('no releases, skipping')
         return
@@ -1372,10 +1380,8 @@ def main():
         validate_new_releases_at_end(deliv, context)
         validate_release_branch_membership(deliv, context)
         validate_tarball_base(deliv, context)
-        # Some rules only apply to the most current release.
-        if deliv.series == defaults.RELEASE:
-            validate_new_releases(deliv, context)
-            validate_series_open(deliv, context)
+        validate_new_releases(deliv, context)
+        validate_series_open(deliv, context)
         validate_series_first(deliv, context)
         validate_branch_prefixes(deliv, context)
         validate_stable_branches(deliv, context)
