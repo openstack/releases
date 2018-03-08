@@ -72,16 +72,12 @@ properties:
                 type: "string"
               hash:
                 type: "string"
-              highlights:
-                type: "string"
               comment:
                 type: "string"
               tarball-base:
                 type: "string"
             additionalProperties: False
         diff-start:
-          type: "string"
-        highlights:
           type: "string"
       required: ["version", "projects"]
       additionalProperties: False
