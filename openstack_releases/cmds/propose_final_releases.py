@@ -139,8 +139,7 @@ def main():
         collapse_history=False,
     )
 
-    for entry in all_deliv.get_deliverables(None, args.series):
-        deliv = deliverable.Deliverable(*entry)
+    for deliv in all_deliv.get_deliverables(None, args.series):
         verbose('\n{} {}'.format(deliv.name, deliv.model))
 
         if deliv.model == 'cycle-trailing':
