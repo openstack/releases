@@ -276,6 +276,10 @@ class Release(object):
     def projects(self):
         return sorted(self._projects.values())
 
+    @property
+    def diff_start(self):
+        return self._data.get('diff-start')
+
     def __eq__(self, other):
         return self.version == other.version
 
@@ -438,6 +442,10 @@ class Deliverable(object):
         if not self.is_released:
             return ''
         return self.releases[-1].version
+
+    @property
+    def is_first_release(self):
+        return len(self.releases) == 1
 
     @property
     def release_notes(self):
