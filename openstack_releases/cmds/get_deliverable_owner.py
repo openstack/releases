@@ -15,7 +15,6 @@ from __future__ import print_function
 import argparse
 
 import openstack_releases
-from openstack_releases import defaults
 from openstack_releases import deliverable
 
 
@@ -26,22 +25,11 @@ def main():
         help='the name of the deliverable, such as "nova" or "oslo.config"',
     )
     parser.add_argument(
-        '--series',
-        default=defaults.RELEASE,
-        help='the release series, such as "newton" or "ocata"',
-    )
-    parser.add_argument(
         '--deliverables-dir',
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
     )
     args = parser.parse_args()
-
-    # Deal with the inconsistency of the name for the independent
-    # directory.
-    series = args.series
-    if series == 'independent':
-        series = '_independent'
 
     all_deliv = deliverable.Deliverables(
         root_dir=args.deliverables_dir,
