@@ -118,8 +118,7 @@ _RELEASE_JOBS_FOR_TYPE = {
 }
 
 
-def require_release_jobs_for_repo(deliv, zuul_projects, repo,
-                                  release_type, messages):
+def require_release_jobs_for_repo(deliv, repo, release_type, context):
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
@@ -139,12 +138,12 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
         LOG.debug('{} is retired, skipping'.format(repo.name))
         return
 
-    if repo.name not in zuul_projects:
-        messages.error(
+    if repo.name not in context.zuul_projects:
+        context.error(
             'did not find %s in %s' % (repo.name, ZUUL_PROJECTS_FILENAME),
         )
     else:
-        p = zuul_projects[repo.name]
+        p = context.zuul_projects[repo.name]
         templates = p.get('templates', [])
         # NOTE(dhellmann): We don't mess around looking for individual
         # jobs, because we want projects to use the templates.
@@ -159,7 +158,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                 if j in expected_jobs
             ]
             if len(found_jobs) == 0:
-                messages.error(
+                context.error(
                     '{filename} no release job specified for {repo}, '
                     'one of {expected!r} needs to be included in {existing!r} '
                     'or no release will be '
@@ -171,7 +170,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                     ),
                 )
             elif len(found_jobs) > 1:
-                messages.warning(
+                context.warning(
                     '{filename} multiple release jobs specified for {repo}, '
                     '{existing!r} should include *one* of '
                     '{expected!r}, found {found!r}'.format(
@@ -193,7 +192,7 @@ def require_release_jobs_for_repo(deliv, zuul_projects, repo,
                     if j in templates and j not in expected_jobs
                 ]
                 if bad_jobs:
-                    messages.error(
+                    context.error(
                         '{filename} has unexpected release jobs '
                         '{bad_jobs!r} for release-type {wrong_type} '
                         'but {repo} uses release-type {release_type}'.format(

@@ -32,7 +32,7 @@ class TestValidateBugTracker(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_no_tracker(self):
         validate.validate_bugtracker(
@@ -42,10 +42,10 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     @mock.patch('requests.get')
     def test_launchpad_invalid_name(self, get):
@@ -57,10 +57,10 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={'launchpad': 'nonsense-name'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     @mock.patch('requests.get')
     def test_launchpad_valid_name(self, get):
@@ -72,10 +72,10 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={'launchpad': 'oslo.config'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('requests.get')
     def test_launchpad_timeout(self, get):
@@ -88,10 +88,10 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={'launchpad': 'oslo.config'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('requests.get')
     def test_storyboard_valid_id(self, get):
@@ -125,10 +125,10 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={'storyboard': '760'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('requests.get')
     def test_storyboard_no_such_project(self, get):
@@ -152,19 +152,20 @@ class TestValidateBugTracker(base.BaseTestCase):
                 name='name',
                 data={'storyboard': '-760'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateTeam(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_invalid_name(self):
+        self.ctx._team_data = {}
         validate.validate_team(
             deliverable.Deliverable(
                 team='nonsense-name',
@@ -172,14 +173,14 @@ class TestValidateTeam(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            {},
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_valid_name(self):
+        self.ctx._team_data = {'oslo': None}
         validate.validate_team(
             deliverable.Deliverable(
                 team='oslo',
@@ -187,18 +188,17 @@ class TestValidateTeam(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            {'oslo': None},
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateReleaseNotes(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_no_link(self):
         validate.validate_release_notes(
@@ -208,10 +208,10 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_invalid_link(self):
         validate.validate_release_notes(
@@ -223,10 +223,10 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                     'release-notes': 'https://docs.openstack.org/no-such-page',
                 },
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_valid_link(self):
         validate.validate_release_notes(
@@ -237,10 +237,10 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                 data={'release-notes':
                       'https://docs.openstack.org/releasenotes/oslo.config'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_invalid_link_multi(self):
         validate.validate_release_notes(
@@ -258,10 +258,10 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                     }
                 },
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_unknown_repo(self):
         validate.validate_release_notes(
@@ -279,10 +279,10 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                     }
                 },
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_valid_link_multi(self):
         validate.validate_release_notes(
@@ -300,17 +300,17 @@ class TestValidateReleaseNotes(base.BaseTestCase):
                     },
                 },
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateModel(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_no_model_series(self):
         validate.validate_model(
@@ -320,11 +320,11 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_no_model_independent(self):
         validate.validate_model(
@@ -334,10 +334,10 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_with_model_independent_match(self):
         validate.validate_model(
@@ -347,10 +347,10 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'independent'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_with_model_independent_nomatch(self):
         validate.validate_model(
@@ -360,10 +360,10 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'cycle-with-intermediary'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_with_independent_and_model(self):
         validate.validate_model(
@@ -373,10 +373,10 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'independent'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_with_model_series(self):
         validate.validate_model(
@@ -386,10 +386,10 @@ class TestValidateModel(base.BaseTestCase):
                 name='name',
                 data={'release-model': 'cycle-with-intermediary'},
             ),
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_untagged_with_releases(self):
         deliv = deliverable.Deliverable(
@@ -410,20 +410,20 @@ class TestValidateModel(base.BaseTestCase):
         )
         validate.validate_model(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateReleaseSHAExists(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateReleaseSHAExists, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_invalid_hash(self):
         deliv = deliverable.Deliverable(
@@ -445,11 +445,11 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         validate.validate_release_sha_exists(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_no_such_hash(self):
         deliv = deliverable.Deliverable(
@@ -471,11 +471,11 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         validate.validate_release_sha_exists(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -492,11 +492,11 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         validate.validate_release_sha_exists(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateExistingTags(base.BaseTestCase):
@@ -505,7 +505,7 @@ class TestValidateExistingTags(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_valid(self):
         deliv = deliverable.Deliverable(
@@ -527,11 +527,11 @@ class TestValidateExistingTags(base.BaseTestCase):
         validate.validate_existing_tags(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_mismatch(self):
         deliv = deliverable.Deliverable(
@@ -553,11 +553,11 @@ class TestValidateExistingTags(base.BaseTestCase):
         validate.validate_existing_tags(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -574,11 +574,11 @@ class TestValidateExistingTags(base.BaseTestCase):
         validate.validate_existing_tags(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateReleaseBranchMembership(base.BaseTestCase):
@@ -587,7 +587,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_hash_from_master_used_in_stable_release(self):
         deliv = deliverable.Deliverable(
@@ -610,11 +610,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_hash_from_master_used_in_stable_release2(self):
         deliv = deliverable.Deliverable(
@@ -643,11 +643,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_hash_from_stable_used_in_master_release(self):
         deliv = deliverable.Deliverable(
@@ -670,11 +670,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_hash_from_master_used_after_default_branch_should_exist_but_does_not(self):
         deliv = deliverable.Deliverable(
@@ -695,11 +695,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_not_descendent(self):
         deliv = deliverable.Deliverable(
@@ -729,11 +729,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(2, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(2, len(self.ctx.errors))
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -750,11 +750,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         validate.validate_release_branch_membership(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateNewReleasesAtEnd(base.BaseTestCase):
@@ -763,7 +763,7 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -780,11 +780,11 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
         validate.validate_new_releases_at_end(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_not_at_end(self):
         deliv = deliverable.Deliverable(
@@ -812,11 +812,11 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
         validate.validate_new_releases_at_end(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateVersionNumbers(base.BaseTestCase):
@@ -825,7 +825,7 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     @mock.patch('openstack_releases.versionutils.validate_version')
     def test_invalid_version(self, validate_version):
@@ -853,11 +853,11 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         validate.validate_version_numbers(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_no_releases(self):
         # When we initialize a new series, we won't have any release
@@ -874,11 +874,11 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         validate.validate_version_numbers(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestGetReleaseType(base.BaseTestCase):
@@ -886,7 +886,7 @@ class TestGetReleaseType(base.BaseTestCase):
     def setUp(self):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_explicit(self):
         deliv = deliverable.Deliverable(
@@ -1089,9 +1089,9 @@ class TestGetReleaseType(base.BaseTestCase):
 class TestPuppetUtils(base.BaseTestCase):
 
     def setUp(self):
-        super(TestPuppetUtils, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     @mock.patch('openstack_releases.gitutils.check_branch_sha')
     @mock.patch('openstack_releases.puppetutils.get_version')
@@ -1118,11 +1118,11 @@ class TestPuppetUtils(base.BaseTestCase):
         validate.validate_version_numbers(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('openstack_releases.gitutils.check_branch_sha')
     @mock.patch('openstack_releases.puppetutils.get_version')
@@ -1149,19 +1149,19 @@ class TestPuppetUtils(base.BaseTestCase):
         validate.validate_version_numbers(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateTarballBase(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateTarballBase, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
@@ -1184,16 +1184,16 @@ class TestValidateTarballBase(base.BaseTestCase):
         validate.clone_deliverable(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
         validate.validate_tarball_base(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
@@ -1217,16 +1217,16 @@ class TestValidateTarballBase(base.BaseTestCase):
         validate.clone_deliverable(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
         validate.validate_tarball_base(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
@@ -1249,16 +1249,16 @@ class TestValidateTarballBase(base.BaseTestCase):
         validate.clone_deliverable(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
         validate.validate_tarball_base(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
@@ -1282,16 +1282,16 @@ class TestValidateTarballBase(base.BaseTestCase):
         validate.clone_deliverable(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
         validate.validate_tarball_base(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     @mock.patch('openstack_releases.project_config.require_release_jobs_for_repo')
     @mock.patch('openstack_releases.pythonutils.get_sdist_name')
@@ -1315,16 +1315,16 @@ class TestValidateTarballBase(base.BaseTestCase):
         validate.clone_deliverable(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
         validate.validate_tarball_base(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateNewReleases(base.BaseTestCase):
@@ -1371,7 +1371,8 @@ class TestValidateNewReleases(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
+        self.ctx._team_data = self.team_data
 
     def test_all_repos(self):
         # The repos in the tag, governance, and repository-settings
@@ -1397,11 +1398,10 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(
             deliv,
-            self.team_data,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_extra_repo_gov(self):
         # The tag includes a repo not in governance.
@@ -1430,11 +1430,10 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(
             deliv,
-            self.team_data,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_missing_repo_gov(self):
         # The tag is missing a repo in governance.
@@ -1463,12 +1462,11 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(
             deliv,
-            self.team_data,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_extra_repo_info(self):
         # The tag has a repo not in repository-settings or governance
@@ -1493,12 +1491,11 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(
             deliv,
-            self.team_data,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_missing_repo_info(self):
         # The tag is missing a repository that is in
@@ -1525,19 +1522,18 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(
             deliv,
-            self.team_data,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateBranchPrefixes(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_invalid_prefix(self):
         deliv = deliverable.Deliverable(
@@ -1553,10 +1549,10 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
         )
         validate.validate_branch_prefixes(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_valid_prefix(self):
         for prefix in validate._VALID_BRANCH_PREFIXES:
@@ -1573,19 +1569,19 @@ class TestValidateBranchPrefixes(base.BaseTestCase):
             )
             validate.validate_branch_prefixes(
                 deliv,
-                self.msg,
+                self.ctx,
             )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateStableBranches(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateStableBranches, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_version_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
@@ -1607,10 +1603,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
@@ -1632,10 +1628,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_version_not_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
@@ -1657,10 +1653,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_mismatched_series_cycle(self):
         deliverable_data = textwrap.dedent('''
@@ -1682,11 +1678,11 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_unknown_series_independent(self):
         deliverable_data = textwrap.dedent('''
@@ -1708,11 +1704,11 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_can_have_independent_branches(self):
         deliverable_data = textwrap.dedent('''
@@ -1737,11 +1733,11 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_explicit_stable_branch_type(self):
         deliverable_data = textwrap.dedent('''
@@ -1764,10 +1760,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_explicit_stable_branch_type_invalid(self):
         deliverable_data = textwrap.dedent('''
@@ -1790,10 +1786,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_tagless_stable_branch_type_bad_location_type(self):
         deliverable_data = textwrap.dedent('''
@@ -1816,10 +1812,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_tagless_stable_branch_type_bad_location_value(self):
         deliverable_data = textwrap.dedent('''
@@ -1843,10 +1839,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_tagless_stable_branch_type(self):
         deliverable_data = textwrap.dedent('''
@@ -1870,10 +1866,10 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_tempest_plugin(self):
         deliverable_data = textwrap.dedent('''
@@ -1897,19 +1893,19 @@ class TestValidateStableBranches(base.BaseTestCase):
         validate.validate_stable_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateFeatureBranches(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateFeatureBranches, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_location_not_a_dict(self):
         deliverable_data = textwrap.dedent('''
@@ -1931,11 +1927,11 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_not_a_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -1958,11 +1954,11 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_a_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -1985,11 +1981,11 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
@@ -2012,11 +2008,11 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_no_such_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -2039,11 +2035,11 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_tempest_plugin(self):
         deliverable_data = textwrap.dedent('''
@@ -2067,20 +2063,20 @@ class TestValidateFeatureBranches(base.BaseTestCase):
         validate.validate_feature_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateDriverfixesBranches(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateDriverfixesBranches, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/automaton')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_unknown_series(self):
         deliverable_data = textwrap.dedent('''
@@ -2103,11 +2099,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_not_a_dict(self):
         deliverable_data = textwrap.dedent('''
@@ -2129,11 +2125,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_not_a_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -2156,11 +2152,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_a_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -2183,11 +2179,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
@@ -2210,11 +2206,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_location_no_such_sha(self):
         deliverable_data = textwrap.dedent('''
@@ -2237,11 +2233,11 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_tempest_plugin(self):
         deliverable_data = textwrap.dedent('''
@@ -2265,19 +2261,19 @@ class TestValidateDriverfixesBranches(base.BaseTestCase):
         validate.validate_driverfixes_branches(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateSeriesOpen(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateSeriesOpen, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_series_is_open(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2313,11 +2309,11 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         validate.validate_series_open(
             deliv,
             series_b_filename,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_no_earlier_series(self):
         series_b_dir = self.tmpdir + '/b'
@@ -2342,11 +2338,11 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         validate.validate_series_open(
             deliv,
             series_b_filename,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_independent(self):
         deliverable_data = textwrap.dedent('''
@@ -2366,11 +2362,11 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         validate.validate_series_open(
             deliv,
             'filename',  # not used
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_no_stable_branch(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2403,19 +2399,19 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         validate.validate_series_open(
             deliv,
             series_b_filename,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(1, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateSeriesFirst(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateSeriesFirst, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_version_ok(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2439,11 +2435,11 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_ignore_if_second_release(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2471,11 +2467,11 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_ignore_if_no_releases(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2495,11 +2491,11 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_version_bad(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2523,11 +2519,11 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_beta_1(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2551,11 +2547,11 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_beta_2(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2579,20 +2575,20 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         )
         validate.validate_series_first(
             deliv,
-            self.msg,
+            self.ctx,
         )
-        self.msg.show_summary()
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
 
 class TestValidateBranchPoints(base.BaseTestCase):
 
     def setUp(self):
-        super(TestValidateBranchPoints, self).setUp()
+        super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         gitutils.clone_repo(self.tmpdir, 'openstack/release-test')
-        self.msg = validate.MessageCollector()
+        self.ctx = validate.ValidationContext()
 
     def test_branch_does_not_exist(self):
         deliverable_data = textwrap.dedent('''
@@ -2614,10 +2610,10 @@ class TestValidateBranchPoints(base.BaseTestCase):
         validate.validate_branch_points(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_branch_is_correct(self):
         deliverable_data = textwrap.dedent('''
@@ -2639,10 +2635,10 @@ class TestValidateBranchPoints(base.BaseTestCase):
         validate.validate_branch_points(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(0, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_branch_moved(self):
         deliverable_data = textwrap.dedent('''
@@ -2665,7 +2661,7 @@ class TestValidateBranchPoints(base.BaseTestCase):
         validate.validate_branch_points(
             deliv,
             self.tmpdir,
-            self.msg,
+            self.ctx,
         )
-        self.assertEqual(0, len(self.msg.warnings))
-        self.assertEqual(1, len(self.msg.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
