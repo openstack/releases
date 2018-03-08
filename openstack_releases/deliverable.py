@@ -191,8 +191,8 @@ class Deliverables(object):
         """Return info associated with a deliverable name.
         """
         for filename in self._by_deliverable_name.get(name, []):
-            yield (
-                None,
+            yield Deliverable(
+                None,  # team will be taken from the data
                 self._series_from_filename(filename),
                 self._deliverable_from_filename(filename),
                 self._by_filename.get(filename, {}),

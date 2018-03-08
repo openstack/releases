@@ -35,7 +35,6 @@ def main():
         root_dir=args.deliverables_dir,
         collapse_history=False,
     )
-    for entry in all_deliv.get_deliverable_history(args.deliverable):
-        deliv = deliverable.Deliverable(*entry)
+    for deliv in all_deliv.get_deliverable_history(args.deliverable):
         print(deliv.team)
         break
