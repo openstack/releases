@@ -153,34 +153,34 @@ def main():
             continue
 
         latest_release = deliv.releases[-1]
-        projects = latest_release.get('projects')
+        projects = latest_release.projects
         if not projects:
             verbose('#  no projects in latest release')
             continue
         for pre_rel in ['a', 'b', 'rc']:
-            if pre_rel in str(latest_release['version']):
+            if pre_rel in str(latest_release.version):
                 break
         else:  # we did not find any pre_rel
             verbose('#  {} was not a release candidate'.format(
-                latest_release['version']))
+                latest_release.version))
             continue
 
         # The new version is the same as the latest release version
         # without the pre-release component at the end. Make sure it
         # has 3 sets of digits.
         new_version = '.'.join(
-            (latest_release['version'].split('.')[:-1] + ['0'])[:3]
+            (latest_release.version.split('.')[:-1] + ['0'])[:3]
         )
 
         branch = 'stable/{}'.format(args.prior_series)
         diff_start = get_prior_branch_point(
-            workdir, projects[0]['repo'], branch,
+            workdir, projects[0].repo.name, branch,
         )
 
         deliverable_data = deliv.data
         release_data = {
             'version': new_version,
-            'projects': latest_release['projects'],
+            'projects': deliv.data['releases'][-1]['projects'],
         }
         if diff_start:
             release_data['diff-start'] = diff_start
