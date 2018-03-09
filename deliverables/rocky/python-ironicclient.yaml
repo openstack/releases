@@ -4,5 +4,10 @@ launchpad: python-ironicclient
 release-model: cycle-with-intermediary
 team: ironic
 type: client-library
+releases:
+  - projects:
+      - hash: 964556bb8ce623fc47ee3378fb11ae77225c0b75
+        repo: openstack/python-ironicclient
+    version: 2.3.0
 repository-settings:
   openstack/python-ironicclient: {}
