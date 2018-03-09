@@ -186,8 +186,10 @@ date ranges during which each key was in general use.
   `key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`_ (details__)
 * 2017-03-24..2017-09-15 (Pike Cycle key):
   `key 0xc96bfb160752606daa0de2fa05eb5792c876df9a`_ (details__)
-* 2017-09-15..present (Queens Cycle key):
+* 2017-09-15..2018-03-19 (Queens Cycle key):
   `key 0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949`_ (details__)
+* 2018-03-19..present (Rocky Cycle key):
+  `key 0xc31292066be772022438222c184fd3e1edf21a78`_ (details__)
 
 .. Static key files are generated with the following command:
    ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28
@@ -202,6 +204,8 @@ date ranges during which each key was in general use.
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xc96bfb160752606daa0de2fa05eb5792c876df9a&fingerprint=on
 .. _`key 0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949`: _static/0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949.txt
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949&fingerprint=on
+.. _`key 0xc31292066be772022438222c184fd3e1edf21a78`: _static/0xc31292066be772022438222c184fd3e1edf21a78.txt
+.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xc31292066be772022438222c184fd3e1edf21a78&fingerprint=on
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
