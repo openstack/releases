@@ -280,6 +280,10 @@ class Release(object):
     def diff_start(self):
         return self._data.get('diff-start')
 
+    @property
+    def is_release_candidate(self):
+        return 'rc' in self.version
+
     def __eq__(self, other):
         return self.version == other.version
 

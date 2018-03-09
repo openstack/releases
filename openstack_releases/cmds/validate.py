@@ -189,6 +189,48 @@ def validate_series_first(deliv, context):
         )
 
 
+def validate_series_final(deliv, context):
+    "The final release after a RC should tag the same commit."
+
+    releases = deliv.releases
+    if len(releases) < 2:
+        # We only have to check this when the first release is being
+        # applied in the file.
+        print('this rule only applies to the final release in a series')
+        return
+
+    previous_release = releases[-2]
+    current_release = releases[-1]
+
+    if (current_release.is_release_candidate or
+            not previous_release.is_release_candidate):
+        print('this rule only applies when tagging a final from a candidate')
+        return
+
+    current_projects = sorted(releases[-1].projects)
+    previous_projects = sorted(previous_release.projects)
+    for c_proj, p_proj in zip(current_projects, previous_projects):
+        LOG.debug(
+            'comparing {}:{} with {}:{}'.format(
+                c_proj.repo.name, c_proj.hash,
+                p_proj.repo.name, p_proj.hash,
+            ))
+        if c_proj.repo.name != p_proj.repo.name:
+            context.error(
+                '{} does not match {} so there is some missing info '
+                'in this release'.format(c_proj.repo.name, p_proj.repo.name)
+            )
+        elif c_proj.hash != p_proj.hash:
+            context.error(
+                '{} for {} is on {} but should be {} '
+                'to match version {}'.format(
+                    current_release.version, c_proj.repo.name, c_proj.hash,
+                    p_proj.hash, previous_release.version)
+            )
+        else:
+            print('OK')
+
+
 def validate_bugtracker(deliv, context):
     "Does the bug tracker info link to something that exists?"
     lp_name = deliv.launchpad_id
@@ -1369,6 +1411,7 @@ def main():
             validate_new_releases,
             validate_series_open,
             validate_series_first,
+            validate_series_final,
             validate_branch_prefixes,
             validate_stable_branches,
             validate_feature_branches,

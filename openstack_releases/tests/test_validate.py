@@ -2325,6 +2325,205 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.errors))
 
 
+class TestValidateSeriesFinal(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        self.ctx = validate.ValidationContext()
+
+    def test_no_releases(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_only_rc(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_no_rc(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.2
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_rc_with_final_match(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_rc_with_final_mismatch(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_rc_with_final_mismatch_many_rcs(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1.0rc2
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: de2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_match_wrong_rc(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1.0rc2
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+
 class TestValidateBranchPoints(base.BaseTestCase):
 
     def setUp(self):
