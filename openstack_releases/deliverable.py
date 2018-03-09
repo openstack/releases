@@ -415,7 +415,7 @@ class Deliverable(object):
 
     @property
     def is_released(self):
-        return len(self._data.get('releases', [])) > 0
+        return len(self._data.get('releases') or []) > 0
 
     @property
     def is_cycle_based(self):
