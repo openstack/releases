@@ -33,10 +33,10 @@ import pyfiglet
 import requests
 
 from openstack_releases import defaults
+from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import governance
 from openstack_releases import hound
-from openstack_releases import pythonutils
 from openstack_releases import release_notes
 from openstack_releases import yamlutils
 
@@ -257,39 +257,27 @@ def main():
             continue
         print('\n' + ('=' * 80))
         print('\nChecking %s\n' % filename)
-        with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_info = yamlutils.loads(f.read())
+        deliv = deliverable.Deliverable.read_file(filename)
 
-        series = os.path.basename(
-            os.path.dirname(
-                os.path.abspath(filename)
-            )
-        )
-        if series == '_independent':
-            default_model = 'independent'
-        else:
-            default_model = 'no release model specified'
-
-        stable_branch = series not in ['_independent', defaults.RELEASE]
+        stable_branch = deliv.series not in ['independent', defaults.RELEASE]
 
         # By default assume the project does not use milestones.
         header('Release model')
-        print(deliverable_info.get('release-model', default_model))
+        print(deliv.model)
 
         header('Team details')
-        if 'team' in deliverable_info:
-            team_name = deliverable_info['team']
+        if deliv.team:
+            team_name = deliv.team
             team_dict = team_data.get(team_name)
             if team_dict:
                 team = governance.Team(team_name, team_dict)
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
                 print('  Liaison: %s (%s)\n' % team.liaison)
-                deliverable_name = os.path.basename(filename)[:-5]  # remove .yaml
-                deliverable = team.deliverables.get(deliverable_name)
-                if deliverable:
-                    print('found deliverable %s' % deliverable_name)
-                    for rn, repo in sorted(deliverable.repositories.items()):
+                team_deliv = team.deliverables.get(deliv.name)
+                if team_deliv:
+                    print('found deliverable %s' % deliv.name)
+                    for rn, repo in sorted(team_deliv.repositories.items()):
                         follows_stable_policy = 'stable:follows-policy' in repo.tags
                         print('\nrepo %s\ntags:' % repo.name)
                         for t in repo.tags:
@@ -301,7 +289,7 @@ def main():
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
-                          (deliverable_name, team_name))
+                          (deliv.name, team_name))
             else:
                 print('no team %r found, cannot report on governance status' %
                       team_name)
@@ -311,39 +299,29 @@ def main():
         # If there are no releases listed, this is probably a new
         # deliverable file for initializing a new series. We don't
         # need to list its changes.
-        if not deliverable_info.get('releases'):
+        if not deliv.is_released:
             header('No releases')
             print('no releases were found, assuming an initialization file')
             continue
 
         # assume the releases are in order and take the last one
-        new_release = deliverable_info['releases'][-1]
+        new_release = deliv.releases[-1]
 
-        # build a map between version numbers and the release details
-        by_version = {
-            str(r['version']): r
-            for r in deliverable_info['releases']
-        }
-
-        repository_settings = deliverable_info.get('repository-settings', {})
-
-        for project in new_release['projects']:
+        for project in new_release.projects:
 
             tag_exists = gitutils.tag_exists(
-                project['repo'],
-                new_release['version'],
+                project.repo.name,
+                new_release.version,
             )
             if tag_exists:
                 print('%s %s exists on git server already' %
-                      (project['repo'], new_release['version']))
+                      (project.repo.name, new_release.version))
                 if args.shortcut:
                     print('skipping further processing')
                     continue
 
-            project_settings = repository_settings.get(project['repo'], {})
-            flags = project_settings.get('flags', {})
-            if 'retired' in flags:
-                print('%s is retired' % (project['repo'],))
+            if project.repo.is_retired:
+                print('%s is retired' % (project.repo.name,))
                 if args.shortcut:
                     print('skipping further processing')
                     continue
@@ -353,14 +331,14 @@ def main():
             # really exists.
             gitutils.clone_repo(
                 workdir,
-                project['repo'],
+                project.repo.name,
                 branch='master',
             )
 
             # Set some git configuration values to allow us to perform
             # local operations like tagging.
             gitutils.ensure_basic_git_config(
-                workdir, project['repo'],
+                workdir, project.repo.name,
                 {'user.email': 'openstack-infra@lists.openstack.org',
                  'user.name': 'OpenStack Proposal Bot'},
             )
@@ -368,8 +346,10 @@ def main():
             # Determine which branch we should actually be looking
             # at. Assume any series for which there is no stable
             # branch will be on 'master'.
-            if gitutils.stable_branch_exists(workdir, project['repo'], series):
-                branch = 'stable/' + series
+            if gitutils.stable_branch_exists(workdir,
+                                             project.repo.name,
+                                             deliv.series):
+                branch = 'stable/' + deliv.series
             else:
                 branch = 'master'
 
@@ -378,7 +358,7 @@ def main():
                 # didn't get it the first time.
                 gitutils.clone_repo(
                     workdir,
-                    project['repo'],
+                    project.repo.name,
                     branch=branch,
                 )
 
@@ -386,65 +366,68 @@ def main():
             # getting the new release
             previous_tag = gitutils.get_latest_tag(
                 workdir,
-                project['repo'],
-                '{}^'.format(project['hash'])
+                project.repo.name,
+                '{}^'.format(project.hash)
             )
-            previous_release = by_version.get(previous_tag)
+            try:
+                previous_release = deliv.get_release(previous_tag)
+            except ValueError:
+                previous_release = None
 
             start_range = previous_tag
             if previous_release:
                 previous_project = {
-                    x['repo']: x
-                    for x in previous_release['projects']
-                }.get(project['repo'])
+                    x.repo.name: x
+                    for x in previous_release.projects
+                }.get(project.repo.name)
                 if previous_project is not None:
                     start_range = previous_tag
 
             if start_range:
-                git_range = '%s..%s' % (start_range, project['hash'])
+                git_range = '%s..%s' % (start_range, project.hash)
             else:
-                git_range = project['hash']
+                git_range = project.hash
 
             # Show details about the commit being tagged.
             header('Details for commit receiving new tag %s' %
-                   new_release['version'])
-            print('\ngit describe %s\n' % project['hash'])
+                   new_release.version)
+            print('\ngit describe %s\n' % project.hash)
             try:
                 subprocess.check_call(
-                    ['git', 'describe', project['hash']],
-                    cwd=os.path.join(workdir, project['repo']),
+                    ['git', 'describe', project.hash],
+                    cwd=os.path.join(workdir, project.repo.name),
                 )
             except subprocess.CalledProcessError as e:
                 print('WARNING: Could not run git describe: %s' % e)
 
             git_show(
                 workdir=workdir,
-                repo=project['repo'],
+                repo=project.repo.name,
                 title='Check existing tags',
-                ref=project['hash'],
+                ref=project.hash,
             )
 
             git_list_existing_branches(
                 workdir=workdir,
-                repo=project['repo'],
+                repo=project.repo.name,
             )
 
             branches = git_branch_contains(
                 workdir=workdir,
-                repo=project['repo'],
+                repo=project.repo.name,
                 title='Branches containing commit',
-                commit=project['hash'],
+                commit=project.hash,
             )
 
             header('Relationship to HEAD')
-            if series == '_independent':
+            if deliv.is_independent:
                 if branches:
                     tag_branch = branches[0]
                 else:
                     tag_branch = branch
                 head_sha = gitutils.sha_for_tag(
                     workdir,
-                    project['repo'],
+                    project.repo.name,
                     tag_branch,
                 )
                 print('HEAD of {} is {}'.format(tag_branch, head_sha))
@@ -455,14 +438,14 @@ def main():
                     tag_branch = branches[0]
                 head_sha = gitutils.sha_for_tag(
                     workdir,
-                    project['repo'],
+                    project.repo.name,
                     tag_branch,
                 )
                 print('HEAD of {} is {}'.format(tag_branch, head_sha))
             requested_sha = gitutils.sha_for_tag(
                 workdir,
-                project['repo'],
-                project['hash'],
+                project.repo.name,
+                project.hash,
             )
             # If the sha for HEAD and the requested release don't
             # match, show any unreleased changes on the branch. We ask
@@ -472,22 +455,22 @@ def main():
             if head_sha == requested_sha:
                 print('\nRequest releases from HEAD on %s' % tag_branch)
             else:
-                git_log(workdir, project['repo'], 'Release will NOT include',
+                git_log(workdir, project.repo.name, 'Release will NOT include',
                         '%s..%s' % (requested_sha, head_sha),
                         extra_args=['--format=%h %ci %s'])
 
-            show_watched_queries(branch, project['repo'])
+            show_watched_queries(branch, project.repo.name)
 
             # Show any requirements changes in the upcoming release.
             # Include setup.cfg, in case the project uses "extras".
             if start_range:
-                git_diff(workdir, project['repo'], git_range, '*requirements*.txt',
+                git_diff(workdir, project.repo.name, git_range, '*requirements*.txt',
                          'Requirements Changes %s' % git_range)
-                git_diff(workdir, project['repo'], git_range, 'doc/requirements.txt',
+                git_diff(workdir, project.repo.name, git_range, 'doc/requirements.txt',
                          'Doc Requirements Changes %s' % git_range)
-                git_diff(workdir, project['repo'], git_range, 'setup.cfg',
+                git_diff(workdir, project.repo.name, git_range, 'setup.cfg',
                          'setup.cfg Changes %s' % git_range)
-                git_diff(workdir, project['repo'], git_range, 'bindep.txt',
+                git_diff(workdir, project.repo.name, git_range, 'bindep.txt',
                          'bindep.txt Changes %s' % git_range)
 
             # Before we try to determine if the previous release
@@ -496,13 +479,13 @@ def main():
             if not tag_exists:
                 header('Applying Temporary Tag')
                 print('\ngit tag {version} {hash}'.format(
-                    version=new_release['version'],
-                    hash=project['hash'],
+                    version=new_release.version,
+                    hash=project.hash,
                 ))
                 subprocess.check_call(
-                    ['git', 'tag', new_release['version'],
-                     project['hash']],
-                    cwd=os.path.join(workdir, project['repo']),
+                    ['git', 'tag', new_release.version,
+                     project.hash],
+                    cwd=os.path.join(workdir, project.repo.name),
                 )
 
             # Show any changes in the previous release but not in this
@@ -511,42 +494,42 @@ def main():
             previous_tag_exists = False
             if previous_release:
                 previous_tag_exists = gitutils.tag_exists(
-                    project['repo'],
-                    previous_release['version'],
+                    project.repo.name,
+                    previous_release.version,
                 )
             if previous_tag_exists:
                 git_log(
-                    workdir, project['repo'],
+                    workdir, project.repo.name,
                     'Patches in previous release but not in this one',
-                    [previous_release['version'],
+                    [previous_release.version,
                      '--not',
-                     project['hash']],
+                     project.hash],
                     extra_args=['--topo-order', '--oneline', '--no-merges'],
                 )
 
                 # The tag will have been added as a local tag above if
                 # it does not already exist.
                 header('New release %s includes previous release %s' %
-                       (new_release['version'], previous_release['version']))
+                       (new_release.version, previous_release.version))
                 print('\ngit tag --contains %s\n' %
-                      previous_release['version'])
+                      previous_release.version)
                 containing_tags = subprocess.check_output(
                     ['git', 'tag',
                      '--contains',
-                     previous_release['version']],
-                    cwd=os.path.join(workdir, project['repo']),
+                     previous_release.version],
+                    cwd=os.path.join(workdir, project.repo.name),
                 ).decode('utf-8').split()
                 print('Containing tags:', containing_tags)
-                if new_release['version'] not in containing_tags:
-                    print('WARNING: Missing %s' % new_release['version'])
+                if new_release.version not in containing_tags:
+                    print('WARNING: Missing %s' % new_release.version)
                 else:
-                    print('Found new version %s' % new_release['version'])
+                    print('Found new version %s' % new_release.version)
 
                 is_ancestor = gitutils.check_ancestry(
                     workdir,
-                    project['repo'],
-                    previous_release['version'],
-                    project['hash'],
+                    project.repo.name,
+                    previous_release.version,
+                    project.hash,
                 )
                 if is_ancestor:
                     print('SHA found in descendants')
@@ -556,12 +539,12 @@ def main():
             # Show the changes since the last release, first as a
             # graph view so we can check for bad merges, and then with
             # more detail.
-            git_log(workdir, project['repo'],
-                    'Release %s will include' % new_release['version'],
+            git_log(workdir, project.repo.name,
+                    'Release %s will include' % new_release.version,
                     git_range,
                     extra_args=['--graph', '--oneline', '--decorate',
                                 '--topo-order'])
-            git_log(workdir, project['repo'],
+            git_log(workdir, project.repo.name,
                     'Details Contents',
                     git_range,
                     extra_args=['--no-merges', '--topo-order'])
@@ -570,26 +553,25 @@ def main():
             # not already exist.
             header('Release Notes')
             try:
-                first_release = len(deliverable_info.get('releases', [])) == 1
                 notes = release_notes.generate_release_notes(
-                    repo=project['repo'],
-                    repo_path=os.path.join(workdir, project['repo']),
-                    start_revision=new_release.get('diff-start', start_range),
-                    end_revision=new_release['version'],
+                    repo=project.repo.name,
+                    repo_path=os.path.join(workdir, project.repo.name),
+                    start_revision=new_release.diff_start or start_range,
+                    end_revision=new_release.version,
                     show_dates=True,
                     skip_requirement_merges=True,
                     is_stable=branch.startswith('stable/'),
-                    series=series,
+                    series=deliv.series,
                     email='test-job@openstack.org',
                     email_from='test-job@openstack.org',
                     email_reply_to='noreply@openstack.org',
                     email_tags='',
                     include_pypi_link=False,
                     changes_only=False,
-                    first_release=first_release,
-                    repo_name=project['repo'],
+                    first_release=deliv.is_first_release,
+                    repo_name=project.repo.name,
                     description='',
-                    publishing_dir_name=project['repo'],
+                    publishing_dir_name=project.repo.name,
                 )
             except Exception as e:
                 logging.exception('Failed to produce release notes')
@@ -597,9 +579,9 @@ def main():
                 print('\n')
                 print(notes)
 
-            if 'library' in deliverable_info.get('type', 'other'):
+            if 'library' in deliv.type:
                 show_dependency_listings(
-                    pythonutils.guess_sdist_name(project),
+                    project.guess_sdist_name(),
                     official_repos,
                 )
 

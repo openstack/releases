@@ -57,13 +57,6 @@ def get_sdist_name(workdir, repo):
     return name
 
 
-def guess_sdist_name(project):
-    "Guess the name without checking out the repo."
-    repo_base = project['repo'].rsplit('/')[-1]
-    base = project.get('tarball-base', repo_base)
-    return base
-
-
 def get_pypi_info(dist_name):
     "Return PyPI information for the distribution."
     canonical_name = packaging_utils.canonicalize_name(dist_name)
