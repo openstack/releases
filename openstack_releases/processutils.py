@@ -38,6 +38,8 @@ def check_call(*popenargs, timeout=None, **kwargs):
     cmd = kwargs.get("args")
     if cmd is None:
         cmd = popenargs[0]
+    if 'cwd' in kwargs:
+        LOG.debug('cwd = {}'.format(kwargs['cwd']))
     LOG.debug('$ {}'.format(' '.join(cmd)))
 
     completed = subprocess.run(*popenargs, **kwargs)
@@ -65,6 +67,8 @@ def check_output(*popenargs, timeout=None, **kwargs):
     cmd = kwargs.get("args")
     if cmd is None:
         cmd = popenargs[0]
+    if 'cwd' in kwargs:
+        LOG.debug('cwd = {}'.format(kwargs['cwd']))
     LOG.debug('$ {}'.format(' '.join(cmd)))
 
     if 'stderr' not in kwargs:
