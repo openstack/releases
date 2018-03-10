@@ -14,6 +14,7 @@
 
 from __future__ import unicode_literals
 
+import logging
 import os
 import textwrap
 
@@ -25,7 +26,46 @@ from openstack_releases.cmds import validate
 from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import gitutils
+from openstack_releases import processutils
 from openstack_releases import yamlutils
+
+
+class GitRepoFixture(fixtures.Fixture):
+
+    logger = logging.getLogger('git')
+
+    def __init__(self, workdir, name):
+        self.workdir = workdir
+        self.name = name
+        self.path = os.path.join(self.workdir, self.name)
+        super().__init__()
+
+    def setUp(self):
+        super().setUp()
+        os.makedirs(self.path)
+        self.git('init', '.')
+        self.git('config', '--local', 'user.email', 'example@example.com')
+        self.git('config', '--local', 'user.name', 'super developer')
+
+    def git(self, *args):
+        self.logger.debug('$ git %s', ' '.join(args))
+        output = processutils.check_output(
+            ['git'] + list(args),
+            cwd=self.path,
+        )
+        self.logger.debug(output)
+        return output
+
+    def commit(self, message='commit message'):
+        self.git('add', '.')
+        self.git('commit', '-m', message)
+        sha = self.git('show', '--pretty=format:%H')
+        return sha.decode('utf-8')
+
+    def add_file(self, name):
+        with open(os.path.join(self.path, name), 'w') as f:
+            f.write('adding %s\n' % name)
+        return self.commit('add %s' % name)
 
 
 class TestDecorators(base.BaseTestCase):
@@ -538,7 +578,13 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
     def setUp(self):
         super().setUp()
         self.ctx = validate.ValidationContext()
-        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
+        self._make_repo()
+
+    def _make_repo(self):
+        self.repo = self.useFixture(
+            GitRepoFixture(self.ctx.workdir, 'openstack/release-test')
+        )
+        self.commit_1 = self.repo.add_file('testfile.txt')
 
     def test_invalid_hash(self):
         deliv = deliverable.Deliverable(
@@ -552,6 +598,28 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
                      'projects': [
                          {'repo': 'openstack/release-test',
                           'hash': 'this-is-not-a-hash',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
+        validate.validate_release_sha_exists(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_valid_hash(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': self.commit_1,
                           'tarball-base': 'openstack-release-test'},
                      ]}
                 ],
