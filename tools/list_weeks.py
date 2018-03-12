@@ -91,12 +91,6 @@ for n, w in enumerate(weeks, 1):
         cross_project.append(add_cycle('final'))
     cycle.append(mk_entry(name, w, cross_project=cross_project))
 
-# Add weeks for the cycle-trailing deadline.
-current += week
-cycle.append(mk_entry('R+1', current))
-current += week
-cycle.append(mk_entry('R+2', current, cross_project=[add_cycle('trailing')]))
-
 data = {
     'cycle': cycle,
 }
