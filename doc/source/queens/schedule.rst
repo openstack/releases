@@ -170,7 +170,8 @@ considered part of the release. Projects made official after the
 second milestone, or which fail to produce milestone releases for at
 least one of the first and second milestones as well as the third
 milestone, are therefore not considered part of the release for the
-cycle.
+cycle. This does not apply to cycle-trailing packaging / lifecycle
+management projects.
 
 .. _q-rc1:
 
@@ -207,29 +208,13 @@ Queens release
 
 The Queens coordinated release will happen on 28 February 2018.
 
-.. _q-trailing-ff:
-
-Queens cycle-trailing feature freeze
-------------------------------------
-
-The release deadline for projects using the release:cycle-trailing model that
-follow the main release cycle.
-
-.. _q-trailing-rc:
-
-Queens cycle-trailing RC deadline
----------------------------------
-
-The deadline for publishing a first release candidate for projects using the
-release:cycle-trailing model that follow the main release cycle.
-
 .. _q-trailing-release:
 
 Queens cycle-trailing release deadline
 --------------------------------------
 
 The release deadline for projects using the release:cycle-trailing model that
-follow the main release cycle.
+follow the main release cycle is set to May 30th, 2018.
 
 .. _n-final-library-releases:
 

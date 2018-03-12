@@ -25,13 +25,13 @@ it falls in:
   form the main components of an OpenStack cloud, and therefore should follow
   the release cycle. They need to pick between `cycle-with-milestones`_
   or `cycle-with-intermediary`_ models.
+* Libraries cannot use RCs or trail the release. They need to pick between
+  `cycle-with-intermediary`_ and `independent`_ release models based on how
+  much they are tied to OpenStack or more generally-useful.
 * Only deployment or lifecycle-management components are allowed to trail
   the cycle. Therefore only components appearing in the
   *openstack-lifecyclemanagement* bucket on the `OpenStack map`_ are
   allowed to use the `cycle-trailing`_ model.
-* Libraries cannot use RCs or trail the release. They need to pick between
-  `cycle-with-intermediary`_ and `independent`_ release models based on how
-  much they are tied to OpenStack or more generally-useful.
 
 .. _`OpenStack map`: https://www.openstack.org/openstack-map
 
@@ -73,16 +73,13 @@ release to match the end of the cycle.
 cycle-trailing
 ==============
 
-The "cycle-trailing" model describes projects that follow the release
-cycle, but because they rely on the other projects being completed may
-not always publish their final release at the same time as those
-projects.
+The "cycle-trailing" model is used by projects producing OpenStack
+packaging, installation recipes or lifecycle management tools. Those
+still do one release for every development cycle, but they can't
+release until OpenStack itself is released.
 
 * "cycle-trailing" projects commit to produce a release no later than
-  2 weeks after the end of the 6-month development cycle.
-* Within the cycle, projects using this release model will produce
-  intermediate or milestone releases (adhering to the same regular
-  deadlines) leading up to their final release.
+  3 months after the main release.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
