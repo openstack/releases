@@ -128,7 +128,6 @@ cycle:
   x-project:
   - q-rc1
   - q-hard-sf
-  - q-trailing-ff
   project-specific:
   - r-ptl-election
 - end: '2018-02-16'
@@ -144,13 +143,3 @@ cycle:
   start: '2018-02-26'
   x-project:
   - q-release
-  - q-trailing-rc
-- end: '2018-03-09'
-  name: R+1
-  start: '2018-03-05'
-- end: '2018-03-16'
-  name: R+2
-  start: '2018-03-12'
-  x-project:
-  - q-trailing-release
-

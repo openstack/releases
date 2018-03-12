@@ -164,7 +164,8 @@ considered part of the release. Projects made official after the
 second milestone, or which fail to produce milestone releases for at
 least one of the first and second milestones as well as the third
 milestone, are therefore not considered part of the release for the
-cycle.
+cycle. This does not apply to cycle-trailing packaging / lifecycle
+management projects.
 
 .. _r-rc1:
 
@@ -201,29 +202,13 @@ Rocky release
 
 The Rocky coordinated release will happen on 30 August 2018.
 
-.. _r-trailing-ff:
-
-Rocky cycle-trailing feature freeze
------------------------------------
-
-The release deadline for projects using the release:cycle-trailing model that
-follow the main release cycle.
-
-.. _r-trailing-rc:
-
-Rocky cycle-trailing RC deadline
---------------------------------
-
-The deadline for publishing a first release candidate for projects using the
-release:cycle-trailing model that follow the main release cycle.
-
 .. _r-trailing-release:
 
 Rocky cycle-trailing release deadline
 -------------------------------------
 
 The release deadline for projects using the release:cycle-trailing model that
-follow the main release cycle.
+follow the main release cycle is set to November 28, 2018.
 
 
 Project-specific events

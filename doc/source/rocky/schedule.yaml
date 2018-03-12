@@ -96,7 +96,6 @@ cycle:
     x-project:
       - r-rc1
       - r-hard-sf
-      - r-trailing-ff
   - end: '2018-08-17'
     name: R-2
     start: '2018-08-13'
@@ -110,15 +109,6 @@ cycle:
     start: '2018-08-27'
     x-project:
       - r-release
-      - r-trailing-rc
-  - end: '2018-09-07'
-    name: R+1
-    start: '2018-09-03'
-  - end: '2018-09-14'
-    name: R+2
-    start: '2018-09-10'
-    x-project:
-      - r-trailing-release
 release-week: 2018-08-27
 start-week: 2018-03-05
 
