@@ -29,6 +29,8 @@ cycle:
     start: '2018-04-16'
     x-project:
       - r-1
+    project-specific:
+      - r-manila-spec-freeze
   - end: '2018-04-27'
     name: R-18
     start: '2018-04-23'
@@ -55,6 +57,8 @@ cycle:
     x-project:
       - r-2
       - r-mf
+    project-specific:
+      - r-manila-driver-deadline
   - end: '2018-06-15'
     name: R-11
     start: '2018-06-11'
@@ -72,6 +76,8 @@ cycle:
     start: '2018-07-09'
     x-project:
       - r-extra-atcs
+    project-specific:
+      - r-manila-fp-freeze
   - end: '2018-07-20'
     name: R-6
     start: '2018-07-16'
