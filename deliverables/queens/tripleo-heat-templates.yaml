@@ -21,6 +21,11 @@ releases:
       - hash: 1c00b6ecaedf4530e8de18ec3bce3f69f07c3f7b
         repo: openstack/tripleo-heat-templates
     version: 8.0.0.0rc1
+  - diff-start: 7.0.0.0rc1
+    projects:
+      - hash: f093c3c790a4a3625a94d62402f042d6e1488731
+        repo: openstack/tripleo-heat-templates
+    version: 8.0.0
 repository-settings:
   openstack/tripleo-heat-templates: {}
 branches:

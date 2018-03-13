@@ -21,6 +21,11 @@ releases:
       - hash: 13f1dd451d93d0efd2278223f2ac477b01f3b885
         repo: openstack/tripleo-image-elements
     version: 8.0.0.0rc1
+  - diff-start: 7.0.0.0rc1
+    projects:
+      - hash: e427c9086ca7a98de9980205e5bfdbe1f5d096fc
+        repo: openstack/tripleo-image-elements
+    version: 8.0.0
 repository-settings:
   openstack/tripleo-image-elements: {}
 branches:
