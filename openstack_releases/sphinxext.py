@@ -178,7 +178,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'library': 'Library Projects',
         'client-library': 'Service Client Projects',
         'other': 'Other Projects',
-        'cycle-trailing': 'Projects Trailing the Release Cycle',
+        'cycle-trailing': 'Deployment and Packaging Tools',
     }
 
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
