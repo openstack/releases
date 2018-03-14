@@ -28,6 +28,115 @@ from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
 
+class TestDecorators(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.ctx = validate.ValidationContext()
+
+    def test_applies_to_current_skips(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='austin',
+            name='name',
+            data={},
+        )
+
+        @validate.applies_to_current
+        def f(deliv, context):
+            self.fail('should not be called')
+
+        f(deliv, self.ctx)
+
+    def test_applies_to_current_runs(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series=defaults.RELEASE,
+            name='name',
+            data={},
+        )
+        called = []
+
+        @validate.applies_to_current
+        def f(deliv, context):
+            called.append(1)
+
+        f(deliv, self.ctx)
+        self.assertTrue(called)
+
+    def test_applies_to_released_skip(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series=defaults.RELEASE,
+            name='name',
+            data={
+                'releases': [
+                ],
+            },
+        )
+
+        @validate.applies_to_released
+        def f(deliv, context):
+            self.fail('should not be called')
+
+        f(deliv, self.ctx)
+
+    def test_applies_to_released_runs(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series=defaults.RELEASE,
+            name='name',
+            data={
+                'releases': [
+                    {'version': '0.8.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            },
+        )
+        called = []
+
+        @validate.applies_to_released
+        def f(deliv, context):
+            called.append(1)
+
+        f(deliv, self.ctx)
+        self.assertTrue(called)
+
+    def test_applies_to_cycle_skip(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='independent',
+            name='name',
+            data={},
+        )
+
+        @validate.applies_to_cycle
+        def f(deliv, context):
+            self.fail('should not be called')
+
+        f(deliv, self.ctx)
+
+    def test_applies_to_cycle_runs(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series=defaults.RELEASE,
+            name='name',
+            data={},
+        )
+        called = []
+
+        @validate.applies_to_cycle
+        def f(deliv, context):
+            called.append(1)
+
+        f(deliv, self.ctx)
+        self.assertTrue(called)
+
+
 class TestValidateBugTracker(base.BaseTestCase):
 
     def setUp(self):

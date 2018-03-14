@@ -20,6 +20,7 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import functools
 import glob
 import inspect
 import logging
@@ -106,20 +107,41 @@ def is_a_hash(val):
     return re.search('^[a-f0-9]{40}$', val, re.I) is not None
 
 
+def applies_to_current(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        if deliv.series != defaults.RELEASE:
+            print('this rule only applies to the most current series, skipping')
+            return
+        return f(deliv, context)
+    return decorated
+
+
+def applies_to_released(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        if not deliv.is_released:
+            print('no releases, skipping')
+            return
+        return f(deliv, context)
+    return decorated
+
+
+def applies_to_cycle(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        if deliv.is_independent:
+            print('rule does not apply to independent projects')
+            return
+        return f(deliv, context)
+    return decorated
+
+
+@applies_to_cycle
+@applies_to_released
+@applies_to_current
 def validate_series_open(deliv, context):
     "No releases in the new series until the previous one has a branch."
-
-    if deliv.series != defaults.RELEASE:
-        print('this rule only applies to the most current series, skipping')
-        return
-
-    if not deliv.is_released:
-        print('no releases, skipping')
-        return
-
-    if deliv.is_independent:
-        print('rule does not apply to independent projects')
-        return
 
     deliverables_dir = os.path.dirname(
         os.path.dirname(context.filename)
@@ -166,12 +188,10 @@ def validate_series_open(deliv, context):
             expected_branch, previous_deliverable_file, deliv.series))
 
 
+@applies_to_released
+@applies_to_cycle
 def validate_series_first(deliv, context):
     "The first release in a series needs to end with '.0'."
-
-    if deliv.is_independent:
-        print('rule does not apply to independent projects')
-        return
 
     releases = deliv.releases
     if len(releases) != 1:
@@ -388,15 +408,12 @@ def get_release_type(deliv, repo, workdir):
     return ('python-service', False)
 
 
+@applies_to_released
 def validate_release_type(deliv, context):
     "Does the most recent release comply with the rules for the release-type?"
 
     if deliv.artifact_link_mode == 'none':
         print('link-mode is "none", skipping release-type checks')
-        return
-
-    if not deliv.releases:
-        print('no releases listed, skipping release-type checks')
         return
 
     release = deliv.releases[-1]
@@ -429,16 +446,13 @@ def validate_release_type(deliv, context):
             )
 
 
+@applies_to_released
 def validate_tarball_base(deliv, context):
     "Does tarball-base match the expected value?"
 
     if deliv.artifact_link_mode != 'tarball':
         print('rule does not apply for link-mode {}, skipping'.format(
             deliv.artifact_link_mode))
-        return
-
-    if not deliv.is_released:
-        print('no releases, skipping')
         return
 
     release = deliv.releases[-1]
@@ -536,6 +550,7 @@ def validate_pypi_permissions(deliv, context):
                 sorted(uploaders), pypi_name))
 
 
+@applies_to_released
 def validate_release_sha_exists(deliv, context):
     "Ensure the hashes for each release exist."
 
@@ -575,6 +590,7 @@ def validate_release_sha_exists(deliv, context):
                                  'repo': project.repo.name})
 
 
+@applies_to_released
 def validate_existing_tags(deliv, context):
     "Ensure tags that exist point to the SHAs listed."
 
@@ -621,6 +637,7 @@ def validate_existing_tags(deliv, context):
                     release.version, project.repo.name))
 
 
+@applies_to_released
 def validate_version_numbers(deliv, context):
     "Ensure the version numbers are valid."
 
@@ -726,6 +743,7 @@ def validate_version_numbers(deliv, context):
         prev_version = release.version
 
 
+@applies_to_released
 def validate_new_releases_at_end(deliv, context):
     "New releases must be added to the end of the list."
 
@@ -763,6 +781,7 @@ def validate_new_releases_at_end(deliv, context):
             print('OK')
 
 
+@applies_to_released
 def validate_release_branch_membership(deliv, context):
     "Commits being tagged need to be on the right branch."
 
@@ -849,16 +868,10 @@ def validate_release_branch_membership(deliv, context):
         prev_version = release.version
 
 
+@applies_to_current
+@applies_to_released
 def validate_new_releases(deliv, context):
     "Apply validation rules that only apply to the current series."
-
-    if deliv.series != defaults.RELEASE:
-        print('this rule only applies to the most current series, skipping')
-        return
-
-    if not deliv.is_released:
-        print('no releases, skipping')
-        return
 
     final_release = deliv.releases[-1]
     expected_repos = set(
