@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/mox3: {}
+releases:
+  - projects:
+      - hash: c979e7b77ab7858ff4e49ac5a1ff5c6f32ae291c
+        repo: openstack/mox3
+    version: 0.25.0
