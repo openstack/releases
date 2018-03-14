@@ -57,7 +57,7 @@ Rocky Community Goals Acknowledgement
 -------------------------------------
 
 Teams should prepare their acknowledgement of `the community-wide
-goals for 
+goals for
 <https://governance.openstack.org/tc/goals/queens/index.html>`__.
 
 .. _r-summit:
@@ -216,3 +216,33 @@ Project-specific events
 
 Elections
 ---------
+
+Manila
+------
+
+.. _r-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs must be approved by 19 Apr 2018 (23:59 UTC).
+
+.. _r-manila-driver-deadline:
+
+Manila New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to to Manila is 4 Jun 2018
+(23:59 UTC). New drivers must be substantially complete, with unit tests, and
+passing 3rd party CI by this date. Drivers do not need to be merged until the
+feature freeze date, but drivers that don't meet this deadline will not be
+considered at all for Rocky.
+
+
+.. _r-manila-fp-freeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially complete, with unit
+tests by 9 Jul 2018 (23:59 UTC).
