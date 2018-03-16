@@ -217,6 +217,39 @@ Project-specific events
 Elections
 ---------
 
+Keystone
+--------
+
+.. _r-keystone-spec-proposal-freeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Rocky must be submitted to the keystone-specs
+repository by the end of the week.
+
+.. _r-keystone-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Rocky must be approved by the end of the week.
+
+.. _r-keystone-fpfreeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _r-keystone-ffreeze:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be merged by the end of the week.
+
 Manila
 ------
 

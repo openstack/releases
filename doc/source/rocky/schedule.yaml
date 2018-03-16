@@ -31,6 +31,7 @@ cycle:
       - r-1
     project-specific:
       - r-manila-spec-freeze
+      - r-keystone-spec-proposal-freeze
   - end: '2018-04-27'
     name: R-18
     start: '2018-04-23'
@@ -59,12 +60,15 @@ cycle:
       - r-mf
     project-specific:
       - r-manila-driver-deadline
+      - r-keystone-spec-freeze
   - end: '2018-06-15'
     name: R-11
     start: '2018-06-11'
   - end: '2018-06-22'
     name: R-10
     start: '2018-06-18'
+    project-specific:
+      - r-keystone-fpfreeze
   - end: '2018-06-29'
     name: R-9
     start: '2018-06-25'
@@ -78,6 +82,7 @@ cycle:
       - r-extra-atcs
     project-specific:
       - r-manila-fp-freeze
+      - r-keystone-ffreeze
   - end: '2018-07-20'
     name: R-6
     start: '2018-07-16'
