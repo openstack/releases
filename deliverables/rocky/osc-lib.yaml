@@ -6,3 +6,8 @@ team: OpenStackClient
 type: library
 repository-settings:
   openstack/osc-lib: {}
+releases:
+  - projects:
+      - hash: b764efc46fcee48394761620672a3a1e117aa3db
+        repo: openstack/osc-lib
+    version: 1.10.0
