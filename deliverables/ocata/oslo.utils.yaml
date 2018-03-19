@@ -37,5 +37,9 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 8d2ab998e85ebf242b4fe0ab3748e0a073397712
+  - projects:
+      - hash: 229a1690bbfe554e84e63bff9e7e3ce3bef1126f
+        repo: openstack/oslo.utils
+    version: 3.22.2
 repository-settings:
   openstack/oslo.utils: {}
