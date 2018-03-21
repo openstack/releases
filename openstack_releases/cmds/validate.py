@@ -668,12 +668,13 @@ def validate_existing_tags(deliv, context):
             )
             if actual_sha != project.hash:
                 context.error(
-                    ('Version %s in %s is on '
-                     'commit %s instead of %s') %
-                    (release.version,
-                     project.repo.name,
-                     actual_sha,
-                     project.hash))
+                    'Version {} in {} is on '
+                    'commit {!r} instead of {!r}'.format(
+                        release.version,
+                        project.repo.name,
+                        actual_sha,
+                        project.hash)
+                )
             else:
                 print('{} tag exists and is correct for {}'.format(
                     release.version, project.repo.name))
