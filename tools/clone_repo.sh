@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 #
 # All Rights Reserved.
 #
@@ -70,13 +70,16 @@ BRANCH="master"
 REF=""
 UPSTREAM="git://git.openstack.org"
 
-OPTS=`getopt -o hv --long branch:,cache-dir:,ref:,upstream:,workspace: -n $0 -- "$@"`
-if [ $? != 0 ] ; then
-    echo "Failed parsing options." >&2
-    print_help
-    exit 1
+if [[ $(uname) != "Darwin" ]]; then
+    OPTS=`getopt -o hv --long branch:,cache-dir:,ref:,upstream:,workspace: -n $0 -- "$@"`
+    if [ $? != 0 ] ; then
+        echo "Failed parsing options." >&2
+        print_help
+        exit 1
+    fi
+    eval set -- "$OPTS"
 fi
-eval set -- "$OPTS"
+
 while true; do
     case "$1" in
         -h)
@@ -113,6 +116,13 @@ while true; do
             ;;
         --)
             shift
+            break
+            ;;
+        *)
+            # Under macOS we don't get -- because getopt doesn't work
+            # the same so we aren't using it. If we see an
+            # unrecognized argument, that's the REPO name, so break
+            # out of the loop.
             break
             ;;
     esac
