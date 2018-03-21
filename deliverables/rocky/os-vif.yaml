@@ -4,5 +4,11 @@ launchpad: os-vif
 release-model: cycle-with-intermediary
 team: nova
 type: library
+releases:
+  - version: 1.10.0
+    projects:
+      - repo: openstack/os-vif
+        hash: 761b3c42790a2c1a084f05075aafa35826e2f416
+        tarball-base: os_vif
 repository-settings:
   openstack/os-vif: {}
