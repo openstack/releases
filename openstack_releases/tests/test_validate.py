@@ -322,7 +322,9 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_invalid_link(self):
+    @mock.patch('requests.get')
+    def test_invalid_link(self, get):
+        get.return_value = mock.Mock(status_code=404)
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
@@ -337,7 +339,9 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
-    def test_valid_link(self):
+    @mock.patch('requests.get')
+    def test_valid_link(self, get):
+        get.return_value = mock.Mock(status_code=200)
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
@@ -351,7 +355,9 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_invalid_link_multi(self):
+    @mock.patch('requests.get')
+    def test_invalid_link_multi(self, get):
+        get.return_value = mock.Mock(status_code=404)
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
@@ -372,7 +378,9 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
-    def test_unknown_repo(self):
+    @mock.patch('requests.get')
+    def test_unknown_repo(self, get):
+        get.return_value = mock.Mock(status_code=200)
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
@@ -393,7 +401,9 @@ class TestValidateReleaseNotes(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
-    def test_valid_link_multi(self):
+    @mock.patch('requests.get')
+    def test_valid_link_multi(self, get):
+        get.return_value = mock.Mock(status_code=200)
         validate.validate_release_notes(
             deliverable.Deliverable(
                 team='team',
