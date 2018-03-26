@@ -16,6 +16,11 @@ releases:
       - repo: openstack/os-vif
         hash: 87e0edde4d190549867e4a0be0c544c5f080213d
         tarball-base: os_vif
+  - version: 1.9.1
+    projects:
+      - repo: openstack/os-vif
+        hash: 3be52b9e650db643827b8b97b28799407f30926f
+        tarball-base: os_vif
 branches:
   - name: stable/queens
     location: 1.9.0
