@@ -1,0 +1,12 @@
+---
+launchpad: oslo.messaging
+release-model: untagged
+team: oslo
+type: other
+stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-kafka: 0c4ae8012e9ed9203f4a1685477d02ce31f0defb
+    name: stable/queens
+repository-settings:
+  openstack/devstack-plugin-kafka: {}
