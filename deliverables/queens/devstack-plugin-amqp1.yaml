@@ -1,0 +1,12 @@
+---
+launchpad: oslo.messaging
+release-model: untagged
+team: oslo
+type: other
+stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-amqp1: 70e18b5738d7c1a77adc41217d96ea3e2830ab67
+    name: stable/queens
+repository-settings:
+  openstack/devstack-plugin-amqp1: {}
