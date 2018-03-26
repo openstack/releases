@@ -24,17 +24,23 @@ cycle:
   - end: '2018-04-13'
     name: R-20
     start: '2018-04-09'
+    x-project:
+      - r-tc-nominations
   - end: '2018-04-20'
     name: 'R-19'
     start: '2018-04-16'
     x-project:
       - r-1
+      - r-tc-email-deadline
+      - r-tc-campaigning
     project-specific:
       - r-manila-spec-freeze
       - r-keystone-spec-proposal-freeze
   - end: '2018-04-27'
     name: R-18
     start: '2018-04-23'
+    x-project:
+      - r-tc-polling
   - end: '2018-05-04'
     name: R-17
     start: '2018-04-30'
