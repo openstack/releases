@@ -536,8 +536,19 @@ def validate_tarball_base(deliv, context):
                         sdist, expected))
 
 
+@applies_to_released
 def validate_pypi_permissions(deliv, context):
     "Do we have permission to upload to PyPI?"
+
+    # Check out the repositories to the hash for the latest release on
+    # the branch so we can find the setup.py there (if it exists), in
+    # case that has been removed from master after a project is
+    # retired. This also ensures we get the right name for the branch,
+    # in case the sdist name changes over time.
+    latest_release = deliv.releases[-1]
+    for project in latest_release.projects:
+        gitutils.safe_clone_repo(
+            context.workdir, project.repo.name, project.hash, context)
 
     for repo in deliv.repos:
 
