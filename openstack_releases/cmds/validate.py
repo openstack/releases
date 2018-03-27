@@ -251,6 +251,40 @@ def validate_series_final(deliv, context):
             print('OK')
 
 
+@applies_to_current
+@applies_to_released
+@applies_to_cycle
+def validate_series_post_final(deliv, context):
+    "After a final release, releases should not use pre-release versions."
+
+    releases = deliv.releases
+    if len(releases) < 2:
+        # We only have to check this when the first release is being
+        # applied in the file.
+        print('this rule only applies if a series has multiple releases')
+        return
+
+    current_release = releases[-1]
+
+    if not current_release.is_pre_release_version:
+        print('this rule only applies if the new '
+              'release has a pre-release version')
+        return
+
+    # If there is a final release version in any of the previous
+    # releases, report the error.
+    for previous_release in releases[-2::-1]:
+        if not previous_release.is_pre_release_version:
+            context.error(
+                '{} uses a pre-release version number '
+                'after a final release version was tagged as {}'.format(
+                    current_release.version, previous_release.version)
+            )
+            return
+
+    print('OK')
+
+
 def validate_bugtracker(deliv, context):
     "Does the bug tracker info link to something that exists?"
     lp_name = deliv.launchpad_id
@@ -1426,6 +1460,7 @@ def main():
             validate_series_open,
             validate_series_first,
             validate_series_final,
+            validate_series_post_final,
             validate_branch_prefixes,
             validate_stable_branches,
             validate_feature_branches,
