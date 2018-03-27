@@ -570,10 +570,16 @@ def validate_pypi_permissions(deliv, context):
                     'for {} to check PyPI permissions: {}'.format(
                         repo.name, err)
                 )
-                continue
+                return
 
             LOG.debug('using sdist name as pypi-name {!r}'.format(sdist))
             pypi_name = sdist
+
+        if not pypi_name:
+            context.error(
+                'Could not determine a valid PyPI dist name for {}'.format(
+                    deliv.name))
+            return
 
         uploaders = pythonutils.get_pypi_uploaders(pypi_name)
         if not uploaders:

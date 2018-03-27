@@ -29,8 +29,10 @@ LOG = logging.getLogger(__name__)
 def get_sdist_name(workdir, repo):
     "Check out the code."
     dest = os.path.join(workdir, repo)
-    if not os.path.exists(os.path.join(dest, 'setup.py')):
-        # Not a python project
+    setup_path = os.path.join(dest, 'setup.py')
+    if not os.path.exists(setup_path):
+        LOG.debug('did not find %s, maybe %s is not a python project',
+                  setup_path, repo)
         return None
     use_tox = repo.endswith('/pbr')
     if use_tox and not os.path.exists(os.path.join(dest, '.tox', 'venv')):
