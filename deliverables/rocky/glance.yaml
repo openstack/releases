@@ -5,5 +5,9 @@ launchpad: glance
 release-model: cycle-with-milestones
 team: glance
 type: service
+branches:
+  - name: feature/policy-refactor
+    location:
+      openstack/glance: ca51cb84650da93c52a26b2581f0582f0a280c11
 repository-settings:
   openstack/glance: {}
