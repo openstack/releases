@@ -210,12 +210,40 @@ Rocky cycle-trailing release deadline
 The release deadline for projects using the release:cycle-trailing model that
 follow the main release cycle is set to November 28, 2018.
 
+.. _r-tc-email-deadline:
+
+TC Election Email Deadline
+--------------------------
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date (April 18th, 2018 at
+00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+.. _r-tc-nominations:
+
+TC Election Nomination Begins
+-----------------------------
+Technical committee candidates interested in serving for the next calendar year
+should announce their candidacies and platforms during this week.
+
+.. _r-tc-campaigning:
+
+TC Election Campaigning Begins
+------------------------------
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.
+
+.. _r-tc-polling:
+
+TC Election Polling Begins
+--------------------------
+Election polling week for open seats on the TC.
 
 Project-specific events
 =======================
 
-Elections
----------
+PTL Elections
+-------------
 
 Keystone
 --------
