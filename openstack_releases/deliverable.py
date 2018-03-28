@@ -284,6 +284,14 @@ class Release(object):
     def is_release_candidate(self):
         return 'rc' in self.version
 
+    @property
+    def is_pre_release_version(self):
+        return (
+            'rc' in self.version
+            or 'a' in self.version
+            or 'b' in self.version
+        )
+
     def __eq__(self, other):
         return self.version == other.version
 
