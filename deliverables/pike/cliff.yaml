@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: d025ad9cd35189c363e89a82395c54f504264aa7
+  - version: 2.8.1
+    projects:
+      - hash: 35f3820855413b4cd1065a00154efb82479cd328
+        repo: openstack/cliff
 branches:
   - name: stable/pike
     location: 2.8.0
