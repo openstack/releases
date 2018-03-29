@@ -4,5 +4,10 @@ launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
 type: other
+releases:
+  - version: 3.15.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 67edb39b4c475a176bed80a3314456323da6cb6d
 repository-settings:
   openstack/python-openstackclient: {}
