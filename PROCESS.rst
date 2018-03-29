@@ -95,47 +95,18 @@ Between Milestone-2 and Milestone-3
 
    2. Include list of unreleased libraries in the email to increase visibility.
 
-4. Two weeks before Milestone-3, set up the gerrit ACLs for the
-   yet-to-be-created stable/$series branches.
+4. Two weeks before Milestone-3, prepare other teams to the final release
+   rush.
 
-   (The timing for this is meant to postpone it until all projects
-   that will be included in the current release are accepted but not
-   put it off for so long that we have to rush to merge the changes in
-   order to avoid having the release blocked.)
+   1. Ask the release liaisons for the affected teams to update the
+      contents of their $project-stable-maint groups, as that group
+      will control the stable/$series branch prior to release. They
+      should reach out to the stable-maint-core group for additions.
 
-   1. Update ACLs for refs/heads/stable/$series so that members of
-      $project-release-branch can approve changes. The patch can be
-      generated (for all release:cycle-with-milestones deliverables)
-      with::
-
-        tox -e aclmanager -- acls /path/to/project-config
-
-      Double-check that all references to the previous stable/$old
-      are all removed from project-config gerrit ACLs, as some may
-      have changed release models and kept stale entries::
-
-        grep stable/$old /path/to/project-config/gerrit/acls/openstack/*
-
-   2. Once the above patch merges (and only then!), set the population
-      of all $project-release-branch groups to the
-      "Release Managers" group and $project-release. This can be done
-      (for all release:cycle-with-milestones deliverables) by running
-      ``aclmanager.py``::
-
-        tox -e aclmanager -- groups pre_release $user
-
-      ($user being your Gerrit username). It will prompt you for your
-      Gerrit HTTP password, which you can see/generate at
-      https://review.openstack.org/#/settings/http-password.
-
-   3. Ask the release liaisons for the affected teams to update the
-      contents of their $project-release groups. For new projects in
-      some cases they will need to get the group created by Infra.
-
-   4. Notify the Infrastructure team to `generate
-      <https://docs.openstack.org/infra/system-config/signing.html#generation>`_
-      an artifact signing key (but not replace the current one yet), and
-      begin the attestation process.
+   2. Notify the Infrastructure team to `generate
+     <https://docs.openstack.org/infra/system-config/signing.html#generation>`_
+     an artifact signing key (but not replace the current one yet), and
+     begin the attestation process.
 
 5. Two weeks before milestone 3, warn cycle-with-intermediary projects
    without any releases that the release team will tag HEAD of master
@@ -336,39 +307,25 @@ Final Release
 
 1. Approve the final release patch created earlier.
 
-2. Reset gerrit ACLs
-
-   1. Update all of the $project-release-branch groups to have
-      $project-stable-maint as members instead of "Release Managers"
-      and $project-release. This can be done (for all
-      release:cycle-with-milestones deliverables) by running::
-
-        tox -e aclmanager -- groups post_release $user
-
-      ($user being your Gerrit username)
-
-   2. Remove the refs/heads/stable/$series from the project gerrit
-      ACLs. This can be done by reverting the original ACL patch.
-
-3. Run the missing-releases script to check for missing tarballs on the
+2. Run the missing-releases script to check for missing tarballs on the
    release page before the announcement::
 
       tox -e venv -- missing-releases --series $SERIES
 
-4. Mark series as released on releases.o.o, by updating doc/source/index.rst
+3. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
    See https://review.openstack.org/#/c/381006 for an example.
 
-5. Update the default series name in
+4. Update the default series name in
    ``openstack/releases/openstack_releases/defaults.py`` to use the
    new series name.
 
-6. Send release announcement email to
+5. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``. Coordinate the timing of the email with
    the press release from the Foundation staff.
 
-7. Send an email to the openstack-dev list to point to the official
+6. Send an email to the openstack-dev list to point to the official
    release announcement, and declare ``openstack/releases`` unfrozen for
    releases on the new series.
 
@@ -394,14 +351,3 @@ cycle-trailing Final Release
 1. Two weeks after the final release for milestone-based projects,
    approve the final release patch created earlier.
 
-2. Reset gerrit ACLs
-
-   1. Update all of the $project-release-branch for cycle-trailing
-      groups to have $project-stable-maint as members instead of
-      "Release Managers" and $project-release. This can be done (for
-      all release:cycle-with-milestones deliverables) by running
-      ``aclmanager.py groups post_release $user`` ($user being your
-      Gerrit username)
-
-   2. Remove the refs/heads/stable/$series from the project gerrit
-      ACLs. This can be done by reverting the original ACL patch.
