@@ -107,7 +107,7 @@ _RELEASE_JOBS_FOR_TYPE = {
         'puppet-release-jobs',
     ],
     'xstatic': [
-        'xstatic-publish-jobs',
+        'publish-xstatic-to-pypi',
     ],
     'fuel': [
         # Fuel is manually packaged by the team at Mirantis.
