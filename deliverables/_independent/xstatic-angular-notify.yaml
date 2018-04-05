@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 2.5.1.0
+    projects:
+      - repo: openstack/xstatic-angular-notify
+        hash: 59bdf1db3a2b301ade80701e5d5baccf36cbb209
+        tarball-base: XStatic-Angular-Notify
+repository-settings:
+  openstack/xstatic-angular-notify: {}
