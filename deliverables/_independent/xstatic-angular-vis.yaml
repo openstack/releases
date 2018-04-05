@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 4.16.0.0
+    projects:
+      - repo: openstack/xstatic-angular-vis
+        hash: cad0238596bbb452eb3841b4beb4111b97f62059
+        tarball-base: XStatic-Angular-Vis
+repository-settings:
+  openstack/xstatic-angular-vis: {}
