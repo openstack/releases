@@ -8,6 +8,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 03a6511f539bd53bc7f57e68a7b2773b54a43619
+  - projects:
+      - hash: 17ba4f9a5f6d68f17c7616bb56fb8b919567fae7
+        repo: openstack/bifrost
+    version: 5.0.1
 branches:
   - name: stable/queens
     location: 5.0.0
