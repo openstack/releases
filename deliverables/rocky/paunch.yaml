@@ -4,5 +4,10 @@ release-model: cycle-trailing
 release-type: python-pypi
 team: tripleo
 type: other
+releases:
+  - projects:
+      - hash: 9348078452965b54ef5337913ac602e4194b7796
+        repo: openstack/paunch
+    version: 3.0.0
 repository-settings:
   openstack/paunch: {}
