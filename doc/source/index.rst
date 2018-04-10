@@ -27,20 +27,20 @@ updates.
      *
      * TBD
    - * :doc:`queens/index`
-     * `Phase I -- Latest release`_
+     * `Maintained`_
      * 2018-02-28
-     * `Phase II -- Maintained release`_ on 2018-08-27
-     * 2019-02-25
+     * `Extended Maintenance`_ approximately on 2019-08-25
+     * TBD
    - * :doc:`pike/index`
-     * `Phase II -- Maintained release`_
+     * `Maintained`_
      * 2017-08-30
-     * `Phase III -- Legacy release`_ on 2018-08-27
-     * 2018-09-03
+     * `Extended Maintenance`_ approximately on 2019-03-03
+     * TBD
    - * :doc:`ocata/index`
-     * `Phase III -- Legacy release`_
+     * `Maintained`_
      * 2017-02-22
-     *
-     * 2018-08-27
+     * `Extended Maintenance`_ approximately on 2018-08-27
+     * TBD
    - * :doc:`newton/index`
      * EOL
      * 2016-10-06
@@ -112,9 +112,8 @@ updates.
      *
      *
 
-.. _Phase I -- Latest release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
-.. _Phase II -- Maintained release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
-.. _Phase III -- Legacy release: https://docs.openstack.org/project-team-guide/stable-branches.html#support-phases
+.. _Maintained: https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
+.. _Extended Maintenance: https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
 
 .. toctree::
    :glob:
@@ -140,6 +139,12 @@ updates.
    bexar/index
    austin/index
    releases/*
+
+Note: The schedule of `Maintenance phases`_ changed during Ocata.
+The `old phases`_ were used until Newton.
+
+.. _Maintenance phases: https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
+.. _old phases: https://github.com/openstack/project-team-guide/blob/1c837bf0~/doc/source/stable-branches.rst
 
 Series-Independent Releases
 ===========================
