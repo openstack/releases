@@ -67,6 +67,9 @@ properties:
           type: "array"
           items:
             type: "object"
+            required:
+              - repo
+              - hash
             properties:
               repo:
                 type: "string"
