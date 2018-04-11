@@ -67,6 +67,8 @@ cycle:
     project-specific:
       - r-manila-driver-deadline
       - r-keystone-spec-freeze
+      - r-cinder-spec-freeze
+      - r-cinder-driver-deadline
   - end: '2018-06-15'
     name: R-11
     start: '2018-06-11'
@@ -94,6 +96,8 @@ cycle:
     start: '2018-07-16'
     x-project:
       - r-final-lib
+    project-specific:
+      - r-cinder-feature-freeze
   - end: '2018-07-27'
     name: R-5
     start: '2018-07-23'
