@@ -1,13 +1,15 @@
 - job:
     name: releases-tox-list-changes
     parent: openstack-tox
+    timeout: 3600
     vars:
       tox_envlist: list-changes
 
 - project:
     check:
       jobs:
-        - openstack-tox-validate
+        - openstack-tox-validate:
+            timeout: 3600
         - releases-tox-list-changes
         - build-openstack-sphinx-docs:
             vars:
@@ -15,7 +17,8 @@
 
     gate:
       jobs:
-        - openstack-tox-validate
+        - openstack-tox-validate:
+            timeout: 3600
         - build-openstack-sphinx-docs:
             vars:
               sphinx_python: python3
