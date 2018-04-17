@@ -7,3 +7,8 @@ release-type: neutron
 include-pypi-link: yes
 repository-settings:
   openstack/networking-odl: {}
+releases:
+  - projects:
+      - hash: e7c44b687d719139a35f4e5d575eaeea8f42cb25
+        repo: openstack/networking-odl
+    version: 13.0.0.0b1

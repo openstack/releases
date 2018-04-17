@@ -6,3 +6,8 @@ release-model: cycle-with-milestones
 include-pypi-link: yes
 repository-settings:
   openstack/networking-bgpvpn: {}
+releases:
+  - projects:
+      - hash: 2475824fa10a9bfe939f35ac2a5dd2baf4902fd1
+        repo: openstack/networking-bgpvpn
+    version: 9.0.0.0b1

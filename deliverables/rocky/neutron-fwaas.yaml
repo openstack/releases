@@ -6,3 +6,8 @@ release-model: cycle-with-milestones
 release-type: neutron
 repository-settings:
   openstack/neutron-fwaas: {}
+releases:
+  - projects:
+      - hash: ce626773ab70528c8af47da153f767ce841baca5
+        repo: openstack/neutron-fwaas
+    version: 13.0.0.0b1

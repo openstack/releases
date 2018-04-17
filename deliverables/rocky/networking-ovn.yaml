@@ -7,3 +7,8 @@ release-type: neutron
 include-pypi-link: yes
 repository-settings:
   openstack/networking-ovn: {}
+releases:
+  - projects:
+      - hash: 974d0176dac4ac68edf9af848aadf04d86b2da65
+        repo: openstack/networking-ovn
+    version: 5.0.0.0b1
