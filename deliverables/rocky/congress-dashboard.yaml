@@ -4,5 +4,10 @@ release-model: cycle-with-milestones
 team: congress
 type: horizon-plugin
 release-type: python-pypi
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 9d0a305c7f405358c94cc8a2986c17e48ddf03ee
 repository-settings:
   openstack/congress-dashboard: {}
