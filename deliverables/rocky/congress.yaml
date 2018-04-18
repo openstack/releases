@@ -3,5 +3,10 @@ launchpad: congress
 release-model: cycle-with-milestones
 team: congress
 type: service
+releases:
+  - version: 8.0.0.0b1
+    projects:
+      - repo: openstack/congress
+        hash: 5854127932426f618db43112a546d75cbf424b2e
 repository-settings:
   openstack/congress: {}
