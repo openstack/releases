@@ -6,3 +6,8 @@ team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: e68011ed5f05846527883d4dd6e216cccc9c2ff2
