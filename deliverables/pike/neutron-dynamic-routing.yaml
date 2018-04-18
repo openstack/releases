@@ -4,6 +4,7 @@ team: neutron
 release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/pike.html
 type: other
 release-model: cycle-with-milestones
+release-type: neutron
 releases:
   - version: 11.0.0.0b1
     projects:
@@ -30,6 +31,10 @@ releases:
       - hash: 9098d4447581117e857d2f86fb4a0508b5ffbb6a
         repo: openstack/neutron-dynamic-routing
     version: 11.0.0
+  - projects:
+      - hash: c1914078fc2d75ca18e875cdc55a3ee49a9bcd9c
+        repo: openstack/neutron-dynamic-routing
+    version: 11.0.1
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike
