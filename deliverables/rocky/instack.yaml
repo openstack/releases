@@ -6,3 +6,8 @@ team: tripleo
 type: library
 repository-settings:
   openstack/instack: {}
+releases:
+  - projects:
+      - hash: 334137855e4f7fd8b5f3d201f7876fed35721bc1
+        repo: openstack/instack
+    version: 9.0.0

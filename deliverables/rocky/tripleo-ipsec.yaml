@@ -1,8 +1,13 @@
 ---
 launchpad: tripleo
-release-model: cycle-trailing
+release-model: cycle-with-intermediary
 release-type: python-pypi
 team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ipsec: {}
+releases:
+  - projects:
+      - hash: 325d23340e9746a0aed4e815f1a9b8de4f449632
+        repo: openstack/tripleo-ipsec
+    version: 9.0.0

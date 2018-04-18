@@ -5,3 +5,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/puppet-tripleo: {}
+releases:
+  - projects:
+      - hash: c5131729e762535e8ec778432e84d82238168388
+        repo: openstack/puppet-tripleo
+    version: 9.0.0
