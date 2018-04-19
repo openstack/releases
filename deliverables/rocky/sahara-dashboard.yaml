@@ -3,5 +3,10 @@ launchpad: sahara
 release-model: cycle-with-milestones
 team: sahara
 type: horizon-plugin
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 2730fcb5dfc654982221df69b03df3a3e6f9a33b
 repository-settings:
   openstack/sahara-dashboard: {}

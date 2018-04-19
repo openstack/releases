@@ -3,5 +3,10 @@ launchpad: sahara
 release-model: cycle-with-milestones
 team: sahara
 type: service
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/sahara
+        hash: 5994c935b9519e1aa93d98a3cb176bdd950135ff
 repository-settings:
   openstack/sahara: {}

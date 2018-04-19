@@ -4,5 +4,10 @@ launchpad: python-saharaclient
 release-model: cycle-with-intermediary
 team: sahara
 type: client-library
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: c3fd27e49bbe286d71cc2e2e17cdf149591826eb
 repository-settings:
   openstack/python-saharaclient: {}
