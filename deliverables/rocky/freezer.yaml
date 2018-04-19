@@ -7,3 +7,12 @@ repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
   openstack/freezer-dr: {}
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/freezer
+        hash: f5d9995dd5ea1b2266487cd419d3aa26e7df6770
+      - repo: openstack/freezer-api
+        hash: 206321471cca2df10d60a76beac897ec79f735d2
+      - repo: openstack/freezer-dr
+        hash: 48a402de4ab5d9cbbabbb89fa0b70c90b78c2a67
