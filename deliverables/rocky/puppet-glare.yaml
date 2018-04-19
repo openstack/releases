@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-glare: {}
+releases:
+  - projects:
+      - hash: a0ec78ab029aed1c96f333be0450cb0b0efd6bd6
+        repo: openstack/puppet-glare
+    version: 2.0.0

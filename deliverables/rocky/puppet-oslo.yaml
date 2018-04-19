@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-oslo: {}
+releases:
+  - projects:
+      - hash: fca8fd95f7fcf2b9cdd5363521892c2624ba94d9
+        repo: openstack/puppet-oslo
+    version: 13.0.0

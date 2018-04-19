@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-aodh: {}
+releases:
+  - projects:
+      - hash: 82449ea7c629b22598b16054e4d759f35c8505fe
+        repo: openstack/puppet-aodh
+    version: 13.0.0

@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-vswitch: {}
+releases:
+  - projects:
+      - hash: df78b576159930a087325a704e2ca1b53266a89f
+        repo: openstack/puppet-vswitch
+    version: 9.0.0

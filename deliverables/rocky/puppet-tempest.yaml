@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-tempest: {}
+releases:
+  - projects:
+      - hash: 471287ec5e0b7b6a5e18139e102dd9ad759a803c
+        repo: openstack/puppet-tempest
+    version: 13.0.0
