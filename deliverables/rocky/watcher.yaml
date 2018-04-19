@@ -5,3 +5,9 @@ team: watcher
 type: service
 repository-settings:
   openstack/watcher: {}
+releases:
+  - version: 1.9.0
+    projects:
+      - repo: openstack/watcher
+        hash: 391bb92bd2c7bee2aae68d50fbbf0275c7093e34
+        tarball-base: python-watcher
