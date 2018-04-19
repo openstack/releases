@@ -7,3 +7,8 @@ team: octavia
 type: horizon-plugin
 repository-settings:
   openstack/neutron-lbaas-dashboard: {}
+releases:
+  - projects:
+      - hash: e6da9ade502458258c565e36813f7d099234eba2
+        repo: openstack/neutron-lbaas-dashboard
+    version: 5.0.0.0b1
