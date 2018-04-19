@@ -1,7 +1,12 @@
 ---
 launchpad: ceilometer-powervm
 release-model: cycle-with-milestones
-team: Telemetry
-type: service
+team: PowerVMStackers
+type: other
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 7ccc8a83e3d5984bca986e29db91e494c2eeb8ad
 repository-settings:
   openstack/ceilometer-powervm: {}
