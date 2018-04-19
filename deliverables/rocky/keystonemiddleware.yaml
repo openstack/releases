@@ -2,6 +2,11 @@
 include-pypi-link: yes
 launchpad: keystonemiddleware
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: cc9a7e27d127df1365ed6970fb2859d4961b5733
+        repo: openstack/keystonemiddleware
+    version: 5.0.0
 team: keystone
 type: library
 repository-settings:
