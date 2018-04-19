@@ -6,3 +6,8 @@ team: octavia
 type: other
 repository-settings:
   openstack/neutron-lbaas: {}
+releases:
+  - projects:
+      - hash: 86548cc0c5e82a8c2de89418542a99060cde49e1
+        repo: openstack/neutron-lbaas
+    version: 13.0.0.0b1

@@ -7,3 +7,8 @@ team: octavia
 type: service
 repository-settings:
   openstack/octavia: {}
+releases:
+  - projects:
+      - hash: afb47816ac7a1299e0ea8a3ce65d24fa6c8f9db6
+        repo: openstack/octavia
+    version: 3.0.0.0b1
