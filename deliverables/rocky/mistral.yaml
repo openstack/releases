@@ -4,6 +4,15 @@ launchpad: mistral
 release-model: cycle-with-milestones
 team: mistral
 type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: 0b1e0bd626169aaba82e08fe17ec6eb071ef9860
+      - repo: openstack/mistral-dashboard
+        hash: 6576e00f28eb70fd8b779d3d04454723bb72297b
+      - repo: openstack/mistral-extra
+        hash: c3deb2d36ac25df0b73e1a7a16399efade7d5861
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
