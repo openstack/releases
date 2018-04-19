@@ -4,5 +4,11 @@ team: nova
 type: library
 release-model: cycle-with-intermediary
 include-pypi-link: yes
+release-notes: https://docs.openstack.org/releasenotes/os-traits/unreleased.html
 repository-settings:
   openstack/os-traits: {}
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/os-traits
+        hash: 16e87f2ea00e7a9410884b4ab4c1e5df2e66a6d8
