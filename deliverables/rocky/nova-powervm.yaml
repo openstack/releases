@@ -1,0 +1,13 @@
+---
+launchpad: nova-powervm
+release-model: cycle-with-milestones
+team: PowerVMStackers
+type: other
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 3b95db9dea019fb553f534516c06305142737777
+        tarball-base: nova_powervm
+repository-settings:
+  openstack/nova-powervm: {}
