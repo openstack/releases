@@ -3,5 +3,10 @@ launchpad: heat
 release-model: cycle-with-milestones
 team: heat
 type: service
+releases:
+  - version: 11.0.0.0b1
+    projects:
+      - repo: openstack/heat
+        hash: dd93b2318c029133705e5a9788cebc97d766dcd1
 repository-settings:
   openstack/heat: {}
