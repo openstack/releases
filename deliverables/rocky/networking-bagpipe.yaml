@@ -6,3 +6,8 @@ release-model: cycle-with-milestones
 include-pypi-link: yes
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - projects:
+      - hash: 58a38a2ada8e95c04742c7e81d0daf062b4e1a8d
+        repo: openstack/networking-bagpipe
+    version: 9.0.0.0b1
