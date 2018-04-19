@@ -3,5 +3,10 @@ launchpad: cinder
 release-model: cycle-with-milestones
 team: cinder
 type: service
+releases:
+  - version: 13.0.0.0b1
+    projects:
+      - hash: 8efee51cae17cec98abee3b3a896a626b5974e5b
+        repo: openstack/cinder
 repository-settings:
   openstack/cinder: {}
