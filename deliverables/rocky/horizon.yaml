@@ -3,5 +3,10 @@ launchpad: horizon
 release-model: cycle-with-milestones
 team: horizon
 type: service
+releases:
+  - version: 14.0.0.0b1
+    projects:
+      - hash: 0e0db289694fe4c1f0d490e4e6ebf2b8275b4657
+        repo: openstack/horizon
 repository-settings:
   openstack/horizon: {}
