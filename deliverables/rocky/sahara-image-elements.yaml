@@ -4,5 +4,10 @@ release-model: cycle-with-milestones
 release-type: python-pypi
 team: sahara
 type: other
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: ba498abc7d5230e5b83db64e48535e55e101d0e3
 repository-settings:
   openstack/sahara-image-elements: {}

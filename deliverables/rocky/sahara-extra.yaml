@@ -3,5 +3,10 @@ launchpad: sahara
 release-model: cycle-with-intermediary
 team: sahara
 type: library
+releases:
+  - version: 9.0.0
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 82fb1fd1f4bbd4db104ab7ba5260ee1ef06749b9
 repository-settings:
   openstack/sahara-extra: {}
