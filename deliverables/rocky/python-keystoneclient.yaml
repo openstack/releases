@@ -2,6 +2,11 @@
 include-pypi-link: yes
 launchpad: python-keystoneclient
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: 935401e67b78a7d6c455e68b609f934a411102f3
+        repo: openstack/python-keystoneclient
+    version: 3.16.0
 team: keystone
 type: client-library
 repository-settings:
