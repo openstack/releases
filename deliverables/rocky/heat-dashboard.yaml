@@ -3,5 +3,10 @@ launchpad: heat-dashboard
 release-model: cycle-with-intermediary
 team: heat
 type: horizon-plugin
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: c88445abb191118e6e8cd35ed169f547b08e8118
 repository-settings:
   openstack/heat-dashboard: {}
