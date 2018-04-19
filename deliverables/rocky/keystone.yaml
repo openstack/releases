@@ -3,5 +3,10 @@ launchpad: keystone
 release-model: cycle-with-milestones
 team: keystone
 type: service
+releases:
+  - version: 14.0.0.0b1
+    projects:
+      - repo: openstack/keystone
+        hash: 395c7088c2d8f11d57ac27878d0f647c42b1a908
 repository-settings:
   openstack/keystone: {}
