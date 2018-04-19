@@ -9,5 +9,10 @@ branches:
   - name: feature/policy-refactor
     location:
       openstack/glance: ca51cb84650da93c52a26b2581f0582f0a280c11
+releases:
+  - version: 17.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: c6376ea0b3f0d539874841c337a0a6bad4a68d27
 repository-settings:
   openstack/glance: {}
