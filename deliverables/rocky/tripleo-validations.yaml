@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-validations: {}
+releases:
+  - projects:
+      - hash: 70ba8b5cb64c74da66da2425ad7bd4f48d0c3dec
+        repo: openstack/tripleo-validations
+    version: 9.0.0

@@ -1,8 +1,13 @@
 ---
 launchpad: tripleo
-release-model: cycle-trailing
+release-model: cycle-with-intermediary
 release-type: nodejs
 team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ui: {}
+releases:
+  - projects:
+      - hash: 82af407be31b74adbdc39be5535d6bd0510fc620
+        repo: openstack/tripleo-ui
+    version: 9.0.0

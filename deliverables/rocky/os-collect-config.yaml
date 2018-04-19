@@ -1,8 +1,13 @@
 ---
 launchpad: os-collect-config
-release-model: cycle-trailing
+release-model: cycle-with-intermediary
 release-type: python-pypi
 team: tripleo
 type: other
 repository-settings:
   openstack/os-collect-config: {}
+releases:
+  - projects:
+      - hash: 7de2fd8444fc4e42b86ecf91849f658cdf5d196e
+        repo: openstack/os-collect-config
+    version: 9.0.0

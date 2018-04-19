@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-common: {}
+releases:
+  - projects:
+      - hash: 33de4303bbb95d3964f8b511a2031ec4c3c01ed6
+        repo: openstack/tripleo-common
+    version: 9.0.0

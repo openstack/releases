@@ -6,5 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-heat-templates: {}
-  # Note for Rocky m1, we'll have to push higher than 9.0.0.0b1
-  # because of https://review.openstack.org/#/c/556579/3/deliverables/queens/tripleo-heat-templates.yaml
+releases:
+  - projects:
+      - hash: 628cd0e3909391e7c21711e0ab2ffd0db66ef942
+        repo: openstack/tripleo-heat-templates
+    version: 9.0.0.0b2
