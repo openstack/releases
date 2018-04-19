@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-murano: {}
+releases:
+  - projects:
+      - hash: 2d7ce0dbe45d3630d5362c1ddb919852ab072bea
+        repo: openstack/puppet-murano
+    version: 13.0.0

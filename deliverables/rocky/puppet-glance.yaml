@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-glance: {}
+releases:
+  - projects:
+      - hash: 010fc167648740237410c0175b6612646fc13f0a
+        repo: openstack/puppet-glance
+    version: 13.0.0

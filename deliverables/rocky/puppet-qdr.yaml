@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-qdr: {}
+releases:
+  - projects:
+      - hash: 348f52bec2ddb01d237c1dd858e9d419fe1ea96f
+        repo: openstack/puppet-qdr
+    version: 2.0.0

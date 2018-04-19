@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-magnum: {}
+releases:
+  - projects:
+      - hash: fd9ae37f01850dd2cde1ccd5e95aed49974b30a0
+        repo: openstack/puppet-magnum
+    version: 13.0.0

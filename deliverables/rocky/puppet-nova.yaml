@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-nova: {}
+releases:
+  - projects:
+      - hash: 4e3ee87eced79e1d1ccb103264c477286d49881a
+        repo: openstack/puppet-nova
+    version: 13.0.0
