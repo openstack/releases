@@ -14,7 +14,7 @@ updates.
 .. _combined release calendar: schedule.ics
 
 .. datatemplate::
-   :source: ../../deliverables/series_status.yaml
+   :source: series_status.yaml
    :template: series_status_table.tmpl
 
 .. toctree::

@@ -26,8 +26,11 @@ from sphinx.util.nodes import nested_parse_with_titles
 from openstack_releases import deliverable
 from openstack_releases import governance
 from openstack_releases import links
+from openstack_releases import series_status
+
 
 _TEAM_DATA = governance.get_team_data()
+_PHASE_DOC_URL = 'https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases'  # noqa
 
 
 def _list_table(add, headers, data, title='', columns=None):
@@ -73,6 +76,9 @@ _deliverables = None
 def _initialize_deliverable_data(app):
     global _deliverables
 
+    series_status_data = series_status.SeriesStatus.from_directory(
+        'deliverables')
+    deliverable.Deliverable.init_series_status_data(series_status_data)
     _deliverables = deliverable.Deliverables('deliverables')
 
 
@@ -221,13 +227,21 @@ class DeliverableDirectiveBase(rst.Directive):
                     )
                 else:
                     notes_link = '`release notes <%s>`__' % release_notes
+                stable_status = '`{} <{}>`__'.format(
+                    deliv.stable_status.title(),
+                    _PHASE_DOC_URL,
+                )
                 most_recent.append(
-                    (ref, earliest_version, recent_version, notes_link)
+                    (ref,
+                     earliest_version,
+                     recent_version,
+                     stable_status,
+                     notes_link)
                 )
             _list_table(
                 lambda t: result.append(t, source_name),
                 ['Deliverable', 'Earliest Version',
-                 'Most Recent Version', 'Notes'],
+                 'Most Recent Version', 'Stable Status', 'Notes'],
                 most_recent,
                 title='Release Summary',
             )
