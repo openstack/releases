@@ -47,6 +47,10 @@ class Series(object):
     def eol_date(self):
         return self._data.get('eol-date', None)
 
+    @property
+    def allows_releases(self):
+        return self.status in ('development', 'maintained')
+
 
 class SeriesStatus(collections.abc.Mapping):
 
@@ -58,6 +62,12 @@ class SeriesStatus(collections.abc.Mapping):
     def from_directory(cls, root_dir):
         raw_data = cls._load_series_status_data(root_dir)
         return cls(raw_data)
+
+    @classmethod
+    def default(cls):
+        module_path = os.path.dirname(__file__)
+        root_dir = os.path.dirname(module_path)
+        return cls.from_directory(root_dir)
 
     @staticmethod
     def _load_series_status_data(root_dir):
