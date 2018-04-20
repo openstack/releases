@@ -5,3 +5,8 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+releases:
+  - version: 2.0.0.0b1
+    projects:
+      - repo: openstack/blazar
+        hash: 038e5e9b1bde00015b92e2b68b2f88e166bfc810
