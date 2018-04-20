@@ -5,3 +5,8 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - projects:
+      - hash: 9ebde65af90c039a346767a5070d79ff809503ef
+        repo: openstack/monasca-api
+    version: 2.6.0
