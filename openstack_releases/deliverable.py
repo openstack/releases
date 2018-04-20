@@ -137,7 +137,7 @@ class Deliverables(object):
 
     @staticmethod
     def _series_from_filename(filename):
-        return os.path.basename(os.path.dirname(filename))
+        return os.path.basename(os.path.dirname(filename)).lstrip('_')
 
     @staticmethod
     def _deliverable_from_filename(filename):
