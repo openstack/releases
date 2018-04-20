@@ -3,5 +3,11 @@ launchpad: openstack-cyborg
 release-model: cycle-with-milestones
 team: cyborg
 type: service
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - hash: ce0b6e5a95e2d93265f814be445e21676479d1e0
+        repo: openstack/cyborg
+        tarball-base: openstack-cyborg
 repository-settings:
   openstack/cyborg: {}
