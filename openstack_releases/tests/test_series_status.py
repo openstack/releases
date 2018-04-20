@@ -44,9 +44,7 @@ class TestConstructSeriesStatus(base.BaseTestCase):
     def setUp(self):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
-        deliv_dir = os.path.join(self.tmpdir, 'deliverables')
-        os.mkdir(deliv_dir)
-        with open(os.path.join(deliv_dir, 'series_status.yaml'),
+        with open(os.path.join(self.tmpdir, 'series_status.yaml'),
                   'w', encoding='utf-8') as f:
             f.write(self._body)
 
