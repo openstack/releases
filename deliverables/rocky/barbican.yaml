@@ -5,3 +5,8 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+releases:
+  - projects:
+      - hash: e708ff34137f2f4213ed964ec66aeadc03a17473
+        repo: openstack/barbican
+    version: 7.0.0.0b1
