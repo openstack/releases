@@ -5,3 +5,8 @@ team: monasca
 type: horizon-plugin
 repository-settings:
   openstack/monasca-ui: {}
+releases:
+  - projects:
+      - hash: c40303031143667a4598c5f8bf39356bdf1459d4
+        repo: openstack/monasca-ui
+    version: 1.13.0

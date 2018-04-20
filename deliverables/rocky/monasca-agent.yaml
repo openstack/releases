@@ -5,3 +5,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-agent: {}
+releases:
+  - projects:
+      - hash: 2f83adf03eea1aa7a6b789a0422f72a43fa4961d
+        repo: openstack/monasca-agent
+    version: 2.7.0

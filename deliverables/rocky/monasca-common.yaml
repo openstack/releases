@@ -5,3 +5,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-common: {}
+releases:
+  - projects:
+      - hash: d77bd7967d56586cfdb03b0dfa1a3cd9a0a7aeae
+        repo: openstack/monasca-common
+    version: 2.9.0
