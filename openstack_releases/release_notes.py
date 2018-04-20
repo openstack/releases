@@ -67,7 +67,7 @@ Subject: {{email_tags}} {{project}} {{end_rev}}{% if series %} ({{series}}){% en
 {% endif %}
 """
 
-PYPI_URL_TPL = 'https://pypi.python.org/pypi/%s'
+PYPI_URL_TPL = 'https://pypi.org/project/%s'
 
 # This will be replaced with template values and then wrapped using parawrap
 # to correctly wrap at paragraph boundaries...
