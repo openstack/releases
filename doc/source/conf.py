@@ -77,7 +77,10 @@ latex_documents = [
 
 def format_date(s, fmt='%b %d'):
     # This function is used in schedule_table.tmpl
-    d = datetime.datetime.strptime(s, '%Y-%m-%d')
+    if isinstance(s, (datetime.date, datetime.datetime)):
+        d = s
+    else:
+        d = datetime.datetime.strptime(s, '%Y-%m-%d')
     return d.strftime(fmt)
 
 
