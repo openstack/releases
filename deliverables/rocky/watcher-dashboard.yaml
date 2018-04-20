@@ -1,8 +1,13 @@
 ---
 launchpad: watcher-dashboard
 release-model: cycle-with-intermediary
-release-type: python-pypi
+release-type: horizon
 team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 1.9.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 233ede982f11d2fc97f404957205b510d2489a7a
