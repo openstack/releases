@@ -3,5 +3,10 @@ launchpad: murano
 release-model: cycle-with-milestones
 team: murano
 type: service
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/murano
+        hash: bfac34bf01d64698993b55a0f4f3b9d81f5c2a07
 repository-settings:
   openstack/murano: {}
