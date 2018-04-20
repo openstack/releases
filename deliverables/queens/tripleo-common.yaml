@@ -33,6 +33,10 @@ releases:
       - hash: 91f52e9fef4c1c7bcaa17ec6fe5d6f499229667a
         repo: openstack/tripleo-common
     version: 8.6.0
+  - projects:
+      - hash: 34243812f15bc35caeadabcaf660c36c23b173ba
+        repo: openstack/tripleo-common
+    version: 8.6.1
 cycle-highlights:
   - |
     config-download: Ability to use Ansible to apply the cloud configuration.
