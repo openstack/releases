@@ -3,5 +3,10 @@ launchpad: zaqar
 release-model: cycle-with-milestones
 team: zaqar
 type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/zaqar
+        hash: 85529379befd2947627881d464d6db689a026bfd
 repository-settings:
   openstack/zaqar: {}
