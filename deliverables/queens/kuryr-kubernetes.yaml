@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 2aaffdf0a77c68ff9249dff82878480ebfbad9b7
+  - version: 0.4.2
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 487267cca097bb7366c21ad49a8e5a36c4a88faf
 branches:
   - location: 0.4.0
     name: stable/queens
