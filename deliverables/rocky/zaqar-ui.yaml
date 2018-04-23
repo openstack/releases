@@ -4,5 +4,10 @@ release-model: cycle-with-milestones
 release-type: python-service
 team: zaqar
 type: horizon-plugin
+releases:
+  - version: 5.0.0.0b1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 83dd934ad547988fca5b5ddb9554dbe9fa98b68a
 repository-settings:
   openstack/zaqar-ui: {}
