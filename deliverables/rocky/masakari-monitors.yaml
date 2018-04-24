@@ -5,3 +5,8 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 34d185deeee6118b373715c2567324010465a94b
