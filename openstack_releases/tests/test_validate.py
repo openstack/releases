@@ -28,6 +28,7 @@ from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import processutils
+from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 
@@ -1017,6 +1018,141 @@ class TestValidateNewReleasesAtEnd(base.BaseTestCase):
             }
         )
         validate.validate_new_releases_at_end(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+
+class TestValidateNewReleasesInOpenSeries(base.BaseTestCase):
+
+    _series_status_data = yamlutils.loads(textwrap.dedent('''
+    - name: rocky
+      status: development
+      initial-release: 2018-08-30
+    - name: queens
+      status: maintained
+      initial-release: 2018-02-28
+    - name: ocata
+      status: extended maintenance
+      initial-release: 2017-02-22
+    - name: newton
+      status: end of life
+      initial-release: 2016-10-06
+      eol-date: 2017-10-25
+    '''))
+
+    def setUp(self):
+        super().setUp()
+        self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
+        self.series_status = series_status.SeriesStatus(
+            self._series_status_data)
+        self.useFixture(fixtures.MockPatch(
+            'openstack_releases.deliverable.Deliverable._series_status_data',
+            self.series_status,
+        ))
+
+    def test_no_releases(self):
+        # When we initialize a new series, we won't have any release
+        # data. That's OK.
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='rocky',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': []
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_development(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='rocky',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '10.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_maintained(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='queens',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '10.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_extended_maintaintenance(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '10.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_end_of_life(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '10.0.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))

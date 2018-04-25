@@ -876,6 +876,51 @@ def validate_new_releases_at_end(deliv, context):
 
 
 @applies_to_released
+def validate_new_releases_in_open_series(deliv, context):
+    "New releases may only be added to open series."
+
+    if deliv.series_info.allows_releases:
+        print('{} has status {!r} and allows releases'.format(
+            deliv.series, deliv.series_info.status))
+        return
+
+    LOG.debug('%s has status %r and will not allow releases',
+              deliv.series, deliv.series_info.status)
+
+    # Remember which entries are new so we can verify that they
+    # appear at the end of the file.
+    new_releases = {}
+
+    for release in deliv.releases:
+
+        for project in release.projects:
+
+            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
+                                            project.hash, context):
+                continue
+
+            version_exists = gitutils.commit_exists(
+                context.workdir, project.repo.name, release.version,
+            )
+            if version_exists:
+                print('tag exists, skipping further validation')
+                continue
+
+            LOG.debug('Found new version {} for {}'.format(
+                release.version, project.repo))
+            new_releases[release.version] = release
+
+    if new_releases:
+        # The series is closed but there is a new release.
+        msg = ('series {} has status {!r} '
+               'and cannot have new releases tagged').format(
+                   deliv.series, deliv.series_info.status)
+        context.error(msg)
+    else:
+        print('OK')
+
+
+@applies_to_released
 def validate_release_branch_membership(deliv, context):
     "Commits being tagged need to be on the right branch."
 
@@ -1471,6 +1516,7 @@ def main():
             validate_existing_tags,
             validate_version_numbers,
             validate_new_releases_at_end,
+            validate_new_releases_in_open_series,
             validate_release_branch_membership,
             validate_tarball_base,
             validate_new_releases,

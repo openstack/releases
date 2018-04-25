@@ -25,6 +25,7 @@ import weakref
 import pbr.version
 
 from openstack_releases import governance
+from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 
@@ -330,6 +331,7 @@ class Branch(object):
 class Deliverable(object):
 
     _governance_data = None
+    _series_status_data = None
 
     def __init__(self, team, series, name, data):
         self.team = team
@@ -521,6 +523,12 @@ class Deliverable(object):
     @property
     def cycle_highlights(self):
         return self._data.get('cycle-highlights', [])
+
+    @property
+    def series_info(self):
+        if self._series_status_data is None:
+            self._series_status_data = series_status.SeriesStatus.default()
+        return self._series_status_data[self.series]
 
     def __eq__(self, other):
         return self.name == other.name
