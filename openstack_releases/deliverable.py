@@ -547,6 +547,10 @@ class Deliverable(object):
                 status = self.series_info.status
         return status
 
+    @property
+    def allows_releases(self):
+        return self.stable_status in ('development', 'maintained')
+
     def __eq__(self, other):
         return self.name == other.name
 

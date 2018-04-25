@@ -879,13 +879,13 @@ def validate_new_releases_at_end(deliv, context):
 def validate_new_releases_in_open_series(deliv, context):
     "New releases may only be added to open series."
 
-    if deliv.series_info.allows_releases:
-        print('{} has status {!r} and allows releases'.format(
-            deliv.series, deliv.series_info.status))
+    if deliv.allows_releases:
+        print('{} has status {!r} for {} and allows releases'.format(
+            deliv.name, deliv.series, deliv.stable_status))
         return
 
-    LOG.debug('%s has status %r and will not allow releases',
-              deliv.series, deliv.series_info.status)
+    LOG.debug('%s has status %r for %s and will not allow new releases',
+              deliv.name, deliv.stable_status, deliv.series)
 
     # Remember which entries are new so we can verify that they
     # appear at the end of the file.
@@ -912,9 +912,9 @@ def validate_new_releases_in_open_series(deliv, context):
 
     if new_releases:
         # The series is closed but there is a new release.
-        msg = ('series {} has status {!r} '
+        msg = ('deliverable {} has status {!r} for {}'
                'and cannot have new releases tagged').format(
-                   deliv.series, deliv.series_info.status)
+                   deliv.name, deliv.stable_status, deliv.series)
         context.error(msg)
     else:
         print('OK')

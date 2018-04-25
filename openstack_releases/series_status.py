@@ -47,10 +47,6 @@ class Series(object):
     def eol_date(self):
         return self._data.get('eol-date', None)
 
-    @property
-    def allows_releases(self):
-        return self.status in ('development', 'maintained')
-
 
 class SeriesStatus(collections.abc.Mapping):
 
