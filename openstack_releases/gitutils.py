@@ -38,7 +38,8 @@ def find_modified_deliverable_files():
     filenames = [
         l.strip()
         for l in results.splitlines()
-        if l.startswith('deliverables/')
+        if (l.startswith('deliverables/') and
+            not l.endswith('series_status.yaml'))
     ]
     return filenames
 

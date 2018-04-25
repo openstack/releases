@@ -19,6 +19,7 @@
 from __future__ import print_function
 
 import argparse
+import datetime
 import glob
 import logging
 import os
@@ -27,12 +28,48 @@ import pkgutil
 import sys
 
 import jsonschema
+import jsonschema.validators
 
 from openstack_releases import yamlutils
 
-_SCHEMA = yamlutils.loads(
+LOG = logging.getLogger('')
+
+_SERIES_SCHEMA = yamlutils.loads(
+    pkgutil.get_data('openstack_releases',
+                     'series_status_schema.yaml').decode('utf-8')
+)
+
+_DELIVERABLE_SCHEMA = yamlutils.loads(
     pkgutil.get_data('openstack_releases', 'schema.yaml').decode('utf-8')
 )
+
+
+def is_date(validator, value, instance, schema):
+    if not isinstance(instance, str):
+        return
+    try:
+        return datetime.datetime.strptime(instance, "%Y-%m-%d")
+    except Exception:
+        yield jsonschema.ValidationError('Invalid date {!r}'.format(instance))
+
+
+def make_validator_with_date(schema_data):
+    return jsonschema.validators.extend(
+        validator=jsonschema.Draft4Validator(schema_data),
+        validators={'date': is_date},
+    )(schema_data, types={'date': datetime.date})
+
+
+def validate_one_file(filename, schema_data, debug):
+    LOG.info('Checking %s', filename)
+    validator = make_validator_with_date(schema_data)
+    with open(filename, 'r', encoding='utf-8') as f:
+        info = yamlutils.loads(f.read())
+    for error in validator.iter_errors(info):
+        LOG.error(error)
+        yield '{}: {}'.format(filename, error)
+        if debug:
+            raise RuntimeError(error)
 
 
 def main():
@@ -58,38 +95,23 @@ def main():
         level=logging.DEBUG,
     )
     logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
-    log = logging.getLogger('')
+
+    errors = []
+
+    errors.extend(
+        validate_one_file('deliverables/series_status.yaml',
+                          _SERIES_SCHEMA, args.debug)
+    )
 
     filenames = args.input or sorted(glob.glob('deliverables/*/*.yaml'))
 
-    errors = []
-    warnings = []
-
     for filename in filenames:
-        log.info('Checking %s', filename)
         if not os.path.isfile(filename):
-            log.info("File was deleted, skipping.")
+            LOG.info("%s was deleted, skipping.", filename)
             continue
-        with open(filename, 'r', encoding='utf-8') as f:
-            deliverable_info = yamlutils.loads(f.read())
-
-        def mk_warning(msg):
-            log.warning(msg)
-            warnings.append('{}: {}'.format(filename, msg))
-
-        def mk_error(msg):
-            log.error(msg)
-            errors.append('{}: {}'.format(filename, msg))
-            if args.debug:
-                raise RuntimeError(msg)
-
-        validator = jsonschema.Draft4Validator(_SCHEMA)
-        for error in validator.iter_errors(deliverable_info):
-            mk_error(str(error))
-
-    print('\n\n%s warnings found' % len(warnings))
-    for w in warnings:
-        print(w)
+        errors.extend(
+            validate_one_file(filename, _DELIVERABLE_SCHEMA, args.debug)
+        )
 
     print('\n\n%s errors found' % len(errors))
     for e in errors:

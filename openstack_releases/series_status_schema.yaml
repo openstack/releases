@@ -1,0 +1,47 @@
+---
+$schema: "http://json-schema.org/schema#"
+$id: "http://git.openstack.org/cgit/openstack/releases/tree/README.rst"
+
+# Do not allow any properties not defined here. This lets us catch
+# typos.
+additionalProperties: false
+
+type: "array"
+items:
+  type: "object"
+  additionalProperties: false
+  required:
+    - name
+    - status
+  properties:
+    name:
+      type: "string"
+    status:
+      type: "string"
+      enum:
+        - development
+        - maintained
+        - extended maintenance
+        - unmaintained
+        - end of life
+    initial-release:
+      type: "date"
+    eol-date:
+      type: "date"
+    next-phase:
+      type: "object"
+      additionalProperties: false
+      properties:
+        required:
+          - status
+          - date
+        status:
+          type: "string"
+          enum:
+            - development
+            - maintained
+            - extended maintenance
+            - unmaintained
+            - end of life
+        date:
+          type: "date"

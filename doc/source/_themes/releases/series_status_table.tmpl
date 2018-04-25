@@ -1,0 +1,24 @@
+.. -*- mode: rst -*-
+
+.. This template renders a table showing the default status of each
+   series using the list-table directive.
+
+{% macro phase_link(phase) -%}
+`{{ phase|title }} <https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases>`__
+{%- endmacro %}
+
+.. list-table::
+   :header-rows: 1
+
+   - * Series
+     * Status
+     * Initial Release Date
+     * Next Phase
+     * EOL Date
+{%- for series in data %}
+   - * :doc:`{{ series['name'] }}/index`
+     * {{ phase_link(series['status']) }}
+     * {{ series['initial-release'] }} {%- if series['status'] == 'development' %} *estimated* :doc:`(schedule) <{{ series['name'] }}/schedule>`{%- endif %}
+     * {% if series['next-phase'] %}{{ phase_link(series['next-phase']['status']) }} *estimated {{ series['next-phase']['date'] }}*{% endif %}
+     * {{ series.get('eol-date', '') }}
+{%- endfor %}
