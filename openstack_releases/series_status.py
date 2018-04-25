@@ -57,6 +57,13 @@ class SeriesStatus(collections.abc.Mapping):
     def __init__(self, raw_data):
         self._raw_data = raw_data
         self._data = self._organize_data(raw_data)
+        # Ensure there is always an independent series.
+        if 'independent' not in self._data:
+            self._data['independent'] = Series({
+                'name': 'independent',
+                'status': 'development',
+                'initial-release': None,
+            })
 
     @classmethod
     def from_directory(cls, root_dir):

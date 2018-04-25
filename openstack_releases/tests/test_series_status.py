@@ -59,6 +59,11 @@ class TestConstructSeriesStatus(base.BaseTestCase):
         status = series_status.SeriesStatus.from_directory(self.tmpdir)
         self.assertIn('rocky', status)
 
+    def test_independent_series(self):
+        data = yamlutils.loads(self._body)
+        status = series_status.SeriesStatus(data)
+        self.assertIn('independent', status)
+
 
 class TestSeries(base.BaseTestCase):
 
