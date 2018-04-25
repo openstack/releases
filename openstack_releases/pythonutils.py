@@ -63,7 +63,7 @@ def get_pypi_info(dist_name):
     "Return PyPI information for the distribution."
     canonical_name = packaging_utils.canonicalize_name(dist_name)
     LOG.debug('looking at PyPI for {!r}'.format(canonical_name))
-    url = 'https://pypi.python.org/pypi/{}/json'.format(canonical_name)
+    url = 'https://pypi.org/project/{}/json'.format(canonical_name)
     LOG.debug(url)
     try:
         return requests.get(url).json()
@@ -72,7 +72,7 @@ def get_pypi_info(dist_name):
 
 
 def _get_pypi_roles(dist_name):
-    client = xmlrpc.client.ServerProxy('https://pypi.python.org/pypi')
+    client = xmlrpc.client.ServerProxy('https://pypi.org/project')
     LOG.debug('retrieving roles for {!r}'.format(
         dist_name))
     return client.package_roles(dist_name)
