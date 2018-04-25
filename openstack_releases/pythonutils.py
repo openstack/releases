@@ -72,7 +72,7 @@ def get_pypi_info(dist_name):
 
 
 def _get_pypi_roles(dist_name):
-    client = xmlrpc.client.ServerProxy('https://pypi.org/project')
+    client = xmlrpc.client.ServerProxy('https://pypi.org/pypi')
     LOG.debug('retrieving roles for {!r}'.format(
         dist_name))
     return client.package_roles(dist_name)
