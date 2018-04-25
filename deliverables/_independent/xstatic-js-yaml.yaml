@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 3.8.1.0
+    projects:
+      - repo: openstack/xstatic-js-yaml
+        hash: 68e241627541fc196ff26245810eb58b8a4f6ce2
+        tarball-base: XStatic-JS-Yaml
+repository-settings:
+  openstack/xstatic-js-yaml: {}
