@@ -526,9 +526,16 @@ class Deliverable(object):
 
     @property
     def series_info(self):
-        if self._series_status_data is None:
-            self._series_status_data = series_status.SeriesStatus.default()
+        self.init_series_status_data()
         return self._series_status_data[self.series]
+
+    @classmethod
+    def init_series_status_data(cls, data=None):
+        if cls._series_status_data is not None:
+            return
+        if data is None:
+            data = series_status.SeriesStatus.default()
+        cls._series_status_data = data
 
     @property
     def stable_status(self):
