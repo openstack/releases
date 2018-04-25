@@ -97,3 +97,11 @@ properties:
             - type: "object"
       required: ["name", "location"]
       additionalProperties: False
+  stable-status:
+    type: "string"
+    enum:
+      - development
+      - maintained
+      - extended maintenance
+      - unmaintained
+      - end of life

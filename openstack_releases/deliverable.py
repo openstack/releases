@@ -530,6 +530,16 @@ class Deliverable(object):
             self._series_status_data = series_status.SeriesStatus.default()
         return self._series_status_data[self.series]
 
+    @property
+    def stable_status(self):
+        status = self._data.get('stable-status')
+        if status is None:
+            if self.is_independent:
+                status = 'development'
+            else:
+                status = self.series_info.status
+        return status
+
     def __eq__(self, other):
         return self.name == other.name
 
