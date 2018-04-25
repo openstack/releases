@@ -813,7 +813,13 @@ class TextTranslator(nodes.NodeVisitor):
         pass
 
     def depart_target(self, node):
-        self.add_text(' (%s)' % node['refuri'])
+        # Reno produces anchor references for sections automatically
+        # now, and those don't have URIs set up so we want to ignore
+        # them. If we do have another target that does have a URI we
+        # want to include that, so test whether we have the URI before
+        # including the target info in the output.
+        if 'refuri' in node:
+            self.add_text(' (%s)' % node['refuri'])
 
     def visit_index(self, node):
         raise nodes.SkipNode
