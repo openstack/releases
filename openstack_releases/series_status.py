@@ -74,11 +74,11 @@ class SeriesStatus(collections.abc.Mapping):
     def default(cls):
         module_path = os.path.dirname(__file__)
         root_dir = os.path.dirname(module_path)
-        return cls.from_directory(root_dir)
+        return cls.from_directory(os.path.join(root_dir, 'deliverables'))
 
     @staticmethod
     def _load_series_status_data(root_dir):
-        filename = os.path.join(root_dir, 'deliverables', 'series_status.yaml')
+        filename = os.path.join(root_dir, 'series_status.yaml')
         with open(filename, 'r', encoding='utf-8') as f:
             return yamlutils.loads(f.read())
 
