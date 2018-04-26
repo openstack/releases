@@ -2,14 +2,13 @@
 include-pypi-link: yes
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-openstacksdk/unreleased.html
-launchpad: python-openstacksdk
+storyboard: 760
 team: OpenStackSDK
 type: library
 releases:
   - projects:
       - hash: f58af1ba4ee17500104e3d304ec3a3498c179b12
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.12.0
 repository-settings:
-  openstack/python-openstacksdk: {}
+  openstack/openstacksdk: {}

@@ -2,34 +2,29 @@
 include-pypi-link: yes
 release-model: cycle-with-intermediary
 release-notes: https://docs.openstack.org/releasenotes/python-openstacksdk/queens.html
-launchpad: python-openstacksdk
+storyboard: 760
 team: OpenStackSDK
 type: library
 releases:
   - projects:
       - hash: 8daa33e3848fffc4b0656f7954b57ab499c71f2d
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.10.0
   - projects:
       - hash: 26e14550fed4cb82ca0af17c71cb5674c3bef12d
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.11.0
   - projects:
       - hash: 5de34797ab9002333830ac606cd5c8349a5fe17c
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.11.1
   - projects:
       - hash: a65b18eab0aa6db51ec365801d2cd5b076e65647
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.11.2
   - projects:
       - hash: 8cdf409c3d6fc3639e85292c5692f92031b4a172
-        repo: openstack/python-openstacksdk
-        tarball-base: openstacksdk
+        repo: openstack/openstacksdk
     version: 0.11.3
 branches:
   - name: stable/queens
@@ -41,4 +36,4 @@ cycle-highlights:
   - 'Updated pagination support to support all existing forms of pagination. Pagination
     now works automatically behind the scenes.'
 repository-settings:
-  openstack/python-openstacksdk: {}
+  openstack/openstacksdk: {}
