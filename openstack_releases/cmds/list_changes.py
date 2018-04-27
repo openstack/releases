@@ -204,7 +204,7 @@ def main():
         help='do not remove temporary files',
     )
     parser.add_argument(
-        '--no-shortcut',
+        '--no-shortcut', '--force', '-f',
         dest='shortcut',
         default=True,
         action='store_false',
