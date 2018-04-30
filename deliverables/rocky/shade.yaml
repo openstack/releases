@@ -4,5 +4,10 @@ release-model: cycle-with-intermediary
 storyboard: 760
 team: OpenStackSDK
 type: library
+releases:
+  - projects:
+      - hash: 2a59fb58f2fed98f9e31e805d42ddc5368f43c71
+        repo: openstack-infra/shade
+    version: 1.28.0
 repository-settings:
   openstack-infra/shade: {}
