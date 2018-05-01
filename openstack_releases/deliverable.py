@@ -176,7 +176,7 @@ class Deliverables(object):
         """
         if team is None:
             if series is None:
-                series = '_independent'
+                series = 'independent'
             filenames = self._by_series[series]
         else:
             filenames = self._by_team_and_series[(team, series)]
