@@ -132,11 +132,7 @@ def main():
     )
     args = parser.parse_args()
 
-    # Deal with the inconsistency of the name for the independent
-    # directory.
     series = args.series
-    if series == 'independent':
-        series = '_independent'
 
     if args.missing_milestone:
         model = 'cycle-with-milestones'
