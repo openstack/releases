@@ -340,7 +340,7 @@ def generate_release_notes(repo, repo_path,
         if is_stable and series:
             branch = 'origin/stable/%s' % series
         cfg.override(branch=branch)
-        ldr = loader.Loader(conf=cfg)
+        ldr = loader.Loader(conf=cfg, ignore_cache=True)
         if end_revision in ldr.versions:
             rst_notes = formatter.format_report(
                 loader=ldr,
