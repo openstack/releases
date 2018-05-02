@@ -6,3 +6,8 @@ team: OpenStackSDK
 type: library
 repository-settings:
   openstack/os-client-config: {}
+releases:
+  - projects:
+      - hash: cf5f446f27a08a41366847e2b586c51f9a6d696f
+        repo: openstack/os-client-config
+    version: 1.30.0
