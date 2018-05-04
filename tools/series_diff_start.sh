@@ -64,14 +64,24 @@ function count_files() {
 
 function shas_at_tag() {
     # Produce a list of shas used by objects at the tag point
-    git ls-tree -lr $1 | cut -f3 -d' '
+    local tag="$1"
+    local extension="$2"
+
+    if [ -z "$extension" ]; then
+        git ls-tree -lr $tag | cut -f3 -d' '
+    else
+        git ls-tree -lr $tag | grep ${extension}'$' | cut -f3 -d' '
+    fi
 }
 
 function count_unchanged_files() {
     local start="$1"
     local end="$2"
+    local extension="$3"
 
-    comm -12 <( shas_at_tag $start | sort  ) <( shas_at_tag $end | sort ) | wc -l
+    comm -12 <( shas_at_tag $start "$extension" | sort  ) \
+         <( shas_at_tag $end "$extension" | sort ) \
+        | wc -l
 }
 
 for repo in $REPOS; do
@@ -101,6 +111,7 @@ for repo in $REPOS; do
     echo
 
     echo "Unchanged files: $(count_unchanged_files $base $latest)"
+    echo "Unchanged .py files: $(count_unchanged_files $base $latest .py)"
     echo
 
     cd $MYTMPDIR
