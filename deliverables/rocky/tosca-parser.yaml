@@ -4,5 +4,10 @@ launchpad: tosca-parser
 release-model: cycle-with-intermediary
 team: heat
 type: library
+releases:
+  - projects:
+      - hash: e17c2a8060434a27293cd4719647cf735216f3c0
+        repo: openstack/tosca-parser
+    version: 1.0.0
 repository-settings:
   openstack/tosca-parser: {}
