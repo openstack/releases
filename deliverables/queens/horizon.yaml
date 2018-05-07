@@ -29,6 +29,10 @@ releases:
       - repo: openstack/horizon
         hash: a6cdd290d0dbe6f6622179cefd4d2c05d60dc22d
     version: 13.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/horizon
+        hash: d95775c524cf804333d2ae6c7619b0b485668f75
 branches:
   - location: 13.0.0.0rc1
     name: stable/queens
