@@ -62,16 +62,34 @@ function count_files() {
     git ls-files | wc -l
 }
 
-function shas_at_tag() {
-    # Produce a list of shas used by objects at the tag point
+function git_ls_tree() {
     local tag="$1"
     local extension="$2"
 
     if [ -z "$extension" ]; then
-        git ls-tree -lr $tag | cut -f3 -d' '
+        git ls-tree -lr $tag
     else
-        git ls-tree -lr $tag | grep ${extension}'$' | cut -f3 -d' '
+        git ls-tree -lr $tag | grep ${extension}'$'
     fi
+}
+
+function shas_at_tag() {
+    # Produce a list of shas used by objects representing files with
+    # real content at the tag point
+    local tag="$1"
+    local extension="$2"
+
+    local mode
+    local type
+    local sha
+    local size
+    local filename
+
+    git_ls_tree $tag $extension | while read mode type sha size filename; do
+        if [ "$size" != "0" ]; then
+            echo $sha
+        fi
+    done
 }
 
 function count_unchanged_files() {
