@@ -62,6 +62,18 @@ function count_files() {
     git ls-files | wc -l
 }
 
+function shas_at_tag() {
+    # Produce a list of shas used by objects at the tag point
+    git ls-tree -lr $1 | cut -f3 -d' '
+}
+
+function count_unchanged_files() {
+    local start="$1"
+    local end="$2"
+
+    comm -12 <( shas_at_tag $start | sort  ) <( shas_at_tag $end | sort ) | wc -l
+}
+
 for repo in $REPOS; do
     clone_repo $repo
     cd $repo
@@ -86,6 +98,9 @@ for repo in $REPOS; do
     echo
 
     git diff --stat ${base}..${latest} | tail -n 1
+    echo
+
+    echo "Unchanged files: $(count_unchanged_files $base $latest)"
     echo
 
     cd $MYTMPDIR
