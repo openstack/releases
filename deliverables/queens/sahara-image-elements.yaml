@@ -26,6 +26,10 @@ releases:
       - repo: openstack/sahara-image-elements
         hash: 8a9185373f92ab3ac201fdff725b45cf7f01f553
     version: 8.0.0
+  - projects:
+      - repo: openstack/sahara-image-elements
+        hash: 86763b3f7927b475cbacf8be0040d23ea108ee7f
+    version: 8.0.1
 branches:
   - name: stable/queens
     location: 8.0.0.0rc1
