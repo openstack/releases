@@ -25,6 +25,10 @@ releases:
       - repo: openstack/sahara-dashboard
         hash: ccfab2ced2a42e206f86a613ccab11e55dafbabb
     version: 8.0.0
+  - projects:
+      - repo: openstack/sahara-dashboard
+        hash: 707059ff4e372ae66b21b82050a9e16295176782
+    version: 8.0.1
 branches:
   - name: stable/queens
     location: 8.0.0.0rc1
