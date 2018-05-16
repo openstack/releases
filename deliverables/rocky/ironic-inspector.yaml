@@ -6,3 +6,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-inspector: {}
+releases:
+  - projects:
+      - hash: c312669bde68ffbbc22e115a4b0f4796bb613dd2
+        repo: openstack/ironic-inspector
+    version: 7.3.0
