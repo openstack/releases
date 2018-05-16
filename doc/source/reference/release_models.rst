@@ -51,6 +51,14 @@ published at predetermined times in the cycle schedule.
   match the end of the 6-month development cycle.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
+* Projects using milestones are expected to tag at least 2 out of the
+  3 for each cycle, or risk being dropped as an official project. The
+  release team will remind projects that miss the first milestone, and
+  create tags on any later milestones for the project team by tagging
+  HEAD at the time of the deadline. If the release team force-creates
+  2 tags for a project in the same given development cycle, the
+  project will be treated as inactive and the release team will
+  recommend dropping it from the official project list.
 
 .. _cycle-with-intermediary:
 
