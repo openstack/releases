@@ -41,6 +41,7 @@ WILDCARD_REPO_EXCEPTIONS = [
 REPO_EXCEPTIONS = [
     'openstack-dev/bashate',
     'openstack-infra/tripleo-ci',
+    'openstack/dib-utils',
     'openstack/diskimage-builder',
     'openstack/dragonflow',
     'openstack/ec2-api',
