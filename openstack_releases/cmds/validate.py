@@ -571,6 +571,49 @@ def validate_tarball_base(deliv, context):
 
 
 @applies_to_released
+def validate_pypi_readme(deliv, context):
+    "Does the README look right for PyPI?"
+
+    # Check out the repositories to the hash for the latest release on
+    # the branch so we can find the setup.py and README.rst there (if
+    # it exists), in case that has been removed from master after a
+    # project is retired. This also ensures we get the right name for
+    # the branch, in case the sdist name changes over time.
+    latest_release = deliv.releases[-1]
+    for project in latest_release.projects:
+        gitutils.safe_clone_repo(
+            context.workdir, project.repo.name, project.hash, context)
+
+    for repo in deliv.repos:
+
+        job_templates = context.zuul_projects.get(repo.name, {}).get(
+            'templates', [])
+        LOG.debug('{} has job templates {}'.format(repo.name, job_templates))
+
+        # Look for jobs that appear to be talking about publishing to
+        # PyPI. There are variations.
+        pypi_jobs = [
+            j
+            for j in job_templates
+            if 'pypi' in j
+        ]
+
+        if not pypi_jobs:
+            print('rule only applies to repos publishing to PyPI')
+            continue
+
+        LOG.debug('{} publishes to PyPI via {}'.format(repo.name, pypi_jobs))
+
+        try:
+            pythonutils.check_readme_format(context.workdir, repo.name)
+        except Exception as err:
+            context.error('README check for {} failed: {}'.format(
+                repo.name, err))
+        else:
+            print('OK')
+
+
+@applies_to_released
 def validate_pypi_permissions(deliv, context):
     "Do we have permission to upload to PyPI?"
 
@@ -1511,6 +1554,7 @@ def main():
             validate_model,
             validate_release_type,
             validate_pypi_permissions,
+            validate_pypi_readme,
             validate_gitreview,
             validate_release_sha_exists,
             validate_existing_tags,

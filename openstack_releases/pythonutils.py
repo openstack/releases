@@ -59,6 +59,22 @@ def get_sdist_name(workdir, repo):
     return name
 
 
+def check_readme_format(workdir, repo):
+    "Verify that the README format looks OK."
+    dest = os.path.join(workdir, repo)
+    setup_path = os.path.join(dest, 'setup.py')
+    if not os.path.exists(setup_path):
+        LOG.debug('did not find %s, maybe %s is not a python project',
+                  setup_path, repo)
+        return None
+    # NOTE(dhellmann): This relies on validate being run via tox so
+    # that python3 is present and the docutils package is installed.
+    processutils.check_call(
+        ['python3', 'setup.py', 'check', '--restructuredtext', '--strict'],
+        cwd=dest,
+    )
+
+
 def get_pypi_info(dist_name):
     "Return PyPI information for the distribution."
     canonical_name = packaging_utils.canonicalize_name(dist_name)
