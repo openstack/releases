@@ -3,5 +3,10 @@ launchpad: ovsdbapp
 team: neutron
 release-model: cycle-with-intermediary
 type: library
+releases:
+  - version: 0.11.0
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 90dfca5dfc60e48544ff25f63c3fa59cb88fc521
 repository-settings:
   openstack/ovsdbapp: {}
