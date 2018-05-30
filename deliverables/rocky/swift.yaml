@@ -9,3 +9,8 @@ branches:
   - name: feature/deep-review
     location:
       openstack/swift: 331339246228167dfab61690327fc0c3f2fab8af
+releases:
+  - version: 2.18.0
+    projects:
+      - repo: openstack/swift
+        hash: f270466de363499894317b7c671f65e8a912bd53
