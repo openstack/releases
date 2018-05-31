@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: ac085524caa12e337092337c61bbc705b1bd9325
+  - projects:
+      - hash: 8ea98c56b647526aae7a786531e934eeee7a90a2
+        repo: openstack/nova
+    version: 17.0.5
 cycle-highlights:
   - |
     The performance of listing instances across a multi-cell cells v2
