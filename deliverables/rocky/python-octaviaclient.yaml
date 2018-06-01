@@ -2,7 +2,13 @@
 include-pypi-link: yes
 storyboard: 911
 release-model: cycle-with-intermediary
+release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/unreleased.html
 team: octavia
 type: client-library
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: a5c9e16a4f517bc964d57d6c2d02e3d5a809c637
 repository-settings:
   openstack/python-octaviaclient: {}
