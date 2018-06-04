@@ -6,7 +6,11 @@ type: service
 repository-settings:
   openstack/senlin: {}
 releases:
-  - projects:
-      - hash: 10334a7b7a8ceff26fde4c4692699ed2524bddc5
-        repo: openstack/senlin
-    version: 6.0.0.0b1
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/senlin
+        hash: 10334a7b7a8ceff26fde4c4692699ed2524bddc5
+  - version: 6.0.0.0b2
+    projects:
+      - repo: openstack/senlin
+        hash: 125575e0811737ce69338eaf08469c65f322dd31
