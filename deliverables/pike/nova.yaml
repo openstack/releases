@@ -65,5 +65,9 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 57c28a379ff6b998953d92983d3be53db3618b69
+  - projects:
+      - hash: 43cac615f6a0a4399c7bf3dda6c2595749f27ace
+        repo: openstack/nova
+    version: 16.1.4
 repository-settings:
   openstack/nova: {}
