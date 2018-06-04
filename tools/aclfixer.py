@@ -50,10 +50,7 @@ REPO_EXCEPTIONS = [
     'openstack/manila-image-elements',
     'openstack/manila-test-image',
     'openstack/murano-apps',
-    'openstack/networking-powervm',
-    'openstack/nova-powervm',
     'openstack/swift-bench',
-    'openstack/yaql',
 ]
 
 
