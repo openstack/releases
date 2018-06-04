@@ -44,7 +44,6 @@ REPO_EXCEPTIONS = [
     'openstack/dib-utils',
     'openstack/diskimage-builder',
     'openstack/dragonflow',
-    'openstack/ec2-api',
     'openstack/eslint-config-openstack',
     'openstack/heat-cfntools',
     'openstack/karma-subunit-reporter',
