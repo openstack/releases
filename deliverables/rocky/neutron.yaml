@@ -5,6 +5,10 @@ type: service
 release-model: cycle-with-milestones
 repository-settings:
   openstack/neutron: {}
+branches:
+  - name: feature/graphql
+    location:
+      openstack/neutron: 9ee628dcc0eb61418e86fee355add38a6b09fab9
 releases:
   - projects:
       - hash: 4d40e6e40e6c02d097c41ee68ec1b885b27e8909
