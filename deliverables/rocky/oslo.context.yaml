@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.context: {}
+releases:
+  - projects:
+      - hash: b1ba490ac5520f34f560b1be9290f020f6c8e2e7
+        repo: openstack/oslo.context
+    version: 2.21.0
