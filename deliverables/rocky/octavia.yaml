@@ -5,6 +5,7 @@ release-model: cycle-with-milestones
 release-type: python-pypi
 team: octavia
 type: service
+release-notes: https://docs.openstack.org/releasenotes/octavia/unreleased.html
 repository-settings:
   openstack/octavia: {}
 releases:
@@ -12,3 +13,7 @@ releases:
       - hash: afb47816ac7a1299e0ea8a3ce65d24fa6c8f9db6
         repo: openstack/octavia
     version: 3.0.0.0b1
+  - projects:
+      - hash: 96cce3ed74c63e5756e216a8e48c60de09b027c2
+        repo: openstack/octavia
+    version: 3.0.0.0b2
