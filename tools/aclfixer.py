@@ -39,14 +39,11 @@ WILDCARD_REPO_EXCEPTIONS = [
 ]
 
 REPO_EXCEPTIONS = [
-    'openstack-dev/bashate',
     'openstack-infra/tripleo-ci',
     'openstack/dib-utils',
     'openstack/diskimage-builder',
     'openstack/dragonflow',
-    'openstack/eslint-config-openstack',
     'openstack/heat-cfntools',
-    'openstack/karma-subunit-reporter',
     'openstack/manila-image-elements',
     'openstack/manila-test-image',
     'openstack/murano-apps',
