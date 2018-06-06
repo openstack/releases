@@ -4,5 +4,10 @@ launchpad: python-congressclient
 release-model: cycle-with-intermediary
 team: congress
 type: client-library
+releases:
+  - version: 1.10.0
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 2d55e1f26e80c5b0b31c53c4cae0c971cb0f08e3
 repository-settings:
   openstack/python-congressclient: {}
