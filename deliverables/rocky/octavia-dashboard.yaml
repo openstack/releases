@@ -5,6 +5,7 @@ release-model: cycle-with-milestones
 release-type: horizon
 team: octavia
 type: horizon-plugin
+release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/unreleased.html
 repository-settings:
   openstack/octavia-dashboard: {}
 releases:
@@ -12,3 +13,7 @@ releases:
       - hash: dac1952bf68b95e7e443aee07de48d0bfaf98c11
         repo: openstack/octavia-dashboard
     version: 2.0.0.0b1
+  - projects:
+      - hash: a670ab72c3e1d2cf17fe1d777a3948736d5d98f6
+        repo: openstack/octavia-dashboard
+    version: 2.0.0.0b2
