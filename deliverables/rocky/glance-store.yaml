@@ -4,5 +4,10 @@ launchpad: glance-store
 release-model: cycle-with-intermediary
 team: glance
 type: library
+releases:
+  - version: 0.24.0
+    projects:
+      - repo: openstack/glance_store
+        hash: cc97b949033f892d6675692cbc8a24df3ce0e15e
 repository-settings:
   openstack/glance_store: {}
