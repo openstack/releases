@@ -5,3 +5,8 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - projects:
+      - hash: 74d239bb88d762a254c15c8a06126eeafcf0cdf9
+        repo: openstack/kolla-ansible
+    version: 7.0.0.0b2
