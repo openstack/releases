@@ -130,6 +130,12 @@ def main():
         action='store_true',
         help='deliverables that have pre-releases but no final releases, yet',
     )
+    grp.add_argument(
+        '--forced',
+        action='store_true',
+        help=('releases that have the "forced" flag applied '
+              '(implies --all-releases)'),
+    )
     args = parser.parse_args()
 
     series = args.series
@@ -155,6 +161,9 @@ def main():
     if not args.model:
         verbose_template += ' {model:15}'
     verbose_template += ' {tags}'
+
+    if args.forced:
+        args.all_releases = True
 
     csvfile = None
     if args.csvfile:
@@ -230,6 +239,8 @@ def main():
                 })
         elif args.all_releases:
             for r in deliv.releases:
+                if args.forced and not r.was_forced:
+                    continue
                 print(verbose_template.format(
                     name=deliv.name,
                     latest_release=r.version,
