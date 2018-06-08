@@ -58,7 +58,7 @@ Rocky Community Goals Acknowledgement
 
 Teams should prepare their acknowledgement of `the community-wide
 goals for
-<https://governance.openstack.org/tc/goals/queens/index.html>`__.
+<https://governance.openstack.org/tc/goals/rocky/index.html>`__.
 
 .. _r-summit:
 
@@ -68,7 +68,7 @@ OpenStack Summit
 The OpenStack Summit happens during this week in Vancouver, BC. It will
 include a "Forum" in which people from all parts of our community will gather
 to give feedback on the last release (Queens) and discuss requirements for the
-next development cycle (S).
+next development cycle (Stein).
 
 .. _r-2:
 
