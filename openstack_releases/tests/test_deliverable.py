@@ -68,3 +68,14 @@ class TestStableStatus(base.BaseTestCase):
             },
         )
         self.assertEqual('extended maintenance', d.stable_status)
+
+
+class TestReleaseWasForced(base.BaseTestCase):
+
+    def test_false(self):
+        r = deliverable.Release('version', [], {'flags': []}, None)
+        self.assertFalse(r.was_forced)
+
+    def test_true(self):
+        r = deliverable.Release('version', [], {'flags': ['forced']}, None)
+        self.assertTrue(r.was_forced)
