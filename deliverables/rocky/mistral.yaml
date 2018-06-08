@@ -13,6 +13,14 @@ releases:
         hash: 6576e00f28eb70fd8b779d3d04454723bb72297b
       - repo: openstack/mistral-extra
         hash: c3deb2d36ac25df0b73e1a7a16399efade7d5861
+  - projects:
+      - hash: 13b2b0fbaf9662606e9d04781c78b5109bfc8145
+        repo: openstack/mistral
+      - hash: 52ebdf9b44fbd994b7459e864d1d14fe1e7ca357
+        repo: openstack/mistral-dashboard
+      - hash: c78bdbb95b1ab3325c42535ac2a6538e5e554b9d
+        repo: openstack/mistral-extra
+    version: 7.0.0.0b2
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
