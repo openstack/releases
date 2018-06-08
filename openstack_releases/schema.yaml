@@ -82,6 +82,11 @@ properties:
             additionalProperties: False
         diff-start:
           type: "string"
+        flags:
+          type: "array"
+          items:
+            type: "string"
+            enum: [ "forced" ]
       required: ["version", "projects"]
       additionalProperties: False
   branches:
