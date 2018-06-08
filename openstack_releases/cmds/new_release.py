@@ -262,54 +262,76 @@ def main():
 
     projects = []
     changes = 0
-    for project in last_release['projects']:
+    for repo in deliverable_info['repository-settings'].keys():
+        print('processing {}'.format(repo))
+
+        # Look for the most recent time the repo was tagged and use
+        # that info as the old sha.
+        previous_sha = None
+        previous_tag = None
+        found = False
+        for release in reversed(deliverable_info['releases']):
+            for project in release['projects']:
+                if project['repo'] == repo:
+                    previous_sha = project.get('hash')
+                    previous_tag = release['version']
+                    print('last tagged as {} at {}'.format(
+                        previous_tag, previous_sha))
+                    found = True
+                    break
+            if found:
+                break
+
+        repo_info = deliverable_info['repository-settings'][repo]
+        tarball_base = repo_info.get('tarball-base')
 
         if args.release_type == 'procedural':
             # Always use the last tagged hash, which should be coming
             # from the previous series.
-            sha = last_version_hashes[project['repo']]
+            sha = last_version_hashes[repo]
 
         else:
             # Figure out the hash for the HEAD of the branch.
-            gitutils.clone_repo(workdir, project['repo'])
+            gitutils.clone_repo(workdir, repo)
 
-            branches = gitutils.get_branches(workdir, project['repo'])
+            branches = gitutils.get_branches(workdir, repo)
             version = 'origin/stable/%s' % series
             if not any(branch for branch in branches
                        if branch.endswith(version)):
                 version = 'master'
 
-            sha = gitutils.sha_for_tag(workdir, project['repo'], version)
+            sha = gitutils.sha_for_tag(workdir, repo, version)
 
         if is_procedural:
             changes += 1
-            print('re-tagging %s at %s (%s)' % (project['repo'], sha,
-                                                last_release['version']))
+            print('re-tagging %s at %s (%s)' % (repo, sha,
+                                                previous_tag))
             new_project = {
-                'repo': project['repo'],
+                'repo': repo,
                 'hash': sha,
                 'comment': 'procedural tag to support creating stable branch',
             }
-            if 'tarball-base' in project:
-                new_project['tarball-base'] = project['tarball-base']
+            if tarball_base:
+                new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
-        elif project['hash'] != sha or force_tag:
+        elif previous_sha != sha or force_tag:
             changes += 1
-            print('advancing %s from %s to %s' % (project['repo'],
-                                                  project['hash'],
-                                                  sha))
+            print('advancing %s from %s (%s) to %s' % (repo,
+                                                       previous_sha,
+                                                       previous_tag,
+                                                       sha))
             new_project = {
-                'repo': project['repo'],
+                'repo': repo,
                 'hash': sha,
             }
-            if 'tarball-base' in project:
-                new_project['tarball-base'] = project['tarball-base']
+            if tarball_base:
+                new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
         else:
             print('{} already tagged at most recent commit, skipping'.format(
-                project['repo']))
+                repo))
 
     deliverable_info['releases'].append({
         'version': new_version,
