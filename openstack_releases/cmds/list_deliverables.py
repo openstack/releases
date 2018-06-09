@@ -232,7 +232,7 @@ def main():
             for r in deliv.releases:
                 print(verbose_template.format(
                     name=deliv.name,
-                    latest_release=r.get('version', ''),
+                    latest_release=r.version,
                     team=deliv.team,
                     type=deliv.type,
                     model=deliv.model,
