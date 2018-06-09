@@ -2192,6 +2192,10 @@ releases:
         hash: e8e013ba196a518c1c512cd3c9fb79ef6572c05d
       - repo: openstack/openstack-ansible-os_designate
         hash: 5bdf6c950e2d83f07340cce824792a16e1412e29
+  - projects:
+      - hash: e99ae8deaa6c4c13bce9610a1544a832160acd57
+        repo: openstack/openstack-ansible
+    version: 15.1.22
 repository-settings:
   openstack/ansible-hardening: {}
   openstack/openstack-ansible: {}
