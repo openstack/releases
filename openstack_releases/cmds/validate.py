@@ -778,7 +778,10 @@ def validate_existing_tags(deliv, context):
 def validate_version_numbers(deliv, context):
     "Ensure the version numbers are valid."
 
-    prev_version = None
+    # Track the previous version tag attached to each repository, by
+    # name.
+    prev_version = {}
+
     for release in deliv.releases:
 
         LOG.debug('checking {}'.format(release.version))
@@ -847,7 +850,8 @@ def validate_version_numbers(deliv, context):
             # project is a python deliverable make sure
             # the requirements haven't changed in a way
             # not reflecting the version.
-            if prev_version and release_type in _PYTHON_RELEASE_TYPES:
+            if (prev_version.get(project.repo.name) and
+                    release_type in _PYTHON_RELEASE_TYPES):
                 # For the master branch, enforce the
                 # rules. For other branches just warn if
                 # the rules are broken because there are
@@ -859,7 +863,8 @@ def validate_version_numbers(deliv, context):
                     report = context.warning
                 requirements.find_bad_lower_bound_increases(
                     context.workdir, project.repo.name,
-                    prev_version, release.version, project.hash,
+                    prev_version.get(project.repo.name),
+                    release.version, project.hash,
                     report,
                 )
 
@@ -877,7 +882,11 @@ def validate_version_numbers(deliv, context):
                 print('{} for {} OK'.format(
                     release.version, project.repo.name))
 
-        prev_version = release.version
+        # Update the previous version information without discarding
+        # any data about repositories that were not tagged in this
+        # release.
+        for project in release.projects:
+            prev_version[project.repo.name] = release.version
 
 
 @applies_to_released
@@ -973,7 +982,9 @@ def validate_release_branch_membership(deliv, context):
                         'branch manually')
         return
 
-    prev_version = None
+    # Track the previous version tag attached to each repository, by
+    # name.
+    prev_version = {}
 
     for release in deliv.releases:
 
@@ -1009,7 +1020,7 @@ def validate_release_branch_membership(deliv, context):
                 )
                 context.error(msg)
 
-            if not prev_version:
+            if not prev_version.get(project.repo.name):
                 print('no ancestry check for first version in a series')
                 continue
 
@@ -1018,7 +1029,7 @@ def validate_release_branch_membership(deliv, context):
             old_sha = gitutils.sha_for_tag(
                 context.workdir,
                 project.repo.name,
-                prev_version,
+                prev_version[project.repo.name],
             )
             if old_sha == project.hash:
                 # FIXME(dhellmann): This needs a test.
@@ -1031,7 +1042,7 @@ def validate_release_branch_membership(deliv, context):
                 is_ancestor = gitutils.check_ancestry(
                     context.workdir,
                     project.repo.name,
-                    prev_version,
+                    prev_version[project.repo.name],
                     project.hash,
                 )
                 if not is_ancestor:
@@ -1041,13 +1052,17 @@ def validate_release_branch_membership(deliv, context):
                             project.repo.name,
                             project.hash,
                             release.version,
-                            prev_version,
+                            prev_version[project.repo.name],
                         )
                     )
                 else:
                     print('ancestry OK')
 
-        prev_version = release.version
+        # Update the previous version information without discarding
+        # any data about repositories that were not tagged in this
+        # release.
+        for project in release.projects:
+            prev_version[project.repo.name] = release.version
 
 
 @applies_to_current
