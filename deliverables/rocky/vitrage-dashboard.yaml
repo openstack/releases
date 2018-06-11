@@ -5,3 +5,8 @@ team: vitrage
 type: horizon-plugin
 repository-settings:
   openstack/vitrage-dashboard: {}
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: f529174252389695f9088477e272f4a436655bfa
