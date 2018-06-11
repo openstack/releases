@@ -849,6 +849,10 @@ releases:
         hash: ed8e178c38a28cab87b8d9bd4396caccf8c0e790
       - repo: openstack/openstack-ansible-rsyslog_server
         hash: d401a62d2f8ff7c8e6924b6fae0086e47ab37fa6
+  - projects:
+      - hash: b6d44cf306fce11d16406bfe9c8f77844de41b2a
+        repo: openstack/openstack-ansible
+    version: 17.0.5
 repository-settings:
   openstack/ansible-hardening: {}
   openstack/openstack-ansible: {}
