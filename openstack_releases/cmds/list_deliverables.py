@@ -194,8 +194,14 @@ def main():
                 continue
         if args.unreleased and (deliv.is_released or not deliv.is_releasable):
             continue
-        if version_ending and deliv.is_released and deliv.latest_release.endswith(version_ending):
-            continue
+        if version_ending and deliv.is_released:
+            found = False
+            for release in deliv.releases:
+                if release.version.endswith(version_ending):
+                    found = True
+                    break
+            if found:
+                continue
         if args.missing_rc and deliv.is_released and 'rc' in deliv.latest_release:
             continue
         if args.tag:
