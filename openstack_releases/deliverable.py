@@ -266,12 +266,19 @@ class Release(object):
 
     def __init__(self, version, projects, data, deliv):
         self.version = version
-        self.deliv = weakref.proxy(deliv)
+        if deliv:
+            self.deliv = weakref.proxy(deliv)
+        else:
+            self.deliv = deliv
         self._data = data
         self._projects = {
             p['repo']: ReleaseProject(p['repo'], p['hash'], p, self)
             for p in projects
         }
+
+    @property
+    def was_forced(self):
+        return 'forced' in self._data.get('flags', set())
 
     @property
     def projects(self):
