@@ -494,6 +494,13 @@ Each ``release`` entry is a mapping with keys:
   announcing the release. (Use ``|`` to indicate a multi-line,
   pre-formatted message.)
 
+``flags``
+  A list of flags attached to the release.
+
+  ``forced``
+    This release was applied by the release team, and not the project
+    team.
+
 Each entry in the ``projects`` list is a mapping with keys:
 
 ``repo``
