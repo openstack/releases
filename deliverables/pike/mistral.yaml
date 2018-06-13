@@ -83,6 +83,12 @@ releases:
       - hash: 24896820c129699995d32ad30bdb8bea17f8c9c6
         repo: openstack/mistral
     version: 5.2.3
+  - projects:
+      - hash: ea4951a59757af72fb815a53d174083b9e0f5e46
+        repo: openstack/mistral
+      - hash: 8667df40a9a0894652ba7bafec048df11256310f
+        repo: openstack/mistral-dashboard
+    version: 5.2.4
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
