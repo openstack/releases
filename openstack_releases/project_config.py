@@ -87,15 +87,19 @@ _RELEASE_JOBS_FOR_TYPE = {
     'python-service': [
         'release-openstack-server',
         'publish-to-pypi',
+        'publish-to-pypi-python3',
     ],
     'python-pypi': [
         'publish-to-pypi',
+        'publish-to-pypi-python3',
     ],
     'neutron': [
         'publish-to-pypi-neutron',
+        'publish-to-pypi-neutron-python3',
     ],
     'horizon': [
         'publish-to-pypi-horizon',
+        'publish-to-pypi-horizon-python3',
     ],
     'nodejs': [
         'nodejs4-publish-to-npm',
