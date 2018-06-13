@@ -1438,6 +1438,7 @@ class ValidationContext(object):
         self.cleanup = cleanup
         self.filename = None
         self._setup_workdir()
+        self.function_name = 'unknown'
 
     def _setup_workdir(self):
         workdir = tempfile.mkdtemp(prefix='releases-')
@@ -1455,13 +1456,18 @@ class ValidationContext(object):
     def set_filename(self, filename):
         self.filename = filename
 
+    def set_function(self, function):
+        self.function_name = function.__name__
+
     def warning(self, msg):
         LOG.warning(msg)
-        self.warnings.append('{}: {}'.format(self.filename, msg))
+        self.warnings.append('{}: {}: {}'.format(
+            self.filename, self.function_name, msg))
 
     def error(self, msg):
         LOG.error(msg)
-        self.errors.append('{}: {}'.format(self.filename, msg))
+        self.errors.append('{}: {}: {}'.format(
+            self.filename, self.function_name, msg))
         if self.debug:
             raise RuntimeError(msg)
 
@@ -1577,6 +1583,7 @@ def main():
         for check in checks:
             title = inspect.getdoc(check).splitlines()[0].strip()
             header(title)
+            context.set_function(check)
             check(deliv, context)
 
     context.show_summary()
