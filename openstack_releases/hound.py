@@ -16,9 +16,12 @@
 
 """
 
+import logging
+
 import requests
 
 
+LOG = logging.getLogger(__name__)
 _URL = 'http://codesearch.openstack.org/api/v1/search'
 
 
@@ -39,14 +42,19 @@ def _query(q, **kwds):
 
 
 def get_dependency_listings(package_name):
-    return _query(
-        q=package_name,
-        # NOTE(dhellmann): Including setup.cfg shows *lots* of results
-        # for oslo.config because of the plugins for the config
-        # generator. It would be nice to figure out how to filter
-        # those.
-        files='(.*requirements.txt|.*constraint.*.txt)',
-    )
+    try:
+        return _query(
+            q=package_name,
+            # NOTE(dhellmann): Including setup.cfg shows *lots* of results
+            # for oslo.config because of the plugins for the config
+            # generator. It would be nice to figure out how to filter
+            # those.
+            files='(.*requirements.txt|.*constraint.*.txt)',
+        )
+    except Exception as e:
+        LOG.error('Could not fetch users of %s: %s',
+                  package_name, e)
+        return {}
 
 
 def show_dependency_listings(package_name, official_repos):
