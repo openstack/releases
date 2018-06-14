@@ -300,6 +300,16 @@ class Release(object):
             or 'b' in self.version
         )
 
+    @property
+    def is_eol(self):
+        return self.version.endswith('-eol')
+
+    @property
+    def eol_series(self):
+        if self.is_eol:
+            return self.version.rpartition('-')[0]
+        return ''
+
     def __eq__(self, other):
         return self.version == other.version
 

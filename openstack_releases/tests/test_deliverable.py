@@ -79,3 +79,95 @@ class TestReleaseWasForced(base.BaseTestCase):
     def test_true(self):
         r = deliverable.Release('version', [], {'flags': ['forced']}, None)
         self.assertTrue(r.was_forced)
+
+
+class TestEOLTags(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+
+    def test_is_eol_tag_true(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: newton-eol
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.assertTrue(deliv.releases[-1].is_eol)
+
+    def test_is_eol_tag_false(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 0.3.0
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.assertFalse(deliv.releases[-1].is_eol)
+
+    def test_is_eol_tag_false_typo(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: newton-dol
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.assertFalse(deliv.releases[-1].is_eol)
+
+    def test_eol_series_for_eol_tag(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: newton-eol
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.assertEqual(
+            'newton',
+            deliv.releases[-1].eol_series,
+        )
+
+    def test_eol_series_for_version_tag(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 0.3.0
+            projects:
+              - repo: openstack/release-test
+                hash: a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.assertEqual(
+            '',
+            deliv.releases[-1].eol_series,
+        )
