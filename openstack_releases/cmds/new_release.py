@@ -129,7 +129,7 @@ def main():
     parser.add_argument(
         'release_type',
         choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
-                 'procedural'),
+                 'procedural', 'eol'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -155,6 +155,7 @@ def main():
     args = parser.parse_args()
 
     is_procedural = args.release_type == 'procedural'
+    is_eol = args.release_type == 'eol'
     force_tag = args.force
 
     workdir = tempfile.mkdtemp(prefix='releases-')
@@ -245,6 +246,12 @@ def main():
                  '{} in old deliverable file').format(
                     '.'.join(last_version))
             )
+
+    elif is_eol:
+        increment = None
+        new_version_parts = None
+        new_version = '{}-eol'.format(args.series)
+
     else:
         increment = {
             'bugfix': (0, 0, 1),
@@ -253,7 +260,10 @@ def main():
         }[args.release_type]
         new_version_parts = increment_version(last_version, increment)
 
-    new_version = '.'.join(new_version_parts)
+    if new_version_parts is not None:
+        # The EOL tag version string is computed above and the parts
+        # list is set to None to avoid recomputing it here.
+        new_version = '.'.join(new_version_parts)
 
     if 'releases' not in deliverable_info:
         deliverable_info['releases'] = []
@@ -310,6 +320,17 @@ def main():
                 'repo': repo,
                 'hash': sha,
                 'comment': 'procedural tag to support creating stable branch',
+            }
+            if tarball_base:
+                new_project['tarball-base'] = tarball_base
+            projects.append(new_project)
+
+        if is_eol:
+            changes += 1
+            print('tagging %s EOL at %s' % (repo, sha))
+            new_project = {
+                'repo': repo,
+                'hash': sha,
             }
             if tarball_base:
                 new_project['tarball-base'] = tarball_base
