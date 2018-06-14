@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 46aee0a86424004290249a2d7c37157ab853f994
+  - version: 10.0.1
+    projects:
+      - repo: openstack/ceilometer
+        hash: f8e7d5252deec7781e4a09fb7ef92561c14c4b1c
 branches:
   - name: stable/queens
     location: 10.0.0
