@@ -20,6 +20,7 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import collections
 import functools
 import glob
 import inspect
@@ -137,6 +138,48 @@ def applies_to_cycle(f):
     return decorated
 
 
+# Remember which tags already exist so we don't have to repeat the
+# expensive check.
+existing_tag_cache = collections.defaultdict(set)
+
+
+def includes_new_tag(deliv, context):
+    "Return true if the deliverable is describing a new tag."
+    for release in deliv.releases:
+        for project in release.projects:
+
+            if project.repo.is_retired:
+                LOG.info('{} is retired, skipping'.format(project.repo.name))
+                continue
+
+            if release.version in existing_tag_cache[project.repo.name]:
+                LOG.debug('%s already tagged %s, skipping',
+                          project.repo.name, release.version)
+                continue
+
+            version_exists = gitutils.commit_exists(
+                context.workdir, project.repo.name, release.version,
+            )
+            if version_exists:
+                existing_tag_cache[project.repo.name].add(release.version)
+                LOG.debug('%s already tagged %s, skipping',
+                          project.repo.name, release.version)
+            else:
+                return True
+    return False
+
+
+def skip_existing_tags(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        if includes_new_tag(deliv, context):
+            return f(deliv, context)
+        else:
+            print('This rule only applies to new tags.')
+    return decorated
+
+
+@skip_existing_tags
 @applies_to_cycle
 @applies_to_released
 @applies_to_current
@@ -188,6 +231,7 @@ def validate_series_open(deliv, context):
             expected_branch, previous_deliverable_file, deliv.series))
 
 
+@skip_existing_tags
 @applies_to_released
 @applies_to_cycle
 def validate_series_first(deliv, context):
@@ -209,6 +253,8 @@ def validate_series_first(deliv, context):
         )
 
 
+@skip_existing_tags
+@applies_to_released
 def validate_series_final(deliv, context):
     "The final release after a RC should tag the same commit."
 
@@ -251,6 +297,7 @@ def validate_series_final(deliv, context):
             print('OK')
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_series_eol(deliv, context):
     "The EOL tag should be applied to the previous release."
@@ -284,6 +331,7 @@ def validate_series_eol(deliv, context):
         print('OK')
 
 
+@skip_existing_tags
 @applies_to_current
 @applies_to_released
 @applies_to_cycle
@@ -470,6 +518,7 @@ def _require_gitreview(repo, context):
         print('found {}'.format(filename))
 
 
+@skip_existing_tags
 def validate_gitreview(deliv, context):
     "All repos must include a .gitreview file for new releases."
     checked = set()
@@ -517,6 +566,7 @@ def get_release_type(deliv, repo, workdir):
     return ('python-service', False)
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_release_type(deliv, context):
     "Does the most recent release comply with the rules for the release-type?"
@@ -603,6 +653,7 @@ def validate_tarball_base(deliv, context):
                         sdist, expected))
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_pypi_readme(deliv, context):
     "Does the README look right for PyPI?"
@@ -646,6 +697,7 @@ def validate_pypi_readme(deliv, context):
             print('OK')
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_pypi_permissions(deliv, context):
     "Do we have permission to upload to PyPI?"
@@ -719,6 +771,7 @@ def validate_pypi_permissions(deliv, context):
                 sorted(uploaders), pypi_name))
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_release_sha_exists(deliv, context):
     "Ensure the hashes for each release exist."
@@ -807,6 +860,7 @@ def validate_existing_tags(deliv, context):
                     release.version, project.repo.name))
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_version_numbers(deliv, context):
     "Ensure the version numbers are valid."
@@ -931,6 +985,7 @@ def validate_version_numbers(deliv, context):
             prev_version[project.repo.name] = release.version
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_new_releases_at_end(deliv, context):
     "New releases must be added to the end of the list."
@@ -969,6 +1024,7 @@ def validate_new_releases_at_end(deliv, context):
             print('OK')
 
 
+@skip_existing_tags
 @applies_to_released
 def validate_new_releases_in_open_series(deliv, context):
     "New releases may only be added to open series."
