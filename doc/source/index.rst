@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   stein/index
    rocky/index
    queens/index
    pike/index
