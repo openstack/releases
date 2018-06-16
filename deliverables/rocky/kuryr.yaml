@@ -3,5 +3,11 @@ launchpad: kuryr
 release-model: cycle-with-intermediary
 team: kuryr
 type: library
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/kuryr
+        hash: 2f38e07a38be59305c573311a04c8d4b6de5a912
+        tarball-base: kuryr-lib
 repository-settings:
   openstack/kuryr: {}
