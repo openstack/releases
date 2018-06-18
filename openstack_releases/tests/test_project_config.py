@@ -12,14 +12,18 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import os.path
+import textwrap
+
 from oslotest import base
 
 from openstack_releases.cmds import validate
 from openstack_releases import deliverable
 from openstack_releases import project_config
+from openstack_releases.tests import fixtures as or_fixtures
 
 
-class TestReleaseJobsStandard(base.BaseTestCase):
+class TestReleaseJobsGlobal(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
@@ -151,3 +155,75 @@ class TestReleaseJobsStandard(base.BaseTestCase):
         )
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
+
+
+class TestReleaseJobsInTree(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.ctx = validate.ValidationContext()
+        self.repo = self.useFixture(
+            or_fixtures.GitRepoFixture(
+                self.ctx.workdir,
+                'openstack/release-test',
+            )
+        )
+        os.mkdir(os.path.join(self.ctx.workdir, self.repo.name, '.zuul.d'))
+        os.mkdir(os.path.join(self.ctx.workdir, self.repo.name, 'zuul.d'))
+
+    def test_none(self):
+        templates = project_config.read_templates_from_repo(
+            self.ctx.workdir, self.repo.name)
+        self.assertEqual([], templates)
+
+    def test_dot_zuul(self):
+        filename = os.path.join(self.repo.path, '.zuul.yaml')
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(textwrap.dedent('''
+            - project:
+                templates:
+                  - noop-jobs
+                  - publish-to-pypi-python3
+            '''))
+        templates = project_config.read_templates_from_repo(
+            self.ctx.workdir, self.repo.name)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+
+    def test_zuul(self):
+        filename = os.path.join(self.repo.path, 'zuul.yaml')
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(textwrap.dedent('''
+            - project:
+                templates:
+                  - noop-jobs
+                  - publish-to-pypi-python3
+            '''))
+        templates = project_config.read_templates_from_repo(
+            self.ctx.workdir, self.repo.name)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+
+    def test_zuul_dot_d(self):
+        filename = os.path.join(self.repo.path, 'zuul.d/projects.yaml')
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(textwrap.dedent('''
+            - project:
+                templates:
+                  - noop-jobs
+                  - publish-to-pypi-python3
+            '''))
+        templates = project_config.read_templates_from_repo(
+            self.ctx.workdir, self.repo.name)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+
+    def test_dot_zuul_dot_d(self):
+        filename = os.path.join(self.repo.path, '.zuul.d/projects.yaml')
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(textwrap.dedent('''
+            - project:
+                templates:
+                  - noop-jobs
+                  - publish-to-pypi-python3
+            '''))
+        templates = project_config.read_templates_from_repo(
+            self.ctx.workdir, self.repo.name)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)

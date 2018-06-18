@@ -514,6 +514,8 @@ def validate_release_type(deliv, context):
         if not version_exists:
             LOG.debug('new version {}, checking release jobs'.format(
                 release.version))
+            gitutils.safe_clone_repo(
+                context.workdir, project.repo.name, project.hash, context)
             project_config.require_release_jobs_for_repo(
                 deliv,
                 project.repo,

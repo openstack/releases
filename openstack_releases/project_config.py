@@ -13,7 +13,10 @@
 """Work with the project-config repository.
 """
 
+import glob
 import logging
+import os
+import os.path
 
 import requests
 
@@ -82,6 +85,55 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
     }
 
 
+def read_templates_from_repo(workdir, repo_name):
+    """Read the zuul settings from a repo and return them.
+
+    Read all of the zuul settings from the YAML files, parser them,
+    and return the project templates.
+
+    :param workdir: Working directory
+    :type workdir: str
+    :param repo_name: Repository name
+    :type repo_name: str
+
+    """
+    root = os.path.join(workdir, repo_name)
+    candidates = [
+        '.zuul.yaml',
+        'zuul.yaml',
+        '.zuul.d/*.yaml',
+        'zuul.d/*.yaml',
+    ]
+    results = []
+    for pattern in candidates:
+        LOG.debug('trying {}'.format(pattern))
+        if '*' in pattern:
+            filenames = glob.glob(os.path.join(root, pattern))
+            if not filenames:
+                LOG.debug('did not find {}'.format(pattern))
+                continue
+        else:
+            filenames = [os.path.join(root, pattern)]
+        for filename in filenames:
+            try:
+                with open(filename, 'r', encoding='utf-8') as f:
+                    body = f.read()
+                results.extend(yamlutils.loads(body))
+                LOG.debug('read {}'.format(pattern))
+            except Exception as e:
+                LOG.debug('failed to read {}: {}'.format(pattern, e))
+    # Find the project settings
+    project_info = [
+        s['project']
+        for s in results
+        if 'project' in s
+    ]
+    templates = []
+    for p in project_info:
+        templates.extend(p.get('templates', []))
+    return templates
+
+
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
     'python-service': [
@@ -123,6 +175,7 @@ _RELEASE_JOBS_FOR_TYPE = {
 
 
 def require_release_jobs_for_repo(deliv, repo, release_type, context):
+
     """Check the repository for release jobs.
 
     Returns a list of tuples containing a message and a boolean
@@ -142,69 +195,89 @@ def require_release_jobs_for_repo(deliv, repo, release_type, context):
         LOG.debug('{} is retired, skipping'.format(repo.name))
         return
 
-    if repo.name not in context.zuul_projects:
-        context.error(
-            'did not find %s in %s' % (repo.name, ZUUL_PROJECTS_FILENAME),
-        )
-    else:
+    # NOTE(dhellmann): We don't mess around looking for individual
+    # jobs, because we want projects to use the templates.
+    expected_jobs = _RELEASE_JOBS_FOR_TYPE.get(
+        release_type,
+        _RELEASE_JOBS_FOR_TYPE['python-service'],
+    )
+    if not expected_jobs:
+        LOG.debug('no expected jobs for release type {}, skipping'.format(
+            release_type))
+        return
+
+    found_jobs = []
+
+    # Start by looking at the global project-config settings.
+    if repo.name in context.zuul_projects:
+        LOG.debug('found {} in project-config settings'.format(
+            repo.name))
         p = context.zuul_projects[repo.name]
         templates = p.get('templates', [])
-        # NOTE(dhellmann): We don't mess around looking for individual
-        # jobs, because we want projects to use the templates.
-        expected_jobs = _RELEASE_JOBS_FOR_TYPE.get(
-            release_type,
-            _RELEASE_JOBS_FOR_TYPE['python-service'],
+        found_jobs.extend(
+            j
+            for j in templates
+            if j in expected_jobs
         )
-        if expected_jobs:
-            found_jobs = [
-                j
-                for j in templates
-                if j in expected_jobs
-            ]
-            if len(found_jobs) == 0:
-                context.error(
-                    '{filename} no release job specified for {repo}, '
-                    'one of {expected!r} needs to be included in {existing!r} '
-                    'or no release will be '
-                    'published'.format(
-                        filename=ZUUL_PROJECTS_FILENAME,
-                        repo=repo.name,
-                        expected=expected_jobs,
-                        existing=templates,
-                    ),
+
+    # Look for settings within the repo.
+    #
+    # NOTE(dhellmann): We only need this until zuul grows the API to
+    # feed us this information via its API.
+    if not found_jobs:
+        LOG.debug('looking in {} for zuul settings'.format(
+            repo.name))
+        templates = read_templates_from_repo(context.workdir, repo.name)
+        found_jobs.extend(
+            j
+            for j in templates
+            if j in expected_jobs
+        )
+
+    if len(found_jobs) == 0:
+        context.error(
+            '{filename} no release job specified for {repo}, '
+            'one of {expected!r} needs to be included in {existing!r} '
+            'or no release will be '
+            'published'.format(
+                filename=ZUUL_PROJECTS_FILENAME,
+                repo=repo.name,
+                expected=expected_jobs,
+                existing=templates,
+            ),
+        )
+    elif len(found_jobs) > 1:
+        context.warning(
+            '{filename} multiple release jobs specified for {repo}, '
+            '{existing!r} should include *one* of '
+            '{expected!r}, found {found!r}'.format(
+                filename=ZUUL_PROJECTS_FILENAME,
+                repo=repo.name,
+                expected=expected_jobs,
+                existing=templates,
+                found=found_jobs,
+            ),
+        )
+    # Check to see if we found jobs we did not expect to find.
+    for wrong_type, wrong_jobs in _RELEASE_JOBS_FOR_TYPE.items():
+        if wrong_type == release_type:
+            continue
+        # "bad" jobs are any that are attached to the repo but
+        # are not supported by the release-type of the repo
+        bad_jobs = [
+            j for j in wrong_jobs
+            if j in templates and j not in expected_jobs
+        ]
+        if bad_jobs:
+            context.error(
+                '{filename} has unexpected release jobs '
+                '{bad_jobs!r} for release-type {wrong_type} '
+                'but {repo} uses release-type {release_type}'.format(
+                    filename=ZUUL_PROJECTS_FILENAME,
+                    repo=repo.name,
+                    bad_jobs=bad_jobs,
+                    wrong_type=wrong_type,
+                    release_type=release_type,
                 )
-            elif len(found_jobs) > 1:
-                context.warning(
-                    '{filename} multiple release jobs specified for {repo}, '
-                    '{existing!r} should include *one* of '
-                    '{expected!r}, found {found!r}'.format(
-                        filename=ZUUL_PROJECTS_FILENAME,
-                        repo=repo.name,
-                        expected=expected_jobs,
-                        existing=templates,
-                        found=found_jobs,
-                    ),
-                )
-            # Check to see if we found jobs we did not expect to find.
-            for wrong_type, wrong_jobs in _RELEASE_JOBS_FOR_TYPE.items():
-                if wrong_type == release_type:
-                    continue
-                # "bad" jobs are any that are attached to the repo but
-                # are not supported by the release-type of the repo
-                bad_jobs = [
-                    j for j in wrong_jobs
-                    if j in templates and j not in expected_jobs
-                ]
-                if bad_jobs:
-                    context.error(
-                        '{filename} has unexpected release jobs '
-                        '{bad_jobs!r} for release-type {wrong_type} '
-                        'but {repo} uses release-type {release_type}'.format(
-                            filename=ZUUL_PROJECTS_FILENAME,
-                            repo=repo.name,
-                            bad_jobs=bad_jobs,
-                            wrong_type=wrong_type,
-                            release_type=release_type,
-                        )
-                    )
+            )
     return
