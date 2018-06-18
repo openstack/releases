@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 8f2fa31d8a47e52b01bcf48771da83c23da464b1
+  - projects:
+      - hash: 1c6845def904899f999d3f2579d7cc082c746ce2
+        repo: openstack/manila
+    version: newton-eol
 repository-settings:
   openstack/manila: {}

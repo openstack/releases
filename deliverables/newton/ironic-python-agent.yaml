@@ -28,5 +28,9 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: e46f75ed0924bae57bc885a950c68a193c5e0eec
+  - projects:
+      - hash: 553b72dc819a9765521f2f8938da9dbeb1609d38
+        repo: openstack/ironic-python-agent
+    version: newton-eol
 repository-settings:
   openstack/ironic-python-agent: {}

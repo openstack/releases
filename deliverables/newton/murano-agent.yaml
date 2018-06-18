@@ -33,5 +33,9 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 961fc5b07c3247fbb7ef75d3d25d0e2ef593acbb
+  - projects:
+      - hash: 8d0afb2bcc7469e88964b8e9ff0c0f374789cb89
+        repo: openstack/murano-agent
+    version: newton-eol
 repository-settings:
   openstack/murano-agent: {}

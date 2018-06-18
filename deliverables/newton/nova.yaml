@@ -77,5 +77,9 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 808d36475103e373f1deb3344b6829ce68d6cdd5
+  - projects:
+      - hash: 808d36475103e373f1deb3344b6829ce68d6cdd5
+        repo: openstack/nova
+    version: newton-eol
 repository-settings:
   openstack/nova: {}

@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 152cf2857fd651d361c465887f35a035030042e2
+  - projects:
+      - hash: 152cf2857fd651d361c465887f35a035030042e2
+        repo: openstack/ironic-lib
+    version: newton-eol
 repository-settings:
   openstack/ironic-lib: {}

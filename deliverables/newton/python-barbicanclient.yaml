@@ -11,5 +11,9 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 06066e77845641fcb193a321d7f10c0387073dff
+  - projects:
+      - hash: 3c304c015e58cb14d68f528f66fb343b611bf0af
+        repo: openstack/python-barbicanclient
+    version: newton-eol
 repository-settings:
   openstack/python-barbicanclient: {}

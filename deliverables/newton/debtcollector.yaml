@@ -28,5 +28,9 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: 4e9659aaeda818e42ae9ec8ee87aa44785b83631
+  - projects:
+      - hash: 852c3683d3167eece151600242e4d37dec505b82
+        repo: openstack/debtcollector
+    version: newton-eol
 repository-settings:
   openstack/debtcollector: {}

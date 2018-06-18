@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: e15d8e7f0920cb7cd5719d2861dea886bd6f9cb0
+  - projects:
+      - hash: b20d9fd6563c1ef295e8a260742f2b3e0b8ee327
+        repo: openstack/python-cinderclient
+    version: newton-eol
 repository-settings:
   openstack/python-cinderclient: {}

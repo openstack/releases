@@ -65,5 +65,9 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: a6efc0e714171d4f5ec8baef46cc8734fb4139dc
+  - projects:
+      - hash: a6efc0e714171d4f5ec8baef46cc8734fb4139dc
+        repo: openstack/oslo.log
+    version: newton-eol
 repository-settings:
   openstack/oslo.log: {}

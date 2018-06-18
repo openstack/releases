@@ -52,5 +52,9 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 9f33bd4c74949ebe42bffe39c529aa6a1c94e531
+  - projects:
+      - hash: 9f33bd4c74949ebe42bffe39c529aa6a1c94e531
+        repo: openstack/oslo.versionedobjects
+    version: newton-eol
 repository-settings:
   openstack/oslo.versionedobjects: {}

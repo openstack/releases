@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: d29569882f74542595451bebab66b22be7b5dcde
+  - projects:
+      - hash: 00f99c97a1eccdb93f4b099c3458de711bc72ea3
+        repo: openstack/barbican
+    version: newton-eol
 repository-settings:
   openstack/barbican: {}

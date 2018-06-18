@@ -29,5 +29,10 @@ releases:
       - repo: openstack/os-vif
         hash: ac8c8376249fde6a226f57c49c370d197602fb6a
         tarball-base: os_vif
+  - projects:
+      - hash: ac8c8376249fde6a226f57c49c370d197602fb6a
+        repo: openstack/os-vif
+    version: newton-eol
 repository-settings:
-  openstack/os-vif: {}
+  openstack/os-vif:
+    tarball-base: os_vif

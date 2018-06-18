@@ -41,5 +41,9 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 804be5979569cc64dfef2ac2b6bc0c040d313aa0
+  - projects:
+      - hash: 018c7475c9dd75da0f902bbe3ec5d01855fa50d6
+        repo: openstack/oslo.policy
+    version: newton-eol
 repository-settings:
   openstack/oslo.policy: {}

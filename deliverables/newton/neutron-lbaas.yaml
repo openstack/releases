@@ -49,5 +49,9 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas
         hash: d53ee411fb263467ab72e6c9cfef79590274aaf3
+  - projects:
+      - hash: d53ee411fb263467ab72e6c9cfef79590274aaf3
+        repo: openstack/neutron-lbaas
+    version: newton-eol
 repository-settings:
   openstack/neutron-lbaas: {}

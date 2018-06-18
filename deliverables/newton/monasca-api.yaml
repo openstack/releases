@@ -19,5 +19,9 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 08920cda8a30d84f238466c8f6169df4f470ec53
+  - projects:
+      - hash: 0d8c6d86b190fbe60ec8835dd5c6d2458c58ca0d
+        repo: openstack/monasca-api
+    version: newton-eol
 repository-settings:
   openstack/monasca-api: {}

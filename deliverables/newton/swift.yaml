@@ -28,5 +28,9 @@ releases:
     projects:
       - repo: openstack/swift
         hash: f860faf774c7c2410fae8b9e56a7c6acd3129029
+  - projects:
+      - hash: cbc14596159b9086c9e799e2232f2960294ebd5a
+        repo: openstack/swift
+    version: newton-eol
 repository-settings:
   openstack/swift: {}

@@ -37,5 +37,9 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 675ac3effa8649d162dabe25aea6d241a6f54b2b
+  - projects:
+      - hash: 675ac3effa8649d162dabe25aea6d241a6f54b2b
+        repo: openstack/keystonemiddleware
+    version: newton-eol
 repository-settings:
   openstack/keystonemiddleware: {}

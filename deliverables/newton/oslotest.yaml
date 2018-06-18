@@ -36,5 +36,9 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: a8c5ed4008963a3436f4a4932ac544f5ee4c283b
+  - projects:
+      - hash: a8c5ed4008963a3436f4a4932ac544f5ee4c283b
+        repo: openstack/oslotest
+    version: newton-eol
 repository-settings:
   openstack/oslotest: {}

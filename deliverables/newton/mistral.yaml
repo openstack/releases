@@ -64,6 +64,12 @@ releases:
         hash: 6356bce81417102accb3619aa05129ab35a35dad
       - repo: openstack/mistral-dashboard
         hash: 2c959e0341da8e939d7c35da524722e55673e7cd
+  - projects:
+      - hash: ddab7176bc890fd72c9dc8e5be8319f90180af7a
+        repo: openstack/mistral
+      - hash: 2c959e0341da8e939d7c35da524722e55673e7cd
+        repo: openstack/mistral-dashboard
+    version: newton-eol
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}

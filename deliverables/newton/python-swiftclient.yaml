@@ -13,5 +13,9 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: cbd71a8b5a7339f3ed297ae410a4836b2d56634a
+  - projects:
+      - hash: 0a65040fcfd14641b40a2f3f9e0430bc7958ae47
+        repo: openstack/python-swiftclient
+    version: newton-eol
 repository-settings:
   openstack/python-swiftclient: {}

@@ -28,5 +28,9 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 4eb64bc790236b05ca2c561d53e72a0ff4745f14
+  - projects:
+      - hash: 7e805be802cc17f7d63b46e50c05fc1669299f8b
+        repo: openstack/os-win
+    version: newton-eol
 repository-settings:
   openstack/os-win: {}

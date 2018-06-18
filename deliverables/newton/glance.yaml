@@ -35,5 +35,9 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 4404ae6a7e2b8d96db102ada8aaf07cbc92e256b
+  - projects:
+      - hash: 6d2a08635f7c1b1bd7eb6050320e7128240b6a2d
+        repo: openstack/glance
+    version: newton-eol
 repository-settings:
   openstack/glance: {}

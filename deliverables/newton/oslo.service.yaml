@@ -44,5 +44,9 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 17a346b023554f48ff72f4e52decea002e311e81
+  - projects:
+      - hash: 17a346b023554f48ff72f4e52decea002e311e81
+        repo: openstack/oslo.service
+    version: newton-eol
 repository-settings:
   openstack/oslo.service: {}

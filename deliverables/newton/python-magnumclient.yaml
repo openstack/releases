@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 14dfc7d61664b03d2b7bed74dd032c60a0d86a19
+  - projects:
+      - hash: 6d1105614d3e2d1ba551be4d422c689a0cf3f3af
+        repo: openstack/python-magnumclient
+    version: newton-eol
 repository-settings:
   openstack/python-magnumclient: {}

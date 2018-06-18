@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 705fd9090c7f38725748895f85edc66dddda5d5f
+  - projects:
+      - hash: 283154a0e50f073c7880faf69177f22384f92314
+        repo: openstack/neutron-lib
+    version: newton-eol
 repository-settings:
   openstack/neutron-lib: {}

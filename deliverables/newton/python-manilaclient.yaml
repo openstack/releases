@@ -21,5 +21,9 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: b5b1ebed6244548f07c1e8c1a6923deaf2192445
+  - projects:
+      - hash: cd213ad19dcebb219ff70692884139264710f909
+        repo: openstack/python-manilaclient
+    version: newton-eol
 repository-settings:
   openstack/python-manilaclient: {}

@@ -33,5 +33,9 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: b4b21f0a6deb6434f777d9ee4a58a04db8d0afd0
+  - projects:
+      - hash: b4b21f0a6deb6434f777d9ee4a58a04db8d0afd0
+        repo: openstack/os-brick
+    version: newton-eol
 repository-settings:
   openstack/os-brick: {}

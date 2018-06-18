@@ -61,5 +61,9 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 471312755c84337a2b63e87b4b8c5c557a2b66d1
+  - projects:
+      - hash: 471312755c84337a2b63e87b4b8c5c557a2b66d1
+        repo: openstack/oslo.messaging
+    version: newton-eol
 repository-settings:
   openstack/oslo.messaging: {}

@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 599171ade4475709ddd8544e7dfd7ee4ba4ba2a2
+  - projects:
+      - hash: 1cbaf62c8ca9bdb461e50e548b9eb9710ef9cdb9
+        repo: openstack/python-troveclient
+    version: newton-eol
 repository-settings:
   openstack/python-troveclient: {}

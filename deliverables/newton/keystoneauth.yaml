@@ -69,5 +69,10 @@ releases:
       - repo: openstack/keystoneauth
         hash: 912d99bdf0f20ddc544dd05656a5ac28ec9acaac
         tarball-base: keystoneauth1
+  - projects:
+      - hash: 912d99bdf0f20ddc544dd05656a5ac28ec9acaac
+        repo: openstack/keystoneauth
+    version: newton-eol
 repository-settings:
-  openstack/keystoneauth: {}
+  openstack/keystoneauth:
+    tarball-base: keystoneauth1

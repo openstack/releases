@@ -45,5 +45,9 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: ff5bbb96d73a83c1e25759c42a30f01608de5b8a
+  - projects:
+      - hash: ff5bbb96d73a83c1e25759c42a30f01608de5b8a
+        repo: openstack/oslo.cache
+    version: newton-eol
 repository-settings:
   openstack/oslo.cache: {}

@@ -19,5 +19,9 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: a50a5e537ffe25da17dcf71c2225536065d03270
+  - projects:
+      - hash: c713955287f5649c51dd740de29073df6b65a7f5
+        repo: openstack/monasca-ui
+    version: newton-eol
 repository-settings:
   openstack/monasca-ui: {}
