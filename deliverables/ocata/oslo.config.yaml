@@ -33,5 +33,9 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: d95290e1ef5fa311e2bd3965aedb3e07dd57f502
+  - projects:
+      - hash: c7dc66cfd2ea0729a138b335d0718bc510aa85e5
+        repo: openstack/oslo.config
+    version: 3.22.2
 repository-settings:
   openstack/oslo.config: {}
