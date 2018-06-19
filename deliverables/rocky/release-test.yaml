@@ -7,28 +7,33 @@ release-model: cycle-with-milestones
 repository-settings:
   openstack/release-test: {}
 releases:
+  # - projects:
+  #     - hash: 17a88a7e98282a174879c4d2ad4c84d877d303d7
+  #       repo: openstack/release-test
+  #       tarball-base: openstack-release-test
+  #   version: 0.13.0
+  # - projects:
+  #     - hash: 86fa0da38cd59cd085ab7fb417832072da7354e9
+  #       repo: openstack/release-test
+  #       tarball-base: openstack-release-test
+  #   version: 0.14.0
+  # - projects:
+  #     - hash: 59b47a6d8e73f9bb11c666492b73bf07bfd124a5
+  #       repo: openstack/release-test
+  #       tarball-base: openstack-release-test
+  #   version: 0.14.1
+  # - projects:
+  #     - hash: 59b47a6d8e73f9bb11c666492b73bf07bfd124a5
+  #       repo: openstack/release-test
+  #       tarball-base: openstack-release-test
+  #   version: 0.15.0
+  # - projects:
+  #     - hash: a903b11f02b238d67b88c6cd7190e73da7a7e962
+  #       repo: openstack/release-test
+  #       tarball-base: openstack-release-test
+  #   version: 0.16.0
   - projects:
-      - hash: 17a88a7e98282a174879c4d2ad4c84d877d303d7
+      - hash: fdda7c0f44bec30131b4d8fa59f7e2030d1eee48
         repo: openstack/release-test
         tarball-base: openstack-release-test
-    version: 0.13.0
-  - projects:
-      - hash: 86fa0da38cd59cd085ab7fb417832072da7354e9
-        repo: openstack/release-test
-        tarball-base: openstack-release-test
-    version: 0.14.0
-  - projects:
-      - hash: 59b47a6d8e73f9bb11c666492b73bf07bfd124a5
-        repo: openstack/release-test
-        tarball-base: openstack-release-test
-    version: 0.14.1
-  - projects:
-      - hash: 59b47a6d8e73f9bb11c666492b73bf07bfd124a5
-        repo: openstack/release-test
-        tarball-base: openstack-release-test
-    version: 0.15.0
-  - projects:
-      - hash: a903b11f02b238d67b88c6cd7190e73da7a7e962
-        repo: openstack/release-test
-        tarball-base: openstack-release-test
-    version: 0.16.0
+    version: 1.0.0.0b1
