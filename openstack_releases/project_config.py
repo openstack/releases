@@ -88,7 +88,7 @@ def get_zuul_project_data(url=ZUUL_PROJECTS_URL):
 def read_templates_from_repo(workdir, repo_name):
     """Read the zuul settings from a repo and return them.
 
-    Read all of the zuul settings from the YAML files, parser them,
+    Read all of the zuul settings from the YAML files, parse them,
     and return the project templates.
 
     :param workdir: Working directory
