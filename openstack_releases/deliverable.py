@@ -233,6 +233,10 @@ class Repo(object):
     def base_name(self):
         return self.name.rsplit('/')[-1]
 
+    @property
+    def tarball_base(self):
+        return self._data.get('tarball-base')
+
     def __eq__(self, other):
         return self.name == other.name
 
@@ -255,7 +259,9 @@ class ReleaseProject(object):
 
     @property
     def tarball_base(self):
-        return self._data.get('tarball-base')
+        if 'tarball-base' in self._data:
+            return self._data['tarball-base']
+        return self.repo.tarball_base
 
     def guess_sdist_name(self):
         return self.tarball_base or self.repo.base_name

@@ -171,3 +171,90 @@ class TestEOLTags(base.BaseTestCase):
             '',
             deliv.releases[-1].eol_series,
         )
+
+
+class TestTarballBase(base.BaseTestCase):
+
+    def test_not_set(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            },
+        )
+        project = deliv.releases[-1].projects[0]
+        self.assertIsNone(project.tarball_base)
+
+    def test_set_project(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'foo'},
+                     ]}
+                ],
+            },
+        )
+        project = deliv.releases[-1].projects[0]
+        self.assertEqual('foo', project.tarball_base)
+
+    def test_set_repo(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+                'repository-settings': {
+                    'openstack/release-test': {
+                        'tarball-base': 'bar',
+                    },
+                },
+            },
+        )
+        project = deliv.releases[-1].projects[0]
+        self.assertEqual('bar', project.tarball_base)
+
+    def test_project_overrides(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'releases': [
+                    {'version': '1.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'foo'},
+                     ]}
+                ],
+                'repository-settings': {
+                    'openstack/release-test': {
+                        'tarball-base': 'bar',
+                    },
+                },
+            },
+        )
+        project = deliv.releases[-1].projects[0]
+        self.assertEqual('foo', project.tarball_base)
