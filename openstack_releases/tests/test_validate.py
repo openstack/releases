@@ -1403,6 +1403,10 @@ class TestPuppetUtils(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     @mock.patch('openstack_releases.gitutils.check_branch_sha')
     @mock.patch('openstack_releases.puppetutils.get_version')
@@ -2412,6 +2416,10 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     def test_series_is_open(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2538,6 +2546,10 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     def test_version_ok(self):
         series_a_dir = self.tmpdir + '/a'
@@ -2714,6 +2726,10 @@ class TestValidateSeriesFinal(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     def test_no_releases(self):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
@@ -2913,6 +2929,10 @@ class TestValidateSeriesEOL(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     def test_no_releases(self):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
@@ -3043,6 +3063,10 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         super().setUp()
         self.tmpdir = self.useFixture(fixtures.TempDir()).path
         self.ctx = validate.ValidationContext()
+        self.useFixture(fixtures.MonkeyPatch(
+            'openstack_releases.cmds.validate.includes_new_tag',
+            mock.Mock(return_value=True),
+        ))
 
     def test_no_releases(self):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
