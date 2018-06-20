@@ -27,12 +27,17 @@ import yaml
 
 
 TEAM_EXCEPTIONS = [
+    # Teams that are likely to be moved off TC governance
     'Infrastructure',
+    'RefStack',
+
+    # Deployment tool teams with externally-released artifacts
     'OpenStack Charms',
     'Chef OpenStack',
     'OpenStack-Helm',
+
+    # Others
     'rally',
-    'RefStack',
 ]
 
 WILDCARD_REPO_EXCEPTIONS = [
