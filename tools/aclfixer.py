@@ -39,7 +39,6 @@ WILDCARD_REPO_EXCEPTIONS = [
 ]
 
 REPO_EXCEPTIONS = [
-    'openstack/heat-cfntools',
     'openstack/manila-image-elements',
     'openstack/manila-test-image',
     'openstack/murano-apps',
