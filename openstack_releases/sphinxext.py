@@ -215,7 +215,12 @@ class DeliverableDirectiveBase(rst.Directive):
             most_recent = []
             for deliv in deliverables:
                 earliest_version = deliv.earliest_release
-                recent_version = deliv.latest_release
+                # Determine the most recent release that is not an EOL
+                # tag.
+                for r in reversed(deliv.releases):
+                    if not r.is_eol:
+                        recent_version = r.version
+                        break
                 ref = ':ref:`%s-%s`' % (series, deliv.name)
                 release_notes = deliv.release_notes
                 if not release_notes:
