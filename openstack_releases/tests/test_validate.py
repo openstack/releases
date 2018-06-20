@@ -1053,6 +1053,28 @@ class TestValidateNewReleasesInOpenSeries(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
+    def test_eol_in_end_of_life(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='newton',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': 'newton-eol',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5',
+                          'tarball-base': 'openstack-release-test'},
+                     ]},
+                ],
+            }
+        )
+        validate.validate_new_releases_in_open_series(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
 
 class TestValidateVersionNumbers(base.BaseTestCase):
 
@@ -1077,6 +1099,69 @@ class TestValidateVersionNumbers(base.BaseTestCase):
                 'artifact-link-mode': 'none',
                 'releases': [
                     {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_valid_version(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '99.5.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_eol_valid_version(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': 'ocata-eol',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_eol_wrong_branch(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': 'newton-eol',
                      'projects': [
                          {'repo': 'openstack/release-test',
                           'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
@@ -2814,6 +2899,136 @@ class TestValidateSeriesFinal(base.BaseTestCase):
             deliverable_data,
         )
         validate.validate_series_final(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+
+class TestValidateSeriesEOL(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.tmpdir = self.useFixture(fixtures.TempDir()).path
+        self.ctx = validate.ValidationContext()
+
+    def test_no_releases(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_only_normal(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_no_eol(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.5.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.2
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_eol_ok(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: newton-eol
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_eol_missing_repo(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: newton-eol
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        repository-settings:
+          openstack/automaton: {}
+          openstack/release-test: {}
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
             deliv,
             self.ctx,
         )

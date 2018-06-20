@@ -251,6 +251,39 @@ def validate_series_final(deliv, context):
             print('OK')
 
 
+@applies_to_released
+def validate_series_eol(deliv, context):
+    "The EOL tag should be applied to the previous release."
+
+    current_release = deliv.releases[-1]
+
+    if not current_release.is_eol:
+        print('this rule only applies when tagging a series as end-of-life')
+        return
+
+    # The tag should be applied to all of the repositories for the
+    # deliverable.
+    actual_repos = set(p.repo.name for p in current_release.projects)
+    expected_repos = set(r.name for r in deliv.repos)
+    error = False
+    for extra in actual_repos.difference(expected_repos):
+        error = True
+        context.error(
+            'EOL release %s includes repository %s '
+            'that is not in deliverable' %
+            (current_release.version, extra)
+        )
+    for missing in expected_repos.difference(actual_repos):
+        error = True
+        context.error(
+            'release %s is missing %s, '
+            'which appears in the deliverable' %
+            (current_release.version, missing)
+        )
+    if not error:
+        print('OK')
+
+
 @applies_to_current
 @applies_to_released
 @applies_to_cycle
@@ -788,6 +821,15 @@ def validate_version_numbers(deliv, context):
 
         LOG.debug('checking {}'.format(release.version))
 
+        if release.is_eol:
+            LOG.debug('Found new EOL tag {} for {}'.format(
+                release.version, deliv.name))
+            if release.eol_series != deliv.series:
+                context.error(
+                    'EOL tag {} does not refer to the {} series.'.format(
+                        release.version, deliv.series))
+            continue
+
         for project in release.projects:
 
             if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
@@ -960,13 +1002,17 @@ def validate_new_releases_in_open_series(deliv, context):
                 print('tag exists, skipping further validation')
                 continue
 
-            LOG.debug('Found new version {} for {}'.format(
-                release.version, project.repo))
-            new_releases[release.version] = release
+            if release.is_eol:
+                LOG.debug('Found new EOL tag {} for {}'.format(
+                    release.version, project.repo))
+            else:
+                LOG.debug('Found new version {} for {}'.format(
+                    release.version, project.repo))
+                new_releases[release.version] = release
 
     if new_releases:
         # The series is closed but there is a new release.
-        msg = ('deliverable {} has status {!r} for {}'
+        msg = ('deliverable {} has status {!r} for {} '
                'and cannot have new releases tagged').format(
                    deliv.name, deliv.stable_status, deliv.series)
         context.error(msg)
@@ -1591,6 +1637,7 @@ def main():
             validate_series_first,
             validate_series_final,
             validate_series_post_final,
+            validate_series_eol,
             validate_branch_prefixes,
             validate_stable_branches,
             validate_feature_branches,
