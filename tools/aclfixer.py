@@ -41,7 +41,6 @@ WILDCARD_REPO_EXCEPTIONS = [
 REPO_EXCEPTIONS = [
     'openstack-infra/tripleo-ci',
     'openstack/dib-utils',
-    'openstack/dragonflow',
     'openstack/heat-cfntools',
     'openstack/manila-image-elements',
     'openstack/manila-test-image',
