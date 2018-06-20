@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 8323dcce2bffead93d2d61daf4aaabc5eaa38088
+  - projects:
+      - hash: 80303d6a4732fefd8ee7e7c5987f0abd34bb47ae
+        repo: openstack/python-saharaclient
+    version: newton-eol
 repository-settings:
   openstack/python-saharaclient: {}

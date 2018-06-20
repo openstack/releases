@@ -44,5 +44,9 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 0aae41e0c1d3d965181b22b6fd25fb1bc0442a35
+  - projects:
+      - hash: 0aae41e0c1d3d965181b22b6fd25fb1bc0442a35
+        repo: openstack/oslo.utils
+    version: newton-eol
 repository-settings:
   openstack/oslo.utils: {}

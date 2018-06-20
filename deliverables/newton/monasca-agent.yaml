@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 470cca70d446bf8ea805dcdc2d50c3139df08f0e
+  - projects:
+      - hash: d3c1bb56b80b44b9ad91e02962568bbd9960f19c
+        repo: openstack/monasca-agent
+    version: newton-eol
 repository-settings:
   openstack/monasca-agent: {}

@@ -56,5 +56,9 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 6c0f50c1f5f4122b31dbfe25aacdce596bf4b648
+  - projects:
+      - hash: 6c0f50c1f5f4122b31dbfe25aacdce596bf4b648
+        repo: openstack/oslo.middleware
+    version: newton-eol
 repository-settings:
   openstack/oslo.middleware: {}

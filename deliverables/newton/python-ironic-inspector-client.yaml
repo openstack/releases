@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 0eae82e24f943ac4e5caffe06a36c2cbe4c79a6e
+  - projects:
+      - hash: 0eae82e24f943ac4e5caffe06a36c2cbe4c79a6e
+        repo: openstack/python-ironic-inspector-client
+    version: newton-eol
 repository-settings:
   openstack/python-ironic-inspector-client: {}

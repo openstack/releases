@@ -41,5 +41,9 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 41aeb89cae68a0e2ce03a248226488d4ba2ea8af
+  - projects:
+      - hash: 41aeb89cae68a0e2ce03a248226488d4ba2ea8af
+        repo: openstack/python-novaclient
+    version: newton-eol
 repository-settings:
   openstack/python-novaclient: {}

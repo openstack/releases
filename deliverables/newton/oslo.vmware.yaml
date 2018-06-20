@@ -49,5 +49,9 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: bfd1e0ffd435e637d00ba54ec99aeafe4488eca1
+  - projects:
+      - hash: 1bd7a846631a5dab3b4e685d1c02f13746a4fd2a
+        repo: openstack/oslo.vmware
+    version: newton-eol
 repository-settings:
   openstack/oslo.vmware: {}

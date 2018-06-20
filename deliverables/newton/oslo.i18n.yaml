@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 1f8d0186075c2014fc44d6a46d9caf0d1761e6c4
+  - projects:
+      - hash: 351c10af6ad6b6fed197cc4b38d9fddf232d0def
+        repo: openstack/oslo.i18n
+    version: newton-eol
 repository-settings:
   openstack/oslo.i18n: {}

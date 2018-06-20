@@ -29,5 +29,9 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: d4196325eb05dadfaf62d8facbd8c6fe50f72166
+  - projects:
+      - hash: a8b7ea6e9a0f13584877f8f99592755e2b12f0f0
+        repo: openstack/python-glanceclient
+    version: newton-eol
 repository-settings:
   openstack/python-glanceclient: {}

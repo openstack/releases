@@ -49,5 +49,9 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 5460ec1e9b50f2ec0abb132b3e093e783ad9fee6
+  - projects:
+      - hash: 171dd3e03430783a1b473496c89088e73434fa1c
+        repo: openstack/kolla
+    version: newton-eol
 repository-settings:
   openstack/kolla: {}

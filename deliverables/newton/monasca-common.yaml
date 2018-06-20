@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: da9fa8ca015efbac2248f017704c33cf83f6be5d
+  - projects:
+      - hash: 1add88dd92527cc915a8f3599f274bcfdae5b00c
+        repo: openstack/monasca-common
+    version: newton-eol
 repository-settings:
   openstack/monasca-common: {}

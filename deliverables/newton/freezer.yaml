@@ -64,6 +64,14 @@ releases:
         hash: 9e3d6a516a097731579a29a970320baacc3a375c
       - repo: openstack/freezer-dr
         hash: a8ba5850e8fe16d8244a1c314ebe074735352795
+  - projects:
+      - hash: f22014f2f2dcfcfd7c8391f9cb2ddc5de4c588a1
+        repo: openstack/freezer
+      - hash: 9e3d6a516a097731579a29a970320baacc3a375c
+        repo: openstack/freezer-api
+      - hash: a8ba5850e8fe16d8244a1c314ebe074735352795
+        repo: openstack/freezer-dr
+    version: newton-eol
 repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}

@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 6c4e27782c5768fef4365d4b0fcfae7eb1da39f2
+  - projects:
+      - hash: 6c4e27782c5768fef4365d4b0fcfae7eb1da39f2
+        repo: openstack/python-heatclient
+    version: newton-eol
 repository-settings:
   openstack/python-heatclient: {}

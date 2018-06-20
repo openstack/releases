@@ -39,6 +39,12 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 7d7d71ee2439098ce79869e5c44411697697a371
+  - projects:
+      - hash: 36b3d016f61070ba4f77e80583842b359fbf1b6e
+        repo: openstack/designate
+      - hash: f55a6fdaf6bf30cf70dea329b0281a6882b8e505
+        repo: openstack/designate-dashboard
+    version: newton-eol
 repository-settings:
   openstack/designate: {}
   openstack/designate-dashboard: {}

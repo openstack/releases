@@ -52,5 +52,9 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 928b08f112b976da50fbed4e4376957ed76d58ba
+  - projects:
+      - hash: 928b08f112b976da50fbed4e4376957ed76d58ba
+        repo: openstack/oslo.privsep
+    version: newton-eol
 repository-settings:
   openstack/oslo.privsep: {}

@@ -18,6 +18,12 @@ releases:
         hash: 3596172ee6bff1c6ac98503415860f897d82ef35
       - repo: openstack/tacker-horizon
         hash: 4c84696280434e761fabe2fca7d80fe18fb6a78a
+  - projects:
+      - hash: 5349428b669c6b08b89cd0fb67fa4b8781046770
+        repo: openstack/tacker
+      - hash: 19c0bbc720df819f7118892ae17e2179f0609f29
+        repo: openstack/tacker-horizon
+    version: newton-eol
 repository-settings:
   openstack/tacker: {}
   openstack/tacker-horizon: {}

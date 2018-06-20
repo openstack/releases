@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: 7175ff0c5595b2f119eb4b7cac1cf204dec175f4
+  - projects:
+      - hash: 3ca4d5f1a88cc2b6eee044d647a29c69a9a242be
+        repo: openstack/monasca-log-api
+    version: newton-eol
 repository-settings:
   openstack/monasca-log-api: {}

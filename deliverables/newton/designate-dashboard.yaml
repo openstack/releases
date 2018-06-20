@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: ce5774b8ec6665b70dbdd032c1466a38fd674034
+  - projects:
+      - hash: f55a6fdaf6bf30cf70dea329b0281a6882b8e505
+        repo: openstack/designate-dashboard
+    version: newton-eol
 repository-settings:
   openstack/designate-dashboard: {}

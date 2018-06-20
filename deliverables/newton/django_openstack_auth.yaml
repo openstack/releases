@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/django_openstack_auth
         hash: 08e96550a31b98b7ee3278b3b6a73e93e79ac343
+  - projects:
+      - hash: 08e96550a31b98b7ee3278b3b6a73e93e79ac343
+        repo: openstack/django_openstack_auth
+    version: newton-eol
 repository-settings:
   openstack/django_openstack_auth: {}

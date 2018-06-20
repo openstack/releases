@@ -16,5 +16,9 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: a62c27a165e61d350fc96432878bec81c09a1587
+  - projects:
+      - hash: bf2874001ce42d605ef66b39f1214d204c210774
+        repo: openstack/monasca-thresh
+    version: newton-eol
 repository-settings:
   openstack/monasca-thresh: {}

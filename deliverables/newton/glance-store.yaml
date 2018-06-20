@@ -28,5 +28,9 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 728b45d4a4573622d56bfb9ee45f6b152fce50a8
+  - projects:
+      - hash: de0b61bb93f397ffc5a0935673d4aeb1d04e2a4f
+        repo: openstack/glance_store
+    version: newton-eol
 repository-settings:
   openstack/glance_store: {}

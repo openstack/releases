@@ -16,5 +16,9 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 0971bd5483faa5d316ec6de4c5084ce555e4dce7
+  - projects:
+      - hash: 470a864a8bfcb05fc3d9184cab8b3fb658572455
+        repo: openstack/python-designateclient
+    version: newton-eol
 repository-settings:
   openstack/python-designateclient: {}

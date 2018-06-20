@@ -29,5 +29,9 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 0d5623355642a5c79f668991aecb9980093954c4
+  - projects:
+      - hash: 9fb73dd207cdf088c6c45d3eb38c5fd289c275d5
+        repo: openstack/networking-ovn
+    version: newton-eol
 repository-settings:
   openstack/networking-ovn: {}

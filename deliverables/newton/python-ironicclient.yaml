@@ -29,5 +29,9 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: c0abab8a96d7e9bdfd04d8cf4527b0243405b505
+  - projects:
+      - hash: 43ba5c0bd1e0a024b67449796dbb24e9a752499e
+        repo: openstack/python-ironicclient
+    version: newton-eol
 repository-settings:
   openstack/python-ironicclient: {}

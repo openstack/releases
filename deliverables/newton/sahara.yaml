@@ -89,6 +89,16 @@ releases:
         hash: fc147fe56343847056f8573b2b14329de24795ec
       - repo: openstack/sahara-image-elements
         hash: 04ac8d8da19ec027daa3e1d30201d2f1a1685636
+  - projects:
+      - hash: 0dc238ea602e3a08910734a26340eaefcd8b3538
+        repo: openstack/sahara
+      - hash: fed6bed0409f7c52426391b29ea73f3355bf190d
+        repo: openstack/sahara-dashboard
+      - hash: fc147fe56343847056f8573b2b14329de24795ec
+        repo: openstack/sahara-extra
+      - hash: 04ac8d8da19ec027daa3e1d30201d2f1a1685636
+        repo: openstack/sahara-image-elements
+    version: newton-eol
 repository-settings:
   openstack/sahara: {}
   openstack/sahara-dashboard: {}

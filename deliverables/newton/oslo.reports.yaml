@@ -36,5 +36,9 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: d332969661534229feb5cbf66fa6084020ae8034
+  - projects:
+      - hash: 2a9e24502d0960010c00314218ae85a1a04e71b2
+        repo: openstack/oslo.reports
+    version: newton-eol
 repository-settings:
   openstack/oslo.reports: {}

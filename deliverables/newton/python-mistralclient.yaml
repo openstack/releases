@@ -20,5 +20,9 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 1dcfc2c096a4610d63611bfd7d98687f3e5e2da4
+  - projects:
+      - hash: 1dcfc2c096a4610d63611bfd7d98687f3e5e2da4
+        repo: openstack/python-mistralclient
+    version: newton-eol
 repository-settings:
   openstack/python-mistralclient: {}

@@ -12,5 +12,9 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: de6a13f33f87415610526781b511c9dfec8f8ad7
+  - projects:
+      - hash: ff7e2cf8c2c75d631c711460c01f9b9767865132
+        repo: openstack/python-brick-cinderclient-ext
+    version: newton-eol
 repository-settings:
   openstack/python-brick-cinderclient-ext: {}

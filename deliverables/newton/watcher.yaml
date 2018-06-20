@@ -33,5 +33,10 @@ releases:
       - repo: openstack/watcher
         hash: 19fdd1557e3a29328c3854a1214f455bca68ced1
         tarball-base: python-watcher
+  - projects:
+      - hash: 1c38637dffd010884063e3795d96254c73fba7fc
+        repo: openstack/watcher
+    version: newton-eol
 repository-settings:
-  openstack/watcher: {}
+  openstack/watcher:
+    tarball-base: python-watcher

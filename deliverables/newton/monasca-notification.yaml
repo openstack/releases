@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 4c39e3ad678cf117252f304fc8507020a7e98c2a
+  - projects:
+      - hash: 00ca2e794343f7c9a3980b2db4d50bd51e6da05b
+        repo: openstack/monasca-notification
+    version: newton-eol
 repository-settings:
   openstack/monasca-notification: {}

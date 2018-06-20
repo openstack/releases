@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 96fbd64a146f89b60317418d0aedb9bfafc14f0e
+  - projects:
+      - hash: 116bbb9c0e1a33cd9726338eab25fecd1a217ed8
+        repo: openstack/monasca-persister
+    version: newton-eol
 repository-settings:
   openstack/monasca-persister: {}

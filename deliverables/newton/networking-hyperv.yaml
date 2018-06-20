@@ -16,5 +16,9 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 85a4b5cff06cc1e0b3b6395e588c0331113b42b0
+  - projects:
+      - hash: 54bc9e5e38a59000c0696cf2738b1bf574263f7b
+        repo: openstack/networking-hyperv
+    version: newton-eol
 repository-settings:
   openstack/networking-hyperv: {}

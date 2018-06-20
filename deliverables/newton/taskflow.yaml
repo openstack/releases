@@ -48,5 +48,9 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: a3ecbf00cd8a8d17816ebcd23f6f4db5fd8ee0c0
+  - projects:
+      - hash: a3ecbf00cd8a8d17816ebcd23f6f4db5fd8ee0c0
+        repo: openstack/taskflow
+    version: newton-eol
 repository-settings:
   openstack/taskflow: {}

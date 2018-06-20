@@ -37,5 +37,9 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 0ad0950e0637c37145bc04df2166468523f8a10a
+  - projects:
+      - hash: b8fe4065ab5ee365526ced5aff12eaa0b8409cb7
+        repo: openstack/oslo.context
+    version: newton-eol
 repository-settings:
   openstack/oslo.context: {}

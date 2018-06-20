@@ -33,5 +33,9 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 89dac51538b711d8e966d4a4a50f9cdfafa92fc5
+  - projects:
+      - hash: d750da94ebfd36af097cbb09c93ded31a840e612
+        repo: openstack/neutron-vpnaas
+    version: newton-eol
 repository-settings:
   openstack/neutron-vpnaas: {}

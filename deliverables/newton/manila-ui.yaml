@@ -27,5 +27,9 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 37ee394305846522be5fd38e71ea10f56e0bd276
+  - projects:
+      - hash: 24f71ed454691322e3250f7171ce0510fed5b913
+        repo: openstack/manila-ui
+    version: newton-eol
 repository-settings:
   openstack/manila-ui: {}

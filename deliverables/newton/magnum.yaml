@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: ce5133ce56e3635bde8097a3eaf4b2c86a9a14e9
+  - projects:
+      - hash: 50e789c8db1bb8fda9a3b5817aeb40e392aaee95
+        repo: openstack/magnum
+    version: newton-eol
 repository-settings:
   openstack/magnum: {}

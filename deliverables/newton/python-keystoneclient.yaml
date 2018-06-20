@@ -37,5 +37,9 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 7c40ff8466dc5e49f93752ecb998db864f8e5598
+  - projects:
+      - hash: 7c40ff8466dc5e49f93752ecb998db864f8e5598
+        repo: openstack/python-keystoneclient
+    version: newton-eol
 repository-settings:
   openstack/python-keystoneclient: {}

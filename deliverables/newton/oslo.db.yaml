@@ -57,5 +57,9 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 37873630050f332c95bf0506aa02d47712fb454b
+  - projects:
+      - hash: 37873630050f332c95bf0506aa02d47712fb454b
+        repo: openstack/oslo.db
+    version: newton-eol
 repository-settings:
   openstack/oslo.db: {}

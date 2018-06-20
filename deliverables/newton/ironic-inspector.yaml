@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: b54b88a8d1d59abd601f784ab09d2d44866d205b
+  - projects:
+      - hash: b34fa9c797fcdbbb247e574bf0dc0e4955ad5a4f
+        repo: openstack/ironic-inspector
+    version: newton-eol
 repository-settings:
   openstack/ironic-inspector: {}

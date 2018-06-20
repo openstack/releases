@@ -56,5 +56,9 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 908def6bb993798146cccc1621a9cee18950629d
+  - projects:
+      - hash: 1b3ab80f1c457a123b4d059f9cb9a721d68bc9fd
+        repo: openstack/cinder
+    version: newton-eol
 repository-settings:
   openstack/cinder: {}
