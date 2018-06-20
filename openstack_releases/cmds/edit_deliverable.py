@@ -15,7 +15,11 @@
 from __future__ import print_function
 
 import argparse
+import atexit
+import shutil
+import tempfile
 
+from openstack_releases import gitutils
 from openstack_releases import yamlutils
 
 
@@ -33,6 +37,37 @@ def stable_branch(args, series, deliverable_info):
         'location': args.location,
     }
     deliverable_info.setdefault('branches', []).append(new_branch)
+
+
+def eol_tag(args, series, deliverable_info):
+
+    workdir = tempfile.mkdtemp(prefix='releases-')
+    print('creating temporary files in %s' % workdir)
+
+    def cleanup_workdir():
+        shutil.rmtree(workdir, True)
+    atexit.register(cleanup_workdir)
+
+    tag = '{}-eol'.format(series)
+    projects = []
+    release = {
+        'version': tag,
+        'projects': projects,
+    }
+
+    for repo in deliverable_info['repository-settings'].keys():
+        if not gitutils.tag_exists(repo, tag):
+            print('No {} tag for {}'.format(tag, repo))
+            continue
+        gitutils.clone_repo(workdir, repo)
+        sha = gitutils.sha_for_tag(workdir, repo, tag)
+        projects.append({
+            'repo': repo,
+            'hash': sha,
+        })
+
+    if projects:
+        deliverable_info['releases'].append(release)
 
 
 def get_deliverable_data(series, deliverable):
@@ -73,6 +108,12 @@ def main():
         help='version number',
     )
     stable_branch_parser.set_defaults(func=stable_branch)
+
+    eol_tag_parser = subparsers.add_parser(
+        'import-eol-tag',
+        help='find the series EOL tag and add it',
+    )
+    eol_tag_parser.set_defaults(func=eol_tag)
 
     args = parser.parse_args()
 
