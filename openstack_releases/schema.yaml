@@ -45,6 +45,8 @@ properties:
         items:
           type: "string"
           enum: [ "no-artifact-build-job", "retired" ]
+      tarball-base:
+        type: "string"
   release-type:
     type: "string"
     enum: [ "python-service", "python-pypi", "xstatic", "fuel",
