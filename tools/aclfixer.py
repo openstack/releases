@@ -46,7 +46,6 @@ WILDCARD_REPO_EXCEPTIONS = [
 REPO_EXCEPTIONS = [
     'openstack/manila-image-elements',
     'openstack/manila-test-image',
-    'openstack/swift-bench',
 ]
 
 
