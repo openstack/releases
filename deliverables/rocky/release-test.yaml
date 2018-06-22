@@ -5,7 +5,8 @@ type: other
 release-type: python-pypi
 release-model: cycle-with-milestones
 repository-settings:
-  openstack/release-test: {}
+  openstack/release-test:
+    tarball-base: openstack-release-test
 releases:
   # - projects:
   #     - hash: 17a88a7e98282a174879c4d2ad4c84d877d303d7
@@ -42,3 +43,7 @@ releases:
         repo: openstack/release-test
         tarball-base: openstack-release-test
     version: 1.0.0
+  - projects:
+      - hash: 3da9679d9b12e2808ce9d073117e93d40ce05da3
+        repo: openstack/release-test
+    version: 1.1.0
