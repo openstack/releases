@@ -6,3 +6,8 @@ release-model: cycle-with-intermediary
 include-pypi-link: yes
 repository-settings:
   openstack/networking-baremetal: {}
+releases:
+  - projects:
+      - hash: e2ca1d94e341f5aebea726d382cc076500da8c82
+        repo: openstack/networking-baremetal
+    version: 1.1.0
