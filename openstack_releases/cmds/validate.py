@@ -48,6 +48,7 @@ from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import requirements
 from openstack_releases import versionutils
+from openstack_releases import xstaticutils
 
 LOG = logging.getLogger()
 
@@ -943,6 +944,26 @@ def validate_version_numbers(deliv, context):
                             release.version,
                         )
                     )
+
+            # If this is an xstatic package, ensure the package version in code
+            # matches the tag being requested.
+            if release_type == 'xstatic':
+                LOG.debug('performing xstatic version checks')
+                xs_versions = xstaticutils.get_versions(
+                    context.workdir, project.repo.name)
+                if not xs_versions:
+                    context.error(
+                        '%s should contain a PACKAGE_VERSION but none found')
+                for xs_version in xs_versions:
+                    if xs_version != release.version:
+                        context.error(
+                            '%s xstatic.pkg has PACKAGE_VERSION "%s" but is '
+                            'being tagged as "%s"' % (
+                                project.repo.name,
+                                xs_version,
+                                release.version,
+                            )
+                        )
 
             # If we know the previous version and the
             # project is a python deliverable make sure
