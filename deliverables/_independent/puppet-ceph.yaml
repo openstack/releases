@@ -6,6 +6,8 @@ stable-branch-type: upstream
 branches:
   - name: stable/jewel
     location: 2.4.0
+  - name: stable/luminous
+    location: 2.5.1
 releases:
   - version: 2.3.0
     projects:
@@ -27,5 +29,9 @@ releases:
       - hash: 5d490bbeef2eb4a172f42865d853ea7ffa24c154
         repo: openstack/puppet-ceph
     version: 2.5.0
+  - projects:
+      - hash: c900116b8fbef30fe2c4c9e0d5b6dffa3e1ef9c2
+        repo: openstack/puppet-ceph
+    version: 2.5.1
 repository-settings:
   openstack/puppet-ceph: {}
