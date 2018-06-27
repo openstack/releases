@@ -58,11 +58,12 @@ def is_a_team_exception(team):
     return team in TEAM_EXCEPTIONS
 
 
-def acl_patch(repo, fullfilename):
+def issues_in_acl(repo, fullfilename, patch):
 
     newcontent = ""
     with open(fullfilename) as aclfile:
         skip = False
+        issues = False
         for line in aclfile:
             # Skip until start of next section if in skip mode
             if skip:
@@ -74,17 +75,22 @@ def acl_patch(repo, fullfilename):
             # Remove [access ref/tags/*] sections
             if line.startswith('[access "refs/tag'):
                 skip = True
+                issues = True
                 continue
 
             # Remove 'create' lines
             if line.startswith('create ='):
+                issues = True
                 continue
 
             # Copy the current line over
             newcontent += line
 
-    with open(fullfilename, 'w') as aclfile:
-        aclfile.write(newcontent)
+    if patch:
+        with open(fullfilename, 'w') as aclfile:
+            aclfile.write(newcontent)
+
+    return issues
 
 
 def main(args=sys.argv[1:]):
@@ -92,14 +98,15 @@ def main(args=sys.argv[1:]):
     parser.add_argument('project_config_repo')
     parser.add_argument('governance_repo')
     parser.add_argument(
-        '--dryrun',
+        '--patch',
         default=False,
-        help='do not actually do anything',
+        help='patch ACL files in project-config to fix violations',
         action='store_true')
     args = parser.parse_args(args)
 
     # Load repo/aclfile mapping from Gerrit config
-    projectsyaml = os.path.join(args.project_config_repo, 'gerrit', 'projects.yaml')
+    projectsyaml = os.path.join(args.project_config_repo,
+                                'gerrit', 'projects.yaml')
     acl = {}
     config = yaml.load(open(projectsyaml))
     for project in config:
@@ -112,21 +119,18 @@ def main(args=sys.argv[1:]):
             acl[project['project']] = project['project'] + '.config'
 
     aclbase = os.path.join(args.project_config_repo, 'gerrit', 'acls')
-    governanceyaml = os.path.join(args.governance_repo, 'reference', 'projects.yaml')
+    governanceyaml = os.path.join(args.governance_repo,
+                                  'reference', 'projects.yaml')
     teams = yaml.load(open(governanceyaml))
     for tname, team in teams.iteritems():
         if is_a_team_exception(tname):
-            print('--- %s --- (SKIPPED)' % tname)
             continue
-        print('=== %s ===' % tname)
         for dname, deliverable in team['deliverables'].iteritems():
             for repo in deliverable.get('repos'):
-                if is_a_repo_exception(repo):
-                    print('%s - Skipping' % repo)
-                else:
-                    print('%s - Patching %s' % (repo, acl[repo]))
-                    if not args.dryrun:
-                        acl_patch(repo, os.path.join(aclbase, acl[repo]))
+                if not is_a_repo_exception(repo):
+                    aclpath = os.path.join(aclbase, acl[repo])
+                    if issues_in_acl(repo, aclpath, args.patch):
+                        print('%s (%s) in %s' % (repo, tname, acl[repo]))
 
 
 if __name__ == '__main__':
