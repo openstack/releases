@@ -219,57 +219,6 @@ Prepare the branch request by submitting a patch to this repository.
    jobs, and the validator requires that the patch listed in your
    deliverable file actually be merged into a proper branch.
 
-Reviewing a Release or Branch Request
-=====================================
-
-Care needs to be taken when reviewing a request such that the version
-proposed (1) follows semver rules and (2) will not cause issues between
-branches, particularly stable branches (at least stable branches that are not
-yet using upper-constraints checking in CI runs, which is anything before
-stable/liberty).
-
-General notes when reviewing a request:
-
-* Check the version number for SemVer, especially for libraries.
-* Make sure the summary of the patch includes the deliverable name and
-  version number.
-
-The following rules apply mostly to stable branches and therefore a member of
-the `stable-maint-core <https://review.openstack.org/#/admin/groups/530,members>`_
-team should +1 the following types of changes before they are approved.
-
-* For libraries, check global-requirements.txt (g-r) in the
-  `openstack/requirements repo <http://git.openstack.org/cgit/openstack/requirements/>`_
-  to make sure the version you are about to release does not cause a
-  conflict and wedge the gate. Typically this is only a concern on stable
-  branches with (un)capped dependencies.
-
-  Typical examples of this kind of break (before upper-constraints are used):
-
-  #. A stable branch, for example stable/juno, has uncapped dependencies on a
-     library and a version is released on a newer branch, e.g. stable/kilo,
-     and that version has updated requirements from global-requirements in
-     stable/kilo which conflict with the versions of libraries allowed in
-     stable/juno. This then leads to ContextualVersionConflict failures when
-     installing packages on stable/juno.
-  #. Similar to the point above, but if there are overlapping version ranges
-     between two branches, like stable/juno and stable/kilo, you can have the
-     same kinds of issues where a release from one branch which has g-r syncs
-     specific to that branch gets used in the other branch and things break.
-     We saw this happen with oslo.utils 1.4.1 which was intended for
-     stable/juno consumption but because stable/kilo g-r allowed that version,
-     we broke stable/kilo CI jobs since 1.4.1 had juno-level dependencies.
-
-* The rule of thumb is that branches should not overlap versions at the minor
-  version range. For example, stable/juno can require foo>=1.1,<1.2 and
-  stable/kilo can require foo>=1.2,<1.3. In this way only patch-level versions
-  are released for foo on stable/juno and stable/kilo. The pin at the minor
-  version range prevents those patch-level versions from breaking each other's
-  branch.
-
-* Ensure that new branches are listed at the end of the branch list in
-  the file.
-
 Release Approval
 ================
 
