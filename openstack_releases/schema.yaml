@@ -50,7 +50,8 @@ properties:
   release-type:
     type: "string"
     enum: [ "python-service", "python-pypi", "xstatic", "fuel",
-            "nodejs", "puppet", "neutron", "horizon", "openstack-manuals" ]
+            "nodejs", "puppet", "neutron", "horizon", "openstack-manuals",
+            "manila-image-elements" ]
   stable-branch-type:
     type: "string"
     enum: [ "std", "tagless", "upstream" ]
