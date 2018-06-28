@@ -109,10 +109,10 @@ Between Milestone-2 and Milestone-3
      begin the attestation process.
 
 5. Two weeks before milestone 3, warn cycle-with-intermediary projects
-   without any releases that the release team will tag HEAD of master
-   for their project if they have not prepared a release by the
-   following week so that there is a fallback release to use for the
-   cycle and as a place to create their stable branch.
+   that had changes over the cycle but no release yet that the release
+   team will tag HEAD of master for their project if they have not prepared
+   a release by the following week so that there is a fallback release to
+   use for the cycle and as a place to create their stable branch.
 
 Final Library Release (week before Milestone-3)
 ===============================================
@@ -132,8 +132,13 @@ Final Library Release (week before Milestone-3)
 4. Ensure that final releases for libraries also include the
    specification to create the stable/$series branch.
 
-5. Tag HEAD of master for any cycle-with-intermediary project without
-   any releases. Do not create branches for non-library projects.
+5. Tag HEAD of master for any cycle-with-intermediary project with
+   changes merged over the cycle but no release yet. Do not create
+   branches for non-library projects.
+
+6. For stable libraries that did not have any change merged over the
+   cycle, create a stable branch from the last available release.
+
 
 Milestone-3
 ===========
@@ -186,6 +191,10 @@ Between Milestone-3 and RC1
    2 months old that we will use their existing release as a point for
    branching if they have not prepared a newer release by the RC1
    deadline.
+
+5. Warn cycle-with-intermediary projects that did not have any change
+   over the cycle that no release will be tagged for them. A stable
+   branch will be created, though, from the last available release.
 
 RC1
 ===
@@ -283,19 +292,24 @@ candidates are coming.
 
      $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-milestones) 2>&1 | tee unreleased.log
 
-7. As soon as the last release candidate is tagged and the freeze
+7. After the deadline for final release candidates has passed, create
+   stable branches for cycle-with-intermediary projects that did not
+   have any change merged over the cycle. Those branches should be
+   created from the last available release.
+
+8. As soon as the last release candidate is tagged and the freeze
    period is entered, use ``propose-final-releases`` to tag the
    existing most recent release candidates as the final release for
    projects using the cycle-with-milestone model.
 
-8. Ask liaisons and PTLs of milestone-based projects to review and +1
+9. Ask liaisons and PTLs of milestone-based projects to review and +1
    the final release proposal from the previous step so their approval
    is included in the metadata that goes onto the signed tag.
 
-9. The week before final release test the release process using the
-   openstack/release-test repository.
+10. The week before final release test the release process using the
+    openstack/release-test repository.
 
-10. Notify the documentation team that it should be safe to apply
+11. Notify the documentation team that it should be safe to apply
     their process to create the new release series landing pages for
     docs.openstack.org. Their process works better if they wait until
     most of the projects have their stable branches created, but they
