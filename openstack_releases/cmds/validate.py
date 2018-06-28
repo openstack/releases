@@ -298,17 +298,7 @@ def validate_series_final(deliv, context):
             print('OK')
 
 
-@skip_existing_tags
-@applies_to_released
-def validate_series_eol(deliv, context):
-    "The EOL tag should be applied to the previous release."
-
-    current_release = deliv.releases[-1]
-
-    if not current_release.is_eol:
-        print('this rule only applies when tagging a series as end-of-life')
-        return
-
+def _require_tag_on_all_repos(deliv, current_release, eol_or_em, context):
     # The tag should be applied to all of the repositories for the
     # deliverable.
     actual_repos = set(p.repo.name for p in current_release.projects)
@@ -317,9 +307,9 @@ def validate_series_eol(deliv, context):
     for extra in actual_repos.difference(expected_repos):
         error = True
         context.error(
-            'EOL release %s includes repository %s '
+            '%s release %s includes repository %s '
             'that is not in deliverable' %
-            (current_release.version, extra)
+            (eol_or_em, current_release.version, extra)
         )
     for missing in expected_repos.difference(actual_repos):
         error = True
@@ -330,6 +320,45 @@ def validate_series_eol(deliv, context):
         )
     if not error:
         print('OK')
+
+
+@skip_existing_tags
+@applies_to_released
+def validate_series_eol(deliv, context):
+    "The EOL tag should be applied to all repositories."
+
+    current_release = deliv.releases[-1]
+
+    if not current_release.is_eol:
+        print('this rule only applies when tagging a series as end-of-life')
+        return
+
+    _require_tag_on_all_repos(
+        deliv,
+        current_release,
+        'EOL',
+        context,
+    )
+
+
+@skip_existing_tags
+@applies_to_released
+def validate_series_em(deliv, context):
+    "The EM tag should be applied to the previous release."
+
+    current_release = deliv.releases[-1]
+
+    if not current_release.is_em:
+        print('this rule only applies when tagging '
+              'a series as extended-maintenance')
+        return
+
+    _require_tag_on_all_repos(
+        deliv,
+        current_release,
+        'extended maintenance',
+        context,
+    )
 
 
 @skip_existing_tags
@@ -885,6 +914,15 @@ def validate_version_numbers(deliv, context):
                         release.version, deliv.series))
             continue
 
+        if release.is_em:
+            LOG.debug('Found new EM tag {} for {}'.format(
+                release.version, deliv.name))
+            if release.em_series != deliv.series:
+                context.error(
+                    'EM tag {} does not refer to the {} series.'.format(
+                        release.version, deliv.series))
+            continue
+
         for project in release.projects:
 
             if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
@@ -1081,6 +1119,9 @@ def validate_new_releases_in_open_series(deliv, context):
 
             if release.is_eol:
                 LOG.debug('Found new EOL tag {} for {}'.format(
+                    release.version, project.repo))
+            elif release.is_em:
+                LOG.debug('Found new EM tag {} for {}'.format(
                     release.version, project.repo))
             else:
                 LOG.debug('Found new version {} for {}'.format(
@@ -1715,6 +1756,7 @@ def main():
             validate_series_final,
             validate_series_post_final,
             validate_series_eol,
+            validate_series_em,
             validate_branch_prefixes,
             validate_stable_branches,
             validate_feature_branches,
