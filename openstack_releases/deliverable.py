@@ -321,6 +321,16 @@ class Release(object):
             return self.version.rpartition('-')[0]
         return ''
 
+    @property
+    def is_em(self):
+        return self.version.endswith('-em')
+
+    @property
+    def em_series(self):
+        if self.is_em:
+            return self.version.rpartition('-')[0]
+        return ''
+
     def __eq__(self, other):
         return self.version == other.version
 
