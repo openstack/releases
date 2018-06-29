@@ -124,4 +124,7 @@ References
    :maxdepth: 2
    :glob:
 
-   reference/*
+   reference/using
+   reference/release_models
+   reference/deliverable_types
+   reference/reviewer_guide
