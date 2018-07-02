@@ -29,15 +29,16 @@ For the stable series we have an arrangement with the
 `stable-maint-core
 <https://review.openstack.org/#/admin/groups/530,members>`_ team that
 if a deliverable has the ``stable:follows-policy`` tag we don't
-approve it until they have had a chance to review it. Things that do
-not have that governance tag can be approved at any time.
+approve it until they have had a chance to review it (usually the
+Monday after the request is submitted). Releases for deliverables that
+do not have that governance tag can be approved at any time.
 
 Releases from master can be approved with a single reviewer.
 
 Code changes and doc changes and other things like that need 2
 reviewers.
 
-Releases from someone other than the PTL or liaison must be
+Releases from someone other than the PTL or release liaison must be
 acknowledged by one of them with a +1 vote in gerrit.
 
 Review Checks
@@ -71,7 +72,7 @@ support human reviewers. It writes the report to
 run as ``tox -e list-changes`` locally.
 
 Reviewers should read this log file for every review. It includes all
-of the information that needed to evaluate a release.
+of the information needed to evaluate a release.
 
 At the top of the file we get the release model, which tells us things
 like when releases are allowed, what version numbers are allowed, etc.
@@ -138,7 +139,7 @@ exception to the SemVer rules is applied:
 
 * Projects tagging a regular release (not a "pre-release" like an
   alpha, beta, or rc) need to increment at least the Y part of their
-  version number when they minimum version of a dependency changes or
+  version number when the minimum version of a dependency changes or
   when a new dependency is added.
 
 The report shows the changes to the test requirements as the second
@@ -175,7 +176,7 @@ text fails for some reason this job will fail and the reno input files
 can be fixed instead of having the announce job fail.
 
 The final part of the output is a list of projects that have the
-current deliverable being released in their one of their dependency
+current deliverable being released in one of their dependency
 lists.  That section is useful for evaluating the impact of a late
 release when we're in the freeze period.
 
