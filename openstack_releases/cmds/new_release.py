@@ -98,16 +98,22 @@ def get_last_series_info(series, deliverable):
             'Could not determine previous version: %s' % (e,))
 
 
+def feature_increment(last_release):
+    """How much do we need to increment the feature number to provision
+    for future stable releases in skipped series, based on last release
+    found.
+    """
+    return max(1, last_release['depth'])
+
+
 def get_release_history(series, deliverable):
     """Retrieve the history of releases for a given deliverable.
     Returns an array of arrays containing the releases for each series,
     in reverse chronological order starting from specified series.
     """
     all_series = sorted(os.listdir('deliverables'), reverse=True)
-    series_index = all_series.index(series)
     release_history = []
-    # Only consider current & previous series, to preserve current behavior
-    for current_series in all_series[series_index:series_index + 1]:
+    for current_series in all_series[all_series.index(series):-1]:
         try:
             deliv_info = get_deliverable_data(current_series, deliverable)
             releases = deliv_info['releases']
@@ -120,14 +126,16 @@ def get_release_history(series, deliverable):
 
 
 def get_last_release(release_history, deliverable, release_type):
+    depth = 0
     for releases in release_history:
         if releases:
-            return releases[-1]
+            return dict({'depth': depth}, **releases[-1])
         elif release_type == 'bugfix':
             raise RuntimeError(
                 'The first release for a series must '
                 'be at least a feature release to allow '
                 'for stable releases from the previous series.')
+        depth = depth + 1
 
     raise RuntimeError('No previous version could be found')
 
@@ -228,7 +236,9 @@ def main():
         # base. If the differences are only patch levels the results
         # do not change, but if there was a minor version update then
         # the new version needs to be incremented based on that.
-        new_version_parts = increment_version(last_version, (0, 1, 0))
+        new_version_parts = increment_version(last_version, (
+            0, feature_increment(last_release), 0)
+        )
 
         # NOTE(dhellmann): Save the SHAs for the commits where the
         # branch was created in each repo, even though that is
@@ -272,7 +282,7 @@ def main():
     else:
         increment = {
             'bugfix': (0, 0, 1),
-            'feature': (0, 1, 0),
+            'feature': (0, feature_increment(last_release), 0),
             'major': (1, 0, 0),
         }[args.release_type]
         new_version_parts = increment_version(last_version, increment)
