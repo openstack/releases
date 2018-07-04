@@ -60,15 +60,10 @@ def main():
         print('creating output directory {}'.format(outdir))
         os.mkdir(outdir)
 
+    warn = '# Note: deliverable was not released in %s\n' % args.old_series
     old_deliverables = all_deliv.get_deliverables(None, args.old_series)
     for deliv in old_deliverables:
         if deliv.name in new_deliverables:
-            continue
-        if not deliv.is_released and not deliv.branches:
-            # There were no releases for the deliverable in the
-            # previous series, stop carrying it over.
-            print('{} skipped (no releases in {})'.format(
-                deliv.name, args.old_series))
             continue
         # Clean up some series-specific data that should not be copied
         # over.
@@ -82,3 +77,7 @@ def main():
         with open(outfilename, 'w', encoding='utf-8') as f:
             print('{} created'.format(outfilename))
             f.write(yamlutils.dumps(raw_data))
+            if not deliv.is_released and not deliv.branches:
+                # There were no releases for the deliverable in the
+                # previous series, add a comment in the file.
+                f.write(warn)
