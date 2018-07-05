@@ -35,9 +35,6 @@ TEAM_EXCEPTIONS = [
     'OpenStack Charms',
     'Chef OpenStack',
     'OpenStack-Helm',
-
-    # Others
-    'rally',
 ]
 
 WILDCARD_REPO_EXCEPTIONS = [
