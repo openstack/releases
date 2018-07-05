@@ -98,21 +98,38 @@ def get_last_series_info(series, deliverable):
             'Could not determine previous version: %s' % (e,))
 
 
-def get_last_release(deliverable_info, series, deliverable, release_type):
-    try:
-        last_release = deliverable_info['releases'][-1]
-    except (KeyError, IndexError):
-        print('No releases for %s in %s, yet.' % (
-            deliverable, series))
-        if release_type == 'bugfix':
+def get_release_history(series, deliverable):
+    """Retrieve the history of releases for a given deliverable.
+    Returns an array of arrays containing the releases for each series,
+    in reverse chronological order starting from specified series.
+    """
+    all_series = sorted(os.listdir('deliverables'), reverse=True)
+    series_index = all_series.index(series)
+    release_history = []
+    # Only consider current & previous series, to preserve current behavior
+    for current_series in all_series[series_index:series_index + 1]:
+        try:
+            deliv_info = get_deliverable_data(current_series, deliverable)
+            releases = deliv_info['releases']
+        except (IOError, OSError, KeyError):
+            print('No releases for %s in %s, yet.' % (
+                deliverable, series))
+            releases = []
+        release_history.append(releases)
+    return release_history
+
+
+def get_last_release(release_history, deliverable, release_type):
+    for releases in release_history:
+        if releases:
+            return releases[-1]
+        elif release_type == 'bugfix':
             raise RuntimeError(
                 'The first release for a series must '
                 'be at least a feature release to allow '
                 'for stable releases from the previous series.')
-        # Look for the version of the previous series.
-        prev_info = get_last_series_info(series, deliverable)
-        last_release = prev_info['releases'][-1]
-    return last_release
+
+    raise RuntimeError('No previous version could be found')
 
 
 def main():
@@ -181,9 +198,9 @@ def main():
         parser.error(e)
 
     try:
+        release_history = get_release_history(series, args.deliverable)
         last_release = get_last_release(
-            deliverable_info,
-            series,
+            release_history,
             args.deliverable,
             args.release_type,
         )
