@@ -48,6 +48,14 @@ Milestone-1
    milestone isn't important in terms of the release, so we want to
    encourage everyone to pay attention on their own.
 
+2. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
+   allowing official deliverables to directly tag or branch without
+   going through openstack/releases. You need to specify the location
+   of up-to-date checkouts for the governance and the project-config
+   repositories. For example::
+
+     tools/aclissues.py ../project-config ../governance
+
 Between Milestone-1 and Milestone-2
 ===================================
 
@@ -76,6 +84,14 @@ Milestone-2
 
    Filter out libraries that have insignificant changes (Updates to .gitreview,
    etc.) and include list in the weekly countdown email.
+
+2. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
+   allowing official deliverables to directly tag or branch without
+   going through openstack/releases. You need to specify the location
+   of up-to-date checkouts for the governance and the project-config
+   repositories. For example::
+
+     tools/aclissues.py ../project-config ../governance
 
 Between Milestone-2 and Milestone-3
 ===================================
@@ -167,6 +183,14 @@ Milestone-3
 
 7. Include a reminder about completing the responses to community-wide
    goals in the countdown email.
+
+8. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
+   allowing official deliverables to directly tag or branch without
+   going through openstack/releases. You need to specify the location
+   of up-to-date checkouts for the governance and the project-config
+   repositories. For example::
+
+     tools/aclissues.py ../project-config ../governance
 
 Between Milestone-3 and RC1
 ===========================
