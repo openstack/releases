@@ -124,7 +124,7 @@ class TestGetLastRelease(base.BaseTestCase):
             ],
         ]
         self.assertEqual(
-            {'version': '1.0.0'},
+            {'version': '1.0.0', 'depth': 0},
             new_release.get_last_release(
                 release_history,
                 'anydeliverable',
@@ -140,7 +140,7 @@ class TestGetLastRelease(base.BaseTestCase):
             ],
         ]
         self.assertEqual(
-            {'version': '1.0.1'},
+            {'version': '1.0.1', 'depth': 0},
             new_release.get_last_release(
                 release_history,
                 'anydeliverable',
@@ -173,7 +173,7 @@ class TestGetLastRelease(base.BaseTestCase):
             ],
         ]
         self.assertEqual(
-            {'version': '1.0.1'},
+            {'version': '1.0.1', 'depth': 1},
             new_release.get_last_release(
                 release_history,
                 'anydeliverable',
@@ -202,10 +202,60 @@ class TestGetLastRelease(base.BaseTestCase):
                 {'version': '1.0.0'},
             ],
         ]
-        self.assertRaises(
-            RuntimeError,
-            new_release.get_last_release,
+        self.assertEqual(
+            {'version': '1.0.0', 'depth': 2},
+            new_release.get_last_release(
+                release_history,
+                'anydeliverable',
+                'feature',
+            )
+        )
+
+
+class TestFeatureIncrement(base.BaseTestCase):
+
+    def test_last_release_in_current(self):
+        release_history = [
+            [
+                {'version': '1.1.1'},
+                {'version': '1.1.0'},
+            ],
+            [
+                {'version': '1.0.0'},
+            ],
+        ]
+        last = new_release.get_last_release(
             release_history,
             'anydeliverable',
-            'bugfix',
+            'feature',
         )
+        self.assertEqual(1, new_release.feature_increment(last))
+
+    def test_last_release_in_previous(self):
+        release_history = [
+            [],
+            [
+                {'version': '1.0.0'},
+            ],
+        ]
+        last = new_release.get_last_release(
+            release_history,
+            'anydeliverable',
+            'feature',
+        )
+        self.assertEqual(1, new_release.feature_increment(last))
+
+    def test_previous_was_skipped(self):
+        release_history = [
+            [],
+            [],
+            [
+                {'version': '1.1.3'},
+            ],
+        ]
+        last = new_release.get_last_release(
+            release_history,
+            'anydeliverable',
+            'feature',
+        )
+        self.assertEqual(2, new_release.feature_increment(last))
