@@ -72,10 +72,17 @@ support human reviewers. It writes the report to
 run as ``tox -e list-changes`` locally.
 
 Reviewers should read this log file for every review. It includes all
-of the information needed to evaluate a release.
+of the information needed to evaluate a release. The List Changes
+Report has multiple sections you will need to review.
+
+Release model
+-------------
 
 At the top of the file we get the release model, which tells us things
 like when releases are allowed, what version numbers are allowed, etc.
+
+Team details
+------------
 
 The "team details" section tells us the PTL and Liaison, so we know
 who to make sure has acknowledged the request.  If one of those people
@@ -84,6 +91,9 @@ want to make sure one of them knows about the release and approves it
 so that teams know we aren't going to release things they know are
 broken, for example.
 
+Tags
+----
+
 Next the report shows the governance tags for the repository.  If the
 request is for a release on a stable branch and the project has that
 ``stable:follows-policy`` tag, there will be a large banner that says
@@ -91,21 +101,33 @@ the release needs to be approved by the stable team. Releases from
 master will not include the banner, regardless of whether the
 deliverable has the tag.
 
-In the "Details for commit receiving new tag..." section the report
-shows what git thinks the previous tag and number of added patches
-should be. That's a quick way to verify that we aren't tagging 1.8.0
-after 1.9.0 or something like that.
+Details for commit receiving new tag X.Y.Z
+------------------------------------------
 
-The next step shows any other tags already on the commit being tagged.
+In the "Details for commit receiving new tag..." section (below the DEBUG
+lines) the report shows what git thinks the previous tag and number of
+added patches should be. That's a quick way to verify that we aren't tagging
+1.8.0 after 1.9.0 or something like that.
+
+Check existing tags
+-------------------
+
+The next section shows any other tags already on the commit being tagged.
 Sometimes a team will have a 3-part deliverable but only 1 part
 changes in a release. If they have defined the 3 parts as 1
 deliverable, they should tag all 3 anyway.
+
+All branches with version numbers
+---------------------------------
 
 The next section shows what versions are on all of the branches.  This
 is somewhat important, since for the first release off of master after
 creating a stable branch we want to make sure we are moving ahead in
 version numbers.  The validation job requires that least the Y value
 in a X.Y.Z version number is incremented.
+
+Branches containing commit
+--------------------------
 
 The next step shows which branch(es) contain(s) the commit. That's
 useful for ensuring that someone has not merged 2 branches together
@@ -115,22 +137,31 @@ For the current cycle, releases should always come from the ``master``
 branch. Stable releases should come from the appropriate stable
 branch.
 
+Relationship to HEAD
+--------------------
+
 The "Relationship to HEAD" section tells us if the release will
-skipping any commits.  Sometimes someone uses a commit hash locally
+skip any commits.  Sometimes someone uses a commit hash locally
 that is older than the most recent commit on the branch.  If this
-section does not say it is releasing HEAD, it is good ask the
-submitter to verify that they're doing what they mean to be doing.
-Sometimes they don't want to release the additional changes, and
+section does not say it is releasing HEAD (``Request releases from HEAD``),
+it is good ask the submitter to verify that they're doing what they mean
+to be doing. Sometimes they don't want to release the additional changes, and
 sometimes they don't know about them.  It is not necessary to take
 this extra precaution for milestone tags, because those are date-based
 and it doesn't really matter if they don't include everything.  We
 expect a lot of churn and progress around the milestone deadlines.
+
+Open patches, Documentation patches and Patches with Release Notes
+------------------------------------------------------------------
 
 The next couple of sections show open patches matching various
 criteria.  These are useful close to the release candidate phase of
 the cycle.  When we are close to a freeze date the release team might
 encourage teams to approve outstanding changes for requirements
 updates, release notes, and translations before releasing.
+
+Requirements Changes
+--------------------
 
 The next two sections, "Requirements Changes..." and "setup.cfg
 Changes...", show the dependencies that have changed for the project
@@ -146,6 +177,9 @@ The report shows the changes to the test requirements as the second
 part of the "Requirements Changes" section. Those do not trigger Y
 version changes.
 
+Release X.Y.Z will include
+--------------------------
+
 The "Release $version will include" section shows the actual changes
 being included in the new release -- the difference since the last
 version was tagged.  This is where the subjective part of the review
@@ -155,10 +189,10 @@ instead.  If anything in the list appears to describe a
 backwards-incompatible change, we want them to tag a major version
 update.
 
-The next section gives a more detailed view of the log messages.  Look
-for comments like "delete class X" or "add argument Y to method B" to
+The ``git log`` section gives a more detailed view of the log messages.
+Look for comments like "delete class X" or "add argument Y to method B" to
 indicate the release will not be backwards-compatible.  It is not
-necessary to *lower* a version number, say if the the release does not
+necessary to *lower* a version number, say, if the release does not
 have new features and has only fixed a bug.  Sometimes if there is
 only one change and it is clearly a bug fix we may ask them to do
 that, but most of the time releases include a mix of fixes and
@@ -170,10 +204,13 @@ to the zuul or tox configuration, because the end user won't see those
 changes. That happens sometimes with the projects that have a script
 to prepare the release proposal.
 
-The next part of the output show the same text that will appear in the
-release announcement email.  It is included so that if building that
-text fails for some reason this job will fail and the reno input files
-can be fixed instead of having the announce job fail.
+The next part of the output (below the ``Release Notes``) shows the same
+text that will appear in the release announcement email.  It is included so
+that if building that text fails for some reason this job will fail and the
+reno input files can be fixed instead of having the announce job fail.
+
+Users of $PROJECT
+-----------------
 
 The final part of the output is a list of projects that have the
 current deliverable being released in one of their dependency
