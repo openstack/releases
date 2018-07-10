@@ -172,6 +172,12 @@ def main():
               'branch is already tagged'),
     )
     parser.add_argument(
+        '--debug',
+        default=False,
+        action='store_true',
+        help='show tracebacks on errors',
+    )
+    parser.add_argument(
         '--stable-branch',
         default=False,
         action='store_true',
@@ -185,6 +191,12 @@ def main():
 
     workdir = tempfile.mkdtemp(prefix='releases-')
     print('creating temporary files in %s' % workdir)
+
+    def error(msg):
+        if args.debug:
+            raise msg
+        else:
+            parser.error(msg)
 
     def cleanup_workdir():
         if args.cleanup:
@@ -203,7 +215,7 @@ def main():
         deliverable_info = get_deliverable_data(
             series, args.deliverable)
     except (IOError, OSError) as e:
-        parser.error(e)
+        error(e)
 
     try:
         release_history = get_release_history(series, args.deliverable)
@@ -213,7 +225,7 @@ def main():
             args.release_type,
         )
     except RuntimeError as err:
-        parser.error(err)
+        error(err)
     last_version = last_release['version'].split('.')
 
     add_stable_branch = args.stable_branch or is_procedural
