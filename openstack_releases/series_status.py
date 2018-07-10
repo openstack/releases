@@ -86,6 +86,11 @@ class SeriesStatus(collections.abc.Mapping):
         }
         return organized
 
+    @property
+    def names(self):
+        for entry in self._raw_data:
+            yield entry['name']
+
     # Mapping API
 
     def __len__(self):
