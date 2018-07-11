@@ -3,6 +3,10 @@ launchpad: solum
 release-model: cycle-with-intermediary
 team: solum
 type: horizon-plugin
-release-type: python-pypi
 repository-settings:
   openstack/solum-dashboard: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: f1b8460ed0ef055afc7169e9864cbe31bdf809c8
