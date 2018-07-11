@@ -5,3 +5,8 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 3.5.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: d8cd0ceee7746b9fe5468b239784b3509b7c47bc
