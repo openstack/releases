@@ -5,3 +5,8 @@ team: solum
 type: service
 repository-settings:
   openstack/solum: {}
+releases:
+  - version: 5.6.0
+    projects:
+      - repo: openstack/solum
+        hash: b163941ad5db5599e87144485ac0860272344d80
