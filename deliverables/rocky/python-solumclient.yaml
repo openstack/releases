@@ -5,3 +5,8 @@ team: solum
 type: client-library
 repository-settings:
   openstack/python-solumclient: {}
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/python-solumclient
+        hash: ea1587bceb45b0e3210f6ae213ceed05557c99f7
