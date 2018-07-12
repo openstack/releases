@@ -21,6 +21,7 @@ import shutil
 import tempfile
 
 from openstack_releases import gitutils
+from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 # Release models that support release candidates.
@@ -111,9 +112,14 @@ def get_release_history(series, deliverable):
     Returns an array of arrays containing the releases for each series,
     in reverse chronological order starting from specified series.
     """
-    all_series = sorted(os.listdir('deliverables'), reverse=True)
+    if series == '_independent':
+        included_series = ['_independent']
+    else:
+        status = series_status.SeriesStatus.default()
+        all_series = reversed(status.names)
+        included_series = all_series[all_series.index(series):-1]
     release_history = []
-    for current_series in all_series[all_series.index(series):-1]:
+    for current_series in included_series:
         try:
             deliv_info = get_deliverable_data(current_series, deliverable)
             releases = deliv_info['releases']
