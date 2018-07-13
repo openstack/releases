@@ -4,6 +4,12 @@ launchpad: neutron
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/neutron-tempest-plugin: {}
+  openstack/neutron-tempest-plugin:
+    tarball-base: neutron_tempest_plugin
 team: neutron
 type: tempest-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/neutron-tempest-plugin
+        hash: 5fece0e41f957f7eba4f8a98d86bab2904c0f3e8
