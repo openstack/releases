@@ -245,6 +245,34 @@ Project-specific events
 PTL Elections
 -------------
 
+.. _s-ptl-email-deadline:
+
+PTL Election Email Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date. Electorate
+rolls are generated after this date and ballots will be sent to the
+listed gerrit email address.   Refer to the `Election Site`_ for exact deatls.
+
+.. _s-ptl-nomination:
+
+Stein PTLs self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Project team lead candidates for the Stein cycle should announce their
+candidacy during this week.  Refer to the `Election Site`_ for exact deatls.
+
+.. _s-ptl-election:
+
+Stein cycle PTLs election
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Election week for Project team leads (where an election must be held to
+determine the winner).  Refer to the `Election Site`_ for exact deatls.
+
+.. _Election Site: https://governance.openstack.org/election/
+
 Keystone
 --------
 
