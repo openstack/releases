@@ -119,10 +119,11 @@ Between Milestone-2 and Milestone-3
       will control the stable/$series branch prior to release. They
       should reach out to the stable-maint-core group for additions.
 
-   2. Notify the Infrastructure team to `generate
-     <https://docs.openstack.org/infra/system-config/signing.html#generation>`_
-     an artifact signing key (but not replace the current one yet), and
-     begin the attestation process.
+   2. Notify the Infrastructure team to `generate an artifact signing key`_
+      (but not replace the current one yet), and
+      begin the attestation process.
+
+      .. _generate an artifact signing key: https://docs.openstack.org/infra/system-config/signing.html#generation
 
 5. Two weeks before milestone 3, warn cycle-with-intermediary projects
    that had changes over the cycle but no release yet that the release
@@ -258,7 +259,9 @@ RC1
    create the stable/$series branch for ``openstack/requirements``.
    Then announce that the requirements freeze is lifted from master.
 
-     Note that we wait until after the other projects have branched to
+   .. note::
+
+     We wait until after the other projects have branched to
      create the branch for requirements because tests for the stable
      branches of those projects will fall back to using the master
      branch of requirements until the same stable branch is created,
