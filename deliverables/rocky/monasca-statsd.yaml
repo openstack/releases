@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 1.10.1
+    name: stable/rocky
 launchpad: monasca
 release-model: cycle-with-intermediary
 team: monasca
@@ -10,3 +13,7 @@ releases:
       - hash: 9f64338f4ac3277d7016311fb86fb33f458fc268
         repo: openstack/monasca-statsd
     version: 1.10.0
+  - projects:
+      - hash: 27e50fefddd631c275edc40a2067f8de2a55ae44
+        repo: openstack/monasca-statsd
+    version: 1.10.1
