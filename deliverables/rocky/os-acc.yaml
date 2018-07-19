@@ -1,0 +1,16 @@
+branches:
+  - location: 0.1.0
+    name: stable/rocky
+include-pypi-link: yes
+storyboard: 968
+release-model: cycle-with-intermediary
+team: cyborg
+type: library
+repository-settings:
+  openstack/os-acc:
+    pypi-name: os-acc
+releases:
+  - projects:
+      - hash: f3cb2261c3f8aa1d6cb029fc0ce8e00b53ec7ce0
+        repo: openstack/os-acc
+    version: 0.1.0
