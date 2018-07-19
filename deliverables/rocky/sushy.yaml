@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 1.6.0
+    name: stable/rocky
 launchpad: sushy
 team: ironic
 type: library
@@ -14,3 +17,7 @@ releases:
       - hash: 31cdd0f951bcd6c8a9b2d3f9628468aef5e7883b
         repo: openstack/sushy
     version: 1.5.0
+  - projects:
+      - hash: 8f952f874b7d0f81f8bd6b7a09d7b3c1174ecbbb
+        repo: openstack/sushy
+    version: 1.6.0
