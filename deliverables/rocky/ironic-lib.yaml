@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 2.14.0
+    name: stable/rocky
 launchpad: ironic-lib
 team: ironic
 type: library
@@ -11,3 +14,7 @@ releases:
       - hash: 19c9f0594d34e8c91fb485bf438b70b095203c29
         repo: openstack/ironic-lib
     version: 2.13.0
+  - projects:
+      - hash: 344161bd50ada6ee8bed4a731af3ad6aab2fc810
+        repo: openstack/ironic-lib
+    version: 2.14.0
