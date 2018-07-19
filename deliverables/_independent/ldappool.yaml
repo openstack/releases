@@ -2,5 +2,10 @@
 launchpad: ldappool
 team: keystone
 type: library
+releases:
+  - version: 2.3.0
+    projects:
+      - repo: openstack/ldappool
+        hash: 459e1b13994ae6cce7b7ec7061d85d4a966da64c
 repository-settings:
   openstack/ldappool: {}
