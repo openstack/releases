@@ -47,3 +47,6 @@ team: keystone
 type: library
 repository-settings:
   openstack/keystoneauth: {}
+branches:
+  - location: 3.10.0
+    name: stable/rocky
