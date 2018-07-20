@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 01c6dfef2ab9ec3056b015627767ced7f1936aff
+  - version: 6.1.0
+    projects:
+      - repo: openstack/kolla
+        hash: ee9ddb6c57ff521932528d83c2ffd8a5136a1970
 cycle-highlights:
   - 'Upgrade to ceph luminous'
   - 'Add almanach, certmonger, ceph-nfs, ptp, rsyslog, sensu and tripleo ui image'
