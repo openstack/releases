@@ -6,3 +6,13 @@ team: Telemetry
 type: library
 repository-settings:
   openstack/ceilometermiddleware: {}
+releases:
+  - projects:
+      - hash: 8332b9eaff3a59026e7af1a7339525440a960d51
+        repo: openstack/ceilometermiddleware
+    version: 1.3.0
+    flags:
+      - forced
+branches:
+  - location: 1.3.0
+    name: stable/rocky
