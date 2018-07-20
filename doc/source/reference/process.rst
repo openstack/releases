@@ -153,7 +153,13 @@ Final Library Release (week before Milestone-3)
    changes merged over the cycle but no release yet. Do not create
    branches for non-library projects.
 
-6. For stable libraries that did not have any change merged over the
+6. Tag HEAD of master for any cycle-with-intermediary project that has
+   unreleased CI configuration changes that would not have triggered a
+   release earlier in the cycle. Failing to tag means those CI changes
+   will not be on the stable branch and so the stable branch may start
+   out broken. Do not create branches for non-library projects.
+
+7. For stable libraries that did not have any change merged over the
    cycle, create a stable branch from the last available release.
 
 
