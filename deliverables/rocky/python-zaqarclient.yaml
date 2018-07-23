@@ -4,5 +4,13 @@ launchpad: python-zaqarclient
 release-model: cycle-with-intermediary
 team: zaqar
 type: client-library
+releases:
+  - version: 1.10.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 1a50023196286fa2644afcea8ee6498498cf18b6
+branches:
+  - name: stable/rocky
+    location: 1.10.0
 repository-settings:
   openstack/python-zaqarclient: {}
