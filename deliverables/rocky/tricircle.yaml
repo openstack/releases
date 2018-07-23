@@ -4,5 +4,13 @@ launchpad: tricircle
 release-model: cycle-with-intermediary
 team: tricircle
 type: service
+releases:
+  - version: 5.1.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 361e5e7a7285e469410df03e8dd1edfdd0243891
+branches:
+  - name: stable/rocky
+    location: 5.1.0
 repository-settings:
   openstack/tricircle: {}
