@@ -700,6 +700,15 @@ def validate_pypi_readme(deliv, context):
         gitutils.safe_clone_repo(
             context.workdir, project.repo.name, project.hash, context)
 
+    if latest_release.is_eol:
+        print('skipping README validation for EOL tag {}'.format(
+            latest_release.version))
+        return
+    if latest_release.is_em:
+        print('skipping README validation for EM tag {}'.format(
+            latest_release.version))
+        return
+
     for repo in deliv.repos:
 
         job_templates = context.zuul_projects.get(repo.name, {}).get(
