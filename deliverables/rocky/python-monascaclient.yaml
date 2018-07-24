@@ -15,3 +15,10 @@ releases:
       - hash: be83eae483cd864d882fc2ef209c8b1d1724a42b
         repo: openstack/python-monascaclient
     version: 1.12.0
+  - projects:
+      - hash: acb6a580eca69d3fff434f1f930849d5f1abf3d7
+        repo: openstack/python-monascaclient
+    version: 1.12.1
+branches:
+  - location: 1.12.1
+    name: stable/rocky
