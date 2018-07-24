@@ -10,6 +10,12 @@ releases:
       - repo: openstack/python-pankoclient
         hash: e9a975fba6ad501f50280da671b9a2a8794474e7
         tarball-base: pankoclient
+  - version: 0.4.1
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 0be95b1d9d64751525820d8bbe1b56be99740ac6
+        tarball-base: pankoclient
+
 branches:
   - location: 0.4.0
     name: stable/queens
