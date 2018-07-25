@@ -13,5 +13,12 @@ releases:
       - hash: a49938dad21c173a69390742e061143b42557006
         repo: openstack/python-ironicclient
     version: 2.4.0
+  - projects:
+      - hash: fb94fb825cccecd11c4a2f78beeff3b0b19956f3
+        repo: openstack/python-ironicclient
+    version: 2.5.0
+branches:
+  - location: 2.5.0
+    name: stable/rocky
 repository-settings:
   openstack/python-ironicclient: {}
