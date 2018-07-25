@@ -11,6 +11,13 @@ releases:
       - hash: 1cf00a5cc9c095071d18137c44f2722d0e20d84e
         repo: openstack/python-glanceclient
     version: 2.11.1
+  - projects:
+      - hash: 2c26f2748f433fbb510715532b45973768bf7483
+        repo: openstack/python-glanceclient
+    version: 2.12.0
+branches:
+  - location: 2.12.0
+    name: stable/rocky
 team: glance
 type: client-library
 repository-settings:
