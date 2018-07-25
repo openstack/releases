@@ -177,12 +177,12 @@ fi
 
 if [ ! -z "$REF" ]; then
     # Check out the specified reference.
-    (cd $local_dir && git checkout "$REF")
+    (cd $local_dir && git checkout -f "$REF")
 else
     # Check out the expected branch (master is the default, but if the
-    # directory already existed we might have checked out something else
+    # directory already exists we might have checked out something else
     # before so just do it again).
     (cd $local_dir &&
-            (git checkout $BRANCH || git checkout master) &&
+            (git checkout -f $BRANCH || git checkout -f master) &&
             git pull --ff-only)
 fi
