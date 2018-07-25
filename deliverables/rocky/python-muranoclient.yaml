@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 2d15d91bbb8fbd3e5a7eb01874ca244d672da03c
+  - version: 1.1.1
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 70b4392c7f8524ac25dbf3ab0feb3ac4127c1ecf
+branches:
+  - location: 1.1.1
+    name: stable/rocky
