@@ -10,5 +10,12 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: a5c9e16a4f517bc964d57d6c2d02e3d5a809c637
+  - projects:
+      - hash: 64d007fba460ae710ae03b355b31b9d02bc83be3
+        repo: openstack/python-octaviaclient
+    version: 1.6.0
 repository-settings:
   openstack/python-octaviaclient: {}
+branches:
+  - location: 1.6.0
+    name: stable/rocky
