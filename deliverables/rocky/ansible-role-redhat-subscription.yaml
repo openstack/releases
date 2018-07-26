@@ -1,0 +1,16 @@
+---
+launchpad: tripleo
+release-model: cycle-with-intermediary
+team: tripleo
+type: other
+repository-settings:
+  openstack/ansible-role-redhat-subscription: {}
+releases:
+  - projects:
+      - hash: 569f43f79d2e7588922e43052096825a544e567d
+        repo: openstack/ansible-role-redhat-subscription
+    version: 1.0.0
+  - projects:
+      - hash: 569f43f79d2e7588922e43052096825a544e567d
+        repo: openstack/ansible-role-redhat-subscription
+    version: 1.0.1
