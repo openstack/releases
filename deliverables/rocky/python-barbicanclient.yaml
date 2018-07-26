@@ -3,5 +3,10 @@ launchpad: python-barbicanclient
 release-model: cycle-with-intermediary
 team: barbican
 type: client-library
+releases:
+  - projects:
+      - hash: 985c46edd50595ba9e1c528c1893fc77a727078e
+        repo: openstack/python-barbicanclient
+    version: 4.7.0
 repository-settings:
   openstack/python-barbicanclient: {}
