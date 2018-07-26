@@ -1,5 +1,5 @@
 ---
-include-pypi-link: true
+include-pypi-link: yes
 launchpad: python-openstackclient
 release-model: cycle-with-intermediary
 team: OpenStackClient
@@ -15,3 +15,6 @@ releases:
       - hash: 8d28a59c43414e8671e660781d534c8b3f942b38
         repo: openstack/osc-lib
     version: 1.11.0
+branches:
+  - location: 1.11.0
+    name: stable/rocky

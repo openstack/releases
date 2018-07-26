@@ -11,3 +11,6 @@ releases:
         tarball-base: kuryr-lib
 repository-settings:
   openstack/kuryr: {}
+branches:
+  - location: 0.8.0
+    name: stable/rocky

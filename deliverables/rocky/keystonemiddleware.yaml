@@ -19,3 +19,6 @@ team: keystone
 type: library
 repository-settings:
   openstack/keystonemiddleware: {}
+branches:
+  - location: 5.2.0
+    name: stable/rocky
