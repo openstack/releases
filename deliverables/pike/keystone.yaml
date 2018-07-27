@@ -29,6 +29,10 @@ releases:
       - repo: openstack/keystone
         hash: e2d33c2819b1f52e7ee651d06d0ed50fd54fad15
     version: 12.0.0
+  - projects:
+      - hash: ce46cc25dc4d967c062587ab21b2b38cab045e00
+        repo: openstack/keystone
+    version: 12.0.1
 branches:
   - location: 12.0.0.0rc1
     name: stable/pike
