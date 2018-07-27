@@ -32,6 +32,10 @@ releases:
       - repo: openstack/keystone
         hash: 847676854572e0c36535048b731f966590adb746
     version: 13.0.0
+  - projects:
+      - hash: 7b1b6a6fc8bdbd2218501282be760d87d096de61
+        repo: openstack/keystone
+    version: 13.0.1
 cycle-highlights:
   - |
     Keystone now offers a better story for applications interacting with
