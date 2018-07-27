@@ -8,9 +8,13 @@ releases:
     projects:
       - repo: openstack/heat
         hash: dd93b2318c029133705e5a9788cebc97d766dcd1
-  - projects:
+  - version: 11.0.0.0b2
+    projects:
       - hash: 8f14f694f7917881dee60f4666494c14b5555c49
         repo: openstack/heat
-    version: 11.0.0.0b2
+  - version: 11.0.0.0b3
+    projects:
+      - repo: openstack/heat
+        hash: 2125395c20db3999e98242bd283b1cae47919fe0
 repository-settings:
   openstack/heat: {}
