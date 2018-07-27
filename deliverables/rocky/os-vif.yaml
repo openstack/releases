@@ -15,6 +15,11 @@ releases:
       - repo: openstack/os-vif
         hash: 96b5a11d35d74faf7c9866dceef66984dbcddae6
         tarball-base: os_vif
+  - projects:
+      - hash: 538f9de75650407271ac14e8b9ce8ac735fb7eba
+        repo: openstack/os-vif
+        tarball-base: os_vif
+    version: 1.11.1
 repository-settings:
   openstack/os-vif: {}
 branches:
