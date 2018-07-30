@@ -1,7 +1,13 @@
 ---
+include-pypi-link: yes
 launchpad: ec2-api
 release-model: cycle-with-intermediary
 team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/ec2-api
+        hash: c65cb663de5d1cfb239bbf32610f0f7a71c7e170
