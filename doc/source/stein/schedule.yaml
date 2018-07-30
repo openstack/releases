@@ -1,0 +1,131 @@
+---
+start-week: 2018-09-03
+release-week: 2019-04-08
+cycle:
+- end: '2018-08-31'
+  start: '2018-08-27'
+  x-project:
+    - r-release
+    - s-goals-research
+- end: '2018-09-07'
+  name: R-31
+  start: '2018-09-03'
+- end: '2018-09-14'
+  name: R-30
+  start: '2018-09-10'
+  x-project:
+    - s-ptg
+- end: '2018-09-21'
+  name: R-29
+  start: '2018-09-17'
+- end: '2018-09-28'
+  name: R-28
+  start: '2018-09-24'
+- end: '2018-10-05'
+  name: R-27
+  start: '2018-10-01'
+- end: '2018-10-12'
+  name: R-26
+  start: '2018-10-08'
+- end: '2018-10-19'
+  name: R-25
+  start: '2018-10-15'
+- end: '2018-10-26'
+  name: R-24
+  start: '2018-10-22'
+  x-project:
+    - s-1
+- end: '2018-11-02'
+  name: R-23
+  start: '2018-10-29'
+- end: '2018-11-09'
+  name: R-22
+  start: '2018-11-05'
+  x-project:
+    - s-summit
+- end: '2018-11-16'
+  name: R-21
+  start: '2018-11-12'
+- end: '2018-11-23'
+  name: R-20
+  start: '2018-11-19'
+- end: '2018-11-30'
+  name: R-19
+  start: '2018-11-26'
+- end: '2018-12-07'
+  name: R-18
+  start: '2018-12-03'
+- end: '2018-12-14'
+  name: R-17
+  start: '2018-12-10'
+- end: '2018-12-21'
+  name: R-16
+  start: '2018-12-17'
+- end: '2018-12-28'
+  name: R-15
+  start: '2018-12-24'
+- end: '2019-01-04'
+  name: R-14
+  start: '2018-12-31'
+- end: '2019-01-11'
+  name: R-13
+  start: '2019-01-07'
+  x-project:
+    - s-2
+    - s-mf
+- end: '2019-01-18'
+  name: R-12
+  start: '2019-01-14'
+- end: '2019-01-25'
+  name: R-11
+  start: '2019-01-21'
+- end: '2019-02-01'
+  name: R-10
+  start: '2019-01-28'
+- end: '2019-02-08'
+  name: R-9
+  start: '2019-02-04'
+- end: '2019-02-15'
+  name: R-8
+  start: '2019-02-11'
+- end: '2019-02-22'
+  name: R-7
+  start: '2019-02-18'
+- end: '2019-03-01'
+  name: R-6
+  start: '2019-02-25'
+  x-project:
+    - s-final-lib
+- end: '2019-03-08'
+  name: R-5
+  start: '2019-03-04'
+  x-project:
+    - s-3
+    - s-ff
+    - s-final-clientlib
+    - s-soft-sf
+    - s-rf
+    - s-goals-complete
+- end: '2019-03-15'
+  name: R-4
+  start: '2019-03-11'
+- end: '2019-03-22'
+  name: R-3
+  start: '2019-03-18'
+  x-project:
+    - s-rc1
+    - s-hard-sf
+- end: '2019-03-29'
+  name: R-2
+  start: '2019-03-25'
+- end: '2019-04-05'
+  name: R-1
+  start: '2019-04-01'
+  x-project:
+    - s-finalrc
+- end: '2019-04-12'
+  name: R+0
+  start: '2019-04-08'
+  x-project:
+  - s-release
+
