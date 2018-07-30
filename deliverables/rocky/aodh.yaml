@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: c723feffe0990892fc15774b2c817207b41006a8
+branches:
+  - name: stable/rocky
+    location: 7.0.0
