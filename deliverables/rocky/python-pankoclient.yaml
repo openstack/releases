@@ -6,3 +6,12 @@ team: Telemetry
 type: client-library
 repository-settings:
   openstack/python-pankoclient: {}
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 572aee9cf6ac618eb5d1ea325f9e59414d387dbf
+        tarball-base: pankoclient
+branches:
+  - location: 0.5.0
+    name: stable/rocky
