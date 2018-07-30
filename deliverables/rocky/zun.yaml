@@ -3,5 +3,10 @@ launchpad: zun
 release-model: cycle-with-intermediary
 team: zun
 type: service
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/zun
+        hash: 5b4777df198d2e9ae970f1bbf616eafb29abd8b4
 repository-settings:
   openstack/zun: {}
