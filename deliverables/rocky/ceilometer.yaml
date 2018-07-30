@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/ceilometer: {}
+releases:
+  - version: 11.0.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: 994911d7bbd6f4cc63ea3fda7ca7354fd651ff6f
+branches:
+  - name: stable/rocky
+    location: 11.0.0
