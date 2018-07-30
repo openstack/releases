@@ -19,6 +19,7 @@ items:
     status:
       type: "string"
       enum:
+        - future
         - development
         - maintained
         - extended maintenance
@@ -38,6 +39,7 @@ items:
         status:
           type: "string"
           enum:
+            - future
             - development
             - maintained
             - extended maintenance
