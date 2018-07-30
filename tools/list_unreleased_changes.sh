@@ -45,10 +45,11 @@ function list_changes {
         echo "$repo has not yet been released"
     else
         echo
-        local end_sha=$(git log -n 1 --pretty=tformat:%h)
+        end_sha=$(git log -n 1 --pretty=tformat:%h)
         echo "Changes between $prev_tag and $end_sha"
         echo
-        git log --no-color --no-merges --format='%h %ci %s' --graph ${prev_tag}..${end_sha}
+        git log --no-color --no-merges --format='%h %ci %s' \
+            --graph ${prev_tag}..${end_sha}
         echo
     fi
 }

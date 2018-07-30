@@ -32,6 +32,7 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
 fi
 
 echo "Finding $SERIES library repositories..."
-repos=$(list-deliverables --repos --type library --type client-library --series $SERIES)
+repos=$(list-deliverables --repos --type library --type client-library \
+    --series $SERIES)
 
 $TOOLSDIR/list_unreleased_changes.sh $BRANCH $repos
