@@ -25,6 +25,9 @@ from openstack_releases import yamlutils
 class TestStableStatus(base.BaseTestCase):
 
     _series_status_data = yamlutils.loads(textwrap.dedent('''
+    - name: stein
+      status: future
+      initial-release: 2019-04-11
     - name: rocky
       status: development
       initial-release: 2018-08-30
