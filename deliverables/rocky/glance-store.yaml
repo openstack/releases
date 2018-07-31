@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 7141c77f18b654f42329d5639aee9c8a694f7d97
+  - version: 0.26.1
+    projects:
+      - repo: openstack/glance_store
+        hash: 3e8f3d62be8366b624b0ea5b515d6f771289f686
 branches:
   - name: stable/rocky
     location: 0.26.0
