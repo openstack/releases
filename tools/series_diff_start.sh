@@ -32,7 +32,7 @@ END="$1"
 shift
 REPOS="$@"
 
-function get_branch_end() {
+function get_branch_end {
     local branch="$1"
 
     if git tag | grep -q ${branch}-eol; then
@@ -43,9 +43,9 @@ function get_branch_end() {
     fi
 }
 
-function get_branch_base() {
+function get_branch_base {
     local branch="$1"
-    local scan_start="$(get_branch_end $branch)"
+    scan_start="$(get_branch_end $branch)"
 
     git log --decorate --oneline ..${scan_start} \
         | grep tag: \
@@ -54,15 +54,15 @@ function get_branch_base() {
         | cut -f1 -d')'
 }
 
-function count_lines() {
+function count_lines {
     git ls-files | xargs wc -l | tail -n 1 | awk '{print $1}'
 }
 
-function count_files() {
+function count_files {
     git ls-files | wc -l
 }
 
-function git_ls_tree() {
+function git_ls_tree {
     local tag="$1"
     local extension="$2"
 
@@ -73,7 +73,7 @@ function git_ls_tree() {
     fi
 }
 
-function shas_at_tag() {
+function shas_at_tag {
     # Produce a list of shas used by objects representing files with
     # real content at the tag point
     local tag="$1"
@@ -92,7 +92,7 @@ function shas_at_tag() {
     done
 }
 
-function count_unchanged_files() {
+function count_unchanged_files {
     local start="$1"
     local end="$2"
     local extension="$3"

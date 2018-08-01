@@ -33,5 +33,7 @@ else
 fi
 
 for pipeline in $pipelines; do
-    echo "zuul enqueue-ref --tenant=openstack --trigger=gerrit --pipeline=$pipeline --project=$repo --ref=refs/tags/$tag --newrev=$hash"
+    echo "zuul enqueue-ref --tenant=openstack --trigger=gerrit \
+        --pipeline=$pipeline --project=$repo --ref=refs/tags/$tag \
+        --newrev=$hash"
 done

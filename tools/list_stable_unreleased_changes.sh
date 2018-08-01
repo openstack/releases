@@ -27,6 +27,7 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
     source $BASEDIR/.tox/venv/bin/activate
 fi
 
-repos="$(list-deliverables --repos --tag stable:follows-policy --series $SERIES)"
+repos="$(list-deliverables --repos --tag stable:follows-policy \
+            --series $SERIES)"
 
 $TOOLSDIR/list_unreleased_changes.sh stable/$SERIES $repos

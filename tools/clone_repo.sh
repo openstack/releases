@@ -71,7 +71,8 @@ REF=""
 UPSTREAM="git://git.openstack.org"
 
 if [[ $(uname) != "Darwin" ]]; then
-    OPTS=`getopt -o hv --long branch:,cache-dir:,ref:,upstream:,workspace: -n $0 -- "$@"`
+    OPTS=`getopt -o hv --long branch:,cache-dir:,ref:,upstream:,workspace: \
+        -n $0 -- "$@"`
     if [ $? != 0 ] ; then
         echo "Failed parsing options." >&2
         print_help

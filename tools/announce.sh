@@ -160,7 +160,8 @@ if [[ $FIRST_FULL = "yes" ]]; then
 fi
 
 # Set up email tags for the project owner.
-PROJECT_OWNER=${PROJECT_OWNER:-$(get-repo-owner --email-tag $REPOORGNAME/$SHORTNAME || echo "")}
+PROJECT_OWNER=${PROJECT_OWNER:-$(get-repo-owner \
+    --email-tag $REPOORGNAME/$SHORTNAME || echo "")}
 if [[ "$PROJECT_OWNER" != "" ]]; then
     email_tags="--email-tags ${PROJECT_OWNER}"
 fi
