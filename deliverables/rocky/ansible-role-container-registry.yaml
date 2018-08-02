@@ -1,0 +1,12 @@
+---
+launchpad: tripleo
+release-model: cycle-with-intermediary
+team: tripleo
+type: other
+repository-settings:
+  openstack/ansible-role-container-registry: {}
+releases:
+  - projects:
+      - hash: c41c49db4a5498810638b7f11dbd9db3fac6ffc4
+        repo: openstack/ansible-role-container-registry
+    version: 1.0.0

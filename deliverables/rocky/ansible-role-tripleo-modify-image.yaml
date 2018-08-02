@@ -1,0 +1,12 @@
+---
+launchpad: tripleo
+release-model: cycle-with-intermediary
+team: tripleo
+type: other
+repository-settings:
+  openstack/ansible-role-tripleo-modify-image: {}
+releases:
+  - projects:
+      - hash: 3b4e2e64e45bfc8363dbb40ba68c52b8fa9b080a
+        repo: openstack/ansible-role-tripleo-modify-image
+    version: 1.0.0
