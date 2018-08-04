@@ -6,3 +6,11 @@ team: senlin
 type: client-library
 repository-settings:
   openstack/python-senlinclient: {}
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 08649a0a858b359164990d0e7418eb3f676d4394
+branches:
+  - location: 1.8.0
+    name: stable/rocky
