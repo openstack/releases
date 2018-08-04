@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: b163941ad5db5599e87144485ac0860272344d80
+  - version: 5.7.0
+    projects:
+      - repo: openstack/solum
+        hash: 82aa60445c37fff48928e9e40b41ba893abfb788
+branches:
+  - location: 5.7.0
+    name: stable/rocky
