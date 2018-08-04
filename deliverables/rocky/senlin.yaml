@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 412ec0be6603c89824a5c9c6e3e59fc6c646ee1b
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: 1ea42387e4ed841c001e09efbd26677fde428bb7
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/rocky
