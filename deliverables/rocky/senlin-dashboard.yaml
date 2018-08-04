@@ -3,6 +3,13 @@ launchpad: senlin
 release-model: cycle-with-intermediary
 team: senlin
 type: horizon-plugin
-release-type: python-pypi
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - version: 0.9.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: ed499720094c3926636a9f80261a0cc3e7b649c6
+branches:
+  - location: 0.9.0
+    name: stable/rocky
