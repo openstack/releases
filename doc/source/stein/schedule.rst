@@ -158,7 +158,7 @@ packaging / lifecycle management projects.
 RC1 target week
 ---------------
 
-The week of 18 March 2019 is the target date for projects following the
+This week is the target for projects following the
 `release:cycle-with-milestones`_ model to issue their first release candidate,
 with a deadline of 21 March 2019.
 
