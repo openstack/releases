@@ -12,5 +12,12 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 179a08d6043233c47938d7d47a0d8a5eafb291c1
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: bd644fec02ec592b8c79828583c689b28dd61675
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/zaqar: {}
