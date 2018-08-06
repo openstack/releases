@@ -4,5 +4,13 @@ launchpad: python-magnumclient
 release-model: cycle-with-intermediary
 team: magnum
 type: client-library
+releases:
+  - projects:
+      - hash: 3e728f945f42e28c4f912c58a45c297d219e03bb
+        repo: openstack/python-magnumclient
+    version: 2.10.0
+branches:
+  - location: 2.10.0
+    name: stable/rocky
 repository-settings:
   openstack/python-magnumclient: {}
