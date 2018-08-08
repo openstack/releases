@@ -65,6 +65,13 @@ def main():
         dest='types',
     )
     parser.add_argument(
+        '--include-trailing',
+        action='append_const',
+        const='cycle-trailing',
+        default=['cycle-with-intermediary'],
+        dest='models',
+    )
+    parser.add_argument(
         '--dry-run', '-n',
         default=False,
         action='store_true',
@@ -114,7 +121,7 @@ def main():
             deliverable_data = yamlutils.loads(f.read())
         if deliverable_data['type'] not in args.types:
             continue
-        if deliverable_data['release-model'] != 'cycle-with-intermediary':
+        if deliverable_data['release-model'] not in args.models:
             print('WARNING {} has release model {}, skipping'.format(
                 deliverable_name, deliverable_data['release-model']))
             continue
