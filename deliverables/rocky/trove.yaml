@@ -14,3 +14,13 @@ releases:
       - hash: 4645f5518dd2df24bb5701decf8e7a75a28ed2bd
         repo: openstack/trove
     version: 10.0.0.0b3
+  - projects:
+      - hash: 4d358c8f5de4f7feda17053fb363be033146c9dc
+        repo: openstack/trove
+    version: 10.0.0.0rc1
+branches:
+  - location: 10.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - Improve Python 3 support, all py3 unitests are new enabled
+  - Remove support of creating volume from Nova
