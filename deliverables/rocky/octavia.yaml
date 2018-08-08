@@ -21,3 +21,18 @@ releases:
       - hash: d3092c0facdbd4e3d0c0190710e286914ee14006
         repo: openstack/octavia
     version: 3.0.0.0b3
+  - projects:
+      - hash: 3935dce08909b6e96bc68e2f051c95f734201334
+        repo: openstack/octavia
+    version: 3.0.0.0rc1
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - 'Octavia now supports provider drivers, allowing third party load
+     balancing drivers to be integrated with the Octavia v2 API.'
+  - 'UDP protocol load balancing has been added to Octavia. This is useful for
+     IoT use cases.'
+  - 'Pools can have *backup* members, also known as "sorry servers", that
+     respond when all of the members of a pool are not available.'
+  - 'Users can now configure load balancer timeouts per listener.'
