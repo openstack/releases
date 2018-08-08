@@ -10,3 +10,10 @@ releases:
       - hash: d851e2e5cb3c7d96b4deec6c13d38d21768f2dd1
         repo: openstack/neutron-fwaas-dashboard
     version: 1.4.0
+  - projects:
+      - hash: 5ece747e15896cf998e3787aa07f547fa39e3e44
+        repo: openstack/neutron-fwaas-dashboard
+    version: 1.5.0
+branches:
+  - location: 1.5.0
+    name: stable/rocky
