@@ -5,6 +5,9 @@ team: watcher
 type: service
 repository-settings:
   openstack/watcher: {}
+branches:
+  - name: stable/rocky
+    location: 1.12.0
 releases:
   - version: 1.9.0
     projects:
@@ -20,4 +23,9 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 595cd1d435319fa5b0a03e10ebab704c05a9f7ca
+        tarball-base: python-watcher
+  - version: 1.12.0
+    projects:
+      - repo: openstack/watcher
+        hash: b471b4ca36f46fa89cdca7be297c3f28dbd21c2b
         tarball-base: python-watcher
