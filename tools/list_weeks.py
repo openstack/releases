@@ -40,12 +40,6 @@ def add_cycle(name):
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    '--etherpad',
-    default=False,
-    action='store_true',
-    help='output in etherpad format for building the release planning doc',
-)
-parser.add_argument(
     'prefix_char',
     help='single letter prefix for tags',
 )
