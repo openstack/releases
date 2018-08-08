@@ -11,3 +11,10 @@ releases:
       - hash: c312669bde68ffbbc22e115a4b0f4796bb613dd2
         repo: openstack/ironic-inspector
     version: 7.3.0
+  - projects:
+      - hash: 600784a91e21cc16ca1e1c34367af7f2327ad79c
+        repo: openstack/ironic-inspector
+    version: 8.0.0
+branches:
+  - location: 8.0.0
+    name: stable/rocky
