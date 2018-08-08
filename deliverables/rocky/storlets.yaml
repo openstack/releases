@@ -16,5 +16,15 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: 2fc038973bd3638143d410ef3f0800657ea5151d
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
+branches:
+  - location: 2.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - Refactor internal communication to invoke Storlets that make it more stable
+  - Unit tests python 3 integration completed
 repository-settings:
   openstack/storlets: {}
