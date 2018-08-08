@@ -4,6 +4,14 @@ launchpad: mistral
 release-model: cycle-with-milestones
 team: mistral
 type: service
+cycle-highlights:
+  - Introduced the notifier service for sending Mistral events.
+  - Added Mistral actions for Swift service methods, Vitrage, Zun, Qinling and
+    Manila.
+  - Executors now have a heartbeat check to verify they are still running. This
+    helps resolve workflows that can become stuck in the RUNNING state when an
+    executor dies.
+  - Improved performance and reduced memory footprint
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -29,7 +37,18 @@ releases:
       - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
         repo: openstack/mistral-extra
     version: 7.0.0.0b3
+  - projects:
+      - hash: ca84455a92e228cd93d878f46488fcc479273817
+        repo: openstack/mistral
+      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
+        repo: openstack/mistral-dashboard
+      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
+        repo: openstack/mistral-extra
+    version: 7.0.0.0rc1
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
   openstack/mistral-extra: {}
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
