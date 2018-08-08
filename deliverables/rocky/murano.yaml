@@ -12,5 +12,12 @@ releases:
     projects:
       - repo: openstack/murano
         hash: a4931ab8d9b0cb300b2bc740b1df43235f5839dd
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: ba9f53100efa6cb00d9ab3174af0ae984dc7c734
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/murano: {}
