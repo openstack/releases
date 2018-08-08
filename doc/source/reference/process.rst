@@ -134,64 +134,68 @@ Between Milestone-2 and Milestone-3
 Final Library Release (week before Milestone-3)
 ===============================================
 
-1. Release libraries as quickly as possible this week to ensure they
+#. Release libraries as quickly as possible this week to ensure they
    are all done before the freeze. Consider relaxing the "not on
    Friday" release rule if absolutely necessary.
 
-2. Remind liaisons to prepare releases for client libraries at
+#. Remind liaisons to prepare releases for client libraries at
    Milestone-3.
 
-3. Update the feature list and allowed stable branch names in
+#. Update the feature list and allowed stable branch names in
    devstack-gate for the new stable branch. For
    example, https://review.openstack.org/362435 and
    https://review.openstack.org/363084
 
-4. Ensure that final releases for libraries also include the
-   specification to create the stable/$series branch.
+#. Allow the stable/$series branch to be requested with each library final
+   release if they know they are ready. Do not require branching at this point
+   in case of critical issues requiring another approved release past the
+   freeze date.
 
-5. Tag HEAD of master for any cycle-with-intermediary project with
+#. Tag HEAD of master for any cycle-with-intermediary project with
    changes merged over the cycle but no release yet. Do not create
    branches for non-library projects.
 
-6. Tag HEAD of master for any cycle-with-intermediary project that has
+#. Tag HEAD of master for any cycle-with-intermediary project that has
    unreleased CI configuration changes that would not have triggered a
    release earlier in the cycle. Failing to tag means those CI changes
    will not be on the stable branch and so the stable branch may start
    out broken. Do not create branches for non-library projects.
 
-7. For stable libraries that did not have any change merged over the
+#. For stable libraries that did not have any change merged over the
    cycle, create a stable branch from the last available release.
 
 
 Milestone-3
 ===========
 
-1. Verify that all projects following release:cycle-with-intermediary
+#. Verify that all projects following release:cycle-with-intermediary
    have prepared at least one release for the cycle.
 
-2. Freeze changes to ``openstack/requirements`` by applying -2 to all
+#. Freeze changes to ``openstack/requirements`` by applying -2 to all
    open patches. Ensure that reviewers do not approve changes created
    by the proposal bot.
 
-3. Ensure the stable/$series branch is requested with each client
-   library final release.
+#. Allow the stable/$series branch to be requested with each client library
+   final release if they know they are ready. Do not require branching at this
+   point in case of critical issues requiring another approved release past the
+   freeze date.
 
-4. Remind PTLs/liaisons that master should be frozen except for bug
+#. Remind PTLs/liaisons that master should be frozen except for bug
    fixes and feature work with FFEs.
 
-5. Remind PTL/liaisons to start preparing "prelude" release notes as
+#. Remind PTL/liaisons to start preparing "prelude" release notes as
    summaries of the content of the release so that those are merged
    before their first release candidate.
 
-6. Freeze all cycle-based library releases except for release-critical
+#. Freeze all cycle-based library releases except for release-critical
    bugs. Independently-released libraries may still be released, but
    constraint or requirement changes will be held until after the freeze
    period.
 
-7. Include a reminder about completing the responses to community-wide
+#. Include a reminder about completing the responses to community-wide
    goals in the countdown email.
 
-8. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
+#. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
    allowing official deliverables to directly tag or branch without
    going through openstack/releases. You need to specify the location
    of up-to-date checkouts for the governance and the project-config
@@ -226,6 +230,12 @@ Between Milestone-3 and RC1
 5. Warn cycle-with-intermediary projects that did not have any change
    over the cycle that no release will be tagged for them. A stable
    branch will be created, though, from the last available release.
+
+6. Propose stable/$series branch creation for all client and non-client
+   libraries that had not requested it at freeze time. The following command
+   may be used::
+
+      tox -e venv -- propose-library-branches --include-clients
 
 RC1
 ===
