@@ -4,5 +4,13 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
 type: client-library
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 7bf6f139cd0f8495c9c49ea7eee579c4db4028dd
+branches:
+  - location: 2.0.0
+    name: stable/rocky
 repository-settings:
   openstack/python-cloudkittyclient: {}
