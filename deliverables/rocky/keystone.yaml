@@ -20,6 +20,26 @@ releases:
       - hash: b625ccc42c4fd7e7a95cb54d6768a5a6fa3769db
         repo: openstack/keystone
     version: 14.0.0.0rc1
+cycle-highlights:
+  - |
+    Support for a new hierarchical enforcement model has been implemented in
+    addition to several improvements to the unified limits APIs.
+  - |
+    Parts of keystone's API have converted from a custom WSGI implementation to
+    using flask and flask-restful. This may affect people using custom
+    middleware or injecting custom paste pipelines.
+  - |
+    The token provider API has been refactored to have cleaner interfaces,
+    reducing technical debt. Deployments using custom token providers may be
+    affected.
+  - |
+    Keystone now creates 2 default roles (``member`` and``reader``) in addition
+    to the ``admin`` role upon installation or bootstrap. These roles will be
+    incorporated across other service policies by default in the future as an
+    effort to simplify RBAC across OpenStack. Note that this might have an
+    impact on deployments given case sensitivity issues with role naming. You
+    can read about case sensitivty within keystone in `here
+    <https://docs.openstack.org/keystone/latest/admin/identity-case-insensitive.html>`_.
 repository-settings:
   openstack/keystone: {}
 branches:
