@@ -16,5 +16,10 @@ releases:
       - hash: cbee6066e4ff92addf3452114f6f6be355a6ac40
         repo: openstack/cinder
     version: 13.0.0.0b3
+cycle-highlights:
+  - 'Improved user experience when recovering from storage system failures.'
+  - 'Security improvements enabled when creating volumes from signed images.'
+  - 'Numerous improvements that give administrators greater control over the placement of volumes.'
+  - 'Improved backup functionality and performance.'
 repository-settings:
   openstack/cinder: {}
