@@ -114,6 +114,10 @@ def main():
             deliverable_data = yamlutils.loads(f.read())
         if deliverable_data['type'] not in args.types:
             continue
+        if deliverable_data['release-model'] != 'cycle-with-intermediary':
+            print('WARNING {} has release model {}, skipping'.format(
+                deliverable_name, deliverable_data['release-model']))
+            continue
         verbose('\n{}'.format(filename))
         releases = deliverable_data.get('releases')
         if not releases:
