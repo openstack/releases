@@ -20,3 +20,10 @@ releases:
       - hash: 3e86565d1eb82fa456659c0943d567afa7c9a6fd
         repo: openstack/networking-midonet
     version: 7.0.0.0b3
+  - projects:
+      - hash: a209f95d627c9a37b65d6ff6b7bf601c911727bd
+        repo: openstack/networking-midonet
+    version: 7.0.0.0rc1
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
