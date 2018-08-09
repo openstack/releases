@@ -3,6 +3,9 @@ launchpad: heat
 release-model: cycle-with-milestones
 team: heat
 type: service
+branches:
+  - location: 11.0.0.0rc1
+    name: stable/rocky
 releases:
   - version: 11.0.0.0b1
     projects:
@@ -16,5 +19,9 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 2125395c20db3999e98242bd283b1cae47919fe0
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: b95ca369bb29e3dfc0de8a61c6744fad886640ba
 repository-settings:
   openstack/heat: {}
