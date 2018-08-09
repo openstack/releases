@@ -10,3 +10,10 @@ releases:
       - hash: e43cd0cc5bf0c13d6a70f873a8ce57f36b719a37
         repo: openstack/ironic
     version: 11.0.0
+  - projects:
+      - hash: 89f68e70e06e24b100d93e751e2a3e8cb8dd9b61
+        repo: openstack/ironic
+    version: 11.1.0
+branches:
+  - location: 11.1.0
+    name: stable/rocky
