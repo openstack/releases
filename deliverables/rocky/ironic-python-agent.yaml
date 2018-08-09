@@ -6,3 +6,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent: {}
+releases:
+  - projects:
+      - hash: 667589bb007e144e37136e706c0b8196422b0344
+        repo: openstack/ironic-python-agent
+    version: 3.3.0
+branches:
+  - location: 3.3.0
+    name: stable/rocky
