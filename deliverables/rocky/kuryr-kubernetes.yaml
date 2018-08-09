@@ -3,5 +3,29 @@ launchpad: kuryr-kubernetes
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+branches:
+  - name: stable/rocky
+    location: 0.5.0
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 5b32ed07fceca24c63f96f39cc1dbc413632ba21
+cycle-highlights:
+  - |
+    Added support for High Availability kuryr-controller in an Active/Passive
+    model, enabling quickly/transparent recovery in case of kuryr-controller
+    crashes.
+  - |
+    Native route support enabling L7 routing via Octavia Amphorae instead of
+    iptables, providing a more direct routing for load balancers and services.
+  - |
+    Added support for namespace isolation, lettting users isolate pods and
+    services in diferent namespaces, implemented through security groups.
+  - |
+    Added support for health checks of the CNI daemon, letting users confirm
+    the CNI daemon's functionality and set limits on resources like memory,
+    improving both stability and performance and for it to be marked as
+    unhealthy if needed.
 repository-settings:
   openstack/kuryr-kubernetes: {}
