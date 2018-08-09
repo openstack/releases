@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: cdf77af495c650254aa99d50e3fe5c6eadbe3c5e
+  - projects:
+      - repo: openstack/congress-dashboard
+        hash: 7570aa4d41837495108fdf5b834966a31f9caf41
+    version: 3.0.0.0rc1
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/congress-dashboard: {}
