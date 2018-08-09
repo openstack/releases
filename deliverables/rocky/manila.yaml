@@ -16,5 +16,19 @@ releases:
       - hash: 1384257e4f205b2c2d79064bc6723aada781d670
         repo: openstack/manila
     version: 7.0.0.0b3
+  - projects:
+      - hash: a17c89ff0875305e4e90ccc45a696aae9d3864dd
+        repo: openstack/manila
+    version: 7.0.0.0rc1
 repository-settings:
   openstack/manila: {}
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - |
+    Metadata can be added to share access rules as key=value pairs
+    with API microversion 2.45.
+  - |
+    Added Inspur AS13000 driver which supports snapshot operation
+    as well as all minimum driver features.
