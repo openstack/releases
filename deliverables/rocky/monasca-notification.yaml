@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - projects:
+      - hash: b50673381f421522757362ee6cec8a99967aef78
+        repo: openstack/monasca-notification
+    version: 1.14.0
+branches:
+  - location: 1.14.0
+    name: stable/rocky

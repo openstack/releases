@@ -10,3 +10,10 @@ releases:
       - hash: c40303031143667a4598c5f8bf39356bdf1459d4
         repo: openstack/monasca-ui
     version: 1.13.0
+  - projects:
+      - hash: 01ef5c2285bda01ecf2d89a5f208779282aec0a7
+        repo: openstack/monasca-ui
+    version: 1.14.0
+branches:
+  - location: 1.14.0
+    name: stable/rocky

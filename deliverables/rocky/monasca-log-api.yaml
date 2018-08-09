@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-log-api: {}
+releases:
+  - projects:
+      - hash: c60c42cbe5694bf404c3e2745fd1488f6ad85b27
+        repo: openstack/monasca-log-api
+    version: 2.7.0
+branches:
+  - location: 2.7.0
+    name: stable/rocky
