@@ -474,6 +474,10 @@ class Deliverable(object):
         return self.model.startswith('cycle-')
 
     @property
+    def is_milestone_based(self):
+        return self.model == 'cycle-with-milestones'
+
+    @property
     def type(self):
         if 'tempest-plugin' in self.name:
             return 'tempest-plugin'

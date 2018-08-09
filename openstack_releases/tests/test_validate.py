@@ -3255,7 +3255,7 @@ class TestValidateSeriesEM(base.BaseTestCase):
         self.assertEqual(1, len(self.ctx.errors))
 
 
-class TestValidatePostSeriesFinal(base.BaseTestCase):
+class TestValidatePreReleaseProgression(base.BaseTestCase):
 
     def setUp(self):
         super().setUp()
@@ -3270,6 +3270,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3277,7 +3278,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )
@@ -3289,6 +3290,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         releases:
           - version: 1.5.1.0rc1
             projects:
@@ -3301,7 +3303,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )
@@ -3313,6 +3315,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         releases:
           - version: 1.5.1
             projects:
@@ -3329,7 +3332,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )
@@ -3341,6 +3344,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         releases:
           - version: 1.5.0.0rc1
             projects:
@@ -3357,7 +3361,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )
@@ -3369,6 +3373,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         releases:
           - version: 1.5.0.0rc1
             projects:
@@ -3389,7 +3394,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )
@@ -3401,6 +3406,7 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
+        release-model: cycle-with-milestones
         releases:
           - version: 1.5.0
             projects:
@@ -3417,7 +3423,65 @@ class TestValidatePostSeriesFinal(base.BaseTestCase):
             'test',
             deliverable_data,
         )
-        validate.validate_series_post_final(
+        validate.validate_pre_release_progression(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_rc_follows_beta(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        release-model: cycle-with-milestones
+        releases:
+          - version: 1.5.0.0b1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.0.0rc1
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_pre_release_progression(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_final_follows_beta(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        release-model: cycle-with-milestones
+        releases:
+          - version: 1.5.0.0b1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            defaults.RELEASE,
+            'test',
+            deliverable_data,
+        )
+        validate.validate_pre_release_progression(
             deliv,
             self.ctx,
         )

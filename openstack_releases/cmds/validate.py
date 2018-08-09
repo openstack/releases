@@ -255,6 +255,69 @@ def validate_series_first(deliv, context):
 
 
 @skip_existing_tags
+@applies_to_current
+@applies_to_released
+@applies_to_cycle
+def validate_pre_release_progression(deliv, context):
+    "Pre-release versions must be applied in progressive order"
+
+    if not deliv.is_milestone_based:
+        print('this rule only applies to milestone-based projects')
+        return
+
+    releases = deliv.releases
+    if len(releases) < 2:
+        print('this rule only applies to the final release in a series')
+        return
+
+    previous_release = releases[-2]
+    current_release = releases[-1]
+
+    LOG.debug(
+        'checking progression from {} to {}'.format(
+            previous_release.version, current_release.version)
+    )
+
+    if 'rc' in current_release.version:
+        version_type = 'Release candidate'
+        previous_type = 'a beta or release candidate'
+        allowed = ['b', 'rc']
+    elif 'b' in current_release.version:
+        version_type = 'Beta'
+        previous_type = 'an alpha or beta'
+        allowed = ['a', 'b']
+    elif 'a' in current_release.version:
+        version_type = 'Alpha'
+        previous_type = 'an alpha'
+        allowed = ['a']
+    else:
+        # Final versions must come after release candidates
+        # or other final versions.
+        version_type = 'Final'
+        previous_type = 'a release candidate or final'
+        allowed = ['rc', 'final']
+
+    def checks():
+        for pre in allowed:
+            if pre == 'final':
+                yield not previous_release.is_pre_release_version
+            else:
+                yield pre in previous_release.version
+
+    if not any(checks()):
+        context.error(
+            ('{} version {} must come after '
+             '{} version, not {}').format(
+                 version_type,
+                 current_release.version,
+                 previous_type,
+                 previous_release.version)
+        )
+    else:
+        print('OK')
+
+
+@skip_existing_tags
 @applies_to_released
 def validate_series_final(deliv, context):
     "The final release after a RC should tag the same commit."
@@ -359,41 +422,6 @@ def validate_series_em(deliv, context):
         'extended maintenance',
         context,
     )
-
-
-@skip_existing_tags
-@applies_to_current
-@applies_to_released
-@applies_to_cycle
-def validate_series_post_final(deliv, context):
-    "After a final release, releases should not use pre-release versions."
-
-    releases = deliv.releases
-    if len(releases) < 2:
-        # We only have to check this when the first release is being
-        # applied in the file.
-        print('this rule only applies if a series has multiple releases')
-        return
-
-    current_release = releases[-1]
-
-    if not current_release.is_pre_release_version:
-        print('this rule only applies if the new '
-              'release has a pre-release version')
-        return
-
-    # If there is a final release version in any of the previous
-    # releases, report the error.
-    for previous_release in releases[-2::-1]:
-        if not previous_release.is_pre_release_version:
-            context.error(
-                '{} uses a pre-release version number '
-                'after a final release version was tagged as {}'.format(
-                    current_release.version, previous_release.version)
-            )
-            return
-
-    print('OK')
 
 
 def validate_bugtracker(deliv, context):
@@ -1763,7 +1791,7 @@ def main():
             validate_series_open,
             validate_series_first,
             validate_series_final,
-            validate_series_post_final,
+            validate_pre_release_progression,
             validate_series_eol,
             validate_series_em,
             validate_branch_prefixes,
