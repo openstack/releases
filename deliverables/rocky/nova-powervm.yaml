@@ -3,6 +3,9 @@ launchpad: nova-powervm
 release-model: cycle-with-milestones
 team: PowerVMStackers
 type: other
+branches:
+  - name: stable/rocky
+    location: 7.0.0.0rc1
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -18,6 +21,11 @@ releases:
     projects:
       - repo: openstack/nova-powervm
         hash: e046d4096398a182110d13f1de2a9cd914d84eb6
+        tarball-base: nova_powervm
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 9b518d8c9986249a06e3f5dc1450b66283af91f1
         tarball-base: nova_powervm
 repository-settings:
   openstack/nova-powervm: {}

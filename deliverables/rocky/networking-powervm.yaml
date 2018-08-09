@@ -3,6 +3,9 @@ launchpad: networking-powervm
 release-model: cycle-with-milestones
 team: PowerVMStackers
 type: other
+branches:
+  - name: stable/rocky
+    location: 7.0.0.0rc1
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -16,5 +19,9 @@ releases:
     projects:
       - repo: openstack/networking-powervm
         hash: 154319453d8342b1058f0bd9dd9437d607e7cd1b
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/networking-powervm
+        hash: fad0075e7e65fb8388b8be343a4dc2cc82b0ba8a
 repository-settings:
   openstack/networking-powervm: {}
