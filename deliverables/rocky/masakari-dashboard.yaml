@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: b18ad52f0e37705c946032bfd0cda20e50bdebdd
+  - version: 0.2.0
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: f53bdbb03131224206cd835f9b2621e297adc25f
+branches:
+  - location: 0.2.0
+    name: stable/rocky
