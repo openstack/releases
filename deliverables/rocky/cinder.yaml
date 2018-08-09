@@ -16,6 +16,13 @@ releases:
       - hash: cbee6066e4ff92addf3452114f6f6be355a6ac40
         repo: openstack/cinder
     version: 13.0.0.0b3
+  - projects:
+      - hash: a3666e9a408eb71861cd9557cefe952fa89324b1
+        repo: openstack/cinder
+    version: 13.0.0.0rc1
+branches:
+  - location: 13.0.0.0rc1
+    name: stable/rocky
 cycle-highlights:
   - 'Improved user experience when recovering from storage system failures.'
   - 'Security improvements enabled when creating volumes from signed images.'
