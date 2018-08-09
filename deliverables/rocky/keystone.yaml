@@ -16,5 +16,12 @@ releases:
       - hash: b8749774559e4e9c8129874712dd1d0bcbf1c0c1
         repo: openstack/keystone
     version: 14.0.0.0b3
+  - projects:
+      - hash: b625ccc42c4fd7e7a95cb54d6768a5a6fa3769db
+        repo: openstack/keystone
+    version: 14.0.0.0rc1
 repository-settings:
   openstack/keystone: {}
+branches:
+  - location: 14.0.0.0rc1
+    name: stable/rocky
