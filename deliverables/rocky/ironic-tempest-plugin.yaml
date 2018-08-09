@@ -5,5 +5,10 @@ release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
   openstack/ironic-tempest-plugin: {}
+releases:
+  - projects:
+      - hash: 3dc8f79c86b5b4dafb1c2ae9e38baae5a725af32
+        repo: openstack/ironic-tempest-plugin
+    version: 1.2.0
 team: ironic
 type: tempest-plugin
