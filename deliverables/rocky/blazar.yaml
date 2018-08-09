@@ -1,6 +1,7 @@
 ---
 launchpad: blazar
 release-model: cycle-with-milestones
+release-notes: https://docs.openstack.org/releasenotes/blazar/unreleased.html
 team: blazar
 type: service
 repository-settings:
@@ -18,3 +19,14 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 32e356a77c5ac86cc7b237d05b460c2660a7da6e
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 06b7e527840128db437cd8af538a7b2ce761bc11
+branches:
+  - location: 2.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - Host and instance reservation support multiple availability zones.
+  - Resource monitoring supports periodic healing in order to avoid unnecessary reservation healing.
+  - A time margin for cleaning up resources between back to back leases is introduced.
