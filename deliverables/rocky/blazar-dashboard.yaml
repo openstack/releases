@@ -4,6 +4,7 @@ release-model: cycle-with-intermediary
 team: blazar
 type: horizon-plugin
 release-type: horizon
+release-notes: https://docs.openstack.org/releasenotes/blazar-dashboard/unreleased.html
 repository-settings:
   openstack/blazar-dashboard: {}
 releases:
@@ -11,3 +12,10 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: b27860f6fcefdd5d98ad96d2c87b95de7fbab533
+  - version: 1.2.0
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: e8e3798f4126afb8633e5485b8c29cfa635d9cec
+branches:
+  - location: 1.2.0
+    name: stable/rocky
