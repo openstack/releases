@@ -5,3 +5,8 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+releases:
+  - version: 0.10.0
+    projects:
+      - repo: openstack/tacker
+        hash: 5987ad8c56a61e3a6d8fcf37a2557926c585de41
