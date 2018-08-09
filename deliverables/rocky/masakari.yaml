@@ -18,3 +18,13 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: aa36bdaca5996a647ee5e045a6c420d35ae1fcac
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: ad3dc737c984c267980e7479acc2bf8856b556d5
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - Operators can now customize taskflow workflows to process each type of failure notifications.
+  - Support introspective Instance Monitoring through QEMU Guest Agent
