@@ -19,3 +19,40 @@ releases:
       - hash: dd6d7529665eb6bd06de55e0aadc1a860e1edb2a
         repo: openstack/nova
     version: 18.0.0.0b3
+  - projects:
+      - hash: ddc7c466d7c82521e1f5f21e51755596dd6895b1
+        repo: openstack/nova
+    version: 18.0.0.0rc1
+branches:
+  - location: 18.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - |
+    Nova is now using the new Neutron port binding API to minimize network
+    downtime during live migrations. See the `related spec
+    <https://specs.openstack.org/openstack/nova-specs/specs/rocky/approved/neutron-new-port-binding-api.html>`_
+    for more details.
+  - |
+    Volume-backed instances will no longer report ``root_gb`` usage for new
+    instances and existing instances will heal during move operations.
+  - |
+    A ``nova-manage db purge`` command to `purge archived shadow table data
+    <https://docs.openstack.org/nova/latest/cli/nova-manage.html#nova-database>`_
+    is now available. A new ``--purge`` option is also available for the
+    ``nova-manage db archive_deleted_rows`` command.
+  - |
+    It is now possible to `disable a cell
+    <https://docs.openstack.org/nova/latest/cli/nova-manage.html#nova-cells-v2>`_
+    to stop scheduling to a cell by using the
+    ``nova-manage cell_v2 update_cell`` command.
+  - |
+    The libvirt compute driver now supports trusted image certificates when
+    using the 2.63 compute API microversion. See the `image signature
+    certificate validation
+    <https://docs.openstack.org/nova/latest/user/certificate-validation.html>`_
+    documentation for more details.
+  - |
+    The placement service now supports granular RBAC policy rules
+    configuration. See the `placement policy
+    <https://docs.openstack.org/nova/latest/configuration/placement-policy.html>`_
+    documentation for details.
