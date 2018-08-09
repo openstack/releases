@@ -13,5 +13,12 @@ releases:
       - hash: 0f2a2a20ed630bd934366a252c9f361452881485
         repo: openstack/manila-ui
     version: 2.15.0
+  - projects:
+      - hash: 3764cc3fc540f0436723815844a8a56d98975b4a
+        repo: openstack/manila-ui
+    version: 2.16.0
 repository-settings:
   openstack/manila-ui: {}
+branches:
+  - location: 2.16.0
+    name: stable/rocky
