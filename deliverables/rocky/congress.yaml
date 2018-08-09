@@ -16,5 +16,12 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 5c43a61a02c3d343fffd2df13554364c43a659a2
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/congress
+        hash: f94581299657db5065a184694393bc186d363e5d
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/congress: {}
