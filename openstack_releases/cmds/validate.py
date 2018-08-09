@@ -685,6 +685,33 @@ def validate_tarball_base(deliv, context):
                         sdist, expected))
 
 
+@applies_to_released
+def validate_build_sdist(deliv, context):
+    "Can we build an sdist for a python project?"
+
+    release = deliv.releases[-1]
+    for project in release.projects:
+
+        version_exists = gitutils.commit_exists(
+            context.workdir, project.repo.name, release.version,
+        )
+        if version_exists:
+            print('version {} was already tagged, skipping'.format(
+                release.version))
+            continue
+
+        gitutils.safe_clone_repo(
+            context.workdir, project.repo.name, project.hash, context)
+
+        try:
+            pythonutils.build_sdist(
+                context.workdir, project.repo.name)
+        except Exception as err:
+            context.error(
+                'Failed to build sdist for {}: {}'.format(
+                    project.repo.name, err))
+
+
 @skip_existing_tags
 @applies_to_released
 def validate_pypi_readme(deliv, context):
@@ -1751,6 +1778,7 @@ def main():
             validate_release_type,
             validate_pypi_permissions,
             validate_pypi_readme,
+            validate_build_sdist,
             validate_gitreview,
             validate_release_sha_exists,
             validate_existing_tags,
