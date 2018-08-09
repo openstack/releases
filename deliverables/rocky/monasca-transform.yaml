@@ -11,3 +11,10 @@ releases:
       - hash: 395a3237f59bb79de040ccb658edf223d3411fb2
         repo: openstack/monasca-transform
     version: 0.15.0
+  - projects:
+      - hash: f11b300a5085139d3ffda98279271882629f36d8
+        repo: openstack/monasca-transform
+    version: 0.16.0
+branches:
+  - location: 0.16.0
+    name: stable/rocky
