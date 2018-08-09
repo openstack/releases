@@ -11,3 +11,10 @@ releases:
       - hash: eb3187863bfc3f60a5ea0f136ec3c14a8c8d6d71
         repo: openstack/networking-generic-switch
     version: 1.1.0
+  - projects:
+      - hash: 451953c9dc3bf140dda10062da15ef0ec14974fb
+        repo: openstack/networking-generic-switch
+    version: 1.2.0
+branches:
+  - location: 1.2.0
+    name: stable/rocky
