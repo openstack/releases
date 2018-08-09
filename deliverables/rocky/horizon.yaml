@@ -16,5 +16,12 @@ releases:
     projects:
       - hash: e1e5c7954133528c0a4f12deda30159ac86a457d
         repo: openstack/horizon
+  - version: 14.0.0.0rc1
+    projects:
+      - hash: 4c9cf5f00e5b978e77678de6c4c257e733f4c46d
+        repo: openstack/horizon
 repository-settings:
   openstack/horizon: {}
+branches:
+  - location: 14.0.0.0rc1
+    name: stable/rocky
