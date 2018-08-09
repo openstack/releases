@@ -9,6 +9,8 @@ branches:
   - name: feature/graphql
     location:
       openstack/neutron: 9ee628dcc0eb61418e86fee355add38a6b09fab9
+  - location: 13.0.0.0rc1
+    name: stable/rocky
 releases:
   - projects:
       - hash: 4d40e6e40e6c02d097c41ee68ec1b885b27e8909
@@ -22,3 +24,18 @@ releases:
       - hash: f597b4bee00334abac3f5bbcfd2053ec885bcb62
         repo: openstack/neutron
     version: 13.0.0.0b3
+  - projects:
+      - hash: 5226e50c68084dd3d76861d1247f9f292949b616
+        repo: openstack/neutron
+    version: 13.0.0.0rc1
+cycle-highlights:
+  - Per TCP/UDP port forwarding on floating IP is supported.
+    Operators can save the number of global IP addresses for floating IPs.
+  - Multiple bindings for compute owned ports is supported for better instance migration support.
+    Better live-migration support is a long-standing topic and Nova support will be coming in the next Stein release.
+  - Perform validation on filter parameters on listing resources. Previously filter parameters were unclear for API users.
+    This release improves the API behavior on resource filtering and documentation in the Neutron API references a lot.
+  - (fwaas) Logging on firewall events is supported. It is useful for operators to debug FWaaS.
+  - (vpnaas) Newer versions of liberswan 3.19+ are supported so that operators can run neutron-vpnaas IPsec VPN with newer distributions.
+  - (ovn) Support migration from an existing ML2OVS TripleO deployment to ML2OVN TripleO deployment.
+  - (bagpipe) bagpipe-bgp, a reference implementation of Neutron BGP VPN support, supports E-VPN with OVS.

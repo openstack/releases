@@ -19,3 +19,10 @@ releases:
       - hash: bb165298e0270ab3cdc0bd0afab4b51988db4d98
         repo: openstack/neutron-vpnaas
     version: 13.0.0.0b3
+  - projects:
+      - hash: da4fff7e7aa756cd8280e8dd14fb8cccc5777277
+        repo: openstack/neutron-vpnaas
+    version: 13.0.0.0rc1
+branches:
+  - location: 13.0.0.0rc1
+    name: stable/rocky
