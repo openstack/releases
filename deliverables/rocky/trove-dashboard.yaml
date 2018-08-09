@@ -14,3 +14,13 @@ releases:
       - hash: 9b7f3d9561ce47f370642a3d169fce6469203148
         repo: openstack/trove-dashboard
     version: 11.0.0.0b3
+  - projects:
+      - hash: 9b7f3d9561ce47f370642a3d169fce6469203148
+        repo: openstack/trove-dashboard
+    version: 11.0.0.0rc1
+branches:
+  - location: 11.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - Fix remaining Python 3 porting problems
+  - Django 2.0 support
