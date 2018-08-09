@@ -5,8 +5,20 @@ team: vitrage
 type: service
 repository-settings:
   openstack/vitrage: {}
+branches:
+  - location: 3.1.0
+    name: stable/rocky
 releases:
   - version: 3.0.0
     projects:
       - repo: openstack/vitrage
         hash: 28716bc2d97b54c5307c96adb7dca42b0b235c97
+  - version: 3.1.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 140b631e36bfa2dc75c9066fb5950159addbacbf
+cycle-highlights:
+  - 'Fast-failover of vitrage-graph for better High-Availability support'
+  - 'New Kubernetes datasource, for Kubernetes cluster as a workload on
+     OpenStack'
+  - 'New Prometheus datasource, to handle alerts coming from Prometheus'
