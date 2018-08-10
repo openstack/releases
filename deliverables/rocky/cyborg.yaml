@@ -19,5 +19,18 @@ releases:
       - hash: 06970bcd0b1ddf98b911fd152b6f173cec55dff8
         repo: openstack/cyborg
         tarball-base: openstack-cyborg
+  - version: 1.0.0.0rc1
+    projects:
+      - hash: b727c1670ab24b68d7224e7967adff5145e45c40
+        repo: openstack/cyborg
+        tarball-base: openstack-cyborg
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/rocky
+cycle-highlights:
+  - 'Add client and os-acc lib for attach/detach.'
+  - 'Improved interaction with Placement via agent provider tree support.'
+  - 'Metadata standardization among drivers for capability report.'
+  - 'Add FPGA programming support.'
 repository-settings:
   openstack/cyborg: {}
