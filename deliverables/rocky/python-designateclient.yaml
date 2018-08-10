@@ -6,3 +6,11 @@ team: designate
 type: client-library
 repository-settings:
   openstack/python-designateclient: {}
+releases:
+  - projects:
+      - hash: 200f5192fdaf1abe982fadd1344f756c760a0414
+        repo: openstack/python-designateclient
+    version: 2.10.0
+branches:
+  - location: 2.10.0
+    name: stable/rocky
