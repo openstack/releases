@@ -10,3 +10,10 @@ releases:
       - hash: 2f83adf03eea1aa7a6b789a0422f72a43fa4961d
         repo: openstack/monasca-agent
     version: 2.7.0
+  - projects:
+      - hash: 2f7153a59c0f79059e977d4d189475771e99d15f
+        repo: openstack/monasca-agent
+    version: 2.8.0
+branches:
+  - location: 2.8.0
+    name: stable/rocky
