@@ -96,6 +96,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'horizon-plugin',
         'other',
         'cycle-trailing',
+        'tempest-plugin',
     ]
 
     def run(self):
@@ -185,6 +186,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'client-library': 'Service Client Projects',
         'other': 'Other Projects',
         'cycle-trailing': 'Deployment and Packaging Tools',
+        'tempest-plugin': 'Tempest Plugins',
     }
 
     def _add_deliverables(self, type_tag, deliverables, series, app, result):
