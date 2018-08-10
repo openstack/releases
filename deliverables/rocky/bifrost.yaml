@@ -5,3 +5,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - projects:
+      - hash: ad4d61bb4d543bf824660727accc1f240f53c461
+        repo: openstack/bifrost
+    version: 5.1.0
+branches:
+  - location: 5.1.0
+    name: stable/rocky
