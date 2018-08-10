@@ -16,5 +16,16 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 09b858b8b1f8072205b0dffe70a975373c402cf3
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: bd725857097dcc7b3e9da36e9c4367df10013704
+branches:
+  - name: stable/rocky
+    location: 9.0.0.0rc1
 repository-settings:
   openstack/sahara: {}
+cycle-highlights:
+  - Plugins versions were updated.
+  - Added support to boot from volume.
+  - Ability to use S3 as job binary and data source backend.

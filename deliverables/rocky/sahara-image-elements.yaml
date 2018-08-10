@@ -17,5 +17,12 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: 34e8f4a27a3cf9cc894922e4c870fcf192d1e886
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 5eeec728593d88bb5a220b43206bf5a071151bbd
+branches:
+  - name: stable/rocky
+    location: 9.0.0.0rc1
 repository-settings:
   openstack/sahara-image-elements: {}
