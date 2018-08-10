@@ -27,7 +27,7 @@ LOG = logging.getLogger(__name__)
 
 
 def get_sdist_name(workdir, repo):
-    "Check out the code."
+    "Find the name of the sdist."
     dest = os.path.join(workdir, repo)
     setup_path = os.path.join(dest, 'setup.py')
     if not os.path.exists(setup_path):
@@ -57,6 +57,33 @@ def get_sdist_name(workdir, repo):
     LOG.debug('Results: %s' % (out,))
     name = out.splitlines()[-1].strip()
     return name
+
+
+def build_sdist(workdir, repo):
+    "Build the sdist."
+    dest = os.path.join(workdir, repo)
+    setup_path = os.path.join(dest, 'setup.py')
+    if not os.path.exists(setup_path):
+        LOG.debug('did not find %s, maybe %s is not a python project',
+                  setup_path, repo)
+        return
+    use_tox = repo.endswith('/pbr')
+    if use_tox and not os.path.exists(os.path.join(dest, '.tox', 'venv')):
+        # Use tox to set up a virtualenv so we can install the
+        # dependencies for the package. This only seems to be
+        # necessary for pbr, but...
+        processutils.check_output(
+            ['tox', '-e', 'venv', '--notest'],
+            cwd=dest,
+        )
+    if use_tox:
+        python = '.tox/venv/bin/python'
+    else:
+        python = 'python'
+    # Run it once and discard the result to ensure any setup_requires
+    # dependencies are installed.
+    cmd = [python, 'setup.py', 'sdist', 'bdist_wheel']
+    processutils.check_call(cmd, cwd=dest)
 
 
 def check_readme_format(workdir, repo):
