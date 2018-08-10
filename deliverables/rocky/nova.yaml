@@ -28,29 +28,22 @@ branches:
     name: stable/rocky
 cycle-highlights:
   - |
-    Nova is now using the new Neutron port binding API to minimize network
-    downtime during live migrations. See the `related spec
-    <https://specs.openstack.org/openstack/nova-specs/specs/rocky/approved/neutron-new-port-binding-api.html>`_
-    for more details.
+    Improvements were made to minimize network downtime during live migrations.
+    In addition, the libvirt driver is now capable of live migrating between
+    different types of networking backends, for example, linuxbridge => OVS.
   - |
-    Volume-backed instances will no longer report ``root_gb`` usage for new
-    instances and existing instances will heal during move operations.
+    Handling of boot from volume instances when the Nova compute host does not
+    have enough local storage has been improved.
   - |
-    A ``nova-manage db purge`` command to `purge archived shadow table data
-    <https://docs.openstack.org/nova/latest/cli/nova-manage.html#nova-database>`_
-    is now available. A new ``--purge`` option is also available for the
-    ``nova-manage db archive_deleted_rows`` command.
+    Operators can now disable a cell to make sure no new instances are
+    scheduled there. This is useful for operators to introduce new cells to the
+    deployment and for maintenance of existing cells.
   - |
-    It is now possible to `disable a cell
-    <https://docs.openstack.org/nova/latest/cli/nova-manage.html#nova-cells-v2>`_
-    to stop scheduling to a cell by using the
-    ``nova-manage cell_v2 update_cell`` command.
+    Security enhancements were made when using Glance signed images with the
+    libvirt compute driver.
   - |
-    The libvirt compute driver now supports trusted image certificates when
-    using the 2.63 compute API microversion. See the `image signature
-    certificate validation
-    <https://docs.openstack.org/nova/latest/user/certificate-validation.html>`_
-    documentation for more details.
+    A ``nova-manage db purge`` command is now available to help operators with
+    maintenance and avoid bloat in their database.
   - |
     The placement service now supports granular RBAC policy rules
     configuration. See the `placement policy
