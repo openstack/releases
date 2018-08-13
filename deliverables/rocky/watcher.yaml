@@ -29,3 +29,17 @@ releases:
       - repo: openstack/watcher
         hash: b471b4ca36f46fa89cdca7be297c3f28dbd21c2b
         tarball-base: python-watcher
+cycle-highlights:
+  - |
+    Watcher services can be launched in HA mode. From now on Watcher Decision
+    Engine and Watcher Applier services may be deployed on different nodes to
+    run in active-active or active-passive mode.
+  - |
+    Added a host maintenance strategy to prepare compute node for maintenance
+    by cleaning up instances via migration.
+  - |
+    Excluding of instances from audit scope based on project_id is added.
+  - |
+    Added the ability to ignore specified instances during strategy's (an
+    implementation in Watcher) work but still consider the workload they
+    produce.
