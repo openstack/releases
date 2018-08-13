@@ -4,5 +4,15 @@ launchpad: python-karborclient
 release-model: cycle-with-intermediary
 team: karbor
 type: client-library
+releases:
+  - projects:
+      - hash: 7aca76b32b6f89774ab1659a90bcba08b62a1700
+        repo: openstack/python-karborclient
+    version: 1.1.0
+    flags:
+      - forced
 repository-settings:
   openstack/python-karborclient: {}
+branches:
+  - location: 1.1.0
+    name: stable/rocky
