@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - projects:
+      - hash: 0743a561fd1021f651e5d4d98690415bb3a6674f
+        repo: openstack/magnum
+    version: 7.0.0
+branches:
+  - name: stable/rocky
+    location: 7.0.0
