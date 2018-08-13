@@ -4,5 +4,13 @@ launchpad: networking-hyperv
 release-model: cycle-with-intermediary
 team: winstackers
 type: other
+releases:
+  - projects:
+      - repo: openstack/networking-hyperv
+        hash: d49d70cc5420e8cc39b50e4950789ac6a11c65cb
+    version: 7.0.0
+branches:
+  - location: 7.0.0
+    name: stable/rocky
 repository-settings:
   openstack/networking-hyperv: {}
