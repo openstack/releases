@@ -3,5 +3,13 @@ launchpad: kuryr-libnetwork
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 7a667d10fc4b96fecedca1363d2e0216faa3bc02
+branches:
+  - name: stable/rocky
+    location: 2.0.0
 repository-settings:
   openstack/kuryr-libnetwork: {}
