@@ -4,5 +4,9 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack-dev/devstack: 8c1052001629d62f001d04c182500fa293858f47
+    name: stable/rocky
 repository-settings:
   openstack-dev/devstack: {}
