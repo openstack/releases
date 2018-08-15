@@ -1,0 +1,13 @@
+---
+launchpad: openstack-requirements
+team: requirements
+type: other
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+stable-branch-type: tagless
+repository-settings:
+  openstack/requirements: {}
+branches:
+  - name: stable/rocky
+    location:
+      openstack/requirements: 823c3f00f131695f54fbf7593cbd5905fb632a44
