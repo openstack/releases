@@ -3,5 +3,13 @@ launchpad: tacker
 release-model: cycle-with-intermediary
 team: tacker
 type: horizon-plugin
+branches:
+  - name: stable/rocky
+    location: 0.12.0
+releases:
+  - projects:
+      - hash: b701cb4d494cd05a409915aa7a455670f1b30dc6
+        repo: openstack/tacker-horizon
+    version: 0.12.0
 repository-settings:
   openstack/tacker-horizon: {}
