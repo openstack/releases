@@ -3,5 +3,13 @@ launchpad: zun-ui
 release-model: cycle-with-intermediary
 team: zun
 type: horizon-plugin
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: 7eb1e0b5dce3c34906cf3f0c048b6b703d3a8fb0
+branches:
+  - name: stable/rocky
+    location: 2.0.0
 repository-settings:
   openstack/zun-ui: {}
