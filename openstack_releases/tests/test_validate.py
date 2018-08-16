@@ -1894,13 +1894,15 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_version_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -1915,13 +1917,15 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_badly_formatted_name(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: ocata
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -1936,13 +1940,42 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_version_not_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 0.0.4
+            location: 99.0.4
+        repository-settings:
+          openstack/release-test: {}
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_stable_branches(deliv, self.ctx)
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_version_not_last(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 99.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+          - version: 99.0.4
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/ocata
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -1957,17 +1990,43 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_mismatched_series_cycle(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
-          - name: stable/def
-            location: 0.0.3
+          - name: stable/does-not-exist
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
-            series='abc',
+            series='series-name-does-not-match',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_stable_branches(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_without_repository_settings(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 99.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/does-not-exist
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='series-name-does-not-match',
             name='release-test',
             data=yamlutils.loads(deliverable_data),
         )
@@ -1979,13 +2038,15 @@ class TestValidateStableBranches(base.BaseTestCase):
     def test_unknown_series_independent(self):
         deliverable_data = textwrap.dedent('''
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/abc
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2004,13 +2065,15 @@ class TestValidateStableBranches(base.BaseTestCase):
         # See validate._NO_STABLE_BRANCH_CHECK.
         launchpad: gnocchi
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/abc
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2027,13 +2090,15 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: std
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2049,13 +2114,15 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: unknown
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2071,13 +2138,15 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
-            location: 0.0.3
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2093,14 +2162,16 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
             location:
-              openstack/release-test: 0.0.3
+              openstack/release-test: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2116,7 +2187,7 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
@@ -2124,6 +2195,8 @@ class TestValidateStableBranches(base.BaseTestCase):
           - name: stable/ocata
             location:
               openstack/release-test: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',
@@ -2139,14 +2212,16 @@ class TestValidateStableBranches(base.BaseTestCase):
         deliverable_data = textwrap.dedent('''
         type: tempest-plugin
         releases:
-          - version: 0.0.3
+          - version: 99.0.3
             projects:
               - repo: openstack/release-test
                 hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
         branches:
           - name: stable/ocata
             location:
-              openstack/release-test: 0.0.3
+              openstack/release-test: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
         ''')
         deliv = deliverable.Deliverable(
             team='team',

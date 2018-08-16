@@ -1365,10 +1365,8 @@ def validate_stable_branches(deliv, context):
 
     branch_mode = deliv.stable_branch_type
 
-    known_releases = {
-        r.version: r
-        for r in deliv.releases
-    }
+    latest_release = deliv.releases[-1]
+
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
@@ -1395,12 +1393,32 @@ def validate_stable_branches(deliv, context):
                      'expected to be a string but got a %s' % (
                          branch.name, type(location)))
                 )
-            if location not in known_releases:
+
+            if not deliv.known_repo_names:
                 context.error(
-                    ('stable branches must be created from existing '
-                     'tagged releases, and %s for %s is not found in the '
-                     'list of releases for this deliverable' % (
-                         location, branch.name))
+                    ('Unable to validate branch {} for '
+                     '{} without repository information').format(
+                         branch.name, deliv.name,
+                    )
+                )
+                return
+            branch_exists = all(
+                gitutils.stable_branch_exists(
+                    context.workdir,
+                    repo,
+                    deliv.series
+                )
+                for repo in deliv.known_repo_names
+            )
+            if branch_exists:
+                print('{} branch already exists, skipping validation'.format(
+                    branch.name))
+                continue
+            if location != latest_release.version:
+                context.error(
+                    ('stable branches must be created from the latest '
+                     'tagged release, and %s for %s does not match %s' % (
+                         location, branch.name, latest_release.version))
                 )
 
         elif branch_mode == 'tagless':
