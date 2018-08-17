@@ -119,10 +119,10 @@ def main(args=sys.argv[1:]):
     governanceyaml = os.path.join(args.governance_repo,
                                   'reference', 'projects.yaml')
     teams = yaml.load(open(governanceyaml))
-    for tname, team in teams.iteritems():
+    for tname, team in teams.items():
         if is_a_team_exception(tname):
             continue
-        for dname, deliverable in team['deliverables'].iteritems():
+        for dname, deliverable in team['deliverables'].items():
             for repo in deliverable.get('repos'):
                 if not is_a_repo_exception(repo):
                     aclpath = os.path.join(aclbase, acl[repo])
