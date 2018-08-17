@@ -3,5 +3,13 @@ launchpad: karbor
 release-model: cycle-with-intermediary
 team: karbor
 type: service
+releases:
+  - projects:
+      - hash: 60a81a1492cd5d4bde4f1a636224b6bdd914073b
+        repo: openstack/karbor
+    version: 1.1.0
+branches:
+  - location: 1.1.0
+    name: stable/rocky
 repository-settings:
   openstack/karbor: {}
