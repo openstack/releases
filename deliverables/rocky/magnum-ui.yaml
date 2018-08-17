@@ -3,5 +3,13 @@ launchpad: magnum-ui
 release-model: cycle-with-intermediary
 team: magnum
 type: horizon-plugin
+branches:
+  - name: stable/rocky
+    location: 5.0.0
+releases:
+  - projects:
+      - hash: cfd93ba5bce986903af3ce113f3ce969390f9d37
+        repo: openstack/magnum-ui
+    version: 5.0.0
 repository-settings:
   openstack/magnum-ui: {}
