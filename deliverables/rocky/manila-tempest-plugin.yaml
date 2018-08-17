@@ -4,6 +4,12 @@ launchpad: manila
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/manila-tempest-plugin: {}
+  openstack/manila-tempest-plugin:
+    tarball-base: manila-tempest-plugin
 team: manila
 type: tempest-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/manila-tempest-plugin
+        hash: f6bc6fa7bc0e46857aba2b141f31b516a7d30a41
