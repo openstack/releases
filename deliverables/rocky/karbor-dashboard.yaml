@@ -4,5 +4,13 @@ release-model: cycle-with-intermediary
 release-type: python-pypi
 team: karbor
 type: horizon-plugin
+releases:
+  - projects:
+      - hash: 3c83ccaac9431b6ede1872819180890c09aeb2c5
+        repo: openstack/karbor-dashboard
+    version: 1.1.0
+branches:
+  - location: 1.1.0
+    name: stable/rocky
 repository-settings:
   openstack/karbor-dashboard: {}
