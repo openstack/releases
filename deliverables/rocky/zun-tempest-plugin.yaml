@@ -3,6 +3,12 @@ include-pypi-link: no
 launchpad: zun
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/zun-tempest-plugin
+        hash: fd84e5affdf6c39dad956e0a309bc0237e068e2f
+        tarball-base: zun-tempest-plugin
 repository-settings:
   openstack/zun-tempest-plugin: {}
 team: zun
