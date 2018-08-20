@@ -3,5 +3,16 @@ launchpad: python-tricircleclient
 release-model: cycle-with-intermediary
 team: tricircle
 type: client-library
+releases:
+  - projects:
+      - hash: a60ef68c25933eeb9b5636cf063f7340cfd6062d
+        repo: openstack/python-tricircleclient
+    version: 0.4.0
+    flags:
+      - forced
 repository-settings:
-  openstack/python-tricircleclient: {}
+  openstack/python-tricircleclient:
+    tarball-base: tricircleclient
+branches:
+  - location: 0.4.0
+    name: stable/rocky
