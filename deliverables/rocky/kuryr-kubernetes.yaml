@@ -14,11 +14,12 @@ releases:
 cycle-highlights:
   - |
     Added support for High Availability kuryr-controller in an Active/Passive
-    model, enabling quickly/transparent recovery in case of kuryr-controller
-    crashes.
+    model, enabling quick and transparent recovery in case kuryr-controller is
+    lost.
   - |
-    Native route support enabling L7 routing via Octavia Amphorae instead of
-    iptables, providing a more direct routing for load balancers and services.
+    Added native route support enabling L7 routing via Octavia Amphorae instead
+    of iptables, providing a more direct routing for load balancers and
+    services.
   - |
     Added support for namespace isolation, lettting users isolate pods and
     services in diferent namespaces, implemented through security groups.
