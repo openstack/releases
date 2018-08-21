@@ -1,0 +1,12 @@
+---
+launchpad: puppet-openstack-spec-helper
+release-model: untagged
+team: 'Puppet OpenStack'
+type: other
+stable-branch-type: tagless
+repository-settings:
+  openstack/puppet-openstack_spec_helper: {}
+branches:
+  - name: stable/rocky
+    location:
+      openstack/puppet-openstack_spec_helper: efbb92b577d210f88d9863151337e1d9367b1468
