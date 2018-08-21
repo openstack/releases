@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: bd725857097dcc7b3e9da36e9c4367df10013704
+  - version: 9.0.0.0rc2
+    projects:
+      - repo: openstack/sahara
+        hash: 7d9483b21c1e45ef4834f3d3d9973d95d181df3c
 branches:
   - name: stable/rocky
     location: 9.0.0.0rc1
