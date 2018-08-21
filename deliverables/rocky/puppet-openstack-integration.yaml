@@ -1,0 +1,12 @@
+---
+launchpad: puppet-openstack-integration
+release-model: untagged
+team: 'Puppet OpenStack'
+type: other
+stable-branch-type: tagless
+repository-settings:
+  openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/rocky
+    location:
+      openstack/puppet-openstack-integration: a025a236014b0b7997ddcbbf30d5ce819e13aa1d
