@@ -4,5 +4,13 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
 type: service
+branches:
+  - name: stable/rocky
+    location: 8.0.0
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 3ab4774f66b84324adc8823a049aa4cf13689fb9
 repository-settings:
   openstack/cloudkitty: {}
