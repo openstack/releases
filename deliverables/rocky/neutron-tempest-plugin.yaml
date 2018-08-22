@@ -13,3 +13,8 @@ releases:
     projects:
       - repo: openstack/neutron-tempest-plugin
         hash: 5fece0e41f957f7eba4f8a98d86bab2904c0f3e8
+  - projects:
+      - hash: d1020f8027d6b55bcf2fcbcbafded75bc9afc5c6
+        repo: openstack/neutron-tempest-plugin
+        tarball-base: neutron_tempest_plugin
+    version: 0.2.0
