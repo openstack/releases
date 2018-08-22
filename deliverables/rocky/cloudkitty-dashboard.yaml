@@ -4,5 +4,13 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 team: cloudkitty
 type: horizon-plugin
+branches:
+  - name: stable/rocky
+    location: 8.0.0
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 071392642480fb700399340ba6b4eb13b31a05fa
 repository-settings:
   openstack/cloudkitty-dashboard: {}
