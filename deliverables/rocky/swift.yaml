@@ -9,8 +9,29 @@ branches:
   - name: feature/deep-review
     location:
       openstack/swift: 331339246228167dfab61690327fc0c3f2fab8af
+  - name: stable/rocky
+    location: 2.19.0
 releases:
   - version: 2.18.0
     projects:
       - repo: openstack/swift
         hash: f270466de363499894317b7c671f65e8a912bd53
+  - version: 2.19.0
+    projects:
+      - repo: openstack/swift
+        hash: f0472f1f7975957fc31cb8c123aa82ee47848645
+cycle-highlights:
+  - Added an S3 API compatibility layer, so clients can use S3 clients
+    to talk to a Swift cluster.
+  - Added container sharding, an operator controlled feature that
+    may be used to shard very large container databases into a
+    number of smaller shard containers. This mitigates the issues
+    with one large DB by distributing the data across multiple
+    smaller databases throughout the cluster.
+  - TempURLs now support IP range restrictions.
+  - The trivial keymaster and the KMIP keymaster now support multiple
+    root encryption secrets to enable key rotation.
+  - Improved performance of many consistency daemon processes.
+  - Added support for the HTTP PROXY protocol to allow for accurate
+    client IP address logging when the connection is routed through
+    external systems.
