@@ -28,14 +28,24 @@ releases:
       - hash: 5226e50c68084dd3d76861d1247f9f292949b616
         repo: openstack/neutron
     version: 13.0.0.0rc1
+  - projects:
+      - hash: b6314ea6c3df11c6b27cd39844c53b65be0d9060
+        repo: openstack/neutron
+    version: 13.0.0.0rc2
 cycle-highlights:
-  - Per TCP/UDP port forwarding on floating IP is supported.
-    Operators can save the number of global IP addresses for floating IPs.
-  - Multiple bindings for compute owned ports is supported for better instance migration support.
-    Better live-migration support is a long-standing topic and Nova support will be coming in the next Stein release.
-  - Perform validation on filter parameters on listing resources. Previously filter parameters were unclear for API users.
-    This release improves the API behavior on resource filtering and documentation in the Neutron API references a lot.
-  - (fwaas) Logging on firewall events is supported. It is useful for operators to debug FWaaS.
-  - (vpnaas) Newer versions of liberswan 3.19+ are supported so that operators can run neutron-vpnaas IPsec VPN with newer distributions.
-  - (ovn) Support migration from an existing ML2OVS TripleO deployment to ML2OVN TripleO deployment.
-  - (bagpipe) bagpipe-bgp, a reference implementation of Neutron BGP VPN support, supports E-VPN with OVS.
+  - 'Per TCP/UDP port forwarding on floating IP is supported. Operators can save the
+    number of global IP addresses for floating IPs.'
+  - 'Multiple bindings for compute owned ports is supported for better instance migration
+    support. Better live-migration support is a long-standing topic and Nova support
+    will be coming in the next Stein release.'
+  - 'Perform validation on filter parameters on listing resources. Previously filter
+    parameters were unclear for API users. This release improves the API behavior
+    on resource filtering and documentation in the Neutron API references a lot.'
+  - '(fwaas) Logging on firewall events is supported. It is useful for operators to
+    debug FWaaS.'
+  - '(vpnaas) Newer versions of liberswan 3.19+ are supported so that operators can
+    run neutron-vpnaas IPsec VPN with newer distributions.'
+  - '(ovn) Support migration from an existing ML2OVS TripleO deployment to ML2OVN
+    TripleO deployment.'
+  - '(bagpipe) bagpipe-bgp, a reference implementation of Neutron BGP VPN support,
+    supports E-VPN with OVS.'
