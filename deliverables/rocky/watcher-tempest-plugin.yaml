@@ -3,6 +3,12 @@ include-pypi-link: no
 launchpad: watcher
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/watcher-tempest-plugin
+        hash: 8b78066462a76eba0242e264d3598adbd38eabbc
+        tarball-base: watcher-tempest-plugin
 repository-settings:
   openstack/watcher-tempest-plugin: {}
 team: watcher
