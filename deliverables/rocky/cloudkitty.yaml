@@ -12,5 +12,13 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 3ab4774f66b84324adc8823a049aa4cf13689fb9
+cycle-highlights:
+  - Cloudkitty can now collect non-OpenStack metrics using a new Promotheus
+    collector or the gnocchi collector.
+  - Improvement in the metrics configuration to ease configuration.
+  - New enhanced client with inclusion of the writer within.
+  - Evolution of Storage with the removal of the pure gnocchi and
+    gnocchihybrid storage and the addition of the new Backend V2 that will be
+    more scalable / faster.
 repository-settings:
   openstack/cloudkitty: {}
