@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 140b631e36bfa2dc75c9066fb5950159addbacbf
+  - version: 3.2.0
+    projects:
+      - repo: openstack/vitrage
+        hash: f920653194270344e6cbd7db42e42a2d0548f1c1
 cycle-highlights:
   - 'Fast-failover of vitrage-graph for better High-Availability support'
   - 'New Kubernetes datasource, for Kubernetes cluster as a workload on
