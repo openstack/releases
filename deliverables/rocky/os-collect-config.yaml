@@ -15,3 +15,10 @@ releases:
       - hash: 5bebbf1654f8eea8d74a4e403ac6bd3331a7fedf
         repo: openstack/os-collect-config
     version: 9.1.0
+  - projects:
+      - hash: 8763b70935068fef63887afdba683dcd6d4e0748
+        repo: openstack/os-collect-config
+    version: 9.2.0
+branches:
+  - location: 9.2.0
+    name: stable/rocky

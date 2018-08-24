@@ -18,3 +18,10 @@ releases:
       - hash: 97f90021c2f43694226353680fbb75c4be7c5e77
         repo: openstack/puppet-tripleo
     version: 9.2.0
+  - projects:
+      - hash: 7f89a62dc3e7fea7b2a15e7c5ad5bcb4d9286556
+        repo: openstack/puppet-tripleo
+    version: 9.3.0
+branches:
+  - location: 9.3.0
+    name: stable/rocky
