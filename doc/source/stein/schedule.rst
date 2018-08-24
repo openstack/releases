@@ -198,7 +198,7 @@ for more details and instructions on adding these highlights.
 Stein release
 -------------
 
-The Stein coordinated release will happen on 11 April 2019.
+The Stein coordinated release will happen on 10 April 2019.
 
 .. _s-trailing-release:
 
