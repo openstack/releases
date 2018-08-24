@@ -3,7 +3,15 @@ launchpad: ceilometer
 include-pypi-link: no
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: b35146e1a423e81b2bbdd8621d0310ffac9af517
+        repo: openstack/telemetry-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
-  openstack/telemetry-tempest-plugin: {}
+  openstack/telemetry-tempest-plugin:
+    tarball-base: telemetry_tempest_plugin
 team: Telemetry
 type: tempest-plugin
