@@ -3,7 +3,15 @@ include-pypi-link: no
 launchpad: magnum
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: cc0647ce1a6fdb0e1a0b6580c9f2b14e0b26fbb1
+        repo: openstack/magnum-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
-  openstack/magnum-tempest-plugin: {}
+  openstack/magnum-tempest-plugin:
+    tarball-base: magnum_tempest_plugin
 team: magnum
 type: tempest-plugin
