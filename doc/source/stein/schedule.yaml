@@ -7,9 +7,13 @@ cycle:
   x-project:
     - r-release
     - s-goals-research
+    - s-tc-nominations
 - end: '2018-09-07'
   name: R-31
   start: '2018-09-03'
+  x-project:
+    - s-tc-email-deadline
+    - s-tc-campaigning
 - end: '2018-09-14'
   name: R-30
   start: '2018-09-10'
@@ -18,6 +22,8 @@ cycle:
 - end: '2018-09-21'
   name: R-29
   start: '2018-09-17'
+  x-project:
+    - s-tc-polling
 - end: '2018-09-28'
   name: R-28
   start: '2018-09-24'
