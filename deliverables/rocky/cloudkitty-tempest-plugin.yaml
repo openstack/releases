@@ -4,6 +4,12 @@ launchpad: cloudkitty
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/cloudkitty-tempest-plugin: {}
+  openstack/cloudkitty-tempest-plugin:
+    tarball-base: cloudkitty_tempest_plugin
 team: cloudkitty
 type: tempest-plugin
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/cloudkitty-tempest-plugin
+        hash: e14309c3b8e441b6aacd0038322be94afd70e59b
