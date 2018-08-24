@@ -56,7 +56,7 @@ Stein Community Goals Acknowledgement
 -------------------------------------
 
 Teams should prepare their acknowledgement of `the community-wide
-goals for
+goals for Stein
 <https://governance.openstack.org/tc/goals/stein/index.html>`__.
 
 .. _s-summit:
