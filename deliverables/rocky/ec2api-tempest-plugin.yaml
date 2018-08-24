@@ -3,6 +3,13 @@ include-pypi-link: no
 launchpad: ec2-api
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: ba836d429f38ce0831cf336feb2a620fdcf3efcb
+        repo: openstack/ec2api-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
   openstack/ec2api-tempest-plugin: {}
 team: ec2-api
