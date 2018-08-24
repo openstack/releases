@@ -3,7 +3,15 @@ include-pypi-link: no
 launchpad: zaqar
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: f6c761d2138824849ca3036e49210e7649978ebb
+        repo: openstack/zaqar-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
-  openstack/zaqar-tempest-plugin: {}
+  openstack/zaqar-tempest-plugin:
+    tarball-base: zaqar_tempest_plugin
 team: zaqar
 type: tempest-plugin
