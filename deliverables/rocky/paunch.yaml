@@ -13,5 +13,12 @@ releases:
       - hash: 9b55e86d0ecd638e03d72684a87747bc496d83b1
         repo: openstack/paunch
     version: 3.1.0
+  - projects:
+      - hash: 6d2ec11c439e94795dc7f75ebe3f931f5eb47e92
+        repo: openstack/paunch
+    version: 3.2.0
 repository-settings:
   openstack/paunch: {}
+branches:
+  - location: 3.2.0
+    name: stable/rocky

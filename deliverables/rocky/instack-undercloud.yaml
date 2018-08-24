@@ -19,3 +19,10 @@ releases:
       - hash: 41d04607df0912a454edb70db6abc8778b86f88d
         repo: openstack/instack-undercloud
     version: 9.2.0
+  - projects:
+      - hash: ed96987af5a77579366b27a44d94442f33cd811a
+        repo: openstack/instack-undercloud
+    version: 9.3.0
+branches:
+  - location: 9.3.0
+    name: stable/rocky

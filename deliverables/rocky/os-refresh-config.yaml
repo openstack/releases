@@ -11,3 +11,10 @@ releases:
       - hash: cf2d98460ddd01f000f2151b98e618b1e13e082c
         repo: openstack/os-refresh-config
     version: 9.0.0
+  - projects:
+      - hash: a2091f9c65d9d9a22118d0c5cd5ebbe0aab7763b
+        repo: openstack/os-refresh-config
+    version: 9.1.0
+branches:
+  - location: 9.1.0
+    name: stable/rocky

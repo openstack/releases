@@ -23,3 +23,10 @@ releases:
       - hash: 2dfed4e87aad128ab3c0014def5cde6b0c32f2ca
         repo: openstack/tripleo-common
     version: 9.2.0
+  - projects:
+      - hash: 18be01a01158de42914654bad23eceb3b65b6da7
+        repo: openstack/tripleo-common
+    version: 9.3.0
+branches:
+  - location: 9.3.0
+    name: stable/rocky
