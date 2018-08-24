@@ -5,13 +5,12 @@ release-model: cycle-with-milestones
 team: mistral
 type: service
 cycle-highlights:
-  - Introduced the notifier service for sending Mistral events.
-  - Added Mistral actions for Swift service methods, Vitrage, Zun, Qinling and
-    Manila.
-  - Executors now have a heartbeat check to verify they are still running. This
-    helps resolve workflows that can become stuck in the RUNNING state when an
-    executor dies.
-  - Improved performance and reduced memory footprint
+  - 'Introduced the notifier service for sending Mistral events.'
+  - 'Added Mistral actions for Swift service methods, Vitrage, Zun, Qinling and Manila.'
+  - 'Executors now have a heartbeat check to verify they are still running. This helps
+    resolve workflows that can become stuck in the RUNNING state when an executor
+    dies.'
+  - 'Improved performance and reduced memory footprint'
 releases:
   - version: 7.0.0.0b1
     projects:
@@ -52,3 +51,4 @@ repository-settings:
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky
+release-notes: https://docs.openstack.org/releasenotes/mistral/rocky.html

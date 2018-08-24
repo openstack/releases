@@ -5,7 +5,7 @@ release-model: cycle-with-milestones
 release-type: horizon
 team: octavia
 type: horizon-plugin
-release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/unreleased.html
+release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/rocky.html
 repository-settings:
   openstack/octavia-dashboard: {}
 releases:
@@ -37,5 +37,4 @@ branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - 'Octavia dashboard details pages now automatically refresh the load
-     balancer status.'
+  - 'Octavia dashboard details pages now automatically refresh the load balancer status.'

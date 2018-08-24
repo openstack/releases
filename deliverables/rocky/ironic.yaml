@@ -18,11 +18,12 @@ branches:
   - location: 11.1.0
     name: stable/rocky
 cycle-highlights:
-  - Added the ability to define groups of conductors and nodes, enabling
-    operators to define specific failure or management domains.
-  - Added ability to manage BIOS settings, with driver support
-    for iRMC and iLO hardware types.
-  - Added automatic recovery from power faults, removing a long
-    standing headache for operators.
-  - Added a ramdisk deployment interface enabling high performance
-    computing deployments to have diskless nodes.
+  - 'Added the ability to define groups of conductors and nodes, enabling operators
+    to define specific failure or management domains.'
+  - 'Added ability to manage BIOS settings, with driver support for iRMC and iLO hardware
+    types.'
+  - 'Added automatic recovery from power faults, removing a long standing headache
+    for operators.'
+  - 'Added a ramdisk deployment interface enabling high performance computing deployments
+    to have diskless nodes.'
+release-notes: https://docs.openstack.org/releasenotes/ironic/rocky.html
