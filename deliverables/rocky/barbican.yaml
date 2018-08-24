@@ -25,3 +25,16 @@ releases:
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky
+cycle-highlights:
+  - |
+    A new crypto plugin was added to allow secrets to be stored and generated
+    in a HashiCorp Vault.  This plugin uses the castellan vault plugin to
+    access the Vault.
+  - |
+    The PKCS#11 plugin was augmented to allow encryption and HMAC algorithms
+    and key parameters to be customized to allow easier integration with Thales
+    and ATOS HSMs.  Changes were also made to barbican-manage to allow the key
+    types and algorithms to be customized.
+  - |
+    The simple crypto plugin was augmented to allow the generation of 512 bit
+    AES keys for XTS mode.
