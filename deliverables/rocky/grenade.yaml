@@ -4,5 +4,9 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack-dev/grenade: dc7f4a4ba5697d5a73a1e656d4a1717964324eab
+    name: stable/rocky
 repository-settings:
   openstack-dev/grenade: {}
