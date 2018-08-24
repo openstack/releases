@@ -3,7 +3,15 @@ include-pypi-link: no
 launchpad: trove
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: fa807b780062ea30aaeebdc37d650f071a98b09c
+        repo: openstack/trove-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
-  openstack/trove-tempest-plugin: {}
+  openstack/trove-tempest-plugin:
+    tarball-base: trove_tempest_plugin
 team: trove
 type: tempest-plugin
