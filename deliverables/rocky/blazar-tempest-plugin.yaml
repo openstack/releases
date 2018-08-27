@@ -3,7 +3,15 @@ include-pypi-link: no
 launchpad: blazar
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: ef61d6fa07a0e95b3a504b5f9bd9ba135ca1229b
+        repo: openstack/blazar-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
-  openstack/blazar-tempest-plugin: {}
+  openstack/blazar-tempest-plugin:
+    tarball-base: blazar_tempest_plugin
 team: blazar
 type: tempest-plugin
