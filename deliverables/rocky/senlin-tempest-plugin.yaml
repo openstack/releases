@@ -3,6 +3,13 @@ include-pypi-link: no
 launchpad: senlin
 release-model: cycle-with-intermediary
 release-type: python-pypi
+releases:
+  - projects:
+      - hash: 01f7f44d95742f11eafc0a2ee1e050615bf7a9de
+        repo: openstack/senlin-tempest-plugin
+    version: 0.1.0
+    flags:
+      - forced
 repository-settings:
   openstack/senlin-tempest-plugin: {}
 team: senlin
