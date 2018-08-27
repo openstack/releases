@@ -4,6 +4,12 @@ launchpad: mistral
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/mistral-tempest-plugin: {}
+  openstack/mistral-tempest-plugin:
+    tarball-base: mistral_tempest_tests
 team: mistral
 type: tempest-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/mistral-tempest-plugin
+        hash: 0646dcc78543d876e92e8079c8146a3c4b9b4bb5
