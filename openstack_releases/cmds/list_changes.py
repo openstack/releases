@@ -247,6 +247,11 @@ def main():
         for r in governance.get_repositories(team_data)
     )
 
+    all_deliverables = deliverable.Deliverables(
+        './deliverables',
+        False,
+    )
+
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
     os.environ['PAGER'] = ''
@@ -290,6 +295,17 @@ def main():
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
                           (deliv.name, team_name))
+                if not deliv.is_independent:
+                    # Show other deliverables owned by the team and
+                    # included in this series.
+                    team_deliv_in_series = all_deliverables.get_deliverables(
+                        team.name, deliv.series)
+                    if team_deliv_in_series:
+                        print('Other {} deliverables in {}:'.format(
+                            team.name, deliv.series))
+                    for d in team_deliv_in_series:
+                        print('  {} ({})'.format(d.name, d.latest_release or None))
+                    print()
             else:
                 print('no team %r found, cannot report on governance status' %
                       team_name)
