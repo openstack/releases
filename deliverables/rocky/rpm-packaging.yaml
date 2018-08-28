@@ -1,0 +1,12 @@
+---
+launchpad: rpm-packaging
+release-model: untagged
+team: 'Packaging-rpm'
+type: other
+stable-branch-type: tagless
+branches:
+  - location:
+      openstack/rpm-packaging: 362c30397da83dced0a9f0812ae022a797d529fb
+    name: stable/rocky
+repository-settings:
+  openstack/rpm-packaging: {}
