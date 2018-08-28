@@ -1365,8 +1365,6 @@ def validate_stable_branches(deliv, context):
 
     branch_mode = deliv.stable_branch_type
 
-    latest_release = deliv.releases[-1]
-
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
@@ -1414,6 +1412,8 @@ def validate_stable_branches(deliv, context):
                 print('{} branch already exists, skipping validation'.format(
                     branch.name))
                 continue
+
+            latest_release = deliv.releases[-1]
             if location != latest_release.version:
                 context.error(
                     ('stable branches must be created from the latest '
