@@ -1416,13 +1416,17 @@ def validate_stable_branches(deliv, context):
                     branch.name))
                 continue
 
-            latest_release = deliv.releases[-1]
-            if location != latest_release.version:
-                context.error(
-                    ('stable branches must be created from the latest '
-                     'tagged release, and %s for %s does not match %s' % (
-                         location, branch.name, latest_release.version))
-                )
+            if deliv.is_independent:
+                print('"latest release" rule does not apply '
+                      'to independent repositories, skipping')
+            else:
+                latest_release = deliv.releases[-1]
+                if location != latest_release.version:
+                    context.error(
+                        ('stable branches must be created from the latest '
+                         'tagged release, and %s for %s does not match %s' % (
+                             location, branch.name, latest_release.version))
+                    )
 
         elif branch_mode == 'tagless':
             if not isinstance(location, dict):
