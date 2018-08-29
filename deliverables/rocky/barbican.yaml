@@ -22,6 +22,11 @@ releases:
       - hash: 3f6cccae4982e5a8fe1ca5a3fb198e1481a5891c
         repo: openstack/barbican
     version: 7.0.0.0rc1
+  - diff-start: 6.0.0
+    projects:
+      - hash: 3f6cccae4982e5a8fe1ca5a3fb198e1481a5891c
+        repo: openstack/barbican
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

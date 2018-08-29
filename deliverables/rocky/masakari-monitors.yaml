@@ -22,8 +22,13 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: bedf75e102f02a349c715a5082142145d90273d8
+  - diff-start: 5.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: bedf75e102f02a349c715a5082142145d90273d8
+    version: 6.0.0
 branches:
   - location: 6.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - Support Introspective Instance Monitoring through QEMU Guest Agent.
+  - 'Support Introspective Instance Monitoring through QEMU Guest Agent.'

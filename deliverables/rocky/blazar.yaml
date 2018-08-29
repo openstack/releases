@@ -23,10 +23,16 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 06b7e527840128db437cd8af538a7b2ce761bc11
+  - diff-start: 1.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: 06b7e527840128db437cd8af538a7b2ce761bc11
+    version: 2.0.0
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - Host and instance reservation support multiple availability zones.
-  - Resource monitoring supports periodic healing in order to avoid unnecessary reservation healing.
-  - A time margin for cleaning up resources between back to back leases is introduced.
+  - 'Host and instance reservation support multiple availability zones.'
+  - 'Resource monitoring supports periodic healing in order to avoid unnecessary reservation
+    healing.'
+  - 'A time margin for cleaning up resources between back to back leases is introduced.'

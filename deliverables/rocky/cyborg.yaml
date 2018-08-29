@@ -24,6 +24,12 @@ releases:
       - hash: b727c1670ab24b68d7224e7967adff5145e45c40
         repo: openstack/cyborg
         tarball-base: openstack-cyborg
+  - diff-start: 0.1.0
+    projects:
+      - hash: b727c1670ab24b68d7224e7967adff5145e45c40
+        repo: openstack/cyborg
+        tarball-base: openstack-cyborg
+    version: 1.0.0
 branches:
   - location: 1.0.0.0rc1
     name: stable/rocky

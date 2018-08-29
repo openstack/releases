@@ -24,6 +24,11 @@ releases:
       - hash: 4c38303620c8a3f38d7261a64ce8532979bf7560
         repo: openstack/networking-sfc
     version: 7.0.0.0rc1
+  - diff-start: 6.0.0
+    projects:
+      - hash: 4c38303620c8a3f38d7261a64ce8532979bf7560
+        repo: openstack/networking-sfc
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

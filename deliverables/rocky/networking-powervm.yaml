@@ -23,5 +23,10 @@ releases:
     projects:
       - repo: openstack/networking-powervm
         hash: fad0075e7e65fb8388b8be343a4dc2cc82b0ba8a
+  - diff-start: 6.0.0.0rc1
+    projects:
+      - repo: openstack/networking-powervm
+        hash: fad0075e7e65fb8388b8be343a4dc2cc82b0ba8a
+    version: 7.0.0
 repository-settings:
   openstack/networking-powervm: {}

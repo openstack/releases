@@ -23,6 +23,11 @@ releases:
       - hash: 3f5a3294a65cbcd5485f4f705984f30091fff9ad
         repo: openstack/designate-dashboard
     version: 7.0.0.0rc1
+  - diff-start: 6.0.0.0rc1
+    projects:
+      - hash: 3f5a3294a65cbcd5485f4f705984f30091fff9ad
+        repo: openstack/designate-dashboard
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

@@ -23,5 +23,10 @@ releases:
     projects:
       - repo: openstack/ceilometer-powervm
         hash: 1bd1f9e639f07b4f53be30ee887f9cced5d80d2a
+  - diff-start: 6.0.0
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 1bd1f9e639f07b4f53be30ee887f9cced5d80d2a
+    version: 7.0.0
 repository-settings:
   openstack/ceilometer-powervm: {}

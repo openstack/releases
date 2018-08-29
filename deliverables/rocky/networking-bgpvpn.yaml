@@ -23,6 +23,11 @@ releases:
       - hash: da2d0db2f27409bd240b0842a3e6c3a1603bb5c1
         repo: openstack/networking-bgpvpn
     version: 9.0.0.0rc1
+  - diff-start: 8.0.0
+    projects:
+      - hash: da2d0db2f27409bd240b0842a3e6c3a1603bb5c1
+        repo: openstack/networking-bgpvpn
+    version: 9.0.0
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky

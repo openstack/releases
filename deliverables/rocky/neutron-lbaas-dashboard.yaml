@@ -28,6 +28,11 @@ releases:
       - hash: af254ca03c7b152b404811350cba54dade741ff0
         repo: openstack/neutron-lbaas-dashboard
     version: 5.0.0.0rc2
+  - diff-start: 4.0.0
+    projects:
+      - hash: af254ca03c7b152b404811350cba54dade741ff0
+        repo: openstack/neutron-lbaas-dashboard
+    version: 5.0.0
 branches:
   - location: 5.0.0.0rc1
     name: stable/rocky

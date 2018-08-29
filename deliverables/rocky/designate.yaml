@@ -24,6 +24,11 @@ releases:
       - hash: 2ff936a38f48f7f6f8c24c3b77fcde18e9c05580
         repo: openstack/designate
     version: 7.0.0.0rc1
+  - diff-start: 6.0.0
+    projects:
+      - hash: 2ff936a38f48f7f6f8c24c3b77fcde18e9c05580
+        repo: openstack/designate
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

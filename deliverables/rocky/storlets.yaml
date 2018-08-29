@@ -20,6 +20,11 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
+  - diff-start: 1.0.0
+    projects:
+      - repo: openstack/storlets
+        hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
+    version: 2.0.0
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
