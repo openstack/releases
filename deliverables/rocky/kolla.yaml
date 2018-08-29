@@ -3,6 +3,9 @@ launchpad: kolla
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/kolla: {}
 releases:
@@ -14,3 +17,9 @@ releases:
       - hash: 778f6dc8235d251d851044b3c54c3d7aded750f5
         repo: openstack/kolla
     version: 7.0.0.0b3
+  - projects:
+      - hash: ca5e30ccf962a430a1968201e0ebdc85a9fb27df
+        repo: openstack/kolla
+    version: 7.0.0.0rc1
+cycle-highlights:
+  - Added new Docker images.
