@@ -3,6 +3,9 @@ launchpad: kolla-ansible
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
 repository-settings:
   openstack/kolla-ansible: {}
 releases:
@@ -14,3 +17,11 @@ releases:
       - hash: cd03876e7d646fe7bc1842888ef79729f52a744b
         repo: openstack/kolla-ansible
     version: 7.0.0.0b3
+  - projects:
+      - hash: a9e02d626465621f09c226f9bbcde91419f5cb62
+        repo: openstack/kolla-ansible
+    version: 7.0.0.0rc1
+cycle-highlights:
+  - Allow operators to set resource limits to containers.
+  - Implement Ceph Bluestore deployment
+  - Support deployment of Prometheus and Monasca services.
