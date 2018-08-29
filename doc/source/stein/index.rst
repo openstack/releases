@@ -2,7 +2,7 @@
 Stein
 =====
 
-Projected Release Date: 11 April, 2019
+Projected Release Date: 10 April, 2019
 
 .. toctree::
    :maxdepth: 1
