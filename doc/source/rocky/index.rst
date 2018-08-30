@@ -2,7 +2,7 @@
  Rocky
 =======
 
-Projected Release Date: 30 August, 2018
+Originally Released: 30 August, 2018
 
 .. toctree::
    :maxdepth: 1
