@@ -21,17 +21,16 @@ releases:
       - repo: openstack/swift
         hash: f0472f1f7975957fc31cb8c123aa82ee47848645
 cycle-highlights:
-  - Added an S3 API compatibility layer, so clients can use S3 clients
-    to talk to a Swift cluster.
-  - Added container sharding, an operator controlled feature that
-    may be used to shard very large container databases into a
-    number of smaller shard containers. This mitigates the issues
-    with one large DB by distributing the data across multiple
-    smaller databases throughout the cluster.
-  - TempURLs now support IP range restrictions.
-  - The trivial keymaster and the KMIP keymaster now support multiple
-    root encryption secrets to enable key rotation.
-  - Improved performance of many consistency daemon processes.
-  - Added support for the HTTP PROXY protocol to allow for accurate
-    client IP address logging when the connection is routed through
-    external systems.
+  - 'Added an S3 API compatibility layer, so clients can use S3 clients to talk to
+    a Swift cluster.'
+  - 'Added container sharding, an operator controlled feature that may be used to
+    shard very large container databases into a number of smaller shard containers.
+    This mitigates the issues with one large DB by distributing the data across multiple
+    smaller databases throughout the cluster.'
+  - 'TempURLs now support IP range restrictions.'
+  - 'The trivial keymaster and the KMIP keymaster now support multiple root encryption
+    secrets to enable key rotation.'
+  - 'Improved performance of many consistency daemon processes.'
+  - 'Added support for the HTTP PROXY protocol to allow for accurate client IP address
+    logging when the connection is routed through external systems.'
+release-notes: https://docs.openstack.org/releasenotes/swift/rocky.html

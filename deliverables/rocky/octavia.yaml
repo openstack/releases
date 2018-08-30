@@ -5,7 +5,7 @@ release-model: cycle-with-milestones
 release-type: python-pypi
 team: octavia
 type: service
-release-notes: https://docs.openstack.org/releasenotes/octavia/unreleased.html
+release-notes: https://docs.openstack.org/releasenotes/octavia/rocky.html
 repository-settings:
   openstack/octavia: {}
 releases:
@@ -42,10 +42,10 @@ branches:
   - location: 3.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - 'Octavia now supports provider drivers, allowing third party load
-     balancing drivers to be integrated with the Octavia v2 API.'
-  - 'UDP protocol load balancing has been added to Octavia. This is useful for
-     IoT use cases.'
-  - 'Pools can have *backup* members, also known as "sorry servers", that
-     respond when all of the members of a pool are not available.'
+  - 'Octavia now supports provider drivers, allowing third party load balancing drivers
+    to be integrated with the Octavia v2 API.'
+  - 'UDP protocol load balancing has been added to Octavia. This is useful for IoT
+    use cases.'
+  - 'Pools can have *backup* members, also known as "sorry servers", that respond
+    when all of the members of a pool are not available.'
   - 'Users can now configure load balancer timeouts per listener.'

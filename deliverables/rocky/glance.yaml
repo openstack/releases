@@ -12,18 +12,16 @@ branches:
   - name: stable/rocky
     location: 17.0.0.0rc1
 cycle-highlights:
-  - Secure Hash Algorithm Support, which allows operators to configure
-    a self-describing secure hash that can be used by image consumers
-    to verify image data integrity
-  - Introduction of "hidden" images, a popular operator request that
-    enables operators to keep outdated public images hidden from the
-    default image-list response yet still available for server rebuilds
-  - The glance-manage utility has been updated to address OpenStack
-    Security Note OSSN-0075
-  - An implementation of multiple backend support, which allows operators
-    to configure multiple stores and allows end users to direct image data
-    to a specific store, is introduced as the EXPERIMENTAL Image Service
-    API version 2.8
+  - 'Secure Hash Algorithm Support, which allows operators to configure a self-describing
+    secure hash that can be used by image consumers to verify image data integrity'
+  - 'Introduction of "hidden" images, a popular operator request that enables operators
+    to keep outdated public images hidden from the default image-list response yet
+    still available for server rebuilds'
+  - 'The glance-manage utility has been updated to address OpenStack Security Note
+    OSSN-0075'
+  - 'An implementation of multiple backend support, which allows operators to configure
+    multiple stores and allows end users to direct image data to a specific store,
+    is introduced as the EXPERIMENTAL Image Service API version 2.8'
 releases:
   - version: 17.0.0.0b1
     projects:
@@ -52,3 +50,4 @@ releases:
     version: 17.0.0
 repository-settings:
   openstack/glance: {}
+release-notes: https://docs.openstack.org/releasenotes/glance/rocky.html

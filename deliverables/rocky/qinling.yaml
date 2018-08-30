@@ -31,10 +31,13 @@ branches:
   - location: 1.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - Support function versioning so that users can create different versions of a same purpose function.
-  - Support function alias which is a pointer to a specific Qinling function version and can be updated to point to a different version.
-  - Use secure connection to Kubernetes cluster in the default deployment.
-  - Support to define untrusted workload for the runtime.
-  - Node.JS runtime support(experimental).
-  - Python runtime security improvement.
-  - Document improvement.
+  - 'Support function versioning so that users can create different versions of a
+    same purpose function.'
+  - 'Support function alias which is a pointer to a specific Qinling function version
+    and can be updated to point to a different version.'
+  - 'Use secure connection to Kubernetes cluster in the default deployment.'
+  - 'Support to define untrusted workload for the runtime.'
+  - 'Node.JS runtime support(experimental).'
+  - 'Python runtime security improvement.'
+  - 'Document improvement.'
+release-notes: https://docs.openstack.org/releasenotes/qinling/rocky.html
