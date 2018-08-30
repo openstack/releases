@@ -19,6 +19,6 @@
    - * :doc:`{{ series['name'] }}/index`
      * {{ phase_link(series['status']) }}
      * {{ series['initial-release'] }} {%- if series['status'] in ['development', 'future'] %} *estimated* :doc:`(schedule) <{{ series['name'] }}/schedule>`{%- endif %}
-     * {% if series['next-phase'] %}{{ phase_link(series['next-phase']['status']) }} *estimated {{ series['next-phase']['date'] }}*{% endif %}
+     * {% if series['next-phase'] %}{{ phase_link(series['next-phase']['status']) }} *estimated {{ series['next-phase'].get('date', 'TBD') }}*{% endif %}
      * {{ series.get('eol-date', '') }}
 {%- endfor %}
