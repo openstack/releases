@@ -1404,7 +1404,7 @@ def validate_stable_branches(deliv, context):
                 gitutils.stable_branch_exists(
                     context.workdir,
                     repo,
-                    deliv.series
+                    series,
                 )
                 for repo in deliv.known_repo_names
             )

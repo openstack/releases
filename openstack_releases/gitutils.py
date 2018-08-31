@@ -165,6 +165,8 @@ def stable_branch_exists(workdir, repo, series):
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8')
         )
+        LOG.debug('looking for %s', remote_match)
+        LOG.debug('found branches: %s', containing_branches)
         return (remote_match in containing_branches)
     except processutils.CalledProcessError as e:
         LOG.error('failed checking for branch: %s [%s]', e, e.output.strip())
