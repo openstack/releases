@@ -88,6 +88,10 @@ def main():
     errors = []
 
     for filename in filenames:
+        # Skip our test deliverable
+        if 'release-test' in filename:
+            continue
+
         print('\nChecking %s' % filename)
         if not os.path.exists(filename):
             print("File was deleted, skipping.")
