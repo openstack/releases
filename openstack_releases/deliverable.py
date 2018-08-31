@@ -478,6 +478,15 @@ class Deliverable(object):
         return self.model == 'cycle-with-milestones'
 
     @property
+    def is_branchless(self):
+        # Tempest plugins do not branch.
+        if self.type == 'tempest-plugin':
+            return True
+        if self.name == 'tempest':
+            return True
+        return False
+
+    @property
     def type(self):
         if 'tempest-plugin' in self.name:
             return 'tempest-plugin'

@@ -199,6 +199,10 @@ def main():
         if args.type and deliv.type not in args.type:
             continue
         if args.no_stable_branch:
+            if deliv.is_branchless:
+                continue
+            if deliv.name == 'release-test':
+                continue
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
         if args.unreleased and (deliv.is_released or not deliv.is_releasable):
