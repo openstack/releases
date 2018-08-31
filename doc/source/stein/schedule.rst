@@ -206,7 +206,7 @@ Stein cycle-trailing release deadline
 -------------------------------------
 
 The release deadline for projects using the release:cycle-trailing model that
-follow the main release cycle is set to 13 June, 2019.
+follow the main release cycle is set to 11 July, 2019.
 
 Project-specific events
 =======================
