@@ -29,6 +29,10 @@ releases:
       - repo: openstack/sahara
         hash: f8f4d45ab4f2ddc757d4ab1d09d2d16ad48d4a58
     version: 8.0.1
+  - projects:
+      - repo: openstack/sahara
+        hash: f8e7026561eb0ab6fa2ad8147e1b771dfb478265
+    version: 8.0.2
 branches:
   - name: stable/queens
     location: 8.0.0.0rc1
