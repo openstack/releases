@@ -20,5 +20,8 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 6b64d8572987808416ae1236279fdafd3f7dca98
+branches:
+  - name: stable/rocky
+    location: 1.4.0
 repository-settings:
   openstack/heat-dashboard: {}
