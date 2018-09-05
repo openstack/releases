@@ -389,22 +389,21 @@ Final Release
 Post-Final Release
 ==================
 
-1. The week after the final release, process any late or blocked
+#. The week after the final release, process any late or blocked
    release requests for deliverables for any branch (treating the new
    series branch as stable).
-
-2. The week after the final releases for milestone-based projects are
-   tagged, use ``propose-final-releases --all`` to tag the existing
-   most recent release candidates as the final release for projects
-   using the cycle-trailing model.
-
-3. Ask liaisons and PTLs of cycle-trailing projects to review and +1
-   the final release proposal from the previous step so their approval
-   is included in the metadata that goes onto the signed tag.
 
 cycle-trailing Final Release
 ============================
 
-1. Two weeks after the final release for milestone-based projects,
-   approve the final release patch created earlier.
+#. A week before the cycle-trailing deadline, use
+   ``propose-final-releases --all`` to tag the existing most recent release
+   candidates as the final release for the cycle-trailing projects.
+
+#. Ask liaisons and PTLs of cycle-trailing projects to review and +1
+   the final release proposal from the previous step so their approval
+   is included in the metadata that goes onto the signed tag.
+
+#. On the cycle-trailing deadline approve the final release patch created
+   earlier.
 
