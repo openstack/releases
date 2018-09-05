@@ -13,5 +13,8 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: fdd6a5f537ad39e092f69bc05307ae7640384430
+branches:
+  - name: stable/rocky
+    location: 1.7.0
 repository-settings:
   openstack/heat-agents: {}
