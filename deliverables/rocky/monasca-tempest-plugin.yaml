@@ -1,5 +1,5 @@
 ---
-launchpad: monasca
+storyboard: 919
 include-pypi-link: no
 release-model: cycle-with-intermediary
 release-type: python-pypi
@@ -7,3 +7,8 @@ repository-settings:
   openstack/monasca-tempest-plugin: {}
 team: monasca
 type: tempest-plugin
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/monasca-tempest-plugin
+        hash: aea636e67787ac0980bb935d6be482f1657ff87a
