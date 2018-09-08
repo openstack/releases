@@ -225,7 +225,7 @@ class TestValidateBugTracker(base.BaseTestCase):
                 "updated_at": None,
                 "autocreate_branches": False,
                 "repo_url": None,
-                "id": 760,
+                "id": "openstack-infra/shade",
                 "description": "Client library for OpenStack...",
             }
         ]
@@ -234,7 +234,7 @@ class TestValidateBugTracker(base.BaseTestCase):
                 team='team',
                 series=defaults.RELEASE,
                 name='name',
-                data={'storyboard': '760'},
+                data={'storyboard': 'openstack-infra/shade'},
             ),
             self.ctx,
         )

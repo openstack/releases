@@ -437,8 +437,7 @@ class Deliverable(object):
 
     @property
     def storyboard_id(self):
-        sb_id = self._data.get('storyboard')
-        return int(sb_id) if sb_id else None
+        return self._data.get('storyboard')
 
     @property
     def repos(self):

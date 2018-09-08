@@ -16,7 +16,10 @@ properties:
   launchpad:
     type: "string"
   storyboard:
-    type: "integer"
+    # TODO(fungi): Previously this was an integer but now we
+    # want to support strings. This can be changed to "string"
+    # later if all the data gets updated from numbers to names.
+    type: ["integer", "string"]
   release-notes:
     oneOf:
       - type: "string"
