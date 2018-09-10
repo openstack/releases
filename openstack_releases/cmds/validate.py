@@ -454,7 +454,10 @@ def validate_bugtracker(deliv, context):
                     'Could not verify storyboard project, API call failed.'
                 )
             for project in projects_resp.json():
-                if sb_id == project.get('id'):
+                # TODO(fungi): This can be changed to simply check
+                # that sb_id == project.get('name') later if all the
+                # data gets updated from numbers to names.
+                if sb_id in (project.get('id'), project.get('name')):
                     break
             else:
                 context.error(
