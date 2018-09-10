@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 5b32ed07fceca24c63f96f39cc1dbc413632ba21
+  - version: 0.5.1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 84ad28ef65b3ad07c83795887df20282fcf7036f
 cycle-highlights:
   - |
     Added support for High Availability kuryr-controller in an Active/Passive
@@ -28,6 +32,10 @@ cycle-highlights:
     the CNI daemon's functionality and set limits on resources like memory,
     improving both stability and performance and for it to be marked as
     unhealthy if needed.
+  - |
+    Added support for multi-vif based on Kubernetes Network Custom Resource
+    Definition De-facto Standard spec defined by the Network Plumbing Working
+    Group, allowing multiple interfaces per pod.
 repository-settings:
   openstack/kuryr-kubernetes: {}
 release-notes: https://docs.openstack.org/releasenotes/kuryr-kubernetes/rocky.html
