@@ -248,3 +248,32 @@ PTL Elections
 -------------
 
 .. _Election site: https://governance.openstack.org/election/
+
+Manila
+------
+
+.. _s-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs must be approved by 8 Nov 2018 (23:59 UTC).
+
+.. _s-manila-driver-deadline:
+
+Manila New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to to Manila is 10 Jan 2019
+(23:59 UTC). New drivers must be substantially complete, with unit tests, and
+passing 3rd party CI by this date. Drivers do not need to be merged until the
+feature freeze date, but drivers that don't meet this deadline will not be
+considered at all for Rocky.
+
+.. _s-manila-fp-freeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially complete, with unit
+tests by 21 February 2019 (23:59 UTC).

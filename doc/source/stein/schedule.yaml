@@ -47,6 +47,8 @@ cycle:
 - end: '2018-11-09'
   name: R-22
   start: '2018-11-05'
+  project-specific:
+    - s-manila-spec-freeze
 - end: '2018-11-16'
   name: R-21
   start: '2018-11-12'
@@ -79,6 +81,8 @@ cycle:
   x-project:
     - s-2
     - s-mf
+  project-specific:
+    - s-manila-driver-deadline
 - end: '2019-01-18'
   name: R-12
   start: '2019-01-14'
@@ -97,6 +101,8 @@ cycle:
 - end: '2019-02-22'
   name: R-7
   start: '2019-02-18'
+  project-specific:
+    - s-manila-fp-freeze
 - end: '2019-03-01'
   name: R-6
   start: '2019-02-25'
@@ -135,4 +141,3 @@ cycle:
   start: '2019-04-08'
   x-project:
   - s-release
-
