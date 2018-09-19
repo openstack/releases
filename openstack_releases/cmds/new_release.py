@@ -16,8 +16,10 @@ from __future__ import print_function
 
 import argparse
 import atexit
+import logging
 import os
 import shutil
+import sys
 import tempfile
 
 from openstack_releases import gitutils
@@ -26,6 +28,8 @@ from openstack_releases import yamlutils
 
 # Release models that support release candidates.
 _USES_RCS = ['cycle-with-milestones', 'cycle-trailing']
+
+LOG = logging.getLogger('')
 
 
 def get_deliverable_data(series, deliverable):
@@ -117,16 +121,18 @@ def get_release_history(series, deliverable):
     else:
         status = series_status.SeriesStatus.default()
         all_series = list(status.names)
+        LOG.debug('all series %s', all_series)
         included_series = all_series[all_series.index(series):]
     release_history = []
+    LOG.debug('building release history')
     for current_series in included_series:
         try:
             deliv_info = get_deliverable_data(current_series, deliverable)
             releases = deliv_info['releases']
         except (IOError, OSError, KeyError):
-            print('No releases for %s in %s, yet.' % (
-                deliverable, series))
             releases = []
+        LOG.debug('%s releases: %s', current_series,
+                  [r['version'] for r in releases])
         release_history.append(releases)
     return release_history
 
@@ -134,7 +140,10 @@ def get_release_history(series, deliverable):
 def get_last_release(release_history, deliverable, release_type):
     depth = 0
     for releases in release_history:
+        LOG.debug('looking for previous version in %s',
+                  [r['version'] for r in releases])
         if releases:
+            LOG.debug('using %s', releases[-1]['version'])
             return dict({'depth': depth}, **releases[-1])
         elif release_type == 'bugfix':
             raise RuntimeError(
@@ -156,7 +165,12 @@ def main():
         'deliverable',
         help='the base name of the deliverable file',
     )
-    # FIXME(dhellmann): Add milestone and rc types.
+    parser.add_argument(
+        '-v', '--verbose',
+        default=False,
+        action='store_true',
+        help='be more chatty',
+    )
     parser.add_argument(
         'release_type',
         choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
@@ -191,12 +205,20 @@ def main():
     )
     args = parser.parse_args()
 
+    # Set up logging, including making some loggers quiet.
+    logging.basicConfig(
+        format='%(levelname)7s: %(message)s',
+        stream=sys.stdout,
+        level=logging.DEBUG if args.verbose else logging.INFO,
+    )
+    logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
+
     is_procedural = args.release_type == 'procedural'
     is_eol = args.release_type == 'eol'
     force_tag = args.force
 
     workdir = tempfile.mkdtemp(prefix='releases-')
-    print('creating temporary files in %s' % workdir)
+    LOG.info('creating temporary files in %s', workdir)
 
     def error(msg):
         if args.debug:
@@ -233,6 +255,7 @@ def main():
     except RuntimeError as err:
         error(err)
     last_version = last_release['version'].split('.')
+    LOG.debug('last_version %r', last_version)
 
     add_stable_branch = args.stable_branch or is_procedural
     if args.release_type in ('milestone', 'rc'):
@@ -242,6 +265,8 @@ def main():
                 deliverable_info['release-model'], args.deliverable))
         new_version_parts = increment_milestone_version(
             last_version, args.release_type)
+        LOG.debug('computed new version %s release type %s',
+                  new_version_parts, args.release_type)
         # We are going to take some special steps for the first
         # release candidate, so figure out if that is what this
         # release will be.
@@ -276,7 +301,7 @@ def main():
                     series)
             )
         if last_version != last_branch_base:
-            print('WARNING: last_version {} branch base {}'.format(
+            LOG.warning('last_version {} branch base {}'.format(
                 '.'.join(last_version), '.'.join(last_branch_base)))
         for r in prev_info['releases']:
             if r['version'] == '.'.join(last_branch_base):
@@ -304,6 +329,7 @@ def main():
             'major': (1, 0, 0),
         }[args.release_type]
         new_version_parts = increment_version(last_version, increment)
+        LOG.debug('computed new version %s', new_version_parts)
 
     if new_version_parts is not None:
         # The EOL tag version string is computed above and the parts
@@ -313,12 +339,12 @@ def main():
     if 'releases' not in deliverable_info:
         deliverable_info['releases'] = []
 
-    print('going from %s to %s' % (last_version, new_version))
+    LOG.info('going from %s to %s' % (last_version, new_version))
 
     projects = []
     changes = 0
     for repo in deliverable_info['repository-settings'].keys():
-        print('processing {}'.format(repo))
+        LOG.info('processing {}'.format(repo))
 
         # Look for the most recent time the repo was tagged and use
         # that info as the old sha.
@@ -330,7 +356,7 @@ def main():
                 if project['repo'] == repo:
                     previous_sha = project.get('hash')
                     previous_tag = release['version']
-                    print('last tagged as {} at {}'.format(
+                    LOG.info('last tagged as {} at {}'.format(
                         previous_tag, previous_sha))
                     found = True
                     break
@@ -359,8 +385,8 @@ def main():
 
         if is_procedural:
             changes += 1
-            print('re-tagging %s at %s (%s)' % (repo, sha,
-                                                previous_tag))
+            LOG.info('re-tagging %s at %s (%s)' % (repo, sha,
+                                                   previous_tag))
             new_project = {
                 'repo': repo,
                 'hash': sha,
@@ -372,7 +398,7 @@ def main():
 
         if is_eol:
             changes += 1
-            print('tagging %s EOL at %s' % (repo, sha))
+            LOG.info('tagging %s EOL at %s' % (repo, sha))
             new_project = {
                 'repo': repo,
                 'hash': sha,
@@ -383,10 +409,10 @@ def main():
 
         elif previous_sha != sha or force_tag:
             changes += 1
-            print('advancing %s from %s (%s) to %s' % (repo,
-                                                       previous_sha,
-                                                       previous_tag,
-                                                       sha))
+            LOG.info('advancing %s from %s (%s) to %s' % (repo,
+                                                          previous_sha,
+                                                          previous_tag,
+                                                          sha))
             new_project = {
                 'repo': repo,
                 'hash': sha,
@@ -396,7 +422,7 @@ def main():
             projects.append(new_project)
 
         else:
-            print('{} already tagged at most recent commit, skipping'.format(
+            LOG.info('{} already tagged at most recent commit, skipping'.format(
                 repo))
 
     deliverable_info['releases'].append({
@@ -411,13 +437,13 @@ def main():
         if 'branches' in deliverable_info:
             for branch in deliverable_info['branches']:
                 if branch.get('name') == branch_name:
-                    print('Branch {} already existes, skipping'.format(
+                    LOG.debug('Branch {} already exists, skipping'.format(
                         branch_name))
                     add_stable_branch = False
                     break
 
         if add_stable_branch:
-            print('adding stable branch at {}'.format(new_version))
+            LOG.info('adding stable branch at {}'.format(new_version))
             deliverable_info.setdefault('branches', []).append({
                 'name': branch_name,
                 'location': new_version,
