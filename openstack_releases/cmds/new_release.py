@@ -116,7 +116,7 @@ def get_release_history(series, deliverable):
         included_series = ['_independent']
     else:
         status = series_status.SeriesStatus.default()
-        all_series = list(reversed(list(status.names)))
+        all_series = list(status.names)
         included_series = all_series[all_series.index(series):]
     release_history = []
     for current_series in included_series:
