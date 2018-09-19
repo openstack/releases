@@ -26,6 +26,39 @@ Cross-project events
 
 .. _s-goals-research:
 
+Keystone
+--------
+
+.. _s-keystone-spec-proposal-freeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Stein must be submitted to the keystone-specs
+repository by the end of the week.
+
+.. _s-keystone-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Stein must be approved by the end of the week.
+
+.. _s-keystone-fpfreeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _s-keystone-ffreeze:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be merged by the end of the week.
+
 Stein Goals Research
 --------------------
 

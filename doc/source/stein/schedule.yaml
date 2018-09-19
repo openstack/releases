@@ -41,6 +41,8 @@ cycle:
   start: '2018-10-22'
   x-project:
     - s-1
+  project-specific:
+    - s-keystone-spec-proposal-freeze
 - end: '2018-11-02'
   name: R-23
   start: '2018-10-29'
@@ -83,6 +85,7 @@ cycle:
     - s-mf
   project-specific:
     - s-manila-driver-deadline
+    - s-keystone-spec-freeze
 - end: '2019-01-18'
   name: R-12
   start: '2019-01-14'
@@ -92,6 +95,8 @@ cycle:
 - end: '2019-02-01'
   name: R-10
   start: '2019-01-28'
+  project-specific:
+    - s-keystone-fpfreeze
 - end: '2019-02-08'
   name: R-9
   start: '2019-02-04'
@@ -118,6 +123,8 @@ cycle:
     - s-soft-sf
     - s-rf
     - s-goals-complete
+  project-specific:
+    - s-keystone-ffreeze
 - end: '2019-03-15'
   name: R-4
   start: '2019-03-11'
