@@ -86,6 +86,9 @@ cycle:
   project-specific:
     - s-manila-driver-deadline
     - s-keystone-spec-freeze
+    - s-cinder-spec-freeze
+    - s-cinder-driver-deadline
+    - s-cinder-target-driver-deadline
 - end: '2019-01-18'
   name: R-12
   start: '2019-01-14'
@@ -125,6 +128,7 @@ cycle:
     - s-goals-complete
   project-specific:
     - s-keystone-ffreeze
+    - s-cinder-fp-freeze
 - end: '2019-03-15'
   name: R-4
   start: '2019-03-11'
