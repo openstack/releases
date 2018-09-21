@@ -310,3 +310,42 @@ Manila Feature Proposal Freeze
 
 All new Manila features must be proposed and substantially complete, with unit
 tests by 21 February 2019 (23:59 UTC).
+
+Cinder
+------
+
+.. _s-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs must be approved by 10 Jan 2019 (23:59 UTC).
+
+.. _s-cinder-driver-deadline:
+
+Cinder New Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new backend drivers to Cinder is 10 Jan 2019 (23:59 UTC).
+New drivers must be complete with unit tests at this point in time.  The backend
+driver must also have a 3rd Party CI running reliably and the driver must be
+merged at this point to be included in the Stein release.
+
+.. _s-cinder-target-driver-deadline:
+
+Cinder New Target Driver Submission Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for submitting new target drivers to Cinder is 10 Jan 2019 (23:59 UTC).
+New target drivers must be complete with unit tests at this point in time.  The target
+driver must also have a 3rd Party CI running reliably and the target driver must
+be marged at this point to be included in the Stein release.
+
+.. _s-cinder-fp-freeze:
+
+Cinder Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Cinder features must be proposed and substantially complete with unit tests
+by 07 Mar 2019 (23:59 UTC).
+
