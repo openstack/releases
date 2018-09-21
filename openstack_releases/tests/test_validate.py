@@ -1840,8 +1840,8 @@ class TestValidateNewReleases(base.BaseTestCase):
         )
         validate.validate_new_releases(deliv, self.ctx)
         self.ctx.show_summary()
-        self.assertEqual(1, len(self.ctx.warnings))
-        self.assertEqual(0, len(self.ctx.errors))
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
 
 
 class TestValidateBranchPrefixes(base.BaseTestCase):

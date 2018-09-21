@@ -1340,7 +1340,7 @@ def validate_new_releases(deliv, context):
             )
     for missing in deliv.known_repo_names:
         if missing not in actual_repos:
-            context.warning(
+            context.error(
                 'release %s is missing %s, '
                 'which appears in the repository-settings list' %
                 (final_release.version, missing)
