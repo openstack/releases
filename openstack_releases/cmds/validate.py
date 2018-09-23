@@ -598,7 +598,7 @@ def validate_gitreview(deliv, context):
             if not version_exists:
                 LOG.debug('checking {} at {} for {}'.format(
                     project.repo.name, project.hash, release.version))
-                gitutils.safe_clone_repo(
+                gitutils.checkout_ref(
                     context.workdir, project.repo.name, project.hash, context)
                 _require_gitreview(project.repo.name, context)
             else:
@@ -658,7 +658,7 @@ def validate_release_type(deliv, context):
         if not version_exists:
             LOG.debug('new version {}, checking release jobs'.format(
                 release.version))
-            gitutils.safe_clone_repo(
+            gitutils.checkout_ref(
                 context.workdir, project.repo.name, project.hash, context)
             project_config.require_release_jobs_for_repo(
                 deliv,
@@ -731,7 +731,7 @@ def validate_build_sdist(deliv, context):
                 release.version))
             continue
 
-        gitutils.safe_clone_repo(
+        gitutils.checkout_ref(
             context.workdir, project.repo.name, project.hash, context)
 
         try:
@@ -755,7 +755,7 @@ def validate_pypi_readme(deliv, context):
     # the branch, in case the sdist name changes over time.
     latest_release = deliv.releases[-1]
     for project in latest_release.projects:
-        gitutils.safe_clone_repo(
+        gitutils.checkout_ref(
             context.workdir, project.repo.name, project.hash, context)
 
     if latest_release.is_eol:
@@ -808,7 +808,7 @@ def validate_pypi_permissions(deliv, context):
     # in case the sdist name changes over time.
     latest_release = deliv.releases[-1]
     for project in latest_release.projects:
-        gitutils.safe_clone_repo(
+        gitutils.checkout_ref(
             context.workdir, project.repo.name, project.hash, context)
 
     for repo in deliv.repos:
@@ -894,8 +894,8 @@ def validate_release_sha_exists(deliv, context):
                 )
                 continue
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             print('successfully cloned {}'.format(project.hash))
@@ -923,8 +923,8 @@ def validate_existing_tags(deliv, context):
 
             LOG.debug('{} SHA {}'.format(project.repo.name, project.hash))
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             # Report if the version has already been
@@ -992,8 +992,8 @@ def validate_version_numbers(deliv, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -1126,8 +1126,8 @@ def validate_new_releases_at_end(deliv, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -1142,7 +1142,7 @@ def validate_new_releases_at_end(deliv, context):
             new_releases[release.version] = release
 
     # Make sure that new entries have been appended to the file.
-    for v, nr in new_releases.items():
+    for _, nr in new_releases.items():
         LOG.debug('comparing {!r} to {!r}'.format(nr, deliv.releases[-1]))
         if nr != deliv.releases[-1]:
             msg = ('new release %s must be listed last, '
@@ -1173,8 +1173,8 @@ def validate_new_releases_in_open_series(deliv, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -1225,8 +1225,8 @@ def validate_release_branch_membership(deliv, context):
 
         for project in release.projects:
 
-            if not gitutils.safe_clone_repo(context.workdir, project.repo.name,
-                                            project.hash, context):
+            if not gitutils.checkout_ref(context.workdir, project.repo.name,
+                                         project.hash, context):
                 continue
 
             version_exists = gitutils.commit_exists(
@@ -1444,8 +1444,8 @@ def validate_stable_branches(deliv, context):
                     )
                     # We can't clone the location if it isn't a SHA.
                     continue
-                if not gitutils.safe_clone_repo(context.workdir, repo, loc,
-                                                context):
+                if not gitutils.checkout_ref(context.workdir, repo, loc,
+                                             context):
                     continue
                 if not gitutils.commit_exists(context.workdir, repo, loc):
                     context.error(
@@ -1499,7 +1499,7 @@ def validate_feature_branches(deliv, context):
 
     for branch in deliv.branches:
         try:
-            prefix, series = branch.name.split('/')
+            prefix, _ = branch.name.split('/')
         except ValueError:
             context.error(
                 ('feature branch name expected to be feature/name '
