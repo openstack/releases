@@ -7,3 +7,9 @@ release-model: cycle-with-milestones
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - projects:
+      - hash: 3da9679d9b12e2808ce9d073117e93d40ce05da3
+        repo: openstack/release-test
+        tarball-base: openstack-release-test
+    version: 1.2.0
