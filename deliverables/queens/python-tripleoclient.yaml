@@ -48,6 +48,12 @@ releases:
       - hash: 9b837182d131d1720d03ecf424f53d189a260eab
         repo: openstack/python-tripleoclient
     version: 9.2.5
+  - diff-start: 9.2.4
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 9b837182d131d1720d03ecf424f53d189a260eab
+        repo: openstack/python-tripleoclient
+    version: 9.2.6
 release-notes: https://docs.openstack.org/releasenotes/python-tripleoclient/queens.html
 repository-settings:
   openstack/python-tripleoclient: {}

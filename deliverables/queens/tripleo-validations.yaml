@@ -37,6 +37,12 @@ releases:
       - hash: f45639211efd4235a3680f653c70f5dd0fd1f6aa
         repo: openstack/tripleo-validations
     version: 8.4.3
+  - diff-start: 8.4.2
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: f45639211efd4235a3680f653c70f5dd0fd1f6aa
+        repo: openstack/tripleo-validations
+    version: 8.4.4
 repository-settings:
   openstack/tripleo-validations: {}
 branches:

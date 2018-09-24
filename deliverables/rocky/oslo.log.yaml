@@ -27,6 +27,12 @@ releases:
       - hash: 871d2df290d829b9cafb0dc383dc3d65810c2dac
         repo: openstack/oslo.log
     version: 3.39.1
+  - diff-start: 3.39.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 871d2df290d829b9cafb0dc383dc3d65810c2dac
+        repo: openstack/oslo.log
+    version: 3.39.2
 branches:
   - location: 3.39.0
     name: stable/rocky

@@ -11,3 +11,9 @@ releases:
       - hash: 0371c1d7f518406d5d8c271606620c1ba396b6c7
         repo: openstack/oslo.serialization
     version: 2.28.0
+  - diff-start: 2.27.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 0371c1d7f518406d5d8c271606620c1ba396b6c7
+        repo: openstack/oslo.serialization
+    version: 2.28.1

@@ -11,3 +11,9 @@ releases:
       - hash: a93c6ef98c8aeddc5a4ae87083689225fbc728bb
         repo: openstack/oslo.log
     version: 3.40.0
+  - diff-start: 3.39.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: a93c6ef98c8aeddc5a4ae87083689225fbc728bb
+        repo: openstack/oslo.log
+    version: 3.40.1

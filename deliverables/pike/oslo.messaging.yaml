@@ -85,6 +85,12 @@ releases:
       - hash: d03b85e9d63702bbf0c416603f2f705e772dc7da
         repo: openstack/oslo.messaging
     version: 5.30.5
+  - diff-start: 5.30.4
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: d03b85e9d63702bbf0c416603f2f705e772dc7da
+        repo: openstack/oslo.messaging
+    version: 5.30.6
 branches:
   - name: stable/pike
     location: 5.30.0

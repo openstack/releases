@@ -11,3 +11,9 @@ releases:
       - hash: 2b4786b5cc819c5d321d97e3cf9e1d5f24ebdb97
         repo: openstack/osprofiler
     version: 2.4.0
+  - diff-start: 2.3.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 2b4786b5cc819c5d321d97e3cf9e1d5f24ebdb97
+        repo: openstack/osprofiler
+    version: 2.4.1

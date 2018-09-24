@@ -20,5 +20,11 @@ releases:
       - hash: c7068c19aaae368b020e20d184890116641a58a2
         repo: openstack/ironic-python-agent
     version: 2.0.2
+  - diff-start: 2.0.1
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: c7068c19aaae368b020e20d184890116641a58a2
+        repo: openstack/ironic-python-agent
+    version: 2.0.3
 repository-settings:
   openstack/ironic-python-agent: {}

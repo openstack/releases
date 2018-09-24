@@ -11,3 +11,9 @@ releases:
       - hash: 50474adf278c79e74c2dc44733f5b6158ba5e7d8
         repo: openstack/oslo.versionedobjects
     version: 1.34.0
+  - diff-start: 1.33.3
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 50474adf278c79e74c2dc44733f5b6158ba5e7d8
+        repo: openstack/oslo.versionedobjects
+    version: 1.34.1

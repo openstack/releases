@@ -36,6 +36,12 @@ releases:
       - hash: 011bd1d5b6b7d922f58202a9e673c31f3ba2a233
         repo: openstack/ironic
     version: 10.1.5
+  - diff-start: 10.1.4
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 011bd1d5b6b7d922f58202a9e673c31f3ba2a233
+        repo: openstack/ironic
+    version: 10.1.6
 branches:
   - location: 10.1.0
     name: stable/queens

@@ -36,5 +36,11 @@ releases:
       - hash: 99b3182e347fa886debab410284a157d6a3223ca
         repo: openstack/ironic-lib
     version: 2.5.3
+  - diff-start: 2.5.2
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 99b3182e347fa886debab410284a157d6a3223ca
+        repo: openstack/ironic-lib
+    version: 2.5.4
 repository-settings:
   openstack/ironic-lib: {}

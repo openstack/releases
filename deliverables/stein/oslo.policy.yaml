@@ -11,3 +11,9 @@ releases:
       - hash: cef105744d80023eed5ec7392f31e073f38ea765
         repo: openstack/oslo.policy
     version: 1.39.0
+  - diff-start: 1.38.1
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: cef105744d80023eed5ec7392f31e073f38ea765
+        repo: openstack/oslo.policy
+    version: 1.39.1
