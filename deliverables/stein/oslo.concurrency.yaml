@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.concurrency: {}
+releases:
+  - projects:
+      - hash: d56295b8a91ab1b6fe1cc402e58404d86d1cd97c
+        repo: openstack/oslo.concurrency
+    version: 3.28.0
