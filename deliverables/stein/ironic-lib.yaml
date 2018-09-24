@@ -6,3 +6,8 @@ release-model: cycle-with-intermediary
 include-pypi-link: yes
 repository-settings:
   openstack/ironic-lib: {}
+releases:
+  - projects:
+      - hash: 712da6c465e8794b3575b34a6eb1c5d3061a9b44
+        repo: openstack/ironic-lib
+    version: 2.15.0
