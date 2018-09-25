@@ -1584,6 +1584,10 @@ releases:
       - hash: a2edd3fb5bd9447d3ed8a8ee5b4a35a2422a31a2
         repo: openstack/openstack-ansible
     version: 16.0.18
+  - projects:
+      - hash: 159a70d0d7dc002c497f868c823555ae9baa9cd3
+        repo: openstack/openstack-ansible
+    version: 16.0.19
 repository-settings:
   openstack/ansible-hardening: {}
   openstack/openstack-ansible: {}
@@ -1625,4 +1629,7 @@ repository-settings:
   openstack/openstack-ansible-repo_server: {}
   openstack/openstack-ansible-rsyslog_client: {}
   openstack/openstack-ansible-rsyslog_server: {}
-  openstack/openstack-ansible-security: {}
+# NOTE(dhellmann): The openstack-ansible-security repo does not have a
+# pike branch, so the new stricter validation rules break when it is
+# included.
+#  openstack/openstack-ansible-security: {}
