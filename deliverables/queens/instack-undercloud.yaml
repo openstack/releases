@@ -45,6 +45,12 @@ releases:
       - hash: a23bfb79cc50b6fb803a9307be4b09d7e80b195c
         repo: openstack/instack-undercloud
     version: 8.4.5
+  - diff-start: 8.4.4
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: a23bfb79cc50b6fb803a9307be4b09d7e80b195c
+        repo: openstack/instack-undercloud
+    version: 8.4.6
 repository-settings:
   openstack/instack-undercloud: {}
 branches:

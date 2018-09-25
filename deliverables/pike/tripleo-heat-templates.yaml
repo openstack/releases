@@ -95,6 +95,12 @@ releases:
       - hash: b25af6fdc6b9228f791854e442033360ac79f34f
         repo: openstack/tripleo-heat-templates
     version: 7.0.16
+  - diff-start: 7.0.15
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: b25af6fdc6b9228f791854e442033360ac79f34f
+        repo: openstack/tripleo-heat-templates
+    version: 7.0.17
 team: tripleo
 type: other
 release-notes: https://docs.openstack.org/releasenotes/tripleo-heat-templates/pike.html

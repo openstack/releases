@@ -53,6 +53,12 @@ releases:
       - hash: 2e3a2a5cc30e3133f33977446efd65acd4a335a7
         repo: openstack/tripleo-common
     version: 8.6.5
+  - diff-start: 8.6.4
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 2e3a2a5cc30e3133f33977446efd65acd4a335a7
+        repo: openstack/tripleo-common
+    version: 8.6.6
 cycle-highlights:
   - |
     config-download: Ability to use Ansible to apply the cloud configuration.

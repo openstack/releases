@@ -41,6 +41,12 @@ releases:
       - hash: 95bcaca4b9775afa9aab62406c0e28b7793f25a6
         repo: openstack/oslo.messaging
     version: 5.35.2
+  - diff-start: 5.35.1
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 95bcaca4b9775afa9aab62406c0e28b7793f25a6
+        repo: openstack/oslo.messaging
+    version: 5.35.3
 branches:
   - name: stable/queens
     location: 5.35.0

@@ -54,6 +54,12 @@ releases:
       - hash: 62bd8bc1ac689bc48b8dd93dbff7fe01aed4f43b
         repo: openstack/os-net-config
     version: 7.3.7
+  - diff-start: 7.3.6
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 62bd8bc1ac689bc48b8dd93dbff7fe01aed4f43b
+        repo: openstack/os-net-config
+    version: 7.3.8
 team: tripleo
 type: other
 repository-settings:

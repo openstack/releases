@@ -55,6 +55,12 @@ releases:
       - hash: a85094b5c5d39cd1496e022f36fc04db7192f153
         repo: openstack/oslo.messaging
     version: 8.1.1
+  - diff-start: 8.1.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: a85094b5c5d39cd1496e022f36fc04db7192f153
+        repo: openstack/oslo.messaging
+    version: 8.1.2
 branches:
   - location: 8.1.0
     name: stable/rocky

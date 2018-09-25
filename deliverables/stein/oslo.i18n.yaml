@@ -11,3 +11,9 @@ releases:
       - hash: e7b3ff20019dcde3796665eea7d5a1867e568630
         repo: openstack/oslo.i18n
     version: 3.22.0
+  - diff-start: 3.21.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: e7b3ff20019dcde3796665eea7d5a1867e568630
+        repo: openstack/oslo.i18n
+    version: 3.22.1

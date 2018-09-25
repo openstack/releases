@@ -11,3 +11,9 @@ releases:
       - hash: f9349f4301d3892fe797498c65d1c0768abc35a3
         repo: openstack/taskflow
     version: 3.3.0
+  - diff-start: 3.2.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: f9349f4301d3892fe797498c65d1c0768abc35a3
+        repo: openstack/taskflow
+    version: 3.3.1

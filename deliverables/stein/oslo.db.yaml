@@ -11,3 +11,9 @@ releases:
       - hash: e64c6bb6970b61b9f8aa704c5b2ac6e1f9c382d3
         repo: openstack/oslo.db
     version: 4.41.0
+  - diff-start: 4.40.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: e64c6bb6970b61b9f8aa704c5b2ac6e1f9c382d3
+        repo: openstack/oslo.db
+    version: 4.41.1

@@ -11,3 +11,9 @@ releases:
       - hash: 04f82ae934fda23612f78b2be9dfb24b06268c87
         repo: openstack/oslo.vmware
     version: 2.32.0
+  - diff-start: 2.31.0
+    projects:
+      - comment: 'procedural tag to handle release job failure'
+        hash: 04f82ae934fda23612f78b2be9dfb24b06268c87
+        repo: openstack/oslo.vmware
+    version: 2.32.1
