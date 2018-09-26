@@ -94,7 +94,11 @@ def increment_milestone_version(old_version, release_type):
 
 
 def get_last_series_info(series, deliverable):
-    all_series = sorted(os.listdir('deliverables'))
+    all_series = sorted(
+        s
+        for s in os.listdir('deliverables')
+        if s != 'series_status.yaml'
+    )
     prev_series = all_series[all_series.index(series) - 1]
     try:
         return get_deliverable_data(prev_series, deliverable)
@@ -174,7 +178,7 @@ def main():
     parser.add_argument(
         'release_type',
         choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
-                 'procedural', 'eol'),
+                 'procedural', 'eol', 'releasefix'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -213,7 +217,8 @@ def main():
     )
     logging.getLogger('urllib3.connectionpool').setLevel(logging.WARNING)
 
-    is_procedural = args.release_type == 'procedural'
+    is_procedural = args.release_type in 'procedural'
+    is_retagging = is_procedural or args.release_type == 'releasefix'
     is_eol = args.release_type == 'eol'
     force_tag = args.force
 
@@ -247,6 +252,7 @@ def main():
 
     try:
         release_history = get_release_history(series, args.deliverable)
+        this_series_history = release_history[0]
         last_release = get_last_release(
             release_history,
             args.deliverable,
@@ -256,6 +262,7 @@ def main():
         error(err)
     last_version = last_release['version'].split('.')
     LOG.debug('last_version %r', last_version)
+    diff_start = None
 
     add_stable_branch = args.stable_branch or is_procedural
     if args.release_type in ('milestone', 'rc'):
@@ -317,6 +324,32 @@ def main():
                     '.'.join(last_version))
             )
 
+    elif args.release_type == 'releasefix':
+        increment = (0, 0, 1)
+        new_version_parts = increment_version(last_version, increment)
+        last_version_hashes = {
+            p['repo']: p['hash']
+            for p in last_release['projects']
+        }
+        # Go back 2 releases so the release announcement includes the
+        # actual changes.
+        try:
+            diff_start_release = this_series_history[-2]
+        except IndexError:
+            # We do not have 2 releases in this series yet, so go back
+            # to the stable branch creation point.
+            prev_info = get_last_series_info(series, args.deliverable)
+            for b in prev_info['branches']:
+                if b['name'].startswith('stable/'):
+                    diff_start = b['location']
+                    LOG.info('using branch point from previous '
+                             'series as diff-start: %r', diff_start)
+                    break
+        else:
+            diff_start = diff_start_release['version']
+            LOG.info('using release from same series as diff-start: %r',
+                     diff_start)
+
     elif is_eol:
         increment = None
         new_version_parts = None
@@ -366,7 +399,7 @@ def main():
         repo_info = deliverable_info['repository-settings'][repo]
         tarball_base = repo_info.get('tarball-base')
 
-        if args.release_type == 'procedural':
+        if is_retagging:
             # Always use the last tagged hash, which should be coming
             # from the previous series.
             sha = last_version_hashes[repo]
@@ -383,20 +416,24 @@ def main():
 
             sha = gitutils.sha_for_tag(workdir, repo, version)
 
-        if is_procedural:
+        if is_retagging:
             changes += 1
             LOG.info('re-tagging %s at %s (%s)' % (repo, sha,
                                                    previous_tag))
+            if is_procedural:
+                comment = 'procedural tag to support creating stable branch'
+            else:
+                comment = 'procedural tag to handle release job failure'
             new_project = {
                 'repo': repo,
                 'hash': sha,
-                'comment': 'procedural tag to support creating stable branch',
+                'comment': comment,
             }
             if tarball_base:
                 new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
-        if is_eol:
+        elif is_eol:
             changes += 1
             LOG.info('tagging %s EOL at %s' % (repo, sha))
             new_project = {
@@ -425,10 +462,13 @@ def main():
             LOG.info('{} already tagged at most recent commit, skipping'.format(
                 repo))
 
-    deliverable_info['releases'].append({
+    new_release_info = {
         'version': new_version,
         'projects': projects,
-    })
+    }
+    if diff_start:
+        new_release_info['diff-start'] = diff_start
+    deliverable_info['releases'].append(new_release_info)
 
     if add_stable_branch:
         branch_name = 'stable/{}'.format(series)
