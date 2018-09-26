@@ -593,7 +593,7 @@ class TestValidateReleaseSHAExists(base.BaseTestCase):
         validate.validate_release_sha_exists(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
-        self.assertEqual(1, len(self.ctx.errors))
+        self.assertEqual(0, len(self.ctx.errors))
 
     def test_no_such_hash(self):
         deliv = deliverable.Deliverable(
@@ -653,7 +653,7 @@ class TestValidateExistingTags(base.BaseTestCase):
         self.repo.tag('0.8.0')
         self.commit_2 = self.repo.add_file('testfile2.txt')
 
-    @mock.patch('openstack_releases.gitutils.safe_clone_repo')
+    @mock.patch('openstack_releases.gitutils.checkout_ref')
     def test_valid(self, clone):
         deliv = deliverable.Deliverable(
             team='team',
@@ -798,6 +798,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         self.assertEqual(1, len(self.ctx.errors))
 
     def test_hash_from_master_used_after_default_branch_should_exist_but_does_not(self):
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/releases')
         deliv = deliverable.Deliverable(
             team='team',
             series='austin',
@@ -1479,6 +1480,7 @@ class TestPuppetUtils(base.BaseTestCase):
         llam.return_value = True
         get_version.return_value = '99.1.0'
         cbs.return_value = True
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/puppet-watcher')
         deliv = deliverable.Deliverable(
             team='team',
             series='ocata',
@@ -1506,6 +1508,7 @@ class TestPuppetUtils(base.BaseTestCase):
         llam.return_value = True
         get_version.return_value = '99.1.0'
         cbs.return_value = True
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/puppet-watcher')
         deliv = deliverable.Deliverable(
             team='team',
             series=defaults.RELEASE,

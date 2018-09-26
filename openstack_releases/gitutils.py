@@ -128,6 +128,22 @@ def safe_clone_repo(workdir, repo, ref, messages):
     return True
 
 
+def checkout_ref(workdir, repo, ref, messages):
+    """Checkout a specific ref in the repo."""
+    LOG.debug('Checking out repository %s to %s', repo, ref)
+
+    try:
+        processutils.check_call(
+            ['git', 'checkout', ref],
+            cwd=os.path.join(workdir, repo))
+    except processutils.CalledProcessError as err:
+        messages.error(
+            'Could not checkout repository {} at {}: {}'.format(
+                repo, ref, err))
+        return False
+    return True
+
+
 def sha_for_tag(workdir, repo, version):
     """Return the SHA for a given tag
     """
