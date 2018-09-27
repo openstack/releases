@@ -1,0 +1,21 @@
+---
+launchpad: rally
+team: rally
+type: other
+release-notes: https://git.openstack.org/cgit/openstack/rally-openstack/tree/CHANGELOG.rst
+include-pypi-link: yes
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/rally-openstack
+        hash: 935cd73368330a512f16ca2a48f86d089ecf1323
+  - version: 1.1.0
+    projects:
+      - repo: openstack/rally-openstack
+        hash: 0c8bde161787ed4b7c899446a18c9327bcea51de
+  - version: 1.2.0
+    projects:
+      - repo: openstack/rally-openstack
+        hash: 79c8d39468e8d41acc1406cf39568d59db4ba308
+repository-settings:
+  openstack/rally-openstack: {}
