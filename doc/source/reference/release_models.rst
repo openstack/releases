@@ -23,7 +23,7 @@ it falls in:
 
 * Components appearing in the *openstack* bucket in the `OpenStack map`_
   form the main components of an OpenStack cloud, and therefore should follow
-  the release cycle. They need to pick between `cycle-with-milestones`_
+  the release cycle. They need to pick between `cycle-with-rc`_
   or `cycle-with-intermediary`_ models.
 * Libraries cannot use RCs or trail the release. They need to pick between
   `cycle-with-intermediary`_ and `independent`_ release models based on how
@@ -35,29 +35,53 @@ it falls in:
 
 .. _`OpenStack map`: https://www.openstack.org/openstack-map
 
+.. _cycle-with-rc:
+
+cycle-with-rc
+=============
+
+The "cycle-with-rc" model describes projects that produce a single release at
+the end of the cycle, with one or more release candidates (RC) close to the end
+of the cycle and optional development milestone betas published on a
+per-project need.
+
+* "cycle-with-rc" projects commit to publish at least one release candidate
+  following a predetermined schedule published by the Release Management team
+  before the start of the cycle.
+* "cycle-with-rc" projects commit to produce a release to match the end of the
+  development cycle.
+* Release tags for deliverables using this tag are reviewed and applied by the
+  Release Management team.
+
 .. _cycle-with-milestones:
 
-cycle-with-milestones
-=====================
+cycle-with-milestones (legacy)
+==============================
 
-The "cycle-with-milestones" model describes projects that produce a
+.. note::
+
+   The cycle-with-milestones release model is no longer used and is kept here
+   for historical reference. Projects should now use cycle-with-rc.
+
+
+The "cycle-with-milestones" model described projects that produced a
 single release at the end of the cycle, with development milestones
 published at predetermined times in the cycle schedule.
 
-* "cycle-with-milestones" projects commit to publish development
+* "cycle-with-milestones" projects commited to publish development
   milestones following a predetermined schedule published by the Release
   Management team before the start of the 6-month cycle.
-* "cycle-with-milestones" projects commit to produce a release to
+* "cycle-with-milestones" projects commited to produce a release to
   match the end of the 6-month development cycle.
-* Release tags for deliverables using this tag are reviewed and
+* Release tags for deliverables using this tag were reviewed and
   applied by the Release Management team.
-* Projects using milestones are expected to tag at least 2 out of the
+* Projects using milestones were expected to tag at least 2 out of the
   3 for each cycle, or risk being dropped as an official project. The
-  release team will remind projects that miss the first milestone, and
+  release team would remind projects that miss the first milestone, and
   create tags on any later milestones for the project team by tagging
-  HEAD at the time of the deadline. If the release team force-creates
+  HEAD at the time of the deadline. If the release team force-created
   2 tags for a project in the same given development cycle, the
-  project will be treated as inactive and the release team will
+  project would be treated as inactive and the release team would
   recommend dropping it from the official project list.
 
 .. _cycle-with-intermediary:

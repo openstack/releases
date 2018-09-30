@@ -78,10 +78,7 @@ cycle 10 - 14 September in Denver, Colorado, USA.
 Stein-1 milestone
 -----------------
 
-25 October 2018 is the Stein-1 milestone window for projects following the
-`release:cycle-with-milestones`_ model.
-
-.. _release:cycle-with-milestones: https://releases.openstack.org/reference/release_models.html#cycle-with-milestones
+25 October 2018 is the Stein-1 milestone.
 
 .. _s-goals-ack:
 
@@ -107,8 +104,7 @@ next development cycle (Stein).
 Stein-2 milestone
 -----------------
 
-10 January 2019 is the Stein-2 milestone window for projects following the
-`release:cycle-with-milestones`_ model.
+10 January 2019 is the Stein-2 milestone.
 
 .. _s-final-lib:
 
@@ -124,8 +120,7 @@ changes before feature freeze.
 Stein-3 milestone
 -----------------
 
-28 February 2019 is the Stein-3 milestone window for projects following the
-`release:cycle-with-milestones`_ model.
+28 February 2019 is the Stein-3 milestone.
 
 .. _s-goals-complete:
 
@@ -142,7 +137,7 @@ Feature freeze
 --------------
 
 The Stein-3 milestone marks feature freeze for projects following the
-`release:cycle-with-milestones`_ model. No featureful patch should be landed
+`release:cycle-with-rc`_ model. No featureful patch should be landed
 after this point. Exceptions may be granted by the project PTL.
 
 .. _s-rf:
@@ -179,10 +174,7 @@ is published).
 Membership Freeze
 -----------------
 
-Projects must participate in at least two milestones in order to be considered
-part of the release. Projects made official after the second milestone, or
-which fail to produce milestone releases for at least one of the first and
-second milestones as well as the third milestone, are therefore not considered
+Projects made official after the second milestone, are not considered
 part of the release for the cycle. This does not apply to cycle-trailing
 packaging / lifecycle management projects.
 
@@ -192,8 +184,10 @@ RC1 target week
 ---------------
 
 This week is the target for projects following the
-`release:cycle-with-milestones`_ model to issue their first release candidate,
+`release:cycle-with-rc`_ model to issue their first release candidate,
 with a deadline of 21 March 2019.
+
+.. _release:cycle-with-rc: https://releases.openstack.org/reference/release_models.html#cycle-with-rc
 
 .. _s-hard-sf:
 
