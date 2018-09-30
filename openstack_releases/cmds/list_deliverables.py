@@ -72,7 +72,7 @@ def main():
     model = parser.add_mutually_exclusive_group()
     model.add_argument(
         '--model',
-        help=('the release model, such as "cycle-with-milestones"'
+        help=('the release model, such as "cycle-with-rc"'
               ' or "independent"'),
         choices=sorted(deliverable_schema.release_models + ['independent']),
     )
@@ -114,16 +114,10 @@ def main():
         help='limit the list to deliverables not released in the cycle',
     )
     grp.add_argument(
-        '--missing-milestone',
-        help=('deliverables that do not have the specified milestone as '
-              'the most current release; for example 2 would look for .0b2 '
-              'in the version number (implies --model cycle-with-milestones)'),
-    )
-    grp.add_argument(
         '--missing-rc',
         action='store_true',
         help=('deliverables that do not have a release candidate, yet '
-              '(implies --model cycle-with-milestones)'),
+              '(implies --model cycle-with-rc)'),
     )
     grp.add_argument(
         '--missing-final',
@@ -140,11 +134,8 @@ def main():
 
     series = args.series
 
-    if args.missing_milestone:
-        model = 'cycle-with-milestones'
-        version_ending = '.0b{}'.format(args.missing_milestone)
-    elif args.missing_rc:
-        model = 'cycle-with-milestones'
+    if args.missing_rc:
+        model = 'cycle-with-rc'
         version_ending = None
     elif args.missing_final:
         model = args.model

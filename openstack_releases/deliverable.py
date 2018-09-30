@@ -475,7 +475,7 @@ class Deliverable(object):
 
     @property
     def is_milestone_based(self):
-        return self.model == 'cycle-with-milestones'
+        return self.model in ['cycle-with-milestones', 'cycle-with-rc']
 
     @property
     def is_branchless(self):

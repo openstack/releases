@@ -27,7 +27,7 @@ from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 # Release models that support release candidates.
-_USES_RCS = ['cycle-with-milestones', 'cycle-trailing']
+_USES_RCS = ['cycle-with-milestones', 'cycle-trailing', 'cycle-with-rc']
 
 LOG = logging.getLogger('')
 

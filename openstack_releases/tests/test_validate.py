@@ -3179,7 +3179,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3199,7 +3199,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.1.0rc1
             projects:
@@ -3224,7 +3224,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.1
             projects:
@@ -3253,7 +3253,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.0.0rc1
             projects:
@@ -3282,7 +3282,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.0.0rc1
             projects:
@@ -3315,7 +3315,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.0
             projects:
@@ -3344,7 +3344,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.0.0b1
             projects:
@@ -3373,7 +3373,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
-        release-model: cycle-with-milestones
+        release-model: cycle-with-rc
         releases:
           - version: 1.5.0.0b1
             projects:

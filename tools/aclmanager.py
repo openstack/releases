@@ -44,7 +44,7 @@ def repositories_list(deliverables_dir, series):
     """Yields (team, repo) tuples for cycle-with-milestones deliverables"""
     deliverables = deliverable.Deliverables(deliverables_dir)
     for d in deliverables.get_deliverables(None, series):
-        if d.model != 'cycle-with-milestones':
+        if d.model not in ['cycle-with-milestones', 'cycle-with-rc']:
             continue
         if not d.repos:
             print('WARNING: no releases for {} in {}'.format(d.name, d.series))
