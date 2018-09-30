@@ -73,6 +73,7 @@ _CLOSED_SERIES = set([
 _USES_PREVER = set([
     'cycle-with-milestones',
     'cycle-trailing',
+    'cycle-with-rc',
 ])
 
 _VALID_BRANCH_PREFIXES = set([
