@@ -1,0 +1,13 @@
+---
+storyboard: openstack/os-ken
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+team: neutron
+type: library
+repository-settings:
+  openstack/os-ken: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/os-ken
+        hash: da39949131ff43761af83329c6d82e979d95440f
