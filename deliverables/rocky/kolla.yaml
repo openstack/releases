@@ -21,5 +21,13 @@ releases:
       - hash: ca5e30ccf962a430a1968201e0ebdc85a9fb27df
         repo: openstack/kolla
     version: 7.0.0.0rc1
+  - projects:
+      - hash: 0cec47368026f81379f07e0939bfd7e8b3c6dbbf
+        repo: openstack/kolla
+    version: 7.0.0.0rc2
 cycle-highlights:
-  - Added new Docker images.
+  - Added new docker images in kolla for logstash, monasca, prometheus, ravd,
+    neutron-infoblox-ipam-driver and apache storm.
+  - Allow operators to set resource limits in kolla-ansible deployed containers.
+  - Implement Ceph Bluestore deployment in kolla and kolla-ansible.
+  - Support deployment of prometheus, kafka and zookeeper via kolla-ansible.

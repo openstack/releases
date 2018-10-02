@@ -21,7 +21,7 @@ releases:
       - hash: a9e02d626465621f09c226f9bbcde91419f5cb62
         repo: openstack/kolla-ansible
     version: 7.0.0.0rc1
-cycle-highlights:
-  - Allow operators to set resource limits to containers.
-  - Implement Ceph Bluestore deployment
-  - Support deployment of Prometheus and Monasca services.
+  - projects:
+      - hash: fa7fbc1776e0bf9a79f46df49a6794bab5d277d3
+        repo: openstack/kolla-ansible
+    version: 7.0.0.0rc2
