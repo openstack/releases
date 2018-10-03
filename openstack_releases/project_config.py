@@ -147,7 +147,7 @@ _RELEASE_JOBS_FOR_TYPE = {
     ],
     'neutron': [
         'publish-to-pypi-neutron',
-        'publish-to-pypi-neutron-python3',
+        'publish-to-pypi-python3',
     ],
     'horizon': [
         'publish-to-pypi-horizon',
