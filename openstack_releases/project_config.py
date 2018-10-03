@@ -151,7 +151,7 @@ _RELEASE_JOBS_FOR_TYPE = {
     ],
     'horizon': [
         'publish-to-pypi-horizon',
-        'publish-to-pypi-horizon-python3',
+        'publish-to-pypi-python3',
     ],
     'nodejs': [
         'nodejs4-publish-to-npm',
