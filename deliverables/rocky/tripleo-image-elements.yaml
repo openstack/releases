@@ -23,6 +23,11 @@ releases:
       - hash: 39e37fe5236addf4bd4e1f28f07829307cf57430
         repo: openstack/tripleo-image-elements
     version: 9.0.0.0rc1
+  - diff-start: 8.0.0.0rc1
+    projects:
+      - hash: 39e37fe5236addf4bd4e1f28f07829307cf57430
+        repo: openstack/tripleo-image-elements
+    version: 9.0.0
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky
