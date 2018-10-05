@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-image-elements: {}
+releases:
+  - projects:
+      - hash: b421b6129b8afade2ee9128536435a18df3603e1
+        repo: openstack/tripleo-image-elements
+    version: 10.0.0

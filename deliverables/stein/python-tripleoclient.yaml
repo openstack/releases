@@ -6,3 +6,8 @@ team: tripleo
 type: client-library
 repository-settings:
   openstack/python-tripleoclient: {}
+releases:
+  - projects:
+      - hash: 01eca26528466e8254533da3e882bf0944dbea41
+        repo: openstack/python-tripleoclient
+    version: 11.0.0
