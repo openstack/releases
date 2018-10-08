@@ -7,9 +7,6 @@ release-model: cycle-with-milestones
 branches:
   - name: stable/ocata
     location: 4.0.0.0rc1
-  - name: driverfixes/ocata
-    location:
-      openstack/manila: 48b5c91ad73e74a8e35b3649b0433ba86d6bdf06
 releases:
   - version: 4.0.0.0b1
     projects:
