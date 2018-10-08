@@ -78,7 +78,6 @@ _USES_PREVER = set([
 _VALID_BRANCH_PREFIXES = set([
     'stable',
     'feature',
-    'driverfixes',
 ])
 
 _NO_STABLE_BRANCH_CHECK = set([
@@ -1541,67 +1540,6 @@ def validate_feature_branches(deliv, context):
                 )
 
 
-def validate_driverfixes_branches(deliv, context):
-    "Apply the rules for driverfixes branches."
-
-    if deliv.type == 'tempest-plugin' and deliv.branches:
-        context.error('Tempest plugins do not support branching.')
-        return
-
-    known_series = sorted(list(
-        d for d in os.listdir('deliverables')
-        if not d.startswith('_')
-    ))
-
-    for branch in deliv.branches:
-        try:
-            prefix, series = branch.name.split('/')
-        except ValueError:
-            context.error(
-                ('driverfixes branch name expected to be driverfixes/name '
-                 'but got %s') % (branch.name,))
-            continue
-
-        if prefix != 'driverfixes':
-            print('{} is not a driverfixes branch, skipping'.format(
-                branch.name))
-            continue
-
-        if series not in known_series:
-            context.error(
-                ('driverfixes branches must be named for known series '
-                 'but %s was not found in %s' % (
-                     branch.name, known_series))
-            )
-
-        location = branch.location
-        if not isinstance(location, dict):
-            context.error(
-                ('branch location for %s is '
-                 'expected to be a mapping but got a %s' % (
-                     branch.name, type(location)))
-            )
-            # The other rules aren't going to be testable, so skip them.
-            continue
-
-        for repo, loc in sorted(location.items()):
-            if not is_a_hash(loc):
-                context.error(
-                    ('driverfixes branches should be created from commits by '
-                     'SHA but location %s for branch %s of %s does not look '
-                     'like a SHA' % (
-                         (loc, repo, branch.name)))
-                )
-            if not gitutils.commit_exists(context.workdir, repo, loc):
-                context.error(
-                    ('driverfixes branches should be created from merged '
-                     'commits but location %s for branch %s of %s does not '
-                     'exist' % (
-                         (loc, repo, branch.name)))
-                )
-            _require_gitreview(repo, context)
-
-
 def validate_branch_points(deliv, context):
     "Make sure the branch points given are on the expected branches."
 
@@ -1619,22 +1557,14 @@ def validate_branch_points(deliv, context):
             print('could not parse the branch name, skipping')
             continue
 
-        if prefix == 'feature':
+        if prefix != 'stable':
             print('these rules do not apply to feature branches, skipping')
             continue
 
-        elif prefix == 'stable':
-            expected = set([
-                'master',
-                branch.name,
-            ])
-
-        else:
-            # driverfixes
-            expected = set([
-                branch.name,
-                'stable/' + series,
-            ])
+        expected = set([
+            'master',
+            branch.name,
+        ])
 
         location = branch.get_repo_map()
 
@@ -1850,7 +1780,6 @@ def main():
             validate_branch_prefixes,
             validate_stable_branches,
             validate_feature_branches,
-            validate_driverfixes_branches,
             validate_branch_points,
         ]
         for check in checks:
