@@ -4,5 +4,10 @@ launchpad: python-zunclient
 release-model: cycle-with-intermediary
 team: zun
 type: client-library
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: b62af4dd69c77440ff948388df90514e7dcdf635
 repository-settings:
   openstack/python-zunclient: {}
