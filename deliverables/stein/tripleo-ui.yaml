@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ui: {}
+releases:
+  - projects:
+      - hash: f672e31b56e5f82cff52d7afd053f4e635c17abe
+        repo: openstack/tripleo-ui
+    version: 10.0.0

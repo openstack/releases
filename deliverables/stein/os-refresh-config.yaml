@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/os-refresh-config: {}
+releases:
+  - projects:
+      - hash: 2cdebc64e0a3b3064cc472c08cbede138497839d
+        repo: openstack/os-refresh-config
+    version: 10.0.0

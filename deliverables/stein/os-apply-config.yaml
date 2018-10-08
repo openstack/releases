@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/os-apply-config: {}
+releases:
+  - projects:
+      - hash: 21be52c835180cbe138acbfde4e6ec344ded634e
+        repo: openstack/os-apply-config
+    version: 10.0.0
