@@ -4,5 +4,10 @@ launchpad: python-cinderclient
 release-model: cycle-with-intermediary
 team: cinder
 type: client-library
+releases:
+  - projects:
+      - hash: 4e17e1d1912f1902a37e4db543e38cdbe3961358
+        repo: openstack/python-cinderclient
+    version: 4.1.0
 repository-settings:
   openstack/python-cinderclient: {}
