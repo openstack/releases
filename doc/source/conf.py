@@ -4,6 +4,10 @@ import datetime
 import os
 import sys
 
+from sphinx.util import logging
+
+LOG = logging.getLogger(__name__)
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -90,5 +94,5 @@ def builder_inited(app):
 
 
 def setup(app):
-    app.info('initializing from conf.py')
+    LOG.info('initializing from conf.py')
     app.connect('builder-inited', builder_inited)
