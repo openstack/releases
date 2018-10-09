@@ -21,6 +21,7 @@ from docutils import nodes
 from docutils.parsers import rst
 from docutils.parsers.rst import directives
 from docutils.statemachine import ViewList
+from sphinx.util import logging
 from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
@@ -28,6 +29,7 @@ from openstack_releases import governance
 from openstack_releases import links
 from openstack_releases import series_status
 
+LOG = logging.getLogger(__name__)
 
 _TEAM_DATA = governance.get_team_data()
 _PHASE_DOC_URL = 'https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases'  # noqa
@@ -73,8 +75,10 @@ def _get_category(deliv):
 _deliverables = None
 
 
-def _initialize_deliverable_data(app):
+def _initialize_deliverable_data():
     global _deliverables
+
+    LOG.info('Loading deliverable data...')
 
     series_status_data = series_status.SeriesStatus.from_directory(
         'deliverables')
@@ -100,9 +104,6 @@ class DeliverableDirectiveBase(rst.Directive):
     ]
 
     def run(self):
-        env = self.state.document.settings.env
-        app = env.app
-
         # The series value is optional for some directives. If it is
         # present but an empty string, convert to None so the
         # Deliverables class will treat it like a wildcard.
@@ -131,7 +132,6 @@ class DeliverableDirectiveBase(rst.Directive):
                     None,
                     d,
                     s,
-                    app,
                     result,
                 )
         else:
@@ -160,14 +160,13 @@ class DeliverableDirectiveBase(rst.Directive):
                 ]
             for category in self._CATEGORY_ORDER:
                 if category not in by_category:
-                    app.info('No %r for %s' % (category,
-                                               (self.team_name, series)))
+                    LOG.info('[sphinxext] No %r for %s', category,
+                             (self.team_name, series))
                     continue
                 self._add_deliverables(
                     category,
                     by_category[category],
                     series,
-                    app,
                     result,
                 )
 
@@ -189,7 +188,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'tempest-plugin': 'Tempest Plugins',
     }
 
-    def _add_deliverables(self, type_tag, deliverables, series, app, result):
+    def _add_deliverables(self, type_tag, deliverables, series, result):
         source_name = '<' + __name__ + '>'
 
         # expand any generators passed in and filter out deliverables
@@ -220,7 +219,7 @@ class DeliverableDirectiveBase(rst.Directive):
                 # Determine the most recent release that is not an EOL
                 # tag.
                 for r in reversed(deliv.releases):
-                    if not r.is_eol:
+                    if not (r.is_eol or r.is_em):
                         recent_version = r.version
                         break
                 ref = ':ref:`%s-%s`' % (series, deliv.name)
@@ -275,8 +274,8 @@ class DeliverableDirectiveBase(rst.Directive):
 
             _title(deliv.name, '=')
 
-            app.info('[deliverables] rendering %s (%s)' %
-                     (deliv.name, series))
+            LOG.info('[deliverables] rendering %s (%s)',
+                     deliv.name, series)
 
             release_notes = deliv.release_notes
             if not release_notes:
@@ -388,10 +387,10 @@ class TeamDirective(rst.Directive):
         return node.children
 
 
-def _generate_team_pages(app):
+def _generate_team_pages():
     teams_with_deliverables = list(sorted(_deliverables.get_teams()))
     for team_name in teams_with_deliverables:
-        app.info('[team page] %s' % team_name)
+        LOG.info('[team page] %s', team_name)
         slug = team_name.lower().replace('-', '_').replace(' ', '_')
         base_file = slug + '.rst'
         with open(os.path.join('doc/source/teams', base_file), 'w') as f:
@@ -428,15 +427,12 @@ class HighlightsDirective(rst.Directive):
         return series_highlights
 
     def run(self):
-        env = self.state.document.settings.env
-        app = env.app
-
         # Get the series we are reporting on
         series = self.options.get('series')
         if not series:
             raise self.error('series value must be set to a valid cycle name.')
 
-        app.info('[series-highlights] gathering highlights for {}'.format(
+        LOG.info('[series-highlights] gathering highlights for {}'.format(
             series))
 
         result = ViewList()
@@ -444,8 +440,8 @@ class HighlightsDirective(rst.Directive):
         source_name = '<{}>'.format(__name__)
 
         for team in sorted(series_highlights.keys(), key=lambda x: x.lower()):
-            app.info('[highlights] rendering %s highlights for %s' %
-                     (team.title(), series))
+            LOG.info('[highlights] rendering %s highlights for %s',
+                     team.title(), series)
 
             tdata = _TEAM_DATA.get(team, {})
             title = team.title()
@@ -472,10 +468,10 @@ class HighlightsDirective(rst.Directive):
 
 
 def setup(app):
-    _initialize_deliverable_data(app)
+    _initialize_deliverable_data()
     app.add_directive('deliverable', DeliverableDirective)
     app.add_directive('independent-deliverables',
                       IndependentDeliverablesDirective)
     app.add_directive('team', TeamDirective)
     app.add_directive('serieshighlights', HighlightsDirective)
-    _generate_team_pages(app)
+    _generate_team_pages()

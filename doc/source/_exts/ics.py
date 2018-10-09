@@ -7,7 +7,10 @@ from docutils.io import FileOutput
 from docutils import nodes
 from docutils.parsers import rst
 import icalendar
+from sphinx.util import logging
 import yaml
+
+LOG = logging.getLogger(__name__)
 
 
 class PendingICS(nodes.Element):
@@ -87,7 +90,7 @@ def doctree_resolved(app, doctree, docname):
         series_name = node._series_name
         data = node._data
 
-        app.info('building {} calendar'.format(series_name))
+        LOG.info('building {} calendar'.format(series_name))
 
         cal = icalendar.Calendar()
         cal.add('prodid', '-//releases.openstack.org//EN')
@@ -111,7 +114,7 @@ def doctree_resolved(app, doctree, docname):
                     # ugly, but given the complexity of the expression
                     # above there are a bunch of ways things might
                     # fail.
-                    app.info('could not get title for {}: {}'.format(item, e))
+                    LOG.info('could not get title for {}: {}'.format(item, e))
                     title = item
                 summary.append(title)
             if summary:
@@ -159,7 +162,7 @@ def doctree_resolved(app, doctree, docname):
             destination_path=output_full_name,
             encoding='utf-8',
         )
-        app.info('generating {}'.format(output_full_name))
+        LOG.info('generating {}'.format(output_full_name))
         destination.write(cal.to_ical())
 
         # Remove the node that the writer won't understand.
@@ -181,12 +184,12 @@ def build_finished(app, exception):
         destination_path=output_full_name,
         encoding='utf-8',
     )
-    app.info('generating {}'.format(output_full_name))
+    LOG.info('generating {}'.format(output_full_name))
     destination.write(_global_calendar.to_ical())
 
 
 def setup(app):
-    app.info('initializing ICS extension')
+    LOG.info('initializing ICS extension')
     app.add_directive('ics', ICS)
     app.connect('doctree-resolved', doctree_resolved)
     app.connect('build-finished', build_finished)
