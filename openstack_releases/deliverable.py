@@ -62,12 +62,13 @@ def _safe_semver(v):
 def _version_sort_key(release):
     """Return a value we can compare for sorting.
     """
-    # NOTE(dhellmann): We want EOL tags to sort last. This assumes we
+    # NOTE(dhellmann): We want EOL and EM tags to sort last. This assumes we
     # won't have more than 1000 major releases of anything, and I
     # surely hope that is a safe assumption.
-    if release['version'].endswith('-eol'):
+    version_string = release['version']
+    if version_string.endswith('-eol') or version_string.endswith('-em'):
         return _safe_semver('1000.0.0')
-    return _safe_semver(release['version'])
+    return _safe_semver(version_string)
 
 
 def _collapse_deliverable_history(name, info):
