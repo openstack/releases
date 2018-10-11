@@ -114,7 +114,7 @@ class TestReleaseJobsGlobal(base.BaseTestCase):
         self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
-                    'publish-to-pypi',
+                    'publish-to-pypi-python3',
                 ],
             },
         }
@@ -142,7 +142,7 @@ class TestReleaseJobsGlobal(base.BaseTestCase):
         self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
-                    'publish-to-pypi',
+                    'publish-to-pypi-python3',
                     'puppet-tarball-jobs',
                 ],
             }

@@ -137,20 +137,15 @@ def read_templates_from_repo(workdir, repo_name):
 # Which jobs are needed for which release types.
 _RELEASE_JOBS_FOR_TYPE = {
     'python-service': [
-        'release-openstack-server',
-        'publish-to-pypi',
         'publish-to-pypi-python3',
     ],
     'python-pypi': [
-        'publish-to-pypi',
         'publish-to-pypi-python3',
     ],
     'neutron': [
-        'publish-to-pypi-neutron',
         'publish-to-pypi-python3',
     ],
     'horizon': [
-        'publish-to-pypi-horizon',
         'publish-to-pypi-python3',
     ],
     'nodejs': [
@@ -163,7 +158,7 @@ _RELEASE_JOBS_FOR_TYPE = {
         'puppet-release-jobs',
     ],
     'xstatic': [
-        'publish-xstatic-to-pypi',
+        'publish-to-pypi-python3',
     ],
     'fuel': [
         # Fuel is manually packaged by the team at Mirantis.
