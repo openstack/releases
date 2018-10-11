@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 994911d7bbd6f4cc63ea3fda7ca7354fd651ff6f
+  - projects:
+      - hash: 018ff32fe0200a041297c386eb8b381f1bec0e71
+        repo: openstack/ceilometer
+    version: 11.0.1
 branches:
   - name: stable/rocky
     location: 11.0.0
