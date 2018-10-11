@@ -2,7 +2,7 @@
  Using This Repository
 =======================
 
-This repository is for tracking release requests for OpenStack
+This repository is for tracking release requests for official OpenStack
 projects. The releases are managed using groups of "deliverables",
 made up of individual project repositories sharing a Launchpad group
 and a version number history. Many deliverables will only have one
@@ -16,3 +16,7 @@ The repository is managed by the `Release Management team
 
 Refer to `the reference documentation
 <https://releases.openstack.org/reference/>`_ for more details
+
+Deliverables managed by teams not under OpenStack governance should
+follow the `tagging instructions in the infra manual
+<https://docs.openstack.org/infra/manual/drivers.html#tagging-a-release>`__.

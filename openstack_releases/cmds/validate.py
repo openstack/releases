@@ -470,8 +470,11 @@ def validate_bugtracker(deliv, context):
 def validate_team(deliv, context):
     "Look for the team name in the governance data."
     if deliv.team not in context.team_data:
-        context.warning('Team %r not in governance data' %
-                        deliv.team)
+        context.warning(
+            'Team {} not in governance data. '
+            'Only official teams should use this repository '
+            'for managing releases. See README.rst for details.'.format(
+                deliv.team))
     else:
         print('owned by team {}'.format(deliv.team))
 
