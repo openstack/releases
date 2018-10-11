@@ -132,7 +132,7 @@ def get_release_history(series, deliverable):
     for current_series in included_series:
         try:
             deliv_info = get_deliverable_data(current_series, deliverable)
-            releases = deliv_info['releases']
+            releases = deliv_info['releases'] or []
         except (IOError, OSError, KeyError):
             releases = []
         LOG.debug('%s releases: %s', current_series,
@@ -156,7 +156,7 @@ def get_last_release(release_history, deliverable, release_type):
                 'for stable releases from the previous series.')
         depth = depth + 1
 
-    raise RuntimeError('No previous version could be found')
+    return None
 
 
 def main():
@@ -250,6 +250,10 @@ def main():
     except (IOError, OSError) as e:
         error(e)
 
+    # Ensure we have a list for releases, even if it is empty.
+    if deliverable_info['releases'] is None:
+        deliverable_info['releases'] = []
+
     try:
         release_history = get_release_history(series, args.deliverable)
         this_series_history = release_history[0]
@@ -260,12 +264,23 @@ def main():
         )
     except RuntimeError as err:
         error(err)
-    last_version = last_release['version'].split('.')
+    if last_release:
+        last_version = last_release['version'].split('.')
+    else:
+        last_version = None
     LOG.debug('last_version %r', last_version)
     diff_start = None
 
     add_stable_branch = args.stable_branch or is_procedural
-    if args.release_type in ('milestone', 'rc'):
+
+    if last_version is None:
+        # Deliverables that have never been released before should
+        # start at 0.1.0, indicating they are not feature complete or
+        # stable but have features.
+        LOG.debug('defaulting to 0.1.0 for first release')
+        new_version_parts = ['0', '1', '0']
+
+    elif args.release_type in ('milestone', 'rc'):
         force_tag = True
         if deliverable_info['release-model'] not in _USES_RCS:
             raise ValueError('Cannot compute RC for {} project {}'.format(
