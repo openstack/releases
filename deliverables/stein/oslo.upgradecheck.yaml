@@ -1,0 +1,13 @@
+---
+include-pypi-link: yes
+launchpad: oslo.upgradecheck
+release-model: cycle-with-intermediary
+team: oslo
+type: library
+repository-settings:
+  openstack/oslo.upgradecheck: {}
+releases:
+  - projects:
+      - hash: 452bd239549f5cbb99e6007828faf8bc387233c7
+        repo: openstack/oslo.upgradecheck
+    version: 0.1.0
