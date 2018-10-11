@@ -198,11 +198,7 @@ Prepare the branch request by submitting a patch to this repository.
 
   ``feature/`` -- for temporary feature branches
 
-  ``driverfixes/`` -- for long-term driver maintenance, beyond the end of
-  the stable branch
-
-* ``stable/`` and ``driverfixes/`` branch names must match a valid series
-  name.
+* ``stable/`` branch names must match a valid series name.
 
 * If you are not the release liaison or PTL, have the PTL of the
   project acknowledge the request with a +1.
@@ -471,10 +467,6 @@ Each entry in the ``branches`` list is a mapping with keys:
   mapping between the target repository name and the SHA of a commit
   already in the target repository.
 
-  If a branch name starts with driverfixes/ then the location must be
-  a mapping between the target repository name and the SHA of a commit
-  already in the target repository on the associated stable branch.
-
 
 Examples
 ========
@@ -516,41 +508,6 @@ and then for the subsequent release it would be updated to contain::
        highlights: |
           This release includes the change to stop importing
           from the 'oslo' namespace package.
-
-A driverfixes branch might be added to a project in a similar
-way. This example shows the branch created in cinder for the newton
-series. The branch was created from the HEAD of the stable/newton
-branch at the time.
-
-::
-
-  ---
-  launchpad: cinder
-  team: cinder
-  type: service
-  release-model: cycle-with-milestones
-  release-notes: https://docs.openstack.org/releasenotes/cinder/newton.html
-  branches:
-    - name: stable/newton
-      location: 9.0.0.0rc1
-    - name: driverfixes/newton
-      location:
-        openstack/cinder: 08bfc7d817f313451e619b535299121b686d7bd8
-  releases:
-    # ...
-    - version: 9.0.0.0rc1
-      projects:
-        - repo: openstack/cinder
-          hash: 0ba267fbc1836722735102994b466ecd7803b10a
-    - version: 9.0.0.0rc2
-      projects:
-        - repo: openstack/cinder
-          hash: ab9518112137f3141739e873b19cdc0085963bc7
-    # ...
-    - version: 9.1.4
-      projects:
-        - repo: openstack/cinder
-          hash: 908def6bb993798146cccc1621a9cee18950629d
 
 For deliverables with multiple repositories, the list of projects
 would contain all of them. For example, the Neutron deliverable might
