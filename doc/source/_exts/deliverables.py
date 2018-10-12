@@ -21,17 +21,17 @@ from docutils import nodes
 from docutils.parsers import rst
 from docutils.parsers.rst import directives
 from docutils.statemachine import ViewList
+from openstack_governance import governance
 from sphinx.util import logging
 from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
-from openstack_releases import governance
 from openstack_releases import links
 from openstack_releases import series_status
 
 LOG = logging.getLogger(__name__)
 
-_TEAM_DATA = governance.get_team_data()
+_GOV_DATA = governance.Governance.from_remote_repo()
 _PHASE_DOC_URL = 'https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases'  # noqa
 
 
@@ -443,14 +443,14 @@ class HighlightsDirective(rst.Directive):
             LOG.info('[highlights] rendering %s highlights for %s',
                      team.title(), series)
 
-            tdata = _TEAM_DATA.get(team, {})
+            tdata = _GOV_DATA.get_team(team)
             title = team.title()
-            if tdata.get('service'):
-                title = "{} - {}".format(title, tdata['service'])
+            if tdata.service:
+                title = "{} - {}".format(title, tdata.service)
             result.append(title, source_name)
             result.append('-' * len(title), source_name)
-            if tdata.get('mission'):
-                result.append(tdata['mission'], source_name)
+            if tdata.mission:
+                result.append(tdata.mission, source_name)
                 result.append('', source_name)
             result.append('**Notes:**', source_name)
             result.append('', source_name)

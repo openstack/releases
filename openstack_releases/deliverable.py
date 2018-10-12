@@ -22,9 +22,9 @@ import os
 import os.path
 import weakref
 
+from openstack_governance import governance
 import pbr.version
 
-from openstack_releases import governance
 from openstack_releases import series_status
 from openstack_releases import yamlutils
 
@@ -369,7 +369,7 @@ class Branch(object):
 @functools.total_ordering
 class Deliverable(object):
 
-    _governance_data = None
+    _gov_data = None
     _series_status_data = None
 
     def __init__(self, team, series, name, data):
@@ -554,10 +554,9 @@ class Deliverable(object):
 
     @property
     def tags(self):
-        if self._governance_data is None:
-            Deliverable._governance_data = governance.get_team_data()
-        return governance.get_tags_for_deliverable(
-            self._governance_data, self.team, self.name)
+        if self._gov_data is None:
+            Deliverable._gov_data = governance.Governance.from_remote_repo()
+        return self._gov_data.get_team(self.team).deliverables[self.name].tags
 
     @property
     def filename(self):
