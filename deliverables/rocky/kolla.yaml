@@ -25,6 +25,10 @@ releases:
       - hash: 0cec47368026f81379f07e0939bfd7e8b3c6dbbf
         repo: openstack/kolla
     version: 7.0.0.0rc2
+  - projects:
+      - hash: 7b3edfce94fc47501dd0b27f7435f461be1860d7
+        repo: openstack/kolla
+    version: 7.0.0.0rc3
 cycle-highlights:
   - Added new docker images in kolla for logstash, monasca, prometheus, ravd,
     neutron-infoblox-ipam-driver and apache storm.
