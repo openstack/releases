@@ -6,3 +6,8 @@ team: freezer
 type: client-library
 repository-settings:
   openstack/python-freezerclient: {}
+releases:
+  - projects:
+      - hash: 026ae218b6920238f3d2ed3abb6816f971c4cea5
+        repo: openstack/python-freezerclient
+    version: 2.0.0
