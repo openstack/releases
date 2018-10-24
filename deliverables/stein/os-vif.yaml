@@ -5,4 +5,10 @@ release-model: cycle-with-intermediary
 team: nova
 type: library
 repository-settings:
-  openstack/os-vif: {}
+  openstack/os-vif:
+    tarball-base: os_vif
+releases:
+  - projects:
+      - hash: c5fda08d4010f91487d1336852ec94b275fdbd8d
+        repo: openstack/os-vif
+    version: 1.12.0
