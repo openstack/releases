@@ -5,3 +5,8 @@ type: library
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/metalsmith: {}
+releases:
+  - projects:
+      - hash: 192b740d9663a1a2df4a96c554addbbf3b9727ff
+        repo: openstack/metalsmith
+    version: 0.8.0
