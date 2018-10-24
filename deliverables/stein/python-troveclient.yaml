@@ -6,3 +6,8 @@ team: trove
 type: client-library
 repository-settings:
   openstack/python-troveclient: {}
+releases:
+  - projects:
+      - hash: ba873aef344149abdf8b490de8d9f82c49bbf82a
+        repo: openstack/python-troveclient
+    version: 2.17.0
