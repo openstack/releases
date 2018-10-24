@@ -6,3 +6,8 @@ release-model: cycle-with-intermediary
 include-pypi-link: yes
 repository-settings:
   openstack/os-traits: {}
+releases:
+  - projects:
+      - hash: 25ea3e4a679677183e88bcf1ad7200a2e9988cdd
+        repo: openstack/os-traits
+    version: 0.10.0
