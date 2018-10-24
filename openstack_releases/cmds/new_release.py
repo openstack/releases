@@ -251,7 +251,7 @@ def main():
         error(e)
 
     # Ensure we have a list for releases, even if it is empty.
-    if deliverable_info['releases'] is None:
+    if deliverable_info.get('releases') is None:
         deliverable_info['releases'] = []
 
     try:
