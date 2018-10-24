@@ -6,3 +6,8 @@ team: senlin
 type: client-library
 repository-settings:
   openstack/python-senlinclient: {}
+releases:
+  - projects:
+      - hash: 5deedab653bfa1bf36a989e47e5f7fc288f5bb3d
+        repo: openstack/python-senlinclient
+    version: 1.9.0
