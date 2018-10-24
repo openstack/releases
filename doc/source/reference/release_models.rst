@@ -26,8 +26,10 @@ it falls in:
   the release cycle. They need to pick between `cycle-with-milestones`_
   or `cycle-with-intermediary`_ models.
 * Libraries cannot use RCs or trail the release. They need to pick between
-  `cycle-with-intermediary`_ and `independent`_ release models based on how
-  much they are tied to OpenStack or more generally-useful.
+  `cycle-with-intermediary`_ and `independent`_ release models. Libraries
+  with strong ties to OpenStack should prefer the `cycle-with-intermediary`_
+  model, while generally-useful libraries should prefer the `independent`_
+  model.
 * Only deployment or lifecycle-management components are allowed to trail
   the cycle. Therefore only components appearing in the
   *openstack-lifecyclemanagement* bucket on the `OpenStack map`_ are
@@ -112,3 +114,34 @@ untagged
 
 Some CI tools are used only from source and never tag releases, but
 need to create stable branches.
+
+Transition between release models
+=================================
+
+OpenStack-related libraries
+---------------------------
+
+Libraries with strong ties with OpenStack are released with a
+`cycle-with-intermediary`_ model, so that:
+
+* they can be released early and often
+* services consuming those libraries can take advantage of their new
+  features
+* we detect integration bugs early rather than late
+
+This works well while libraries see lots of changes, however it is a bit
+heavy-handed for feature-complete, stable libraries: it forces those to
+release multiple times per year even if they have not seen any change.
+
+Once libraries are deemed feature-complete and stable, they should be
+switched to an `independent`_ release model (like all our third-party
+libraries). Those would see releases purely as needed for the occasional
+corner case bugfix. They won't be released early and often, there is no
+new feature to take advantage of, and new integration bugs should be
+very rare.
+
+This transition should be definitive in most cases. In rare cases where
+a library were to need large feature development work again, we'd have
+two options: develop the new feature in a new library depending on the
+stable one, or grant an exception and switch it back to the
+`cycle-with-intermediary`_ model.
