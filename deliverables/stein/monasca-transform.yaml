@@ -6,3 +6,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-transform: {}
+releases:
+  - projects:
+      - hash: 5acdca0e652f21c8a4499d41c759683166533ac9
+        repo: openstack/monasca-transform
+    version: 0.17.0

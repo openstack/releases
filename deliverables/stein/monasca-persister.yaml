@@ -5,3 +5,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - projects:
+      - hash: b8471f3d5187fb64a3ef62613d63097b6e137e2a
+        repo: openstack/monasca-persister
+    version: 1.13.0

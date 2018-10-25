@@ -1,0 +1,12 @@
+---
+storyboard: 866
+release-model: cycle-with-intermediary
+team: monasca
+type: service
+repository-settings:
+  openstack/monasca-events-api: {}
+releases:
+  - projects:
+      - hash: a6ca0fead5419ee20ecac0f3bc1e9cb1af0c6884
+        repo: openstack/monasca-events-api
+    version: 0.2.0
