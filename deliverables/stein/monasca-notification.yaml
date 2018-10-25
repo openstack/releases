@@ -5,3 +5,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - projects:
+      - hash: 9bc2d7bd523f0db574cab6786fca8ade1e2926b6
+        repo: openstack/monasca-notification
+    version: 1.15.0

@@ -6,3 +6,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-ceilometer: {}
+releases:
+  - projects:
+      - hash: ee80e0f54c94ce829a10d6e183522b35b0daffc4
+        repo: openstack/monasca-ceilometer
+    version: 1.9.0

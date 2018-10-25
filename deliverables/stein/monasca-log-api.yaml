@@ -5,3 +5,8 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-log-api: {}
+releases:
+  - projects:
+      - hash: f735e546b517cc22ac9d1ffc860e238e64058e85
+        repo: openstack/monasca-log-api
+    version: 2.8.0
