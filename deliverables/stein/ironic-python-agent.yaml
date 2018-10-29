@@ -6,3 +6,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent: {}
+releases:
+  - projects:
+      - hash: f63099ebb68e3a29afc3fd923259aada2feb7074
+        repo: openstack/ironic-python-agent
+    version: 3.4.0
