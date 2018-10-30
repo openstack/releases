@@ -2,6 +2,12 @@
 include-pypi-link: yes
 storyboard: openstack/python-searchlightclient
 release-model: cycle-with-intermediary
+releases:
+  - projects:
+      - hash: 62725614cc42be594888136ac23bd78eb3c28aba
+        repo: openstack/python-searchlightclient
+        tarball-base: python-searchlightclient
+    version: 1.4.0
 team: searchlight
 type: client-library
 repository-settings:

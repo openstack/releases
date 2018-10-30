@@ -2,6 +2,11 @@
 include-pypi-link: true
 storyboard: openstack/searchlight-ui
 release-model: cycle-with-rc
+releases:
+  - projects:
+      - hash: 0ff28690223cf9b5f3517bc994728e754c16247c
+        repo: openstack/searchlight-ui
+    version: 6.0.0.0b1
 team: searchlight
 type: horizon-plugin
 repository-settings:

@@ -1,6 +1,11 @@
 ---
 storyboard: openstack/searchlight
 release-model: cycle-with-rc
+releases:
+  - projects:
+      - repo: openstack/searchlight
+        hash: 665a106e25301382b88b61420c06b336bf9cf866
+    version: 6.0.0.0b1
 team: searchlight
 type: service
 repository-settings:
