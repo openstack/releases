@@ -160,7 +160,7 @@ class DeliverableDirectiveBase(rst.Directive):
                 ]
             for category in self._CATEGORY_ORDER:
                 if category not in by_category:
-                    LOG.info('[sphinxext] No %r for %s', category,
+                    LOG.info('[deliverables] No %r for %s', category,
                              (self.team_name, series))
                     continue
                 self._add_deliverables(
@@ -432,7 +432,7 @@ class HighlightsDirective(rst.Directive):
         if not series:
             raise self.error('series value must be set to a valid cycle name.')
 
-        LOG.info('[series-highlights] gathering highlights for {}'.format(
+        LOG.info('[highlights] gathering highlights for {}'.format(
             series))
 
         result = ViewList()
