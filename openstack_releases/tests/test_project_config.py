@@ -114,7 +114,7 @@ class TestReleaseJobsGlobal(base.BaseTestCase):
         self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
-                    'publish-to-pypi-python3',
+                    'publish-to-pypi',
                 ],
             },
         }
@@ -142,7 +142,7 @@ class TestReleaseJobsGlobal(base.BaseTestCase):
         self.ctx._zuul_projects = {
             'openstack/releases': {
                 'templates': [
-                    'publish-to-pypi-python3',
+                    'publish-to-pypi',
                     'puppet-tarball-jobs',
                 ],
             }
@@ -183,11 +183,11 @@ class TestReleaseJobsInTree(base.BaseTestCase):
             - project:
                 templates:
                   - noop-jobs
-                  - publish-to-pypi-python3
+                  - publish-to-pypi
             '''))
         templates = project_config.read_templates_from_repo(
             self.ctx.workdir, self.repo.name)
-        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi'], templates)
 
     def test_zuul(self):
         filename = os.path.join(self.repo.path, 'zuul.yaml')
@@ -196,11 +196,11 @@ class TestReleaseJobsInTree(base.BaseTestCase):
             - project:
                 templates:
                   - noop-jobs
-                  - publish-to-pypi-python3
+                  - publish-to-pypi
             '''))
         templates = project_config.read_templates_from_repo(
             self.ctx.workdir, self.repo.name)
-        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi'], templates)
 
     def test_zuul_dot_d(self):
         filename = os.path.join(self.repo.path, 'zuul.d/projects.yaml')
@@ -209,11 +209,11 @@ class TestReleaseJobsInTree(base.BaseTestCase):
             - project:
                 templates:
                   - noop-jobs
-                  - publish-to-pypi-python3
+                  - publish-to-pypi
             '''))
         templates = project_config.read_templates_from_repo(
             self.ctx.workdir, self.repo.name)
-        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi'], templates)
 
     def test_dot_zuul_dot_d(self):
         filename = os.path.join(self.repo.path, '.zuul.d/projects.yaml')
@@ -222,8 +222,8 @@ class TestReleaseJobsInTree(base.BaseTestCase):
             - project:
                 templates:
                   - noop-jobs
-                  - publish-to-pypi-python3
+                  - publish-to-pypi
             '''))
         templates = project_config.read_templates_from_repo(
             self.ctx.workdir, self.repo.name)
-        self.assertEqual(['noop-jobs', 'publish-to-pypi-python3'], templates)
+        self.assertEqual(['noop-jobs', 'publish-to-pypi'], templates)
