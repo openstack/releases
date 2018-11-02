@@ -171,7 +171,7 @@ matches the most recent release from that repository. To re-tag in
 those cases, use the --force option.
 
 Use the --stable-branch option to also create a stable branch for the
-new release. Projects following the cycle-with-milestones release
+new release. Projects following the cycle-with-rc release
 model automatically receive a new stable branch on their first release
 candidate.
 
@@ -255,7 +255,7 @@ that deliverable. For each deliverable, we need to track:
 
 * cycle highlights that will be published to
   ``releases.openstack.org/$SERIES/highlights.html`` (optional, and for
-  cycle-with-intermediary, cycle-with-milestones, and cycle-trailing projects
+  cycle-with-intermediary, cycle-with-rc, and cycle-trailing projects
   only)
 * the starting points of all branches
 

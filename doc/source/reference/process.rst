@@ -269,7 +269,7 @@ RC1
 
    Note this work is done by translation team.
 
-7. After all cycle-with-milestone projects have their branches
+7. After all cycle-with-rc projects have their branches
    created, someone from the requirements core team (preferably the
    requirements PTL) needs to propose an update the deliverable file to
    create the stable/$series branch for ``openstack/requirements``.
@@ -333,7 +333,7 @@ candidates are coming.
 
    In the release-tools repository working directory, run::
 
-     $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-milestones) 2>&1 | tee unreleased.log
+     $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-rc) 2>&1 | tee unreleased.log
 
 7. After the deadline for final release candidates has passed, create
    stable branches for cycle-with-intermediary projects that did not
@@ -343,7 +343,7 @@ candidates are coming.
 8. As soon as the last release candidate is tagged and the freeze
    period is entered, use ``propose-final-releases`` to tag the
    existing most recent release candidates as the final release for
-   projects using the cycle-with-milestone model.
+   projects using the cycle-with-rc model.
 
 9. Ask liaisons and PTLs of milestone-based projects to review and +1
    the final release proposal from the previous step so their approval
