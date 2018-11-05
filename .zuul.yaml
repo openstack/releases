@@ -11,6 +11,7 @@
     templates:
       - openstack-python35-jobs
       - openstack-python36-jobs
+      - build-openstack-docs-pti
     check:
       jobs:
         - openstack-tox-validate:
@@ -18,9 +19,6 @@
             irrelevant-files:
               - ^doc/.*$
         - releases-tox-list-changes
-        - build-openstack-sphinx-docs:
-            vars:
-              sphinx_python: python3
         - openstack-tox-py35:
             irrelevant-files:
               - ^deliverables/.*$
@@ -39,9 +37,6 @@
             timeout: 3600
             irrelevant-files:
               - ^doc/.*$
-        - build-openstack-sphinx-docs:
-            vars:
-              sphinx_python: python3
         - openstack-tox-py35:
             irrelevant-files:
               - ^deliverables/.*$
@@ -53,6 +48,6 @@
     release-post:
       jobs:
         - tag-releases
-        - publish-static:
+        - publish-tox-docs-static:
             dependencies:
               - tag-releases
