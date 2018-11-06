@@ -41,11 +41,15 @@ releases:
       - hash: d48b0c15ac97c6644718651ce6e14cae9c32d07b
         repo: openstack/neutron
     version: 13.0.1
+  - projects:
+      - hash: 41f81b9c374e89501ba7ea53f5627009ba99b756
+        repo: openstack/neutron
+    version: 13.0.2
 cycle-highlights:
   - 'Per TCP/UDP port forwarding on floating IP is supported. Operators can save the
     number of global IP addresses for floating IPs.'
-  - 'Multiple bindings for compute owned ports is supported for better server
-    live migration support.'
+  - 'Multiple bindings for compute owned ports is supported for better server live
+    migration support.'
   - 'Perform validation on filter parameters on listing resources. Previously filter
     parameters were unclear for API users. This release improves the API behavior
     on resource filtering and documentation in the Neutron API references a lot.'
