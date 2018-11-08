@@ -24,6 +24,10 @@ releases:
       - hash: 6c8967dc8eeea1d64b8b7a17bee1f8d1aa647bed
         repo: openstack/python-openstackclient
     version: 3.14.2
+  - version: 3.14.3
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 010da92ff3711873e40c0f5a1c262010400bf53b
 release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/queens.html
 repository-settings:
   openstack/python-openstackclient: {}
