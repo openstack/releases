@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-octavia: {}
+releases:
+  - projects:
+      - hash: 01593b19570ff75ff50895833908b5a88b63389a
+        repo: openstack/puppet-octavia
+    version: 14.1.0

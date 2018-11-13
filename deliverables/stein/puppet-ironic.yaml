@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-ironic: {}
+releases:
+  - projects:
+      - hash: c4e5aa2152225aafdb8b48f84b0d7021d103f5cb
+        repo: openstack/puppet-ironic
+    version: 14.1.0

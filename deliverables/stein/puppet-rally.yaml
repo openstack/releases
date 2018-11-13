@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-rally: {}
+releases:
+  - projects:
+      - hash: 1ee830b0eb3390b7c8c80b2265ab3b38c6447bd0
+        repo: openstack/puppet-rally
+    version: 2.1.0

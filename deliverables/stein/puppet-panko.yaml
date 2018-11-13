@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-panko: {}
+releases:
+  - projects:
+      - hash: 73483cfd91ab4ce36e0cab538aa25471efa43aec
+        repo: openstack/puppet-panko
+    version: 14.1.0

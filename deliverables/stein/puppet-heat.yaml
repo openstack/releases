@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-heat: {}
+releases:
+  - projects:
+      - hash: 46df6599021890b91afeaa92a287b67f1e6e5afa
+        repo: openstack/puppet-heat
+    version: 14.1.0

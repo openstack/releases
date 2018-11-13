@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-gnocchi: {}
+releases:
+  - projects:
+      - hash: c9a1da1a258fa1703eddb5e0b9d802eeb5e2b2fb
+        repo: openstack/puppet-gnocchi
+    version: 14.1.0

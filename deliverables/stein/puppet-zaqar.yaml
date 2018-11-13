@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-zaqar: {}
+releases:
+  - projects:
+      - hash: f3d970c4548204082af26fad56903209f9b83e41
+        repo: openstack/puppet-zaqar
+    version: 14.1.0

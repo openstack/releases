@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-ec2api: {}
+releases:
+  - projects:
+      - hash: 065e0e6ac9756cb0328de7a51a54cd6b120a61d3
+        repo: openstack/puppet-ec2api
+    version: 14.1.0
