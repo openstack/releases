@@ -99,7 +99,7 @@ date ranges during which each key was in general use.
 * 2018-03-19..2018-09-05 (Rocky Cycle key):
   `key 0xc31292066be772022438222c184fd3e1edf21a78`_ (details__)
 * 2018-09-05..present (Stein Cycle key):
-  `key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`_ (details__)
+  `key 0x27023b1ffccd8e3ae9a5ce95d943d5d270273ada`_ (details__)
 
 .. Static key files are generated with the following command:
    ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28
@@ -116,8 +116,8 @@ date ranges during which each key was in general use.
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949&fingerprint=on
 .. _`key 0xc31292066be772022438222c184fd3e1edf21a78`: _static/0xc31292066be772022438222c184fd3e1edf21a78.txt
 .. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xc31292066be772022438222c184fd3e1edf21a78&fingerprint=on
-.. _`key 0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07`: _static/0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07.txt
-.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0xd47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07&fingerprint=on
+.. _`key 0x27023b1ffccd8e3ae9a5ce95d943d5d270273ada`: _static/0x27023b1ffccd8e3ae9a5ce95d943d5d270273ada.txt
+.. __: https://sks-keyservers.net/pks/lookup?op=vindex&search=0x27023b1ffccd8e3ae9a5ce95d943d5d270273ada&fingerprint=on
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
