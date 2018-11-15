@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/ldappool
         hash: 7734b7f45d61a22ebc0ce204304486b7484d697a
+  - projects:
+      - hash: acc14fca3a6fccb5bcb01718aa5c3c9566197f18
+        repo: openstack/ldappool
+    version: 2.4.0
 branches:
   - name: stable/rocky
     location: 2.3.1
