@@ -117,3 +117,25 @@ function clone_repo {
 
     return $_retval
 }
+
+
+function series_to_branch {
+    typeset series="$1"
+
+    typeset default=$(python -c 'from openstack_releases import defaults; print(defaults.RELEASE)')
+    if [ "$series" = "$default" ]; then
+        echo "master"
+    else
+        echo "stable/$series"
+    fi
+}
+
+
+function enable_tox_venv {
+    # Set up and activate the virtualenv that contains the
+    # edit-deliverable command.
+    if [ ! -d .tox/venv ]; then
+        tox -e venv --notest
+    fi
+    source .tox/venv/bin/activate
+}

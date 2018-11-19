@@ -646,12 +646,22 @@ looking at the commit logs.
 Print the list of changes in ``openstack/oslo.config`` along the
 master branch.
 
+tools/list_unreleased_changes_for_team.sh
+-----------------------------------------
+
+Given a series and team name, produce a list of the changes in the
+repositories for that team since their last tag on that branch. This
+is useful for deciding if a project needs to prepare a release, and
+for predicting what the next release version should be by looking at
+the commit logs.
+
 ::
 
-  ./tools/list_unreleased_changes.sh stable/kilo $(list-deliverables --repos --team Oslo)
+  ./tools/list_unreleased_changes_for_team.sh stein oslo
 
-Print the list of changes in the ``stable/kilo`` branch of all Oslo
-libraries.
+Print the list of changes in Oslo team repositories along the branch
+for the stein release ('master' before the release and 'stable/stein'
+after the release).
 
 tools/list_library_unreleased_changes.sh
 ----------------------------------------
