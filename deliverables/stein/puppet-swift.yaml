@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-swift: {}
+releases:
+  - projects:
+      - hash: 1f8723119ca7db3d2117497d4428b18cc8449df1
+        repo: openstack/puppet-swift
+    version: 14.1.0

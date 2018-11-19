@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-barbican: {}
+releases:
+  - projects:
+      - hash: 42e1953e964489e4ffad339277a7c5c8c224fceb
+        repo: openstack/puppet-barbican
+    version: 14.1.0

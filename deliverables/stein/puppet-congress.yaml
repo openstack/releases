@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-congress: {}
+releases:
+  - projects:
+      - hash: 5a3675e92cccbbf4a164b27015df23f13b70cc4b
+        repo: openstack/puppet-congress
+    version: 14.1.0

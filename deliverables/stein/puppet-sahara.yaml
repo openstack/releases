@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-sahara: {}
+releases:
+  - projects:
+      - hash: 1b72c18d9f99bc5a2eeebac0e4b6d1f9d03cf409
+        repo: openstack/puppet-sahara
+    version: 14.1.0

@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-neutron: {}
+releases:
+  - projects:
+      - hash: cff2e2d9c38614bab2665059162af038541a3aae
+        repo: openstack/puppet-neutron
+    version: 14.1.0
