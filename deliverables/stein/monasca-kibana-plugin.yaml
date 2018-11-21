@@ -5,4 +5,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-kibana-plugin: {}
-# Note: deliverable was not released in rocky
+releases:
+  - projects:
+      - hash: 32e8d3f4770ef72f93595d5a85e26620a6ce0776
+        repo: openstack/monasca-kibana-plugin
+    version: 1.4.0
