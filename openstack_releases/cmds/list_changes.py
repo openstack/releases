@@ -283,7 +283,10 @@ def main():
             if team:
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
-                team_liaison = liaison_data.get(team.name.lower(), {})
+                team_liaison = liaison_data.get(
+                    team.name.lower(),
+                    {'Liaison': 'None', 'IRC Handle': ''},
+                )
                 print('  Liaison: %(Liaison)s (%(IRC Handle)s)\n' %
                       team_liaison)
                 team_deliv = team.deliverables.get(deliv.name)
