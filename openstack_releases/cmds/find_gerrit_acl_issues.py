@@ -23,13 +23,13 @@ import os.path
 import urllib
 
 import appdirs
+from openstack_governance import governance
 import requests
 from requests.packages import urllib3
 
 import openstack_releases
 from openstack_releases import defaults
 from openstack_releases import deliverable
-from openstack_releases import governance
 
 # Disable warnings about insecure connections.
 urllib3.disable_warnings()
@@ -121,7 +121,7 @@ def main():
     if not config.has_option('DEFAULT', 'password'):
         parser.error('No password set in {}'.format(config_filename))
 
-    team_data = governance.get_team_data()
+    gov_data = governance.Governance.from_remote_repo()
 
     # Some deliverables were independent at one time but might not be
     # any more, so compare the independent list with the current
@@ -148,7 +148,12 @@ def main():
         config['DEFAULT']['password'],
     )
 
-    for repo in governance.get_repositories(team_data, code_only=True):
+    for repo in gov_data.get_repositories():
+
+        if repo.name.endswith('-specs'):
+            continue
+        if 'cookiecutter' in repo.name:
+            continue
 
         if repo.deliverable.team.name in IGNORED_TEAMS:
             if args.verbose:

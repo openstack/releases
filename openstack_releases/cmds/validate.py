@@ -32,6 +32,7 @@ import shutil
 import sys
 import tempfile
 
+from openstack_governance import governance
 import requests
 import six
 
@@ -41,7 +42,6 @@ from requests.packages import urllib3
 from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import gitutils
-from openstack_releases import governance
 from openstack_releases import npmutils
 from openstack_releases import project_config
 from openstack_releases import puppetutils
@@ -470,7 +470,9 @@ def validate_bugtracker(deliv, context):
 
 def validate_team(deliv, context):
     "Look for the team name in the governance data."
-    if deliv.team not in context.team_data:
+    try:
+        context.gov_data.get_team(deliv.team)
+    except ValueError:
         context.warning(
             'Team {} not in governance data. '
             'Only official teams should use this repository '
@@ -1309,8 +1311,7 @@ def validate_new_releases(deliv, context):
     final_release = deliv.releases[-1]
     expected_repos = set(
         r.name
-        for r in governance.get_repositories(
-            context.team_data,
+        for r in context.gov_data.get_repositories(
             deliverable_name=deliv.name,
         )
     )
@@ -1633,7 +1634,7 @@ def validate_branch_points(deliv, context):
 class ValidationContext(object):
 
     _zuul_projects = None
-    _team_data = None
+    _gov_data = None
 
     def __init__(self, debug=False, cleanup=True):
         self.warnings = []
@@ -1693,10 +1694,10 @@ class ValidationContext(object):
         return self._zuul_projects
 
     @property
-    def team_data(self):
-        if not self._team_data:
-            self._team_data = governance.get_team_data()
-        return self._team_data
+    def gov_data(self):
+        if not self._gov_data:
+            self._gov_data = governance.Governance.from_remote_repo()
+        return self._gov_data
 
 
 def main():

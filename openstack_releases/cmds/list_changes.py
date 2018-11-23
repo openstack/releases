@@ -29,15 +29,16 @@ import subprocess
 import sys
 import tempfile
 
+from openstack_governance import governance
 import pyfiglet
 import requests
 
 from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import gitutils
-from openstack_releases import governance
 from openstack_releases import hound
 from openstack_releases import release_notes
+from openstack_releases import wiki
 from openstack_releases import yamlutils
 
 
@@ -241,16 +242,18 @@ def main():
             print('not cleaning up %s' % workdir)
     atexit.register(cleanup_workdir)
 
-    team_data = governance.get_team_data()
+    gov_data = governance.Governance.from_remote_repo()
     official_repos = set(
         r.name
-        for r in governance.get_repositories(team_data)
+        for r in gov_data.get_repositories()
     )
 
     all_deliverables = deliverable.Deliverables(
         './deliverables',
         False,
     )
+
+    liaison_data = wiki.get_liaison_data()
 
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
@@ -273,12 +276,16 @@ def main():
         header('Team details')
         if deliv.team:
             team_name = deliv.team
-            team_dict = team_data.get(team_name)
-            if team_dict:
-                team = governance.Team(team_name, team_dict)
+            try:
+                team = gov_data.get_team(team_name)
+            except ValueError:
+                team = None
+            if team:
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
-                print('  Liaison: %s (%s)\n' % team.liaison)
+                team_liaison = liaison_data.get(team.name.lower(), {})
+                print('  Liaison: %(Liaison)s (%(IRC Handle)s)\n' %
+                      team_liaison)
                 team_deliv = team.deliverables.get(deliv.name)
                 if team_deliv:
                     print('found deliverable %s' % deliv.name)
