@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: ddd9d6ae6d1ab0d6fed100343b090d023878a19b
+  - version: 6.1.1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 1ae90d4b55d8b1336ed8acbb60716dca172482d5
 cycle-highlights:
   - |
     Implemented support for using ansible-vault passwords in kolla-ansible
