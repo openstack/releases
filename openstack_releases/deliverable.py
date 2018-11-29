@@ -556,7 +556,13 @@ class Deliverable(object):
     def tags(self):
         if self._gov_data is None:
             Deliverable._gov_data = governance.Governance.from_remote_repo()
-        return self._gov_data.get_team(self.team).deliverables[self.name].tags
+        team = self._gov_data.get_team(self.team)
+        try:
+            deliv = team.deliverables[self.name]
+        except KeyError:
+            # The deliverable is no longer listed under governance.
+            return []
+        return deliv.tags
 
     @property
     def filename(self):
