@@ -333,6 +333,7 @@ def generate_release_notes(repo, repo_path,
 
     # Look for reno notes for this version.
     if not changes_only:
+        logging.getLogger('reno').setLevel(logging.WARNING)
         cfg = reno_config.Config(
             reporoot=repo_path,
         )
