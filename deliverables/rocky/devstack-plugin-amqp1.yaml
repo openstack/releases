@@ -4,5 +4,9 @@ release-model: untagged
 team: oslo
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-amqp1: dc1d5602504d070118f859d4fae6ce787fb216eb
+    name: stable/rocky
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
