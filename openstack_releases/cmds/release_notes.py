@@ -89,7 +89,7 @@ def main():
     )
     email_group.add_argument(
         "--email-reply-to",
-        default="openstack-dev@lists.openstack.org",
+        default="openstack-discuss@lists.openstack.org",
         help="follow-up for discussions, defaults to %(default)s",
     )
     email_group.add_argument(
