@@ -365,7 +365,7 @@ def generate_release_notes(repo, repo_path,
     if repo == 'openstack-release-test':
         email_to = 'release-job-failures@lists.openstack.org'
     elif is_release_candidate:
-        email_to = 'openstack-dev@lists.openstack.org'
+        email_to = 'openstack-discuss@lists.openstack.org'
 
     params = dict(readme_sections)
     params.update({
