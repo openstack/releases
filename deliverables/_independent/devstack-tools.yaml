@@ -1,0 +1,44 @@
+---
+launchpad: devstack
+team: 'Quality Assurance'
+type: other
+include-pypi-link: yes
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/devstack-tools
+        hash: 3ecd349bfe5127dbd246777c3553c22a09433315
+  - version: 0.1.1
+    projects:
+      - repo: openstack/devstack-tools
+        hash: dde87e097fca533c8e8b4ca77d9eee528643e4fc
+  - version: 0.1.2
+    projects:
+      - repo: openstack/devstack-tools
+        hash: dae9f3be8d03feafef4b63a8b19771789d659608
+  - version: 0.1.3
+    projects:
+      - repo: openstack/devstack-tools
+        hash: 2c8054020bec7f43cb4a7de3ac05a87f3b9d0b83
+  - version: 0.1.4
+    projects:
+      - repo: openstack/devstack-tools
+        hash: 1384ec992db4ea1692e66427dfa56edfe9a75528
+  - version: 0.2.0
+    projects:
+      - repo: openstack/devstack-tools
+        hash: cf9093ec580806d973a11220dd8a87f3d5b95ad7
+  - version: 0.2.1
+    projects:
+      - repo: openstack/devstack-tools
+        hash: 375e772a6e83ef53657c954eae1f1f6676afc403
+  - version: 0.3.0
+    projects:
+      - repo: openstack/devstack-tools
+        hash: c5626f3b4bef206c704f4be871526f1907a6a39a
+  - version: 0.4.0
+    projects:
+      - repo: openstack/devstack-tools
+        hash: 8a9057a4e2a854f77f8bee2ea3ed1e006fb0a45a
+repository-settings:
+  openstack/devstack-tools: {}

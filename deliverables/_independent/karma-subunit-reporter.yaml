@@ -1,0 +1,12 @@
+---
+launchpad: devstack
+team: 'Quality Assurance'
+type: other
+include-pypi-link: no
+releases:
+  - version: 0.0.3
+    projects:
+      - repo: openstack/karma-subunit-reporter
+        hash: 45c359feea1e40ed3a6c4c38462dc8d9ac51cc3a
+repository-settings:
+  openstack/karma-subunit-reporter: {}
