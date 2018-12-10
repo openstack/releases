@@ -5,3 +5,7 @@ team: cyborg
 type: service
 repository-settings:
   openstack/cyborg: {}
+branches:
+  - name: feature/cyborg-nova-pilot
+    location:
+      openstack/cyborg: 34eac481a423db1f8dea94e6687b5972dd6d4c58

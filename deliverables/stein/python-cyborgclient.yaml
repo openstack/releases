@@ -6,3 +6,7 @@ team: cyborg
 type: client-library
 repository-settings:
   openstack/python-cyborgclient: {}
+branches:
+  - name: feature/cyborg-nova-pilot
+    location:
+      openstack/python-cyborgclient: dfe15c51b7d1660b3bad055b067e4c2f4a1af2fe
