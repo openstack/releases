@@ -1,7 +1,18 @@
 ---
 storyboard: openstack/freezer
-release-model: cycle-with-milestones
+release-model: cycle-with-intermediary
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: d59b138182e8a929a599f2b95455d0656be5fbfa
+      - repo: openstack/freezer-api
+        hash: 06dc898a3bdbe9cc5ba9132a016dcee13c069782
+      - repo: openstack/freezer-dr
+        hash: 6af94a5610e9a678d891ea0420a2a61ceaacd6fd
 team: freezer
 type: service
 repository-settings:
   openstack/freezer: {}
+  openstack/freezer-api: {}
+  openstack/freezer-dr: {}
