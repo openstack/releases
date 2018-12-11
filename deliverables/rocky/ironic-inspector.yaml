@@ -1,5 +1,5 @@
 ---
-launchpad: ironic-inspector
+storyboard: 944
 release-model: cycle-with-intermediary
 release-type: python-pypi
 team: ironic
@@ -15,6 +15,10 @@ releases:
       - hash: 600784a91e21cc16ca1e1c34367af7f2327ad79c
         repo: openstack/ironic-inspector
     version: 8.0.0
+  - projects:
+      - hash: b235c9fee6df4627bdf7c2e85633e15d7884bb2b
+        repo: openstack/ironic-inspector
+    version: 8.0.1
 branches:
   - location: 8.0.0
     name: stable/rocky
