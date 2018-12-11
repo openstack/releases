@@ -70,10 +70,10 @@ The "cycle-with-milestones" model described projects that produced a
 single release at the end of the cycle, with development milestones
 published at predetermined times in the cycle schedule.
 
-* "cycle-with-milestones" projects commited to publish development
+* "cycle-with-milestones" projects committed to publish development
   milestones following a predetermined schedule published by the Release
   Management team before the start of the 6-month cycle.
-* "cycle-with-milestones" projects commited to produce a release to
+* "cycle-with-milestones" projects committed to produce a release to
   match the end of the 6-month development cycle.
 * Release tags for deliverables using this tag were reviewed and
   applied by the Release Management team.
