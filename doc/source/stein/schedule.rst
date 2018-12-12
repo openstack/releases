@@ -253,7 +253,7 @@ TC Election Nomination Begins
 -----------------------------
 Technical committee candidates interested in serving for the next calendar year
 should announce their candidacies and platforms during this week.  Please see
-the `Election site`_ for specific timing imformation.
+the `Election site`_ for specific timing information.
 
 .. _s-tc-campaigning:
 
@@ -261,14 +261,14 @@ TC Election Campaigning Begins
 ------------------------------
 The electorate has time to ask candidates questions about their platforms
 and debate topics before polling begins.  Please see the `Election site`_ for
-specific timing imformation.
+specific timing information.
 
 .. _s-tc-polling:
 
 TC Election Polling Begins
 --------------------------
 Election polling week for open seats on the TC.  Please see the
-`Election site`_ for specific timing imformation.
+`Election site`_ for specific timing information.
 
 
 PTL Elections
