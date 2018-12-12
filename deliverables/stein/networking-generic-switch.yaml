@@ -6,3 +6,8 @@ release-model: cycle-with-intermediary
 include-pypi-link: yes
 repository-settings:
   openstack/networking-generic-switch: {}
+releases:
+  - projects:
+      - hash: 59cf11bee6647f7c24a8ee7ca7750e8cedec19c2
+        repo: openstack/networking-generic-switch
+    version: 1.3.0
