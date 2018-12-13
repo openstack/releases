@@ -333,7 +333,7 @@ Cinder New Target Driver Submission Deadline
 The deadline for submitting new target drivers to Cinder is 10 Jan 2019 (23:59 UTC).
 New target drivers must be complete with unit tests at this point in time.  The target
 driver must also have a 3rd Party CI running reliably and the target driver must
-be marged at this point to be included in the Stein release.
+be merged at this point to be included in the Stein release.
 
 .. _s-cinder-fp-freeze:
 
