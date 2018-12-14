@@ -1,0 +1,13 @@
+---
+launchpad: nova
+team: nova
+type: library
+release-model: cycle-with-intermediary
+include-pypi-link: yes
+repository-settings:
+  openstack/os-resource-classes: {}
+releases:
+  - projects:
+      - hash: 1ae04e7d41a1f5d65708b89787f45ec0bbb32d9c
+        repo: openstack/os-resource-classes
+    version: 0.1.0
