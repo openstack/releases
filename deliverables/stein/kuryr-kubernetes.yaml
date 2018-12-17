@@ -3,5 +3,10 @@ launchpad: kuryr-kubernetes
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 5f2d33d4859dade30c561281baf274f80a3f17fc
 repository-settings:
   openstack/kuryr-kubernetes: {}
