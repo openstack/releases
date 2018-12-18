@@ -1,5 +1,5 @@
 ---
-launchpad: ironic-python-agent
+storyboard: 947
 release-model: cycle-with-intermediary
 release-type: python-pypi
 team: ironic
@@ -11,6 +11,10 @@ releases:
       - hash: 667589bb007e144e37136e706c0b8196422b0344
         repo: openstack/ironic-python-agent
     version: 3.3.0
+  - projects:
+      - hash: aab9f53b66c5f7cd4f02c8f48641c988066fd682
+        repo: openstack/ironic-python-agent
+    version: 3.3.1
 branches:
   - location: 3.3.0
     name: stable/rocky
