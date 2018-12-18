@@ -343,3 +343,13 @@ Cinder Feature Proposal Freeze
 All new Cinder features must be proposed and substantially complete with unit tests
 by 07 Mar 2019 (23:59 UTC).
 
+Oslo
+----
+
+.. _s-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
