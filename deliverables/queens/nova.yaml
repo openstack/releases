@@ -68,7 +68,13 @@ releases:
   - projects:
       - hash: a48c1123cd0dedf0c0a8978b76bacb1987766255
         repo: openstack/nova
+        # NOTE(mriedem): Ignore 17.0.8 since it mistakenly uses the same
+        # git hash as 17.0.7.
     version: 17.0.8
+  - projects:
+      - hash: 33dc9f7bbd4ceecf2a590a30e6df034a32a31597
+        repo: openstack/nova
+    version: 17.0.9
 cycle-highlights:
   - |
     The performance of listing instances across a multi-cell cells v2
