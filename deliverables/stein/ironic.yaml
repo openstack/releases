@@ -1,7 +1,12 @@
 ---
-launchpad: ironic
+storyboard: 943
 release-model: cycle-with-intermediary
 team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+releases:
+  - projects:
+      - hash: be8d81becd0c34405f48d45831726c4b4e1fc8b8
+        repo: openstack/ironic
+    version: 12.0.0
