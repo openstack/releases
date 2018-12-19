@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 1.6.50.1
+    projects:
+      - repo: openstack/xstatic-mdi
+        hash: 29bc27f557d366382b172bb07190a3d040a04065
+        tarball-base: XStatic-mdi
+repository-settings:
+  openstack/xstatic-mdi: {}
