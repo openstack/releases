@@ -1,0 +1,14 @@
+---
+include-pypi-link: yes
+launchpad: nova
+release-model: cycle-with-rc
+team: nova
+type: service
+repository-settings:
+  openstack/placement:
+    tarball-base: openstack-placement
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/placement
+        hash: 9d42491910e66ecd15767238bb617ed5984283f2
