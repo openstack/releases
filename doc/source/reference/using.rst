@@ -116,7 +116,7 @@ repository.
   miss the deadline.
 
 * RC1 tags and stable branches should be submitted together for
-  projects using the cycle-with-milestone release model.
+  projects using the cycle-with-rc release model.
 
 Using new-release command
 =========================
@@ -187,7 +187,7 @@ branch point and possibly the name.
 Prepare the branch request by submitting a patch to this repository.
 
 * RC1 tags and stable branches should be submitted together for
-  projects using the cycle-with-milestone release model.
+  projects using the cycle-with-rc release model.
 
 * Always add the new branch to the end of the list in the file being
   edited.
