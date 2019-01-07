@@ -5,3 +5,8 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla: {}
+releases:
+  - projects:
+      - hash: f46b1c3b084c15757a93d61d9a4b95be9edb8672
+        repo: openstack/kolla
+    version: 8.0.0.0b1
