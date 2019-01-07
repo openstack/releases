@@ -393,7 +393,8 @@ def main():
             previous_tag = gitutils.get_latest_tag(
                 workdir,
                 project.repo.name,
-                '{}^'.format(project.hash)
+                '{}^'.format(project.hash),
+                always=False,
             )
             try:
                 previous_release = deliv.get_release(previous_tag)
@@ -582,7 +583,7 @@ def main():
                 notes = release_notes.generate_release_notes(
                     repo=project.repo.name,
                     repo_path=os.path.join(workdir, project.repo.name),
-                    start_revision=new_release.diff_start or start_range,
+                    start_revision=new_release.diff_start or start_range or '',
                     end_revision=new_release.version,
                     show_dates=True,
                     skip_requirement_merges=True,
