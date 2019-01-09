@@ -1,7 +1,12 @@
 ---
-launchpad: vitrage
+storyboard: openstack/vitrage
 release-model: cycle-with-intermediary
 team: vitrage
 type: service
 repository-settings:
   openstack/vitrage: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 30383d2deac9e490c505eed6a82b6480acb84732
