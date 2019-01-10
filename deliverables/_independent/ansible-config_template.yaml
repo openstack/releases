@@ -1,0 +1,14 @@
+---
+team: OpenStackAnsible
+type: other
+launchpad: openstack-ansible
+release-notes: https://docs.openstack.org/releasenotes/ansible-config_template/
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/ansible-config_template
+        hash: 937d9956e601e4cb41cb9d057e4312097dfec414
+repository-settings:
+  openstack/ansible-config_template:
+    flags:
+      - no-artifact-build-job
