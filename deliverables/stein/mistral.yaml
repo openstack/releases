@@ -8,3 +8,12 @@ repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
   openstack/mistral-extra: {}
+releases:
+  - projects:
+      - hash: fdd50f0e2597089c404543c1b1b73288b047d188
+        repo: openstack/mistral
+      - hash: 29fa2cd15c87f46369417928bdc573725df24d45
+        repo: openstack/mistral-dashboard
+      - hash: 255f4d54bc9df947dbfe4ed9ffbb843883767f05
+        repo: openstack/mistral-extra
+    version: 8.0.0.0b1
