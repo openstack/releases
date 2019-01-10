@@ -243,7 +243,7 @@ def maybe_create_release(release_repo_path, deliverable_info,
             except KeyError:
                 newest_release['releases'] = [new_release]
             newest_release = yamlutils.dumps(newest_release)
-            with open(newest_release_path, 'wb') as fh:
+            with open(newest_release_path, 'w') as fh:
                 fh.write(newest_release)
 
 
