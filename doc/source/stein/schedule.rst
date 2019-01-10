@@ -24,7 +24,6 @@
 Cross-project events
 ====================
 
-.. _s-goals-research:
 
 Keystone
 --------
@@ -58,6 +57,8 @@ Keystone Feature Freeze
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 All new Keystone features must be merged by the end of the week.
+
+.. _s-goals-research:
 
 Stein Goals Research
 --------------------
