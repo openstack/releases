@@ -25,7 +25,7 @@ import tempfile
 
 import six
 
-from prompt_toolkit.contrib.completers import WordCompleter
+from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit import prompt
 from prompt_toolkit.validation import ValidationError
 from prompt_toolkit.validation import Validator
