@@ -24,6 +24,40 @@
 Cross-project events
 ====================
 
+.. _s-tc-email-deadline:
+
+Stein TC Election
+-----------------
+
+Stein TC Election Email Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date (September 9th, 2018
+at 00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+.. _s-tc-nominations:
+
+Stein TC Election Nomination Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Technical committee candidates interested in serving for the next calendar year
+should announce their candidacies and platforms during this week.  Please see
+the `Election site`_ for specific timing information.
+
+.. _s-tc-campaigning:
+
+Stein TC Election Campaigning Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.  Please see the `Election site`_ for
+specific timing information.
+
+.. _s-tc-polling:
+
+Stein TC Election Polling Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Election polling week for open seats on the TC.  Please see the
+`Election site`_ for specific timing information.
 
 Keystone
 --------
@@ -238,39 +272,6 @@ follow the main release cycle is set to 11 July, 2019.
 
 Project-specific events
 =======================
-
-.. _s-tc-email-deadline:
-
-TC Election Email Deadline
---------------------------
-Contributors that will be in the electorate for the upcoming election
-should confirm their gerrit email addresses by this date (September 9th, 2018
-at 00:00 UTC). Electorate rolls are generated after this date and ballots will
-be sent to the listed gerrit email address.
-
-.. _s-tc-nominations:
-
-TC Election Nomination Begins
------------------------------
-Technical committee candidates interested in serving for the next calendar year
-should announce their candidacies and platforms during this week.  Please see
-the `Election site`_ for specific timing information.
-
-.. _s-tc-campaigning:
-
-TC Election Campaigning Begins
-------------------------------
-The electorate has time to ask candidates questions about their platforms
-and debate topics before polling begins.  Please see the `Election site`_ for
-specific timing information.
-
-.. _s-tc-polling:
-
-TC Election Polling Begins
---------------------------
-Election polling week for open seats on the TC.  Please see the
-`Election site`_ for specific timing information.
-
 
 PTL Elections
 -------------
