@@ -4,5 +4,10 @@ storyboard: 911
 release-model: cycle-with-intermediary
 team: octavia
 type: client-library
+releases:
+  - version: 1.7.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 08f4a1fdd164a37da0313ab9f0c771c2da3051a9
 repository-settings:
   openstack/python-octaviaclient: {}
