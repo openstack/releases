@@ -29,6 +29,10 @@ releases:
       - repo: openstack/sahara-dashboard
         hash: db8283502a9fe1d3b540dbacf9e607255d81a110
     version: 9.0.0
+  - projects:
+      - repo: openstack/sahara-dashboard
+        hash: 6e3f7538ce7779612d8e82b069597c06c2225a77
+    version: 9.0.1
 branches:
   - name: stable/rocky
     location: 9.0.0.0rc1
