@@ -8,5 +8,15 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 5f2d33d4859dade30c561281baf274f80a3f17fc
+  - version: 0.6.1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: d490b08cb7e0a0f4fa71d080226f8aa6ef0637c9
+
+cycle-highlights:
+  - |
+    Added support for handling and reacting to Network Policies events from
+    kubernetes, allowing Kuryr-Kubernetes to handle security group rules on the
+    fly based on them.
 repository-settings:
   openstack/kuryr-kubernetes: {}
