@@ -5,3 +5,8 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - projects:
+      - repo: openstack/masakari
+        hash: 4808a2a3d32b764b3bbb55df545b2a72b69f1ccd
+    version: 7.0.0.0b1
