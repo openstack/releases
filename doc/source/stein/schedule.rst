@@ -155,7 +155,7 @@ changes before feature freeze.
 Stein-3 milestone
 -----------------
 
-28 February 2019 is the Stein-3 milestone.
+7 March 2019 is the Stein-3 milestone.
 
 .. _s-goals-complete:
 
