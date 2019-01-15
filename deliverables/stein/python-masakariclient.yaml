@@ -3,5 +3,10 @@ launchpad: python-masakariclient
 release-model: cycle-with-intermediary
 team: masakari
 type: client-library
+releases:
+  - version: 5.3.0
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 44bb59f0e7d149cd61150a7ddbe91a1b33b917f8
 repository-settings:
   openstack/python-masakariclient: {}
