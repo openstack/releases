@@ -4,5 +4,10 @@ launchpad: python-heatclient
 release-model: cycle-with-intermediary
 team: heat
 type: client-library
+releases:
+  - version: 1.17.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 8af5deb458d51f4ec16e769d7fd6c94655f82f5f
 repository-settings:
   openstack/python-heatclient: {}
