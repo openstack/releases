@@ -4,5 +4,10 @@ launchpad: heat-translator
 release-model: cycle-with-intermediary
 team: heat
 type: library
+releases:
+  - version: 1.2.0
+    projects:
+      - repo: openstack/heat-translator
+        hash: c1c09eef75020a07d538efff57ffeefd0b2c42bb
 repository-settings:
   openstack/heat-translator: {}
