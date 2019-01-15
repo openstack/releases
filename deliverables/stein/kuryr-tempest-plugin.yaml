@@ -6,4 +6,9 @@ release-type: python-pypi
 repository-settings:
   openstack/kuryr-tempest-plugin: {}
 team: kuryr
+releases:
+  - version: 0.4.0
+    projects:
+      - repo: openstack/kuryr-tempest-plugin
+        hash: a82c55f7c002f33a5222ef3fbda5922b201859d6
 type: tempest-plugin
