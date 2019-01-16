@@ -603,6 +603,25 @@ To set the pre-release group membership:
 
   tox -e aclmanager -- groups pre_release ttx
 
+tools/membership_freeze_test.py
+--------------------------------
+
+A script to test for new deliverables in governance that were
+never under release management and therefore escape any form of
+release management tracking.
+
+Those need to be checked around milestone-2 (before MembershipFreeze)
+so that we create deliverable files for them if they are to be part of
+the final release.
+
+Example:
+
+To check for Stein release:
+
+::
+
+  tox -e membership_freeze_test -- stein ~/branches/governance/reference/projects.yaml
+
 propose-final-releases
 ----------------------
 
