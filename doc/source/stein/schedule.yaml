@@ -106,9 +106,14 @@ cycle:
 - end: '2019-02-15'
   name: R-8
   start: '2019-02-11'
+  x-project:
+    - t-tc-nominations
 - end: '2019-02-22'
   name: R-7
   start: '2019-02-18'
+  x-project:
+    - t-email-deadline
+    - t-tc-campaigning
   project-specific:
     - s-manila-fp-freeze
     - s-oslo-feature-freeze
@@ -117,6 +122,7 @@ cycle:
   start: '2019-02-25'
   x-project:
     - s-final-lib
+    - t-tc-polling
 - end: '2019-03-08'
   name: R-5
   start: '2019-03-04'
@@ -130,9 +136,12 @@ cycle:
   project-specific:
     - s-keystone-ffreeze
     - s-cinder-fp-freeze
+    - t-ptl-nominations
 - end: '2019-03-15'
   name: R-4
   start: '2019-03-11'
+  project-specific:
+    - t-ptl-poll
 - end: '2019-03-22'
   name: R-3
   start: '2019-03-18'
