@@ -63,13 +63,19 @@ def main(args=sys.argv[1:]):
         'projects_yaml',
         help='path to governance projects.yaml file'
     )
+    parser.add_argument(
+        '--yaml',
+        action="store_true",
+        help='display results to yaml format'
+    )
     args = parser.parse_args(args)
     last_team = ''
     for team, deliverable in in_governance_but_not_released(args):
         if last_team != team:
             print('\n' + team + ':')
             last_team = team
-        print(deliverable)
+        output_format = "- " if args.yaml else ""
+        print("{}{}".format(output_format, deliverable))
 
 
 if __name__ == '__main__':
