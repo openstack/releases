@@ -4,5 +4,10 @@ release-model: cycle-with-rc
 release-type: python-pypi
 team: sahara
 type: service
+releases:
+  - version: 10.0.0.0b1
+    projects:
+      - repo: openstack/sahara
+        hash: bf6fdb9f96a3ee0dcdaf0815841bb453de0551ee
 repository-settings:
   openstack/sahara: {}
