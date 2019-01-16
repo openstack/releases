@@ -74,6 +74,17 @@ Between Milestone-1 and Milestone-2
    List teams that still haven't done a library release yet and remind
    them of the milestone-2 deadline.
 
+5. Ahead of MembershipFreeze, run membership_freeze_test to check for
+   any new deliverable in governance that has not been released yet::
+
+     tox -e membership_freeze_test -- $series ~/branches/governance/reference/projects.yaml
+
+   Those should either get a release management exception (see
+   release-management key in the governance projects.yaml file) or an
+   empty deliverable file should be added to the series so that we can
+   properly track it. Leftovers are considered too young to be released
+   in the next release and will be reconsidered at the next cycle.
+
 Milestone-2
 ===========
 
