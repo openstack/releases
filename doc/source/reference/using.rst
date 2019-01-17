@@ -622,6 +622,19 @@ To check for Stein release:
 
   tox -e membership_freeze_test -- stein ~/branches/governance/reference/projects.yaml
 
+This script generate can generate a project url and append it to each results found
+simply by adding the flag `--url` to your command.
+
+By default the generated urls use the official git repository
+(https://git.openstack.org) but you can use another one like github or your
+specific dist git url by adding the option `--distgit <base-url>` to your command.
+
+Example:
+
+::
+
+  tox -e membership_freeze_test -- stein ~/branches/governance/reference/projects.yaml --url --distgit https://github.com/
+
 propose-final-releases
 ----------------------
 

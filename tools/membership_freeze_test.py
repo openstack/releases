@@ -49,7 +49,10 @@ def in_governance_but_not_released(args):
                     if os.path.isfile(fname):
                         break
                 else:
-                    missing.append((tname, dname))
+                    url = ''
+                    if len(deliverable['repos']) == 1:
+                        url = deliverable['repos'][0]
+                    missing.append((tname, dname, url))
     return missing
 
 
@@ -68,20 +71,34 @@ def main(args=sys.argv[1:]):
         action="store_true",
         help='display results to yaml format'
     )
+    parser.add_argument(
+        '--url',
+        action='store_true',
+        help='generate url for the given results found'
+    )
+    parser.add_argument(
+        '--distgit',
+        default='https://git.openstack.org/cgit/',
+        required=False,
+        help='deliverable git repository url to use'
+    )
     args = parser.parse_args(args)
     last_team = ''
     missing = in_governance_but_not_released(args)
-    for team, deliverable in missing:
+    for team, deliverable, url in missing:
         if last_team != team:
             print('\n' + team + ':')
             last_team = team
         output_format = "- " if args.yaml else ""
-        print("{}{}".format(output_format, deliverable))
+        output = "{}{}".format(output_format, deliverable)
+        if args.url:
+            output = "{} ({}{})".format(output, args.distgit, url)
+        print(output)
 
     if missing:
-        print('-' * 50)
-        print('{} project(s) missing'.format(len(missing)))
-        print('-' * 50)
+        print("-" * 50)
+        print("{} project(s) missing".format(len(missing)))
+        print("-" * 50)
 
 
 if __name__ == '__main__':
