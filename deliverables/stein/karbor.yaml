@@ -5,3 +5,8 @@ team: karbor
 type: service
 repository-settings:
   openstack/karbor: {}
+releases:
+  - projects:
+      - hash: e0258aac274a0a000c3bb85878f8e5adbd25ce55
+        repo: openstack/karbor
+    version: 1.2.0
