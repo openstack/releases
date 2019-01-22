@@ -5,5 +5,9 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+branches:
+  - name: feature/metadata-caching
+    location:
+      openstack/glance: 437ba3ee9b361b33e8918b804bd35f25a722457c
 repository-settings:
   openstack/glance: {}
