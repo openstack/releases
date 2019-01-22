@@ -167,7 +167,7 @@ _RELEASE_JOBS_FOR_TYPE = {
         # openstack-manuals is not released, only generated content pushed
     ],
     'manila-image-elements': [
-        'legacy-manila-publishimage-generic',
+        'manila-image-elements-publish-artifacts',
     ],
 }
 
