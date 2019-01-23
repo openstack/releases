@@ -6,3 +6,8 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/ec2-api
+        hash: 46af2c326f413fb993e6dbe7d14cdc4b7e3f4ace
