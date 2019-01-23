@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 0b25b5b1c7abfc28954a879162136c3a9b13ea4b
+  - version: 0.5.3
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 1d56b5b26dee769a55de3c677bde2ed63992c4ed
 cycle-highlights:
   - |
     Added support for High Availability kuryr-controller in an Active/Passive
