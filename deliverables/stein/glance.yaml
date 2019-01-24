@@ -11,3 +11,8 @@ branches:
       openstack/glance: 437ba3ee9b361b33e8918b804bd35f25a722457c
 repository-settings:
   openstack/glance: {}
+releases:
+  - version: 18.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: 437ba3ee9b361b33e8918b804bd35f25a722457c
