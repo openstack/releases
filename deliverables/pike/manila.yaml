@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: efbc62d9b29e94dd45339fa78da93a6a85532271
+  - version: 5.0.3
+    projects:
+      - repo: openstack/manila
+        hash: 2eb8268da9e073a5febe9f21bc3432138dff43b6
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
