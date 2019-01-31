@@ -20,7 +20,6 @@
 
 import argparse
 import os
-import re
 import sys
 
 import yaml
@@ -29,26 +28,7 @@ import yaml
 TEAM_EXCEPTIONS = [
     # Teams that are likely to be moved off TC governance
     'Infrastructure',
-    'RefStack',
-
-    # Deployment tool teams with externally-released artifacts
-    'OpenStack Charms',
-    'Chef OpenStack',
-    'OpenStack-Helm',
 ]
-
-WILDCARD_REPO_EXCEPTIONS = [
-]
-
-REPO_EXCEPTIONS = [
-]
-
-
-def is_a_repo_exception(repo):
-    for pattern in WILDCARD_REPO_EXCEPTIONS:
-        if re.match(pattern, repo):
-            return True
-    return repo in REPO_EXCEPTIONS
 
 
 def is_a_team_exception(team):
@@ -123,8 +103,8 @@ def main(args=sys.argv[1:]):
         if is_a_team_exception(tname):
             continue
         for dname, deliverable in team['deliverables'].items():
-            for repo in deliverable.get('repos'):
-                if not is_a_repo_exception(repo):
+            if 'release-management' not in deliverable:
+                for repo in deliverable.get('repos'):
                     aclpath = os.path.join(aclbase, acl[repo])
                     if issues_in_acl(repo, aclpath, args.patch):
                         print('%s (%s) in %s' % (repo, tname, acl[repo]))
