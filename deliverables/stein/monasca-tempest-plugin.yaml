@@ -7,4 +7,8 @@ repository-settings:
   openstack/monasca-tempest-plugin: {}
 team: monasca
 type: tempest-plugin
-# Note: deliverable was not released in rocky
+releases:
+  - projects:
+      - hash: 0ad394d8daa2dba43e9d08230e9efbd185592a92
+        repo: openstack/monasca-tempest-plugin
+    version: 0.3.0
