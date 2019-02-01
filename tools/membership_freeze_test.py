@@ -70,12 +70,18 @@ def main(args=sys.argv[1:]):
     )
     args = parser.parse_args(args)
     last_team = ''
-    for team, deliverable in in_governance_but_not_released(args):
+    missing = in_governance_but_not_released(args)
+    for team, deliverable in missing:
         if last_team != team:
             print('\n' + team + ':')
             last_team = team
         output_format = "- " if args.yaml else ""
         print("{}{}".format(output_format, deliverable))
+
+    if missing:
+        print('-' * 50)
+        print('{} project(s) missing'.format(len(missing)))
+        print('-' * 50)
 
 
 if __name__ == '__main__':
