@@ -43,10 +43,12 @@ Between Summit and Milestone-1
 Milestone-1
 ===========
 
-1. Include the deadline for the milestone in the countdown emails but
-   do not send extra reminders to liaisons. Missing the first
-   milestone isn't important in terms of the release, so we want to
-   encourage everyone to pay attention on their own.
+1. Generate release requests for all cycle-with-intermediary libraries
+   which had changes, but did not release since the previous release.
+   That patch will be used as a base to communicate with the team:
+   if a team wants to wait for a specific patch to make it to the library,
+   someone from the team can -1 the patch to have it held, or update
+   that patch with a different commit SHA.
 
 2. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
    allowing official deliverables to directly tag or branch without
@@ -59,22 +61,17 @@ Milestone-1
 Between Milestone-1 and Milestone-2
 ===================================
 
-1. Follow up with PTLs and liaisons for projects that missed the first
-   milestone.
-
-2. Use the countdown emails to list which projects have not done any
+#. Use the countdown emails to list which projects have not done any
    stable release yet, to encourage them to do so.
 
-3. Use the countdown emails to list which intermediary-released (or
-   independent) projects haven't done a release yet. Remind teams that
-   we need at least one library release before milestone-2.
+#. Use the countdown emails to list which intermediary-released (or
+   independent) deliverables haven't done a release yet. Remind teams that
+   intermediary-released services that have not done a release by
+   milestone-2 should be switched to the cycle-with-rc model.
 
-4. The week before Milestone-2 include a reminder of the deadline in
-   the countdown emails. Mention the MembershipFreeze deadline as well.
-   List teams that still haven't done a library release yet and remind
-   them of the milestone-2 deadline.
+#. Mention the upcoming MembershipFreeze deadline in the countdown emails.
 
-5. Ahead of MembershipFreeze, run membership_freeze_test to check for
+#. Ahead of MembershipFreeze, run membership_freeze_test to check for
    any new deliverable in governance that has not been released yet::
 
      tox -e membership_freeze_test -- $series ~/branches/governance/reference/projects.yaml
@@ -88,13 +85,12 @@ Between Milestone-1 and Milestone-2
 Milestone-2
 ===========
 
-1. Run the following to get a report of which libraries have unreleased
-   changes::
-
-     tools/list_library_unreleased_changes.sh
-
-   Filter out libraries that have insignificant changes (Updates to .gitreview,
-   etc.) and include list in the weekly countdown email.
+1. Generate release requests for all cycle-with-intermediary libraries
+   which had changes, but did not release since milestone-1.
+   That patch will be used as a base to communicate with the team:
+   if a team wants to wait for a specific patch to make it to the library,
+   someone from the team can -1 the patch to have it held, or update
+   that patch with a different commit SHA.
 
 2. Run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
    allowing official deliverables to directly tag or branch without
@@ -107,13 +103,15 @@ Milestone-2
 Between Milestone-2 and Milestone-3
 ===================================
 
-1. Follow up with PTLs and liaisons for projects that missed the second
-   milestone, or still haven't done their library releases yet.
-
-2. In the countdown email immediately after Milestone-2, include a
+#. In the countdown email immediately after Milestone-2, include a
    reminder about the various freezes that happen around Milestone-3.
 
-3. Two weeks before Milestone-3, include a reminder about the final
+#. For intermediary-released service projects that have not done a
+   release by milestone-2, propose a change from cycle-with-intermediary
+   to cycle-with-rc. Engage with PTLs and release liaisons to either
+   get an intermediary release, or a confirmation of the model switch.
+
+#. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
 
    1. Run the command from milestone-2 again to get a list of libraries::
@@ -122,7 +120,7 @@ Between Milestone-2 and Milestone-3
 
    2. Include list of unreleased libraries in the email to increase visibility.
 
-4. Two weeks before Milestone-3, prepare other teams to the final release
+#. Two weeks before Milestone-3, prepare other teams to the final release
    rush.
 
    1. Ask the release liaisons for the affected teams to update the
@@ -136,14 +134,15 @@ Between Milestone-2 and Milestone-3
 
       .. _generate an artifact signing key: https://docs.openstack.org/infra/system-config/signing.html#generation
 
-5. Two weeks before milestone 3, warn cycle-with-intermediary projects
-   that had changes over the cycle but no release yet that the release
-   team will tag HEAD of master for their project if they have not prepared
-   a release by the following week so that there is a fallback release to
-   use for the cycle and as a place to create their stable branch.
-
 Final Library Release (week before Milestone-3)
 ===============================================
+
+#. Generate release requests for all cycle-with-intermediary libraries
+   (except client libraries) which had changes, but did not release since
+   milestone-2. That patch will be used as a base to communicate with the
+   team: if a team wants to wait for a specific patch to make it to the
+   library, someone from the team can -1 the patch to have it held, or update
+   that patch with a different commit SHA.
 
 #. Release libraries as quickly as possible this week to ensure they
    are all done before the freeze. Consider relaxing the "not on
@@ -162,16 +161,6 @@ Final Library Release (week before Milestone-3)
    in case of critical issues requiring another approved release past the
    freeze date.
 
-#. Tag HEAD of master for any cycle-with-intermediary project with
-   changes merged over the cycle but no release yet. Do not create
-   branches for non-library projects.
-
-#. Tag HEAD of master for any cycle-with-intermediary project that has
-   unreleased CI configuration changes that would not have triggered a
-   release earlier in the cycle. Failing to tag means those CI changes
-   will not be on the stable branch and so the stable branch may start
-   out broken. Do not create branches for non-library projects.
-
 #. For stable libraries that did not have any change merged over the
    cycle, create a stable branch from the last available release.
 
@@ -179,8 +168,11 @@ Final Library Release (week before Milestone-3)
 Milestone-3
 ===========
 
-#. Verify that all projects following release:cycle-with-intermediary
-   have prepared at least one release for the cycle.
+#. Generate release requests for all client libraries which had changes,
+   but did not release since milestone-2. That patch will be used as a base
+   to communicate with the team: if a team wants to wait for a specific patch
+   to make it to the library, someone from the team can -1 the patch to have
+   it held, or update that patch with a different commit SHA.
 
 #. Freeze changes to ``openstack/requirements`` by applying -2 to all
    open patches. Ensure that reviewers do not approve changes created
@@ -217,61 +209,55 @@ Milestone-3
 Between Milestone-3 and RC1
 ===========================
 
-1. Encourage liaisons to wait as long as possible to create RC1 to
-   avoid immediately having to create an RC2 with a new bug fix.
-
-2. Encourage release:independent projects to add the history for any
-   releases not yet listed in their deliverable file.
-
-3. Remind projects using all release models to prepare their new
-   stable branch request around the RC1 target date.
-
-   As soon as grenade is updated for the new branch (see the RC1
-   instructions that follow), projects without stable branches may
-   start seeing issues with their grenade jobs because without the
-   stable branch the branch selection will cause the jobs to run
-   master->master instead of previous->master. At the end of Ocata
-   this caused trouble for the Ironic team, for example.
-
-4. Warn cycle-with-intermediary projects that have releases more than
+#. Warn cycle-with-intermediary projects that have releases more than
    2 months old that we will use their existing release as a point for
-   branching if they have not prepared a newer release by the RC1
+   branching if they have not prepared a newer release by the final RC
    deadline.
 
-5. Warn cycle-with-intermediary projects that did not have any change
-   over the cycle that no release will be tagged for them. A stable
-   branch will be created, though, from the last available release.
-
-6. Propose stable/$series branch creation for all client and non-client
+#. Propose stable/$series branch creation for all client and non-client
    libraries that had not requested it at freeze time. The following command
    may be used::
 
       tox -e venv -- propose-library-branches --include-clients
 
-RC1
-===
+RC1 week
+========
 
-1. Ensure all RC1 tag requests include the info to have the
-   stable/$series branch created, too.
+#. Early in the week, generate RC1 release requests (including the
+   stable/$series branch creation) for all cycle-with-rc deliverables.
+   That patch will be used as a base to communicate with the team:
+   if a team wants to wait for a specific patch to make it to the RC,
+   someone from the team can -1 the patch to have it held, or update
+   that patch with a different commit SHA.
 
-   Branches for cycle-trailing and cycle-with-intermediary projects
-   should be created when the PTL/liaison are ready, and not
-   necessarily for RC1 week.
+#. By the end of the week, ideally we would want a +1 from the PTL and/or
+   release liaison to indicate approval. However we will consider the absence
+   of -1 or otherwise negative feedback as an indicator that the automatically
+   proposed patches can be approved at the end of the RC deadline week.
 
-2. After the minimum set of projects used by devstack have been branched, the
+#. After the minimum set of projects used by devstack have been branched, the
    devstack branch can be created. Devstack doesn't push a tag at RC1 it is
    just branched off of HEAD
 
-3. After devstack is branched a grenade branch can be created. As with
+#. After devstack is branched a grenade branch can be created. As with
    devstack it will branch from HEAD instead of a tag.
 
-4. Update the default branch for devstack in the new stable
+#. Update the default branch for devstack in the new stable
    branch. For example, https://review.openstack.org/#/c/493208/
 
-5. Update the grenade settings in devstack-gate for the new branch. For
+#. Update the grenade settings in devstack-gate for the new branch. For
    example, https://review.openstack.org/362438.
 
-6. For translations, create stable-$series versions in the Zanata
+   .. note::
+
+     As soon as grenade is updated for the new branch (see the RC1
+     instructions that follow), projects without stable branches may
+     start seeing issues with their grenade jobs because without the
+     stable branch the branch selection will cause the jobs to run
+     master->master instead of previous->master. At the end of Ocata
+     this caused trouble for the Ironic team, for example.
+
+#. For translations, create stable-$series versions in the Zanata
    translation server on https://translate.openstack.org for all
    projects that the translation team wants to handle. Create new
    translation-jobs-$series periodic jobs to import translations from
@@ -280,7 +266,7 @@ RC1
 
    Note this work is done by translation team.
 
-7. After all cycle-with-rc projects have their branches
+#. After all cycle-with-rc projects have their branches
    created, someone from the requirements core team (preferably the
    requirements PTL) needs to propose an update the deliverable file to
    create the stable/$series branch for ``openstack/requirements``.
@@ -297,7 +283,7 @@ RC1
      and we can have divergence between the requirements being tested
      and being declared as correct.
 
-8. In the tempest repo, create new branch specific jobs for our two branchless
+#. In the tempest repo, create new branch specific jobs for our two branchless
    projects, devstack-gate and tempest. Configure tempest to run them on all
    changes, voting. Configure tempest to run them as periodic bitrot jobs as
    well. All this can be done in one tempest patch, like for example, see
@@ -305,7 +291,7 @@ RC1
    Configure devstack-gate to run the new jobs in check pipeline only,
    non-voting, for example see https://review.openstack.org/545144.
 
-9. Add the new branch to the list of branches in the periodic-stable job
+#. Add the new branch to the list of branches in the periodic-stable job
    templates in openstack-zuul-jobs. For example, see
    https://review.openstack.org/545268/.
 
@@ -313,31 +299,39 @@ RC1
 Between RC1 and Final
 =====================
 
-Try to avoid creating more than 3 release candidates so we are not
-creating candidates that consumers are then trained to ignore. Each
-release candidate should be kept for at least 1 day, so if there is a
-proposal to create RCX but clearly a reason to create another one,
-delay RCX to include the additional patches. Teams that know they will
-need additional release candidates can submit the requests and mark
-them WIP until actually ready, so the release team knows that more
-candidates are coming.
+#. In the countdown email, remind everyone that the latest RC (for
+   cycle-with-rc deliverables) or the latest intermediary release (for
+   cycle-with-intermediary deliverables) will automatically be used as
+   the final $series release on release day.
 
-1. Ensure that all projects that are publishing release notes have the
+#. Let cycle-with-rc projects iterate on RCs as needed. The final release
+   candidate for each project needs to be prepared at least one week before
+   the final release date.
+
+   .. note::
+
+     Try to avoid creating more than 3 release candidates so we are not
+     creating candidates that consumers are then trained to ignore. Each
+     release candidate should be kept for at least 1 day, so if there is a
+     proposal to create RCx but clearly a reason to create another one,
+     delay RCX to include the additional patches. Teams that know they will
+     need additional release candidates can submit the requests and mark
+     them WIP until actually ready, so the release team knows that more
+     candidates are coming.
+
+#. Ensure that all projects that are publishing release notes have the
    notes link included in their deliverable file. See
    ``tools/add_release_note_links.sh``.
 
-2. Encourage liaisons to merge all translation patches.
+#. Encourage liaisons to merge all translation patches.
 
-3. When all translations and bug fixes are merged for a project,
+#. When all translations and bug fixes are merged for a project,
    prepare a new release candidate.
 
-4. Ensure that the final release candidate for each project is
-   prepared at least one week before the final release date.
-
-5. After final releases for release:cycle-with-intermediary projects
+#. After final releases for release:cycle-with-intermediary projects
    are tagged, create their stable branches.
 
-6. On the morning of the deadline for final release candidates, check
+#. On the morning of the deadline for final release candidates, check
    the list of unreleased changes for milestone projects and verify
    with the PTLs and liaisons that they are planning a release or that
    they do not need one.
@@ -346,29 +340,27 @@ candidates are coming.
 
      $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-rc) 2>&1 | tee unreleased.log
 
-7. After the deadline for final release candidates has passed, create
-   stable branches for cycle-with-intermediary projects that did not
-   have any change merged over the cycle. Those branches should be
-   created from the last available release.
+#. Propose stable/$series branch creation for deliverables that have not
+   requested it yet.
 
-8. As soon as the last release candidate is tagged and the freeze
+#. As soon as the last release candidate is tagged and the freeze
    period is entered, use ``propose-final-releases`` to tag the
    existing most recent release candidates as the final release for
    projects using the cycle-with-rc model.
 
-9. Ask liaisons and PTLs of milestone-based projects to review and +1
+#. Ask liaisons and PTLs of milestone-based projects to review and +1
    the final release proposal from the previous step so their approval
    is included in the metadata that goes onto the signed tag.
 
-10. The week before final release test the release process using the
-    openstack/release-test repository.
+#. The week before final release test the release process using the
+   openstack/release-test repository.
 
-11. Notify the documentation team that it should be safe to apply
-    their process to create the new release series landing pages for
-    docs.openstack.org. Their process works better if they wait until
-    most of the projects have their stable branches created, but they
-    can do the work before the final release date to avoid having to
-    synchronize with the release team on that day.
+#. Notify the documentation team that it should be safe to apply
+   their process to create the new release series landing pages for
+   docs.openstack.org. Their process works better if they wait until
+   most of the projects have their stable branches created, but they
+   can do the work before the final release date to avoid having to
+   synchronize with the release team on that day.
 
 Final Release
 =============
