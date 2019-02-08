@@ -5,6 +5,10 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+branches:
+  - name: feature/losf
+    location:
+      openstack/swift: 6c6bb80e40313733b28dae920acc28889016a114
 releases:
   - version: 2.20.0
     projects:
