@@ -206,6 +206,10 @@ Milestone-3
 
      tools/aclissues.py ../project-config ../governance
 
+#. Email openstack-discuss to give PTLs a heads up to start thinking about
+   what they might want to include in their deliverables file as cycle-highlights
+   and that RC1 is the deadline for them.
+
 Between Milestone-3 and RC1
 ===========================
 
@@ -219,6 +223,9 @@ Between Milestone-3 and RC1
    may be used::
 
       tox -e venv -- propose-library-branches --include-clients
+
+#. Include a reminder in the weekly countdown email reminding PTLs of the
+   RC1 deadline for cycle-highlights.
 
 RC1 week
 ========
@@ -295,6 +302,8 @@ RC1 week
    templates in openstack-zuul-jobs. For example, see
    https://review.openstack.org/545268/.
 
+#. Email openstack-discuss list to remind PTLs that cycle-highlights are due
+   this week so that they can be included in release marketing preparations.
 
 Between RC1 and Final
 =====================
