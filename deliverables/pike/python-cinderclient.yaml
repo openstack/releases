@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 99bb6f3ecb1f3c883c50bf715618e64b145257b2
+  - version: 3.1.1
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: f3dcbd2f77d5f87c2dfa47cabf8aeb1047381031
 branches:
   - name: stable/pike
     location: 3.1.0
