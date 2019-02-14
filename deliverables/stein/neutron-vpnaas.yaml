@@ -6,3 +6,8 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-vpnaas: {}
+releases:
+  - projects:
+      - hash: c561e8940a64926d95e4386b195db83bcbc4b45f
+        repo: openstack/neutron-vpnaas
+    version: 14.0.0.0b1
