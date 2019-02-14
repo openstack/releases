@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 0.2.0.1
+    projects:
+      - repo: openstack/xstatic-magic-search
+        hash: 60d6954a36e54afa1f925324e7b527d235bdb484
+        tarball-base: XStatic-Magic-Search
+repository-settings:
+  openstack/xstatic-magic-search: {}

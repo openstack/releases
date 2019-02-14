@@ -1,0 +1,29 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: yes
+releases:
+  - version: 2.1.2.0
+    projects:
+      - repo: openstack/xstatic-jasmine
+        hash: a55f5db1dbe59b23c7d6284250bf4eac1d0143c3
+        tarball-base: XStatic-Jasmine
+  - version: 2.2.0.0
+    projects:
+      - repo: openstack/xstatic-jasmine
+        hash: cf95a6556c18762df48a3c66c28ccf0fea14c049
+        tarball-base: XStatic-Jasmine
+  - version: 2.2.0.1
+    projects:
+      - repo: openstack/xstatic-jasmine
+        hash: cf95a6556c18762df48a3c66c28ccf0fea14c049
+        tarball-base: XStatic-Jasmine
+  - version: 2.2.0.2
+    projects:
+      - repo: openstack/xstatic-jasmine
+        hash: b309c06b51b039d90340212fc181d56c736183bb
+        tarball-base: XStatic-Jasmine
+repository-settings:
+  openstack/xstatic-jasmine: {}
