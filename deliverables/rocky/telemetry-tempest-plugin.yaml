@@ -10,6 +10,10 @@ releases:
     version: 0.1.0
     flags:
       - forced
+  - projects:
+      - hash: 7f0e315a78df17d981ed86ebddf87759cd97eedf
+        repo: openstack/telemetry-tempest-plugin
+    version: 0.2.0
 repository-settings:
   openstack/telemetry-tempest-plugin:
     tarball-base: telemetry_tempest_plugin
