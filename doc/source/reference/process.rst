@@ -69,6 +69,11 @@ Between Milestone-1 and Milestone-2
    intermediary-released services that have not done a release by
    milestone-2 should be switched to the cycle-with-rc model.
 
+   For this, run::
+
+     tox -e venv -- list-deliverables --unreleased --model cycle-with-intermediary \
+     --type client-library --type horizon-plugin --type library --type other
+
 #. Mention the upcoming MembershipFreeze deadline in the countdown emails.
 
 #. Ahead of MembershipFreeze, run membership_freeze_test to check for
