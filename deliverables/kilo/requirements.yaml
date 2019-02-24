@@ -1,0 +1,14 @@
+---
+launchpad: openstack-requirements
+team: requirements
+type: other
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+stable-branch-type: tagless
+repository-settings:
+  openstack/requirements: {}
+releases:
+  - projects:
+      - hash: b7c9502f924acc4f8e13b1e561520f14a90535a3
+        repo: openstack/requirements
+    version: kilo-eol
