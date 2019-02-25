@@ -28,6 +28,7 @@ from sphinx.util.nodes import nested_parse_with_titles
 from openstack_releases import deliverable
 from openstack_releases import links
 from openstack_releases import series_status
+from openstack_releases._redirections import generate_constraints_redirections
 
 LOG = logging.getLogger(__name__)
 
@@ -467,6 +468,23 @@ class HighlightsDirective(rst.Directive):
         return node.children
 
 
+def build_finished(app, exception):
+    if exception is not None:
+        return
+
+    rendered_output = app.builder.templates.render(
+        'htaccess',
+        dict(redirections=generate_constraints_redirections(_deliverables))
+    )
+    output_full_name = os.path.join(app.builder.outdir, '.htaccess')
+    with open(output_full_name, "w") as f:
+        f.write(rendered_output)
+    LOG.info('Wrote Redirections to %s' % (output_full_name))
+    # NOTE(tonyb): We want to output this here because we won't be able to
+    # get to it via http{,s} so this helps debugging.
+    LOG.debug(rendered_output)
+
+
 def setup(app):
     _initialize_deliverable_data()
     app.add_directive('deliverable', DeliverableDirective)
@@ -474,4 +492,5 @@ def setup(app):
                       IndependentDeliverablesDirective)
     app.add_directive('team', TeamDirective)
     app.add_directive('serieshighlights', HighlightsDirective)
+    app.connect('build-finished', build_finished)
     _generate_team_pages()
