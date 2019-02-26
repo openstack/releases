@@ -2,6 +2,7 @@
 include-pypi-link: yes
 storyboard: openstack/octavia-lib
 release-model: cycle-with-intermediary
+release-type: python-pypi
 team: octavia
 type: library
 repository-settings:
@@ -11,3 +12,7 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: d045062aad396bf0a7eb78b7105770d95349afd9
+  - projects:
+      - hash: 679cfbb297d59fd27dc51772e1d90aed3f7c7079
+        repo: openstack/octavia-lib
+    version: 1.1.0
