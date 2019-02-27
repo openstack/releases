@@ -5,3 +5,8 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+releases:
+  - projects:
+      - repo: openstack/senlin
+        hash: e4fbf8d86fee5767301eb4d71dc638b63ec96b42
+    version: 7.0.0.0b1

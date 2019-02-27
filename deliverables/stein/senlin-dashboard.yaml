@@ -5,3 +5,8 @@ team: senlin
 type: horizon-plugin
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - projects:
+      - repo: openstack/senlin-dashboard
+        hash: 16ded081f4a544443bffe5cba9d3f6c50f05a124
+    version: 0.10.0
