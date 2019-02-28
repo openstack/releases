@@ -25,3 +25,10 @@ releases:
       - hash: 653b59a09d93af736ac02733de05045097bb2b3d
         repo: openstack/ironic-lib
     version: 2.16.1
+  - projects:
+      - hash: 20205755800c67a424d2e135d9085f68de4d8e67
+        repo: openstack/ironic-lib
+    version: 2.16.2
+branches:
+  - name: stable/stein
+    location: 2.16.2
