@@ -10,3 +10,10 @@ releases:
       - hash: 817e77a115f63e58a617c36f3b02237ac3cd30c9
         repo: openstack/sushy
     version: 1.7.0
+  - projects:
+      - hash: fb465bc3e0204858697e08aa80b5019eb7d79ea2
+        repo: openstack/sushy
+    version: 1.8.0
+branches:
+  - name: stable/stein
+    location: 1.8.0
