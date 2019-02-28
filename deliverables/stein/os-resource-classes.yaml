@@ -1,6 +1,6 @@
 ---
 launchpad: nova
-team: nova
+team: placement
 type: library
 release-model: cycle-with-intermediary
 include-pypi-link: yes
@@ -15,3 +15,7 @@ releases:
       - hash: b0c27a7d62d6a1e7331de0e8d2a7c708b5f8a3ba
         repo: openstack/os-resource-classes
     version: 0.2.0
+  - projects:
+      - hash: 2d4672e5f342a4a5aec4ceca885cd7d966134ebb
+        repo: openstack/os-resource-classes
+    version: 0.3.0
