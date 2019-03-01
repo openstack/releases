@@ -6,3 +6,10 @@ team: oslo
 type: library
 repository-settings:
   openstack/automaton: {}
+releases:
+  - projects:
+      - hash: 0e9634c5fc82c89eb3e3b491caf50fc0e31a2333
+        repo: openstack/automaton
+    version: 1.16.0
+    flags:
+      - forced
