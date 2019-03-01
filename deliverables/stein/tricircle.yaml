@@ -4,5 +4,13 @@ launchpad: tricircle
 release-model: cycle-with-intermediary
 team: tricircle
 type: service
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/tricircle
+        hash: 4f27abf4d141fe47928f89516f22dea14f3e446c
+branches:
+  - name: stable/stein
+    location: 6.0.0
 repository-settings:
   openstack/tricircle: {}
