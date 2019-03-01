@@ -1,0 +1,14 @@
+---
+launchpad: openstack-requirements
+team: requirements
+type: other
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+stable-branch-type: tagless
+repository-settings:
+  openstack/requirements: {}
+releases:
+  - projects:
+      - hash: 2a6816dab055a70747f37a6184b0d0d196a73647
+        repo: openstack/requirements
+    version: mitaka-eol

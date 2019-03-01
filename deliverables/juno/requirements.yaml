@@ -1,0 +1,14 @@
+---
+launchpad: openstack-requirements
+team: requirements
+type: other
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+stable-branch-type: tagless
+repository-settings:
+  openstack/requirements: {}
+releases:
+  - projects:
+      - hash: f2223f2b9003b4dd7182159c7d6b9457c6cd18a1
+        repo: openstack/requirements
+    version: juno-eol

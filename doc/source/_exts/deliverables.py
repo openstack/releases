@@ -215,7 +215,7 @@ class DeliverableDirectiveBase(rst.Directive):
         if not self.team_name:
             most_recent = []
             for deliv in deliverables:
-                earliest_version = deliv.earliest_release
+                recent_version = earliest_version = deliv.earliest_release
                 # Determine the most recent release that is not an EOL
                 # tag.
                 for r in reversed(deliv.releases):

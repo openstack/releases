@@ -3,6 +3,11 @@ launchpad: openstack-requirements
 team: requirements
 type: other
 include-pypi-link: yes
+release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - location:
+      openstack/requirements: c589637b184e77901d37cc7faa93dbb906979448
+    name: stable/newton

@@ -1,0 +1,14 @@
+---
+launchpad: openstack-requirements
+team: requirements
+type: other
+include-pypi-link: yes
+release-model: cycle-with-intermediary
+stable-branch-type: tagless
+repository-settings:
+  openstack/requirements: {}
+releases:
+  - projects:
+      - hash: 104c1f0cdeb2aebe7e63f04c322c26e3e2519ff2
+        repo: openstack/requirements
+    version: liberty-eol
