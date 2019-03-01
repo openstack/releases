@@ -6,3 +6,10 @@ team: mistral
 type: library
 repository-settings:
   openstack/mistral-lib: {}
+releases:
+  - projects:
+      - hash: bac92db60bb3f6f971a31b53f5bd113447c2787b
+        repo: openstack/mistral-lib
+    version: 1.1.0
+    flags:
+      - forced
