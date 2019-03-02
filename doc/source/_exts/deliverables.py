@@ -472,17 +472,25 @@ def build_finished(app, exception):
     if exception is not None:
         return
 
+    redirections = generate_constraints_redirections(_deliverables)
     rendered_output = app.builder.templates.render(
         'htaccess',
-        dict(redirections=generate_constraints_redirections(_deliverables))
+        dict(redirections=redirections)
     )
     output_full_name = os.path.join(app.builder.outdir, '.htaccess')
     with open(output_full_name, "w") as f:
         f.write(rendered_output)
     LOG.info('Wrote Redirections to %s' % (output_full_name))
-    # NOTE(tonyb): We want to output this here because we won't be able to
-    # get to it via http{,s} so this helps debugging.
-    LOG.debug(rendered_output)
+
+    rendered_output = app.builder.templates.render(
+        'redirect-tests',
+        dict(redirections=redirections)
+    )
+    output_full_name = os.path.join(app.builder.outdir,
+                                    '..',
+                                    'redirect-tests.txt')
+    with open(output_full_name, "w") as f:
+        f.write(rendered_output)
 
 
 def setup(app):
