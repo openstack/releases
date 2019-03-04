@@ -1,0 +1,6 @@
+redirect 301 /teams/shade.html /teams/openstacksdk.html
+redirect 301 /constraints/upper/master http://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt?h=master
+{%- for redirection in redirections %}
+redirect {{ redirection.code }} /constraints/upper/{{ redirection.src }} http://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt?h={{ redirection.dst }}
+{%- endfor %}
+
