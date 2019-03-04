@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #
 # Tool to generate a patch to remove direct tagging / branch-creating
 # rights for official OpenStack deliverables
