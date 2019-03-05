@@ -3,5 +3,10 @@ launchpad: kuryr-libnetwork
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 5fb8275d1202d6ab8880e9fd021e22c59353ce4f
 repository-settings:
   openstack/kuryr-libnetwork: {}
