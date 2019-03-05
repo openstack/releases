@@ -21,5 +21,12 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 01a1d2f0e4531cae1a59126f795e2455c76b43a4
+  - version: 3.3.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 55cdb633f42c56585ff95605217aa63b87882ec6
 repository-settings:
   openstack/python-zunclient: {}
+branches:
+  - location: 3.3.0
+    name: stable/stein
