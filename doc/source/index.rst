@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   train/index
    stein/index
    rocky/index
    queens/index
