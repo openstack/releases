@@ -3,5 +3,10 @@ storyboard: 1104
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: e9b258423c075368a77622386e10e31e712a53a7
 repository-settings:
   openstack/sahara-plugin-spark: {}

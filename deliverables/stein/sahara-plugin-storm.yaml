@@ -3,5 +3,10 @@ storyboard: 1105
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: a24b19cc296fedbbb1593e11ec51b6253d7f0f8b
 repository-settings:
   openstack/sahara-plugin-storm: {}
