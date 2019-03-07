@@ -9,5 +9,12 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 9ebd05065d759434b6f341421fb6cce23f7b8249
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 25043cbdf1fdfdb37201f130bd03d3e96dcce330
 repository-settings:
   openstack/python-saharaclient: {}
+branches:
+  - location: 2.2.0
+    name: stable/stein
