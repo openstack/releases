@@ -860,10 +860,16 @@ def validate_pypi_permissions(deliv, context):
 
         uploaders = pythonutils.get_pypi_uploaders(pypi_name)
         if not uploaders:
-            context.error(
-                'could not find users with permission to upload packages '
-                'for {}. Is the sdist name correct?'.format(pypi_name)
-            )
+            pypi_info = pythonutils.get_pypi_info(pypi_name)
+            if not pypi_info:
+                LOG.debug('no %s project data on pypi, assuming it will be '
+                          'created by release',
+                          pypi_name)
+            else:
+                context.error(
+                    'could not find users with permission to upload packages '
+                    'for {}. Is the sdist name correct?'.format(pypi_name)
+                )
         elif 'openstackci' not in uploaders:
             context.error(
                 'openstackci does not have permission to upload packages '
