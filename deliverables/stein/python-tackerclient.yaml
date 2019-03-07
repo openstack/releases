@@ -4,5 +4,10 @@ launchpad: python-tackerclient
 release-model: cycle-with-intermediary
 team: tacker
 type: client-library
+releases:
+  - projects:
+      - hash: f4839f308ab341bbb4a8faa818b0d6eba2048819
+        repo: openstack/python-tackerclient
+    version: 0.15.0
 repository-settings:
   openstack/python-tackerclient: {}
