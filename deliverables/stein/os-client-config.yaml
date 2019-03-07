@@ -4,5 +4,10 @@ launchpad: os-client-config
 release-model: cycle-with-intermediary
 team: OpenStackSDK
 type: library
+releases:
+  - projects:
+      - hash: 74fc34a8f07036c4944c22da7a5c02a1ccdfdb71
+        repo: openstack/os-client-config
+    version: 1.32.0
 repository-settings:
   openstack/os-client-config: {}
