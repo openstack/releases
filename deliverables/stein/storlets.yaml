@@ -3,5 +3,10 @@ launchpad: storlets
 team: storlets
 type: service
 release-model: cycle-with-rc
+releases:
+  - version: 3.0.0.0b1
+    projects:
+      - repo: openstack/storlets
+        hash: d331e97791a63bbbabe52e53a588caee6828e7b9
 repository-settings:
   openstack/storlets: {}
