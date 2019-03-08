@@ -106,7 +106,7 @@ def get_pypi_info(dist_name):
     "Return PyPI information for the distribution."
     canonical_name = packaging_utils.canonicalize_name(dist_name)
     LOG.debug('looking at PyPI for {!r}'.format(canonical_name))
-    url = 'https://pypi.org/project/{}/json'.format(canonical_name)
+    url = 'https://pypi.org/pypi/{}/json'.format(canonical_name)
     LOG.debug(url)
     try:
         return requests.get(url).json()
