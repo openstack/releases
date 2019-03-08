@@ -3,5 +3,10 @@ storyboard: 1101
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 471f55da91df84b4f0317ca27dcf672185865e0e
 repository-settings:
   openstack/sahara-plugin-ambari: {}

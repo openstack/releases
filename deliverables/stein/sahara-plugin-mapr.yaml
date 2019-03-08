@@ -3,5 +3,10 @@ storyboard: 1103
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 1f4353f1582c2898d66ff2bccde6d246a8682525
 repository-settings:
   openstack/sahara-plugin-mapr: {}

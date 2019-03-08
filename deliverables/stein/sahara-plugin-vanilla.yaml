@@ -3,5 +3,10 @@ storyboard: 1106
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 62ebd23a5f70967708213b41b023be1e2e1b0877
 repository-settings:
   openstack/sahara-plugin-vanilla: {}

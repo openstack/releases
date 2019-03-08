@@ -3,5 +3,10 @@ storyboard: 1102
 release-model: cycle-with-rc
 team: sahara
 type: other
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 0c427c1b9fc7804533f9958139a02cf7d277a5cd
 repository-settings:
   openstack/sahara-plugin-cdh: {}
