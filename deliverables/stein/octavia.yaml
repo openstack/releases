@@ -7,3 +7,13 @@ team: octavia
 type: service
 repository-settings:
   openstack/octavia: {}
+cycle-highlights:
+  - 'Octavia now supports load balancer "flavors". This allows an operator to
+     create custom load balancer "flavors" that users can select when creating
+     a load balancer.'
+  - 'You can now enable TLS client authentication when using TERMINATED_HTTPS
+     listeners.'
+  - 'Octavia now supports backend re-encryption of connections to member
+     servers.'
+  - 'Metadata tags can now be assigned to the elements of an Octavia load
+     balancer.'
