@@ -22,6 +22,8 @@ if [[ $# -lt 1 ]]; then
 fi
 
 BRANCH=${1}
+RESULT_DIR="$BRANCH-$(date '+%Y%m%d-%H%M')"
+mkdir -p $RESULT_DIR
 
 OPENSTACK_TEAMS=$(grep team deliverables/ocata/*.yaml | cut -f3 -d: | sort -u)
 
@@ -32,7 +34,10 @@ source $TOOLSDIR/functions
 function get_open_patches {
     REPO=$1
 
-    OPEN_CHANGES=$(ssh -p 29418 review.openstack.org gerrit query status:open project:${REPO} branch:stable/${BRANCH} | awk '/url:|commitMessage:/ {$1=""; print $0}')
+    OPEN_CHANGES=$(ssh -p 29418 review.openstack.org gerrit query status:open \
+                   project:${REPO} branch:stable/${BRANCH} | \
+                   awk '/url:|commitMessage:/ {$1=""; print $0}' | \
+                   awk '!(NR%2){print buf " --" $0}{buf=$0}')
 
     if [ -n "${OPEN_CHANGES}" ]; then
         title "Changes waiting for review in ${REPO} (stable/${BRANCH})"
@@ -46,10 +51,10 @@ for team in ${OPENSTACK_TEAMS}; do
     REPOS=$(tox -e venv -- list-deliverables --tag stable:follows-policy -r --series ${BRANCH} --team ${team} | grep "^openstack/")
 
     if [ -n "${REPOS}" ]; then
-        echo "List of open and unreleased changes of team '${team}' (stable/${BRANCH})" >${team}.txt
+        echo "List of open and unreleased changes of team '${team}' (stable/${BRANCH})" >${RESULT_DIR}/${team}.txt
         for repo in ${REPOS}; do
-            get_open_patches ${repo} >>${team}.txt
-            tools/list_unreleased_changes.sh stable/${BRANCH} ${repo} >>${team}.txt
+            get_open_patches ${repo} >>${RESULT_DIR}/${team}.txt
+            tools/list_unreleased_changes.sh stable/${BRANCH} ${repo} >>${RESULT_DIR}/${team}.txt
         done
     else
         echo " Tag stable:follows-policy not found for repositories of team '${team}'"
