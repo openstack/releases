@@ -5,3 +5,20 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+cycle-highlights:
+  - This release introduced Multi-Factor Authentication Receipts, which
+    facilitates a much more natural sequential authentication flow when using
+    MFA.
+  - The limits API now supports domains in addition to projects, so quota for
+    resources can be allocated to top-level domains and distributed among
+    children projects.
+  - JSON Web Tokens are added as a new token format alongside fernet tokens,
+    enabling support for a internet-standard format. JSON Web Tokens are
+    asymmetrically signed and so synchronizing private keys across keystone
+    servers is no longer required with this token format.
+  - Multiple keystone APIs now support system scope as a policy target, which
+    reduces the need for customized policies to prevent global access to users
+    with an admin role on any project.
+  - Multiple keystone APIs now use default reader, member, and admin roles
+    instead of a catch-all role, which reduces the need for customized policies
+    to create read-only access for certain users.
