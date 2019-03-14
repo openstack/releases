@@ -242,6 +242,9 @@ RC1 week
    someone from the team can -1 the patch to have it held, or update
    that patch with a different commit SHA.
 
+#. Email openstack-discuss list to remind PTLs that cycle-highlights are due
+   this week so that they can be included in release marketing preparations.
+
 #. By the end of the week, ideally we would want a +1 from the PTL and/or
    release liaison to indicate approval. However we will consider the absence
    of -1 or otherwise negative feedback as an indicator that the automatically
@@ -306,9 +309,6 @@ RC1 week
 #. Add the new branch to the list of branches in the periodic-stable job
    templates in openstack-zuul-jobs. For example, see
    https://review.openstack.org/545268/.
-
-#. Email openstack-discuss list to remind PTLs that cycle-highlights are due
-   this week so that they can be included in release marketing preparations.
 
 Between RC1 and Final
 =====================
