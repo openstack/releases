@@ -74,16 +74,18 @@ def _get_category(deliv):
 
 
 _deliverables = None
+_series_status_data = None
 
 
 def _initialize_deliverable_data():
     global _deliverables
+    global _series_status_data
 
     LOG.info('Loading deliverable data...')
 
-    series_status_data = series_status.SeriesStatus.from_directory(
+    _series_status_data = series_status.SeriesStatus.from_directory(
         'deliverables')
-    deliverable.Deliverable.init_series_status_data(series_status_data)
+    deliverable.Deliverable.init_series_status_data(_series_status_data)
     _deliverables = deliverable.Deliverables('deliverables')
 
 
@@ -472,7 +474,11 @@ def build_finished(app, exception):
     if exception is not None:
         return
 
-    redirections = generate_constraints_redirections(_deliverables)
+    future_releases = [series.name
+                       for series in _series_status_data.values()
+                       if series.status == 'future']
+    redirections = generate_constraints_redirections(_deliverables,
+                                                     future_releases)
     rendered_output = app.builder.templates.render(
         'htaccess',
         dict(redirections=redirections)
