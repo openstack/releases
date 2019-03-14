@@ -10,3 +10,15 @@ releases:
       - hash: be8d81becd0c34405f48d45831726c4b4e1fc8b8
         repo: openstack/ironic
     version: 12.0.0
+cycle-highlights:
+  - 'Adds additional interfaces for management of hardware including Redfish
+    BIOS settings, explicit iPXE boot interface option, and additional
+    hardware support.'
+  - 'Increased capabilities and options for operators including deployment
+    templates, improved parallel conductor workers and disk erasure processes,
+    deployed node protection and descriptions, and use of local HTTP(S) servers
+    for serving images.'
+  - 'Improved options for standalone users to request allocations of bare metal
+    nodes and submit configuration data as opposed to pre-formed configuration
+    drives. Additionally allows for ironic to be leveraged using JSON-RPC as
+    opposed to an AMQP message bus.'
