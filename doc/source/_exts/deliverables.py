@@ -471,32 +471,26 @@ class HighlightsDirective(rst.Directive):
 
 
 def build_finished(app, exception):
+    def write_out_data(app, template, params, *path_parts):
+        output_full_name = os.path.normpath(os.path.join(app.builder.outdir,
+                                                         *path_parts))
+        with open(output_full_name, "w") as f:
+            f.write(app.builder.templates.render(template, params))
+        LOG.info('Wrote %s to %s' % (template, output_full_name))
+
     if exception is not None:
         return
 
     future_releases = [series.name
                        for series in _series_status_data.values()
                        if series.status == 'future']
-    redirections = generate_constraints_redirections(_deliverables,
-                                                     future_releases)
-    rendered_output = app.builder.templates.render(
-        'htaccess',
-        dict(redirections=redirections)
+    params = dict(
+        redirections=generate_constraints_redirections(_deliverables,
+                                                       future_releases)
     )
-    output_full_name = os.path.join(app.builder.outdir, '.htaccess')
-    with open(output_full_name, "w") as f:
-        f.write(rendered_output)
-    LOG.info('Wrote Redirections to %s' % (output_full_name))
 
-    rendered_output = app.builder.templates.render(
-        'redirect-tests',
-        dict(redirections=redirections)
-    )
-    output_full_name = os.path.join(app.builder.outdir,
-                                    '..',
-                                    'redirect-tests.txt')
-    with open(output_full_name, "w") as f:
-        f.write(rendered_output)
+    write_out_data(app, 'htaccess', params, '.htaccess')
+    write_out_data(app, 'redirect-tests', params, '..', 'redirect-tests.txt')
 
 
 def setup(app):
