@@ -85,9 +85,15 @@ def increment_milestone_version(old_version, release_type):
         if 'b' in old_version[-1]:
             # First RC
             new_version_parts.append('0rc1')
-        else:
+        elif 'rc' in old_version[-1]:
+            # A deliverable exists so we can handle normally
             next_rc = int(old_version[-1][3:]) + 1
             new_version_parts.append('0rc{}'.format(next_rc))
+        else:
+            # No milestone or rc exists, fallback to the same logic
+            # as for '0b1' and increment the major version.
+            new_version_parts = increment_version(old_version, (1, 0, 0))
+            new_version_parts.append('0rc1')
     else:
         raise ValueError('Unknown release type {!r}'.format(release_type))
     return new_version_parts
