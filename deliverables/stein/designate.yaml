@@ -7,3 +7,8 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+cycle-highlights:
+  - Added ``CAA`` recordset type for CA authorization for managed DNS Zones
+  - Added ``NAPTR`` recordset type for service chaining and SIP management
+  - Validation of project IDs when updating quotas
+  - Added ``designate-status upgrade check`` command to aid in upgrades.
