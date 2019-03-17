@@ -3,5 +3,9 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - |
+    Extended support for manage/unmanage support for shares and snapshots to DHSS=True mode
+    and added manage/unmanage support for share-servers.
 repository-settings:
   openstack/manila: {}
