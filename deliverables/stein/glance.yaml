@@ -9,6 +9,8 @@ branches:
   - name: feature/metadata-caching
     location:
       openstack/glance: 437ba3ee9b361b33e8918b804bd35f25a722457c
+  - location: 18.0.0.0rc1
+    name: stable/stein
 repository-settings:
   openstack/glance: {}
 releases:
@@ -16,3 +18,7 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 437ba3ee9b361b33e8918b804bd35f25a722457c
+  - projects:
+      - hash: 798c4ed44d2d4f99805665d9fce36dfb423c4c34
+        repo: openstack/glance
+    version: 18.0.0.0rc1
