@@ -5,3 +5,11 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+releases:
+  - projects:
+      - hash: 27c3aea4fe649bc0dd7f0caaf0384c35096619d3
+        repo: openstack/blazar
+    version: 3.0.0.0rc1
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/stein
