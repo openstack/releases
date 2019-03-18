@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - projects:
+      - hash: a46d2ffc915de69f1ffafe42071192daffb1de4c
+        repo: openstack/magnum
+    version: 8.0.0.0rc1
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
