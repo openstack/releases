@@ -4,4 +4,13 @@ release-model: cycle-with-rc
 team: watcher
 type: service
 repository-settings:
-  openstack/watcher: {}
+  openstack/watcher:
+    tarball-base: python-watcher
+releases:
+  - projects:
+      - hash: 922783a5f8b30dbd7e2da95f29ce8e747b812c19
+        repo: openstack/watcher
+    version: 2.0.0.0rc1
+branches:
+  - location: 2.0.0.0rc1
+    name: stable/stein
