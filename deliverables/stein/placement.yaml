@@ -12,3 +12,15 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 9d42491910e66ecd15767238bb617ed5984283f2
+cycle-highlights:
+  - |
+    The placement service was extracted from the Nova project and became a new
+    official OpenStack project called Placement.
+  - |
+    Added the ability to target a candidate resource provider, easing
+    specifying a host for workload migration.
+  - |
+    Increased API performance by 50% for common scheduling operations.
+  - |
+    Simplified the code by removing unneeded complexity, easing future
+    maintenance.
