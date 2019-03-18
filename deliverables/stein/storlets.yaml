@@ -8,5 +8,12 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: d331e97791a63bbbabe52e53a588caee6828e7b9
+  - projects:
+      - hash: f2dc93465409eae36e1adc4ec9af8150b4341560
+        repo: openstack/storlets
+    version: 3.0.0.0rc1
 repository-settings:
   openstack/storlets: {}
+branches:
+  - location: 3.0.0.0rc1
+    name: stable/stein
