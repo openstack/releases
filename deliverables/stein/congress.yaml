@@ -4,4 +4,13 @@ release-model: cycle-with-rc
 team: congress
 type: service
 repository-settings:
-  openstack/congress: {}
+  openstack/congress:
+    tarball-base: openstack-congress
+releases:
+  - projects:
+      - hash: 030eed8c5519d44a69b3b458cf5169086852ae0d
+        repo: openstack/congress
+    version: 9.0.0.0rc1
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/stein
