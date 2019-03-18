@@ -247,7 +247,10 @@ def validate_series_first(deliv, context):
 
     versionstr = releases[0].version
     patchlevel = versionstr.rpartition('.')[-1]
-    if not (patchlevel == '0' or patchlevel.startswith('0b')):
+    # Make sure first release of a series is more than just a bugfix bump so
+    # there is room for a stable release in the previous cycle
+    if not (patchlevel == '0' or
+            patchlevel.startswith('0b') or patchlevel.startswith('0rc')):
         context.error(
             'Initial releases in a series must increment at '
             'least the minor version or be beta versions. %r' % (versionstr,)
