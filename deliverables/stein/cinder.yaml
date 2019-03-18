@@ -11,3 +11,11 @@ cycle-highlights:
   - 'Continued improvements in the backup service.'
 repository-settings:
   openstack/cinder: {}
+releases:
+  - projects:
+      - hash: 95379fdfea71f514b2f832f8549e34c2b8f389a3
+        repo: openstack/cinder
+    version: 14.0.0.0rc1
+branches:
+  - location: 14.0.0.0rc1
+    name: stable/stein
