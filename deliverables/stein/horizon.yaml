@@ -12,5 +12,17 @@ releases:
     projects:
       - hash: 560ebb5429c666214a1d00178dc6d81961185ba7
         repo: openstack/horizon
+  - projects:
+      - hash: 18efb06cddf838e3d49f71697480b311045ff5a3
+        repo: openstack/horizon
+    version: 15.0.0.0rc1
 repository-settings:
   openstack/horizon: {}
+branches:
+  - location: 15.0.0.0rc1
+    name: stable/stein
+cycle-highlights:
+  - 'Cinder Generic Groups admin panels are now supported'
+  - 'Added option to mitigate breach attacks'
+  - 'Added an upgrade_check management command'
+  - 'Custom templates for clouds.yaml and openrc files support'
