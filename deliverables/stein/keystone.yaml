@@ -5,6 +5,14 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - projects:
+      - hash: 1f1522703cfa25a533b7462aa402ac30128473e3
+        repo: openstack/keystone
+    version: 15.0.0.0rc1
+branches:
+  - location: 15.0.0.0rc1
+    name: stable/stein
 cycle-highlights:
   - This release introduced Multi-Factor Authentication Receipts, which
     facilitates a much more natural sequential authentication flow when using
