@@ -25,7 +25,7 @@ BRANCH=${1}
 RESULT_DIR="$BRANCH-$(date '+%Y%m%d-%H%M')"
 mkdir -p $RESULT_DIR
 
-OPENSTACK_TEAMS=$(grep team deliverables/ocata/*.yaml | cut -f3 -d: | sort -u)
+OPENSTACK_TEAMS=$(grep team deliverables/${BRANCH}/*.yaml | cut -f3 -d: | sort -u)
 
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
