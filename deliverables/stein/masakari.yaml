@@ -10,3 +10,10 @@ releases:
       - repo: openstack/masakari
         hash: 4808a2a3d32b764b3bbb55df545b2a72b69f1ccd
     version: 7.0.0.0b1
+  - projects:
+      - hash: d7d785ba96a3de71a5dbe6c5f7186ccb199daf3e
+        repo: openstack/masakari
+    version: 7.0.0.0rc1
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/stein
