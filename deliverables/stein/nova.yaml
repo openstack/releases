@@ -32,3 +32,11 @@ cycle-highlights:
     in the placement API so they can be used for scheduling via flavor
     extra specs and/or image properties.
   - Live migration is now supported for the VMware driver.
+releases:
+  - projects:
+      - hash: c993d4fe2ffaadea76d5ae76eedfddc3a4c71346
+        repo: openstack/nova
+    version: 19.0.0.0rc1
+branches:
+  - location: 19.0.0.0rc1
+    name: stable/stein
