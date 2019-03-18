@@ -6,3 +6,11 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - projects:
+      - hash: 55ca0e2983a4a9221857fab89e647e946f70078c
+        repo: openstack/cloudkitty
+    version: 9.0.0.0rc1
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/stein
