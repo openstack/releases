@@ -37,3 +37,6 @@ team: keystone
 type: library
 repository-settings:
   openstack/keystoneauth: {}
+branches:
+  - location: 3.13.1
+    name: stable/stein

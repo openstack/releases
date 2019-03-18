@@ -10,6 +10,8 @@ branches:
   - name: feature/cyborg-nova-pilot
     location:
       openstack/python-cyborgclient: dfe15c51b7d1660b3bad055b067e4c2f4a1af2fe
+  - location: 0.3.0
+    name: stable/stein
 releases:
   - projects:
       - hash: dfe15c51b7d1660b3bad055b067e4c2f4a1af2fe
