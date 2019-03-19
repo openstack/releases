@@ -1,6 +1,7 @@
 ---
-launchpad: heat
+storyboard: openstack/heat
 release-model: cycle-with-milestones
+release-type: python-pypi
 release-notes: https://docs.openstack.org/releasenotes/heat/pike.html
 team: heat
 type: service
@@ -53,5 +54,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: e4312ec9b1cc9d5e47d56f7d3f4560f9dcf5986a
+  - version: 9.0.6
+    projects:
+      - repo: openstack/heat
+        hash: f3b6666d214f70cac4f93cac37e2ed96b82a6044
 repository-settings:
-  openstack/heat: {}
+  openstack/heat:
+    pypi-name: openstack-heat

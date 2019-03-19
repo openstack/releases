@@ -1,5 +1,6 @@
 ---
-launchpad: heat
+storyboard: openstack/heat
+release-type: python-pypi
 release-model: cycle-with-milestones
 team: heat
 type: service
@@ -32,6 +33,11 @@ releases:
       - repo: openstack/heat
         hash: 207498dea1e9ca23485511cadbbdda85079e391f
     version: 11.0.0
+  - version: 11.0.1
+    projects:
+      - repo: openstack/heat
+        hash: 12dd1004ef4cb218cdfc5205e1e002297d8db838
 repository-settings:
-  openstack/heat: {}
+  openstack/heat:
+    pypi-name: openstack-heat
 release-notes: https://docs.openstack.org/releasenotes/heat/rocky.html
