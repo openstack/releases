@@ -8,5 +8,12 @@ releases:
       - hash: 5e019312643c4702702b5691af9dfd972bbab6f3
         repo: openstack/tacker-horizon
     version: 0.13.0
+  - projects:
+      - hash: 88cc477b7afd50eaf364acd2e68065deb8386783
+        repo: openstack/tacker-horizon
+    version: 0.14.0
 repository-settings:
   openstack/tacker-horizon: {}
+branches:
+  - location: 0.14.0
+    name: stable/stein
