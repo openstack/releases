@@ -15,3 +15,10 @@ releases:
       - hash: a76567d9e5e0e7b01c1afb78217b82c369dbc7a8
         repo: openstack/ironic-python-agent
     version: 3.5.0
+  - projects:
+      - hash: 872dba1a7eb9cf4d67edf21a1c0569df6c27a779
+        repo: openstack/ironic-python-agent
+    version: 3.6.0
+branches:
+  - location: 3.6.0
+    name: stable/stein
