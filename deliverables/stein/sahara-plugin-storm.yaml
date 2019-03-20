@@ -8,5 +8,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-storm
         hash: a24b19cc296fedbbb1593e11ec51b6253d7f0f8b
+  - projects:
+      - hash: a24b19cc296fedbbb1593e11ec51b6253d7f0f8b
+        repo: openstack/sahara-plugin-storm
+    version: 1.0.0.0rc1
 repository-settings:
   openstack/sahara-plugin-storm: {}
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/stein
