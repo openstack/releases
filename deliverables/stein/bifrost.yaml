@@ -10,3 +10,10 @@ releases:
       - hash: 177ce1faefa6e8cbf1264c788d9f21d311305051
         repo: openstack/bifrost
     version: 5.2.0
+  - projects:
+      - hash: 86ddca659a7925bb38228be3c854799ded55774a
+        repo: openstack/bifrost
+    version: 6.0.0
+branches:
+  - location: 6.0.0
+    name: stable/stein
