@@ -1,7 +1,17 @@
 ---
-launchpad: heat
+storyboard: 989
+release-type: python-pypi
 release-model: cycle-with-rc
 team: heat
 type: service
 repository-settings:
-  openstack/heat: {}
+  openstack/heat:
+    tarball-base: openstack-heat
+releases:
+  - projects:
+      - hash: acce80a2579f8757a5f853a956a2bbcffbff03fb
+        repo: openstack/heat
+    version: 12.0.0.0rc1
+branches:
+  - location: 12.0.0.0rc1
+    name: stable/stein
