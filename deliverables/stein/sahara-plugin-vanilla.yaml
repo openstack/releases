@@ -8,5 +8,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 62ebd23a5f70967708213b41b023be1e2e1b0877
+  - projects:
+      - hash: 62ebd23a5f70967708213b41b023be1e2e1b0877
+        repo: openstack/sahara-plugin-vanilla
+    version: 1.0.0.0rc1
 repository-settings:
   openstack/sahara-plugin-vanilla: {}
+branches:
+  - location: 1.0.0.0rc1
+    name: stable/stein
