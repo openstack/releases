@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: python-pypi
 repository-settings:
   openstack/congress-dashboard: {}
+releases:
+  - projects:
+      - hash: e5c562c7b3cab096d6b46d353a836bf71044917a
+        repo: openstack/congress-dashboard
+    version: 4.0.0.0rc1
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/stein
