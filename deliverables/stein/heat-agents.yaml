@@ -4,5 +4,10 @@ release-model: cycle-with-intermediary
 release-type: python-pypi
 team: heat
 type: other
+releases:
+  - version: 1.8.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: 6139799be23d6421e768dd068949982eab5f2cb3
 repository-settings:
   openstack/heat-agents: {}
