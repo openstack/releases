@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - projects:
+      - hash: cf01152b3ac58258675f05042cc4a132fb46c7e3
+        repo: openstack/zaqar
+    version: 8.0.0.0rc1
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
