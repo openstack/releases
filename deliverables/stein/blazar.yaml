@@ -13,3 +13,16 @@ releases:
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein
+cycle-highlights:
+  - |
+    Introduced a new Resource Allocation API allowing operators to query the
+    reserved state of their cloud resources.
+  - |
+    Added support for affinity and no-affinity policies for instance
+    reservations, allowing multiple instances of the same reservation to be
+    scheduled to the same hypervisor.
+  - |
+    Added a new plugin for reservation of floating IPs. This new feature is
+    available as a preview and will be fully completed in the next release.
+  - |
+    Integrated numerous bug fixes to improve reliability.
