@@ -18,3 +18,17 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: c5459d4910acbcaa8918d37b81d4de99110cfb1c
+  - version: 4.3.0
+    projects:
+      - repo: openstack/vitrage
+        hash: bddd3bf69c69ff5dc9924b816d19c8cb379ebeef
+branches:
+  - location: 4.3.0
+    name: stable/stein
+cycle-highlights:
+  - 'New and simplified template language! the new templates are shorter and
+     much easier to understand and reuse.'
+  - 'Added a Trove datasource and a Zaqar notifier.'
+  - 'New APIs for querying Vitrage services and for resource count.'
+  - 'Performance improvements and faster data retrieval. The memory signature
+     and processing runtime were significantly reduced.'
