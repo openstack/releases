@@ -8,12 +8,16 @@ type: service
 repository-settings:
   openstack/octavia: {}
 cycle-highlights:
-  - 'Octavia now supports load balancer "flavors". This allows an operator to
-     create custom load balancer "flavors" that users can select when creating
-     a load balancer.'
-  - 'You can now enable TLS client authentication when using TERMINATED_HTTPS
-     listeners.'
-  - 'Octavia now supports backend re-encryption of connections to member
-     servers.'
-  - 'Metadata tags can now be assigned to the elements of an Octavia load
-     balancer.'
+  - 'Octavia now supports load balancer "flavors". This allows an operator to create
+    custom load balancer "flavors" that users can select when creating a load balancer.'
+  - 'You can now enable TLS client authentication when using TERMINATED_HTTPS listeners.'
+  - 'Octavia now supports backend re-encryption of connections to member servers.'
+  - 'Metadata tags can now be assigned to the elements of an Octavia load balancer.'
+releases:
+  - projects:
+      - hash: 68b9d06dae65c20b26aa63b78884f94b6642c542
+        repo: openstack/octavia
+    version: 4.0.0.0rc1
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/stein
