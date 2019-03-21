@@ -3,5 +3,13 @@ launchpad: networking-powervm
 release-model: cycle-with-rc
 team: PowerVMStackers
 type: other
+branches:
+  - name: stable/stein
+    location: 8.0.0.0rc1
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/networking-powervm
+        hash: c87dadbbb4eefcca4f363c042c850e3145806d3d
 repository-settings:
   openstack/networking-powervm: {}
