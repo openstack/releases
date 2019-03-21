@@ -3,6 +3,13 @@ launchpad: karbor
 release-model: cycle-with-intermediary
 team: karbor
 type: service
+cycle-highlights:
+  - |
+    Support for reset checkpoint to the specify state
+  - |
+    Support for cross site backup and restore with volume_glance_plugin
+  - |
+    Optimization for checkpoints management in different bank cases
 repository-settings:
   openstack/karbor: {}
 releases:
