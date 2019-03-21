@@ -7,3 +7,8 @@ repository-settings:
 storyboard: 908
 team: octavia
 type: tempest-plugin
+releases:
+  - projects:
+      - hash: c9414e8419322815dc97a1919f19a44a0044c151
+        repo: openstack/octavia-tempest-plugin
+    version: 1.0.0
