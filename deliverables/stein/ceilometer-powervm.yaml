@@ -3,5 +3,13 @@ launchpad: ceilometer-powervm
 release-model: cycle-with-rc
 team: PowerVMStackers
 type: other
+branches:
+  - name: stable/stein
+    location: 8.0.0.0rc1
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 7bf69d7beea6cf532d402d9abf4ac2edde6c35d2
 repository-settings:
   openstack/ceilometer-powervm: {}
