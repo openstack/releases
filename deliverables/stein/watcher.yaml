@@ -14,3 +14,15 @@ releases:
 branches:
   - location: 2.0.0.0rc1
     name: stable/stein
+cycle-highlights:
+  - |
+    Watcher supports API microversions.
+  - |
+    Watcher consumes Nova notifications to update its internal
+    Compute CDM(Cluster Data Model).
+  - |
+    Building the Compute CDM according to the audit scope.
+  - |
+    Added start_time and end_time fields to CONTINUOUS audit.
+  - |
+    Added a new config option 'action_execution_rule'.
