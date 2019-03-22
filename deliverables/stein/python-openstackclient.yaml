@@ -6,6 +6,9 @@ team: OpenStackClient
 type: other
 repository-settings:
   openstack/python-openstackclient: {}
+branches:
+  - name: stable/stein
+    location: 3.18.0
 releases:
   - version: 3.17.0
     projects:
