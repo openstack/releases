@@ -4,8 +4,16 @@ release-model: cycle-with-rc
 team: cyborg
 type: service
 repository-settings:
-  openstack/cyborg: {}
+  openstack/cyborg:
+    tarball-base: openstack-cyborg
 branches:
   - name: feature/cyborg-nova-pilot
     location:
       openstack/cyborg: 34eac481a423db1f8dea94e6687b5972dd6d4c58
+  - location: 2.0.0.0rc1
+    name: stable/stein
+releases:
+  - projects:
+      - hash: 0160a6b3bbcd94c479780e71510bee5fc16b5df7
+        repo: openstack/cyborg
+    version: 2.0.0.0rc1
