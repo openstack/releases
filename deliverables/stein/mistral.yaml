@@ -25,3 +25,14 @@ releases:
       - hash: 5fe2ff8cd7a67ac27976a9a275fa741fee8b40da
         repo: openstack/mistral-extra
     version: 8.0.0.0b2
+  - projects:
+      - hash: 99ebc1b5f73f2a3ffc3a44e2ebe1119cfb033719
+        repo: openstack/mistral
+      - hash: 29fa2cd15c87f46369417928bdc573725df24d45
+        repo: openstack/mistral-dashboard
+      - hash: 5fe2ff8cd7a67ac27976a9a275fa741fee8b40da
+        repo: openstack/mistral-extra
+    version: 8.0.0.0rc1
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
