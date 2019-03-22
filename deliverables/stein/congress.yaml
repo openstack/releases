@@ -14,3 +14,14 @@ releases:
 branches:
   - location: 9.0.0.0rc1
     name: stable/stein
+cycle-highlights:
+  - Important new NFV fault management capabilities through the addition of
+    multiple new features in Congress integration with Nova, Tacker, and
+    Monasca.
+  - The new JGress framework unlocks whole new classes of policy use by making
+    the state of the cloud as given by JSON APIs available for policy
+    evaluation. By adopting a JSON query language for expressing policy
+    directly over JSON API data, JGress enables deployers to plug-in new data
+    sources without being limited by the availability of integration drivers.
+  - As with every release, we continue to make Congress more robust and
+    stable than ever with bug fixes and internal improvements.
