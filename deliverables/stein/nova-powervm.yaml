@@ -11,6 +11,6 @@ releases:
     projects:
       - repo: openstack/nova-powervm
         hash: b3e195041d710135e53e51d17c0b007ea865d850
-        tarball-base: nova_powervm
 repository-settings:
-  openstack/nova-powervm: {}
+  openstack/nova-powervm:
+    tarball-base: nova_powervm

@@ -5,12 +5,12 @@ release-model: cycle-with-intermediary
 team: Telemetry
 type: client-library
 repository-settings:
-  openstack/python-pankoclient: {}
+  openstack/python-pankoclient:
+    tarball-base: pankoclient
 releases:
   - projects:
       - hash: 0a27e534d8dde68b05b4e9a8a812622d58642b0a
         repo: openstack/python-pankoclient
-        tarball-base: pankoclient
     version: 0.6.0
 branches:
   - location: 0.6.0
