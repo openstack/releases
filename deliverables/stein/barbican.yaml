@@ -13,3 +13,16 @@ releases:
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
+cycle-highlights:
+  - Some enhancements were made to the vault back-end.  It is now
+    possible to specify a KV mountpoint and use AppRoles to manage
+    authentication.
+  - We now run a Barbican specific Octavia gate to verify the Octavia
+    load balancing scenario.
+  - The PKCS#11 plugin was modified to allow the hmac_keywrap_mechanism
+    to be configured.  With this change, Barbican can be deployed with
+    Ultimaco HSMs.
+  - It is now possible to deploy Barbican with the pkcs#11 backend using
+    either a Thales or an ATOS HSM via TripleO.
+  - Fixes were made to ensure that the barbican-manage commands for
+    key rotation worked for the PKCS#11 plugin.
