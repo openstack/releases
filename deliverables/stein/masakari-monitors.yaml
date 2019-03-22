@@ -10,3 +10,10 @@ releases:
       - repo: openstack/masakari-monitors
         hash: 2171a824bbc05883e2ca174a4d8df290440b6948
     version: 7.0.0.0b1
+  - projects:
+      - hash: 984b3deb92657d4b5ace29b20f86acac30b01f92
+        repo: openstack/masakari-monitors
+    version: 7.0.0.0rc1
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/stein
