@@ -6,3 +6,11 @@ team: octavia
 type: other
 repository-settings:
   openstack/neutron-lbaas: {}
+releases:
+  - projects:
+      - hash: a4c4944d568e4c01da0f7d1a7afdaf1b8ebbe45c
+        repo: openstack/neutron-lbaas
+    version: 14.0.0.0rc1
+branches:
+  - location: 14.0.0.0rc1
+    name: stable/stein
