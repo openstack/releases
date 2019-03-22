@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/panko: {}
+releases:
+  - projects:
+      - hash: 91f809625560d770f39299f782eff2b56ec84874
+        repo: openstack/panko
+    version: 6.0.0.0rc1
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/stein
