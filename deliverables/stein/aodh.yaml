@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - projects:
+      - hash: 1b552dd82565157c123925adecd12fc279cbbee0
+        repo: openstack/aodh
+    version: 8.0.0.0rc1
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
