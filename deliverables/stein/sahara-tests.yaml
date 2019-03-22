@@ -5,5 +5,10 @@ storyboard: 940
 release-model: cycle-with-intermediary
 release-type: python-pypi
 release-notes: https://docs.openstack.org/releasenotes/sahara-tests/index.html
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/sahara-tests
+        hash: 7e39b7b05d0c41940e99b97b0d898d2dbd46a2f8
 repository-settings:
   openstack/sahara-tests: {}
