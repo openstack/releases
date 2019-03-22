@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/stein
+    location:
+      openstack/puppet-openstack-integration: 0bdf7879237b19344729a02bb9b9288dbd001793
