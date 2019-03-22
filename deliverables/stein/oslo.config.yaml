@@ -11,8 +11,9 @@ cycle-highlights:
     on-disk config files to any Castellan-compatible keystore. This driver
     lives in the Castellan project, so Castellan must be installed in order to
     use it.
-  - Added a config driver to read config values from environment variables.
-    This driver is enabled by default in oslo.config.
+  - Added a config driver to read values from environment variables, which
+    allows configuration of services in containers without needing to
+    inject a file. This driver is enabled by default in oslo.config.
   - Added a config validation tool, ``oslo-config-validator``. This uses the
     oslo-config-generator data to find options in a config file that are
     not defined in the service.
