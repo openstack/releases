@@ -22,4 +22,6 @@ cycle-highlights:
     with a version that conflicts with the existing resource.
   - New resource types in Heat add support for Neutron Layer 2 Gateways,
     Blazar, and Tap-as-a-Service.
+  - Support Glance web download image resource type, which allow get the image
+    from URL without pre-load it out side of Glance.
 release-notes: https://docs.openstack.org/releasenotes/heat/stein.html
