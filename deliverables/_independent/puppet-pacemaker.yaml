@@ -5,6 +5,8 @@ type: other
 branches:
   - name: stable/0.6.x
     location: 0.6.0
+  - name: stable/0.7.x
+    location: 0.7.2
 releases:
   - version: 0.5.0
     projects:
@@ -22,5 +24,9 @@ releases:
     projects:
       - repo: openstack/puppet-pacemaker
         hash: e136cf4c65c0eade3734a90b7ec0a8bb09a85e76
+  - version: 0.7.2
+    projects:
+      - repo: openstack/puppet-pacemaker
+        hash: 5f796950743d421adba6fe4205e42c594f9e74f2
 repository-settings:
   openstack/puppet-pacemaker: {}
