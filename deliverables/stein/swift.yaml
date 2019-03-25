@@ -9,8 +9,24 @@ branches:
   - name: feature/losf
     location:
       openstack/swift: 6c6bb80e40313733b28dae920acc28889016a114
+  - name: stable/stein
+    location: 2.21.0
 releases:
   - version: 2.20.0
     projects:
       - repo: openstack/swift
         hash: 184fdf17ef7490038e89fe92a92de0fe4f2b36b7
+  - version: 2.21.0
+    projects:
+      - repo: openstack/swift
+        hash: 179fa7ccd4d6faeacc989715887b69f9422a17b2
+cycle-highlights:
+  - 'Numerous improvements to the S3 API compatibility layer.'
+  - 'Several fixes and improvements for the data-encryption middleware,
+    including allowing multiple keymaster middlewares. This allows
+    migration from one key provider to another.'
+  - 'Operators have more control over account and container server
+    background daemon I/O usage with the new ``databases_per_second``
+    config option.'
+  - 'Erasure-coded data may now be rebuilt to handoff nodes. This improves
+    data durability when disk failures go unremedied for extended periods.'
