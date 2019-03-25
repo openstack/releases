@@ -49,7 +49,8 @@ fi
 # of better information for the real repository name.
 REMOTE_URL=$(cd $REPODIR && git config --get remote.origin.url || echo "")
 if [ ! -z "$REMOTE_URL" ]; then
-    SHORTNAME=$(basename $REMOTE_URL)
+    # Make sure .git extensions are not included
+    SHORTNAME=$(basename $REMOTE_URL .git)
     REPOORGNAME=$(basename $(dirname $REMOTE_URL))
 else
     # WARNING(dhellmann): This formulation only works in CI where the
@@ -159,13 +160,6 @@ if [[ $FIRST_FULL = "yes" ]]; then
     stable=""
 fi
 
-# Set up email tags for the project owner.
-PROJECT_OWNER=${PROJECT_OWNER:-$(get-repo-owner \
-    --email-tag $REPOORGNAME/$SHORTNAME || echo "")}
-if [[ "$PROJECT_OWNER" != "" ]]; then
-    email_tags="--email-tags ${PROJECT_OWNER}"
-fi
-
 # Only include the PyPI link if we are told to.
 INCLUDE_PYPI_LINK=$(get_tag_meta pypi)
 if [[ "$INCLUDE_PYPI_LINK" == "yes" ]]; then
@@ -202,7 +196,6 @@ echo
 echo "Generating email body in $relnotes_file"
 release-notes \
     --email \
-    $email_tags \
     --series "$SERIES" \
     $stable \
     $first_release \
