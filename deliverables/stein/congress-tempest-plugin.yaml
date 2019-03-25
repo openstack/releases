@@ -7,3 +7,8 @@ repository-settings:
   openstack/congress-tempest-plugin: {}
 team: congress
 type: tempest-plugin
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/congress-tempest-plugin
+        hash: 01b99a1144c734d6e15b3d75d16c41aaefe07236
