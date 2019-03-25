@@ -1,5 +1,6 @@
 ---
-launchpad: heat
+storyboard: openstack/heat
+release-type: python-pypi
 release-model: cycle-with-milestones
 team: heat
 type: service
@@ -40,6 +41,11 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 1f08105fbd17f8f51999689f8b0113201870475c
+  - version: 10.0.3
+    projects:
+      - repo: openstack/heat
+        hash: 01e6439281bdf04e2baea5fb51bfc082da7087c1
 repository-settings:
-  openstack/heat: {}
+  openstack/heat:
+    pypi-name: openstack-heat
 release-notes: https://docs.openstack.org/releasenotes/heat/queens.html
