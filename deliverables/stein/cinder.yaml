@@ -6,8 +6,8 @@ type: service
 cycle-highlights:
   - 'Added multiattach and deferred deletion support for the RBD driver.'
   - 'Numerous bug fixes have been integrated to address stability and reliability.'
-  - 'User experience improvements around driver initialization, data retained
-     during volume transfers and the information returned by commands.'
+  - 'User experience improvements around driver initialization, data retained during
+    volume transfers and the information returned by commands.'
   - 'Continued improvements in the backup service.'
 repository-settings:
   openstack/cinder: {}
@@ -19,3 +19,4 @@ releases:
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein
+release-notes: https://docs.openstack.org/releasenotes/cinder/stein.html
