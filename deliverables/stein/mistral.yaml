@@ -33,6 +33,8 @@ releases:
       - hash: 5fe2ff8cd7a67ac27976a9a275fa741fee8b40da
         repo: openstack/mistral-extra
     version: 8.0.0.0rc1
+    flags:
+      - forced
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
