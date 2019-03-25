@@ -8,6 +8,8 @@ branches:
     location: 2.4.0
   - name: stable/luminous
     location: 2.5.1
+  - name: stable/mimic
+    location: 2.6.0
 releases:
   - version: 2.3.0
     projects:
@@ -37,5 +39,9 @@ releases:
       - hash: f8d3fd2eb6cb9cbb0f71717ca3be9501b46ca494
         repo: openstack/puppet-ceph
     version: 2.5.2
+  - projects:
+      - hash: a85fb9ba7ecb0744a601cb6e17b64faf16de1ed5
+        repo: openstack/puppet-ceph
+    version: 2.6.0
 repository-settings:
   openstack/puppet-ceph: {}
