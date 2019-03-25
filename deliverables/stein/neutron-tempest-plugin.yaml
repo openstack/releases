@@ -5,6 +5,11 @@ release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
   openstack/neutron-tempest-plugin:
-    tarball-base: neutron_tempest_plugin
+    tarball-base: neutron-tempest-plugin
 team: neutron
 type: tempest-plugin
+releases:
+  - projects:
+      - hash: e40f6012424ff0c414dfd20d923c0ab7c8251af3
+        repo: openstack/neutron-tempest-plugin
+    version: 0.3.0
