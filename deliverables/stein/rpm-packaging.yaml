@@ -4,5 +4,9 @@ release-model: untagged
 team: Packaging-rpm
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/rpm-packaging: 97c4e224fa25b27d6721fe3e05a0d8a357f1e4bc
+    name: stable/stein
 repository-settings:
   openstack/rpm-packaging: {}
