@@ -42,6 +42,6 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
         redirections.insert(0, dict(code=301, src=deliv.series, dst=target))
 
     for series in future_releases:
-        redirections.insert(0, dict(code=301, src=series, dst='master'))
+        redirections.insert(0, dict(code=302, src=series, dst='master'))
 
     return redirections
