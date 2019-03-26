@@ -7,16 +7,14 @@ type: library
 repository-settings:
   openstack/oslo.config: {}
 cycle-highlights:
-  - Added a Castellan config driver that allows secrets to be moved from
-    on-disk config files to any Castellan-compatible keystore. This driver
-    lives in the Castellan project, so Castellan must be installed in order to
-    use it.
-  - Added a config driver to read values from environment variables, which
-    allows configuration of services in containers without needing to
-    inject a file. This driver is enabled by default in oslo.config.
-  - Added a config validation tool, ``oslo-config-validator``. This uses the
-    oslo-config-generator data to find options in a config file that are
-    not defined in the service.
+  - 'Added a Castellan config driver that allows secrets to be moved from on-disk
+    config files to any Castellan-compatible keystore. This driver lives in the Castellan
+    project, so Castellan must be installed in order to use it.'
+  - 'Added a config driver to read values from environment variables, which allows
+    configuration of services in containers without needing to inject a file. This
+    driver is enabled by default in oslo.config.'
+  - 'Added a config validation tool, ``oslo-config-validator``. This uses the oslo-config-generator
+    data to find options in a config file that are not defined in the service.'
 releases:
   - projects:
       - hash: 7072a7552dcb58a60d08c73c1d002fdf1c5a6202
@@ -55,3 +53,4 @@ releases:
 branches:
   - location: 6.8.1
     name: stable/stein
+release-notes: https://docs.openstack.org/releasenotes/oslo.config/stein.html
