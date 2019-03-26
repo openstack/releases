@@ -4,6 +4,11 @@ launchpad: tempest
 release-model: cycle-with-intermediary
 team: 'Quality Assurance'
 type: other
+releases:
+  - projects:
+      - repo: openstack/tempest
+        hash: a955095f8369e2e15c97a536edc1a9c077208129
+    version: 20.0.0
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
