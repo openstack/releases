@@ -12,11 +12,28 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: d490b08cb7e0a0f4fa71d080226f8aa6ef0637c9
+  - version: 1.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: ac1510bd41406122c5ff1b6bd57b74fc08cbc3f7
+branches:
+  - location: 1.0.0
+    name: stable/stein
 
 cycle-highlights:
   - |
     Added support for handling and reacting to Network Policies events from
     kubernetes, allowing Kuryr-Kubernetes to handle security group rules on the
     fly based on them.
+  - |
+    Added support for K8s configured to use CRI-O, the Open Container
+    Initiative-based implementation of Kubernetes Container Runtime Interface
+    as container runtime.
+  - |
+    Enhancement of readiness health checks to validate quota of handlers
+    resources, improving overall perforamance and stability and for them to be
+    marked as unhealthy if needed.
+  - |
+    Improved DPDK and SRIOV support.
 repository-settings:
   openstack/kuryr-kubernetes: {}
