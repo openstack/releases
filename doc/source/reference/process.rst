@@ -346,13 +346,13 @@ Between RC1 and Final
    are tagged, create their stable branches.
 
 #. On the morning of the deadline for final release candidates, check
-   the list of unreleased changes for milestone projects and verify
+   the list of unreleased changes for cycle-with-rc projects and verify
    with the PTLs and liaisons that they are planning a release or that
    they do not need one.
 
-   In the release-tools repository working directory, run::
+   In the releases repository working directory, run::
 
-     $ ./list_unreleased_changes.sh stable/newton $(list-repos --tag release:cycle-with-rc) 2>&1 | tee unreleased.log
+     $ ./tools/list_rc_updates.sh
 
 #. Propose stable/$series branch creation for deliverables that have not
    requested it yet.
