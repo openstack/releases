@@ -25,6 +25,7 @@ from reno import formatter
 from reno import loader
 
 from openstack_releases import rst2txt
+from openstack_releases import yamlutils
 
 LOG = logging.getLogger(__name__)
 
@@ -103,7 +104,7 @@ Download the package from:
 {% endif %}
 {% if bug_url %}
 
-Please report issues through launchpad:
+Please report issues through:
 
     {{ bug_url }}
 {% endif %}
@@ -158,13 +159,13 @@ cycle is available!  You can find the source code tarball at:
 
 Unless release-critical issues are found that warrant a release
 candidate respin, this candidate will be formally released as the
-final {{series|capitalize}} release. You are therefore strongly
-encouraged to test and validate this tarball!
+final {{series|capitalize}} release. You are therefore strongly encouraged
+to test and validate this tarball!
 
 Alternatively, you can directly test the stable/{{series|lower}} release
 branch at:
 
-    https://git.openstack.org/cgit/openstack/{{publishing_dir_name}}/log/?h=stable/{{series|lower}}
+    {{source_url}}/log/?h=stable/{{series|lower}}
 
 Release notes for {{project}} can be found at:
 
@@ -182,39 +183,46 @@ release crew's attention.
 """
 
 
-def parse_readme(repo_path):
+def parse_deliverable(series, repo):
+    """Parse useful information out of the deliverable file.
+
+    Currently only parses the bug URL, but could potentially be expanded to get
+    other useful settings.
+
+    :param series: The release series being processed.
+    :param repo: The name of the deliverable.
+    """
+    release_repo = os.path.realpath(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
+    deliverable_path = os.path.join(
+        release_repo, 'deliverables', series.lower(), "%s.yaml" % repo)
+
+    # Hard coding source URL for now
     sections = {
         'bug_url': '',
-        'source_url': '',
+        'source_url': 'https://git.openstack.org/cgit/openstack/%s' % repo,
     }
-    readme_formats = ['rst', 'md']
-    for k in readme_formats:
-        readme_path = os.path.join(repo_path, 'README.%s' % k)
-        try:
-            f = open(readme_path, 'r', encoding='utf-8')
-            f.close()
-            break
-        except IOError:
-            continue
-    else:
-        LOG.warning("No README file found in %s\n"
-                    % repo_path)
+
+    try:
+        with open(deliverable_path, 'r') as d:
+            deliverable_info = yamlutils.loads(d)
+    except Exception:
+        # TODO(smcginnis): If the deliverable doesn't match the repo name, we
+        # can try to find it by loading all deliverable data and iterating on
+        # each deliverables repos to find it.
+        LOG.warning('Unable to parse %s %s deliverable file', repo, series)
         return sections
 
-    with open(readme_path, 'r', encoding='utf-8') as fh:
-        for line in fh:
-            for (name, key_name) in [("Bugs:", "bug_url"),
-                                     ("Source:", 'source_url')]:
-                pieces = line.split(name, 1)
-                if len(pieces) == 2:
-                    candidate = pieces[1].strip()
-                    if 'http' in candidate:
-                        sections[key_name] = candidate
-    for (k, v) in sections.items():
-        if not v:
-            what = k.replace("_", " ")
-            LOG.warning("No %s found in '%s'\n"
-                        % (what, readme_path))
+    if deliverable_info.get('launchpad'):
+        sections['bug_url'] = (
+            'https://bugs.launchpad.net/%s/+bugs' %
+            deliverable_info['launchpad'])
+    elif deliverable_info.get('storyboard'):
+        sections['bug_url'] = (
+            'https://storyboard.openstack.org/#!/project/%s' %
+            deliverable_info['storyboard'])
+
     return sections
 
 
@@ -326,8 +334,8 @@ def generate_release_notes(repo, repo_path,
             continue
         diff_stats.append(line)
 
-    # Extract + valdiate needed sections from readme...
-    readme_sections = parse_readme(repo_path)
+    # Extract + valdiate needed sections...
+    sections = parse_deliverable(series, publishing_dir_name)
     change_header = ["Changes in %s %s" % (repo_name, git_range)]
     change_header.append("-" * len(change_header[0]))
 
@@ -368,7 +376,7 @@ def generate_release_notes(repo, repo_path,
     elif is_release_candidate:
         email_to = 'openstack-discuss@lists.openstack.org'
 
-    params = dict(readme_sections)
+    params = dict(sections)
     params.update({
         'project': repo_name,
         'description': description,
