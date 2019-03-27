@@ -4,6 +4,12 @@ launchpad: freezer
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/freezer-tempest-plugin: {}
+  openstack/freezer-tempest-plugin:
+    tarball-base: freezer_tempest_plugin
 team: freezer
 type: tempest-plugin
+releases:
+  - projects:
+      - hash: 0f2b0e9a8424e50adca10fdfa64359f6df93c569
+        repo: openstack/freezer-tempest-plugin
+    version: 0.1.0
