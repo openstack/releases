@@ -10,9 +10,20 @@ releases:
         hash: 06dc898a3bdbe9cc5ba9132a016dcee13c069782
       - repo: openstack/freezer-dr
         hash: 6af94a5610e9a678d891ea0420a2a61ceaacd6fd
+  - version: 7.1.0
+    projects:
+      - repo: openstack/freezer
+        hash: 3ca3e5689aa9d1a8a0bc8e8bb76b6b5c7e91ea18
+      - repo: openstack/freezer-api
+        hash: b52291b7e6a1d468f479168f89396d9feaf95568
+      - repo: openstack/freezer-dr
+        hash: 1e687a499363dd912c69e2628a6ccc523c74f39c
 team: freezer
 type: service
 repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
   openstack/freezer-dr: {}
+branches:
+  - location: 7.1.0
+    name: stable/stein
