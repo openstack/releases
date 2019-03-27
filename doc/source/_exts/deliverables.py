@@ -138,6 +138,13 @@ class DeliverableDirectiveBase(rst.Directive):
                     result,
                 )
         else:
+            # Add table of contents for all deliverables
+            result.append('.. contents:: **Deliverables**', '<toc>')
+            result.append('   :local:', '<toc>')
+            result.append('   :backlinks: none', '<toc>')
+            result.append('   :depth: 1', '<toc>')
+            result.append('', '<toc>')
+
             # Only the deliverables for the given series are
             # shown. They are categorized by type, which we need to
             # extract from the data.
