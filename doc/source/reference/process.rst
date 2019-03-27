@@ -28,7 +28,7 @@ Between Summit and Milestone-1
    contact information.
 
 2. Email PTLs directly one time to explain the use of the "[release]"
-   email tag on the openstack-dev list.
+   email tag on the openstack-discuss list.
 
 3. Encourage liaisons to ensure that their release model is set
    properly before the first milestone.
@@ -399,7 +399,7 @@ Final Release
    ``templates/final.txt``. Coordinate the timing of the email with
    the press release from the Foundation staff.
 
-6. Send an email to the openstack-dev list to point to the official
+6. Send an email to the openstack-discuss list to point to the official
    release announcement, and declare ``openstack/releases`` unfrozen for
    releases on the new series.
 
@@ -409,6 +409,13 @@ Post-Final Release
 #. The week after the final release, process any late or blocked
    release requests for deliverables for any branch (treating the new
    series branch as stable).
+
+#. Prepare for the next release cycle by adding deliverable files under the
+   next cycle's directory. Remove any deliverable files from the current cycle
+   that ended up not having any releases. Then run the following command to use
+   the current cycle deliverables to generate placeholders for the next cycle::
+
+      tox -e venv -- init-series $SERIES $NEXT_SERIES
 
 cycle-trailing Final Release
 ============================
