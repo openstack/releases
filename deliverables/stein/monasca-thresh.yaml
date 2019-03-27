@@ -6,3 +6,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-thresh: {}
+releases:
+  - projects:
+      - hash: 8c976339a79d8be6396503821dc4d8f384633a0b
+        repo: openstack/monasca-thresh
+    version: 2.4.0
+branches:
+  - location: 2.4.0
+    name: stable/stein
