@@ -1,7 +1,16 @@
 ---
+artifact-link-mode: none
 launchpad: tripleo
 release-model: cycle-with-intermediary
 team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ansible: {}
+releases:
+  - projects:
+      - hash: 0e699abda5b1057af187db07c30f6b5b1a9fdf33
+        repo: openstack/tripleo-ansible
+    version: 0.1.0
+branches:
+  - location: 0.1.0
+    name: stable/stein
