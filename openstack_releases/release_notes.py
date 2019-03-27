@@ -164,11 +164,11 @@ encouraged to test and validate this tarball!
 Alternatively, you can directly test the stable/{{series|lower}} release
 branch at:
 
-    https://git.openstack.org/cgit/openstack/{{project}}/log/?h=stable/{{series|lower}}
+    https://git.openstack.org/cgit/openstack/{{publishing_dir_name}}/log/?h=stable/{{series|lower}}
 
 Release notes for {{project}} can be found at:
 
-    https://docs.openstack.org/releasenotes/{{project}}/
+    https://docs.openstack.org/releasenotes/{{publishing_dir_name}}/
 
 {% if bug_url -%}
 If you find an issue that could be considered release-critical, please
