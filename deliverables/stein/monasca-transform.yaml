@@ -11,3 +11,10 @@ releases:
       - hash: 5acdca0e652f21c8a4499d41c759683166533ac9
         repo: openstack/monasca-transform
     version: 0.17.0
+  - projects:
+      - hash: c3e87aea34f1f9d5bda489a823b2127a5350331e
+        repo: openstack/monasca-transform
+    version: 0.17.1
+branches:
+  - location: 0.17.1
+    name: stable/stein

@@ -10,3 +10,10 @@ releases:
       - hash: 9bc2d7bd523f0db574cab6786fca8ade1e2926b6
         repo: openstack/monasca-notification
     version: 1.15.0
+  - projects:
+      - hash: 65a40ad8995c08a2778c46ffb73626914dfa60e8
+        repo: openstack/monasca-notification
+    version: 1.16.0
+branches:
+  - location: 1.16.0
+    name: stable/stein
