@@ -10,3 +10,10 @@ releases:
       - hash: 5756ed9b641de8e7bdeca57176e46f4d4c297315
         repo: openstack/monasca-agent
     version: 2.9.0
+  - projects:
+      - hash: 9375de287639948303487397152fcab7fea1cb04
+        repo: openstack/monasca-agent
+    version: 2.10.0
+branches:
+  - location: 2.10.0
+    name: stable/stein
