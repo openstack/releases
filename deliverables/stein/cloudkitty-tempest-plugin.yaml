@@ -8,3 +8,9 @@ repository-settings:
     tarball-base: cloudkitty_tempest_plugin
 team: cloudkitty
 type: tempest-plugin
+releases:
+  - projects:
+      - hash: ea0b694d899a6b6cf4e54dae5f8bacff863db4ce
+        repo: openstack/cloudkitty-tempest-plugin
+        tarball-base: cloudkitty_tempest_plugin
+    version: 1.1.0
