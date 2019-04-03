@@ -11,9 +11,17 @@ releases:
       - hash: 2fe8c9f7031213521b4c3b64b399acb39adaf6d0
         repo: openstack/openstack-ansible
     version: 19.0.0.0b1
+  - projects:
+      - hash: 33c4f9df3dfc263e5f9084999fade492c30e77fe
+        repo: openstack/openstack-ansible
+    version: 19.0.0.0rc1
 cycle-highlights:
-  - Tooling optimizations have been done that will
-    result in faster and more reliable deployments.
-  - Add Ubuntu Bionic support.
-  - Add Mistral support.
-  - Add Manila support.
+  - 'Tooling optimizations have been done that will result in faster and more reliable
+    deployments.'
+  - 'Add Ubuntu Bionic support.'
+  - 'Add Mistral support.'
+  - 'Add Manila support.'
+  - 'Add Masakari support.'
+branches:
+  - location: 19.0.0.0rc1
+    name: stable/stein
