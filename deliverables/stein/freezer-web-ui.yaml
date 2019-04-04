@@ -7,7 +7,14 @@ releases:
     projects:
       - hash: 6763ff9a59413dfe6ae9bcc5ee60877581d51425
         repo: openstack/freezer-web-ui
+  - version: 7.1.0
+    projects:
+      - hash: 3207b575a159fc6c21206eca91565c9372c9c622
+        repo: openstack/freezer-web-ui
 team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+branches:
+  - location: 7.1.0
+    name: stable/stein
