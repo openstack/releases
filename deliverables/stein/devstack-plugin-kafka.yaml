@@ -4,6 +4,9 @@ release-model: untagged
 team: oslo
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-kafka: 28be3eed69db8a2ecdd156fb00012e1626829add
+    name: stable/stein
 repository-settings:
   openstack/devstack-plugin-kafka: {}
-# Note: deliverable was not released in rocky
