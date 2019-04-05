@@ -3,6 +3,9 @@ launchpad: kolla
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
 repository-settings:
   openstack/kolla: {}
 releases:
@@ -10,6 +13,10 @@ releases:
       - hash: f46b1c3b084c15757a93d61d9a4b95be9edb8672
         repo: openstack/kolla
     version: 8.0.0.0b1
+  - projects:
+      - hash: 041c2c8645df2203c953ab5dd66cbf996931b813
+        repo: openstack/kolla
+    version: 8.0.0.0rc1
 cycle-highlights:
   - Completed addition of images and playbooks for the OpenStack Monitoring
     service, Monasca.
