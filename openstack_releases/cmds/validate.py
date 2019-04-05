@@ -180,6 +180,20 @@ def skip_existing_tags(f):
     return decorated
 
 
+def skip_em_eol_tags(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        em_or_eol = False
+        for release in deliv.releases:
+            if '-em' in release.version or '-eol' in release.version:
+                print('Skipping rule for EM or EOL tagging.')
+                em_or_eol = True
+                break
+        if not em_or_eol:
+            return f(deliv, context)
+    return decorated
+
+
 @skip_existing_tags
 @applies_to_cycle
 @applies_to_released
@@ -427,6 +441,7 @@ def validate_series_em(deliv, context):
     )
 
 
+@skip_em_eol_tags
 def validate_bugtracker(deliv, context):
     "Does the bug tracker info link to something that exists?"
     lp_name = deliv.launchpad_id
@@ -471,6 +486,7 @@ def validate_bugtracker(deliv, context):
         context.error('No launchpad or storyboard project given')
 
 
+@skip_em_eol_tags
 def validate_team(deliv, context):
     "Look for the team name in the governance data."
     try:
@@ -485,6 +501,7 @@ def validate_team(deliv, context):
         print('owned by team {}'.format(deliv.team))
 
 
+@skip_em_eol_tags
 def validate_release_notes(deliv, context):
     "Make sure the release notes page exists, if it is specified."
     notes_link = deliv.release_notes
@@ -516,6 +533,7 @@ def validate_release_notes(deliv, context):
             print('{} OK'.format(link))
 
 
+@skip_em_eol_tags
 def validate_model(deliv, context):
     "Require a valid release model"
 
@@ -635,6 +653,7 @@ def get_release_type(deliv, repo, workdir):
     return ('python-service', False)
 
 
+@skip_em_eol_tags
 @skip_existing_tags
 @applies_to_released
 def validate_release_type(deliv, context):
@@ -676,6 +695,7 @@ def validate_release_type(deliv, context):
             )
 
 
+@skip_em_eol_tags
 @applies_to_released
 def validate_tarball_base(deliv, context):
     "Does tarball-base match the expected value?"
@@ -729,6 +749,7 @@ def validate_tarball_base(deliv, context):
                         sdist, expected))
 
 
+@skip_em_eol_tags
 @applies_to_released
 def validate_build_sdist(deliv, context):
     "Can we build an sdist for a python project?"
@@ -759,6 +780,7 @@ def validate_build_sdist(deliv, context):
                     project.repo.name, err))
 
 
+@skip_em_eol_tags
 @skip_existing_tags
 @applies_to_released
 def validate_pypi_readme(deliv, context):
@@ -812,6 +834,7 @@ def validate_pypi_readme(deliv, context):
             print('OK')
 
 
+@skip_em_eol_tags
 @skip_existing_tags
 @applies_to_released
 def validate_pypi_permissions(deliv, context):
@@ -1180,6 +1203,7 @@ def validate_new_releases_at_end(deliv, context):
             print('OK')
 
 
+@skip_em_eol_tags
 @skip_existing_tags
 @applies_to_released
 def validate_new_releases_in_open_series(deliv, context):
@@ -1329,6 +1353,7 @@ def validate_release_branch_membership(deliv, context):
             prev_version[project.repo.name] = release.version
 
 
+@skip_em_eol_tags
 @applies_to_current
 @applies_to_released
 def validate_new_releases(deliv, context):
