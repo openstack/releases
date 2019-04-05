@@ -1774,8 +1774,9 @@ def main():
             validate_model,
             validate_release_type,
             validate_pypi_permissions,
-            validate_pypi_readme,
             validate_build_sdist,
+            # Check readme after sdist build to slightly optimize things
+            validate_pypi_readme,
             validate_gitreview,
             validate_release_sha_exists,
             validate_existing_tags,
