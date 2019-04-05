@@ -593,7 +593,7 @@ def validate_gitreview(deliv, context):
     checked = set()
     for release in deliv.releases:
         for project in release.projects:
-            if project.repo.name in checked:
+            if project.repo.name in checked or project.repo.is_retired:
                 continue
             checked.add(project.repo.name)
             if project.repo.is_retired:
@@ -687,6 +687,11 @@ def validate_tarball_base(deliv, context):
 
     release = deliv.releases[-1]
     for project in release.projects:
+
+        if project.repo.is_retired:
+            LOG.info('%s is retired, skipping', project.repo.name)
+            continue
+
         version_exists = gitutils.commit_exists(
             context.workdir, project.repo.name, release.version,
         )
@@ -730,6 +735,9 @@ def validate_build_sdist(deliv, context):
 
     release = deliv.releases[-1]
     for project in release.projects:
+        if project.repo.is_retired:
+            LOG.info('%s is retired, skipping', project.repo.name)
+            continue
 
         version_exists = gitutils.commit_exists(
             context.workdir, project.repo.name, release.version,
@@ -894,6 +902,9 @@ def validate_release_sha_exists(deliv, context):
         LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
+            if project.repo.is_retired:
+                LOG.info('%s is retired, skipping', project.repo.name)
+                continue
 
             # Check the SHA specified for the tag.
             LOG.debug('{} SHA {}'.format(project.repo.name, project.hash))
@@ -934,6 +945,9 @@ def validate_existing_tags(deliv, context):
         LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
+            if project.repo.is_retired:
+                LOG.info('%s is retired, skipping', project.repo.name)
+                continue
 
             LOG.debug('{} SHA {}'.format(project.repo.name, project.hash))
 
@@ -1238,6 +1252,9 @@ def validate_release_branch_membership(deliv, context):
         LOG.debug('checking {}'.format(release.version))
 
         for project in release.projects:
+            if project.repo.is_retired:
+                LOG.info('%s is retired, skipping', project.repo.name)
+                continue
 
             if not gitutils.checkout_ref(context.workdir, project.repo.name,
                                          project.hash, context):
@@ -1422,7 +1439,8 @@ def validate_stable_branches(deliv, context):
                     repo,
                     series,
                 )
-                for repo in deliv.known_repo_names
+                for repo in deliv.known_repo_names if
+                not deliv.get_repo(repo).is_retired
             )
             if branch_exists:
                 print('{} branch already exists, skipping validation'.format(
@@ -1583,6 +1601,8 @@ def validate_branch_points(deliv, context):
         location = branch.get_repo_map()
 
         for repo, hash in sorted(location.items()):
+            if deliv.get_repo(repo).is_retired:
+                continue
             LOG.debug('checking repo {}'.format(repo))
             existing_branches = sorted([
                 (b.partition('/origin/')[-1]
