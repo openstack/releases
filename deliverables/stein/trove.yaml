@@ -10,6 +10,11 @@ releases:
       - hash: 75784f94b1411a325ab3bdff4c71d2e5aa2abc2b
         repo: openstack/trove
     version: 11.0.0.0rc1
+  - diff-start: 10.0.0
+    projects:
+      - hash: 75784f94b1411a325ab3bdff4c71d2e5aa2abc2b
+        repo: openstack/trove
+    version: 11.0.0
 branches:
   - location: 11.0.0.0rc1
     name: stable/stein

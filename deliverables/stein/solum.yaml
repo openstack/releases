@@ -10,6 +10,11 @@ releases:
       - hash: 9452aa669207092a12a703913694180cff4e7043
         repo: openstack/solum
     version: 6.0.0.0rc1
+  - diff-start: 5.7.0
+    projects:
+      - hash: 9452aa669207092a12a703913694180cff4e7043
+        repo: openstack/solum
+    version: 6.0.0
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein

@@ -14,6 +14,11 @@ releases:
       - hash: c78581b4608f3dc10e945d358963000f284f188a
         repo: openstack/keystone
     version: 15.0.0.0rc2
+  - diff-start: 14.0.0.0rc1
+    projects:
+      - hash: c78581b4608f3dc10e945d358963000f284f188a
+        repo: openstack/keystone
+    version: 15.0.0
 branches:
   - location: 15.0.0.0rc1
     name: stable/stein

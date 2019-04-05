@@ -16,6 +16,11 @@ releases:
       - hash: 66c1f6fc0407dbf125aa6d36a398cfa1c295f17e
         repo: openstack/networking-ovn
     version: 6.0.0.0rc1
+  - diff-start: 5.0.0
+    projects:
+      - hash: 66c1f6fc0407dbf125aa6d36a398cfa1c295f17e
+        repo: openstack/networking-ovn
+    version: 6.0.0
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein

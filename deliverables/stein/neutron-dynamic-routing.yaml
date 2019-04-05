@@ -19,6 +19,11 @@ releases:
       - hash: c27bb1f190a60d201d616bebd42c60dae6afa545
         repo: openstack/neutron-dynamic-routing
     version: 14.0.0.0rc1
+  - diff-start: 13.0.0
+    projects:
+      - hash: c27bb1f190a60d201d616bebd42c60dae6afa545
+        repo: openstack/neutron-dynamic-routing
+    version: 14.0.0
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein

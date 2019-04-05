@@ -14,6 +14,11 @@ releases:
       - hash: 89fdcf7559f87086ef17e82b22839703253d9f54
         repo: openstack/murano
     version: 7.0.0.0rc2
+  - diff-start: 6.0.0
+    projects:
+      - hash: 89fdcf7559f87086ef17e82b22839703253d9f54
+        repo: openstack/murano
+    version: 7.0.0
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein
