@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 63a3014dec7932437a579e8cb4ba4be79609c14c
+  - projects:
+      - hash: 63a3014dec7932437a579e8cb4ba4be79609c14c
+        repo: openstack/python-brick-cinderclient-ext
+    version: ocata-em
 repository-settings:
   openstack/python-brick-cinderclient-ext: {}
 release-notes: https://docs.openstack.org/releasenotes/python-brick-cinderclient-ext/ocata.html

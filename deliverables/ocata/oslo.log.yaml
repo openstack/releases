@@ -29,5 +29,9 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 60d66d2a7f517ff22da40824cb840e6697d78dba
+  - projects:
+      - hash: 60d66d2a7f517ff22da40824cb840e6697d78dba
+        repo: openstack/oslo.log
+    version: ocata-em
 repository-settings:
   openstack/oslo.log: {}

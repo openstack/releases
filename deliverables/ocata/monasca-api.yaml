@@ -27,5 +27,9 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: e4177f7e280f1337a8c918b22d92b080c577cdcb
+  - projects:
+      - hash: e4177f7e280f1337a8c918b22d92b080c577cdcb
+        repo: openstack/monasca-api
+    version: ocata-em
 repository-settings:
   openstack/monasca-api: {}

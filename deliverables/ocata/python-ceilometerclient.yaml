@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: f5d596623cddef1534a66ae0971da76e5e66cbcb
+  - projects:
+      - hash: f5d596623cddef1534a66ae0971da76e5e66cbcb
+        repo: openstack/python-ceilometerclient
+    version: ocata-em
 repository-settings:
   openstack/python-ceilometerclient:
     flags:

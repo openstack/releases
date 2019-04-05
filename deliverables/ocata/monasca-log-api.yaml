@@ -27,5 +27,9 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: f52802f00c9f5fa16a8fc7ef325539c8a49b5da7
+  - projects:
+      - hash: f52802f00c9f5fa16a8fc7ef325539c8a49b5da7
+        repo: openstack/monasca-log-api
+    version: ocata-em
 repository-settings:
   openstack/monasca-log-api: {}

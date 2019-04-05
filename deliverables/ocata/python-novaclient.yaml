@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 2e2317bfca941e59899edda181241f320e2033f8
+  - projects:
+      - hash: 2e2317bfca941e59899edda181241f320e2033f8
+        repo: openstack/python-novaclient
+    version: ocata-em
 repository-settings:
   openstack/python-novaclient: {}

@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: e189ff7975941a7da12533dcbaa70dbce413826c
+  - projects:
+      - hash: e189ff7975941a7da12533dcbaa70dbce413826c
+        repo: openstack/oslotest
+    version: ocata-em
 repository-settings:
   openstack/oslotest: {}

@@ -34,5 +34,9 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 3c8c021cc1eca0351a18a878e8dc5fd09d8988cd
+  - projects:
+      - hash: 3c8c021cc1eca0351a18a878e8dc5fd09d8988cd
+        repo: openstack/networking-ovn
+    version: ocata-em
 repository-settings:
   openstack/networking-ovn: {}

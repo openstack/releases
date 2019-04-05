@@ -21,5 +21,9 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 1ac7647c6f9ccf6b31bbc74f76d1d79eddd1b2ce
+  - projects:
+      - hash: 1ac7647c6f9ccf6b31bbc74f76d1d79eddd1b2ce
+        repo: openstack/python-troveclient
+    version: ocata-em
 repository-settings:
   openstack/python-troveclient: {}

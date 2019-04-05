@@ -53,5 +53,9 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 5bc45ebd8154107dab0db04b382ba6ece4ff843d
+  - projects:
+      - hash: 5bc45ebd8154107dab0db04b382ba6ece4ff843d
+        repo: openstack/kolla-ansible
+    version: ocata-em
 repository-settings:
   openstack/kolla-ansible: {}

@@ -17,5 +17,9 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 7d140d0896fe54c4fc03fa501544da4e67d666c6
+  - projects:
+      - hash: 7d140d0896fe54c4fc03fa501544da4e67d666c6
+        repo: openstack/python-cinderclient
+    version: ocata-em
 repository-settings:
   openstack/python-cinderclient: {}

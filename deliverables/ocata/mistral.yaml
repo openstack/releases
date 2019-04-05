@@ -54,6 +54,12 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: ce3bec77804c491cc560d77b2c3227fc806952d3
+  - version: ocata-em
+    projects:
+      - repo: openstack/mistral
+        hash: ce3bec77804c491cc560d77b2c3227fc806952d3
+      - repo: openstack/mistral-dashboard
+        hash: 72a0ef38e325ea831cfbe38de82368cdf4247918
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}

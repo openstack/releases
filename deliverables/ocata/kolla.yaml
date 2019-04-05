@@ -53,5 +53,9 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 683ee4511a5071e74073c84477f04057a1d0a5d8
+  - projects:
+      - hash: 683ee4511a5071e74073c84477f04057a1d0a5d8
+        repo: openstack/kolla
+    version: ocata-em
 repository-settings:
   openstack/kolla: {}

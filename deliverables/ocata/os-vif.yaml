@@ -24,5 +24,9 @@ releases:
       - repo: openstack/os-vif
         hash: f5f2071fe551c127e9ecafb8a44baf44b9b92d9b
         tarball-base: os_vif
+  - projects:
+      - hash: f5f2071fe551c127e9ecafb8a44baf44b9b92d9b
+        repo: openstack/os-vif
+    version: ocata-em
 repository-settings:
   openstack/os-vif: {}
