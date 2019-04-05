@@ -33,8 +33,13 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 2a6e9b9630cf31b17003bd0b0e98c748553f81ac
+  - version: 7.0.2
+    projects:
+      - repo: openstack/congress
+        hash: dc64fa1c0480407aa3e6f0993623844ff770ccac
 repository-settings:
-  openstack/congress: {}
+  openstack/congress:
+    tarball-base: openstack-congress
 branches:
   - location: 7.0.0.0rc1
     name: stable/queens
