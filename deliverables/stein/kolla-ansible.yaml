@@ -3,6 +3,9 @@ launchpad: kolla-ansible
 release-model: cycle-trailing
 team: kolla
 type: other
+branches:
+  - location: 8.0.0.0rc1
+    name: stable/stein
 repository-settings:
   openstack/kolla-ansible: {}
 releases:
@@ -10,3 +13,7 @@ releases:
       - hash: d55129d1266d13baec41753b3d07028bb966da6b
         repo: openstack/kolla-ansible
     version: 8.0.0.0b1
+  - projects:
+      - hash: d08f06dd6471215b951dbe4d6966eb4013db7e98
+        repo: openstack/kolla-ansible
+    version: 8.0.0.0rc1
