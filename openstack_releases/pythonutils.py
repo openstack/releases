@@ -94,10 +94,16 @@ def check_readme_format(workdir, repo):
         LOG.debug('did not find %s, maybe %s is not a python project',
                   setup_path, repo)
         return None
+
+    # Check if the sdist build has been done
+    build_path = os.path.join(dest, 'dist')
+    if not os.path.exists(build_path):
+        build_sdist(workdir, repo)
+
     # NOTE(dhellmann): This relies on validate being run via tox so
-    # that python3 is present and the docutils package is installed.
+    # that python3 is present and the twine package is installed.
     processutils.check_call(
-        ['python3', 'setup.py', 'check', '--restructuredtext', '--strict'],
+        ['twine', 'check', os.path.join(build_path, '*')],
         cwd=dest,
     )
 
