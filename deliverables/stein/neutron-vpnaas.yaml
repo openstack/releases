@@ -19,6 +19,11 @@ releases:
       - hash: acf8d1948570a2092629b5ee97d418e9153b3877
         repo: openstack/neutron-vpnaas
     version: 14.0.0.0rc1
+  - diff-start: 13.0.0
+    projects:
+      - hash: acf8d1948570a2092629b5ee97d418e9153b3877
+        repo: openstack/neutron-vpnaas
+    version: 14.0.0
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein

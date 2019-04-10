@@ -11,6 +11,11 @@ releases:
       - hash: ffadf3868f3edd22cffb880591cd41710e685377
         repo: openstack/designate-dashboard
     version: 8.0.0.0rc1
+  - diff-start: 7.0.0
+    projects:
+      - hash: ffadf3868f3edd22cffb880591cd41710e685377
+        repo: openstack/designate-dashboard
+    version: 8.0.0
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein

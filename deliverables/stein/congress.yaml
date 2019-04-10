@@ -15,17 +15,23 @@ releases:
       - hash: 4977fe3dacbf4de25e8568141d9bdbf7363a5288
         repo: openstack/congress
     version: 9.0.0.0rc2
+  - diff-start: 8.0.0
+    projects:
+      - hash: 4977fe3dacbf4de25e8568141d9bdbf7363a5288
+        repo: openstack/congress
+    version: 9.0.0
 branches:
   - location: 9.0.0.0rc1
     name: stable/stein
 cycle-highlights:
-  - 'Important new NFV fault management capabilities through the addition of multiple
-    new features in Congress integration with Nova, Tacker, and Monasca.'
-  - 'The new JGress framework unlocks whole new classes of policy use by making the
-    state of the cloud as given by JSON APIs available for policy evaluation. By adopting
-    a JSON query language for expressing policy directly over JSON API data, JGress
-    enables deployers to plug-in new data sources without being limited by the availability
-    of integration drivers.'
-  - 'As with every release, we continue to make Congress more robust and stable than
-    ever with bug fixes and internal improvements.'
+  - 'Important new NFV fault management capabilities through the addition of
+    multiple new features in Congress integration with Nova, Tacker, and
+    Monasca.'
+  - 'The new JGress framework unlocks whole new classes of policy use by making
+    the state of the cloud as given by JSON APIs available for policy
+    evaluation. By adopting a JSON query language for expressing policy
+    directly over JSON API data, JGress enables deployers to plug-in new data
+    sources without being limited by the availability of integration drivers.'
+  - 'As with every release, we continue to make Congress more robust and stable
+    than ever with bug fixes and internal improvements.'
 release-notes: https://docs.openstack.org/releasenotes/congress/stein.html

@@ -20,6 +20,11 @@ releases:
       - hash: 46363697d9a7ddc7880bf6071e5d035f3f9aa043
         repo: openstack/cinder
     version: 14.0.0.0rc2
+  - diff-start: 13.0.0.0rc1
+    projects:
+      - hash: 46363697d9a7ddc7880bf6071e5d035f3f9aa043
+        repo: openstack/cinder
+    version: 14.0.0
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein

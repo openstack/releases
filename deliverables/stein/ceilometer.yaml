@@ -10,6 +10,11 @@ releases:
       - hash: 062e02c612d1fdd8c40b9209319b32e04489c163
         repo: openstack/ceilometer
     version: 12.0.0.0rc1
+  - diff-start: 11.0.0
+    projects:
+      - hash: 062e02c612d1fdd8c40b9209319b32e04489c163
+        repo: openstack/ceilometer
+    version: 12.0.0
 branches:
   - location: 12.0.0.0rc1
     name: stable/stein

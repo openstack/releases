@@ -26,6 +26,11 @@ releases:
       - hash: feb640d99d392167ca37e1c7c02d895a03f32172
         repo: openstack/octavia
     version: 4.0.0.0rc3
+  - diff-start: 3.0.0.0rc1
+    projects:
+      - hash: feb640d99d392167ca37e1c7c02d895a03f32172
+        repo: openstack/octavia
+    version: 4.0.0
 branches:
   - location: 4.0.0.0rc1
     name: stable/stein
