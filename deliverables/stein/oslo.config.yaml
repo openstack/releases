@@ -16,10 +16,6 @@ cycle-highlights:
   - 'Added a config validation tool, ``oslo-config-validator``. This uses the oslo-config-generator
     data to find options in a config file that are not defined in the service.'
 releases:
-  - projects:
-      - hash: 7072a7552dcb58a60d08c73c1d002fdf1c5a6202
-        repo: openstack/oslo.config
-    version: 6.5.0
   - diff-start: 6.4.0
     projects:
       - comment: 'procedural tag to handle release job failure'
