@@ -430,9 +430,10 @@ def main():
         repo_info = deliverable_info['repository-settings'][repo]
         tarball_base = repo_info.get('tarball-base')
 
-        if is_retagging or is_em:
+        if is_retagging or (
+                is_em and deliverable_info['release-model'] != 'untagged'):
             # Always use the last tagged hash, which should be coming
-            # from the previous series.
+            # from the previous series or last release.
             sha = last_version_hashes[repo]
 
         else:
