@@ -29,9 +29,14 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 8b18f0574a6619279b7fc6169f74f2bbea0e30f1
+  - version: 6.0.2
+    projects:
+      - repo: openstack/congress
+        hash: 6e0558e6ee1169dd5cec65d49e3197eb05597d38
 branches:
   - location: 6.0.0.0rc1
     name: stable/pike
 release-notes: https://docs.openstack.org/releasenotes/congress/pike.html
 repository-settings:
-  openstack/congress: {}
+  openstack/congress:
+    tarball-base: openstack-congress
