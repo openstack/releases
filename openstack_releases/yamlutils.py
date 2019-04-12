@@ -117,6 +117,7 @@ def dumps(obj):
                   indent=2,
                   default_flow_style=False,
                   line_break="\n",
+                  width=66,
                   Dumper=PrettySafeDumper,
                   allow_unicode=True)
     return buff.getvalue()
