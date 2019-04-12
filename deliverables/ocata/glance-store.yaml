@@ -16,5 +16,9 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: ee6840c92e637384061b9c8d213a81352466995e
+  - projects:
+      - hash: ee6840c92e637384061b9c8d213a81352466995e
+        repo: openstack/glance_store
+    version: ocata-em
 repository-settings:
   openstack/glance_store: {}

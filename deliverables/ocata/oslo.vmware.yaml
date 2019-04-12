@@ -25,5 +25,9 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: f009120b42b3e6972094106c70227fe4825141af
+  - projects:
+      - hash: f009120b42b3e6972094106c70227fe4825141af
+        repo: openstack/oslo.vmware
+    version: ocata-em
 repository-settings:
   openstack/oslo.vmware: {}

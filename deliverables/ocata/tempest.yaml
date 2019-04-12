@@ -13,5 +13,9 @@ releases:
     projects:
       - repo: openstack/tempest
         hash: 8f98c4b60bf06a8c15e8c054848d2440c46077d0
+  - projects:
+      - hash: 8f98c4b60bf06a8c15e8c054848d2440c46077d0
+        repo: openstack/tempest
+    version: ocata-em
 repository-settings:
   openstack/tempest: {}

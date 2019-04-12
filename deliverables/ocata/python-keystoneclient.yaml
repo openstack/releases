@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 5e23cef55366e09c1b12d692b8666140bed8f549
+  - projects:
+      - hash: 5e23cef55366e09c1b12d692b8666140bed8f549
+        repo: openstack/python-keystoneclient
+    version: ocata-em
 branches:
   - name: stable/ocata
     location: 3.10.0

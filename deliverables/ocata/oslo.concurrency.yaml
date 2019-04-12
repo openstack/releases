@@ -29,5 +29,9 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: 56dca3e7fcc3ab79ccb17de600560cf7065c32f9
+  - projects:
+      - hash: 56dca3e7fcc3ab79ccb17de600560cf7065c32f9
+        repo: openstack/oslo.concurrency
+    version: ocata-em
 repository-settings:
   openstack/oslo.concurrency: {}

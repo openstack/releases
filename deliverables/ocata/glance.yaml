@@ -35,5 +35,9 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 3b7c58003de9d6e9e67b2ccbcdc0addd77b17191
+  - projects:
+      - hash: 3b7c58003de9d6e9e67b2ccbcdc0addd77b17191
+        repo: openstack/glance
+    version: ocata-em
 repository-settings:
   openstack/glance: {}

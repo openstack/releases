@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 082f728d179dc2bba64e9821eaec18f429aa15fd
+  - projects:
+      - hash: 082f728d179dc2bba64e9821eaec18f429aa15fd
+        repo: openstack/python-heatclient
+    version: ocata-em
 repository-settings:
   openstack/python-heatclient: {}

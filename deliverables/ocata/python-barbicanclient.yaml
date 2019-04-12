@@ -11,5 +11,9 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 585e9c92922018345fa10a7ef93f9c09ae0413ec
+  - projects:
+      - hash: 585e9c92922018345fa10a7ef93f9c09ae0413ec
+        repo: openstack/python-barbicanclient
+    version: ocata-em
 repository-settings:
   openstack/python-barbicanclient: {}

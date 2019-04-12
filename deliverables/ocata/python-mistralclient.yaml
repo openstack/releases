@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 615b6dc207cbd913850a34eea39fa0e2d0bdb503
+  - projects:
+      - hash: 615b6dc207cbd913850a34eea39fa0e2d0bdb503
+        repo: openstack/python-mistralclient
+    version: ocata-em
 release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/ocata.html
 repository-settings:
   openstack/python-mistralclient: {}
