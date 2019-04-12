@@ -1,11 +1,16 @@
 ---
-launchpad: nova
-team: nova
+storyboard: openstack/os-traits
+team: placement
 type: library
+include-pypi-link: yes
 releases:
   - version: 0.1.0
     projects:
       - repo: openstack/os-traits
         hash: e4bfa8c4e08766c20a2ed5f1b8f866d42157ef07
+  - version: 0.12.0
+    projects:
+      - repo: openstack/os-traits
+        hash: 1b14058122aa62439fb23de6efb10cce4a3f0c84
 repository-settings:
   openstack/os-traits: {}
