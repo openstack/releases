@@ -45,6 +45,10 @@ releases:
       - hash: 41f81b9c374e89501ba7ea53f5627009ba99b756
         repo: openstack/neutron
     version: 13.0.2
+  - projects:
+      - hash: 31a48bea869f3b7fafcf8ec2fae683456885c3cf
+        repo: openstack/neutron
+    version: 13.0.3
 cycle-highlights:
   - 'Per TCP/UDP port forwarding on floating IP is supported. Operators can save the
     number of global IP addresses for floating IPs.'
