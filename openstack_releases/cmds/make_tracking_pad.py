@@ -50,7 +50,7 @@ def main():
 
     print('Review dashboard: http://bit.ly/ocata-relmgt-dashboard')
     print('Planning document: https://etherpad.openstack.org/p/{}-relmgt-plan'.format(series))
-    print('Process document: http://git.openstack.org/cgit/openstack/releases/tree/PROCESS.rst')
+    print('Process document: https://releases.openstack.org/reference/process.html')
     print()
 
     print('First apply title formatting to all week titles. Then apply list')

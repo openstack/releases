@@ -201,7 +201,7 @@ def parse_deliverable(series, repo):
     # Hard coding source URL for now
     sections = {
         'bug_url': '',
-        'source_url': 'https://git.openstack.org/cgit/openstack/%s' % repo,
+        'source_url': 'https://opendev.org/openstack/%s' % repo,
     }
 
     try:
