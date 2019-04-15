@@ -5,11 +5,13 @@ team: OpenStackAnsible
 type: other
 stable-branch-type: tagless
 repository-settings:
+  openstack/ansible-role-atos-hsm: {}
   openstack/ansible-role-qdrouterd: {}
   openstack/ansible-role-python_venv_build: {}
   openstack/ansible-role-systemd_mount: {}
   openstack/ansible-role-systemd_networkd: {}
   openstack/ansible-role-systemd_service: {}
+  openstack/ansible-role-thales-hsm: {}
   openstack/ansible-hardening: {}
   openstack/openstack-ansible-apt_package_pinning: {}
   openstack/openstack-ansible-ceph_client: {}
@@ -41,6 +43,8 @@ repository-settings:
   openstack/openstack-ansible-os_keystone: {}
   openstack/openstack-ansible-os_magnum: {}
   openstack/openstack-ansible-os_masakari: {}
+  openstack/openstack-ansible-os_manila: {}
+  openstack/openstack-ansible-os_mistral: {}
   openstack/openstack-ansible-os_molteniron: {}
   openstack/openstack-ansible-os_monasca: {}
   openstack/openstack-ansible-os_monasca-agent: {}
@@ -48,6 +52,7 @@ repository-settings:
   openstack/openstack-ansible-os_nova: {}
   openstack/openstack-ansible-os_octavia: {}
   openstack/openstack-ansible-os_panko: {}
+  openstack/openstack-ansible-os_placement: {}
   openstack/openstack-ansible-os_rally: {}
   openstack/openstack-ansible-os_sahara: {}
   openstack/openstack-ansible-os_searchlight: {}
@@ -68,11 +73,13 @@ repository-settings:
   openstack/openstack-ansible-tests: {}
 branches:
   - location:
+      openstack/ansible-role-atos-hsm: f6f9c3f3df08c385c6d23f4097c1e2a8b0c18c94
       openstack/ansible-role-qdrouterd: 82213e344a01a5ef5359a3c524013700d89c7632
       openstack/ansible-role-python_venv_build: 6cf37c0c5dd820fa0159f2b7830cb7169abc52f2
       openstack/ansible-role-systemd_mount: 55cf2af70c43d79864ea4a2044824d0ae4644685
       openstack/ansible-role-systemd_networkd: 3bb3d5aa6968e1094e59f8257e71652b2ff95e9f
       openstack/ansible-role-systemd_service: a8b308489a3754ec2e2a01247344a79acf5ec1b8
+      openstack/ansible-role-thales-hsm: 08b5efaa7b083c610bb55c4fb64a87455b3bd9eb
       openstack/ansible-hardening: ef1b4170328391d55c3ca94e8183fdd56a229c34
       openstack/openstack-ansible-apt_package_pinning: 7285bb8da76b00c6bf379dd2247c7318e5a525df
       openstack/openstack-ansible-ceph_client: 3d4b385e078b70af31a3476590c400be1de66fba
@@ -104,6 +111,8 @@ branches:
       openstack/openstack-ansible-os_keystone: ca2f31bc43b3c488365964ab8052551cfe9cd5a2
       openstack/openstack-ansible-os_magnum: 22bd476b4679686ff94cf4f0988f14a42d7e4546
       openstack/openstack-ansible-os_masakari: 7fe1d547b81627ede320deedb6003e1fe9c950f4
+      openstack/openstack-ansible-os_manila: 4187a2e07a7239da9c0da2c6f893c6ae1577906f
+      openstack/openstack-ansible-os_mistral: ce22401c84aa0123fe252434551af730fc3f7ff7
       openstack/openstack-ansible-os_molteniron: 12af40985c003c08f65a0c07019c03fcf53dbea2
       openstack/openstack-ansible-os_monasca: f5518e57eb40d83adeff53d400bf3417c377b7ba
       openstack/openstack-ansible-os_monasca-agent: cbb97430a00c1f8cb066dc3c3b4786e44ef920d2
@@ -111,6 +120,7 @@ branches:
       openstack/openstack-ansible-os_nova: 597127e60c0a1aee20cba0ae7577936fc63268e6
       openstack/openstack-ansible-os_octavia: 7aa511643a2874dc00e78fb31ddde4a894231e61
       openstack/openstack-ansible-os_panko: eb9cdd615a021cbafa3885316cb9074e38a0d6a6
+      openstack/openstack-ansible-os_placement: cc83465a4ba176965a942c81ab7c24bc06c6fedd
       openstack/openstack-ansible-os_rally: a81e822ecee20c5a5c12fc6902c3a16d4762a63a
       openstack/openstack-ansible-os_sahara: 3551d6d57e6a7074d2f4db11681a5d152c08a576
       openstack/openstack-ansible-os_searchlight: 9b4ef1865b664b9e29cc38d907241ca5fadc6911
