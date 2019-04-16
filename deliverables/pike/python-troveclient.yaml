@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 97dd5908f80ab7bb4b2e36c8bbf0c37739938439
+  - projects:
+      - hash: b10b8170cd21f9fd40a4a85fc26075a2737fbe31
+        repo: openstack/python-troveclient
+    version: 2.12.1
 branches:
   - name: stable/pike
     location: 2.12.0
