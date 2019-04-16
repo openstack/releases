@@ -4,6 +4,8 @@ release-model: cycle-with-intermediary
 team: manila
 release-type: horizon
 type: horizon-plugin
+repository-settings:
+  openstack/manila-ui: {}
 releases:
   - version: 2.11.0
     projects:
@@ -21,8 +23,6 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 49a45133c24fb5a9f00bf3ad5f58f69a0d05f3d6
-repository-settings:
-  openstack/manila-ui: {}
 branches:
   - location: 2.13.0
     name: stable/queens
