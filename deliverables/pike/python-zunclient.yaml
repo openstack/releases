@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 3995efdc1f5eb6c8c583fe47ec315fa08585c7ff
+  - projects:
+      - hash: cfc25ae8977039f62329aab97e396c40c90e48d0
+        repo: openstack/python-zunclient
+    version: 0.4.2
 branches:
   - name: stable/pike
     location: 0.4.0
