@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 90f5374f73ea8dd5f41c9ca8f2ed447d5a37285a
+  - projects:
+      - hash: 49ddf45f027825dfa2a3e1ff8f97bf8e10ade729
+        repo: openstack/tacker
+    version: 0.8.2
 release-notes: https://docs.openstack.org/releasenotes/tacker/pike.html
 repository-settings:
   openstack/tacker: {}
