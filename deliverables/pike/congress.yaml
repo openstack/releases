@@ -33,6 +33,11 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 6e0558e6ee1169dd5cec65d49e3197eb05597d38
+  - projects:
+      - hash: 6e0558e6ee1169dd5cec65d49e3197eb05597d38
+        repo: openstack/congress
+        tarball-base: openstack-congress
+    version: pike-em
 branches:
   - location: 6.0.0.0rc1
     name: stable/pike
