@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: a3b49877366da2d424328c4d15e8eafdaef976c7
+  - projects:
+      - hash: 6f5d8cf8d870746edfd291f62809c3f725a41e5b
+        repo: openstack/python-solumclient
+    version: 2.5.1
 branches:
   - name: stable/pike
     location: 2.5.0
