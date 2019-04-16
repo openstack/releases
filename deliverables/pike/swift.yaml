@@ -30,5 +30,9 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 472ec6b70cddca0043823f5d3dcd135ed6082cd8
+  - projects:
+      - hash: 472ec6b70cddca0043823f5d3dcd135ed6082cd8
+        repo: openstack/swift
+    version: pike-em
 repository-settings:
   openstack/swift: {}
