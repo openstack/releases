@@ -109,6 +109,14 @@ releases:
       - hash: caed955c442da4f7ac16fccb0d886e5860a8f98b
         repo: openstack/mistral
     version: 5.2.8
+  - projects:
+      - hash: caed955c442da4f7ac16fccb0d886e5860a8f98b
+        repo: openstack/mistral
+      - hash: 2d3ad3bed37a711d122912230e6baa8d145a83ee
+        repo: openstack/mistral-dashboard
+      - hash: 58a816da3b810ae8b31c91a0829bdca3e0e5903e
+        repo: openstack/mistral-extra
+    version: pike-em
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
