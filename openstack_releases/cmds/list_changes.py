@@ -596,7 +596,7 @@ def main():
                     include_pypi_link=False,
                     changes_only=False,
                     first_release=deliv.is_first_release,
-                    repo_name=project.repo.name,
+                    deliverable_file=filename,
                     description='',
                     publishing_dir_name=project.repo.name,
                 )
