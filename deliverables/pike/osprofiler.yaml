@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: ba4732d68a4ad4cbbab282d5328b82bdda564ffd
+  - projects:
+      - hash: 65bd14bc0412590fdc9113f8e289b62be26bdb9f
+        repo: openstack/osprofiler
+    version: 1.11.1
 branches:
   - name: stable/pike
     location: 1.11.0
