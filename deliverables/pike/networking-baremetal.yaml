@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: b9f41a2dee5c6fcbdfe73735564222b064d8244d
+  - projects:
+      - hash: b9f41a2dee5c6fcbdfe73735564222b064d8244d
+        repo: openstack/networking-baremetal
+    version: pike-em
 branches:
   - location: 0.1.0
     name: stable/pike
