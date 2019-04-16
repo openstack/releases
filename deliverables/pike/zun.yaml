@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: ee968441aa4ec31b8e7f34b35377124ade4933fe
+  - projects:
+      - hash: c1ca145bce9c4ad3c7d723d6035622065fd7daeb
+        repo: openstack/zun
+    version: 0.2.2
 repository-settings:
   openstack/zun: {}
 release-notes: https://docs.openstack.org/releasenotes/zun/pike.html
