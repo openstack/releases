@@ -31,6 +31,10 @@ releases:
     projects:
       - hash: 9f6f9c1beae64c170f6c27808b4d5ce8bc14f1e0
         repo: openstack/python-openstackclient
+  - projects:
+      - hash: f750ff452d82edf65d693214d542f6c1106e4e9c
+        repo: openstack/python-openstackclient
+    version: 3.12.2
 release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/pike.html
 repository-settings:
   openstack/python-openstackclient: {}
