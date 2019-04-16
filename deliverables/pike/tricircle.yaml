@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 9939540c070423906ebd8aba0070713b845f868c
+  - projects:
+      - hash: 9939540c070423906ebd8aba0070713b845f868c
+        repo: openstack/tricircle
+    version: pike-em
 branches:
   - location: 4.0.0
     name: stable/pike
