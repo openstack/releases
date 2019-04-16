@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: ab6e1fee0c04d3adfb6f3813f1ce116d89193aad
+  - projects:
+      - hash: c9b8dcba95ff5c47514863c6d4a580b35489430e
+        repo: openstack/ovsdbapp
+    version: 0.4.4
 branches:
   - name: stable/pike
     location: 0.4.0
