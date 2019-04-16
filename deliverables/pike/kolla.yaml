@@ -48,6 +48,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 35aa36054231c14968ebe4c7a521fa33de27ead8
+  - projects:
+      - hash: 35aa36054231c14968ebe4c7a521fa33de27ead8
+        repo: openstack/kolla
+    version: pike-em
 release-notes: https://docs.openstack.org/releasenotes/kolla/pike.html
 repository-settings:
   openstack/kolla: {}
