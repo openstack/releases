@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: e2baac279652ce53d39f1b0953c731a77c189faa
+  - projects:
+      - hash: 5c64747b1561b48a47ddd21505b140e9fd6a6cf5
+        repo: openstack/python-congressclient
+    version: 1.8.1
 branches:
   - name: stable/pike
     location: 1.8.0
