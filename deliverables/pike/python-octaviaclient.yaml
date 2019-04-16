@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: 40ba02434a4abc62f237d8756fa1ce53a9037b70
+  - projects:
+      - hash: 2b532d92be3dd0631283ebc6f3b7b401d0c557ca
+        repo: openstack/python-octaviaclient
+    version: 1.2.1
 branches:
   - name: stable/pike
     location: 1.1.0
