@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: ccb1c3831b9a66c98b2577d65ac0990b8e7551eb
+  - projects:
+      - hash: 7468d434634e608eba10e098ada4fdaa856d54fb
+        repo: openstack/cloudkitty-dashboard
+    version: 6.0.1
 repository-settings:
   openstack/cloudkitty-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/pike.html

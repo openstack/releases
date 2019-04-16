@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 069ea4ea237a1abbb1a0fe5d81263b69c733ff11
+  - projects:
+      - hash: e99543c7b85ac2dcb4cde22f7ff64eda4b9f4133
+        repo: openstack/cloudkitty
+    version: 6.0.1
 repository-settings:
   openstack/cloudkitty: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/pike.html
