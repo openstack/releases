@@ -9,9 +9,13 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: f29cdbdd2a8137f30d0866f0e080045ccdd40583
-        tarball-base: pankoclient
+  - projects:
+      - hash: f29cdbdd2a8137f30d0866f0e080045ccdd40583
+        repo: openstack/python-pankoclient
+    version: pike-em
 branches:
   - name: stable/pike
     location: 0.3.0
 repository-settings:
-  openstack/python-pankoclient: {}
+  openstack/python-pankoclient:
+    tarball-base: aodhclient

@@ -9,9 +9,13 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: eb827601af8929803285c09ead6996e6d60b14ef
-        tarball-base: aodhclient
+  - projects:
+      - hash: eb827601af8929803285c09ead6996e6d60b14ef
+        repo: openstack/python-aodhclient
+    version: pike-em
 branches:
   - name: stable/pike
     location: 0.9.0
 repository-settings:
-  openstack/python-aodhclient: {}
+  openstack/python-aodhclient:
+    tarball-base: aodhclient
