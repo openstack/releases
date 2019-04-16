@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: f501b618fb344b36d2771ac4921746125e1a0871
+  - projects:
+      - hash: 2754b15cd4f2bf73441487a3dde526d61019849f
+        repo: openstack/python-magnumclient
+    version: 2.7.1
 branches:
   - name: stable/pike
     location: 2.7.0
