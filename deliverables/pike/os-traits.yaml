@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/os-traits
         hash: 3e8b4a77aaf2d8b64f89ba3b479113d0b44bbe2f
+  - projects:
+      - hash: 98aa3e5a0515cf148ee8b2c1a3ff22c5d9d78084
+        repo: openstack/os-traits
+    version: 0.3.4
 branches:
   - name: stable/pike
     location: 0.3.3

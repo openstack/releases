@@ -26,6 +26,11 @@ releases:
       - repo: openstack/os-vif
         hash: 3bb2331488569e30cf8619e17a3d9f79569da8e1
         tarball-base: os_vif
+  - version: 1.7.2
+    projects:
+      - repo: openstack/os-vif
+        hash: 5b4db2087a0f44fc5d5a951663f620cc24940df3
+        tarball-base: os_vif
 branches:
   - name: stable/pike
     location: 1.7.0
