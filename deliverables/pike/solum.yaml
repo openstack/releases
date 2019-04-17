@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: a327ef08a15e97a445ee895da627039d885d2c95
+  - projects:
+      - hash: da251dc710bc45d6c1f86f68f966c466890f5787
+        repo: openstack/solum
+    version: 5.4.1
 release-notes: https://docs.openstack.org/releasenotes/solum/pike.html
 repository-settings:
   openstack/solum: {}
