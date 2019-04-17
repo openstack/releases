@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 2e7f77ad48e9f231adaa11696af23962219c014e
+  - projects:
+      - hash: ca1756712322b90efaabd9f297c153bdac09297e
+        repo: openstack/watcher-dashboard
+    version: 1.4.1
 release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/pike.html
 repository-settings:
   openstack/watcher-dashboard: {}
