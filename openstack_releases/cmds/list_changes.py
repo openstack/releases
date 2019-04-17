@@ -24,6 +24,7 @@ import json
 import logging
 import os
 import os.path
+import re
 import shutil
 import subprocess
 import sys
@@ -80,7 +81,13 @@ def git_list_existing_branches(workdir, repo):
                 ['git', 'describe', branch],
                 cwd=os.path.join(workdir, repo),
             ).decode('utf-8').strip()
-            tag = description.partition('-')[0]  # strip to the real tag value
+            # strip to the real tag value
+            match = re.match('^(.*)-[0-9]+-g[a-f0-9]+', description,
+                             re.IGNORECASE)
+            if match:
+                tag = match.groups()[0]
+            else:
+                tag = ''
         except subprocess.CalledProcessError as exc:
             description = exc.output.decode('utf-8').strip()
             tag = ''
