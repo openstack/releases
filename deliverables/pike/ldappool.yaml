@@ -8,6 +8,10 @@ releases:
     projects:
       - repo: openstack/ldappool
         hash: 62e08434f82b088da7c7fcc9660f397ba8d51d08
+  - projects:
+      - hash: 7e6cf7d811ae29038a619ab6b60f5fd1d1cff8a3
+        repo: openstack/ldappool
+    version: 2.1.1
 branches:
   - name: stable/pike
     location: 2.1.0

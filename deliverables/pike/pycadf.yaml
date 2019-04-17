@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 88064cffa79dd807782eff9e167d6e7724d74171
+  - projects:
+      - hash: 0c3fb9ded5b4f354dab896dcedd48a51095279bc
+        repo: openstack/pycadf
+    version: 2.6.1
 branches:
   - name: stable/pike
     location: 2.6.0
