@@ -1134,6 +1134,34 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
+    @mock.patch('openstack_releases.requirements.find_bad_lower_bound_increases')
+    def test_generic_model(self, mock_lower_bound):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='name',
+            data={
+                'release-type': 'generic',
+                'releases': [
+                    {'version': '0.9.0',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': '04ee20f0bfe8774935de33b75e87fb3b858d0733'},
+                     ]},
+                    {'version': '0.9.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+        self.assertFalse(mock_lower_bound.called)
+
     def test_valid_version(self):
         deliv = deliverable.Deliverable(
             team='team',
