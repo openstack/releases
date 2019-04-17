@@ -26,8 +26,7 @@ urllib3.disable_warnings()
 
 LOG = logging.getLogger(__name__)
 
-CGIT_SHA_TEMPLATE = 'http://git.openstack.org/cgit/%s/commit/?id=%s'
-CGIT_TAG_TEMPLATE = 'http://git.openstack.org/cgit/%s/tag/?h=%s'
+GIT_TAG_TEMPLATE = 'https://opendev.org/%s/src/tag/%s'
 
 
 def find_modified_deliverable_files():
@@ -70,7 +69,7 @@ def tag_exists(repo, ref):
     someone to fool the check.
 
     """
-    url = CGIT_TAG_TEMPLATE % (repo, ref)
+    url = GIT_TAG_TEMPLATE % (repo, ref)
     return links.link_exists(url)
 
 

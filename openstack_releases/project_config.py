@@ -25,7 +25,7 @@ from openstack_releases import yamlutils
 
 LOG = logging.getLogger()
 
-ZUUL_PROJECTS_URL = 'http://git.openstack.org/cgit/openstack-infra/project-config/plain/zuul.d/projects.yaml'  # noqa
+ZUUL_PROJECTS_URL = 'https://opendev.org/openstack-infra/project-config/raw/branch/master/zuul.d/projects.yaml'  # noqa
 ZUUL_PROJECTS_FILENAME = 'openstack-infra/project-config/zuul.d/projects.yaml'
 
 # We use this key to modify the data structure read from the zuul
