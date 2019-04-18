@@ -376,7 +376,7 @@ def generate_release_notes(repo, repo_path,
     # release-announce@lists.openstack.org ML (except for
     # release-test and release candidates)
     email_to = 'release-announce@lists.openstack.org'
-    if repo == 'openstack-release-test':
+    if repo_name == 'openstack-release-test':
         email_to = 'release-job-failures@lists.openstack.org'
     elif is_release_candidate:
         email_to = 'openstack-discuss@lists.openstack.org'

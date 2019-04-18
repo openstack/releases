@@ -23,7 +23,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("repo", metavar='path', action="store",
                         help="repository directory, for example"
-                             " 'openstack/cliff'",
+                             " 'openstack/cliff' or './'",
                         )
     parser.add_argument('repo_name', action='store',
                         help='The name of the repository being released',
@@ -107,7 +107,7 @@ def main():
     repo_path = os.path.abspath(args.repo)
 
     notes = release_notes.generate_release_notes(
-        repo=args.repo,
+        repo=args.repo_name,
         repo_path=repo_path,
         start_revision=args.start_revision,
         end_revision=args.end_revision,
