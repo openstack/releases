@@ -122,7 +122,7 @@ def main():
         include_pypi_link=args.include_pypi_link,
         changes_only=args.changes_only,
         first_release=args.first_release,
-        repo_name=args.repo_name,
+        deliverable_file=None,
         description=args.description,
         publishing_dir_name=args.publishing_dir_name or args.repo_name,
     )

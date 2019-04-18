@@ -183,20 +183,24 @@ release crew's attention.
 """
 
 
-def parse_deliverable(series, repo):
+def parse_deliverable(series, repo, deliverable_file=None):
     """Parse useful information out of the deliverable file.
 
     Currently only parses the bug URL, but could potentially be expanded to get
     other useful settings.
 
     :param series: The release series being processed.
-    :param repo: The name of the deliverable.
+    :param repo: The name of the repo.
+    :param deliverable_file: The deliverable file.
     """
     release_repo = os.path.realpath(
         os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
-    deliverable_path = os.path.join(
-        release_repo, 'deliverables', series.lower(), "%s.yaml" % repo)
+    if deliverable_file is None:
+        deliverable_file = os.path.join(
+            'deliverables', series.lower(), '%s.yaml' % repo)
+
+    deliverable_path = os.path.join(release_repo, deliverable_file)
 
     # Hard coding source URL for now
     sections = {
@@ -252,7 +256,7 @@ def generate_release_notes(repo, repo_path,
                            include_pypi_link,
                            changes_only,
                            first_release,
-                           repo_name, description,
+                           deliverable_file, description,
                            publishing_dir_name,
                            ):
     """Return the text of the release notes.
@@ -280,12 +284,12 @@ def generate_release_notes(repo, repo_path,
         the list of changes, without any extra data.
     :param first_release: Boolean indicating whether this is the first
         release of the project
-    :param repo_name: Name of the repo
+    :param deliverable_file: The deliverable file path from the repo root.
     :param description: Description of the repo
     :param publishing_dir_name: The directory on publishings.openstack.org
         containing the package.
-
     """
+    repo_name = repo.split('/')[-1]
     # Determine if this is a release candidate or not.
     is_release_candidate = 'rc' in end_revision
 
@@ -335,8 +339,9 @@ def generate_release_notes(repo, repo_path,
         diff_stats.append(line)
 
     # Extract + valdiate needed sections...
-    sections = parse_deliverable(series, publishing_dir_name)
-    change_header = ["Changes in %s %s" % (repo_name, git_range)]
+    sections = parse_deliverable(
+        series, repo_name, deliverable_file=deliverable_file)
+    change_header = ["Changes in %s %s" % (repo, git_range)]
     change_header.append("-" * len(change_header[0]))
 
     # Look for reno notes for this version.
@@ -378,7 +383,7 @@ def generate_release_notes(repo, repo_path,
 
     params = dict(sections)
     params.update({
-        'project': repo_name,
+        'project': repo,
         'description': description,
         'end_rev': end_revision,
         'range': git_range,
