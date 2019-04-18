@@ -23,3 +23,10 @@ releases:
       - hash: e912b02c3bec61ec3af610820601cc24b5dc1cba
         repo: openstack/os-net-config
     version: 10.3.0
+  - projects:
+      - hash: b82730235eb3e0ffddf12e12a2ffd85f52984c0c
+        repo: openstack/os-net-config
+    version: 10.4.0
+branches:
+  - location: 10.4.0
+    name: stable/stein

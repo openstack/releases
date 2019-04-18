@@ -23,3 +23,10 @@ releases:
       - hash: a6f17e52dedfa7c229b7b8d8e1148aaa77a30916
         repo: openstack/paunch
     version: 4.3.0
+  - projects:
+      - hash: 61c448d7bcbd76ce69e378087798c0a7ac09cbef
+        repo: openstack/paunch
+    version: 4.4.0
+branches:
+  - location: 4.4.0
+    name: stable/stein

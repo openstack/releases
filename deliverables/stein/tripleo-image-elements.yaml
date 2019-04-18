@@ -23,3 +23,10 @@ releases:
       - hash: 97dc7498602607c5e4d8e61de37713da4df7fd16
         repo: openstack/tripleo-image-elements
     version: 10.3.0
+  - projects:
+      - hash: 253fe8831f6f7277772af5cd09238f15f4e5f62b
+        repo: openstack/tripleo-image-elements
+    version: 10.4.0
+branches:
+  - location: 10.4.0
+    name: stable/stein
