@@ -129,8 +129,21 @@ def safe_clone_repo(workdir, repo, ref, messages):
 
 def checkout_ref(workdir, repo, ref, messages):
     """Checkout a specific ref in the repo."""
-    LOG.debug('Checking out repository %s to %s', repo, ref)
 
+    LOG.debug('Resetting the repository %s to HEAD', repo)
+    # Reset the repo to HEAD just in case any ot the previous steps
+    # updated a checked in file.  If this fails we continue to try the
+    # requested ref as that shoudl give us a more complete error log.
+    try:
+        processutils.check_call(
+            ['git', 'reset', '--hard'],
+            cwd=os.path.join(workdir, repo))
+    except processutils.CalledProcessError as err:
+        messages.warning(
+            'Could not reset repository {} to HEAD: {}'.format(
+                repo, err))
+
+    LOG.debug('Checking out repository %s to %s', repo, ref)
     try:
         processutils.check_call(
             ['git', 'checkout', ref],
