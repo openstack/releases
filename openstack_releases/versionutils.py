@@ -40,6 +40,10 @@ _VALIDATORS['nodejs'] = _VALIDATORS['python-service']
 _VALIDATORS['neutron'] = _VALIDATORS['python-service']
 _VALIDATORS['horizon'] = _VALIDATORS['python-service']
 _VALIDATORS['python-pypi'] = _VALIDATORS['python-service']
+# This release-type uses the same version validation as python-service and
+# has no language specific validation like nodejs or xstatic.
+# It's used to bypass and python specific checks (like requirements validation)
+_VALIDATORS['generic'] = _VALIDATORS['python-service']
 
 
 def validate_version(versionstr, release_type='python-service', pre_ok=True):
