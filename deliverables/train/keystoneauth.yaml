@@ -7,3 +7,9 @@ type: library
 repository-settings:
   openstack/keystoneauth:
     tarball-base: keystoneauth1
+releases:
+  - projects:
+      - hash: 6162d3dcf291576ba5a767a9ab05011bada5f51f
+        repo: openstack/keystoneauth
+        tarball-base: keystoneauth1
+    version: 3.14.0
