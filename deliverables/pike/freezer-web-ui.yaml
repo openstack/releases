@@ -25,6 +25,10 @@ releases:
       - repo: openstack/freezer-web-ui
         hash: 9ed92d49745190863f16ae032efbe454abac7749
     version: 5.0.0
+  - projects:
+      - hash: a03b8a983f45c8097625b220231e1fd8c573b18c
+        repo: openstack/freezer-web-ui
+    version: 5.0.1
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
