@@ -234,3 +234,14 @@ Keystone Feature Freeze
 
 All new Keystone features must be merged by the end of the week.
 
+Oslo
+----
+
+.. _t-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
+
