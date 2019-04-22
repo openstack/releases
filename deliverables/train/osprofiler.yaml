@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/osprofiler: {}
+releases:
+  - projects:
+      - hash: 9847b8984a0e8ac9c325962431c08d7dddff13bc
+        repo: openstack/osprofiler
+    version: 2.7.0
