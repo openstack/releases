@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: ea41cef9a1753faf5004c5900a486ed4439ca1dd
+  - projects:
+      - hash: da85c37baea5ec7e37851b6b3f66119d2200a33b
+        repo: openstack/python-designateclient
+    version: 2.7.1
 branches:
   - name: stable/pike
     location: 2.7.0
