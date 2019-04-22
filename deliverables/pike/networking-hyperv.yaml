@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 400c817c337d6571e47af77ae2f33961fb69e75c
+  - projects:
+      - hash: e38a2356b43e06aee7cb9f19e2ff51273abee87d
+        repo: openstack/networking-hyperv
+    version: 5.0.1
 release-notes: https://docs.openstack.org/releasenotes/networking-hyperv/pike.html
 repository-settings:
   openstack/networking-hyperv: {}

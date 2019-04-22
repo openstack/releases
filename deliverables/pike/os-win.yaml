@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 111fa2896cefac91639dd8ffd28dc1d6b72d86a5
+  - projects:
+      - hash: 22f35e9ce7b734d4f8f930147c9e257f3506f616
+        repo: openstack/os-win
+    version: 2.2.1
 branches:
   - name: stable/pike
     location: 2.1.0
