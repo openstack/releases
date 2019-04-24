@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/python-ceilometerclient
         hash: 3b4e35abada626ce052f20d55c71fe12ab77052a
+  - projects:
+      - hash: 4ee321feeef39fa2a297ad8e58e931b8a03d8f14
+        repo: openstack/python-ceilometerclient
+    version: 2.9.1
 branches:
   - name: stable/pike
     location: 2.9.0
