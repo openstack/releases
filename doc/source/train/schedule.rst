@@ -273,3 +273,37 @@ Oslo Feature Freeze
 All new Oslo features must be proposed and substantially complete, with unit
 tests by the end of the week.
 
+Manila
+------
+
+.. _t-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Train must be approved by the end of the week.
+
+.. _t-manila-driver-deadline:
+
+Manila Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI.  Drivers do not have to
+actually merge until feature freeze.
+
+.. _t-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _t-manila-ffreeze:
+
+Manila Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be merged by the end of the week.
+
