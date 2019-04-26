@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: b6d59fc773d2a89f9673dbc4bf1ffcdbf0a83745
+  - projects:
+      - hash: bdb9615c018d9b9af0d93e7ff6843469b2a82d7b
+        repo: openstack/python-zaqarclient
+    version: 1.7.1
 branches:
   - name: stable/pike
     location: 1.7.0
