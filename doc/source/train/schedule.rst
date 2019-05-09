@@ -234,6 +234,21 @@ Keystone Feature Freeze
 
 All new Keystone features must be merged by the end of the week.
 
+Nova
+----
+
+.. _t-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+All Nova specs targeted to Train must be approved by Thursday.
+
+.. _t-nova-ffreeze:
+
+Nova Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+All new Nova features must be approved by Thursday.
+
 Oslo
 ----
 
