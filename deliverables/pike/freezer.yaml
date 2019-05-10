@@ -53,6 +53,14 @@ releases:
       - hash: 50f9c4cfe8fe07b8659fa2f1853d7c9f4c6621fb
         repo: openstack/freezer-dr
     version: 5.0.1
+  - projects:
+      - hash: 421033e4db3a29d695d071b4da18f2b7d9aef161
+        repo: openstack/freezer
+      - hash: 57a092f6d694d1ae63ac2ebc073cb30b24337d94
+        repo: openstack/freezer-api
+      - hash: 50f9c4cfe8fe07b8659fa2f1853d7c9f4c6621fb
+        repo: openstack/freezer-dr
+    version: pike-em
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
