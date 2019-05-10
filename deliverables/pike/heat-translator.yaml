@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 4973b0ccc5a236f43f436b5765a1cb301fb5f9fb
+  - projects:
+      - hash: 2f927cefcd39e1ac1ee49c45f3a0f0749b7aebf3
+        repo: openstack/heat-translator
+    version: 0.9.1
 branches:
   - name: stable/pike
     location: 0.9.0

@@ -58,6 +58,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: f3b6666d214f70cac4f93cac37e2ed96b82a6044
+  - projects:
+      - hash: b780b3219f8974a81b17db39707d9717c72e411d
+        repo: openstack/heat
+    version: 9.0.7
 repository-settings:
   openstack/heat:
     pypi-name: openstack-heat

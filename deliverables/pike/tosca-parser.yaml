@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 0b000ae4e81b28a09fc32c4f669c00c558611671
+  - projects:
+      - hash: 2aa81311ae93678bfa2e865f5297f3ee5ff2bbd9
+        repo: openstack/tosca-parser
+    version: 0.8.2
 branches:
   - name: stable/pike
     location: 0.8.1
