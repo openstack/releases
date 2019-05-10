@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 49c915f498fc8d91c98fcf4e07ceecdcf167fc5a
+  - projects:
+      - hash: 49c915f498fc8d91c98fcf4e07ceecdcf167fc5a
+        repo: openstack/glance_store
+    version: pike-em
 branches:
   - name: stable/pike
     location: 0.21.0
