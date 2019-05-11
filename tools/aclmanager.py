@@ -35,7 +35,7 @@ from openstack_releases import deliverable
 # https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
 urllib3.disable_warnings()
 
-GERRIT_URL = 'https://review.openstack.org/'
+GERRIT_URL = 'https://review.opendev.org/'
 
 EXCEPTIONS = ['openstack/release-test']
 

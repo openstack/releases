@@ -185,8 +185,8 @@ Final Library Release (week before Milestone-3)
 
 #. Update the feature list and allowed stable branch names in
    devstack-gate for the new stable branch. For
-   example, https://review.openstack.org/362435 and
-   https://review.openstack.org/363084
+   example, https://review.opendev.org/362435 and
+   https://review.opendev.org/363084
 
 #. Allow the ``stable/$series`` branch to be requested with each library final
    release if they know they are ready. Do not require branching at this point
@@ -317,13 +317,13 @@ RC1 week
    projects, devstack-gate and tempest, in the tempest repo. Configure tempest
    to run them on all changes, voting. Configure tempest to run them as
    periodic bitrot jobs as well. All this can be done in one tempest patch,
-   for example, see https://review.openstack.org/521888.
+   for example, see https://review.opendev.org/521888.
    Configure devstack-gate to run the new jobs in check pipeline only,
-   non-voting, for example see https://review.openstack.org/545144.
+   non-voting, for example see https://review.opendev.org/545144.
 
 #. Remind the QA PTL to add the new branch to the list of branches in the
    periodic-stable job templates in openstack-zuul-jobs. For example, see
-   https://review.openstack.org/545268/.
+   https://review.opendev.org/545268/.
 
 Between RC1 and Final
 =====================
@@ -412,7 +412,7 @@ Final Release
 
 #. Mark series as released on releases.o.o, by updating doc/source/index.rst
    and doc/source/$series/index.rst.
-   See https://review.openstack.org/#/c/381006 for an example.
+   See https://review.opendev.org/#/c/381006 for an example.
 
    .. note::
 

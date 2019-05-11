@@ -71,7 +71,7 @@ repository.
      version to fix the target branch, e.g. stable/juno, but don't
      increment the minor version to avoid it being used in a different
      branch, like stable/kilo.  Someone from the `stable-maint-core
-     <https://review.openstack.org/#/admin/groups/530,members>`_ team
+     <https://review.opendev.org/#/admin/groups/530,members>`_ team
      should +1 a change like this before it's approved.
 
 * Do not increment version numbers artificially to maintain

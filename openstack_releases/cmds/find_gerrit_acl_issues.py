@@ -78,7 +78,7 @@ class GerritClient(object):
         # strip off first few chars because 'the JSON response body starts with
         # a magic prefix line that must be stripped before feeding the rest of
         # the response body to a JSON parser'
-        # https://review.openstack.org/Documentation/rest-api.html
+        # https://review.opendev.org/Documentation/rest-api.html
         # print(response.text)
         return json.loads(response.text[5:])
 
