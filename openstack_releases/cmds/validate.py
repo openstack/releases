@@ -1026,6 +1026,11 @@ def validate_version_numbers(deliv, context):
         if release.is_eol:
             LOG.debug('Found new EOL tag {} for {}'.format(
                 release.version, deliv.name))
+            if deliv.is_independent:
+                context.warning(
+                    'EOL tag {} on independent deliverable, branch not validated'.format(
+                        release.version))
+                continue
             if release.eol_series != deliv.series:
                 context.error(
                     'EOL tag {} does not refer to the {} series.'.format(
@@ -1035,6 +1040,11 @@ def validate_version_numbers(deliv, context):
         if release.is_em:
             LOG.debug('Found new EM tag {} for {}'.format(
                 release.version, deliv.name))
+            if deliv.is_independent:
+                context.warning(
+                    'EM tag {} on independent deliverable, branch not validated'.format(
+                        release.version))
+                continue
             if release.em_series != deliv.series:
                 context.error(
                     'EM tag {} does not refer to the {} series.'.format(
