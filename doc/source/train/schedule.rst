@@ -180,6 +180,19 @@ intermediary releases before release week. During release week, only
 final-release-critical releases will be accepted (at the discretion of the
 release team).
 
+.. _t-cycle-highlights:
+
+Cycle highlights marketing deadline
+-----------------------------------
+
+Cycle highlights need to be added to the release deliverables by feature freeze to
+be included in any marketing release messaging. Highlights may be added after
+this point, but they will likely only be useful for historical purposes.
+
+See the `project team guide <https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights>`_
+for more details and instructions on adding these highlights.
+
+
 .. _t-final:
 
 Train release
