@@ -10,6 +10,12 @@ releases:
         hash: 797cae92c1921f0bb1617949049e3685af016014
       - repo: openstack/tripleo-quickstart-extras
         hash: dd96d343cefb7e6bbd17128fb89c9211b1406c86
+  - projects:
+      - hash: 62724ea59185dc387716a0d84561c65d32bcadd1
+        repo: openstack/tripleo-quickstart
+      - hash: d244b0a0fc93d03b962f638423f5fc476a76430d
+        repo: openstack/tripleo-quickstart-extras
+    version: 2.1.1
 repository-settings:
   openstack/tripleo-quickstart: {}
   openstack/tripleo-quickstart-extras: {}
