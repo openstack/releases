@@ -307,3 +307,59 @@ Manila Feature Freeze
 
 All new Manila features must be merged by the end of the week.
 
+Cinder
+------
+
+.. _t-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs must be approved by 25 Jul 2019 (23:59 UTC).
+
+.. _t-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder is 25 Jul 2019 (23:59 UTC).
+New drivers must be complete with unit tests at this point in time.  The backend
+driver must also have a 3rd Party CI running reliably and the driver must be
+merged at this point to be included in the Train release.
+
+.. _t-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder is 25 Jul 2019 (23:59 UTC).
+New target drivers must be complete with unit tests at this point in time.  The target
+driver must also have a 3rd Party CI running reliably and the target driver must
+be merged at this point to be included in the Train release.
+
+.. _t-cinder-py37-ci-running:
+
+Cinder 3rd Party CIs Running Py37
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In preparation for OpenStack's move to Python 3.x we are requiring that all
+vendors demonstrate their driver running Py37 tests by 25 Jul 2019 (23:59 UTC).
+Vendors who do not meet this reuqirement will have a patch marking their
+driver as unsupported submitted.
+
+.. _t-cinder-py37-ci-working:
+
+Cinder 3rd Party CIs Passing Py37 Testing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All vendors must demonstrate that their driver can execute 3rd Party CI
+with Py37 by 12 Sep 2019 (23:59 UTC) or their driver will be marked as
+unsupported.
+
+.. _t-cinder-fp-freeze:
+
+Cinder Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Cinder features must be proposed and substantially complete with unit
+tests by 12 Sep 2019 (23:59 UTC).

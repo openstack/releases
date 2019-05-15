@@ -66,6 +66,10 @@ cycle:
     - t-manila-spec-freeze
     - t-manila-driver-deadline
     - t-nova-spec-freeze
+    - t-cinder-spec-freeze
+    - t-cinder-driver-deadline
+    - t-cinder-target-driver-deadline
+    - t-cinder-py37-ci-running
 - end: '2019-08-02'
   name: R-11
   start: '2019-07-29'
@@ -108,6 +112,8 @@ cycle:
     - t-keystone-ffreeze
     - t-manila-ffreeze
     - t-nova-ffreeze
+    - t-cinder-fp-freeze
+    - t-cinder-py37-ci-working
 - end: '2019-09-20'
   name: R-4
   start: '2019-09-16'
