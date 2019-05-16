@@ -63,6 +63,8 @@ cycle:
     - t-mf
   project-specific:
     - t-keystone-spec-freeze
+    - t-manila-spec-freeze
+    - t-manila-driver-deadline
     - t-nova-spec-freeze
 - end: '2019-08-02'
   name: R-11
@@ -75,6 +77,7 @@ cycle:
   start: '2019-08-12'
   project-specific:
     - t-keystone-fpfreeze
+    - t-manila-fpfreeze
 - end: '2019-08-23'
   name: R-8
   start: '2019-08-19'
@@ -103,6 +106,7 @@ cycle:
     - t-cycle-highlights
   project-specific:
     - t-keystone-ffreeze
+    - t-manila-ffreeze
     - t-nova-ffreeze
 - end: '2019-09-20'
   name: R-4
