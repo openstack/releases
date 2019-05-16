@@ -27,7 +27,7 @@ development work is going to happen.
 
 For the stable series we have an arrangement with the
 `stable-maint-core
-<https://review.openstack.org/#/admin/groups/530,members>`_ team that
+<https://review.opendev.org/#/admin/groups/530,members>`_ team that
 if a deliverable has the ``stable:follows-policy`` tag we don't
 approve it until they have had a chance to review it (usually the
 Monday after the request is submitted). Releases for deliverables that
