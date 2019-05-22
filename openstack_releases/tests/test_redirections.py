@@ -122,42 +122,48 @@ class TestRedirections(base.BaseTestCase):
         deliverables = FakeDeliverables([
             self.OPEN_DEVELOPMENT,
         ])
-        self.assertEqual([dict(code=301, src='stein', dst='master')],
+        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+                               dst='master')],
                          generate_constraints_redirections(deliverables))
 
     def test_development_release(self):
         deliverables = FakeDeliverables([
             self.DEVELOPMENT_RELEASE,
         ])
-        self.assertEqual([dict(code=301, src='stein', dst='master')],
+        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+                               dst='master')],
                          generate_constraints_redirections(deliverables))
 
     def test_open_stable(self):
         deliverables = FakeDeliverables([
             self.OPEN_STABLE,
         ])
-        self.assertEqual([dict(code=301, src='rocky', dst='stable/rocky')],
+        self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
+                               dst='stable/rocky')],
                          generate_constraints_redirections(deliverables))
 
     def test_open_unstable(self):
         deliverables = FakeDeliverables([
             self.OPEN_UNSTABLE,
         ])
-        self.assertEqual([dict(code=301, src='rocky', dst='stable/rocky')],
+        self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
+                               dst='stable/rocky')],
                          generate_constraints_redirections(deliverables))
 
     def test_stable_release(self):
         deliverables = FakeDeliverables([
             self.STABLE_RELEASE,
         ])
-        self.assertEqual([dict(code=301, src='rocky', dst='stable/rocky')],
+        self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
+                               dst='stable/rocky')],
                          generate_constraints_redirections(deliverables))
 
     def test_stable_eol(self):
         deliverables = FakeDeliverables([
             self.STABLE_EOL,
         ])
-        self.assertEqual([dict(code=301, src='mitaka', dst='mitaka-eol')],
+        self.assertEqual([dict(code=301, src='mitaka', ref_type='tag',
+                               dst='mitaka-eol')],
                          generate_constraints_redirections(deliverables))
 
     def test_all(self):
@@ -166,9 +172,12 @@ class TestRedirections(base.BaseTestCase):
             self.STABLE_RELEASE,
             self.DEVELOPMENT_RELEASE,
         ])
-        self.assertEqual([dict(code=301, src='stein', dst='master'),
-                          dict(code=301, src='rocky', dst='stable/rocky'),
-                          dict(code=301, src='mitaka', dst='mitaka-eol')],
+        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+                               dst='master'),
+                          dict(code=301, src='rocky', ref_type='branch',
+                               dst='stable/rocky'),
+                          dict(code=301, src='mitaka', ref_type='tag',
+                               dst='mitaka-eol')],
                          generate_constraints_redirections(deliverables))
 
     def test_empty(self):
