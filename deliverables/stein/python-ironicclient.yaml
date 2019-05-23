@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: b40630f3b3e747ae4a26d31e8e292554b99713f2
+  - projects:
+      - hash: 266a700534cbd166c800999dd92556cb431d2055
+        repo: openstack/python-ironicclient
+    version: 2.7.2
 repository-settings:
   openstack/python-ironicclient: {}
 branches:
