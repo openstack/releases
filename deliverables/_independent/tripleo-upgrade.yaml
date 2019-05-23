@@ -8,6 +8,8 @@ branches:
     location: 2.0.0
   - name: stable/rocky
     location: 3.0.0
+  - name: stable/stein
+    location: 4.0.0
 releases:
   - projects:
       - hash: 0f37163303a00936b56522e2cc3310e38b87a343
@@ -21,6 +23,10 @@ releases:
       - hash: 6b914d2387ec62408eee0e55ad2158e713f93563
         repo: openstack/tripleo-upgrade
     version: 3.0.0
+  - projects:
+      - hash: 39d4b47821829edbd0ad7d393262b60324f815a4
+        repo: openstack/tripleo-upgrade
+    version: 4.0.0
 team: tripleo
 type: other
 repository-settings:
