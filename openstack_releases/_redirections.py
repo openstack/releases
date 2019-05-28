@@ -24,6 +24,7 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
     for deliv in _deliverables.get_deliverable_history('requirements'):
         # Any open deliverables should point to master
         target = 'master'
+        ref_type = 'branch'
 
         # Unless there is a specific stable branch
         for branch in deliv.branches:
@@ -35,13 +36,16 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
         for release in deliv.releases:
             if release.is_eol:
                 target = str(release.version)
+                ref_type = 'tag'
                 break
 
         # Insert into the begining of the list so that redirections are
         # master -> juno
-        redirections.insert(0, dict(code=301, src=deliv.series, dst=target))
+        redirections.insert(0, dict(code=301, src=deliv.series,
+                                    ref_type=ref_type, dst=target))
 
     for series in future_releases:
-        redirections.insert(0, dict(code=302, src=series, dst='master'))
+        redirections.insert(0, dict(code=302, src=series,
+                                    ref_type='branch', dst='master'))
 
     return redirections
