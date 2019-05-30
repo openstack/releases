@@ -83,8 +83,7 @@ def _initialize_deliverable_data():
 
     LOG.info('Loading deliverable data...')
 
-    _series_status_data = series_status.SeriesStatus.from_directory(
-        'deliverables')
+    _series_status_data = series_status.SeriesStatus.default()
     deliverable.Deliverable.init_series_status_data(_series_status_data)
     _deliverables = deliverable.Deliverables('deliverables')
 

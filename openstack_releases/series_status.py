@@ -70,7 +70,7 @@ class SeriesStatus(collections.abc.Mapping):
     def default(cls):
         module_path = os.path.dirname(__file__)
         root_dir = os.path.dirname(module_path)
-        return cls.from_directory(os.path.join(root_dir, 'deliverables'))
+        return cls.from_directory(os.path.join(root_dir, 'data'))
 
     @staticmethod
     def _load_series_status_data(root_dir):

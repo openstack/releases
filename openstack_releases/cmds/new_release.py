@@ -98,11 +98,7 @@ def increment_milestone_version(old_version, release_type):
 
 
 def get_last_series_info(series, deliverable):
-    all_series = sorted(
-        s
-        for s in os.listdir('deliverables')
-        if s != 'series_status.yaml'
-    )
+    all_series = sorted(os.listdir('deliverables'))
     prev_series = all_series[all_series.index(series) - 1]
     try:
         return get_deliverable_data(prev_series, deliverable)
