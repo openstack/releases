@@ -50,14 +50,18 @@ releases:
       - hash: 802464eda2280644ee258a2038d9b0eeecfa3cc4
         repo: openstack/ironic
     version: 10.1.8
+  - projects:
+      - hash: 4d2604da4a1bcfdd6658da7793efe55dbf1ef5ab
+        repo: openstack/ironic
+    version: 10.1.9
 branches:
   - location: 10.1.0
     name: stable/queens
 cycle-highlights:
   - 'Introduced API to get, set and unset traits on nodes.'
   - 'Introduced new ansible deploy interface.'
-  - 'Finished implementation of rescue mode. Users can repair instances, troubleshoot
-    misconfigured nodes, lost SSH keys, etc.'
+  - 'Finished implementation of rescue mode. Users can repair instances,
+    troubleshoot misconfigured nodes, lost SSH keys, etc.'
   - 'Added support for routed networks when using flat networking.'
   - 'Deprecated classic drivers in favor of hardware types.'
 repository-settings:
