@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-trove: {}
+releases:
+  - projects:
+      - hash: 742ce235d3a2ef418d2bff18fd5d85ee180111fd
+        repo: openstack/puppet-trove
+    version: 15.0.0

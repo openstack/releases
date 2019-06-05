@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-cloudkitty: {}
+releases:
+  - projects:
+      - hash: 1851c07cb64b2e2fa46d641430a51c28fdedc1a3
+        repo: openstack/puppet-cloudkitty
+    version: 4.0.0

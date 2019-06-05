@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-senlin: {}
+releases:
+  - projects:
+      - hash: aea92ab404ee4c423751e464d8a4f8a57a2d5613
+        repo: openstack/puppet-senlin
+    version: 2.0.0

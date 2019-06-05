@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-openstacklib: {}
+releases:
+  - projects:
+      - hash: 7d0f1b785ddeffd35cd667ac5725643ee5b2a44c
+        repo: openstack/puppet-openstacklib
+    version: 15.0.0
