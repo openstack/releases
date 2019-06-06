@@ -6,3 +6,8 @@ team: OpenStackClient
 type: library
 repository-settings:
   openstack/cliff: {}
+releases:
+  - projects:
+      - hash: b39b3276ec1d8ba1e0df36791051e24ba2af2fb5
+        repo: openstack/cliff
+    version: 2.15.0
