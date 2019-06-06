@@ -27,12 +27,23 @@ def main():
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
     )
+    parser.add_argument(
+        '--file',
+        default=False,
+        action='store_true',
+        help='deliverable arg is a file path rather than a std. deliverable'
+    )
     args = parser.parse_args()
 
-    all_deliv = deliverable.Deliverables(
-        root_dir=args.deliverables_dir,
-        collapse_history=False,
-    )
-    for deliv in all_deliv.get_deliverable_history(args.deliverable):
-        print(deliv.team)
-        break
+    # If we've been told the 'deliverable' is infact a yaml file *or* the
+    # deliverable contains a '/' just load that file directly
+    if args.file or '/' in args.deliverable:
+        deliv = deliverable.Deliverable.read_file(args.deliverable)
+    else:
+        all_deliv = deliverable.Deliverables(
+            root_dir=args.deliverables_dir,
+            collapse_history=False,
+        )
+        deliv = next(all_deliv.get_deliverable_history(args.deliverable))
+
+    print(deliv.team)

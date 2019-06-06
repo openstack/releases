@@ -576,6 +576,8 @@ easy as ``pip install .`` in this repository directory.
   of the releases that should have been tagged by hand have been
 * ``init-series`` initializes a new deliverable directory with stub
   files based on the previous release.
+* ``get-contacts`` Loads the governance and liaison data to print contact
+  deatils for a given team
 
 tools/aclmanager.py
 -------------------
@@ -619,6 +621,25 @@ Example:
 ::
 
   tox -e check_approval -- 695375
+
+tools/bulk_review.sh
+--------------------
+
+A script for taking a working directory and dividing up the modified files into
+a collection on independent per-team reviews.  Each per-team change should be
+able to be processed in any order.  These reviews will request review from the
+the PTL and all release liaisons.
+
+This is designed to be used by the release team at key points in the cycle to
+ease bulk releases.
+
+  .. note::
+
+     This tool will commit ultimately commit all modified deliverables and
+     modifies git state.  Therefore it is essential that befoer running it
+     the working tree contains only the logical changes appropriate for the
+     stage of the release *and* all changes are saved elsewhere, in case the
+     script encounters a problem.
 
 tools/membership_freeze_test.py
 --------------------------------
