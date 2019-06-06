@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-tacker: {}
+releases:
+  - projects:
+      - hash: 1736d10a74da18ffcac0d55da9d08d6f23d09f70
+        repo: openstack/puppet-tacker
+    version: 15.0.0

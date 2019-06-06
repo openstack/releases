@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-vitrage: {}
+releases:
+  - projects:
+      - hash: 416218e03d9b3a0bdb63ec070c5e6ad1cd3e304a
+        repo: openstack/puppet-vitrage
+    version: 5.0.0

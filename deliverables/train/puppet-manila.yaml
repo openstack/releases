@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-manila: {}
+releases:
+  - projects:
+      - hash: 8b13fe2dce91656b3ca5b6cac06e851c6ec94e7e
+        repo: openstack/puppet-manila
+    version: 15.0.0

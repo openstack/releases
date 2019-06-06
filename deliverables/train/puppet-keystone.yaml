@@ -5,3 +5,8 @@ team: 'Puppet OpenStack'
 type: other
 repository-settings:
   openstack/puppet-keystone: {}
+releases:
+  - projects:
+      - hash: d0ebda3cd36896627221a2482126bc44a747a28d
+        repo: openstack/puppet-keystone
+    version: 15.0.0
