@@ -71,32 +71,33 @@ Release request merged
 +-------+-------+       +---------------+
 
 The second step is triggered by the creation of the tag, creating a series
-of jobs in the "release" pipeline (or "pre-release" pipeline, in case of beta
-versions) of the repository the tag landed in:
+of jobs in the "tag" pipeline and the "release" pipeline (or "pre-release"
+pipeline, in case of beta versions) of the repository the tag landed in:
 
-  Tag is created
-        |
-   +----v------------------------------------+
-          Release pipeline (each repo)
-   +----+---------------+---------------+----+
-        |               |               |
-        v               v               v
-  +-----+-----+   +-----+-----+   +-----+-----+
-  |  release  |   |  announce |   |  propose  |
-  |           |   |           |   |constraints|
-  |(builds    |   |  (sends   |   |  update   |
-  | tarball   |   |   email)  |   |           |
-  | & uploads |   |           |   +-----------+
+  Tag is created -----------------------------------------------
+        |                                                      |
+   +----v------------------------------------+      +----------v-----------+
+          Release pipeline (each repo)              Tag pipeline (each repo)
+   +----+---------------+---------------+----+      +----------------------+
+        |               |               |                      |
+        v               v               v                      v
+  +-----+-----+   +-----+-----+   +-----+-----+          +-----+-----+
+  |  release  |   |  announce |   |  propose  |          |  publish  |
+  |           |   |           |   |constraints|          |  release  |
+  |(builds    |   |  (sends   |   |  update   |          |  notes    |
+  | tarball   |   |   email)  |   |           |          |           |
+  | & uploads |   |           |   +-----------+          +-----------+
   | it)       |   +-----------+
   +-----------+
 
 Note that a single release request can create multiple tags in different
 repositories, triggering that second stage in multiple repositories.
 
-Jobs in step 2 need information from the release request (like series name,
-or whether to upload to pypi). We use metadata in the git tag itself to pass
-that information: the "tag" job in step 1 records the information in the tag,
-and the jobs in step 2 retrieve that information directly from the tag.
+Jobs in the release pipeline need information from the release request
+(like series name, or whether to upload to pypi). We use metadata in the
+git tag itself to pass that information: the "tag" job in step 1 records
+the information in the tag, and the jobs in step 2 retrieve that information
+directly from the tag.
 
 
 Checklist before approving a release
