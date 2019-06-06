@@ -6,3 +6,8 @@ team: winstackers
 type: library
 repository-settings:
   openstack/os-win: {}
+releases:
+  - projects:
+      - hash: 75ac0ac15a3f1d238c5ae233485dd4cbc481a76b
+        repo: openstack/os-win
+    version: 4.3.0
