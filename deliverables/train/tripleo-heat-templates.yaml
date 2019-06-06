@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-heat-templates: {}
+releases:
+  - projects:
+      - hash: dee66d8983d0bc7c75c2ff40a110b2feed910147
+        repo: openstack/tripleo-heat-templates
+    version: 11.0.0
