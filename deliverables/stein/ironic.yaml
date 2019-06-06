@@ -14,17 +14,23 @@ releases:
       - hash: d4d1a0132ab110f38ee3868c6625c2734a137019
         repo: openstack/ironic
     version: 12.1.0
+  - projects:
+      - hash: e48f1c4386595189678f99defb4351ad69c202a8
+        repo: openstack/ironic
+    version: 12.1.1
 branches:
   - location: 12.1.0
     name: stable/stein
 cycle-highlights:
-  - 'Adds additional interfaces for management of hardware including Redfish BIOS
-    settings, explicit iPXE boot interface option, and additional hardware support.'
-  - 'Increased capabilities and options for operators including deployment templates,
-    improved parallel conductor workers and disk erasure processes, deployed node
-    protection and descriptions, and use of local HTTP(S) servers for serving images.'
-  - 'Improved options for standalone users to request allocations of bare metal nodes
-    and submit configuration data as opposed to pre-formed configuration drives. Additionally
-    allows for ironic to be leveraged using JSON-RPC as opposed to an AMQP message
-    bus.'
+  - 'Adds additional interfaces for management of hardware including
+    Redfish BIOS settings, explicit iPXE boot interface option, and
+    additional hardware support.'
+  - 'Increased capabilities and options for operators including deployment
+    templates, improved parallel conductor workers and disk erasure
+    processes, deployed node protection and descriptions, and use of
+    local HTTP(S) servers for serving images.'
+  - 'Improved options for standalone users to request allocations of
+    bare metal nodes and submit configuration data as opposed to pre-formed
+    configuration drives. Additionally allows for ironic to be leveraged
+    using JSON-RPC as opposed to an AMQP message bus.'
 release-notes: https://docs.openstack.org/releasenotes/ironic/stein.html
