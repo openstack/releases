@@ -3,5 +3,10 @@ launchpad: horizon
 release-model: cycle-with-rc
 team: horizon
 type: service
+releases:
+  - version: 16.0.0.0b1
+    projects:
+      - hash: 4c203b10c874db2b88b8d283938a1acd6ccc3fa8
+        repo: openstack/horizon
 repository-settings:
   openstack/horizon: {}
