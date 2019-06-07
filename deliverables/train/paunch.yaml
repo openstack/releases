@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/paunch: {}
+releases:
+  - projects:
+      - hash: ecc2047b2ec5eaf39cce119abe1678ac19139d79
+        repo: openstack/paunch
+    version: 5.0.0
