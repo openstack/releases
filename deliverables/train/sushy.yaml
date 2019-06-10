@@ -5,3 +5,8 @@ type: library
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/sushy: {}
+releases:
+  - projects:
+      - hash: 6f4539d1b00d31b6f831fc8e23278261c0fdd55e
+        repo: openstack/sushy
+    version: 1.9.0
