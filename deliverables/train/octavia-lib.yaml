@@ -7,3 +7,8 @@ team: octavia
 type: library
 repository-settings:
   openstack/octavia-lib: {}
+releases:
+  - projects:
+      - hash: 307b15e2a3755c70a0e6062bad3bdb79e687c3d7
+        repo: openstack/octavia-lib
+    version: 1.2.0
