@@ -89,14 +89,18 @@ cycle:
   name: R-7
   start: '2019-08-26'
   x-project:
+    - u-tc-nominations
     - t-extra-atcs
   project-specific:
     - t-oslo-feature-freeze
+    - u-ptl-nominations
 - end: '2019-09-06'
   name: R-6
   start: '2019-09-02'
   x-project:
     - t-final-lib
+    - u-election-email-deadline
+    - u-tc-campaigning
 - end: '2019-09-13'
   name: R-5
   start: '2019-09-09'
@@ -108,8 +112,10 @@ cycle:
     - t-rf
     - t-goals-complete
     - t-cycle-highlights
+    - u-tc-polling
   project-specific:
     - t-cinder-py37-ci-working
+    - u-ptl-poll
 - end: '2019-09-20'
   name: R-4
   start: '2019-09-16'
