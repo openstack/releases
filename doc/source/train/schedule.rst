@@ -4,7 +4,7 @@ Train Release Schedule
 
 15 April 2019 - 16 October 2019 (27 weeks)
 
-.. datatemplate::
+.. datatemplate:yaml::
    :source: schedule.yaml
    :template: schedule_table.tmpl
 
