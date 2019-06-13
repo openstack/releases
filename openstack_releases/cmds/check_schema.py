@@ -99,7 +99,7 @@ def main():
     errors = []
 
     errors.extend(
-        validate_one_file('deliverables/series_status.yaml',
+        validate_one_file('data/series_status.yaml',
                           _SERIES_SCHEMA, args.debug)
     )
 
