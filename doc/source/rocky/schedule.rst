@@ -4,7 +4,7 @@
 
 1 March 2018 - 29 August 2018 (26 weeks)
 
-.. datatemplate::
+.. datatemplate:yaml::
    :source: schedule.yaml
    :template: schedule_table.tmpl
 

@@ -4,7 +4,7 @@
 
 20 February 2017 - 1 September 2017 (27 weeks)
 
-.. datatemplate::
+.. datatemplate:yaml::
    :source: schedule.yaml
    :template: schedule_table.tmpl
 
