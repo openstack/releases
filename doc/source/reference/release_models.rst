@@ -117,6 +117,22 @@ release until OpenStack itself is released.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
+.. _cycle-automatic:
+
+cycle-automatic
+===============
+
+The "cycle-automatic" model is used by specific technical deliverables
+that just need to be automatically released once (and only once) at the
+end of a cycle. Those do not need a stable branch created. This may be
+applied only to "tempest-plugin" or "other" deliverables.
+
+* "cycle-automatic" deliverables will be automatically released by the
+  release team once at the end of a cycle, using the current HEAD of the
+  repository. No stable branch will be automatically created.
+* Release tags for deliverables using this model are reviewed and
+  applied by the Release Management team.
+
 .. _independent:
 
 independent

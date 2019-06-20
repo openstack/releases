@@ -266,6 +266,9 @@ RC1 week
    someone from the team can -1 the patch to have it held, or update
    that patch with a different commit SHA.
 
+#. Generate release requests (without ``stable/$series`` branch creation)
+   for all cycle-automatic deliverables.
+
 #. By the end of the week, ideally we would want a +1 from the PTL and/or
    release liaison to indicate approval. However we will consider the absence
    of -1 or otherwise negative feedback as an indicator that the automatically

@@ -30,7 +30,7 @@ properties:
     type: "boolean"
   release-model:
     type: "string"
-    enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing", "untagged", "cycle-with-rc"]
+    enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing", "untagged", "cycle-with-rc", "cycle-automatic"]
   type:
     type: "string"
     enum: ["horizon-plugin", "library", "client-library", "service", "tempest-plugin", "other"]
