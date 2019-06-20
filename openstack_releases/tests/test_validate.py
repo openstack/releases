@@ -3248,16 +3248,12 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_no_rc(self):
+    def test_missing_rc(self):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
         ---
         team: Release Management
         release-model: cycle-with-rc
         releases:
-          - version: 1.5.1
-            projects:
-              - repo: openstack/automaton
-                hash: be2885f544637e6ee6139df7dc7bf937925804dd
           - version: 1.5.2
             projects:
               - repo: openstack/automaton
@@ -3275,7 +3271,7 @@ class TestValidatePreReleaseProgression(base.BaseTestCase):
         )
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
-        self.assertEqual(0, len(self.ctx.errors))
+        self.assertEqual(1, len(self.ctx.errors))
 
     def test_final_follows_rc(self):
         deliverable_data = yamlutils.loads(textwrap.dedent('''
