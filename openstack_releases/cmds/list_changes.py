@@ -260,7 +260,8 @@ def main():
         False,
     )
 
-    liaison_data = yaml.load("../../data/release_liaisons.yaml", "r")
+    with open("./data/release_liaisons.yaml", "r") as f:
+        liaison_data = yaml.safe_load(f)
 
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
@@ -291,7 +292,7 @@ def main():
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
                 for liaison in liaison_data.get(team.name.lower(), []):
-                    print('Liaison: %(name)s (%(irc)s)' % liaison)
+                    print('  Liaison: %(name)s (%(irc)s)' % liaison)
                 team_deliv = team.deliverables.get(deliv.name)
                 if team_deliv:
                     print('found deliverable %s' % deliv.name)
