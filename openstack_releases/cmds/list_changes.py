@@ -29,6 +29,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import yaml
 
 from openstack_governance import governance
 import pyfiglet
@@ -39,7 +40,6 @@ from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import hound
 from openstack_releases import release_notes
-from openstack_releases import wiki
 from openstack_releases import yamlutils
 
 
@@ -260,7 +260,7 @@ def main():
         False,
     )
 
-    liaison_data = wiki.get_liaison_data()
+    liaison_data = yaml.load("../../data/release_liaisons.yaml", "r")
 
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
@@ -290,12 +290,8 @@ def main():
             if team:
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
-                team_liaison = liaison_data.get(
-                    team.name.lower(),
-                    {'Liaison': 'None', 'IRC Handle': ''},
-                )
-                print('  Liaison: %(Liaison)s (%(IRC Handle)s)\n' %
-                      team_liaison)
+                for liaison in liaison_data.get(team.name.lower(), []):
+                    print('Liaison: %(name)s (%(irc)s)' % liaison)
                 team_deliv = team.deliverables.get(deliv.name)
                 if team_deliv:
                     print('found deliverable %s' % deliv.name)

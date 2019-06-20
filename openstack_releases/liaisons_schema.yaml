@@ -1,0 +1,23 @@
+---
+$schema: "http://json-schema.org/schema#"
+$id: "https://opendev.org/openstack/releases/src/branch/master/README.rst"
+
+# Do not allow any properties not defined here. This lets us catch
+# typos.
+
+type: "array"
+items:
+  type: "object"
+  name:
+    type: "object"
+    additionalProperties: false
+    required:
+      - irc
+      - email
+    properties:
+        name:
+           type: "string"
+        irc:
+           type: "string"
+        email:
+           type: "string"
