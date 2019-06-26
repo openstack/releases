@@ -1,7 +1,20 @@
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+
 import datetime
 import json
 import os
 import os.path
+import subprocess
 
 from docutils.io import FileOutput
 from docutils import nodes
@@ -15,11 +28,12 @@ LOG = logging.getLogger(__name__)
 
 class PendingICS(nodes.Element):
 
-    def __init__(self, data_source, series_name, data):
+    def __init__(self, data_source, series_name, data, last_update):
         super(PendingICS, self).__init__()
         self._data_source = data_source
         self._series_name = series_name
         self._data = data
+        self.last_update = last_update
 
 
 class ICS(rst.Directive):
@@ -29,12 +43,30 @@ class ICS(rst.Directive):
         'name': rst.directives.unchanged,
     }
     has_content = False
+    last_update = ''
 
     def _load_data(self, env, data_source):
         rel_filename, filename = env.relfn2path(data_source)
+
+        # Attempt to get the last update time for our timestamp
+        try:
+            last_update = subprocess.check_output(
+                [
+                    'git', 'log', '-n1', '--format=%ad',
+                    '--date=format:%Y-%m-%d %H:%M:%S',
+                    '--', filename,
+                ]
+            ).decode('utf-8').strip()
+            self.last_update = datetime.datetime.strptime(
+                last_update, '%Y-%m-%d %H:%M:%S')
+            LOG.info('[ics] Last update of %s was %s',
+                     rel_filename, last_update)
+        except subprocess.CalledProcessError:
+            self.last_update = datetime.datetime.utcnow()
+
         if data_source.endswith('.yaml'):
             with open(filename, 'r') as f:
-                return yaml.load(f)
+                return yaml.safe_load(f)
         elif data_source.endswith('.json'):
             with open(filename, 'r') as f:
                 return json.load(f)
@@ -65,13 +97,14 @@ class ICS(rst.Directive):
 
         data = self._load_data(env, data_source)
 
-        node = PendingICS(data_source, series_name, data)
+        node = PendingICS(data_source, series_name, data, self.last_update)
         node.document = self.state.document
         return [node]
 
 
 _global_calendar = icalendar.Calendar()
 _global_calendar.add('prodid', '-//releases.openstack.org//EN')
+_global_calendar.add('version', '2.0')
 _global_calendar.add('X-WR-CALNAME', 'OpenStack Release Schedule')
 
 
@@ -127,6 +160,9 @@ def doctree_resolved(app, doctree, docname):
                                  week['name'],
                                  summary_text),
             )
+
+            event.add('dtstamp', node.last_update)
+            event.add('uid', '%s-%s' % (series_name, week.get('name')))
 
             start = datetime.datetime.strptime(week['start'], '%Y-%m-%d')
             event.add('dtstart', icalendar.vDate(start.date()))
