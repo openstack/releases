@@ -283,8 +283,12 @@ def validate_pre_release_progression(deliv, context):
         return
 
     releases = deliv.releases
-    if len(releases) < 2:
-        print('this rule only applies to the final release in a series')
+
+    # Milestone-based deliverables cannot directly do a final release
+    if len(releases) == 1:
+        if not releases[-1].is_pre_release_version:
+            context.error('A RC release must be present before final release '
+                          'for deliverables following a milestone-based cycle')
         return
 
     previous_release = releases[-2]
