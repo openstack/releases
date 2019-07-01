@@ -2,6 +2,14 @@
 launchpad: tripleo
 team: tripleo
 type: other
-stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: 3b4e2e64e45bfc8363dbb40ba68c52b8fa9b080a
+        repo: openstack/ansible-role-tripleo-modify-image
+    version: 1.0.0
+  - projects:
+      - hash: 1415b042f5e5b0728cb9fabce0396dd7796bf0b2
+        repo: openstack/ansible-role-tripleo-modify-image
+    version: 1.1.0
 repository-settings:
   openstack/ansible-role-tripleo-modify-image: {}
