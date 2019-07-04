@@ -69,6 +69,12 @@ def main():
         '--csvfile',
         help='Save results (same as when --verbose) to CSV file',
     )
+    parser.add_argument(
+        '--show-tags',
+        action='store_true',
+        default=False,
+        help='Show tags associated with deliverable (in verbose mode)',
+    )
     model = parser.add_mutually_exclusive_group()
     model.add_argument(
         '--model',
@@ -151,7 +157,8 @@ def main():
         verbose_template += ' {type:15}'
     if not args.model:
         verbose_template += ' {model:15}'
-    verbose_template += ' {tags}'
+    if args.show_tags:
+        verbose_template += ' {tags}'
 
     if args.forced:
         args.all_releases = True
