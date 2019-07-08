@@ -31,5 +31,4 @@ def dumps(obj):
 def loads(blob):
     """Load a yaml blob and retain key ordering."""
     yaml = ruamel.yaml.YAML()
-    yaml.version = '1.1'
     return yaml.load(blob)
