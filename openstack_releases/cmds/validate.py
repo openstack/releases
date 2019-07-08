@@ -1437,6 +1437,10 @@ def validate_stable_branches(deliv, context):
 
     branch_mode = deliv.stable_branch_type
 
+    if deliv.releases and deliv.releases[-1].is_eol:
+        print('rule does not apply to end-of-life repos, skipping')
+        return
+
     known_series = sorted(list(
         d for d in os.listdir('deliverables')
         if not d.startswith('_')
