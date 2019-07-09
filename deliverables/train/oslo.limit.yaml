@@ -1,0 +1,13 @@
+---
+include-pypi-link: yes
+launchpad: oslo.limit
+release-model: cycle-with-intermediary
+team: oslo
+type: library
+repository-settings:
+  openstack/oslo.limit: {}
+releases:
+  - projects:
+      - hash: 90acc274f7f944e4eab4de2a114253ea24c5e6af
+        repo: openstack/oslo.limit
+    version: 0.1.0
