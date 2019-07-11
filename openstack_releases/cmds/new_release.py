@@ -36,7 +36,7 @@ def get_deliverable_data(series, deliverable):
     deliverable_filename = 'deliverables/%s/%s.yaml' % (
         series, deliverable)
     with open(deliverable_filename, 'r', encoding='utf-8') as f:
-        return yamlutils.loads(f.read())
+        return yamlutils.loads(f)
 
 
 def increment_version(old_version, increment):
