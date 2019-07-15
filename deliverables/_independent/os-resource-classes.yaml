@@ -2,11 +2,15 @@
 storyboard: openstack/os-resource-classes
 team: placement
 type: library
-include-pypi-link: yes
+include-pypi-link: true
 releases:
   - version: 0.4.0
     projects:
       - repo: openstack/os-resource-classes
         hash: cda818464ec4bfc7f34279501fb4a890e900ae53
+  - version: 0.5.0
+    projects:
+      - repo: openstack/os-resource-classes
+        hash: 0dd643be96ebb51c7a120922cd164e64c8695cdd
 repository-settings:
   openstack/os-resource-classes: {}
