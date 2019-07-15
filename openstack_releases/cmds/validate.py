@@ -1437,6 +1437,11 @@ def validate_stable_branches(deliv, context):
 
     branch_mode = deliv.stable_branch_type
 
+    if branch_mode == 'none' and deliv.branches:
+        context.error('Deliverables with stable-branch-mode:none '
+                      'do not support stable branching.')
+        return
+
     if deliv.releases and deliv.releases[-1].is_eol:
         print('rule does not apply to end-of-life repos, skipping')
         return

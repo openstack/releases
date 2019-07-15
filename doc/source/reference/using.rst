@@ -408,6 +408,11 @@ The top level of a deliverable file is a mapping with keys:
     Stable branch names track upstream release names, rather than
     OpenStack series names.
 
+  ``none``
+    This mode indicates that the deliverable should never have stable
+    branches. This is used for specific deliverables like tempest
+    or patrole.
+
 ``cycle-highlights``
   A list of plain-text bullet points describing some of the top new
   features or changes you would like to point out for this release
