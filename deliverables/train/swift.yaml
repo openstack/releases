@@ -5,3 +5,8 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+releases:
+  - version: 2.22.0
+    projects:
+      - repo: openstack/swift
+        hash: a48ac28efe5c133b439ab0e525d315271bf370da
