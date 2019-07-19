@@ -15,6 +15,7 @@ from __future__ import print_function
 import argparse
 import csv
 import operator
+import requests
 
 import openstack_releases
 from openstack_releases import defaults
@@ -70,6 +71,12 @@ def main():
         help='Save results (same as when --verbose) to CSV file',
     )
     parser.add_argument(
+        '--show-dates',
+        action='store_true',
+        default=False,
+        help='Show last release date (in verbose mode)',
+    )
+    parser.add_argument(
         '--show-tags',
         action='store_true',
         default=False,
@@ -120,6 +127,11 @@ def main():
         help='limit the list to deliverables not released in the cycle',
     )
     grp.add_argument(
+        '--unreleased-since',
+        help=('limit the list to deliverables not released in the cycle '
+              'since a given YYYY-MM-DD date'),
+    )
+    grp.add_argument(
         '--missing-rc',
         action='store_true',
         help=('deliverables that do not have a release candidate, yet '
@@ -139,6 +151,8 @@ def main():
     args = parser.parse_args()
 
     series = args.series
+    GET_REFS_API = 'https://opendev.org/api/v1/repos/{}/git/{}'
+    GET_COMMIT_API = 'https://opendev.org/api/v1/repos/{}/git/commits/{}'
 
     if args.missing_rc:
         model = 'cycle-with-rc'
@@ -150,9 +164,14 @@ def main():
         model = args.model
         version_ending = None
 
+    if args.unreleased_since:
+        args.show_dates = True
+
     verbose_template = '{name:30} {team:20}'
     if not args.unreleased:
-        verbose_template += ' {latest_release:15}'
+        verbose_template += ' {latest_release:12}'
+    if args.show_dates:
+        verbose_template += ' {last_release_date:11}'
     if len(args.type) != 1:
         verbose_template += ' {type:15}'
     if not args.model:
@@ -233,6 +252,36 @@ def main():
                     'b' in deliv.latest_release):
                 continue
 
+        release_date = {}
+        if (args.show_dates or args.unreleased_since) and deliv.is_released:
+            if args.all_releases:
+                versions = [a.version for a in deliv.releases]
+            else:
+                versions = [deliv.releases[-1].version]
+            for ver in versions:
+                ref = "refs/tags/{}".format(ver)
+                api = GET_REFS_API.format(deliv.repos[0], ref)
+                tagsjson = requests.get(api).json()
+
+                # Gitea returns either a single tag object, or a list of
+                # tag objects containing the provided string. So we need to
+                # filter the list for the exact match.
+                if isinstance(tagsjson, list):
+                    for release_tag in tagsjson:
+                        if release_tag['ref'] == ref:
+                            break
+                else:
+                    release_tag = tagsjson
+
+                release_sha = release_tag['object']['sha']
+                api = GET_COMMIT_API.format(deliv.repos[0], release_sha)
+                release_commit = requests.get(api).json()['commit']
+                release_date[ver] = release_commit['author']['date'][0:10]
+
+        if args.unreleased_since and deliv.is_released:
+            if release_date[ver] >= args.unreleased_since:
+                continue
+
         if csvfile:
             rel = (deliv.releases or [{}])[-1]
             for prj in rel.get('projects', [{}]):
@@ -252,6 +301,7 @@ def main():
                 print(verbose_template.format(
                     name=deliv.name,
                     latest_release=r.version,
+                    last_release_date=release_date.get(r.version, ''),
                     team=deliv.team,
                     type=deliv.type,
                     model=deliv.model,
@@ -261,6 +311,7 @@ def main():
             print(verbose_template.format(
                 name=deliv.name,
                 latest_release=deliv.latest_release or '',
+                last_release_date=release_date.get(deliv.latest_release, ''),
                 team=deliv.team,
                 type=deliv.type,
                 model=deliv.model,

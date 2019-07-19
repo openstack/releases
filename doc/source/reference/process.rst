@@ -45,7 +45,13 @@ Between Summit and Milestone-1
 Milestone-1
 ===========
 
-#. Generate release requests for all cycle-with-intermediary libraries
+#. Generate a list of all cycle-with-intermediary libraries which did not
+   release since the previous release. For this, run::
+
+     tox -e venv -- list-deliverables --unreleased \
+     --model cycle-with-intermediary --type client-library --type library
+
+   Generate release requests for all cycle-with-intermediary libraries
    which had changes, but did not release since the previous release.
    That patch will be used as a base to communicate with the team:
    if a team wants to wait for a specific patch to make it to the library,
@@ -71,15 +77,16 @@ Between Milestone-1 and Milestone-2
 #. Use the countdown emails to list which projects have not done any
    stable release yet, to encourage them to do so.
 
-#. Use the countdown emails to list which intermediary-released (or
-   independent) deliverables haven't done a release yet. Remind teams that
-   intermediary-released services that have not done a release by
-   milestone-2 should be switched to the cycle-with-rc model.
+#. Use the countdown emails to list which intermediary-released deliverables
+   haven't done a release yet. Remind teams that intermediary-released
+   deliverables that have not done a release by milestone-2 should be
+   switched to the cycle-with-rc model.
 
    For this, run::
 
-     tox -e venv -- list-deliverables --unreleased --model cycle-with-intermediary \
-     --type client-library --type horizon-plugin --type library --type other
+     tox -e venv -- list-deliverables --unreleased \
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
 
 #. Mention the upcoming MembershipFreeze deadline in the countdown emails.
 
@@ -98,7 +105,13 @@ Between Milestone-1 and Milestone-2
 Milestone-2
 ===========
 
-#. Generate release requests for all cycle-with-intermediary libraries
+#. Generate a list of all cycle-with-intermediary libraries which did not
+   release since the YYYY-MM-DD date of milestone-1. For this, run::
+
+     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
+     --model cycle-with-intermediary --type client-library --type library
+
+   Generate release requests for all cycle-with-intermediary libraries
    which had changes, but did not release since milestone-1.
    That patch will be used as a base to communicate with the team:
    if a team wants to wait for a specific patch to make it to the library,
@@ -131,10 +144,17 @@ Between Milestone-2 and Milestone-3
 #. Check with the election team about whether the countdown email
    needs to include any updates about the election schedule.
 
-#. For intermediary-released service projects that have not done a
-   release by milestone-2, propose a change from cycle-with-intermediary
-   to cycle-with-rc. Engage with PTLs and release liaisons to either
-   get an intermediary release, or a confirmation of the model switch.
+#. Generate a list of intermediary-released service deliverables that have
+   not done a release in this cycle yet. For this, use::
+
+     tox -e venv -- list-deliverables --unreleased \
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
+
+   For intermediary-released deliverables that have not done a release yet,
+   propose a change from cycle-with-intermediary to cycle-with-rc.
+   Engage with PTLs and release liaisons to either get an intermediary
+   release, or a confirmation of the model switch.
 
 #. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
@@ -167,7 +187,14 @@ Between Milestone-2 and Milestone-3
 Final Library Release (week before Milestone-3)
 ===============================================
 
-#. Generate release requests for all cycle-with-intermediary libraries
+#. Generate a list of all cycle-with-intermediary libraries (except client
+   libraries) which did not release since the YYYY-MM-DD date of milestone-2.
+   For this, run::
+
+     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
+     --model cycle-with-intermediary --type library
+
+   Generate release requests for all cycle-with-intermediary libraries
    (except client libraries) which had changes, but did not release since
    milestone-2. That patch will be used as a base to communicate with the
    team: if a team wants to wait for a specific patch to make it to the
@@ -196,7 +223,14 @@ Final Library Release (week before Milestone-3)
 Milestone-3
 ===========
 
-#. Generate release requests for all client libraries which had changes,
+#. Generate a list of all cycle-with-intermediary client libraries which
+   did not release since the YYYY-MM-DD date of milestone-2.
+   For this, run::
+
+     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
+     --model cycle-with-intermediary --type client-library
+
+   Generate release requests for all client libraries which had changes,
    but did not release since milestone-2. That patch will be used as a base
    to communicate with the team: if a team wants to wait for a specific patch
    to make it to the library, someone from the team can -1 the patch to have
@@ -245,10 +279,17 @@ Milestone-3
 Between Milestone-3 and RC1
 ===========================
 
-#. Warn cycle-with-intermediary services that have releases more than
-   2 months old that we will use their existing release as a point for
-   branching if they have not prepared a newer release by the final RC
-   deadline.
+#. List cycle-with-intermediary deliverables that have not been refreshed in
+   the last 2 months. For this, use the following command, with YYYY-MM-DD
+   being the day two nmonths ago::
+
+     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
+
+   Warn teams with deliverables that have releases more than 2 months old
+   that we will use their existing release as a point for branching if they
+   have not prepared a newer release by the final RC deadline.
 
 #. Propose ``stable/$series`` branch creation for all client and non-client
    libraries that had not requested it at freeze time. The following command
