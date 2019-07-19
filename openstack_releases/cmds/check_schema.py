@@ -12,10 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Verify that all deliverable files, series_status file,
-and release_liaisons file match the schema.
-
-"""
+"""Verify that all data files match the schema."""
 
 from __future__ import print_function
 
@@ -104,15 +101,16 @@ def main():
 
     errors = []
 
-    errors.extend(
-        validate_one_file('data/series_status.yaml',
-                          _SERIES_SCHEMA, args.debug)
-    )
+    if not args.input:
+        errors.extend(
+            validate_one_file('data/series_status.yaml',
+                              _SERIES_SCHEMA, args.debug)
+        )
 
-    errors.extend(
-        validate_one_file('data/release_liaisons.yaml',
-                          _LIAISONS_SCHEMA, args.debug)
-    )
+        errors.extend(
+            validate_one_file('data/release_liaisons.yaml',
+                              _LIAISONS_SCHEMA, args.debug)
+        )
 
     filenames = args.input or sorted(glob.glob('deliverables/*/*.yaml'))
 
