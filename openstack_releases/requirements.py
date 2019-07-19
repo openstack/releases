@@ -12,8 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Tools for working with requirements lists.
-"""
+"""Tools for working with requirements lists."""
 
 import logging
 import os.path
@@ -129,7 +128,7 @@ def parse_requirements(body):
 
     [sphinxext]
     sphinx<1.6.1,>=1.5.1
-    oslosphinx
+    openstackdocstheme
     sphinxcontrib.datatemplates
     icalendar
 
