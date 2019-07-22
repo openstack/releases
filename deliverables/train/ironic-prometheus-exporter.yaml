@@ -1,0 +1,12 @@
+---
+storyboard: openstack/ironic-prometheus-exporter
+release-model: cycle-with-intermediary
+team: ironic
+type: other
+repository-settings:
+  openstack/ironic-prometheus-exporter: {}
+releases:
+  - projects:
+      - hash: f7e9344fac562db8614ef2ac54dcb3e1a81cbaaf
+        repo: openstack/ironic-prometheus-exporter
+    version: 0.1.0
