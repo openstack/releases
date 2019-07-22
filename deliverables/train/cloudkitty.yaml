@@ -1,8 +1,13 @@
 ---
 include-pypi-link: yes
 launchpad: cloudkitty
-release-model: cycle-with-rc
+release-model: cycle-with-intermediary
 team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - projects:
+      - hash: 043c793ccca47cfabff18eebb5be28da634427c4
+        repo: openstack/cloudkitty
+    version: 10.0.0
