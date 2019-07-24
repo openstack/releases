@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ansible: {}
+releases:
+  - projects:
+      - hash: f56915eae7d5122706c9201fe6e7d261272fff07
+        repo: openstack/tripleo-ansible
+    version: 0.2.0
