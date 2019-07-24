@@ -23,6 +23,7 @@ def dumps(obj):
 
     stream = ruamel.yaml.compat.StringIO()
     yaml.explicit_start = True
+    yaml.indent(mapping=2, sequence=4, offset=2)
     yaml.dump(obj, stream)
     return stream.getvalue()
 
