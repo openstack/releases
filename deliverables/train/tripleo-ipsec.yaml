@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ipsec: {}
+releases:
+  - projects:
+      - hash: ffe104c743ea983fb268cf7ac8e868cc24b91475
+        repo: openstack/tripleo-ipsec
+    version: 9.2.0

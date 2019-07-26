@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/os-collect-config: {}
+releases:
+  - projects:
+      - hash: 8cda3f6cc05ddf714c0b449758b4cf1cc348777a
+        repo: openstack/os-collect-config
+    version: 10.4.0
