@@ -3,6 +3,11 @@ launchpad: patrole
 release-model: cycle-with-intermediary
 team: 'Quality Assurance'
 type: other
+releases:
+  - projects:
+      - repo: openstack/patrole
+        hash: cb29d64c1b9a0f0e7a39429c84a912ad81d1714d
+    version: 0.6.0
 repository-settings:
   openstack/patrole:
     pypi-name: Patrole
