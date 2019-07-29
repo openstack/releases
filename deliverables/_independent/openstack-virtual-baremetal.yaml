@@ -1,0 +1,22 @@
+---
+launchpad: tripleo
+team: tripleo
+type: other
+branches:
+  - name: stable/1.0
+    location: '1.0'
+releases:
+  - projects:
+      - hash: 1e98fb2d851e94983c76a8ef13e491cb80d50eef
+        repo: openstack/openstack-virtual-baremetal
+    version: 0.0.1
+  - projects:
+      - hash: e8d820ae812d94dc54148d9575ac063a4d07ff5d
+        repo: openstack/openstack-virtual-baremetal
+    version: '1.0'
+  - projects:
+      - hash: abc95e8351300379974bbf003ccb6b0c686d37dc
+        repo: openstack/openstack-virtual-baremetal
+    version: 1.0.1
+repository-settings:
+  openstack/openstack-virtual-baremetal: {}
