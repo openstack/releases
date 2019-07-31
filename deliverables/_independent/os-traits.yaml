@@ -2,7 +2,7 @@
 storyboard: openstack/os-traits
 team: placement
 type: library
-include-pypi-link: yes
+include-pypi-link: true
 releases:
   - version: 0.1.0
     projects:
@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/os-traits
         hash: 74f8a3fe097bfde1cae3c58c2d8bf6f92ae192ba
+  - version: 0.16.0
+    projects:
+      - repo: openstack/os-traits
+        hash: 5a477b8aed198fbece7cc508ee15ad46fd9e1437
 repository-settings:
   openstack/os-traits: {}
