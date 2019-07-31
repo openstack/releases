@@ -3,7 +3,7 @@ launchpad: ironic-lib
 team: ironic
 type: library
 release-model: cycle-with-intermediary
-include-pypi-link: yes
+include-pypi-link: true
 repository-settings:
   openstack/ironic-lib: {}
 releases:
@@ -19,3 +19,7 @@ releases:
       - hash: 04d9ebf605c7788381c10eb9d4fbe6fd6f9a63b8
         repo: openstack/ironic-lib
     version: 2.18.0
+  - version: 2.19.0
+    projects:
+      - repo: openstack/ironic-lib
+        hash: cd51319528bb2333139c7cefb68e7e6e27df740a
