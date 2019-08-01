@@ -4,7 +4,7 @@ release-model: cycle-with-milestones
 team: designate
 release-notes: https://docs.openstack.org/releasenotes/designate/ocata.html
 type: service
-include-pypi-link: no
+include-pypi-link: false
 artifact-link-mode: tarball
 branches:
   - name: stable/ocata

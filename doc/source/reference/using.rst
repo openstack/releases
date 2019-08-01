@@ -296,9 +296,9 @@ The top level of a deliverable file is a mapping with keys:
   to its notes URL.
 
 ``include-pypi-link``
-  Either ``yes`` or ``no``, indicating whether the release
+  Either ``true`` or ``false``, indicating whether the release
   announcement should include the link to the package on
-  PyPI. Defaults to ``no``.
+  PyPI. Defaults to ``false``.
 
 ``release-model``
   Identify the release model used by the deliverable. See
