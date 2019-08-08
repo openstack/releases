@@ -2746,6 +2746,35 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
+    def test_branchless(self):
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/sahara-tests.yaml'
+        os.makedirs(series_a_dir)
+        deliverable_data = textwrap.dedent('''
+        ---
+        type: tempest-plugin
+        releases:
+          - version: 0.9.1
+            projects:
+              - repo: openstack/sahara-tests
+                hash: 1e016405f8dbdf265374700d2fb8f8e2a9460805
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_series_first(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
 
 class TestValidateSeriesFinal(base.BaseTestCase):
 

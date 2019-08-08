@@ -252,6 +252,10 @@ def validate_series_open(deliv, context):
 def validate_series_first(deliv, context):
     "The first release in a series needs to end with '.0'."
 
+    if deliv.type == 'tempest-plugin':
+        print('this rule does not apply to branchless tempest plugins')
+        return
+
     releases = deliv.releases
     if len(releases) != 1:
         # We only have to check this when the first release is being
