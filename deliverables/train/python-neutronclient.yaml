@@ -6,3 +6,8 @@ team: neutron
 type: client-library
 repository-settings:
   openstack/python-neutronclient: {}
+releases:
+  - version: 6.13.0
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 1a8fdf355de233ccbc7aa0beb588fb02d436aa5c
