@@ -77,17 +77,6 @@ Between Milestone-1 and Milestone-2
 #. Use the countdown emails to list which projects have not done any
    stable release yet, to encourage them to do so.
 
-#. Use the countdown emails to list which intermediary-released deliverables
-   haven't done a release yet. Remind teams that intermediary-released
-   deliverables that have not done a release by milestone-2 should be
-   switched to the cycle-with-rc model.
-
-   For this, run::
-
-     tox -e venv -- list-deliverables --unreleased \
-     --model cycle-with-intermediary \
-     --type horizon-plugin --type other --type service
-
 #. Mention the upcoming MembershipFreeze deadline in the countdown emails.
 
 #. Ahead of MembershipFreeze, run ``membership_freeze_test`` to check for
@@ -151,10 +140,19 @@ Between Milestone-2 and Milestone-3
      --model cycle-with-intermediary \
      --type horizon-plugin --type other --type service
 
-   For intermediary-released deliverables that have not done a release yet,
-   propose a change from cycle-with-intermediary to cycle-with-rc.
-   Engage with PTLs and release liaisons to either get an intermediary
-   release, or a confirmation of the model switch.
+   Intermediary-released deliverables that did release only once during
+   the last cycle, and have not done a release yet are good candidates to
+   switch to the cycle-with-rc model, which is much more suitable for
+   deliverables that are only released once per cycle.
+
+   Propose a release model change for all deliverables meeting that criteria.
+   PTLs and release liaisons may decide to:
+
+   - immediately release an intermediary release (and -1 the proposed change)
+   - confirm the release model change (+1 the proposed change)
+   - stay uncertain for this cycle of how many releases will be made, but
+     acknowledge that they need to do a release before RC1 (-1 the proposed
+     change)
 
 #. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
@@ -279,9 +277,18 @@ Milestone-3
 Between Milestone-3 and RC1
 ===========================
 
+#. List cycle-with-intermediary deliverables that have not been released yet::
+
+     tox -e venv -- list-deliverables --unreleased
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
+
+   Remind teams with such unreleased deliverables that they have until the RC1
+   deadline to produce a release for those.
+
 #. List cycle-with-intermediary deliverables that have not been refreshed in
    the last 2 months. For this, use the following command, with YYYY-MM-DD
-   being the day two nmonths ago::
+   being the day two months ago::
 
      tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
      --model cycle-with-intermediary \
@@ -300,10 +307,18 @@ Between Milestone-3 and RC1
 RC1 week
 ========
 
-#. Early in the week, generate RC1 release requests (including the
+#. Early in the week, generate release requests for all cycle-with-intermediary
+   deliverables that have not been released yet. You can list those using::
+
+     tox -e venv -- list-deliverables --unreleased
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
+
+#. At the same time, generate RC1 release requests (including the
    ``stable/$series`` branch creation) for all cycle-with-rc deliverables.
-   That patch will be used as a base to communicate with the team:
-   if a team wants to wait for a specific patch to make it to the RC,
+
+#. Those patches will be used as a base to communicate with the team:
+   if a team wants to wait for a specific patch to make it to the release,
    someone from the team can -1 the patch to have it held, or update
    that patch with a different commit SHA.
 
