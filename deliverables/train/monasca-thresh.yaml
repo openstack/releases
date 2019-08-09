@@ -7,3 +7,8 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-thresh: {}
+releases:
+  - projects:
+      - hash: b1409c391f72826baac7951a753a58672874d88f
+        repo: openstack/monasca-thresh
+    version: 2.5.0
