@@ -5,3 +5,8 @@ team: vitrage
 type: service
 repository-settings:
   openstack/vitrage: {}
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/vitrage
+        hash: f11565a317fb9976cb1370b001303c968f712686
