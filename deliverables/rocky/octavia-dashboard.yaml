@@ -38,8 +38,13 @@ releases:
       - hash: 7ebcf9936fb8d1cc472d0cf81979c49356098cb2
         repo: openstack/octavia-dashboard
     version: 2.0.0
+  - version: 2.0.1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: da110314aff384180e4a9abd9c69ca5eb0eabc54
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - 'Octavia dashboard details pages now automatically refresh the load balancer status.'
+  - Octavia dashboard details pages now automatically refresh the load
+    balancer status.
