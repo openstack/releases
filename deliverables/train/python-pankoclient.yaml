@@ -7,3 +7,9 @@ type: client-library
 repository-settings:
   openstack/python-pankoclient:
     tarball-base: pankoclient
+releases:
+  - version: 0.7.0
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 28b55860a2e71fe1fd015d868d64500d3b36470c
+        tarball-base: pankoclient
