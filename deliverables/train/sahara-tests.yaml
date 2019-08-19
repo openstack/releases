@@ -4,5 +4,11 @@ type: tempest-plugin
 storyboard: 940
 release-model: cycle-automatic
 release-type: python-pypi
+release-notes: https://docs.openstack.org/releasenotes/sahara-tests/index.html
+releases:
+  - version: 0.9.1
+    projects:
+      - repo: openstack/sahara-tests
+        hash: a225824efc44271e36bc1242d9160a153537c722
 repository-settings:
   openstack/sahara-tests: {}
