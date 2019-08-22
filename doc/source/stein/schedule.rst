@@ -317,7 +317,7 @@ Train PTL self-nomination
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Project team lead candidates for the Stein cycle should announce their
-candidacy during this week.  Refer to the `Election Site`_ for exact deatls.
+candidacy during this week.  Refer to the `Election Site`_ for exact details.
 
 .. _t-ptl-poll:
 
@@ -325,7 +325,7 @@ Train PTL Election Polling Begins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Election week for Project team leads (where an election must be held to
-determine the winner).  Refer to the `Election Site`_ for exact deatls.
+determine the winner).  Refer to the `Election Site`_ for exact details.
 
 .. _Election site: https://governance.openstack.org/election/
 

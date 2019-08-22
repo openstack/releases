@@ -254,7 +254,7 @@ PTL Elections
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Project team lead candidates for the 'U' cycle should announce their
-candidacy during this week.  Refer to the `Election Site`_ for exact deatls.
+candidacy during this week.  Refer to the `Election Site`_ for exact details.
 
 .. _u-ptl-poll:
 
@@ -262,7 +262,7 @@ candidacy during this week.  Refer to the `Election Site`_ for exact deatls.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Election week for Project team leads (where an election must be held to
-determine the winner).  Refer to the `Election Site`_ for exact deatls.
+determine the winner).  Refer to the `Election Site`_ for exact details.
 
 .. _Election site: https://governance.openstack.org/election/
 
