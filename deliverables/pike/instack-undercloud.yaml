@@ -94,6 +94,11 @@ releases:
       - hash: 63cc74e4bcdab117d353b54dc40ea27954e4e3bb
         repo: openstack/instack-undercloud
     version: pike-em
+  - projects:
+      - hash: bb49f96f4c8c7cd6cebcc9c06d67dbfeaf8cf261
+        repo: openstack/instack-undercloud
+    version: pike-eol
+
 team: tripleo
 type: other
 release-notes: https://docs.openstack.org/releasenotes/instack-undercloud/pike.html
