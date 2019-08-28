@@ -1,9 +1,14 @@
 ---
 include-pypi-link: false
 launchpad: kuryr
-release-model: cycle-automatic
+release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
   openstack/kuryr-tempest-plugin: {}
 team: kuryr
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack/kuryr-tempest-plugin
+        hash: 2194649ab242a3e99fd2839d5bcf8ed0d081b3f1
 type: tempest-plugin
