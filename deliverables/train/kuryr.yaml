@@ -8,6 +8,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: b10acd57eae5ba95fce4beef8ca155041691e8d8
+  - version: 1.1.0
+    projects:
+      - repo: openstack/kuryr
+        hash: 50da6c1b30cb747a64602924d3d139185c92ff95
 repository-settings:
   openstack/kuryr:
     tarball-base: kuryr-lib
+branches:
+  - location: 1.1.0
+    name: stable/train
