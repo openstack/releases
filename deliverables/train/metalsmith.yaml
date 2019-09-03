@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 6f316bbad4e8a82ab1d77e0ee2fcc7fbe7f0c476
+  - version: 0.15.0
+    projects:
+      - repo: openstack/metalsmith
+        hash: a77cfb2ce66f965809bb4dd43eb0b03b5787ff6e
+branches:
+  - location: 0.15.0
+    name: stable/train
