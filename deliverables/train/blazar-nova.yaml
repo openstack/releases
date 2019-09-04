@@ -6,3 +6,11 @@ type: library
 release-type: python-pypi
 repository-settings:
   openstack/blazar-nova: {}
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 32350eb304768a59ce597f498eff92783cb575ac
+branches:
+  - location: 1.3.0
+    name: stable/train
