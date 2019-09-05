@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 1.4.0
+    name: stable/train
 include-pypi-link: true
 storyboard: openstack/octavia-lib
 release-model: cycle-with-intermediary
@@ -20,3 +23,7 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: 43e957f9fe42505b421c882b6706d74132aebd7d
+  - version: 1.4.0
+    projects:
+      - repo: openstack/octavia-lib
+        hash: cec8b194211b5f6dc6c927210b082e8a4282a9d2
