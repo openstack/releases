@@ -10,3 +10,10 @@ releases:
       - hash: 6f4539d1b00d31b6f831fc8e23278261c0fdd55e
         repo: openstack/sushy
     version: 1.9.0
+  - version: 2.0.0
+    projects:
+      - repo: openstack/sushy
+        hash: eaa2cd77686da97f1cfeab1b887b4cbf2791116d
+branches:
+  - name: stable/train
+    location: 2.0.0
