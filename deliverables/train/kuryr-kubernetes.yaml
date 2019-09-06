@@ -3,5 +3,14 @@ launchpad: kuryr-kubernetes
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+cycle-highlights:
+  - |
+    Stabilization of the support for Kubernetes Network Policy.
+  - |
+    Kuryr CNI plugin is now rewriten to golang to make deploying it easier.
+  - |
+    Multiple enhancements made in support for DPDK and SR-IOV.
+  - |
+    Support for tagging all the Neutron and Octavia resources created by Kuryr.
 repository-settings:
   openstack/kuryr-kubernetes: {}
