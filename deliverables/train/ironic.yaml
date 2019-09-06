@@ -10,3 +10,11 @@ releases:
       - hash: 7a718ee4de6bc04aa6a63c99899a2d6e4e130bb7
         repo: openstack/ironic
     version: 12.2.0
+cycle-highlights:
+  - Basic support for building `software RAID
+    <https://docs.openstack.org/ironic/latest/admin/raid.html#software-raid>`_
+  - Virtual media boot for the Redfish hardware type.
+  - Improvements in the sensor data collection.
+  - 'New tool for building ramdisk images: `ironic-python-agent-builder
+    <https://docs.openstack.org/ironic-python-agent-builder/>`_'
+  - Numerous fixes in the Ansible deploy interface.
