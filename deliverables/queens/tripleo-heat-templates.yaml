@@ -56,7 +56,7 @@ releases:
     version: 8.0.6
   - diff-start: 8.0.5
     projects:
-      - comment: 'procedural tag to handle release job failure'
+      - comment: procedural tag to handle release job failure
         hash: 8537f0230216097a3b6760f0d4636ba6854dcb6b
         repo: openstack/tripleo-heat-templates
     version: 8.0.7
@@ -80,6 +80,10 @@ releases:
       - hash: f0082dd5d93007e30575c0d046f9e31f26f52140
         repo: openstack/tripleo-heat-templates
     version: 8.4.0
+  - version: 8.4.1
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 80a67e6c8f81888bf01782e2746e4bb9ede5a1d0
 repository-settings:
   openstack/tripleo-heat-templates: {}
 branches:
