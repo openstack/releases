@@ -31,6 +31,10 @@ releases:
       - hash: 210c0d662ec9c748629cfaf7a1e1d451f84bc894
         repo: openstack/paunch
     version: 4.5.0
+  - version: 4.5.1
+    projects:
+      - repo: openstack/paunch
+        hash: 26eb9c342d96f2558efd686d01d93d8606d2dffc
 branches:
   - location: 4.4.0
     name: stable/stein
