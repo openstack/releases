@@ -7,7 +7,11 @@ type: library
 repository-settings:
   openstack/tosca-parser: {}
 releases:
-  - version: 1.5.0
-    projects:
+  - projects:
       - repo: openstack/tosca-parser
         hash: 328cec62b29dfca599f530e653d1eaa78c7a36ec
+    version: 1.5.0
+  - projects:
+      - repo: openstack/tosca-parser
+        hash: 8a18ca8c73e8e43d54c4c89c01053d7c9159885e
+    version: 1.6.0
