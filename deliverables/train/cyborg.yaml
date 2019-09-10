@@ -6,3 +6,20 @@ type: service
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - |
+    Got Cyborg-Nova interaction spec merged. This is the blueprint for
+    the end goal, i.e., launching and managing VMs with accelerators.
+    <https://github.com/openstack/nova-specs/blob/master/specs/train/approved/nova-cyborg-interaction.rst>
+  - |
+    Updated Cyborg APIs to version 2, which includes support for Nova
+    interaction.  Using v2 APIs, end users can create/delete device profiles
+    and create/bind/unbind/delete accelerator requests (ARQs).
+  - |
+    Added new Cyborg driver (Ascend) and improved existing drivers
+    (Intel FPGA, GPU).
+  - |
+    Created tempest CI framework that can be used with a fake driver today and
+    with real hardware in the future.
+  - |
+    Enabled Python 3 testing and fixed issues in support of Train goals.
