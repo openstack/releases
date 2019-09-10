@@ -11,3 +11,10 @@ releases:
       - hash: a22874bd585bac07a613bd6a2a14dc3fa487dcc3
         repo: openstack/python-ironicclient
     version: 2.8.0
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 2e25b23539b882ad10074242e924208d65d95b97
+branches:
+  - location: 3.0.0
+    name: stable/train
