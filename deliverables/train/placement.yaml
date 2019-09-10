@@ -7,3 +7,21 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+cycle-highlights:
+  - |
+    Train is the first cycle where Placement is available solely from its own
+    project and must be installed separately from Nova.
+  - |
+    Extensive benchmarking and profiling have led to massive performance
+    enhancements in the placement service, especially in environments with
+    large numbers of resource providers and high concurrency.
+  - |
+    Added support for forbidden aggregates which allows groups of resource
+    providers to only be used for specific purposes, such as reserving a group
+    of compute nodes for licensed workloads.
+  - |
+    Added a suite of features which, combined, enable targeting candidate
+    providers that have complex trees modeling NUMA layouts, multiple devices,
+    and networks where affinity between and grouping among the members of the
+    tree are required. These features will help to enable NFV and other high
+    performance workloads in the cloud.
