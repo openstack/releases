@@ -32,6 +32,11 @@ releases:
       - hash: 4d95199728f152a29b2cf2081183398dd419bb31
         repo: openstack/os-vif
     version: 1.15.1
+  - version: 1.15.2
+    projects:
+      - hash: ec9d5430300c908ea9a1c64151eee7af522a44e7
+        repo: openstack/os-vif
+        tarball-base: os_vif
 branches:
   - location: 1.15.1
     name: stable/stein
