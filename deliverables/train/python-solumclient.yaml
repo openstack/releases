@@ -8,5 +8,8 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: b3e7f9dd4edf032074b5f67a3a92a6c8cfafa8fa
+branches:
+  - location: 2.9.0
+    name: stable/train
 repository-settings:
   openstack/python-solumclient: {}
