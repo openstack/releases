@@ -423,9 +423,6 @@ def main():
             if found:
                 break
 
-        repo_info = deliverable_info['repository-settings'][repo]
-        tarball_base = repo_info.get('tarball-base')
-
         if is_retagging or (
                 is_em and deliverable_info['release-model'] != 'untagged'):
             # Always use the last tagged hash, which should be coming
@@ -456,8 +453,6 @@ def main():
                 'hash': sha,
                 'comment': comment,
             }
-            if tarball_base:
-                new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
         elif is_eol or is_em:
@@ -470,8 +465,6 @@ def main():
                 'repo': repo,
                 'hash': sha,
             }
-            if tarball_base:
-                new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
         elif previous_sha != sha or force_tag:
@@ -482,8 +475,6 @@ def main():
                 'repo': repo,
                 'hash': sha,
             }
-            if tarball_base:
-                new_project['tarball-base'] = tarball_base
             projects.append(new_project)
 
         else:
