@@ -34,6 +34,10 @@ releases:
       - hash: fa51726240000662058a3f3739a54d2a0956dc09
         repo: openstack/puppet-tripleo
     version: 10.5.0
+  - version: 10.5.1
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: bbcd189cf019533e545c3746e8d292ec0f0b046e
 branches:
   - location: 10.4.0
     name: stable/stein
