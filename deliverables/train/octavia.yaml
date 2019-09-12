@@ -7,3 +7,12 @@ team: octavia
 type: service
 repository-settings:
   openstack/octavia: {}
+cycle-highlights:
+  - 'An Access Control List (ACL) can now be applied to the load balancer
+    listener. Each port can have a list of allowed source addresses.'
+  - 'Octavia now supports Amphora log offloading. Operators can define syslog
+    targets for the Amphora administrative logs and for the tenant
+    load balancer connection logs.'
+  - 'Amphorae can now be booted using Cinder volumes.'
+  - 'The Amphora images have been optimized to reduce the image size and
+    memory consumption.'
