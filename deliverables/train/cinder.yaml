@@ -3,5 +3,14 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - 'A number of drivers have added support for newer features
+    like multi-attach and consistency groups.'
+  - 'When uploading qcow2 images to Glance the data can now be
+    compressed.'
+  - 'Team focused on getting numerous bug fixes and usability
+    improvements in place.'
+  - 'Cinder now has upgrade checks that can be run to check for
+    possible compatibility issues when upgrading to Train.'
 repository-settings:
   openstack/cinder: {}
