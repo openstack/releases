@@ -5,3 +5,8 @@ team: karbor
 type: service
 repository-settings:
   openstack/karbor: {}
+cycle-highlights:
+  - Added events notifications for plan, checkpoint, restore, scheduled
+    and trigger operations.
+  - Allow users backup image boot servers with the new added data which
+    is located on root disk.
