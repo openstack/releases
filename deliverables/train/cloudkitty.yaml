@@ -6,6 +6,18 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+cycle-highlights:
+  - 'A v2 API, along with five new endpoints has been introduced.
+     It is marked as ``EXPERIMENTAL`` for now. Its endpoints support timezones,
+     and aim at being more generic and efficient than v1 endpoints.'
+  - 'A Prometheus scope fetcher has been added. It allows dynamic scope
+     discovery from Prometheus and is intended to be used with the Prometheus
+     collector.'
+  - 'Fault-tolerance and performance of the processor has been improved.
+     Each processor does now spawn several workers, which are restarted in
+     case of a failure.'
+  - 'A v2 storage driver for Elasticsearch has been introduced. It is marked as
+     ``EXPERIMENTAL`` for now.'
 releases:
   - projects:
       - hash: 043c793ccca47cfabff18eebb5be28da634427c4
