@@ -7,3 +7,8 @@ type: client-library
 repository-settings:
   openstack/python-searchlightclient:
     tarball-base: python-searchlightclient
+releases:
+  - version: 1.6.0
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: de228e7b38a23c548394880d4e3c74fe6924b0e9
