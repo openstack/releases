@@ -6,3 +6,11 @@ team: OpenStackAnsible
 type: other
 repository-settings:
   openstack/openstack-ansible: {}
+cycle-highlights:
+  - Services' venvs are using Python 3 by default
+  - Added murano support
+  - Projects become more re-usable outside of the full OpenStack-Ansible deployment
+  - Added uwsgi role to unify uWSGI service configuration across roles
+  - Fully migrated to systemd-journald from rsyslog
+  - Added support of the metal multinode deployments
+  - General reduction of technical debt
