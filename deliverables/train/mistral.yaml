@@ -8,3 +8,19 @@ repository-settings:
   openstack/mistral: {}
   openstack/mistral-dashboard: {}
   openstack/mistral-extra: {}
+cycle-highlights:
+  - improved performance by roughtly 40% (depends on a workflow)
+  - improved event notification mechanism
+  - finished leftovers on "advanced publishing"
+  - workflow execution report now contains "retry_count" for tasks
+  - completely ready for dropping py27
+  - lots of bugfixes and small improvements (including dashboard)
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: 8eb0951a3ff11e376b6ef64bab8bbd1b205cf6f4
+      - repo: openstack/mistral-dashboard
+        hash: ee3680a4d6c89f0ba2b64d7903f5a6bd48925c41
+      - repo: openstack/mistral-extra
+        hash: 30f737f54e67b903f7f1cd6a5104aca25de500fd
