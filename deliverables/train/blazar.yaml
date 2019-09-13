@@ -5,3 +5,11 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+cycle-highlights:
+  - |
+    Added support for a global request ID which can be used to track requests
+    across multiple OpenStack services.
+  - Added support for microversions to the v1 API.
+  - |
+    Completed the implementation and documentation of the floating IP
+    reservation feature introduced as a preview in Stein.
