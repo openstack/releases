@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 1.10.0
+    name: stable/train
 include-pypi-link: true
 storyboard: openstack/python-octaviaclient
 release-model: cycle-with-intermediary
@@ -11,3 +14,7 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: 680efaac9a82863fc7deae229baa6c05aed831f9
+  - version: 1.10.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 0e00a90c607940b9bb7a40dee170ab4a62a362f9
