@@ -5,3 +5,17 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - |
+    Manila share networks can now be created with multiple subnets,
+    which may be in different availability zones.
+  - |
+    NetApp backend added support for replication when DHSS=True.
+  - |
+    GlusterFS back end added support for extend/shrink for directory layout.
+  - |
+    Added Infortrend driver with support for NFS and CIFS shares.
+  - |
+    CephFS backend now supports IPv6 exports and access lists.
+  - |
+    Added Inspur Instorage driver with support for NFS and CIFS shares.
