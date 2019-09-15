@@ -3,6 +3,14 @@ launchpad: kuryr-kubernetes
 release-model: cycle-with-intermediary
 team: kuryr
 type: other
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: f009598f40f224cf59bb610d882534aa80ba3188
+branches:
+  - location: 1.1.0
+    name: stable/train
 cycle-highlights:
   - |
     Stabilization of the support for Kubernetes Network Policy.
