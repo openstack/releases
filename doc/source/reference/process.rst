@@ -14,13 +14,18 @@ Before PTG (after closing previous release)
 #. Update the link to the documentation on the newly opened cycle page
    to point to the right place on docs.openstack.org.
 
-#. Create the $series-relmgt-tracking etherpad using ``tools/list_weeks.py``.
+#. Create the $series-relmgt-tracking etherpad using the
+   ``make-tracking-etherpad`` command.
    For example::
 
-        tools/list_weeks.py t 2019-04-15 2019-10-16
+       tox -e venv -- make-tracking-pad ussuri
 
-#. Use ``init-series`` to create stub deliverable files based on the
-   contents of the previous release.
+   The output from this command can be pasted into a
+   ``$SERIES-relmgt-tracking`` etherpad. Set title formatting for the top
+   sections. Then highlight all listed weeks and set to **Heading 3** style.
+   Fill in the contents of one of the weeks with the typical items, then copy
+   and past that into each subsequent week to prepare for the rest of the
+   cycle.
 
 Between Summit and Milestone-1
 ==============================
@@ -510,4 +515,15 @@ Post-Final Release
       tox -e venv -- init-series $SERIES $NEXT_SERIES
 
 #. Remind PTLs of cycle-trailing projects to prepare their releases.
+
+#. Plan the next release cycle schedule based on the number of desired weeks or
+   by making sure the cycle ends within a few weeks of the next developer
+   event. Using the first Monday following the close of the last cycle, and the
+   Monday of the planned last week of the new cycle, use the tool
+   ``tools/weeks.py`` to generate the release schedule YAML file. For example::
+
+        ./tools/list_weeks.py t 2019-04-15 2019-10-16
+
+   The generated output can be used to set up the schedule similar to what was
+   done for the `Ussuri release <https://review.opendev.org/#/c/679822/>`_.
 
