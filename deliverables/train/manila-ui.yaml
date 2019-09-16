@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/manila-ui: {}
+releases:
+  - projects:
+      - repo: openstack/manila-ui
+        hash: 78815b46ab3b5a4e23ddad95f953831ddd6477bb
+    version: 2.19.0
+branches:
+  - location: 2.19.0
+    name: stable/train
