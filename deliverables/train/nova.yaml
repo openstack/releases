@@ -27,7 +27,7 @@ cycle-highlights:
     `count quota usage <https://docs.openstack.org/nova/latest/user/quotas.html#quota-usage-from-placement>`_
     using the Placement service and API database.
   - |
-    Added a new framework supporting hardware-based encryption of guest memory
+    A new framework supporting hardware-based encryption of guest memory
     to protect users against attackers or rogue administrators snooping on
     their workloads when using the libvirt compute driver. Currently only has
     basic support for
@@ -42,3 +42,10 @@ cycle-highlights:
   - |
     Improved coordination with the baremetal service during external node
     `power cycles <https://docs.openstack.org/ironic/latest/admin/power-sync.html>`_.
+  - |
+    Support for
+    `VPMEM (Virtual Persistent Memory) <http://specs.openstack.org/openstack/nova-specs/specs/train/approved/virtual-persistent-memory.html>`_
+    when using the libvirt compute driver. This provides data persistence
+    across power cycles at a lower cost and with much larger capacities than
+    DRAM, especially benefitting HPC and memory databases such as redis,
+    rocksdb, oracle, SAP HANA, and Aerospike.
