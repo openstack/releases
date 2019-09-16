@@ -53,10 +53,10 @@ goals for
 Open Infrastructure Summit
 --------------------------
 
-The Open Infrastructure Summit happens during this week in Shanghai, China. It
+The Open Infrastructure Summit happens during this week in Denver, CO, USA. It
 will include a "Forum" in which people from all parts of our community will
 gather to give feedback on the last release (Stein) and discuss requirements
-for the next development cycle (U).
+for the next development cycle (Train).
 
 .. _t-2:
 
