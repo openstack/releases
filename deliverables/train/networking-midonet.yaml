@@ -7,3 +7,8 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-midonet: {}
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 5af46b5a7605b626896c68fe74a61963e6470974
