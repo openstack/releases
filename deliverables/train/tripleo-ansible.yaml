@@ -1,7 +1,7 @@
 ---
 artifact-link-mode: none
 launchpad: tripleo
-release-model: cycle-with-intermediary
+release-model: cycle-trailing
 team: tripleo
 type: other
 repository-settings:
@@ -11,3 +11,7 @@ releases:
       - hash: f56915eae7d5122706c9201fe6e7d261272fff07
         repo: openstack/tripleo-ansible
     version: 0.2.0
+  - version: 0.3.0
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: f511229250aaf8b62b42483aed5293bb4a7d364b
