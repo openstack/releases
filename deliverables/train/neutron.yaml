@@ -5,3 +5,8 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
+releases:
+  - version: 15.0.0.0b1
+    projects:
+      - repo: openstack/neutron
+        hash: 3ad6af76266f466953de08451b922e033b5c8c43
