@@ -322,6 +322,9 @@ RC1 week
 #. At the same time, generate RC1 release requests (including the
    ``stable/$series`` branch creation) for all cycle-with-rc deliverables.
 
+   Keep in mind you can use `release-test` as a canary test. `release-test`
+   needs to have a RC1 anyway for preparing the final release.
+
 #. Those patches will be used as a base to communicate with the team:
    if a team wants to wait for a specific patch to make it to the release,
    someone from the team can -1 the patch to have it held, or update
