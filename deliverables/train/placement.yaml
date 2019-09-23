@@ -25,3 +25,11 @@ cycle-highlights:
     and networks where affinity between and grouping among the members of the
     tree are required. These features will help to enable NFV and other high
     performance workloads in the cloud.
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: 2bf7ad034eead9328df1688adbeb8d415d6a7627
+branches:
+  - name: stable/train
+    location: 2.0.0.0rc1
