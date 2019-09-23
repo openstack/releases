@@ -6,3 +6,11 @@ team: sahara
 type: service
 repository-settings:
   openstack/sahara: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: 17a25a73eab1d80e44b26eafbf63f5015f72d1e2
+branches:
+  - name: stable/train
+    location: 11.0.0.0rc1
