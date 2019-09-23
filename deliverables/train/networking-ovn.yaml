@@ -8,14 +8,21 @@ include-pypi-link: true
 repository-settings:
   openstack/networking-ovn: {}
 cycle-highlights:
-  - 'OVN can now send ICMP "Fragmention Needed" packets, allowing VMs
+  - OVN can now send ICMP "Fragmention Needed" packets, allowing VMs
     on tenant networks using jumbo frames to access the external network
-    without any extra routing configuration.'
-  - 'Event processing performance has been increased by better distributing
-    how work is done in the controller. This helps significantly when doing
-    bulk port bindings.'
+    without any extra routing configuration.
+  - Event processing performance has been increased by better distributing
+    how work is done in the controller. This helps significantly when
+    doing bulk port bindings.
 releases:
   - version: 7.0.0.0b1
     projects:
       - repo: openstack/networking-ovn
         hash: f4ba9d6368109dbcad96d59a1f56fc2cc6321e46
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/networking-ovn
+        hash: ff6f221e3689ad5b708c8fc0b435fdc8ce0fc1bc
+branches:
+  - name: stable/train
+    location: 7.0.0.0rc1
