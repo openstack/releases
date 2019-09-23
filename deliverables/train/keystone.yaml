@@ -6,37 +6,49 @@ type: service
 repository-settings:
   openstack/keystone: {}
 cycle-highlights:
-  - "All keystone APIs now use the default reader, member, and admin roles in
-    their default policies. This means that it is now possible to create a user
-    with finer-grained access to keystone APIs than was previously possible
-    with the default policies. For example, it is possible to create an
-    \"auditor\" user that can only access keystone's GET APIs. Please be aware
+  - All keystone APIs now use the default reader, member, and admin
+    roles in their default policies. This means that it is now possible
+    to create a user with finer-grained access to keystone APIs than
+    was previously possible with the default policies. For example,
+    it is possible to create an "auditor" user that can only access
+    keystone's GET APIs. Please be aware that depending on the default
+    and overridden policies of other OpenStack services, such a user
+    may still be able to access creative or destructive APIs for other
+    services.
+  - All keystone APIs now support system scope as a policy target, where
+    applicable. This means that it is now possible to set ``[oslo_policy]/enforce_scope``
+    to ``true`` in `keystone.conf`, which, with the default policies,
+    will allow keystone to distinguish between project-specific requests
+    and requests that operate on an entire deployment. This makes it
+    safe to grant admin access to a specific keystone project without
+    giving admin access to all of keystone's APIs, but please be aware
     that depending on the default and overridden policies of other OpenStack
-    services, such a user may still be able to access creative or destructive
-    APIs for other services."
-  - "All keystone APIs now support system scope as a policy target, where
-    applicable. This means that it is now possible to set
-    ``[oslo_policy]/enforce_scope`` to ``true`` in `keystone.conf`, which, with
-    the default policies, will allow keystone to distinguish between
-    project-specific requests and requests that operate on an entire
-    deployment. This makes it safe to grant admin access to a specific keystone
-    project without giving admin access to all of keystone's APIs, but please
-    be aware that depending on the default and overridden policies of other
-    OpenStack services, a project admin may still have admin-level privileges
-    outside of the project scope for other services."
-  - "Keystone domains can now be created with a user-provided ID, which allows
-    for all IDs for users created within such a domain to be predictable. This
-    makes scaling cloud deployments across multiple sites easier as domain and
-    user IDs no longer need to be explicitly synced."
-  - "Application credentials now support access rules, a user-provided list of
-    OpenStack API requests for which an application credential is permitted to
-    be used. This level of access control is supplemental to traditional
-    role-based access control managed through policy rules."
-  - "Keystone roles, projects, and domains may now be made immutable, so that
-    certain important resources like the default roles or service projects
-    cannot be accidentally modified or deleted. This is managed through
-    resource options on roles, projects, and domains. The ``keystone-manage
-    bootstrap`` command now allows the deployer to opt into creating the
-    default roles as immutable at deployment time, which will become the
-    default behavior in the future. Roles that existed prior to running
-    ``keystone-manage bootstrap`` can be made immutable via resource update."
+    services, a project admin may still have admin-level privileges
+    outside of the project scope for other services.
+  - Keystone domains can now be created with a user-provided ID, which
+    allows for all IDs for users created within such a domain to be
+    predictable. This makes scaling cloud deployments across multiple
+    sites easier as domain and user IDs no longer need to be explicitly
+    synced.
+  - Application credentials now support access rules, a user-provided
+    list of OpenStack API requests for which an application credential
+    is permitted to be used. This level of access control is supplemental
+    to traditional role-based access control managed through policy
+    rules.
+  - Keystone roles, projects, and domains may now be made immutable,
+    so that certain important resources like the default roles or service
+    projects cannot be accidentally modified or deleted. This is managed
+    through resource options on roles, projects, and domains. The ``keystone-manage
+    bootstrap`` command now allows the deployer to opt into creating
+    the default roles as immutable at deployment time, which will become
+    the default behavior in the future. Roles that existed prior to
+    running ``keystone-manage bootstrap`` can be made immutable via
+    resource update.
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: e860c69831289a800a1d7bb52e8621fc460f260b
+branches:
+  - name: stable/train
+    location: 16.0.0.0rc1
