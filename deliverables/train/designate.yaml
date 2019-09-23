@@ -7,3 +7,24 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 63f216755a61f76452d900264948d55ce94b75a4
+cycle-highlights:
+  - Removal of old deprecated code like Pool Manager and old Power DNS drivers
+    which ensures less complexity for operators. (95% of all deprecation
+    warnings have been removed in Train)
+  - V1 API code removed (previously had been disabled by default)
+  - Full IPv6 Support for the API control plane, and for the DNS data plane
+  - Audit of logging to ensure sane log messages and log quanitity
+  - 100s of tests added, and code coverage increased by 5-6%.
+  - By far the most active cycle in recent releases.
+    363 files changed, 12894 insertions(+), 9564 deletions(-)
+  - Cycle MVP - Erik Olof Gunnar Andersson <eandersson@blizzard.com> with 66
+    out of the 178 commits in the cycle.
+  - Train is the last release with Python 2.7 support
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
