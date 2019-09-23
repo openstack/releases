@@ -6,3 +6,11 @@ type: other
 repository-settings:
   openstack/nova-powervm:
     tarball-base: nova_powervm
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 5de7a5ebdca34ba56407c9e8cece6953278ce27f
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
