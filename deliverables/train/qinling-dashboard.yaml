@@ -5,3 +5,11 @@ storyboard: 1050
 release-model: cycle-with-rc
 repository-settings:
   openstack/qinling-dashboard: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 8c10ec4ad1cec1bb465694537e6551384028127a
+branches:
+  - name: stable/train
+    location: 2.0.0.0rc1
