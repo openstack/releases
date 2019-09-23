@@ -6,3 +6,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-image-elements: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 24a0ea0195febff2554d2275b9a30972f8071dee
+branches:
+  - name: stable/train
+    location: 11.0.0.0rc1
