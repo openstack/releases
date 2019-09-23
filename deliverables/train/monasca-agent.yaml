@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-agent: {}
+releases:
+  - version: 2.11.0
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 69117baed4f5233b15745624d584983dae97bd4b
+branches:
+  - name: stable/train
+    location: 2.11.0
