@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: b7cdcb0964f4c07533bf56751fad96e0f6251281
+branches:
+  - name: stable/train
+    location: 8.0.0.0rc1
