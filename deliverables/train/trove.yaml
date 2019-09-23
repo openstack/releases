@@ -6,12 +6,20 @@ type: service
 repository-settings:
   openstack/trove: {}
 cycle-highlights:
-  - A lot of improvements have been made for the Service Tenant
-    Deployment model which is highly recommended in the production
-    environment. The cloud administrator is allowed to define the
-    management resources for the trove instance, such as keypair,
-    security group, network, etc.
-  - Creating trove guest image becomes much easier for the cloud
-    administrator or developer by using ``trovestack`` script.
+  - A lot of improvements have been made for the Service Tenant Deployment
+    model which is highly recommended in the production environment.
+    The cloud administrator is allowed to define the management resources
+    for the trove instance, such as keypair, security group, network,
+    etc.
+  - Creating trove guest image becomes much easier for the cloud administrator
+    or developer by using ``trovestack`` script.
   - Users could expose the trove instance to the public with the ability
     to limit source IP addresses access to the database.
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 59be66ceaacba7be038ff17817fa6bd8e0aed4ec
+branches:
+  - name: stable/train
+    location: 12.0.0.0rc1
