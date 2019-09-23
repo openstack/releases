@@ -5,3 +5,11 @@ team: searchlight
 type: service
 repository-settings:
   openstack/searchlight: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight
+        hash: ec7baccfc4fbf1726d17f763d315604f2f242ae7
+branches:
+  - name: stable/train
+    location: 7.0.0.0rc1
