@@ -165,7 +165,7 @@ to test and validate this tarball!
 Alternatively, you can directly test the stable/{{series|lower}} release
 branch at:
 
-    {{source_url}}/log/?h=stable/{{series|lower}}
+    {{source_url}}/src/branch/stable/{{series|lower}}
 
 Release notes for {{project}} can be found at:
 
