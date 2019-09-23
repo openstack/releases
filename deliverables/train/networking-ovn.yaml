@@ -7,6 +7,13 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-ovn: {}
+cycle-highlights:
+  - 'OVN can now send ICMP "Fragmention Needed" packets, allowing VMs
+    on tenant networks using jumbo frames to access the external network
+    without any extra routing configuration.'
+  - 'Event processing performance has been increased by better distributing
+    how work is done in the controller. This helps significantly when doing
+    bulk port bindings.'
 releases:
   - version: 7.0.0.0b1
     projects:
