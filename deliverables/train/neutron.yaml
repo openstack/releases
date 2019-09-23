@@ -10,17 +10,26 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 3ad6af76266f466953de08451b922e033b5c8c43
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 1c2e10f8595d2286bd9bec513bc5a346a84a6f7c
 cycle-highlights:
-  - 'When different subnet pools participate in the same address scope, the
-    constraints disallowing subnets to be allocated from different pools on
-    the same network have been relaxed. As long as subnet pools participate
-    in the same address scope, subnets can now be created from different
-    subnet pools when multiple subnets are created on a network. When
-    address scopes are not used, subnets with the same ``ip_version`` on the
-    same network must still be allocated from the same subnet pool.'
-  - 'A new API, extraroute-atomic, has been implemented for Neutron routers. This
-    extension enables users to add or delete individual entries to a router
-    routing table, instead of having to update the entire table as one whole'
-  - 'Support for L3 conntrack helpers has been added. Users can now configure
+  - When different subnet pools participate in the same address scope,
+    the constraints disallowing subnets to be allocated from different
+    pools on the same network have been relaxed. As long as subnet pools
+    participate in the same address scope, subnets can now be created
+    from different subnet pools when multiple subnets are created on
+    a network. When address scopes are not used, subnets with the same
+    ``ip_version`` on the same network must still be allocated from
+    the same subnet pool.
+  - A new API, extraroute-atomic, has been implemented for Neutron routers.
+    This extension enables users to add or delete individual entries
+    to a router routing table, instead of having to update the entire
+    table as one whole
+  - Support for L3 conntrack helpers has been added. Users can now configure
     conntrack helper target rules to be set for a router. This is accomplished
-    by associating a conntrack_helper sub-resource to a router.'
+    by associating a conntrack_helper sub-resource to a router.
+branches:
+  - name: stable/train
+    location: 15.0.0.0rc1
