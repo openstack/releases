@@ -1,7 +1,15 @@
 ---
 launchpad: monasca
-release-model: cycle-with-rc
+release-model: cycle-with-intermediary
 team: monasca
 type: other
 repository-settings:
   openstack/monasca-kibana-plugin: {}
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: aaedc304803a1808a48ae73cb01f9bc8ee65ec52
+branches:
+  - name: stable/train
+    location: 1.5.0
