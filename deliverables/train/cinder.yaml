@@ -4,13 +4,20 @@ release-model: cycle-with-rc
 team: cinder
 type: service
 cycle-highlights:
-  - 'A number of drivers have added support for newer features
-    like multi-attach and consistency groups.'
-  - 'When uploading qcow2 images to Glance the data can now be
-    compressed.'
-  - 'Team focused on getting numerous bug fixes and usability
-    improvements in place.'
-  - 'Cinder now has upgrade checks that can be run to check for
-    possible compatibility issues when upgrading to Train.'
+  - A number of drivers have added support for newer features like multi-attach
+    and consistency groups.
+  - When uploading qcow2 images to Glance the data can now be compressed.
+  - Team focused on getting numerous bug fixes and usability improvements
+    in place.
+  - Cinder now has upgrade checks that can be run to check for possible
+    compatibility issues when upgrading to Train.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 4bee77bedfdb96425bf60d3f49edab6dfd05bca9
+branches:
+  - name: stable/train
+    location: 15.0.0.0rc1
