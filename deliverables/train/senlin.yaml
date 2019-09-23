@@ -12,3 +12,11 @@ cycle-highlights:
   - Supported admin user can see details of any cluster profile.
   - Allows the cluster delete actions to detach policies and delete receivers
     for the cluster being deleted.
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: c19f2de68eff800e6d8ef656d1a77a043a79efb3
+branches:
+  - name: stable/train
+    location: 8.0.0.0rc1
