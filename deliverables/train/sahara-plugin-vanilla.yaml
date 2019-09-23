@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-vanilla: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: a29ff6890fe1461f3f2deeac907e43026051229e
+branches:
+  - name: stable/train
+    location: 2.0.0.0rc1
