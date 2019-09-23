@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: 5177658d8bad4d97444519ef21fe024629954b71
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/networking-odl
+        hash: 8f1360d543462dba6bc67e2dacdf2e3e968a0524
+branches:
+  - name: stable/train
+    location: 15.0.0.0rc1
