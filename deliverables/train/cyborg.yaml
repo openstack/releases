@@ -23,3 +23,11 @@ cycle-highlights:
     with real hardware in the future.
   - |
     Enabled Python 3 testing and fixed issues in support of Train goals.
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 7e665ea2e3d885b81e07a5f75dccef7be5577a56
+branches:
+  - name: stable/train
+    location: 3.0.0.0rc1
