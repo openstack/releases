@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: b1f4ce5593601c3476e91401290aefdc0f7fdef6
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
