@@ -4,5 +4,9 @@ release-model: untagged
 team: oslo
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-kafka: ce2bfca50c7e9ba912adca3626e4bf6e30b40eab
+    name: stable/train
 repository-settings:
   openstack/devstack-plugin-kafka: {}
