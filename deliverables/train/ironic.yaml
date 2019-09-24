@@ -10,6 +10,13 @@ releases:
       - hash: 7a718ee4de6bc04aa6a63c99899a2d6e4e130bb7
         repo: openstack/ironic
     version: 12.2.0
+  - projects:
+      - hash: ac55c642e492a54e41c095df00db25cc29719110
+        repo: openstack/ironic
+    version: 13.0.0
+branches:
+  - location: 13.0.0
+    name: stable/train
 cycle-highlights:
   - Basic support for building `software RAID
     <https://docs.openstack.org/ironic/latest/admin/raid.html#software-raid>`_
