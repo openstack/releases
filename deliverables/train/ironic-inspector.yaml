@@ -15,3 +15,10 @@ releases:
       - hash: 0b38536d1c9ab92952e6ecd069ea13facf012830
         repo: openstack/ironic-inspector
     version: 9.1.0
+  - projects:
+      - hash: 6fa2a94d05301494a4f081502d51e695d564e828
+        repo: openstack/ironic-inspector
+    version: 9.2.0
+branches:
+  - location: 9.2.0
+    name: stable/train
