@@ -3,5 +3,16 @@ launchpad: storlets
 team: storlets
 type: service
 release-model: cycle-with-rc
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: 18b05fe4bdd1cabe47a8cffcacfb069d5eb8a5ad
 repository-settings:
   openstack/storlets: {}
+cycle-highlights:
+  - 'Python 3 support is going forward'
+  - 'Various code improvement'
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/train
