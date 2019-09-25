@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: f54699926d1d4d2a600e65f811343a86128e5c31
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
