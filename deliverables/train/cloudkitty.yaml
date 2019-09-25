@@ -23,3 +23,10 @@ releases:
       - hash: 043c793ccca47cfabff18eebb5be28da634427c4
         repo: openstack/cloudkitty
     version: 10.0.0
+  - projects:
+      - hash: c8c7965878e6a5c818db0ed0d05a719d7d2ae779
+        repo: openstack/cloudkitty
+    version: 11.0.0
+branches:
+  - name: stable/train
+    location: 11.0.0
