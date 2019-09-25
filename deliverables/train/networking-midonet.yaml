@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 5af46b5a7605b626896c68fe74a61963e6470974
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 5af46b5a7605b626896c68fe74a61963e6470974
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
