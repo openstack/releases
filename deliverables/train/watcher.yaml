@@ -20,3 +20,11 @@ cycle-highlights:
     Added show data model API.
   - |
     Added node resource consolidation strategy.
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: d13adb4e3c16518f450b1646fdf5ffb73b95cfc5
+branches:
+  - name: stable/train
+    location: 3.0.0.0rc1
