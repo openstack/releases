@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: a026aa2e2f38bcfe072fb9cdfa6e9719f6fda5c6
+branches:
+  - name: stable/train
+    location: 4.0.0.0rc1
