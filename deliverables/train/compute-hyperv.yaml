@@ -5,3 +5,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/compute-hyperv: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: bf39a47dbee4397ea5d183e2c14789de5a107c75
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
