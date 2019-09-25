@@ -5,6 +5,14 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - projects:
+      - hash: aaa4ae8bf8ee7b50a3666f27e30444abd67b3b82
+        repo: openstack/zun
+    version: 4.0.0.0rc1
+branches:
+  - location: 4.0.0.0rc1
+    name: stable/train
 cycle-highlights:
   - Zun compute agent report local resources to Placement API.
   - Zun scheduler gets allocation candidates from placement API and
