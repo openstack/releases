@@ -5,3 +5,11 @@ team: PowerVMStackers
 type: other
 repository-settings:
   openstack/networking-powervm: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/networking-powervm
+        hash: 50b81c3b2d874ecc0d81049cbcb265618534e4ba
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
