@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: deb466b66c70cf8866c869267dfc89a8d6a84fe4
+  - version: 1.0.1
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 5141cae6dc4eba2b609957b931b8d17ccdc8a007
 branches:
   - location: 1.0.0
     name: stable/queens
