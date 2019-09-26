@@ -5,3 +5,10 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+cycle-highlights:
+  - Added webhook v2 support:Previously webhook API introduced microversion 1.10
+    to allow callers to pass arbritary data in the body along with the webhook
+    call.
+  - Supported admin user can see details of any cluster profile.
+  - Allows the cluster delete actions to detach policies and delete receivers
+    for the cluster being deleted.
