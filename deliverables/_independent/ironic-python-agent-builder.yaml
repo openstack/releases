@@ -2,6 +2,10 @@
 storyboard: openstack/ironic-python-agent-builder
 team: ironic
 type: other
-releases: []
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: de8e8e62ff31b70fdf2aca59fcdff9f81951a05c
 repository-settings:
   openstack/ironic-python-agent-builder: {}
