@@ -5,3 +5,11 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: 24f678cd29dc500ae85e52ccca6d26583cdc20f3
+branches:
+  - name: stable/train
+    location: 8.0.0.0rc1
