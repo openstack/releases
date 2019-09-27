@@ -4,7 +4,11 @@ launchpad: openstack-cyborg
 release-model: cycle-automatic
 release-type: python-pypi
 repository-settings:
-  openstack/cyborg-tempest-plugin:
-    tarball-base: cyborg_tempest_plugin
+  openstack/cyborg-tempest-plugin: {}
 team: cyborg
 type: tempest-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/cyborg-tempest-plugin
+        hash: cf8d927ed02ac1010d1887328c89dc6741d7e803
