@@ -49,3 +49,11 @@ cycle-highlights:
     across power cycles at a lower cost and with much larger capacities than
     DRAM, especially benefitting HPC and memory databases such as redis,
     rocksdb, oracle, SAP HANA, and Aerospike.
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 207d2c22538ddec4d82fafbc01e756c9d25f6e36
+branches:
+  - name: stable/train
+    location: 20.0.0.0rc1
