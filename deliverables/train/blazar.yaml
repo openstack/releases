@@ -13,3 +13,11 @@ cycle-highlights:
   - |
     Completed the implementation and documentation of the floating IP
     reservation feature introduced as a preview in Stein.
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: a2bcedbb9c923868f0f15f70a2395cbfacba5a74
+branches:
+  - name: stable/train
+    location: 4.0.0.0rc1
