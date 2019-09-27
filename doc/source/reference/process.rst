@@ -197,82 +197,227 @@ Between Milestone-2 and Milestone-3
    #. Include a reminder in the weekly countdown email reminding PTLs of the
       feature freeze deadline for cycle-highlights.
 
-Final Library Release (week before Milestone-3)
-===============================================
+R-6 week (Final Library Release deadline)
+=========================================
 
-#. Generate a list of all cycle-with-intermediary libraries (except client
-   libraries) which have commits that have not been included in a release.
-   For this, run::
+#. Propose autoreleases for cycle-with-intermediary libraries (excluding
+   client libraries) which had commits that have not been included in a
+   release.
 
-     ./tools/list_library_unrelease_changes.sh
+   - List them using::
 
-   That patch will be used as a base to communicate with the
-   team: if a team wants to wait for a specific patch to make it to the
-   library, someone from the team can -1 the patch to have it held, or update
-   that patch with a different commit SHA.
+      ./tools/list_library_unrelease_changes.sh
 
-   .. note::
+   - That patch will be used as a base to communicate with the
+     team: if a team wants to wait for a specific patch to make it to the
+     library, someone from the team can -1 the patch to have it held, or update
+     that patch with a different commit SHA.
+
+     .. note::
 
       At this point, we want *all* changes in the deliverables, to ensure
       that we have CI configuration up to date when the stable branch
       is created later.
 
-#. Release libraries as quickly as possible this week to ensure they
-   are all done before the freeze.
+   - Allow the ``stable/$series`` branch to be requested with each library
+     final release if they know they are ready. Do not require branching at
+     this point in case of critical issues requiring another approved release
+     past the freeze date.
+
+   - Between Tuesday and Thursday, merge as soon as possible the patches that
+     get +1 from the PTL or the release liaison.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
 
 #. Update the feature list and allowed stable branch names in
    devstack-gate for the new stable branch. For
    example, https://review.opendev.org/362435 and
    https://review.opendev.org/363084
 
-#. Allow the ``stable/$series`` branch to be requested with each library final
-   release if they know they are ready. Do not require branching at this point
-   in case of critical issues requiring another approved release past the
-   freeze date.
+#. At the end of the week, send weekly email content preparing for R-5 week::
 
-Milestone-3
-===========
+    Development Focus
+    -----------------
 
-#. Generate a list of all cycle-with-intermediary client libraries which
-   have commits that have not been included in a release.
-   For this, run::
+    We are getting close to the end of the $series cycle! Next week on
+    $milestone3 is the $series-3 milestone, also known as feature freeze.
+    It's time to wrap up feature work in the services and their client
+    libraries, and defer features that won't make it to the $next-series cycle.
 
-     ./tools/list_client_library_unreleased_changes.sh
+    General Information
+    -------------------
 
-   That patch will be used as a base
-   to communicate with the team: if a team wants to wait for a specific patch
-   to make it to the library, someone from the team can -1 the patch to have
-   it held, or update that patch with a different commit SHA.
+    This coming week is the deadline for client libraries: their last feature
+    release needs to happen before "Client library freeze" on $milestone3.
+    Only bugfix releases will be allowed beyond this point.
+
+    When requesting those library releases, you can also include the
+    stable/$series branching request with the review. As an example, see the
+    "branches" section here:
+    https://opendev.org/openstack/releases/src/branch/master/deliverables/pike/os-brick.yaml#n2
+
+    $milestone3 is also the deadline for feature work in all OpenStack
+    deliverables following the cycle-with-rc model. To help those projects
+    produce a first release candidate in time, only bugfixes should be allowed
+    in the master branch beyond this point. Any feature work past that deadline
+    has to be raised as a Featur Freeze Exception (FFE) and approved by the
+    team PTL.
+
+    Finally, feature freeze is also the deadline for submitting a first version
+    of your cycle-highlights. Cycle highlights are the raw data hat helps shape
+    what is communicated in press releases and other release activity at the
+    end of the cycle, avoiding direct contacts from marketing folks. See
+    https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
+    for more details.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $series-3 milestone (feature freeze): $milestone3 (R-5 week)
+    RC1 deadline: $rc1-deadline (R-3 week)
+    Final RC deadline: $final-rc-deadline (R-1 week)
+    Final Train release: $release-date
+    $other-upcoming-event
+
+
+R-5 week (Milestone-3)
+======================
+
+#. Process any remaining library freeze exception.
+
+#. Early in the week, email openstack-discuss list to remind PTLs that
+   cycle-highlights are due this week so that they can be included in
+   release marketing preparations.
+
+#. Propose autoreleases for cycle-with-intermediary client libraries which
+   had commits that have not been included in a release.
+
+   - List them using::
+
+      ./tools/list_client_library_unreleased_changes.sh
+
+   - That patch will be used as a base
+     to communicate with the team: if a team wants to wait for a specific patch
+     to make it to the library, someone from the team can -1 the patch to have
+     it held, or update that patch with a different commit SHA.
+
+   - Allow the ``stable/$series`` branch to be requested with each client
+     library final release if they know they are ready. Do not require
+     branching at this point in case of critical issues requiring another
+     approved release past the freeze date.
+
+   - Between Tuesday and Thursday, merge as soon as possible the patches that
+     get +1 from the PTL or the release liaison.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
 
 #. Evaluate any libraries that did not have any change merged over the
    cycle to see if it is time to `transition them to the independent release
    model <https://releases.openstack.org/reference/release_models.html#openstack-related-libraries>`__.
 
-   If it is OK to transition them, move the deliverable file to the ``_independent`` directory.
+   If it is OK to transition them, propose to move the deliverable file to
+   the ``_independent`` directory.
 
-   If it is not OK to transition them, create a new stable branch from the latest release
-   from the previous series.
+   If it is not OK to transition them, create a new stable branch from the
+   latest release from the previous series.
 
-#. Remind the requirements team to freeze changes to
+#. List cycle-with-intermediary deliverables that have not been released yet::
+
+     tox -e venv -- list-deliverables --unreleased \
+     --model cycle-with-intermediary \
+     --type horizon-plugin --type other --type service
+
+   Send a separate email targeted to teams with such unreleased deliverables
+   saying::
+
+    Quick reminder that we'll need a release very soon for a number of
+    deliverables following a cycle-with-intermediary release model but which
+    have not done *any* release yet in the $series cycle:
+
+    {{list-of-deliverables}}
+
+    Those should be released ASAP, and in all cases before $rc1-deadline, so
+    that we have a release to include in the final $series release.
+
+#. On Friday, remind the requirements team to freeze changes to
    ``openstack/requirements`` by applying -2 to all
    open patches. Ensure that reviewers do not approve changes created
    by the proposal bot, but do approve changes for new OpenStack deliverable
    releases.
 
-#. Allow the ``stable/$series`` branch to be requested with each client library
-   final release if they know they are ready. Do not require branching at this
-   point in case of critical issues requiring another approved release past the
-   freeze date.
+#. At the end of the week, send weekly email content for R-3 week::
 
-#. Remind PTLs/liaisons that master should be frozen except for bug
-   fixes and feature work with FFEs.
+    Development Focus
+    -----------------
 
-#. Email openstack-discuss list to remind PTLs that cycle-highlights are due
-   this week so that they can be included in release marketing preparations.
+    We just passed feature freeze! Until release branches are cut, you
+    should stop accepting featureful changes to deliverables following the
+    cycle-with-rc release model, or to libraries. Exceptions should be
+    discussed on separate threads on the mailing-list, and feature freeze
+    exceptions approved by the team's PTL.
 
-#. Remind PTL/liaisons to start preparing "prelude" release notes as
-   summaries of the content of the release so that those are merged
-   before their first release candidate.
+    Focus should be on finding and fixing release-critical bugs, so that
+    release candidates and final versions of the $series deliverables can be
+    proposed, well ahead of the final $series release date.
+
+    General Information
+    -------------------
+
+    We are still finishing up processing a few release requests, but the
+    $series release requirements are now frozen. If new library releases are
+    needed to fix release-critical bugs in $series, you must request a
+    Requirements Freeze Exception (RFE) from the requirements team before we
+    can do a new release to avoid having something released in $series that
+    is not actually usable. This is done by posting to the openstack-discuss
+    mailing list with a subject line similar to:
+
+            [$PROJECT][requirements] RFE requested for $PROJECT_LIB
+
+    Include justification/reasoning for why a RFE is needed for this lib.
+    If/when the requirements team OKs the post-freeze update, we can then
+    process a new release.
+
+    A soft String freeze is now in effect, in order to let the I18N team do the
+    translation work in good conditions. In Horizon and the various dashboard
+    plugins, you should stop accepting changes that modify user-visible
+    strings. Exceptions should be discussed on the mailing-list. By
+    $rc-final-date this will become a hard string freeze, with no changes
+    in user-visible strings allowed.
+
+    Actions
+    -------
+
+    stable/$series branches should be created soon for all not-already-branched
+    libraries. You should expect 2-3 changes to be proposed for each: a
+    .gitreview update, a reno update (skipped for projects not using reno),
+    and a tox.ini constraints URL update. Please review those in priority
+    so that the branch can be functional ASAP.
+
+    The Prelude section of reno release notes is rendered as the top level
+    overview for the release. Any important overall messaging for $series
+    changes should be added there to make sure the consumers of your release
+    notes see them.
+
+    Finally, if you haven't proposed $series cycle-highlights yet, you are
+    already late to the party. Please see $email for details.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    RC1 deadline: $rc1-deadline (R-3 week)
+    Final RC deadline: $final-rc-deadline (R-1 week)
+    Final Train release: $release-date
+    $other-upcoming-event
+
+
+R-4 week
+========
+
+#. Process any remaining client library freeze exception.
 
 #. Freeze all cycle-based library releases except for release-critical
    bugs. Independently-released libraries may still be released, but
@@ -282,19 +427,23 @@ Milestone-3
    .. note::
 
       Do not release libraries without a link to a message to openstack-discuss
-      requesting a requirements FFE and an approval response from that team.
+      requesting a requirements RFE and an approval response from that team.
 
-Between Milestone-3 and RC1
-===========================
+#. Propose ``stable/$series`` branch creation for all client and non-client
+   libraries that had not requested it at freeze time.
 
-#. List cycle-with-intermediary deliverables that have not been released yet::
+   - The following command may be used::
 
-     tox -e venv -- list-deliverables --unreleased
-     --model cycle-with-intermediary \
-     --type horizon-plugin --type other --type service
+      tox -e venv -- propose-library-branches --include-clients
 
-   Remind teams with such unreleased deliverables that they have until the RC1
-   deadline to produce a release for those.
+   - That patch will be used as a base
+     to communicate with the team: if a team wants to wait for a specific patch
+     to make it to the library, someone from the team can -1 the patch to have
+     it held, or update that patch with a different commit SHA.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
 
 #. List cycle-with-intermediary deliverables that have not been refreshed in
    the last 2 months. For this, use the following command, with YYYY-MM-DD
@@ -304,106 +453,204 @@ Between Milestone-3 and RC1
      --model cycle-with-intermediary \
      --type horizon-plugin --type other --type service
 
-   Warn teams with deliverables that have releases more than 2 months old
-   that we will use their existing release as a point for branching if they
-   have not prepared a newer release by the final RC deadline.
+   Send a separate email targeted to teams with such old deliverables
+   saying::
 
-#. Propose ``stable/$series`` branch creation for all client and non-client
-   libraries that had not requested it at freeze time. The following command
-   may be used::
+    Quick reminder that for deliverables following the cycle-with-intermediary
+    model, the release team will use the latest $series release available on
+    release week.
 
-      tox -e venv -- propose-library-branches --include-clients
+    The following deliverables have done a $series release, but it was not
+    refreshed in the last two months:
 
-RC1 week
+     {{list_of_deliverables}}
+
+    You should consider making a new one very soon, so that we don't use an
+    outdated version for the final release.
+
+#. At the end of the week, send weekly email content preparing for R-3 week::
+
+    Development Focus
+    -----------------
+
+    The Release Candidate (RC) deadline is next Thursday, $rc1-deadline. Work
+    should be focused on fixing any release-critical bugs.
+
+    General Information
+    -------------------
+
+    All deliverables released under a cycle-with-rc model should have a first
+    release candidate by the end of the week, from which a stable/$series
+    branch will be cut. This branch will track the $series release.
+
+    Once stable/$series has been created, master will will be ready to switch
+    to $next-series development. While master will no longer be feature-frozen,
+    please prioritize any work necessary for completing $series plans.
+    Release-critical bugfixes will need to be merged in the master branch
+    first, then backported to the stable/$series branch before a new release
+    candidate can be proposed.
+
+    Actions
+    -------
+
+    Early in the week, the release team will be proposing RC1 patches for all
+    cycle-with-rc projects, using the latest commit from master. If your team
+    is ready to go for cutting RC1, please let us know by leaving a +1 on these
+    patches.
+
+    If there are still a few more patches needed before RC1, you can -1 the
+    patch and update it later in the week with the new commit hash you would
+    like to use. Remember, stable/$series branches will be created with this,
+    so you will want to make sure you have what you need included to avoid
+    needing to backport changes from master (which will technically then be
+    $next-series) to this stable branch for any additional RCs before the final
+    release.
+
+    The release team will also be proposing releases for any deliverable
+    following a cycle-with-intermediary model that has not produced any $series
+    release so far.
+
+    Finally, now is a good time to finalize release highlights. Release
+    highlights help shape the messaging around the release and make sure that
+    your work is properly represented.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    RC1 deadline: $rc1-deadline (R-3 week)
+    Final RC deadline: $final-rc-deadline (R-1 week)
+    Final Train release: $release-date
+    $other-upcoming-event
+
+
+R-3 week (RC1 deadline)
+=======================
+
+#. Process any remaining library branching exception.
+
+#. On the Monday, generate release requests for all deliverables
+   that have do not have a suitable Train candidate yet. That includes:
+
+   - Using `release-test` as a canary test. `release-test`
+     needs to have a RC1 anyway for preparing the final release.
+
+   - cycle-with-intermediary deliverables that have not released yet, for
+     which a release should be proposed from HEAD, and include stable branch
+     creation. You can list those using::
+
+       tox -e venv -- list-deliverables --unreleased \
+       --model cycle-with-intermediary \
+       --type horizon-plugin --type other --type service
+
+   - cycle-with-rc deliverables that have not done a RC1 yet, for which
+     a release should be proposed from HEAD, and include stable branch
+     creation. You can list those using::
+
+       tox -e venv -- list-deliverables --missing-rc --model cycle-with-rc
+
+   - cycle-automatic deliverables, for which a final release should be
+     proposed from HEAD (unless there is an existing release in the cycle
+     and no change was merged since). Those should **not** include stable
+     branch creation. You can list those using::
+
+       tox -e venv -- list-deliverables --model cycle-automatic
+
+   - Those patches will be used as a base to communicate with the team:
+     if a team wants to wait for a specific patch to make it to the release,
+     someone from the team can -1 the patch to have it held, or update
+     that patch with a different commit SHA.
+
+   - Between Tuesday and Thursday, merge as soon as possible the patches that
+     get +1 from the PTL or the release liaison.
+
+   - By EOD Thursday, ideally we would want a +1 from the PTL and/or
+     release liaison to indicate approval. However we will consider the
+     absence of -1 or otherwise negative feedback as an indicator that the
+     automatically proposed patches can be approved.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
+
+
+R-2 week
 ========
 
-#. Early in the week, generate release requests for all cycle-with-intermediary
-   deliverables that have not been released yet. You can list those using::
+#. Process any standing RC1 deadline exceptions.
 
-     tox -e venv -- list-deliverables --unreleased
-     --model cycle-with-intermediary \
-     --type horizon-plugin --type other --type service
+#. On the Monday, generate stable branches for all cycle deliverables that
+   are still missing one. You can list those using::
 
-#. At the same time, generate RC1 release requests (including the
-   ``stable/$series`` branch creation) for all cycle-with-rc deliverables.
-
-   Keep in mind you can use `release-test` as a canary test. `release-test`
-   needs to have a RC1 anyway for preparing the final release.
+     tox -e venv -- list-deliverables --no-stable-branch
 
 #. Those patches will be used as a base to communicate with the team:
-   if a team wants to wait for a specific patch to make it to the release,
-   someone from the team can -1 the patch to have it held, or update
-   that patch with a different commit SHA.
+   if a team wants to wait and make another release before the branch is
+   cut, someone from the team can -1 the patch to have it held, or update
+   that patch to include another release and stable branch point.
 
-#. Generate release requests (without ``stable/$series`` branch creation)
-   for all cycle-automatic deliverables.
+#. Between Tuesday and Thursday, merge as soon as possible the patches that
+   get +1 from the PTL or the release liaison.
 
-#. By the end of the week, ideally we would want a +1 from the PTL and/or
-   release liaison to indicate approval. However we will consider the absence
-   of -1 or otherwise negative feedback as an indicator that the automatically
-   proposed patches can be approved at the end of the RC deadline week.
+#. On the Friday, merge patches that did not get any feedback from PTL or
+   release liaison. Discuss standing -1s to see if they should be granted
+   an exception and wait until next week.
 
 #. After all the projects enabled in devstack by default have been branched,
-   remind the QA PTL to create a branch in the devstack repository. Devstack
-   doesn't push a tag at RC1 it is just branched off of HEAD.
+   we can engage with the QA, I18n and Requirements PTLs to finalize the
+   stable branch setup:
 
-#. After devstack is branched, remind the QA PTL to create a branch in the
-   grenade repository. As with devstack, it will branch from HEAD instead of a
-   tag.
+   - Remind the QA PTL to create a branch in the devstack repository.
+     Devstack doesn't push a tag at RC1 it is just branched off of HEAD.
 
-#. Remind the QA PTL to update the default branch for devstack in the new
-   stable branch. For example, https://review.opendev.org/#/c/493208/
+   - After devstack is branched, remind the QA PTL to create a branch in the
+     grenade repository. As with devstack, it will branch from HEAD instead
+     of a tag.
 
-#. Remind the QA PTL to update the grenade settings in devstack-gate for the
-   new branch. For example, https://review.opendev.org/362438.
+   - Remind the QA PTL to update the default branch for devstack in the new
+     stable branch. For example, https://review.opendev.org/#/c/493208/
 
-   .. note::
+   - Remind the QA PTL to update the grenade settings in devstack-gate for the
+     new branch. For example, https://review.opendev.org/362438.
 
-      As soon as grenade is updated for the new branch (see the RC1
-      instructions that follow), projects without stable branches may
-      start seeing issues with their grenade jobs because without the
-      stable branch the branch selection will cause the jobs to run
-      master->master instead of previous->master. At the end of Ocata
-      this caused trouble for the Ironic team, for example.
+      .. note::
 
-#. Remind the I18n PTL to update the translation tools for the new stable
-   series.
+        As soon as grenade is updated for the new branch (see the RC1
+        instructions that follow), projects without stable branches may
+        start seeing issues with their grenade jobs because without the
+        stable branch the branch selection will cause the jobs to run
+        master->master instead of previous->master. At the end of Ocata
+        this caused trouble for the Ironic team, for example.
 
-#. After all cycle-with-rc projects have their branches created, remind the
-   requirements PTL to propose an update to the deliverable file to create the
-   ``stable/$series`` branch for ``openstack/requirements``. Then announce that
-   the requirements freeze is lifted from master.
+   - Remind the I18n PTL to update the translation tools for the new stable
+     series.
 
-   .. note::
+   - After all cycle-with-rc projects have their branches created, remind the
+     requirements PTL to propose an update to the deliverable file to create
+     the ``stable/$series`` branch for ``openstack/requirements``. Then
+     announce that the requirements freeze is lifted from master.
 
-      We wait until after the other projects have branched to
-      create the branch for requirements because tests for the stable
-      branches of those projects will fall back to using the master
-      branch of requirements until the same stable branch is created,
-      but if the branch for the requirements repo exists early the
-      changes happening in master on the other projects will not use it
-      and we can have divergence between the requirements being tested
-      and being declared as correct.
+      .. note::
 
-#. Remind the QA PTL to create new branch specific jobs for our two branchless
-   projects, devstack-gate and tempest, in the tempest repo. Configure tempest
-   to run them on all changes, voting. Configure tempest to run them as
-   periodic bitrot jobs as well. All this can be done in one tempest patch,
-   for example, see https://review.opendev.org/521888.
-   Configure devstack-gate to run the new jobs in check pipeline only,
-   non-voting, for example see https://review.opendev.org/545144.
+         We wait until after the other projects have branched to
+         create the branch for requirements because tests for the stable
+         branches of those projects will fall back to using the master
+         branch of requirements until the same stable branch is created,
+         but if the branch for the requirements repo exists early the
+         changes happening in master on the other projects will not use it
+         and we can have divergence between the requirements being tested
+         and being declared as correct.
 
-#. Remind the QA PTL to add the new branch to the list of branches in the
-   periodic-stable job templates in openstack-zuul-jobs. For example, see
-   https://review.opendev.org/545268/.
+  - Remind the QA PTL to create new branch specific jobs for our two
+    branchless projects, devstack-gate and tempest, in the tempest repo.
+    Configure tempest to run them on all changes, voting. Configure tempest
+    to run them as periodic bitrot jobs as well. All this can be done in one
+    tempest patch, for example, see https://review.opendev.org/521888.
+    Configure devstack-gate to run the new jobs in check pipeline only,
+    non-voting, for example see https://review.opendev.org/545144.
 
-Between RC1 and Final
-=====================
-
-#. In the countdown email, remind everyone that the latest RC (for
-   cycle-with-rc deliverables) or the latest intermediary release (for
-   cycle-with-intermediary deliverables) will automatically be used as
-   the final $series release on release day.
+  - Remind the QA PTL to add the new branch to the list of branches in the
+    periodic-stable job templates in openstack-zuul-jobs. For example, see
+    https://review.opendev.org/545268/.
 
 #. Let cycle-with-rc projects iterate on RCs as needed. The final release
    candidate for each project needs to be prepared at least one week before
@@ -420,6 +667,15 @@ Between RC1 and Final
       them WIP until actually ready, so the release team knows that more
       candidates are coming.
 
+
+R-1 week (Final RC deadline)
+============================
+
+#. In the countdown email, remind everyone that the latest RC (for
+   cycle-with-rc deliverables) or the latest intermediary release (for
+   cycle-with-intermediary deliverables) will automatically be used as
+   the final $series release on release day.
+
 #. Ensure that all projects that are publishing release notes have the
    notes link included in their deliverable file. See
    ``tools/add_release_note_links.sh``.
@@ -428,9 +684,6 @@ Between RC1 and Final
 
 #. When all translations and bug fixes are merged for a project,
    prepare a new release candidate.
-
-#. After final releases for release:cycle-with-intermediary projects
-   are tagged, create their stable branches.
 
 #. On the morning of the deadline for final release candidates, check
    the list of unreleased changes for cycle-with-rc projects and verify
@@ -441,9 +694,6 @@ Between RC1 and Final
 
      $ ./tools/list_rc_updates.sh
 
-#. Propose stable/$series branch creation for deliverables that have not
-   requested it yet.
-
 #. As soon as the last release candidate is tagged and the freeze
    period is entered, use ``propose-final-releases`` to tag the
    existing most recent release candidates as the final release for
@@ -453,8 +703,8 @@ Between RC1 and Final
    the final release proposal from the previous step so their approval
    is included in the metadata that goes onto the signed tag.
 
-#. The week before final release test the release process using the
-   ``openstack/release-test`` repository to ensure our machinery is functional.
+#. Test the release process using the ``openstack/release-test``
+   repository to ensure our machinery is functional.
 
 #. Notify the documentation team that it should be safe to apply
    their process to create the new release series landing pages for
@@ -463,8 +713,9 @@ Between RC1 and Final
    can do the work before the final release date to avoid having to
    synchronize with the release team on that day.
 
-Final Release
-=============
+
+R+0 week (Final Release)
+========================
 
 #. Approve the final release patch created earlier.
 
@@ -508,10 +759,10 @@ Final Release
    release announcement from the previous step, and declare
    ``openstack/releases`` unfrozen for releases on the new series.
 
-Post-Final Release
-==================
+R+1 week
+========
 
-#. The week after the final release, process any late or blocked
+#. Process any late or blocked
    release requests for deliverables for any branch (treating the new
    series branch as stable).
 
