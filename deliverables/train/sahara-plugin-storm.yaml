@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-storm: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: 379f1af8506595e8c9da7f7f2bba163319458286
+branches:
+  - name: stable/train
+    location: 2.0.0.0rc1
