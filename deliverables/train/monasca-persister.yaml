@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 1.15.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 2e6ce3842b181a8d61e4dab671acef585dbefe41
+branches:
+  - name: stable/train
+    location: 1.15.0
