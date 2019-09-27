@@ -162,11 +162,21 @@ Between Milestone-2 and Milestone-3
 #. Two weeks before Milestone-3, include a reminder about the final
    library release freeze coming the week before Milestone-3.
 
-   #. Run the command from milestone-2 again to get a list of libraries::
+   #. Run the following command to get a list of libraries::
 
         tools/list_library_unreleased_changes.sh
 
    #. Include list of unreleased libraries in the email to increase visibility.
+
+#. One week before Milestone-3, include a reminder about the final
+   client library release freeze coming the week of Milestone-3.
+
+   #. Run the following command to get a list of client libraries::
+
+        tools/list_client_library_unreleased_changes.sh
+
+   #. Include list of unreleased client libraries in the email to increase
+      visibility.
 
 #. Two weeks before Milestone-3, prepare other teams to the final release
    rush.
@@ -191,15 +201,12 @@ Final Library Release (week before Milestone-3)
 ===============================================
 
 #. Generate a list of all cycle-with-intermediary libraries (except client
-   libraries) which did not release since the YYYY-MM-DD date of milestone-2.
+   libraries) which have commits that have not been included in a release.
    For this, run::
 
-     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
-     --model cycle-with-intermediary --type library
+     ./tools/list_library_unrelease_changes.sh
 
-   Generate release requests for all cycle-with-intermediary libraries
-   (except client libraries) which had changes, but did not release since
-   milestone-2. That patch will be used as a base to communicate with the
+   That patch will be used as a base to communicate with the
    team: if a team wants to wait for a specific patch to make it to the
    library, someone from the team can -1 the patch to have it held, or update
    that patch with a different commit SHA.
@@ -227,14 +234,12 @@ Milestone-3
 ===========
 
 #. Generate a list of all cycle-with-intermediary client libraries which
-   did not release since the YYYY-MM-DD date of milestone-2.
+   have commits that have not been included in a release.
    For this, run::
 
-     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
-     --model cycle-with-intermediary --type client-library
+     ./tools/list_client_library_unreleased_changes.sh
 
-   Generate release requests for all client libraries which had changes,
-   but did not release since milestone-2. That patch will be used as a base
+   That patch will be used as a base
    to communicate with the team: if a team wants to wait for a specific patch
    to make it to the library, someone from the team can -1 the patch to have
    it held, or update that patch with a different commit SHA.
