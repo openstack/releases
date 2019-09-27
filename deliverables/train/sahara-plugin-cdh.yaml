@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-cdh: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 22619ffe5b0487db22bd1c0199e0af355c4ca9fd
+branches:
+  - name: stable/train
+    location: 2.0.0.0rc1
