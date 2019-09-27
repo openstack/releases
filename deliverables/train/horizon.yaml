@@ -12,9 +12,17 @@ releases:
     projects:
       - hash: cd1009bd2f3d6a6ee6e1d00e3733bb9964bb1903
         repo: openstack/horizon
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/horizon
+        hash: ab429363ba49f2acf8df19dfd393712bfe47c7c0
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:
-  - 'Volumes multi-attach is supported now'
-  - 'Horizon now supports the optional automatic generation of a Kubernetes configuration file'
-  - 'It is the last release with Python 2.7 and Django 1.11 support'
+  - Volumes multi-attach is supported now
+  - Horizon now supports the optional automatic generation of a Kubernetes
+    configuration file
+  - It is the last release with Python 2.7 and Django 1.11 support
+branches:
+  - name: stable/train
+    location: 16.0.0.0rc1
