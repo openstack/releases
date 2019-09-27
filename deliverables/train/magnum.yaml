@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: a0c894a222a08600edf612f48fad628758b48dbf
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
