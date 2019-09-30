@@ -21,12 +21,12 @@ releases:
       - repo: openstack/swift
         hash: 179fa7ccd4d6faeacc989715887b69f9422a17b2
 cycle-highlights:
-  - 'Numerous improvements to the S3 API compatibility layer.'
-  - 'Several fixes and improvements for the data-encryption middleware, including
-    allowing multiple keymaster middlewares. This allows migration from one key provider
-    to another.'
-  - 'Operators have more control over account and container server background daemon
-    I/O usage with the new ``databases_per_second`` config option.'
-  - 'Erasure-coded data may now be rebuilt to handoff nodes. This improves data durability
-    when disk failures go unremedied for extended periods.'
+  - Numerous improvements to the S3 API compatibility layer.
+  - Several fixes and improvements for the data-encryption middleware,
+    including allowing multiple keymaster middlewares. This allows migration
+    from one key provider to another.
+  - Operators have more control over account and container server background
+    daemon I/O usage with the new ``databases_per_second`` config option.
+  - Erasure-coded data may now be rebuilt to handoff nodes. This improves
+    data durability when disk failures go unremedied for extended periods.
 release-notes: https://docs.openstack.org/releasenotes/swift/stein.html

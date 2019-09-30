@@ -20,14 +20,15 @@ releases:
         repo: openstack/senlin
     version: 7.0.0
 cycle-highlights:
-  - 'Improved performance so that Senlin operations execute multiple orders of magnitude
-    faster.'
-  - 'Health policy v1.1 now allows a user to specify multiple types of detection modes.'
-  - 'Senlin APIs now issues synchronous failures in case of cluster/node lock, cooldown
-    in effect or action conflict.'
-  - 'Operators can now remove completed actions using action-purge subcommand in senlin-manage
-    tool.  This is useful for long-running clusters that have accumulated a large
-    number of actions in the database.'
+  - Improved performance so that Senlin operations execute multiple
+    orders of magnitude faster.
+  - Health policy v1.1 now allows a user to specify multiple types of
+    detection modes.
+  - Senlin APIs now issues synchronous failures in case of cluster/node
+    lock, cooldown in effect or action conflict.
+  - Operators can now remove completed actions using action-purge subcommand
+    in senlin-manage tool.  This is useful for long-running clusters
+    that have accumulated a large number of actions in the database.
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein

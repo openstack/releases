@@ -6,26 +6,30 @@ type: service
 repository-settings:
   openstack/nova: {}
 cycle-highlights:
-  - 'It is now possible to run Nova with version 1.0.0 of the recently extracted placement
-    service, hosted from its own repository. Note that install/upgrade of an extracted
-    placement service is not yet fully implemented in all deployment tools. Operators
-    should check with their particular deployment tool for support before proceeding.
+  - It is now possible to run Nova with version 1.0.0 of the recently
+    extracted placement service, hosted from its own repository. Note
+    that install/upgrade of an extracted placement service is not yet
+    fully implemented in all deployment tools. Operators should check
+    with their particular deployment tool for support before proceeding.
     See the placement `install <https://docs.openstack.org/placement/latest/install/index.html>`_
     and `upgrade <https://docs.openstack.org/placement/latest/upgrade/to-stein.html>`_
-    documentation for more details. In Stein, operators may choose to continue to
-    run with the integrated placement service from the Nova repository, but should
-    begin planning a migration to the extracted placement service by Train, as the
-    removal of the integrated placement code from Nova is planned for the Train release.'
-  - 'Users can now specify a volume type when creating servers.'
-  - 'The compute API is now tolerant of transient conditions in a deployment like
-    partial infrastructure failures, for example a cell not being reachable.'
-  - 'Users can now create servers with Neutron ports that have quality-of-service
-    minimum bandwidth rules.'
-  - 'Operators can now set overcommit allocation ratios using Nova configuration files
-    or the placement API.'
-  - 'Compute driver capabilities are now automatically exposed as traits in the placement
-    API so they can be used for scheduling via flavor extra specs and/or image properties.'
-  - 'Live migration is now supported for the VMware driver.'
+    documentation for more details. In Stein, operators may choose to
+    continue to run with the integrated placement service from the Nova
+    repository, but should begin planning a migration to the extracted
+    placement service by Train, as the removal of the integrated placement
+    code from Nova is planned for the Train release.
+  - Users can now specify a volume type when creating servers.
+  - The compute API is now tolerant of transient conditions in a deployment
+    like partial infrastructure failures, for example a cell not being
+    reachable.
+  - Users can now create servers with Neutron ports that have quality-of-service
+    minimum bandwidth rules.
+  - Operators can now set overcommit allocation ratios using Nova configuration
+    files or the placement API.
+  - Compute driver capabilities are now automatically exposed as traits
+    in the placement API so they can be used for scheduling via flavor
+    extra specs and/or image properties.
+  - Live migration is now supported for the VMware driver.
 releases:
   - projects:
       - hash: c993d4fe2ffaadea76d5ae76eedfddc3a4c71346

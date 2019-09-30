@@ -28,10 +28,11 @@ type: service
 repository-settings:
   openstack/searchlight: {}
 cycle-highlights:
-  - 'Searchlight now works with Elasticsearch 5.x'
-  - 'We have released a new vision to make Searchlight a multi-cloud application'
-  - 'Functional test setup has been improved'
-  - 'Searchlight now can work and be tested with Python 3.7'
+  - Searchlight now works with Elasticsearch 5.x
+  - We have released a new vision to make Searchlight a multi-cloud
+    application
+  - Functional test setup has been improved
+  - Searchlight now can work and be tested with Python 3.7
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
