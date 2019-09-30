@@ -168,9 +168,9 @@ branch.
 If a deliverable includes multiple git repositories, all of the
 repositories are included in the new release unless their HEAD version
 matches the most recent release from that repository. To re-tag in
-those cases, use the --force option.
+those cases, use the ``--force`` option.
 
-Use the --stable-branch option to also create a stable branch for the
+Use the ``--stable-branch`` option to also create a stable branch for the
 new release. Projects following the cycle-with-rc release
 model automatically receive a new stable branch on their first release
 candidate.
