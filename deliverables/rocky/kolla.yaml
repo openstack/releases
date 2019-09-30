@@ -51,9 +51,10 @@ releases:
         hash: 4e63ecc9abec139f429c003ff8f0c72c10399caf
     version: 7.0.4
 cycle-highlights:
-  - 'Added new docker images in kolla for logstash, monasca, prometheus, ravd, neutron-infoblox-ipam-driver
-    and apache storm.'
-  - 'Allow operators to set resource limits in kolla-ansible deployed containers.'
-  - 'Implement Ceph Bluestore deployment in kolla and kolla-ansible.'
-  - 'Support deployment of prometheus, kafka and zookeeper via kolla-ansible.'
+  - Added new docker images in kolla for logstash, monasca, prometheus,
+    ravd, neutron-infoblox-ipam-driver and apache storm.
+  - Allow operators to set resource limits in kolla-ansible deployed
+    containers.
+  - Implement Ceph Bluestore deployment in kolla and kolla-ansible.
+  - Support deployment of prometheus, kafka and zookeeper via kolla-ansible.
 release-notes: https://docs.openstack.org/releasenotes/kolla/rocky.html

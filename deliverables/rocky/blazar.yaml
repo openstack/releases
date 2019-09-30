@@ -32,7 +32,8 @@ branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
 cycle-highlights:
-  - 'Host and instance reservation support multiple availability zones.'
-  - 'Resource monitoring supports periodic healing in order to avoid unnecessary reservation
-    healing.'
-  - 'A time margin for cleaning up resources between back to back leases is introduced.'
+  - Host and instance reservation support multiple availability zones.
+  - Resource monitoring supports periodic healing in order to avoid
+    unnecessary reservation healing.
+  - A time margin for cleaning up resources between back to back leases
+    is introduced.
