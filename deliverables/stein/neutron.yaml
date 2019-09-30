@@ -39,16 +39,18 @@ branches:
   - location: 14.0.0.0rc1
     name: stable/stein
 cycle-highlights:
-  - 'Support for strict minimum bandwidth based scheduling. With this feature, Nova
-    instances can be scheduled to compute hosts that will honor the minimum bandwidth
-    requirements of the instance as defined by QoS policies of its ports.'
-  - 'Network Segment Range Management. This features enables cloud administrators
-    to manage network segment ranges dynamically via a new API extension, as opposed
-    to the previous approach of editing configuration files. This feature targets
-    StarlingX and edge use cases, where ease of of management is paramount.'
-  - 'Speed up Neutron port bulk creation. The targets are containers / k8s use cases,
-    where ports are created in groups.'
-  - '(FWaaS) FWaaS v1 has been removed. FWaaS v2 is available since Newton release
-    and it covers all features in FWaaS v1. A migartion script is provided to convert
-    existing FWaaS v1 objects into FWaaS v2 models.'
+  - Support for strict minimum bandwidth based scheduling. With this
+    feature, Nova instances can be scheduled to compute hosts that will
+    honor the minimum bandwidth requirements of the instance as defined
+    by QoS policies of its ports.
+  - Network Segment Range Management. This features enables cloud administrators
+    to manage network segment ranges dynamically via a new API extension,
+    as opposed to the previous approach of editing configuration files.
+    This feature targets StarlingX and edge use cases, where ease of
+    of management is paramount.
+  - Speed up Neutron port bulk creation. The targets are containers
+    / k8s use cases, where ports are created in groups.
+  - (FWaaS) FWaaS v1 has been removed. FWaaS v2 is available since Newton
+    release and it covers all features in FWaaS v1. A migartion script
+    is provided to convert existing FWaaS v1 objects into FWaaS v2 models.
 release-notes: https://docs.openstack.org/releasenotes/neutron/stein.html

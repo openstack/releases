@@ -26,15 +26,15 @@ branches:
   - location: 12.1.0
     name: stable/stein
 cycle-highlights:
-  - 'Adds additional interfaces for management of hardware including
+  - Adds additional interfaces for management of hardware including
     Redfish BIOS settings, explicit iPXE boot interface option, and
-    additional hardware support.'
-  - 'Increased capabilities and options for operators including deployment
+    additional hardware support.
+  - Increased capabilities and options for operators including deployment
     templates, improved parallel conductor workers and disk erasure
     processes, deployed node protection and descriptions, and use of
-    local HTTP(S) servers for serving images.'
-  - 'Improved options for standalone users to request allocations of
+    local HTTP(S) servers for serving images.
+  - Improved options for standalone users to request allocations of
     bare metal nodes and submit configuration data as opposed to pre-formed
     configuration drives. Additionally allows for ironic to be leveraged
-    using JSON-RPC as opposed to an AMQP message bus.'
+    using JSON-RPC as opposed to an AMQP message bus.
 release-notes: https://docs.openstack.org/releasenotes/ironic/stein.html
