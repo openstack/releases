@@ -60,10 +60,10 @@ branches:
   - location: 2.0.0.0rc1
     name: stable/queens
 cycle-highlights:
-  - 'Added the ability to batch update pool members.'
-  - 'A Neutron Quality of Service (QoS) policy can now be applied to
-    Octavia load balancers.'
-  - 'Octavia now supports using Castellan and PKCS12 bundles for TLS
-    termination.'
+  - Added the ability to batch update pool members.
+  - A Neutron Quality of Service (QoS) policy can now be applied to
+    Octavia load balancers.
+  - Octavia now supports using Castellan and PKCS12 bundles for TLS
+    termination.
 repository-settings:
   openstack/octavia: {}

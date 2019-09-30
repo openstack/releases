@@ -53,9 +53,10 @@ releases:
       - repo: openstack/kolla
         hash: c717c5872db2e73c8243bc2a3b8974c91fe11464
 cycle-highlights:
-  - 'Upgrade to ceph luminous'
-  - 'Add almanach, certmonger, ceph-nfs, ptp, rsyslog, sensu and tripleo ui image'
-  - 'Support to squash newly built layers into a single new layer'
+  - Upgrade to ceph luminous
+  - Add almanach, certmonger, ceph-nfs, ptp, rsyslog, sensu and tripleo
+    ui image
+  - Support to squash newly built layers into a single new layer
 repository-settings:
   openstack/kolla: {}
 release-notes: https://docs.openstack.org/releasenotes/kolla/queens.html

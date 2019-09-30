@@ -9,11 +9,11 @@ branches:
   - name: stable/queens
     location: 16.0.0.0rc1
 cycle-highlights:
-  - 'Introduced the Image API v2.6, including interoperable image import'
-  - 'Added a new import-method, ''web-download'''
-  - 'Added import plugin scaffolding and a new import plugin that injects image metadata
-    upon import'
-  - 'Updated the glance-manage and glance-scrubber tools'
+  - Introduced the Image API v2.6, including interoperable image import
+  - Added a new import-method, 'web-download'
+  - Added import plugin scaffolding and a new import plugin that injects
+    image metadata upon import
+  - Updated the glance-manage and glance-scrubber tools
 releases:
   - version: 16.0.0.0b1
     projects:
