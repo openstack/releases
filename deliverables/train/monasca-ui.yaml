@@ -10,3 +10,10 @@ releases:
       - hash: f0231ab00f7e352fa8a9637a3e3a887f0d6ce374
         repo: openstack/monasca-ui
     version: 1.16.0
+  - version: 1.17.0
+    projects:
+      - repo: openstack/monasca-ui
+        hash: ac9b6e163c177eddd86b5e7f6184d151bd8ac89f
+branches:
+  - name: stable/train
+    location: 1.17.0
