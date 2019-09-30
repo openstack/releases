@@ -95,6 +95,12 @@ def main():
         default=False,
         help='include all cycle-based code repositories',
     )
+    model.add_argument(
+        '--cycle-based-no-trailing',
+        action='store_true',
+        default=False,
+        help='include all cycle-based code repositories except cycle-trailing',
+    )
     parser.add_argument(
         '--type',
         default=[],
@@ -212,6 +218,9 @@ def main():
         if model and deliv.model != model:
             continue
         if args.cycle_based and not deliv.is_cycle_based:
+            continue
+        if args.cycle_based_no_trailing and (not deliv.is_cycle_based or
+                                             deliv.model == 'cycle-trailing'):
             continue
         if args.type and deliv.type not in args.type:
             continue
