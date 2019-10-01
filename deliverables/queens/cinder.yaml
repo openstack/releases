@@ -61,6 +61,10 @@ releases:
       - hash: f55d3a6f61b3be3df4597504d26385ddb72f6b6b
         repo: openstack/cinder
     version: 12.0.8
+  - projects:
+      - hash: 80e29d3ad5d7bb4d8692ed40be4c5aa104c51926
+        repo: openstack/cinder
+    version: 12.0.9
 cycle-highlights:
   - Support for attaching a single Cinder volume to multile VM instances.
   - Add ability to report backend state in service list.
