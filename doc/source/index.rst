@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   ussuri/index
    train/index
    stein/index
    rocky/index

@@ -61,7 +61,7 @@ class ICS(rst.Directive):
                 last_update, '%Y-%m-%d %H:%M:%S')
             LOG.info('[ics] Last update of %s was %s',
                      rel_filename, last_update)
-        except subprocess.CalledProcessError:
+        except (subprocess.CalledProcessError, ValueError):
             self.last_update = datetime.datetime.utcnow()
 
         if data_source.endswith('.yaml'):
@@ -180,6 +180,7 @@ def doctree_resolved(app, doctree, docname):
             description = [
                 _format_description(doctree.ids[item])
                 for item in week.get('x-project', [])
+                if item in doctree.ids
             ]
             if description:
                 event.add('description', '\n\n'.join(description))
