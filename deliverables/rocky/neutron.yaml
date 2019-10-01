@@ -6,9 +6,6 @@ release-model: cycle-with-milestones
 repository-settings:
   openstack/neutron: {}
 branches:
-  - name: feature/graphql
-    location:
-      openstack/neutron: 9ee628dcc0eb61418e86fee355add38a6b09fab9
   - location: 13.0.0.0rc1
     name: stable/rocky
 releases:
