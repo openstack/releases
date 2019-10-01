@@ -19,6 +19,9 @@ cycle-highlights:
     CephFS backend now supports IPv6 exports and access lists.
   - |
     Added Inspur Instorage driver with support for NFS and CIFS shares.
+  - |
+    Added support for modifying share type name, description and/or public
+    access fields.
 releases:
   - version: 9.0.0.0rc1
     projects:
