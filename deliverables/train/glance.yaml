@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 53fbfc8c635b778bc4731a352fc2fa3197328e3c
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: c71f717d39dbbe0937e561e93424c3827f8bdaec
+branches:
+  - name: stable/train
+    location: 19.0.0.0rc1
