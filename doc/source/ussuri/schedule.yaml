@@ -65,6 +65,9 @@ cycle:
   x-project:
     - u-2
     - u-mf
+  project-specific:
+    - u-manila-spec-freeze
+    - u-manila-driver-deadline
 - end: '2020-02-21'
   name: R-12
   start: '2020-02-17'
@@ -77,6 +80,8 @@ cycle:
 - end: '2020-03-13'
   name: R-9
   start: '2020-03-09'
+  project-specific:
+    - u-manila-fpfreeze
 - end: '2020-03-20'
   name: R-8
   start: '2020-03-16'
@@ -100,6 +105,8 @@ cycle:
     - u-soft-sf
     - u-rf
     - u-goals-complete
+  project-specific:
+    - u-manila-ffreeze
 - end: '2020-04-17'
   name: R-4
   start: '2020-04-13'

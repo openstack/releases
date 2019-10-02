@@ -190,6 +190,44 @@ The Ussuri coordinated release will happen on Wednesday, 13 May, 2020.
 Project-specific events
 =======================
 
+Manila
+------
+
+.. _u-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Ussuri must be approved by the end of the week.
+
+.. _u-manila-driver-deadline:
+
+Manila Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI.  Drivers do not have to
+actually merge until feature freeze.
+
+.. _u-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
+
+.. _u-manila-ffreeze:
+
+Manila Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be merged by the end of the week. The
+Ussuri releases for the OpenStack Dashboard plugin (manila-ui) and the
+python SDK / CLI library (python-manilaclient) will be made by the end of
+the week.
+
+
 PTL Elections
 -------------
 
