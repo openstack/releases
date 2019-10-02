@@ -10,6 +10,13 @@ releases:
     projects:
       - repo: openstack/swift
         hash: a48ac28efe5c133b439ab0e525d315271bf370da
+  - version: 2.23.0
+    projects:
+      - repo: openstack/swift
+        hash: 8a4becb12fbe3d4988ddee73536673d6f55682dd
+branches:
+  - name: stable/train
+    location: 2.23.0
 cycle-highlights:
   - 'Swift can now be run under Python 3.'
   - 'Log formats are now more configurable and include support for anonymization.'
