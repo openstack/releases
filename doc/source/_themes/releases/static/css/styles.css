@@ -44,6 +44,13 @@ ol.loweralpha {
     font-weight: 400;
 }
 
+/* ensure the entries in the schedule table align so it is easy to
+   read when multiple deadlines fall on the same week (see
+   schedule_table.tmpl) */
+table.schedule td {
+    vertical-align: top
+}
+
 /* lists within tables don't need as much margin */
 td ul {
 	margin-bottom: 0;
