@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-zaqar
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-zaqar: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 84e31f0c3de7482f1fd86d64ba357e4d60ecc62b
         repo: openstack/puppet-zaqar
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 37d6b6777046ed5785a7187b21396bbd33a5bceb
+branches:
+  - name: stable/train
+    location: 15.4.0

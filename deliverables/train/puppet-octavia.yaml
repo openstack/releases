@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-octavia
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-octavia: {}
@@ -18,3 +18,10 @@ releases:
       - hash: a504abc557866704792c701ddc3bad4dc906e695
         repo: openstack/puppet-octavia
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 7d38fa74a4ced79001f9f52643c7c5282e71a4f0
+branches:
+  - name: stable/train
+    location: 15.4.0

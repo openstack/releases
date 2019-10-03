@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-panko
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-panko: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 6d9c3b23222b534fa144294ab7d0a5bd7cb99a5d
         repo: openstack/puppet-panko
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 941bd57f37812151920a0781bf1b681dc8461eed
+branches:
+  - name: stable/train
+    location: 15.4.0

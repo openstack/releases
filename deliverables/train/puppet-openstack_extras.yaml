@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-openstack-extras
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-openstack_extras: {}
@@ -18,3 +18,10 @@ releases:
       - hash: e9c84c881c9e539371b11946442f714e99b0ec87
         repo: openstack/puppet-openstack_extras
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 4ab10f6fb4ab1388990229d236539248ea693151
+branches:
+  - name: stable/train
+    location: 15.4.0
