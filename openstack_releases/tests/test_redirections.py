@@ -122,7 +122,7 @@ class TestRedirections(base.BaseTestCase):
         deliverables = FakeDeliverables([
             self.OPEN_DEVELOPMENT,
         ])
-        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+        self.assertEqual([dict(code=302, src='stein', ref_type='branch',
                                dst='master')],
                          generate_constraints_redirections(deliverables))
 
@@ -130,7 +130,7 @@ class TestRedirections(base.BaseTestCase):
         deliverables = FakeDeliverables([
             self.DEVELOPMENT_RELEASE,
         ])
-        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+        self.assertEqual([dict(code=302, src='stein', ref_type='branch',
                                dst='master')],
                          generate_constraints_redirections(deliverables))
 
@@ -172,7 +172,7 @@ class TestRedirections(base.BaseTestCase):
             self.STABLE_RELEASE,
             self.DEVELOPMENT_RELEASE,
         ])
-        self.assertEqual([dict(code=301, src='stein', ref_type='branch',
+        self.assertEqual([dict(code=302, src='stein', ref_type='branch',
                                dst='master'),
                           dict(code=301, src='rocky', ref_type='branch',
                                dst='stable/rocky'),

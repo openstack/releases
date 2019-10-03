@@ -41,7 +41,8 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
 
         # Insert into the begining of the list so that redirections are
         # master -> juno
-        redirections.insert(0, dict(code=301, src=deliv.series,
+        status = 302 if target == 'master' else 301
+        redirections.insert(0, dict(code=status, src=deliv.series,
                                     ref_type=ref_type, dst=target))
 
     for series in future_releases:
