@@ -11,6 +11,10 @@ releases:
       - hash: ba873aef344149abdf8b490de8d9f82c49bbf82a
         repo: openstack/python-troveclient
     version: 2.17.0
+  - version: 2.17.1
+    projects:
+      - hash: c3d667971d7c48cd6e069851252e494962fc251a
+        repo: openstack/python-troveclient
 branches:
   - location: 2.17.0
     name: stable/stein
