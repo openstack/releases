@@ -48,9 +48,25 @@ def main():
 
     print('Release Team Calendar for {}\n'.format(series.title()))
 
-    print('Review dashboard: http://bit.ly/ocata-relmgt-dashboard')
-    print('Planning document: https://etherpad.openstack.org/p/{}-relmgt-plan'.format(series))
+    print('Review dashboard: https://tiny.cc/ReleaseInbox')
     print('Process document: https://releases.openstack.org/reference/process.html')
+    print('Storyboard: https://storyboard.openstack.org/#!/board/64')
+    print('Release email content: https://etherpad.openstack.org/p/relmgmt-weekly-emails')
+    print()
+
+    print('Meeting info')
+    print('Thursdays at 16:00 UTC in #openstack-release')
+    print('Meeting stanza: #startmeeting releaseteam')
+    print('Ping list: ')
+    print()
+
+    print('Review Days')
+    print('[make list format]')
+    print('Mon: ')
+    print('Tue: ')
+    print('Wed: ')
+    print('Thu: ')
+    print('Fri: ')
     print()
 
     print('First apply title formatting to all week titles. Then apply list')
