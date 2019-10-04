@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-openstacklib
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-openstacklib: {}
@@ -18,3 +18,10 @@ releases:
       - hash: fe0f998d1c9d422820435527554eebf4ceb5affe
         repo: openstack/puppet-openstacklib
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 16e0c81a3c401e52d771d58f8d497b5661e57618
+branches:
+  - name: stable/train
+    location: 15.4.0

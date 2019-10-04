@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-vitrage
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-vitrage: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 1dede1047c216b0587d386ca9f51966b9787ec88
         repo: openstack/puppet-vitrage
     version: 5.2.0
+  - version: 5.4.0
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: d6cc59890331b6d97085d9d55beea69ea60e8df6
+branches:
+  - name: stable/train
+    location: 5.4.0

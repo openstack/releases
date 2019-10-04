@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-manila
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-manila: {}
@@ -18,3 +18,10 @@ releases:
       - hash: d69a4f20a796a51e42ac5ab679ab3bd8a42458f2
         repo: openstack/puppet-manila
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-manila
+        hash: e4f009efb59828d81203185e04c5e221ba799514
+branches:
+  - name: stable/train
+    location: 15.4.0

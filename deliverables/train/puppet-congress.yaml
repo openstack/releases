@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-congress
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-congress: {}
@@ -18,3 +18,10 @@ releases:
       - hash: a4b4637fc3659857b6c2c8bd6c94179428a8f113
         repo: openstack/puppet-congress
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 89038da276a4170d333eb30156af5b3437978b2b
+branches:
+  - name: stable/train
+    location: 15.4.0

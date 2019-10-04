@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-gnocchi
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-gnocchi: {}
@@ -18,3 +18,10 @@ releases:
       - hash: ff10a2b3fc1b4b8c1c488dabc5ea3b9dd1149709
         repo: openstack/puppet-gnocchi
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: bc7a5193ee36accece0e61b37267c7b411e5892b
+branches:
+  - name: stable/train
+    location: 15.4.0

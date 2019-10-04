@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-nova
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-nova: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 75504111d5f3a4c0ec62e8ec7ba0cafe434c25d8
         repo: openstack/puppet-nova
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 4ad6ac30483746f8c6b6c59fb8f37b558e170a78
+branches:
+  - name: stable/train
+    location: 15.4.0

@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-keystone
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-keystone: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 9b3bf3199b029cb7034dbdefb23b5bcb947cf2fc
         repo: openstack/puppet-keystone
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 061d795f7204d57f3301fcce2e18a057a72ad291
+branches:
+  - name: stable/train
+    location: 15.4.0

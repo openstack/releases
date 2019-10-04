@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-magnum
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-magnum: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 101bbaa6b5ff2d74db86cb853de6490450eae71f
         repo: openstack/puppet-magnum
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: db32669f18112d0a99215abd88dd9812ece31201
+branches:
+  - name: stable/train
+    location: 15.4.0

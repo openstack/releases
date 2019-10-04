@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-mistral
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-mistral: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 31aa947c0933272e5cb608abb5168206b0e50098
         repo: openstack/puppet-mistral
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: d92cc8048b28eaaf358a628fb0cbf8955da5b350
+branches:
+  - name: stable/train
+    location: 15.4.0

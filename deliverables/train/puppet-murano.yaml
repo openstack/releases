@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-murano
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-murano: {}
@@ -18,3 +18,10 @@ releases:
       - hash: f6f6bd781486d64883a5c655ce2c2d8271cacaf3
         repo: openstack/puppet-murano
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 4f2d7def436c5e04bc700916a69844c9700f3a99
+branches:
+  - name: stable/train
+    location: 15.4.0

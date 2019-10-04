@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-ironic
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-ironic: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 486e62796ec2d6d2dcc2221f3e37ae5bfdb41549
         repo: openstack/puppet-ironic
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: e157ffd63be71c076a0ee55c6a2887934b6ca152
+branches:
+  - name: stable/train
+    location: 15.4.0

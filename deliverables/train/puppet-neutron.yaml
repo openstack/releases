@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-neutron
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-neutron: {}
@@ -18,3 +18,10 @@ releases:
       - hash: b2e7de79df98a986768aaef203ddbe02bee41072
         repo: openstack/puppet-neutron
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: f76f779f6ebd80caf13ca7ef5c6f1ea9110f10f5
+branches:
+  - name: stable/train
+    location: 15.4.0

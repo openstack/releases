@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-tacker
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-tacker: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 0fb9c10264f9ce36bd67b347cb9e9404e48107e5
         repo: openstack/puppet-tacker
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 7a6de4febbb4416b3853ce118cdf6e0a29459848
+branches:
+  - name: stable/train
+    location: 15.4.0

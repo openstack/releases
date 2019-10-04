@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-watcher
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-watcher: {}
@@ -18,3 +18,10 @@ releases:
       - hash: a95ed77beef7445db1f17579517be8892b09fec6
         repo: openstack/puppet-watcher
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 53f653311a893c7e19770a67caf35cc40005455f
+branches:
+  - name: stable/train
+    location: 15.4.0

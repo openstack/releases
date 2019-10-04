@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-ceilometer
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-ceilometer: {}
@@ -18,3 +18,10 @@ releases:
       - hash: 2bc879129acbacc757a89a83b931f3ca80a17953
         repo: openstack/puppet-ceilometer
     version: 15.2.0
+  - version: 15.4.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 71698a1ed365d69eaa02cb84e279e95c42ffd935
+branches:
+  - name: stable/train
+    location: 15.4.0

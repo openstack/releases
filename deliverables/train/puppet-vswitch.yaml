@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-vswitch
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-vswitch: {}
@@ -18,3 +18,10 @@ releases:
       - hash: dd5360e9fd569dfa85ebe7b1e81b7902ec67c242
         repo: openstack/puppet-vswitch
     version: 11.2.0
+  - version: 11.4.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: b734f1417b1884ae650f663a7510e8005d917290
+branches:
+  - name: stable/train
+    location: 11.4.0
