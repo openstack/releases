@@ -18,3 +18,10 @@ releases:
       - hash: d695e1df44a03ca40d64caa0cd0993d5d4430b7c
         repo: openstack/puppet-glare
     version: 4.2.0
+  - projects:
+      - hash: 0dff7701679f208f7935984fec6e68284458ea65
+        repo: openstack/puppet-glare
+    version: 4.4.0
+branches:
+  - name: stable/train
+    location: 4.4.0

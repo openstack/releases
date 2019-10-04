@@ -18,3 +18,10 @@ releases:
       - hash: d48e9f889a824bc12a5e20c9c68c1b45d3766aa9
         repo: openstack/puppet-monasca
     version: 4.2.0
+  - projects:
+      - hash: 9f5bf736a77acbcfe3c53c009429a4ad91d41914
+        repo: openstack/puppet-monasca
+    version: 4.4.0
+branches:
+  - name: stable/train
+    location: 4.4.0
