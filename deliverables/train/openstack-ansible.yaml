@@ -9,7 +9,8 @@ repository-settings:
 cycle-highlights:
   - Services' venvs are using Python 3 by default
   - Added murano support
-  - Projects become more re-usable outside of the full OpenStack-Ansible deployment
+  - Projects become more re-usable outside of the full OpenStack-Ansible
+    deployment
   - Added uwsgi role to unify uWSGI service configuration across roles
   - Fully migrated to systemd-journald from rsyslog
   - Added support of the metal multinode deployments
@@ -19,3 +20,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: 440bc86cd12338e467a9cd41fb18542913ee89f4
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: bd801990db7ad0365dbe18cd84519caee21ff3c7
+branches:
+  - name: stable/train
+    location: 20.0.0.0rc1
