@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: d7f0c819e376297989773c35f417fb3e0f2cd1e8
+  - version: 5.0.0.0rc2
+    projects:
+      - repo: openstack/octavia
+        hash: 6f54167b05cab1ef2721d63ddee99f92d61ea14f
 branches:
   - name: stable/train
     location: 5.0.0.0rc1

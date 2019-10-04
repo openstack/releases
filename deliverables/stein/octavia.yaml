@@ -39,6 +39,10 @@ releases:
       - hash: 3ac8f296953d5bf4951d3278428f51b29118aa91
         repo: openstack/octavia
     version: 4.0.1
+  - version: 4.1.0
+    projects:
+      - repo: openstack/octavia
+        hash: 1725517d1d209f26b2275306d83e49c099dcbe1a
 branches:
   - location: 4.0.0.0rc1
     name: stable/stein

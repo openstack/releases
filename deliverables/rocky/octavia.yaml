@@ -54,6 +54,10 @@ releases:
       - hash: b12f0d9d6ce5e873b8e9b501e50c314ffb02e128
         repo: openstack/octavia
     version: 3.1.1
+  - version: 3.2.0
+    projects:
+      - repo: openstack/octavia
+        hash: 624ff08f27bcb73788663cbe6d35cbe29c537844
 branches:
   - location: 3.0.0.0rc1
     name: stable/rocky
