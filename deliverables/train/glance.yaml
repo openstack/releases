@@ -6,16 +6,15 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - 'Images API v2.9 has promoted to current with 2.7 &
-    2.8 marked as SUPPORTED. 2.8 will show in version
-    list only when multi-store is configured.'
-  - 'Glance multi-store feature has been deemed stable'
-  - 'glance-cache-manage is not depending to glance-regstry
-    anymore and is communicating directly with glance-api'
-  - 'Cache prefetching is now done as periodic task by
-    glance-api removing the requirement to add it in cron.'
-  - 'Various bugfixes done in glance, glance_store and
-    python-glanceclient'
+  - Images API v2.9 has promoted to current with 2.7 & 2.8 marked as
+    SUPPORTED. 2.8 will show in version list only when multi-store is
+    configured.
+  - Glance multi-store feature has been deemed stable
+  - glance-cache-manage is not depending to glance-regstry anymore and
+    is communicating directly with glance-api
+  - Cache prefetching is now done as periodic task by glance-api removing
+    the requirement to add it in cron.
+  - Various bugfixes done in glance, glance_store and python-glanceclient
 repository-settings:
   openstack/glance: {}
 releases:
