@@ -18,3 +18,10 @@ releases:
       - hash: a36b4b3e1135bc594bcb11912b869bc2bea6aa5b
         repo: openstack/puppet-qdr
     version: 4.2.0
+  - projects:
+      - hash: c51ba07c7ccfaf81693021dfa9767b190f76cc5a
+        repo: openstack/puppet-qdr
+    version: 4.4.0
+branches:
+  - name: stable/train
+    location: 4.4.0
