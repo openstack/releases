@@ -9,6 +9,10 @@ releases:
       - repo: openstack/tempest
         hash: 702b21c1e4350ecf99542d8f1df545adb3f71d75
     version: 21.0.0
+  - projects:
+      - repo: openstack/tempest
+        hash: 13c190d62e4c4596339eeee93eb0425cd525d71f
+    version: 22.0.0
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
