@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+branches:
+  - name: stable/train
+    location:
+      openstack/puppet-openstack_spec_helper: b913da34b78f00e8d639af414620085acdb087d5
