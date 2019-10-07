@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 4bee77bedfdb96425bf60d3f49edab6dfd05bca9
+  - version: 15.0.0.0rc2
+    projects:
+      - repo: openstack/cinder
+        hash: d879e76ff05f78aa042c4fe5f79a69699ccaa997
 branches:
   - name: stable/train
     location: 15.0.0.0rc1
