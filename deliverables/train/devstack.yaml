@@ -4,5 +4,9 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: deb3ff50f15bc89921ea548f5b53d49492c5ee65
+    name: stable/train
 repository-settings:
   openstack/devstack: {}
