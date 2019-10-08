@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/train
+    location:
+      openstack/puppet-openstack-integration: 4bc7c38c867a428bfbd4b12abb3cbbce7bbc3717
