@@ -4,5 +4,9 @@ release-model: untagged
 team: Packaging-rpm
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/rpm-packaging: abf1ea38bec009948d6d31c1a39e70a72b77b2af
+    name: stable/train
 repository-settings:
   openstack/rpm-packaging: {}
