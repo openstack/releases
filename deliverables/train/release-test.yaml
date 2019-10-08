@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: 3f36401d256b374188d0991138b79927bb875f3f
+  - version: 2.0.0
+    diff-start: 1.3.0
+    projects:
+      - repo: openstack/release-test
+        hash: 3f36401d256b374188d0991138b79927bb875f3f
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
