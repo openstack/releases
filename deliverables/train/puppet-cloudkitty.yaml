@@ -18,3 +18,10 @@ releases:
       - hash: 07e33c452fa10cfc6ccef2cccd2fcc3ea5152a1a
         repo: openstack/puppet-cloudkitty
     version: 4.2.0
+  - projects:
+      - hash: e8a6462057413e3e7bb1f63f014fed1da66711d0
+        repo: openstack/puppet-cloudkitty
+    version: 4.4.0
+branches:
+  - name: stable/train
+    location: 4.4.0
