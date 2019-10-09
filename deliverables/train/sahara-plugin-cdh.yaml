@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-cdh
         hash: 22619ffe5b0487db22bd1c0199e0af355c4ca9fd
+  - version: 2.0.0.0rc2
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: c4c8cbbcada44b448a7d4bb074a46e4c792482d7
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
