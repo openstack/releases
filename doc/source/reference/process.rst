@@ -768,27 +768,6 @@ R-1 week (Final RC deadline)
 
 #. Process any remaining stable branching exception.
 
-#. On the morning of the deadline for final release candidates, check
-   the list of unreleased changes for cycle-with-rc projects and verify
-   with the PTLs and liaisons that they are planning a release or that
-   they do not need one.
-
-   In the releases repository working directory, run::
-
-     $ ./tools/list_rc_updates.sh
-
-#. As soon as the last release candidate is tagged and the freeze
-   period is entered, use ``propose-final-releases`` to tag the
-   existing most recent release candidates as the final release for
-   projects using the cycle-with-rc model.
-
-#. Ask liaisons and PTLs of milestone-based projects to review and +1
-   the final release proposal from the previous step so their approval
-   is included in the metadata that goes onto the signed tag.
-
-#. Test the release process using the ``openstack/release-test``
-   repository to ensure our machinery is functional.
-
 #. Notify the documentation team that it should be safe to apply
    their process to create the new release series landing pages for
    docs.openstack.org. Their process works better if they wait until
@@ -796,11 +775,77 @@ R-1 week (Final RC deadline)
    can do the work before the final release date to avoid having to
    synchronize with the release team on that day.
 
+#. Test the release process using the ``openstack/release-test``
+   repository to ensure our machinery is functional.
+
+#. On the day before the deadline for final release candidates,
+   propose last-minute RCs where needed:
+
+   - Check the list of unreleased changes for cycle-with-rc projects, by
+     running the following command in the releases repo working directory::
+
+     $ ./tools/list_rc_updates.sh
+
+   - Propose patches creating a new RC for those that have unreleased
+     bugfixes or updated translations
+
+   - Patches that get a +1 from PTL or release liaison should be approved.
+     A -1 will mean that the PTL prefers to wait for a post-release stable
+     update. Patches that get no feedback by the deadline should be abandoned.
+
+#. At the end of the week, send weekly email content preparing for R-0 week::
+
+    Development Focus
+    -----------------
+
+    We will be releasing the coordinated OpenStack $series release next week,
+    on $release-date. Thanks to everyone involved in the $series cycle!
+
+    We are now in pre-release freeze, so no new deliverable will be created
+    until final release, unless a release-critical regression is spotted.
+
+    Otherwise, teams attending the PTG in $ptg-location should start to plan
+    what they will be discussing there, by creating and filling team etherpads.
+    You can access the list of PTG etherpads at:
+
+    http://ptg.openstack.org/etherpads.html
+
+    General Information
+    -------------------
+
+    On release day, the release team will produce final versions of
+    deliverables following the cycle-with-rc release model, by re-tagging
+    the commit used for the last RC.
+
+    A patch doing just that will be proposed. PTLs and release liaisons should
+    watch for that final release patch from the release team. While not
+    required, we would appreciate having an ack from each team before we
+    approve it on the 16th, so that their approval is included in the metadata
+    that goes onto the signed tag.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Final Train release: $release-date
+    $other-upcoming-event
+
+#. After the email is sent, use ``propose-final-releases`` to tag the
+   existing most recent release candidates as the final release for
+   projects using the cycle-with-rc model.
+
 
 R+0 week (Final Release)
 ========================
 
-#. Approve the final release patch created earlier.
+#. We are in pre-release freeze. Only release-critical regressions, or
+   legal compliance issues, or bugs making it otherwise impossible to install
+   and use the software on release day, should be considered by the release
+   management team for a pre-release freeze exception. If approved,
+   release freeze exceptions should trigger the production of a new RC (or
+   cycle-with-intermediary release) and (if needed) a regeneration of the
+   final release patch.
+
+#. On release day, approve the final release patch created earlier.
 
    .. note::
 
@@ -809,8 +854,8 @@ R+0 week (Final Release)
       too far in advance (to avoid releasing the day before the press
       release).
 
-#. Run the ``missing-releases`` script to check for missing tarballs on the
-   release page before the announcement::
+#. Once the final patch is proceesed, run the ``missing-releases`` script
+   to check for missing tarballs on the release page before the announcement::
 
       tox -e venv -- missing-releases --series $SERIES
 
