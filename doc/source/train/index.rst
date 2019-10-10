@@ -2,7 +2,7 @@
 Train
 =====
 
-Projects Release Date: 16 October, 2019
+Originally Released: 16 October, 2019
 
 .. toctree::
    :maxdepth: 1
