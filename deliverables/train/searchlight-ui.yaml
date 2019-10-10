@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: d22b03e2e10f8d24e09f10087367e0f3ccefece4
+  - version: 7.0.0
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: d22b03e2e10f8d24e09f10087367e0f3ccefece4
+    diff-start: 6.0.0
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

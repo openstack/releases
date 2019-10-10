@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/ceilometer-powervm
         hash: f3008d1ee22329e0cd8e76aaf8b7b4a2a56af876
+  - version: 9.0.0
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: f3008d1ee22329e0cd8e76aaf8b7b4a2a56af876
+    diff-start: 8.0.0.0rc1
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

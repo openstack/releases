@@ -20,6 +20,11 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 26c97d910a135d1ab1bd8ecd47f5bd80355b5624
+  - version: 16.0.0
+    projects:
+      - repo: openstack/horizon
+        hash: 26c97d910a135d1ab1bd8ecd47f5bd80355b5624
+    diff-start: 15.0.0.0rc1
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:

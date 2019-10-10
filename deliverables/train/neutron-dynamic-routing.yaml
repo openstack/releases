@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: b6d13bdce51a38408051120b1e05281b23e1dac9
+  - version: 15.0.0
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: b6d13bdce51a38408051120b1e05281b23e1dac9
+    diff-start: 14.0.0
 branches:
   - name: stable/train
     location: 15.0.0.0rc1

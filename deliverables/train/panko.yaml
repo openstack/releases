@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/panko
         hash: 92a0a825e5771a03c81069c5a19a6fc8adfbec15
+  - version: 7.0.0
+    projects:
+      - repo: openstack/panko
+        hash: 92a0a825e5771a03c81069c5a19a6fc8adfbec15
+    diff-start: 6.0.0
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

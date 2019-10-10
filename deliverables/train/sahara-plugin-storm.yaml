@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-storm
         hash: 3c0331869c0df96c85b3f0066a9dd0aa987a28f7
+  - version: 2.0.0
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: 3c0331869c0df96c85b3f0066a9dd0aa987a28f7
+    diff-start: 1.0.0
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

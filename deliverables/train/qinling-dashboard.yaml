@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/qinling-dashboard
         hash: 8c10ec4ad1cec1bb465694537e6551384028127a
+  - version: 2.0.0
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 8c10ec4ad1cec1bb465694537e6551384028127a
+    diff-start: 1.0.0
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 63f216755a61f76452d900264948d55ce94b75a4
+  - version: 9.0.0
+    projects:
+      - repo: openstack/designate
+        hash: 63f216755a61f76452d900264948d55ce94b75a4
+    diff-start: 8.0.0
 cycle-highlights:
   - Removal of old deprecated code like Pool Manager and old Power DNS
     drivers which ensures less complexity for operators. (95% of all

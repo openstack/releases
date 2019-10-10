@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: 24a0ea0195febff2554d2275b9a30972f8071dee
+  - version: 11.0.0
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 24a0ea0195febff2554d2275b9a30972f8071dee
+    diff-start: 10.0.0
 branches:
   - name: stable/train
     location: 11.0.0.0rc1

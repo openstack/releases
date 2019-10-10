@@ -12,11 +12,16 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: e107b41ed9c707db67d58f1ada5d1eea1c14e72f
+  - version: 4.0.0
+    projects:
+      - repo: openstack/storlets
+        hash: e107b41ed9c707db67d58f1ada5d1eea1c14e72f
+    diff-start: 3.0.0.0rc1
 repository-settings:
   openstack/storlets: {}
 cycle-highlights:
-  - 'Python 3 support is going forward'
-  - 'Various code improvement'
+  - Python 3 support is going forward
+  - Various code improvement
 branches:
   - location: 4.0.0.0rc1
     name: stable/train
