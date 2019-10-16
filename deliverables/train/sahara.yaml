@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 8501b5235cb4c4d23eba796f201eace350e08bf2
+  - version: 11.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: 8501b5235cb4c4d23eba796f201eace350e08bf2
+    diff-start: 10.0.0
 branches:
   - name: stable/train
     location: 11.0.0.0rc1

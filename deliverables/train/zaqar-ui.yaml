@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 472d462c9030bf204fb11c67456f9651c44d4270
+  - version: 7.0.0
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 472d462c9030bf204fb11c67456f9651c44d4270
+    diff-start: 6.0.0
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

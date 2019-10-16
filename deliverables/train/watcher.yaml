@@ -29,6 +29,11 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 85763ccfce7937887cc7086b34c0255633c8b7e5
+  - version: 3.0.0
+    projects:
+      - repo: openstack/watcher
+        hash: 85763ccfce7937887cc7086b34c0255633c8b7e5
+    diff-start: 2.0.0
 branches:
   - name: stable/train
     location: 3.0.0.0rc1

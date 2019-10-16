@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 1879195d64b877e167534ba4371dfda6d4ed1672
+  - version: 13.0.0
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 1879195d64b877e167534ba4371dfda6d4ed1672
+    diff-start: 12.0.0
 branches:
   - name: stable/train
     location: 13.0.0.0rc1

@@ -40,6 +40,15 @@ releases:
         hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
       - repo: openstack/mistral-extra
         hash: 559c7ef5a977583dd4f1b931880d4154ebf565b5
+  - version: 9.0.0
+    projects:
+      - repo: openstack/mistral
+        hash: 016509eb5ea673dd66cff04bb457645be1618653
+      - repo: openstack/mistral-dashboard
+        hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
+      - repo: openstack/mistral-extra
+        hash: 559c7ef5a977583dd4f1b931880d4154ebf565b5
+    diff-start: 8.0.0.0rc1
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

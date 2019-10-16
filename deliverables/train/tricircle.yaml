@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: deb146a18ccf87553bd9ed61295d09846aad2741
+  - version: 7.0.0
+    projects:
+      - repo: openstack/tricircle
+        hash: deb146a18ccf87553bd9ed61295d09846aad2741
+    diff-start: 6.0.0
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

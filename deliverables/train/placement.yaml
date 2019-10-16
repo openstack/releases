@@ -34,6 +34,11 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 36beddbaf5e3cc4dce8e3abda5471fe95704feae
+  - version: 2.0.0
+    projects:
+      - repo: openstack/placement
+        hash: 36beddbaf5e3cc4dce8e3abda5471fe95704feae
+    diff-start: 1.0.0.0rc1
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

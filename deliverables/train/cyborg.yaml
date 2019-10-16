@@ -28,6 +28,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: 7e665ea2e3d885b81e07a5f75dccef7be5577a56
+  - version: 3.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: 7e665ea2e3d885b81e07a5f75dccef7be5577a56
+    diff-start: 2.0.0
 branches:
   - name: stable/train
     location: 3.0.0.0rc1

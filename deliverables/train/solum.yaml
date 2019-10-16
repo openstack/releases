@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 24fa3f5e3d05162599748dc86419dadc0c71f346
+  - version: 7.0.0
+    projects:
+      - repo: openstack/solum
+        hash: 24fa3f5e3d05162599748dc86419dadc0c71f346
+    diff-start: 6.0.0
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

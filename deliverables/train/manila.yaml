@@ -27,6 +27,11 @@ releases:
     projects:
       - repo: openstack/manila
         hash: dd86685cd962dad6b99be27444422d80dc7bf8a3
+  - version: 9.0.0
+    projects:
+      - repo: openstack/manila
+        hash: dd86685cd962dad6b99be27444422d80dc7bf8a3
+    diff-start: 8.0.0
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
