@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # List deliverables that appear in governance but not in releases
 # in preparation for MemberShipFreeze

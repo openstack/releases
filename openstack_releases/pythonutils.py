@@ -44,9 +44,9 @@ def get_sdist_name(workdir, repo):
             cwd=dest,
         )
     if use_tox:
-        python = '.tox/venv/bin/python'
+        python = '.tox/venv/bin/python3'
     else:
-        python = 'python'
+        python = 'python3'
     # Run it once and discard the result to ensure any setup_requires
     # dependencies are installed.
     cmd = [python, 'setup.py', '--name']
@@ -77,9 +77,9 @@ def build_sdist(workdir, repo):
             cwd=dest,
         )
     if use_tox:
-        python = '.tox/venv/bin/python'
+        python = '.tox/venv/bin/python3'
     else:
-        python = 'python'
+        python = 'python3'
     # Run it once and discard the result to ensure any setup_requires
     # dependencies are installed.
     cmd = [python, 'setup.py', 'sdist', 'bdist_wheel']
