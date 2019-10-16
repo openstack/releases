@@ -572,6 +572,57 @@ R-3 week (RC1 deadline)
      release liaison. Discuss standing -1s to see if they should be granted
      an exception and wait until next week.
 
+#. At the end of the week, send weekly email content preparing for R-2 week::
+
+    Development Focus
+    -----------------
+
+    At this point we should have release candidates (RC1 or recent intermediary
+    release) for all the $series deliverables. Teams should be working on any
+    release-critical bugs that would require another RC or intermediary release
+    before the final release.
+
+    Actions
+    -------
+
+    Early in the week, the release team will be proposing stable/$series branch
+    creation for all deliverables that have not branched yet, using the latest
+    available $series release as the branch point. If your team is ready to go
+    for creating that branch, please let us know by leaving a +1 on these
+    patches.
+
+    If you would like to wait for another release before branching, you can -1
+    the patch and update it later in the week with the new release you would
+    like to use. By the end of the week the release team will merge those
+    patches though, unless an exception is granted.
+
+    Once stable/$series branches are created, if a release-critical bug is
+    detected, you will need to fix the issue in the master branch first, then
+    backport the fix to the stable/$series branch before releasing out of the
+    stable/$series branch.
+
+    After all of the cycle-with-rc projects have branched we will branch
+    devstack, grenade, and the requirements repos. This will effectively open
+    them up for $next-series development, though the focus should still be on
+    finishing up $series until the final release.
+
+    For projects with translations, watch for any translation patches coming
+    through and merge them quickly. A new release should be produced so that
+    translations are included in the final $series release.
+
+    Finally, now is a good time to finalize release notes. In particular,
+    consider adding any relevant "prelude" content. Release notes are
+    targetted for the downstream consumers of your project, so it would be
+    great to include any useful information for those that are going to pick
+    up and use or deploy the $series version of your project.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Final RC deadline: $final-rc-deadline (R-1 week)
+    Final Train release: $release-date
+    $other-upcoming-event
+
 
 R-2 week
 ========
@@ -579,21 +630,23 @@ R-2 week
 #. Process any standing RC1 deadline exceptions.
 
 #. On the Monday, generate stable branches for all cycle deliverables that
-   are still missing one. You can list those using::
+   are still missing one.
 
-     tox -e venv -- list-deliverables --no-stable-branch
+   - You can list those using::
 
-#. Those patches will be used as a base to communicate with the team:
-   if a team wants to wait and make another release before the branch is
-   cut, someone from the team can -1 the patch to have it held, or update
-   that patch to include another release and stable branch point.
+         tox -e venv -- list-deliverables --no-stable-branch
 
-#. Between Tuesday and Thursday, merge as soon as possible the patches that
-   get +1 from the PTL or the release liaison.
+   - Those patches will be used as a base to communicate with the team:
+     if a team wants to wait and make another release before the branch is
+     cut, someone from the team can -1 the patch to have it held, or update
+     that patch to include another release and stable branch point.
 
-#. On the Friday, merge patches that did not get any feedback from PTL or
-   release liaison. Discuss standing -1s to see if they should be granted
-   an exception and wait until next week.
+   - Between Tuesday and Thursday, merge as soon as possible the patches that
+     get +1 from the PTL or the release liaison.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
 
 #. After all the projects enabled in devstack by default have been branched,
    we can engage with the QA, I18n and Requirements PTLs to finalize the
@@ -612,7 +665,7 @@ R-2 week
    - Remind the QA PTL to update the grenade settings in devstack-gate for the
      new branch. For example, https://review.opendev.org/362438.
 
-      .. note::
+     .. note::
 
         As soon as grenade is updated for the new branch (see the RC1
         instructions that follow), projects without stable branches may
@@ -629,7 +682,7 @@ R-2 week
      the ``stable/$series`` branch for ``openstack/requirements``. Then
      announce that the requirements freeze is lifted from master.
 
-      .. note::
+     .. note::
 
          We wait until after the other projects have branched to
          create the branch for requirements because tests for the stable
@@ -652,6 +705,10 @@ R-2 week
     periodic-stable job templates in openstack-zuul-jobs. For example, see
     https://review.opendev.org/545268/.
 
+#. Ensure that all projects that are publishing release notes have the
+   notes link included in their deliverable file. See
+   tools/add_release_note_links.sh.
+
 #. Let cycle-with-rc projects iterate on RCs as needed. The final release
    candidate for each project needs to be prepared at least one week before
    the final release date.
@@ -667,23 +724,49 @@ R-2 week
       them WIP until actually ready, so the release team knows that more
       candidates are coming.
 
+#. At the end of the week, send weekly email content preparing for R-1 week::
+
+    Development Focus
+    -----------------
+
+    We are on the final mile of the $series development cycle!
+
+    Remember that the $series final release will include the latest release
+    candidate (for cycle-with-rc deliverables) or the latest intermediary
+    release (for cycle-with-intermediary deliverables) available.
+
+    $final-rc-deadline is the deadline for final $series release candidates
+    as well as any last cycle-with-intermediary deliverables. We will then
+    enter a quiet period until we tag the final release on $release-date.
+    Teams should be prioritizing fixing release-critical bugs, before that
+    deadline.
+
+    Otherwise it's time to start planning the $next-series development cycle,
+    including discussing Forum and PTG sessions content, in preparation of
+    $other-upcoming-event.
+
+    Actions
+    -------
+
+    Watch for any translation patches coming through on the stable/$series
+    branch and merge them quickly. If you discover a release-critical issue,
+    please make sure to fix it on the master branch first, then backport the
+    bugfix to the stable/$series branch before triggering a new release.
+
+    Please drop by #openstack-release with any questions or concerns about
+    the upcoming release !
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Final Train release: $release-date
+    $other-upcoming-event
+
 
 R-1 week (Final RC deadline)
 ============================
 
-#. In the countdown email, remind everyone that the latest RC (for
-   cycle-with-rc deliverables) or the latest intermediary release (for
-   cycle-with-intermediary deliverables) will automatically be used as
-   the final $series release on release day.
-
-#. Ensure that all projects that are publishing release notes have the
-   notes link included in their deliverable file. See
-   ``tools/add_release_note_links.sh``.
-
-#. Encourage liaisons to merge all translation patches.
-
-#. When all translations and bug fixes are merged for a project,
-   prepare a new release candidate.
+#. Process any remaining stable branching exception.
 
 #. On the morning of the deadline for final release candidates, check
    the list of unreleased changes for cycle-with-rc projects and verify
