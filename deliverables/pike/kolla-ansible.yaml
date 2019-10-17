@@ -56,6 +56,10 @@ releases:
       - hash: 858790a358d052344536395bec18571e7dcd9a23
         repo: openstack/kolla-ansible
     version: pike-em
+  - projects:
+      - hash: dd69cc96de9e35755b2752a286ea30301e31caed
+        repo: openstack/kolla-ansible
+    version: pike-eol
 release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/pike.html
 repository-settings:
   openstack/kolla-ansible: {}
