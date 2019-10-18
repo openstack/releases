@@ -231,3 +231,35 @@ the week.
 PTL Elections
 -------------
 
+Keystone
+--------
+
+.. _u-keystone-spec-proposal-freeze:
+
+Keystone Spec Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Ussuri must be submitted to the keystone-specs
+repository by the end of the week.
+
+.. _u-keystone-spec-freeze:
+
+Keystone Spec Freeze
+^^^^^^^^^^^^^^^^^^^^
+
+All Keystone specs targeted to Ussuri must be approved by the end of the week.
+
+.. _u-keystone-fpfreeze:
+
+Keystone Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be proposed and substantially completed, with
+unit tests and documentation by the end of the week.
+
+.. _u-keystone-ffreeze:
+
+Keystone Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Keystone features must be merged by the end of the week.

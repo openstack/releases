@@ -35,6 +35,8 @@ cycle:
   start: '2019-12-09'
   x-project:
     - u-1
+  project-specific:
+    - u-keystone-spec-proposal-freeze
 - end: '2019-12-20'
   name: R-21
   start: '2019-12-16'
@@ -68,6 +70,7 @@ cycle:
   project-specific:
     - u-manila-spec-freeze
     - u-manila-driver-deadline
+    - u-keystone-spec-freeze
 - end: '2020-02-21'
   name: R-12
   start: '2020-02-17'
@@ -82,6 +85,7 @@ cycle:
   start: '2020-03-09'
   project-specific:
     - u-manila-fpfreeze
+    - u-keystone-fpfreeze
 - end: '2020-03-20'
   name: R-8
   start: '2020-03-16'
