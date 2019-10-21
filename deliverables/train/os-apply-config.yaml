@@ -15,3 +15,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: d9df1dbd367d42430aa9abfe90d5aec572ec152b
+  - version: 10.5.0
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 45d999508849137c13eeab63bbec269df232758b
+branches:
+  - name: stable/train
+    location: 10.5.0

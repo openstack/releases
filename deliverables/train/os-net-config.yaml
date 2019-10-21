@@ -19,3 +19,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: a74bbdd7b017fb3bb9faffb4240efa59cb42c79c
+  - version: 11.3.0
+    projects:
+      - repo: openstack/os-net-config
+        hash: 2ec6d366ee694e3540eac6ba702e73d9a210c366
+branches:
+  - name: stable/train
+    location: 11.3.0
