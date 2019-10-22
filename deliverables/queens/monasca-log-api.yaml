@@ -16,6 +16,10 @@ releases:
       - hash: 51d9493edaffc68f85014037fba4a059d7a1a345
         repo: openstack/monasca-log-api
     version: 2.6.0
+  - version: 2.6.1
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: 415e2bb59383fe8ca7c10ec0a49ca916bb15c799
 branches:
   - location: 2.6.0
     name: stable/queens
