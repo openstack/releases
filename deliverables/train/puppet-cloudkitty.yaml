@@ -1,7 +1,7 @@
 ---
 launchpad: puppet-cloudkitty
 release-model: cycle-trailing
-team: 'Puppet OpenStack'
+team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-cloudkitty: {}
@@ -25,3 +25,4 @@ releases:
 branches:
   - name: stable/train
     location: 4.4.0
+release-notes: https://docs.openstack.org/releasenotes/puppet-cloudkitty/train.html
