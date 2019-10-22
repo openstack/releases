@@ -273,15 +273,6 @@ Manila Feature Proposal Freeze
 All new Manila features must be proposed and substantially completed, with
 unit, functional and integration tests by the end of the week.
 
-.. _u-manila-ffreeze:
-
-Manila Feature Freeze
-^^^^^^^^^^^^^^^^^^^^^
-
-All new Manila features must be merged by the end of the week. The
-Ussuri releases for the OpenStack Dashboard plugin (manila-ui) and the
-python SDK / CLI library (python-manilaclient) will be made by the end of
-the week.
 
 Oslo
 ----
