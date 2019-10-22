@@ -227,6 +227,17 @@ Ussuri releases for the OpenStack Dashboard plugin (manila-ui) and the
 python SDK / CLI library (python-manilaclient) will be made by the end of
 the week.
 
+Oslo
+----
+
+.. _u-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
+
 
 PTL Elections
 -------------
