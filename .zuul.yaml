@@ -46,8 +46,7 @@
               - ^doc/.*$
     release-post:
       jobs:
-        - tag-releases:
-            timeout: 3600
+        - tag-releases
         - publish-tox-docs-static:
             dependencies:
               - tag-releases
