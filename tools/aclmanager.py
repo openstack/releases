@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Handle pre-release / post-release ACLs for milestone-driven projects
 #

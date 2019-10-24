@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 #
 # Scan the releases for a series that came after the project's branch
 # and verify that they are all on the right branch.
