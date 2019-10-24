@@ -4,5 +4,10 @@ release-model: cycle-with-intermediary
 storyboard: 760
 team: OpenStackSDK
 type: library
+releases:
+  - projects:
+      - hash: 6fa13c234ee637945908f1e1c297c8f0385e924d
+        repo: openstack/openstacksdk
+    version: 0.37.0
 repository-settings:
   openstack/openstacksdk: {}
