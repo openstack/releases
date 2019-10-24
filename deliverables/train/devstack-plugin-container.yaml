@@ -4,5 +4,9 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: ac7cd2f4a5e3710f7275384af7860a6e31515872
+    name: stable/train
 repository-settings:
   openstack/devstack-plugin-container: {}
