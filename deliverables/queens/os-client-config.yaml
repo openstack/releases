@@ -10,6 +10,10 @@ releases:
       - hash: ed71a5994f747951c737b16e300ed9dec54a4750
         repo: openstack/os-client-config
     version: 1.29.0
+  - version: queens-em
+    projects:
+      - repo: openstack/os-client-config
+        hash: ed71a5994f747951c737b16e300ed9dec54a4750
 branches:
   - name: stable/queens
     location: 1.29.0
