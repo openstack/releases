@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 1cf074f4da62b7a42f88aef3c8571e7b6e850823
+  - version: 3.6.1
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 9279603765cd7099fd180f4e13b1e8e1344d6f52
 branches:
   - name: stable/rocky
     location: 3.6.0
