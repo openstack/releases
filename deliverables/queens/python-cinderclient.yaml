@@ -21,6 +21,10 @@ releases:
       - hash: 1de605cdd3c52795d3d6649515807239596f3054
         repo: openstack/python-cinderclient
     version: 3.5.0
+  - version: queens-em
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 1de605cdd3c52795d3d6649515807239596f3054
 branches:
   - name: stable/queens
     location: 3.5.0

@@ -61,6 +61,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 8d3e40b7cd0ee73cc422afddc0ad37a23673ef73
+  - version: queens-em
+    projects:
+      - repo: openstack/os-brick
+        hash: 8d3e40b7cd0ee73cc422afddc0ad37a23673ef73
 branches:
   - name: stable/queens
     location: 2.3.0
