@@ -24,6 +24,10 @@ releases:
       - hash: 257784d7b70ae4bb692fc585f59a6d45b07fe01a
         repo: openstack/monasca-common
     version: 2.8.0
+  - version: queens-em
+    projects:
+      - repo: openstack/monasca-common
+        hash: 257784d7b70ae4bb692fc585f59a6d45b07fe01a
 branches:
   - location: 2.8.0
     name: stable/queens
