@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: db0cea7121628d6d27e0beaa10b989be33dad37e
+  - version: queens-em
+    projects:
+      - repo: openstack/zun
+        hash: db0cea7121628d6d27e0beaa10b989be33dad37e
 branches:
   - name: stable/queens
     location: 1.0.0
