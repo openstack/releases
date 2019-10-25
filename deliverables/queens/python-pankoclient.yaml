@@ -16,6 +16,10 @@ releases:
         hash: 0be95b1d9d64751525820d8bbe1b56be99740ac6
         tarball-base: pankoclient
 
+  - version: queens-em
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 0be95b1d9d64751525820d8bbe1b56be99740ac6
 branches:
   - location: 0.4.0
     name: stable/queens
