@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 49a45133c24fb5a9f00bf3ad5f58f69a0d05f3d6
+  - version: queens-em
+    projects:
+      - repo: openstack/manila-ui
+        hash: 49a45133c24fb5a9f00bf3ad5f58f69a0d05f3d6
 branches:
   - location: 2.13.0
     name: stable/queens
