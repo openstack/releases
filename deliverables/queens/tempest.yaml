@@ -2,7 +2,7 @@
 include-pypi-link: true
 launchpad: tempest
 release-model: cycle-with-intermediary
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 release-notes: https://docs.openstack.org/releasenotes/tempest/v18.0.0.html
 releases:
@@ -18,6 +18,10 @@ releases:
       - repo: openstack/tempest
         hash: b9f9f892958be615dad47e740e6329c3046b6dbd
     version: 18.0.0
+  - version: queens-em
+    projects:
+      - repo: openstack/tempest
+        hash: b9f9f892958be615dad47e740e6329c3046b6dbd
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
