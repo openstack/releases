@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: cb60d7316c283667629355f33bf5602c4950101f
+  - version: queens-em
+    projects:
+      - repo: openstack/designate
+        hash: cb60d7316c283667629355f33bf5602c4950101f
 cycle-highlights:
   - Removed legacy V1 API interface
   - Policy files are now just overrides to default rules
