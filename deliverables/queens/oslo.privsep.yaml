@@ -25,6 +25,10 @@ releases:
       - hash: 2221752ceae77ed8af3daa5e478c63ced677d3cf
         repo: openstack/oslo.privsep
     version: 1.27.0
+  - version: queens-em
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 2221752ceae77ed8af3daa5e478c63ced677d3cf
 branches:
   - name: stable/queens
     location: 1.26.0

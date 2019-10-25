@@ -53,6 +53,10 @@ releases:
       - hash: 7d9e9a894b23a418bbb9597e1f43bf8f5803d1d0
         repo: openstack/oslo.db
     version: 4.33.4
+  - version: queens-em
+    projects:
+      - repo: openstack/oslo.db
+        hash: 7d9e9a894b23a418bbb9597e1f43bf8f5803d1d0
 branches:
   - name: stable/queens
     location: 4.33.0

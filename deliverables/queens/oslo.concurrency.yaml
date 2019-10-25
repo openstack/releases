@@ -25,6 +25,10 @@ releases:
       - hash: 0c4718fcb77e9f4e3a22ae458869b7294b7bc91f
         repo: openstack/oslo.concurrency
     version: 3.25.1
+  - version: queens-em
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 0c4718fcb77e9f4e3a22ae458869b7294b7bc91f
 branches:
   - name: stable/queens
     location: 3.25.0

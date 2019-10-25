@@ -17,6 +17,10 @@ releases:
       - hash: 8fff2242ff53735255247a1b126727e374fe9159
         repo: openstack/futurist
     version: 1.6.0
+  - version: queens-em
+    projects:
+      - repo: openstack/futurist
+        hash: 8fff2242ff53735255247a1b126727e374fe9159
 branches:
   - name: stable/queens
     location: 1.6.0
