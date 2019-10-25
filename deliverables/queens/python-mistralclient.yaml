@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 1008e4e4cbd58465226a54c261b1d73021fcd2ed
+  - version: queens-em
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 1008e4e4cbd58465226a54c261b1d73021fcd2ed
 release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/queens.html
 repository-settings:
   openstack/python-mistralclient: {}
