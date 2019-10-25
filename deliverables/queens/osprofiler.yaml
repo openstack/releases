@@ -29,6 +29,10 @@ releases:
       - hash: 2eef34430671bac137a0e16d0d87197feb726464
         repo: openstack/osprofiler
     version: 1.15.2
+  - version: queens-em
+    projects:
+      - repo: openstack/osprofiler
+        hash: 2eef34430671bac137a0e16d0d87197feb726464
 branches:
   - name: stable/queens
     location: 1.15.1

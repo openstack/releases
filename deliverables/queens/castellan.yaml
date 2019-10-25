@@ -32,6 +32,10 @@ releases:
       - hash: 8e2929b8779eaa03f15a25da5cf64ef8539a026b
         repo: openstack/castellan
     version: 0.17.0
+  - version: queens-em
+    projects:
+      - repo: openstack/castellan
+        hash: 8e2929b8779eaa03f15a25da5cf64ef8539a026b
 branches:
   - name: stable/queens
     location: 0.17.0

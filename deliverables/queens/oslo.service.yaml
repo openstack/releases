@@ -29,6 +29,10 @@ releases:
       - hash: 7e69bf9dce753c6f0c2a8f8f5e1996248a99274e
         repo: openstack/oslo.service
     version: 1.29.1
+  - version: queens-em
+    projects:
+      - repo: openstack/oslo.service
+        hash: 7e69bf9dce753c6f0c2a8f8f5e1996248a99274e
 branches:
   - name: stable/queens
     location: 1.29.0
