@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 991a6cebb900f9ece5279f1c3c2bf33bcbb74086
+  - version: 3.7.1
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: c2ba4df5e229549447658469cded8f31e2822bf5
 branches:
   - location: 3.7.0
     name: stable/stein
