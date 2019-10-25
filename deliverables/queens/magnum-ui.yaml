@@ -15,6 +15,10 @@ releases:
       - hash: a6d173dcede3ecb97791c09986ddb8177fa45c82
         repo: openstack/magnum-ui
     version: 4.0.1
+  - version: queens-em
+    projects:
+      - repo: openstack/magnum-ui
+        hash: a6d173dcede3ecb97791c09986ddb8177fa45c82
 repository-settings:
   openstack/magnum-ui: {}
 release-notes: https://docs.openstack.org/releasenotes/magnum-ui/queens.html
