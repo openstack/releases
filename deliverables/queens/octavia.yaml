@@ -60,6 +60,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 89a2f6e0136ad49d928eb65b4cf555af2a2b8ab1
+  - version: queens-em
+    projects:
+      - repo: openstack/octavia
+        hash: 89a2f6e0136ad49d928eb65b4cf555af2a2b8ab1
 branches:
   - location: 2.0.0.0rc1
     name: stable/queens
