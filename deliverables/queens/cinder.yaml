@@ -69,6 +69,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 772897cad777716e55216f59d0e11ec191b31c80
+  - version: queens-em
+    projects:
+      - repo: openstack/cinder
+        hash: 772897cad777716e55216f59d0e11ec191b31c80
 cycle-highlights:
   - Support for attaching a single Cinder volume to multile VM instances.
   - Add ability to report backend state in service list.
