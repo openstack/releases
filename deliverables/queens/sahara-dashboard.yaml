@@ -33,6 +33,10 @@ releases:
       - repo: openstack/sahara-dashboard
         hash: 0fb5197b80642817761b8e68db3bbace412e357c
     version: 8.0.2
+  - version: queens-em
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 0fb5197b80642817761b8e68db3bbace412e357c
 branches:
   - name: stable/queens
     location: 8.0.0.0rc1

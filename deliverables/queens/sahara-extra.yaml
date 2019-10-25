@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: 391c425e94e94bd1e838fc83e6f7ec3be1e6c353
+  - version: queens-em
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 391c425e94e94bd1e838fc83e6f7ec3be1e6c353
 branches:
   - name: stable/queens
     location: 8.0.0
