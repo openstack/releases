@@ -61,6 +61,10 @@ releases:
       - hash: f07b62c37880821aaf067ad18ddfa97e049d31d9
         repo: openstack/neutron
     version: 12.1.1
+  - version: queens-em
+    projects:
+      - repo: openstack/neutron
+        hash: f07b62c37880821aaf067ad18ddfa97e049d31d9
 repository-settings:
   openstack/neutron: {}
 branches:

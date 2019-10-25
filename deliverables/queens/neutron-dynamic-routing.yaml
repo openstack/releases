@@ -34,6 +34,10 @@ releases:
       - hash: a29018ba87b18828c52326030413bc5e55f3668b
         repo: openstack/neutron-dynamic-routing
     version: 12.0.1
+  - version: queens-em
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: a29018ba87b18828c52326030413bc5e55f3668b
 repository-settings:
   openstack/neutron-dynamic-routing: {}
 branches:
