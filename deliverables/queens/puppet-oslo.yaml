@@ -24,6 +24,10 @@ releases:
       - hash: 2259336c85029f753400df31a2fc6a8645b190a5
         repo: openstack/puppet-oslo
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 2259336c85029f753400df31a2fc6a8645b190a5
 repository-settings:
   openstack/puppet-oslo: {}
 branches:

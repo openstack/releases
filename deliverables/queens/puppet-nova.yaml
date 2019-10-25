@@ -28,6 +28,10 @@ releases:
       - hash: f1b23d074e52e5c785fd07fbfeededbde3ca2c49
         repo: openstack/puppet-nova
     version: 12.5.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-nova
+        hash: f1b23d074e52e5c785fd07fbfeededbde3ca2c49
 repository-settings:
   openstack/puppet-nova: {}
 branches:

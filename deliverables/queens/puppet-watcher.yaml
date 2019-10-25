@@ -24,6 +24,10 @@ releases:
       - hash: af2e20b81d1938b2a6e5d4a8d3c444526e3e0aeb
         repo: openstack/puppet-watcher
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: af2e20b81d1938b2a6e5d4a8d3c444526e3e0aeb
 repository-settings:
   openstack/puppet-watcher: {}
 branches:

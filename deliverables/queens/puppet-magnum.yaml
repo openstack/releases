@@ -24,6 +24,10 @@ releases:
       - hash: c2b7f7939bcd7e89b67de57f96424df92c1cb187
         repo: openstack/puppet-magnum
     version: 12.2.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: c2b7f7939bcd7e89b67de57f96424df92c1cb187
 repository-settings:
   openstack/puppet-magnum: {}
 branches:

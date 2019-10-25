@@ -24,6 +24,10 @@ releases:
       - hash: 36ff21904dc61202b4b6c4819dc1758bfc50c9d8
         repo: openstack/puppet-ovn
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 36ff21904dc61202b4b6c4819dc1758bfc50c9d8
 repository-settings:
   openstack/puppet-ovn: {}
 branches:
