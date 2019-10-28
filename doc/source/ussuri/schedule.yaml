@@ -56,6 +56,8 @@ cycle:
 - end: '2020-01-31'
   name: R-15
   start: '2020-01-27'
+  project-specific:
+    - u-cinder-spec-freeze
 - end: '2020-02-07'
   name: R-14
   start: '2020-02-03'
@@ -66,6 +68,8 @@ cycle:
     - u-2
     - u-mf
   project-specific:
+    - u-cinder-driver-deadline
+    - u-cinder-target-driver-deadline
     - u-manila-spec-freeze
     - u-manila-driver-deadline
 - end: '2020-02-21'
@@ -85,6 +89,8 @@ cycle:
 - end: '2020-03-20'
   name: R-8
   start: '2020-03-16'
+  project-specific:
+    - u-cinder-feature-checkpoint
 - end: '2020-03-27'
   name: R-7
   start: '2020-03-23'
@@ -108,6 +114,7 @@ cycle:
     - u-rf
     - u-goals-complete
   project-specific:
+    - u-cinder-ci-checkpoint
     - u-manila-ffreeze
 - end: '2020-04-17'
   name: R-4
