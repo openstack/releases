@@ -8,6 +8,10 @@ releases:
       - hash: 209b830334309b0b11dd85c0ff9e4617c762abdc
         repo: openstack/monasca-kibana-plugin
     version: 1.2.0
+  - version: queens-em
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: 209b830334309b0b11dd85c0ff9e4617c762abdc
 branches:
   - location: 1.2.0
     name: stable/queens
