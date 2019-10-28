@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 15d0a7dd0543f00fa3886d287b980e65b346d949
+  - version: queens-em
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 15d0a7dd0543f00fa3886d287b980e65b346d949
 cycle-highlights:
   - Addition/Evolution of collectors (Monasca and Ceph Object Storage)
   - Split metrology configuration from CK config file
