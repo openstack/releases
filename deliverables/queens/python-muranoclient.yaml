@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 294480075de1bde296953eaa54916d75cbfb40f5
+  - version: queens-em
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 294480075de1bde296953eaa54916d75cbfb40f5
 branches:
   - name: stable/queens
     location: 1.0.1
