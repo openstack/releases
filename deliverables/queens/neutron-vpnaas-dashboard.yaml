@@ -21,6 +21,10 @@ releases:
       - hash: 652574b29c2e2ad99d01fa9dd57878ca04f4b009
         repo: openstack/neutron-vpnaas-dashboard
     version: 1.2.3
+  - version: queens-em
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 652574b29c2e2ad99d01fa9dd57878ca04f4b009
 branches:
   - location: 1.2.1
     name: stable/queens
