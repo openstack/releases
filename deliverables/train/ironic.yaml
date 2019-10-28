@@ -18,6 +18,10 @@ releases:
       - repo: openstack/ironic
         hash: 8ecae41ee12a81d741cc8e63ad8eba8fb5c180e3
     version: 13.0.1
+  - version: 13.0.2
+    projects:
+      - repo: openstack/ironic
+        hash: 9988ee59a23337f7d590b42cdb0b4d2a1e46cacd
 branches:
   - location: 13.0.0
     name: stable/train
