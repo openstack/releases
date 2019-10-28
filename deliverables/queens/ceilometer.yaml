@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: f8e7d5252deec7781e4a09fb7ef92561c14c4b1c
+  - version: queens-em
+    projects:
+      - repo: openstack/ceilometer
+        hash: f8e7d5252deec7781e4a09fb7ef92561c14c4b1c
 branches:
   - name: stable/queens
     location: 10.0.0
