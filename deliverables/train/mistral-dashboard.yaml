@@ -1,0 +1,28 @@
+---
+launchpad: mistral
+release-model: cycle-with-rc
+team: mistral
+type: horizon-plugin
+repository-settings:
+  openstack/mistral-dashboard: {}
+releases:
+  - version: 9.0.0.0b1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: ee3680a4d6c89f0ba2b64d7903f5a6bd48925c41
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 538fc12dff4c6e1171c28e6b49fddbe5371db315
+  - version: 9.0.0.0rc2
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
+  - version: 9.0.0
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
+    diff-start: 8.0.0.0rc1
+branches:
+  - name: stable/train
+    location: 9.0.0.0rc1
