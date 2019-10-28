@@ -27,6 +27,11 @@ releases:
       - repo: openstack/watcher
         hash: 40a653215f37a52394d561742d7975a4be3b946d
         tarball-base: python-watcher
+  - version: 1.8.1
+    projects:
+      - repo: openstack/watcher
+        hash: 5307f5a80ea81c69a1bc37aead007b441a4af450
+        tarball-base: python-watcher
 repository-settings:
   openstack/watcher: {}
 release-notes: https://docs.openstack.org/releasenotes/watcher/queens.html
