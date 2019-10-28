@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 8c6c6e37c8b019ee069ed666dd63eac636f452e2
+  - version: queens-em
+    projects:
+      - repo: openstack/vitrage
+        hash: 8c6c6e37c8b019ee069ed666dd63eac636f452e2
 repository-settings:
   openstack/vitrage: {}
 release-notes: https://docs.openstack.org/releasenotes/vitrage/queens.html
