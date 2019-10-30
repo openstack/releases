@@ -1,0 +1,45 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-milestones
+team: mistral
+type: service
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b1f04293b874e19de4bfa8b6a9776371a7f59727
+  - version: 6.0.0.0b2
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b1f04293b874e19de4bfa8b6a9776371a7f59727
+  - version: 6.0.0.0b3
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b1f04293b874e19de4bfa8b6a9776371a7f59727
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 566dc85cca11512537b786a8a8ffc35a2331871c
+  - diff-start: 5.0.0
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 566dc85cca11512537b786a8a8ffc35a2331871c
+    version: 6.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 8173e8d1b886fd58ec9ddae7ad03f76c812ac1f4
+  - projects:
+      - hash: e761742f652a981eddf8ea3b50e2eabea3ca6b97
+        repo: openstack/mistral-extra
+    version: 6.0.4
+  - version: queens-em
+    projects:
+      - repo: openstack/mistral-extra
+        hash: e761742f652a981eddf8ea3b50e2eabea3ca6b97
+repository-settings:
+  openstack/mistral-extra: {}
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens

@@ -1,0 +1,45 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-milestones
+team: mistral
+type: service
+releases:
+  - version: 6.0.0.0b1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 2688f3e48411f3f555b12c32b54b1c89f3560202
+  - version: 6.0.0.0b2
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: f9ff2798bd21a672933c18f9fc139a770bf8150e
+  - version: 6.0.0.0b3
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: e221ba4dfb55e0535688bf8dffa44d8a9c24be0d
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: e221ba4dfb55e0535688bf8dffa44d8a9c24be0d
+  - diff-start: 5.0.0
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: e221ba4dfb55e0535688bf8dffa44d8a9c24be0d
+    version: 6.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 5f78ec5f73257d80fd8d6dd343a1e422e1d5b986
+  - projects:
+      - hash: 1734cdf479b70643155e421635e3e7d443cffcaa
+        repo: openstack/mistral-dashboard
+    version: 6.0.4
+  - version: queens-em
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 1734cdf479b70643155e421635e3e7d443cffcaa
+repository-settings:
+  openstack/mistral-dashboard: {}
+branches:
+  - location: 6.0.0.0rc1
+    name: stable/queens
