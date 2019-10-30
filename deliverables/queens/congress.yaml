@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/congress
         hash: dc64fa1c0480407aa3e6f0993623844ff770ccac
+  - version: queens-em
+    projects:
+      - repo: openstack/congress
+        hash: dc64fa1c0480407aa3e6f0993623844ff770ccac
 repository-settings:
   openstack/congress:
     tarball-base: openstack-congress
