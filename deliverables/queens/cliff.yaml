@@ -25,6 +25,10 @@ releases:
       - hash: 085310c89c744a78fa09d7b6eed32a3e325c18df
         repo: openstack/cliff
     version: 2.11.1
+  - version: queens-em
+    projects:
+      - repo: openstack/cliff
+        hash: 085310c89c744a78fa09d7b6eed32a3e325c18df
 branches:
   - name: stable/queens
     location: 2.11.0

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 010da92ff3711873e40c0f5a1c262010400bf53b
+  - version: queens-em
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 010da92ff3711873e40c0f5a1c262010400bf53b
 release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/queens.html
 repository-settings:
   openstack/python-openstackclient: {}
