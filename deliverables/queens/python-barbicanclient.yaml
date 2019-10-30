@@ -12,6 +12,10 @@ releases:
       - hash: e12aa561572d32e643c6dc46a1fa7576370e2f00
         repo: openstack/python-barbicanclient
     version: 4.6.1
+  - version: queens-em
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: e12aa561572d32e643c6dc46a1fa7576370e2f00
 branches:
   - location: 4.6.0
     name: stable/queens
