@@ -6,10 +6,14 @@ team: OpenStackSDK
 type: library
 releases:
   - projects:
-      - comment: 'procedural tag to support creating stable branch'
+      - comment: procedural tag to support creating stable branch
         hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
         repo: openstack/requestsexceptions
     version: 1.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/requestsexceptions
+        hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
 branches:
   - location: 1.4.0
     name: stable/queens
