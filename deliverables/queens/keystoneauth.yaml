@@ -18,6 +18,11 @@ releases:
         repo: openstack/keystoneauth
         tarball-base: keystoneauth1
     version: 3.4.0
+  - version: 3.4.1
+    projects:
+      - repo: openstack/keystoneauth
+        hash: a760e5760a50fa6c89f0548f3c332f3d2d52ab46
+        tarball-base: keystoneauth1
 team: keystone
 type: library
 branches:
