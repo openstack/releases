@@ -30,6 +30,10 @@ releases:
       - repo: openstack/zaqar-ui
         hash: dc37badd740413a6fc0bdd02b2f5b34081ca78d7
     version: 4.0.1
+  - version: queens-em
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: dc37badd740413a6fc0bdd02b2f5b34081ca78d7
 branches:
   - location: 4.0.0.0rc1
     name: stable/queens
