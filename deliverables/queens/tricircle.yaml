@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 147a38f5731cc6c549a8002fb19bc79c7a3e31f9
+  - version: queens-em
+    projects:
+      - repo: openstack/tricircle
+        hash: 147a38f5731cc6c549a8002fb19bc79c7a3e31f9
 branches:
   - location: 5.0.0
     name: stable/queens

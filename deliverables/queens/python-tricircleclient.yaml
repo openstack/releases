@@ -9,6 +9,10 @@ releases:
         repo: openstack/python-tricircleclient
         tarball-base: tricircleclient
     version: 0.3.0
+  - version: queens-em
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: fb3b78942c9f0e8d96a6c4f451d51a8cfc38ee9a
 branches:
   - location: 0.3.0
     name: stable/queens
