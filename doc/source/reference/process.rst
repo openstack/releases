@@ -30,9 +30,9 @@ Before PTG (after closing previous release)
 Between Summit and Milestone-1
 ==============================
 
-#. Establish liaisons by having them update
-   https://wiki.openstack.org/wiki/CrossProjectLiaisons with their
-   contact information.
+#. Remind PTLs to update their release liaisons by having them update
+   https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
+   with any changes.
 
 #. Email PTLs directly one time to explain the use of the "[release][ptl]"
    email tag on the openstack-discuss list.
