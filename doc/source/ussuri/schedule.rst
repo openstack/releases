@@ -190,6 +190,62 @@ The Ussuri coordinated release will happen on Wednesday, 13 May, 2020.
 Project-specific events
 =======================
 
+Cinder
+------
+.. _u-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in Ussuri must be approved
+by 31 Jan 2020 (23:59 UTC).
+
+.. _u-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the Ussuri release
+is 13 February 2020 (23:59 UTC).  New drivers must be (a) code complete
+including unit tests, (b) merged into the code repository, and (c) must have
+a 3rd Party CI running reliably.  (The idea is that new drivers will be
+included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _u-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the Ussuri release
+is 13 February 2020 (23:59 UTC).  New target drivers must be (a) code complete
+including unit tests, (b) merged into the code repository, and (c) must have
+a 3rd Party CI running reliably.  (The idea is that new drivers will be
+included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _u-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that
+the final release for client libraries is in three weeks.  Thus your Cinder
+feature should be substantially complete with unit tests by this time so
+that any client changes can be reviewed, tested, and merged before 9 April.
+
+.. _u-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the Ussuri release, its third party CI must be running
+properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
+
 Manila
 ------
 
