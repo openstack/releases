@@ -28,6 +28,10 @@ releases:
       - hash: e4a9d3c1dfb06482f90699e60b98a94481af5f75
         repo: openstack/neutron-lbaas
     version: 13.0.0
+  - projects:
+      - hash: e22276df0560f38d6527a56808764924d66b3f5d
+        repo: openstack/neutron-lbaas
+    version: 13.0.1
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky

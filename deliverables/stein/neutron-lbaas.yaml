@@ -16,6 +16,10 @@ releases:
       - hash: a4c4944d568e4c01da0f7d1a7afdaf1b8ebbe45c
         repo: openstack/neutron-lbaas
     version: 14.0.0
+  - projects:
+      - hash: 7a4ef6704ba47f7f278121fdc1832ef91feb4be4
+        repo: openstack/neutron-lbaas
+    version: 14.0.1
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein
