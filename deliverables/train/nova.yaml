@@ -63,6 +63,10 @@ releases:
       - repo: openstack/nova
         hash: 5d7e4c52ff0b8d71881c209de03a6856fbdcb2fc
     diff-start: 19.0.0.0rc1
+  - version: 20.0.1
+    projects:
+      - repo: openstack/nova
+        hash: c9f2e603d754660e5122992a1bcc28376ce699dc
 branches:
   - name: stable/train
     location: 20.0.0.0rc1
