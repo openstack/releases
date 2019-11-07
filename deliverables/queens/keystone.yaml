@@ -48,6 +48,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: e8b04cc4265d672214da50b99ead8c4f8cc49aa2
+  - version: queens-em
+    projects:
+      - repo: openstack/keystone
+        hash: e8b04cc4265d672214da50b99ead8c4f8cc49aa2
 cycle-highlights:
   - |
     Keystone now offers a better story for applications interacting with

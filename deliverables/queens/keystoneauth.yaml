@@ -6,23 +6,23 @@ releases:
   - projects:
       - hash: c14df5da19f7e3bd6d5437917a258c922217fc0b
         repo: openstack/keystoneauth
-        tarball-base: keystoneauth1
     version: 3.2.0
   - projects:
       - hash: ba6650e9c7971b696f71e159e620c40ec39d5677
         repo: openstack/keystoneauth
-        tarball-base: keystoneauth1
     version: 3.3.0
   - projects:
       - hash: d4a552c2f3bede6efa7a145eb1b523ec9e0bd0ac
         repo: openstack/keystoneauth
-        tarball-base: keystoneauth1
     version: 3.4.0
   - version: 3.4.1
     projects:
       - repo: openstack/keystoneauth
         hash: a760e5760a50fa6c89f0548f3c332f3d2d52ab46
-        tarball-base: keystoneauth1
+  - version: queens-em
+    projects:
+      - repo: openstack/keystoneauth
+        hash: a760e5760a50fa6c89f0548f3c332f3d2d52ab46
 team: keystone
 type: library
 branches:
@@ -30,4 +30,5 @@ branches:
     location: 3.4.0
 release-notes: https://docs.openstack.org/releasenotes/keystoneauth/queens.html
 repository-settings:
-  openstack/keystoneauth: {}
+  openstack/keystoneauth:
+    tarball-base: keystoneauth1
