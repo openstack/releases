@@ -27,6 +27,10 @@ releases:
       - hash: 4cf67c4898ba104c430a6c0da4b5e13801e6722e
         repo: openstack/neutron-lbaas
     version: 12.0.0
+  - version: queens-em
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 4cf67c4898ba104c430a6c0da4b5e13801e6722e
 branches:
   - location: 12.0.0.0rc1
     name: stable/queens
