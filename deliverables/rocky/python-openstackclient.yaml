@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: e09c358e7b35ac938595aad90c5c42dfe402a42a
+  - projects:
+      - repo: openstack/python-openstackclient
+        hash: 3fe5d27a4df00280d00cc9041b99911b3d576eef
+    version: 3.16.3
 branches:
   - location: 3.16.0
     name: stable/rocky
