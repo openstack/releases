@@ -5,3 +5,11 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla-ansible: {}
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/train
+releases:
+  - projects:
+      - hash: 6160cdc5764e471b71166c2ccc28888513d1c638
+        repo: openstack/kolla-ansible
+    version: 9.0.0.0rc1
