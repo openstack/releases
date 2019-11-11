@@ -3,4 +3,5 @@ redirect 301 /constraints/upper/master https://opendev.org/openstack/requirement
 {%- for redirection in redirections %}
 redirect {{ redirection.code }} /constraints/upper/{{ redirection.src }} https://opendev.org/openstack/requirements/raw/{{ redirection.ref_type }}/{{ redirection.dst }}/upper-constraints.txt
 {%- endfor %}
+redirectmatch 302 ^/constraints/upper/([0-9a-f]{40})$ https://opendev.org/openstack/requirements/raw/commit/$1/upper-constraints.txt
 

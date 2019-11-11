@@ -3,3 +3,4 @@
 {%- for redirection in redirections %}
 /constraints/upper/{{ redirection.src }} {{ redirection.code }} https://opendev.org/openstack/requirements/raw/{{ redirection.ref_type }}/{{ redirection.dst }}/upper-constraints.txt
 {%- endfor %}
+/constraints/upper/5d2dc701ab2fe7e87d78e4d96eb444766eef6725 302 https://opendev.org/openstack/requirements/raw/commit/5d2dc701ab2fe7e87d78e4d96eb444766eef6725/upper-constraints.txt
