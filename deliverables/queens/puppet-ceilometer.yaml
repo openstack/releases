@@ -32,6 +32,10 @@ releases:
       - hash: 58f886ce3ecb87b4110d7ce2e77bece9f71c37d6
         repo: openstack/puppet-ceilometer
     version: 12.5.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 58f886ce3ecb87b4110d7ce2e77bece9f71c37d6
 repository-settings:
   openstack/puppet-ceilometer: {}
 branches:

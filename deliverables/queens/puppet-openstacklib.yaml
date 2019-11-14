@@ -24,6 +24,10 @@ releases:
       - hash: 4b30e6f02388ad2f551c10469893f1bd882ec5bd
         repo: openstack/puppet-openstacklib
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 4b30e6f02388ad2f551c10469893f1bd882ec5bd
 repository-settings:
   openstack/puppet-openstacklib: {}
 branches:

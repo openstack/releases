@@ -24,6 +24,10 @@ releases:
       - hash: 1af925a8b56ad4d194198047df4c4ee67c23ddbb
         repo: openstack/puppet-tacker
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 1af925a8b56ad4d194198047df4c4ee67c23ddbb
 repository-settings:
   openstack/puppet-tacker: {}
 branches:

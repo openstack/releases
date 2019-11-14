@@ -24,6 +24,10 @@ releases:
       - hash: 42162c3b0df03c4ec07a625e555277951a13f8a4
         repo: openstack/puppet-sahara
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 42162c3b0df03c4ec07a625e555277951a13f8a4
 repository-settings:
   openstack/puppet-sahara: {}
 branches:

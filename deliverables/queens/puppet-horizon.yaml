@@ -24,6 +24,10 @@ releases:
       - hash: 64559b87cece585a92852d7b213f7c44f38dfb28
         repo: openstack/puppet-horizon
     version: 12.4.0
+  - version: queens-em
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 64559b87cece585a92852d7b213f7c44f38dfb28
 repository-settings:
   openstack/puppet-horizon: {}
 branches:
