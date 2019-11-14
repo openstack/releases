@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/paunch
         hash: 5004a33433b2bd4ebf8f24e60db005acbc4d4711
+  - version: queens-em
+    projects:
+      - repo: openstack/paunch
+        hash: 5004a33433b2bd4ebf8f24e60db005acbc4d4711
 repository-settings:
   openstack/paunch: {}
 release-notes: https://docs.openstack.org/releasenotes/paunch/queens.html

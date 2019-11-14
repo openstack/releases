@@ -51,6 +51,10 @@ releases:
       - hash: 49f8aad6c526445b80664130bb539140284ed3b9
         repo: openstack/tripleo-validations
     version: 8.5.0
+  - version: queens-em
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 49f8aad6c526445b80664130bb539140284ed3b9
 repository-settings:
   openstack/tripleo-validations: {}
 branches:
