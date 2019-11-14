@@ -8,3 +8,8 @@ repository-settings:
     tarball-base: neutron-tempest-plugin
 team: neutron
 type: tempest-plugin
+releases:
+  - projects:
+      - hash: 616a27a1b0125e6d2b820bb1cb0d7b623a0f3394
+        repo: openstack/neutron-tempest-plugin
+    version: 0.7.0
