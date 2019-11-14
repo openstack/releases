@@ -2,17 +2,26 @@
  Release Processes
 ===================
 
-This document describes the relative ordering and rough timeline for
-all of the steps related to preparing the release.
+This document describes the process and week-per-week steps related to
+preparing the release. It should be adapted to take team holidays and
+other commitments into account, and turned into a clear action plan for
+the release cycle.
 
-Before PTG (after closing previous release)
-===========================================
+Week after previous release
+===========================
 
-#. Set up the release schedule for the newly opened cycle by creating
-   the required pages in openstack/releases.
+#. Process any late or blocked release requests for deliverables
+   for any branch (treating the new series branch as stable).
 
-#. Update the link to the documentation on the newly opened cycle page
-   to point to the right place on docs.openstack.org.
+#. Prepare for the next release cycle by adding deliverable files under the
+   next cycle's directory. Remove any deliverable files from the current cycle
+   that ended up not having any releases. Then run the following command to use
+   the current cycle deliverables to generate placeholders for the next cycle::
+
+      tox -e venv -- init-series $SERIES $NEXT_SERIES
+
+#. Coordinate with the Infrastructure team to swap out the previous cycle
+   signing key and establish the new one for the startniog cycle.
 
 #. Create the $series-relmgt-tracking etherpad using the
    ``make-tracking-etherpad`` command.
@@ -27,25 +36,61 @@ Before PTG (after closing previous release)
    and past that into each subsequent week to prepare for the rest of the
    cycle.
 
-Between Summit and Milestone-1
-==============================
-
-#. Remind PTLs to update their release liaisons by having them update
-   https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
-   with any changes.
-
 #. Email PTLs directly one time to explain the use of the "[release][ptl]"
-   email tag on the openstack-discuss list.
+   email tag on the openstack-discuss list and tell them to pay attention
+   to [release] countdown emails.
 
-#. Encourage liaisons to ensure that their release model is set
-   properly before the first milestone.
+#. At the end of the week, send the following weekly email content::
 
-#. Start weekly countdown emails, sent right after the team meeting,
-   with information needed about the
-   following week (deadlines, instructions, etc.).
+    Welcome back to the release countdown emails! These will be sent at
+    major points in the $SERIES development cycle, which should conclude
+    with a final release on $release-date.
 
-#. The week before Milestone-1, include a reminder about completing
-   the responses to community-wide goals in the countdown email.
+    Development Focus
+    -----------------
+
+    At this stage in the release cycle, focus should be on planning the
+    $SERIES development cycle, assessing $SERIES community goals and approving
+    $SERIES specs.
+
+    General Information
+    -------------------
+
+    $remark-on-series-length. In case you haven't seen it yet, please take
+    a look over the schedule for this release:
+
+    https://releases.openstack.org/$SERIES/schedule.html
+
+    By default, the team PTL is responsible for handling the release cycle
+    and approving release requests. This task can (and probably should) be
+    delegated to release liaisons. Now is a good time to review release
+    liaison information for your team and make sure it is up to date:
+
+    https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
+
+    By default, all your team deliverables from the Train release are
+    continued in $SERIES with a similar release model. If you intend to drop
+    a deliverable, or modify its release model, please do so before the
+    $SERIES-1 milestone by proposing a change to the deliverable file at:
+
+    https://opendev.org/openstack/releases/src/branch/master/deliverables/$SERIES
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $other-upcoming-event_
+    $SERIES-1 milestone: $milestone1
+
+
+Week before milestone-1
+=======================
+
+#. Review cycle-trailing projects to check which haven't released yet.
+   Ask them to prepare their releases, if they haven't already.
+
+#. In the weekly email, remind liaisons to ensure that their release model
+   is set properly before the first milestone.
+
 
 Milestone-1
 ===========
@@ -127,6 +172,17 @@ Milestone-2
 
 Between Milestone-2 and Milestone-3
 ===================================
+
+#. Plan the next release cycle schedule based on the number of desired weeks or
+   by making sure the cycle ends within a few weeks of the next developer
+   event. Using the first Monday following the close of the last cycle, and the
+   Monday of the planned last week of the new cycle, use the tool
+   ``tools/weeks.py`` to generate the release schedule YAML file. For example::
+
+        ./tools/list_weeks.py t 2019-04-15 2019-10-16
+
+   The generated output can be used to set up the schedule similar to what was
+   done for the `Ussuri release <https://review.opendev.org/#/c/679822/>`_.
 
 #. In the countdown email immediately after Milestone-2, include a
    reminder about the various freezes that happen around Milestone-3.
@@ -886,31 +942,4 @@ R+0 week (Final Release)
 #. Send an email to the openstack-discuss list to point to the official
    release announcement from the previous step, and declare
    ``openstack/releases`` unfrozen for releases on the new series.
-
-R+1 week
-========
-
-#. Process any late or blocked
-   release requests for deliverables for any branch (treating the new
-   series branch as stable).
-
-#. Prepare for the next release cycle by adding deliverable files under the
-   next cycle's directory. Remove any deliverable files from the current cycle
-   that ended up not having any releases. Then run the following command to use
-   the current cycle deliverables to generate placeholders for the next cycle::
-
-      tox -e venv -- init-series $SERIES $NEXT_SERIES
-
-#. Remind PTLs of cycle-trailing projects to prepare their releases.
-
-#. Plan the next release cycle schedule based on the number of desired weeks or
-   by making sure the cycle ends within a few weeks of the next developer
-   event. Using the first Monday following the close of the last cycle, and the
-   Monday of the planned last week of the new cycle, use the tool
-   ``tools/weeks.py`` to generate the release schedule YAML file. For example::
-
-        ./tools/list_weeks.py t 2019-04-15 2019-10-16
-
-   The generated output can be used to set up the schedule similar to what was
-   done for the `Ussuri release <https://review.opendev.org/#/c/679822/>`_.
 
