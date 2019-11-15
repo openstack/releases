@@ -5,6 +5,7 @@
     vars:
       tox_envlist: list-changes
     irrelevant-files:
+      - ^data/.*$
       - ^doc/.*$
 
 - project:
@@ -20,14 +21,17 @@
         - releases-tox-list-changes
         - openstack-tox-py36:
             irrelevant-files:
+              - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
         - openstack-tox-py37:
             irrelevant-files:
+              - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
         - openstack-tox-pep8:
             irrelevant-files:
+              - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
     gate:
@@ -38,10 +42,12 @@
               - ^doc/.*$
         - openstack-tox-py36:
             irrelevant-files:
+              - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
         - openstack-tox-py37:
             irrelevant-files:
+              - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
     release-post:
