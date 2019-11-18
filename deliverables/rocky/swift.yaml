@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 3d2d954107d676e48acb81069639eed15ead5713
+  - version: 2.19.2
+    projects:
+      - repo: openstack/swift
+        hash: 5aa4c5d88fec98cf4ca0536c511c61759e865ec9
 cycle-highlights:
   - Added an S3 API compatibility layer, so clients can use S3 clients
     to talk to a Swift cluster.
