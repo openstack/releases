@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.log: {}
+releases:
+  - version: 3.45.0
+    projects:
+      - repo: openstack/oslo.log
+        hash: 3d4070e0fe235f4dc18e07d5d4c27d6080177dbc
