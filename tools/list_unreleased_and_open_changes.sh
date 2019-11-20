@@ -35,7 +35,7 @@ source $TOOLSDIR/functions
 function get_open_patches {
     REPO=$1
 
-    OPEN_CHANGES=$(ssh -p 29418 review.openstack.org gerrit query status:open \
+    OPEN_CHANGES=$(ssh -p 29418 review.opendev.org gerrit query status:open \
                 project:${REPO} branch:stable/${BRANCH} | \
                 awk '/url:|commitMessage:/ {$1=""; print $0}' | \
                 awk '!(NR%2){print buf " --" $0}{buf=$0}')
