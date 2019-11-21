@@ -608,6 +608,18 @@ To set the pre-release group membership:
 
   tox -e aclmanager -- groups pre_release ttx
 
+tools/check_approval.py
+-----------------------
+
+A script to test that release requests have been approved by a team
+liaison.
+
+Example:
+
+::
+
+  tox -e check_approval -- 695375
+
 tools/membership_freeze_test.py
 --------------------------------
 
