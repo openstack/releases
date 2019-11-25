@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.i18n: {}
+releases:
+  - version: 3.25.0
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 0d76d2cb30fdaa0adbb151ecb4129789334b7beb
