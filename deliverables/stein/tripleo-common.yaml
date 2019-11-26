@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: 7849f7461dd6d22faa2eef0d248a45420b1a4ebe
+  - version: 10.8.2
+    projects:
+      - repo: openstack/tripleo-common
+        hash: c2a83c1cd5e8cc9cb04432e9bc8f37793c02f0c7
 branches:
   - location: 10.7.0
     name: stable/stein

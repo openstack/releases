@@ -23,6 +23,10 @@ releases:
       - hash: 51cb5aa4acfe5ecfc8e3fa6bb9dc7c798bed35c6
         repo: openstack/os-collect-config
     version: 10.3.0
+  - version: 10.3.1
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 95d2b5e27bf2dd3fb394e234227c375b65037703
 branches:
   - location: 10.3.0
     name: stable/stein
