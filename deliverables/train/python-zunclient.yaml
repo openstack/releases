@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 1459f4d8f92e0a8d4af0fbfda8ebbfe68aceb409
+  - version: 3.5.1
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 361634d1e130504b54ade4cc80c06ea0b1cc80d6
 branches:
   - location: 3.5.0
     name: stable/train
