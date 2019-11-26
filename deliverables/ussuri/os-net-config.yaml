@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/os-net-config: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/os-net-config
+        hash: 04bea45124473bc75b1d053c5062e08f9861fbe0

@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-common: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: c57d2420a8435af7813b44a772df98c8c444f990
