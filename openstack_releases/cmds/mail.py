@@ -18,8 +18,6 @@ when notes are being send from a developer's system.
 
 """
 
-from __future__ import print_function
-
 import argparse
 import email
 import smtplib

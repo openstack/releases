@@ -15,8 +15,6 @@
 """Show the changes that will be included in the release.
 """
 
-from __future__ import print_function
-
 import argparse
 import atexit
 import glob
