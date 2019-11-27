@@ -6,3 +6,8 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-puppet-elements: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: 1bcefb483d4b08da4c8b1bb2ca88532ac3e419fd
