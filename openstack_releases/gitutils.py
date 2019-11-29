@@ -42,6 +42,26 @@ def find_modified_deliverable_files():
     return filenames
 
 
+def changes_since(workdir, repo, ref):
+    """Get all changes between the last ref and the current point.
+
+    :param workdir: The git repo working directory.
+    :param repo: The name of the repo.
+    :param ref: The starting ref.
+    :returns: Merged commits between the two points.
+    """
+    try:
+        changes = processutils.check_output(
+            ['git', 'log', '--decorate', '--no-merges', '--pretty=oneline',
+             "%s..HEAD" % ref],
+            cwd=os.path.join(workdir, repo),
+        ).decode('utf-8').strip()
+    except processutils.CalledProcessError as err:
+        LOG.error('Could not find {}: {}'.format(ref, err))
+        changes = ''
+    return changes
+
+
 def commit_exists(workdir, repo, ref):
     """Return boolean specifying whether the reference exists in the repository.
 
@@ -126,7 +146,7 @@ def safe_clone_repo(workdir, repo, ref, messages):
     return True
 
 
-def checkout_ref(workdir, repo, ref, messages):
+def checkout_ref(workdir, repo, ref, messages=None):
     """Checkout a specific ref in the repo."""
 
     LOG.debug('Resetting the repository %s to HEAD', repo)
@@ -138,9 +158,10 @@ def checkout_ref(workdir, repo, ref, messages):
             ['git', 'reset', '--hard'],
             cwd=os.path.join(workdir, repo))
     except processutils.CalledProcessError as err:
-        messages.warning(
-            'Could not reset repository {} to HEAD: {}'.format(
-                repo, err))
+        if messages:
+            messages.warning(
+                'Could not reset repository {} to HEAD: {}'.format(
+                    repo, err))
 
     LOG.debug('Checking out repository %s to %s', repo, ref)
     try:
@@ -148,9 +169,10 @@ def checkout_ref(workdir, repo, ref, messages):
             ['git', 'checkout', ref],
             cwd=os.path.join(workdir, repo))
     except processutils.CalledProcessError as err:
-        messages.error(
-            'Could not checkout repository {} at {}: {}'.format(
-                repo, ref, err))
+        if messages:
+            messages.error(
+                'Could not checkout repository {} at {}: {}'.format(
+                    repo, ref, err))
         return False
     return True
 

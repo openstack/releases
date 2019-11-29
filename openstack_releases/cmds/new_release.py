@@ -12,8 +12,6 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from __future__ import print_function
-
 import argparse
 import atexit
 import logging
@@ -22,6 +20,8 @@ import shutil
 import sys
 import tempfile
 
+from openstack_releases.cmds.interactive_release import clean_changes
+from openstack_releases.cmds.interactive_release import yes_no_prompt
 from openstack_releases import gitutils
 from openstack_releases import series_status
 from openstack_releases import yamlutils
@@ -179,6 +179,12 @@ def main():
         help='be more chatty',
     )
     parser.add_argument(
+        '-i', '--interactive',
+        default=False,
+        action='store_true',
+        help='Be interactive and only make releases when instructed'
+    )
+    parser.add_argument(
         'release_type',
         choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
                  'procedural', 'eol', 'em', 'releasefix'),
@@ -239,7 +245,7 @@ def main():
         if args.cleanup:
             shutil.rmtree(workdir, True)
         else:
-            print('not cleaning up %s' % workdir)
+            LOG.warning('not cleaning up %s', workdir)
     atexit.register(cleanup_workdir)
 
     # Allow for independent projects.
@@ -441,6 +447,9 @@ def main():
 
             sha = gitutils.sha_for_tag(workdir, repo, version)
 
+            # Check out the working repo to the sha
+            gitutils.checkout_ref(workdir, repo, sha)
+
         if is_retagging:
             changes += 1
             LOG.info('re-tagging %s at %s (%s)', repo, sha, previous_tag)
@@ -468,6 +477,29 @@ def main():
             projects.append(new_project)
 
         elif previous_sha != sha or force_tag:
+            # TODO(tonyb): Do this early and also prompt for release type.
+            # Once we do that we can probably deprecate interactive-release
+            if args.interactive:
+                # NOTE(tonyb): This is pretty much just copied from
+                # interactive-release
+                last_tag = '.'.join(last_version)
+                change_lines = list(clean_changes(gitutils.changes_since(
+                    workdir, repo, last_tag).splitlines()))
+                max_changes_show = 100
+                LOG.info('')
+                if last_tag:
+                    LOG.info("%s changes to %s since %s are:",
+                             len(change_lines), repo, last_tag)
+                else:
+                    LOG.info("%s changes to %s are:", len(change_lines), repo)
+                for sha, descr in change_lines[0:max_changes_show]:
+                    LOG.info("* %s %s", sha[:7], descr)
+                leftover_change_lines = change_lines[max_changes_show:]
+                if leftover_change_lines:
+                    LOG.info("   and %s more changes...",
+                             len(leftover_change_lines))
+                LOG.info('')
+
             changes += 1
             LOG.info('advancing %s from %s (%s) to %s',
                      repo, previous_sha, previous_tag, sha)
@@ -507,7 +539,12 @@ def main():
                 'location': new_version,
             })
 
-    if changes > 0:
+    create_release = changes > 0
+    if create_release and args.interactive:
+        create_release = yes_no_prompt(
+            'Create a release in %s containing those changes? ' % series)
+
+    if create_release:
         deliverable_filename = 'deliverables/%s/%s.yaml' % (
             series, args.deliverable)
         with open(deliverable_filename, 'w', encoding='utf-8') as f:
