@@ -15,8 +15,6 @@
 """Show the most current versions of everything in a given branch.
 """
 
-from __future__ import print_function
-
 import argparse
 import glob
 import os

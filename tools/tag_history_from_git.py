@@ -20,9 +20,6 @@ Use git as the canonical source of version numbers.
 
 """
 
-from __future__ import print_function
-from __future__ import unicode_literals
-
 from openstack_releases.versionutils import canonical_version
 
 import argparse

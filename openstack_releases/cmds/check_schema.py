@@ -14,8 +14,6 @@
 
 """Verify that all data files match the schema."""
 
-from __future__ import print_function
-
 import argparse
 import datetime
 import glob
