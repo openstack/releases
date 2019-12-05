@@ -23,6 +23,10 @@ releases:
       - hash: 9493f4db27668a4b1fa0a9889ef9d3a932cd79aa
         repo: openstack/magnum
     version: 8.1.0
+  - version: 8.2.0
+    projects:
+      - repo: openstack/magnum
+        hash: 1dcedf17314ff111ce5458896a447c2dd2e7f50d
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
