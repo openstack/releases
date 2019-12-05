@@ -58,6 +58,14 @@ Teams should prepare their acknowledgement of `the community-wide
 goals for Ussuri
 <https://governance.openstack.org/tc/goals/ussuri/index.html>`__.
 
+.. _u-cycle-trail:
+
+Train Cycle-Trailing Release Deadline
+-------------------------------------
+
+All projects following the cycle-trailing release model must release
+their Train deliverables by 9 January, 2020.
+
 .. _u-2:
 
 Ussuri-2 milestone
