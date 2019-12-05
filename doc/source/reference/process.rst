@@ -86,7 +86,12 @@ Week before milestone-1
 =======================
 
 #. Review cycle-trailing projects to check which haven't released yet.
-   Ask them to prepare their releases, if they haven't already.
+   Ask them to prepare their releases, if they haven't already. The list
+   of pending cycle-trailing deliverables can be determined by running
+   the command::
+
+     tox -e venv -- list-deliverables --series $LASTSERIES \
+         --model cycle-trailing --missing-final
 
 #. In the weekly email, remind liaisons to ensure that their release model
    is set properly before the first milestone.
