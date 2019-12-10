@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-horizon: {}
+releases:
+  - projects:
+      - hash: 875bd75779f0ba267c95470823a19e08df10aa8b
+        repo: openstack/puppet-horizon
+    version: 16.0.0

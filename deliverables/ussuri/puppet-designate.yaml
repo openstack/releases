@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-designate: {}
+releases:
+  - projects:
+      - hash: 5e266555674b9d4277e7ce5b898847fd4893ad90
+        repo: openstack/puppet-designate
+    version: 16.0.0

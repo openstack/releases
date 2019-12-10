@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-placement: {}
+releases:
+  - projects:
+      - hash: c999c4ce111149ebe55347f783da5268a30a7058
+        repo: openstack/puppet-placement
+    version: 3.0.0

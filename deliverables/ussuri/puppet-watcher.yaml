@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-watcher: {}
+releases:
+  - projects:
+      - hash: a2b08c8201b6c7c21faea2338f0b07d972934bd7
+        repo: openstack/puppet-watcher
+    version: 16.0.0

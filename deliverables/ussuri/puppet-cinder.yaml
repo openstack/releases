@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-cinder: {}
+releases:
+  - projects:
+      - hash: 3b24d9c21be85c1db7c0f21747ccc93fa6482f14
+        repo: openstack/puppet-cinder
+    version: 16.0.0

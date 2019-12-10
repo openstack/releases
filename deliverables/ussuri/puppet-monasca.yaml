@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-monasca: {}
+releases:
+  - projects:
+      - hash: 9bbf4113193c51429a3f9082d259deabf96ee6b3
+        repo: openstack/puppet-monasca
+    version: 5.0.0

@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-ceilometer: {}
+releases:
+  - projects:
+      - hash: 917bf0688e6f136bc73819966c583c3d6247d818
+        repo: openstack/puppet-ceilometer
+    version: 16.0.0
