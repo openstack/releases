@@ -5,3 +5,11 @@ team: cinder
 type: other
 repository-settings:
   openstack/cinderlib: {}
+branches:
+  - location: 1.0.0
+    name: stable/train
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: b3ee3447e05ae89b3372219e5c4c4757f9762031
