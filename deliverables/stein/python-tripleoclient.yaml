@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: a357740a0b7569a2ee355b50464889d84c7b8f3f
+  - version: 11.5.2
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 751324eb5d7994101523bffe1de2cd5876ac63d2
 branches:
   - location: 11.4.0
     name: stable/stein
