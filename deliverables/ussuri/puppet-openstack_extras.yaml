@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-openstack_extras: {}
+releases:
+  - projects:
+      - hash: 02a555206d43631a67b092befe2c21a0daff3807
+        repo: openstack/puppet-openstack_extras
+    version: 16.0.0

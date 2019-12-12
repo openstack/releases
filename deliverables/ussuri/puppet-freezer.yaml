@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-freezer: {}
+releases:
+  - projects:
+      - hash: 27c480be3b26e98ea66b8c8861193349b6d4c277
+        repo: openstack/puppet-freezer
+    version: 5.0.0

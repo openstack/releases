@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: other
 repository-settings:
   openstack/puppet-mistral: {}
+releases:
+  - projects:
+      - hash: fd9a99441e7052a04ece0207edc0a7d51aedda06
+        repo: openstack/puppet-mistral
+    version: 16.0.0
