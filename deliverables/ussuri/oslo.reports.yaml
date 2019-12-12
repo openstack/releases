@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.reports: {}
+releases:
+  - version: 1.31.0
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 39ed8ffc5048ec7763ef7320e5cb0d0dd5bfc7a9
