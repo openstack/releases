@@ -5,3 +5,8 @@ team: monasca
 type: library
 repository-settings:
   openstack/monasca-common: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/monasca-common
+        hash: 6ff39f3a4d65cf52e78abfa544b945e116dd5c5b
