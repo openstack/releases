@@ -5,3 +5,11 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla-cli: {}
+branches:
+  - location: 9.0.0.0rc1
+    name: stable/train
+releases:
+  - projects:
+      - hash: 2fdd3889442d1f0e78199ecf7be3cd36bff645af
+        repo: openstack/kolla-cli
+    version: 9.0.0.0rc1
