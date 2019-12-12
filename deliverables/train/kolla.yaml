@@ -13,9 +13,13 @@ releases:
       - hash: 3ef9bf828ed225270c668d0ab396f4ecefdf9e31
         repo: openstack/kolla
     version: 9.0.0.0rc1
+  - version: 9.0.0.0rc2
+    projects:
+      - hash: 19c38d9c9d6416b7859037396484fff2e587ec4b
+        repo: openstack/kolla
 cycle-highlights:
   - Switched to Python 3 in Debian and Ubuntu source images.
-  - Introduced images and playbooks for Masakari, which supports instance High
-    Availability, and Qinling, which provides Functions as a Service.
+  - Introduced images and playbooks for Masakari, which supports instance
+    High Availability, and Qinling, which provides Functions as a Service.
   - Added support for deployment of multiple Nova cells.
   - Added support for control plane communication via IPv6.
