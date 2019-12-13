@@ -49,6 +49,27 @@ Ussuri-1 milestone
 12 December, 2019 is the Ussuri-1 milestone. See project-specific notes for
 relevant deadlines.
 
+.. _u-py-drop-1:
+
+Services Drop python 2 Completed
+--------------------------------
+
+OpenStack Services `dropped the python 2.7 support and testing
+<https://governance.openstack.org/tc/goals/selected/ussuri/drop-py27.html>`__.
+Project needs to coordinate with third party CI or any backend drivers.
+
+.. _u-py-drop-2:
+
+Common libraries & QA Start dropping python 2
+---------------------------------------------
+
+Common libraries & QA start `dropping the python 2.7 support and testing
+<https://governance.openstack.org/tc/goals/selected/ussuri/drop-py27.html>`__.
+This includes Oslo, QA tools (including Tempest plugins or any other
+testing tools), common lib used among projects (os-brick), Client
+libraries. Tempest will drop the support during Feb as discussed
+with TripleO.
+
 .. _u-goals-ack:
 
 Ussuri Community Goals Acknowledgement
@@ -73,6 +94,23 @@ Ussuri-2 milestone
 
 13 February, 2020 is the Ussuri-2 milestone. See project-specific notes for
 relevant deadlines.
+
+.. _u-py-drop-3:
+
+Common libraries & QA Drop python 2 Completed
+----------------------------------------------
+
+Common libraries & QA `dropped the python 2.7 support and testing
+<https://governance.openstack.org/tc/goals/selected/ussuri/drop-py27.html>`__.
+
+.. _u-py-drop-final:
+
+Requirement Drop python 2 & Audit
+---------------------------------
+
+Requirement to `drop the python 2.7 support and testing
+<https://governance.openstack.org/tc/goals/selected/ussuri/drop-py27.html>`__.
+Audit that every project except Swift have dropped the python 2 support.
 
 .. _u-final-lib:
 
