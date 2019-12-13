@@ -227,10 +227,18 @@ class DeliverableDirectiveBase(rst.Directive):
                 recent_version = earliest_version = deliv.earliest_release
                 # Determine the most recent release that is not an EOL
                 # tag.
+                has_non_eol_em = False
                 for r in reversed(deliv.releases):
                     if not (r.is_eol or r.is_em):
                         recent_version = r.version
+                        has_non_eol_em = True
                         break
+                # Even though we have this check later for specific
+                # deliverables, we need to do this at a couple points to make
+                # sure we don't start adding something that doesn't actually
+                # end up having any individual release data to show
+                if not has_non_eol_em:
+                    continue
                 ref = ':ref:`%s-%s`' % (series, deliv.name)
                 release_notes = deliv.release_notes
                 if not release_notes:
@@ -264,6 +272,13 @@ class DeliverableDirectiveBase(rst.Directive):
         # Show the detailed history of the deliverables within the series.
 
         for deliv in deliverables:
+            has_non_eol_em = False
+            for r in deliv.releases:
+                if not (r.is_eol or r.is_em):
+                    has_non_eol_em = True
+                    break
+            if not has_non_eol_em:
+                continue
 
             # These closures need to be redefined in each iteration of
             # the loop because they use the deliverable name.
@@ -309,7 +324,8 @@ class DeliverableDirectiveBase(rst.Directive):
                                                        deliv),
                          p.repo, p.hash)
                         for r in reversed(deliv.releases)
-                        for p in r.projects)
+                        for p in r.projects
+                        if not (r.is_eol or r.is_em))
                 columns = [10, 10, 40, 50]
             else:
                 headers = ['Version', 'Repo', 'Git Commit']
@@ -317,7 +333,8 @@ class DeliverableDirectiveBase(rst.Directive):
                                              deliv),
                          p.repo, p.hash)
                         for r in reversed(deliv.releases)
-                        for p in r.projects)
+                        for p in r.projects
+                        if not (r.is_eol or r.is_em))
                 columns = [10, 40, 50]
             _list_table(
                 _add,
