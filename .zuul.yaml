@@ -8,6 +8,16 @@
       - ^data/.*$
       - ^doc/.*$
 
+- job:
+    name: releases-check-approval
+    parent: openstack-tox
+    files:
+      - ^deliverables/.*$
+    timeout: 360
+    vars:
+      tox_envlist: check_approval
+      tox_extra_args: "{{ zuul.change }}"
+
 - project:
     templates:
       - openstack-python3-ussuri-jobs
@@ -34,6 +44,9 @@
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
+    experimental:
+      jobs:
+        - releases-check-approval
     gate:
       jobs:
         - openstack-tox-validate:
