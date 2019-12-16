@@ -29,7 +29,8 @@ Ussuri Goals Research
 ---------------------
 
 Pre-cycle planning and investigation into `the community-wide goals
-for Ussuri <https://governance.openstack.org/tc/goals/ussuri/index.html>`__.
+for Ussuri
+<https://governance.openstack.org/tc/goals/selected/ussuri/index.html>`__.
 
 .. _u-summit:
 
@@ -56,7 +57,7 @@ Ussuri Community Goals Acknowledgement
 
 Teams should prepare their acknowledgement of `the community-wide
 goals for Ussuri
-<https://governance.openstack.org/tc/goals/ussuri/index.html>`__.
+<https://governance.openstack.org/tc/goals/selected/ussuri/index.html>`__.
 
 .. _u-cycle-trail:
 
@@ -98,7 +99,7 @@ Ussuri Community Goals Completed
 
 Teams should prepare their documentation for completing `the
 community-wide goals for Ussuri
-<https://governance.openstack.org/tc/goals/ussuri/index.html>`__.
+<https://governance.openstack.org/tc/goals/selected/ussuri/index.html>`__.
 
 .. _u-extra-atcs:
 
