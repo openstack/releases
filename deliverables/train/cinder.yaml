@@ -27,6 +27,10 @@ releases:
       - repo: openstack/cinder
         hash: d879e76ff05f78aa042c4fe5f79a69699ccaa997
     diff-start: 14.0.0.0rc1
+  - version: 15.0.1
+    projects:
+      - repo: openstack/cinder
+        hash: f2f3a1b528268dbeb93a68e834ef3bc5f8107026
 branches:
   - name: stable/train
     location: 15.0.0.0rc1
