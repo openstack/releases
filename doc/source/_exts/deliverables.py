@@ -298,8 +298,8 @@ class DeliverableDirectiveBase(rst.Directive):
 
             _title(deliv.name, '=')
 
-            LOG.info('[deliverables] rendering %s (%s)',
-                     deliv.name, series)
+            LOG.debug('[deliverables] rendering %s (%s)',
+                      deliv.name, series)
 
             release_notes = deliv.release_notes
             if not release_notes:
@@ -458,16 +458,16 @@ class HighlightsDirective(rst.Directive):
         if not series:
             raise self.error('series value must be set to a valid cycle name.')
 
-        LOG.info('[highlights] gathering highlights for {}'.format(
-            series))
+        LOG.debug('[highlights] gathering highlights for {}'.format(
+                  series))
 
         result = ViewList()
         series_highlights = self._get_deliverable_highlights(series)
         source_name = '<{}>'.format(__name__)
 
         for team in sorted(series_highlights.keys(), key=lambda x: x.lower()):
-            LOG.info('[highlights] rendering %s highlights for %s',
-                     team.title(), series)
+            LOG.debug('[highlights] rendering %s highlights for %s',
+                      team.title(), series)
 
             tdata = _GOV_DATA.get_team(team)
             title = team.title()
