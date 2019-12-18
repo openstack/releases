@@ -88,25 +88,64 @@ Week before milestone-1
 #. Review cycle-trailing projects to check which haven't released yet.
    Ask them to prepare their releases, if they haven't already.
 
-#. In the weekly email, remind liaisons to ensure that their release model
-   is set properly before the first milestone.
+#. At the end of the week, send the following weekly email content::
+
+    Development Focus
+    -----------------
+
+    The $SERIES-1 milestone is next week, on $milestone1! Project team plans
+    for the $SERIES cycle should now be solidified.
+
+    General Information
+    -------------------
+
+    If you planned to change the release model for any of your deliverables
+    this cycle, please remember to do so ASAP, before milestone-1.
+
+    Libraries need to be released at least once per milestone period. Next
+    week, the release team will propose releases for any library which had
+    changes but has not been otherwise released since the $LASTSERIES release.
+    PTL's or release liaisons, please watch for these and give a +1 to
+    acknowledge them. If there is some reason to hold off on a release, let
+    us know that as well, by posting a -1. If we do not hear anything at all
+    by the end of the week, we will assume things are OK to proceed.
+
+    NB: If one of your libraries is still releasing 0.x versions, start
+    thinking about when it will be appropriate to do a 1.0 version. The
+    version number does signal the state, real or perceived, of the library,
+    so we strongly encourage going to a full major version once things are
+    in a good and usable state.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $SERIES-1 milestone: $milestone1
 
 
 Milestone-1
 ===========
 
-#. Generate a list of all cycle-with-intermediary libraries which did not
-   release since the previous release. For this, run::
+#. Propose autoreleases for cycle-with-intermediary libraries which
+   did not release since the previous release.
 
-     tox -e venv -- list-deliverables --unreleased \
-     --model cycle-with-intermediary --type client-library --type library
+   - List them using::
 
-   Generate release requests for all cycle-with-intermediary libraries
-   which had changes, but did not release since the previous release.
-   That patch will be used as a base to communicate with the team:
-   if a team wants to wait for a specific patch to make it to the library,
-   someone from the team can -1 the patch to have it held, or update
-   that patch with a different commit SHA.
+       tox -e venv -- list-deliverables --unreleased \
+       --model cycle-with-intermediary --type client-library --type library
+
+   - Generate release requests for all cycle-with-intermediary libraries
+     which had changes, but did not release since the previous release.
+     That patch will be used as a base to communicate with the team: if
+     a team wants to wait for a specific patch to make it to the library,
+     someone from the team can -1 the patch to have it held, or update
+     that patch with a different commit SHA.
+
+   - Between Tuesday and Thursday, merge as soon as possible the patches that
+     get +1 from the PTL or the release liaison.
+
+   - On the Friday, merge patches that did not get any feedback from PTL or
+     release liaison. Discuss standing -1s to see if they should be granted
+     an exception and wait until next week.
 
 #. To catch if there are acl issues in newly created repositories,
    run tools/aclissues.py to detect potential leftovers in Gerrit ACLs
@@ -120,6 +159,45 @@ Milestone-1
    If the tool reports any violation, you can re-run it with ``--patch`` to
    generate needed changes in ../project-config to align ACLs with governance,
    and propose the changes for review.
+
+#. At the end of the week, send the following weekly email content::
+
+    Development Focus
+    -----------------
+
+    We are now past the $SERIES-1 milestone. Teams should now be focused on
+    feature development and completion of release cycle goals [0].
+
+    [0] https://governance.openstack.org/tc/goals/selected/$SERIES/index.html
+
+    General Information
+    -------------------
+
+    Our next milestone in this development cycle will be $SERIES-2, on
+    $milestone2. This milestone is when we freeze the list of deliverables
+    that will be included in the $SERIES final release, so if you plan to
+    introduce new deliverables in this release, please propose a change to
+    add an empty deliverable file in the deliverables/$SERIES directory of
+    the openstack/releases repository.
+
+    Now is also generally a good time to look at bugfixes that were
+    introduced in the master branch that might make sense to be backported
+    and released in a stable release.
+
+    If you have any question around the OpenStack release process, feel free
+    to ask on this mailing-list or on the #openstack-release channel on IRC.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $SERIES-2 Milestone: $milestone2
+
+
+Week after milestone-1
+======================
+
+#. Review any remaining milestone-1 exceptions
+
 
 Between Milestone-1 and Milestone-2
 ===================================
