@@ -552,11 +552,12 @@ def validate_model(deliv, context):
             'no release-model specified',
         )
 
-    if deliv.model == 'independent' and deliv.series != 'independent':
-        # If the project is release:independent, make sure
-        # that's where the deliverable file is.
+    if (deliv.model in ['independent', 'abandoned']
+            and deliv.series != 'independent'):
+        # If the project is release:independent or abandoned, make sure
+        # the deliverable file is in _independent.
         context.error(
-            'uses the independent release model '
+            'uses the independent or abandoned release model '
             'and should be in the _independent '
             'directory'
         )
@@ -566,10 +567,11 @@ def validate_model(deliv, context):
     # bypass the model property because that always returns
     # 'independent' for deliverables in that series.
     model_value = deliv.data.get('release-model', 'independent')
-    if deliv.series == 'independent' and model_value != 'independent':
+    if (deliv.series == 'independent'
+            and model_value not in ['independent', 'abandoned']):
         context.error(
             'deliverables in the _independent directory '
-            'should all use the independent release model'
+            'should use either the independent or abandoned release models'
         )
 
     if deliv.model == 'untagged' and deliv.is_released:
@@ -919,6 +921,15 @@ def validate_pypi_permissions(deliv, context):
         else:
             print('found {} able to upload to {}'.format(
                 sorted(uploaders), pypi_name))
+
+
+@skip_existing_tags
+@applies_to_released
+def validate_deliverable_is_not_abandoned(deliv, context):
+    "Ensure the deliverable is not an independent abandoned deliverable."
+
+    if deliv.model == 'abandoned':
+        context.error('Abandoned deliverables should not see new releases')
 
 
 @skip_existing_tags
@@ -1848,6 +1859,7 @@ def main():
             # Check readme after sdist build to slightly optimize things
             validate_pypi_readme,
             validate_gitreview,
+            validate_deliverable_is_not_abandoned,
             validate_release_sha_exists,
             validate_existing_tags,
             validate_version_numbers,
