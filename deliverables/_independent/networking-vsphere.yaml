@@ -1,11 +1,12 @@
 ---
+release-model: abandoned
 launchpad: networking-vsphere
 team: neutron
 type: other
 releases:
   - version: 1.0.0
     projects:
-      - repo: openstack/networking-vsphere
+      - repo: x/networking-vsphere
         hash: 396e4de19a81c5b33ed09462f4dfc7c5f4d02ac2
 repository-settings:
   openstack/networking-vsphere: {}
