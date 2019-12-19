@@ -232,7 +232,7 @@ and uploads it.
 .. ttx has a nice diagram of that, insert it here
 
 After a Python package release is uploaded, the job
-``propose-upper-constraints`` submits a change to
+``propose-update-constraints`` submits a change to
 ``openstack/requirements`` to update the ``upper-constraints.txt``
 list. The constraints list is used along with the actual requirements
 list to tell the jobs which versions of which packages to
