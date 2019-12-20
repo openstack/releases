@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ansible
         hash: 6992d5e88030a63920eb06196209ff4a37ce3531
+  - version: 0.4.1
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: e26dca0c95ef6cba33d76909fecb5bf8aab8a16c
 branches:
   - name: stable/train
     location: 0.4.0
