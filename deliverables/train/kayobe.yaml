@@ -5,3 +5,21 @@ team: kolla
 type: other
 repository-settings:
   openstack/kayobe: {}
+  openstack/kayobe-config:
+    flags:
+      - no-artifact-build-job
+  openstack/kayobe-config-dev:
+    flags:
+      - no-artifact-build-job
+branches:
+  - name: stable/train
+    location: 7.0.0.0rc1
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 47aeacbacb0fca4e2547b2e61196d65ed4182b11
+      - repo: openstack/kayobe-config
+        hash: 17bda47d194a7d34cc4f4d3f3cf1b59fe3983e23
+      - repo: openstack/kayobe-config-dev
+        hash: ae4bcc722734497106b05ad6fdc82ab9a4a8620b
