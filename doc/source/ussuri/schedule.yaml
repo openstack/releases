@@ -35,6 +35,8 @@ cycle:
   start: '2019-12-09'
   x-project:
     - u-1
+    - u-py-drop-1
+    - u-py-drop-2
   project-specific:
     - u-keystone-spec-proposal-freeze
 - end: '2019-12-20'
@@ -71,6 +73,8 @@ cycle:
   x-project:
     - u-2
     - u-mf
+    - u-py-drop-3
+    - u-py-drop-final
   project-specific:
     - u-cinder-driver-deadline
     - u-cinder-target-driver-deadline
