@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-rc
+team: mistral
+type: horizon-plugin
+repository-settings:
+  openstack/mistral-dashboard: {}
+releases:
+  - version: 10.0.0.0b1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: dcd4303c4b7ddd249f1b15db735f28482d3e944c
