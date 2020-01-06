@@ -6,24 +6,24 @@ type: service
 repository-settings:
   openstack/magnum: {}
 cycle-highlights:
-  - Fedora CoreOS driver is now available which we are please to offer since
-    Fedora Atomic will be end of life at the end of this November. We welcome
-    users to test and provide feedback for this driver.
-  - Node groups now allow users to create clusters with groups of nodes with
-    different specs, e.g. GPU node groups and high memory node groups. Thanks
-    for the great work from CERN team and StackHPC.
-  - Rolling upgrade is available for both Kubernetes version and the node
-    operating system with minimal downtime.
-  - Auto healing can be deployed on Kubernetes cluster to monitor the cluster
-    health and replace broken nodes when failure is detected.
+  - Fedora CoreOS driver is now available which we are please to offer
+    since Fedora Atomic will be end of life at the end of this November.
+    We welcome users to test and provide feedback for this driver.
+  - Node groups now allow users to create clusters with groups of nodes
+    with different specs, e.g. GPU node groups and high memory node
+    groups. Thanks for the great work from CERN team and StackHPC.
+  - Rolling upgrade is available for both Kubernetes version and the
+    node operating system with minimal downtime.
+  - Auto healing can be deployed on Kubernetes cluster to monitor the
+    cluster health and replace broken nodes when failure is detected.
   - Boot Kubernetes cluster from volumes and configurable volume types.
-    They can even set the volume type etcd volumes. This may be useful for
-    cloud providers who want to use SSDs, NVMEs, etc.
-  - Private cluster can be created following best security practices, isolating
-    Kubernetes clusters from Internet access. This may be a desirable feature
-    for enterprise users. Now they have the flexibility to choose between a
-    private cluster by default and only allow access to the API exposed on
-    Internet or make it fully accessible.
+    They can even set the volume type etcd volumes. This may be useful
+    for cloud providers who want to use SSDs, NVMEs, etc.
+  - Private cluster can be created following best security practices,
+    isolating Kubernetes clusters from Internet access. This may be
+    a desirable feature for enterprise users. Now they have the flexibility
+    to choose between a private cluster by default and only allow access
+    to the API exposed on Internet or make it fully accessible.
 releases:
   - version: 9.0.0.0rc1
     projects:
@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 347b7b74742306f8573d2a6cad8e966a8ccb58fb
+  - version: 9.2.0
+    projects:
+      - repo: openstack/magnum
+        hash: 1115672e7284bdd77a5951e93d47b22495c33d91
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
