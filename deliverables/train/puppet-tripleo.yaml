@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: c97dbd19462672e527e515c32371010b1ac16d34
+  - version: 11.4.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 6969a3f5f3d059668f067d8201a07b7c82fc6dde
 branches:
   - name: stable/train
     location: 11.3.0
