@@ -61,6 +61,10 @@ releases:
       - hash: 6d1c2ce4f904c6e92013cbb72d7459db648417cb
         repo: openstack/cinder
     version: 13.0.7
+  - version: 13.0.8
+    projects:
+      - hash: ce951a3b586bc51a77422c3079637198f14ecb44
+        repo: openstack/cinder
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky
