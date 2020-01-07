@@ -15,6 +15,10 @@ releases:
       - hash: 9b632e29f145a4e56e12f0ef8f860b57c3231257
         repo: openstack/oslo.rootwrap
     version: 5.14.1
+  - version: 5.14.2
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: fdb32096ab1fafbacf116b722140b24f0e2cd834
 branches:
   - location: 5.14.1
     name: stable/rocky
