@@ -29,6 +29,10 @@ releases:
       - hash: 130d7155c4dcbbf170a0210ac72e302538fb26e4
         repo: openstack/oslo.privsep
     version: 1.32.1
+  - version: 1.32.2
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 9e09a179305b77ea1985c7d2944c91266a97e10e
 branches:
   - location: 1.32.1
     name: stable/stein

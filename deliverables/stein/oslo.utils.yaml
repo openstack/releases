@@ -47,6 +47,10 @@ releases:
       - hash: acd26c57560316aa5eeab645636d183e0665de64
         repo: openstack/oslo.utils
     version: 3.40.4
+  - version: 3.40.5
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 566e14cb96ef9fa520f007efdeb5e855587a1b98
 branches:
   - location: 3.40.3
     name: stable/stein

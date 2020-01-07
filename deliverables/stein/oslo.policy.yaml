@@ -61,6 +61,10 @@ releases:
       - hash: 106a86d18eafe55cd55266ad38e463f68699fe58
         repo: openstack/oslo.policy
     version: 2.1.1
+  - version: 2.1.2
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 20331c35974bac73693e0f5c19faef4c5ba5abea
 branches:
   - location: 2.1.1
     name: stable/stein
