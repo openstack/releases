@@ -1,27 +1,28 @@
 ---
+release-model: abandoned
 launchpad: networking-cisco
 team: neutron
 type: other
 releases:
   - version: 1.0.0
     projects:
-      - repo: openstack/networking-cisco
+      - repo: x/networking-cisco
         hash: 24edb9fd14584020a8b242a8b351befc5ddafb7e
   - version: 1.1.0
     projects:
-      - repo: openstack/networking-cisco
+      - repo: x/networking-cisco
         hash: d9b9a6421d7ff92e920ed21b01ebc7bf49e38bd6
   - version: 2.0.0
     projects:
-      - repo: openstack/networking-cisco
+      - repo: x/networking-cisco
         hash: cccaa1d12b81e17756dbef216048d76d008df54d
   - version: 3.0.0
     projects:
-      - repo: openstack/networking-cisco
+      - repo: x/networking-cisco
         hash: 60a37781808ed2bccc1906d75d937f1157fa88c3
   - version: 3.1.0
     projects:
-      - repo: openstack/networking-cisco
+      - repo: x/networking-cisco
         hash: 2d3d174fdba0fd3bec01851a7d89481cc5a97714
 repository-settings:
   openstack/networking-cisco: {}

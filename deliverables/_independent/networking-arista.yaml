@@ -1,11 +1,12 @@
 ---
+release-model: abandoned
 launchpad: networking-arista
 team: neutron
 type: other
 releases:
   - version: 2015.1.5
     projects:
-      - repo: openstack/networking-arista
+      - repo: x/networking-arista
         hash: 4f2e72515f66262c356e5eff51e1b3c86b733c31
         tarball-base: networking_arista
 repository-settings:

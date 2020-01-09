@@ -1,4 +1,5 @@
 ---
+release-model: abandoned
 launchpad: tuskar-ui
 team: tripleo
 type: horizon-plugin
@@ -9,5 +10,5 @@ repository-settings:
 releases:
   - version: 0.4.0
     projects:
-      - repo: openstack/tuskar-ui
+      - repo: x/tuskar-ui
         hash: 8699410998b72a513ef7764fe6d81f6a6a5982de
