@@ -47,6 +47,10 @@ releases:
       - hash: 472d483942d77ff7157db159606f7e0599f2b6c6
         repo: openstack/oslo.messaging
     version: 9.5.0
+  - version: 9.5.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 76fce54b9e693203f268774f876fa478ab44412c
 branches:
   - location: 9.5.0
     name: stable/stein
