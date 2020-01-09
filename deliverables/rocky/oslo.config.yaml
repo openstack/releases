@@ -47,6 +47,10 @@ releases:
       - hash: 1884c307a9502393d275e0d5c5b2e56343792908
         repo: openstack/oslo.config
     version: 6.4.1
+  - version: 6.4.2
+    projects:
+      - repo: openstack/oslo.config
+        hash: c1394f6e2d3e55a8d4e4332915d26fbfd5f4ee9e
 branches:
   - location: 6.4.0
     name: stable/rocky
