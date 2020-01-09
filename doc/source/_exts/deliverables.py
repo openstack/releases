@@ -70,6 +70,8 @@ def _get_category(deliv):
     model = deliv.model
     if model == 'cycle-trailing':
         return 'cycle-trailing'
+    if model == 'abandoned':
+        return 'abandoned'
     return deliv.type
 
 
@@ -103,6 +105,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'other',
         'cycle-trailing',
         'tempest-plugin',
+        'abandoned',
     ]
 
     def run(self):
@@ -195,6 +198,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'other': 'Other Projects',
         'cycle-trailing': 'Deployment and Packaging Tools',
         'tempest-plugin': 'Tempest Plugins',
+        'abandoned': 'End-of-life deliverables',
     }
 
     def _add_deliverables(self, type_tag, deliverables, series, result):
@@ -289,6 +293,8 @@ class DeliverableDirectiveBase(rst.Directive):
                 text = str(text)  # version numbers might be seen as floats
                 if self.team_name:
                     _add('.. _team-%s-%s:' % (series, text))
+                    if deliv.model == 'abandoned':
+                        text = '%s (EOL)' % text
                 else:
                     _add('.. _%s-%s:' % (series, text))
                 _add('')

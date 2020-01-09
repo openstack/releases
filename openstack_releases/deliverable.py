@@ -602,6 +602,8 @@ class Deliverable(object):
                 status = 'development'
             else:
                 status = self.series_info.status
+        if self.model == 'abandoned':
+            status = 'end of life'
         return status
 
     @property
