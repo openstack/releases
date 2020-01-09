@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
-# Wrapper script to locate run pre-defined queries and if needed create new releases
+# Wrapper script to locate run pre-defined queries and if needed create new
+# releases
 #
 # All Rights Reserved.
 #
@@ -21,7 +22,7 @@ set -e
 function usage {
     echo "Usage: make_missing_releases.sh <series> <stage>"
     echo
-    echo "Valid valules for stage are:"
+    echo "Valid values for stage are:"
     echo "    cwi-m) Used at the m{1,2,3} to run 'interactive release on"
     echo "           cycle-with-intermediary libraries"
     echo
@@ -29,8 +30,8 @@ function usage {
          "needed create new releases"
 }
 
-# Run a command but echo it first, kind of a light-weight set -x but avoids opencoding things
-# and there for glogic errors
+# Run a command but echo it first, kind of a light-weight set -x but avoids
+# opencoding things and there for glogic errors
 function v_run {
     echo "$*"
     "$@"
@@ -41,13 +42,16 @@ if [ $# -lt 2 ]; then
     exit 2
 fi
 
+TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASEDIR=$(dirname $TOOLSDIR)
+
 # FIXME(tonyb): We *almost* have this in 'functions' update enable_tox_venv()
 # and use that everywhere
 if [[ -z "$VIRTUAL_ENV" ]]; then
     if [[ ! -d .tox/venv ]]; then
-        tox -e venv --notest
+        (cd $BASEDIR && tox -e venv --notest)
     fi
-    source ./.tox/venv/bin/activate
+    source $BASEDIR/.tox/venv/bin/activate
 fi
 
 stable_branch=''
