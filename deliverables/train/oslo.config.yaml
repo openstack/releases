@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: c4d8fa7b88f3d952b7faabd89dc22123a1cb7e03
+  - version: 6.11.2
+    projects:
+      - repo: openstack/oslo.config
+        hash: 22c286c63b15b6f0acf6f696b98226a9257bf745
 branches:
   - name: stable/train
     location: 6.11.1
