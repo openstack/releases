@@ -27,7 +27,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import yaml
 
 from openstack_governance import governance
 import pyfiglet
@@ -37,6 +36,7 @@ from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import gitutils
 from openstack_releases import hound
+from openstack_releases import liaisons
 from openstack_releases import release_notes
 from openstack_releases import yamlutils
 
@@ -258,8 +258,7 @@ def main():
         False,
     )
 
-    with open("./data/release_liaisons.yaml", "r") as f:
-        liaison_data = yaml.safe_load(f)
+    liaison_data = liaisons.get_liaisons()
 
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
