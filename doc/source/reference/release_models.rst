@@ -148,6 +148,22 @@ projects.
 * Release tags for deliverables using this tag are managed without
   oversight from the Release Management team.
 
+.. _abandoned:
+
+abandoned
+=========
+
+As time passes, some deliverables are abandoned, as they are
+no longer useful, or their functionality is absorbed by another deliverable.
+For cycle-tied release models they just disappear in the next cycle. However
+deliverables with a cycle-independent model just stay around.
+
+The 'abandoned' release model describes a formally-independent deliverable
+that will no longer be released, because it changed release models or
+because it was abandoned.
+
+* "abandoned" deliverables never produce new releases.
+
 .. _untagged:
 
 untagged

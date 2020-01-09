@@ -486,6 +486,32 @@ class TestValidateModel(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
+    def test_with_model_abandoned_match(self):
+        validate.validate_model(
+            deliverable.Deliverable(
+                team='team',
+                series='independent',
+                name='name',
+                data={'release-model': 'abandoned'},
+            ),
+            self.ctx,
+        )
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_with_model_abandoned_nomatch(self):
+        validate.validate_model(
+            deliverable.Deliverable(
+                team='team',
+                series='ocata',
+                name='name',
+                data={'release-model': 'abandoned'},
+            ),
+            self.ctx,
+        )
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
     def test_with_independent_and_model(self):
         validate.validate_model(
             deliverable.Deliverable(
@@ -530,6 +556,38 @@ class TestValidateModel(base.BaseTestCase):
             }
         )
         validate.validate_model(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+
+class TestValidateNotAbandoned(base.BaseTestCase):
+
+    def setUp(self):
+        super().setUp()
+        self.ctx = validate.ValidationContext()
+        gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
+
+    def test_new_release_on_abandoned_deliverable(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='independent',
+            name='name',
+            data={
+                'release-model': 'abandoned',
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '0.8.1',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          # hash from master
+                          'hash': '218c9c82f168f1db681b27842b5a829428c6b5e1',
+                          'tarball-base': 'openstack-release-test'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_deliverable_is_not_abandoned(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))

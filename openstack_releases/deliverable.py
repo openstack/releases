@@ -453,9 +453,10 @@ class Deliverable(object):
 
     @property
     def model(self):
-        if self.is_independent:
+        model = self._data.get('release-model', '')
+        if self.is_independent and model != 'abandoned':
             return 'independent'
-        return self._data.get('release-model', '')
+        return model
 
     @property
     def is_independent(self):
