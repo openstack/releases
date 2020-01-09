@@ -39,6 +39,10 @@ releases:
       - hash: ca6f839fc49e8e57995d4e107ee3f428f9baa1e3
         repo: openstack/oslo.service
     version: 1.38.0
+  - version: 1.38.1
+    projects:
+      - repo: openstack/oslo.service
+        hash: abfec6a48a01c80b861ebe7e151b8df23ff6b398
 branches:
   - location: 1.38.0
     name: stable/stein
