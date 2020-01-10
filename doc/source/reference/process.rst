@@ -207,10 +207,55 @@ Week after milestone-1
 Between Milestone-1 and Milestone-2
 ===================================
 
-#. Use the countdown emails to list which projects have not done any
-   stable release yet, to encourage them to do so.
+#. Send the following weekly email content::
 
-#. Mention the upcoming MembershipFreeze deadline in the countdown emails.
+    Development Focus
+    -----------------
+
+    The $SERIES-2 milestone will happen in next month, on $milestone2.
+    $SERIES-related specs should now be finalized so that teams can move
+    to implementation ASAP. Some teams observe specific deadlines on
+    the second milestone (mostly spec freezes): please refer to
+    https://releases.openstack.org/$SERIES/schedule.html for details.
+
+    General Information
+    -------------------
+
+    Please remember that libraries need to be released at least once per
+    milestone period. At milestone 2, the release team will propose releases
+    for any library that has not been otherwise released since milestone 1.
+
+    Other non-library deliverables that follow the cycle-with-intermediary
+    release model should have an intermediary release before milestone-2.
+    Those who haven't will be proposed to switch to the cycle-with-rc model,
+    which is more suited to deliverables that are released only once per cycle.
+
+    At milestone-2 we also freeze the contents of the final release. If you
+    have a new deliverable that should be included in the final release, you
+    should make sure it has a deliverable file in:
+    https://opendev.org/openstack/releases/src/branch/master/deliverables/$series
+    You should request a beta release (or intermediary release) for those new
+    deliverables by milestone-2. We understand some may not be quite ready
+    for a full release yet, but if you have something minimally viable to
+    get released it would be good to do a 0.x release to exercise the release
+    tooling for your deliverables. See the MembershipFreeze description for
+    more details: https://releases.openstack.org/$SERIES/schedule.html#$S-mf
+
+    Finally, now may be a good time for teams to check on any stable
+    releases that need to be done for your deliverables. If you have
+    bugfixes that have been backported, but no stable release getting
+    those. If you are unsure what is out there committed but not released,
+    in the openstack/releases repo, running the command
+    "tools/list_stable_unreleased_changes.sh <cycle_name>" gives a nice report.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $SERIES-2 Milestone: $milestone2
+
+
+Week before Milestone-2
+=======================
 
 #. Ahead of MembershipFreeze, run ``membership_freeze_test`` to check for
    any new deliverable in governance that has not been released yet::
