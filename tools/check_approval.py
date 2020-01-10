@@ -23,12 +23,13 @@ import logging
 import os
 import sys
 
-from openstack_governance import governance
 import requests
 from requests.packages import urllib3
 import yaml
 
 
+GOVERNANCE_SITE = 'https://opendev.org/openstack/governance/raw/branch/master/'
+PROJECTS_YAML = 'reference/projects.yaml'
 GERRIT_URL = 'https://review.opendev.org/'
 LOG = logging.getLogger(__name__)
 
@@ -55,9 +56,10 @@ def get_liaisons(team):
 
 class GerritChange(object):
 
-    def __init__(self, gov_data, changeid):
+    def __init__(self, changeid):
         # Load governance data
-        self.gov_data = governance.Governance.from_remote_repo()
+        r = requests.get(GOVERNANCE_SITE + PROJECTS_YAML)
+        self.gov_data = yaml.safe_load(r.text)
 
         # Grab changeid details from Gerrit
         call = 'changes/%s' % changeid + \
@@ -96,7 +98,7 @@ class GerritChange(object):
         for deliv_file in self.deliv_files:
             team = get_team(deliv_file)
             try:
-                govteam = self.gov_data.get_team(team)
+                govteam = self.gov_data[team]
             except ValueError:
                 print('✕ %s mentions unknown team %s' % (deliv_file, team))
                 approved = False
@@ -104,15 +106,15 @@ class GerritChange(object):
 
             # Check that deliverable is indeed defined in governance team
             delivname, _ = os.path.splitext(os.path.basename(deliv_file))
-            if delivname not in govteam.deliverables:
+            if delivname not in govteam['deliverables']:
                 print('✕ %s not in %s governance' % (deliv_file, team))
                 approved = False
                 break
 
             # Fetch PTL and release liaisons
             liaisons = get_liaisons(team)
-            if 'email' in govteam.ptl:
-                liaisons.append(govteam.ptl['email'])
+            if 'email' in govteam['ptl']:
+                liaisons.append(govteam['ptl']['email'])
             LOG.debug('%s needs %s' % (deliv_file, liaisons))
 
             for approver in self.approvers:
@@ -134,8 +136,7 @@ def main(args=sys.argv[1:]):
     if (args.debug):
         logging.basicConfig(level=logging.DEBUG)
 
-    gov_data = governance.Governance.from_remote_repo()
-    change = GerritChange(gov_data, args.changeid)
+    change = GerritChange(args.changeid)
 
     if not change.is_approved():
         sys.exit(1)
