@@ -44,6 +44,9 @@
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
+        - openstack-tox-bashate:
+            files:
+              - ^.*\.sh$
     experimental:
       jobs:
         - releases-check-approval
