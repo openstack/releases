@@ -19,6 +19,10 @@ releases:
       - hash: 93acc927beb6cb6b1c1236c1ad6bb58ed9109bc2
         repo: openstack/python-magnumclient
     version: 2.15.0
+  - projects:
+      - repo: openstack/python-magnumclient
+        hash: 8106c5ff0020aefd755af66cdf8f2c49bb68f969
+    version: 2.16.0
 branches:
   - name: stable/train
     location: 2.15.0
