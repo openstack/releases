@@ -7,7 +7,6 @@ type: service
 repository-settings:
   openstack/mistral: {}
   openstack/mistral-extra: {}
-  openstack/mistral-dashboard: {}
 releases:
   - version: 10.0.0.0b1
     projects:
@@ -15,5 +14,3 @@ releases:
         repo: openstack/mistral
       - hash: f3b09f4b946830e0f759ddb69639f8aa32d1039e
         repo: openstack/mistral-extra
-      - repo: openstack/mistral-dashboard
-        hash: dcd4303c4b7ddd249f1b15db735f28482d3e944c
