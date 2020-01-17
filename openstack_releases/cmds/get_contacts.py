@@ -32,11 +32,10 @@ class Contact(object):
         self.irc = contact_data['irc']
         self.email = contact_data['email']
 
-
-def print_contact(contact):
-    print('Name     : %s' % contact.name)
-    print('IRC Nick : %s' % contact.irc)
-    print('Email    : %s' % contact.email)
+    def __str__(self):
+        return ("Name     : {0.name}\n" +
+                "IRC Nick : {0.irc}\n" +
+                "Email    : {0.email}").format(self)
 
 
 def main():
@@ -75,6 +74,6 @@ def main():
         print(team_header)
         print('%s' % ('-' * len(team_header)))
         for contact in contacts:
-            print_contact(contact)
+            print(contact)
 
     return 0
