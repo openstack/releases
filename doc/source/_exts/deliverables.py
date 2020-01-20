@@ -321,27 +321,18 @@ class DeliverableDirectiveBase(rst.Directive):
                 _add('')
                 _add('Release Notes: %s' % notes_link)
                 _add('')
-            # We have signatures for artifacts only after newton
-            if series and series[0] >= 'o':
-                headers = ['Version', 'Signature', 'Repo', 'Git Commit']
-                data = ((links.artifact_link(r.version, p, deliv),
-                         links.artifact_signature_link(r.version,
-                                                       'pgp', p,
-                                                       deliv),
-                         p.repo, p.hash)
-                        for r in reversed(deliv.releases)
-                        for p in r.projects
-                        if not (r.is_eol or r.is_em))
-                columns = [10, 10, 40, 50]
-            else:
-                headers = ['Version', 'Repo', 'Git Commit']
-                data = ((links.artifact_link(r.version, p,
-                                             deliv),
-                         p.repo, p.hash)
-                        for r in reversed(deliv.releases)
-                        for p in r.projects
-                        if not (r.is_eol or r.is_em))
-                columns = [10, 40, 50]
+            headers = ['Version', 'Signature', 'Repo', 'Git Commit']
+            data = ((links.artifact_link(r.version, p, deliv),
+                     links.artifact_signature_link(r.version,
+                                                   'pgp', p,
+                                                   deliv)
+                     if (series and series[0] >= 'o') or deliv.is_independent
+                     else '',
+                     p.repo, p.hash)
+                    for r in reversed(deliv.releases)
+                    for p in r.projects
+                    if not (r.is_eol or r.is_em))
+            columns = [10, 10, 40, 50]
             _list_table(
                 _add,
                 headers=headers,
