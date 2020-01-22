@@ -4,6 +4,11 @@ release-model: cycle-with-intermediary
 team: Quality Assurance
 type: other
 stable-branch-type: none
+releases:
+  - projects:
+      - repo: openstack/patrole
+        hash: 5bbdaa4fde46cf3924c4be02b6c5db8bc157e468
+    version: 0.8.0
 repository-settings:
   openstack/patrole:
     pypi-name: Patrole
