@@ -641,6 +641,14 @@ ease bulk releases.
      stage of the release *and* all changes are saved elsewhere, in case the
      script encounters a problem.
 
+tools/make_missing_releases.sh
+------------------------------
+
+A wrapper script around ``new-release`` designed to be run by the release team
+to create releases at appropriate times in the release cycle, e.g milestones.
+Once ``tools/make_missing_releases.sh`` completes the release manager can use
+``tools/bulk_review.sh`` to submit the release requests.
+
 tools/membership_freeze_test.py
 --------------------------------
 
