@@ -37,7 +37,7 @@
         - openstack-tox-bashate:
             files:
               - ^.*\.sh$
-    experimental:
+    release-approval:
       jobs:
         - check-release-approval
     gate:
