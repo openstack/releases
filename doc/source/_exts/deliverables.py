@@ -326,7 +326,8 @@ class DeliverableDirectiveBase(rst.Directive):
                      links.artifact_signature_link(r.version,
                                                    'pgp', p,
                                                    deliv)
-                     if (series and series[0] >= 'o') or deliv.is_independent
+                     if ((series and series[0] >= 'o')
+                         or (deliv.is_independent and not r.skipped_sig))
                      else '',
                      p.repo, p.hash)
                     for r in reversed(deliv.releases)

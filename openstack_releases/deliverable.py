@@ -293,6 +293,10 @@ class Release(object):
         return 'forced' in self._data.get('flags', set())
 
     @property
+    def skipped_sig(self):
+        return 'skipped-sig' in self._data.get('flags', set())
+
+    @property
     def projects(self):
         return sorted(self._projects.values())
 
