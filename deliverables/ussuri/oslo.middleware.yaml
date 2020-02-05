@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.middleware: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 0f769d4c9f5f0833d4a2d999f494a1d36dd636ab
