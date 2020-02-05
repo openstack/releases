@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/debtcollector: {}
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/debtcollector
+        hash: 3e241f33da72a3a5139a37545e6b8ab6a82bccdf
