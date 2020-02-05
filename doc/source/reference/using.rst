@@ -445,6 +445,11 @@ Each ``release`` entry is a mapping with keys:
     This release was applied by the release team, and not the project
     team.
 
+  ``skipped-sig``
+    This independent release pre-dates the Ocata cycle and did not
+    generate any signature. Signature link display should be skipped
+    when the release website pages are generated.
+
 Each entry in the ``projects`` list is a mapping with keys:
 
 ``repo``

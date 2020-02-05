@@ -92,7 +92,7 @@ properties:
           type: "array"
           items:
             type: "string"
-            enum: [ "forced" ]
+            enum: [ "forced", "skipped-sig" ]
       required: ["version", "projects"]
       additionalProperties: False
   branches:
