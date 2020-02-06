@@ -22,6 +22,10 @@ releases:
       - hash: 2aeb60434ed515b2f294a1cbbb685892ed437803
         repo: openstack/metalsmith
     version: 0.11.0
+  - version: 0.11.1
+    projects:
+      - repo: openstack/metalsmith
+        hash: 3f2e391389d294d04abeb159b215ba0e0aabf0cf
 branches:
   - location: 0.11.0
     name: stable/stein
