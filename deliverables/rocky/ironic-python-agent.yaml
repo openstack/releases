@@ -19,6 +19,10 @@ releases:
       - hash: 78ba0d1c30776607c1563bae847c062622ff12b7
         repo: openstack/ironic-python-agent
     version: 3.3.2
+  - version: 3.3.3
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 5a7cd9899821f0ca4654474e1ac6f565f671030f
 branches:
   - location: 3.3.0
     name: stable/rocky
