@@ -67,6 +67,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: c9f2e603d754660e5122992a1bcc28376ce699dc
+  - version: 20.1.0
+    projects:
+      - repo: openstack/nova
+        hash: 27bfd0bc6233c25114504bb363402807752a7ece
 branches:
   - name: stable/train
     location: 20.0.0.0rc1
