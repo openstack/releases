@@ -27,6 +27,10 @@ releases:
       - hash: ecee3d255f346da22148d15aa1b910e7b7aafd57
         repo: openstack/ironic-inspector
     version: 8.2.3
+  - projects:
+      - repo: openstack/ironic-inspector
+        hash: c7a4ec8a3b332a320444c664d0e5c45ada048a64
+    version: 8.2.4
 branches:
   - location: 8.2.0
     name: stable/stein
