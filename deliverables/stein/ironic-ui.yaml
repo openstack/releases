@@ -11,6 +11,10 @@ releases:
       - hash: 736ae26883a5eb41c9641c46dece1be274088bae
         repo: openstack/ironic-ui
     version: 3.4.0
+  - version: 3.4.1
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 5c593fd34a149c62e4153a1456bb5bc1ae366ea7
 branches:
   - location: 3.4.0
     name: stable/stein
