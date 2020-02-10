@@ -6,3 +6,8 @@ type: client-library
 repository-settings:
   openstack/python-tricircleclient:
     tarball-base: tricircleclient
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 27bfddea9d3d13670b4aae40698b88751633132f
