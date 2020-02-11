@@ -6,3 +6,8 @@ team: sahara
 type: client-library
 repository-settings:
   openstack/python-saharaclient: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 82ecc50fbe247ba72b0b3cfb73ff83d89390cd9d
