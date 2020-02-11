@@ -1,6 +1,6 @@
 ---
 launchpad: bash8
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 include-pypi-link: true
 releases:
@@ -8,5 +8,9 @@ releases:
     projects:
       - repo: openstack/bashate
         hash: 8e303ee19406652bbd7587581b03c9931e75b67d
+  - version: 1.0.0
+    projects:
+      - repo: openstack/bashate
+        hash: 49c5f16d629d0aa5fe4a9f2ff6bc65b79c6ba134
 repository-settings:
   openstack/bashate: {}
