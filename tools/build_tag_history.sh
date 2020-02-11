@@ -30,7 +30,6 @@ gen_from_git cue openstack/cue
 
 gen_from_git gnocchi openstack/gnocchi
 
-gen_from_git coreos-image-builder openstack/coreos-image-builder
 gen_from_git ironic-inspector openstack/ironic-inspector
 
 gen_from_git magnum openstack/magnum
