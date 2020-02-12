@@ -6,3 +6,8 @@ include-pypi-link: true
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/python-qinlingclient: {}
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: 5ab81333e30f9a5718d30cd8f3e988a80273f5e5
