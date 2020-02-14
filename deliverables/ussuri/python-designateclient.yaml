@@ -6,3 +6,8 @@ team: designate
 type: client-library
 repository-settings:
   openstack/python-designateclient: {}
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/python-designateclient
+        hash: eb3c72cd89cc8876433c0e3a39edf6ac4a3a0aea
