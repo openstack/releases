@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   victoria/index
    ussuri/index
    train/index
    stein/index
