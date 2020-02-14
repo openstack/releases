@@ -303,9 +303,10 @@ Between Milestone-2 and Milestone-3
 
 #. Plan the next release cycle schedule based on the number of desired weeks or
    by making sure the cycle ends within a few weeks of the next developer
-   event. Using the first Monday following the close of the last cycle, and the
+   event. Using the Monday of the close of the last cycle, and the
    Monday of the planned last week of the new cycle, use the tool
-   ``tools/weeks.py`` to generate the release schedule YAML file. For example::
+   ``tools/list_weeks.py`` to generate the release schedule YAML file.
+   For example::
 
         ./tools/list_weeks.py t 2019-04-15 2019-10-16
 
