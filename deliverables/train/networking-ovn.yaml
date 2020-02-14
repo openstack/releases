@@ -32,6 +32,10 @@ releases:
       - repo: openstack/networking-ovn
         hash: 60ca3c7809cba359871ed7220715a637448d9362
     diff-start: 6.0.0
+  - version: 7.1.0
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 59e705be402cd10f332b460d898cc478ded7160d
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
