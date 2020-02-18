@@ -6,3 +6,8 @@ team: ironic
 type: client-library
 repository-settings:
   openstack/sushy-cli: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/sushy-cli
+        hash: a03ffa5a8a034b4b71787a2eb1e28646a1e1706a
