@@ -234,6 +234,40 @@ Ussuri release
 
 The Ussuri coordinated release will happen on Wednesday, 13 May, 2020.
 
+.. _v-election-email-deadline:
+
+Election Email Deadline
+-----------------------
+Contributors that will be in the electorate for the upcoming elections
+should confirm their gerrit email addresses by this date (April 7th, 2020
+at 00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+TC Elections
+------------
+.. _v-tc-nominations:
+
+TC Election Nomination Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Technical committee candidates interested in serving for the next calendar year
+should announce their candidacies and platforms during this week.  Please see
+the `Election site`_ for specific timing imformation.
+
+.. _v-tc-campaigning:
+
+TC Election Campaigning Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.  Please see the `Election site`_ for
+specific timing information.
+
+.. _v-tc-polling:
+
+TC Election Polling Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Election polling week for open seats on the TC.  Please see the
+`Election site`_ for specific timing imformation.
+
 Project-specific events
 =======================
 
@@ -368,3 +402,24 @@ Keystone Feature Freeze
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 All new Keystone features must be merged by the end of the week.
+
+PTL Elections
+-------------
+
+.. _v-ptl-nominations:
+
+'U' PTL self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Project team lead candidates for the 'U' cycle should announce their
+candidacy during this week.  Refer to the `Election Site`_ for exact details.
+
+.. _v-ptl-polling:
+
+'U' PTL Election Polling Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Election week for Project team leads (where an election must be held to
+determine the winner).  Refer to the `Election Site`_ for exact details.
+
+.. _Election site: https://governance.openstack.org/election/

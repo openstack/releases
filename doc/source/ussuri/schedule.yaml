@@ -106,13 +106,17 @@ cycle:
   start: '2020-03-23'
   x-project:
     - u-extra-atcs
+    - v-tc-nominations
   project-specific:
     - u-oslo-feature-freeze
+    - v-ptl-nominations
 - end: '2020-04-03'
   name: R-6
   start: '2020-03-30'
   x-project:
     - u-final-lib
+    - v-tc-campaigning
+    - v-election-email-deadline
 - end: '2020-04-10'
   name: R-5
   start: '2020-04-06'
@@ -123,8 +127,10 @@ cycle:
     - u-soft-sf
     - u-rf
     - u-goals-complete
+    - v-tc-polling
   project-specific:
     - u-cinder-ci-checkpoint
+    - v-ptl-polling
 - end: '2020-04-17'
   name: R-4
   start: '2020-04-13'
