@@ -269,6 +269,54 @@ Week before Milestone-2
    to be released in the next release and will be reconsidered at the next
    cycle.
 
+#. Send the following weekly email content::
+
+    Development Focus
+    -----------------
+
+    The $SERIES-2 milestone is next week, on $milestone2! $SERIES-related
+    specs should now be finalized so that teams can move to implementation
+    ASAP. Some teams observe specific deadlines on the second milestone
+    (mostly spec freezes): please refer to
+    https://releases.openstack.org/$SERIES/schedule.html for details.
+
+    General Information
+    -------------------
+
+    Libraries need to be released at least once per milestone period. Next
+    week, the release team will propose releases for any library that has not
+    been otherwise released since milestone 1. PTL's and release liaisons,
+    please watch for these and give a +1 to acknowledge them. If there is
+    some reason to hold off on a release, let us know that as well. A +1
+    would be appreciated, but if we do not hear anything at all by the end
+    of the week, we will assume things are OK to proceed.
+
+    Remember that non-library deliverables that follow the
+    cycle-with-intermediary release model should have an intermediary
+    release before milestone-2. Those who haven't will be proposed to switch
+    to the cycle-with-rc model, which is more suited to deliverables that
+    are released only once per cycle.
+
+    Next week is also the deadline to freeze the contents of the final
+    release. All new '$SERIES' deliverables need to have a deliverable file
+    in https://opendev.org/openstack/releases/src/branch/master/deliverables
+    and need to have done a release by milestone-2. The following new
+    deliverables have not had a release yet, and will not be included in
+    $SERIES unless a release is requested for them in the coming week:
+
+    [ list of deliverables ]
+
+    Changes proposing those deliverables for inclusion in $SERIES have been
+    posted, please update them with an actual release request before the
+    milestone-2 deadline if you plan on including that deliverable in $SERIES,
+    or -1 if you need one more cycle to be ready.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    $SERIES-2 Milestone: $milestone2
+
+
 Milestone-2
 ===========
 
@@ -297,6 +345,51 @@ Milestone-2
    If the tool reports any violation, you can re-run it with ``--patch`` to
    generate needed changes in ../project-config to align ACLs with governance,
    and propose the changes for review.
+
+#. Send the following weekly email content::
+
+    Development Focus
+    -----------------
+
+    We are now past the $SERIES-2 milestone, and entering the last development
+    phase of the cycle. Teams should be focused on implementing planned work
+    for the cycle.
+
+    Now is a good time to review those plans and reprioritize anything if
+    needed based on the what progress has been made and what looks realistic
+    to complete in the next few weeks.
+
+    General Information
+    -------------------
+
+    Looking ahead to the end of the release cycle, please be aware of the
+    feature freeze dates. Those vary depending on deliverable type:
+
+    * General libraries (except client libraries) need to have their last
+      feature release before Non-client library freeze ($nclfreeze). Their
+      stable branches are cut early.
+
+    * Client libraries (think python-*client libraries) need to have their
+      last feature release before Client library freeze ($milestone3)
+
+    * Deliverables following a cycle-with-rc model (that would be most
+      services) observe a Feature freeze on that same date, $milestone3.
+      Any feature addition beyond that date should be discussed on the
+      mailing-list and get PTL approval. After feature freeze, cycle-with-rc
+      deliverables need to produce a first release candidate (and a stable
+      branch) before RC1 deadline ($rc1-deadline)
+
+    * Deliverables following cycle-with-intermediary model can release as
+      necessary, but in all cases before Final RC deadline ($final-rc-deadline)
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Non-client library freeze: $nclfreeze (R-6 week)
+    Client library freeze: $milestone3 (R-5 week)
+    Ussuri-3 milestone: $milestone3 (R-5 week)
+    $other-upcoming-event
+
 
 Between Milestone-2 and Milestone-3
 ===================================
