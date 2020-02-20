@@ -59,6 +59,6 @@
     release-post:
       jobs:
         - tag-releases
-        - publish-tox-docs-static:
+        - publish-tox-docs-releases:
             dependencies:
               - tag-releases
