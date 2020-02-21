@@ -1,6 +1,6 @@
 ---
 launchpad: openstack-doc-tools
-team: Documentation
+team: oslo
 type: library
 release-notes: https://docs.openstack.org/releasenotes/openstack-doc-tools/
 releases:
@@ -104,5 +104,9 @@ releases:
     projects:
       - repo: openstack/openstack-doc-tools
         hash: 2b275421b0dae78da94ee18d142414b122e091ad
+  - version: 3.0.0
+    projects:
+      - repo: openstack/openstack-doc-tools
+        hash: 5888968ec016104f1ea596e8c7388a3e8512bfb3
 repository-settings:
   openstack/openstack-doc-tools: {}

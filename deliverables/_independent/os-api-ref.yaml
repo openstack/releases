@@ -1,6 +1,6 @@
 ---
 launchpad: openstack-doc-tools
-team: Documentation
+team: oslo
 type: library
 releases:
   - version: 0.1.0
@@ -55,5 +55,9 @@ releases:
     projects:
       - repo: openstack/os-api-ref
         hash: 678238dec2162b3dfac29231c11fa1af71009fca
+  - version: 2.0.0
+    projects:
+      - repo: openstack/os-api-ref
+        hash: ac100a7b7665e10d3d14e0e514535f5d7accaa33
 repository-settings:
   openstack/os-api-ref: {}
