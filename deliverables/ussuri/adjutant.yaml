@@ -4,4 +4,10 @@ release-model: cycle-with-intermediary
 team: adjutant
 type: service
 repository-settings:
-  openstack/adjutant: {}
+  openstack/adjutant:
+    tarball-base: python-adjutant
+releases:
+  - version: 0.5.0
+    projects:
+      - repo: openstack/adjutant
+        hash: 592e24170ef917d490203a6d2daaaabd0c467b7f
