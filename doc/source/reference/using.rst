@@ -342,6 +342,11 @@ The top level of a deliverable file is a mapping with keys:
     canonicalized output of ``python setup.py --name``, such as if it
     uses capitalized letters ("DragonFlow" instead of "dragonflow").
 
+  ``tarball-base``
+    An optional name for the base of the tarball created by the
+    release. If no value is provided, it defaults to the repo base name or
+    an overridden value set on a specific release entry under ``releases``.
+
 ``release-type``
   This (optional) key sets the level of validation for the versions numbers.
 
@@ -460,7 +465,8 @@ Each entry in the ``projects`` list is a mapping with keys:
 
 ``tarball-base``
   An optional name for the base of the tarball created by the
-  release. If no value is provided, it defaults to the repo base name.
+  release. If no value is provided, it defaults to the ``repository-settings``
+  value if set, else the repo base name.
 
 Each entry in the ``branches`` list is a mapping with keys:
 
