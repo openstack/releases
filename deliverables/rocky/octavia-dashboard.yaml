@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 0e14846f712fedfdc8b56686bde2114d26b241fe
+  - version: rocky-em
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 0e14846f712fedfdc8b56686bde2114d26b241fe
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
