@@ -23,6 +23,10 @@ releases:
       - hash: 6a38838a412f7b4f7820eb98c82a7ced5299ee44
         repo: openstack/python-novaclient
     version: 11.0.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 6a38838a412f7b4f7820eb98c82a7ced5299ee44
 branches:
   - location: 11.0.0
     name: stable/rocky
