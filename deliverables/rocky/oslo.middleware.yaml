@@ -15,6 +15,10 @@ releases:
       - hash: 48ec101f159f2345bdadb688fe2d35b08a038686
         repo: openstack/oslo.middleware
     version: 3.36.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 48ec101f159f2345bdadb688fe2d35b08a038686
 branches:
   - location: 3.36.0
     name: stable/rocky

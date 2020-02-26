@@ -15,6 +15,10 @@ releases:
       - hash: 2429c4c4f04102dcad3388bfaa8cdf5dc12bcf0f
         repo: openstack/oslo.concurrency
     version: 3.27.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 2429c4c4f04102dcad3388bfaa8cdf5dc12bcf0f
 branches:
   - location: 3.27.0
     name: stable/rocky

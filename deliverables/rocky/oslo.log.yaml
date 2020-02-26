@@ -33,6 +33,10 @@ releases:
         hash: 871d2df290d829b9cafb0dc383dc3d65810c2dac
         repo: openstack/oslo.log
     version: 3.39.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/oslo.log
+        hash: 871d2df290d829b9cafb0dc383dc3d65810c2dac
 branches:
   - location: 3.39.0
     name: stable/rocky
