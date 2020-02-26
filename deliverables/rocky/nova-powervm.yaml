@@ -38,5 +38,9 @@ releases:
         hash: 984b122668161703eee33918d570c61ae9c5b1ca
         tarball-base: nova_powervm
     version: 7.0.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 984b122668161703eee33918d570c61ae9c5b1ca
 repository-settings:
   openstack/nova-powervm: {}
