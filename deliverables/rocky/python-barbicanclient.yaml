@@ -16,6 +16,10 @@ releases:
       - hash: f14511dd9d8806d777f81f33f34ef522245af6a0
         repo: openstack/python-barbicanclient
     version: 4.7.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: f14511dd9d8806d777f81f33f34ef522245af6a0
 repository-settings:
   openstack/python-barbicanclient: {}
 branches:
