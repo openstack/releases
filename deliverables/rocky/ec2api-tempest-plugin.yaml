@@ -10,6 +10,10 @@ releases:
     version: 0.1.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/ec2api-tempest-plugin
+        hash: ba836d429f38ce0831cf336feb2a620fdcf3efcb
 repository-settings:
   openstack/ec2api-tempest-plugin: {}
 team: ec2-api
