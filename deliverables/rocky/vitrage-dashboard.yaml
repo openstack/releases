@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: f265f1549bd00131c436d913571b515467b01f2d
+  - version: rocky-em
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: f265f1549bd00131c436d913571b515467b01f2d
 cycle-highlights:
   - New UI for alarm history
 release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/rocky.html
