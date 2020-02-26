@@ -41,6 +41,10 @@ releases:
       - hash: dbc64b48b5ac376c93cb70022698c5c87da17288
         repo: openstack/keystone
     version: 14.2.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/keystone
+        hash: dbc64b48b5ac376c93cb70022698c5c87da17288
 cycle-highlights:
   - |
     Support for a new hierarchical enforcement model has been implemented in
