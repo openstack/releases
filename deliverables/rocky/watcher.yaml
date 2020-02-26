@@ -29,6 +29,11 @@ releases:
       - repo: openstack/watcher
         hash: b471b4ca36f46fa89cdca7be297c3f28dbd21c2b
         tarball-base: python-watcher
+  - version: 1.12.1
+    projects:
+      - repo: openstack/watcher
+        hash: a8974556ecc29f09e07f411fb745e61e68d8db92
+        tarball-base: python-watcher
 cycle-highlights:
   - |
     Watcher services can be launched in HA mode. From now on Watcher Decision
