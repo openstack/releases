@@ -37,6 +37,10 @@ releases:
       - repo: openstack/sahara
         hash: 8677168b80aeee669d468a09bfb754498f81f5c2
     version: 9.0.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/sahara
+        hash: 8677168b80aeee669d468a09bfb754498f81f5c2
 branches:
   - name: stable/rocky
     location: 9.0.0.0rc1
