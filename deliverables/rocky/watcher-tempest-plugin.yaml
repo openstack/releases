@@ -9,6 +9,10 @@ releases:
       - repo: openstack/watcher-tempest-plugin
         hash: 8b78066462a76eba0242e264d3598adbd38eabbc
         tarball-base: watcher-tempest-plugin
+  - version: rocky-em
+    projects:
+      - repo: openstack/watcher-tempest-plugin
+        hash: 8b78066462a76eba0242e264d3598adbd38eabbc
 repository-settings:
   openstack/watcher-tempest-plugin: {}
 team: watcher
