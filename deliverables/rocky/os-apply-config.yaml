@@ -23,6 +23,10 @@ releases:
       - hash: 07165a907a01408485526950739183a6154f6515
         repo: openstack/os-apply-config
     version: 9.1.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 07165a907a01408485526950739183a6154f6515
 branches:
   - location: 9.1.0
     name: stable/rocky
