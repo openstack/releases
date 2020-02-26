@@ -9,6 +9,10 @@ releases:
       - repo: openstack/kuryr
         hash: 2f38e07a38be59305c573311a04c8d4b6de5a912
         tarball-base: kuryr-lib
+  - version: rocky-em
+    projects:
+      - repo: openstack/kuryr
+        hash: 2f38e07a38be59305c573311a04c8d4b6de5a912
 repository-settings:
   openstack/kuryr: {}
 branches:
