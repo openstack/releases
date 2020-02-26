@@ -29,6 +29,10 @@ releases:
       - hash: ecde0a165f6145d8257fd52d50ee6f417b0b6ff0
         repo: openstack/networking-odl
     version: 13.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/networking-odl
+        hash: 9ef63ea47bf64150878920444fb059349af5fef0
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky
