@@ -10,6 +10,10 @@ releases:
     version: 0.4.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: a60ef68c25933eeb9b5636cf063f7340cfd6062d
 repository-settings:
   openstack/python-tricircleclient:
     tarball-base: tricircleclient
