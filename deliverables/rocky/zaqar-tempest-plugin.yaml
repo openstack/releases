@@ -10,6 +10,10 @@ releases:
     version: 0.1.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/zaqar-tempest-plugin
+        hash: f6c761d2138824849ca3036e49210e7649978ebb
 repository-settings:
   openstack/zaqar-tempest-plugin:
     tarball-base: zaqar_tempest_plugin

@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 1a50023196286fa2644afcea8ee6498498cf18b6
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 1a50023196286fa2644afcea8ee6498498cf18b6
 branches:
   - name: stable/rocky
     location: 1.10.0

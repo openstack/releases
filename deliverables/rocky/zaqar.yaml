@@ -21,6 +21,10 @@ releases:
       - repo: openstack/zaqar
         hash: bd644fec02ec592b8c79828583c689b28dd61675
     version: 7.0.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/zaqar
+        hash: bd644fec02ec592b8c79828583c689b28dd61675
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky
