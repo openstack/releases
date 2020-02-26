@@ -23,6 +23,10 @@ releases:
       - hash: 9b7f3d9561ce47f370642a3d169fce6469203148
         repo: openstack/trove-dashboard
     version: 11.0.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 9b7f3d9561ce47f370642a3d169fce6469203148
 branches:
   - location: 11.0.0.0rc1
     name: stable/rocky

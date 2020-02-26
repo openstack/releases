@@ -10,6 +10,10 @@ releases:
     version: 0.1.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/trove-tempest-plugin
+        hash: fa807b780062ea30aaeebdc37d650f071a98b09c
 repository-settings:
   openstack/trove-tempest-plugin:
     tarball-base: trove_tempest_plugin
