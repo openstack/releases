@@ -25,6 +25,10 @@ releases:
       - repo: openstack/storlets
         hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
     version: 2.0.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/storlets
+        hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
