@@ -26,6 +26,10 @@ releases:
       - hash: 001ed3329c86d0f93bff0d6a0b1b32a8b2c638d1
         repo: openstack/puppet-manila
     version: 13.3.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 001ed3329c86d0f93bff0d6a0b1b32a8b2c638d1
 branches:
   - location: 13.3.0
     name: stable/rocky

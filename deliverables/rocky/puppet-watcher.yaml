@@ -22,6 +22,10 @@ releases:
       - hash: a5da2e29c30982a5a805eb229ae6c92929e6c891
         repo: openstack/puppet-watcher
     version: 13.3.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: a5da2e29c30982a5a805eb229ae6c92929e6c891
 branches:
   - location: 13.3.0
     name: stable/rocky

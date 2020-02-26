@@ -22,6 +22,10 @@ releases:
       - hash: 4b95b4b64f7ca5642a71d0a395b5907d85479d1a
         repo: openstack/puppet-gnocchi
     version: 13.3.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 4b95b4b64f7ca5642a71d0a395b5907d85479d1a
 branches:
   - location: 13.3.0
     name: stable/rocky
