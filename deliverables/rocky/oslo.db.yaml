@@ -43,6 +43,10 @@ releases:
       - hash: 249c65b5010941855d77d642c508177443a5c371
         repo: openstack/oslo.db
     version: 4.40.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/oslo.db
+        hash: 249c65b5010941855d77d642c508177443a5c371
 branches:
   - location: 4.40.0
     name: stable/rocky

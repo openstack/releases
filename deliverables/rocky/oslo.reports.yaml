@@ -15,6 +15,10 @@ releases:
       - hash: d743d0183a0166ae8bef56b6721f0ba48c73aeab
         repo: openstack/oslo.reports
     version: 1.28.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/oslo.reports
+        hash: d743d0183a0166ae8bef56b6721f0ba48c73aeab
 branches:
   - location: 1.28.0
     name: stable/rocky

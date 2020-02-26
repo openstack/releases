@@ -19,6 +19,10 @@ releases:
       - hash: 747f022f2006f831e2e408d54268ded236bbcd7f
         repo: openstack/tooz
     version: 1.62.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/tooz
+        hash: 747f022f2006f831e2e408d54268ded236bbcd7f
 branches:
   - location: 1.62.0
     name: stable/rocky
