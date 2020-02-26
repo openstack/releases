@@ -19,6 +19,10 @@ releases:
       - hash: 7eba94ee323fef95f4aad3247e12b1eee65e86b4
         repo: openstack/python-neutronclient
     version: 6.9.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 7eba94ee323fef95f4aad3247e12b1eee65e86b4
 branches:
   - location: 6.9.0
     name: stable/rocky

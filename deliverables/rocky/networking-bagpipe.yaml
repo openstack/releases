@@ -38,6 +38,10 @@ releases:
         hash: 6150dccbc763a8d5b5ff22c2bbbcec8527e7213d
         repo: openstack/networking-bagpipe
     version: 9.0.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 6150dccbc763a8d5b5ff22c2bbbcec8527e7213d
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky
