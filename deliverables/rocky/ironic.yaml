@@ -30,6 +30,10 @@ releases:
       - hash: 0362f72636436238f3b10b45d79ba190b63981ba
         repo: openstack/ironic
     version: 11.1.4
+  - version: rocky-em
+    projects:
+      - repo: openstack/ironic
+        hash: 0362f72636436238f3b10b45d79ba190b63981ba
 branches:
   - location: 11.1.0
     name: stable/rocky

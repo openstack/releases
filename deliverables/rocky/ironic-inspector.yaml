@@ -31,6 +31,10 @@ releases:
     projects:
       - hash: f8eba2adc0c46fd76bf68982b3c1f2bbeb40e5f8
         repo: openstack/ironic-inspector
+  - version: rocky-em
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: f8eba2adc0c46fd76bf68982b3c1f2bbeb40e5f8
 branches:
   - location: 8.0.0
     name: stable/rocky
