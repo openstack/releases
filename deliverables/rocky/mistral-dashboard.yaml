@@ -1,0 +1,46 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-milestones
+team: mistral
+type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 6576e00f28eb70fd8b779d3d04454723bb72297b
+  - projects:
+      - hash: 52ebdf9b44fbd994b7459e864d1d14fe1e7ca357
+        repo: openstack/mistral-dashboard
+    version: 7.0.0.0b2
+  - projects:
+      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
+        repo: openstack/mistral-dashboard
+    version: 7.0.0.0b3
+  - projects:
+      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
+        repo: openstack/mistral-dashboard
+    version: 7.0.0.0rc1
+  - diff-start: 6.0.0
+    projects:
+      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
+        repo: openstack/mistral-dashboard
+    version: 7.0.0
+  - projects:
+      - hash: 55e9a7ac2908f41b5f1b2258a0913372a1a3fbcd
+        repo: openstack/mistral-dashboard
+    version: 7.0.1
+  - version: 7.1.0
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 0c9b734e427f90253c41b7850ad1436d814bc938
+  - version: rocky-em
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 0c9b734e427f90253c41b7850ad1436d814bc938
+repository-settings:
+  openstack/mistral-dashboard: {}
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
+release-notes: https://docs.openstack.org/releasenotes/mistral/rocky.html
