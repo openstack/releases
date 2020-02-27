@@ -14,6 +14,10 @@ releases:
       - hash: 4bbb7d1f03e2da824266ead6a9ae7cc2e5c0582a
         repo: openstack/monasca-persister
     version: 1.12.0
+  - version: 1.12.1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 81abadf4ea9e4693dfba574e5e28c52195577507
 branches:
   - location: 1.12.0
     name: stable/rocky
