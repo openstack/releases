@@ -34,6 +34,10 @@ releases:
       - repo: openstack/watcher
         hash: a8974556ecc29f09e07f411fb745e61e68d8db92
         tarball-base: python-watcher
+  - version: rocky-em
+    projects:
+      - repo: openstack/watcher
+        hash: a8974556ecc29f09e07f411fb745e61e68d8db92
 cycle-highlights:
   - |
     Watcher services can be launched in HA mode. From now on Watcher Decision
