@@ -32,6 +32,10 @@ releases:
       - hash: d5e98c5c56aafba8f2839c13909ba0534dcb214b
         repo: openstack/neutron-dynamic-routing
     version: 13.0.1
+  - version: 13.1.0
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 76895e8214e6c63647132b69a8d49d9b92fb782b
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky
