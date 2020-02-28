@@ -10,6 +10,10 @@ releases:
     version: 0.1.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/blazar-tempest-plugin
+        hash: ef61d6fa07a0e95b3a504b5f9bd9ba135ca1229b
 repository-settings:
   openstack/blazar-tempest-plugin:
     tarball-base: blazar_tempest_plugin
