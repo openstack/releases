@@ -86,19 +86,29 @@ def get_min_specifier(specifier_set):
 
 
 def get_requirements_at_ref(workdir, repo, ref):
-    "Check out the repo at the ref and load the list of requirements."
-    dest = gitutils.clone_repo(workdir, repo, ref=ref)
-    processutils.check_call(['python3', 'setup.py', 'sdist'], cwd=dest)
-    sdist_name = pythonutils.get_sdist_name(workdir, repo)
-    requirements_filename = os.path.join(
-        dest, sdist_name + '.egg-info', 'requires.txt',
-    )
-    if os.path.exists(requirements_filename):
-        with open(requirements_filename, 'r') as f:
-            body = f.read()
-    else:
-        # The package has no dependencies.
-        body = ''
+    """Check out the repo at the ref and load the list of requirements."""
+    body = ''
+
+    try:
+        dest = gitutils.clone_repo(workdir, repo, ref=ref)
+        processutils.check_call(['python3', 'setup.py', 'sdist'], cwd=dest)
+        sdist_name = pythonutils.get_sdist_name(workdir, repo)
+        requirements_filename = os.path.join(
+            dest, sdist_name + '.egg-info', 'requires.txt',
+        )
+        if os.path.exists(requirements_filename):
+            with open(requirements_filename, 'r') as f:
+                body = f.read()
+        else:
+            # The package has no dependencies.
+            pass
+    except Exception:
+        # We've had a few cases where a previous version had an issue and could
+        # no longer be installed. In this case, just move along.
+        LOG.warning('Unable to create sdist, unable to get requirements.')
+        LOG.warning('!!! Perform manual comparison for requirements changes'
+                    '!!!')
+
     return parse_requirements(body)
 
 
