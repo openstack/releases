@@ -14,6 +14,10 @@ releases:
       - hash: 471c0fb8ce47d0f1e78381ddb48599f53645a641
         repo: openstack/monasca-api
     version: 2.7.0
+  - version: 2.7.1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 18a45477e6f6e92a849e0b05ff488604a679915e
 branches:
   - location: 2.7.0
     name: stable/rocky
