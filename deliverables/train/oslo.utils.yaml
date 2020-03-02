@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 39870f6807e07811bd5d98d82bb8799feeca73d6
+  - version: 3.41.5
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 85cd57d1c5b7f1e046f831b9b1caa341b688cfb4
 branches:
   - name: stable/train
     location: 3.41.1
