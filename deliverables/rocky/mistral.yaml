@@ -17,50 +17,26 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 0b1e0bd626169aaba82e08fe17ec6eb071ef9860
-      - repo: openstack/mistral-dashboard
-        hash: 6576e00f28eb70fd8b779d3d04454723bb72297b
-      - repo: openstack/mistral-extra
-        hash: c3deb2d36ac25df0b73e1a7a16399efade7d5861
   - projects:
       - hash: 13b2b0fbaf9662606e9d04781c78b5109bfc8145
         repo: openstack/mistral
-      - hash: 52ebdf9b44fbd994b7459e864d1d14fe1e7ca357
-        repo: openstack/mistral-dashboard
-      - hash: c78bdbb95b1ab3325c42535ac2a6538e5e554b9d
-        repo: openstack/mistral-extra
     version: 7.0.0.0b2
   - projects:
       - hash: 952967a019ba2af6b3c7b661addb59d5f4187f24
         repo: openstack/mistral
-      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
-        repo: openstack/mistral-dashboard
-      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
-        repo: openstack/mistral-extra
     version: 7.0.0.0b3
   - projects:
       - hash: ca84455a92e228cd93d878f46488fcc479273817
         repo: openstack/mistral
-      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
-        repo: openstack/mistral-dashboard
-      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
-        repo: openstack/mistral-extra
     version: 7.0.0.0rc1
   - diff-start: 6.0.0
     projects:
       - hash: ca84455a92e228cd93d878f46488fcc479273817
         repo: openstack/mistral
-      - hash: 04c32537f7925aaeb54d8d7aa6da34ce85479c2c
-        repo: openstack/mistral-dashboard
-      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
-        repo: openstack/mistral-extra
     version: 7.0.0
   - projects:
       - hash: 2309e5265a1d5f28480ae872817b5de05f66e83c
         repo: openstack/mistral
-      - hash: 55e9a7ac2908f41b5f1b2258a0913372a1a3fbcd
-        repo: openstack/mistral-dashboard
-      - hash: ab11582d10aaf6b9e731896c0a8705fc8a361272
-        repo: openstack/mistral-extra
     version: 7.0.1
   - projects:
       - hash: e50fbfbdd903340402716dc306f5c5354b9060ab
@@ -78,14 +54,12 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 4d3ef8887fb765c9edd36f62cc66904aff4c1b0e
-      - repo: openstack/mistral-dashboard
-        hash: 0c9b734e427f90253c41b7850ad1436d814bc938
-      - repo: openstack/mistral-extra
-        hash: 1cfaedd55b49b68e391b81aa02b20365864286eb
+  - version: rocky-em
+    projects:
+      - repo: openstack/mistral
+        hash: 4d3ef8887fb765c9edd36f62cc66904aff4c1b0e
 repository-settings:
   openstack/mistral: {}
-  openstack/mistral-dashboard: {}
-  openstack/mistral-extra: {}
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

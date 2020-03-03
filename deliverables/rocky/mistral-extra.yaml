@@ -1,0 +1,46 @@
+---
+include-pypi-link: true
+launchpad: mistral
+release-model: cycle-with-milestones
+team: mistral
+type: service
+releases:
+  - version: 7.0.0.0b1
+    projects:
+      - repo: openstack/mistral-extra
+        hash: c3deb2d36ac25df0b73e1a7a16399efade7d5861
+  - projects:
+      - hash: c78bdbb95b1ab3325c42535ac2a6538e5e554b9d
+        repo: openstack/mistral-extra
+    version: 7.0.0.0b2
+  - projects:
+      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
+        repo: openstack/mistral-extra
+    version: 7.0.0.0b3
+  - projects:
+      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
+        repo: openstack/mistral-extra
+    version: 7.0.0.0rc1
+  - diff-start: 6.0.0
+    projects:
+      - hash: 0d193dab2b4e13b06fd8822308c3aee202e370c4
+        repo: openstack/mistral-extra
+    version: 7.0.0
+  - projects:
+      - hash: ab11582d10aaf6b9e731896c0a8705fc8a361272
+        repo: openstack/mistral-extra
+    version: 7.0.1
+  - version: 7.1.0
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 1cfaedd55b49b68e391b81aa02b20365864286eb
+  - version: rocky-em
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 1cfaedd55b49b68e391b81aa02b20365864286eb
+repository-settings:
+  openstack/mistral-extra: {}
+branches:
+  - location: 7.0.0.0rc1
+    name: stable/rocky
+release-notes: https://docs.openstack.org/releasenotes/mistral/rocky.html
