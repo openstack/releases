@@ -27,14 +27,14 @@ function usage {
     echo "     body: This will be the message body for the git commit"
     echo
     echo "This script operates on a dirty repo (such as one created by"
-    echo "running tools/make_missing_releases.sh.  It will then create a"
+    echo "running tools/make_missing_releases.sh. It will then create a"
     echo "local branch per-team of the modified deliverable files and then"
     echo "submit that branch for review"
     echo
     echo "PTLs and liaisons will be CC'd on the review"
 }
 
-# NOTE: It might be worth switching getopt but I don't knwo if that is
+# NOTE: It might be worth switching getopt but I don't know if that is
 # available and the same on MacOS
 while getopts "t:s:b:" arg ; do
     case "$arg" in
