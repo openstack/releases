@@ -72,6 +72,10 @@ releases:
       - hash: fd50cfacd2eb1da507e226be0f9b3c04e747685b
         repo: openstack/nova
     version: 18.3.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/nova
+        hash: fd50cfacd2eb1da507e226be0f9b3c04e747685b
 branches:
   - location: 18.0.0.0rc1
     name: stable/rocky
