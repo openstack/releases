@@ -14,3 +14,6 @@ releases:
       - hash: b24fe0217990f3740b2374256b4268fe855788a8
         repo: openstack/puppet-keystone
     version: 16.1.0
+cycle-highlights:
+  - Puppet OpenStack can now bootstrap Keystone using
+    a admin password instead of using the legacy admin token.
