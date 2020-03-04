@@ -9,6 +9,10 @@ releases:
       - hash: 3e728f945f42e28c4f912c58a45c297d219e03bb
         repo: openstack/python-magnumclient
     version: 2.10.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 3e728f945f42e28c4f912c58a45c297d219e03bb
 branches:
   - location: 2.10.0
     name: stable/rocky

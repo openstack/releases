@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 1df886df52ace162e88b064d4c3302908c2ba290
+  - version: rocky-em
+    projects:
+      - repo: openstack/magnum
+        hash: 1df886df52ace162e88b064d4c3302908c2ba290
 branches:
   - name: stable/rocky
     location: 7.0.0
