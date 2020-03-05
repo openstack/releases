@@ -11,6 +11,10 @@ releases:
     version: 1.1.0
     flags:
       - forced
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 7aca76b32b6f89774ab1659a90bcba08b62a1700
 repository-settings:
   openstack/python-karborclient: {}
 branches:
