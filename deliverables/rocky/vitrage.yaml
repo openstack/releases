@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 37a393c85bd689fbc689213d9c1b9d1462798104
+  - version: rocky-em
+    projects:
+      - repo: openstack/vitrage
+        hash: 37a393c85bd689fbc689213d9c1b9d1462798104
 cycle-highlights:
   - Fast-failover of vitrage-graph for better High-Availability support
   - New Kubernetes datasource, for Kubernetes cluster as a workload
