@@ -30,6 +30,10 @@ releases:
         repo: openstack/cyborg
         tarball-base: openstack-cyborg
     version: 1.0.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/cyborg
+        hash: b727c1670ab24b68d7224e7967adff5145e45c40
 branches:
   - location: 1.0.0.0rc1
     name: stable/rocky

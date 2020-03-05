@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 16bdd7cccf1966996c327ca14d1ce417ad1e7926
+  - version: rocky-em
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 16bdd7cccf1966996c327ca14d1ce417ad1e7926
 branches:
   - name: stable/rocky
     location: 0.2.0
