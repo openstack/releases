@@ -19,6 +19,10 @@ releases:
       - hash: a66f37d09d49677bc774157a19bb3f0e9781a179
         repo: openstack/osc-lib
     version: 1.11.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/osc-lib
+        hash: a66f37d09d49677bc774157a19bb3f0e9781a179
 branches:
   - location: 1.11.0
     name: stable/rocky
