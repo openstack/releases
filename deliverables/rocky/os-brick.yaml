@@ -55,6 +55,10 @@ releases:
       - hash: d640c73d9b68bdf200c3e71ddec65b166a571f4b
         repo: openstack/os-brick
     version: 2.5.10
+  - version: rocky-em
+    projects:
+      - repo: openstack/os-brick
+        hash: d640c73d9b68bdf200c3e71ddec65b166a571f4b
 branches:
   - location: 2.5.3
     name: stable/rocky

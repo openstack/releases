@@ -69,6 +69,10 @@ releases:
     projects:
       - hash: bcea359d54fcaa5a013204f7981f952e4329cf93
         repo: openstack/cinder
+  - version: rocky-em
+    projects:
+      - repo: openstack/cinder
+        hash: bcea359d54fcaa5a013204f7981f952e4329cf93
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky
