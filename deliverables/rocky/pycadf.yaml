@@ -11,6 +11,10 @@ releases:
       - hash: 7df2d5978005c1a4af33067e77ecd945b38ab13a
         repo: openstack/pycadf
     version: 2.8.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/pycadf
+        hash: 7df2d5978005c1a4af33067e77ecd945b38ab13a
 branches:
   - location: 2.8.0
     name: stable/rocky
