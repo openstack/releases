@@ -29,6 +29,10 @@ releases:
       - repo: openstack/congress
         hash: e4693afce7fa318f610d11988b5d484e19f559aa
     version: 8.0.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/congress
+        hash: e4693afce7fa318f610d11988b5d484e19f559aa
 branches:
   - location: 8.0.0.0rc1
     name: stable/rocky

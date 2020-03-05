@@ -30,6 +30,10 @@ releases:
       - repo: openstack/congress-dashboard
         hash: 96bfbc09b52e9548a8773917130920b284a9909e
     version: 3.0.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 96bfbc09b52e9548a8773917130920b284a9909e
 branches:
   - location: 3.0.0.0rc1
     name: stable/rocky
