@@ -22,6 +22,10 @@ releases:
       - hash: 25e85622f2bc41e75c48ba5044d0ce2e2ef70c05
         repo: openstack/puppet-tacker
     version: 13.3.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 25e85622f2bc41e75c48ba5044d0ce2e2ef70c05
 branches:
   - location: 13.3.0
     name: stable/rocky

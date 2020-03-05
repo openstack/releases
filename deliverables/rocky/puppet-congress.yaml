@@ -22,6 +22,10 @@ releases:
       - hash: 4202ec72eec1cbc0c00a4bbe4c6dfc05b18d6b97
         repo: openstack/puppet-congress
     version: 13.3.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 4202ec72eec1cbc0c00a4bbe4c6dfc05b18d6b97
 branches:
   - location: 13.3.0
     name: stable/rocky

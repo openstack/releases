@@ -26,6 +26,10 @@ releases:
       - hash: 36bb5fef6b9e6807fdbd7874e112913b0a177694
         repo: openstack/puppet-cinder
     version: 13.3.2
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 36bb5fef6b9e6807fdbd7874e112913b0a177694
 branches:
   - location: 13.3.0
     name: stable/rocky

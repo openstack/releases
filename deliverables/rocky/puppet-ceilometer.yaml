@@ -22,6 +22,10 @@ releases:
       - hash: 4f7b0bf08d3b37924a439a7c9d182b048067f8fc
         repo: openstack/puppet-ceilometer
     version: 13.3.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 4f7b0bf08d3b37924a439a7c9d182b048067f8fc
 branches:
   - location: 13.3.0
     name: stable/rocky
