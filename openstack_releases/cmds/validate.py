@@ -430,7 +430,7 @@ def validate_series_eol(deliv, context):
 @skip_existing_tags
 @applies_to_released
 def validate_series_em(deliv, context):
-    "The EM tag should be applied to the previous release."
+    """The EM tag should be applied to the previous release."""
 
     current_release = deliv.releases[-1]
 
@@ -439,12 +439,36 @@ def validate_series_em(deliv, context):
               'a series as extended-maintenance')
         return
 
+    if len(deliv.releases) == 1:
+        context.error('at least one release will have to been done to '
+                      'mark as extended-maintenance')
+        print('This deliverable may need to be cleaned up if a '
+              'release was not actually done for the series.')
+        return
+
     _require_tag_on_all_repos(
         deliv,
         current_release,
         'extended maintenance',
         context,
     )
+
+    # Make sure we are taking the last release
+    previous_release = deliv.releases[-2]
+    for project in deliv.known_repo_names:
+        current_proj = current_release.project(project)
+        previous_proj = previous_release.project(project)
+
+        if current_proj is None or previous_proj is None:
+            # Error will be picked up above
+            continue
+
+        current_hash = current_proj.hash
+        previous_hash = previous_proj.hash
+        if current_hash != previous_hash:
+            context.error('EM tag must match the last release, tagging '
+                          '%s, last release %s' %
+                          (current_hash, previous_hash))
 
 
 @skip_em_eol_tags

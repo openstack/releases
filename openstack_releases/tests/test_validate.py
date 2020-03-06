@@ -3258,10 +3258,106 @@ class TestValidateSeriesEM(base.BaseTestCase):
         ---
         team: Release Management
         releases:
+          - version: 1.2.3
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
           - version: newton-em
             projects:
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_em(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_em_no_releases(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: newton-em
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_em(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_em_not_matching_last_release(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.2.3
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.2.4
+            projects:
+              - repo: openstack/automaton
+                hash: beef85f544637e6ee6139df7dc7bf937925804dd
+          - version: newton-em
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        repository-settings:
+          openstack/automaton: {}
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_em(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_em_matches_last_release(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.2.3
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: 1.2.4
+            projects:
+              - repo: openstack/automaton
+                hash: beef85f544637e6ee6139df7dc7bf937925804dd
+          - version: newton-em
+            projects:
+              - repo: openstack/automaton
+                hash: beef85f544637e6ee6139df7dc7bf937925804dd
+        repository-settings:
+          openstack/automaton: {}
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3282,10 +3378,14 @@ class TestValidateSeriesEM(base.BaseTestCase):
         ---
         team: Release Management
         releases:
+          - version: 1.2.3
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
           - version: newton-em
             projects:
               - repo: openstack/automaton
-                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
         repository-settings:
           openstack/automaton: {}
           openstack/release-test: {}

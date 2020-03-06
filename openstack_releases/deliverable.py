@@ -300,6 +300,11 @@ class Release(object):
     def projects(self):
         return sorted(self._projects.values())
 
+    def project(self, repo):
+        if repo in self._projects:
+            return self._projects[repo]
+        return None
+
     @property
     def diff_start(self):
         return self._data.get('diff-start')
