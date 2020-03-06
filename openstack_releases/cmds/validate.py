@@ -12,9 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Try to verify that the latest commit contains valid SHA values.
-
-"""
+"""Try to verify that the latest commit contains valid SHA values."""
 
 import argparse
 import atexit
@@ -66,6 +64,10 @@ _CLOSED_SERIES = set([
     'kilo',
     'liberty',
     'mitaka',
+    'newton',
+    'ocata',
+    'pike',
+    'queens',
 ])
 
 _USES_PREVER = set([
