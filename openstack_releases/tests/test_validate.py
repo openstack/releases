@@ -3124,10 +3124,17 @@ class TestValidateSeriesEOL(base.BaseTestCase):
         ---
         team: Release Management
         releases:
+          - version: 1.5.2
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
           - version: newton-eol
             projects:
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.5.2
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3152,9 +3159,38 @@ class TestValidateSeriesEOL(base.BaseTestCase):
             projects:
               - repo: openstack/automaton
                 hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.2.3
         repository-settings:
           openstack/automaton: {}
           openstack/release-test: {}
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_eol(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_eol_branchless(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: newton-eol
+            projects:
+              - repo: openstack/automaton
+                hash: ce2885f544637e6ee6139df7dc7bf937925804dd
+        repository-settings:
+          openstack/automaton: {}
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3266,6 +3302,9 @@ class TestValidateSeriesEM(base.BaseTestCase):
             projects:
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.2.3
         '''))
         deliv = deliverable.Deliverable(
             None,
@@ -3322,6 +3361,9 @@ class TestValidateSeriesEM(base.BaseTestCase):
             projects:
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.2.3
         repository-settings:
           openstack/automaton: {}
         '''))
@@ -3356,6 +3398,9 @@ class TestValidateSeriesEM(base.BaseTestCase):
             projects:
               - repo: openstack/automaton
                 hash: beef85f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.2.3
         repository-settings:
           openstack/automaton: {}
         '''))
@@ -3386,9 +3431,40 @@ class TestValidateSeriesEM(base.BaseTestCase):
             projects:
               - repo: openstack/automaton
                 hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        branches:
+          - name: stable/newton
+            location: 1.2.3
         repository-settings:
           openstack/automaton: {}
           openstack/release-test: {}
+        '''))
+        deliv = deliverable.Deliverable(
+            None,
+            'newton',
+            'test',
+            deliverable_data,
+        )
+        validate.validate_series_em(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(1, len(self.ctx.errors))
+
+    def test_em_branchless(self):
+        deliverable_data = yamlutils.loads(textwrap.dedent('''
+        ---
+        team: Release Management
+        releases:
+          - version: 1.2.3
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+          - version: newton-em
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
         '''))
         deliv = deliverable.Deliverable(
             None,
