@@ -15,6 +15,10 @@ releases:
       - hash: 6ebd2dc1c266b4394de8c28209ac4a8f51989e3f
         repo: openstack/monasca-ceilometer
     version: 1.8.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: 6ebd2dc1c266b4394de8c28209ac4a8f51989e3f
 branches:
   - location: 1.8.1
     name: stable/rocky
