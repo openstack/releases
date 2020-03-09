@@ -413,13 +413,16 @@ def _require_tag_on_all_repos(deliv, current_release, eol_or_em, context):
 @skip_existing_tags
 @applies_to_released
 def validate_series_eol(deliv, context):
-    "The EOL tag should be applied to all repositories."
+    """The EOL tag should be applied to all repositories."""
 
     current_release = deliv.releases[-1]
 
     if not current_release.is_eol:
         print('this rule only applies when tagging a series as end-of-life')
         return
+
+    if len(deliv.branches) == 0:
+        context.error('only branched deliverables can be tagged EOL')
 
     _require_tag_on_all_repos(
         deliv,
@@ -447,6 +450,9 @@ def validate_series_em(deliv, context):
         print('This deliverable may need to be cleaned up if a '
               'release was not actually done for the series.')
         return
+
+    if len(deliv.branches) == 0:
+        context.error('only branched deliverables can be tagged EM')
 
     _require_tag_on_all_repos(
         deliv,
