@@ -19,6 +19,10 @@ releases:
       - hash: a48fe19ceeb64575e8b9619552014dc9c6853c90
         repo: openstack/networking-baremetal
     version: 1.2.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: a48fe19ceeb64575e8b9619552014dc9c6853c90
 branches:
   - location: 1.2.0
     name: stable/rocky

@@ -15,6 +15,10 @@ releases:
       - hash: 451953c9dc3bf140dda10062da15ef0ec14974fb
         repo: openstack/networking-generic-switch
     version: 1.2.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 451953c9dc3bf140dda10062da15ef0ec14974fb
 branches:
   - location: 1.2.0
     name: stable/rocky
