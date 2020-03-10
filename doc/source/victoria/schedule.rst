@@ -1,0 +1,190 @@
+=========================
+Victoria Release Schedule
+=========================
+
+.. note::
+
+   Deadlines are generally the Thursday of the week on which they are noted
+   below. Exceptions to this policy will be explicitly mentioned in the event
+   description.
+
+18 May 2020 - 16 October 2020 (22 weeks)
+
+.. datatemplate::
+   :source: schedule.yaml
+   :template: schedule_table.tmpl
+
+.. ics::
+   :source: schedule.yaml
+   :name: Victoria
+
+`Subscribe to iCalendar file <schedule.ics>`_
+
+Cross-project events
+====================
+
+.. _v-goals-research:
+
+Victoria Goals Research
+-----------------------
+
+Pre-cycle planning and investigation into `the community-wide goals
+for Victoria
+<https://governance.openstack.org/tc/goals/selected/victoria/index.html>`__.
+
+.. _v-opendev:
+
+OpenDev + PTG
+-------------
+
+The OpenDev+PTG happens during this week in Vancouver, British Columbia.
+The Project Teams Gathering provides and opportunity for teams to collaborate
+and plan, and discuss requirements for future releases.
+
+.. _v-1:
+
+Victoria-1 milestone
+--------------------
+
+18 June, 2020 is the Victoria-1 milestone. See project-specific notes for
+relevant deadlines.
+
+.. _v-cycle-trail:
+
+Ussuri Cycle-Trailing Release Deadline
+--------------------------------------
+
+All projects following the cycle-trailing release model must release
+their Ussuri deliverables by 13 August, 2020.
+
+.. _v-2:
+
+Victoria-2 milestone
+--------------------
+
+30 July, 2020 is the Victoria-2 milestone. See project-specific notes for
+relevant deadlines.
+
+.. _v-final-lib:
+
+Final release for non-client libraries
+--------------------------------------
+
+Libraries that are not client libraries (Oslo and others) should issue their
+final release during this week. That allows to give time for last-minute
+changes before feature freeze.
+
+.. _v-3:
+
+Victoria-3 milestone
+--------------------
+
+10 September, 2020 is the Victoria-3 milestone. See project-specific notes for
+relevant deadlines.
+
+.. _v-goals-complete:
+
+Victoria Community Goals Completed
+----------------------------------
+
+Teams should prepare their documentation for completing `the
+community-wide goals for Victoria
+<https://governance.openstack.org/tc/goals/selected/victoria/index.html>`__.
+
+.. _v-ff:
+
+Feature freeze
+--------------
+
+The Victoria-3 milestone marks feature freeze for projects following the
+`release:cycle-with-rc`_ model. No featureful patch should be landed
+after this point. Exceptions may be granted by the project PTL.
+
+.. _release:cycle-with-rc: https://releases.openstack.org/reference/release_models.html#cycle-with-rc
+
+.. _v-rf:
+
+Requirements freeze
+-------------------
+
+After the Victoria-3 milestone, only critical requirements and constraints
+changes will be allowed. Freezing our requirements list gives packagers
+downstream an opportunity to catch up and prepare packages for everything
+necessary for distributions of the upcoming release. The requirements remain
+frozen until the stable branches are created, with the release candidates.
+
+.. _v-final-clientlib:
+
+Final release for client libraries
+----------------------------------
+
+Client libraries should issue their final release during this week, to match
+feature freeze.
+
+.. _v-soft-sf:
+
+Soft StringFreeze
+-----------------
+
+You are no longer allowed to accept proposed changes containing modifications
+in user-facing strings. Such changes should be rejected by the review team and
+postponed until the next series development opens (which should happen when RC1
+is published).
+
+.. _v-mf:
+
+Membership Freeze
+-----------------
+
+Projects must participate in at least two milestones in order to be considered
+part of the release. Projects made official after the second milestone, or
+which fail to produce milestone releases for at least one of the first and
+second milestones as well as the third milestone, are therefore not considered
+part of the release for the cycle. This does not apply to cycle-trailing
+packaging / lifecycle management projects.
+
+.. _v-rc1:
+
+RC1 target week
+---------------
+
+The week of 21 September is the target date for projects following the
+`release:cycle-with-rc`_ model to issue their first release candidate.
+
+.. _v-hard-sf:
+
+Hard StringFreeze
+-----------------
+
+This happens when the RC1 for the project is tagged. At this point, ideally
+no strings are changed (or added, or removed), to give translators time to
+finish up their efforts.
+
+.. _v-summit:
+
+Open Infrastructure Summit
+--------------------------
+
+The Open Infrastructure Summit will take place October 19-24 in Berlin,
+Germany.
+
+.. _v-finalrc:
+
+Final RCs and intermediary releases
+-----------------------------------
+
+The week of 5 October is the last week to issue release candidates or
+intermediary releases before release week. During release week, only
+final-release-critical releases will be accepted (at the discretion of the
+release team).
+
+.. _v-final:
+
+Victoria release
+----------------
+
+The Victoria coordinated release will happen on Wednesday, 14 October, 2020.
+
+Project-specific events
+=======================
+
