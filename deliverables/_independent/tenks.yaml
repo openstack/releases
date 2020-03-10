@@ -4,3 +4,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/tenks: {}
+releases:
+  - projects:
+      - hash: b783f1c66daeb4a8c2636025c74d17f167d9ca11
+        repo: openstack/tenks
+    version: 1.0.0
