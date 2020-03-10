@@ -160,14 +160,6 @@ This happens when the RC1 for the project is tagged. At this point, ideally
 no strings are changed (or added, or removed), to give translators time to
 finish up their efforts.
 
-.. _v-summit:
-
-Open Infrastructure Summit
---------------------------
-
-The Open Infrastructure Summit will take place October 19-24 in Berlin,
-Germany.
-
 .. _v-finalrc:
 
 Final RCs and intermediary releases
@@ -184,6 +176,14 @@ Victoria release
 ----------------
 
 The Victoria coordinated release will happen on Wednesday, 14 October, 2020.
+
+.. _v-summit:
+
+Open Infrastructure Summit
+--------------------------
+
+The Open Infrastructure Summit will take place October 19-24 in Berlin,
+Germany.
 
 Project-specific events
 =======================
