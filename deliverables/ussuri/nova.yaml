@@ -5,3 +5,27 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    `Support for cold migrating and resizing servers between Nova cells.
+    <https://docs.openstack.org/nova/latest/admin/configuration/cross-cell-resize.html>`_
+  - |
+    `Support for precaching Glance images to Nova compute hosts.
+    <https://docs.openstack.org/nova/latest/reference/api-microversion-history.html#id74>`_
+  - |
+    `Support for creating servers with accelerator devices via Cyborg.
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html>`_
+  - |
+    `Further enahanced support for moving servers with minimum bandwidth
+    guarantees.
+    <https://docs.openstack.org/api-guide/compute/port_with_resource_request.html>`_
+  - |
+    `Support for nova-manage placement audit CLI to find and clean up orphaned
+    resource allocations.
+    <https://docs.openstack.org/nova/latest/cli/nova-manage.html>`_
+  - |
+    `Nova API policies are introducing new default roles with scope_type
+    capabilities. These new changes improve the security level and
+    manageability. New policies are richer in terms of handling access at
+    system and project level token with 'Read' & 'Write' roles. This feature
+    is disabled by default and can be enabled by config options.`
