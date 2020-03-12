@@ -45,6 +45,10 @@ releases:
       - hash: d16b5f0ea41419bdf4eb4e66ce4551571ee6acec
         repo: openstack/manila
     version: 7.4.1
+  - version: rocky-em
+    projects:
+      - repo: openstack/manila
+        hash: d16b5f0ea41419bdf4eb4e66ce4551571ee6acec
 repository-settings:
   openstack/manila: {}
 branches:
