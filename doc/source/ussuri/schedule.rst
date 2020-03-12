@@ -408,16 +408,16 @@ PTL Elections
 
 .. _v-ptl-nominations:
 
-'U' PTL self-nomination
-^^^^^^^^^^^^^^^^^^^^^^^
+'Victoria' PTL self-nomination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Project team lead candidates for the 'U' cycle should announce their
+Project team lead candidates for the 'Victoria' cycle should announce their
 candidacy during this week.  Refer to the `Election Site`_ for exact details.
 
 .. _v-ptl-polling:
 
-'U' PTL Election Polling Begins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+'Victoria' PTL Election Polling Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Election week for Project team leads (where an election must be held to
 determine the winner).  Refer to the `Election Site`_ for exact details.
