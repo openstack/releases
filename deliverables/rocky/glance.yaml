@@ -50,6 +50,10 @@ releases:
       - repo: openstack/glance
         hash: 488d2e4fccc399234fd62c127c8ece262111fe93
     version: 17.0.0
+  - version: 17.0.1
+    projects:
+      - repo: openstack/glance
+        hash: ad39c12c64c8ff017918a8790d69d5278ac379da
 repository-settings:
   openstack/glance: {}
 release-notes: https://docs.openstack.org/releasenotes/glance/rocky.html
