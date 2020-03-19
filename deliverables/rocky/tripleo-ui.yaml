@@ -23,6 +23,10 @@ releases:
       - hash: 9bbece2f29be1f72007b8dde3e64c663605bd02a
         repo: openstack/tripleo-ui
     version: 9.3.0
+  - version: rocky-em
+    projects:
+      - repo: openstack/tripleo-ui
+        hash: 9bbece2f29be1f72007b8dde3e64c663605bd02a
 branches:
   - location: 9.3.0
     name: stable/rocky

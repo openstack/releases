@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: 74991a643a616be3cfa63d874497a325075714aa
+  - version: rocky-em
+    projects:
+      - repo: openstack/tripleo-common
+        hash: 74991a643a616be3cfa63d874497a325075714aa
 branches:
   - location: 9.3.0
     name: stable/rocky
