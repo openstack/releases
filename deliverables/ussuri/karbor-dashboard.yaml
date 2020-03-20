@@ -6,3 +6,10 @@ team: karbor
 type: horizon-plugin
 repository-settings:
   openstack/karbor-dashboard: {}
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: af0f54f7e490bc88505754d30be90eeb2aa5792e
+    flags:
+      - forced

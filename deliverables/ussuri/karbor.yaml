@@ -5,3 +5,10 @@ team: karbor
 type: service
 repository-settings:
   openstack/karbor: {}
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/karbor
+        hash: 7fc2b1055753b283d8bda21cb85adf560e58c476
+    flags:
+      - forced
