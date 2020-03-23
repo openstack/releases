@@ -6,3 +6,12 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+cycle-highlights:
+  - |
+    Added a new webhook API and a new audit type EVENT. Now Watcher
+    user can create audit with EVENT type and the audit will be
+    triggered by webhook API.
+  - |
+    The building of the compute (Nova) data model will be done using the
+    decision engine threadpool, thereby, significantly reducing the total
+    time required to build it.
