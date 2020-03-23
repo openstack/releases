@@ -5,3 +5,8 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+cycle-highlights:
+  - Starting from this release, Zun adds support for CRI-compatible runtime.
+    Zun uses CRI runtime to realize the concept of capsule (pod).
+    As a result, users can use Zun API to create pods in Kata container via
+    a CRI runtime.
