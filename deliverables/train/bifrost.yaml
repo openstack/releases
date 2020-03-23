@@ -22,6 +22,10 @@ releases:
       - hash: 1de5bb6fa04ad4631b75d950ca978cc7bcbfb4dc
         repo: openstack/bifrost
     version: 7.1.1
+  - version: 7.2.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 172bad1c3bb481b550c89d81f8a4308f7cef44b2
 branches:
   - location: 7.0.0
     name: stable/train
