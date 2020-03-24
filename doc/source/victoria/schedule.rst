@@ -188,3 +188,13 @@ Germany.
 Project-specific events
 =======================
 
+Oslo
+----
+
+.. _v-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
