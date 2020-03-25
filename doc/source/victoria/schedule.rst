@@ -188,6 +188,34 @@ Germany.
 Project-specific events
 =======================
 
+Manila
+------
+
+.. _v-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Victoria must be approved by the end of the week.
+
+.. _v-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI.  Drivers do not have to
+actually merge until feature freeze.
+
+.. _v-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
+
+
 Oslo
 ----
 

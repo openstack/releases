@@ -35,6 +35,8 @@ cycle:
 - end: '2020-07-10'
   name: R-14
   start: '2020-07-06'
+  project-specific:
+    - v-manila-spec-freeze
 - end: '2020-07-17'
   name: R-13
   start: '2020-07-13'
@@ -46,6 +48,8 @@ cycle:
   start: '2020-07-27'
   x-project:
     - v-2
+  project-specific:
+    - v-manila-new-driver-deadline
 - end: '2020-08-07'
   name: R-10
   start: '2020-08-03'
@@ -57,6 +61,8 @@ cycle:
 - end: '2020-08-21'
   name: R-8
   start: '2020-08-17'
+  project-specific:
+    - v-manila-fpfreeze
 - end: '2020-08-28'
   name: R-7
   start: '2020-08-24'
