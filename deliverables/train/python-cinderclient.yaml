@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: a63d4d651ae2f7614224f716b3ef8ebf392a6b78
+  - version: 5.0.1
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 8fa0882354c589b17d4502e04344ae00b75369d5
 branches:
   - location: 5.0.0
     name: stable/train
