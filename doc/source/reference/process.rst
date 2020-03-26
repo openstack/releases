@@ -257,17 +257,27 @@ Between Milestone-1 and Milestone-2
 Week before Milestone-2
 =======================
 
-#. Ahead of MembershipFreeze, run ``membership_freeze_test`` to check for
-   any new deliverable in governance that has not been released yet::
+#. Ahead of MembershipFreeze, run ``governance_consistency.py``::
 
-     tox -e membership_freeze_test -- $series ~/branches/governance/reference/projects.yaml
+     python3 tools/governance_consistency.py $series $project_yaml_file
 
-   Those should either be tagged as a release management exception if they do
+   This tool will list all inconsistencies between the deliverables described
+   in the governance's reference "projects.yaml" file and the deliverables
+   defined in the $series directory or the _independent directory.
+   There should ideally be none.
+
+   For deliverables defined in governance but not in deliverable files,
+   they should either be tagged as a release management exception if they do
    not need to be released (see ``release-management`` key in the governance
    projects.yaml file) or an empty deliverable file should be added to the
    series so that we can properly track it. Leftovers are considered too young
    to be released in the next release and will be reconsidered at the next
    cycle.
+
+   For deliverables defined in deliverable files but not in (active)
+   governance, their deliverable file should generally be removed from the
+   $series directory, or marked release-model:abandoned if present in the
+   _independent directory.
 
 #. Send the following weekly email content::
 
