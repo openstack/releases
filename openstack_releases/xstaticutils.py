@@ -35,6 +35,12 @@ def get_versions(workdir, repo):
             if '__' in name:
                 continue
             if os.path.isdir('xstatic/pkg/%s' % name):
+                # import cache buster, since these namespaces can linger
+                import xstatic
+                import xstatic.pkg
+                importlib.reload(xstatic)
+                importlib.reload(xstatic.pkg)
+
                 xs = importlib.import_module('xstatic.pkg.%s' % name)
                 versions.append(xs.PACKAGE_VERSION)
     finally:
