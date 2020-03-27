@@ -2,7 +2,7 @@
 include-pypi-link: true
 storyboard: openstack/cliff
 release-model: cycle-with-intermediary
-team: OpenStackClient
+team: OpenStackSDK
 type: library
 repository-settings:
   openstack/cliff: {}
@@ -19,3 +19,7 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 972410871009d44916a8857d6132dad8fbc96866
+  - version: 3.1.0
+    projects:
+      - repo: openstack/cliff
+        hash: 5405c3dfd76a48a36f8c847dcd8daa38cfb7668c
