@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/xstatic-angular-gettext
         hash: 6ec7c032b3a87159f14d6d2138e03d73fc8b57b0
-        tarball-base: XStatic-Angular-Gettext
+  - version: 2.4.1.0
+    projects:
+      - repo: openstack/xstatic-angular-gettext
+        hash: 6b7ba0f82bfe7b2094e7097e827d00b03f632c37
 repository-settings:
-  openstack/xstatic-angular-gettext: {}
+  openstack/xstatic-angular-gettext:
+    tarball-base: XStatic-Angular-Gettext
