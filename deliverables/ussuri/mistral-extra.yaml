@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: 5a641a9166d4cb8caf1811c2fe64bc18ae5ddf27
+  - version: 10.0.1
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b615bd4b48a97e8f90dc64cd89e890cc2e688a43
+branches:
+  - name: stable/ussuri
+    location: 10.0.1
