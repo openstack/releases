@@ -401,8 +401,10 @@ Milestone-2
     $other-upcoming-event
 
 
-Between Milestone-2 and Milestone-3
-===================================
+Week after Milestone-2
+======================
+
+#. Review any remaining milestone-2 exceptions
 
 #. Plan the next release cycle schedule based on the number of desired weeks or
    by making sure the cycle ends within a few weeks of the next developer
@@ -416,15 +418,9 @@ Between Milestone-2 and Milestone-3
    The generated output can be used to set up the schedule similar to what was
    done for the `Ussuri release <https://review.opendev.org/#/c/679822/>`_.
 
-#. In the countdown email immediately after Milestone-2, include a
-   reminder about the various freezes that happen around Milestone-3.
 
-   Remind PTLs a heads up to start thinking about what they might want to
-   include in their deliverables file as cycle-highlights
-   and that feature freeze is the deadline for them.
-
-#. Check with the election team about whether the countdown email
-   needs to include any updates about the election schedule.
+Between Milestone-2 and Milestone-3
+===================================
 
 #. Generate a list of intermediary-released service deliverables that have
    not done a release in this cycle yet. For this, use::
@@ -447,43 +443,174 @@ Between Milestone-2 and Milestone-3
      acknowledge that they need to do a release before RC1 (-1 the proposed
      change)
 
-#. Two weeks before Milestone-3, include a reminder about the final
-   library release freeze coming the week before Milestone-3.
+#. Send the following weekly email content::
 
-   #. Run the following command to get a list of libraries::
+    General Information
+    -------------------
 
-        tools/list_library_unreleased_changes.sh
+    The following cycle-with-intermediary deliverables have not done any
+    intermediary release yet during this cycle. The cycle-with-rc release
+    model is more suited for deliverables that plan to be released only once
+    per cycle. As a result, we have proposed[1] to change the release model
+    for the following deliverables:
 
-   #. Include list of unreleased libraries in the email to increase visibility.
+    [ list of deliverables ]
 
-#. One week before Milestone-3, include a reminder about the final
-   client library release freeze coming the week of Milestone-3.
+    [1] https://review.opendev.org/#/q/topic:$series-cwi
 
-   #. Run the following command to get a list of client libraries::
+    PTLs and release liaisons for each of those deliverables can either +1
+    the release model change, or propose an intermediary release for that
+    deliverable. In absence of answer by the end of R-10 week we'll consider
+    that the switch to cycle-with-rc is preferable.
 
-        tools/list_client_library_unreleased_changes.sh
+    We also published a proposed release schedule for the upcoming
+    $nextseries cycle. Please check out the separate thread:
 
-   #. Include list of unreleased client libraries in the email to increase
-      visibility.
+    [ link to thread ]
 
-#. Two weeks before Milestone-3, prepare other teams to the final release
-   rush.
+    Upcoming Deadlines & Dates
+    --------------------------
 
-   #. Ask the release liaisons for the affected teams to audit the
-      contents of their ``$project-stable-maint`` groups, as that group
-      will control the ``stable/$series`` branch prior to release. They
-      should reach out to the ``stable-maint-core`` group for additions.
+    Non-client library freeze: $nclfreeze (R-6 week)
+    Client library freeze: $milestone3 (R-5 week)
+    $SERIES-3 milestone: $milestone3 (R-5 week)
+    $other-upcoming-event
 
-   #. Include a reminder about the stable branch ACLs in the countdown email.
 
-   #. Notify the Infrastructure team to `generate an artifact signing key`_
-      (but not replace the current one yet), and
-      begin the attestation process.
+R-8 week
+========
 
-      .. _generate an artifact signing key: https://docs.openstack.org/infra/system-config/signing.html#generation
+#. Send the following weekly email content::
 
-   #. Include a reminder in the weekly countdown email reminding PTLs of the
-      feature freeze deadline for cycle-highlights.
+    Development Focus
+    -----------------
+
+    We are entering the last weeks of the $series development cycle. From
+    now until the final release, we'll send a countdown email like this
+    every week.
+
+    It's probably a good time for teams to take stock of their library and
+    client work that needs to be completed yet. The non-client library freeze
+    is coming up, followed closely by the client lib freeze. Please plan
+    accordingly to avoid any last minute rushes to get key functionality in.
+
+    General Information
+    -------------------
+
+    Next week is the Extra-ATC freeze, in preparation for elections. All
+    contributions to OpenStack are valuable, but some are not expressed as
+    Gerrit code changes. Please list active contributors to your project team
+    who do not have a code contribution this cycle, and therefore won't
+    automatically be considered an Active Technical Contributor and allowed
+    to vote. This is done by adding extra-atcs to
+    https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
+    before the Extra-ATC freeze on $extraatc.
+
+    A quick reminder of the upcoming freeze dates. Those vary depending on
+    deliverable type:
+
+    * General libraries (except client libraries) need to have their last
+    feature release before Non-client library freeze ($nclfreeze). Their
+    stable branches are cut early.
+
+    * Client libraries (think python-*client libraries) need to have their
+    last feature release before Client library freeze ($milestone3)
+
+    * Deliverables following a cycle-with-rc model (that would be most
+    services) observe a Feature freeze on that same date, $milestone3. Any
+    feature addition beyond that date should be discussed on the mailing-list
+    and get PTL approval. After feature freeze, cycle-with-rc deliverables
+    need to produce a first release candidate (and a stable branch) before
+    RC1 deadline ($rc1-deadline)
+
+    * Deliverables following cycle-with-intermediary model can release as
+    necessary, but in all cases before Final RC deadline ($final-rc-deadline)
+
+    Finally, now is also a good time to start planning what highlights you
+    want for your deliverables in the cycle highlights. The deadline to
+    submit an initial version for those is set to Feature freeze ($milestone3).
+
+    Background on cycle-highlights:
+    http://lists.openstack.org/pipermail/openstack-dev/2017-December/125613.html
+    Project Team Guide, Cycle-Highlights:
+    https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
+    knelson [at] openstack.org/diablo_rojo on IRC is available if you need
+    help selecting or writing your highlights
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Extra-ATC freeze: $extraatc (R-7 week)
+    Non-client library freeze: $nclfreeze (R-6 week)
+    Client library freeze: $milestone3 (R-5 week)
+    $SERIES-3 milestone: $milestone3 (R-5 week)
+    $other-upcoming-event
+
+
+R-7 week (Extra-ATC deadline week)
+==================================
+
+#. Notify the Infrastructure team to `generate an artifact signing key`_
+   (but not replace the current one yet), and
+   begin the attestation process.
+
+   .. _generate an artifact signing key: https://docs.openstack.org/infra/system-config/signing.html#generation
+
+#. Send the following weekly email content::
+
+    Development Focus
+    -----------------
+
+    Work on libraries should be wrapping up, in preparation for the various
+    library-related deadlines coming up. Now is a good time to make decisions
+    on deferring feature work to the next development cycle in order to be
+    able to focus on finishing already-started feature work.
+
+    General Information
+    -------------------
+
+    We are now getting close to the end of the cycle, and will be gradually
+    freezing feature work on the various deliverables that make up the
+    OpenStack release.
+
+    This coming week is the deadline for general libraries (except client
+    libraries): their last feature release needs to happen before "Non-client
+    library freeze" on $nclfreeze. Only bugfixes releases will be allowed
+    beyond this point.
+
+    When requesting those library releases, you can also include the
+    stable/$series branching request with the review (as an example, see the
+    "branches" section here:
+    https://opendev.org/openstack/releases/src/branch/master/deliverables/pike/os-brick.yaml#n2
+
+    In the next weeks we will have deadlines for:
+
+    * Client libraries (think python-*client libraries), which need to have
+    their last feature release before "Client library freeze" ($milestone3)
+
+    * Deliverables following a cycle-with-rc model (that would be most
+    services), which observe a Feature freeze on that same date, $milestone3.
+    Any feature addition beyond that date should be discussed on the
+    mailing-list and get PTL approval.
+
+    As we are getting to the point of creating stable/$series branches, this
+    would be a good point for teams to review membership in their
+    $project-stable-maint groups. Once the stable/$series branches are cut
+    for a repo, the ability to approve any necessary backports into those
+    branches for $series will be limited to the members of that stable team.
+    If there are any questions about stable policy or stable team membership,
+    please reach out in the #openstack-stable channel.
+
+    Upcoming Deadlines & Dates
+    --------------------------
+
+    Non-client library freeze: $nclfreeze (R-6 week)
+    Client library freeze: $milestone3 (R-5 week)
+    $SERIES-3 milestone: $milestone3 (R-5 week)
+    Cycle Highlights Due: $milestone3 (R-5 week)
+    $series final release: $release-date
+    $other-upcoming-event
+
 
 R-6 week (Final Library Release deadline)
 =========================================
