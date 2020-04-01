@@ -15,3 +15,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 2a6e8d405eb955caea15c85c157638533e486ba8
+  - version: 3.0.1
+    projects:
+      - repo: openstack/os-brick
+        hash: ebe6a0463d0adca0bd64287cfe783408e150d1db
+branches:
+  - location: 3.0.1
+    name: stable/ussuri
