@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: bce42e979ffa2a96a0ffb617d7adf447e0cd544d
+  - version: 2.0.0
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 1abd37695c34ef26e7021705ce81aee7cbaa1537
+branches:
+  - name: stable/ussuri
+    location: 2.0.0
