@@ -1,6 +1,6 @@
 ---
 storyboard: 933
-team: 'Release Management'
+team: Release Management
 type: other
 include-pypi-link: true
 branches:
@@ -187,5 +187,9 @@ releases:
       - hash: ab3eb972bfb66b36f7979e071e8157150d5ecc85
         repo: openstack/reno
     version: 3.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/reno
+        hash: bd3886ac480500eb7515058cfe2ea5662fa53d8d
 repository-settings:
   openstack/reno: {}
