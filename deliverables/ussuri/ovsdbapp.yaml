@@ -14,3 +14,10 @@ releases:
       - hash: 781ecb5bf648774f5d365585a0c2c13442523754
         repo: openstack/ovsdbapp
     version: 1.0.0
+  - version: 1.1.0
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 85d632327b0daad854151289c190dee0dcc680d5
+branches:
+  - name: stable/ussuri
+    location: 1.1.0
