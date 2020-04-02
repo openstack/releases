@@ -13,3 +13,10 @@ releases:
         repo: openstack/keystoneauth
         tarball-base: keystoneauth1
     version: 3.18.0
+  - version: 4.0.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: c096099416013414cb476e17b6bcfcbabee3856e
+branches:
+  - name: stable/ussuri
+    location: 4.0.0
