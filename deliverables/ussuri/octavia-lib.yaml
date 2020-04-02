@@ -1,4 +1,7 @@
 ---
+branches:
+  - location: 2.0.0
+    name: stable/ussuri
 include-pypi-link: true
 storyboard: openstack/octavia-lib
 release-model: cycle-with-intermediary
@@ -12,3 +15,7 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: 12d678a04943aea6c1987ce098c2ff4659109137
+  - version: 2.0.0
+    projects:
+      - repo: openstack/octavia-lib
+        hash: 99118d2e47f24fc9aeccb8da530cd8133e530cc9
