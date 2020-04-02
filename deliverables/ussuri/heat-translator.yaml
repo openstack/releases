@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 85e2ad02e5c89378721348c55f2eab7906eac7c7
+  - version: 2.0.0
+    projects:
+      - repo: openstack/heat-translator
+        hash: 2a57298dced28b913aaf6af0d1222d71b32df3b6
+branches:
+  - name: stable/ussuri
+    location: 2.0.0
