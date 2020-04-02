@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-hogan:
+    tarball-base: XStatic-Hogan
+releases:
+  - version: 2.0.0.3
+    projects:
+      - repo: openstack/xstatic-hogan
+        hash: d9d52a3631b96128fc5a18933955fbb67fec4342

@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-jquery-migrate:
+    tarball-base: XStatic-JQuery-Migrate
+releases:
+  - version: 1.2.1.2
+    projects:
+      - repo: openstack/xstatic-jquery-migrate
+        hash: 2ac50aad6ca99f61f5f39db12fce9bbdb31dad93

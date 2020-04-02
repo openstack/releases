@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-spin:
+    tarball-base: XStatic-Spin
+releases:
+  - version: 1.2.5.3
+    projects:
+      - repo: openstack/xstatic-spin
+        hash: 14237451bad092de9c352d48ef7e0ce1c85d7a58

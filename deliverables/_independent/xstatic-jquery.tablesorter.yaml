@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-jquery.tablesorter:
+    tarball-base: XStatic-JQuery.TableSorter
+releases:
+  - version: 2.14.5.2
+    projects:
+      - repo: openstack/xstatic-jquery.tablesorter
+        hash: 09a700b565e3fa8696d8bfd1fc9059e1979f9f79
