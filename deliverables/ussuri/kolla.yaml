@@ -5,4 +5,11 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla: {}
-# Note: deliverable was not released in train
+cycle-highlights:
+  - All images, scripts and Ansible playbooks now use Python 3, and support for
+    Python 2 has been dropped.
+  - Added support for CentOS 8 hosts and images.
+  - Added initial support for TLS encryption of backend API services, providing
+    end-to-end encryption of API traffic. Currently Keystone is supported.
+  - Added support for Open Virtual Network (OVN) and integration of it with
+    Neutron.
