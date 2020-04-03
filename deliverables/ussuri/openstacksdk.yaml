@@ -41,5 +41,12 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 8e5893f0ad074a3b82d7e8f5b8821695ee6ec15b
+  - version: 0.46.0
+    projects:
+      - repo: openstack/openstacksdk
+        hash: fc3b3d09efe23772520f1280b05e64522940b234
 repository-settings:
   openstack/openstacksdk: {}
+branches:
+  - name: stable/ussuri
+    location: 0.46.0
