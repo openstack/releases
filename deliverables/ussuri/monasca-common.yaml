@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: 6ff39f3a4d65cf52e78abfa544b945e116dd5c5b
+  - version: 3.1.0
+    projects:
+      - repo: openstack/monasca-common
+        hash: 0f4e2bc5dfbd06f39961123750b3f2f65a5337da
+branches:
+  - name: stable/ussuri
+    location: 3.1.0
