@@ -5,6 +5,12 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - 'Enhancement in multiple stores feature, users now can import single
+    image in multiple stores, copy existing imgae in multiple stores and
+    delete image from single store.'
+  - 'New import plugin to decompress the image'
+  - 'Introduced S3 driver for glance-store again'
 repository-settings:
   openstack/glance: {}
 releases:
