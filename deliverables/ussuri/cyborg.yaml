@@ -6,3 +6,20 @@ type: service
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - |
+    Users can now launch instances with accelerators managed by
+    Cyborg, as the Nova-Cyborg integration has been completed.
+    See release notes to find which instance operations are supported.
+  - |
+    New APIs have been implemented to list devices managed by Cyborg
+    and, in general, to view and manage inventory of accelerators.
+  - |
+    Cyborg has laid the foundations for providing backwards compatibility
+    in future releases by adopting microversions in v2 API.
+  - |
+    The Cyborg client is now based on OpenStack SDK and supports
+    most Version 2 APIs.
+  - |
+    Improved quality overall by adding more unit/functional tests and by
+    reducing technical debt.
