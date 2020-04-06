@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: d87618b24fc9b11b5ae216e241e1a4d1d4fb8e72
+  - version: 12.1.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 7f638bb493571f2a6d30d3679945119d6596cfa7
 branches:
   - name: feature/nats-driver
     location:
