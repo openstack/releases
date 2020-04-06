@@ -3,5 +3,13 @@ launchpad: zaqar
 release-model: cycle-with-rc
 team: zaqar
 type: service
+cycle-highlights:
+  - Support querying queues with 'with_count' to return the amount of
+    the queues. Help users to quickly get the exact total number of
+    queues which they own.
+  - Introduce new resource called Topic which is a concept from SNS.
+    User can send message to a Topic and then subscribers will get
+    the message according to different protocols like http, email,
+    sms, etc.
 repository-settings:
   openstack/zaqar: {}
