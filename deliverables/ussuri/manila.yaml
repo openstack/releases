@@ -5,3 +5,15 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - |
+    Shares can be created from snapshots across storage pools when
+    compatible. This new feature allows better utilization of back end
+    resources by spreading workloads that were previously confined to the
+    back end that hosted the snapshot.
+  - |
+    New quota control mechanisms have been introduced to constrain projects
+    and their users to the number and size of share replicas they can create.
+  - |
+    It is now possible to query asynchronous user messages with time
+    intervals.
