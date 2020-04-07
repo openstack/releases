@@ -8,41 +8,38 @@ releases:
     projects:
       - repo: openstack/microversion-parse
         hash: 615383062c5ec808a960184020e765468a86fdf0
-        tarball-base: microversion_parse
   - version: 0.1.1
     projects:
       - repo: openstack/microversion-parse
         hash: 45916f2af1344b93bf1a82ac23c21c892fd111ec
-        tarball-base: microversion_parse
   - version: 0.1.2
     projects:
       - repo: openstack/microversion-parse
         hash: 2f044aae4e48527a7afb94941643c3446197076f
-        tarball-base: microversion_parse
   - version: 0.1.3
     projects:
       - repo: openstack/microversion-parse
         hash: 4b04aaf3b235821e97829379c460ca74437f5dec
-        tarball-base: microversion_parse
   - version: 0.1.4
     projects:
       - repo: openstack/microversion-parse
         hash: 1f6eac7c3df048679663919f75c2bcecd3e183a2
-        tarball-base: microversion_parse
   - version: 0.2.0
     projects:
       - repo: openstack/microversion-parse
         hash: 6a379d9783c02a75deaccb4f96cf0a3ad35bdb44
-        tarball-base: microversion_parse
   - version: 0.2.1
     projects:
       - repo: openstack/microversion-parse
         hash: ae5e3ce521556aaec85661e4b76ac997037d4f75
-        tarball-base: microversion_parse
   - version: 1.0.0
     projects:
       - repo: openstack/microversion-parse
         hash: dbf8dd6bcf583f1f217fa74031af20f62f366f13
-        tarball-base: microversion_parse
+  - version: 1.0.1
+    projects:
+      - repo: openstack/microversion-parse
+        hash: 2c36df6bf33e42c379fbd8228fbe63c77b3714b1
 repository-settings:
-  openstack/microversion-parse: {}
+  openstack/microversion-parse:
+    tarball-base: microversion_parse
