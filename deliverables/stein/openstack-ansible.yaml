@@ -76,6 +76,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: b22016a76db48a9c37cef298b83b2f1ecd4152f8
+  - version: 19.1.0
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: a49c9fe89b2880f84fc7a0edbf33a6363c540662
 cycle-highlights:
   - Tooling optimizations have been done that will result in faster
     and more reliable deployments.
