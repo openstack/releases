@@ -6,6 +6,9 @@ team: octavia
 type: client-library
 repository-settings:
   openstack/python-octaviaclient: {}
+branches:
+  - location: 2.0.1
+    name: stable/ussuri
 releases:
   - version: 1.11.0
     projects:
@@ -15,3 +18,7 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: ee1d0e6871c99d692fe15ab37a14338ff9c15818
+  - version: 2.0.1
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 17836502fa925d3bcef3d77426ae0e497561943b
