@@ -11,5 +11,11 @@ cycle-highlights:
   - Added support for CentOS 8 hosts and images.
   - Added initial support for TLS encryption of backend API services, providing
     end-to-end encryption of API traffic. Currently Keystone is supported.
-  - Added support for Open Virtual Network (OVN) and integration of it with
-    Neutron.
+  - Added support for deployment of Open Virtual Network (OVN) and integration
+    of it with Neutron.
+  - Added support for deployment of Zun CNI (Container Networking Interface)
+    components allowing Docker with containerd to support Zun capsules (pods).
+  - Added support for Elasticsearch Curator to help manage clustered log data.
+  - Added components necessary to use Mellanox networking devices with Neutron.
+  - Streamlined configuration of external Ceph integration, making it easy to
+    go from Ceph-Ansible-deployed Ceph cluster to enabling it in OpenStack.
