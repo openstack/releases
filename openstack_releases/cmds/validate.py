@@ -85,6 +85,7 @@ _NO_STABLE_BRANCH_CHECK = set([
     'gnocchi',
     'rally',
     'puppet-pacemaker',  # tracks upstream version
+    'openstack/tenks',
 ])
 
 _TYPE_TO_RELEASE_TYPE = {
@@ -1472,7 +1473,8 @@ def validate_branch_prefixes(deliv, context):
 def validate_stable_branches(deliv, context):
     "Apply the rules for stable branches."
 
-    if deliv.launchpad_id in _NO_STABLE_BRANCH_CHECK:
+    if (deliv.launchpad_id in _NO_STABLE_BRANCH_CHECK or
+            deliv.storyboard_id in _NO_STABLE_BRANCH_CHECK):
         print('rule does not apply to this repo, skipping')
         return
 
