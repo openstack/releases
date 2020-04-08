@@ -10,3 +10,26 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 6930f5dc3300c990f8777952c0042c89aaf2d14c
+cycle-highlights:
+  - The ``OVN`` driver is now merged into Neutron repository and is one of the
+    in-tree Neutron ML2 drivers, like ``linuxbridge`` or ``openvswitch``.
+    ``OVN`` driver benefits over the ``openvswitch`` driver include for example
+    DVR with distributed SNAT traffic, distributed DHCP and possibility to run
+    without network nodes. Other ML2 drivers are still in-tree and are fully
+    supported. Currently default agent is still ``openvswitch`` but our
+    plan is to make ``OVN`` driver to be the default choice in the future.
+  - Support for stateless security groups has been added. Users can now create
+    security group set as ``stateless`` which means that conntrack will
+    not be used for any rule in that group. One port can only use ``stateless``
+    or ``stateful`` security groups. In some use cases stateless security groups
+    will allow operator to choose for optimized datapath performance whereas
+    stateful security groups impose extra processing on the system.
+  - Role Based Access Control (``RBAC``) for address scopes and subnet pools
+    has been added. Address scopes and subnet pools are usually defined by
+    operators and exposed to users. This change allows operators to use more
+    granular access controls on address scopes and subnet pools.
+  - Support for tagging resources during creation has been added in Neutron
+    API. User can now set tags for resources like e.g. ports directly in
+    ``POST`` requests. This will improve the performance of kubernetes network
+    operations a lot. The number of API calls which e.g. ``Kuryr`` has to
+    send to Neutron are greatly reduced.
