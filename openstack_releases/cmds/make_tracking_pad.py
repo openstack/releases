@@ -73,7 +73,6 @@ def main():
     print('Team availability notes')
     print('Tasks')
     print('Meeting Agenda')
-    print('Countdown email content to send this week')
     print()
 
     for week in schedule_data['cycle']:
