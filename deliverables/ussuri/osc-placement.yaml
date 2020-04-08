@@ -2,7 +2,7 @@
 include-pypi-link: true
 launchpad: placement-osc-plugin
 release-model: cycle-with-intermediary
-team: nova
+team: placement
 type: client-library
 repository-settings:
   openstack/osc-placement: {}
@@ -11,3 +11,7 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 37f521e53cb83d22121804a940aedd97114e82e3
+  - version: 2.0.0
+    projects:
+      - repo: openstack/osc-placement
+        hash: 1d6cb4cf0c49728b28191527ded74709128939bc
