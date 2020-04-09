@@ -1108,17 +1108,17 @@ R-2 week
          and we can have divergence between the requirements being tested
          and being declared as correct.
 
-  - Remind the QA PTL to create new branch specific jobs for our two
-    branchless projects, devstack-gate and tempest, in the tempest repo.
-    Configure tempest to run them on all changes, voting. Configure tempest
-    to run them as periodic bitrot jobs as well. All this can be done in one
-    tempest patch, for example, see https://review.opendev.org/521888.
-    Configure devstack-gate to run the new jobs in check pipeline only,
-    non-voting, for example see https://review.opendev.org/545144.
+   - Remind the QA PTL to create new branch specific jobs for our two
+     branchless projects, devstack-gate and tempest, in the tempest repo.
+     Configure tempest to run them on all changes, voting. Configure tempest
+     to run them as periodic bitrot jobs as well. All this can be done in one
+     tempest patch, for example, see https://review.opendev.org/521888.
+     Configure devstack-gate to run the new jobs in check pipeline only,
+     non-voting, for example see https://review.opendev.org/545144.
 
-  - Remind the QA PTL to add the new branch to the list of branches in the
-    periodic-stable job templates in openstack-zuul-jobs. For example, see
-    https://review.opendev.org/545268/.
+   - Remind the QA PTL to add the new branch to the list of branches in the
+     periodic-stable job templates in openstack-zuul-jobs. For example, see
+     https://review.opendev.org/545268/.
 
 #. Ensure that all projects that are publishing release notes have the
    notes link included in their deliverable file. See
