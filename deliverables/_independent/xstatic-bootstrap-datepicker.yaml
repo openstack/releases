@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-bootstrap-datepicker:
+    tarball-base: XStatic-Bootstrap-Datepicker
+releases:
+  - version: 1.4.0.0
+    projects:
+      - repo: openstack/xstatic-bootstrap-datepicker
+        hash: f1fc9efd5e6618330fa14292c702ed65fc1715cc

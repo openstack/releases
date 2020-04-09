@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-jquery.quicksearch:
+    tarball-base: XStatic-JQuery.quicksearch
+releases:
+  - version: 2.0.3.2
+    projects:
+      - repo: openstack/xstatic-jquery.quicksearch
+        hash: 6459ef2119c6792c12995fac68a08259f4517d98
