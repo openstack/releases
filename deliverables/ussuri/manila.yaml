@@ -7,6 +7,12 @@ repository-settings:
   openstack/manila: {}
 cycle-highlights:
   - |
+    Share groups have graduated from being an experimental feature to being
+    generally available. Starting with API version 2.55, the
+    `X-OpenStack-Manila-API-Experimental` header is no longer required
+    to create/update/delete share group types, group specifications, group
+    quotas and share groups themselves.
+  - |
     Shares can be created from snapshots across storage pools when
     compatible. This new feature allows better utilization of back end
     resources by spreading workloads that were previously confined to the
