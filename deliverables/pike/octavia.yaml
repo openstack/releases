@@ -55,6 +55,10 @@ releases:
       - hash: d8707f9a74636995edb3eb9a5db3ce4adc265af9
         repo: openstack/octavia
     version: pike-em
+  - projects:
+      - repo: openstack/octavia
+        hash: 2976a7f0f109e17930db8a61136526ead44ea7e5
+    version: pike-eol
 branches:
   - location: 1.0.0.0rc1
     name: stable/pike
