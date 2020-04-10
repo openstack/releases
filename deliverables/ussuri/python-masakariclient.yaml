@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 6cf24b423c99e31340149bd4ced7ebfb55d0b076
+  - version: 6.0.0
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 621a392d3219726d970387e62f3bb9299e26aa7a
+branches:
+  - name: stable/ussuri
+    location: 6.0.0
