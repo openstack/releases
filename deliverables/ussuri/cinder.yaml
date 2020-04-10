@@ -3,6 +3,14 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - Numerous improvements in current functionality, for example, the
+    ability to set minimum and maximum sizes for volume-types; the
+    ability to filter the volume list using time comparison operators.
+  - Support for Glance multistore and image data colocation when uploading
+    a volume to the Image Service.
+  - Added some new backend drivers, and many current drivers have added
+    support for more features.
 releases:
   - version: 16.0.0.0b1
     projects:
