@@ -1,0 +1,14 @@
+---
+launchpad: vitrage
+team: vitrage
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-graphlib:
+    tarball-base: XStatic-Graphlib
+releases:
+  - version: 2.1.7.0
+    projects:
+      - repo: openstack/xstatic-graphlib
+        hash: 32eecfeb243346f2ae5c3b2bff038e1d14bbaeb1
