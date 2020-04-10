@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 51d1915049618edf56d76df9ef19ba4ecddce44b
+  - version: queens-eol
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: cb757c2fbe26782eb6aad799cc085e2e3c335849
 branches:
   - location: 1.0.0.0rc1
     name: stable/queens
