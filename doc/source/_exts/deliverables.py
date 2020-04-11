@@ -523,3 +523,7 @@ def setup(app):
     app.add_directive('serieshighlights', HighlightsDirective)
     app.connect('build-finished', build_finished)
     _generate_team_pages()
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
