@@ -49,7 +49,7 @@ def main():
     print('Review dashboard: https://tiny.cc/ReleaseInbox')
     print('Process document: https://releases.openstack.org/reference/process.html')
     print('Storyboard: https://storyboard.openstack.org/#!/board/64')
-    print('Release email content: https://etherpad.openstack.org/p/relmgmt-weekly-emails')
+    print('Release email content: https://etherpad.opendev.org/p/relmgmt-weekly-emails')
     print()
 
     print('Meeting info')
