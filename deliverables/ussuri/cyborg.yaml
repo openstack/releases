@@ -9,8 +9,11 @@ repository-settings:
 cycle-highlights:
   - |
     Users can now launch instances with accelerators managed by
-    Cyborg, as the Nova-Cyborg integration has been completed.
-    See release notes to find which instance operations are supported.
+    Cyborg, as the `Nova-Cyborg integration
+    <https://specs.openstack.org/openstack/nova-specs/specs/ussuri/approved/nova-cyborg-interaction.html>`_
+    has been completed. See `accelerator operation guide
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html>`_
+    to find which instance operations are supported.
   - |
     New APIs have been implemented to list devices managed by Cyborg
     and, in general, to view and manage inventory of accelerators.
