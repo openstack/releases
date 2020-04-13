@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 3e91562b029711a6242e70f71fb623855ad56d86
+  - version: 3.1.1
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 1d8fa3d8cc4841855209f8f73dbce6e65bff4741
 branches:
   - location: 3.1.0
     name: stable/ussuri
