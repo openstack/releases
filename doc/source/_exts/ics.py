@@ -230,3 +230,7 @@ def setup(app):
     app.add_directive('ics', ICS)
     app.connect('doctree-resolved', doctree_resolved)
     app.connect('build-finished', build_finished)
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
