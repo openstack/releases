@@ -32,13 +32,13 @@ Pre-cycle planning and investigation into `the community-wide goals
 for Victoria
 <https://governance.openstack.org/tc/goals/selected/victoria/index.html>`__.
 
-.. _v-opendev:
+.. _v-ptg:
 
-OpenDev + PTG
--------------
+Virtual PTG
+-----------
 
-The OpenDev+PTG happens during this week in Vancouver, British Columbia.
-The Project Teams Gathering provides and opportunity for teams to collaborate
+A virtual PTG will be held during this week. The Project Teams Gathering
+provides and opportunity for teams to collaborate
 and plan, and discuss requirements for future releases.
 
 .. _v-1:
