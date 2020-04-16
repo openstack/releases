@@ -1,6 +1,6 @@
 ---
 storyboard: 923
-team: 'Technical Committee'
+team: Technical Committee
 type: library
 releases:
   - version: 0.1.0
@@ -28,6 +28,11 @@ releases:
         repo: openstack/governance
         tarball-base: openstack-governance
     version: 0.5.0
+  - version: 0.6.0
+    projects:
+      - repo: openstack/governance
+        hash: 6c91b455c5430f2d2614d9614aac095f1af68246
+        tarball-base: openstack-governance
 repository-settings:
   openstack/governance:
     tarball-base: openstack-governance
