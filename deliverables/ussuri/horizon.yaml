@@ -26,3 +26,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: ddc52a7405f0be38629f665d24bcf75022ce0018
+  - version: 18.3.0
+    projects:
+      - repo: openstack/horizon
+        hash: b62c49acf5eba001937cff33a41d73a4f4caa292
+branches:
+  - name: stable/ussuri
+    location: 18.3.0
