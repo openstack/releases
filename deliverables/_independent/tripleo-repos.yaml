@@ -1,0 +1,12 @@
+---
+artifact-link-mode: none
+launchpad: tripleo
+team: tripleo
+type: other
+repository-settings:
+  openstack/tripleo-repos: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/tripleo-repos
+        hash: b361925cd5aec296df410f0f42147aa0d8e8fd70
