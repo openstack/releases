@@ -13,8 +13,8 @@
 #    under the License.
 
 import textwrap
+from unittest import mock
 
-import mock
 from oslotest import base
 import pkg_resources
 

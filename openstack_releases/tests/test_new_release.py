@@ -12,8 +12,6 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from __future__ import unicode_literals
-
 from oslotest import base
 
 from openstack_releases.cmds import new_release
