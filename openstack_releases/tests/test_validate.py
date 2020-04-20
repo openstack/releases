@@ -12,13 +12,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from __future__ import unicode_literals
-
 import os
 import textwrap
+from unittest import mock
 
 import fixtures
-import mock
 from oslotest import base
 
 from openstack_releases.cmds import validate

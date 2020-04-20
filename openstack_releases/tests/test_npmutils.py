@@ -12,13 +12,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from __future__ import unicode_literals
-
 import os
+from unittest import mock
 
 import fixtures
 import json
-import mock
 from oslotest import base
 
 from openstack_releases import npmutils
