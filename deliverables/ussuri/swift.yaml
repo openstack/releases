@@ -10,6 +10,13 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 5cd854b783ce80356ec62e709f0817cbe699c8cd
+  - version: 2.25.0
+    projects:
+      - repo: openstack/swift
+        hash: f3543f5346a3d7ae31fe193f1336ef178da7db9b
+branches:
+  - name: stable/ussuri
+    location: 2.25.0
 cycle-highlights:
   - Added a new system-namespace for Swift containers and objects.
   - Added a new Swift object-versioning API using the new namespace.
