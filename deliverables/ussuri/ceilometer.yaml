@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/ceilometer: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/ceilometer
+        hash: f42de0349a4aebdf6cf3c960183f591057005c24
+branches:
+  - name: stable/ussuri
+    location: 14.0.0.0rc1
