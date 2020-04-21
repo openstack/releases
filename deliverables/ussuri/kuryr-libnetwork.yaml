@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: bf8a79a5e1924404126f3cdbc67c4121bbb63d17
+branches:
+  - name: stable/ussuri
+    location: 5.0.0.0rc1
