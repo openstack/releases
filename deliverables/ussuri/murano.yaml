@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: 4866d54831b7b1f9626ae42a45d2cd5d8bf977f1
+branches:
+  - name: stable/ussuri
+    location: 9.0.0.0rc1
