@@ -5,3 +5,11 @@ team: zun
 type: horizon-plugin
 repository-settings:
   openstack/zun-ui: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/zun-ui
+        hash: 08e0830f356f80aa4e0797aa877943cd319fae5c
+branches:
+  - name: stable/ussuri
+    location: 5.0.0.0rc1
