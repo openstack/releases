@@ -6,21 +6,29 @@ type: service
 repository-settings:
   openstack/keystone: {}
 cycle-highlights:
-  - The user experience for creating application credentials and trusts has
-    been greatly improved when using a federated authentication method.
-    Federated users whose role assignments come from mapped group membership
-    will have those group memberships persisted for a configurable TTL after
-    their token expires, during which time their application credentials will
-    remain valid.
-  - Keystone to Keystone assertions now contain the user's group memberships on
-    the keystone Identity Provider which can be mapped to group membership on
-    the keystone Service Provider.
-  - Federated users can now be given concrete role assignments without relying
-    on the mapping API by allowing federated users to be created directly in
-    keystone and linked to their Identity Provider.
-  - When bootstrapping a new keystone deployment, the admin role now defaults
-    to having the "immutable" option set, which prevents it from being
-    accidentally deleted or modified unless the "immutable" option is
-    deliberately removed.
-  - Keystonemiddleware no longer supports the Identity v2.0 API, which was
-    removed from keystone in previous release cycles.
+  - The user experience for creating application credentials and trusts
+    has been greatly improved when using a federated authentication
+    method. Federated users whose role assignments come from mapped
+    group membership will have those group memberships persisted for
+    a configurable TTL after their token expires, during which time
+    their application credentials will remain valid.
+  - Keystone to Keystone assertions now contain the user's group memberships
+    on the keystone Identity Provider which can be mapped to group membership
+    on the keystone Service Provider.
+  - Federated users can now be given concrete role assignments without
+    relying on the mapping API by allowing federated users to be created
+    directly in keystone and linked to their Identity Provider.
+  - When bootstrapping a new keystone deployment, the admin role now
+    defaults to having the "immutable" option set, which prevents it
+    from being accidentally deleted or modified unless the "immutable"
+    option is deliberately removed.
+  - Keystonemiddleware no longer supports the Identity v2.0 API, which
+    was removed from keystone in previous release cycles.
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 16ac75c2b55f3e53d574f87cfa190edef405da30
+branches:
+  - name: stable/ussuri
+    location: 17.0.0.0rc1
