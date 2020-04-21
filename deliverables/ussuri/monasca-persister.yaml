@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 26844c1dd02c25449e40007537f78a70d27d45ef
+branches:
+  - name: stable/ussuri
+    location: 2.0.0.0rc1
