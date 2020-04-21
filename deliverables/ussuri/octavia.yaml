@@ -9,11 +9,21 @@ repository-settings:
   openstack/octavia: {}
 cycle-highlights:
   - Octavia now supports deploying load balancers in specific availability
-    zones. This allows the deployment of load balancing capabilities to edge
-    environments.
-  - The Octavia amphora driver has added a technology preview feature that
-    improves control plane resiliency. Should a control plane host go down
-    during a load balancer provisioning operation, an alternate controller can
-    resume the in-process provisioning and complete the request.
-  - Users can now specify the TLS ciphers acceptable for listeners and pools.
-    This allows load balancers to enforce security compliance requirements.
+    zones. This allows the deployment of load balancing capabilities
+    to edge environments.
+  - The Octavia amphora driver has added a technology preview feature
+    that improves control plane resiliency. Should a control plane host
+    go down during a load balancer provisioning operation, an alternate
+    controller can resume the in-process provisioning and complete the
+    request.
+  - Users can now specify the TLS ciphers acceptable for listeners and
+    pools. This allows load balancers to enforce security compliance
+    requirements.
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: 0f0e594e179091e1632cb0f80849bb5f8a6b4158
+branches:
+  - name: stable/ussuri
+    location: 6.0.0.0rc1
