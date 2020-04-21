@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/panko: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/panko
+        hash: ada2bdd041b89b9ceb06c1839f8401e7d7f62e4e
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
