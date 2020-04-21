@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: 21c15aa680caabf3587627dd900469d77d13d9ae
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
