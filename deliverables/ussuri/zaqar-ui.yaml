@@ -6,3 +6,11 @@ team: zaqar
 type: horizon-plugin
 repository-settings:
   openstack/zaqar-ui: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 23db4cb84ccdcc55f6f451463d9ac3936124de5d
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
