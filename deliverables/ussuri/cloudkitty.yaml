@@ -6,3 +6,11 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 56609c46f96e38ddc13c7830d6b32479ddaaa1ac
+branches:
+  - name: stable/ussuri
+    location: 12.0.0
