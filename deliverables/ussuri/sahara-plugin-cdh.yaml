@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-cdh: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 78b3ab272a5609b743577393d1a0970680410845
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
