@@ -5,3 +5,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/compute-hyperv: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: b14ae9e2766d8b4ba9c6c6160ebe399da0fa8116
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
