@@ -7,3 +7,8 @@ repository-settings:
   openstack/vitrage-tempest-plugin: {}
 team: vitrage
 type: tempest-plugin
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/vitrage-tempest-plugin
+        hash: 83eac6f6d9c95a711a90e0ce80306cf102107ebe
