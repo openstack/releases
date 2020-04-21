@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-storm: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: f5a760eac445626836bcf15fde5e39ea9af832d9
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
