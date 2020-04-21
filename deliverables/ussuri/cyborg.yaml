@@ -26,3 +26,11 @@ cycle-highlights:
   - |
     Improved quality overall by adding more unit/functional tests and by
     reducing technical debt.
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 973716aa23d033df3a23aa2b34ce533f3f320c8f
+branches:
+  - name: stable/ussuri
+    location: 4.0.0.0rc1
