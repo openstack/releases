@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral-dashboard
         hash: dcd4303c4b7ddd249f1b15db735f28482d3e944c
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 9c19e28c218f50682a735772f4ad3ee616f65368
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
