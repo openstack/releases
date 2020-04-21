@@ -6,3 +6,11 @@ team: ironic
 type: horizon-plugin
 repository-settings:
   openstack/ironic-ui: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 1aa9c8f61bccfab6944f73fc3efa60bd2b877078
+branches:
+  - name: stable/ussuri
+    location: 4.0.0
