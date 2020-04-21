@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: aeed1c63dcc95678297fedae61fc60cd3fde0d59
+branches:
+  - name: stable/ussuri
+    location: 4.0.0.0rc1
