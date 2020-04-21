@@ -8,3 +8,8 @@ repository-settings:
     tarball-base: magnum_tempest_plugin
 team: magnum
 type: tempest-plugin
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/magnum-tempest-plugin
+        hash: 0655f1a2cb6523945a96f9b596e13eee6f8f3bec
