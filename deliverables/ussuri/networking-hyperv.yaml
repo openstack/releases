@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: cb8e1c0b8419fe367e4c2f033db54ef015b2adb7
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
