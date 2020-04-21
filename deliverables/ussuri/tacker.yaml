@@ -5,3 +5,11 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 4a2fd6c292b2bcc273eaee3ef797f90ad9eed652
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
