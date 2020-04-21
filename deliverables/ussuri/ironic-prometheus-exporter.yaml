@@ -5,3 +5,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-prometheus-exporter: {}
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 8880844434a7cf042c87dfa93e8c4499166fa34e
+branches:
+  - name: stable/ussuri
+    location: 2.0.0
