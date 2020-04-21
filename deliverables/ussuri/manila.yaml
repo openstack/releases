@@ -23,3 +23,11 @@ cycle-highlights:
   - |
     It is now possible to query asynchronous user messages with time
     intervals.
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 962fdcc3493aa72a9d7f58edc0616ed31a37d718
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
