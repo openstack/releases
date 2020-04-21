@@ -6,3 +6,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-transform: {}
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-transform
+        hash: cffdf512c3bdf690a6f10693017f7cb44e92d727
+branches:
+  - name: stable/ussuri
+    location: 1.0.0.0rc1
