@@ -7,3 +7,11 @@ team: octavia
 type: horizon-plugin
 repository-settings:
   openstack/octavia-dashboard: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 761408e3b83712baa7ca281ab1685255d70b13c3
+branches:
+  - name: stable/ussuri
+    location: 5.0.0.0rc1
