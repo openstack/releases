@@ -6,3 +6,11 @@ team: murano
 type: horizon-plugin
 repository-settings:
   openstack/murano-dashboard: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 22efa8fd7fb3f5838246b37501418a25158b4d01
+branches:
+  - name: stable/ussuri
+    location: 9.0.0.0rc1
