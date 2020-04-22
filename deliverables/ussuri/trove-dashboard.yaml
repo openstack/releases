@@ -5,3 +5,11 @@ team: trove
 type: horizon-plugin
 repository-settings:
   openstack/trove-dashboard: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: a92ba65de0454fe6676290bf556e6f92108e9ba8
+branches:
+  - name: stable/ussuri
+    location: 14.0.0.0rc1
