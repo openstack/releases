@@ -6,11 +6,11 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - 'Enhancement in multiple stores feature, users now can import single
-    image in multiple stores, copy existing imgae in multiple stores and
-    delete image from single store.'
-  - 'New import plugin to decompress the image'
-  - 'Introduced S3 driver for glance-store again'
+  - Enhancement in multiple stores feature, users now can import single
+    image in multiple stores, copy existing imgae in multiple stores
+    and delete image from single store.
+  - New import plugin to decompress the image
+  - Introduced S3 driver for glance-store again
 repository-settings:
   openstack/glance: {}
 releases:
@@ -26,3 +26,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: b4eabc062a7aa2cc0dd382004b9c9cbfbb2b4444
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 16520ed240eabf70e096c254b6947b6c0f8fe912
+branches:
+  - name: stable/ussuri
+    location: 20.0.0.0rc1
