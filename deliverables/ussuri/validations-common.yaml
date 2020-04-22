@@ -1,0 +1,16 @@
+---
+launchpad: tripleo
+release-model: cycle-trailing
+release-type: python-pypi
+team: tripleo
+type: other
+repository-settings:
+  openstack/validations-common: {}
+releases:
+  - projects:
+      - hash: 99050941f49a8752c8b2a7f75af12039f21c1afe
+        repo: openstack/validations-common
+    version: 1.0.0
+branches:
+  - location: 1.0.0
+    name: stable/ussuri
