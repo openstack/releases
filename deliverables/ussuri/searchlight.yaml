@@ -5,3 +5,11 @@ team: searchlight
 type: service
 repository-settings:
   openstack/searchlight: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight
+        hash: cddffe6af3d816ac862819c891944693390fac39
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
