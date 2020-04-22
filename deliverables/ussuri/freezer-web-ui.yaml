@@ -6,3 +6,11 @@ team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: e5992486617ea000a0999ae7fc40bd1cb626116a
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
