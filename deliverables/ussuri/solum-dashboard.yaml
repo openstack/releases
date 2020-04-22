@@ -5,3 +5,11 @@ team: solum
 type: horizon-plugin
 repository-settings:
   openstack/solum-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: e37246df9d1a61d339f380abfa29ed1224a637e0
+branches:
+  - name: stable/ussuri
+    location: 4.0.0.0rc1
