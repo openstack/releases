@@ -5,3 +5,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - version: 8.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 41886d846354b1a9eae2384902ec0151c30e6242
+branches:
+  - name: stable/ussuri
+    location: 8.0.0
