@@ -6,3 +6,11 @@ team: searchlight
 type: horizon-plugin
 repository-settings:
   openstack/searchlight-ui: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 708445d245ac262314543771d1b888fef12e7892
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
