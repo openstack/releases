@@ -6,3 +6,11 @@ release-model: cycle-with-intermediary
 include-pypi-link: true
 repository-settings:
   openstack/networking-baremetal: {}
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: b80ab336977c9efc094b619f5eddf12b65bf3841
+branches:
+  - name: stable/ussuri
+    location: 2.0.0
