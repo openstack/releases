@@ -7,3 +7,8 @@ repository-settings:
   openstack/tempest-horizon: {}
 team: horizon
 type: tempest-plugin
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/tempest-horizon
+        hash: 785e7812796190f7ae69dcd039b540761f09a058
