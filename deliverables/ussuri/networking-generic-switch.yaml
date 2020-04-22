@@ -6,3 +6,11 @@ release-model: cycle-with-intermediary
 include-pypi-link: true
 repository-settings:
   openstack/networking-generic-switch: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 8a48190f38b87984d25364accd7ef2bbef35db4d
+branches:
+  - name: stable/ussuri
+    location: 3.0.0
