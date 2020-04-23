@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 30bb75d744ce976dbc9922a8d6f6870ccff288b2
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
