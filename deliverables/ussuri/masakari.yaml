@@ -5,3 +5,11 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: 9a59610643805f121279519045ff29640fade749
+branches:
+  - name: stable/ussuri
+    location: 9.0.0.0rc1
