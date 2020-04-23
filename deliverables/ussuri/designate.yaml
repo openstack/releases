@@ -7,3 +7,11 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 846f919ec83fc829df9bc05cd76cb2ff2db2b764
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
