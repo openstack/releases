@@ -5,8 +5,8 @@ team: cinder
 type: service
 cycle-highlights:
   - Numerous improvements in current functionality, for example, the
-    ability to set minimum and maximum sizes for volume-types; the
-    ability to filter the volume list using time comparison operators.
+    ability to set minimum and maximum sizes for volume-types; the ability
+    to filter the volume list using time comparison operators.
   - Support for Glance multistore and image data colocation when uploading
     a volume to the Image Service.
   - Added some new backend drivers, and many current drivers have added
@@ -16,5 +16,12 @@ releases:
     projects:
       - hash: cff7fffc36f25da35152908404f2dbfcf7d791b1
         repo: openstack/cinder
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 938aa98f942a9d1f6057fde04e91963b6d7756ec
 repository-settings:
   openstack/cinder: {}
+branches:
+  - name: stable/ussuri
+    location: 16.0.0.0rc1
