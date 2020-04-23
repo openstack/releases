@@ -6,3 +6,11 @@ team: sahara
 type: service
 repository-settings:
   openstack/sahara: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: d40deb150563382f2ef7b46bbf5dc49515394ae6
+branches:
+  - name: stable/ussuri
+    location: 12.0.0.0rc1
