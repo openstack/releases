@@ -7,3 +7,8 @@ repository-settings:
   openstack/cyborg-tempest-plugin: {}
 team: cyborg
 type: tempest-plugin
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/cyborg-tempest-plugin
+        hash: b5ef5941c3ae7938bdfec1b23b60df677ce16183
