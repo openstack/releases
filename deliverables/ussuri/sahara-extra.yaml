@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-extra: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-extra
+        hash: c45a7073733bed15992ef776303c7633d0b4aa18
+branches:
+  - name: stable/ussuri
+    location: 11.0.0.0rc1
