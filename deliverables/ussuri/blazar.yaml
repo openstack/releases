@@ -5,3 +5,11 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: cfc631121857839ce72a54508d54bd0513d89961
+branches:
+  - name: stable/ussuri
+    location: 5.0.0.0rc1
