@@ -31,3 +31,11 @@ cycle-highlights:
     is disabled by default and can be enabled by config options.`
     See the `Policy Concepts <https://docs.openstack.org/nova/latest/configuration/policy-concepts.html>`__
     documentation for more details.
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 2cddf595a8cdedbdb844e800d853ea143817b545
+branches:
+  - name: stable/ussuri
+    location: 21.0.0.0rc1
