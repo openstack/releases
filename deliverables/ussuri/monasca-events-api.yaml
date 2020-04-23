@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-events-api: {}
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: 2550100ada77785e0af8e85f08afb806a6383e0a
+branches:
+  - name: stable/ussuri
+    location: 1.0.0.0rc1
