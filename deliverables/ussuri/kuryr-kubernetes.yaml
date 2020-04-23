@@ -12,3 +12,11 @@ cycle-highlights:
     DPDK support for nested setups and various other DPDK and SR-IOV improvements.
   - |
     Multiple fixes related to NetworkPolicy support.
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 52b216de3d1e7e29e69d8e3e326a4118978f5e61
+branches:
+  - name: stable/ussuri
+    location: 2.0.0.0rc1
