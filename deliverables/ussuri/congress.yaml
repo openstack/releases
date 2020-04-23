@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/congress:
     tarball-base: openstack-congress
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/congress
+        hash: 85243abf63dfc7c086e28e9bdb3fb0b7c9d2ad94
+branches:
+  - name: stable/ussuri
+    location: 11.0.0.0rc1
