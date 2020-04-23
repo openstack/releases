@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-spark: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: a286258d61ab727b2842403edf5e2203434a0fa9
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
