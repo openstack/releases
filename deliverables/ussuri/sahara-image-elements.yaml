@@ -6,3 +6,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-image-elements: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 6a316ee9bf880141b5b8af0f07d3aa0e0db6d316
+branches:
+  - name: stable/ussuri
+    location: 12.0.0.0rc1
