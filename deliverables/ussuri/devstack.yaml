@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: 1b01f23b7411765a3fa5b0b009f87b955a7f1fa0
+    name: stable/ussuri
 repository-settings:
   openstack/devstack: {}
