@@ -6,3 +6,8 @@ release-model: cycle-automatic
 release-type: python-pypi
 repository-settings:
   openstack/sahara-tests: {}
+releases:
+  - version: 0.10.0
+    projects:
+      - repo: openstack/sahara-tests
+        hash: 53f70d9d9290e1bd267eec095eaa40408bb6ac2a
