@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 92c934a8e3c2f726e7f1b845f39c5436d870fd6c
+branches:
+  - name: stable/ussuri
+    location: 9.0.0.0rc1
