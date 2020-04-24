@@ -621,6 +621,26 @@ To set the pre-release group membership:
 
   tox -e aclmanager -- groups pre_release ttx
 
+tools/add_reviewers.sh
+----------------------
+
+A script to add the PTL and release liaisons to one or more reviews.
+
+Around deadlines during the cycle, and especially near the end of the cycle,
+the release team needs to generate a large number of release patches for
+various subsets of the included deliverables. The ``add_reviewers.sh`` script
+can be used to make sure the appropriate people have been added as reveiwers
+for these reviews.
+
+For example, assuming the release candidate patches for the Ussuri cycle are
+generated using the Gerrit review topic of ``ussuri-rc``, the following will
+process all of those reviews to add the necessary PTL and liaison reviewers::
+
+  ./tools/add_reviewers.sh ussuri-rc
+
+Note that any topic may be used, so this script can be used even if just
+adding reviewers to an individual review.
+
 tools/check_approval.py
 -----------------------
 
