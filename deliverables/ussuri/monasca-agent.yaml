@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-agent: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 8d4bd979d5789689ff5fe5298171e60ac0d65c81
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
