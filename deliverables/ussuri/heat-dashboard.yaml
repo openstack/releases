@@ -5,3 +5,11 @@ team: heat
 type: horizon-plugin
 repository-settings:
   openstack/heat-dashboard: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 78421908513eec5366fda3081e47c085ad2f89d0
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
