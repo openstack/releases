@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: ab081554d0c63a0459deae1fcb38ea663c1ca8ea
+branches:
+  - name: stable/ussuri
+    location: 1.0.0.0rc1
