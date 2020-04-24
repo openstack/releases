@@ -5,3 +5,11 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: 5ae51e7344d1e578c67c4ccbd9c4f4f8c0a4994f
+branches:
+  - name: stable/ussuri
+    location: 9.0.0.0rc1
