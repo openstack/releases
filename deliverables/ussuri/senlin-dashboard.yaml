@@ -5,3 +5,11 @@ team: senlin
 type: horizon-plugin
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 40e2fb0b9d62e1abbff5683d9d4d1068b10a6aa4
+branches:
+  - name: stable/ussuri
+    location: 1.0.0.0rc1
