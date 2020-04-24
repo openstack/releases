@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 0b5b77c974e80757a030bb633a64b78e073c86bb
+branches:
+  - name: stable/ussuri
+    location: 2.0.0.0rc1
