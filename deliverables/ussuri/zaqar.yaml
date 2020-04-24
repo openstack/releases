@@ -8,8 +8,16 @@ cycle-highlights:
     the queues. Help users to quickly get the exact total number of
     queues which they own.
   - Introduce new resource called Topic which is a concept from SNS.
-    User can send message to a Topic and then subscribers will get
-    the message according to different protocols like http, email,
-    sms, etc.
+    User can send message to a Topic and then subscribers will get the
+    message according to different protocols like http, email, sms,
+    etc.
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: 22c457a55b3bdaec7c8aa31f2cf291c175082a80
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
