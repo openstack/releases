@@ -12,3 +12,11 @@ cycle-highlights:
     Improved robustness for cases where high levels of concurrent
     allocation writes are common, such as a busy clustered hypervisor,
     by making allocation retry count configurable.
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: 0f90d197e11d7aa605c0e1d338db1d146a00d8eb
+branches:
+  - name: stable/ussuri
+    location: 3.0.0.0rc1
