@@ -168,9 +168,6 @@ echo "$DIFF_START to $VERSION on $SERIES"
 
 relnotes_file="$RELNOTESDIR/$SHORTNAME-$VERSION"
 
-# If we don't have a setup.py, use a CI system environment variable or the
-# current directory name as the library name so the email template makes
-# sense.
 if [ -e setup.py ] ; then
     # Some projects have setup_requires dependencies on packages that are
     # not pre-installed, so run a setuptools command in a way to get them
@@ -178,16 +175,18 @@ if [ -e setup.py ] ; then
     # be sending.
     echo "Priming setup_requires packages"
     python setup.py --name
-    library_name=$(python setup.py --name)
+    project_name=$(python setup.py --name)
     description="$(python setup.py --description)"
-elif [ -n "$ZUUL_PROJECT" ] ; then
-    # We may be running in the context of a Zuul CI system, in which case
-    # we can infer the project name from the repo name it supplies.
-    library_name="$(basename ${ZUUL_PROJECT})"
 else
     # As a last resort, guess that the project name may be the same as that
     # of the local working directory at the point this script is invoked.
-    library_name="$(basename $(pwd))"
+    project_name="$(basename $(pwd))"
+fi
+
+# If we are running in the context of a Zuul CI system,
+# we can just infer the project name from the repo name it supplies.
+if [ -n "$ZUUL_PROJECT" ] ; then
+    project_name="$(basename ${ZUUL_PROJECT})"
 fi
 
 echo
@@ -198,7 +197,7 @@ release-notes \
     $stable \
     $first_release \
     --publishing-dir-name "$SHORTNAME" \
-    . "$library_name" "$DIFF_START" "$VERSION" \
+    . "$project_name" "$DIFF_START" "$VERSION" \
     $include_pypi_link \
     --description "$description" \
     | tee $relnotes_file
