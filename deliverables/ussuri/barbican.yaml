@@ -5,3 +5,11 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/barbican
+        hash: 7b14d983e0dce6dcffe9781b05c52335b8203fc7
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
