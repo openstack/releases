@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: 80f64b92d39ec8f7e3ee840dc9f8b6ad1e8d3c07
+    name: stable/ussuri
 repository-settings:
   openstack/grenade: {}
