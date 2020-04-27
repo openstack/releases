@@ -680,6 +680,23 @@ to create releases at appropriate times in the release cycle, e.g milestones.
 Once ``tools/make_missing_releases.sh`` completes the release manager can use
 ``tools/bulk_review.sh`` to submit the release requests.
 
+tools/releases_note_links.sh
+------------------------------
+
+A script to add the missing release note links to deliverables if needed.
+
+This script is designed to be run by the release team
+to ensure that release note links are present in deliverables at appropriate
+times in the release cycle, e.g milestones.
+
+Example:
+
+To check for ussuri release note links:
+
+::
+
+  tools/add_release_note_links.sh ussuri
+
 tools/membership_freeze_test.py
 --------------------------------
 
