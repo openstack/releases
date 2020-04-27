@@ -11,6 +11,13 @@ releases:
     projects:
       - hash: e964b18b993535c2f282404c702c443f86493f0a
         repo: openstack/ironic-inspector
+  - projects:
+      - repo: openstack/ironic-inspector
+        hash: 02c6c92c50c8c55347cb02138781a57e8b976850
+    version: 10.1.0
+branches:
+  - name: stable/ussuri
+    location: 10.1.0
 cycle-highlights:
   - |
     Support for scoped introspection rules which allow to have (and keep)
