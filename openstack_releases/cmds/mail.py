@@ -22,6 +22,8 @@ import argparse
 import email
 import smtplib
 
+import tenacity
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -47,9 +49,14 @@ def main():
         msg = email.message_from_file(f)
 
     tolist = [address.strip() for address in msg['to'].split(",")]
+    send_email(server, msg, tolist, user=user, pw=pw, debug=args.verbose)
 
-    server = smtplib.SMTP(server)
-    if args.verbose:
+
+@tenacity.retry(wait=tenacity.wait_exponential,
+                stop=tenacity.stop_after_attempt(4))
+def send_email(smtp_server, msg, tolist, user=None, pw=None, debug=False):
+    server = smtplib.SMTP(smtp_server)
+    if debug:
         server.set_debuglevel(True)
     try:
         if pw:
