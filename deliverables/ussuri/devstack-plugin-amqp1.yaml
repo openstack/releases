@@ -4,5 +4,9 @@ release-model: untagged
 team: oslo
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-amqp1: 72667f4e7baf15688c48a4a3b17465286efa9b76
+    name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
