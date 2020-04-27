@@ -1127,8 +1127,13 @@ R-2 week
      https://review.opendev.org/545268/.
 
 #. Ensure that all projects that are publishing release notes have the
-   notes link included in their deliverable file. See
-   tools/add_release_note_links.sh.
+   notes link included in their deliverable file. This is done by running
+   the command::
+
+     tools/add_release_note_links.sh $series
+
+   Then submit the updated deliverable files in one patch to update the
+   docs.
 
 #. Let cycle-with-rc projects iterate on RCs as needed. The final release
    candidate for each project needs to be prepared at least one week before
