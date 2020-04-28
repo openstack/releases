@@ -22,3 +22,10 @@ releases:
       - hash: eb5908706c1197b5f6cc820b59cdef2ddf80a9cb
         repo: openstack/puppet-magnum
     version: 16.2.1
+  - projects:
+      - hash: 3a10cbf45cd6a84b02705968dc0617afb7b7444a
+        repo: openstack/puppet-magnum
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

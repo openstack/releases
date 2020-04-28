@@ -22,3 +22,10 @@ releases:
       - hash: 13c0f527615bf0a3dfddd716637b2d1f50f661e1
         repo: openstack/puppet-vswitch
     version: 12.2.1
+  - projects:
+      - hash: 5a72262494f8007c28fdd4a442d6f5c54cf89af4
+        repo: openstack/puppet-vswitch
+    version: 12.3.0
+branches:
+  - name: stable/ussuri
+    location: 12.3.0

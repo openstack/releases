@@ -22,3 +22,10 @@ releases:
       - hash: 8bfa4fe03274fb1cdf864bcd23aaf89f004b7f3b
         repo: openstack/puppet-barbican
     version: 16.2.1
+  - projects:
+      - hash: 14a09830eb371624d7e715cae03a9b8b694a4a20
+        repo: openstack/puppet-barbican
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

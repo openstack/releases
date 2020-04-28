@@ -22,3 +22,10 @@ releases:
       - hash: bc868e47dbaab7aff84be4e40ca699a5ae44e7ba
         repo: openstack/puppet-cloudkitty
     version: 5.2.1
+  - projects:
+      - hash: 18afe29d3d6bf10b6db5e42d0356d996e7c9758d
+        repo: openstack/puppet-cloudkitty
+    version: 5.3.0
+branches:
+  - name: stable/ussuri
+    location: 5.3.0
