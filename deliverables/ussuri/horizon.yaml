@@ -38,3 +38,19 @@ branches:
   - name: stable/ussuri
     location: 18.3.0
 release-notes: https://docs.openstack.org/releasenotes/horizon/ussuri.html
+cycle-highlights:
+  - |
+    This release mainly focuses on bug fixes and improvements from the
+    maintenance perspective including deprecations of old features,
+    cleanup of deprecated features, integration test coverage improvements,
+    migration to mock usage in unit tests and so on.
+  - |
+    Horizon and all horizon plugins now support Django 2.2 which is
+    the only supported LTS of Django. Django is a framework which horizon
+    depends on. Note that python 2.7 is no longer supported and
+    we have enter into the python3 era.
+  - |
+    A couple of feature gaps in keystone support are implemented:
+    a feature to allow users to change expired password including first login,
+    password lock option in the user panel, and
+    a support of access rules for application credentials.
