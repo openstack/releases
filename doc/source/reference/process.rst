@@ -1088,6 +1088,11 @@ R-2 week
 
      .. note::
 
+        More examples about the QA team's patches during the ussuri cycle are
+        available here https://review.opendev.org/#/q/topic:qa-ussuri-release
+
+     .. note::
+
         As soon as grenade is updated for the new branch (see the RC1
         instructions that follow), projects without stable branches may
         start seeing issues with their grenade jobs because without the
