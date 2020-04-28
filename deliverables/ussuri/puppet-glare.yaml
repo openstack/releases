@@ -22,3 +22,10 @@ releases:
       - hash: 595673e91e829c1d106e38adf44ab68f386be1cb
         repo: openstack/puppet-glare
     version: 5.2.1
+  - projects:
+      - hash: 7501bc5252ae34915084e72de26d98899cf11ff3
+        repo: openstack/puppet-glare
+    version: 5.3.0
+branches:
+  - name: stable/ussuri
+    location: 5.3.0

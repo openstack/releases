@@ -22,3 +22,10 @@ releases:
       - hash: b686352266839725e6a6148471119056a001544f
         repo: openstack/puppet-horizon
     version: 16.2.1
+  - projects:
+      - hash: 00646bed5f3a0cfaf2ea2e5922af54f71d18d73c
+        repo: openstack/puppet-horizon
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

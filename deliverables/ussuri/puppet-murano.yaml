@@ -22,3 +22,10 @@ releases:
       - hash: 69210513b7cbbacacf100bd45a8ccb603fba4d5f
         repo: openstack/puppet-murano
     version: 16.2.1
+  - projects:
+      - hash: f9f18af5cdc1bda9570335cf259508d462a034dd
+        repo: openstack/puppet-murano
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

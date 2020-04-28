@@ -22,3 +22,10 @@ releases:
       - hash: 423190d13ac1179f28d09f0af986cb8e6f97a285
         repo: openstack/puppet-ceilometer
     version: 16.2.1
+  - projects:
+      - hash: ffed06ca430597a38849bf4ee39251d2c22cab46
+        repo: openstack/puppet-ceilometer
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

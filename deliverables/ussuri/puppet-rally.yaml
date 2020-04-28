@@ -22,3 +22,10 @@ releases:
       - hash: d7bb6d79ba87ec55d722fbab03787f9f4f6a4787
         repo: openstack/puppet-rally
     version: 4.2.1
+  - projects:
+      - hash: e07c803b979be1d714dc5bd5824601bd88254c63
+        repo: openstack/puppet-rally
+    version: 4.3.0
+branches:
+  - name: stable/ussuri
+    location: 4.3.0

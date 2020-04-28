@@ -22,3 +22,10 @@ releases:
       - hash: 8b7dea0f048c75a753152e958ad165da12908dba
         repo: openstack/puppet-designate
     version: 16.2.1
+  - projects:
+      - hash: b8825aea20e4751f025ebce5bb547d7ecec25997
+        repo: openstack/puppet-designate
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

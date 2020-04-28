@@ -22,3 +22,10 @@ releases:
       - hash: 013426b97e9cc848241fe15539bb19b0375ea155
         repo: openstack/puppet-aodh
     version: 16.2.1
+  - projects:
+      - hash: 61ba1ff44a9fba60dc05547c985926f556fe2214
+        repo: openstack/puppet-aodh
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0

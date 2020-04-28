@@ -22,3 +22,10 @@ releases:
       - hash: fcc6bab7f9e35b7757db28904da9ae3c63218c50
         repo: openstack/puppet-placement
     version: 3.2.1
+  - projects:
+      - hash: b4be77a60912490c6aca411b33c14cad79fd752a
+        repo: openstack/puppet-placement
+    version: 3.3.0
+branches:
+  - name: stable/ussuri
+    location: 3.3.0

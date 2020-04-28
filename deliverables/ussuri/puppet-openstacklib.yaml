@@ -22,3 +22,10 @@ releases:
       - hash: e88e4489375cb45475c23005db2a447d6a514af9
         repo: openstack/puppet-openstacklib
     version: 16.2.1
+  - projects:
+      - hash: e3321d68c8fc6c9afe93a48f6f822f64d4f775f9
+        repo: openstack/puppet-openstacklib
+    version: 16.3.0
+branches:
+  - name: stable/ussuri
+    location: 16.3.0
