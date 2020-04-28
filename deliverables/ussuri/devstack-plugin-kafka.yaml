@@ -4,5 +4,9 @@ release-model: untagged
 team: oslo
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-kafka: 305802ea2e5df49933cdc46c218ca270a2f9470f
+    name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-kafka: {}

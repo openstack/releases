@@ -4,6 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: 26e3a3dcddebeb5d923dc0f7988ed8fa96e572e0
+    name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-container: {}
-# Note: deliverable was not released in train
