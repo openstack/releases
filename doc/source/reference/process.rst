@@ -1135,6 +1135,8 @@ R-2 week
    Then submit the updated deliverable files in one patch to update the
    docs.
 
+   Example given: https://review.opendev.org/#/c/723540/
+
 #. Let cycle-with-rc projects iterate on RCs as needed. The final release
    candidate for each project needs to be prepared at least one week before
    the final release date.
