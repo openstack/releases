@@ -1103,8 +1103,14 @@ R-2 week
    - Remind the I18n PTL to update the translation tools for the new stable
      series.
 
-   - After all cycle-with-rc projects have their branches created, remind the
-     requirements PTL to propose an update to the deliverable file to create
+   - Ensure that all cycle-with-rc projects have their branches created.
+     This could be done by using ``tox -e venv -- list-deliverables
+     --model cycle-with-rc --no-stable-branch`` where a non empty list mean
+     that some projects are missing a stable branch and a patch proposed
+     to create it.
+
+   - If the previous list is empty then we can remind the requirements
+     PTL to propose an update to the deliverable file to create
      the ``stable/$series`` branch for ``openstack/requirements``. Then
      announce that the requirements freeze is lifted from master.
 
