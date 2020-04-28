@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/ussuri
+    location:
+      openstack/requirements: b85e113e6c2388482ffc8b778c8757ba49ad4615
