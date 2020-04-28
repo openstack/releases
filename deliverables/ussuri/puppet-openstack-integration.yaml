@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/ussuri
+    location:
+      openstack/puppet-openstack-integration: b99d1f5ad912bac1ff41a002271cb24fc30fa876
