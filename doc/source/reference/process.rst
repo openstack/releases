@@ -1073,6 +1073,15 @@ R-2 week
    we can engage with the QA, I18n and Requirements PTLs to finalize the
    stable branch setup:
 
+   .. note::
+
+      Information about PTLs could be easily retrieved either from the
+      `governance project
+      <https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml>`__
+      or from the `release project
+      <https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml>`__.
+
+
    - Remind the QA PTL to create a branch in the devstack repository.
      Devstack doesn't push a tag at RC1 it is just branched off of HEAD.
 
