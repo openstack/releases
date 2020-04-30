@@ -1111,8 +1111,9 @@ R-2 week
 
    - If the previous list is empty then we can remind the requirements
      PTL to propose an update to the deliverable file to create
-     the ``stable/$series`` branch for ``openstack/requirements``. Then
-     announce that the requirements freeze is lifted from master.
+     the ``stable/$series`` branch for ``openstack/requirements`` and then
+     remind to him to announce that the requirements freeze is lifted
+     from master.
 
      .. note::
 
