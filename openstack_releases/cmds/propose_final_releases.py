@@ -87,6 +87,12 @@ def main():
         help='produce detailed output',
     )
     parser.add_argument(
+        '--canary',
+        action='store_true',
+        default=False,
+        help='process only a canary final release on release-test',
+    )
+    parser.add_argument(
         '--deliverables-dir',
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
@@ -138,6 +144,10 @@ def main():
     )
 
     for deliv in all_deliv.get_deliverables(None, args.series):
+
+        if args.canary and deliv.name != "release-test":
+            continue
+
         verbose('\n{} {}'.format(deliv.name, deliv.model))
 
         if deliv.model == 'cycle-trailing':
