@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: edc878574d9c6ef31d204607954869c6ccfd9da6
+  - version: 8.0.3
+    projects:
+      - repo: openstack/kolla
+        hash: 0cf37e0091bf51f169436cfb1c4290de892042aa
 cycle-highlights:
   - Completed addition of images and playbooks for the OpenStack Monitoring
     service, Monasca.
