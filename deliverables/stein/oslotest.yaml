@@ -15,6 +15,10 @@ releases:
       - hash: dac45a694c371d4b57bb9d015bf642c628b5b4a6
         repo: openstack/oslotest
     version: 3.7.1
+  - version: 3.7.2
+    projects:
+      - repo: openstack/oslotest
+        hash: 9e46577ab812cd4657b6ca276f0061c1851d2925
 branches:
   - location: 3.7.1
     name: stable/stein
