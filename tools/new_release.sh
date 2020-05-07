@@ -19,10 +19,13 @@
 set -e
 
 function usage {
-    echo "Usage: new_release.sh series deliverable updatetype"
+    echo "Usage: new_release.sh <series> <deliverable> <updatetype>"
     echo
     echo "Example: new_release.sh mitaka oslo.rootwrap feature"
     echo "Example: new_release.sh independent reno bugfix"
+    echo
+    echo "For further details about how to use the 'new-release' command:"
+    echo "tox -e venv new-release --help"
 }
 
 if [ $# -lt 3 ]; then
