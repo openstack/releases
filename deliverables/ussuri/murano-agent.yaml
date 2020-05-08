@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 97f53bb54a6209bc917e1a5a727ea8f6333bafc1
+  - version: 5.0.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: 97f53bb54a6209bc917e1a5a727ea8f6333bafc1
+    diff-start: 4.0.0
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1

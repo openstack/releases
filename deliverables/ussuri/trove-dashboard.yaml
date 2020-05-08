@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: a92ba65de0454fe6676290bf556e6f92108e9ba8
+  - version: 14.0.0
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: a92ba65de0454fe6676290bf556e6f92108e9ba8
+    diff-start: 13.0.0
 branches:
   - name: stable/ussuri
     location: 14.0.0.0rc1

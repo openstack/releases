@@ -24,6 +24,11 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 0f0e594e179091e1632cb0f80849bb5f8a6b4158
+  - version: 6.0.0
+    projects:
+      - repo: openstack/octavia
+        hash: 0f0e594e179091e1632cb0f80849bb5f8a6b4158
+    diff-start: 5.0.0.0rc1
 branches:
   - name: stable/ussuri
     location: 6.0.0.0rc1

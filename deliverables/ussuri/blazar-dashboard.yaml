@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 26fda6b6976edef785b5a9f2e1ca6565e761d866
+  - version: 3.0.0
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 26fda6b6976edef785b5a9f2e1ca6565e761d866
+    diff-start: 2.0.0
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
