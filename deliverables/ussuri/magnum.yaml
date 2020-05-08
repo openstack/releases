@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 7c4fb32189198ee69a0c50d7c498fc349c590962
+  - version: 10.0.0.0rc2
+    projects:
+      - repo: openstack/magnum
+        hash: c6e536ae071550077f192562e3a6df33fd01ee04
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
