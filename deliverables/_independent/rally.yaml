@@ -2,7 +2,7 @@
 launchpad: rally
 team: rally
 type: other
-release-notes: https://git.openstack.org/cgit/openstack/rally/tree/CHANGELOG.rst
+release-notes: https://opendev.org/openstack/rally/src/branch/master/CHANGELOG.rst
 include-pypi-link: true
 releases:
   - version: 0.0.4
@@ -157,5 +157,9 @@ releases:
     projects:
       - repo: openstack/rally
         hash: 6b86848fc8517ca465cd0caf916168bd312f0a9b
+  - version: 3.1.0
+    projects:
+      - repo: openstack/rally
+        hash: 47cb8cb3d1a54c1966a478b194d4664c9c92b7af
 repository-settings:
   openstack/rally: {}
