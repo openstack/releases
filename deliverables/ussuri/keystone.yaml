@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 16ac75c2b55f3e53d574f87cfa190edef405da30
+  - version: 17.0.0.0rc2
+    projects:
+      - repo: openstack/keystone
+        hash: 28bce595bb5d7d61c09c183c053f89c216fb8d62
 branches:
   - name: stable/ussuri
     location: 17.0.0.0rc1
