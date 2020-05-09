@@ -20,13 +20,21 @@
 function usage {
     echo "Usage: $0 $gerrit_topic"
     echo
-    echo "Example: $0 ussuri-c-w-i"
+    echo "# Add reviewers to all open reviews"
+    echo "Example: $0"
+    echo "# Add reviewers for a specific topic"
+    echo "Example: $0 ussuri-c-w-i # Adds reviewers for a specific topic"
 }
 
 # Validate topic was provided
-if [ $# -lt 1 ]; then
+if [ $# -gt 1 ]; then
     usage
     exit 2
+fi
+
+topic=""
+if [ $# -eq 1 ]; then
+    topic="+topic:$1"
 fi
 
 # We make assumptions that local commands will be available
@@ -55,13 +63,13 @@ GERRIT_PROJECT="openstack/releases"
 
 # Get all open reviews for the given topic
 reviews=$(curl -s \
-    "$GERRIT_URL/changes/?q=status:open+project:$GERRIT_PROJECT+topic:$1" | \
+    "$GERRIT_URL/changes/?q=status:open+project:$GERRIT_PROJECT${topic}" | \
     sed 1d | \
     jq --raw-output '.[] | .change_id')
 
 # Loop through each review and find deliverable files
 for review in $reviews; do
-    teams=()
+    last_team=""
     deliverable_files=$(curl -s \
         "$GERRIT_URL/changes/?q=$review&o=CURRENT_REVISION&o=CURRENT_FILES" | \
         sed 1d | \
@@ -71,13 +79,10 @@ for review in $reviews; do
     # Extract the owning teams for each deliverable in this patch
     for file in $deliverable_files; do
         team=$(grep team $file | sed 's/team: //g')
-        if [[ ! "${teams[@]}" =~ "$team" ]]; then
-            teams+=($team)
+        if [[ "$team" == "$last_team" ]]; then
+            continue
         fi
-    done
-
-    # Look up the contacts for each team and add them as reviewers
-    for team in $teams; do
+        last_team="$team"
         echo "Adding $team reviewers for $review"
         declare -a emails=$(
             get-contacts --all "$team" | awk -F': ' '/Email/ {print $2}')
