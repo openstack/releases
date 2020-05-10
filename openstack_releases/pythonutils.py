@@ -60,8 +60,14 @@ def get_sdist_name(workdir, repo):
 
 
 def build_sdist(workdir, repo):
-    "Build the sdist."
+    """Build the sdist."""
     dest = os.path.join(workdir, repo)
+
+    build_path = os.path.join(dest, 'dist')
+    if os.path.exists(build_path):
+        # sdist already built, skip rebuilding it
+        return
+
     setup_path = os.path.join(dest, 'setup.py')
     if not os.path.exists(setup_path):
         LOG.debug('did not find %s, maybe %s is not a python project',
@@ -80,10 +86,17 @@ def build_sdist(workdir, repo):
         python = '.tox/venv/bin/python3'
     else:
         python = 'python3'
-    # Run it once and discard the result to ensure any setup_requires
-    # dependencies are installed.
+    # Set some flags to turn off pbr functionality that we don't need
+    flags = {
+        'SKIP_GENERATE_RENO': '1',
+        'SKIP_GENERATE_AUTHORS': '1',
+        'SKIP_WRITE_GIT_CHANGELOG': '1',
+    }
     cmd = [python, 'setup.py', 'sdist', 'bdist_wheel']
-    processutils.check_call(cmd, cwd=dest)
+    processutils.check_call(
+        cmd,
+        cwd=dest,
+        env=flags)
 
 
 def check_readme_format(workdir, repo):
