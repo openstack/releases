@@ -43,7 +43,7 @@
     gate:
       jobs:
         - openstack-tox-validate:
-            timeout: 7200
+            timeout: 10800
             irrelevant-files:
               - ^doc/.*$
         - openstack-tox-py36:
