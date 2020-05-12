@@ -58,6 +58,10 @@ releases:
       - repo: openstack/keystone
         hash: dc9e9e32dfbf9fd9c58f9f8e2b35f0bcfd62328e
     diff-start: 15.0.0.0rc1
+  - version: 16.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 40cbb7bebd50276412daa1981ff5a7c7b3b899a5
 branches:
   - name: stable/train
     location: 16.0.0.0rc1
