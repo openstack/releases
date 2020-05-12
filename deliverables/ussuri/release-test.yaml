@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: 600c783cc95005ba70a6aef1847b21587849de33
+  - version: 3.0.0
+    diff-start: 2.0.0
+    projects:
+      - repo: openstack/release-test
+        hash: 600c783cc95005ba70a6aef1847b21587849de33
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
