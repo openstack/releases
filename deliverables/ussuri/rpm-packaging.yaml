@@ -4,5 +4,9 @@ release-model: untagged
 team: Packaging-rpm
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/rpm-packaging: 4cbdd048301ada07601e6d4363bb5b690728ae90
+    name: stable/ussuri
 repository-settings:
   openstack/rpm-packaging: {}
