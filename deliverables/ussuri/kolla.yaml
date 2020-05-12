@@ -10,7 +10,8 @@ cycle-highlights:
     Python 2 has been dropped.
   - Added support for CentOS 8 hosts and images.
   - Added initial support for TLS encryption of backend API services, providing
-    end-to-end encryption of API traffic. Currently Keystone is supported.
+    end-to-end encryption of API traffic. Currently Barbican, Cinder, Glance,
+    Heat, Horizon, Keystone, Nova and Placement are supported.
   - Added support for deployment of Open Virtual Network (OVN) and integration
     of it with Neutron.
   - Added support for deployment of Zun CNI (Container Networking Interface)
