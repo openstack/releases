@@ -13,6 +13,7 @@
 #    under the License.
 
 import logging
+import os
 import subprocess
 
 
@@ -42,7 +43,14 @@ def check_call(*popenargs, timeout=None, **kwargs):
         LOG.debug('cwd = {}'.format(kwargs['cwd']))
     LOG.debug('$ {}'.format(' '.join(cmd)))
 
-    completed = subprocess.run(*popenargs, **kwargs)
+    # Copy full environment to pass in so we can include any of our own
+    # environment variables with it.
+    env = os.environ.copy()
+    env_extras = kwargs.pop('env', None)
+    if env_extras:
+        env.update(env_extras)
+
+    completed = subprocess.run(*popenargs, env=env, **kwargs)
     _multi_line_log(logging.DEBUG, completed.stdout.decode('utf-8'))
 
     if completed.returncode:
@@ -74,10 +82,18 @@ def check_output(*popenargs, timeout=None, **kwargs):
     if 'stderr' not in kwargs:
         kwargs['stderr'] = subprocess.PIPE
 
+    # Copy full environment to pass in so we can include any of our own
+    # environment variables with it.
+    env = os.environ.copy()
+    env_extras = kwargs.pop('env', None)
+    if env_extras:
+        env.update(env_extras)
+
     completed = subprocess.run(*popenargs,
                                stdout=subprocess.PIPE,
                                timeout=timeout,
                                check=True,
+                               env=env,
                                **kwargs)
 
     if completed.stderr:

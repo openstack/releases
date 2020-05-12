@@ -86,18 +86,18 @@ def build_sdist(workdir, repo):
         python = '.tox/venv/bin/python3'
     else:
         python = 'python3'
+
     # Set some flags to turn off pbr functionality that we don't need.
-    # This is currently causing some failures, so for now we are not passing
-    # along until we understand why.
-    # flags = {
-    #     'SKIP_GENERATE_RENO': '1',
-    #     'SKIP_GENERATE_AUTHORS': '1',
-    #     'SKIP_WRITE_GIT_CHANGELOG': '1',
-    # }
+    flags = {
+        'SKIP_GENERATE_RENO': '1',
+        'SKIP_GENERATE_AUTHORS': '1',
+        'SKIP_WRITE_GIT_CHANGELOG': '1',
+    }
     cmd = [python, 'setup.py', 'sdist', 'bdist_wheel']
     processutils.check_call(
         cmd,
-        cwd=dest)
+        cwd=dest,
+        env=flags)
 
 
 def check_readme_format(workdir, repo):
