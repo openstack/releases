@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: c45a7073733bed15992ef776303c7633d0b4aa18
+  - version: 11.0.0
+    projects:
+      - repo: openstack/sahara-extra
+        hash: c45a7073733bed15992ef776303c7633d0b4aa18
+    diff-start: 10.0.0
 branches:
   - name: stable/ussuri
     location: 11.0.0.0rc1

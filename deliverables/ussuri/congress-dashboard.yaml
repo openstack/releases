@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: e298ddce8a91bb88a2b8ef15777eed02e23c7365
+  - version: 6.0.0
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: e298ddce8a91bb88a2b8ef15777eed02e23c7365
+    diff-start: 5.0.0
 branches:
   - name: stable/ussuri
     location: 6.0.0.0rc1

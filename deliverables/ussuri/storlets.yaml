@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: 3e8f98f4b6295d9b570be590368b1108181bbfeb
+  - version: 5.0.0
+    projects:
+      - repo: openstack/storlets
+        hash: 3e8f98f4b6295d9b570be590368b1108181bbfeb
+    diff-start: 4.0.0.0rc1
 repository-settings:
   openstack/storlets: {}
 branches:

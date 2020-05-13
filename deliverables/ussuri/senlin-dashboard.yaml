@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 2da90bb62821e080df554aab36a11346839f29e6
+  - version: 1.0.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 2da90bb62821e080df554aab36a11346839f29e6
+    diff-start: 0.11.0
 branches:
   - name: stable/ussuri
     location: 1.0.0.0rc1

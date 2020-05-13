@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: 08e0830f356f80aa4e0797aa877943cd319fae5c
+  - version: 5.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: 08e0830f356f80aa4e0797aa877943cd319fae5c
+    diff-start: 4.0.0
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1

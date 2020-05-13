@@ -21,6 +21,11 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 256f3a65a3425d385a8e0afffa0b376e09347326
+  - version: 2.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 256f3a65a3425d385a8e0afffa0b376e09347326
+    diff-start: 1.1.0
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 92c934a8e3c2f726e7f1b845f39c5436d870fd6c
+  - version: 9.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 92c934a8e3c2f726e7f1b845f39c5436d870fd6c
+    diff-start: 8.0.0
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1

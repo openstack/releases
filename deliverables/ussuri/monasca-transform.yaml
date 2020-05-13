@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/monasca-transform
         hash: cffdf512c3bdf690a6f10693017f7cb44e92d727
+  - version: 1.0.0
+    projects:
+      - repo: openstack/monasca-transform
+        hash: cffdf512c3bdf690a6f10693017f7cb44e92d727
+    diff-start: 0.18.0
 branches:
   - name: stable/ussuri
     location: 1.0.0.0rc1

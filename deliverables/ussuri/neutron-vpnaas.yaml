@@ -19,6 +19,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 3bf327fd5cc6bd08930d5046eff37bb7c204505f
+  - version: 16.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 3bf327fd5cc6bd08930d5046eff37bb7c204505f
+    diff-start: 15.0.0
 branches:
   - name: stable/ussuri
     location: 16.0.0.0rc1

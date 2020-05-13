@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: e5f601a35082a654f057544d582edbf1eeb44f42
+  - version: 5.0.0
+    projects:
+      - repo: openstack/zun
+        hash: e5f601a35082a654f057544d582edbf1eeb44f42
+    diff-start: 4.0.0
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: dcc33690b70d8a4cf75444f09d7872860da7e56f
+  - version: 10.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: dcc33690b70d8a4cf75444f09d7872860da7e56f
+    diff-start: 9.0.0
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 7b14d983e0dce6dcffe9781b05c52335b8203fc7
+  - version: 10.0.0
+    projects:
+      - repo: openstack/barbican
+        hash: 7b14d983e0dce6dcffe9781b05c52335b8203fc7
+    diff-start: 9.0.0
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1

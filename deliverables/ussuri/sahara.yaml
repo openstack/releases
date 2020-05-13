@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: a6ee52234382f8c52023796ed13cb3cdc8521098
+  - version: 12.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: a6ee52234382f8c52023796ed13cb3cdc8521098
+    diff-start: 11.0.0.0rc1
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1
