@@ -2,7 +2,7 @@
 Ussuri
 ======
 
-Projected Release Date: 13 May, 2020
+Originally Released: 13 May, 2020
 
 .. toctree::
    :maxdepth: 1
