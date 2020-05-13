@@ -145,7 +145,7 @@ fi
 
 set -e
 
-cache_remote="$CACHE_DIR/$REPO"
+cache_remote="$CACHE_DIR/opendev.org/$REPO"
 if [ ! -d "$cache_remote" ]; then
     echo "WARNING: Cache directory $cache_remote does not exist, ignoring."
     cache_remote=""
