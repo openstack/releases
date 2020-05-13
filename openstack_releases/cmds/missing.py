@@ -12,9 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Look for releases listed in a series but not actually tagged.
-
-"""
+"""Look for releases listed in a series but not actually tagged."""
 
 import argparse
 import glob
@@ -142,25 +140,26 @@ def main():
                         print('  apparently not a python module')
                         continue
 
-                    wheel_2_errors = list(
+                    wheel_errors = list(
                         check_url(
-                            'python 2 wheel',
-                            links.wheel_py2_url(version, project)
+                            'python 3 wheel',
+                            links.wheel_py3_url(version, project)
                         )
                     )
-                    wheel_both_errors = list(
-                        check_url(
-                            'python 2/3 wheel',
-                            links.wheel_both_url(version, project)
+                    has_23_wheel = False
+                    if wheel_errors:
+                        has_23_wheel = True
+                        # Check if there is actually a 2/3 wheel
+                        wheel_errors = list(
+                            check_url(
+                                'python 2/3 wheel',
+                                links.wheel_both_url(version, project)
+                            )
                         )
-                    )
-                    # We only expect to find one wheel. Look for both,
-                    # and minimize what we report as errors.
-                    if wheel_2_errors and wheel_both_errors:
-                        # We have neither wheel.
-                        errors.extend(wheel_2_errors)
-                        errors.extend(wheel_both_errors)
-                    elif not wheel_both_errors:
+                    if wheel_errors:
+                        # We are missing the wheel.
+                        errors.extend(wheel_errors)
+                    elif has_23_wheel:
                         # We have the "both" wheel, so check for the
                         # signature file.
                         errors.extend(
@@ -170,13 +169,13 @@ def main():
                                                      project) + '.asc',
                             )
                         )
-                    elif not wheel_2_errors:
-                        # We have the py2 wheel, so check for the
+                    else:
+                        # We have the py3 wheel, so check for the
                         # signature file.
                         errors.extend(
                             check_url(
-                                'python 2 wheel signature',
-                                links.wheel_py2_url(version,
+                                'python 3 wheel signature',
+                                links.wheel_py3_url(version,
                                                     project) + '.asc',
                             )
                         )
