@@ -30,5 +30,6 @@ branches:
   - name: stable/ussuri
     location: 16.3.0
 cycle-highlights:
-  - Puppet OpenStack can now bootstrap Keystone using
-    an admin password instead of using the legacy admin token.
+  - Puppet OpenStack can now bootstrap Keystone using an admin password
+    instead of using the legacy admin token.
+release-notes: https://docs.openstack.org/releasenotes/puppet-keystone/ussuri.html
