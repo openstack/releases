@@ -21,6 +21,7 @@ def link_exists(url):
         response = requests.head(
             url,
             headers={'user-agent': 'openstack-release-link-checker'},
+            allow_redirects=True,
         )
         missing = (
             (response.status_code // 100 != 2) or
@@ -43,10 +44,10 @@ def tarball_url(version, project):
     )
 
 
-def wheel_py2_url(version, project):
+def wheel_py3_url(version, project):
     repo_base = project.repo.base_name
     base = project.tarball_base or repo_base
-    return '{s}/{r}/{n}-{v}-py2-none-any.whl'.format(
+    return '{s}/{r}/{n}-{v}-py3-none-any.whl'.format(
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
