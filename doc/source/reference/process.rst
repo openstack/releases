@@ -1340,22 +1340,15 @@ R+0 week (Final Release)
 
    If there are any missing deliverables, fix them.
 
-#. Mark series as released on releases.o.o, by updating doc/source/index.rst
-   and doc/source/$series/index.rst.
-   See https://review.opendev.org/#/c/381006 for an example.
+#. Mark series as released on releases.o.o, by updating
+   ``doc/source/$series/index.rst``, ``data\series_status.yaml``,  and
+   changing the default series in ``openstack_releases/default.py``..
+
+   See https://review.opendev.org/#/c/727746 for an example.
 
    .. note::
 
       This item can be staged as a patch on top of the final release patch.
-
-#. Update the default series name in
-   ``openstack/releases/openstack_releases/defaults.py`` to use the
-   new series name.
-
-   .. note::
-
-      This item can be staged as a patch on top of the previous patch.
-      Only workflow when previous step *fully* ready
 
 #. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
