@@ -23,3 +23,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ansible
         hash: 2a66695dbdea9f8039b5b2e04976deef37187911
+  - version: 1.4.0
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: 60e59345b88631d247970afcb46ce21f10c1bc81
+branches:
+  - location: 1.4.0
+    name: stable/ussuri

@@ -19,3 +19,10 @@ releases:
     projects:
       - repo: openstack/paunch
         hash: b2a8afb7700653ee578262406a9ff8e75d1ff444
+  - version: 7.0.0
+    projects:
+      - repo: openstack/paunch
+        hash: a838a69c4f78686c3f471c79b766c427b5f2a6e8
+branches:
+  - location: 7.0.0
+    name: stable/ussuri

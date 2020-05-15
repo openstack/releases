@@ -19,3 +19,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 9972cf40f28782da7dc64fc5d84acef659cf69a6
+  - version: 12.3.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: c335e50409ea78e405585ee52482711c9f42bffc
+branches:
+  - location: 12.3.0
+    name: stable/ussuri
