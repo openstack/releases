@@ -7,3 +7,8 @@ repository-settings:
   openstack/kuryr-tempest-plugin: {}
 team: kuryr
 type: tempest-plugin
+releases:
+  - version: 0.6.0
+    projects:
+      - repo: openstack/kuryr-tempest-plugin
+        hash: f3e5484218fbf357f317a947625da97a51e46d65
