@@ -227,6 +227,8 @@ def main():
                 continue
             if deliv.name == 'release-test':
                 continue
+            if deliv.stable_branch_type is None:
+                continue
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
         if args.unreleased and (deliv.is_released or not deliv.is_releasable):

@@ -584,7 +584,8 @@ class Deliverable(object):
 
     @property
     def stable_branch_type(self):
-        return self._data.get('stable-branch-type', 'std')
+        branch_type = self._data.get('stable-branch-type', 'std')
+        return None if branch_type == 'none' else branch_type
 
     @property
     def cycle_highlights(self):
