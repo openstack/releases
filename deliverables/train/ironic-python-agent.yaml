@@ -23,6 +23,10 @@ releases:
     projects:
       - hash: 205f89a944ab47da44aa9e16417c21ee314b6da0
         repo: openstack/ironic-python-agent
+  - projects:
+      - repo: openstack/ironic-python-agent
+        hash: 7bad00cfe94198f83fd41d92b721ccae3d848036
+    version: 5.0.2
 branches:
   - location: 5.0.0
     name: stable/train
