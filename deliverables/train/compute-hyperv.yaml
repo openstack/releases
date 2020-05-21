@@ -19,6 +19,10 @@ releases:
       - repo: openstack/compute-hyperv
         hash: 0d9f5310941c6278e9416a7f8e25375565485108
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 2070a6c798a3eeea32de2751f4088e460f2e0f6a
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
