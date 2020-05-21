@@ -23,3 +23,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: 3614cdf8d3e2c0da93f1a28610dc6b1ddf4fba61
+  - version: 12.4.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: 2f86b6bcb958d75f576ba20e3fc531efe2af7ee1
+branches:
+  - location: 12.4.0
+    name: stable/ussuri
