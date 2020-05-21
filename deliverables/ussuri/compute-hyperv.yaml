@@ -19,6 +19,10 @@ releases:
       - repo: openstack/compute-hyperv
         hash: d44995425f48cfcb85e0289d624d1ecddbd956d8
     diff-start: 9.0.0.0rc1
+  - version: 10.0.1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 4ad05407b199fc844ba4716f6e5e62f453374343
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
