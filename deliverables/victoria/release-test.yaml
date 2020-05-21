@@ -3,7 +3,12 @@ launchpad: nova
 team: Release Management
 type: other
 release-type: python-pypi
-release-model: cycle-with-rc
+release-model: cycle-with-intermediary
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/release-test
+        hash: f0d941dcfcc216a90445f5d11907a47e47a363e2
