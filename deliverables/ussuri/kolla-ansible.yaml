@@ -5,4 +5,12 @@ team: kolla
 type: other
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - hash: d15bf7d62f58ca373cc384f97c917c808f6230c3
+        repo: openstack/kolla-ansible
+branches:
+  - name: stable/ussuri
+    location: 10.0.0.0rc1
 # Note: deliverable was not released in train
