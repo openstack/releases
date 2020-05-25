@@ -47,6 +47,10 @@ releases:
       - hash: 6bae6789e24f1cb35413b5d89af6ad491b75f161
         repo: openstack/neutron
     version: 14.1.0
+  - version: 14.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: bc8c38bda821b0fd989b221dbd9fedb9e3a3d9a2
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein
