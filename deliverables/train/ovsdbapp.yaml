@@ -22,6 +22,10 @@ releases:
       - hash: df707485c1176b04b2056029e0180eada4f045ab
         repo: openstack/ovsdbapp
     version: 0.17.2
+  - version: 0.17.3
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 9bb0eee28608d554076a1d9273c607afe0a5e0c3
 branches:
   - name: stable/train
     location: 0.17.0
