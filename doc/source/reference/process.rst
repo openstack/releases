@@ -480,6 +480,9 @@ Between Milestone-2 and Milestone-3
 R-8 week
 ========
 
+#. Make sure the next development series name has been added to the
+   ``data/series_status.yaml`` file.
+
 #. Send the following weekly email content::
 
     Development Focus
@@ -555,6 +558,18 @@ R-7 week (Extra-ATC deadline week)
    begin the attestation process.
 
    .. _generate an artifact signing key: https://docs.openstack.org/infra/system-config/signing.html#generation
+
+#. Check with the Technical Committee to make sure Python runtimes have been
+   determined for the next development cycle and that Zuul job templates have
+   been created to include those runtimes.
+
+   The upcoming release deadlines may include the creation of stable branches.
+   When that branching is performed, automated patches will be proposed to the
+   master branch of those repos to switch them over to the next cycle's job
+   template. If the template is not defined yet, those patches will get a Zuul
+   error. A recheck of failed patches will clear that up once the template is
+   defined, but it is best if any errors can be avoided to make sure the
+   patches get approved in a timely manner.
 
 #. Send the following weekly email content::
 
