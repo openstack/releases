@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 3ff497d1cf0dbb4c78babacc32a02b0b2bacd328
+  - version: 3.44.2
+    projects:
+      - repo: openstack/oslo.log
+        hash: 65ee5f5bbb3ec759bfa1bf1dbccb02c3b348bad0
 branches:
   - name: stable/train
     location: 3.44.1
