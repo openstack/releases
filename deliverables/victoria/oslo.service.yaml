@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.service: {}
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/oslo.service
+        hash: a61c15db2fd974c77bab91e06d2f6e7012c6f409
