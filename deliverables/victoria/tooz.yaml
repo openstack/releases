@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/tooz: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/tooz
+        hash: 94bf257392a759cf9dd00ff4a0971e7aef663b94
