@@ -33,6 +33,10 @@ releases:
       - hash: 7c5f8362b26313217b6c248e77be3dc8e2ef74a5
         repo: openstack/oslo.log
     version: 3.42.3
+  - version: 3.42.4
+    projects:
+      - repo: openstack/oslo.log
+        hash: 19fd9a2e2a283705552cb2c1f53c229b6ecf85e1
 branches:
   - location: 3.42.3
     name: stable/stein

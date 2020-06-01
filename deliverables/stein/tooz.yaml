@@ -27,6 +27,10 @@ releases:
       - hash: d55449258a0e73c9d38cba5a02120c6a8d5ea4d9
         repo: openstack/tooz
     version: 1.64.2
+  - version: 1.64.3
+    projects:
+      - repo: openstack/tooz
+        hash: 8ddcd6fd0800379474e00590c4317e217a662627
 branches:
   - location: 1.64.2
     name: stable/stein
