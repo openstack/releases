@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 2aaf7b08a651a3360755f6401b78dcb77a13bfb9
+  - version: 4.1.2
+    projects:
+      - repo: openstack/oslo.log
+        hash: a67f7b5ce5b956918640784d9a180873676d5820
 branches:
   - name: stable/ussuri
     location: 4.1.1
