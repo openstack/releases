@@ -2221,6 +2221,54 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
+    def test_std_with_versions_stable_branch_type(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: std-with-versions
+        releases:
+          - version: 99.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/99.0
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_stable_branches(deliv, self.ctx)
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_std_with_versions_normal_stable_branch_type(self):
+        deliverable_data = textwrap.dedent('''
+        stable-branch-type: std-with-versions
+        releases:
+          - version: 99.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/ocata
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='ocata',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_stable_branches(deliv, self.ctx)
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
     def test_tagless_stable_branch_type_bad_location_type(self):
         deliverable_data = textwrap.dedent('''
         stable-branch-type: tagless

@@ -403,6 +403,14 @@ The top level of a deliverable file is a mapping with keys:
     associated with the version (as identified by the deliverable
     file) will be branched from that version using the name given.
 
+  ``std-with-versions``
+    This mode has the same meaning as the ``std`` branch type, with the
+    addition that version-based branches can be created as well.
+
+    These version-based branches are shorter term stable branches that
+    are named for the major and minor version number (e.g. stable/3.1).
+    This is primarily used for Ironic releases.
+
   ``tagless``
     This mode requires stable branch locations to be a mapping between
     repository name and an existing commit, specified by the

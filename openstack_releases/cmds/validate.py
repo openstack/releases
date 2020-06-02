@@ -1512,7 +1512,7 @@ def validate_stable_branches(deliv, context):
 
         location = branch.location
 
-        if branch_mode == 'std':
+        if branch_mode == 'std' or branch_mode == 'std-with-versions':
             if not isinstance(location, six.string_types):
                 context.error(
                     ('branch location for %s is '
@@ -1613,11 +1613,22 @@ def validate_stable_branches(deliv, context):
 
         else:
             if series != deliv.series:
-                context.error(
-                    ('cycle-based projects must match series names '
-                     'for stable branches. %s should be stable/%s' % (
-                         branch.name, deliv.series))
-                )
+                if branch_mode == 'std-with-versions':
+                    # Not a normal stable branch, so it must be a version
+                    # branch (stable/3.1)
+                    expected_version = '.'.join(location.split('.')[0:2])
+                    if series != expected_version:
+                        context.error(
+                            'cycle-based projects must match series names '
+                            'for stable branches, or branch based on version '
+                            'for short term support. %s should be stable/%s '
+                            'or stable/%s' % (
+                                branch.name, deliv.series, expected_version))
+                else:
+                    context.error(
+                        'cycle-based projects must match series names '
+                        'for stable branches. %s should be stable/%s' % (
+                            branch.name, deliv.series))
 
 
 def validate_feature_branches(deliv, context):
