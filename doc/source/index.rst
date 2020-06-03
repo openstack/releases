@@ -46,8 +46,17 @@ updates.
    austin/index
    releases/*
 
-Note: The schedule of `Maintenance phases`_ changed during Ocata.
-The `old phases`_ were used until Newton.
+.. note::
+   The schedule of `Maintenance phases`_ changed during Ocata.
+   The `old phases`_ were used until Newton.
+
+.. _extended-maintenance-note:
+
+.. note::
+   If a branch is marked as Extended Maintenance, that means individual
+   projects can be in state *Maintained*, *Unmaintained* or *End of Life* on
+   that branch. Please check specific project about its actual status on the
+   given branch.
 
 .. _Maintenance phases: https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
 .. _old phases: https://github.com/openstack/project-team-guide/blob/1c837bf0~/doc/source/stable-branches.rst
