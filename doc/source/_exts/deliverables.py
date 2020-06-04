@@ -467,13 +467,19 @@ class HighlightsDirective(rst.Directive):
             LOG.debug('[highlights] rendering %s highlights for %s',
                       team.title(), series)
 
-            tdata = _GOV_DATA.get_team(team)
+            tdata = None
+            try:
+                tdata = GOV_DATA.get_team(team)
+            except:
+                # Team may have moved out of governance
+                pass
+
             title = team.title()
-            if tdata.service:
+            if tdata and tdata.service:
                 title = "{} - {}".format(title, tdata.service)
             result.append(title, source_name)
             result.append('-' * len(title), source_name)
-            if tdata.mission:
+            if tdata and tdata.mission:
                 result.append(tdata.mission, source_name)
                 result.append('', source_name)
             result.append('**Notes:**', source_name)
