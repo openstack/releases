@@ -12,6 +12,8 @@ branches:
     location: 4.0.0
   - name: stable/train
     location: 5.0.0
+  - name: stable/ussuri
+    location: 6.0.0
 releases:
   - projects:
       - hash: 0f37163303a00936b56522e2cc3310e38b87a343
@@ -33,6 +35,10 @@ releases:
       - hash: 4d189c08d4cbc67312ebb902e61f077713a9905e
         repo: openstack/tripleo-upgrade
     version: 5.0.0
+  - projects:
+      - hash: f7b2a5bf1fb124f44098d9af3359629a532f6754
+        repo: openstack/tripleo-upgrade
+    version: 6.0.0
 team: tripleo
 type: other
 repository-settings:
