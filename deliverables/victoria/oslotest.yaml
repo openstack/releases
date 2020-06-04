@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslotest: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslotest
+        hash: 5a0d3c2fa53061953a783edf2aac1def983fa8e0
