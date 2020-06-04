@@ -57,7 +57,7 @@ properties:
             "manila-image-elements", "generic" ]
   stable-branch-type:
     type: "string"
-    enum: [ "std", "tagless", "upstream", "none" ]
+    enum: [ "std", "tagless", "upstream", "none", "std-with-versions" ]
   cycle-highlights:
     type: "array"
     items:
