@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 07f068d8a2bf8420a419f806a22012ed8419d029
+  - version: 2.23.1
+    projects:
+      - repo: openstack/oslo.context
+        hash: ab17aef5735bcb242889f610d2165d46b380f7cc
 branches:
   - name: stable/train
     location: 2.23.0
