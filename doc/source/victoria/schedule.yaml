@@ -32,6 +32,8 @@ cycle:
 - end: '2020-07-03'
   name: R-15
   start: '2020-06-29'
+  project-specific:
+    - v-cinder-spec-freeze
 - end: '2020-07-10'
   name: R-14
   start: '2020-07-06'
@@ -49,6 +51,8 @@ cycle:
   x-project:
     - v-2
   project-specific:
+    - v-cinder-driver-deadline
+    - v-cinder-target-driver-deadline
     - v-manila-new-driver-deadline
 - end: '2020-08-07'
   name: R-10
@@ -62,6 +66,8 @@ cycle:
   name: R-8
   start: '2020-08-17'
   project-specific:
+    - v-cinder-feature-checkpoint
+    - v-cinder-driver-features-declaration
     - v-manila-fpfreeze
 - end: '2020-08-28'
   name: R-7
@@ -83,6 +89,8 @@ cycle:
     - v-soft-sf
     - v-rf
     - v-goals-complete
+  project-specific:
+    - v-cinder-ci-checkpoint
 - end: '2020-09-18'
   name: R-4
   start: '2020-09-14'

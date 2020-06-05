@@ -188,6 +188,81 @@ Germany.
 Project-specific events
 =======================
 
+Cinder
+------
+
+.. _v-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in Victoria must be approved by
+Wednesday 1 July 2020 (23:59 UTC).
+
+.. _v-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the Victoria
+release is Thursday 30 July 2020 (23:59 UTC).  New drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.  (The idea is that new drivers will
+be included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _v-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the Victoria release
+is Thursday 30 July 2020 (23:59 UTC).  New target drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.  (The idea is that new drivers will
+be included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _v-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in three weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 10 September.  Keep
+in mind that 7 September is a holiday for many Cinder core reviewers, so we
+will have reduced bandwith around the time of the Feature Freeze.  So please
+plan ahead.
+
+.. _v-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in three weeks.  During this
+week, you should post a blueprint in Launchpad listing the Gerrit reviews of
+features you'd like to land in Victoria.  (You can look among the Ussuri
+blueprints for examples; contact the PTL if you have any questions.)  This will
+help the team prioritize reviews and give you candid early feedback on whether
+the features look ready.  Due to the 7 September holiday in the USA, there will
+be reduced reviewing bandwidth right around the Feature Freeze, so it will pay
+to plan ahead.
+
+.. _v-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the Victoria release, its third party CI must be running
+properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
+
 Manila
 ------
 
