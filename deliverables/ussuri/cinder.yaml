@@ -33,6 +33,10 @@ releases:
       - repo: openstack/cinder
         hash: cc9014ab4298a4509fd6139fe5b9ca4c7c69120d
     diff-start: 15.0.0.0rc1
+  - version: 16.1.0
+    projects:
+      - repo: openstack/cinder
+        hash: 20a3cab7ddd9555eaa0406f539d491308f18e4e9
 repository-settings:
   openstack/cinder: {}
 branches:
