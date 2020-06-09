@@ -11,3 +11,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: fe4dea965dd72ec85a70a09c708160457dcd92e3
+      - repo: openstack/kayobe-config
+        hash: 96cea012cfa5030b1df6e6fe13fa436d1095cba2
+      - repo: openstack/kayobe-config-dev
+        hash: 0460b0b73956d74d0d82f485b0d4fc0a6956ff92
+branches:
+  - name: stable/ussuri
+    location: 8.0.0.0rc1
