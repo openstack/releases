@@ -16,6 +16,10 @@ releases:
       - repo: openstack/designate-dashboard
         hash: 410e06916bd54865ad3daa6eac7fe75d6828c42f
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 51a44589c2f59fca73ed8b1f3933c5d6cffae50c
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
