@@ -15,6 +15,10 @@ releases:
       - hash: aaa4ae8bf8ee7b50a3666f27e30444abd67b3b82
         repo: openstack/zun
     diff-start: 3.0.0.0rc1
+  - version: 4.0.1
+    projects:
+      - repo: openstack/zun
+        hash: 25e566361ee654d9ebfb086341ff5c20ac84823a
 branches:
   - location: 4.0.0.0rc1
     name: stable/train
