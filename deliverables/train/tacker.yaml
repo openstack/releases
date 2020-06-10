@@ -20,6 +20,10 @@ releases:
       - repo: openstack/tacker
         hash: e4c7805f9b38533b42e23bc2f1e6d9c2d2e38944
     diff-start: 1.0.0.0rc1
+  - version: 2.0.1
+    projects:
+      - repo: openstack/tacker
+        hash: a758d828ae8d2cf011ee20d5cba2daef80b9bad3
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
