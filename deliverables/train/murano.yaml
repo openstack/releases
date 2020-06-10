@@ -15,6 +15,10 @@ releases:
       - repo: openstack/murano
         hash: 31c624716be0ac55e5a5a749fa0c94888f70adc8
     diff-start: 7.0.0.0rc1
+  - version: 8.1.0
+    projects:
+      - repo: openstack/murano
+        hash: 9718a527430101b6c07af056668dc34bcecf5ff9
 branches:
   - name: stable/train
     location: 8.0.0.0rc1
