@@ -15,6 +15,10 @@ releases:
       - repo: openstack/zaqar
         hash: f54699926d1d4d2a600e65f811343a86128e5c31
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/zaqar
+        hash: 15a8ad7b3939ac958cd6d65ea908a667c240febb
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
