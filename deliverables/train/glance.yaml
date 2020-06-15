@@ -43,6 +43,10 @@ releases:
       - repo: openstack/glance
         hash: 521de9b6ed0c9c9fb0dcd4be43cfee4b56556e1a
     diff-start: 18.0.0
+  - version: 19.0.3
+    projects:
+      - repo: openstack/glance
+        hash: 3e16bc7d40922f4e6176486b5e7af42989a50774
 branches:
   - name: stable/train
     location: 19.0.0.0rc1
