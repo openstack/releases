@@ -91,7 +91,7 @@ Week before milestone-1
    the command::
 
      tox -e venv -- list-deliverables --series $LASTSERIES \
-         --model cycle-trailing --missing-final
+         --type trailing --missing-final
 
 #. At the end of the week, send the following weekly email content::
 
