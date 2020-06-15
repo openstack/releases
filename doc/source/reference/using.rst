@@ -679,13 +679,14 @@ the PTL and all release liaisons.
 This is designed to be used by the release team at key points in the cycle to
 ease bulk releases.
 
-  .. note::
+.. note::
 
-     This tool will commit ultimately commit all modified deliverables and
-     modifies git state.  Therefore it is essential that befoer running it
-     the working tree contains only the logical changes appropriate for the
-     stage of the release *and* all changes are saved elsewhere, in case the
-     script encounters a problem.
+  This tool will commit ultimately commit all modified deliverables and
+  modifies git state.  Therefore it is essential that before running it
+  the working tree contains only the logical changes appropriate for the
+  stage of the release *and* all changes are saved elsewhere, in case the
+  script encounters a problem.
+
 
 tools/make_missing_releases.sh
 ------------------------------
@@ -694,6 +695,41 @@ A wrapper script around ``new-release`` designed to be run by the release team
 to create releases at appropriate times in the release cycle, e.g milestones.
 Once ``tools/make_missing_releases.sh`` completes the release manager can use
 ``tools/bulk_review.sh`` to submit the release requests.
+
+toos/process_auto_releases.sh
+-----------------------------
+
+Automates parts of the process to propose releases for a large set of
+deliverables.
+
+There are multiple points during the release cycle where the release team
+needs to initiate releases for library releases, tagging RCs, or other cases
+where we need to inspect each deliverable in a set to generate release
+requests.
+
+This tool asks for input on a few common settings to use for the releases. A
+template commit message is entered on the command line, using the placeholder
+of PROJECT that will be replaced by the actual deliverable name. It then
+iterates through a set of deliverables and shows any commits to the relevant
+repos that have not been included in a release yet. You are then able to
+decide whether it needs to be released and select the release type
+(major, minor, bugfix, rc, etc.) based on the included commits.
+
+This can be used in conjunction with the ``list-deliverables`` command to get
+the specific deliverables to process. An example use would be::
+
+   ./tools/process_auto_releases.sh ussuri $(list-deliverables --unreleased --series ussuri)
+
+As an alternative, it may be useful to be able to edit the list of deliverables
+before running the command. That can be done by something similar to::
+
+   tox -e venv -- list-deliverables --unreleased --series ussuri > deliverables.log
+   vi deliverables.log  # edit contents as needed
+   ./tools/process_auto_releases.sh ussuri $(cat deliverables.log)
+
+Unlike make_missing_releases.sh, this script will create fresh temporary clones
+of each repo to avoid stale information, and it will submit each new release
+request as it goes.
 
 tools/releases_note_links.sh
 ------------------------------
