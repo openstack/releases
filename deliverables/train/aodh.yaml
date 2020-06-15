@@ -15,6 +15,10 @@ releases:
       - repo: openstack/aodh
         hash: 670267b9603684b4019abdd8bc7fd2303a1e66a6
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/aodh
+        hash: 5415b96d1e58615fa80fee2eb74dc9cda90d8e2a
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
