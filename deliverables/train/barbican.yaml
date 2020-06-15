@@ -15,6 +15,10 @@ releases:
       - repo: openstack/barbican
         hash: 2a6fc155d232763a44ebe886f70fdde2a0030a62
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/barbican
+        hash: 07be1986b44191600de8b9bf919bef395c3a8613
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
