@@ -27,6 +27,10 @@ releases:
       - hash: cd396b8b61ed7496f4166a2237b27aa0a138f6e5
         repo: openstack/python-novaclient
     version: 15.1.0
+  - version: 15.1.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 79959abc90bc615687e3a940951ad9ec548178ec
 branches:
   - name: stable/train
     location: 15.1.0
