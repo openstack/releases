@@ -29,6 +29,10 @@ releases:
       - repo: openstack/trove
         hash: 6bfa510194e3cf30c8c03446d435edd87c1b4d23
     diff-start: 11.0.0
+  - version: 12.1.0
+    projects:
+      - repo: openstack/trove
+        hash: d8b5525fd2a544c264a86edcd0d3493709f262af
 branches:
   - name: stable/train
     location: 12.0.0.0rc1
