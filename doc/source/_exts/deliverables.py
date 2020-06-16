@@ -69,7 +69,7 @@ def _list_table(add, headers, data, title='', columns=None):
 def _get_category(deliv):
     model = deliv.model
     if model == 'cycle-trailing':
-        return 'cycle-trailing'
+        return 'trailing'
     if model == 'abandoned':
         return 'abandoned'
     return deliv.type
@@ -103,7 +103,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'library',
         'horizon-plugin',
         'other',
-        'cycle-trailing',
+        'trailing',
         'tempest-plugin',
         'abandoned',
     ]
@@ -196,7 +196,7 @@ class DeliverableDirectiveBase(rst.Directive):
         'library': 'Library Projects',
         'client-library': 'Service Client Projects',
         'other': 'Other Projects',
-        'cycle-trailing': 'Deployment and Packaging Tools',
+        'trailing': 'Deployment and Packaging Tools',
         'tempest-plugin': 'Tempest Plugins',
         'abandoned': 'End-of-life deliverables',
     }

@@ -78,7 +78,7 @@ def main():
         '--all',
         default=False,
         action='store_true',
-        help='process all deliverables, including release:cycle-trailing',
+        help='process all deliverables, including cycle-trailing ones',
     )
     parser.add_argument(
         '--verbose', '-v',
@@ -150,7 +150,7 @@ def main():
 
         verbose('\n{} {}'.format(deliv.name, deliv.model))
 
-        if deliv.model == 'cycle-trailing':
+        if (deliv.model == 'cycle-trailing' or deliv.type == 'trailing'):
             verbose('#  {} is a cycle-trailing project'.format(
                 deliv.name))
             if not args.all:

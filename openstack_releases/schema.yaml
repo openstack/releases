@@ -33,7 +33,7 @@ properties:
     enum: ["cycle-with-intermediary", "cycle-with-milestones", "cycle-trailing", "untagged", "cycle-with-rc", "cycle-automatic", "abandoned"]
   type:
     type: "string"
-    enum: ["horizon-plugin", "library", "client-library", "service", "tempest-plugin", "other"]
+    enum: ["horizon-plugin", "library", "client-library", "service", "tempest-plugin", "other", "trailing"]
   artifact-link-mode:
     type: "string"
     enum: ["tarball", "none"]

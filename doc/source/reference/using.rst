@@ -255,8 +255,7 @@ that deliverable. For each deliverable, we need to track:
 
 * cycle highlights that will be published to
   ``releases.openstack.org/$SERIES/highlights.html`` (optional, and for
-  cycle-with-intermediary, cycle-with-rc, and cycle-trailing projects
-  only)
+  cycle-with-intermediary and cycle-with-rc projects only)
 * the starting points of all branches
 
 We track this metadata for the history of all releases of the

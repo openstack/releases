@@ -3,37 +3,44 @@
 ================
 
 Development in OpenStack is organized around 6-month cycles (like
-"kilo").  At the end of every 6-month cycle a number of projects
-release at the same time, providing a convenient reference point for
-downstream teams (stable branch maintenance, vulnerability management)
-and downstream users (in particular packagers of OpenStack
-distributions).
+"kilo").  At the end of every 6-month cycle, a synchronized release
+of all OpenStack components is produced, along with a common stable
+branch, providing a convenient reference point for downstream teams
+(stable branch maintenance, vulnerability management) and downstream
+users (in particular packagers of OpenStack distributions).
 
-This "final" release may be the only release of the development cycle,
-in which case the project publishes intermediary "development
-milestones" on a time-based schedule during the cycle. Or the project
-may release more often and make intermediary releases in the middle of
-the cycle. Other projects trail the main release deadline, waiting for
-the final releases of components on which they rely.
+Most deliverables follow the cycle. If their "final" release is their
+only release of the development cycle, they can produce release
+candidates in the final stages of the release cycle (`cycle-with-rc`_
+release model). Otherwise they can opt to release directly and
+whenever appropriate (`cycle-with-intermediary`_ release model).
 
-A given deliverable can't have more than one model. It therefore must
-choose between one of the following models. A number of rules apply
-based on what the deliverable is and which bucket of the OpenStack map
-it falls in:
+The deadline for producing this "final" release varies depending on
+the type of the deliverable. In a development cycle, non-client
+libraries ("library" type) are first, then client libraries
+("client-library" type), then services and other main deliverables
+("service" and "other" types), then release-trailing deliverables
+("trailing" type).
+
+Finally, some deliverables that are generally useful and not strictly
+tied to the OpenStack development cycle can release independently
+from it using the `independent`_ release model.
+
+A number of rules apply based on what the deliverable is and which
+bucket of the OpenStack map it falls in:
 
 * Components appearing in the *openstack* bucket in the `OpenStack map`_
-  form the main components of an OpenStack cloud, and therefore should follow
+  form the main components of an OpenStack cloud, and therefore must follow
   the release cycle. They need to pick between `cycle-with-rc`_
   or `cycle-with-intermediary`_ models.
-* Libraries cannot use RCs or trail the release. They need to pick between
+* Libraries cannot use RCs. They need to pick between
   `cycle-with-intermediary`_ and `independent`_ release models. Libraries
   with strong ties to OpenStack should prefer the `cycle-with-intermediary`_
   model, while generally-useful libraries should prefer the `independent`_
   model.
-* Only deployment or lifecycle-management components are allowed to trail
-  the cycle. Therefore only components appearing in the
-  *openstack-lifecyclemanagement* bucket on the `OpenStack map`_ are
-  allowed to use the `cycle-trailing`_ model.
+* Trailing deliverables trail the release, so they cannot, by definition,
+  be independent. They need to pick between `cycle-with-rc`_ or
+  `cycle-with-intermediary`_ models.
 
 .. _`OpenStack map`: https://www.openstack.org/openstack-map
 
@@ -55,37 +62,6 @@ per-project need.
 * Release tags for deliverables using this tag are reviewed and applied by the
   Release Management team.
 
-.. _cycle-with-milestones:
-
-cycle-with-milestones (legacy)
-==============================
-
-.. note::
-
-   The cycle-with-milestones release model is no longer used and is kept here
-   for historical reference. Projects should now use cycle-with-rc.
-
-
-The "cycle-with-milestones" model described projects that produced a
-single release at the end of the cycle, with development milestones
-published at predetermined times in the cycle schedule.
-
-* "cycle-with-milestones" projects committed to publish development
-  milestones following a predetermined schedule published by the Release
-  Management team before the start of the 6-month cycle.
-* "cycle-with-milestones" projects committed to produce a release to
-  match the end of the 6-month development cycle.
-* Release tags for deliverables using this tag were reviewed and
-  applied by the Release Management team.
-* Projects using milestones were expected to tag at least 2 out of the
-  3 for each cycle, or risk being dropped as an official project. The
-  release team would remind projects that miss the first milestone, and
-  create tags on any later milestones for the project team by tagging
-  HEAD at the time of the deadline. If the release team force-created
-  2 tags for a project in the same given development cycle, the
-  project would be treated as inactive and the release team would
-  recommend dropping it from the official project list.
-
 .. _cycle-with-intermediary:
 
 cycle-with-intermediary
@@ -99,21 +75,6 @@ release to match the end of the cycle.
   release near the end of the 6-month development cycle to be used
   with projects using the other cycle-based release models that are
   required to produce a release at that time.
-* Release tags for deliverables using this tag are reviewed and
-  applied by the Release Management team.
-
-.. _cycle-trailing:
-
-cycle-trailing
-==============
-
-The "cycle-trailing" model is used by projects producing OpenStack
-packaging, installation recipes or lifecycle management tools. Those
-still do one release for every development cycle, but they can't
-release until OpenStack itself is released.
-
-* "cycle-trailing" projects commit to produce a release no later than
-  3 months after the main release.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
@@ -214,3 +175,61 @@ Projects created or added to governance after the second milestone
 should be released using the independent release model, and then
 changed to one of the cycle-based models at the start of the next
 cycle.
+
+Legacy release models
+=====================
+
+Those models were available in previous development cycles, but were
+replaced or abandoned.
+
+.. _cycle-trailing:
+
+cycle-trailing
+--------------
+
+.. note::
+
+   The cycle-trailing release model has been replaced by a specific
+   "trailing" deliverable type that can be applied to cycle-with-rc
+   or cycle-with-intermediary release models.
+
+The "cycle-trailing" model was used by projects producing OpenStack
+packaging, installation recipes or lifecycle management tools. Those
+still do one release for every development cycle, but they can't
+release until OpenStack itself is released.
+
+* "cycle-trailing" projects commit to produce a release no later than
+  3 months after the main release.
+* Release tags for deliverables using this tag are reviewed and
+  applied by the Release Management team.
+
+
+.. _cycle-with-milestones:
+
+cycle-with-milestones
+---------------------
+
+.. note::
+
+   The cycle-with-milestones release model has been replaced by the
+   cycle-with-rc model.
+
+The "cycle-with-milestones" model described projects that produced a
+single release at the end of the cycle, with development milestones
+published at predetermined times in the cycle schedule.
+
+* "cycle-with-milestones" projects committed to publish development
+  milestones following a predetermined schedule published by the Release
+  Management team before the start of the 6-month cycle.
+* "cycle-with-milestones" projects committed to produce a release to
+  match the end of the 6-month development cycle.
+* Release tags for deliverables using this tag were reviewed and
+  applied by the Release Management team.
+* Projects using milestones were expected to tag at least 2 out of the
+  3 for each cycle, or risk being dropped as an official project. The
+  release team would remind projects that miss the first milestone, and
+  create tags on any later milestones for the project team by tagging
+  HEAD at the time of the deadline. If the release team force-created
+  2 tags for a project in the same given development cycle, the
+  project would be treated as inactive and the release team would
+  recommend dropping it from the official project list.

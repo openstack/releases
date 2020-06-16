@@ -500,6 +500,8 @@ class Deliverable(object):
     def type(self):
         if 'tempest-plugin' in self.name:
             return 'tempest-plugin'
+        if self.model == 'cycle-trailing':
+            return 'trailing'
         return self._data.get('type', 'other')
 
     @property
