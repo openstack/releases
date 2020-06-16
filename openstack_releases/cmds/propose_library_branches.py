@@ -34,12 +34,6 @@ def main():
         help='do not remove temporary files',
     )
     parser.add_argument(
-        '--all',
-        default=False,
-        action='store_true',
-        help='process all deliverables, including release:cycle-trailing',
-    )
-    parser.add_argument(
         '--verbose', '-v',
         action='store_true',
         default=False,
