@@ -386,6 +386,8 @@ class TeamDirective(rst.Directive):
         all_series = reversed(sorted(
             _deliverables.get_team_series(self.team_name)
         ))
+        # If independent is in the list, it should be sorted last
+        all_series = sorted(all_series, key='independent'.__eq__)
 
         result = ViewList()
 
