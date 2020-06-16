@@ -2,7 +2,8 @@
 team: sahara
 type: tempest-plugin
 storyboard: 940
-release-model: cycle-automatic
+release-model: cycle-with-intermediary
+stable-branch-type: none
 release-type: python-pypi
 repository-settings:
   openstack/sahara-tests: {}
