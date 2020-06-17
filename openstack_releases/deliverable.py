@@ -117,6 +117,7 @@ class Deliverables(object):
         # Map team names to a set of all the series in which they
         # produced anything.
         self._team_series = collections.defaultdict(set)
+        self._active_teams = set()
         # Map team, series, and deliverable names to a list of the
         # deliverable files.
         self._by_team_and_series = collections.defaultdict(list)
@@ -156,6 +157,9 @@ class Deliverables(object):
         self._by_series[series].append(filename)
         self._team_deliverables[team].add(deliverable)
         self._team_series[team].add(series)
+        d = Deliverable(team, series, deliverable, d_info)
+        if d.allows_releases:
+            self._active_teams.add(team)
         deliv = self._deliverable_from_filename(filename)
         self._by_deliverable_name[deliv].append(filename)
 
@@ -170,6 +174,10 @@ class Deliverables(object):
     def get_teams(self):
         "Return all of the names of all of the teams seen."
         return list(self._team_series.keys())
+
+    def get_active_teams(self):
+        "Return the names of all teams which have releasable deliverables."
+        return self._active_teams
 
     def get_deliverables(self, team, series):
         """Return a sequence of deliverable data for the team and series.
