@@ -412,7 +412,7 @@ class TeamDirective(rst.Directive):
 
 
 def _generate_team_pages():
-    teams_with_deliverables = list(sorted(_deliverables.get_teams()))
+    teams_with_deliverables = list(sorted(_deliverables.get_active_teams()))
     for team_name in teams_with_deliverables:
         LOG.info('[team page] %s', team_name)
         slug = team_name.lower().replace('-', '_').replace(' ', '_')

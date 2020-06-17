@@ -64,7 +64,7 @@ updates.
 Series-Independent Releases
 ===========================
 
-Some projects are released independently from the OpenStack release series.
+Some deliverables are released independently from the OpenStack release series.
 You can find their releases listed here:
 
 .. toctree::
@@ -75,13 +75,16 @@ You can find their releases listed here:
 Teams
 =====
 
-Deliverables organized by the team that produces them.
+Deliverables are produced by `project teams`_. Here you can find all OpenStack
+deliverables, organized by the team that produces them:
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
    teams/*
+
+.. _project teams: https://governance.openstack.org/tc/reference/projects/index.html
 
 Cryptographic Signatures
 ========================
@@ -146,8 +149,8 @@ date ranges during which each key was in general use.
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
 
-References
-==========
+Documentation
+=============
 
 .. toctree::
    :maxdepth: 2
