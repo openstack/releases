@@ -164,18 +164,6 @@ two options: develop the new feature in a new library depending on the
 stable one, or grant an exception and switch it back to the
 `cycle-with-intermediary`_ model.
 
-Adding Deliverables
-===================
-
-In order to be considered to be included in the release for a given
-series, the project must be documented by adding a deliverable file to
-this repository before the second milestone of the series.
-
-Projects created or added to governance after the second milestone
-should be released using the independent release model, and then
-changed to one of the cycle-based models at the start of the next
-cycle.
-
 Legacy release models
 =====================
 
