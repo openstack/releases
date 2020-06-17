@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: f0d941dcfcc216a90445f5d11907a47e47a363e2
+  - version: 3.1.1
+    projects:
+      - repo: openstack/release-test
+        hash: 12c721461acfab86802cca7c3047fbb4d7e41377
 branches:
   - name: stable/3.1
     location: 3.1.0
