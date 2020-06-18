@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 type: library
 repository-settings:
   openstack/ovn-octavia-provider: {}
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 43bcbbea5eac84800b81618a1e4cba4024948908
