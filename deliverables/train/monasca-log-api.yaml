@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: 7977a033394fc47c06841858bc941c59d35e9e38
+  - version: 2.11.0
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: 2eaa1b58d08637f3e0f8a4ad634acf23ecf82ab1
 branches:
   - name: stable/train
     location: 2.10.0
