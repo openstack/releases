@@ -971,8 +971,9 @@ R-3 week (RC1 deadline)
      needs to have a RC1 anyway for preparing the final release.
 
    - cycle-with-intermediary deliverables that have not released yet, for
-     which a release should be proposed from HEAD, and include stable branch
-     creation. You can list those using::
+     which a release should be proposed from HEAD. Stable branch creation
+     should be included, unless the deliverable has specified the
+     'stable-branch-type: none' option. You can list those using::
 
        tox -e venv -- list-deliverables --unreleased \
        --model cycle-with-intermediary \
@@ -983,13 +984,6 @@ R-3 week (RC1 deadline)
      creation. You can list those using::
 
        tox -e venv -- list-deliverables --missing-rc --model cycle-with-rc
-
-   - cycle-automatic deliverables, for which a final release should be
-     proposed from HEAD (unless there is an existing release in the cycle
-     and no change was merged since). Those should **not** include stable
-     branch creation. You can list those using::
-
-       tox -e venv -- list-deliverables --model cycle-automatic
 
    - Those patches will be used as a base to communicate with the team:
      if a team wants to wait for a specific patch to make it to the release,

@@ -78,23 +78,6 @@ release to match the end of the cycle.
 * Release tags for deliverables using this tag are reviewed and
   applied by the Release Management team.
 
-.. _cycle-automatic:
-
-cycle-automatic
-===============
-
-The "cycle-automatic" model is used by specific technical deliverables
-that need to be automatically released once at the end of a cycle.
-Those may, optionally, also be released in the middle of the cycle.
-Those do not need a stable branch created. This may be applied only
-to "tempest-plugin" or "other" deliverables.
-
-* "cycle-automatic" deliverables will be automatically released by the
-  release team once at the end of a cycle, using the current HEAD of the
-  repository. No stable branch will be automatically created.
-* Release tags for deliverables using this model are reviewed and
-  applied by the Release Management team.
-
 .. _independent:
 
 independent
@@ -201,6 +184,28 @@ release until OpenStack itself is released.
 * "cycle-trailing" projects commit to produce a release no later than
   3 months after the main release.
 * Release tags for deliverables using this tag are reviewed and
+  applied by the Release Management team.
+
+.. _cycle-automatic:
+
+cycle-automatic
+---------------
+
+.. note::
+
+   The cycle-automatic release model is now better described by the
+   cycle-with-intermediary model combined with stable-branch-type: none
+
+The "cycle-automatic" model is used by specific technical deliverables
+that need to be automatically released once at the end of a cycle.
+Those may, optionally, also be released in the middle of the cycle.
+Those do not need a stable branch created. This may be applied only
+to "tempest-plugin" or "other" deliverables.
+
+* "cycle-automatic" deliverables will be automatically released by the
+  release team once at the end of a cycle, using the current HEAD of the
+  repository. No stable branch will be automatically created.
+* Release tags for deliverables using this model are reviewed and
   applied by the Release Management team.
 
 
