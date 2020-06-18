@@ -15,6 +15,10 @@ releases:
       - repo: openstack/sahara-plugin-mapr
         hash: 62fe610b1423cea0735c90b860d0154805602b3f
     diff-start: 1.0.0
+  - version: 2.0.1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: a7b37aac861c515aa073d02fe34f06e497ca4acb
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
