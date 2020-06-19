@@ -6,3 +6,8 @@ team: glance
 type: client-library
 repository-settings:
   openstack/python-glanceclient: {}
+releases:
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: de178ac4382716cc93022be06b93697936e816fc
