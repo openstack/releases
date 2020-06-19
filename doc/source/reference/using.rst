@@ -28,6 +28,14 @@ detail below. All automated manipulation of the deliverable is managed
 through the data file, which is reviewed by the core team when the
 patch is proposed to openstack/releases.
 
+Adding Deliverables
+===================
+
+In order to be considered to be included in the release for a given
+series, the project must be documented by adding a deliverable file to
+this repository before the second milestone of the series. Exceptions
+will be considered by the release team on a case-by-case basis.
+
 Requesting a Release
 ====================
 
