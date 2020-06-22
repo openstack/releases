@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: c653a6f0b46398e0e814cb64e72591963db67e82
+  - version: 11.4.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: f7715be87ce7314b3bf8db743a85ebd9fa69575d
 branches:
   - location: 11.3.0
     name: stable/train
