@@ -6,3 +6,8 @@ team: mistral
 type: library
 repository-settings:
   openstack/mistral-extra: {}
+releases:
+  - version: 10.1.0
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b5e08f227699b4f459336ee098b5b8576e5c0e50
