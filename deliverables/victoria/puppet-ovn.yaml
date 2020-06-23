@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-ovn: {}
+releases:
+  - projects:
+      - hash: ed0a37a937dccc4e72d066e0670e7d6d2cb476f5
+        repo: openstack/puppet-ovn
+    version: 17.1.0

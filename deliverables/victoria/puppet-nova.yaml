@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-nova: {}
+releases:
+  - projects:
+      - hash: 4dd1b7beaa24583f80ef0641a792cd40cdf2e91f
+        repo: openstack/puppet-nova
+    version: 17.1.0

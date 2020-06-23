@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-tacker: {}
+releases:
+  - projects:
+      - hash: f490be0a0f22e761ac1f216177527e7687ea7d65
+        repo: openstack/puppet-tacker
+    version: 17.1.0

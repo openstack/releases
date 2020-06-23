@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-senlin: {}
+releases:
+  - projects:
+      - hash: 4b2fb1915b3351a7ccc3ea7a949c4ddc757e4fc7
+        repo: openstack/puppet-senlin
+    version: 4.1.0

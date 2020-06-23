@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-barbican: {}
+releases:
+  - projects:
+      - hash: bbd38354a0b25c5e32fc3c99fb6ace2c9a87f0c7
+        repo: openstack/puppet-barbican
+    version: 17.1.0
