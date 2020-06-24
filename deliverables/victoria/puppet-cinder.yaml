@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-cinder: {}
+releases:
+  - projects:
+      - hash: 4f41338ab4a2d08bff1b8738e97f901a72d3b8e2
+        repo: openstack/puppet-cinder
+    version: 17.1.0

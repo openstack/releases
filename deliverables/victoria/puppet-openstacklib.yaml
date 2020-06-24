@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-openstacklib: {}
+releases:
+  - projects:
+      - hash: 8959ad8dc34b69d22698ae9ca2420bfbf2da57b2
+        repo: openstack/puppet-openstacklib
+    version: 17.1.0

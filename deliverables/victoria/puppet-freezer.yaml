@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-freezer: {}
+releases:
+  - projects:
+      - hash: d05c891026dd7218248cb5187acea19ff686fbfd
+        repo: openstack/puppet-freezer
+    version: 6.1.0

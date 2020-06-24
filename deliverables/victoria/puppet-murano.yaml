@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-murano: {}
+releases:
+  - projects:
+      - hash: 335592b7d83b8d96fa174edf5a3d7e3e981727d7
+        repo: openstack/puppet-murano
+    version: 17.1.0

@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-qdr: {}
+releases:
+  - projects:
+      - hash: 11a87371f822b789c33caf2aa9d8e1f83ec132a4
+        repo: openstack/puppet-qdr
+    version: 6.1.0
