@@ -39,6 +39,10 @@ releases:
       - hash: aeb95779c7bea4117ccb69b17eab31d452397964
         repo: openstack/oslo.cache
     version: 1.33.3
+  - version: 1.33.4
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 157ed3fc8c5095fb8e94cd74c5c10f15d185230c
 branches:
   - location: 1.33.2
     name: stable/stein
