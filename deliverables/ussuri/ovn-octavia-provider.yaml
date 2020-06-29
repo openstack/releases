@@ -2,7 +2,7 @@
 launchpad: neutron
 team: neutron
 release-model: cycle-with-intermediary
-type: library
+type: other
 repository-settings:
   openstack/ovn-octavia-provider: {}
 releases:
@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 6e7f454ccd7feac1f08c1f1e67059d13de04e116
+  - version: 0.1.1
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 2448c4925b7c2b2e4f4287a14bc67fa5e8360002
 branches:
   - name: stable/ussuri
     location: 0.1.0
