@@ -19,6 +19,10 @@ releases:
       - repo: openstack/monasca-agent
         hash: a7f85cf9856a27a4776c66c81f6de03049ebf9c9
     diff-start: 2.11.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 7ff2c9cbd0324f04a96a9b115ded262ec2d7fa02
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
