@@ -204,9 +204,16 @@ def _filter_branches(output):
     ]
 
 
-def stable_branch_exists(workdir, repo, series):
-    "Does the stable/series branch exist?"
-    remote_match = 'remotes/origin/stable/%s' % series
+def branch_exists(workdir, repo, prefix, identifier):
+    """Does the prefix/identifier branch exist.
+
+    Checks if a named branch already exists.
+    :param workdir: The working directory for the local clone.
+    :param repo: The name of the repo.
+    :param prefix: The branch prefix (e.g. "stable" or "bugfix").
+    :param idenifier: The branch identifier (series name or version).
+    """
+    remote_match = 'remotes/origin/{}/{}'.format(prefix, identifier)
     try:
         containing_branches = _filter_branches(
             processutils.check_output(
@@ -220,6 +227,11 @@ def stable_branch_exists(workdir, repo, series):
     except processutils.CalledProcessError as e:
         LOG.error('failed checking for branch: %s [%s]', e, e.output.strip())
         return False
+
+
+def stable_branch_exists(workdir, repo, series):
+    "Does the stable/series branch exist?"
+    return branch_exists(workdir, repo, 'stable', series)
 
 
 def check_branch_sha(workdir, repo, series, sha):
