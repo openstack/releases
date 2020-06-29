@@ -415,7 +415,7 @@ The top level of a deliverable file is a mapping with keys:
     addition that version-based branches can be created as well.
 
     These version-based branches are shorter term stable branches that
-    are named for the major and minor version number (e.g. stable/3.1).
+    are named for the major and minor version number (e.g. bugfix/3.1).
     This is primarily used for Ironic releases.
 
   ``tagless``

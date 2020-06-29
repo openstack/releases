@@ -79,6 +79,7 @@ _USES_PREVER = set([
 _VALID_BRANCH_PREFIXES = set([
     'stable',
     'feature',
+    'bugfix',
 ])
 
 _NO_STABLE_BRANCH_CHECK = set([
@@ -1505,8 +1506,8 @@ def validate_stable_branches(deliv, context):
                 ('stable branch name expected to be stable/name '
                  'but got %s') % (branch.name,))
             continue
-        if prefix != 'stable':
-            print('{} is not a stable branch, skipping'.format(
+        if prefix != 'stable' and prefix != 'bugfix':
+            print('{} is not a stable or bugfix branch, skipping'.format(
                 branch.name))
             continue
 
@@ -1529,9 +1530,10 @@ def validate_stable_branches(deliv, context):
                 )
                 return
             branch_exists = all(
-                gitutils.stable_branch_exists(
+                gitutils.branch_exists(
                     context.workdir,
                     repo,
+                    prefix,
                     series,
                 )
                 for repo in deliv.known_repo_names if
@@ -1542,9 +1544,10 @@ def validate_stable_branches(deliv, context):
                     branch.name))
                 continue
 
-            if deliv.is_independent:
+            if deliv.is_independent or prefix == 'bugfix':
                 print('"latest release" rule does not apply '
-                      'to independent repositories, skipping')
+                      'to independent repositories or bugfix '
+                      'branches, skipping')
             else:
                 latest_release = deliv.releases[-1]
                 if location != latest_release.version:
@@ -1614,15 +1617,15 @@ def validate_stable_branches(deliv, context):
         else:
             if series != deliv.series:
                 if branch_mode == 'std-with-versions':
-                    # Not a normal stable branch, so it must be a version
-                    # branch (stable/3.1)
+                    # Not a normal stable branch, so it must be a versioned
+                    # bugfix branch (bugfix/3.1)
                     expected_version = '.'.join(location.split('.')[0:2])
                     if series != expected_version:
                         context.error(
                             'cycle-based projects must match series names '
                             'for stable branches, or branch based on version '
                             'for short term support. %s should be stable/%s '
-                            'or stable/%s' % (
+                            'or bugfix/%s' % (
                                 branch.name, deliv.series, expected_version))
                 else:
                     context.error(
