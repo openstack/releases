@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: b7b99301d99c82af0cff87dcc9763792c114aa72
+  - version: 2.3.4
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 5904564bf13bbac7d66e00ec6312487c507f09c4
 branches:
   - name: stable/train
     location: 2.3.2
