@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 0ed3df2c3a26598dfcfdfd6502530c71fde9f371
+  - version: 3.1.1
+    projects:
+      - repo: openstack/oslo.policy
+        hash: c8c138e69d9189345a7366a10b0779ef70b7250e
 branches:
   - name: stable/ussuri
     location: 3.1.0
