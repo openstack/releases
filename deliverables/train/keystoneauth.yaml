@@ -38,6 +38,10 @@ releases:
         hash: 1d5f57258af4e429995bf4c02137d24fe32c36e1
         tarball-base: keystoneauth1
     version: 3.17.2
+  - version: 3.17.3
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 7d7b9564ba32ded721f67002b712e6d3cafa8511
 branches:
   - location: 3.17.1
     name: stable/train
