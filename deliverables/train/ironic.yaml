@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 555494870cb2ac8e7874427720534394e20c281b
+  - version: 13.0.5
+    projects:
+      - repo: openstack/ironic
+        hash: ecd64ea2caf5a92233e3bfc0d9935f02e487656a
 branches:
   - location: 13.0.0
     name: stable/train
