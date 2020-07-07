@@ -17,46 +17,20 @@
 if [[ $# -lt 2 ]]; then
     echo "Usage: $(basename $0) <branch> <repo> [<repo>...]"
     echo "repo should be e.g. openstack/glance"
+    echo
+    echo "Example: $(basename $0) victoria oslo.rootwrap"
+    echo "Example: $(basename $0) independent reno bugfix"
+    echo
+    echo "For further details about how to use the command:"
+    echo "tox -e venv -- list-unreleased-changes --help"
     exit 1
 fi
 
-branch="$1"
-shift
-repos="$@"
-
-TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-BASEDIR=$(dirname $TOOLSDIR)
-source $TOOLSDIR/functions
-
-# Make sure no pager is configured so the output is not blocked
-export PAGER=
-
-setup_temp_space 'list-unreleased'
-
-function list_changes {
-    title "Unreleased changes in $repo ($branch)"
-    clone_repo $repo $branch
-    if [[ $? -ne 0 ]]; then
-        return 1
+if [[ -z "$VIRTUAL_ENV" ]]; then
+    if [[ ! -d .tox/venv ]]; then
+        tox -e venv --notest
     fi
-    cd $repo
-    prev_tag=$(get_last_tag)
-    if [ -z "$prev_tag" ]; then
-        echo "$repo has not yet been released"
-    else
-        echo
-        end_sha=$(git log -n 1 --pretty=tformat:%h)
-        echo "Changes between $prev_tag and $end_sha"
-        echo
-        git log --no-color --no-merges --format='%h %ci %s' \
-            --graph ${prev_tag}..${end_sha}
-        echo
-    fi
-}
+    source ./.tox/venv/bin/activate
+fi
 
-# Show the unreleased changes for each repository.
-for repo in $repos; do
-    cd $MYTMPDIR
-    echo
-    list_changes "$repo"
-done
+list-unreleased-changes $@

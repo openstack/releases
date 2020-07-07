@@ -307,6 +307,20 @@ def check_ancestry(workdir, repo, old_version, sha):
         return False
 
 
+def get_head(workdir, repo):
+    cmd = ['git', 'log', '-n', '1', '--pretty=tformat:%h']
+    try:
+        return processutils.check_output(
+            cmd,
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).decode('utf-8').strip()
+    except processutils.CalledProcessError as e:
+        LOG.warning('failed to retrieve HEAD: %s [%s]',
+                    e, e.output.strip())
+        return None
+
+
 def get_latest_tag(workdir, repo, sha=None, always=True):
     cmd = ['git', 'describe', '--abbrev=0']
     if always:
