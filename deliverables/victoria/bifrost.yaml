@@ -1,7 +1,16 @@
 ---
 storyboard: openstack/bifrost
 release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
 team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - version: 8.2.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 0b58a05ac6bcabb8d5dc65a32e1526df4e0251e5
+branches:
+  - name: bugfix/8.2
+    location: 8.2.0
