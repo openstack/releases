@@ -1,9 +1,8 @@
 ---
 launchpad: tripleo
-release-model: cycle-with-intermediary
 release-type: python-pypi
 team: tripleo
-type: trailing
+type: other
 repository-settings:
   openstack/validations-common: {}
 releases:
@@ -11,7 +10,4 @@ releases:
       - hash: 99050941f49a8752c8b2a7f75af12039f21c1afe
         repo: openstack/validations-common
     version: 1.0.0
-branches:
-  - location: 1.0.0
-    name: stable/ussuri
 release-notes: https://docs.openstack.org/releasenotes/validations-common/ussuri.html

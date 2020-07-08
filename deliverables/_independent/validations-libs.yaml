@@ -1,9 +1,8 @@
 ---
 launchpad: tripleo
-release-model: cycle-with-intermediary
 release-type: python-pypi
 team: tripleo
-type: trailing
+type: other
 repository-settings:
   openstack/validations-libs: {}
 releases:
@@ -15,6 +14,3 @@ releases:
       - hash: 41195bd426f08e9b073ff0a51f663e1e936be441
         repo: openstack/validations-libs
     version: 1.0.1
-branches:
-  - location: 1.0.0
-    name: stable/ussuri
