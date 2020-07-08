@@ -1,7 +1,16 @@
 ---
 storyboard: 943
 release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
 team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+releases:
+  - version: 15.1.0
+    projects:
+      - repo: openstack/ironic
+        hash: 3fab17f966c4d9e7c019b12cd749fa8218ca4ac4
+branches:
+  - name: bugfix/15.1
+    location: 15.1.0
