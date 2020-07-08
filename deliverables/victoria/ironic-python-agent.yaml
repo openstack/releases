@@ -1,8 +1,17 @@
 ---
 storyboard: openstack/ironic-python-agent
 release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
 release-type: python-pypi
 team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent: {}
+releases:
+  - version: 6.2.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 9d9a6bce5c246d18d50dc405265e865fb77142eb
+branches:
+  - name: bugfix/6.2
+    location: 6.2.0
