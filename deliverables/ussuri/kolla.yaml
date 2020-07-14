@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 4103b0b151af100493c7242b088b42f051bf5485
+  - version: 10.1.0
+    projects:
+      - repo: openstack/kolla
+        hash: fbea3bf26d93e6fd784dbd9967659f549df3ec2d
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
