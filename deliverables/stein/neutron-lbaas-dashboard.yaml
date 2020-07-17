@@ -17,6 +17,10 @@ releases:
       - hash: 8630dfe40e798ceaeb18f490612f979cdaab0361
         repo: openstack/neutron-lbaas-dashboard
     version: 6.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: fdc34d2087c55bf59c8a20eb2dae13df04157773
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
