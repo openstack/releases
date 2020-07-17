@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: ac1510bd41406122c5ff1b6bd57b74fc08cbc3f7
+  - version: 1.0.1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: cb0ff6c7ff7a850b623c4690da56af3257a53812
 branches:
   - location: 1.0.0
     name: stable/stein
