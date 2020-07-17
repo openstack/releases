@@ -23,6 +23,10 @@ releases:
       - hash: 59d8cab9bbe37529346728778e6dae79a3a57a2a
         repo: openstack/designate
     version: 8.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/designate
+        hash: 6307c84e83530ab27124ab9e6a8117ee44069614
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
