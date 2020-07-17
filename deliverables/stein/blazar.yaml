@@ -15,6 +15,10 @@ releases:
       - hash: 27c3aea4fe649bc0dd7f0caaf0384c35096619d3
         repo: openstack/blazar
     version: 3.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/blazar
+        hash: 6bbad1bc79eb2f9535e58f0c9ff19669eaac1373
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein
