@@ -10,6 +10,10 @@ releases:
       - hash: a6bc9ba3ced079d2f662c83ad86dfb9dfa8658df
         repo: openstack/monasca-ui
     version: 1.15.0
+  - version: 1.15.1
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 9ba0b0dced015618eaf9493bbaf52501645aa0ea
 branches:
   - location: 1.15.0
     name: stable/stein
