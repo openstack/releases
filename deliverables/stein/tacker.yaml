@@ -19,6 +19,10 @@ releases:
       - hash: 2ee2affbaae165b0affc55eccd825c0a8ea841eb
         repo: openstack/tacker
     version: 1.0.0
+  - version: 1.0.1
+    projects:
+      - repo: openstack/tacker
+        hash: aee46c86bbe87cbb8b6ebb3bd9b765aafd13df53
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein
