@@ -15,6 +15,10 @@ releases:
       - hash: 1b552dd82565157c123925adecd12fc279cbbee0
         repo: openstack/aodh
     version: 8.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/aodh
+        hash: 43e3b39a649897344ca863e6c8b4e85d5b32d4b7
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
