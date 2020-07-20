@@ -19,6 +19,10 @@ releases:
       - hash: dd7205052474c7effd75810125bfcd37704262d8
         repo: openstack/zun
     version: 3.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/zun
+        hash: 307617805dfb2ca32761c2db3aaa472b6811a7bf
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein
