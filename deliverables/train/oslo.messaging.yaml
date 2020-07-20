@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: b7e9faf6590086b79f9696183b5c296ecc12b7b6
+  - version: 10.2.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 1613b7a968f33ef7dc683d05fde05be0c458c8fc
 branches:
   - name: stable/train
     location: 10.2.0
