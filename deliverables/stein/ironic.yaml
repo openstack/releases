@@ -30,6 +30,10 @@ releases:
       - repo: openstack/ironic
         hash: 5101808e8daceeef8cb486e71124c6b1efd4b319
     version: 12.1.4
+  - version: 12.1.5
+    projects:
+      - repo: openstack/ironic
+        hash: f1b2cb74545b4ea75bd551fca61c69f53bb608fd
 branches:
   - location: 12.1.0
     name: stable/stein
