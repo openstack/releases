@@ -32,6 +32,10 @@ releases:
       - hash: 9a34dc9107296be7b1f7d29ff40f39ca612ead0a
         repo: openstack/castellan
     version: 1.2.2
+  - version: 1.2.3
+    projects:
+      - repo: openstack/castellan
+        hash: 46575f02e8a9288bce1b646bcb777143451b1d4b
 branches:
   - location: 1.2.2
     name: stable/stein
