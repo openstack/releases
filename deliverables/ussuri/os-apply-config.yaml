@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: 852795d2459cd90cbb9007985fe0a40671dc6000
+  - version: 11.2.1
+    projects:
+      - repo: openstack/os-apply-config
+        hash: bc8f0616b3cd63641efdc5eff792552152cc527a
 branches:
   - location: 11.2.0
     name: stable/ussuri
