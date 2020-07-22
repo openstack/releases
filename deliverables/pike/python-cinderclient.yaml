@@ -38,6 +38,10 @@ releases:
       - hash: f3dcbd2f77d5f87c2dfa47cabf8aeb1047381031
         repo: openstack/python-cinderclient
     version: pike-em
+  - projects:
+      - hash: f23dc43402f9ff8e85f39694c6edb6c095368780
+        repo: openstack/python-cinderclient
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 3.1.0

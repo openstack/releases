@@ -62,6 +62,10 @@ releases:
       - hash: 9e870c78eae4b491516d792f1883f79b09838cf8
         repo: openstack/cinder
     version: pike-em
+  - projects:
+      - hash: 9189dc66394ec474a46c321d2059b6b09937ad9f
+        repo: openstack/cinder
+    version: pike-eol
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

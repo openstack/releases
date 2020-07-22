@@ -21,6 +21,10 @@ releases:
       - hash: 4dd6b351ba6448e6fbdc9654c12eca038f0f8cbb
         repo: openstack/python-brick-cinderclient-ext
     version: pike-em
+  - projects:
+      - hash: d0db3abc5a7c361a4e47c3dbf3d48535e8f17702
+        repo: openstack/python-brick-cinderclient-ext
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 0.5.0
