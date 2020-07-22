@@ -168,7 +168,7 @@ def main():
         "-f",
         "--format",
         choices=['std', 'json', 'yaml'],
-        default='standard',
+        default='std',
         help="Output format")
     parser.add_argument(
         'branch',
