@@ -119,6 +119,7 @@ def generate_output(content, output_format='std',
             out.append(range_msg)
             if repo['commits'].get('logs', None):
                 out.append("\n".join(repo['commits']['logs']))
+            out.append('')
         return '\n'.join(out)
 
 
