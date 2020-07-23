@@ -70,6 +70,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: e7376be7afec98192da969dc9382ad860b1cbe01
+  - version: rocky-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 126ad303ac998f2fa36de572bb37cb36f366913a
 branches:
   - location: 3.0.0.0rc1
     name: stable/rocky
