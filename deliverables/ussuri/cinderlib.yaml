@@ -5,3 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
+branches:
+  - location: 2.0.0
+    name: stable/ussuri
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: d810da70c89a7066376763c6aeb9317248d85473
