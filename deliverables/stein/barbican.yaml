@@ -15,6 +15,10 @@ releases:
       - hash: 4c0ddda941289fba8e5ec4341b5d02d155d46162
         repo: openstack/barbican
     version: 8.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/barbican
+        hash: 3d23804a6f78f881ac5526bc31e2a7c61b174516
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
