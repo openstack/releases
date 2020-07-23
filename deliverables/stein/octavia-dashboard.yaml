@@ -21,6 +21,10 @@ releases:
       - hash: 13c01348f5275c7afe4130dc0a3b072d89cae4af
         repo: openstack/octavia-dashboard
     version: 3.0.1
+  - version: 3.1.0
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: bea85726eb6c9cea8800f518bb45f53af06cf69d
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein
