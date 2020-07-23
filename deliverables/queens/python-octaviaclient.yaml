@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: f87cb8f3f96262f7cd15478430d4aed63855de38
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 96343bd97952dd54b1511832880993522bab57ed
 cycle-highlights:
   - The Octavia OpenStack client plugin now supports quotas, load balancer
     QoS policies, load balancer failover, listener statistics, and filtering
