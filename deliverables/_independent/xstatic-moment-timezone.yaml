@@ -1,0 +1,14 @@
+---
+storyboard: openstack/vitrage-dashboard
+team: vitrage
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-moment-timezone:
+    tarball-base: XStatic-Moment-Timezone
+releases:
+  - version: 0.5.22.1
+    projects:
+      - repo: openstack/xstatic-moment-timezone
+        hash: 61313b7a415bd1bfa69316d6ffe5a4a41e555b6a

@@ -1,0 +1,14 @@
+---
+storyboard: openstack/vitrage-dashboard
+team: vitrage
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-moment:
+    tarball-base: XStatic-moment
+releases:
+  - version: 2.8.4.3
+    projects:
+      - repo: openstack/xstatic-moment
+        hash: 7734ce759a6e6d92706e6d9b12111b2fbc6a7bbe
