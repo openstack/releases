@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: 6c67963672395c1a947f214cb6ca24013c43e231
+  - version: 12.3.1
+    projects:
+      - repo: openstack/os-net-config
+        hash: eb9942a2b2c21759bb5f54b98b451da84e0afc4f
 branches:
   - location: 12.3.0
     name: stable/ussuri

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 9e751c820d0ce30834a97de08e0b3d9fc412d261
+  - version: 12.4.0
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: ce3dce82772cb5e853be2b7fe287eddb1d2cefe2
 branches:
   - location: 12.3.0
     name: stable/ussuri
