@@ -103,14 +103,21 @@ def generate_output(content, output_format='std',
     if output_format == 'std':
         out = []
         for repo in filtered:
-            out.append('[ Unreleased changes in {rep} ({br}) ]'.format(
-                rep=repo['repo'], br=repo['branch']))
+            out.append(
+                '\033[1m\033[91m[ Unreleased changes in '
+                '{rep} ({br}) ]\033[0m'.format(rep=repo['repo'],
+                                               br=repo['branch'])
+            )
 
+            if repo['not_yet_released'] or repo['error']:
+                out.append(repo['msg'])
+                continue
+
+            range_msg = 'Changes between {start} and {end}'.format(
+                start=repo['commits']['range'][0],
+                end=repo['commits']['range'][1])
+            out.append(range_msg)
             if repo['commits'].get('logs', None):
-                range_msg = 'Changes between {start} and {end}'.format(
-                    start=repo['commits']['range'][0],
-                    end=repo['commits']['range'][1])
-                out.append(range_msg)
                 out.append("\n".join(repo['commits']['logs']))
         return '\n'.join(out)
 
@@ -295,6 +302,8 @@ def main():
 
         current.update({'commits': commits})
         output.append(current)
+
+    LOG.debug(output)
 
     out = generate_output(output, output_format=args.format,
                           ignore_no_results=args.ignore_no_results,
