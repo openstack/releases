@@ -182,8 +182,7 @@ The Victoria coordinated release will happen on Wednesday, 14 October, 2020.
 Open Infrastructure Summit
 --------------------------
 
-The Open Infrastructure Summit will take place October 19-24 in Berlin,
-Germany.
+The virtual Open Infrastructure Summit will take place October 19-23.
 
 Project-specific events
 =======================
