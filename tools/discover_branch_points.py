@@ -170,5 +170,6 @@ def main():
             sys.stderr.write('could not find {} in any repos for {}\n'.format(
                 branch_name, deliv.name))
 
+
 if __name__ == '__main__':
     main()

@@ -11,8 +11,7 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-"""Class for manipulating all of the deliverable data.
-"""
+"""Class for manipulating all of the deliverable data."""
 
 import collections
 import copy
@@ -60,8 +59,7 @@ def _safe_semver(v):
 
 
 def _version_sort_key(release):
-    """Return a value we can compare for sorting.
-    """
+    """Return a value we can compare for sorting."""
     # NOTE(dhellmann): We want EOL and EM tags to sort last. This assumes we
     # won't have more than 1000 major releases of anything, and I
     # surely hope that is a safe assumption.
@@ -75,7 +73,6 @@ def _collapse_deliverable_history(name, info):
     """Collapse pre-releases into their final release.
 
     Edit the info dictionary in place.
-
     """
     sorted_releases = sorted(
         info.get('releases', []),
@@ -186,7 +183,6 @@ class Deliverables(object):
         deliverable file content.
 
         If the team or series is None, treat that value as a wildcard.
-
         """
         if team is None:
             if series is None:
@@ -203,8 +199,7 @@ class Deliverables(object):
             )
 
     def get_deliverable_history(self, name):
-        """Return info associated with a deliverable name.
-        """
+        """Return info associated with a deliverable name."""
         for filename in self._by_deliverable_name.get(name, []):
             yield Deliverable(
                 None,  # team will be taken from the data
@@ -324,9 +319,9 @@ class Release(object):
     @property
     def is_pre_release_version(self):
         return (
-            'rc' in self.version
-            or 'a' in self.version
-            or 'b' in self.version
+            'rc' in self.version or
+            'a' in self.version or
+            'b' in self.version
         )
 
     @property

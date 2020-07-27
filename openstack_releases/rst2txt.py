@@ -79,11 +79,11 @@ class TextWrapper(textwrap.TextWrapper):
                 del chunks[-1]
 
             while chunks:
-                l = column_width(chunks[-1])
+                line = column_width(chunks[-1])
 
-                if cur_len + l <= width:
+                if cur_len + line <= width:
                     cur_line.append(chunks.pop())
-                    cur_len += l
+                    cur_len += line
 
                 else:
                     break

@@ -114,7 +114,7 @@ label-Workflow = -1..+1 group {group}
                         else:
                             continue
 
-                    if re.match('^\[access "refs/heads/stable/[a-z]', line):
+                    if re.match(r'^\[access "refs/heads/stable/[a-z]', line):
                         # We just hit a specific stable section.
                         # Skip the file until the next section starts.
                         skip = True

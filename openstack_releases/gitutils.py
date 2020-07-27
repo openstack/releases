@@ -35,9 +35,9 @@ def find_modified_deliverable_files():
         ['git', 'diff', '--name-only', '--pretty=format:', 'HEAD^']
     ).decode('utf-8')
     filenames = [
-        l.strip()
-        for l in results.splitlines()
-        if (l.startswith('deliverables/'))
+        line.strip()
+        for line in results.splitlines()
+        if (line.startswith('deliverables/'))
     ]
     return filenames
 
@@ -67,7 +67,6 @@ def commit_exists(workdir, repo, ref):
 
     The commit must have been merged into the repository, but this
     check does not enforce any branch membership.
-
     """
     try:
         processutils.check_output(
@@ -86,14 +85,15 @@ def tag_exists(repo, ref):
     Uses a cgit query instead of looking locally to avoid cloning a
     repository or having Depends-On settings in a commit message allow
     someone to fool the check.
-
     """
     url = GIT_TAG_TEMPLATE % (repo, ref)
     return links.link_exists(url)
 
 
 def ensure_basic_git_config(workdir, repo, settings):
-    """Given a repo directory and a settings dict, set local config values
+    """Make sure git config is set.
+
+    Given a repo directory and a settings dict, set local config values
     if those settings are not already defined.
     """
     dest = os.path.join(workdir, repo)
@@ -132,9 +132,10 @@ def clone_repo(workdir, repo, ref=None, branch=None):
 
 
 def safe_clone_repo(workdir, repo, ref, messages):
-    """Ensure we have a local copy of the repository so we
-    can scan for values that are more difficult to get
-    remotely.
+    """Clone a git repo and report success or failure.
+
+    Ensure we have a local copy of the repository so we can scan for values
+    that are more difficult to get remotely.
     """
     try:
         clone_repo(workdir, repo, ref)
@@ -178,8 +179,7 @@ def checkout_ref(workdir, repo, ref, messages=None):
 
 
 def sha_for_tag(workdir, repo, version):
-    """Return the SHA for a given tag
-    """
+    """Return the SHA for a given tag"""
     # git log 2.3.11 -n 1 --pretty=format:%H
     try:
         actual_sha = processutils.check_output(
