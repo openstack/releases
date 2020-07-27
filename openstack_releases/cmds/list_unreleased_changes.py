@@ -149,8 +149,8 @@ def main():
         "--ignore-no-results",
         action='store_true',
         default=False,
-        help="Ignore projects without difference between the HEAD and"
-             "the retrieved previous tag."
+        help="Ignore projects without difference between the HEAD and "
+             "the retrieved previous tag. "
              "They will be ignored in the command output.")
     parser.add_argument(
         "--ignore-errors",
@@ -167,11 +167,11 @@ def main():
         "--ignore-all",
         action='store_true',
         default=False,
-        help="Ignore projects without difference between the HEAD and"
-             "previous tag, projects not yet released, projects in error."
+        help="Ignore projects without difference between the HEAD and "
+             "previous tag, projects not yet released, projects in error. "
              "Similar to call command with "
              "`--ignore-no-results --ignore-errors --ignore-not-yet-released`"
-             "They will be ignored in the command output.")
+             " They will be ignored in the command output.")
     parser.add_argument(
         "-f",
         "--format",
