@@ -259,8 +259,9 @@ def main():
         # Determine which branch we should actually be looking
         # at. Assume any series for which there is no stable
         # branch will be on 'master'.
-        if gitutils.stable_branch_exists(workdir, repo, args.branch):
-            branch = 'stable/' + args.branch
+        branch = args.branch.replace('stable/', '')
+        if gitutils.stable_branch_exists(workdir, repo, branch):
+            branch = 'stable/' + branch
         else:
             branch = 'master'
 
