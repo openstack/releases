@@ -37,7 +37,7 @@ def in_governance_but_not_released(args):
     dirs = [args.series, '_independent']
 
     with open(args.projects_yaml, 'r') as projects:
-        teams = yaml.load(projects)
+        teams = yaml.safe_load(projects)
         for tname, team in teams.items():
             if tname in TEAM_EXCEPTIONS:
                 continue
