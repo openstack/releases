@@ -1,0 +1,14 @@
+---
+storyboard: openstack/vitrage-dashboard
+team: vitrage
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-lodash:
+    tarball-base: XStatic-lodash
+releases:
+  - version: 4.16.4.2
+    projects:
+      - repo: openstack/xstatic-lodash
+        hash: 3bbd3db102bf786b95dfd7cb62c7c9ba8deca6a0

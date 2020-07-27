@@ -1,0 +1,14 @@
+---
+storyboard: openstack/vitrage-dashboard
+team: vitrage
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-dagre-d3:
+    tarball-base: XStatic-Dagre-D3
+releases:
+  - version: 0.4.17.1
+    projects:
+      - repo: openstack/xstatic-dagre-d3
+        hash: fcd6e551f0a8ddf629c913cb78dc107a53e79ccd
