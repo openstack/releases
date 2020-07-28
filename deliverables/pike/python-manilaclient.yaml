@@ -39,6 +39,10 @@ releases:
       - hash: a1096c97de4b60212cea403f9e18c2eb81ccd55a
         repo: openstack/python-manilaclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 7f52051e0195a74b805121611cc07bca04e622a1
 team: manila
 type: library
 repository-settings:

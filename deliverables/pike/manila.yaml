@@ -45,6 +45,10 @@ releases:
       - hash: d3bcc465b23a32359a9efad2a2d9085f413e5414
         repo: openstack/manila
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/manila
+        hash: 58911882ff380421709e260b1a28c1525fb6761e
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
