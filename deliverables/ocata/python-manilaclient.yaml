@@ -25,5 +25,9 @@ releases:
       - hash: 58933a6848715bbc9beb26c018a5d8e89f94371a
         repo: openstack/python-manilaclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 77d5aa9c74745a1a3e243d3abe0fd304c44567d6
 repository-settings:
   openstack/python-manilaclient: {}
