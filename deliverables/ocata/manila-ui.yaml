@@ -24,5 +24,9 @@ releases:
       - hash: 4c77fd9818e58e74c39d36c8dbac135bccb6b3f3
         repo: openstack/manila-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: a66432796de8ba36e1f726cd6e059288b5477ba1
 repository-settings:
   openstack/manila-ui: {}
