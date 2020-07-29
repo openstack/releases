@@ -33,6 +33,10 @@ releases:
       - hash: 089062685aee1946599336946b69d3a0d456b1b7
         repo: openstack/manila-ui
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: a3d20831b0ed2415b7c7f869f8b2fdb341013944
 branches:
   - location: 2.10.1
     name: stable/pike
