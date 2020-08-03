@@ -85,7 +85,7 @@ def main(args=sys.argv[1:]):
     projectsyaml = os.path.join(args.project_config_repo,
                                 'gerrit', 'projects.yaml')
     acl = {}
-    config = yaml.load(open(projectsyaml))
+    config = yaml.safe_load(open(projectsyaml))
     for project in config:
         aclfilename = project.get('acl-config')
         if aclfilename:
@@ -98,7 +98,7 @@ def main(args=sys.argv[1:]):
     aclbase = os.path.join(args.project_config_repo, 'gerrit', 'acls')
     governanceyaml = os.path.join(args.governance_repo,
                                   'reference', 'projects.yaml')
-    teams = yaml.load(open(governanceyaml))
+    teams = yaml.safe_load(open(governanceyaml))
     for tname, team in teams.items():
         if is_a_team_exception(tname):
             continue

@@ -72,7 +72,7 @@ label-Workflow = -1..+1 group {group}
     # Load repo/aclfile mapping from Gerrit config
     projectsyaml = os.path.join(args.repository, 'gerrit', 'projects.yaml')
     acl = {}
-    config = yaml.load(open(projectsyaml))
+    config = yaml.safe_load(open(projectsyaml))
     for project in config:
         aclfilename = project.get('acl-config')
         if aclfilename:
