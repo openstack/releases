@@ -586,8 +586,8 @@ def validate_model(deliv, context):
             'no release-model specified',
         )
 
-    if (deliv.model in ['independent', 'abandoned']
-            and deliv.series != 'independent'):
+    if (deliv.model in ['independent', 'abandoned'] and
+            deliv.series != 'independent'):
         # If the project is release:independent or abandoned, make sure
         # the deliverable file is in _independent.
         context.error(
@@ -601,8 +601,8 @@ def validate_model(deliv, context):
     # bypass the model property because that always returns
     # 'independent' for deliverables in that series.
     model_value = deliv.data.get('release-model', 'independent')
-    if (deliv.series == 'independent'
-            and model_value not in ['independent', 'abandoned']):
+    if (deliv.series == 'independent' and
+            model_value not in ['independent', 'abandoned']):
         context.error(
             'deliverables in the _independent directory '
             'should use either the independent or abandoned release models'

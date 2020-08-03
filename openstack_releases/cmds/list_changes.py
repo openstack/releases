@@ -601,7 +601,7 @@ def main():
                     description='',
                     publishing_dir_name=project.repo.name,
                 )
-            except Exception as e:
+            except Exception:
                 logging.exception('Failed to produce release notes')
             else:
                 print('\n')
