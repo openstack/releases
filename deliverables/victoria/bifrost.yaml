@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 0b58a05ac6bcabb8d5dc65a32e1526df4e0251e5
+  - version: 8.3.0
+    projects:
+      - repo: openstack/bifrost
+        hash: bcda97b6308eda47a80b6290d06bc43dbe5032a3
 branches:
   - name: bugfix/8.2
     location: 8.2.0
+  - name: bugfix/8.3
+    location: 8.3.0
