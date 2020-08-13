@@ -216,6 +216,14 @@ def main():
         action='store_true',
         help='create a new stable branch from the release',
     )
+    parser.add_argument(
+        '--intermediate-branch',
+        default=False,
+        action='store_true',
+        help='create a new intermediate branch with the form bugfix/n.n; '
+             'this is usually needed only by projects with a '
+             'cycle-with-intermediary release model'
+    )
     args = parser.parse_args()
 
     # Set up logging, including making some loggers quiet.
@@ -282,6 +290,8 @@ def main():
     diff_start = None
 
     add_stable_branch = args.stable_branch or is_procedural
+
+    add_intermediate_branch = args.intermediate_branch
 
     # Validate new tag can be applied
     if last_version and 'eol' in last_version[0]:
@@ -534,6 +544,26 @@ def main():
 
         if add_stable_branch:
             LOG.info('adding stable branch at %s', new_version)
+            deliverable_info.setdefault('branches', []).append({
+                'name': branch_name,
+                'location': new_version,
+            })
+
+    if add_intermediate_branch:
+        new_branch = new_version.rsplit('.', 1)[0]
+        branch_name = 'bugfix/{}'.format(new_branch)
+
+        # First check if this branch is already defined
+        if 'branches' in deliverable_info:
+            for branch in deliverable_info['branches']:
+                if branch.get('name') == branch_name:
+                    LOG.debug('Branch %s already exists, skipping',
+                              branch_name)
+                    add_intermediate_branch = False
+                    break
+
+        if add_intermediate_branch:
+            LOG.info('adding intermediate branch at %s', new_version)
             deliverable_info.setdefault('branches', []).append({
                 'name': branch_name,
                 'location': new_version,
