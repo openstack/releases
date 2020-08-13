@@ -1,7 +1,16 @@
 ---
 storyboard: openstack/ironic-prometheus-exporter
 release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
 team: ironic
 type: other
 repository-settings:
   openstack/ironic-prometheus-exporter: {}
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 796d76bcd37b79d30f358c76fb065fe7277ec70f
+branches:
+  - name: bugfix/2.1
+    location: 2.1.0
