@@ -184,6 +184,22 @@ Open Infrastructure Summit
 
 The virtual Open Infrastructure Summit will take place October 19-23.
 
+.. _v-cycle-highlights:
+
+Cycle Highlights
+---------------------
+
+Cycle highlights need to be added to the release deliverables by feature
+freeze to be included in any marketing release messaging.
+Highlights may be added after this point, but they will likely only be
+useful for historical purposes.
+
+See the `Project Team Guide`_ for more details and instructions on adding
+these highlights.
+
+.. _Project Team Guide: https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
+
+
 Project-specific events
 =======================
 
