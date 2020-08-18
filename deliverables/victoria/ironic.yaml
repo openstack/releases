@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 3fab17f966c4d9e7c019b12cd749fa8218ca4ac4
+  - version: 15.2.0
+    projects:
+      - repo: openstack/ironic
+        hash: df9ce79f23d4975f99734a59619ef2d89bcdbbe7
 branches:
   - name: bugfix/15.1
     location: 15.1.0
+  - name: bugfix/15.2
+    location: 15.2.0
