@@ -14,6 +14,10 @@ releases:
       - hash: 39bcb00f3cc624e8e215baa1b7e26eb7b2af5710
         repo: openstack/ironic
     version: 15.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/ironic
+        hash: b26838b2913bbc739e88555c2441d1bc7fcd8429
 cycle-highlights:
   - Support for a hardware `retirement workflow <https://docs.openstack.org/ironic/latest/admin/retirement.html>`_
     to enable automation of hardware decommission in managed clouds.
