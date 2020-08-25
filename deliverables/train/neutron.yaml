@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 9c242a032915141d18705198f637cd717a414a26
+  - version: 15.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: 8ff90c2bd44c8796246a7a7c473b880e75ea5da7
 cycle-highlights:
   - When different subnet pools participate in the same address scope,
     the constraints disallowing subnets to be allocated from different
