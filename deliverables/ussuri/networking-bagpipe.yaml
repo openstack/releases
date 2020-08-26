@@ -20,6 +20,10 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: c15d5e0a3e9cbd88c98112db95086e0476ff3333
     diff-start: 11.0.0
+  - version: 12.0.1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 0e866eed9f6c3e545a2fd6c0b680a718996661a5
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1
