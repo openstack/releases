@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   wallaby/index
    victoria/index
    ussuri/index
    train/index
