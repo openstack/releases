@@ -37,8 +37,6 @@ for Wallaby
 Virtual PTG
 -----------
 
-.. This needs to be added to the schedule once we know when the event will be
-
 A virtual PTG will be held during this week. The Project Teams Gathering
 provides and opportunity for teams to collaborate
 and plan, and discuss requirements for future releases.
