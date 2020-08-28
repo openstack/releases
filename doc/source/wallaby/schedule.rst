@@ -189,3 +189,31 @@ Exact event dates are yet to be determined.
 
 Project-specific events
 =======================
+
+
+Manila
+------
+
+.. _w-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Wallaby must be approved by the end of the week.
+
+.. _w-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI.  Drivers do not have to
+actually merge until feature freeze.
+
+.. _w-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
