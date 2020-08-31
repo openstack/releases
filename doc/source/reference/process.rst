@@ -663,8 +663,7 @@ R-6 week (Final Library Release deadline)
 
 #. Update the feature list and allowed stable branch names in
    devstack-gate for the new stable branch. For
-   example, https://review.opendev.org/362435 and
-   https://review.opendev.org/363084
+   example, https://review.opendev.org/715272/
 
 #. At the end of the week, send weekly email content preparing for R-5 week::
 
