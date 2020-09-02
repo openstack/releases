@@ -19,3 +19,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 58dff38e3bf4e28874a9d58c9a3b63c1fb2e5cc0
+  - version: 4.0.0
+    projects:
+      - repo: openstack/os-brick
+        hash: c5015cbd8a5397b2c639a6a74d6d2f6a95d5bf18
+branches:
+  - location: 4.0.0
+    name: stable/victoria
