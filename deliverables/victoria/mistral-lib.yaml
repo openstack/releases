@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 301c17e7eabeb0d60b2216cd4e1919b095a5d410
+  - version: 2.3.0
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 245c1272f2219991194cfead55d03277e68cccd7
+branches:
+  - name: stable/victoria
+    location: 2.3.0
