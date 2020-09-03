@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 9de5c99ccdb77ec1bf0392aa04bb628e6edc25ce
+  - version: 3.1.1
+    projects:
+      - repo: openstack/pycadf
+        hash: 4179996d52dbd37f3fd966225b4157343a75239c
+branches:
+  - name: stable/victoria
+    location: 3.1.1
