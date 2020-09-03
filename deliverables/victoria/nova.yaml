@@ -5,3 +5,18 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    `Nova supports mixing pinned and floating CPUs within the same nova
+    server. <https://docs.openstack.org/nova/latest/user/flavors.html>`_
+  - |
+    `Nova supports customizing the placement resource inventory of the compute
+    node via a provider configuration file.
+    <https://docs.openstack.org/nova/latest/admin/managing-resource-providers.html>`_
+  - |
+    `Nova supports fast cloning of Glance images from the Ceph RBD cluster even if
+    Glance multistore configuration is used.
+    <https://specs.openstack.org/openstack/nova-specs/specs/victoria/approved/rbd-glance-multistore.html>`_
+  - |
+    `Nova supports creating servers with virtual TPM devices.
+    <https://docs.openstack.org/nova/latest/admin/emulated-tpm.rst>`_
