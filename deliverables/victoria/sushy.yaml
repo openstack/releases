@@ -14,3 +14,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: fc5b22a568b7ceb6bef91e56fe171b77088a5112
+  - version: 3.4.0
+    projects:
+      - repo: openstack/sushy
+        hash: 8866075d7ce6eb6d892339d4eef06770df02abb7
+branches:
+  - name: stable/victoria
+    location: 3.4.0
