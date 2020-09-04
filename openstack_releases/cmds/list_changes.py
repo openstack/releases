@@ -428,6 +428,17 @@ def main():
             except subprocess.CalledProcessError as e:
                 print('WARNING: Could not run git describe: %s' % e)
 
+            header('reno SemVer suggestion')
+            print('\n(This may produce an old tag version if no release notes were added.\n')
+            print('\nreno -q semver-next\n')
+            try:
+                subprocess.check_call(
+                    ['reno', '-q', 'semver-next'],
+                    cwd=os.path.join(workdir, project.repo.name),
+                )
+            except subprocess.CalledProcessError as e:
+                print('WARNING: Could not run reno semver-next: %s' % e)
+
             git_show(
                 workdir=workdir,
                 repo=project.repo.name,
