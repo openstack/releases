@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 67431c91371496bcf34eae4a3faf70592bceefd0
+  - version: 1.2.0
+    projects:
+      - repo: openstack/metalsmith
+        hash: 3621535d6733a8493a39eb1a98994694ed8f16c9
+branches:
+  - name: stable/victoria
+    location: 1.2.0
