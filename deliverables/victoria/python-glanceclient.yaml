@@ -15,3 +15,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 77eab17cf9f3cf3f2578f73163cb816e425effa2
+  - version: 3.2.2
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 8a63928e2ef1e50875db675105f910a511a0242e
+branches:
+  - name: stable/victoria
+    location: 3.2.2
