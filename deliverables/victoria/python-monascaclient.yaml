@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 152a1a2e7c54cb32c396f563321c7ac72b6be126
+  - version: 2.2.1
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 4c3eef6277f679da2e7773fabed416029e55a5e9
+branches:
+  - name: stable/victoria
+    location: 2.2.1
