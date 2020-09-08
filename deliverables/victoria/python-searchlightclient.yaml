@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: 9282fc3ca78ce9a245f6e3eddb38f2ca7c40da6a
+  - version: 2.1.1
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 9b7c80cfc48924f71aefd0527363d54e13fd113e
+branches:
+  - name: stable/victoria
+    location: 2.1.1
