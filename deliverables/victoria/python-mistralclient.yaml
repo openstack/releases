@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: f77c1d23fb68b24d7406647b489f3f960026c46b
+  - version: 4.1.1
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 471e37df0218844d7693f31848037e768460f244
+branches:
+  - name: stable/victoria
+    location: 4.1.1
