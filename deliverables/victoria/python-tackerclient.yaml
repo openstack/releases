@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 1d033f9053a12ed4d5406d38a768009c9a109397
+  - version: 1.3.0
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 8ff2f35476027975d44fa7f6dad4a8ee022ff898
+branches:
+  - name: stable/victoria
+    location: 1.3.0
