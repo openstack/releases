@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: 2a8a8dc3cd0fdb7bda58e77f463840b1c812f2dd
+  - version: 4.0.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 2ccd96d73360d6ed78b28a31ec00eb9652679dbf
+branches:
+  - name: stable/victoria
+    location: 4.0.0
