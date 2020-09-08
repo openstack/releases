@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: df7dbabb7dd63bc8066d9cc89955a510bf63b04d
+  - version: 5.0.1
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 1f0feb30ccd3b19bc23453d85d3266c85fcf04d6
+branches:
+  - name: stable/victoria
+    location: 5.0.1
