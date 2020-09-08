@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 9268d3101b3c3464150e96fde0319c24d4d8856d
+  - version: 7.2.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: f605cca16320f7869bff0ce32aa0f70ab8a29a8b
+branches:
+  - name: stable/victoria
+    location: 7.2.0
