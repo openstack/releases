@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 0d405a5022000b76541f0c8323766eda97b613c3
+  - version: 1.2.1
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 257e8200fbaee55deac910040fca1071db7b85ae
+branches:
+  - name: stable/victoria
+    location: 1.2.1
