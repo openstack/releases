@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/sushy-cli
         hash: 0e0f8c48ff65da75cca96120860cace38d2206c2
+  - version: 0.3.1
+    projects:
+      - repo: openstack/sushy-cli
+        hash: eb47e89ff8a4cbdefecf8b139236a4261197496a
+branches:
+  - name: stable/victoria
+    location: 0.3.1
