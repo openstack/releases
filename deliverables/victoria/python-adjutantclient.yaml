@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 9908379f82ae9101c7294c856993f87c5453063f
+  - version: 0.7.0
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 9095d25ca0b0e487464f370825872e457b698e68
+branches:
+  - name: stable/victoria
+    location: 0.7.0
