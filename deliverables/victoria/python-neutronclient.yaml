@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: f751dd3782d0d674d8e717e7be6d8bc99518b237
+  - version: 7.2.1
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 62c187f5c7c9c43b01cc8ea2773393d2c899ea1d
+branches:
+  - name: stable/victoria
+    location: 7.2.1
