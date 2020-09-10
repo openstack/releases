@@ -5,6 +5,12 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - 'Enhancement in multiple stores feature, administrator can now set
+    policy to allow user to copy images owned by other tenants'
+  - 'Glance allow to configure cinder multi-stores'
+  - 'RBD and Filesystem drivers of glance now support sparse image upload'
+  - 'Enhancement in RBD driver chunk upload of image'
 repository-settings:
   openstack/glance: {}
 releases:
