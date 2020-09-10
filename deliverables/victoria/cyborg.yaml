@@ -1,8 +1,36 @@
 ---
-storyboard: openstack/cyborg
-release-model: cycle-with-rc
 team: cyborg
 type: service
+storyboard: 968
+release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - |
+    Users can launch instances with accelerators managed by Cyborg since Ussuri
+    release, this release two more operations * Rebuild and * Evacuate are
+    supported. See `accelerator operation guide
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html>`_
+    to find all supported operations.
+  - |
+    Cyborg supported new accelerator drivers (Intel QAT and Inspur FPGA) and
+    reached an agreement that Vendors who want to implement a new driver should
+    at least provide a full driver report result. (Of course, providing
+    third-party CI is more welcome.) `Supported drivers
+    <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html>_`
+  - |
+    Program API is supported, now users can program FPGA given the pre-uploaded
+    bitstream. `program API (PATCH deployable)
+    <https://specs.openstack.org/openstack/cyborg-specs/specs/train/approved/cyborg-api.html>_`
+    And API microversion for existed APIs is improved such as arq APIs.
+  - |
+    In this release, the policy refresh (RBAC with scoped) for cyborg is
+    partially implemented (Device Profile APIs), we've implemented new default
+    rules in base policy and device_profile policy, and added the basic
+    testing framework for all policies.
+    For the Backward Compatibility, old rules are maintained as deprecated
+    rules with same defaults as today so that existing deployment will keep
+    working as it is. After we implement all the features, we'll give two
+    cycles transition period for operators. See `policy default refresh
+    <https://specs.openstack.org/openstack/cyborg-specs/specs/ussuri/approved/policy-defaults-refresh.html>`_
