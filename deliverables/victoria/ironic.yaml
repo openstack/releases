@@ -20,3 +20,18 @@ branches:
     location: 15.1.0
   - name: bugfix/15.2
     location: 15.2.0
+cycle-highlights:
+  - The `deploy steps
+    <https://docs.openstack.org/ironic/latest/admin/node-deployment.html>`_
+    work has decomposed the basic deployment operation into multiple
+    steps which can now also include steps from supported RAID and BIOS
+    interfaces at the time of deploy.
+  - An ``agent`` power interface enables `provisoining operations
+    <https://docs.openstack.org/ironic/latest/admin/agent-power.html>`_
+    without a Baseboard Management Controller.
+  - Ironic can now be configured for `HTTP Basic authentication
+    <https://docs.openstack.org/ironic/latest/install/standalone.html#service-settings>`_
+    without the need for additional services.
+  - Adds initial support for `DHCP-less based deployments
+    <https://docs.openstack.org/ironic/latest/admin/drivers/redfish.html#layer-3-or-dhcp-less-ramdisk-booting>`_
+    with Redfish Virtual Media.
