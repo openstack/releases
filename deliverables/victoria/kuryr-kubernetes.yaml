@@ -5,3 +5,12 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
+cycle-highlights:
+  - |
+    Kuryr will no longer use annotations to store data about OpenStack objects
+    in K8s API. Instead a corresponding CRDs are created, i.e. KuryrPort,
+    KuryrLoadBalancer and KuryrNetworkPolicy.
+  - |
+    Logs on INFO level should be much cleaner now.
+  - |
+    Added support for autodetection of VM bridging interface in nested setups.
