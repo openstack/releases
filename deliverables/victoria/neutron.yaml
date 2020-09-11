@@ -6,14 +6,14 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
 cycle-highlights:
-  - Metadata service is now available also over the IPv6 address.
-    Users can now use metadata service without config drive in the
-    IPv6-only networks now.
-  - Support for ``flat`` networks has been added for Distributed virtual
-    routers (``DVR``).
-  - Support for floating IPs port forwarding has been added for the ``OVN``
-    backend. Users can now create port forwardings for Floating IP when also
-    when OVN backend is used in Neutron.
+  - Metadata service is now available over IPv6.
+    Users can now use metadata service without config drive in
+    IPv6-only networks.
+  - Support for ``flat`` networks has been added for Distributed Virtual
+    Routers (``DVR``).
+  - Support for Floating IP port forwarding has been added for the ``OVN``
+    backend. Users can now create port forwardings for Floating IPs when
+    the OVN backend is used in Neutron.
   - Added support for router availability zones in OVN. The OVN driver can now
     read from the router’s availability_zone_hints field and schedule router
     ports accordingly with the given availability zones.
