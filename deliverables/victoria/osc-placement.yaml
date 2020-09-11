@@ -6,3 +6,11 @@ team: placement
 type: client-library
 repository-settings:
   openstack/osc-placement: {}
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/osc-placement
+        hash: 25ef9ede49172a47c305e28f6a02d0c0b472920b
+branches:
+  - name: stable/victoria
+    location: 2.1.0
