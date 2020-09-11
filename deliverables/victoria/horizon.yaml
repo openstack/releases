@@ -18,3 +18,12 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 79e505520fc307eeedc1f5c81fb516e9638ebd72
+cycle-highlights:
+  - Error messages shown in horizon now contains more detail. Previously GUI
+    users cannot know detail reasons of operations, but users can now check
+    detailed information from back-end service so that they can address causes.
+  - Added a new tab that shows messages for volumes and volume snapshots.
+    Users can know detail events which happend for corresponding volumes or
+    snapshots.
+  - Added support for extending in-use volumes. Users can extend in-use
+    volumes via horizon now.
