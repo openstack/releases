@@ -5,3 +5,15 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - |
+    Tenant driven share replication, a self-service aid to data protection,
+    disaster recovery and high availability is now generally available and
+    fully supported. Starting with API version 2.56, the
+    ``X-OpenStack-Manila-API-Experimental`` header is no longer required to
+    create/promote/resync/delete share replicas.
+  - |
+    Share server migration is now available as an experimental feature. Share
+    servers provide hard multi-tenancy guarantees by isolating shared file
+    systems in the network path. In this release, cloud administrators
+    are able to move share servers to different backends or share networks.
