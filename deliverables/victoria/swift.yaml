@@ -5,3 +5,7 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+cycle-highlights:
+  - Improved time-to-first-byte latencies when reading erasure-coded data.
+  - Increased isolation between background daemons and proxy-servers when running with a separate replication network.
+  - We're beginning to see non-trivial production clusters transition from running Swift under Python 2 to Python 3.
