@@ -754,11 +754,11 @@ R-5 week (Milestone-3)
    If it is not OK to transition them, create a new stable branch from the
    latest release from the previous series.
 
-   A full list of unreleased deliverables for the cycle can be found with::
+   A full list of unreleased ``libraries`` and ``client-libraries`` for the cycle
+   can be found with::
 
-     tox -e venv -- list-deliverables --unreleased --group-by type
+     tox -e venv -- list-deliverables --unreleased --type library --type client-library
 
-   Check for any ``client-library`` and ``library`` deliverables in the output.
 
 #. List cycle-with-intermediary deliverables that have not been released yet::
 
