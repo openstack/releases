@@ -5,6 +5,14 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+releases:
+  - version: 2.26.0
+    projects:
+      - repo: openstack/swift
+        hash: d6c6ab764e4c0e737b99f19b2495f1b9aab8c0d2
+branches:
+  - name: stable/victoria
+    location: 2.26.0
 cycle-highlights:
   - Improved time-to-first-byte latencies when reading erasure-coded data.
   - Increased isolation between background daemons and proxy-servers when running with a separate replication network.
