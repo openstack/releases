@@ -3,5 +3,14 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - Improved handling around the configured default volume-type and
+    added new Block Storage API calls with microversion 3.62 that enable
+    setting a project-level default volume-type for individual projects.
+  - Added some new backend drivers, and many current drivers have added
+    support for more features.  For example, the NFS driver now supports
+    volume encryption.
+  - Support was added to cinder backup to use the popular Zstandard
+    compression algorithm.
 repository-settings:
   openstack/cinder: {}
