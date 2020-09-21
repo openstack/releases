@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/panko: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/panko
+        hash: 046c9460c60808ebbbee1ac988160e09ce88a27d
+branches:
+  - name: stable/victoria
+    location: 9.0.0.0rc1
