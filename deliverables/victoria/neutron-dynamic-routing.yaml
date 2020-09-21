@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-dynamic-routing: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 632061cb68e7d61a5c8987eede6053dbbad3e703
+branches:
+  - name: stable/victoria
+    location: 17.0.0.0rc1
