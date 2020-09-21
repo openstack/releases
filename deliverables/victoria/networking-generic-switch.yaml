@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-generic-switch: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 7ab35184f7e460070d4da9cd21ba58af6583b709
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
