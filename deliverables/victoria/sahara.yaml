@@ -6,3 +6,11 @@ team: sahara
 type: service
 repository-settings:
   openstack/sahara: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: d32f7d6cf9fe188b83eb01b885065723cfd3d9fb
+branches:
+  - name: stable/victoria
+    location: 13.0.0.0rc1
