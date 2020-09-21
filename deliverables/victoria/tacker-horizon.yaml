@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: fe74538ae2e415381ad8a6489d30125442088526
+branches:
+  - name: stable/victoria
+    location: 2.0.0.0rc1
