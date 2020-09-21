@@ -7,6 +7,15 @@ type: service
 repository-settings:
   openstack/cloudkitty: {}
 cycle-highlights:
-  - After a period of inactivity, development has been resumed by a group of
-    new contributors.
-  - Introduced a Monasca fetcher, to gather scopes to be rated from Monasca.
+  - After a period of inactivity, development has been resumed by a
+    group of new contributors.
+  - Introduced a Monasca fetcher, to gather scopes to be rated from
+    Monasca.
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: dbc5b7c8d4d53083db484a010dcbb310823b3ff3
+branches:
+  - name: stable/victoria
+    location: 13.0.0.0rc1
