@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-storm: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: a0f41eea5313ab10256ecce78a063b3191b13ad7
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
