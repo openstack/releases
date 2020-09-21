@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: db25e505a30b10ed8a2a66c4674e20130dd5d5e0
+branches:
+  - name: stable/victoria
+    location: 18.0.0.0rc1
