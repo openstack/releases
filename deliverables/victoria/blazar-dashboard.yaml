@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/blazar-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: f494ec194164086d221d0fa4980342f1be95310f
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
