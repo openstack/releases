@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: fca3366641786aabae43178154e3c60e3042c20c
+branches:
+  - name: stable/victoria
+    location: 9.0.0.0rc1
