@@ -5,3 +5,11 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/storlets: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: 1a431d5c20a99d8797973de12b9a9b24a3600df5
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
