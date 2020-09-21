@@ -7,3 +7,11 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 2168b4367d483ce420afee4bc1e5fca371cc40b8
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
