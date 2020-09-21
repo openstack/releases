@@ -5,3 +5,11 @@ storyboard: 927
 release-model: cycle-with-rc
 repository-settings:
   openstack/qinling: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/qinling
+        hash: 8787d06d41b67b8f732a2acda75b1574a67d08a7
+branches:
+  - name: stable/victoria
+    location: 5.0.0.0rc1
