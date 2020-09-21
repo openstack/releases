@@ -6,21 +6,30 @@ release-type: python-pypi
 team: octavia
 type: service
 cycle-highlights:
-  - Users can now specify the TLS versions accepted for listeners and pools.
-    Operators also now have the ability to set a minimum TLS version
-    acceptable for their deployment.
+  - Users can now specify the TLS versions accepted for listeners and
+    pools. Operators also now have the ability to set a minimum TLS
+    version acceptable for their deployment.
   - Octavia now supports HTTP/2 over TLS using the new Application Layer
     Protocol Negotiation (ALPN) configuration option for listeners.
   - Load balancer statistics can now be reported to multiple statistics
     drivers simultaneously and supports delta metrics. This allows easier
-    integration into external metrics system, such as a time series database.
-  - Octavia flavors for the amphora driver now support specifying the glance
-    image tag as part of the flavor. This allows the operator to define
-    Octavia flavors that boot alternate amphora images.
-  - Load balancer pools now support version two of the PROXY protocol. This
-    allows passing client information to member servers when using TCP
-    protocols. PROXYV2 improves the performance of establishing new connections
-    using the PROXY protocol to member servers, especially when the listener
-    is using IPv6.
+    integration into external metrics system, such as a time series
+    database.
+  - Octavia flavors for the amphora driver now support specifying the
+    glance image tag as part of the flavor. This allows the operator
+    to define Octavia flavors that boot alternate amphora images.
+  - Load balancer pools now support version two of the PROXY protocol.
+    This allows passing client information to member servers when using
+    TCP protocols. PROXYV2 improves the performance of establishing
+    new connections using the PROXY protocol to member servers, especially
+    when the listener is using IPv6.
 repository-settings:
   openstack/octavia: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: afe9ac3cfc60c598e647a7b25f74ffeff1d1333b
+branches:
+  - name: stable/victoria
+    location: 7.0.0.0rc1
