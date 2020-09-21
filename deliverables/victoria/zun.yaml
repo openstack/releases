@@ -5,3 +5,11 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/zun
+        hash: 40bf033a73c5428a5135e828a0c9967854652114
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
