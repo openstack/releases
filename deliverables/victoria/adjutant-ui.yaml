@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/adjutant-ui: {}
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 92f8bdc649b96e437bec23dbf334cbdd9fc3ec7b
+branches:
+  - name: stable/victoria
+    location: 1.0.0.0rc1
