@@ -5,3 +5,11 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 3167277843986efe50a03dc15e04acf2ef742fef
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
