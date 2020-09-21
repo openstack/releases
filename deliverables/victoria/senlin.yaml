@@ -5,3 +5,11 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: aca5b42d81bf3ec422ea6452027f3527c3b5443b
+branches:
+  - name: stable/victoria
+    location: 10.0.0.0rc1
