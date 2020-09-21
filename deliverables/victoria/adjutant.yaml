@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/adjutant:
     tarball-base: python-adjutant
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant
+        hash: 43e0c625e39f826b578e3e5c25519606d9b72808
+branches:
+  - name: stable/victoria
+    location: 1.0.0.0rc1
