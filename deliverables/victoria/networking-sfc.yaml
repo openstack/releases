@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-sfc: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 79f95d9c3c6ab4feb9eccc739f58cb5ff2621fe2
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
