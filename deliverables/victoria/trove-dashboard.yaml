@@ -5,3 +5,11 @@ team: trove
 type: horizon-plugin
 repository-settings:
   openstack/trove-dashboard: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 2ce3da5b3080146d3aa00aa7d583a477017ed7ba
+branches:
+  - name: stable/victoria
+    location: 15.0.0.0rc1
