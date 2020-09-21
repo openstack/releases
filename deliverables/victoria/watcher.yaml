@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: 583c946061f8af815c32254655f4aed8f0c18dc9
+branches:
+  - name: stable/victoria
+    location: 5.0.0.0rc1
