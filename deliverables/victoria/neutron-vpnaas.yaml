@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-vpnaas: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 2b293a1bfae6cefe17efa820e41ef698663749f2
+branches:
+  - name: stable/victoria
+    location: 17.0.0.0rc1
