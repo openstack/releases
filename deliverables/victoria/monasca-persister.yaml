@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 92c93e9f1e9a9b835025e882ef862865f20d1014
+branches:
+  - name: stable/victoria
+    location: 3.0.0.0rc1
