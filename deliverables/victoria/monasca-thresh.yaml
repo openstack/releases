@@ -7,3 +7,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-thresh: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 846e255d782d40f27f786013a5a54ef5a5d96582
+branches:
+  - name: stable/victoria
+    location: 3.0.0.0rc1
