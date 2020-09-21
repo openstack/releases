@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: 306b131d2adb0535b194d5c3371cf17d9dd80c63
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
