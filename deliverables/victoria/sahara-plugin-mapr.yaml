@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-mapr: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 07d787ff45ae9394ad00f40240e05f73f3f68d3e
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
