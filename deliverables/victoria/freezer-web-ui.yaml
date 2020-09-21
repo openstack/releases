@@ -6,3 +6,11 @@ team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 1f5004d5214e46064ba6f3444ff813715e7808ff
+branches:
+  - name: stable/victoria
+    location: 9.0.0.0rc1
