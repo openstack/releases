@@ -34,3 +34,11 @@ cycle-highlights:
     working as it is. After we implement all the features, we'll give two
     cycles transition period for operators. See `policy default refresh
     <https://specs.openstack.org/openstack/cyborg-specs/specs/ussuri/approved/policy-defaults-refresh.html>`_
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 9a16e9b678828f90dde810d37ebeb02f8581edf1
+branches:
+  - name: stable/victoria
+    location: 5.0.0.0rc1
