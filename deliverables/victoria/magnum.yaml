@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: 2a61e7dc1f28c0ab7694b4c2855764358ee1a4ee
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
