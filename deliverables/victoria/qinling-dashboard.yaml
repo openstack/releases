@@ -5,3 +5,11 @@ storyboard: openstack/qinling-dashboard
 release-model: cycle-with-rc
 repository-settings:
   openstack/qinling-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 14da97ed539bbeb03bf79a1e10e451b5a280dbae
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
