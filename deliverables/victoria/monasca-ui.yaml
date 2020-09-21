@@ -5,3 +5,11 @@ team: monasca
 type: horizon-plugin
 repository-settings:
   openstack/monasca-ui: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 0ae1ab35e4877d0e54a1acb2a855bfb8a00dfd9c
+branches:
+  - name: stable/victoria
+    location: 3.0.0.0rc1
