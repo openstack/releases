@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 721d5e8fb5318bf08946404836dbc8e0a485431a
+branches:
+  - name: stable/victoria
+    location: 5.0.0.0rc1
