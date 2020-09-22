@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 9e777ec9a471d32f6c28be742496f71a71295bc2
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
