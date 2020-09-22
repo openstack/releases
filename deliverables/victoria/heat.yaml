@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/heat:
     tarball-base: openstack-heat
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: 8e1e3d6011ba28f8a0e6ca7c09d1e61660a75f3f
+branches:
+  - name: stable/victoria
+    location: 15.0.0.0rc1
