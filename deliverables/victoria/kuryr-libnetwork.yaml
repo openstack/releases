@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: c587fc063d8e1f9956daff6a864f5378238106f7
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
