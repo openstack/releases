@@ -5,3 +5,11 @@ team: zun
 type: horizon-plugin
 repository-settings:
   openstack/zun-ui: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/zun-ui
+        hash: 1fe062f92c473568eda13527d0ff7cb5705e5cfa
+branches:
+  - name: stable/victoria
+    location: 6.0.0.0rc1
