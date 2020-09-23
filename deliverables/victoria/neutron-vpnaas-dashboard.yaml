@@ -5,3 +5,11 @@ type: horizon-plugin
 release-model: cycle-with-rc
 repository-settings:
   openstack/neutron-vpnaas-dashboard: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: b44a22731683c83b9467c268fb3f2a098d0c9397
+branches:
+  - name: stable/victoria
+    location: 3.0.0.0rc1
