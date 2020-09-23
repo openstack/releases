@@ -5,3 +5,11 @@ team: sahara
 type: horizon-plugin
 repository-settings:
   openstack/sahara-dashboard: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 3fc494d1730b90a3e49855c2498958c92a2c1ee5
+branches:
+  - name: stable/victoria
+    location: 13.0.0.0rc1
