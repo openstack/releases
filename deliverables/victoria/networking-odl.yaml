@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-odl: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/networking-odl
+        hash: 30ee733387efb4323175c1df372e9a344c520fcc
+branches:
+  - name: stable/victoria
+    location: 17.0.0.0rc1
