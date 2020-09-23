@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: add152d6e7623e5d044585d239a3dd4c3c580e27
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
