@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-cdh: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 8429c530fad71e04e3bfb9bf26d21fbe9a8bc435
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
