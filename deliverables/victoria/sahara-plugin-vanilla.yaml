@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-vanilla: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 3e3f94e6c9fddb6c2cba3efc830620d60aa3231f
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
