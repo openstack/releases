@@ -5,3 +5,11 @@ team: searchlight
 type: service
 repository-settings:
   openstack/searchlight: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/searchlight
+        hash: 2d5d6dd491fba14b43742961fbdad5116d4510ff
+branches:
+  - name: stable/victoria
+    location: 9.0.0.0rc1
