@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ironic-inspector
         hash: 02c6c92c50c8c55347cb02138781a57e8b976850
     version: 10.1.0
+  - version: 10.1.1
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: bc4311e16f108e7e38036c13b73f0824d34eb4a1
 branches:
   - name: stable/ussuri
     location: 10.1.0
