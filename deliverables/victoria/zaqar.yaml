@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: bd4e5b62fc08f802868389113971f3402a90c232
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
