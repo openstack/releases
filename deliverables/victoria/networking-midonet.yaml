@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-midonet: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/networking-midonet
+        hash: af9b8a7444c72d69c1accdce70bcedba530f0ff8
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
