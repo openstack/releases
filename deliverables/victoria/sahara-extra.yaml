@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-extra: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-extra
+        hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+branches:
+  - name: stable/victoria
+    location: 12.0.0.0rc1
