@@ -1,10 +1,15 @@
 ---
-storyboard: openstack/vitrage
-release-model: cycle-with-intermediary
 team: vitrage
 type: service
+storyboard: openstack/vitrage
+release-model: cycle-with-intermediary
 repository-settings:
   openstack/vitrage: {}
+cycle-highlights:
+  - Add new datasource for TMF API 639 Datasource.
+  - Complete verification to verify the `Vitrage API
+    <https://docs.openstack.org/vitrage/latest/contributor/vitrage-api.html>`_
+
 releases:
   - version: 7.2.0
     projects:
