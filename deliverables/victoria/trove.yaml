@@ -5,3 +5,11 @@ team: trove
 type: service
 repository-settings:
   openstack/trove: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: dc2faefa720d08ce77868fade696dd93f548746d
+branches:
+  - name: stable/victoria
+    location: 14.0.0.0rc1
