@@ -6,11 +6,11 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - 'Enhancement in multiple stores feature, administrator can now set
-    policy to allow user to copy images owned by other tenants'
-  - 'Glance allow to configure cinder multi-stores'
-  - 'RBD and Filesystem drivers of glance now support sparse image upload'
-  - 'Enhancement in RBD driver chunk upload of image'
+  - Enhancement in multiple stores feature, administrator can now set
+    policy to allow user to copy images owned by other tenants
+  - Glance allow to configure cinder multi-stores
+  - RBD and Filesystem drivers of glance now support sparse image upload
+  - Enhancement in RBD driver chunk upload of image
 repository-settings:
   openstack/glance: {}
 releases:
@@ -22,3 +22,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 213660d8b5c726573efa714ab958a33c48b2138a
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 6504588aaa849b89f4b6dfc22d17ee2f8e3b80f2
+branches:
+  - name: stable/victoria
+    location: 21.0.0.0rc1
