@@ -15,3 +15,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 870b53ee8ee66920fe0b68a31fadf1ee5431ab74
+  - version: 7.3.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 23d1dcd0092579e3ceeee3084084ca4c23d78251
+branches:
+  - name: stable/victoria
+    location: 7.3.0
