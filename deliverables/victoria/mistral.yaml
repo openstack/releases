@@ -6,3 +6,11 @@ team: mistral
 type: service
 repository-settings:
   openstack/mistral: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/mistral
+        hash: 068e5cc0e9ab73a3046a6b8de251079a784b9139
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
