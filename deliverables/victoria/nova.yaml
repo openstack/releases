@@ -22,3 +22,11 @@ cycle-highlights:
   - |
     `Nova supports creating servers with virtual TPM devices.
     <https://docs.openstack.org/nova/latest/admin/emulated-tpm.rst>`_
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 2931516b75ab1eda8deefec6910efee82a0a7ae2
+branches:
+  - name: stable/victoria
+    location: 22.0.0.0rc1
