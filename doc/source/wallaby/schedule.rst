@@ -230,3 +230,14 @@ Manila Feature Proposal Freeze
 
 All new Manila features must be proposed and substantially completed, with
 unit, functional and integration tests by the end of the week.
+
+Oslo
+----
+
+.. _w-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
