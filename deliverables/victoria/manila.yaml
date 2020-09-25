@@ -17,3 +17,11 @@ cycle-highlights:
     servers provide hard multi-tenancy guarantees by isolating shared file
     systems in the network path. In this release, cloud administrators
     are able to move share servers to different backends or share networks.
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 22823526c5889f6b64fc52b22bf6e60308613884
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
