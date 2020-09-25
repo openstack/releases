@@ -40,6 +40,8 @@ cycle:
 - end: '2020-12-18'
   name: R-17
   start: '2020-12-14'
+  project-specific:
+    - w-cinder-spec-freeze
 - end: '2020-12-25'
   name: R-16
   start: '2020-12-21'
@@ -62,6 +64,9 @@ cycle:
   x-project:
     - w-2
     - w-mf
+  project-specific:
+    - w-cinder-driver-deadline
+    - w-cinder-target-driver-deadline
 - end: '2021-01-29'
   name: R-11
   start: '2021-01-25'
@@ -74,10 +79,13 @@ cycle:
   name: R-9
   start: '2021-02-08'
   project-specific:
+    - w-cinder-feature-checkpoint
     - w-manila-fpfreeze
 - end: '2021-02-19'
   name: R-8
   start: '2021-02-15'
+  project-specific:
+    - w-cinder-driver-features-declaration
 - end: '2021-02-26'
   name: R-7
   start: '2021-02-22'
@@ -97,6 +105,8 @@ cycle:
     - w-rf
     - w-goals-complete
     - w-cycle-highlights
+  project-specific:
+    - w-cinder-ci-checkpoint
 - end: '2021-03-19'
   name: R-4
   start: '2021-03-15'
