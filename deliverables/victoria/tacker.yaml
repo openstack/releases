@@ -6,7 +6,15 @@ type: service
 repository-settings:
   openstack/tacker: {}
 cycle-highlights:
-  - Implement ETSI NFV-SOL standard features (Life-cycle management, Scaling,
-    VNF operation, etc.).
+  - Implement ETSI NFV-SOL standard features (Life-cycle management,
+    Scaling, VNF operation, etc.).
   - Add Fenix plugin for Rolling update for VNFs with Fenix and Heat.
   - Expand Kubernetes support.
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 100130beb06c19fed79751d60afe68971af07e6a
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
