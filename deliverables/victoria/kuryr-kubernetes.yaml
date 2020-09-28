@@ -14,3 +14,11 @@ cycle-highlights:
     Logs on INFO level should be much cleaner now.
   - |
     Added support for autodetection of VM bridging interface in nested setups.
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: ff0299d5074c13fe87bd69948837ba1358ad1ea7
+branches:
+  - name: stable/victoria
+    location: 3.0.0.0rc1
