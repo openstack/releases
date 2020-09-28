@@ -14,3 +14,11 @@ cycle-highlights:
     compression algorithm.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 501fa32cc45246a7393479cd0448ff4a053e59b0
+branches:
+  - name: stable/victoria
+    location: 17.0.0.0rc1
