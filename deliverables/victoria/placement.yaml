@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: 471e4cc8b78d4382820bbb5245e15d648e7cc136
+branches:
+  - name: stable/victoria
+    location: 4.0.0.0rc1
