@@ -203,6 +203,75 @@ these highlights.
 Project-specific events
 =======================
 
+Cinder
+------
+
+.. _w-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in Wallaby must be approved by
+Friday 18 December 2020 (23:59 UTC).
+
+.. _w-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the Wallaby
+release is Thursday 21 January 2021 (20:00 UTC).  New drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.  (The idea is that new drivers will
+be included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _w-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the Wallaby release
+is Thursday 21 January 2021 (20:00 UTC).  New target drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.  (The idea is that new drivers will
+be included in a release at the second milestone and thus be easily available
+for downstream testing, documentation feedback, etc.)
+
+.. _w-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in four weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 11 March 2021.
+
+.. _w-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in three weeks.  Before
+the Cinder meeting this week, you should post a blueprint in Launchpad listing
+the Gerrit reviews of features you'd like to land in Wallaby.  (You can look
+among the Ussuri and Victoria blueprints for examples; contact the PTL if you
+have any questions.)  This will help the team prioritize reviews and give you
+candid early feedback on whether the features look ready.
+
+.. _w-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the Wallaby release, its third party CI must be running
+properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
 
 Manila
 ------
