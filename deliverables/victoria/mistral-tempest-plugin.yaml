@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: mistral_tempest_tests
 team: mistral
 type: tempest-plugin
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/mistral-tempest-plugin
+        hash: 776b590bd6af2517238336a114a2b68332228fb2
