@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: watcher-tempest-plugin
 team: watcher
 type: tempest-plugin
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/watcher-tempest-plugin
+        hash: 7fbabcafa39e99b58aeb542214ebd44272bc54ab
