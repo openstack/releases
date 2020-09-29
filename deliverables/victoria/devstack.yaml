@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: 680298e7c67a4250f2edf603ffb90510d5cbf496
+    name: stable/victoria
 repository-settings:
   openstack/devstack: {}
