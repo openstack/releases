@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: zaqar_tempest_plugin
 team: zaqar
 type: tempest-plugin
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/zaqar-tempest-plugin
+        hash: 9146cc9dbfcb7c6c207cf1660288ec03e172ff4e
