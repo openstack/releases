@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 711cd65118ace8609b69f1588238a2a10b0123c1
+  - version: 16.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: 70d0a7e769a88330118dde7073bdcb4bab04ba7c
 cycle-highlights:
   - The ``OVN`` driver is now merged into Neutron repository and is
     one of the in-tree Neutron ML2 drivers, like ``linuxbridge`` or
