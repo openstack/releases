@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: bee397ed880d17c35ec68028ef67d7e3dd0d8798
+    name: stable/victoria
 repository-settings:
   openstack/grenade: {}
