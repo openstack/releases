@@ -16,8 +16,14 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: e5841dfd2ba2e5e811c98b6004d53ed2115ea026
+  - version: 10.4.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: e4273d1f0bbb152d9ab8b165eefc4b40f257afdf
 branches:
   - name: bugfix/10.2
     location: 10.2.0
   - name: bugfix/10.3
     location: 10.3.0
+  - name: stable/victoria
+    location: 10.4.0
