@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 5f49e8f6887f44d2757e3c376739facd8ca6b43d
+  - version: 2.1.2
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 6d41ef9f91b297091aa37721ba10456142fc5107
 branches:
   - name: stable/ussuri
     location: 2.1.1
