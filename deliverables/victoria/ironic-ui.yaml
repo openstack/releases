@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 50134dc769a666b29ba55e377d7b1bfc4af94489
+  - version: 4.2.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 927b4c291e4dbd40eaa45a87318d8165e01de0ee
+branches:
+  - name: stable/victoria
+    location: 4.2.0
