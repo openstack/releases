@@ -26,11 +26,13 @@ branches:
   - name: stable/victoria
     location: 18.6.0
 cycle-highlights:
-  - Error messages shown in horizon now contains more detail. Previously GUI
-    users cannot know detail reasons of operations, but users can now check
-    detailed information from back-end service so that they can address causes.
+  - Error messages shown in horizon now contains more detail. Previously
+    GUI users cannot know detail reasons of operations, but users can
+    now check detailed information from back-end service so that they
+    can address causes.
   - Added a new tab that shows messages for volumes and volume snapshots.
-    Users can know detail events which happend for corresponding volumes or
-    snapshots.
+    Users can know detail events which happend for corresponding volumes
+    or snapshots.
   - Added support for extending in-use volumes. Users can extend in-use
     volumes via horizon now.
+release-notes: https://docs.openstack.org/releasenotes/horizon/victoria.html
