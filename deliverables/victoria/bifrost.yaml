@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: bcda97b6308eda47a80b6290d06bc43dbe5032a3
+  - version: 9.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 4f175fd5be21dccec74ed6b67c5c4c71719ff7ed
 branches:
   - name: bugfix/8.2
     location: 8.2.0
   - name: bugfix/8.3
     location: 8.3.0
+  - name: stable/victoria
+    location: 9.0.0
