@@ -15,11 +15,17 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: df9ce79f23d4975f99734a59619ef2d89bcdbbe7
+  - version: 16.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 33a34ce364ce28077a114b7d1a80fd719521580a
 branches:
   - name: bugfix/15.1
     location: 15.1.0
   - name: bugfix/15.2
     location: 15.2.0
+  - name: stable/victoria
+    location: 16.0.0
 cycle-highlights:
   - The `deploy steps
     <https://docs.openstack.org/ironic/latest/admin/node-deployment.html>`_
