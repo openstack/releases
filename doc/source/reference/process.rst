@@ -1089,19 +1089,8 @@ R-2 week
       or from the `release project
       <https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml>`__.
 
-
-   - Remind the QA PTL to create a branch in the devstack repository.
-     Devstack doesn't push a tag at RC1 it is just branched off of HEAD.
-
-   - After devstack is branched, remind the QA PTL to create a branch in the
-     grenade repository. As with devstack, it will branch from HEAD instead
-     of a tag.
-
-   - Remind the QA PTL to update the default branch for devstack in the new
-     stable branch. For example, https://review.opendev.org/#/c/493208/
-
-   - Remind the QA PTL to update the grenade settings in devstack-gate for the
-     new branch. For example, https://review.opendev.org/362438.
+   - Remind the QA PTL to manage their release duties
+     (c.f https://wiki.openstack.org/wiki/QA/releases).
 
      .. note::
 
@@ -1142,18 +1131,6 @@ R-2 week
          changes happening in master on the other projects will not use it
          and we can have divergence between the requirements being tested
          and being declared as correct.
-
-   - Remind the QA PTL to create new branch specific jobs for our two
-     branchless projects, devstack-gate and tempest, in the tempest repo.
-     Configure tempest to run them on all changes, voting. Configure tempest
-     to run them as periodic bitrot jobs as well. All this can be done in one
-     tempest patch, for example, see https://review.opendev.org/521888.
-     Configure devstack-gate to run the new jobs in check pipeline only,
-     non-voting, for example see https://review.opendev.org/545144.
-
-   - Remind the QA PTL to add the new branch to the list of branches in the
-     periodic-stable job templates in openstack-zuul-jobs. For example, see
-     https://review.opendev.org/545268/.
 
 #. Ensure that all projects that are publishing release notes have the
    notes link included in their deliverable file. This is done by running
