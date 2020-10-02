@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/karbor-dashboard
         hash: a96c06dbfde4a6c15a57262d4f852dec0a0b7e4a
+  - version: 1.5.1
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: 06e52e51262b0c329b74c6c1d599a2464c2f9a2d
+branches:
+  - name: stable/victoria
+    location: 1.5.1
