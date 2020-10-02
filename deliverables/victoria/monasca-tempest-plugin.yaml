@@ -8,3 +8,8 @@ repository-settings:
   openstack/monasca-tempest-plugin: {}
 team: monasca
 type: tempest-plugin
+releases:
+  - version: 2.1.0
+    projects:
+      - repo: openstack/monasca-tempest-plugin
+        hash: 42e94266d7108a59be2b8a0bf34fe4274c3f3dff
