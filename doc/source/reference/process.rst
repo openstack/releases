@@ -1063,7 +1063,7 @@ R-2 week
 
    - You can list those using::
 
-         tox -e venv -- list-deliverables --no-stable-branch
+         tox -e venv -- list-deliverables --no-stable-branch --cycle-based-no-trailing
 
    - Those patches will be used as a base to communicate with the team:
      if a team wants to wait and make another release before the branch is
@@ -1131,6 +1131,12 @@ R-2 week
      the ``stable/$series`` branch for ``openstack/requirements`` and then
      remind to him to announce that the requirements freeze is lifted
      from master.
+
+     .. note::
+
+       The requirements team expect for an empty output of::
+
+           tox -e venv -- list-deliverables --no-stable-branch --cycle-based-no-trailing
 
      .. note::
 
