@@ -1225,45 +1225,14 @@ R-1 week (Final RC deadline)
 
 #. Process any remaining stable branching exception.
 
-#. Notify the documentation team that it should be safe to apply
+#. Notify the documentation
+   (Technical Writing SIG - https://wiki.openstack.org/wiki/Documentation)
+   team that it should be safe to apply
    their process to create the new release series landing pages for
    docs.openstack.org. Their process works better if they wait until
    most of the projects have their stable branches created, but they
    can do the work before the final release date to avoid having to
    synchronize with the release team on that day.
-
-#. Test the release process using the ``openstack/release-test``
-   repository to ensure our machinery is functional.
-
-   The goal here is to ensure that everything work fine and there aren't any
-   problems before we start sending through a bunch of releases. It's a good
-   safety practice to make sure we don't have a bunch of failed releases.
-
-   The tasks is to basically do a release canary of our
-   `testing project
-   <https://opendev.org/openstack/release-test>`__.
-
-   Examples of similar patches for previous cycles:
-
-   - Train: https://review.opendev.org/#/c/687396/;
-   - Ussuri: https://review.opendev.org/#/c/725268/.
-
-   How to proceed::
-
-   $ tox -e venv -- propose-final-releases train ussuri --canary
-   $ git add deliverable/ussuri/release-test.yaml
-   $ git commit -m "Testing the Final Release Plumbing"
-   $ git review -t release-process
-
-   Using this gerrit topic (`release-process`) could help us to track our
-   actions cycle per cycle.
-
-   Another example of a release candidate canary is available through
-   https://review.opendev.org/#/c/721299/.
-
-   Also for further details about the related context you can take a look to our
-   tool `propose-final-releases
-   <https://releases.openstack.org/reference/using.html#propose-final-releases>`__.
 
 #. On the day before the deadline for final release candidates,
    propose last-minute RCs where needed:
