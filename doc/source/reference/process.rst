@@ -21,7 +21,7 @@ Week after previous release
       tox -e venv -- init-series $SERIES $NEXT_SERIES
 
 #. Coordinate with the Infrastructure team to swap out the previous cycle
-   signing key and establish the new one for the startniog cycle.
+   signing key and establish the new one for the starting cycle.
 
 #. Create the $series-relmgt-tracking etherpad using the
    ``make-tracking-etherpad`` command.
