@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: ddde706469cee2c2f0d28e32b4b990b4c3d78cbd
+  - version: 1.33.4
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 00e69d4f32af14a49727b0b9dcad614d8dd29edb
 branches:
   - name: stable/train
     location: 1.33.3
