@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 33972cce5768011809b6231fb5ac865869c11f7f
+  - version: 13.1.0
+    projects:
+      - repo: openstack/heat
+        hash: 48b730a31c4bf9d438c66a1161648f602f8ac9ea
 branches:
   - name: stable/train
     location: 13.0.0.0rc1
