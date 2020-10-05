@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/victoria
+    location:
+      openstack/puppet-openstack-integration: a41b4f29825d32564658d573d0fb34bd6414d6f1
