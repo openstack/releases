@@ -976,7 +976,7 @@ R-3 week (RC1 deadline)
 
        tox -e venv -- list-deliverables --unreleased \
        --model cycle-with-intermediary \
-       --type horizon-plugin --type other --type service
+       --type horizon-plugin --type other --type service --type tempest-plugin
 
    - cycle-with-rc deliverables that have not done a RC1 yet, for which
      a release should be proposed from HEAD, and include stable branch
