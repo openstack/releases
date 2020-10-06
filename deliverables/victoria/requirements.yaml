@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/victoria
+    location:
+      openstack/requirements: fc679c617443a8f99601c67454842dd51d02b94c
