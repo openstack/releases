@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 41167c4ae5ae12c914a9bfadbe0e6ea330ae6123
+  - version: 2.1.1
+    projects:
+      - repo: openstack/heat-agents
+        hash: 6725696d1ba87bc4ab112eb203a270d3c81476fc
+branches:
+  - name: stable/victoria
+    location: 2.1.1
