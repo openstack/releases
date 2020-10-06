@@ -222,6 +222,7 @@ def main():
     output = []
 
     for repo in args.repos:
+        repo = f'openstack/{repo}' if 'openstack/' not in repo else repo
         current = {
             'repo': repo,
             'branch': args.branch,
