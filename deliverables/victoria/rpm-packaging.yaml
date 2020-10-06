@@ -4,5 +4,9 @@ release-model: untagged
 team: Packaging-rpm
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/rpm-packaging: f0367d095c32e7120577e4362005013fb4bfaa7b
+    name: stable/victoria
 repository-settings:
   openstack/rpm-packaging: {}
