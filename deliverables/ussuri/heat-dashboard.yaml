@@ -15,6 +15,10 @@ releases:
       - repo: openstack/heat-dashboard
         hash: 78421908513eec5366fda3081e47c085ad2f89d0
     diff-start: 2.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 389a3ce2c7bae51b7f75261529a2d5f45ed5fb69
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1

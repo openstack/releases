@@ -17,6 +17,10 @@ releases:
       - repo: openstack/heat
         hash: 084c9b3ea19c522d9741f5ba32ef951d3f3a6aa0
     diff-start: 13.0.0.0rc1
+  - version: 14.1.0
+    projects:
+      - repo: openstack/heat
+        hash: cdfb5df5597fb258169b4245e81f2bfcd01f192f
 branches:
   - name: stable/ussuri
     location: 14.0.0.0rc1
