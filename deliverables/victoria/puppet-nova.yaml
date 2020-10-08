@@ -22,3 +22,10 @@ releases:
       - hash: 12e680c3604466bde20a17f08a42a709d34d9ce6
         repo: openstack/puppet-nova
     version: 17.4.0
+  - projects:
+      - hash: 1d848e5aa09be83a1471db43e1bc5cf5fa9724e3
+        repo: openstack/puppet-nova
+    version: 17.5.0
+branches:
+  - name: stable/victoria
+    location: 17.5.0

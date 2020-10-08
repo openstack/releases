@@ -22,3 +22,10 @@ releases:
       - hash: 9a4ac85a82fd03a43bacb37360f31e62cf2bfebc
         repo: openstack/puppet-swift
     version: 17.4.0
+  - projects:
+      - hash: adcdf4955e8d2cc9082eb9423148630095f0cca7
+        repo: openstack/puppet-swift
+    version: 17.4.1
+branches:
+  - name: stable/victoria
+    location: 17.4.1

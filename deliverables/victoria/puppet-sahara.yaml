@@ -22,3 +22,10 @@ releases:
       - hash: 13cca9ffa83e3c3f4e3492d987be78174755f8e2
         repo: openstack/puppet-sahara
     version: 17.4.0
+  - projects:
+      - hash: d181b8b9dcaf026e3b781752ddb2955f3cf3e3e6
+        repo: openstack/puppet-sahara
+    version: 17.4.1
+branches:
+  - name: stable/victoria
+    location: 17.4.1

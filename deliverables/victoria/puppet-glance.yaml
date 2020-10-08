@@ -22,3 +22,10 @@ releases:
       - hash: 424891f43d1a9fe2788fea66a030e13cb19fa670
         repo: openstack/puppet-glance
     version: 17.4.0
+  - projects:
+      - hash: 97add646a1eb015e6dd8d3f56145f82d848d3c04
+        repo: openstack/puppet-glance
+    version: 17.5.0
+branches:
+  - name: stable/victoria
+    location: 17.5.0
