@@ -20,7 +20,14 @@ releases:
       - repo: openstack/sahara-dashboard
         hash: a93165f6dc3dca1e7e562c6c9bdf53650864a7ab
     version: 6.0.3
+  - version: ocata-em
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: a93165f6dc3dca1e7e562c6c9bdf53650864a7ab
+  - version: ocata-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: aeeb0d78b8a961553e4815e9a6171f811252d1db
 repository-settings:
   openstack/sahara-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/ocata.html
-# Retriggering ocata-em tagging

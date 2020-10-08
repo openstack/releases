@@ -20,6 +20,13 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+  - version: ocata-em
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+  - version: ocata-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 6895e63e99b3c1276777a2b8237f5be05e74a0f7
 repository-settings:
   openstack/sahara-extra: {}
-# Retriggering ocata-em tagging
