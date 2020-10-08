@@ -21,6 +21,10 @@ releases:
       - hash: e6589628165546df850ac290f74fd2680fc2b5ee
         repo: openstack/python-saharaclient
     version: pike-em
+  - projects:
+      - hash: b83322d521c818affe91c99775f7cdc58bc9e55d
+        repo: openstack/python-saharaclient
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 1.3.0
