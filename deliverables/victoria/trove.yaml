@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: dc2faefa720d08ce77868fade696dd93f548746d
+  - version: 14.0.0.0rc2
+    projects:
+      - repo: openstack/trove
+        hash: 0239500ee04c75cbab892fa96a42fa7b820383ca
 branches:
   - name: stable/victoria
     location: 14.0.0.0rc1
