@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: 43e0c625e39f826b578e3e5c25519606d9b72808
+  - version: 1.0.0
+    projects:
+      - repo: openstack/adjutant
+        hash: 43e0c625e39f826b578e3e5c25519606d9b72808
+    diff-start: 0.5.0
 branches:
   - name: stable/victoria
     location: 1.0.0.0rc1

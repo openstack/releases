@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 01ac499997b7c90d5ef3f235431814e50bc00efc
+  - version: 11.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 01ac499997b7c90d5ef3f235431814e50bc00efc
+    diff-start: 10.0.0
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

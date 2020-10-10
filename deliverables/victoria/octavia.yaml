@@ -30,6 +30,11 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: afe9ac3cfc60c598e647a7b25f74ffeff1d1333b
+  - version: 7.0.0
+    projects:
+      - repo: openstack/octavia
+        hash: afe9ac3cfc60c598e647a7b25f74ffeff1d1333b
+    diff-start: 6.0.0
 branches:
   - name: stable/victoria
     location: 7.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 7d4ef2057fff075771e5ba24f7bff25e411b9102
+  - version: 4.0.0
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 7d4ef2057fff075771e5ba24f7bff25e411b9102
+    diff-start: 3.0.0
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

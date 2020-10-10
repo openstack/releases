@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: a5816d9b8766dc3400037078c8a014fead5e7f3a
+  - version: 9.0.0
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: a5816d9b8766dc3400037078c8a014fead5e7f3a
+    diff-start: 8.0.0
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

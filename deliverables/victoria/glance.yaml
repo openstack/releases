@@ -30,6 +30,11 @@ releases:
     projects:
       - repo: openstack/glance
         hash: c4d8880794c20aad6772f6e9c2217f15f41c9c2c
+  - version: 21.0.0
+    projects:
+      - repo: openstack/glance
+        hash: c4d8880794c20aad6772f6e9c2217f15f41c9c2c
+    diff-start: 20.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 21.0.0.0rc1

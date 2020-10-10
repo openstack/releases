@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-cdh
         hash: 8429c530fad71e04e3bfb9bf26d21fbe9a8bc435
+  - version: 4.0.0
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 8429c530fad71e04e3bfb9bf26d21fbe9a8bc435
+    diff-start: 3.0.0
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

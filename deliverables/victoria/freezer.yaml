@@ -16,6 +16,15 @@ releases:
         hash: db0c4dd3c717d2e2bf67ef7e50fa1e2fa7bef6d4
       - repo: openstack/freezer-dr
         hash: 7d4c5ad01c780ea9874575464bae4f33877ebc23
+  - version: 9.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 663737694ff9129fae222dd6fe0b7253c29490f3
+      - repo: openstack/freezer-api
+        hash: db0c4dd3c717d2e2bf67ef7e50fa1e2fa7bef6d4
+      - repo: openstack/freezer-dr
+        hash: 7d4c5ad01c780ea9874575464bae4f33877ebc23
+    diff-start: 8.0.0
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

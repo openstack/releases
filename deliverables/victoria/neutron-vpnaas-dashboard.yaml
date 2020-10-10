@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: b44a22731683c83b9467c268fb3f2a098d0c9397
+  - version: 3.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: b44a22731683c83b9467c268fb3f2a098d0c9397
+    diff-start: 2.0.0
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

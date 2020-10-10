@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 40bf033a73c5428a5135e828a0c9967854652114
+  - version: 6.0.0
+    projects:
+      - repo: openstack/zun
+        hash: 40bf033a73c5428a5135e828a0c9967854652114
+    diff-start: 5.0.0
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1

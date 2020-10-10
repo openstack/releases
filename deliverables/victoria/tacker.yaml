@@ -23,6 +23,11 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: e4a7d9b7cd0b4ca110230eca64fe5fa0ba68d3ed
+  - version: 4.0.0
+    projects:
+      - repo: openstack/tacker
+        hash: e4a7d9b7cd0b4ca110230eca64fe5fa0ba68d3ed
+    diff-start: 3.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

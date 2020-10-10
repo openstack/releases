@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 2168b4367d483ce420afee4bc1e5fca371cc40b8
+  - version: 11.0.0
+    projects:
+      - repo: openstack/designate
+        hash: 2168b4367d483ce420afee4bc1e5fca371cc40b8
+    diff-start: 10.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

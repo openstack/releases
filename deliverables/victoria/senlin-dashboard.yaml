@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 6c5d0219657f39215fa29cde73359401adbdb5cc
+  - version: 2.0.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 6c5d0219657f39215fa29cde73359401adbdb5cc
+    diff-start: 1.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 2.0.0.0rc1

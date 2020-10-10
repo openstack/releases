@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 4f148688ac7cee6f2912113d8fa6e6a45935aa57
+  - version: 3.0.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 4f148688ac7cee6f2912113d8fa6e6a45935aa57
+    diff-start: 2.0.0
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

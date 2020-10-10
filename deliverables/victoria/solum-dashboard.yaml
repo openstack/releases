@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: 9f7ad91e05da4ae6285db05df8e5353e92e5e1ae
+  - version: 5.0.0
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 9f7ad91e05da4ae6285db05df8e5353e92e5e1ae
+    diff-start: 4.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

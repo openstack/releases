@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/panko
         hash: 046c9460c60808ebbbee1ac988160e09ce88a27d
+  - version: 9.0.0
+    projects:
+      - repo: openstack/panko
+        hash: 046c9460c60808ebbbee1ac988160e09ce88a27d
+    diff-start: 8.0.0
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

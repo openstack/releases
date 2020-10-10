@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 721d5e8fb5318bf08946404836dbc8e0a485431a
+  - version: 5.0.0
+    projects:
+      - repo: openstack/monasca-api
+        hash: 721d5e8fb5318bf08946404836dbc8e0a485431a
+    diff-start: 4.0.0
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

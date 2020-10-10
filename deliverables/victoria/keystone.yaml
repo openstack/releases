@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: db25e505a30b10ed8a2a66c4674e20130dd5d5e0
+  - version: 18.0.0
+    projects:
+      - repo: openstack/keystone
+        hash: db25e505a30b10ed8a2a66c4674e20130dd5d5e0
+    diff-start: 17.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 18.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: d32f7d6cf9fe188b83eb01b885065723cfd3d9fb
+  - version: 13.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: d32f7d6cf9fe188b83eb01b885065723cfd3d9fb
+    diff-start: 12.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1

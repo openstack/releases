@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-spark
         hash: 0300afc2c185318cd27611a45ae2cc1dccfbd1c1
+  - version: 4.0.0
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 0300afc2c185318cd27611a45ae2cc1dccfbd1c1
+    diff-start: 3.0.0
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

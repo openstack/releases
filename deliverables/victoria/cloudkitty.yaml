@@ -20,6 +20,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 19f88a2929d438c035e2992122f974dedfe560e7
+  - version: 13.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 19f88a2929d438c035e2992122f974dedfe560e7
+    diff-start: 12.0.0
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1

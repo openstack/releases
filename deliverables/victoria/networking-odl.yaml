@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: 30ee733387efb4323175c1df372e9a344c520fcc
+  - version: 17.0.0
+    projects:
+      - repo: openstack/networking-odl
+        hash: 30ee733387efb4323175c1df372e9a344c520fcc
+    diff-start: 16.0.0
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1

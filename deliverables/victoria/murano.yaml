@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 05c57f8933818fa14a291544dbcee35da548c868
+  - version: 10.0.0
+    projects:
+      - repo: openstack/murano
+        hash: 05c57f8933818fa14a291544dbcee35da548c868
+    diff-start: 9.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1
