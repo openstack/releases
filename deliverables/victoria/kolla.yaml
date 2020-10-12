@@ -7,9 +7,10 @@ repository-settings:
   openstack/kolla: {}
 cycle-highlights:
   - Added support for Ubuntu Focal 20.04.
-  - Added additional support for TLS encryption of backend API services,
-    providing end-to-end encryption of API traffic. This cycle adds Nova.
-  - Added support for TLS encryption of etcd.
+  - Added support for automatic creation of resources for Octavia.
+  - Added support for container healthchecks for core OpenStack services.
+  - Improved TLS support, covering etcd, RabbitMQ, as well as Ironic,
+    Neutron and Nova backends. Also adds initial support for ACME protocol, as
+    used by Letsencrypt.
   - Improved performance and scalability of Ansible playbooks.
   - Added support for integrating Neutron with Mellanox InfiniBand.
-  - Added support to Kayobe for deploying custom containers on the seed.
