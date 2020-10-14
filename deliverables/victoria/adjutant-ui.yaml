@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant-ui
         hash: 92f8bdc649b96e437bec23dbf334cbdd9fc3ec7b
+  - version: 1.0.0
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 92f8bdc649b96e437bec23dbf334cbdd9fc3ec7b
+    diff-start: 0.5.0
 branches:
   - name: stable/victoria
     location: 1.0.0.0rc1

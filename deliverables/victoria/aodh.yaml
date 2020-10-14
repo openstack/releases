@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 8635b67777e3aa0c90eccdbcb5753e33a1750aeb
+  - version: 11.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: 8635b67777e3aa0c90eccdbcb5753e33a1750aeb
+    diff-start: 10.0.0
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

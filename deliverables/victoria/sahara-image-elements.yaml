@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: ded80db2667438313bab6d448d19ef2305f2e527
+  - version: 13.0.0
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: ded80db2667438313bab6d448d19ef2305f2e527
+    diff-start: 12.0.0
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1

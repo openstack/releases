@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: a34ddd216e623e35165ecd297f1f51afb89864c2
+  - version: 10.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: a34ddd216e623e35165ecd297f1f51afb89864c2
+    diff-start: 9.0.0
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1

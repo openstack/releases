@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: b27e70a7da3a8bdf43d5a8eba58e8e872fe722cd
+  - version: 11.0.0
+    projects:
+      - repo: openstack/ec2-api
+        hash: b27e70a7da3a8bdf43d5a8eba58e8e872fe722cd
+    diff-start: 10.0.0
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

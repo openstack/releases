@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: 1fe062f92c473568eda13527d0ff7cb5705e5cfa
+  - version: 6.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: 1fe062f92c473568eda13527d0ff7cb5705e5cfa
+    diff-start: 5.0.0
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1

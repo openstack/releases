@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 2b293a1bfae6cefe17efa820e41ef698663749f2
+  - version: 17.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 2b293a1bfae6cefe17efa820e41ef698663749f2
+    diff-start: 16.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1

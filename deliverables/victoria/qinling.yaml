@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/qinling
         hash: 8787d06d41b67b8f732a2acda75b1574a67d08a7
+  - version: 5.0.0
+    projects:
+      - repo: openstack/qinling
+        hash: 8787d06d41b67b8f732a2acda75b1574a67d08a7
+    diff-start: 4.0.0
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 068e5cc0e9ab73a3046a6b8de251079a784b9139
+  - version: 11.0.0
+    projects:
+      - repo: openstack/mistral
+        hash: 068e5cc0e9ab73a3046a6b8de251079a784b9139
+    diff-start: 10.0.0
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

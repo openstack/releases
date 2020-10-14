@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 6d689be76c1b0c55206b46a190608e8336fb927f
+  - version: 9.0.0
+    projects:
+      - repo: openstack/solum
+        hash: 6d689be76c1b0c55206b46a190608e8336fb927f
+    diff-start: 8.0.0
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

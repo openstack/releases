@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 632061cb68e7d61a5c8987eede6053dbbad3e703
+  - version: 17.0.0
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 632061cb68e7d61a5c8987eede6053dbbad3e703
+    diff-start: 16.0.0.0rc1
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1

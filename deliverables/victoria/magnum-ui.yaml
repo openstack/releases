@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/magnum-ui
         hash: d144650bd91f0a078b2483343e1e6d3edb1e8544
+  - version: 7.0.0
+    projects:
+      - repo: openstack/magnum-ui
+        hash: d144650bd91f0a078b2483343e1e6d3edb1e8544
+    diff-start: 6.0.0
 branches:
   - name: stable/victoria
     location: 7.0.0.0rc1
