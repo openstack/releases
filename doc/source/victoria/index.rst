@@ -2,7 +2,7 @@
 Victoria
 ========
 
-Projected Release Date: 14 October, 2020
+Originally Released: 14 October, 2020
 
 .. toctree::
    :maxdepth: 1
