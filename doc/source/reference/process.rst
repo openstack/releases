@@ -1327,6 +1327,10 @@ R+0 week (Final Release)
 
       This item can be staged as a patch on top of the final release patch.
 
+      The ``next-phase`` date should be set to the first Monday after the
+      period declared for the Maintained phase.
+      See https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
+
 #. Send release announcement email to
    ``openstack-announce@lists.openstack.org``, based on
    ``templates/final.txt``. Coordinate the timing of the email with
