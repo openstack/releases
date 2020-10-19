@@ -1,0 +1,14 @@
+---
+storyboard: openstack/kayobe
+release-model: cycle-with-rc
+team: kolla
+type: trailing
+repository-settings:
+  openstack/kayobe: {}
+  openstack/kayobe-config:
+    flags:
+      - no-artifact-build-job
+  openstack/kayobe-config-dev:
+    flags:
+      - no-artifact-build-job
+# Note: deliverable was not released in victoria
