@@ -87,12 +87,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: a2843e8a54465be9c7a5b58e36c854e6b3ad090a
-      - repo: openstack/sahara-image-elements
-        hash: 1098b70175baf27ea706a2ca308ba212a1018ad1
-      - repo: openstack/sahara-dashboard
-        hash: a93165f6dc3dca1e7e562c6c9bdf53650864a7ab
-      - repo: openstack/sahara-extra
-        hash: 89b5dbc51d57302027bdaa4e472d0d57e89d5eb4
+  - version: ocata-eol
+    projects:
+      - repo: openstack/sahara
+        hash: 4459e12258d990a3a67f96012d9fe5b1b8ea7bb7
 repository-settings:
   openstack/sahara: {}
   openstack/sahara-dashboard: {}
