@@ -198,6 +198,12 @@ useful for historical purposes.
 See the `Project Team Guide`_ for more details and instructions on adding
 these highlights.
 
+For examples of previous release highlights:
+`Stein Highlights <https://releases.openstack.org/stein/highlights.html>`_,
+`Train Highlights <https://releases.openstack.org/train/highlights.html>`_,
+`Ussuri Highlights <https://releases.openstack.org/ussuri/highlights.html>`_,
+`Victoria Highlights <https://releases.openstack.org/victoria/highlights.html>`_.
+
 .. _Project Team Guide: https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
 
 Project-specific events
