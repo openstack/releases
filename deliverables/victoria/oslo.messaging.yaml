@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 62e104bdb57714a0754f788795d1b4faf8ebb74d
+  - version: 12.5.1
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 8f5847dcbe5144272ff7295fce2b50a9f544e5b0
 branches:
   - name: stable/victoria
     location: 12.5.0
