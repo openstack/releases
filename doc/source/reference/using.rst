@@ -748,6 +748,74 @@ To check for ussuri release note links:
 
   tools/add_release_note_links.sh ussuri
 
+tools/search_email.py
+---------------------
+
+A script to search emails on the openstack-discuss mailing list. By default
+this script will search for emails related to the release team, but
+topic can be overriden to looking for specific subjects.
+
+Examples:
+
+The most basic example is the following, it will search for emails related
+to releases topics on openstack-discuss during the entire life of
+this mailing list (between the creation date in November 2018 to
+the current date):
+
+::
+
+  $ tools/search_emails.py
+
+To looking for emails related to release and filtered between 2 dates:
+
+::
+
+  $ tools/search_emails.py --starting-date 2020-04-01 --ending-date 2020-4-1
+
+To looking for emails related to release and filtered by authors:
+
+::
+
+  $ tools/search_emails.py --authors "Herve Beraud" "Sean McGinnis"
+
+To looking for emails related to release between 2 dates and sent by authors:
+
+::
+
+  $ tools/search_emails.py --starting-date 2020-04-01 --ending-date 2020-4-1 --authors "Herve Beraud" "Sean McGinnis"
+
+To looking for emails related to release FFE since August 2020:
+
+::
+  $ tools/search_emails.py --topic ".?\[release\].*FFE.*" --starting-date 2020-8-1
+
+To looking for all the release countdown emails sent during victoria:
+
+::
+
+  $ tools/search_emails.py --topic ".?\[release\] Release countdown.*" --starting-date 2020-5-1
+
+By default will be executed on ``http://lists.openstack.org/pipermail/openstack-discuss``
+but you can change the url to execute research on different mailing list.
+
+In the following example we looking for all release jobs who failed for ``openstack/watcher*``:
+
+::
+
+  $ tools/search_emails.py --topic ".?openstack/watcher.*" --mailing-list http://lists.openstack.org/pipermail/
+  release-job-failures/ --starting-date 2016-6-1
+
+Notice that by default we search on ``http://lists.openstack.org/pipermail/openstack-discuss``
+and this mailing list was created in November 2018 so the ``--starting-date``
+is initialized to this date by default, but the date can't be before this
+default date except if you search on a different mailing list and if you also
+override it by passing params with ``--mailing-list``.
+
+For more usage and examples:
+
+::
+  $ tools/search_emails.py -h
+
 tools/membership_freeze_test.py
 --------------------------------
 
