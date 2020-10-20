@@ -38,7 +38,90 @@ Week after previous release
 
 #. Email PTLs directly one time to explain the use of the "[release][ptl]"
    email tag on the openstack-discuss list and tell them to pay attention
-   to [release] countdown emails.
+   to [release] countdown emails. Use the following email template and
+   send it with ``$SERIES Cycle Information`` as email subject::
+
+    This email is going out to all PTLs and release liaisons for $SERIES.
+
+    Welcome to the $SERIES series. On behalf of the release management team, I
+    just wanted to say hello and make sure you had the information you need
+    to know what to do and what to expect during this coming release cycle.
+
+    Release Schedule
+    ================
+
+    If you haven't seen it yet, please take a look at the published schedule for
+    this cycle:
+
+        https://releases.openstack.org/$SERIES/schedule.html
+
+    That lists all of the major milestones along the way as we work towards the
+    coordinated release on $release-date.
+
+    Community-wide deadlines are listed under the "Cross-project events" column.
+    You may notice some projects have added project-specific deadlines under the
+    "Project-specific events" column. That can be done by submitting a patch to the
+    openstack/releases repo updating the doc/source/$SERIES/schedule.* files, if
+    you would like to make sure those deadlines are published somewhere.
+
+    Countdown Emails
+    ================
+
+    Throughout the cycle, we will be sending regular "countdown" emails to the
+    openstack-discuss mailing list. If you have filtering set up for mailing list
+    emails, please make sure you are not filtering out subject lines that contain
+    "[release]" and "[ptl]" tags.
+
+    These countdown emails will contain important updates on upcoming deadlines and
+    information about necessary actions throughout the cycle. We try to keep them
+    to a minimum, so earlier on in the cycle they will not be sent weekly, but
+    around deadline times and especially towards the end of the cycle, these will
+    go out weekly to make sure everyone has the information they need to get work
+    done in time. Your attention to these emails would be appreciated. We will try
+    to keep them short.
+
+    Deliverables
+    ============
+
+    The release process may be new for a few of you. All official OpenStack
+    deliverables are released by updating deliverable files in the
+    openstack/releases repo:
+
+        https://opendev.org/openstack/releases/src/branch/master/deliverables/$SERIES
+
+    Please take a look at your deliverable files and make sure the release-model
+    matches what the team plans to follow for this cycle. This model is a way to
+    communicate to downstream consumers what to expect, so the release team uses
+    your declared model to determine when and how to enforce different steps during
+    the cycle.
+
+    Details on the release models and what they mean, as well as documentation on
+    how to use the releases repo, can be found in the references section here:
+
+        https://releases.openstack.org/index.html#references
+
+    That has documentation for some of our tooling too. The most important one you
+    may want to know about is the new-release tooling so you don't need to edit
+    those yaml files directly. That command can be used like this:
+
+        tools/new_release.sh $SERIES cinder feature
+
+    The last part can be major (major version bump), feature (minor version bump),
+    and bugfix (bugfix, or the Z in X.Y.Z).
+
+    Release Liaisons
+    ================
+
+    If anyone should be added as a release liaison, or removed, just submit a patch
+    to update the data/release_liaisons.yaml file in the openstack/releases repo
+    with current information for your team.
+
+
+    Please contact us at any point with any questions. We can be reached on the
+    openstack-discuss mailing list with the [release] tag, or on IRC in the
+    #openstack-release channel.
+
+    Thanks for your attention. I hope the $SERIES cycle goes well for everyone.
 
 #. At the end of the week, send the following weekly email content::
 
