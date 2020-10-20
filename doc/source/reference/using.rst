@@ -816,6 +816,23 @@ For more usage and examples:
 ::
   $ tools/search_emails.py -h
 
+tools/list_eol_stale_branches.sh
+---------------------------------
+
+A script to detect deliverables who have eol stale branches in their repos.
+
+Example:
+
+::
+
+  tools/list_eol_stale_branches.sh
+
+The reason behind this tool is that since the extended maintenance model
+have been introduced we stopped removing automatically EOL branches when a
+deliverable become EOL, this tool aim to list projects that have been declared
+EOL on a series that is EM and where the corresponding series branch
+still exists.
+
 tools/membership_freeze_test.py
 --------------------------------
 
