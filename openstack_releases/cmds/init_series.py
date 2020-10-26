@@ -75,7 +75,8 @@ def main():
         with open(outfilename, 'w', encoding='utf-8') as f:
             print('{} created'.format(outfilename))
             f.write(yamlutils.dumps(raw_data))
-            if not deliv.is_released and not deliv.branches:
+            if (not deliv.is_released and not deliv.branches and
+                    deliv.type != 'trailing'):
                 # There were no releases for the deliverable in the
                 # previous series, add a comment in the file.
                 f.write(warn)
