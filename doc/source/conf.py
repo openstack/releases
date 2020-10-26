@@ -21,6 +21,7 @@ extensions = [
     'deliverables',
     'sphinxcontrib.datatemplates',
     'ics',
+    'reviewinbox',
 ]
 
 config_generator_config_file = 'config-generator.conf'
