@@ -931,3 +931,12 @@ is equivalent to:
 ::
 
   ./list_unreleased_changes.sh stable/liberty $(list-deliverables --repos --series liberty)
+
+list-em-series
+--------------
+
+Command to list all series tagged as in extended maintenance.
+
+::
+
+  tox -e venv -- list-em-series
