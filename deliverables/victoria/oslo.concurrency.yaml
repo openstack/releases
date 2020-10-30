@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: 2f7880383987f18861338e9c59b598bc98fa385e
+  - version: 4.3.1
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: fd7c4976ef4118f501737a29ccfb31edde48373b
 branches:
   - name: stable/victoria
     location: 4.3.0
