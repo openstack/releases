@@ -120,8 +120,10 @@ date ranges during which each key was in general use.
   `key 0xcdc08088c3cb45a9be08332b2354069e5b504663`_ (details__)
 * 2019-10-29..2020-05-21 (Ussuri Cycle key):
   `key 0xbba3b1e67a7303dd1769d34595bf2e4d09004514`_ (details__)
-* 2020-05-21..present (Victoria Cycle key):
+* 2020-05-21..2020-10-30 (Victoria Cycle key):
   `key 0x2426b928085a020d8a90d0d879ab7008d0896c8a`_ (details__)
+* 2020-10-30..present (Wallaby Cycle key):
+  `key 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da`_ (details__)
 
 .. Static key files are generated with the following command:
    ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28
@@ -146,6 +148,8 @@ date ranges during which each key was in general use.
 .. __: http://pool.sks-keyservers.net:11371/pks/lookup?op=vindex&search=0xbba3b1e67a7303dd1769d34595bf2e4d09004514&fingerprint=on
 .. _`key 0x2426b928085a020d8a90d0d879ab7008d0896c8a`: _static/0x2426b928085a020d8a90d0d879ab7008d0896c8a.txt
 .. __: http://pool.sks-keyservers.net:11371/pks/lookup?op=vindex&search=0x2426b928085a020d8a90d0d879ab7008d0896c8a&fingerprint=on
+.. _`key 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da`: _static/0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da.txt
+.. __: http://pool.sks-keyservers.net:11371/pks/lookup?op=vindex&search=0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da&fingerprint=on
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack Infrastructure team`: https://governance.openstack.org/tc/reference/projects/infrastructure.html
