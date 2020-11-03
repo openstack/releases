@@ -10,7 +10,15 @@ cycle-highlights:
   - Added support for automatic creation of resources for Octavia.
   - Added support for container healthchecks for core OpenStack services.
   - Improved TLS support, covering etcd, RabbitMQ, as well as Ironic,
-    Neutron and Nova backends. Also adds initial support for ACME protocol, as
-    used by Letsencrypt.
+    Neutron and Nova backends. Also adds initial support for ACME protocol,
+    as used by Letsencrypt.
   - Improved performance and scalability of Ansible playbooks.
   - Added support for integrating Neutron with Mellanox InfiniBand.
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: f47f7b4b6cf5ec31b50aa9a9bd6f3815327ed131
+branches:
+  - name: stable/victoria
+    location: 11.0.0.0rc1
