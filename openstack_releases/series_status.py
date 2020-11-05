@@ -47,6 +47,10 @@ class Series(object):
     def eol_date(self):
         return self._data.get('eol-date', None)
 
+    @property
+    def is_em(self):
+        return self.status == 'extended maintenance'
+
 
 class SeriesStatus(collections.abc.Mapping):
 
