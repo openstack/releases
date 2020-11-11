@@ -23,6 +23,10 @@ releases:
       - hash: 9a50e081cb9bc27ec573bda5ad00beff64b23dec
         repo: openstack/os-apply-config
     version: 10.3.0
+  - version: stein-em
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 9a50e081cb9bc27ec573bda5ad00beff64b23dec
 branches:
   - location: 10.3.0
     name: stable/stein

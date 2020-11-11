@@ -24,6 +24,10 @@ releases:
       - hash: abd4334d5e8bf5b04248c5192fa0fc6f115849f3
         repo: openstack/tripleo-ui
     version: 10.3.0
+  - version: stein-em
+    projects:
+      - repo: openstack/tripleo-ui
+        hash: abd4334d5e8bf5b04248c5192fa0fc6f115849f3
 branches:
   - location: 10.3.0
     name: stable/stein

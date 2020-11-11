@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: ab7364accb8b2198ec4718e2aeb5009af2c108bb
+  - version: stein-em
+    projects:
+      - repo: openstack/os-net-config
+        hash: ab7364accb8b2198ec4718e2aeb5009af2c108bb
 branches:
   - location: 10.4.0
     name: stable/stein
