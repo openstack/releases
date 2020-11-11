@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: acb54b9ffb818ba49f11e6ebac331621cbc8fc81
+  - version: 8.0.4
+    projects:
+      - repo: openstack/oslo.config
+        hash: 1fcb3e8acd3c229c74c87d80fd183cfc2432bace
 branches:
   - name: stable/ussuri
     location: 8.0.2
