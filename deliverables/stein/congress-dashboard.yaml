@@ -16,6 +16,10 @@ releases:
       - hash: e5c562c7b3cab096d6b46d353a836bf71044917a
         repo: openstack/congress-dashboard
     version: 4.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: e5c562c7b3cab096d6b46d353a836bf71044917a
 branches:
   - location: 4.0.0.0rc1
     name: stable/stein
