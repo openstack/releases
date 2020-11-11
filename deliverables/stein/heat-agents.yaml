@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 6139799be23d6421e768dd068949982eab5f2cb3
+  - version: stein-em
+    projects:
+      - repo: openstack/heat-agents
+        hash: 6139799be23d6421e768dd068949982eab5f2cb3
 branches:
   - location: 1.8.0
     name: stable/stein
