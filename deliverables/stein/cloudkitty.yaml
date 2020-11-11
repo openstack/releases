@@ -24,6 +24,10 @@ releases:
       - hash: 9b53864dac0351f2b3869decca342d4bde521818
         repo: openstack/cloudkitty
     version: 9.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 9b53864dac0351f2b3869decca342d4bde521818
 branches:
   - location: 9.0.0.0rc1
     name: stable/stein

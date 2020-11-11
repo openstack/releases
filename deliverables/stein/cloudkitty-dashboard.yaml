@@ -11,6 +11,10 @@ releases:
       - hash: 5a5ff16f275b7875c9a251f90e6f22497b134852
         repo: openstack/cloudkitty-dashboard
     version: 8.1.0
+  - version: stein-em
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 5a5ff16f275b7875c9a251f90e6f22497b134852
 branches:
   - location: 8.1.0
     name: stable/stein
