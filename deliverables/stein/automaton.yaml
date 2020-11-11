@@ -13,6 +13,10 @@ releases:
     version: 1.16.0
     flags:
       - forced
+  - version: stein-em
+    projects:
+      - repo: openstack/automaton
+        hash: 0e9634c5fc82c89eb3e3b491caf50fc0e31a2333
 branches:
   - location: 1.16.0
     name: stable/stein

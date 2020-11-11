@@ -17,6 +17,10 @@ releases:
       - hash: 69f36d515b6fe3209aa9be56f7eb067a90c596b2
         repo: openstack/oslo.vmware
     version: 2.32.2
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 69f36d515b6fe3209aa9be56f7eb067a90c596b2
 branches:
   - location: 2.32.2
     name: stable/stein

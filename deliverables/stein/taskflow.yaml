@@ -21,6 +21,10 @@ releases:
       - hash: 6e0b1ed9c0b9ef2053de5dc41c3a57731e262fa3
         repo: openstack/taskflow
     version: 3.5.0
+  - version: stein-em
+    projects:
+      - repo: openstack/taskflow
+        hash: 6e0b1ed9c0b9ef2053de5dc41c3a57731e262fa3
 branches:
   - location: 3.4.0
     name: stable/stein

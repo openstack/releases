@@ -11,6 +11,10 @@ releases:
       - hash: becfb5b8796e7c374d663d41ef94dca0eec297e5
         repo: openstack/debtcollector
     version: 1.21.0
+  - version: stein-em
+    projects:
+      - repo: openstack/debtcollector
+        hash: becfb5b8796e7c374d663d41ef94dca0eec297e5
 branches:
   - location: 1.21.0
     name: stable/stein

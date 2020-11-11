@@ -29,6 +29,10 @@ releases:
       - hash: 79b933b0302e11a8178f7590246d12098c313622
         repo: openstack/oslo.db
     version: 4.45.0
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.db
+        hash: 79b933b0302e11a8178f7590246d12098c313622
 branches:
   - location: 4.44.0
     name: stable/stein
