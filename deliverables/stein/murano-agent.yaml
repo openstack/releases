@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: ce41ef5b782704339ad54c97f129164c6b8e28e3
+  - version: stein-em
+    projects:
+      - repo: openstack/murano-agent
+        hash: ce41ef5b782704339ad54c97f129164c6b8e28e3
 branches:
   - location: 3.6.0
     name: stable/stein

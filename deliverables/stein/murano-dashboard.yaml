@@ -16,6 +16,10 @@ releases:
       - hash: 005f36b347ac0fa590f4dc372d7ba842fa23f836
         repo: openstack/murano-dashboard
     version: 7.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 005f36b347ac0fa590f4dc372d7ba842fa23f836
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein
