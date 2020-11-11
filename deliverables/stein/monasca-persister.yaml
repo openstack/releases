@@ -14,6 +14,10 @@ releases:
       - hash: 9900e18422f46f4aac2487444d174c7b41b63ca7
         repo: openstack/monasca-persister
     version: 1.14.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 9900e18422f46f4aac2487444d174c7b41b63ca7
 branches:
   - location: 1.14.0
     name: stable/stein

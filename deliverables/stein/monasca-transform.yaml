@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-transform
         hash: 863e7f05f62998bc2127684e1e924185f51d1167
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-transform
+        hash: 863e7f05f62998bc2127684e1e924185f51d1167
 branches:
   - location: 0.17.1
     name: stable/stein
