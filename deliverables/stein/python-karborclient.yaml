@@ -11,6 +11,10 @@ releases:
       - hash: 3216f64d14167c0330e9b96606f19d113007e303
         repo: openstack/python-karborclient
     version: 1.2.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 3216f64d14167c0330e9b96606f19d113007e303
 branches:
   - location: 1.2.0
     name: stable/stein
