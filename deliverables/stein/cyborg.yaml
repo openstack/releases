@@ -22,6 +22,10 @@ releases:
       - hash: 0160a6b3bbcd94c479780e71510bee5fc16b5df7
         repo: openstack/cyborg
     version: 2.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/cyborg
+        hash: 0160a6b3bbcd94c479780e71510bee5fc16b5df7
 cycle-highlights:
   - Add FPGA programming support
   - Add GPU drivers
