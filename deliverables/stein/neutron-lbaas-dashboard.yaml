@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas-dashboard
         hash: fdc34d2087c55bf59c8a20eb2dae13df04157773
+  - version: stein-em
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: fdc34d2087c55bf59c8a20eb2dae13df04157773
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
