@@ -15,6 +15,10 @@ releases:
       - hash: 1712bd4b6c698f5eff783e07c5f69b475c12c24d
         repo: openstack/python-mistralclient
     version: 3.8.1
+  - version: stein-em
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 1712bd4b6c698f5eff783e07c5f69b475c12c24d
 branches:
   - location: 3.8.0
     name: stable/stein
