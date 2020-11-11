@@ -18,6 +18,14 @@ releases:
         hash: b52291b7e6a1d468f479168f89396d9feaf95568
       - repo: openstack/freezer-dr
         hash: 1e687a499363dd912c69e2628a6ccc523c74f39c
+  - version: stein-em
+    projects:
+      - repo: openstack/freezer
+        hash: 3ca3e5689aa9d1a8a0bc8e8bb76b6b5c7e91ea18
+      - repo: openstack/freezer-api
+        hash: b52291b7e6a1d468f479168f89396d9feaf95568
+      - repo: openstack/freezer-dr
+        hash: 1e687a499363dd912c69e2628a6ccc523c74f39c
 team: freezer
 type: service
 repository-settings:
