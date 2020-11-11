@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 1e538a2d714d0a1ae8944450f07a024c98ca73ec
+  - version: stein-em
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 1e538a2d714d0a1ae8944450f07a024c98ca73ec
 branches:
   - location: 0.15.0
     name: stable/stein

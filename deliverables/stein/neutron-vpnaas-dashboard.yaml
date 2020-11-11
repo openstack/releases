@@ -18,6 +18,10 @@ releases:
       - hash: 4463b3f199b734d2aa0eb9aaee63a10ede1ba6d8
         repo: openstack/neutron-vpnaas-dashboard
     version: 1.5.2
+  - version: stein-em
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 4463b3f199b734d2aa0eb9aaee63a10ede1ba6d8
 branches:
   - location: 1.5.1
     name: stable/stein

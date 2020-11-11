@@ -25,6 +25,10 @@ releases:
       - hash: 5b062f03e795809760b706d7700b53c8ef038a7f
         repo: openstack/networking-odl
     version: 14.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-odl
+        hash: 5b062f03e795809760b706d7700b53c8ef038a7f
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein

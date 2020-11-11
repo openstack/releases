@@ -25,6 +25,10 @@ releases:
       - hash: 5ea96a1c85710fb24f860267042fd52e64b59c87
         repo: openstack/networking-sfc
     version: 8.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 5ea96a1c85710fb24f860267042fd52e64b59c87
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein

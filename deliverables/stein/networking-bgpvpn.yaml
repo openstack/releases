@@ -20,6 +20,10 @@ releases:
       - hash: 2c20de71a475bf22754b0cac45be1e82c0af162b
         repo: openstack/networking-bgpvpn
     version: 10.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 2c20de71a475bf22754b0cac45be1e82c0af162b
 branches:
   - location: 10.0.0.0rc1
     name: stable/stein

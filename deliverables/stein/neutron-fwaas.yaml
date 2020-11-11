@@ -28,6 +28,10 @@ releases:
       - hash: 648d725da0de99b5104196a2888fe2490a57cf47
         repo: openstack/neutron-fwaas
     version: 14.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 648d725da0de99b5104196a2888fe2490a57cf47
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein

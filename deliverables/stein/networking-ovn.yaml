@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 84e74585fc47ef0355009f5f01a71a75476654ea
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-ovn
+        hash: 84e74585fc47ef0355009f5f01a71a75476654ea
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein

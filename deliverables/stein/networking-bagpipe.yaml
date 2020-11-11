@@ -24,6 +24,10 @@ releases:
       - hash: e8d2fca2a498e5efc5a925377dc17dca3efeeb4e
         repo: openstack/networking-bagpipe
     version: 10.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: e8d2fca2a498e5efc5a925377dc17dca3efeeb4e
 branches:
   - location: 10.0.0.0rc1
     name: stable/stein
