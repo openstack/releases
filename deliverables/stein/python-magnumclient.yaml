@@ -15,6 +15,10 @@ releases:
       - hash: 37e602d160632a386c2960ec8777bfc65642a9a9
         repo: openstack/python-magnumclient
     version: 2.12.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 37e602d160632a386c2960ec8777bfc65642a9a9
 branches:
   - location: 2.12.0
     name: stable/stein
