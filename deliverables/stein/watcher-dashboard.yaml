@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 50437a47e418beff01038d92eed2d65714e50137
+  - version: stein-em
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 50437a47e418beff01038d92eed2d65714e50137
 branches:
   - location: 1.12.0
     name: stable/stein
