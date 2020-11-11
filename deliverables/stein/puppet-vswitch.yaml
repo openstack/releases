@@ -22,6 +22,10 @@ releases:
       - hash: 1613f68c3ad7ea24b6112317818f5e2df1b1dfd4
         repo: openstack/puppet-vswitch
     version: 10.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 1613f68c3ad7ea24b6112317818f5e2df1b1dfd4
 branches:
   - location: 10.4.0
     name: stable/stein

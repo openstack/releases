@@ -18,6 +18,10 @@ releases:
       - hash: 136f1bff1ca5e5c3ff3d3fc185debff7cc072137
         repo: openstack/puppet-freezer
     version: 3.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: 136f1bff1ca5e5c3ff3d3fc185debff7cc072137
 branches:
   - location: 3.4.0
     name: stable/stein

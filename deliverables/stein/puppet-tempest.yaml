@@ -22,6 +22,10 @@ releases:
       - hash: 2d4c081a8f083a121bf88f346493a0861cf3ecbf
         repo: openstack/puppet-tempest
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 2d4c081a8f083a121bf88f346493a0861cf3ecbf
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -22,6 +22,10 @@ releases:
       - hash: 8d1528287d988d16779432ddeef597d999228d6d
         repo: openstack/puppet-zaqar
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 8d1528287d988d16779432ddeef597d999228d6d
 branches:
   - location: 14.4.0
     name: stable/stein

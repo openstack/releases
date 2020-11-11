@@ -18,6 +18,10 @@ releases:
       - hash: 4e189871fde7e2835c96917f71947f5778c9c810
         repo: openstack/puppet-qdr
     version: 3.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 4e189871fde7e2835c96917f71947f5778c9c810
 branches:
   - location: 3.4.0
     name: stable/stein

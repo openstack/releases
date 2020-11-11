@@ -22,6 +22,10 @@ releases:
       - hash: aa4a91159de949a90ee0541ea5dd1d236251fde5
         repo: openstack/puppet-nova
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-nova
+        hash: aa4a91159de949a90ee0541ea5dd1d236251fde5
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -26,6 +26,10 @@ releases:
       - hash: ecbb3a4a11194250a75bc07b7f5a64ad9744f5ad
         repo: openstack/puppet-manila
     version: 14.4.1
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-manila
+        hash: ecbb3a4a11194250a75bc07b7f5a64ad9744f5ad
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -22,6 +22,10 @@ releases:
       - hash: 7d5993b3a82fa0f650a4f07321f0b1e086e4c3de
         repo: openstack/puppet-horizon
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 7d5993b3a82fa0f650a4f07321f0b1e086e4c3de
 branches:
   - location: 14.4.0
     name: stable/stein
