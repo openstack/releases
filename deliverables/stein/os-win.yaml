@@ -23,6 +23,10 @@ releases:
       - hash: 027749c401a73f4561d8542cdcaf5672ac9f4ee2
         repo: openstack/os-win
     version: 4.2.1
+  - version: stein-em
+    projects:
+      - repo: openstack/os-win
+        hash: 027749c401a73f4561d8542cdcaf5672ac9f4ee2
 branches:
   - location: 4.2.0
     name: stable/stein
