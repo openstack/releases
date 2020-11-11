@@ -11,6 +11,10 @@ releases:
       - hash: dd2ceebb7e0c85eb66f05f2825d506765ab792de
         repo: openstack/python-qinlingclient
     version: 2.1.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: dd2ceebb7e0c85eb66f05f2825d506765ab792de
 branches:
   - location: 2.1.0
     name: stable/stein
