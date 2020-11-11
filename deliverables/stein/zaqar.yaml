@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: a5752f84dd3b31f7b0087756c0bd906ef428ac42
+  - version: stein-em
+    projects:
+      - repo: openstack/zaqar
+        hash: a5752f84dd3b31f7b0087756c0bd906ef428ac42
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
