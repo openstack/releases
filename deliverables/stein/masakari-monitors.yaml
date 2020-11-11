@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 1b47056bb6b7f9d7a13dfe5f00c642652e39dfe2
+  - version: stein-em
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 1b47056bb6b7f9d7a13dfe5f00c642652e39dfe2
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein

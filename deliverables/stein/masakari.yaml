@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: cd4c562eaf0bc5e5b8bc819aed5d35b11393e65e
+  - version: stein-em
+    projects:
+      - repo: openstack/masakari
+        hash: cd4c562eaf0bc5e5b8bc819aed5d35b11393e65e
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein
