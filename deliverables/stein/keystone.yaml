@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 95b2bbeab113d9f04d1c81f7f1b48bf692bce979
+  - version: stein-em
+    projects:
+      - repo: openstack/keystone
+        hash: 95b2bbeab113d9f04d1c81f7f1b48bf692bce979
 branches:
   - location: 15.0.0.0rc1
     name: stable/stein
