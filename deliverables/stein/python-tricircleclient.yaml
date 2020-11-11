@@ -12,6 +12,10 @@ releases:
         repo: openstack/python-tricircleclient
         tarball-base: tricircleclient
     version: 0.5.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: d7dc4eedb2116ff32410c8a501ffd85950ef6d64
 branches:
   - location: 0.5.0
     name: stable/stein
