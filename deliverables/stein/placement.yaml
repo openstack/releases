@@ -34,6 +34,10 @@ releases:
         repo: openstack/placement
         tarball-base: openstack-placement
     version: 1.1.0
+  - version: stein-em
+    projects:
+      - repo: openstack/placement
+        hash: bdcbb2604bcbb195fa6e3a1b504ec2c31531308b
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein

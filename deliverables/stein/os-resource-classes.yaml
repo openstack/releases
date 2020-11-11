@@ -19,6 +19,10 @@ releases:
       - hash: 2d4672e5f342a4a5aec4ceca885cd7d966134ebb
         repo: openstack/os-resource-classes
     version: 0.3.0
+  - version: stein-em
+    projects:
+      - repo: openstack/os-resource-classes
+        hash: 2d4672e5f342a4a5aec4ceca885cd7d966134ebb
 branches:
   - location: 0.3.0
     name: stable/stein
