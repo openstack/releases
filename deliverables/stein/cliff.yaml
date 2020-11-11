@@ -15,6 +15,10 @@ releases:
       - hash: 99236b49267049c6bd32a26feec57d9b18b676cb
         repo: openstack/cliff
     version: 2.14.1
+  - version: stein-em
+    projects:
+      - repo: openstack/cliff
+        hash: 99236b49267049c6bd32a26feec57d9b18b676cb
 branches:
   - location: 2.14.1
     name: stable/stein
