@@ -15,6 +15,10 @@ releases:
       - hash: cc11fc13ee1d1a1688031de9145025afe06ccbce
         repo: openstack/trove-dashboard
     version: 12.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: cc11fc13ee1d1a1688031de9145025afe06ccbce
 branches:
   - location: 12.0.0.0rc1
     name: stable/stein
