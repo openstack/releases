@@ -15,6 +15,10 @@ releases:
       - hash: 91f809625560d770f39299f782eff2b56ec84874
         repo: openstack/panko
     version: 6.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/panko
+        hash: 91f809625560d770f39299f782eff2b56ec84874
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein

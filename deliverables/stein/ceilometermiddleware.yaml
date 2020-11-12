@@ -13,6 +13,10 @@ releases:
     version: 1.4.0
     flags:
       - forced
+  - version: stein-em
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 0ef20fbe009460a492dbd56acb535280973b8c20
 branches:
   - location: 1.4.0
     name: stable/stein

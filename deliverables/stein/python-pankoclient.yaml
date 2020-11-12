@@ -12,6 +12,10 @@ releases:
       - hash: 0a27e534d8dde68b05b4e9a8a812622d58642b0a
         repo: openstack/python-pankoclient
     version: 0.6.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 0a27e534d8dde68b05b4e9a8a812622d58642b0a
 branches:
   - location: 0.6.0
     name: stable/stein
