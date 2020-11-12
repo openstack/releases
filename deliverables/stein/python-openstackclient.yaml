@@ -22,4 +22,8 @@ releases:
     projects:
       - hash: 111d6a9b23d8c6b9bcce437039ff49536f0b5dd1
         repo: openstack/python-openstackclient
+  - version: stein-em
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 111d6a9b23d8c6b9bcce437039ff49536f0b5dd1
 release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/stein.html
