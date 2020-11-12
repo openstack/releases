@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 6bbad1bc79eb2f9535e58f0c9ff19669eaac1373
+  - version: stein-em
+    projects:
+      - repo: openstack/blazar
+        hash: 6bbad1bc79eb2f9535e58f0c9ff19669eaac1373
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein

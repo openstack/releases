@@ -11,6 +11,10 @@ releases:
       - hash: 7a7461cf0265b8280df26574cd2ecfceb7cb346d
         repo: openstack/python-blazarclient
     version: 2.1.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 7a7461cf0265b8280df26574cd2ecfceb7cb346d
 branches:
   - location: 2.1.0
     name: stable/stein
