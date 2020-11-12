@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 522823548a61745b95f079ed092ba80d57265b1c
+  - version: stein-em
+    projects:
+      - repo: openstack/swift
+        hash: 522823548a61745b95f079ed092ba80d57265b1c
 cycle-highlights:
   - Numerous improvements to the S3 API compatibility layer.
   - Several fixes and improvements for the data-encryption middleware,
