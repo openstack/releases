@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 46af2c326f413fb993e6dbe7d14cdc4b7e3f4ace
+  - version: stein-em
+    projects:
+      - repo: openstack/ec2-api
+        hash: 46af2c326f413fb993e6dbe7d14cdc4b7e3f4ace
 branches:
   - location: 8.0.0
     name: stable/stein
