@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: b02c6b6931c0256f4ce6d7167c97ebb849ff3453
+  - version: 8.0.2
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 4d13e712cbb4139c6e04fe4a3b00a4072d195eb1
 branches:
   - name: stable/train
     location: 8.0.0.0rc1

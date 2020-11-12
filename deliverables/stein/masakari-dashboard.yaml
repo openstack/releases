@@ -11,6 +11,10 @@ releases:
       - hash: e05a1822db99178f79108b26625029cce477b441
         repo: openstack/masakari-dashboard
     version: 0.3.0
+  - version: 0.3.1
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: ff7206fa973e0b13f0d5165b76be3901bbf7c36f
 branches:
   - location: 0.3.0
     name: stable/stein

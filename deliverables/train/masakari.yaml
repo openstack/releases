@@ -15,6 +15,10 @@ releases:
       - repo: openstack/masakari
         hash: 24f678cd29dc500ae85e52ccca6d26583cdc20f3
     diff-start: 7.0.0
+  - version: 8.1.0
+    projects:
+      - repo: openstack/masakari
+        hash: e0423906a7aabb4ea02b754e041f725c16535be5
 branches:
   - name: stable/train
     location: 8.0.0.0rc1
