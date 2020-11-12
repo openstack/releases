@@ -8,6 +8,10 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: b3df2c6b5cfae0cfb692a2d9152b5ee84b5dd2b3
+  - version: stein-em
+    projects:
+      - repo: openstack/kuryr
+        hash: b3df2c6b5cfae0cfb692a2d9152b5ee84b5dd2b3
 repository-settings:
   openstack/kuryr:
     tarball-base: kuryr-lib
