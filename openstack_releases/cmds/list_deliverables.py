@@ -142,6 +142,11 @@ def main():
               '(implies --model cycle-with-rc)'),
     )
     grp.add_argument(
+        '--is-eol',
+        action='store_true',
+        help='limit the list to deliverables EOL in the cycle',
+    )
+    grp.add_argument(
         '--missing-final',
         action='store_true',
         help='deliverables that have pre-releases but no final releases, yet',
@@ -232,6 +237,8 @@ def main():
             if deliv.get_branch_location('stable/' + series) is not None:
                 continue
         if args.unreleased and (deliv.is_released or not deliv.is_releasable):
+            continue
+        if args.is_eol and 'eol' not in deliv.latest_release:
             continue
         if version_ending and deliv.is_released:
             found = False
