@@ -18,4 +18,9 @@ releases:
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1
+cycle-highlights:
+  - Adds ability for operators to override, per failure type, the instance
+    metadata key controlling the behaviour of Masakari towards the instance.
+    This makes it possible to differentiate between instance- and host-level
+    failures per instance.
 release-notes: https://docs.openstack.org/releasenotes/masakari/victoria.html
