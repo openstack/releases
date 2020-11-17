@@ -14,6 +14,10 @@ releases:
       - hash: 7b581bed9444e28c3f0d3e727bf2c214c5c6a3b8
         repo: openstack/monasca-events-api
     version: 0.3.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: 7b581bed9444e28c3f0d3e727bf2c214c5c6a3b8
 branches:
   - location: 0.3.0
     name: stable/stein

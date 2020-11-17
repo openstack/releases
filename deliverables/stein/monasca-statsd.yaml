@@ -10,6 +10,10 @@ releases:
       - hash: 0156d20a4d25bb93fd62732749dcb8cabcf8dd2f
         repo: openstack/monasca-statsd
     version: 1.11.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 0156d20a4d25bb93fd62732749dcb8cabcf8dd2f
 branches:
   - location: 1.11.0
     name: stable/stein

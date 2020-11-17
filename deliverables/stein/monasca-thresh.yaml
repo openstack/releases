@@ -12,6 +12,10 @@ releases:
       - hash: 8c976339a79d8be6396503821dc4d8f384633a0b
         repo: openstack/monasca-thresh
     version: 2.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 8c976339a79d8be6396503821dc4d8f384633a0b
 branches:
   - location: 2.4.0
     name: stable/stein

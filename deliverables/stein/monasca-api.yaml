@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 41871ffd6aeb817d10b42ffac76f6335db7304c2
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-api
+        hash: 41871ffd6aeb817d10b42ffac76f6335db7304c2
 branches:
   - location: 3.0.0
     name: stable/stein

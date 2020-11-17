@@ -14,6 +14,10 @@ releases:
       - hash: ea3f5b4beb979363f71a50d0651d08c5707b16ff
         repo: openstack/monasca-log-api
     version: 2.9.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: ea3f5b4beb979363f71a50d0651d08c5707b16ff
 branches:
   - location: 2.9.0
     name: stable/stein

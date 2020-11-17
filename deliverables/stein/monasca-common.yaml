@@ -14,6 +14,10 @@ releases:
       - hash: 24aef15057184d41c71f2d63f5442c8b37096afc
         repo: openstack/monasca-common
     version: 2.13.0
+  - version: stein-em
+    projects:
+      - repo: openstack/monasca-common
+        hash: 24aef15057184d41c71f2d63f5442c8b37096afc
 branches:
   - location: 2.13.0
     name: stable/stein

@@ -19,6 +19,10 @@ releases:
       - hash: bcb16d134fcfac0fec1b34ef1b19216e1ce69ce7
         repo: openstack/python-monascaclient
     version: 1.15.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: bcb16d134fcfac0fec1b34ef1b19216e1ce69ce7
 branches:
   - location: 1.14.0
     name: stable/stein
