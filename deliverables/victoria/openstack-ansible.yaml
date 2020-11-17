@@ -6,3 +6,8 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+releases:
+  - version: 22.0.0.0b1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: d27c9f595159b28920e8bbb636619c68f6af58dd
