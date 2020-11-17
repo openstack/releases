@@ -11,3 +11,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 074024d63f9cb364ca16a7a7f0ac94d77ee9466b
+      - repo: openstack/kayobe-config
+        hash: 29a6c9be55a754a2fb6d037981720ef40b07fa06
+      - repo: openstack/kayobe-config-dev
+        hash: 02619c16286341f1074420b66405b3e536197220
+branches:
+  - name: stable/victoria
+    location: 9.0.0.0rc1
