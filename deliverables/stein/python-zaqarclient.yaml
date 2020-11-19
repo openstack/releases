@@ -11,6 +11,10 @@ releases:
       - hash: 13e90a0ab5e296fb8cf21d09c666c06ed47a84c0
         repo: openstack/python-zaqarclient
     version: 1.11.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 13e90a0ab5e296fb8cf21d09c666c06ed47a84c0
 branches:
   - location: 1.11.0
     name: stable/stein
