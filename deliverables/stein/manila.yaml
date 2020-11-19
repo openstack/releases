@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: ef8d704c3b08d7de64926549a2f8f14cec3bfd0b
+  - version: stein-em
+    projects:
+      - repo: openstack/manila
+        hash: ef8d704c3b08d7de64926549a2f8f14cec3bfd0b
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
