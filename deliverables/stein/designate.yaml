@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 6307c84e83530ab27124ab9e6a8117ee44069614
+  - version: stein-em
+    projects:
+      - repo: openstack/designate
+        hash: 6307c84e83530ab27124ab9e6a8117ee44069614
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
