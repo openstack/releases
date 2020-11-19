@@ -23,6 +23,10 @@ releases:
       - hash: 5d6673e343a47fc4cf90e53b2e6e9fa37d7f601c
         repo: openstack/python-vitrageclient
     version: 2.7.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 5d6673e343a47fc4cf90e53b2e6e9fa37d7f601c
 branches:
   - location: 2.7.0
     name: stable/stein
