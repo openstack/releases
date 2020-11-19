@@ -19,6 +19,10 @@ releases:
       - hash: dd15b0e6c4b553b7120aa06054cfce5010e7c304
         repo: openstack/networking-hyperv
     version: 7.2.1
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: dd15b0e6c4b553b7120aa06054cfce5010e7c304
 branches:
   - location: 7.1.0
     name: stable/stein
