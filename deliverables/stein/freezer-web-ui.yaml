@@ -11,6 +11,10 @@ releases:
     projects:
       - hash: 3207b575a159fc6c21206eca91565c9372c9c622
         repo: openstack/freezer-web-ui
+  - version: stein-em
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 3207b575a159fc6c21206eca91565c9372c9c622
 team: freezer
 type: horizon-plugin
 repository-settings:

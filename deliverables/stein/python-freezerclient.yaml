@@ -15,6 +15,10 @@ releases:
       - hash: cc92d7cc2cf35ed791d29879b2aed5b08e6bf4e0
         repo: openstack/python-freezerclient
     version: 2.1.0
+  - version: stein-em
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: cc92d7cc2cf35ed791d29879b2aed5b08e6bf4e0
 branches:
   - location: 2.1.0
     name: stable/stein
