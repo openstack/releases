@@ -19,6 +19,10 @@ releases:
       - hash: 27e421af26cd1bcc68746a0beadb541fb8d647be
         repo: openstack/glance_store
     version: 0.28.1
+  - version: stein-em
+    projects:
+      - repo: openstack/glance_store
+        hash: 27e421af26cd1bcc68746a0beadb541fb8d647be
 branches:
   - location: 0.28.0
     name: stable/stein
