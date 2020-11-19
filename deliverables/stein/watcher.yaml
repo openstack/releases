@@ -16,6 +16,10 @@ releases:
       - hash: 922783a5f8b30dbd7e2da95f29ce8e747b812c19
         repo: openstack/watcher
     version: 2.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/watcher
+        hash: 922783a5f8b30dbd7e2da95f29ce8e747b812c19
 branches:
   - location: 2.0.0.0rc1
     name: stable/stein
