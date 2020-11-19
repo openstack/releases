@@ -37,6 +37,10 @@ releases:
       - hash: ec9d5430300c908ea9a1c64151eee7af522a44e7
         repo: openstack/os-vif
         tarball-base: os_vif
+  - version: stein-em
+    projects:
+      - repo: openstack/os-vif
+        hash: ec9d5430300c908ea9a1c64151eee7af522a44e7
 branches:
   - location: 1.15.1
     name: stable/stein

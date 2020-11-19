@@ -76,6 +76,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: cde42879a497cd2b91f0cf926e0417fda07b3c31
+  - version: stein-em
+    projects:
+      - repo: openstack/nova
+        hash: cde42879a497cd2b91f0cf926e0417fda07b3c31
 branches:
   - location: 19.0.0.0rc1
     name: stable/stein
