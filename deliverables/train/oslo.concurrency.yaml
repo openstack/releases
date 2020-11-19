@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: 610df387b62db922d5981b5028d3362d9f75daf4
+  - version: 3.30.1
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: f4d2dd88174e5abdb43dab1958e1798ae177a3a7
 branches:
   - name: stable/train
     location: 3.30.0
