@@ -25,6 +25,10 @@ releases:
       - hash: 0bd26cc47ed51d19e07280db9e770ad09edd2bf8
         repo: openstack/python-ironicclient
     version: 2.7.3
+  - version: stein-em
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 0bd26cc47ed51d19e07280db9e770ad09edd2bf8
 repository-settings:
   openstack/python-ironicclient: {}
 branches:

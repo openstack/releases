@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 8964d9981e8c98d96820f60ab0a3f2928f339668
+  - version: stein-em
+    projects:
+      - repo: openstack/ironic
+        hash: 8964d9981e8c98d96820f60ab0a3f2928f339668
 branches:
   - location: 12.1.0
     name: stable/stein

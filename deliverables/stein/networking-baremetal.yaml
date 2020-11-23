@@ -11,6 +11,10 @@ releases:
       - hash: 8fdef956cb1cc394ecbabfcff92b6c0a5dbe9cbe
         repo: openstack/networking-baremetal
     version: 1.3.0
+  - version: stein-em
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 8fdef956cb1cc394ecbabfcff92b6c0a5dbe9cbe
 branches:
   - location: 1.3.0
     name: stable/stein

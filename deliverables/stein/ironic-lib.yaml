@@ -9,7 +9,7 @@ repository-settings:
 releases:
   - diff-start: 2.14.0
     projects:
-      - comment: 'procedural tag to handle release job failure'
+      - comment: procedural tag to handle release job failure
         hash: 712da6c465e8794b3575b34a6eb1c5d3061a9b44
         repo: openstack/ironic-lib
     version: 2.15.1
@@ -33,6 +33,10 @@ releases:
       - hash: 67214a778df97d2a9ddb019401dabdca9d0e3a8d
         repo: openstack/ironic-lib
     version: 2.16.4
+  - version: stein-em
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 67214a778df97d2a9ddb019401dabdca9d0e3a8d
 branches:
   - name: stable/stein
     location: 2.16.2
