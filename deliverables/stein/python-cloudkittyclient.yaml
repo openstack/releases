@@ -15,6 +15,10 @@ releases:
       - hash: 57d45638173f322b73876d4017e236ab7fc79e09
         repo: openstack/python-cloudkittyclient
     version: 2.1.1
+  - version: stein-em
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 57d45638173f322b73876d4017e236ab7fc79e09
 branches:
   - location: 2.1.0
     name: stable/stein
