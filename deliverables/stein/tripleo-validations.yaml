@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 730ef1ff02d8013fc429cc4794dda96e6c254aa7
+  - version: stein-em
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 730ef1ff02d8013fc429cc4794dda96e6c254aa7
 branches:
   - location: 10.4.0
     name: stable/stein

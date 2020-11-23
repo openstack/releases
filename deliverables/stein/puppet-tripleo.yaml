@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: 4e7d2b991d84617b7dc15937a47fa1ed2b4441b7
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 4e7d2b991d84617b7dc15937a47fa1ed2b4441b7
 branches:
   - location: 10.4.0
     name: stable/stein

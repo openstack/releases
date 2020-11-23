@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/os-refresh-config
         hash: 2c77834219fe86218a22f6cc07f8708321b5b00b
+  - version: stein-em
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 2c77834219fe86218a22f6cc07f8708321b5b00b
 branches:
   - location: 10.2.0
     name: stable/stein
