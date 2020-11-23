@@ -19,6 +19,10 @@ releases:
       - hash: 9707977825a5bf5d3218d6787341fd803c670a6c
         repo: openstack/senlin
     version: 7.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/senlin
+        hash: 9707977825a5bf5d3218d6787341fd803c670a6c
 cycle-highlights:
   - Improved performance so that Senlin operations execute multiple
     orders of magnitude faster.
