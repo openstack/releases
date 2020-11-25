@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: bb41d4d6852db966f24ecf38e4750baa870a422a
+  - version: stein-em
+    projects:
+      - repo: openstack/mistral-lib
+        hash: bb41d4d6852db966f24ecf38e4750baa870a422a
 branches:
   - location: 1.1.0
     name: stable/stein
