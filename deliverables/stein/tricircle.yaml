@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 4f27abf4d141fe47928f89516f22dea14f3e446c
+  - version: stein-em
+    projects:
+      - repo: openstack/tricircle
+        hash: 4f27abf4d141fe47928f89516f22dea14f3e446c
 branches:
   - name: stable/stein
     location: 6.0.0
