@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 3d23804a6f78f881ac5526bc31e2a7c61b174516
+  - version: stein-em
+    projects:
+      - repo: openstack/barbican
+        hash: 3d23804a6f78f881ac5526bc31e2a7c61b174516
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
