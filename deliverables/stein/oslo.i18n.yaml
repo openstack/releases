@@ -21,6 +21,10 @@ releases:
       - hash: 20bbee510b9714075b7f48f7c3968d7e2bd21a8a
         repo: openstack/oslo.i18n
     version: 3.23.1
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 20bbee510b9714075b7f48f7c3968d7e2bd21a8a
 branches:
   - location: 3.23.1
     name: stable/stein

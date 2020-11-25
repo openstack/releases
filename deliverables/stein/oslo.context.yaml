@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 445de77bf7e6c57b3b4bd4097859075920b0b042
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.context
+        hash: 445de77bf7e6c57b3b4bd4097859075920b0b042
 branches:
   - location: 2.22.1
     name: stable/stein

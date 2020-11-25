@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: abfec6a48a01c80b861ebe7e151b8df23ff6b398
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.service
+        hash: abfec6a48a01c80b861ebe7e151b8df23ff6b398
 branches:
   - location: 1.38.0
     name: stable/stein

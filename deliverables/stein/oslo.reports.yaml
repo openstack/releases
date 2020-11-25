@@ -17,6 +17,10 @@ releases:
       - hash: 9fb535371eb43ad0a9a53080654ff7f94a8037e4
         repo: openstack/oslo.reports
     version: 1.29.2
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 9fb535371eb43ad0a9a53080654ff7f94a8037e4
 branches:
   - location: 1.29.2
     name: stable/stein

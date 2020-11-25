@@ -52,6 +52,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 0a9c6c156a6eedf149528fd853f72a8ddd83e147
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.config
+        hash: 0a9c6c156a6eedf149528fd853f72a8ddd83e147
 branches:
   - location: 6.8.1
     name: stable/stein

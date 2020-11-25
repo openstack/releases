@@ -15,6 +15,10 @@ releases:
       - hash: 27a8395660e483e6c527f5f0b34c336b08ef7e22
         repo: openstack/stevedore
     version: 1.30.1
+  - version: stein-em
+    projects:
+      - repo: openstack/stevedore
+        hash: 27a8395660e483e6c527f5f0b34c336b08ef7e22
 branches:
   - location: 1.30.1
     name: stable/stein

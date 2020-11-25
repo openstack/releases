@@ -17,6 +17,10 @@ releases:
       - hash: bc2a1fb5259e64596a8071a592dc8eb1b6990ae0
         repo: openstack/oslo.serialization
     version: 2.28.2
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: bc2a1fb5259e64596a8071a592dc8eb1b6990ae0
 branches:
   - location: 2.28.2
     name: stable/stein

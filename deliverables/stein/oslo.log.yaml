@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: ef23f7085059a7844be308db454a20168fbc97e1
+  - version: stein-em
+    projects:
+      - repo: openstack/oslo.log
+        hash: ef23f7085059a7844be308db454a20168fbc97e1
 branches:
   - location: 3.42.3
     name: stable/stein
