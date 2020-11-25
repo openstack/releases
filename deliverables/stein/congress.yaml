@@ -20,6 +20,10 @@ releases:
       - hash: 4977fe3dacbf4de25e8568141d9bdbf7363a5288
         repo: openstack/congress
     version: 9.0.0
+  - version: stein-em
+    projects:
+      - repo: openstack/congress
+        hash: 4977fe3dacbf4de25e8568141d9bdbf7363a5288
 branches:
   - location: 9.0.0.0rc1
     name: stable/stein
