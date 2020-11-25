@@ -23,6 +23,10 @@ releases:
       - hash: e0c67af3bda09b7b59321b9c9b2b5bfa7b0b151e
         repo: openstack/tosca-parser
     version: 1.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/tosca-parser
+        hash: e0c67af3bda09b7b59321b9c9b2b5bfa7b0b151e
 branches:
   - location: 1.4.0
     name: stable/stein
