@@ -18,6 +18,10 @@ releases:
       - hash: 1cbf46f2e6f8693b7a737577375580ba816e66cd
         repo: openstack/puppet-cloudkitty
     version: 3.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: 1cbf46f2e6f8693b7a737577375580ba816e66cd
 branches:
   - location: 3.4.0
     name: stable/stein

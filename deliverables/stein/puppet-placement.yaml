@@ -14,6 +14,10 @@ releases:
       - hash: 4e68e8fdba79f7cd7f78a4a7c64d60354b9a3af4
         repo: openstack/puppet-placement
     version: 1.2.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 4e68e8fdba79f7cd7f78a4a7c64d60354b9a3af4
 branches:
   - location: 1.2.0
     name: stable/stein

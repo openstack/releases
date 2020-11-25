@@ -22,6 +22,10 @@ releases:
       - hash: 74907b83c7486d841a17110df7e2a4488808a39e
         repo: openstack/puppet-panko
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 74907b83c7486d841a17110df7e2a4488808a39e
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -18,6 +18,10 @@ releases:
       - hash: 751f4b53bcd67be90144a753ef53f244b0e44b3f
         repo: openstack/puppet-monasca
     version: 3.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: 751f4b53bcd67be90144a753ef53f244b0e44b3f
 branches:
   - location: 3.4.0
     name: stable/stein

@@ -22,6 +22,10 @@ releases:
       - hash: fbb797b891c6f2530b18ee904a93c35b9e7490c1
         repo: openstack/puppet-vitrage
     version: 4.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: fbb797b891c6f2530b18ee904a93c35b9e7490c1
 branches:
   - location: 4.4.0
     name: stable/stein

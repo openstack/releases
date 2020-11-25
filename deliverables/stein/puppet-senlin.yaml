@@ -14,6 +14,10 @@ releases:
       - hash: 3eec130aa97c85bb0cbfd344b9ae7f4d44f0a49f
         repo: openstack/puppet-senlin
     version: 1.2.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: 3eec130aa97c85bb0cbfd344b9ae7f4d44f0a49f
 branches:
   - location: 1.2.0
     name: stable/stein

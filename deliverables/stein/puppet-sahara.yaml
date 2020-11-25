@@ -22,6 +22,10 @@ releases:
       - hash: fec9476f5f025a20545a8eb6344788f0fb515897
         repo: openstack/puppet-sahara
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: fec9476f5f025a20545a8eb6344788f0fb515897
 branches:
   - location: 14.4.0
     name: stable/stein

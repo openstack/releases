@@ -18,6 +18,10 @@ releases:
       - hash: 1dbebb67c5a9754bda7f4147926e6b9c80544eca
         repo: openstack/puppet-rally
     version: 2.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 1dbebb67c5a9754bda7f4147926e6b9c80544eca
 branches:
   - location: 2.4.0
     name: stable/stein

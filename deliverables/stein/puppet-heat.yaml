@@ -22,6 +22,10 @@ releases:
       - hash: e2412684f1e1cd80c0749972a2716384b5b8fdf1
         repo: openstack/puppet-heat
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-heat
+        hash: e2412684f1e1cd80c0749972a2716384b5b8fdf1
 branches:
   - location: 14.4.0
     name: stable/stein

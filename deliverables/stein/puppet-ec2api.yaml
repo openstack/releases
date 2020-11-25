@@ -22,6 +22,10 @@ releases:
       - hash: 33a59ff98fc580e54602ba9dff705170b1565405
         repo: openstack/puppet-ec2api
     version: 14.4.0
+  - version: stein-em
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 33a59ff98fc580e54602ba9dff705170b1565405
 branches:
   - location: 14.4.0
     name: stable/stein
