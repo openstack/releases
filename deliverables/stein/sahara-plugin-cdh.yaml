@@ -21,6 +21,10 @@ releases:
       - hash: 3c4b42448bb3b341e150bad64e4e2d3840902d7b
         repo: openstack/sahara-plugin-cdh
     version: 1.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 3c4b42448bb3b341e150bad64e4e2d3840902d7b
 repository-settings:
   openstack/sahara-plugin-cdh: {}
 branches:

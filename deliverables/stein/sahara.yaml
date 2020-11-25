@@ -22,6 +22,10 @@ releases:
       - hash: 1fa76ce666539a2d8381cad5286993e27322b56a
         repo: openstack/sahara
     version: 10.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/sahara
+        hash: 1fa76ce666539a2d8381cad5286993e27322b56a
 repository-settings:
   openstack/sahara: {}
 branches:
