@@ -19,6 +19,10 @@ releases:
       - hash: abe757aa70b262068f26b2b634b8fff06a8fbfdf
         repo: openstack/python-keystoneclient
     version: 3.19.1
+  - version: stein-em
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: abe757aa70b262068f26b2b634b8fff06a8fbfdf
 branches:
   - location: 3.19.0
     name: stable/stein

@@ -19,6 +19,10 @@ releases:
       - hash: 89af8f0192a3446e416efe2215b47c4e3a89809d
         repo: openstack/keystonemiddleware
     version: 6.0.1
+  - version: stein-em
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 89af8f0192a3446e416efe2215b47c4e3a89809d
 branches:
   - location: 6.0.0
     name: stable/stein
