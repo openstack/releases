@@ -55,6 +55,10 @@ releases:
       - hash: 173601116eb5e00274b10898b56b37dc42d685ac
         repo: openstack/os-brick
     version: 2.8.7
+  - version: stein-em
+    projects:
+      - repo: openstack/os-brick
+        hash: 173601116eb5e00274b10898b56b37dc42d685ac
 branches:
   - location: 2.8.1
     name: stable/stein
