@@ -12,6 +12,10 @@ releases:
       - hash: 0506812fff952bf8df0942cbe7d45a07d464ec38
         repo: openstack/os-acc
     version: 0.2.0
+  - version: stein-em
+    projects:
+      - repo: openstack/os-acc
+        hash: 0506812fff952bf8df0942cbe7d45a07d464ec38
 branches:
   - location: 0.2.0
     name: stable/stein
