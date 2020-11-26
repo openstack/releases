@@ -23,6 +23,10 @@ releases:
       - hash: 450039b7f91f37acc742413af596cc4abb5af6ae
         repo: openstack/python-neutronclient
     version: 6.12.1
+  - version: stein-em
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 450039b7f91f37acc742413af596cc4abb5af6ae
 branches:
   - location: 6.12.0
     name: stable/stein
