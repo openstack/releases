@@ -6,3 +6,8 @@ team: neutron
 type: library
 repository-settings:
   openstack/neutron-lib: {}
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 28373a924b0bc6fab56f5f52067ae607705f6654
