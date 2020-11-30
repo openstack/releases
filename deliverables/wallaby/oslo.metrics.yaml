@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: oslo.metrics
+release-model: cycle-with-intermediary
+team: oslo
+type: library
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: 4631e58c56a37c3ab007c1b6de3680dcda83f1b9
+repository-settings:
+  openstack/oslo.metrics: {}
