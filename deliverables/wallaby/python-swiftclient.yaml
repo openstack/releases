@@ -6,3 +6,8 @@ team: swift
 type: client-library
 repository-settings:
   openstack/python-swiftclient: {}
+releases:
+  - version: 3.11.0
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 903e0cb64a078c72dbadf7abc93be7e1a3b4747a
