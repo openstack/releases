@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.versionedobjects: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 9f0f31eb8b6953bdd299e34658644142bedfc1e8
