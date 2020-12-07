@@ -28,6 +28,10 @@ releases:
       - repo: openstack/cinder
         hash: d4d90f812e35ef836c2bd8b8a33caf37032b1ad4
     diff-start: 16.0.0.0rc1
+  - version: 17.0.1
+    projects:
+      - repo: openstack/cinder
+        hash: cdc586631586dc9782794a90f129ce3f34118193
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
