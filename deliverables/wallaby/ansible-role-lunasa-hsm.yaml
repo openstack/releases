@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 storyboard: 1180
 repository-settings:
   openstack/ansible-role-lunasa-hsm: {}
+releases:
+  - version: 1.1.0
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: b3981c6f8b013affa484fac1270ef57b8b292261
