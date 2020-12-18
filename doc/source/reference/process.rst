@@ -151,7 +151,7 @@ Week after previous release
 
     https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
 
-    By default, all your team deliverables from the Train release are
+    By default, all your team deliverables from the $SERIES release are
     continued in $SERIES with a similar release model. If you intend to drop
     a deliverable, or modify its release model, please do so before the
     $SERIES-1 milestone by proposing a change to the deliverable file at:
@@ -790,7 +790,7 @@ R-6 week (Final Library Release deadline)
     $series-3 milestone (feature freeze): $milestone3 (R-5 week)
     RC1 deadline: $rc1-deadline (R-3 week)
     Final RC deadline: $final-rc-deadline (R-1 week)
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 
@@ -928,7 +928,7 @@ R-5 week (Milestone-3)
 
     RC1 deadline: $rc1-deadline (R-3 week)
     Final RC deadline: $final-rc-deadline (R-1 week)
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 
@@ -1037,7 +1037,7 @@ R-4 week
 
     RC1 deadline: $rc1-deadline (R-3 week)
     Final RC deadline: $final-rc-deadline (R-1 week)
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 
@@ -1047,7 +1047,7 @@ R-3 week (RC1 deadline)
 #. Process any remaining library branching exception.
 
 #. On the Monday, generate release requests for all deliverables
-   that have do not have a suitable Train candidate yet. That includes:
+   that have do not have a suitable candidate yet. That includes:
 
    - Using `release-test` as a canary test. `release-test`
      needs to have a RC1 anyway for preparing the final release.
@@ -1132,7 +1132,7 @@ R-3 week (RC1 deadline)
     --------------------------
 
     Final RC deadline: $final-rc-deadline (R-1 week)
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 
@@ -1282,7 +1282,7 @@ R-2 week
     Upcoming Deadlines & Dates
     --------------------------
 
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 
@@ -1348,7 +1348,7 @@ R-1 week (Final RC deadline)
     Upcoming Deadlines & Dates
     --------------------------
 
-    Final Train release: $release-date
+    Final $SERIES release: $release-date
     $other-upcoming-event
 
 #. After the email is sent, use ``propose-final-releases`` to tag the
