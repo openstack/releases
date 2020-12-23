@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: 71a69b899efcba4b6b60927ec15fc47ebae421fd
+  - version: 12.0.0
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 2bf86c4c82404d3e987be23cf85f270a3c46c6e0
+branches:
+  - name: stable/victoria
+    location: 12.0.0

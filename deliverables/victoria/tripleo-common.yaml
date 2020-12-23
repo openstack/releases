@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: d9c3e3c618eae99ad0b71d18bdcdf08e6fa1eaa6
+  - version: 13.1.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: 0d12d835266569db082f731bce07ffdf7a64fe49
 branches:
   - name: stable/victoria
     location: 13.0.0

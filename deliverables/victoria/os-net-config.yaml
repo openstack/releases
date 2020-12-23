@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: c01eae0483e69471b564b50d66dc17cd4d793e5f
+  - version: 13.1.0
+    projects:
+      - repo: openstack/os-net-config
+        hash: 157df251cf9086cbc58315808ec2f59605626f81
 branches:
   - name: stable/victoria
     location: 13.0.0
