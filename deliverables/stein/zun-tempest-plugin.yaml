@@ -8,6 +8,10 @@ releases:
     projects:
       - repo: openstack/zun-tempest-plugin
         hash: e1d8cb3c73aca182245e2208d9dd876ae9cc4a49
+  - version: stein-last
+    projects:
+      - repo: openstack/zun-tempest-plugin
+        hash: 9c28eca4f5bc4f4c300ed28994c33276913a5a84
 repository-settings:
   openstack/zun-tempest-plugin:
     tarball-base: zun-tempest-plugin
