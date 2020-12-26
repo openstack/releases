@@ -4,12 +4,16 @@ launchpad: cinder
 release-model: cycle-with-intermediary
 release-type: python-pypi
 repository-settings:
-  openstack/cinder-tempest-plugin:
-    tarball-base: cinder_tempest_plugin
+  openstack/cinder-tempest-plugin: {}
 team: cinder
 type: tempest-plugin
 releases:
   - projects:
       - hash: 3cd73f60d8726170c7567338d9812f0e399ab7e7
         repo: openstack/cinder-tempest-plugin
+        tarball-base: cinder_tempest_plugin
     version: 0.2.0
+  - version: stein-last
+    projects:
+      - repo: openstack/cinder-tempest-plugin
+        hash: 3b255b76966a9c4bb5deadbc0d3d372a5288830c
