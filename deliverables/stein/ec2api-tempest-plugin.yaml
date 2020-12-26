@@ -8,6 +8,10 @@ releases:
       - hash: 2757fdac7355e9bd355b0e472ed928d7b88b933e
         repo: openstack/ec2api-tempest-plugin
     version: 0.2.0
+  - version: stein-last
+    projects:
+      - repo: openstack/ec2api-tempest-plugin
+        hash: ac5fb7ad47fc67304ff1cb819ff606488d522fe0
 repository-settings:
   openstack/ec2api-tempest-plugin: {}
 team: ec2-api
