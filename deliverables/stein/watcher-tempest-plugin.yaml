@@ -8,6 +8,10 @@ releases:
     projects:
       - repo: openstack/watcher-tempest-plugin
         hash: d58ad1411156b925192df5769a3765a5d1fc4e95
+  - version: stein-last
+    projects:
+      - repo: openstack/watcher-tempest-plugin
+        hash: f5913409a5ab1887954594089cd275e7a62f2fb8
 repository-settings:
   openstack/watcher-tempest-plugin:
     tarball-base: watcher-tempest-plugin
