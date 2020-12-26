@@ -7,3 +7,8 @@ stable-branch-type: none
 release-type: python-pypi
 repository-settings:
   openstack/sahara-tests: {}
+releases:
+  - version: 0.12.0
+    projects:
+      - repo: openstack/sahara-tests
+        hash: edcd88782ba5221cf804a3c4b5a3c8bb5ef44b67
