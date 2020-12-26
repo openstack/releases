@@ -10,6 +10,10 @@ releases:
       - repo: openstack/tempest
         hash: a955095f8369e2e15c97a536edc1a9c077208129
     version: 20.0.0
+  - version: stein-last
+    projects:
+      - repo: openstack/tempest
+        hash: f9d31f2c46204abbbef53d3c0ae0f80125878fc9
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
