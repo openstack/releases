@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-manila: {}
+releases:
+  - projects:
+      - hash: a7da2478120e5c418f19eeeb89f482a9a9f629fa
+        repo: openstack/puppet-manila
+    version: 18.0.0

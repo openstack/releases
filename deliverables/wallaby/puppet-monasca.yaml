@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-monasca: {}
+releases:
+  - projects:
+      - hash: 1480d4e55bc9014270ede2538e1c49c93b5b12a9
+        repo: openstack/puppet-monasca
+    version: 7.0.0

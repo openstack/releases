@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-mistral: {}
+releases:
+  - projects:
+      - hash: e705d27a1e68780f1e491f69f1c04d0c67a9bd10
+        repo: openstack/puppet-mistral
+    version: 18.0.0

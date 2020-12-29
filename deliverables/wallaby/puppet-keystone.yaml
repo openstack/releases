@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-keystone: {}
+releases:
+  - projects:
+      - hash: 97c2a39d59c56b9393001214939313405df4c5ce
+        repo: openstack/puppet-keystone
+    version: 18.0.0
