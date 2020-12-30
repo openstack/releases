@@ -5,3 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
+branches:
+  - location: 3.0.0
+    name: stable/victoria
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: f9b2b76e39c40d6762a9ba16c94b565b791f2ec3
