@@ -1049,9 +1049,6 @@ R-3 week (RC1 deadline)
 #. On the Monday, generate release requests for all deliverables
    that have do not have a suitable candidate yet. That includes:
 
-   - Using `release-test` as a canary test. `release-test`
-     needs to have a RC1 anyway for preparing the final release.
-
    - cycle-with-intermediary deliverables that have not released yet, for
      which a release should be proposed from HEAD. Stable branch creation
      should be included, unless the deliverable has specified the
