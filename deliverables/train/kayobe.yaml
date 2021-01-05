@@ -47,4 +47,10 @@ releases:
         hash: 6b0e952742bc50d45433464a3b1a0bf7201ec623
       - repo: openstack/kayobe-config-dev
         hash: d87b3ebf7c31abfe4824214657e96883be6b5307
+  - version: 7.2.0
+    projects:
+      - repo: openstack/kayobe
+        hash: cf0146097249fc211131732f858399c8ea1e30de
+      - repo: openstack/kayobe-config
+        hash: 2e700ae2729ca4ebd019d5bc32677ddd8d1819b7
 release-notes: https://docs.openstack.org/releasenotes/kayobe/train.html
