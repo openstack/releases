@@ -6,3 +6,11 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/os-collect-config: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/os-collect-config
+        hash: cc519a7d4844ef7a48ab69abf1d2dd0f90e7bafd
+branches:
+  - name: stable/victoria
+    location: 12.0.0
