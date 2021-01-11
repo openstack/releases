@@ -28,6 +28,14 @@ releases:
         hash: 44fcb163025c95560a14221136b45072bd73b764
       - repo: openstack/kayobe-config-dev
         hash: 4fb1f2aae2bf184bebecfa6c8a6b44567ca4c420
+  - version: 9.0.0
+    projects:
+      - repo: openstack/kayobe
+        hash: f26cd52325c9a4ae259f4c1cdacb9d24517aa413
+      - repo: openstack/kayobe-config
+        hash: 44fcb163025c95560a14221136b45072bd73b764
+      - repo: openstack/kayobe-config-dev
+        hash: 4fb1f2aae2bf184bebecfa6c8a6b44567ca4c420
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
