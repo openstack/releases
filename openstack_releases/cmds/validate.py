@@ -1102,6 +1102,24 @@ def validate_version_numbers(deliv, context):
                         release.version, deliv.series))
             continue
 
+        if release.is_last:
+            LOG.debug('Found new LAST tag {} for {}'.format(
+                release.version, deliv.name))
+            if deliv.is_independent:
+                context.warning(
+                    'LAST tag {} on independent deliverable, branch not validated'.format(
+                        release.version))
+                continue
+            if release.version != "{}-last".format(deliv.series):
+                context.error(
+                    "LAST tag {} should match branch name (e.g {}-last)".format(
+                        release.version, deliv.series))
+            if not deliv.series_info.is_em:
+                context.error(
+                    "LAST tag {} aren't allowed on a series ({}) that are not EM".format(
+                        release.version, deliv.series))
+            continue
+
         for project in release.projects:
 
             if not gitutils.checkout_ref(context.workdir, project.repo.name,
@@ -1302,6 +1320,9 @@ def validate_new_releases_in_open_series(deliv, context):
                     release.version, project.repo))
             elif release.is_em:
                 LOG.debug('Found new EM tag {} for {}'.format(
+                    release.version, project.repo))
+            elif release.is_last:
+                LOG.debug('Found new LAST tag {} for {}'.format(
                     release.version, project.repo))
             else:
                 LOG.debug('Found new version {} for {}'.format(
