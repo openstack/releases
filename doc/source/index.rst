@@ -157,6 +157,11 @@ date ranges during which each key was in general use.
 Documentation
 =============
 
+Content for this site is automatically generated from the data submitted to
+the `openstack/releases`_ git repository. You can learn more about this
+repository and the release management team processes in the following
+documentation:
+
 .. toctree::
    :maxdepth: 2
    :glob:
@@ -166,3 +171,5 @@ Documentation
    reference/deliverable_types
    reference/reviewer_guide
    reference/process
+
+.. _`openstack/releases`: https://opendev.org/openstack/releases
