@@ -6,3 +6,11 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/os-refresh-config: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 754bb751e6728aafa680111a6fab3013609654cc
+branches:
+  - name: stable/victoria
+    location: 12.0.0

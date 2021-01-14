@@ -6,3 +6,12 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-ipsec: {}
+
+releases:
+  - version: 10.0.0
+    projects:
+      - repo: openstack/tripleo-ipsec
+        hash: 3e445d6add5d9aa144bdfca196a199eed6461bc4
+branches:
+  - name: stable/victoria
+    location: 10.0.0
