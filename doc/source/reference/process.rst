@@ -393,11 +393,7 @@ Week before Milestone-2
     Next week is also the deadline to freeze the contents of the final
     release. All new '$SERIES' deliverables need to have a deliverable file
     in https://opendev.org/openstack/releases/src/branch/master/deliverables
-    and need to have done a release by milestone-2. The following new
-    deliverables have not had a release yet, and will not be included in
-    $SERIES unless a release is requested for them in the coming week:
-
-    [ list of deliverables ]
+    and need to have done a release by milestone-2.
 
     Changes proposing those deliverables for inclusion in $SERIES have been
     posted, please update them with an actual release request before the
