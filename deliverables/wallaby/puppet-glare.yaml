@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-glare: {}
+releases:
+  - projects:
+      - hash: ad0d02353d80ca9807ec8ebbcdca8affbf5d4031
+        repo: openstack/puppet-glare
+    version: 7.0.0

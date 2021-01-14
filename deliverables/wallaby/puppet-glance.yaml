@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-glance: {}
+releases:
+  - projects:
+      - hash: d49a985ea770a0ba5166dfdde00d6d9104af31d6
+        repo: openstack/puppet-glance
+    version: 18.0.0

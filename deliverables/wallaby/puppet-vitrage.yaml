@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-vitrage: {}
+releases:
+  - projects:
+      - hash: f1c97d4a0638304b823aa6475b89522482c72687
+        repo: openstack/puppet-vitrage
+    version: 8.0.0
