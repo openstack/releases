@@ -696,8 +696,8 @@ to create releases at appropriate times in the release cycle, e.g milestones.
 Once ``tools/make_missing_releases.sh`` completes the release manager can use
 ``tools/bulk_review.sh`` to submit the release requests.
 
-toos/process_auto_releases.sh
------------------------------
+tools/process_auto_releases.sh
+------------------------------
 
 Automates parts of the process to propose releases for a large set of
 deliverables.
