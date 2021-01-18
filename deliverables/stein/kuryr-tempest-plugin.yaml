@@ -15,4 +15,8 @@ releases:
     projects:
       - repo: openstack/kuryr-tempest-plugin
         hash: 0d51e9905bf9d9af62d6f536b7c2156956c59699
+  - version: stein-last
+    projects:
+      - repo: openstack/kuryr-tempest-plugin
+        hash: fa37cdfbda7b52f37482b4f000d4e5b7af33fe1e
 type: tempest-plugin
