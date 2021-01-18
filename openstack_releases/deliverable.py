@@ -64,7 +64,9 @@ def _version_sort_key(release):
     # won't have more than 1000 major releases of anything, and I
     # surely hope that is a safe assumption.
     version_string = release['version']
-    if version_string.endswith('-eol') or version_string.endswith('-em'):
+    if version_string.endswith('-eol') or \
+        version_string.endswith('-em') or \
+        version_string.endswith('-last'):
         return _safe_semver('1000.0.0')
     return _safe_semver(version_string)
 
@@ -337,6 +339,10 @@ class Release(object):
     @property
     def is_em(self):
         return self.version.endswith('-em')
+
+    @property
+    def is_last(self):
+        return self.version.endswith('-last')
 
     @property
     def em_series(self):
