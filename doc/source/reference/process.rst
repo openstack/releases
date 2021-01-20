@@ -152,11 +152,7 @@ Week after previous release
     https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
 
     By default, all your team deliverables from the $SERIES release are
-    continued in $SERIES with a similar release model. If you intend to drop
-    a deliverable, or modify its release model, please do so before the
-    $SERIES-1 milestone by proposing a change to the deliverable file at:
-
-    https://opendev.org/openstack/releases/src/branch/master/deliverables/$SERIES
+    continued in $SERIES with a similar release model.
 
     Upcoming Deadlines & Dates
     --------------------------
@@ -186,9 +182,6 @@ Week before milestone-1
 
     General Information
     -------------------
-
-    If you planned to change the release model for any of your deliverables
-    this cycle, please remember to do so ASAP, before milestone-1.
 
     Libraries need to be released at least once per milestone period. Next
     week, the release team will propose releases for any library which had
