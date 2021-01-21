@@ -218,15 +218,32 @@ Milestone-1
 
    - List them using::
 
-       tox -e venv -- list-deliverables --unreleased \
-       --model cycle-with-intermediary --type client-library --type library
+       tox -e venv -- \
+            list-deliverables \
+                --unreleased \
+                --model cycle-with-intermediary \
+                --type client-library \
+                --type library
+       > /tmp/deliverables.log
+
+   - Edit the generated file (``/tmp/deliverables.log``) to remove tox's logs.
 
    - Generate release requests for all cycle-with-intermediary libraries
      which had changes, but did not release since the previous release.
+     For this, run (c.f `tools/process_auto_releases.sh
+     <https://releases.openstack.org/reference/using.html#tools-process-auto-releases-sh>`__)::
+
+       tools/process_auto_releases.sh $SERIES $(cat /tmp/deliverables.log)
+
      That patch will be used as a base to communicate with the team: if
      a team wants to wait for a specific patch to make it to the library,
      someone from the team can -1 the patch to have it held, or update
      that patch with a different commit SHA.
+
+     Here is an example of milestone 1 generated for Wallaby:
+
+     https://review.opendev.org/q/topic:%22w1-c-w-i%22
+
 
    - Between Tuesday and Thursday, merge as soon as possible the patches that
      get +1 from the PTL or the release liaison.
@@ -412,15 +429,31 @@ Milestone-2
 #. Generate a list of all cycle-with-intermediary libraries which did not
    release since the YYYY-MM-DD date of milestone-1. For this, run::
 
-     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
-     --model cycle-with-intermediary --type client-library --type library
+     tox -e venv -- \
+        list-deliverables \
+            --unreleased-since YYYY-MM-DD \
+            --model cycle-with-intermediary \
+            --type client-library \
+            --type library \
+     > /tmp/deliverables.log
+
+   Then, edit the generated file to remove tox's logs.
 
    Generate release requests for all cycle-with-intermediary libraries
    which had changes, but did not release since milestone-1.
+   For this, run (c.f `tools/process_auto_releases.sh
+   <https://releases.openstack.org/reference/using.html#tools-process-auto-releases-sh>`__)::
+
+     tools/process_auto_releases.sh $SERIES $(cat /tmp/deliverables.log)
+
    That patch will be used as a base to communicate with the team:
    if a team wants to wait for a specific patch to make it to the library,
    someone from the team can -1 the patch to have it held, or update
    that patch with a different commit SHA.
+
+   Here is an example of milestone 2 generated for Wallaby:
+
+   https://review.opendev.org/q/topic:%22w2-c-w-i%22
 
 #. To catch if there are acl issues in newly created repositories,
    run ``tools/aclissues.py`` to detect potential leftovers in Gerrit ACLs
