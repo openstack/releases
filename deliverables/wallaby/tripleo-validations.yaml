@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-validations: {}
+releases:
+  - version: 14.0.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 949cc1c18ea7c166b999fd0375f61b62f7e02340

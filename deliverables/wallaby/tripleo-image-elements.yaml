@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-image-elements: {}
+releases:
+  - version: 13.0.0
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: d072a79acf52a87333fa663059eb769009b8fb4e

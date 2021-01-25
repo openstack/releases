@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/os-net-config: {}
+releases:
+  - version: 14.0.0
+    projects:
+      - repo: openstack/os-net-config
+        hash: 84a1a5222d58dc7602e4674132c81dd010d8c5b1

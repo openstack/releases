@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-ansible: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: 31a5b3cda5532ad9f916a09f73d706606eb6d2a8
