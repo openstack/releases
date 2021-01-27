@@ -46,6 +46,7 @@ for i in "$@"; do
 done
 
 
+GERRIT_URL="https://review.opendev.org"
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
 source $TOOLSDIR/functions
@@ -64,6 +65,12 @@ function is_eol {
     clone_repo ${repo} stable/${em_serie}
     if [[ $? -eq 0 ]]; then
         echo "${repo} contains eol stale branch (${em_serie})"
+        req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${em_serie}"
+        patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
+        if [ ! -z "${patches}" ]; then
+            echo "Patches remain opened on stale branch:"
+            echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${em_serie}"
+        fi
     fi
 }
 
