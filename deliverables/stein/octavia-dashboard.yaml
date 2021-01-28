@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: bea85726eb6c9cea8800f518bb45f53af06cf69d
+  - version: stein-eol
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: bea85726eb6c9cea8800f518bb45f53af06cf69d
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein

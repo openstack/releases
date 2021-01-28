@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: c9069d587228603db696496f88b6e686d380f022
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: c9069d587228603db696496f88b6e686d380f022
 repository-settings:
   openstack/python-octaviaclient: {}
 branches:
