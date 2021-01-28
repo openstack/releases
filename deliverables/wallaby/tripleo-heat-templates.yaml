@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-heat-templates: {}
+releases:
+  - version: 14.0.0
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 5a4904114380def42b4c3e988db7ea0a7035bd2e

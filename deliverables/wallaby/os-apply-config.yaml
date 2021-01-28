@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/os-apply-config: {}
+releases:
+  - version: 13.0.0
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 2bf86c4c82404d3e987be23cf85f270a3c46c6e0

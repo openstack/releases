@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-puppet-elements: {}
+releases:
+  - version: 14.0.0
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: ad31a402117851eddb288f43c39e7944127376bd
