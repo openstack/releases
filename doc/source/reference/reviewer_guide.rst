@@ -252,3 +252,36 @@ Release Job Failures
 When release jobs fail, messages are sent to release failure mailing
 list:
 http://lists.openstack.org/cgi-bin/mailman/listinfo/release-job-failures
+
+Release Approval Status
+=======================
+
+Depending on the kind of job failures experienced it could be mandatory
+to stop all our release approvals.
+
+Indeed, sometimes job failures are systemic and should be fixed
+first to avoid repeated failures wich could lead inconsistent states in our
+coordinated releases.
+
+To answer that case we defined three statuses to indicate if we should/shouldn't
+continue to validate patch:
+
+- ``RED``: no more approvals;
+- ``ORANGE``: a transient status where we think that the issue is solved but
+  approvals must be carefully monitored first;
+- ``GREEN``: the issue have been fixed and everything works as expected.
+  (approvals are reopen).
+
+To inform all the release managers that something went wrong and ask them to
+hold approvals then follow the following process:
+
+1. open a new thread on the ML with for topic ``[release] Status: RED - $subject``
+   to indicate the issue
+2. notify directly the release managers on IRC (``#openstack-release``)
+
+When you think that the problem is solved but that it still need some tests
+you just have to reply on the thread by moving the topic from ``RED``
+to ``ORANGE``.
+
+When everything seems under control then you can reply on the thread by moving
+the topic from ``ORANGE`` to ``GREEN``.
