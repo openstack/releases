@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: 49ca4208e2837f97f1bae68e3e878f460569ed75
+  - version: 12.5.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 06eb278207952175c9c5bd3f78ff4c3699743890
 branches:
   - location: 12.3.0
     name: stable/ussuri
