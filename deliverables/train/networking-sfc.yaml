@@ -21,6 +21,10 @@ releases:
       - repo: openstack/networking-sfc
         hash: 32702b57bd43357b5f6754e6b9d2adff040a47e5
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 31b28ea8355af8c64cfddc48d4045de4613ba199
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
