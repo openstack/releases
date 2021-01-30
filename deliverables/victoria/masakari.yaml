@@ -15,6 +15,10 @@ releases:
       - repo: openstack/masakari
         hash: 3fcadf85c73bbd0ca1be6a359369ac3a18fc1d71
     diff-start: 9.0.0
+  - version: 10.0.1
+    projects:
+      - repo: openstack/masakari
+        hash: da2a5f01534d228311f5d5fa7b31c9917870a563
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1
