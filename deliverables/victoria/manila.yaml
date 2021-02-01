@@ -27,6 +27,10 @@ releases:
       - repo: openstack/manila
         hash: 22823526c5889f6b64fc52b22bf6e60308613884
     diff-start: 10.0.0.0rc1
+  - version: 11.0.1
+    projects:
+      - repo: openstack/manila
+        hash: a5bd828cbf4545872c0fef596929134b488d5241
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
