@@ -16,6 +16,10 @@ releases:
       - repo: openstack/ec2-api
         hash: b1f4ce5593601c3476e91401290aefdc0f7fdef6
     diff-start: 8.0.0
+  - version: 9.0.1
+    projects:
+      - repo: openstack/ec2-api
+        hash: f90157089654487af9a64fdbf73c76c6909c1bf3
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
