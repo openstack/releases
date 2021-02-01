@@ -18,6 +18,10 @@ releases:
       - hash: 66dc3e29d0aa107f59a92ca253ea1eaa14b63279
         repo: openstack/ironic-prometheus-exporter
     version: 1.1.1
+  - version: 1.1.2
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 2a3893b05867ba58d850438a4fca4d9a75349d44
 branches:
   - location: 1.1.0
     name: stable/train
