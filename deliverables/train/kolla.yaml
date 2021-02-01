@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 3e020fdf2a26ad640a56134c25a5060c48bb190b
+  - version: 9.3.1
+    projects:
+      - repo: openstack/kolla
+        hash: fc0ebe07c2e88ee000caf43d7ba67ceed7d7a842
 cycle-highlights:
   - Switched to Python 3 in Debian and Ubuntu source images.
   - Introduced images and playbooks for Masakari, which supports instance
