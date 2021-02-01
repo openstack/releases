@@ -8,6 +8,12 @@ Wallaby Release Schedule
    below. Exceptions to this policy will be explicitly mentioned in the event
    description.
 
+.. note::
+    All projects following the cycle-trailing release model must release
+    their Wallaby deliverables by 02 July, 2021.
+
+    `Xena schedule <https://releases.openstack.org/xena/schedule.html>`
+
 19 October 2020 - 14 April 2021 (26 weeks)
 
 .. datatemplate::
