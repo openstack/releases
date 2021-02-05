@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 8a84c011e692611249eddced636fec484c10bd24
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 1d1958931aa56a45e6dd918f3e74e758e7653f04
 branches:
   - location: 9.3.0
     name: stable/rocky

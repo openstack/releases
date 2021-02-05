@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/instack-undercloud
         hash: 5f1b6c6e5001ed917d474bed33ca88103031de94
+  - version: rocky-eol
+    projects:
+      - repo: openstack/instack-undercloud
+        hash: b082cc19299cd6d6075716d7a12bf0c09c2224dc
 branches:
   - location: 9.3.0
     name: stable/rocky

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: 07165a907a01408485526950739183a6154f6515
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-apply-config
+        hash: c3da807b7c125a7386eb4c6c1a091bea25ceb581
 branches:
   - location: 9.1.0
     name: stable/rocky

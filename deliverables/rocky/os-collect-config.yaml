@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: f63f4d2dc8e6de98edee861642eb2c204800f7cf
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 88a863180861bcb7e27a6bf8703c4ad4b1558c00
 branches:
   - location: 9.2.0
     name: stable/rocky

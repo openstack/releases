@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 934711db2bc642a24aa408d048553c5f3f5c09fd
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 68f74dbcd06c91a254b678e0ee8ba0df57df3882
 branches:
   - location: 10.5.0
     name: stable/rocky

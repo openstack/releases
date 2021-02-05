@@ -48,6 +48,10 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: 8813bfa061b0486e57a5e3d74f32339c12a35ef3
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: a6884626752b7d6d7ee37fda6fa9ea7a9d2f3010
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky

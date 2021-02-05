@@ -56,6 +56,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 4a691d683124ea226a94799bc77c131c5e279096
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: b5c08cbab33148eb35538ce399c731c44259a20e
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky

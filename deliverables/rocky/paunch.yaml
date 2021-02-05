@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/paunch
         hash: b87a7bd445caf38b1d74606f024e5018114753dd
+  - version: rocky-eol
+    projects:
+      - repo: openstack/paunch
+        hash: 7779c4bc40016dfc481027ec5a288705db11fc0e
 repository-settings:
   openstack/paunch: {}
 branches:

@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: 92a3500b5fc9ae458b71e934e523be4fabe97100
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-net-config
+        hash: 3cc286037b35c36b56bd7b5f940e2462cd04c013
 branches:
   - location: 9.2.0
     name: stable/rocky
