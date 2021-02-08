@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/os-refresh-config
         hash: 2ea1ccaa7986666f1a147bf1d8db253d1a69d01f
+  - version: 10.4.1
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: d0fdb42918c2f48eb9f522245e1e7334cdc3da97
 branches:
   - name: stable/train
     location: 10.4.0
