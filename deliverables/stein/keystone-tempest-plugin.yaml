@@ -13,3 +13,8 @@ releases:
       - repo: openstack/keystone-tempest-plugin
         hash: b573efb357ad1abba0227357015aa0d782e40541
         tarball-base: keystone_tempest_plugin
+  - version: stein-last
+    projects:
+      - repo: openstack/keystone-tempest-plugin
+        hash: 774bb4f905f1626bb30802f5c21205761ccc88d2
+        tarball-base: keystone_tempest_plugin
