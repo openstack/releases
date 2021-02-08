@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.cache: {}
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 062d29b2562c4b1072ad3c1d08855848e2af6327
