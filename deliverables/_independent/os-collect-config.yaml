@@ -1,7 +1,10 @@
 ---
 launchpad: os-collect-config
+release-type: python-pypi
 team: tripleo
 type: other
+repository-settings:
+  openstack/os-collect-config: {}
 releases:
   - version: 0.1.34
     projects:
@@ -11,5 +14,7 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: 163030c08181ef152ea8bb80ea88dfe0dfe519eb
-repository-settings:
-  openstack/os-collect-config: {}
+  - version: 13.0.0
+    projects:
+      - repo: openstack/os-collect-config
+        hash: cc519a7d4844ef7a48ab69abf1d2dd0f90e7bafd

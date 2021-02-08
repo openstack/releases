@@ -1,9 +1,8 @@
 ---
 launchpad: os-refresh-config
-release-model: cycle-with-intermediary
 release-type: python-pypi
 team: tripleo
-type: trailing
+type: other
 repository-settings:
   openstack/os-refresh-config: {}
 releases:
@@ -11,4 +10,3 @@ releases:
     projects:
       - repo: openstack/os-refresh-config
         hash: 754bb751e6728aafa680111a6fab3013609654cc
-# Note: deliverable was not released in victoria
