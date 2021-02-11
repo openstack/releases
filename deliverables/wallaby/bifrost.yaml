@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: aa727de74d4a88ba4f86137e36c113477592a79b
+  - version: 10.1.0
+    projects:
+      - repo: openstack/bifrost
+        hash: b266ee92f023bc559e0b802a503d6a37e1ccc185
 branches:
   - name: bugfix/10.0
     location: 10.0.0
+  - name: bugfix/10.1
+    location: 10.1.0
