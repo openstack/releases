@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: ef606c96ac8461a450e3e749b1b5a7cff2cb6a42
+  - version: 2.3.1
+    projects:
+      - repo: openstack/oslo.cache
+        hash: d4559be5a025de93bd34c3ecfa7c1f294edb4322
 branches:
   - name: stable/ussuri
     location: 2.3.0

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: f67262f0e7e7d5d59c3f36492d8fdaad8d6f269b
+  - version: 1.37.1
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 3e3037886e8021911e10f492c0502951bff5104e
 branches:
   - name: stable/train
     location: 1.37.0
