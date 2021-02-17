@@ -5,3 +5,8 @@ team: cinder
 type: service
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 18.0.0.0b1
+    projects:
+      - hash: bdfcdb631c59405a81e3fd0739d7ebbef893d49c
+        repo: openstack/cinder
