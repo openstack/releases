@@ -22,6 +22,10 @@ releases:
       - repo: openstack/senlin
         hash: c19f2de68eff800e6d8ef656d1a77a043a79efb3
     diff-start: 7.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/senlin
+        hash: 366ee0084c1f2ca6e046bd63b765accd50aba23b
 branches:
   - name: stable/train
     location: 8.0.0.0rc1
