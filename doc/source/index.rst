@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   xena/index
    wallaby/index
    victoria/index
    ussuri/index
