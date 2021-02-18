@@ -206,6 +206,15 @@ Week before milestone-1
 Milestone-1
 ===========
 
+#. Ensure that all trailing projects have been branched for the previous
+   series.
+
+   - List unbranched projects using::
+
+       tools/list_unbranched_projects.sh
+
+   - Propose a patch to branch the missing ones.
+
 #. Propose autoreleases for cycle-with-intermediary libraries which
    did not release since the previous release.
 

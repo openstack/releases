@@ -833,6 +833,24 @@ deliverable become EOL, this tool aim to list projects that have been declared
 EOL on a series that is EM and where the corresponding series branch
 still exists.
 
+tools/list_unbranched_projects.sh
+---------------------------------
+
+A script to detect deliverables who haven't been branched during previous
+series.
+
+Example:
+
+::
+
+  tools/list_unbranched_projects.sh
+
+This tooling aim to avoid to miss branching. This is a side effect of
+the trailing projects, each series some of them are missed and remain
+unbranched. We faced similar use case previously and that leaded us to
+issues during releasing on stable branches.
+
+
 tools/membership_freeze_test.py
 --------------------------------
 
