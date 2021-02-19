@@ -813,6 +813,22 @@ def validate_build_sdist(deliv, context):
         gitutils.checkout_ref(
             context.workdir, project.repo.name, project.hash, context)
 
+        # Set some git configuration values to allow us to perform
+        # local operations like tagging.
+        gitutils.ensure_basic_git_config(
+            context.workdir, project.repo.name,
+            {'user.email': 'openstack-infra@lists.openstack.org',
+             'user.name': 'OpenStack Proposal Bot'},
+        )
+
+        # Ensure us that build sdist will works with tags. That help to detect
+        # branching problems early. The goal is to avoid to try to add a tag
+        # to a branch which is older than another tag already on that
+        # branch/in that branch's history
+        gitutils.add_tag(
+            context.workdir, project.repo.name, release.version, project.hash
+        )
+
         try:
             pythonutils.build_sdist(
                 context.workdir, project.repo.name)
