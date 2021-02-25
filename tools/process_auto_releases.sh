@@ -69,15 +69,21 @@ read -p "> Create stable branch? [y/N]: " YN
 if [ "${YN,,}" == "y" ]; then
     newbranch="--stable-branch"
 fi
+echo
+read -p "> Append list of changes to commit message? [y/N]: " YN
+if [ "${YN,,}" == "y" ]; then
+    append_change_list="yes"
+fi
 
 echo
 echo "======================================"
 echo "Confirm details:"
 echo "======================================"
-echo "Topic:      $topic"
-echo "Series:     $series"
-echo "Branch:     $branch"
-echo "New Branch: $newbranch"
+echo "Topic:       $topic"
+echo "Series:      $series"
+echo "Branch:      $branch"
+echo "New Branch:  $newbranch"
+echo "Change list: $append_change_list"
 echo "Commit Message Template:"
 echo
 echo "------------------------------------------------------------------------"
@@ -92,6 +98,7 @@ fi
 
 function process_repo {
     repo=$1
+    change_list=""
     title "Unreleased changes in $repo ($series)"
     cd "$MYTMPDIR"
     clone_repo "openstack/$repo" $branch
@@ -110,6 +117,13 @@ function process_repo {
         git log --no-color --no-merges --format='%h %ci %s' \
             --graph ${prev_tag}..${end_sha}
         echo
+        if [ -n "$append_change_list" ]; then
+            change_list="
+
+$ git log --oneline --no-merges ${prev_tag}..${end_sha}
+$(git log --oneline --no-merges ${prev_tag}..${end_sha})
+"
+        fi
     fi
 
     read -p "Create new release? [y/N]: " YN
@@ -132,7 +146,7 @@ function process_repo {
         break
     done
     git add .
-    message=${commit//PROJECT/$repo}
+    message="${commit//PROJECT/$repo}${change_list}"
     git commit -s -m "$message"
     git log -1
     git review -t $topic
