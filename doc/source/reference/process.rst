@@ -741,7 +741,13 @@ R-6 week (Final Library Release deadline)
 
    - List them using::
 
-      ./tools/list_library_unrelease_changes.sh
+      ./tools/list_library_unreleased_changes.sh > /tmp/cwiff.log
+
+   - Clean the generated list to keep projects names only.
+
+   - Generate the patches by using ``process_auto_releases``::
+
+      ./tools/process_auto_releases.sh $SERIES $(cat /tmp/cwiff.log)
 
    - That patch will be used as a base to communicate with the
      team: if a team wants to wait for a specific patch to make it to the
