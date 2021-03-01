@@ -79,6 +79,19 @@ second milestones as well as the third milestone, are therefore not considered
 part of the release for the cycle. This does not apply to cycle-trailing
 packaging / lifecycle management projects.
 
+.. _x-extra-atc-freeze:
+
+Extra-ATC freeze
+--------------------------------------
+
+All contributions to OpenStack are valuable, but some are not expressed as
+Gerrit code changes. That allow teams to list active contributors to their
+projects and who do not have a code contribution this cycle, and therefore won't
+automatically be considered an Active Technical Contributor and allowed
+to vote. This is done by adding extra-atcs to
+https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
+before the Extra-ATC freeze on 13 August, 2021.
+
 .. _x-final-lib:
 
 Final release for non-client libraries
