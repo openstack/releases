@@ -1,4 +1,5 @@
 ---
+launchpad: openstack-cyborg
 team: cyborg
 type: service
 storyboard: 968
@@ -6,3 +7,18 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - |
+    Users can launch instances with accelerators managed by Cyborg since
+    Ussuri release, this release more operations such as Shelve/Unshelve
+    are supported.
+    See accelerator operation guide to find all supported operations.
+  - |
+    Cyborg introduces more new accelerator drivers such as Intel NIC and
+    Inspur SSD driver which allow user to boot up a VM with such device
+    attached.
+  - |
+    Cyborg now provides a new configuration for user to configure their
+    devices, for example, user can indicate the vgpu type for their
+    virtualized GPU, user can indicate the specific functions loaded on
+    their NIC, etc.
