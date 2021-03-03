@@ -38,6 +38,8 @@ cycle:
 - end: '2021-06-25'
   name: R-15
   start: '2021-06-21'
+  project-specific:
+    - x-manila-spec-freeze
 - end: '2021-07-02'
   name: R-14
   start: '2021-06-28'
@@ -58,9 +60,13 @@ cycle:
 - end: '2021-07-30'
   name: R-10
   start: '2021-07-26'
+  project-specific:
+    - x-manila-new-driver-deadline
 - end: '2021-08-06'
   name: R-9
   start: '2021-08-02'
+  project-specific:
+    - x-manila-fpfreeze
 - end: '2021-08-13'
   name: R-8
   start: '2021-08-09'

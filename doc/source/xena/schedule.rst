@@ -212,6 +212,33 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Manila
+------
+
+.. _x-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Xena must be approved by the end of the week.
+
+.. _x-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI.  Drivers do not have to
+actually merge until feature freeze.
+
+.. _x-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
+
 Oslo
 ----
 
