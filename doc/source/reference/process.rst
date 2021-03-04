@@ -802,11 +802,11 @@ R-6 week (Final Library Release deadline)
     deliverables following the cycle-with-rc model. To help those projects
     produce a first release candidate in time, only bugfixes should be allowed
     in the master branch beyond this point. Any feature work past that deadline
-    has to be raised as a Featur Freeze Exception (FFE) and approved by the
+    has to be raised as a Feature Freeze Exception (FFE) and approved by the
     team PTL.
 
     Finally, feature freeze is also the deadline for submitting a first version
-    of your cycle-highlights. Cycle highlights are the raw data hat helps shape
+    of your cycle-highlights. Cycle highlights are the raw data that helps shape
     what is communicated in press releases and other release activity at the
     end of the cycle, avoiding direct contacts from marketing folks. See
     https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
