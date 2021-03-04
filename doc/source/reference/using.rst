@@ -819,7 +819,8 @@ For more usage and examples:
 tools/list_eol_stale_branches.sh
 ---------------------------------
 
-A script to detect deliverables who have eol stale branches in their repos.
+A script to detect deliverables who have EOL stale branches and optionally
+delete them.
 
 Example:
 
@@ -827,11 +828,22 @@ Example:
 
   tools/list_eol_stale_branches.sh
 
-The reason behind this tool is that since the extended maintenance model
-have been introduced we stopped removing automatically EOL branches when a
-deliverable become EOL, this tool aim to list projects that have been declared
-EOL on a series that is EM and where the corresponding series branch
-still exists.
+Another example with predefining the gerrit user to be used for branch deletion:
+
+::
+
+  GERRIT_USER=<gerrit_user_name> tools/list_eol_stale_branches.sh
+
+The reason behind this tool is that since the Extended Maintenance model
+have been introduced we stopped removing automatically End of Life (EOL)
+branches. This tool aims to list projects with branches that have been
+declared ``End of Life`` (that is, tagged with ``$series-eol``), but the
+corresponding series branch still exists. The script also offers to delete
+these stale branches.
+
+.. note::
+
+   Only release managers have the access rights to delete branches.
 
 tools/list_unbranched_projects.sh
 ---------------------------------
