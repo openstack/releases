@@ -225,6 +225,10 @@ release when we're in the freeze period.
 Release Jobs
 ============
 
+When a release request is submitted the ``check-release-approval`` job
+will be triggered to check that release requests were approved by PTL or
+release liaison.
+
 After a release request merges, the ``tag-releases`` job will start up
 in the ``release-post`` pipeline.
 
