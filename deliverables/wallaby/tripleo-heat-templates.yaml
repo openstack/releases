@@ -6,6 +6,26 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-heat-templates: {}
+cycle-highlights:
+  - |
+    Moving `network <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/triplo-network-data-v2.rst>`_
+    and `network port creation <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/triplo-network-data-v2-node-ports.rst>`_
+    out of the Heat stack and into the baremetal provisioning workflow.
+  - |
+    Ceph version upgraded to Octopus. cephadm may be used to deploy/maintain a Ceph RBD cluster but
+    not all Ceph services (e.g. RGW). ceph-ansible may still be used to deploy/maintain all Ceph
+    services but will be replaced with cephadm in next release.
+    This work is described in the `TripleO Ceph spec <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/tripleo-ceph.rst>`_
+    and the `Tripleo Ceph Client spec <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/tripleo-ceph-client.rst>`_.
+  - |
+    Removed Swift from the Undercloud services and removed the deployment
+    'plan' as described in the `Excise swift spec <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/excise-swift.rst>`_.
+  - |
+    Early (beta) support for deploying FRRouter in the Overcloud to support BGP routing
+    as described in the `FRRouter spec <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/triplo-bgp-frrouter.rst>`_.
+  - |
+    Moving away from using a dedicated Heat service on the Undercloud for the
+    Overcloud deployment and instead using `Ephemeral Heat <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/ephemeral-heat-overcloud.rst>`_.
 releases:
   - version: 14.0.0
     projects:
