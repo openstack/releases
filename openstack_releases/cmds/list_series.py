@@ -28,7 +28,7 @@ def em():
 
 def maintained():
     series = series_status.SeriesStatus.from_directory(ROOT_DIR)
-    for serie in series:
-        if series.get(serie).is_maintained:
-            if serie != 'independent':
-                print(serie)
+    for current_series in series:
+        if series.get(current_series).is_maintained:
+            if current_series != 'independent':
+                print(current_series)
