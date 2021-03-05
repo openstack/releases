@@ -19,8 +19,16 @@ BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 ROOT_DIR = f'{BASE_PATH}/../../data'
 
 
-def main():
+def em():
     series = series_status.SeriesStatus.from_directory(ROOT_DIR)
     for serie in series:
         if series.get(serie).is_em:
             print(serie)
+
+
+def maintained():
+    series = series_status.SeriesStatus.from_directory(ROOT_DIR)
+    for serie in series:
+        if series.get(serie).is_maintained:
+            if serie != 'independent':
+                print(serie)

@@ -51,6 +51,10 @@ class Series(object):
     def is_em(self):
         return self.status == 'extended maintenance'
 
+    @property
+    def is_maintained(self):
+        return self.status == 'maintained' or self.status == 'development'
+
 
 class SeriesStatus(collections.abc.Mapping):
 
