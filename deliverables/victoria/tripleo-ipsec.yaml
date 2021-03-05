@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ipsec
         hash: 3e445d6add5d9aa144bdfca196a199eed6461bc4
+  - version: 10.0.1
+    projects:
+      - repo: openstack/tripleo-ipsec
+        hash: 96c60fa201697546cf4cc619e13fd685d7f7d52f
 branches:
   - name: stable/victoria
     location: 10.0.0

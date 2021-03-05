@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ipsec
         hash: 3e445d6add5d9aa144bdfca196a199eed6461bc4
+  - version: 9.3.2
+    projects:
+      - repo: openstack/tripleo-ipsec
+        hash: d9666d8900f90ef79d704478dde622b09b8ccfd1
 branches:
   - name: stable/ussuri
     location: 9.3.1
