@@ -6,4 +6,8 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
-# Note: deliverable was not released in victoria
+cycle-highlights:
+  - Significantly improved Zun role and moved from experimental to stable status
+  - Exerimental support for CentOS Stream
+  - Experimental support for Debian Bullseye
+  - Self-signed SSL will be generated and signed with local Certificate Authority
