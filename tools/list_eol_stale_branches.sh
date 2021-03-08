@@ -20,7 +20,8 @@ function help {
 cat <<EOF
 usage: $0 [<args>]
 
-Provide a list of repositories that contains eol stale branches
+Provide a list of repositories that contains eol stale branches, and
+give option to delete them.
 
 Arguments:
     -d, --debug         Turn on the debug mode
@@ -46,6 +47,7 @@ for i in "$@"; do
 done
 
 
+gerrit_username=${GERRIT_USER:-}
 GERRIT_URL="https://review.opendev.org"
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
@@ -68,8 +70,16 @@ function is_eol {
         req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${em_serie}"
         patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
         if [ ! -z "${patches}" ]; then
-            echo "Patches remain opened on stale branch:"
+            echo "Patches remained open on stale branch (make sure to abandon them):"
             echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${em_serie}"
+        else
+            read -p "> Do you want to delete the branch stable/${em_serie} from ${repo} repository? [y/N]: " YN
+            if [ "${YN,,}" == "y" ]; then
+                if [ -z "$gerrit_username" ]; then
+                    read -p "Gerrit username: " gerrit_username
+                fi
+                ${TOOLSDIR}/delete_stable_branch.py ${gerrit_username} ${repo} ${em_serie}
+            fi
         fi
     fi
 }
