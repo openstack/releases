@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: e1dc35d8e10d01d8823065cccfb5c8f341be7446
+  - version: 22.1.0
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 19d8050d055b97249eb46bab01522a3cd6f406d3
 branches:
   - name: stable/victoria
     location: 22.0.0.0rc1
