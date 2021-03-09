@@ -5,3 +5,10 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+cycle-highlights:
+  - Static large object segments can now be deleted asynchronously; multipart
+    uploads deleted through the S3 API will always be deleted asynchronously.
+  - Numerous sharding improvements, including the ability to cache shard
+    ranges for listings and support for operator-driven shrinking.
+  - Several part-power-increase improvements, which ensure small clusters are
+    capabale of growing to be large clusters.
