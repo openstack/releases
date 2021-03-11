@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: cc519a7d4844ef7a48ab69abf1d2dd0f90e7bafd
+  - version: 12.0.1
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 4e0667fbc620721a79f884854efff835da56a449
 branches:
   - name: stable/victoria
     location: 12.0.0
