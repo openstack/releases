@@ -6,3 +6,11 @@ team: zun
 type: client-library
 repository-settings:
   openstack/python-zunclient: {}
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 751df7101f66da07b7c2366d20c2af06a91de3d6
+branches:
+  - name: stable/wallaby
+    location: 4.2.0
