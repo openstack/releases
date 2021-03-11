@@ -54,7 +54,7 @@ properties:
     type: "string"
     enum: [ "python-service", "python-pypi", "xstatic", "fuel",
             "nodejs", "puppet", "neutron", "horizon", "openstack-manuals",
-            "manila-image-elements", "generic" ]
+            "manila-image-elements", "openstack-virtual-baremetal", "generic" ]
   stable-branch-type:
     type: "string"
     enum: [ "std", "tagless", "upstream", "none", "std-with-versions" ]

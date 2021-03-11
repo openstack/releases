@@ -169,6 +169,9 @@ _RELEASE_JOBS_FOR_TYPE = {
     'manila-image-elements': [
         'manila-image-elements-publish-artifacts',
     ],
+    'openstack-virtual-baremetal': [
+        'docs-on-readthedocs',
+    ],
 }
 
 
