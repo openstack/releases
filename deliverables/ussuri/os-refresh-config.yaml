@@ -6,3 +6,11 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/os-refresh-config: {}
+releases:
+  - version: 11.0.0
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 2d6a97498e01a7951f3f2a43ec5fe62345214142
+branches:
+  - name: stable/ussuri
+    location: 11.0.0
