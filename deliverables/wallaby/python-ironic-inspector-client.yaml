@@ -6,3 +6,11 @@ team: ironic
 type: client-library
 repository-settings:
   openstack/python-ironic-inspector-client: {}
+releases:
+  - version: 4.5.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 3c03e21b2ad24f8162021a0206ebbf027357d5e5
+branches:
+  - name: stable/wallaby
+    location: 4.5.0
