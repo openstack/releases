@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 259b98f69dd0b9929ee9e04ccb37183d2666d227
+  - version: 3.9.1
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 3673cc0e88517f33e18655d9d861bb1366a0b19a
 branches:
   - name: stable/ussuri
     location: 3.9.0
