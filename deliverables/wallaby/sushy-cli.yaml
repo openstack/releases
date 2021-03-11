@@ -6,3 +6,11 @@ team: ironic
 type: client-library
 repository-settings:
   openstack/sushy-cli: {}
+releases:
+  - version: 0.4.0
+    projects:
+      - repo: openstack/sushy-cli
+        hash: 911616593885ea424484ecb8be50993834e1eb4d
+branches:
+  - name: stable/wallaby
+    location: 0.4.0
