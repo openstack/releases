@@ -6,3 +6,11 @@ team: watcher
 type: client-library
 repository-settings:
   openstack/python-watcherclient: {}
+releases:
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 6a33b44d7f989043e448030c518210744b35a08e
+branches:
+  - name: stable/wallaby
+    location: 3.2.0
