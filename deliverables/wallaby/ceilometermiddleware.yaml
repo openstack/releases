@@ -6,3 +6,11 @@ team: Telemetry
 type: library
 repository-settings:
   openstack/ceilometermiddleware: {}
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: caeeb51c70c7417811f69b916c38d2f41cc2f384
+branches:
+  - name: stable/wallaby
+    location: 2.2.0
