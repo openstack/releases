@@ -7,3 +7,11 @@ type: client-library
 repository-settings:
   openstack/python-aodhclient:
     tarball-base: aodhclient
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: b747ae3161d75d45e08349aaa6bbfac3a32f78a7
+branches:
+  - name: stable/wallaby
+    location: 2.2.0
