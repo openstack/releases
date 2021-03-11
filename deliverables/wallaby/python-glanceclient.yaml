@@ -6,3 +6,11 @@ team: glance
 type: client-library
 repository-settings:
   openstack/python-glanceclient: {}
+releases:
+  - version: 3.3.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: f802c710835e2e9ac42964c7282bbb4e539b38c5
+branches:
+  - name: stable/wallaby
+    location: 3.3.0
