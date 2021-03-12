@@ -5,4 +5,10 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla: {}
-# Note: deliverable was not released in victoria
+cycle-highlights:
+  - Switched CentOS images to CentOS Stream 8.
+  - Added support for Ubuntu in Kayobe.
+  - Added support for the OpenID Connect authentication protocol in Keystone.
+  - Added Docker healthchecks for several services.
+  - Added support for Prometheus version 2.
+  - Added support for multiple environments in a single Kayobe configuration.
