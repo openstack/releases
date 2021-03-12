@@ -5,3 +5,24 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    `Support for accelerators in Nova servers has been improved. Now shelving
+    and unshelving such server is supported.
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html>`_
+  - |
+    `Now Nova supports attaching neutron ports with QoS minimum bandwidth rules
+    for running servers.
+    <https://docs.openstack.org/api-guide/compute/port_with_resource_request.html>`_
+  - |
+    The Nova scheduler can now ensure that servers with the requested networks
+    or ports related to Neutron routed networks are scheduled to compute hosts
+    where network segments are available.
+  - |
+    The Hyper-V virt driver can now attach Cinder RBD volumes.
+  - |
+    `The libvirt driver now support changing the default machine type on a compute
+    node safely <https://docs.openstack.org/nova/latest/admin/hw-machine-type.html>`_
+  - |
+    `The libvirt driver now supports UEFI Secure Boot.
+    <https://specs.openstack.org/openstack/nova-specs/specs/wallaby/approved/allow-secure-boot-for-qemu-kvm-guests.html>`_
