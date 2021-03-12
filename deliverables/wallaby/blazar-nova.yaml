@@ -6,3 +6,11 @@ type: library
 release-type: python-pypi
 repository-settings:
   openstack/blazar-nova: {}
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/blazar-nova
+        hash: fb318e704f68c92cb7391d9e44d598c6101ebec4
+branches:
+  - name: stable/wallaby
+    location: 2.2.0
