@@ -10,15 +10,24 @@ repository-settings:
 cycle-highlights:
   - |
     Users can launch instances with accelerators managed by Cyborg since
-    Ussuri release, this release more operations such as Shelve/Unshelve
+    Ussuri release, this release more operations such as `Shelve/Unshelve
+    <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html#id1>`_
     are supported.
     See accelerator operation guide to find all supported operations.
   - |
     Cyborg introduces more new accelerator drivers such as Intel NIC and
-    Inspur SSD driver which allow user to boot up a VM with such device
-    attached.
+    `Inspur SSD <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html#id2>`_
+    driver which allow user to boot up a VM with such device attached.
   - |
     Cyborg now provides a new configuration for user to configure their
     devices, for example, user can indicate the vgpu type for their
     virtualized GPU, user can indicate the specific functions loaded on
     their NIC, etc.
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: f9835cff9c83c9da1ede6d4173d17031deb4061f
+branches:
+  - name: stable/wallaby
+    location: 6.0.0.0rc1
