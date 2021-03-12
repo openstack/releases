@@ -5,3 +5,27 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - OSProfiler support has been added for tracing and observability.
+  - Users may now add and update security services on share networks that
+    are in use.
+  - Operators may now set maximum and minimum share sizes as extra
+    specifications on share types. It is also possible to limit the maximum
+    size of shares via project and share type quotas.
+  - The number and size of shares can be limited on share servers for load
+    balancing.
+  - The service provided default RBAC policies for all API endpoints have
+    been adjusted to accommodate system scoped and project scoped personas
+    with admin, member and reader roles where appropriate.
+  - The service now supports a healthcheck middleware that is enabled by
+    default.
+  - Several driver improvements have been committed. The Container share driver
+    now supports user defined LDAP security services that can be added to
+    share networks or modified at any time. The NetApp driver supports
+    setting up FPolicy events on shares. It also now allows users to
+    add/update Kerberos, LDAP or Active Directory security services on their
+    share networks at any time. The CephFS driver has been refactored to
+    interact with the ceph manager daemon to create and manage shares. It
+    also supports efficiently cloning snapshots into new shares.
+  - A new share driver has been added for Zadara Cloud Storage and supports
+    NFS and CIFS protocols.
