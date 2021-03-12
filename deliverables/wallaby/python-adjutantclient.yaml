@@ -6,3 +6,11 @@ team: adjutant
 type: client-library
 repository-settings:
   openstack/python-adjutantclient: {}
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 32ef2538fc97893c555e438070281d5599bf1ebc
+branches:
+  - name: stable/wallaby
+    location: 0.8.0
