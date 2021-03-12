@@ -20,6 +20,9 @@ Week after previous release
 
       tox -e venv -- init-series $SERIES $NEXT_SERIES
 
+
+   Submit your changes by using the gerrit topic ``$series-init-series``.
+
 #. Coordinate with the Infrastructure team to swap out the previous cycle
    signing key and establish the new one for the starting cycle.
 
@@ -232,6 +235,12 @@ Milestone-1
 
    - Generate release requests for all cycle-with-intermediary libraries
      which had changes, but did not release since the previous release.
+
+     .. warning::
+
+        ``process_auto_releases`` will ask you to enter a topic for the patches.
+        Please use ``$series-milestone-1`` as topic.
+
      For this, run (c.f `tools/process_auto_releases.sh
      <https://releases.openstack.org/reference/using.html#tools-process-auto-releases-sh>`__)::
 
@@ -443,6 +452,12 @@ Milestone-2
 
    Generate release requests for all cycle-with-intermediary libraries
    which had changes, but did not release since milestone-1.
+
+   .. warning::
+
+      ``process_auto_releases`` will ask you to enter a topic for the patches.
+      Please use ``$series-milestone-2`` as topic.
+
    For this, run (c.f `tools/process_auto_releases.sh
    <https://releases.openstack.org/reference/using.html#tools-process-auto-releases-sh>`__)::
 
@@ -758,6 +773,11 @@ R-6 week (Final Library Release deadline)
 
       ./tools/process_auto_releases.sh $SERIES $(cat /tmp/cwiff.log)
 
+     .. warning::
+
+        ``process_auto_releases`` will ask you to enter a topic for the patches.
+        Please use ``$series-final-non-client-libs`` as topic.
+
    - That patch will be used as a base to communicate with the
      team: if a team wants to wait for a specific patch to make it to the
      library, someone from the team can -1 the patch to have it held, or update
@@ -840,12 +860,18 @@ R-5 week (Milestone-3)
    cycle-highlights are due this week so that they can be included in
    release marketing preparations.
 
-#. Propose autoreleases for cycle-with-intermediary client libraries which
-   had commits that have not been included in a release.
+#. Propose autoreleases (``process_auto_releases``) for
+   ``cycle-with-intermediary`` client libraries which had commits that have
+   not been included in a release.
 
    - List them using::
 
       ./tools/list_client_library_unreleased_changes.sh
+
+     .. warning::
+
+        ``process_auto_releases`` will ask you to enter a topic for the patches.
+        Please use ``$series-milestone-3`` as topic.
 
    - That patch will be used as a base
      to communicate with the team: if a team wants to wait for a specific patch
@@ -991,6 +1017,10 @@ R-4 week
 
       tox -e venv -- propose-library-branches --include-clients
 
+     .. warning::
+
+        Please use ``$series-table-branches`` as gerrit topic.
+
    - That patch will be used as a base
      to communicate with the team: if a team wants to wait for a specific patch
      to make it to the library, someone from the team can -1 the patch to have
@@ -1101,6 +1131,13 @@ R-3 week (RC1 deadline)
 
        tox -e venv -- list-deliverables --missing-rc --model cycle-with-rc
 
+   - Generate patches by using ``process_auto_releases``.
+
+     .. warning::
+
+        ``process_auto_releases`` will ask you to enter a topic for the patches.
+        Please use ``$series-rc1-deadline`` as topic.
+
    - Those patches will be used as a base to communicate with the team:
      if a team wants to wait for a specific patch to make it to the release,
      someone from the team can -1 the patch to have it held, or update
@@ -1181,6 +1218,10 @@ R-2 week
    - You can list those using::
 
          tox -e venv -- list-deliverables --no-stable-branch --cycle-based-no-trailing
+
+     .. warning::
+
+        Please use ``$series-missing-stable-branches`` as gerrit topic.
 
    - Those patches will be used as a base to communicate with the team:
      if a team wants to wait and make another release before the branch is
@@ -1343,7 +1384,13 @@ R-1 week (Final RC deadline)
      $ ./tools/list_rc_updates.sh
 
    - Propose patches creating a new RC for those that have unreleased
-     bugfixes or updated translations
+     bugfixes or updated translations. Generate patches by using
+     ``process_auto_releases``.
+
+     .. warning::
+
+        ``process_auto_releases`` will ask you to enter a topic for the patches.
+        Please use ``$series-final-rc`` as topic.
 
    - Patches that get a +1 from PTL or release liaison should be approved.
      A -1 will mean that the PTL prefers to wait for a post-release stable
@@ -1416,6 +1463,11 @@ R+0 week (Final Release)
       tox -e venv -- missing-releases --series $SERIES
 
    If there are any missing deliverables, fix them.
+
+   .. warning::
+
+      ``process_auto_releases`` will ask you to enter a topic for the patches.
+      Please use ``$series-final-missing-deliverables`` as topic.
 
 #. Mark series as released on releases.o.o, by updating
    ``doc/source/$series/index.rst``, ``data\series_status.yaml``,  and
