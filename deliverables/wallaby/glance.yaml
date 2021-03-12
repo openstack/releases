@@ -5,6 +5,11 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - 'New API /v2/images/<image-id>/tasks to get tasks associated with image'
+  - 'Support for distributed image import'
+  - 'Secure RBAC - Experimental support for project personas'
+  - 'Cleanup of stale files in staging area upon service startup'
 repository-settings:
   openstack/glance: {}
 releases:
