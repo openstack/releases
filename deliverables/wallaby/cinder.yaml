@@ -3,6 +3,19 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    Block Storage API microversions 3.63 and 3.64 add useful information to
+    the volume detail response (``volume_type_id`` and ``encryption_key_id``,
+    respectively).
+  - |
+    Added new backend drivers: Ceph iSCSI, Dell EMC PowerVault ME, KIOXIA
+    Kumoscale, Open-E JovianDSS, and TOYOU ACS5000. Additionally, many current
+    drivers have added support for features exceeding the required driver
+    functions, with revert to snapshot and backend QoS being particularly
+    popular this cycle.
+  - |
+    Added a new backup driver for S3-compatible storage.
 repository-settings:
   openstack/cinder: {}
 releases:
