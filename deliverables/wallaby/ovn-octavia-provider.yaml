@@ -3,5 +3,11 @@ launchpad: neutron
 team: neutron
 release-model: cycle-with-intermediary
 type: other
+cycle-highlights:
+  - The OVN Octavia provider driver now supports Stream Control
+    Transmission Protocol (SCTP) load balancing.
+  - Better co-existence with floating IP port forwarding load balancers.
+  - Fixed a number of bugs so we better reflect load balancer status
+    via the Octavia API.
 repository-settings:
   openstack/ovn-octavia-provider: {}
