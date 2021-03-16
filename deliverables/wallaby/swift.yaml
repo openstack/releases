@@ -5,6 +5,14 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+releases:
+  - version: 2.27.0
+    projects:
+      - repo: openstack/swift
+        hash: c6a64036651e18f3d7d0715c5d4876257aaa0e6f
+branches:
+  - name: stable/wallaby
+    location: 2.27.0
 cycle-highlights:
   - Static large object segments can now be deleted asynchronously; multipart
     uploads deleted through the S3 API will always be deleted asynchronously.
