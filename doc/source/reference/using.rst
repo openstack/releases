@@ -859,7 +859,7 @@ Example:
 
 This tooling aim to avoid to miss branching. This is a side effect of
 the trailing projects, each series some of them are missed and remain
-unbranched. We faced similar use case previously and that leaded us to
+unbranched. We faced similar use case previously and that led us to
 issues during releasing on stable branches.
 
 
