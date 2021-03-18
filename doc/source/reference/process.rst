@@ -1038,28 +1038,28 @@ R-4 week
     release candidate by the end of the week, from which a stable/$series
     branch will be cut. This branch will track the $series release.
 
-    Once stable/$series has been created, master will will be ready to switch
-    to $next-series development. While master will no longer be feature-frozen,
-    please prioritize any work necessary for completing $series plans.
-    Release-critical bugfixes will need to be merged in the master branch
-    first, then backported to the stable/$series branch before a new release
-    candidate can be proposed.
+    Once stable/$series has been created, the master branch will be ready to
+    switch to $next-series development. While the master branch will no longer
+    be feature-frozen, please prioritize any work necessary for completing
+    $series plans.  Release-critical bugfixes will need to be merged in the
+    master branch first, then backported to the stable/$series branch before
+    a new release candidate can be proposed.
 
     Actions
     -------
 
     Early in the week, the release team will be proposing RC1 patches for all
-    cycle-with-rc projects, using the latest commit from master. If your team
-    is ready to go for cutting RC1, please let us know by leaving a +1 on these
-    patches.
+    cycle-with-rc projects, using the latest commit from the master branch.
+    If your team is ready to go for cutting RC1, please let us know by
+    leaving a +1 on these patches.
 
     If there are still a few more patches needed before RC1, you can -1 the
     patch and update it later in the week with the new commit hash you would
     like to use. Remember, stable/$series branches will be created with this,
     so you will want to make sure you have what you need included to avoid
-    needing to backport changes from master (which will technically then be
-    $next-series) to this stable branch for any additional RCs before the final
-    release.
+    needing to backport changes from the master branch (which will
+    technically then be $next-series) to this stable branch for any
+    additional RCs before the final release.
 
     The release team will also be proposing releases for any deliverable
     following a cycle-with-intermediary model that has not produced any $series
