@@ -11,6 +11,10 @@ releases:
       - hash: 325d23340e9746a0aed4e815f1a9b8de4f449632
         repo: openstack/tripleo-ipsec
     version: 9.0.0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tripleo-ipsec
+        hash: cf104444ab7b61e22a2eb4b2d60e533c9f9ce5ed
 branches:
   - location: 9.0.0
     name: stable/rocky
