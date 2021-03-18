@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/adjutant-ui: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 104c474479e9a89d22b96777378ff59983c03393
+branches:
+  - name: stable/wallaby
+    location: 2.0.0.0rc1
