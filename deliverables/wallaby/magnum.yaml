@@ -12,3 +12,11 @@ cycle-highlights:
     <https://storyboard.openstack.org/#!/story/2007857>`_
   - |
     Update versions for kubernetes, containerd and addons.
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: 42f8c97bbf426f346c0cd189684ed83eb22b84b4
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
