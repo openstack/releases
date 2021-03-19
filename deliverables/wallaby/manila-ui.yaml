@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/manila-ui: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/manila-ui
+        hash: ee3fd09af6b54df6d2159f3dd2f90f6db1fc0ddb
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
