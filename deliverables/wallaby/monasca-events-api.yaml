@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-events-api: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: fc97ceed7af98b196cfc157cb1b7a69101d2970a
+branches:
+  - name: stable/wallaby
+    location: 3.0.0.0rc1
