@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-mapr: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: f9c6df0c6d4c6a34318f3c032416676ea0d4394c
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
