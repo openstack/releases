@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: 863815153e3451f2354f14e6c271233e24e84782
+branches:
+  - name: stable/wallaby
+    location: 6.0.0.0rc1
