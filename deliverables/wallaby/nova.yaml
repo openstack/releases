@@ -26,3 +26,8 @@ cycle-highlights:
   - |
     `The libvirt driver now supports UEFI Secure Boot.
     <https://specs.openstack.org/openstack/nova-specs/specs/wallaby/approved/allow-secure-boot-for-qemu-kvm-guests.html>`_
+  - |
+    `The libvrit driver now supports vDPA (vHost data path acceleration), a vendor
+    neutral way to accelerate standard virtio device using software or hardware
+    accelerator implementations.
+    <https://specs.openstack.org/openstack/nova-specs/specs/wallaby/approved/libvirt-vdpa-support.html>`_
