@@ -5,3 +5,11 @@ team: monasca
 type: horizon-plugin
 repository-settings:
   openstack/monasca-ui: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-ui
+        hash: eb44a1031e473c32a2e5bdf7e495854632564294
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
