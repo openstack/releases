@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-generic-switch: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 6b1fca9439b8df5ad26b6ac9374733b62c5ddee9
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
