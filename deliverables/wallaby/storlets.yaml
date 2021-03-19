@@ -5,3 +5,11 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/storlets: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: f8e8ecb2b8c49f446beaf42805619c3d0523d070
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
