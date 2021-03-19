@@ -6,12 +6,22 @@ type: service
 repository-settings:
   openstack/trove: {}
 cycle-highlights:
-  - Support image tags for the datastore version. When using image tags, Trove
-    is able to get the image dynamically from Glance for creating instances.
-  - Added custom container registry configuration for trove guest agent, it's
-    now possible to use images in private registry rather than docker hub.
-  - Added a new field ``operating_status`` for the instance to show the actual
-    operational status of user's database.
-  - In multi-region deployment with geo-replicated Swift, the user can restore
-    a backup in one region by manually specifying the original backup data
-    location created in another region.
+  - Support image tags for the datastore version. When using image tags,
+    Trove is able to get the image dynamically from Glance for creating
+    instances.
+  - Added custom container registry configuration for trove guest agent,
+    it's now possible to use images in private registry rather than
+    docker hub.
+  - Added a new field ``operating_status`` for the instance to show
+    the actual operational status of user's database.
+  - In multi-region deployment with geo-replicated Swift, the user can
+    restore a backup in one region by manually specifying the original
+    backup data location created in another region.
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 7dc95b61bc5b7a7f64b7f3206a6f10d4db59ca18
+branches:
+  - name: stable/wallaby
+    location: 15.0.0.0rc1
