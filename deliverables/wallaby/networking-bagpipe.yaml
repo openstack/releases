@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: a7e479f043d31cbfe57f5b0039757fa8e3546547
+branches:
+  - name: stable/wallaby
+    location: 14.0.0.0rc1
