@@ -5,3 +5,11 @@ team: solum
 type: horizon-plugin
 repository-settings:
   openstack/solum-dashboard: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 874e693c34c6e2fb4d9a9a9a9cdd7d44d41df626
+branches:
+  - name: stable/wallaby
+    location: 6.0.0.0rc1
