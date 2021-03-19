@@ -9,9 +9,9 @@ cycle-highlights:
   - With the addition of ALPN and HTTP/2 support for backend pool members,
     Octavia now supports the gRPC protocol. gRPC enables bidirectional
     streaming of Protocol Buffer messages through the load balancer.
-  - Octavia now supports Stream Control Transmission Protocol (SCTP) load
-    balancing. The addition of SCTP enables new mobile, telephony, and
-    multimedia use cases for Octavia.
+  - Octavia now supports Stream Control Transmission Protocol (SCTP)
+    load balancing. The addition of SCTP enables new mobile, telephony,
+    and multimedia use cases for Octavia.
   - Load balancers using the amphora provider will benefit from increased
     performance and scalability when using amphora images built with
     version 2.x of the HAProxy load balancing engine.
@@ -19,3 +19,11 @@ cycle-highlights:
   - Octavia now supports the Keystone default roles and scoped tokens.
 repository-settings:
   openstack/octavia: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: 3cdac6afc04e0de7694ba531e8ebd1433ec9390c
+branches:
+  - name: stable/wallaby
+    location: 8.0.0.0rc1
