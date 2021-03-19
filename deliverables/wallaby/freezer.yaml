@@ -7,3 +7,15 @@ repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
   openstack/freezer-dr: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/freezer
+        hash: 9773f99febb853ca9fc44756428ce1874ffdf0f5
+      - repo: openstack/freezer-api
+        hash: e02a4928176cb3816074d7f8a76d6024ce3acf56
+      - repo: openstack/freezer-dr
+        hash: 599c2bedb3952176aa0056fc47fd82bc64e411d2
+branches:
+  - name: stable/wallaby
+    location: 10.0.0.0rc1
