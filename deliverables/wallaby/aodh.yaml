@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/aodh
+        hash: 418d17c34baaf9081088ddb0ab5c97fba67ed156
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
