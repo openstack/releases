@@ -6,3 +6,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-prometheus-exporter: {}
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 1ec78598b3d0ea7f2a51db8a854fd73744a66a8c
+branches:
+  - name: stable/wallaby
+    location: 2.2.0
