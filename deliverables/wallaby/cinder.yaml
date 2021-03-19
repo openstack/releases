@@ -23,3 +23,10 @@ releases:
     projects:
       - hash: bdfcdb631c59405a81e3fd0739d7ebbef893d49c
         repo: openstack/cinder
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 7c4b626c013d25e6c7308a431c521e7211a43d53
+branches:
+  - name: stable/wallaby
+    location: 18.0.0.0rc1
