@@ -5,3 +5,11 @@ team: zun
 type: horizon-plugin
 repository-settings:
   openstack/zun-ui: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/zun-ui
+        hash: aa4875f1218ff9f1cfa32640ccab28fe7b245410
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
