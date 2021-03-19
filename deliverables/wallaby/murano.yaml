@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: 1c87ebf9a8a79d990e4a1ba44452b50efae77883
+branches:
+  - name: stable/wallaby
+    location: 11.0.0.0rc1
