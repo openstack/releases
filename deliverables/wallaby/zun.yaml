@@ -5,3 +5,11 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/zun
+        hash: 6ac7a3ee5322164995248f4534f807e897991180
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
