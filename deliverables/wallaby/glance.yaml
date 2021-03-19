@@ -6,10 +6,11 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - 'New API /v2/images/<image-id>/tasks to get tasks associated with image'
-  - 'Support for distributed image import'
-  - 'Secure RBAC - Experimental support for project personas'
-  - 'Cleanup of stale files in staging area upon service startup'
+  - New API /v2/images/<image-id>/tasks to get tasks associated with
+    image
+  - Support for distributed image import
+  - Secure RBAC - Experimental support for project personas
+  - Cleanup of stale files in staging area upon service startup
 repository-settings:
   openstack/glance: {}
 releases:
@@ -21,3 +22,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 50cd037bcd04a2996dada2f65bcbbc40d89d9ddb
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 922e544ca2556994450e6972403ba4313318c5e0
+branches:
+  - name: stable/wallaby
+    location: 22.0.0.0rc1
