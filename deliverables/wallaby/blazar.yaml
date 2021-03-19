@@ -6,5 +6,13 @@ type: service
 repository-settings:
   openstack/blazar: {}
 cycle-highlights:
-  - Introduced a framework for enforcing operator-defined limits on reservation
-    usage.
+  - Introduced a framework for enforcing operator-defined limits on
+    reservation usage.
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: d3f77fd0c5a3e09ff52c8563fd07172834372ee7
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
