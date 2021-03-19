@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: 7d481ad60e90cfa1ccb967df473fcbe90d3fcc1c
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
