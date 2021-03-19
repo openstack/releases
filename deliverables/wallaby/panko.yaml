@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/panko: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/panko
+        hash: 8bc176fdbdecb0ebce06c16a3999ab39dbd141b8
+branches:
+  - name: stable/wallaby
+    location: 10.0.0.0rc1
