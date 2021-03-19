@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 5104c9ebac38b81e415781d95a0c1089d676c6b1
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
