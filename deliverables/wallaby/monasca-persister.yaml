@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: caac9719c76d7fcfd75960a1feb26e6e889f1c8a
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
