@@ -6,3 +6,11 @@ team: ironic
 type: horizon-plugin
 repository-settings:
   openstack/ironic-ui: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 63fa1fed2203fc63a85ddf2829ba02e1d78a8664
+branches:
+  - name: stable/wallaby
+    location: 4.3.0
