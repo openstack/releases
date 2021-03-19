@@ -31,3 +31,11 @@ cycle-highlights:
     neutral way to accelerate standard virtio device using software or hardware
     accelerator implementations.
     <https://specs.openstack.org/openstack/nova-specs/specs/wallaby/approved/libvirt-vdpa-support.html>`_
+releases:
+  - version: 23.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 4a285b1fb90bd6ea00d4423f8d72116bfb4af44b
+branches:
+  - name: stable/wallaby
+    location: 23.0.0.0rc1
