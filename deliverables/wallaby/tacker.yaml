@@ -6,18 +6,26 @@ type: service
 repository-settings:
   openstack/tacker: {}
 cycle-highlights:
-  - Add APIs for scale, update, and rollback operations for VNF defined in ETSI
-    NFV.
-  - Add fundamental VNF lifecycle management support
-    for subscriptions and notifications defined in ETSI NFV.
+  - Add APIs for scale, update, and rollback operations for VNF defined
+    in ETSI NFV.
+  - Add fundamental VNF lifecycle management support for subscriptions
+    and notifications defined in ETSI NFV.
   - Implement VNF package management interface to obtain VNF package,
-    grant interface to allow the VNFM to request a grant for authorization of
-    a VNF lifecycle operation defined in ETSI NFV SOL003 specification compliant
-    operations to cooperate with 3rd-Party NFVOs as VNFM.
-  - Add container based VNF support with ESTI NFV-SOL003 v2.6.1 VNF Lifecycle
-    Management. User is able to create, instantiate, terminate, and delete VNF
-    on Kubernetes VIM. Kubernetes resource files are available as VNFD and it's
-    uploaded as a part of VNF Package.
-  - Enable VNF vendors to customize configuration methods for applications via
-    MgmtDriver. These customizations are specified by “interface” definition
-    in ETSI NFV-SOL001 v2.6.1.
+    grant interface to allow the VNFM to request a grant for authorization
+    of a VNF lifecycle operation defined in ETSI NFV SOL003 specification
+    compliant operations to cooperate with 3rd-Party NFVOs as VNFM.
+  - Add container based VNF support with ESTI NFV-SOL003 v2.6.1 VNF
+    Lifecycle Management. User is able to create, instantiate, terminate,
+    and delete VNF on Kubernetes VIM. Kubernetes resource files are
+    available as VNFD and it's uploaded as a part of VNF Package.
+  - Enable VNF vendors to customize configuration methods for applications
+    via MgmtDriver. These customizations are specified by “interface”
+    definition in ETSI NFV-SOL001 v2.6.1.
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 550b39277f13cb2d5a90244a05e8a77d5872154f
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
