@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: faf3cc060857dadcd5e86b53b6830966675e502e
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
