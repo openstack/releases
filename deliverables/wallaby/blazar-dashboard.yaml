@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/blazar-dashboard: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: f90eac95dd90c5fd7c126e16cb9c1cdf9acd367c
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
