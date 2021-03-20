@@ -6,3 +6,11 @@ team: OpenStackSDK
 type: other
 repository-settings:
   openstack/python-openstackclient: {}
+releases:
+  - version: 5.5.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 86bca18b74539d024e3854af0dfd3552c4d3b50b
+branches:
+  - name: stable/wallaby
+    location: 5.5.0
