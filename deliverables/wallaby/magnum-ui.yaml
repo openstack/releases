@@ -5,3 +5,11 @@ team: magnum
 type: horizon-plugin
 repository-settings:
   openstack/magnum-ui: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/magnum-ui
+        hash: e5518874c224dc76d3c6ff9f96f1c7f3cda3ce0a
+branches:
+  - name: stable/wallaby
+    location: 8.0.0.0rc1
