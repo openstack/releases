@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 02bdd270ee5e45ab3286df434a0e7d03275db821
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
