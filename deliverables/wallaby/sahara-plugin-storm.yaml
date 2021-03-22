@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-storm: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: c1237046988eb6db33f5fb6691276ef01ed85870
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
