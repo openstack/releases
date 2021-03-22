@@ -5,3 +5,11 @@ team: trove
 type: horizon-plugin
 repository-settings:
   openstack/trove-dashboard: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 26a40acc6e641e449db1913edf46e899ecb13d09
+branches:
+  - name: stable/wallaby
+    location: 16.0.0.0rc1
