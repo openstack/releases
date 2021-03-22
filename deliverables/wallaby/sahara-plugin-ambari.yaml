@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: a02327853d27e653e481456ad3699c0da12549b0
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
