@@ -904,7 +904,7 @@ R-5 week (Milestone-3)
    by the proposal bot, but do approve changes for new OpenStack deliverable
    releases.
 
-#. At the end of the week, send weekly email content for R-3 week::
+#. At the end of the week, send weekly email content for R-4 week::
 
     Development Focus
     -----------------
