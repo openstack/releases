@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 70566f48610c5917f9b24b9804f843a76a4effef
+branches:
+  - name: stable/wallaby
+    location: 3.0.0.0rc1
