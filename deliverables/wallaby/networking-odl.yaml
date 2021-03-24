@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-odl: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/networking-odl
+        hash: b8a140df8c6f801714734667f8c4985c65d603e2
+branches:
+  - name: stable/wallaby
+    location: 18.0.0.0rc1
