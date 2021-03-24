@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bgpvpn: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: a7e99a62c12a9837db61495cf795b43b8e72a116
+branches:
+  - name: stable/wallaby
+    location: 14.0.0.0rc1
