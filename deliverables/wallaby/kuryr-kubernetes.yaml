@@ -9,11 +9,19 @@ cycle-highlights:
   - Nested mode with nodes VMs running in multiple subnets is now available.
     To use that functionality a new option `[pod_vif_nested]worker_nodes_subnets`
     is introduced accepting multiple Subnet IDs.
-  - Kuryr now handles Services that do not define the `.spec.selector`, allowing
-    the user to manually manage the Endpoints object.
-  - Kuryr can handle egress Network Policy that allows traffic to Pods being
-    pointed by a Service without Selector.
+  - Kuryr now handles Services that do not define the `.spec.selector`,
+    allowing the user to manually manage the Endpoints object.
+  - Kuryr can handle egress Network Policy that allows traffic to Pods
+    being pointed by a Service without Selector.
   - Added support for SCTP.
-  - Networks can now be created by relying on the default MTU defined in Neutron,
-    regardless of the SDN used and without changing the default configuration
-    value in Kuryr.
+  - Networks can now be created by relying on the default MTU defined
+    in Neutron, regardless of the SDN used and without changing the
+    default configuration value in Kuryr.
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 5ccf238ec20320c5894b69a6568f4f62d468d716
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
