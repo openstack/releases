@@ -7,3 +7,11 @@ team: octavia
 type: horizon-plugin
 repository-settings:
   openstack/octavia-dashboard: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 08ba87ee6b367a09810781ca7de040372f905570
+branches:
+  - name: stable/wallaby
+    location: 7.0.0.0rc1
