@@ -13,3 +13,6 @@ releases:
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
+cycle-highlights:
+  - Introduce the python-binding for iteracting with CRI runtime via GRPC
+  - Introduce CNI plugin for container network
