@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: 5c6cd1d6a8329c2298d876ba1ed5b85f5d0122f1
+  - version: 21.2.4
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 04ccaaca6045ab55b0d2cee303684f78bea18915
 branches:
   - name: stable/ussuri
     location: 21.0.0.0rc1
