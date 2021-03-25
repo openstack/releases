@@ -6,12 +6,21 @@ type: service
 repository-settings:
   openstack/masakari: {}
 cycle-highlights:
-  - Support for disabling and enabling failover segments.
-    This way operators are able to put whole segments into maintenance
-    mode instead of having to do it for each single host.
-  - Support for smoothing-out the decision about whether to consider a host
-    down or not. Operators can configure host monitors to consider a chosen
-    number of probes before sending the notification about host being down.
+  - Support for disabling and enabling failover segments. This way operators
+    are able to put whole segments into maintenance mode instead of
+    having to do it for each single host.
+  - Support for smoothing-out the decision about whether to consider
+    a host down or not. Operators can configure host monitors to consider
+    a chosen number of probes before sending the notification about
+    host being down.
   - Support for running host monitors in environments without systemd,
     such as app containers.
   - Support for using system-scoped tokens when contacting Nova.
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: 571248f6da32070919f1f86a252970e9a464420e
+branches:
+  - name: stable/wallaby
+    location: 11.0.0.0rc1
