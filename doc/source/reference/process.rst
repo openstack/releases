@@ -1125,11 +1125,11 @@ R-3 week (RC1 deadline)
        --model cycle-with-intermediary \
        --type horizon-plugin --type other --type service --type tempest-plugin
 
-   - cycle-with-rc deliverables that have not done a RC1 yet, for which
-     a release should be proposed from HEAD, and include stable branch
-     creation. You can list those using::
+   - cycle-with-rc that are not trailing deliverables and that have not done
+     a RC1 yet, for which a release should be proposed from HEAD, and include
+     stable branch creation. You can list those using::
 
-       tox -e venv -- list-deliverables --missing-rc --model cycle-with-rc
+       tools/list_rc1.sh
 
    - Generate patches by using ``process_auto_releases``.
 
