@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 15b787ec6abfd7c861ac302e7b1f674aac236177
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 8e7914fce24d2c9d94a83795983aaa0fb05f020c
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
