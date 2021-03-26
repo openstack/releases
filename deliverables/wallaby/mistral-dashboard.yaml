@@ -6,3 +6,11 @@ team: mistral
 type: horizon-plugin
 repository-settings:
   openstack/mistral-dashboard: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 63fa310920bec67084aab32a6691c9df97ba997d
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
