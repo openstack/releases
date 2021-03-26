@@ -5,3 +5,11 @@ team: solum
 type: service
 repository-settings:
   openstack/solum: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/solum
+        hash: 86765728bbe9d6287845d10f8a0201e8b3f447b6
+branches:
+  - name: stable/wallaby
+    location: 10.0.0.0rc1
