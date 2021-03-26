@@ -6,3 +6,11 @@ team: murano
 type: horizon-plugin
 repository-settings:
   openstack/murano-dashboard: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: dd78672b3f45b802efc4af2569ceb11e4abdd1ba
+branches:
+  - name: stable/wallaby
+    location: 11.0.0.0rc1
