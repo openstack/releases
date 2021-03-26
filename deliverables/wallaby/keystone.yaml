@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: ef711cd0eb5fb6fb143783ad4096e3f1dbd9da99
+branches:
+  - name: stable/wallaby
+    location: 19.0.0.0rc1
