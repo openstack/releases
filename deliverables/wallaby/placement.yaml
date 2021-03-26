@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: f41599e1ada2dfc7900817b09b623422d9d1dbe9
+branches:
+  - name: stable/wallaby
+    location: 5.0.0.0rc1
