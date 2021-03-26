@@ -7,3 +7,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-thresh: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: d8420f5ec072b488c7fbcc5cff72e864c731de37
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
