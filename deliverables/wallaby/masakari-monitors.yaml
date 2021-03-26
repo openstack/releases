@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 12d67aede4849e03a7b2b2836083119247058d01
+branches:
+  - name: stable/wallaby
+    location: 11.0.0.0rc1

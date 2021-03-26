@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/masakari-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: a44b5a4266505679cc4e32a6d650466d49596c7c
+branches:
+  - name: stable/wallaby
+    location: 4.0.0.0rc1
