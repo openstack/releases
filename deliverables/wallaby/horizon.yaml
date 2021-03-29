@@ -5,15 +5,6 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
-releases:
-  - version: 19.0.0
-    projects:
-      - repo: openstack/horizon
-        hash: 7e682a2d528bcff992334d8792e33abbd57f5802
-  - version: 19.1.0
-    projects:
-      - repo: openstack/horizon
-        hash: ade661e50d7cb7f4ed5f88226cf86560db05f478
 cycle-highlights:
   - Horizon supports the registered default policies. Now operators do not
     need to define all the policies in the policy file instead define only
@@ -23,3 +14,15 @@ cycle-highlights:
     the new locales decouple what is spoken from specific locations as they
     are also used outside of China/Taiwan.
   - Added Volume backups support for admin.
+releases:
+  - version: 19.0.0
+    projects:
+      - repo: openstack/horizon
+        hash: 7e682a2d528bcff992334d8792e33abbd57f5802
+  - version: 19.1.0
+    projects:
+      - repo: openstack/horizon
+        hash: ade661e50d7cb7f4ed5f88226cf86560db05f478
+branches:
+  - name: stable/wallaby
+    location: 19.1.0
