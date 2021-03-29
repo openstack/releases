@@ -5,6 +5,23 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+cycle-highlights:
+  - Support Helm v3 to install all magnum installed charts. Support for Helm v2
+    client will be removed in X release.
+  - A new config option ``post_install_manifest_url`` is added to support
+    installing cloud provider/vendor specific manifest after deploying a
+    kuberbetes cluster.
+  - A new ``--merge-labels`` boolean flag can be used to merge user labels at
+    cluster/nodegroup scope with cluster template/cluster labels.
+  - Cloud admin users now can do rolling upgrade on behalf of end users to do
+    urgent security patching.
+  - Magnum now cascade deletes all the load balancers before deleting the
+    cluster, not only including load balancers for the cluster services and
+    ingresses, but also those for Kubernetes API/etcd endpoints.
+  - Magnum supports updating the k8s cluster health status via the Magnum
+    cluster update API so that a controller (e.g. magnum-auto-healer) running
+    inside the k8s cluster can call the Magnum update API to update the cluster
+    health status.
 releases:
   - version: 10.0.0.0rc1
     projects:
