@@ -24,6 +24,11 @@ cycle-highlights:
     a desirable feature for enterprise users. Now they have the flexibility
     to choose between a private cluster by default and only allow access
     to the API exposed on Internet or make it fully accessible.
+  - Add ``cinder_csi_enabled`` label to support out of tree Cinder CSI.
+  - Support ``containerd`` as a ``container_runtime`` as an alternative to
+    ``host-docker``.
+  - A new config ``health_polling_interval`` is supported to make the interval
+    configurable or disable completely.
 releases:
   - version: 9.0.0.0rc1
     projects:
