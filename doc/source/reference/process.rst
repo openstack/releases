@@ -894,11 +894,15 @@ R-5 week (Milestone-3)
    cycle to see if it is time to `transition them to the independent release
    model <https://releases.openstack.org/reference/release_models.html#openstack-related-libraries>`__.
 
+   Note: client libraries (and other libraries strongly tied to another
+   deliverable) should generally follow their parent deliverable release
+   model, even if they did not have a lot of activity themselves).
+
    If it is OK to transition them, propose to move the deliverable file to
    the ``_independent`` directory.
 
-   If it is not OK to transition them, create a new stable branch from the
-   latest release from the previous series.
+   If it is not OK to transition them, propose a new minor release and stable
+   branch from HEAD.
 
    A full list of unreleased ``libraries`` and ``client-libraries`` for the cycle
    can be found with::
