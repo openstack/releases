@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: caf9256b22f5b4b0e62ac20fb9d0d9eeee6c1695
+  - version: 10.6.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 3f26b916388a1c96c919e006f38920c87bfeafa4
 branches:
   - name: bugfix/10.5
     location: 10.5.0
+  - name: stable/wallaby
+    location: 10.6.0
