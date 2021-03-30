@@ -1,0 +1,15 @@
+---
+team: barbican
+type: other
+release-model: cycle-with-intermediary
+storyboard: 1184
+repository-settings:
+  openstack/ansible-role-thales-hsm: {}
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: e82db3b3fc5088c393eb810bf52329444a91b4eb
+branches:
+  - name: stable/wallaby
+    location: 1.0.0
