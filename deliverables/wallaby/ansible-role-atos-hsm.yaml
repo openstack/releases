@@ -1,0 +1,15 @@
+---
+team: barbican
+type: other
+release-model: cycle-with-intermediary
+storyboard: 1183
+repository-settings:
+  openstack/ansible-role-atos-hsm: {}
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: c5e5b2427bdbf59bb4bfd875f4c26d6e12224747
+branches:
+  - name: stable/wallaby
+    location: 1.0.0
