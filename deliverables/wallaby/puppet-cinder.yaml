@@ -22,3 +22,10 @@ releases:
       - hash: 79ad558f45b3ff63b0060506980dc4eb2f077042
         repo: openstack/puppet-cinder
     version: 18.3.0
+  - projects:
+      - hash: d57b40a349483cb7ba290d6305f5777c957c9126
+        repo: openstack/puppet-cinder
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

@@ -22,3 +22,10 @@ releases:
       - hash: c2ebbfb4dffc4981503c4ca10e247b0dfa5ad58e
         repo: openstack/puppet-ceilometer
     version: 18.3.0
+  - projects:
+      - hash: ee236d482d909accd11c58a6245a8b36683102ab
+        repo: openstack/puppet-ceilometer
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

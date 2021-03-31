@@ -22,3 +22,10 @@ releases:
       - hash: 1665669943543b17538369eec3d55996b86c7c3a
         repo: openstack/puppet-horizon
     version: 18.3.0
+  - projects:
+      - hash: 4f2c9174bc8a9a94c4cf20a77dab17a229dc3d99
+        repo: openstack/puppet-horizon
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

@@ -22,3 +22,10 @@ releases:
       - hash: b7ea086fddc5bb461d306f08ebda008cbcbda636
         repo: openstack/puppet-zaqar
     version: 18.3.0
+  - projects:
+      - hash: 5e707eb4f474d2852c4115f8cdf2016657282cfd
+        repo: openstack/puppet-zaqar
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

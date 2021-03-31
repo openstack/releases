@@ -22,3 +22,10 @@ releases:
       - hash: 4197096cbd9a10e9fc7bb08933e3b768d37a14fd
         repo: openstack/puppet-barbican
     version: 18.3.0
+  - projects:
+      - hash: acd24e6ddac6fb8405fa522608ed35dfe1c106f1
+        repo: openstack/puppet-barbican
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

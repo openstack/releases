@@ -22,3 +22,10 @@ releases:
       - hash: 340c951856f7c89f1954086b69196c322ce49259
         repo: openstack/puppet-freezer
     version: 7.3.0
+  - projects:
+      - hash: 2249c4fbae362ec4862ab039903b943c5a13781b
+        repo: openstack/puppet-freezer
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

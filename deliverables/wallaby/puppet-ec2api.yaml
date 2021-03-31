@@ -22,3 +22,10 @@ releases:
       - hash: 43792a066e9e456eda602acc50f553464074eaf9
         repo: openstack/puppet-ec2api
     version: 18.3.0
+  - projects:
+      - hash: 842938e20814fd2f3389b0b52f82dceef3477e1e
+        repo: openstack/puppet-ec2api
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0
