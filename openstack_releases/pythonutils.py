@@ -16,6 +16,7 @@ import json
 import logging
 import os
 import os.path
+import time
 import xmlrpc.client
 
 from packaging import utils as packaging_utils
@@ -144,6 +145,9 @@ def _get_pypi_roles(dist_name):
 def get_pypi_uploaders(dist_name):
     roles = _get_pypi_roles(dist_name)
     if not roles:
+        # Sleep one second before retrying, to avoid PyPI returning
+        # TooManyRequests and hiding the real issue
+        time.sleep(1)
         canonical_name = packaging_utils.canonicalize_name(dist_name)
         roles = _get_pypi_roles(canonical_name)
     uploaders = set(
