@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: a64c843052529cf5c8ac8cf8eb46c59b103b4b47
+    name: stable/wallaby
 repository-settings:
   openstack/devstack: {}
