@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: 08199218df99ead17d7c34256ed0969b8ae3b3af
+    name: stable/wallaby
 repository-settings:
   openstack/grenade: {}
