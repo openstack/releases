@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: b266ee92f023bc559e0b802a503d6a37e1ccc185
+  - version: 10.2.0
+    projects:
+      - repo: openstack/bifrost
+        hash: f521b9c4ae95d1890b6ba314f4c907bbb5f3acd9
 branches:
   - name: bugfix/10.0
     location: 10.0.0
   - name: bugfix/10.1
     location: 10.1.0
+  - name: stable/wallaby
+    location: 10.2.0
