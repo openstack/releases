@@ -67,6 +67,19 @@ or some other tool that builds on top of an existing release. The deadline
 for producing such a deliverable in a development cycle is the 'cycle-trailing
 Release Deadline', usually located 3 months after the coordinated release.
 
+.. _`type-tempest-plugin`:
+
+tempest-plugin
+==============
+
+This deliverable type indicates that a deliverable is a tempest plugin.
+those need to be automatically released once at the end of a cycle.
+Those may, optionally, also be released in the middle of the cycle.
+Those do not need a stable branch created. Those deliverables were previously
+managed by `the legacy cycle-automatic model`_.
+
+.. _`the legacy cycle-automatic model`: ./release_models.html#cycle-automatic
+
 .. _`type-other`:
 
 other

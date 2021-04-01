@@ -1216,6 +1216,26 @@ R-2 week
 
 #. Process any standing RC1 deadline exceptions.
 
+#. Gracefully release tempest plugins with latest changes available. Tempest
+   plugins are branchless however they should be released on their ``HEAD`` at
+   the end of each cycle at least
+   (cf. `the legacy cycle automatic model <https://releases.openstack.org/reference/release_models.html#cycle-automatic>`_ and
+   `the tempest-plugin type <https://releases.openstack.org/reference/deliverable_types.html#tempest-plugin>`_).
+
+   - You can preview unreleased changes by using::
+
+      $ tox -e venv -- list-deliverables --type tempest-plugin
+      $ tools/list_unreleased_changes.sh wallaby <tempest-plugin-projects>
+
+   - Process auto release for those who need to be released::
+
+      $ tools/process_auto_releases.sh $series <tempest-plugin-projects-list>
+
+     .. warning::
+
+        Please use ``$series-tp-latest`` as gerrit topic.
+
+
 #. On the Monday, generate stable branches for all cycle deliverables that
    are still missing one.
 
