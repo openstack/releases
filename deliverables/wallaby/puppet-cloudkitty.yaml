@@ -22,3 +22,10 @@ releases:
       - hash: 07bf5a6c74d42f055d893b4f80f8b53ae2120599
         repo: openstack/puppet-cloudkitty
     version: 7.3.0
+  - projects:
+      - hash: 6d2553ca372ecac263f4559fdbcdb2c68260d734
+        repo: openstack/puppet-cloudkitty
+    version: 7.4.0
+branches:
+  - name: stable/wallaby
+    location: 7.4.0

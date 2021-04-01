@@ -22,3 +22,10 @@ releases:
       - hash: be435d2dcd3f0eb1d647f9817bcef6b169c887ef
         repo: openstack/puppet-gnocchi
     version: 18.3.0
+  - projects:
+      - hash: 8e623875b6b8756f2de27015297f0b0c55136f33
+        repo: openstack/puppet-gnocchi
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

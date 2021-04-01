@@ -22,3 +22,10 @@ releases:
       - hash: b666b6bd03c815b190fbf6de977e8657bbb5b641
         repo: openstack/puppet-mistral
     version: 18.3.0
+  - projects:
+      - hash: 6f5a30ace6e41c38aa40a3cebae906d8c59333dc
+        repo: openstack/puppet-mistral
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

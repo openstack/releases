@@ -22,3 +22,10 @@ releases:
       - hash: e93c9e066c5f9a81cce78a8afccad710ec58c267
         repo: openstack/puppet-monasca
     version: 7.3.0
+  - projects:
+      - hash: 4a103c275e9fd6015c62b180f68e20749f8e550d
+        repo: openstack/puppet-monasca
+    version: 7.4.0
+branches:
+  - name: stable/wallaby
+    location: 7.4.0

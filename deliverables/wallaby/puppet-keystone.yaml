@@ -22,3 +22,10 @@ releases:
       - hash: 351d69df2d5230639083c6b576aa58dfe10c36c2
         repo: openstack/puppet-keystone
     version: 18.3.0
+  - projects:
+      - hash: 1fa1148c9ac513793b3ec9d9006e50098f0ea5b0
+        repo: openstack/puppet-keystone
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

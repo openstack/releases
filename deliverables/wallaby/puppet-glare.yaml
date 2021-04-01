@@ -22,3 +22,10 @@ releases:
       - hash: a75c239a8fa227fb8052b14ed562d158d133b218
         repo: openstack/puppet-glare
     version: 7.3.0
+  - projects:
+      - hash: 774171c6a2c4ca9c3a9744d2da6864a722143eeb
+        repo: openstack/puppet-glare
+    version: 7.4.0
+branches:
+  - name: stable/wallaby
+    location: 7.4.0

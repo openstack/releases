@@ -22,3 +22,10 @@ releases:
       - hash: f7912f2e9c8d9837c9d4bfa7d83cbc0d94fcb874
         repo: openstack/puppet-openstack_extras
     version: 18.3.0
+  - projects:
+      - hash: 9d7f70a3d15b23f4b7c7e00d55b7849ffeb153c9
+        repo: openstack/puppet-openstack_extras
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0

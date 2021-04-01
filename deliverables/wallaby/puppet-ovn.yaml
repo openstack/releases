@@ -22,3 +22,10 @@ releases:
       - hash: 7c0ba83593995f921c20b577261c97796822d4a0
         repo: openstack/puppet-ovn
     version: 18.3.0
+  - projects:
+      - hash: 29feb7ab2b5a2adbcefc0b9636896719886330f3
+        repo: openstack/puppet-ovn
+    version: 18.4.0
+branches:
+  - name: stable/wallaby
+    location: 18.4.0
