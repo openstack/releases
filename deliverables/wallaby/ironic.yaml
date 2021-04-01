@@ -15,11 +15,17 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: d65c4865924e47df623e94262fbfd78fab111c23
+  - version: 17.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 31d93dccdcf24f285d784ca7bb6c623002c02bf1
 branches:
   - name: bugfix/16.1
     location: 16.1.0
   - name: bugfix/16.2
     location: 16.2.0
+  - name: stable/wallaby
+    location: 17.0.0
 cycle-highlights:
   - Redfish capability enhancements covering Out of Band hardware RAID
     configuration, and automatic Secure Boot setting enablement.
