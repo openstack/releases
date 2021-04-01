@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/wallaby
+    location:
+      openstack/requirements: 040e24a73f93c5f1c81fc2312a3552f4cb972cc5
