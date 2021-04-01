@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 5179c2a9f961a4e0e68998588e52cb8660e47289
+  - version: 11.5.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 1a737336c59062c0cc4e70eb907bb2ade2b01b62
 branches:
   - name: stable/train
     location: 11.3.0
