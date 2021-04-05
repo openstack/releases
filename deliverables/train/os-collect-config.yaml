@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: 0f985b9a658c153627c01810050ccb8d3347392a
+  - version: 10.6.0
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 5b8355db34b729733eb420bd970c278b893abf84
 branches:
   - name: stable/train
     location: 10.5.0
