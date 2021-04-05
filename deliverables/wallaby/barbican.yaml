@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 97ae3bc57add7d087f590afddf938cce2cddeac1
+  - version: 12.0.0.0rc2
+    projects:
+      - repo: openstack/barbican
+        hash: c8d3c580143282935de36e4a5a1708ee9242f7be
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
