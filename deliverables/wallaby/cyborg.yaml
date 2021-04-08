@@ -13,10 +13,12 @@ cycle-highlights:
     Ussuri release, this release more operations such as `Shelve/Unshelve
     <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html#id1>`_
     are supported.
-    See accelerator operation guide to find all supported operations.
+    See accelerator operation `guide
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html>`_
+    to find all supported operations.
   - |
     Cyborg introduces more new accelerator drivers such as Intel NIC and
-    `Inspur SSD <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html#id2>`_
+    `Inspur NVMe SSD <https://docs.openstack.org/cyborg/latest/reference/support-matrix.html#id2>`_
     driver which allow user to boot up a VM with such device attached.
   - |
     Cyborg now provides a new configuration for user to configure their
