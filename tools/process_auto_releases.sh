@@ -51,9 +51,6 @@ clone_repo "openstack/releases"
 cd openstack/releases
 git review -s > /dev/null
 
-# Set the branch name for this series
-branch=$(series_to_branch "$series")
-
 # Prompt for global parameters to use for all releases
 read -p "> Enter review topic to use: " topic
 echo
@@ -64,6 +61,15 @@ echo
 echo "------------------------------------------------------------------------"
 commit=$(</dev/stdin)
 echo
+# Set the branch name for this series
+branch=$(series_to_branch "$series")
+read -p "> Branch to use (${branch}): " temp_branch
+echo
+
+if [[ ! -z "${temp_branch}" ]]; then
+    branch=${temp_branch}
+fi
+
 newbranch=""
 read -p "> Create stable branch? [y/N]: " YN
 if [ "${YN,,}" == "y" ]; then
