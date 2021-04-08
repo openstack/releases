@@ -4,6 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: d4de1bb9905aebff7e3620d08aa65dc334d435b8
+    name: stable/wallaby
 repository-settings:
   openstack/devstack-plugin-container: {}
-# Note: deliverable was not released in victoria
