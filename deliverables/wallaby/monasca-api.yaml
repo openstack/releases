@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: dea6f95c155f0508d23a2063bc83c24fca1fa672
+  - version: 6.0.0.0rc2
+    projects:
+      - repo: openstack/monasca-api
+        hash: e576fc49399acb36b0189cc5b8398379864991e8
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1
