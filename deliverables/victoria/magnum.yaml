@@ -20,6 +20,10 @@ releases:
       - repo: openstack/magnum
         hash: 2a61e7dc1f28c0ab7694b4c2855764358ee1a4ee
     diff-start: 10.0.0.0rc1
+  - version: 11.1.0
+    projects:
+      - repo: openstack/magnum
+        hash: 4b404389fd38dc8673eb6e4dafc21379e0ef6381
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
