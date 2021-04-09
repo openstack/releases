@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: ef711cd0eb5fb6fb143783ad4096e3f1dbd9da99
+  - version: 19.0.0.0rc2
+    projects:
+      - repo: openstack/keystone
+        hash: f47e635b8041542faa05e64606e66d2fbbc5f284
 branches:
   - name: stable/wallaby
     location: 19.0.0.0rc1
