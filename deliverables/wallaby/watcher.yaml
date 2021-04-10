@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 863815153e3451f2354f14e6c271233e24e84782
+  - version: 6.0.0
+    projects:
+      - repo: openstack/watcher
+        hash: 863815153e3451f2354f14e6c271233e24e84782
+    diff-start: 5.0.0
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1

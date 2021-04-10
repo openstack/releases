@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 07e627e3e8290823b63dea154ff32c98741c6f9e
+  - version: 5.0.0
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 07e627e3e8290823b63dea154ff32c98741c6f9e
+    diff-start: 4.0.0
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 70566f48610c5917f9b24b9804f843a76a4effef
+  - version: 3.0.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 70566f48610c5917f9b24b9804f843a76a4effef
+    diff-start: 2.0.0
 branches:
   - name: stable/wallaby
     location: 3.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-events-api
         hash: fc97ceed7af98b196cfc157cb1b7a69101d2970a
+  - version: 3.0.0
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: fc97ceed7af98b196cfc157cb1b7a69101d2970a
+    diff-start: 2.0.0
 branches:
   - name: stable/wallaby
     location: 3.0.0.0rc1

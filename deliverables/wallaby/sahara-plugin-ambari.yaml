@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-ambari
         hash: a02327853d27e653e481456ad3699c0da12549b0
+  - version: 5.0.0
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: a02327853d27e653e481456ad3699c0da12549b0
+    diff-start: 4.0.0
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1

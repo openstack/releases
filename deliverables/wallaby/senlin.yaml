@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: e111000aab550635f8dcc3b678a2ae2b6c8b137f
+  - version: 11.0.0
+    projects:
+      - repo: openstack/senlin
+        hash: e111000aab550635f8dcc3b678a2ae2b6c8b137f
+    diff-start: 10.0.0
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1

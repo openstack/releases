@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: ec54320a2d4ede78b6982c2f7bdfe0e2d1f9fccb
+  - version: 12.0.0
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: ec54320a2d4ede78b6982c2f7bdfe0e2d1f9fccb
+    diff-start: 11.0.0
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

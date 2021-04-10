@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 6da23dd284e9307cdf1fed1bdfb0dc558beed753
+  - version: 10.0.0
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 6da23dd284e9307cdf1fed1bdfb0dc558beed753
+    diff-start: 9.0.0
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1

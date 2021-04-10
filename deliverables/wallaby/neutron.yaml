@@ -31,6 +31,11 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 5858f6c5023121ea645c832ab87f078f0249adeb
+  - version: 18.0.0
+    projects:
+      - repo: openstack/neutron
+        hash: 5858f6c5023121ea645c832ab87f078f0249adeb
+    diff-start: 17.0.0.0rc1
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1

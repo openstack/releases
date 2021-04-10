@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: f18611595861d82d27d9d8322215784ed9d0ee31
+  - version: 14.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: f18611595861d82d27d9d8322215784ed9d0ee31
+    diff-start: 13.0.0
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1

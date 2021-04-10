@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 3d084bf48360a03cea8eb8e2a24149d09ea5c6a6
+  - version: 18.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 3d084bf48360a03cea8eb8e2a24149d09ea5c6a6
+    diff-start: 17.0.0
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1

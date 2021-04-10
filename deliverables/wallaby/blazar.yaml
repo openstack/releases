@@ -13,6 +13,11 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: d3f77fd0c5a3e09ff52c8563fd07172834372ee7
+  - version: 7.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: d3f77fd0c5a3e09ff52c8563fd07172834372ee7
+    diff-start: 6.0.0
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1

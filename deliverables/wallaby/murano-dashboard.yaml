@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: dd78672b3f45b802efc4af2569ceb11e4abdd1ba
+  - version: 11.0.0
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: dd78672b3f45b802efc4af2569ceb11e4abdd1ba
+    diff-start: 10.0.0
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1
