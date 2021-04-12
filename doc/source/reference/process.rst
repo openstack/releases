@@ -1120,6 +1120,12 @@ R-3 week (RC1 deadline)
 #. On the Monday, generate release requests for all deliverables
    that have do not have a suitable candidate yet. That includes:
 
+   - Branch ``devstack-plugin-*`` delivrables. Usually devstack plugings are
+     branchless and tagless so out of our jurisdiction, however, some are just
+     tagless so they are deliverables that must be branched. Please use the
+     gerrit topic ``devstack-plugin-$series`` to help to track them. Example
+     https://review.opendev.org/c/openstack/releases/+/785180
+
    - cycle-with-intermediary deliverables that have not released yet, for
      which a release should be proposed from HEAD. Stable branch creation
      should be included, unless the deliverable has specified the
@@ -1271,8 +1277,24 @@ R-2 week
       or from the `release project
       <https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml>`__.
 
-   - Remind the QA PTL to manage their release duties
-     (c.f https://wiki.openstack.org/wiki/QA/releases).
+   - At this point all projects should have their branches created,
+     as doing the branching first is a prerequisite to allow us to branch
+     requirements. You can ensure that all projects are branched by using
+     ``tox -e venv -- list-deliverables --no-stable-branch
+     --cycle-based-no-trailing`` where a non empty list mean that some
+     projects are missing a stable branch and a patch should be proposed to
+     create it. The requirements team expect an empty output of this
+     command, so you should not continue to the next point until its output
+     is empty.
+
+     .. note::
+
+        The previous command will return the `requirements` deliverable
+        however in this case this one can be ignored, because our goal is to
+        branch it.
+
+   - If the previous list is empty then remind the QA PTL to manage their
+     release duties (cf. https://wiki.openstack.org/wiki/QA/releases).
 
      .. note::
 
@@ -1291,23 +1313,11 @@ R-2 week
    - Remind the I18n PTL to update the translation tools for the new stable
      series.
 
-   - Ensure that all cycle-with-rc projects have their branches created.
-     This could be done by using ``tox -e venv -- list-deliverables
-     --model cycle-with-rc --no-stable-branch`` where a non empty list mean
-     that some projects are missing a stable branch and a patch proposed
-     to create it.
-
    - If the previous list is empty then we can remind the requirements
      PTL to propose an update to the deliverable file to create
      the ``stable/$series`` branch for ``openstack/requirements`` and then
      remind to him to announce that the requirements freeze is lifted
      from master.
-
-     .. note::
-
-       The requirements team expect for an empty output of::
-
-           tox -e venv -- list-deliverables --no-stable-branch --cycle-based-no-trailing
 
      .. note::
 
