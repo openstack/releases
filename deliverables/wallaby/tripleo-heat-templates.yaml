@@ -12,7 +12,7 @@ cycle-highlights:
     and `network port creation <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/triplo-network-data-v2-node-ports.rst>`_
     out of the Heat stack and into the baremetal provisioning workflow.
   - |
-    Ceph version upgraded to Octopus. cephadm may be used to deploy/maintain a Ceph RBD cluster but
+    Ceph version upgraded to Pacific. cephadm may be used to deploy/maintain a Ceph RBD cluster but
     not all Ceph services (e.g. RGW). ceph-ansible may still be used to deploy/maintain all Ceph
     services but will be replaced with cephadm in next release.
     This work is described in the `TripleO Ceph spec <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/tripleo-ceph.rst>`_
