@@ -1,0 +1,12 @@
+---
+launchpad: devstack
+release-model: untagged
+team: Quality Assurance
+type: other
+stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-ceph: c55c49121acdb38a0d8d4a7ee6a89c9dec37507a
+    name: stable/train
+repository-settings:
+  openstack/devstack-plugin-ceph: {}
