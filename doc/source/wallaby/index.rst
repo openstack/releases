@@ -2,7 +2,7 @@
 Wallaby
 =======
 
-Projected Release Date: 14 April, 2021
+Originally Released: 14 April, 2021
 
 .. toctree::
    :maxdepth: 1
