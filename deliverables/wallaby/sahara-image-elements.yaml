@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: ded80db2667438313bab6d448d19ef2305f2e527
+  - version: 14.0.0
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: ded80db2667438313bab6d448d19ef2305f2e527
+    diff-start: 13.0.0
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1

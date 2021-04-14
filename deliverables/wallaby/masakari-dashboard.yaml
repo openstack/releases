@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: a44b5a4266505679cc4e32a6d650466d49596c7c
+  - version: 4.0.0
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: a44b5a4266505679cc4e32a6d650466d49596c7c
+    diff-start: 3.0.0
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1

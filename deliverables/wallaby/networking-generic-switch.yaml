@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 6b1fca9439b8df5ad26b6ac9374733b62c5ddee9
+  - version: 5.0.0
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 6b1fca9439b8df5ad26b6ac9374733b62c5ddee9
+    diff-start: 4.0.0
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1

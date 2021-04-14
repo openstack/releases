@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: caac9719c76d7fcfd75960a1feb26e6e889f1c8a
+  - version: 4.0.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: caac9719c76d7fcfd75960a1feb26e6e889f1c8a
+    diff-start: 3.0.0
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 7eb3241cc22a6700f6973553ab2468adb825eefd
+  - version: 12.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 7eb3241cc22a6700f6973553ab2468adb825eefd
+    diff-start: 11.0.0
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

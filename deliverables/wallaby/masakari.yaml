@@ -21,6 +21,11 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: 571248f6da32070919f1f86a252970e9a464420e
+  - version: 11.0.0
+    projects:
+      - repo: openstack/masakari
+        hash: 571248f6da32070919f1f86a252970e9a464420e
+    diff-start: 10.0.0
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1

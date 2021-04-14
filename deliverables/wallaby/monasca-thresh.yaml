@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: d8420f5ec072b488c7fbcc5cff72e864c731de37
+  - version: 4.0.0
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: d8420f5ec072b488c7fbcc5cff72e864c731de37
+    diff-start: 3.0.0
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1

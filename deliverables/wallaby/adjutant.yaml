@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: ad19ed13b65b583e65b5a19e04a0f0403c366b09
+  - version: 2.0.0
+    projects:
+      - repo: openstack/adjutant
+        hash: ad19ed13b65b583e65b5a19e04a0f0403c366b09
+    diff-start: 1.0.0
 branches:
   - name: stable/wallaby
     location: 2.0.0.0rc1

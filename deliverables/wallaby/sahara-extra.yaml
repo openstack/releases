@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+  - version: 13.0.0
+    projects:
+      - repo: openstack/sahara-extra
+        hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+    diff-start: 12.0.0
 branches:
   - name: stable/wallaby
     location: 13.0.0.0rc1

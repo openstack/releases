@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: c8befc7c60177027a4184e848788fe50eced965b
+  - version: 12.0.0
+    projects:
+      - repo: openstack/networking-sfc
+        hash: c8befc7c60177027a4184e848788fe50eced965b
+    diff-start: 11.0.0
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

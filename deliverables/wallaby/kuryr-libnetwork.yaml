@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: 8f7866809240acd52667f9e47a5df4a700d9290b
+  - version: 7.0.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 8f7866809240acd52667f9e47a5df4a700d9290b
+    diff-start: 6.0.0
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
