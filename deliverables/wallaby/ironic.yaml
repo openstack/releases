@@ -33,11 +33,10 @@ branches:
 cycle-highlights:
   - Redfish capability enhancements covering Out of Band hardware RAID
     configuration, and automatic Secure Boot setting enablement.
-  - Deployment and Cleaning enhancements including
-    UEFI Partition Image handling, NVMe Secure Erase,
-    per-instance deployment driver interface overrides,
-    deploy time "deploy_steps", and file injection.
-  - The ``System`` scoped RBAC model is now supported by Ironic along with
-    the ``admin``, ``member``, and ``reader`` roles.
-    This work has resulted in over 1500 new unit tests being added to Ironic.
+  - Deployment and Cleaning enhancements including UEFI Partition Image
+    handling, NVMe Secure Erase, per-instance deployment driver interface
+    overrides, deploy time "deploy_steps", and file injection.
+  - The ``System`` scoped RBAC model is now supported by Ironic along
+    with the ``admin``, ``member``, and ``reader`` roles. This work
+    has resulted in over 1500 new unit tests being added to Ironic.
 release-notes: https://docs.openstack.org/releasenotes/ironic/wallaby.html
