@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: 238d3b255d17f079019f597b9e1868dae3bc38b2
+  - version: 15.0.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: 25e1e24273d7741624382da4cc9f739482ea6ac4
+branches:
+  - name: stable/wallaby
+    location: 15.0.0
