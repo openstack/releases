@@ -1482,7 +1482,13 @@ R+0 week (Final Release)
    cycle-with-intermediary release) and (if needed) a regeneration of the
    final release patch.
 
-#. On release day, approve the final release patch created earlier.
+#. On release day freeze all other release activity by holding stable branch
+   releases while coordinated release is underway.
+
+#. On release day, approve the final release patch created earlier. Before
+   merging the patch ensure that used infras are operational, you can do that
+   by looking at https://status.python.org/ and by asking to our infra team
+   how is the situation of the openstack infra.
 
    .. note::
 
