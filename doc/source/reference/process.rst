@@ -1485,6 +1485,12 @@ R+0 week (Final Release)
 #. On release day freeze all other release activity by holding stable branch
    releases while coordinated release is underway.
 
+#. Few hours before approving the release patch ensure that all the available
+   release note landing pages are present
+   (example: https://review.opendev.org/c/openstack/releases/+/786374)::
+
+      tools/add_release_note_links.sh $SERIES
+
 #. On release day, approve the final release patch created earlier. Before
    merging the patch ensure that used infras are operational, you can do that
    by looking at https://status.python.org/ and by asking to our infra team
