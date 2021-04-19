@@ -5,4 +5,11 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla-ansible: {}
-# Note: deliverable was not released in victoria
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 058dd6828d788b60b6803f24f53f1dfca0876e6b
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
