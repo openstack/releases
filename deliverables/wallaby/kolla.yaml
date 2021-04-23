@@ -8,7 +8,16 @@ repository-settings:
 cycle-highlights:
   - Switched CentOS images to CentOS Stream 8.
   - Added support for Ubuntu in Kayobe.
-  - Added support for the OpenID Connect authentication protocol in Keystone.
+  - Added support for the OpenID Connect authentication protocol in
+    Keystone.
   - Added Docker healthchecks for several services.
   - Added support for Prometheus version 2.
   - Added support for multiple environments in a single Kayobe configuration.
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 940baeff65b8e75fed8a77e56cb385920d72ed01
+branches:
+  - name: stable/wallaby
+    location: 12.0.0.0rc1
