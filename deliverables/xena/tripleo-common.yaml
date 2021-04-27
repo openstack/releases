@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/tripleo-common: {}
+releases:
+  - version: 16.0.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: e944f1f789861a4e7cbd04fedbf3efe7917919ad
