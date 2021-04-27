@@ -1,0 +1,15 @@
+---
+include-pypi-link: false
+launchpad: glance
+release-model: cycle-with-intermediary
+stable-branch-type: none
+release-type: python-pypi
+repository-settings:
+  openstack/glance-tempest-plugin: {}
+team: glance
+type: tempest-plugin
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/glance-tempest-plugin
+        hash: 6b707bacc0c1dfdb1bd6cc1f4ee259fbf7e9cfe4
