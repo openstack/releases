@@ -12,3 +12,15 @@ repository-settings:
     flags:
       - no-artifact-build-job
 # Note: deliverable was not released in victoria
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 42a13037370e4ffa30fb74e06f6ff8f2c0ad3146
+      - repo: openstack/kayobe-config
+        hash: c49ceb953daff7938a318cd863f91d773fbfa7cd
+      - repo: openstack/kayobe-config-dev
+        hash: da221a0f06ba474fcfba2ba735fda5513a1fb83b
+branches:
+  - name: stable/wallaby
+    location: 10.0.0.0rc1
