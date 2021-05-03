@@ -63,16 +63,34 @@ setup_temp_space 'list-eol-stale-branches'
 
 branch=$(series_to_branch "$series")
 
+function no_open_patches {
+    req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${em_serie}"
+    patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
+    [ -z "${patches}" ]
+    no_opens=$?
+    if [[ "$no_opens" -eq 1 ]]; then
+        echo "Patches remained open on stale branch (make sure to abandon them):"
+        echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${em_serie}"
+    fi
+    return $no_opens
+}
+
+function eol_tag_matches_head {
+    head=$(git log --oneline --decorate -1)
+    [[ "$head" =~ "${em_serie}-eol" ]] && [[ "$head" =~ "origin/stable/${em_serie}" ]]
+    matches=$?
+    if [[ "$matches" -eq 1 ]] ; then
+        echo "stable/${em_serie} has patches on top of the ${em_serie}-eol tag"
+    fi
+    return $matches
+}
+
 function is_eol {
     clone_repo ${repo} stable/${em_serie}
+    cd ${repo} && git checkout -f -q stable/${em_serie} 2>/dev/null
     if [[ $? -eq 0 ]]; then
         echo "${repo} contains eol stale branch (${em_serie})"
-        req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${em_serie}"
-        patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
-        if [ ! -z "${patches}" ]; then
-            echo "Patches remained open on stale branch (make sure to abandon them):"
-            echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${em_serie}"
-        else
+        if no_open_patches && eol_tag_matches_head; then
             read -p "> Do you want to delete the branch stable/${em_serie} from ${repo} repository? [y/N]: " YN
             if [ "${YN,,}" == "y" ]; then
                 if [ -z "$gerrit_username" ]; then
@@ -81,6 +99,7 @@ function is_eol {
                 ${TOOLSDIR}/delete_stable_branch.py ${gerrit_username} ${repo} ${em_serie}
             fi
         fi
+        cd ..
     fi
 }
 
