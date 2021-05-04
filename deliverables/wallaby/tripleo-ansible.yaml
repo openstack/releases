@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ansible
         hash: 31a5b3cda5532ad9f916a09f73d706606eb6d2a8
+  - version: 3.1.0
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: cec79b26a8b392cb2a76c056c4681df59e70e166
+branches:
+  - name: stable/wallaby
+    location: 3.1.0
