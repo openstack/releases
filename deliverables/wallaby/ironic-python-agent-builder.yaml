@@ -1,0 +1,17 @@
+---
+storyboard: openstack/ironic-python-agent-builder
+release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
+release-type: python-pypi
+team: ironic
+type: other
+repository-settings:
+  openstack/ironic-python-agent-builder: {}
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 93292bfd5740dda108da40dc960940c9b7502ffe
+branches:
+  - name: stable/wallaby
+    location: 2.7.0
