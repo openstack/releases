@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: ad36c1f5b6bff35198b9bf1b06c8755fe14f080c
+  - version: train-em
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: ad36c1f5b6bff35198b9bf1b06c8755fe14f080c
 branches:
   - name: stable/train
     location: 0.16.0
