@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-watcher
         hash: c5d6aef8d95713f57dd95716e6ad2ed3c432ed7b
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: c5d6aef8d95713f57dd95716e6ad2ed3c432ed7b
 branches:
   - name: stable/train
     location: 15.4.0

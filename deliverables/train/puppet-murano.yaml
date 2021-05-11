@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 6f29cf4e77d96fba764493903da8f3d01937d4ea
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 6f29cf4e77d96fba764493903da8f3d01937d4ea
 branches:
   - name: stable/train
     location: 15.4.0

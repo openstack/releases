@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 883fa530a6dc34d6d62c611a302273f9b9578a03
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 883fa530a6dc34d6d62c611a302273f9b9578a03
 branches:
   - name: stable/train
     location: 15.4.0

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 1e6a89a9a64eaa4a1bcc5752007a6874c89ac284
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 1e6a89a9a64eaa4a1bcc5752007a6874c89ac284
 branches:
   - name: stable/train
     location: 15.4.0

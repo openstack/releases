@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 699d285aaf0813b697168a3f959c341dcaef3453
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 699d285aaf0813b697168a3f959c341dcaef3453
 branches:
   - name: stable/train
     location: 15.4.0

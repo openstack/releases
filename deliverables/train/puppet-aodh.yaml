@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 09972d8b065df7a7390b430614dbc3c9e6928a65
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 09972d8b065df7a7390b430614dbc3c9e6928a65
 branches:
   - name: stable/train
     location: 15.4.0

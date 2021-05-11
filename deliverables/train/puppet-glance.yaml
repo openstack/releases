@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 8a233453092f3cf8c878c2f588b93f6726137ba8
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 8a233453092f3cf8c878c2f588b93f6726137ba8
 branches:
   - name: stable/train
     location: 15.4.0

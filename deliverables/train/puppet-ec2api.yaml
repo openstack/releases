@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: b2b6f419884c6dc51cfb06a0977f9d9b90eb96f3
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: b2b6f419884c6dc51cfb06a0977f9d9b90eb96f3
 branches:
   - name: stable/train
     location: 15.4.0

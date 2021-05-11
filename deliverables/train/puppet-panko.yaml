@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-panko
         hash: da522675438c3edf31998558938ecca0c7895bb5
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-panko
+        hash: da522675438c3edf31998558938ecca0c7895bb5
 branches:
   - name: stable/train
     location: 15.4.0
