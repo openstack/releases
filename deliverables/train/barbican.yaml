@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 07be1986b44191600de8b9bf919bef395c3a8613
+  - version: train-em
+    projects:
+      - repo: openstack/barbican
+        hash: 07be1986b44191600de8b9bf919bef395c3a8613
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
