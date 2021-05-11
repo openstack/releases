@@ -18,6 +18,10 @@ releases:
       - repo: openstack/os-vif
         hash: 3a08cc4528c183ecf03d1795ca500bb9b745f12d
         tarball-base: os_vif
+  - version: train-em
+    projects:
+      - repo: openstack/os-vif
+        hash: 3a08cc4528c183ecf03d1795ca500bb9b745f12d
 branches:
   - name: stable/train
     location: 1.17.0
