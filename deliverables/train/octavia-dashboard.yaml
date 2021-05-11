@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 8463b8f443e2a1f493c5b7cedf7fca5259a231aa
+  - version: train-em
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 8463b8f443e2a1f493c5b7cedf7fca5259a231aa
 branches:
   - name: stable/train
     location: 4.0.0.0rc1

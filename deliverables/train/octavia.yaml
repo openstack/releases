@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: a686bc1c4cf4f73f14acf579465c2add046bbdc2
+  - version: train-em
+    projects:
+      - repo: openstack/octavia
+        hash: a686bc1c4cf4f73f14acf579465c2add046bbdc2
 branches:
   - name: stable/train
     location: 5.0.0.0rc1
