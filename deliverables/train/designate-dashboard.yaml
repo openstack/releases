@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 51a44589c2f59fca73ed8b1f3933c5d6cffae50c
+  - version: train-em
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 51a44589c2f59fca73ed8b1f3933c5d6cffae50c
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
