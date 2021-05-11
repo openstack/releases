@@ -109,6 +109,10 @@ releases:
       - hash: 211e8ce69286ebd4ba5bc0bae2353498dee0012d
         repo: openstack/openstack-ansible
     version: 20.2.6
+  - version: train-em
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 211e8ce69286ebd4ba5bc0bae2353498dee0012d
 branches:
   - name: stable/train
     location: 20.0.0.0rc1
