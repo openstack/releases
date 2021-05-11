@@ -15,6 +15,10 @@ releases:
       - hash: 537e9aeb7841f810e49cd157295468441ecda981
         repo: openstack/networking-hyperv
     version: 7.3.1
+  - version: train-em
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 537e9aeb7841f810e49cd157295468441ecda981
 branches:
   - location: 7.3.0
     name: stable/train
