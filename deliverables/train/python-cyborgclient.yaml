@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 047d5e2558c8bf419259c005320ec7de129fdd9e
+  - version: train-em
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 047d5e2558c8bf419259c005320ec7de129fdd9e
 branches:
   - name: stable/train
     location: 0.4.0
