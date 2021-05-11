@@ -16,6 +16,10 @@ releases:
       - repo: openstack/tricircle
         hash: deb146a18ccf87553bd9ed61295d09846aad2741
     diff-start: 6.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/tricircle
+        hash: deb146a18ccf87553bd9ed61295d09846aad2741
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
