@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas-dashboard
         hash: b5a9b32c0095afb2efcbff65122946dd14b48fd1
+  - version: train-em
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: b5a9b32c0095afb2efcbff65122946dd14b48fd1
 branches:
   - name: stable/train
     location: 2.1.0

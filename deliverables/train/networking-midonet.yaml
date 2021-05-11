@@ -25,6 +25,10 @@ releases:
       - repo: openstack/networking-midonet
         hash: 466a03701ab77598aa42cd1f9784e1ddbfc1727a
     diff-start: 8.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 466a03701ab77598aa42cd1f9784e1ddbfc1727a
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

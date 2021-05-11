@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: a09e82470fd934e1ecb46b53a1c0836ef4df744b
+  - version: train-em
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: a09e82470fd934e1ecb46b53a1c0836ef4df744b
 branches:
   - name: stable/train
     location: 6.14.0

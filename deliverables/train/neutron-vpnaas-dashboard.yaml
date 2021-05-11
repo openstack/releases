@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: db7db316eef751c27c9b8ca8e017f1b129fbf6ae
+  - version: train-em
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: db7db316eef751c27c9b8ca8e017f1b129fbf6ae
 branches:
   - name: stable/train
     location: 1.6.0

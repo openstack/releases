@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 31b28ea8355af8c64cfddc48d4045de4613ba199
+  - version: train-em
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 31b28ea8355af8c64cfddc48d4045de4613ba199
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: 2512a2b7a0553856d4bfd73d1b25542dd6939e91
+  - version: train-em
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 2512a2b7a0553856d4bfd73d1b25542dd6939e91
 branches:
   - name: stable/train
     location: 11.0.0.0rc1
