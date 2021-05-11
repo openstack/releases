@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: dc246bf808d3a0823f77ffcd42f4d32d0587c161
+  - version: train-em
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: dc246bf808d3a0823f77ffcd42f4d32d0587c161
 branches:
   - name: stable/train
     location: 3.10.0
