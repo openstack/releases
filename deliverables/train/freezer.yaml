@@ -16,6 +16,14 @@ releases:
         hash: c57a206eb8347e0b3c02455e32ddf378e29e0bfe
       - repo: openstack/freezer-dr
         hash: 9bd3eab987255b43e600bdd2dae649678c755d69
+  - version: train-em
+    projects:
+      - repo: openstack/freezer
+        hash: 65a985e8c38290303f963f9e5494fa2ee796d4c7
+      - repo: openstack/freezer-api
+        hash: c57a206eb8347e0b3c02455e32ddf378e29e0bfe
+      - repo: openstack/freezer-dr
+        hash: 9bd3eab987255b43e600bdd2dae649678c755d69
 branches:
   - name: stable/train
     location: 7.2.0
