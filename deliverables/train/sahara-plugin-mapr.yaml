@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-mapr
         hash: a7b37aac861c515aa073d02fe34f06e497ca4acb
+  - version: train-em
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: a7b37aac861c515aa073d02fe34f06e497ca4acb
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

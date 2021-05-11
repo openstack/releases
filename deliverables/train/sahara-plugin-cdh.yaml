@@ -19,6 +19,10 @@ releases:
       - repo: openstack/sahara-plugin-cdh
         hash: c4c8cbbcada44b448a7d4bb074a46e4c792482d7
     diff-start: 1.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: c4c8cbbcada44b448a7d4bb074a46e4c792482d7
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: b72364c36d8d25ddc94bc02b4fd3c5be9c4dacf9
+  - version: train-em
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: b72364c36d8d25ddc94bc02b4fd3c5be9c4dacf9
 branches:
   - name: stable/train
     location: 11.0.0.0rc1
