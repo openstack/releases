@@ -16,6 +16,10 @@ releases:
       - repo: openstack/nova-powervm
         hash: 5de7a5ebdca34ba56407c9e8cece6953278ce27f
     diff-start: 8.0.0.0rc1
+  - version: train-em
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 5de7a5ebdca34ba56407c9e8cece6953278ce27f
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
