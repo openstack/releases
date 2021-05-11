@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 564edb7f63ffdc8ae9e0e9fb33afbf4bf60902ce
+  - version: train-em
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 564edb7f63ffdc8ae9e0e9fb33afbf4bf60902ce
 branches:
   - name: stable/train
     location: 3.0.0

@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: d8b5525fd2a544c264a86edcd0d3493709f262af
+  - version: train-em
+    projects:
+      - repo: openstack/trove
+        hash: d8b5525fd2a544c264a86edcd0d3493709f262af
 branches:
   - name: stable/train
     location: 12.0.0.0rc1
