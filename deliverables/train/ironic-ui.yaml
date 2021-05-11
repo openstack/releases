@@ -31,6 +31,10 @@ releases:
     projects:
       - hash: 1f091c92058945c2beb5c0db3b40e1722ab661ac
         repo: openstack/ironic-ui
+  - version: train-em
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 1f091c92058945c2beb5c0db3b40e1722ab661ac
 branches:
   - location: 3.5.2
     name: stable/train

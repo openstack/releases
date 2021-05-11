@@ -23,6 +23,10 @@ releases:
       - hash: 3a411274c261d66b1d5cfb803c0d4322ccd279f6
         repo: openstack/python-ironic-inspector-client
     version: 3.7.1
+  - version: train-em
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 3a411274c261d66b1d5cfb803c0d4322ccd279f6
 branches:
   - location: 3.7.0
     name: stable/train
