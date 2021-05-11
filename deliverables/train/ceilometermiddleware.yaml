@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: fc21cde1c26bbb6c7abbc0890a88381aabed67fa
+  - version: train-em
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: fc21cde1c26bbb6c7abbc0890a88381aabed67fa
 branches:
   - name: stable/train
     location: 1.5.0
