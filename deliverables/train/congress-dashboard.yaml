@@ -16,6 +16,10 @@ releases:
       - repo: openstack/congress-dashboard
         hash: 8f0ba864891c432f07bec2975fc996e18b94e52b
     diff-start: 4.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 8f0ba864891c432f07bec2975fc996e18b94e52b
 branches:
   - name: stable/train
     location: 5.0.0.0rc1
