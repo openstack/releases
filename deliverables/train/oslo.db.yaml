@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: fb40cdb7a9d8e0b0c696f8e6c71cd8969d88d610
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.db
+        hash: fb40cdb7a9d8e0b0c696f8e6c71cd8969d88d610
 branches:
   - name: stable/train
     location: 5.0.2

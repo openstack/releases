@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 91b39bb60de37b061c7da032cf196014bd0d67b1
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 91b39bb60de37b061c7da032cf196014bd0d67b1
 branches:
   - name: stable/train
     location: 3.24.0

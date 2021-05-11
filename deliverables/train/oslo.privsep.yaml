@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: ced0e7b33b617fbfd9137cf2917ab279092dbd7f
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: ced0e7b33b617fbfd9137cf2917ab279092dbd7f
 branches:
   - name: stable/train
     location: 1.33.3

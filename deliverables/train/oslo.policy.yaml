@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 5904564bf13bbac7d66e00ec6312487c507f09c4
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 5904564bf13bbac7d66e00ec6312487c507f09c4
 branches:
   - name: stable/train
     location: 2.3.2

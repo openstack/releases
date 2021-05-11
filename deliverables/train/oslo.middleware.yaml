@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 9bae80ec0207d44c8bc467a11c837da9a98da007
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 9bae80ec0207d44c8bc467a11c837da9a98da007
 branches:
   - name: stable/train
     location: 3.38.1

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: cf35fec00a18cb0bd309266c10cd887354030dce
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.reports
+        hash: cf35fec00a18cb0bd309266c10cd887354030dce
 branches:
   - name: stable/train
     location: 1.30.0

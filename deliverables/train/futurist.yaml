@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 25ffb8f1545b11becbbfcff13b4530fb15f3849f
+  - version: train-em
+    projects:
+      - repo: openstack/futurist
+        hash: 25ffb8f1545b11becbbfcff13b4530fb15f3849f
 branches:
   - name: stable/train
     location: 1.9.0
