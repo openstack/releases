@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: ed9edc6b36ebc8c1ddbfbd4a35ea5793910176db
+  - version: train-em
+    projects:
+      - repo: openstack/python-heatclient
+        hash: ed9edc6b36ebc8c1ddbfbd4a35ea5793910176db
 branches:
   - name: stable/train
     location: 1.18.0

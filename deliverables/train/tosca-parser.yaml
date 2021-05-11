@@ -19,6 +19,10 @@ releases:
       - repo: openstack/tosca-parser
         hash: 6ddfdc6eaa82659ad26a7b363b31b6bbb3a0939e
     version: 1.6.1
+  - version: train-em
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 6ddfdc6eaa82659ad26a7b363b31b6bbb3a0939e
 branches:
   - name: stable/train
     location: 1.6.0
