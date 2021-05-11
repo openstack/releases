@@ -19,6 +19,10 @@ releases:
       - repo: openstack/searchlight
         hash: 5aeee08c44091b93b7619b48d389af4833016337
     diff-start: 6.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/searchlight
+        hash: 5aeee08c44091b93b7619b48d389af4833016337
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
