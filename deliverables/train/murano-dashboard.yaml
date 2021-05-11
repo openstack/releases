@@ -20,6 +20,10 @@ releases:
       - repo: openstack/murano-dashboard
         hash: bead4366d96a1e6e230e8f147b97a60e859f760b
     diff-start: 7.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: bead4366d96a1e6e230e8f147b97a60e859f760b
 branches:
   - location: 8.0.0.0rc1
     name: stable/train
