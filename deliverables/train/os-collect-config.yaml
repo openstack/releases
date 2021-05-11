@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: 5b8355db34b729733eb420bd970c278b893abf84
+  - version: train-em
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 5b8355db34b729733eb420bd970c278b893abf84
 branches:
   - name: stable/train
     location: 10.5.0

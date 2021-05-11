@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 105de767e335e1cfc9ed20bb74708ab2bcf6fdd3
+  - version: train-em
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 105de767e335e1cfc9ed20bb74708ab2bcf6fdd3
 branches:
   - name: stable/train
     location: 11.3.0
