@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: 3b3161c031c795da3ab5c4268419465e8e8aaf3c
+  - version: train-em
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 3b3161c031c795da3ab5c4268419465e8e8aaf3c
 branches:
   - location: 4.0.0.0rc1
     name: stable/train

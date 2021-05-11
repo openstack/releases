@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 24a1c31b8ba1bc3419ee54f86323886538879355
+  - version: train-em
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 24a1c31b8ba1bc3419ee54f86323886538879355
 branches:
   - location: 1.1.0
     name: stable/train

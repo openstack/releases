@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 41e696464b6ab827c455d8866dd81936f4c0ab0e
+  - version: train-em
+    projects:
+      - repo: openstack/kuryr
+        hash: 41e696464b6ab827c455d8866dd81936f4c0ab0e
 repository-settings:
   openstack/kuryr:
     tarball-base: kuryr-lib
