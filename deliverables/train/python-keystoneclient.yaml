@@ -15,6 +15,10 @@ releases:
       - hash: 79f150f962a2300f4644ba735b4f28e337035251
         repo: openstack/python-keystoneclient
     version: 3.21.0
+  - version: train-em
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 79f150f962a2300f4644ba735b4f28e337035251
 branches:
   - location: 3.21.0
     name: stable/train

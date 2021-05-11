@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: d113c1564d49d93451d9330955e8a42b7db04149
+  - version: train-em
+    projects:
+      - repo: openstack/pycadf
+        hash: d113c1564d49d93451d9330955e8a42b7db04149
 branches:
   - name: stable/train
     location: 2.10.0

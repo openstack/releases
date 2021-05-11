@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 0a65b1420799e7c7f8736e9f6c234f755ab5ac6b
+  - version: train-em
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 0a65b1420799e7c7f8736e9f6c234f755ab5ac6b
 branches:
   - name: stable/train
     location: 7.0.1

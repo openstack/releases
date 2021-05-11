@@ -66,6 +66,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: c65455965aec303b55bc76388314a2b96a2bc12c
+  - version: train-em
+    projects:
+      - repo: openstack/keystone
+        hash: c65455965aec303b55bc76388314a2b96a2bc12c
 branches:
   - name: stable/train
     location: 16.0.0.0rc1
