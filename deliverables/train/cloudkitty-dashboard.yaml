@@ -16,6 +16,10 @@ releases:
       - repo: openstack/cloudkitty-dashboard
         hash: 45c962d72bdccdc2181afe3e49a42c4e980d5da5
     diff-start: 8.1.0
+  - version: train-em
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 45c962d72bdccdc2181afe3e49a42c4e980d5da5
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

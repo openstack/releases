@@ -36,6 +36,10 @@ releases:
         repo: openstack/cloudkitty
     version: 11.1.0
 
+  - version: train-em
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 9e79c7ed91e446fe064619978d2c90126da1bb7e
 branches:
   - name: stable/train
     location: 11.0.0
