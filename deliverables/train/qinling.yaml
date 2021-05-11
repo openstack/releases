@@ -15,6 +15,10 @@ releases:
       - repo: openstack/qinling
         hash: 5329b7952585f54fc87e2b70454454b81a494395
     diff-start: 2.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/qinling
+        hash: 5329b7952585f54fc87e2b70454454b81a494395
 branches:
   - name: stable/train
     location: 3.0.0.0rc1
