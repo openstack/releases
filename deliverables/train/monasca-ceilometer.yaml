@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/monasca-ceilometer
         hash: 15697d9d3af64a4d97656116bd7f03c14ded09b5
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: 15697d9d3af64a4d97656116bd7f03c14ded09b5
 branches:
   - name: stable/train
     location: 1.10.0

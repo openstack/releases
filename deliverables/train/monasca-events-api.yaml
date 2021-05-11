@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-events-api
         hash: 64e4e9af47c0a4b62f5c21629c20ed1b12aea0fc
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: 64e4e9af47c0a4b62f5c21629c20ed1b12aea0fc
 branches:
   - name: stable/train
     location: 0.4.0
