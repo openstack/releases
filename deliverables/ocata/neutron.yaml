@@ -65,5 +65,9 @@ releases:
       - hash: f71afa5b38c5360e5a134c5ab436bb99be6860a9
         repo: openstack/neutron
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron
+        hash: 2028a66f21af596cd59e2a6f7d9bb05f6d5f7292
 repository-settings:
   openstack/neutron: {}

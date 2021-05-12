@@ -37,5 +37,9 @@ releases:
       - hash: 4b6afd41961743353400f78ddcbc4a5d34665468
         repo: openstack/neutron-dynamic-routing
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: decf30e404e2f3578d7cf4c04a5b696737102e59
 repository-settings:
   openstack/neutron-dynamic-routing: {}

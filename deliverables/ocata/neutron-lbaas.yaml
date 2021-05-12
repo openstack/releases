@@ -37,5 +37,9 @@ releases:
       - hash: 674e3604a6285655f2dc7f2949629cc4de06bbf4
         repo: openstack/neutron-lbaas
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron-lbaas
+        hash: 310d92f6bf15f1c4bdf3216f00a8aa7d944c1067
 repository-settings:
   openstack/neutron-lbaas: {}

@@ -21,5 +21,9 @@ releases:
       - hash: 9b3ea8f29f8ddb27575b79a77183d1ac2224ff01
         repo: openstack/neutron-lib
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron-lib
+        hash: b3afc9ae08a1081c7e04db61872a8dcf734acf1f
 repository-settings:
   openstack/neutron-lib: {}
