@@ -45,5 +45,9 @@ releases:
       - hash: 1f76429d87327e1d1d70a7a0211098c76f9f4688
         repo: openstack/neutron-fwaas
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: e383e4a9b0a903649466d82350b8681a49c561b6
 repository-settings:
   openstack/neutron-fwaas: {}
