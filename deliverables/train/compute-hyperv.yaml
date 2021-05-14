@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: 2070a6c798a3eeea32de2751f4088e460f2e0f6a
+  - version: train-em
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 2070a6c798a3eeea32de2751f4088e460f2e0f6a
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
