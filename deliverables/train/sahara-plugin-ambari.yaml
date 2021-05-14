@@ -19,6 +19,10 @@ releases:
       - repo: openstack/sahara-plugin-ambari
         hash: 2fd443ec4374aa81bfb7aaad0697ba082acbad83
     diff-start: 1.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 2fd443ec4374aa81bfb7aaad0697ba082acbad83
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

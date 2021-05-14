@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: b60f08f7599a2e01c84ca3e3958021804a50ea7c
+  - version: train-em
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: b60f08f7599a2e01c84ca3e3958021804a50ea7c
 branches:
   - name: stable/train
     location: 11.0.0.0rc1
