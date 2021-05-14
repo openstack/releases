@@ -21,6 +21,10 @@ releases:
       - repo: openstack/networking-odl
         hash: 8f1360d543462dba6bc67e2dacdf2e3e968a0524
     diff-start: 14.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/networking-odl
+        hash: 8f1360d543462dba6bc67e2dacdf2e3e968a0524
 branches:
   - name: stable/train
     location: 15.0.0.0rc1

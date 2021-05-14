@@ -20,6 +20,10 @@ releases:
       - repo: openstack/neutron-vpnaas
         hash: 66dfa3f57c2a4747b81b25bd4c2e3ecf30134b8b
     diff-start: 14.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 66dfa3f57c2a4747b81b25bd4c2e3ecf30134b8b
 branches:
   - name: stable/train
     location: 15.0.0.0rc1

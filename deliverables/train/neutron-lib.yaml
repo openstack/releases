@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: d53744e0370096048aea8f394fa1a7342c774fd6
+  - version: train-em
+    projects:
+      - repo: openstack/neutron-lib
+        hash: d53744e0370096048aea8f394fa1a7342c774fd6
 branches:
   - name: stable/train
     location: 1.29.1
