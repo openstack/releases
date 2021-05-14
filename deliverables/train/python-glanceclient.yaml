@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 1aba8f2d248040364e690dd8dc7f3a508baed631
+  - version: train-em
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 1aba8f2d248040364e690dd8dc7f3a508baed631
 branches:
   - location: 2.17.0
     name: stable/train

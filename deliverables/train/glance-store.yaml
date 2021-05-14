@@ -23,6 +23,10 @@ releases:
       - hash: 9383fde396041758d767ce3f30b9a5669ad9ebf1
         repo: openstack/glance_store
     version: 1.0.1
+  - version: train-em
+    projects:
+      - repo: openstack/glance_store
+        hash: 9383fde396041758d767ce3f30b9a5669ad9ebf1
 branches:
   - name: stable/train
     location: 1.0.0
