@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 1b2cafb008bee70242b68a03212bcc575df683b9
+  - version: train-em
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 1b2cafb008bee70242b68a03212bcc575df683b9
 branches:
   - location: 1.29.0
     name: stable/train

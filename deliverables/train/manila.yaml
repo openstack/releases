@@ -56,6 +56,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 960e45bd255dafacef7c6f895aca9477fcd12d9b
+  - version: train-em
+    projects:
+      - repo: openstack/manila
+        hash: 960e45bd255dafacef7c6f895aca9477fcd12d9b
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
