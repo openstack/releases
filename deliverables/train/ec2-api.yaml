@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: f90157089654487af9a64fdbf73c76c6909c1bf3
+  - version: train-em
+    projects:
+      - repo: openstack/ec2-api
+        hash: f90157089654487af9a64fdbf73c76c6909c1bf3
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
