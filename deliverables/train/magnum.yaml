@@ -25,10 +25,10 @@ cycle-highlights:
     to choose between a private cluster by default and only allow access
     to the API exposed on Internet or make it fully accessible.
   - Add ``cinder_csi_enabled`` label to support out of tree Cinder CSI.
-  - Support ``containerd`` as a ``container_runtime`` as an alternative to
-    ``host-docker``.
-  - A new config ``health_polling_interval`` is supported to make the interval
-    configurable or disable completely.
+  - Support ``containerd`` as a ``container_runtime`` as an alternative
+    to ``host-docker``.
+  - A new config ``health_polling_interval`` is supported to make the
+    interval configurable or disable completely.
 releases:
   - version: 9.0.0.0rc1
     projects:
@@ -60,6 +60,10 @@ releases:
       - repo: openstack/magnum
         hash: 368241fda7fbe146f824193b1e0b39b73c226f87
   - version: 9.4.1
+    projects:
+      - repo: openstack/magnum
+        hash: 528ec941da294b454221170e1919b7dc18d10e86
+  - version: train-em
     projects:
       - repo: openstack/magnum
         hash: 528ec941da294b454221170e1919b7dc18d10e86
