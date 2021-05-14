@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: f4a6f3db56149eea9bba5c5806ab14cfeebd6668
+  - version: train-em
+    projects:
+      - repo: openstack/blazar
+        hash: f4a6f3db56149eea9bba5c5806ab14cfeebd6668
 branches:
   - name: stable/train
     location: 4.0.0.0rc1

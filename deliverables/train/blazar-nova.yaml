@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 32350eb304768a59ce597f498eff92783cb575ac
+  - version: train-em
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 32350eb304768a59ce597f498eff92783cb575ac
 branches:
   - location: 1.3.0
     name: stable/train

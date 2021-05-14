@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: e98421c9197873d0b3c2c9a9601b7dc0655da72e
+  - version: train-em
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: e98421c9197873d0b3c2c9a9601b7dc0655da72e
 branches:
   - location: 2.2.1
     name: stable/train
