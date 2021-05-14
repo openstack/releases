@@ -15,6 +15,10 @@ releases:
       - hash: 8951feb3feed09ee687470e621adaac0dcd9e8e1
         repo: openstack/python-brick-cinderclient-ext
     version: 0.12.0
+  - version: train-em
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 8951feb3feed09ee687470e621adaac0dcd9e8e1
 branches:
   - location: 0.11.0
     name: stable/train

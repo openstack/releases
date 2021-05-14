@@ -47,6 +47,10 @@ releases:
     projects:
       - hash: 30244b175cac6e643915d762a80b8c8f5848f256
         repo: openstack/os-brick
+  - version: train-em
+    projects:
+      - repo: openstack/os-brick
+        hash: 30244b175cac6e643915d762a80b8c8f5848f256
 branches:
   - location: 2.10.0
     name: stable/train
