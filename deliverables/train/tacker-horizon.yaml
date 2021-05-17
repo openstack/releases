@@ -10,6 +10,10 @@ releases:
       - hash: e0e3836b4b667f0449aba1b51279b76e69ae7a44
         repo: openstack/tacker-horizon
     version: 0.15.0
+  - version: train-em
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: e0e3836b4b667f0449aba1b51279b76e69ae7a44
 branches:
   - name: stable/train
     location: 0.15.0
