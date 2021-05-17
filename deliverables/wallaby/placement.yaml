@@ -17,6 +17,10 @@ releases:
       - repo: openstack/placement
         hash: f41599e1ada2dfc7900817b09b623422d9d1dbe9
     diff-start: 4.0.0
+  - version: 5.0.1
+    projects:
+      - repo: openstack/placement
+        hash: adf525a8f176fe37222d08478c9fe08db823db98
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
