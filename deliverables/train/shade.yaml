@@ -13,6 +13,10 @@ releases:
         hash: 47fe056533be356f8021ed961c8a56c39882a5c3
     flags:
       - forced
+  - version: train-em
+    projects:
+      - repo: openstack/shade
+        hash: 47fe056533be356f8021ed961c8a56c39882a5c3
 branches:
   - name: stable/train
     location: 1.32.0
