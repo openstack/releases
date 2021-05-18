@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: 5c4be3e15876f3a1e3fd8a6a4737decf18914161
+  - version: 14.1.1
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: c53c2bd2df7865035fd0a53eb94a7e3f3c11cc82
 branches:
   - name: stable/wallaby
     location: 14.1.0

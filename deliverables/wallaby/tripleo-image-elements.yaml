@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: c69ead8b45d28befc693a5d0583868cef501ff25
+  - version: 13.1.1
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 74acb5493fe9da1e5063e00cd82f38dcf9e54d63
 branches:
   - name: stable/wallaby
     location: 13.1.0
