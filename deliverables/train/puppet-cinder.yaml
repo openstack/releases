@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 23b62772eb0930e4f0719212ca21d9cf47c7b4f7
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: d67dac076f643bd94eeeb2399e4d3be02333f11d
 branches:
   - name: stable/train
     location: 15.4.0

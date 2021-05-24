@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: e56b6726bfc257a5f69d33c91947315c56c354d1
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: c30038047dc54c0aa7267ab746b151e512891549
 branches:
   - name: stable/train
     location: 15.4.0

@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 4f2d7def436c5e04bc700916a69844c9700f3a99
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 7a3a8d7e58dfa64b490ce71791262f4403545693
 branches:
   - name: stable/train
     location: 15.4.0

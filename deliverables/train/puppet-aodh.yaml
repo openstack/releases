@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 14259c184e91e706c26e41d8d48972ebbacff349
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 09972d8b065df7a7390b430614dbc3c9e6928a65
 branches:
   - name: stable/train
     location: 15.4.0

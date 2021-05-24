@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: c9bd95b700ffc4bcb1968689741d00d715f7ff5f
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 1fdb986ee58117909b100ebb2b925a341df63379
 branches:
   - name: stable/train
     location: 15.4.0

@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: cc4bb1d8295271461b04f776dfd9e7bf44624c1a
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 688135153e4533d5c6831aa629fa660a06336b1d
 branches:
   - name: stable/train
     location: 15.4.0

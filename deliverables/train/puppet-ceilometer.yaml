@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: 71698a1ed365d69eaa02cb84e279e95c42ffd935
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 2f62d7f8d7819a2a70d170d0df9035118020375c
 branches:
   - name: stable/train
     location: 15.4.0
