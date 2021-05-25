@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 79959abc90bc615687e3a940951ad9ec548178ec
+  - version: train-em
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 79959abc90bc615687e3a940951ad9ec548178ec
 branches:
   - name: stable/train
     location: 15.1.0

@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/placement
         hash: ff55034f10ab0b45ebcc455434fa491efcd3eb7b
+  - version: train-em
+    projects:
+      - repo: openstack/placement
+        hash: ff55034f10ab0b45ebcc455434fa491efcd3eb7b
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
