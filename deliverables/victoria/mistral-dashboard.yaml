@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 4a80f083521e88ef5cdeaa31bffa4d5c4c6b1d59
     diff-start: 10.0.0
+  - version: 11.0.1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: e1936e4886f5fee1076b4a9ef7276a44aadce896
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
