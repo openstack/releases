@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 63fa310920bec67084aab32a6691c9df97ba997d
     diff-start: 11.0.0
+  - version: 12.0.1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 7cee9c9cbfc0cd5c1b1027c6f4e9c87887c302bb
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
