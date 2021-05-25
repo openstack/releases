@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 1b707a7e408370ce328190a0996bf381761e89d2
+  - version: 3.2.2
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: fc941022c5690edf80544678530b741cdd983ea9
 branches:
   - name: stable/victoria
     location: 3.2.1
