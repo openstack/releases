@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/monasca-kibana-plugin
         hash: aaedc304803a1808a48ae73cb01f9bc8ee65ec52
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: aaedc304803a1808a48ae73cb01f9bc8ee65ec52
 branches:
   - name: stable/train
     location: 1.5.0

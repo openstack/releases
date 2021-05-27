@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 6a8ce64b366fa198303fa1cac2292472e64b56dc
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 6a8ce64b366fa198303fa1cac2292472e64b56dc
 branches:
   - name: stable/train
     location: 1.12.0

@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: d562bc38c5d1fe86a57fbed28d02d797493faa4c
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-common
+        hash: d562bc38c5d1fe86a57fbed28d02d797493faa4c
 branches:
   - name: stable/train
     location: 2.16.0

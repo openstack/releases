@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 2e6ce3842b181a8d61e4dab671acef585dbefe41
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 2e6ce3842b181a8d61e4dab671acef585dbefe41
 branches:
   - name: stable/train
     location: 1.15.0

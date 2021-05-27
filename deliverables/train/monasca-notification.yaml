@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: f6fed3772eb3970cb2de22227961507a178d6ca4
+  - version: train-em
+    projects:
+      - repo: openstack/monasca-notification
+        hash: f6fed3772eb3970cb2de22227961507a178d6ca4
 branches:
   - name: stable/train
     location: 1.18.0

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 3b9ec1177f50fd347b4846baf52dacd9d2f2e4cd
+  - version: train-em
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 3b9ec1177f50fd347b4846baf52dacd9d2f2e4cd
 branches:
   - name: stable/train
     location: 1.16.0
