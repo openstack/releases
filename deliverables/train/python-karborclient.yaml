@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 4571dcb49231a1b23f53029e0b2715497f9cb6ed
+  - version: train-em
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 4571dcb49231a1b23f53029e0b2715497f9cb6ed
 branches:
   - name: stable/train
     location: 1.3.0
