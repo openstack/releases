@@ -53,5 +53,9 @@ releases:
       - hash: 4892f35575bde78c612088a388fbf50c7f19f9e7
         repo: openstack/horizon
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/horizon
+        hash: b49cd9fd97128086ced5b7df9d44a27105d28900
 repository-settings:
   openstack/horizon: {}
