@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: f82a43c54e95b858177f5342289bd3729b0af004
+  - version: train-em
+    projects:
+      - repo: openstack/ironic
+        hash: f82a43c54e95b858177f5342289bd3729b0af004
 branches:
   - location: 13.0.0
     name: stable/train
