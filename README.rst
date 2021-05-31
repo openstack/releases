@@ -35,5 +35,5 @@ More information
 ----------------
 
 You can reach the Release Management team on the #openstack-release channel
-on Freenode IRC, or by sending an email with '[release]' as a subject prefix
+on `OFTC IRC <https://www.oftc.net/>`, or by sending an email with '[release]' as a subject prefix
 to the `openstack-discuss <http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-discuss>`_ mailing-list.
