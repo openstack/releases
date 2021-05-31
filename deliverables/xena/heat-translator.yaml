@@ -6,3 +6,8 @@ team: heat
 type: library
 repository-settings:
   openstack/heat-translator: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/heat-translator
+        hash: 491348b58ac567b069bbf73d7bca525d03ca77df
