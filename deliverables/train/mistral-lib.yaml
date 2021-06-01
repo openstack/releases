@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 4bac2b282e3a01e7a9a035d8b8c921024ecb6261
+  - version: train-em
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 4bac2b282e3a01e7a9a035d8b8c921024ecb6261
 branches:
   - name: stable/train
     location: 1.2.0

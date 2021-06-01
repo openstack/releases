@@ -6,7 +6,6 @@ team: mistral
 type: service
 repository-settings:
   openstack/mistral: {}
-  openstack/mistral-dashboard: {}
   openstack/mistral-extra: {}
 cycle-highlights:
   - improved performance by roughtly 40% (depends on a workflow)
@@ -45,12 +44,16 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: c40fc775f4912cad335120a565f85d4260c965f4
-      - repo: openstack/mistral-dashboard
-        hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
   - projects:
       - hash: 30039178714ea776df2b60a0f49427c239eb6d22
         repo: openstack/mistral
     version: 9.1.0
+  - version: train-em
+    projects:
+      - repo: openstack/mistral
+        hash: 30039178714ea776df2b60a0f49427c239eb6d22
+      - repo: openstack/mistral-extra
+        hash: 559c7ef5a977583dd4f1b931880d4154ebf565b5
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
