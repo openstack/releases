@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: edf96c465c4574b38c5324a3773cf41429b6820e
+  - version: train-em
+    projects:
+      - repo: openstack/castellan
+        hash: edf96c465c4574b38c5324a3773cf41429b6820e
 branches:
   - name: stable/train
     location: 1.3.1

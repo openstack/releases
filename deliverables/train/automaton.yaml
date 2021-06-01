@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 5e82feb25044634ea55c2ce477ef40884989b49a
+  - version: train-em
+    projects:
+      - repo: openstack/automaton
+        hash: 5e82feb25044634ea55c2ce477ef40884989b49a
 branches:
   - name: stable/train
     location: 1.17.0

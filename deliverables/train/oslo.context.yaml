@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: ab17aef5735bcb242889f610d2165d46b380f7cc
+  - version: train-em
+    projects:
+      - repo: openstack/oslo.context
+        hash: ab17aef5735bcb242889f610d2165d46b380f7cc
 branches:
   - name: stable/train
     location: 2.23.0

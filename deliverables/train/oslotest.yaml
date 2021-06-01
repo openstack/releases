@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: 7ad16dea566cf9c29e0a544236da85726803a5fe
+  - version: train-em
+    projects:
+      - repo: openstack/oslotest
+        hash: 7ad16dea566cf9c29e0a544236da85726803a5fe
 branches:
   - name: stable/train
     location: 3.8.1
