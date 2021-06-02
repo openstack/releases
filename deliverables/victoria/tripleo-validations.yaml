@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: d2904eb2d5516f2bf5350c4fc12ea1ad3240c778
+  - version: 13.3.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 1c27dc6be12f7efbfeaca63cda53283e9f2cd63c
 branches:
   - name: stable/victoria
     location: 13.0.0
