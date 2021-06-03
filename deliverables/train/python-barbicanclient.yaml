@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 9c0e02d367b86eb5bdebda4e0ff1434d70db5f61
+  - version: train-em
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 9c0e02d367b86eb5bdebda4e0ff1434d70db5f61
 branches:
   - name: stable/train
     location: 4.9.0
