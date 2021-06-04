@@ -19,6 +19,10 @@ releases:
       - repo: openstack/solum
         hash: 24fa3f5e3d05162599748dc86419dadc0c71f346
     diff-start: 6.0.0
+  - version: train-em
+    projects:
+      - repo: openstack/solum
+        hash: 24fa3f5e3d05162599748dc86419dadc0c71f346
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
