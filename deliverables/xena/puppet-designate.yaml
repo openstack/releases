@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-designate: {}
+releases:
+  - projects:
+      - hash: 0d888ec744cbfbe6499594b2f482961689125dab
+        repo: openstack/puppet-designate
+    version: 19.0.0

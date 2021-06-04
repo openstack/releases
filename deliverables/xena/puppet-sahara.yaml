@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-sahara: {}
+releases:
+  - projects:
+      - hash: 550934cd6147dc5111817260e7fcd4fe6cacbb9c
+        repo: openstack/puppet-sahara
+    version: 19.0.0

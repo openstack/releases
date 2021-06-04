@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-zaqar: {}
+releases:
+  - projects:
+      - hash: 46bfc18b934b5a25ba585f1d04b75d514de3870a
+        repo: openstack/puppet-zaqar
+    version: 19.0.0

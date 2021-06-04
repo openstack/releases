@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-magnum: {}
+releases:
+  - projects:
+      - hash: 4195773b30dc84f75de74370f1307f14dc3cd78a
+        repo: openstack/puppet-magnum
+    version: 19.0.0

@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-trove: {}
+releases:
+  - projects:
+      - hash: 7344f7c463d7f882684e2830f464211efdbfe9a5
+        repo: openstack/puppet-trove
+    version: 19.0.0

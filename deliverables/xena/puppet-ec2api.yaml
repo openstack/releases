@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-ec2api: {}
+releases:
+  - projects:
+      - hash: 2484e981bf40fe6ecab3d01ba97571b1149c1180
+        repo: openstack/puppet-ec2api
+    version: 19.0.0
