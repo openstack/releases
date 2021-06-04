@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: eca92571e99f1e65cdc72d5e1c603ca2b57f1a4d
+  - version: train-em
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: eca92571e99f1e65cdc72d5e1c603ca2b57f1a4d
 branches:
   - name: stable/train
     location: 1.11.0
