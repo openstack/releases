@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 40759dd94c27beb147d31839f84475c29cd15226
+  - version: 16.2.1
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: c5b1e0c25325be771bba9fdd864a0c16c1941d9f
 branches:
   - name: stable/wallaby
     location: 16.0.0
