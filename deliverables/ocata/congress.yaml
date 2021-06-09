@@ -41,5 +41,9 @@ releases:
       - hash: 919b78248643d7c84e7f0056831adfc9810ca396
         repo: openstack/congress
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/congress
+        hash: 31866d37f64bb47b24f7f49a7f220cc433865b92
 repository-settings:
   openstack/congress: {}
