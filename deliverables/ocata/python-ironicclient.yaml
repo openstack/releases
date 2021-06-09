@@ -37,5 +37,9 @@ releases:
       - hash: d73ddeda1b7836518e540c89b91a1b6ff29f5068
         repo: openstack/python-ironicclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 9fdde621b440e0db2a5481273f8eac77b9ce14dc
 repository-settings:
   openstack/python-ironicclient: {}

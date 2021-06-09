@@ -17,5 +17,9 @@ releases:
       - hash: 481a92e056f6ee14363c35ce7bce45dd0a038064
         repo: openstack/python-ironic-inspector-client
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: bc7df229542ef12b006b5e45a8e27dc54fbe6b7f
 repository-settings:
   openstack/python-ironic-inspector-client: {}
