@@ -16,5 +16,9 @@ releases:
       - hash: 83f8a20c82434fb4b90c2e0c30779a361f2c7944
         repo: openstack/networking-hyperv
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 47733ed311856487552ff0feac8dac5474eb4820
 repository-settings:
   openstack/networking-hyperv: {}
