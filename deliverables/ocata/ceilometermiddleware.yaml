@@ -25,5 +25,9 @@ releases:
       - hash: 387c1797c54fae5d12cc3545475e6d3386d85b41
         repo: openstack/ceilometermiddleware
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: df831efa078193e5d577c8379cbca539927060e5
 repository-settings:
   openstack/ceilometermiddleware: {}

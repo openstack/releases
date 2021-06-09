@@ -28,5 +28,9 @@ releases:
       - hash: 7ef01c41dc3b61f8658632535204f6b7233f7701
         repo: openstack/panko
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/panko
+        hash: 7c4164f393b141efe6e8c7d1343a2eb666c7b358
 repository-settings:
   openstack/panko: {}
