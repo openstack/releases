@@ -41,5 +41,9 @@ releases:
       - hash: 74208402c6cadc0fb46379e2f7122eade7998883
         repo: openstack/oslo.middleware
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 68e9fc9182d214efbbbd25c04795987bf98eae84
 repository-settings:
   openstack/oslo.middleware: {}

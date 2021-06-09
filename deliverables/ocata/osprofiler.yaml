@@ -17,5 +17,9 @@ releases:
       - hash: c1d53d925e9faa9db5e91594a62406edd19e9894
         repo: openstack/osprofiler
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 7858fbf43be1407fd22ff6d7941e0ed5399a1489
 repository-settings:
   openstack/osprofiler: {}

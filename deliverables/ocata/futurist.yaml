@@ -29,5 +29,9 @@ releases:
       - hash: b1104b175a787bca0c5f602c4fc7c5da1180ab99
         repo: openstack/futurist
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/futurist
+        hash: c9fa4b2f03776a8901bae7136b7089f0b7ebb462
 repository-settings:
   openstack/futurist: {}

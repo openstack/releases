@@ -25,5 +25,9 @@ releases:
       - hash: eeb787db7439f057eb48fa80cb0e28752e7ea8a8
         repo: openstack/oslo.cache
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 9a138004811a13eb59e49a5b7eac3925a02eb16a
 repository-settings:
   openstack/oslo.cache: {}

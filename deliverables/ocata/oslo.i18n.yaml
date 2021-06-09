@@ -25,5 +25,9 @@ releases:
       - hash: de6b4a37bcd1d310e0311a973f7a9317a65fb622
         repo: openstack/oslo.i18n
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 26f3ffdb8694bd328e4ab12232e09c2e59fe9ac4
 repository-settings:
   openstack/oslo.i18n: {}

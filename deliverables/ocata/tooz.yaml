@@ -41,6 +41,10 @@ releases:
       - hash: 0dc996b92dd66a5da5e75966df3a59fabc6df420
         repo: openstack/tooz
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/tooz
+        hash: 2e0bf2bd3ed9af272def80c85e2616b010a9904e
 repository-settings:
   openstack/tooz: {}
 # Retriggering ocata-em tagging

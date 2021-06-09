@@ -37,5 +37,9 @@ releases:
       - hash: 3ab92c6091fb175973a96244c5c1a4d3226f7373
         repo: openstack/oslo.rootwrap
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 30510c61b33a4abfc95ca3f62ccfbd3fc4b20798
 repository-settings:
   openstack/oslo.rootwrap: {}

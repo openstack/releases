@@ -29,5 +29,9 @@ releases:
       - hash: b0621b439c8051c013617a8ce685ea5e06ef981e
         repo: openstack/oslo.policy
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 478c1918abaa9f2006dc651656bd02d8cc54a9b9
 repository-settings:
   openstack/oslo.policy: {}

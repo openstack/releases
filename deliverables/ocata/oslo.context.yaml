@@ -33,5 +33,9 @@ releases:
       - hash: e39f890bb326df3aa9fcd72d43e501906e99f719
         repo: openstack/oslo.context
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: 9918cf05be5805e3c96ef6deef9621956d6a6868
 repository-settings:
   openstack/oslo.context: {}

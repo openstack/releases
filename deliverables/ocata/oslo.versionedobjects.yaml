@@ -33,5 +33,9 @@ releases:
       - hash: 4d9b8302556eabb7f7fc519617f00cf04d9192c4
         repo: openstack/oslo.versionedobjects
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: e792dcf8e278181360bff7173ecf75edee9a8102
 repository-settings:
   openstack/oslo.versionedobjects: {}

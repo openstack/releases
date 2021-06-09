@@ -33,5 +33,9 @@ releases:
       - hash: b2eec440b212c6d0f19e38ec8b92a1fed8636167
         repo: openstack/oslo.db
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.db
+        hash: ef6aa7f04be2719612668dca38d9751a41cb312b
 repository-settings:
   openstack/oslo.db: {}

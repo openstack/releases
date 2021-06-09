@@ -25,5 +25,9 @@ releases:
       - hash: 00d2db18a99cbc57feab5b91e6d4165f6f5de3c5
         repo: openstack/debtcollector
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/debtcollector
+        hash: 24a5de18f1075dddfa56a648c9dd8dd3c0944380
 repository-settings:
   openstack/debtcollector: {}

@@ -29,6 +29,10 @@ releases:
       - hash: b9f545d699b69c875856f2838c6f34aa23d6240c
         repo: openstack/taskflow
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 06770dd0b3960fdab5a0dbefc0b8869c345c0204
 repository-settings:
   openstack/taskflow: {}
 # Retriggering ocata-em tagging
