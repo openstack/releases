@@ -17,6 +17,10 @@ releases:
       - hash: 9e60abfe8f1a41c361cd40b22c16655682555110
         repo: openstack/tricircle
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/tricircle
+        hash: 568dec76c1dcf5a48777468b6b2d4bd797c7ec09
 repository-settings:
   openstack/tricircle: {}
 # Retriggering ocata-em tagging
