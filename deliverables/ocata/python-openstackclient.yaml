@@ -49,5 +49,9 @@ releases:
       - hash: f2120f15d54ba8b23748663c81650e3fd7a6efd1
         repo: openstack/python-openstackclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 37b87080889083e51e1ed506a16286ebf26b75ad
 repository-settings:
   openstack/python-openstackclient: {}
