@@ -20,5 +20,9 @@ releases:
       - hash: dcea9d96b290b86d0e7d724dc1336fe6819a89d4
         repo: openstack/murano-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 90c71b8b4b4a15e5f04b932098276950e0d13ef1
 repository-settings:
   openstack/murano-dashboard: {}
