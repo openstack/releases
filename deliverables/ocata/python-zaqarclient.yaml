@@ -21,5 +21,9 @@ releases:
       - hash: bdeb81fa6b37d0f484a17a18e1977fbf2b3e0de8
         repo: openstack/python-zaqarclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 3d717e6ecd0e389db0affa364d410557e83a7b0e
 repository-settings:
   openstack/python-zaqarclient: {}
