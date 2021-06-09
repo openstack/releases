@@ -49,5 +49,9 @@ releases:
       - hash: ade177ad357d28746ab4203e56a74e6e1e89c074
         repo: openstack/keystone
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/keystone
+        hash: be9b642575c9736be617e8ebc31babf6f97c7dcd
 repository-settings:
   openstack/keystone: {}
