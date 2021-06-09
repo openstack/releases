@@ -16,5 +16,9 @@ releases:
       - hash: eca7afa8d5a8c3cd898e81b372bdd747b47e7ad7
         repo: openstack/monasca-ceilometer
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: 949f6c175de95023559e4a81867b31cb096d1c68
 repository-settings:
   openstack/monasca-ceilometer: {}

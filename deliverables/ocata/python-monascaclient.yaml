@@ -28,5 +28,9 @@ releases:
       - hash: 8face6f1c31e1a8d9272e0f743afb4470fbd4039
         repo: openstack/python-monascaclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: bcc90c5636265dd93248da45c1b12dedafdd2168
 repository-settings:
   openstack/python-monascaclient: {}

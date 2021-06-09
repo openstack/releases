@@ -23,5 +23,9 @@ releases:
       - hash: ef9db227440c4c1396fdf9ddc61576dc44806be9
         repo: openstack/monasca-notification
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 4a8803e4e00480f7a0804fdbb374259335cf91b1
 repository-settings:
   openstack/monasca-notification: {}

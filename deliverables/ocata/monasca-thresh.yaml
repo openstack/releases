@@ -20,5 +20,9 @@ releases:
       - hash: 86b8634c9c428c123438a20e1d05891f6824e993
         repo: openstack/monasca-thresh
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 6885362d44e6b227a7e1a2ddc7d2025121db5e99
 repository-settings:
   openstack/monasca-thresh: {}

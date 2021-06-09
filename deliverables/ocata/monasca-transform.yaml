@@ -16,5 +16,9 @@ releases:
       - hash: 8b1819b0968b1fc29dcced4d57620aa06f7d2ecf
         repo: openstack/monasca-transform
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-transform
+        hash: 04ef98ee5206fbb34593a5a307ccb3bcbaf52a5c
 repository-settings:
   openstack/monasca-transform: {}
