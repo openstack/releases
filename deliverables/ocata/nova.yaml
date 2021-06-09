@@ -93,5 +93,9 @@ releases:
       - hash: 8c663dbd25a0dab1c2d903efc7cf7fc3d9d07b00
         repo: openstack/nova
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/nova
+        hash: 105626f650902476f8149b2032ed6e3551346516
 repository-settings:
   openstack/nova: {}
