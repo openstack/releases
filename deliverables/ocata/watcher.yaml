@@ -37,6 +37,10 @@ releases:
       - hash: 1caf89686c7f13e8164dbbd6bd8c09b9ee66f9c4
         repo: openstack/watcher
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 8d5e816eaad53f620687a07225c0acad693c909c
 repository-settings:
   openstack/watcher: {}
 # Retriggering ocata-em tagging
