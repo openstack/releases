@@ -35,6 +35,10 @@ releases:
       - hash: a6d9f8950cfd91e5856a047061ac8057b7e257f3
         repo: openstack/magnum
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 69ed3bcaa44abd78b8ea1e87d98da667648edff6
 release-notes: https://docs.openstack.org/releasenotes/magnum/ocata.html
 repository-settings:
   openstack/magnum: {}
