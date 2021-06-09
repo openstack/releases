@@ -24,5 +24,9 @@ releases:
       - hash: 0c195604f6e0bc214309193eb0de0a46677626a5
         repo: openstack/django_openstack_auth
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/django_openstack_auth
+        hash: c9a263baff8927762205541b79d976f09426f71a
 repository-settings:
   openstack/django_openstack_auth: {}
