@@ -15,5 +15,9 @@ releases:
       - hash: a8fc1bc6fe6a33e8ab452d17418d901c08c9a3d9
         repo: openstack/python-solumclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: a037a49301b55155a3377e99b324f677e94a860b
 repository-settings:
   openstack/python-solumclient: {}

@@ -20,6 +20,10 @@ releases:
       - hash: 6e88f9b39ce3088446c8b1f07cf0afe7997e5286
         repo: openstack/solum
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/solum
+        hash: c7c573629d0db91e42ea9d96d2a1c50f368024d6
 repository-settings:
   openstack/solum: {}
 # Retriggering ocata-em tagging
