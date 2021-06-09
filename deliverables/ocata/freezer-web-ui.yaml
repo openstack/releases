@@ -32,5 +32,9 @@ releases:
       - hash: 466d66ed313e572cc11d971d27cbbf2d45b449c4
         repo: openstack/freezer-web-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 680a1d55c89cdfabcf806c924576ec09f56ae58d
 repository-settings:
   openstack/freezer-web-ui: {}

@@ -27,6 +27,10 @@ releases:
       - hash: 24b3489a4f0926b190e2229c2eb00133ca3f1116
         repo: openstack/python-freezerclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 2a4972f22fffafeedd5284500aa545fe16ba37f1
 release-notes: https://docs.openstack.org/releasenotes/python-freezerclient/ocata.html
 repository-settings:
   openstack/python-freezerclient: {}
