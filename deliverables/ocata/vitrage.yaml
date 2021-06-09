@@ -28,6 +28,10 @@ releases:
       - hash: 14eb7057df335dbbf8d5ae723b634bfdd12345e9
         repo: openstack/vitrage
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: c6d1aebadfb6df3a74bdd5b0b8156e799bb54ba1
 repository-settings:
   openstack/vitrage: {}
 # Retriggering ocata-em tagging
