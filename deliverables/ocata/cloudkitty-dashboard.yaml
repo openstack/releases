@@ -16,6 +16,10 @@ releases:
       - hash: 9fb1813e21af118ce49e9db433783d5ac538b2ab
         repo: openstack/cloudkitty-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 61b4c76e691a0c3f2117ac509626f087f89f9cec
 repository-settings:
   openstack/cloudkitty-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/ocata.html

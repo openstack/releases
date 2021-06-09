@@ -20,6 +20,10 @@ releases:
       - hash: d3604cba7093b7ba5a61529635e1cc8d8318b232
         repo: openstack/cloudkitty
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 5278bd86bb43dfede31f006a9c5efba9f446aff3
 repository-settings:
   openstack/cloudkitty: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/ocata.html
