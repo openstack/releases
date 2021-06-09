@@ -17,5 +17,9 @@ releases:
       - hash: 9afb56c875c3fdc001f1b5e09c1126a008940e6c
         repo: openstack/python-glanceclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 8b8d317b12fe1c2a5e8aa880229a09836abee74a
 repository-settings:
   openstack/python-glanceclient: {}
