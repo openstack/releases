@@ -32,5 +32,9 @@ releases:
       - hash: 451f0e229ce75649245a129a5a34b0f2dbaf26d8
         repo: openstack/designate-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: c28930dec47ff17bfb37197d3caf8d1496708a0c
 repository-settings:
   openstack/designate-dashboard: {}

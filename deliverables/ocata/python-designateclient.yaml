@@ -24,5 +24,9 @@ releases:
       - hash: 5b8cab8079c2eea9f9d084801102ed5b036927fa
         repo: openstack/python-designateclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 922773deaf1d663ab84752021b5f400bc5aac1f8
 repository-settings:
   openstack/python-designateclient: {}
