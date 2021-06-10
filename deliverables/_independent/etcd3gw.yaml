@@ -5,3 +5,8 @@ release-type: python-pypi
 type: other
 repository-settings:
   openstack/etcd3gw: {}
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/etcd3gw
+        hash: dc9f55975ecd5b291eb1014b9fe8393dcd6d7e5c
