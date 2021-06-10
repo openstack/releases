@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: 5939eab15fe5275cb3620c5997a82dd1b7c6933d
+  - version: 11.0.4
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 1bdb36136a052dddc3299c2775916aeb6ad3648b
 branches:
   - name: stable/ussuri
     location: 11.0.2

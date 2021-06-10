@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/os-refresh-config
         hash: 2d6a97498e01a7951f3f2a43ec5fe62345214142
+  - version: 11.0.1
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 2790bcc985cf87a540870d54179077f7300904da
 branches:
   - name: stable/ussuri
     location: 11.0.0
