@@ -6,3 +6,8 @@ team: tripleo
 type: trailing
 repository-settings:
   openstack/python-tripleoclient: {}
+releases:
+  - version: 17.0.0
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 5f358350fb8020ec100ddc6caebeb3d7a6ba51d6
