@@ -11,3 +11,8 @@ cycle-highlights:
   - Exerimental support for CentOS Stream
   - Experimental support for Debian Bullseye
   - Self-signed SSL will be generated and signed with local Certificate Authority
+releases:
+  - version: 23.0.0.0b1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 51a107aba05ebd74a68418fb3f2e1298399964d6
