@@ -37,6 +37,10 @@ releases:
       - hash: ffb7e7c1952fc85a94a86a145a5d2a56270cba63
         repo: openstack/searchlight-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 094078d6432a4b7d0b0ff3ca9704f15b085879f8
 repository-settings:
   openstack/searchlight-ui: {}
 # Retriggering ocata-em tagging

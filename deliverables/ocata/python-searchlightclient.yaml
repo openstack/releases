@@ -16,5 +16,9 @@ releases:
       - hash: 85497f478f3a4ea1a06c2136d197ff479f47fb60
         repo: openstack/python-searchlightclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 167eef72516fe29acd8717614e1460694b5eb559
 repository-settings:
   openstack/python-searchlightclient: {}
