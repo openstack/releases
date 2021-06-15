@@ -16,5 +16,9 @@ releases:
       - hash: ab2eea35d535b4cb136f3c410d4b1f6280100ebb
         repo: openstack/python-congressclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 24f1595a6b9c945f0d152adb2c437b592c5ec10d
 repository-settings:
   openstack/python-congressclient: {}
