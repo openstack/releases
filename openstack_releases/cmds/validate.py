@@ -836,6 +836,15 @@ def validate_build_sdist(deliv, context):
             context.error(
                 'Failed to build sdist for {}: {}'.format(
                     project.repo.name, err))
+        finally:
+            # Removing the temporary tag to avoid to mislead next tests, else
+            # if not deleted the tag will remain active in the repo and it
+            # will be see as an existing tag.
+            gitutils.delete_tag(
+                context.workdir,
+                project.repo.name,
+                release.version
+            )
 
 
 @skip_em_eol_tags

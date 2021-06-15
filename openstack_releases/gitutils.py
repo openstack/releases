@@ -355,6 +355,21 @@ def add_tag(workdir, repo, tag, sha):
         return None
 
 
+def delete_tag(workdir, repo, tag):
+    cmd = ['git', 'tag', '-d', tag]
+    try:
+        LOG.info(' '.join(cmd))
+        return processutils.check_output(
+            cmd,
+            cwd=os.path.join(workdir, repo),
+            stderr=subprocess.STDOUT,
+        ).decode('utf-8').strip()
+    except processutils.CalledProcessError as e:
+        LOG.warning('failed to delete tag: %s [%s]',
+                    e, e.output.strip())
+        return None
+
+
 def get_branches(workdir, repo):
     try:
         output = processutils.check_output(
