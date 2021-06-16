@@ -31,5 +31,9 @@ releases:
       - hash: b029ac9934720fde7610b4c955c002fc70f5ae42
         repo: openstack/designate
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/designate
+        hash: 83c360a42dee43270b82881b73864d3416727367
 repository-settings:
   openstack/designate: {}
