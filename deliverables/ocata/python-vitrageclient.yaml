@@ -25,5 +25,9 @@ releases:
       - hash: 41beaa35c237b41a7b10a9e044322fd6483d08be
         repo: openstack/python-vitrageclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: e603bc6ffa4f117ad94f5a61013905e6a2fe92c6
 repository-settings:
   openstack/python-vitrageclient: {}

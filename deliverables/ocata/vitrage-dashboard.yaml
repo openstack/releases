@@ -20,6 +20,10 @@ releases:
       - hash: 9a66296af5dd9ac4c17337b5db20894bc5886bdf
         repo: openstack/vitrage-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: b68b79ee726607a755285fd51e703f71ee6fab2c
 repository-settings:
   openstack/vitrage-dashboard: {}
 # Retriggering ocata-em tagging
