@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-panko: {}
+  openstack/puppet-panko:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 6ea4f2e779608de12e2a03cc34155a4c37988ee4

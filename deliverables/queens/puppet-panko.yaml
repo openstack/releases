@@ -3,6 +3,10 @@ launchpad: puppet-panko
 release-model: cycle-trailing
 team: Puppet OpenStack
 type: other
+repository-settings:
+  openstack/puppet-panko:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 42d38686b95da19874edfdcc1d2b80183d0a6cd5
@@ -28,8 +32,6 @@ releases:
     projects:
       - repo: openstack/puppet-panko
         hash: 7641dbec7dc20d17fad8d48a2aea5f7c28aaeb2a
-repository-settings:
-  openstack/puppet-panko: {}
 branches:
   - location: 12.3.0
     name: stable/queens
