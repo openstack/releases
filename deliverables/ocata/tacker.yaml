@@ -23,6 +23,10 @@ releases:
       - hash: a4024984baee1fd30fb125dab53763d62388a550
         repo: openstack/tacker
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 3bfe0c24b5aa1c99a63327be5874ed17d6cedb19
 repository-settings:
   openstack/tacker: {}
 # Retriggering ocata-em tagging

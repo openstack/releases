@@ -23,6 +23,10 @@ releases:
       - hash: 1d228935bac15db186a08f3ee1a62e06b6791fee
         repo: openstack/tacker-horizon
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 7fb2fe09c1a92c93a6c3f8c7e59927400f73f2f9
 repository-settings:
   openstack/tacker-horizon: {}
 # Retriggering ocata-em tagging

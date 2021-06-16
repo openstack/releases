@@ -21,5 +21,9 @@ releases:
       - hash: 9a5588d1661406800db57eb71f0d39cf65d030e6
         repo: openstack/python-tackerclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 7c786b3ee344234cc3cc8404f289958cc244ae81
 repository-settings:
   openstack/python-tackerclient: {}
