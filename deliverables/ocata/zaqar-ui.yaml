@@ -33,6 +33,10 @@ releases:
       - hash: 440a1032b0ce3e65444891c25e70352ff87922e7
         repo: openstack/zaqar-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 7bceb57a3d0f3f30ca48b60111848bc84a120538
 repository-settings:
   openstack/zaqar-ui: {}
 # Retriggering ocata-em tagging
