@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: 16e0c81a3c401e52d771d58f8d497b5661e57618
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: e3b61ab6cc4eeb5615d67b7a33af68abd7d48303
 branches:
   - name: stable/train
     location: 15.4.0

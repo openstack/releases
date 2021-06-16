@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 143cd9ce79fe24d18ccd810453cf037c86e1d0fc
+  - version: 15.4.1
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 1e6a89a9a64eaa4a1bcc5752007a6874c89ac284
 branches:
   - name: stable/train
     location: 15.4.0

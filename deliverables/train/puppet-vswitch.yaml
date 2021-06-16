@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: b734f1417b1884ae650f663a7510e8005d917290
+  - version: 11.5.0
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 5d96dab6b86890db1a3528047d723aa3f3171d7e
 branches:
   - name: stable/train
     location: 11.4.0

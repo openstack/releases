@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 0543a1c2a0108fb7b67c41e6bc2fbad99eb24cb9
+  - version: 15.6.0
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 699d285aaf0813b697168a3f959c341dcaef3453
 branches:
   - name: stable/train
     location: 15.4.0

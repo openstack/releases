@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: e157ffd63be71c076a0ee55c6a2887934b6ca152
+  - version: 15.5.0
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: d5535414d64a5b2aeea6d757c015d5cc2c2f2598
 branches:
   - name: stable/train
     location: 15.4.0
