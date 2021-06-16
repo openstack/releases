@@ -56,6 +56,14 @@ releases:
       - hash: 3dacdc86dc5a54d340df0ed92c21789f22cef333
         repo: openstack/freezer-dr
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/freezer
+        hash: 76e76fd14cc2c17315be9af276a6d8e539d87f36
+      - repo: openstack/freezer-api
+        hash: ae057e24d33c6431e7e67243f9b1715fbc7bb292
+      - repo: openstack/freezer-dr
+        hash: 35bebe8ac8665da8091e2503277a12f6ede7e7b0
 repository-settings:
   openstack/freezer: {}
   openstack/freezer-api: {}
