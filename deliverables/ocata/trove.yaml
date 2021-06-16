@@ -37,6 +37,10 @@ releases:
       - hash: 60e35d16b5d944d708f781271d63ce17df31df4e
         repo: openstack/trove
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/trove
+        hash: 12ba44ad3654a51c41771cfd7c3491539e0fcf31
 repository-settings:
   openstack/trove: {}
 # Retriggering ocata-em tagging

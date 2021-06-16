@@ -37,6 +37,10 @@ releases:
       - hash: 27e3dd2b9648bf32346e5bedbdd42de934e4d0f9
         repo: openstack/trove-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 006c8c60de7496e68b29df3fb3dcbfb6b20dc96d
 repository-settings:
   openstack/trove-dashboard: {}
 # Retriggering ocata-em tagging
