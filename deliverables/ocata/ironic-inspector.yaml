@@ -24,5 +24,9 @@ releases:
       - hash: 53f44a7ccf8164d19031266a35e341cc557ee84a
         repo: openstack/ironic-inspector
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 36af5a5f34e90620f58ecc9da81d7eb90e2ca095
 repository-settings:
   openstack/ironic-inspector: {}

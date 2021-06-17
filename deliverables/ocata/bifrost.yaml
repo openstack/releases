@@ -24,5 +24,9 @@ releases:
       - hash: 69c1f0f7ff2ecba1de5db34afd0e5352f8b71567
         repo: openstack/bifrost
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 89e40137e7c0d5dece406c7646f2176e8afbac34
 repository-settings:
   openstack/bifrost: {}

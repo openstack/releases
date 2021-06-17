@@ -38,7 +38,7 @@ releases:
     version: 7.0.6
   - diff-start: 7.0.5
     projects:
-      - comment: 'procedural tag to handle release job failure'
+      - comment: procedural tag to handle release job failure
         hash: 6c107103790b52e11e9d6029fd3e948bd0ce33d6
         repo: openstack/ironic
     version: 7.0.7
@@ -46,5 +46,9 @@ releases:
       - hash: 6c107103790b52e11e9d6029fd3e948bd0ce33d6
         repo: openstack/ironic
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ironic
+        hash: 401e5653d98dc6e3e91bc4b7124f4f80a20ca51f
 repository-settings:
   openstack/ironic: {}

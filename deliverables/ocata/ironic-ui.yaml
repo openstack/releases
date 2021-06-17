@@ -25,5 +25,9 @@ releases:
       - hash: 6c70c8ef6b104e121db0311aa035affc3680a00f
         repo: openstack/ironic-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 7a9ad2d2dbb70f82cd04331af50430a96c6fe2a3
 repository-settings:
   openstack/ironic-ui: {}
