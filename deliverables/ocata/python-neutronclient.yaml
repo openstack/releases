@@ -21,5 +21,9 @@ releases:
       - hash: 0c8a457da182be28d3d4d0eb33cbaeeb4156b307
         repo: openstack/python-neutronclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 9f4a8a9a2db57f9de0a526c75634f8942b41a564
 repository-settings:
   openstack/python-neutronclient: {}
