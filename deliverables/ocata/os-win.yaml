@@ -28,5 +28,9 @@ releases:
       - hash: f66f4fac031f0c6e64a594b4c513bf028229606a
         repo: openstack/os-win
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/os-win
+        hash: d14f39c0f6a33d8aa9681680ee0f52cca8ab4d7b
 repository-settings:
   openstack/os-win: {}
