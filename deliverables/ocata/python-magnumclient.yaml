@@ -20,5 +20,9 @@ releases:
       - hash: e6329a75f9536828c07fb2b65a30df20b18092ae
         repo: openstack/python-magnumclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: bbebea9d3fb90267a8b51995b2a183c83b6cf8fb
 repository-settings:
   openstack/python-magnumclient: {}

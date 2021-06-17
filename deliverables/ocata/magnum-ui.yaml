@@ -16,5 +16,9 @@ releases:
       - hash: 722a867ef0d5e1b7a0247ef5cf835e3398b36388
         repo: openstack/magnum-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/magnum-ui
+        hash: c2ad56d2a76338c7df0432fce524fbd8892b776d
 repository-settings:
   openstack/magnum-ui: {}
