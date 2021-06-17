@@ -28,5 +28,9 @@ releases:
       - hash: f5f2071fe551c127e9ecafb8a44baf44b9b92d9b
         repo: openstack/os-vif
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: 112ec4e00fb58d74e9bf7757a2f514f38428a09a
 repository-settings:
   openstack/os-vif: {}
