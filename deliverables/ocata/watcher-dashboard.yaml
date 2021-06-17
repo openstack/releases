@@ -28,6 +28,10 @@ releases:
       - hash: d9852e72158767df0cf151d11a1eab85f003dd95
         repo: openstack/watcher-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: f1f3db08699561257fa9ae525c274c8cd2c0b9bb
 repository-settings:
   openstack/watcher-dashboard: {}
 # Retriggering ocata-em tagging
