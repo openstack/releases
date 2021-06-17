@@ -23,5 +23,9 @@ releases:
       - hash: ba381b409b0a14988d05f4b894b54994f3cffec8
         repo: openstack/monasca-persister
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 0bcc628061a31f81428173cf9f25d2e15ef3e37f
 repository-settings:
   openstack/monasca-persister: {}

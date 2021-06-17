@@ -23,5 +23,9 @@ releases:
       - hash: 9e847fccdeed6bede90cbb1b59c8032cc0978b5e
         repo: openstack/monasca-statsd
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: d66de55150aed7d8d2e17eed8ad080740cc674d7
 repository-settings:
   openstack/monasca-statsd: {}

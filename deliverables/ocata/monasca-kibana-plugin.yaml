@@ -19,5 +19,9 @@ releases:
       - hash: 7019ff7504459603ee07c2c33eee7b3f32911981
         repo: openstack/monasca-kibana-plugin
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: 0ad98bd6dfca3a03bc9b442a772e2e1c648f81f9
 repository-settings:
   openstack/monasca-kibana-plugin: {}

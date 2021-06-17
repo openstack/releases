@@ -39,5 +39,9 @@ releases:
       - hash: 2a983a1f84f48fd1f00c8722c68d96bc923ff745
         repo: openstack/monasca-ui
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 64220060b55b38e7dbde4def04fdeca8bf0dcc12
 repository-settings:
   openstack/monasca-ui: {}

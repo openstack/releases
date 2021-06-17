@@ -27,5 +27,9 @@ releases:
       - hash: f3ca3b200542f5990f01fb5e4e9f455a04c1e94e
         repo: openstack/monasca-common
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: 46947f344444ca38680d6bea5dc4f27837a92e82
 repository-settings:
   openstack/monasca-common: {}
