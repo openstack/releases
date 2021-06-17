@@ -48,5 +48,9 @@ releases:
       - hash: 0e315fd30a12c7fd012d98c6ebfc2ce2fdfb9cb9
         repo: openstack/ceilometer
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 94aefb2c3db5612cb11a5eb44be0e9838e545ada
 repository-settings:
   openstack/ceilometer: {}

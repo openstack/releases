@@ -28,5 +28,9 @@ releases:
       - hash: c77c0aac4db000dbd8bee2b68080773deaf90071
         repo: openstack/aodh
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/aodh
+        hash: 94060a33ffe879437b112685b1d0d95f7b3f9e1c
 repository-settings:
   openstack/aodh: {}

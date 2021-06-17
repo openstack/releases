@@ -17,5 +17,9 @@ releases:
       - hash: 2f7a9c4dac8683c5c91455c3eb421592e6be2a37
         repo: openstack/python-aodhclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 80ab308dccf61d16f0d52b07a10f42a7849c25ff
 repository-settings:
   openstack/python-aodhclient: {}
