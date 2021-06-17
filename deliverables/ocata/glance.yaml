@@ -39,5 +39,9 @@ releases:
       - hash: 3b7c58003de9d6e9e67b2ccbcdc0addd77b17191
         repo: openstack/glance
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/glance
+        hash: 1fbcf0960b1e3727789e3c837e2679e8db202e8b
 repository-settings:
   openstack/glance: {}
