@@ -2710,6 +2710,37 @@ class TestValidateSeriesFirst(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
+    def test_version_ko(self):
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/automaton.yaml'
+        os.makedirs(series_a_dir)
+        deliverable_data = textwrap.dedent('''
+        ---
+        releases:
+          - version: 1.1.1
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='a',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_series_first(
+            deliv,
+            self.ctx,
+        )
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        # Starting a cycle with a bugfix version (1.1.1) isn't allowed,
+        # so, in this case our validation should fail accordingly to that
+        # rule.
+        self.assertEqual(1, len(self.ctx.errors))
+
     def test_ignore_if_second_release(self):
         series_a_dir = self.tmpdir + '/a'
         series_a_filename = series_a_dir + '/automaton.yaml'
