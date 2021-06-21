@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: 4e737f79cd30c5c8d3fc01043a5dcb7aa637e2f9
+  - version: 15.8.1
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 287ce1fe36b1cf7d9d9177391ab32782c8181074
 branches:
   - name: stable/train
     location: 15.4.0
