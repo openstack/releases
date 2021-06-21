@@ -33,6 +33,10 @@ releases:
       - hash: 72e7df283f5fc947370d47850a38b48af2cde7df
         repo: openstack/stevedore
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: ffb59c7e4103b320b953539a1406966cc0d687be
 repository-settings:
   openstack/stevedore: {}
 # Retriggering ocata-em tagging

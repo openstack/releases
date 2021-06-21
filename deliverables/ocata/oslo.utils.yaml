@@ -49,5 +49,9 @@ releases:
       - hash: edf2e78cc809aeff7dc4fb4b87df2a4c1ebde753
         repo: openstack/oslo.utils
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 0572755410ecc9a27445e18a7e28eea5024fa7e6
 repository-settings:
   openstack/oslo.utils: {}

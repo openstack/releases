@@ -20,5 +20,9 @@ releases:
       - hash: b3644b23537d56bfc54f887fbe33af940039ee19
         repo: openstack/mox3
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/mox3
+        hash: 09f4e0272c96afb102e853177ea64d845c0946f7
 repository-settings:
   openstack/mox3: {}

@@ -29,5 +29,9 @@ releases:
       - hash: be828c35d84f8f10b07f11aa8bbf195a44e730f8
         repo: openstack/oslo.serialization
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: d09853dfa9a9396f4b72bb2b6a60fb0cd031a4a4
 repository-settings:
   openstack/oslo.serialization: {}

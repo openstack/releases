@@ -25,5 +25,9 @@ releases:
       - hash: 2208a539ee0f6e2f4d549cbbdafef20ac1225da3
         repo: openstack/oslo.privsep
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: dfcc3222ff71818d599cddef691c98c03493c954
 repository-settings:
   openstack/oslo.privsep: {}

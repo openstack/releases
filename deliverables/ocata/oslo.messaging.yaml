@@ -57,5 +57,9 @@ releases:
       - hash: 4b568352eb9498edac70c428e8638f50bb034789
         repo: openstack/oslo.messaging
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 4b162ca8fe5ad054cfd62ee428f394fe55d891f5
 repository-settings:
   openstack/oslo.messaging: {}

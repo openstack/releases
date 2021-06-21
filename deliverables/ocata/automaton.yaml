@@ -29,5 +29,9 @@ releases:
       - hash: fe8824bb0232e5e3d267d21826f029ae9a163fe5
         repo: openstack/automaton
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/automaton
+        hash: 7dd21f52626502ca67ebd6bf3352ef116c2cec61
 repository-settings:
   openstack/automaton: {}
