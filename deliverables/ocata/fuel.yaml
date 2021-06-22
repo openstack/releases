@@ -106,6 +106,30 @@ releases:
       - hash: 679cea82482225336d978b1e2bb77eb6375afb6b
         repo: openstack/fuel-web
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/fuel-agent
+        hash: 9d619e545c583907bd079036865d649cd35a3b3d
+      - repo: openstack/fuel-astute
+        hash: ac5bfd88bc955ed4c1af0e3a2a9bdd70903271e9
+      - repo: openstack/fuel-library
+        hash: 9d59120e1ae2efefd1f138a61fc3b9b76c328cb0
+      - repo: openstack/fuel-main
+        hash: f34eba18fc210fdef9ae1a2ede37aa73a64c2a1d
+      - repo: openstack/fuel-menu
+        hash: feab505f197c1ed2f97a6354157bee2e1746847e
+      - repo: openstack/fuel-nailgun-agent
+        hash: 0eb70b3c0da51230857a965ed0a871b86707d8b4
+      - repo: openstack/fuel-ostf
+        hash: 70d14e30a47c4e9f94bc4103258b8d850b423ea6
+      - repo: openstack/fuel-qa
+        hash: 2270c6a596386a260d0dd1fa06f5d91ccdf53151
+      - repo: openstack/fuel-ui
+        hash: f6c9408e199229ef1e16f90b6b2cb1a53e5c69f9
+      - repo: openstack/fuel-virtualbox
+        hash: a498549d87e5fa58614c8c8259fa3cc823d65144
+      - repo: openstack/fuel-web
+        hash: 0d02a6cede4517ee2e20ff8782a9c5539dc7f509
 repository-settings:
   openstack/fuel-agent: {}
   openstack/fuel-astute: {}
