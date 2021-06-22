@@ -7,12 +7,21 @@ type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
 cycle-highlights:
-  - Significantly improved Zun role and moved from experimental to stable status
+  - Significantly improved Zun role and moved from experimental to stable
+    status
   - Exerimental support for CentOS Stream
   - Experimental support for Debian Bullseye
-  - Self-signed SSL will be generated and signed with local Certificate Authority
+  - Self-signed SSL will be generated and signed with local Certificate
+    Authority
 releases:
   - version: 23.0.0.0b1
     projects:
       - repo: openstack/openstack-ansible
         hash: 51a107aba05ebd74a68418fb3f2e1298399964d6
+  - version: 23.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 8066df435b7f1f89b63f30094b975819c99550f7
+branches:
+  - name: stable/wallaby
+    location: 23.0.0.0rc1
