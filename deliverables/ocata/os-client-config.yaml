@@ -33,5 +33,9 @@ releases:
       - hash: 3c47e251c978cf9c5e393f032c0c70d67c1dcb00
         repo: openstack/os-client-config
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/os-client-config
+        hash: 102fabfe548ac98b9f5898c424d8a32ba46a9978
 repository-settings:
   openstack/os-client-config: {}
