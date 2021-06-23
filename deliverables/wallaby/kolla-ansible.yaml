@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: bcce291aa3bc1ee511e17fbc9a872612c55ed09d
+  - version: 12.0.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: bcce291aa3bc1ee511e17fbc9a872612c55ed09d
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
