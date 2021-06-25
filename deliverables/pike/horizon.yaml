@@ -53,6 +53,10 @@ releases:
       - hash: eba87483eaea45905b4f260130f319404aa17fa5
         repo: openstack/horizon
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/horizon
+        hash: 37af3f3d0a7f2d50c759964e3a46f4beeee27f15
 branches:
   - location: 12.0.0.0rc1
     name: stable/pike
