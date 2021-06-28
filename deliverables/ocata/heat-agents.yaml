@@ -19,5 +19,9 @@ releases:
       - hash: 769d0de4d9acb07563202a2ef3d3a0aa1b9542d1
         repo: openstack/heat-agents
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 0ddc10eeba2ce4df8b9c64b438c8acad9de65191
 repository-settings:
   openstack/heat-agents: {}

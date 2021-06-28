@@ -65,5 +65,9 @@ releases:
       - hash: 21a4740a885184a95b37758d2b816443633db953
         repo: openstack/heat
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/heat
+        hash: a1ba867f07870450d40c93f31b79c8c9984c469a
 repository-settings:
   openstack/heat: {}
