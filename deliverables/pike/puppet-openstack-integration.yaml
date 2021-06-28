@@ -1,0 +1,13 @@
+---
+launchpad: puppet-openstack-integration
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: 1c3583bf13189ac049ae9e5a3a7f063b843fe67f
+        repo: openstack/puppet-openstack-integration
+    version: pike-eol
+team: 'Puppet OpenStack'
+type: other
+repository-settings:
+  openstack/puppet-openstack-integration: {}
