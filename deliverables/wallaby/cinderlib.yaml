@@ -5,4 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
-# Note: deliverable was not released in victoria
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: 51609b61a43d53119c8e8e00ae5ef5e919e85a27
+branches:
+  - location: 4.0.0
+    name: stable/wallaby
