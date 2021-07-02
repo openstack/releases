@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-rally: {}
+releases:
+  - projects:
+      - hash: 31d7a0eb4891bf45063e70e82402b3e5d8c5390f
+        repo: openstack/puppet-rally
+    version: 7.0.0

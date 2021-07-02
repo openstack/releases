@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-tempest: {}
+releases:
+  - projects:
+      - hash: d7d4b851ead6479fe963dacf8ec4f51245b82554
+        repo: openstack/puppet-tempest
+    version: 19.0.0

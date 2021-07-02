@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-swift: {}
+releases:
+  - projects:
+      - hash: 45cf113bb4d0b6eb47344a8816885d4d746b955d
+        repo: openstack/puppet-swift
+    version: 19.0.0

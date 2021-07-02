@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-neutron: {}
+releases:
+  - projects:
+      - hash: c6fc2e417f07d91e6d818af2a9b3fc4dc13abe58
+        repo: openstack/puppet-neutron
+    version: 19.0.0

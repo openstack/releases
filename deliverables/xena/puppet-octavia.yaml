@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-octavia: {}
+releases:
+  - projects:
+      - hash: 0221597f1bda5d82f28e6e320f0a0b2ee272c63f
+        repo: openstack/puppet-octavia
+    version: 19.0.0

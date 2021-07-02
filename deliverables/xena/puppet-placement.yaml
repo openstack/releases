@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-placement: {}
+releases:
+  - projects:
+      - hash: bb3dc8c1f13e4cf33be3248d3303a4a1d6ec8fab
+        repo: openstack/puppet-placement
+    version: 6.0.0

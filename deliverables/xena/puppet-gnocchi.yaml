@@ -5,3 +5,8 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-gnocchi: {}
+releases:
+  - projects:
+      - hash: b754f2b841ffb02cfe0522588ab7b70524439577
+        repo: openstack/puppet-gnocchi
+    version: 19.0.0
