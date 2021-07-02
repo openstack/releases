@@ -29,5 +29,9 @@ releases:
       - hash: d0ebc6c321a840c2d3c8ae5a682d721da7b4a239
         repo: openstack/barbican
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/barbican
+        hash: f5101f461a2e551d221ba4b678a67c5297549904
 repository-settings:
   openstack/barbican: {}
