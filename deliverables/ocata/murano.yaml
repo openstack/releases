@@ -20,5 +20,9 @@ releases:
       - hash: fbee4043ee1c269d90c8ec2c1f275f02f43cd4fd
         repo: openstack/murano
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/murano
+        hash: 54aa55c6da1b5bdd1270e12f5a15bc54859ed2ad
 repository-settings:
   openstack/murano: {}

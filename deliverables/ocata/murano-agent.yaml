@@ -20,5 +20,9 @@ releases:
       - hash: 3fc9cfb63de2e69cae2ca1a73e5fb59810459726
         repo: openstack/murano-agent
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: 99efcbec2c371d87146845ca675fc14638f8dab0
 repository-settings:
   openstack/murano-agent: {}

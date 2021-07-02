@@ -17,5 +17,9 @@ releases:
       - hash: d0f0929bba5fcf0b8b89085d095034d9708be7aa
         repo: openstack/python-muranoclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: a76497356bfce5f8364c48aa09187e55a07edd0d
 repository-settings:
   openstack/python-muranoclient: {}
