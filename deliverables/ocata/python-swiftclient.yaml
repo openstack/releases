@@ -21,5 +21,9 @@ releases:
       - hash: 307d4c007afaccdcd70628d9fce44231115d62cd
         repo: openstack/python-swiftclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 4f280c6614ccb31d894c58c94ec23f56f5dbfa77
 repository-settings:
   openstack/python-swiftclient: {}

@@ -28,6 +28,10 @@ releases:
       - hash: 72ed8f23a78f11e1ca1688ba086590bb7062a8c7
         repo: openstack/swift
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/swift
+        hash: 53a6386791e3237e2a95db3a1a86a046b11e0664
 repository-settings:
   openstack/swift: {}
 # Retriggering ocata-em tagging
