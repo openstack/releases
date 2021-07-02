@@ -16,5 +16,9 @@ releases:
       - hash: 6e7ecfae0f6f584fa78dbfe3c318c13e0afbec96
         repo: openstack/pycadf
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/pycadf
+        hash: 028b5f2eef54c451744c8c08f30da4443d90eb34
 repository-settings:
   openstack/pycadf: {}

@@ -40,6 +40,10 @@ releases:
       - hash: 9365dbeb6d4ffb70d0e2ecf561fadbb3e150b23c
         repo: openstack/keystoneauth
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 0df3dde4cd63c5cfdd43a1fa01d962c5f4bdf8fe
 branches:
   - name: stable/ocata
     location: 2.18.0

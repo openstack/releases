@@ -34,6 +34,10 @@ releases:
       - hash: 3a36cc2d0a8504a9df77c5a833edc50a88828252
         repo: openstack/keystonemiddleware
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 0b2a1ee40c78b449b9b2499c8e591e5aad8d3136
 branches:
   - name: stable/ocata
     location: 4.14.0
