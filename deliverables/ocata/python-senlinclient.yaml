@@ -21,5 +21,9 @@ releases:
       - hash: 9df5282567b67225ad3407dbfff2783c7bd75bff
         repo: openstack/python-senlinclient
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 1c5851faf9a12853fe56d4f5ccd198206c0375b4
 repository-settings:
   openstack/python-senlinclient: {}

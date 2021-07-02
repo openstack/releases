@@ -41,6 +41,10 @@ releases:
       - hash: ce509a040a55bcf62729c2f3934cb7df2e90a40a
         repo: openstack/senlin
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 29a73afcd0972e6a83a494ccb9eaf4d08121e367
 repository-settings:
   openstack/senlin: {}
 # Retriggering ocata-em tagging

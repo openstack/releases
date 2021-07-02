@@ -16,6 +16,10 @@ releases:
       - hash: 59eaf4d998c60474de3a098a4d08ed0e4fa0e252
         repo: openstack/senlin-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 41e4eb744ff0f6a0efe9af2583e7cc54bc2559e0
 repository-settings:
   openstack/senlin-dashboard: {}
 # Retriggering ocata-em tagging
