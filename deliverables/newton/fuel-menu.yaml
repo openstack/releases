@@ -19,5 +19,10 @@ releases:
       - repo: openstack/fuel-menu
         hash: 1a94d657ecaca4a1b549141ee22e5bc7ca20822e
         tarball-base: fuelmenu
+  - version: newton-eol
+    projects:
+      - repo: openstack/fuel-menu
+        hash: 5a47b21c50e139160c944f5134ebbb51003d0bf8
+        tarball-base: fuelmenu
 repository-settings:
   openstack/fuel-menu: {}
