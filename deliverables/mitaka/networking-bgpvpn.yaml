@@ -1,0 +1,11 @@
+---
+launchpad: bgpvpn
+team: neutron
+type: other
+releases:
+  - version: mitaka-eol
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: fcfe56d98f52f92a27facf2cd7f89ae93f908896
+repository-settings:
+  openstack/networking-bgpvpn: {}
