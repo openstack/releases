@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/paunch
         hash: faed0cf419dfdae485e17144512b6e62f7bf2251
+  - version: stein-eol
+    projects:
+      - repo: openstack/paunch
+        hash: a464c0c196cde72791e244c0d628af8155b2eea9
 branches:
   - location: 4.4.0
     name: stable/stein
