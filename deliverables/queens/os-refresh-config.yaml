@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/os-refresh-config
         hash: 4703b548bfcdedc1e56d93c62777f4e5061fca5d
+  - version: queens-eol
+    projects:
+      - repo: openstack/os-refresh-config
+        hash: 0c259be975f1c3f4ebf1d48936e254e35e35f8b3
 repository-settings:
   openstack/os-refresh-config: {}
 branches:

@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/instack
         hash: d71921cd87e5a7bdd85bb218c8f7b0c5654a0b01
+  - version: queens-eol
+    projects:
+      - repo: openstack/instack
+        hash: 5cc714995909e9343d6cd92b10c97ccce2ef6a9c
 branches:
   - name: stable/queens
     location: 8.1.0

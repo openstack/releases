@@ -70,6 +70,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 173e91f238ed651ff813cecce44265a94df3b114
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 9871ac7bc6fc6850c7b74ba22d3c7558209574f2
 release-notes: https://docs.openstack.org/releasenotes/python-tripleoclient/queens.html
 repository-settings:
   openstack/python-tripleoclient: {}

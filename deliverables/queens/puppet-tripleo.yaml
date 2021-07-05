@@ -64,6 +64,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: 151177ef16a84fbedde9828f762b1639b183bcfd
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 9ede5d961c822628b98027b42f056c7b0f87fe77
 repository-settings:
   openstack/puppet-tripleo: {}
 branches:
