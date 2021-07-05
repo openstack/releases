@@ -1,0 +1,14 @@
+---
+launchpad: bgpvpn
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: cfe2579b74fc422e33a49271be8284e93d02069d
+        repo: openstack/networking-bgpvpn
+    version: ocata-eol
+team: neutron
+type: other
+repository-settings:
+  openstack/networking-bgpvpn: {}
+

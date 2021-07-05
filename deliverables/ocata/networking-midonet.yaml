@@ -1,0 +1,14 @@
+---
+launchpad: networking-midonet
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: 4c0b062ba76e882c9d2df44522abaef1624dcf62
+        repo: openstack/networking-midonet
+    version: ocata-eol
+team: neutron
+type: other
+repository-settings:
+  openstack/networking-midonet: {}
+
