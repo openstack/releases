@@ -15,6 +15,10 @@ releases:
       - hash: 7d0dfc16af23883147ca9381268a07e1ab36d443
         repo: openstack/solum-dashboard
     version: ocata-em
+  - version: ocata-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 54955181278611a171ad39cbcfc56c278441fe57
 repository-settings:
   openstack/solum-dashboard: {}
 # Retriggering ocata-em tagging
