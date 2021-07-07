@@ -1,0 +1,14 @@
+---
+launchpad: neutron-vpnaas
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: 1b241be2a1a2a636bdb138d485d9fc137e51edb9
+        repo: openstack/neutron-vpnaas
+    version: ocata-eol
+team: neutron
+type: other
+repository-settings:
+  openstack/neutron-vpnaas: {}
+
