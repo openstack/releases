@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: a6b0f698c7847e12bdb81ba20abae7a65ab4418b
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: a6b0f698c7847e12bdb81ba20abae7a65ab4418b
 branches:
   - name: stable/train
     location: 15.4.0

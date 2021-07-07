@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: 548f023ecd201158d06faafd789238e60740cda0
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 548f023ecd201158d06faafd789238e60740cda0
 branches:
   - name: stable/train
     location: 15.4.0

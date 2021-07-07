@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: 6ab7806733cdcbbd54369fe545190d7e7eca7dc2
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 6ab7806733cdcbbd54369fe545190d7e7eca7dc2
 branches:
   - name: stable/train
     location: 15.4.0

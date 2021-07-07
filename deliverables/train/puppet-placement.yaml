@@ -26,6 +26,10 @@ releases:
       - hash: 8fe110ecea431a9e5380e1295989158c43bdf2e2
         repo: openstack/puppet-placement
     version: 2.5.0
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 8fe110ecea431a9e5380e1295989158c43bdf2e2
 branches:
   - name: stable/train
     location: 2.4.0

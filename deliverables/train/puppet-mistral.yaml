@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 5dcd2371f39ae151bc9b0f10d0ce9e1a52746860
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 5dcd2371f39ae151bc9b0f10d0ce9e1a52746860
 branches:
   - name: stable/train
     location: 15.4.0

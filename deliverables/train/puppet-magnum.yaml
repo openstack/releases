@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: 9273638665287b677e36427da57b6113dc010ba6
+  - version: train-em
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 9273638665287b677e36427da57b6113dc010ba6
 branches:
   - name: stable/train
     location: 15.4.0
