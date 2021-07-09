@@ -6,3 +6,8 @@ team: octavia
 type: client-library
 repository-settings:
   openstack/python-octaviaclient: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 6ef3eed57378490ab9731cc5f3c0975aa0a4d4e9
