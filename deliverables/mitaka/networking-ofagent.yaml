@@ -1,0 +1,13 @@
+---
+launchpad: networking-ofagent
+team: neutron
+type: other
+releases:
+  - version: mitaka-eol
+    projects:
+      - repo: openstack/networking-ofagent
+        hash: 6e96079a62194ea6e40f4b04e7a05005e563a8ce
+repository-settings:
+  openstack/networking-ofagent:
+    flags:
+      - retired

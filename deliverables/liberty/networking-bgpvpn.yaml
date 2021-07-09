@@ -1,0 +1,11 @@
+---
+launchpad: bgpvpn
+team: neutron
+type: other
+releases:
+  - version: liberty-eol
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 1e4d1d183ab69e8f976bebcaaba29ff723c04cd0
+repository-settings:
+  openstack/networking-bgpvpn: {}
