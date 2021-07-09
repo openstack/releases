@@ -6,3 +6,8 @@ team: monasca
 type: client-library
 repository-settings:
   openstack/python-monascaclient: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 6d04502de7febdca9633834e46f4e5b9264a44a8
