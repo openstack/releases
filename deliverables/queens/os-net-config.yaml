@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: 2a374db9847b92cc3f9da9be20a614932d9dd997
+  - version: queens-eol
+    projects:
+      - repo: openstack/os-net-config
+        hash: 99b56aa883ca0deac3150115af0db90f2ffe462e
 repository-settings:
   openstack/os-net-config: {}
 branches:

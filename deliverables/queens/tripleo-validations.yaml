@@ -55,6 +55,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 49f8aad6c526445b80664130bb539140284ed3b9
+  - version: queens-eol
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 715d44cf752524a37cf96565a7ee3b21a2c025f1
 repository-settings:
   openstack/tripleo-validations: {}
 branches:

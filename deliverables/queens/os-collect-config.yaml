@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: cf2d08c7a5ed428c3db0c76379b4cf6a5b791055
+  - version: queens-eol
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 443df6379eea51a631bac659fca271ab84ba17b1
 repository-settings:
   openstack/os-collect-config: {}
 branches:

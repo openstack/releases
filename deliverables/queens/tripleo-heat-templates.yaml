@@ -88,6 +88,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 80a67e6c8f81888bf01782e2746e4bb9ede5a1d0
+  - version: queens-eol
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 0f47a4de9b5e64023ddc594d6106fff2c053bcfb
 repository-settings:
   openstack/tripleo-heat-templates: {}
 branches:

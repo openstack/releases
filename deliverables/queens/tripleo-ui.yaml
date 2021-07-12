@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ui
         hash: 93101f26e25ec8788b061554d3181d4c84148c9c
+  - version: queens-eol
+    projects:
+      - repo: openstack/tripleo-ui
+        hash: d35124d7e713e80633679ccb12b10430e4ba03be
 repository-settings:
   openstack/tripleo-ui: {}
 branches:

@@ -67,6 +67,10 @@ releases:
     projects:
       - repo: openstack/instack-undercloud
         hash: 1910a4b06beb67d8cdd143dde39f7200f31ea7ad
+  - version: queens-eol
+    projects:
+      - repo: openstack/instack-undercloud
+        hash: 9b770ae2460e6ab7cf8bb3556f35239ee154db7b
 repository-settings:
   openstack/instack-undercloud: {}
 branches:

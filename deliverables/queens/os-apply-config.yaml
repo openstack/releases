@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: ad29f1d44923d12c8c91e6389fda6535653dac2c
+  - version: queens-eol
+    projects:
+      - repo: openstack/os-apply-config
+        hash: b8687b3a6b712bebfbd62452d6f27e0241f91b95
 repository-settings:
   openstack/os-apply-config: {}
 branches:
