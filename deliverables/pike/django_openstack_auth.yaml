@@ -33,6 +33,10 @@ releases:
       - hash: ddcfe7a6d4db1b476254b556057756eadd7b097d
         repo: openstack/django_openstack_auth
     version: pike-em
+  - projects:
+      - hash: b661070aec100d7f486746234a4713dfb2796279
+        repo: openstack/django_openstack_auth
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 3.5.0
