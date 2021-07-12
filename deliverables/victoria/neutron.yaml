@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 02667a9789b10965689a86aaa4648d1b6613b756
+  - version: 17.2.0
+    projects:
+      - repo: openstack/neutron
+        hash: d3818308d189da845c3a10834cbdb0717645d91f
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
