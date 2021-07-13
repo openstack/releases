@@ -1,0 +1,111 @@
+---
+start-week: 2021-10-13
+release-week: 2022-03-30
+cycle:
+- end: '2021-10-08'
+  start: '2021-10-04'
+  x-project:
+    - x-final
+- end: '2021-10-15'
+  name: R-24
+  start: '2021-10-11'
+- end: '2021-10-22'
+  name: R-23
+  start: '2021-10-18'
+- end: '2021-10-29'
+  name: R-22
+  start: '2021-10-25'
+- end: '2021-11-05'
+  name: R-21
+  start: '2021-11-01'
+- end: '2021-11-12'
+  name: R-20
+  start: '2021-11-08'
+- end: '2021-11-19'
+  name: R-19
+  start: '2021-11-15'
+  x-project:
+    - y-1
+- end: '2021-11-26'
+  name: R-18
+  start: '2021-11-22'
+- end: '2021-12-03'
+  name: R-17
+  start: '2021-11-29'
+- end: '2021-12-10'
+  name: R-16
+  start: '2021-12-06'
+- end: '2021-12-17'
+  name: R-15
+  start: '2021-12-13'
+  x-project:
+    - y-cycle-trail
+- end: '2021-12-24'
+  name: R-14
+  start: '2021-12-20'
+- end: '2022-12-31'
+  name: R-13
+  start: '2021-12-27'
+- end: '2022-01-07'
+  name: R-12
+  start: '2022-01-03'
+  x-project:
+    - y-2
+    - y-mf
+- end: '2022-01-14'
+  name: R-11
+  start: '2022-01-10'
+- end: '2022-01-21'
+  name: R-10
+  start: '2022-01-17'
+- end: '2022-01-28'
+  name: R-9
+  start: '2022-01-24'
+- end: '2022-02-04'
+  name: R-8
+  start: '2022-01-31'
+- end: '2022-02-11'
+  name: R-7
+  start: '2022-02-07'
+  x-project:
+    - y-extra-atc-freeze
+    - y-final-lib
+- end: '2022-02-18'
+  name: R-6
+  start: '2022-02-14'
+  project-specific:
+    - y-oslo-feature-freeze
+- end: '2022-02-25'
+  name: R-5
+  start: '2022-02-21'
+  x-project:
+    - y-3
+    - y-ff
+    - y-final-clientlib
+    - y-soft-sf
+    - y-rf
+    - y-goals-complete
+    - y-cycle-highlights
+- end: '2022-03-04'
+  name: R-4
+  start: '2022-02-28'
+- end: '2022-03-11'
+  name: R-3
+  start: '2022-03-07'
+  x-project:
+    - y-rc1
+    - y-hard-sf
+- end: '2022-03-18'
+  name: R-2
+  start: '2022-03-14'
+- end: '2022-03-25'
+  name: R-1
+  start: '2022-03-21'
+  x-project:
+    - y-finalrc
+- end: '2022-03-30'
+  name: R+0
+  start: '2022-03-28'
+  x-project:
+    - y-final
+
