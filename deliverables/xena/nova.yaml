@@ -5,3 +5,25 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    Nova now supports `Cyborg managed SmartNICs
+    <https://docs.openstack.org/api-guide/compute/accelerator-support.html#using-sriov-with-cyborg>`_
+    represented by Neutron ports and attached as SRIOV devices to the Nova servers.
+  - |
+    Nova's libvirt virt driver now supports any PCI devices, not just virtual GPUs, that are using
+    the ``VFIO-mdev`` virtualization framework like network adapters or compute accelerators.
+    `See more in the spec <https://specs.openstack.org/openstack/nova-specs/specs/xena/approved/generic-mdevs.html>`_
+  - |
+    Nova stores the cinder volume connection_info in its database. Over time this information can
+    become stale if changes are made in the environment, the most common example of which being the
+    changing of MON IP addresses when using Ceph as the backing store for the Cinder volume service.
+    Previously operators have had to query the database directly for an understanding of the current
+    state of the connection_info and could only migrate or shelve the instance to force a refresh
+    of this. Now Nova provides a set of ``nova-manage``
+    `CLI commands <https://docs.openstack.org/nova/latest/cli/nova-manage.html#volume-attachment-commands>`_
+    to read and refresh the stale information.
+  - |
+    `API microversion 2.90 <https://docs.openstack.org/nova/latest/reference/api-microversion-history.html#maximum-in-xena>`_
+    allows users to configure the hostname that will be exposed via the nova metadata service when
+    creating or rebuilding their instance.
