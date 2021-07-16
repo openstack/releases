@@ -8,3 +8,8 @@ repository-settings:
   openstack/senlin-tempest-plugin: {}
 team: senlin
 type: tempest-plugin
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/senlin-tempest-plugin
+        hash: f71166b2c6619746ac24614ed151e4befdb1f495
