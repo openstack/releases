@@ -526,7 +526,7 @@ Milestone-2
 
     Non-client library freeze: $nclfreeze (R-6 week)
     Client library freeze: $milestone3 (R-5 week)
-    Ussuri-3 milestone: $milestone3 (R-5 week)
+    $SERIES-3 milestone: $milestone3 (R-5 week)
     $other-upcoming-event
 
 
