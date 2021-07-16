@@ -65,6 +65,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: f4bc383de1ab81a642496d7bb9373fd45f2c26c3
+  - version: queens-eol
+    projects:
+      - repo: openstack/manila
+        hash: 1c736bbe3e0d3cff53e32c465e8d60a316b18b4a
 cycle-highlights:
   - |
     Added drivers for Infinidat, MapR-FS, and Veritas

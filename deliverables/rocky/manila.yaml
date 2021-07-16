@@ -49,6 +49,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: d16b5f0ea41419bdf4eb4e66ce4551571ee6acec
+  - version: rocky-eol
+    projects:
+      - repo: openstack/manila
+        hash: abaa601e1839dc591997406c91bb2833cca02712
 repository-settings:
   openstack/manila: {}
 branches:
