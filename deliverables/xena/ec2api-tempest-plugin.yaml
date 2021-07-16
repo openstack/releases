@@ -8,3 +8,8 @@ repository-settings:
   openstack/ec2api-tempest-plugin: {}
 team: ec2-api
 type: tempest-plugin
+releases:
+  - version: 1.3.0
+    projects:
+      - repo: openstack/ec2api-tempest-plugin
+        hash: aae0b12bd1906fb8fbb7d8037b68af382df61a15
