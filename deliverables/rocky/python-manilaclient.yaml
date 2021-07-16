@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 816bfc82e7a1835cdbfccf0e023beb4c11eb2a30
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: c0ce858da632355404906b6b05ee8de232a1b6fa
 branches:
   - location: 1.24.0
     name: stable/rocky
