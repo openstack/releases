@@ -45,6 +45,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 919870a13b3dc51374604120cf2c9151add9a218
+  - version: queens-eol
+    projects:
+      - repo: openstack/horizon
+        hash: 149870a853798c98b8512720519345ecdf2e1397
 branches:
   - location: 13.0.0.0rc1
     name: stable/queens
