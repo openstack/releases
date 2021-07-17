@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: keystone_tempest_plugin
 team: keystone
 type: tempest-plugin
+releases:
+  - version: 0.8.0
+    projects:
+      - repo: openstack/keystone-tempest-plugin
+        hash: faa9b1389186a9a81f91f67ac78df9c0b0343b3c
