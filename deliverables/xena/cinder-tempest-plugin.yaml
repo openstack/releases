@@ -8,3 +8,8 @@ repository-settings:
   openstack/cinder-tempest-plugin: {}
 team: cinder
 type: tempest-plugin
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/cinder-tempest-plugin
+        hash: a2a23ca6d10c90d19cda68220d102409c75390e5
