@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: 7224ee478a3207c508250d5df5a117c2875feaf1
+  - version: 12.2.2
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 6fd9757b189732d5e0b6a27eed7f03c1eb2dd71e
 branches:
   - name: stable/victoria
     location: 12.2.0
