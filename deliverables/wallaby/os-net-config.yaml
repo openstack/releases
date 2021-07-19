@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: 012b58ccc1623945c4428e82eec80b2f3f22d6b7
+  - version: 14.1.1
+    projects:
+      - repo: openstack/os-net-config
+        hash: e2b7ed13fc8c06fbe5d9a1b89ed1d8c16015e97a
 branches:
   - name: stable/wallaby
     location: 14.1.0
