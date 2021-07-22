@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 105e3292be02a52fabb2c68ed27c6e2802d14ec7
+  - version: 11.1.0
+    projects:
+      - repo: openstack/bifrost
+        hash: dfa9eddb3f4b2cbed0e4fe4ec1604aac70d83bec
 branches:
   - name: bugfix/11.0
     location: 11.0.0
+  - name: bugfix/11.1
+    location: 11.1.0
