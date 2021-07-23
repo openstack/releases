@@ -29,6 +29,10 @@ releases:
       - repo: openstack/watcher
         hash: 870e6d75e0bb0d868ee5188d35685d08bc4724c7
     diff-start: 3.0.0.0rc1
+  - version: 4.0.1
+    projects:
+      - repo: openstack/watcher
+        hash: 2e033d7b96eb4cb47642909cda5a87a4ec4e0fe9
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1
