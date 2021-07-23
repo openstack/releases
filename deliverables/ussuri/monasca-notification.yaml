@@ -15,6 +15,10 @@ releases:
       - repo: openstack/monasca-notification
         hash: 0b5b77c974e80757a030bb633a64b78e073c86bb
     diff-start: 1.18.0
+  - version: 2.0.1
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 9dd0ea54c9727c431c0a2391a37dbc8f79069f64
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
