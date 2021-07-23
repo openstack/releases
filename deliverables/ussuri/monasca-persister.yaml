@@ -19,6 +19,10 @@ releases:
       - repo: openstack/monasca-persister
         hash: d95e7d72e667dcc4c7c875606f15b31edf23f005
     diff-start: 1.15.0
+  - version: 2.0.1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 2d4bd37d0563ddece44c4e44a0eaeaaadac0f43c
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
