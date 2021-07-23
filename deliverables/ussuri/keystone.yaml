@@ -38,6 +38,10 @@ releases:
       - repo: openstack/keystone
         hash: 28bce595bb5d7d61c09c183c053f89c216fb8d62
     diff-start: 16.0.0.0rc1
+  - version: 17.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 2cf2912fd4d23bd8515313eafc77c6df92c68b81
 branches:
   - name: stable/ussuri
     location: 17.0.0.0rc1
