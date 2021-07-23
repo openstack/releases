@@ -21,6 +21,10 @@ releases:
       - repo: openstack/networking-sfc
         hash: 07f17590febf20a1f97794c4a2bc29fce415fe64
     diff-start: 9.0.0
+  - version: 10.0.1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: ba57ca7d1f2d8f5986103cf114089f5ca159dd77
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
