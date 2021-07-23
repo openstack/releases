@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 30bb75d744ce976dbc9922a8d6f6870ccff288b2
     diff-start: 2.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: abcd7c04b27409b08b62c4311944bbe3a24b1ccd
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
