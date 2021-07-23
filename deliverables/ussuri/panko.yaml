@@ -15,6 +15,10 @@ releases:
       - repo: openstack/panko
         hash: ada2bdd041b89b9ceb06c1839f8401e7d7f62e4e
     diff-start: 7.0.0
+  - version: 8.1.0
+    projects:
+      - repo: openstack/panko
+        hash: 0a8d5b4fc0169108468404e88d12ee6fefed4e63
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
