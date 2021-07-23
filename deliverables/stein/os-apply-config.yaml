@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: 9a50e081cb9bc27ec573bda5ad00beff64b23dec
+  - version: stein-eol
+    projects:
+      - repo: openstack/os-apply-config
+        hash: f76911c726483ed31b902ed02b49009dac14c5f5
 branches:
   - location: 10.3.0
     name: stable/stein

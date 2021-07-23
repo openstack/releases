@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 69a694d858756418d091f92270ff8bb667993650
+  - version: stein-eol
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 9b4878b3af5622d3f87c42cd14600ec0f3b53b84
 cycle-highlights:
   - |
     Added support for podman and buildah for containers and container images.

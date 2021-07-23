@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: 78f7e7f6d926b27cd4025fa7c28a7d84d01813f2
+  - version: stein-eol
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: 78f7e7f6d926b27cd4025fa7c28a7d84d01813f2
 branches:
   - location: 10.3.0
     name: stable/stein
