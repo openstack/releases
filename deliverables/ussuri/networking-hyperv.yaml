@@ -20,6 +20,10 @@ releases:
       - repo: openstack/networking-hyperv
         hash: 6da239c19d1098212e00110a11d0797836adebd5
     diff-start: 7.3.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: e5b0ddbb1a9701c1661047293ec50042a63f7d89
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
