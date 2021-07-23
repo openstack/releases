@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: d63d72799766801414500934e06db8c88807fe59
+  - version: 20.1.0
+    projects:
+      - repo: openstack/glance
+        hash: 5ed4b41a7c8292ebe30c1cbeac54b68439b626dc
 branches:
   - name: stable/ussuri
     location: 20.0.0.0rc1
