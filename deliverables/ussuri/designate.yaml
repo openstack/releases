@@ -21,6 +21,10 @@ releases:
       - repo: openstack/designate
         hash: 0d52d83697bfd786481be630726530cc27e1b830
     diff-start: 9.0.0
+  - version: 10.0.1
+    projects:
+      - repo: openstack/designate
+        hash: b967e9f706373f1aad6db882c2295fbbe1fadfc9
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
