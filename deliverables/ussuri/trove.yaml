@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove
         hash: a4057b10af44e7f21243e539dd2daad2ad61657b
     diff-start: 12.0.0.0rc1
+  - version: 13.0.1
+    projects:
+      - repo: openstack/trove
+        hash: 48e39a07a60c9a7ce9b2fbfcc97a16bc2c56723f
 branches:
   - name: stable/ussuri
     location: 13.0.0.0rc1
