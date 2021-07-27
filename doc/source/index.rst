@@ -174,7 +174,9 @@ documentation:
    reference/using
    reference/release_models
    reference/deliverable_types
+   reference/join_release_team
    reference/reviewer_guide
+   reference/release_infra
    reference/process
 
 .. _`openstack/releases`: https://opendev.org/openstack/releases
