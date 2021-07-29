@@ -19,6 +19,10 @@ releases:
       - repo: openstack/tacker
         hash: 406fca4c8974d7a4392f9ddcf6434b1fdd53710f
     diff-start: 2.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/tacker
+        hash: 5783b9fff46544e1d50f1d3eafc254095f9f9b99
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
