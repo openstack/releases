@@ -19,6 +19,10 @@ releases:
       - repo: openstack/tempest
         hash: c93345233e06c173a65a3edcb769c4220386b3bd
     version: 22.1.0
+  - version: train-last
+    projects:
+      - repo: openstack/tempest
+        hash: 2eb82f1cbc2bd1e189e33ee65a5beb33aff9d1f5
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
