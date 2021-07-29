@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: d400f7a2bb41aac6bd1a64add1565148e5439535
+  - version: 2.7.1
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: cce79a5dc6579c0fd6c5282a2c738a5023fd161c
 branches:
   - name: stable/ussuri
     location: 2.7.0
