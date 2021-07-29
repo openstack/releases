@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: f9384b1005f780c25501232c82686d668608d1f0
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 8365b389100011bfbf5a430bc4953e6230b10c6b
 branches:
   - location: 1.21.0
     name: stable/queens
