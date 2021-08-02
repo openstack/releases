@@ -5,3 +5,8 @@ storyboard: openstack/vitrage
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/vitrage: {}
+releases:
+  - version: 7.5.0
+    projects:
+      - repo: openstack/vitrage
+        hash: 7035e09f0865c9d26e50f022ce20dff9d9eaea71
