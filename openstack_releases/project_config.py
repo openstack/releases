@@ -138,15 +138,19 @@ def read_templates_from_repo(workdir, repo_name):
 _RELEASE_JOBS_FOR_TYPE = {
     'python-service': [
         'publish-to-pypi',
+        'publish-to-pypi-stable-only',
     ],
     'python-pypi': [
         'publish-to-pypi',
+        'publish-to-pypi-stable-only',
     ],
     'neutron': [
         'publish-to-pypi',
+        'publish-to-pypi-stable-only',
     ],
     'horizon': [
         'publish-to-pypi',
+        'publish-to-pypi-stable-only',
     ],
     'nodejs': [
         'nodejs4-publish-to-npm',
@@ -159,6 +163,7 @@ _RELEASE_JOBS_FOR_TYPE = {
     ],
     'xstatic': [
         'publish-to-pypi',
+        'publish-to-pypi-stable-only',
     ],
     'fuel': [
         # Fuel is manually packaged by the team at Mirantis.
