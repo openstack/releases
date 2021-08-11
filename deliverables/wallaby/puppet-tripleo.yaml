@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: 462811638fd4145b43797f1ca61f372a9d84ae56
+  - version: 14.2.2
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: a29fd8ef777489fd1ba58bf7220775940b7a3d9b
 branches:
   - name: stable/wallaby
     location: 14.1.0
