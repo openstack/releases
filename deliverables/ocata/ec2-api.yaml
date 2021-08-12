@@ -1,0 +1,12 @@
+---
+launchpad: ec2-api
+release-model: cycle-with-intermediary
+team: ec2-api
+type: service
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: 1a1ee340d2dc85bf38371768fdcc3e6e91c25b5c
+repository-settings:
+  openstack/ec2-api: {}
