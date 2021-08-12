@@ -1,0 +1,12 @@
+---
+launchpad: karbor
+release-model: cycle-with-intermediary
+team: karbor
+type: service
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/karbor
+        hash: b526c8cf7f3c21ede79e2a50e500b05ab9db91fa
+repository-settings:
+  openstack/karbor: {}

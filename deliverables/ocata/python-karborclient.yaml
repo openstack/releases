@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: python-karborclient
+release-model: cycle-with-intermediary
+team: karbor
+type: library
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 7a8e80f62f0ab388579f5a0a2259f8020286ebed
+repository-settings:
+  openstack/python-karborclient: {}
