@@ -1,0 +1,12 @@
+---
+launchpad: blazar
+release-model: cycle-with-milestones
+team: blazar
+type: service
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/blazar
+        hash: 80408239669e3a27f4214b078e78d146ab90906d
+repository-settings:
+  openstack/blazar: {}
