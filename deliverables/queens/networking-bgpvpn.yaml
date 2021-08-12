@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: ca0a16f0ba55fdbd6fb34423fbce4e15366f2ff8
+  - version: queens-eol
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 987d2fb601571d6773d39a6e8ed050b09306950b
 repository-settings:
   openstack/networking-bgpvpn: {}
 branches:
