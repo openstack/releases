@@ -39,6 +39,10 @@ releases:
       - hash: c220eb2483784a490667f42e684f25160ed28939
         repo: openstack/networking-bgpvpn
     version: pike-em
+  - projects:
+      - hash: 08a9558b08edeb74afe3d65d7b690b511a8849c8
+        repo: openstack/networking-bgpvpn
+    version: pike-eol
 branches:
   - location: 7.0.0.0rc1
     name: stable/pike
