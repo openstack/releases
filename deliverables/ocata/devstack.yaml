@@ -1,0 +1,13 @@
+---
+launchpad: devstack
+release-model: untagged
+team: 'Quality Assurance'
+type: other
+stable-branch-type: tagless
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/devstack
+        hash: 4a6a717a15e61e289b84953bbb4db9a10bcbf636
+repository-settings:
+  openstack/devstack: {}
