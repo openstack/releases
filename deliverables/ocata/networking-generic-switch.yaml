@@ -1,0 +1,12 @@
+---
+storyboard: openstack/networking-generic-switch
+team: ironic
+type: other
+release-model: cycle-with-intermediary
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 5832e974992640a424dd822efe665a873b39d3d9
+repository-settings:
+  openstack/networking-generic-switch: {}
