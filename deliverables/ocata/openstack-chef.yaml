@@ -1,0 +1,55 @@
+---
+launchpad: openstack-chef
+release-model: untagged
+team: openstack-chef
+type: other
+stable-branch-type: tagless
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/openstack-chef
+        hash: 2d3b129912bc25daf83114e327d55fc7a4abaf0f
+      - repo: openstack/openstack-chef-repo
+        hash: 28b6c9f27f94cbe3f3318a7befcec38344b33a55
+      - repo: openstack/cookbook-openstack-block-storage
+        hash: 4b4cccc8f3808738ef3e8f8a157ebd02a3f8a42b
+      - repo: openstack/cookbook-openstack-common
+        hash: a435990da3e3ec61dd09020e92e6f9daf1ab957b
+      - repo: openstack/cookbook-openstack-compute
+        hash: dd8e84070b0ef0f2ecf610efadecf7c7876ddfc8
+      - repo: openstack/cookbook-openstack-dashboard
+        hash: 3a35ca5e6d6965ffcc088309fa2b27bcd34f42c6
+      - repo: openstack/cookbook-openstack-identity
+        hash: a24f1d067ca616a8af6e58b9c7c47b14acbcf521
+      - repo: openstack/cookbook-openstack-image
+        hash: 190e7baf43c963441bd119b3aab40ebb5cc5aef1
+      - repo: openstack/cookbook-openstack-integration-test
+        hash: 16e75a802171558590c381dac4e10c0565c7889b
+      - repo: openstack/cookbook-openstack-network
+        hash: 4a186290a4468f615d522913eb07ebd82a38d424
+      - repo: openstack/cookbook-openstack-ops-database
+        hash: 8e78b9fc51c31bc7e5a19b12766af29422e5acbd
+      - repo: openstack/cookbook-openstack-ops-messaging
+        hash: bc3920ffadb148a013abf71f5a7ea5afdefd88a7
+      - repo: openstack/cookbook-openstack-orchestration
+        hash: 9e57bb284fe730b3092b9bc9cd8ac34df503ba1e
+      - repo: openstack/cookbook-openstack-telemetry
+        hash: 56730083f9a4434942230393cd93b68e007ca146
+      - repo: openstack/cookbook-openstackclient
+        hash: 9b2279d37ae01a7d8ecbb3c37574c19d68314eeb
+repository-settings:
+  openstack/openstack-chef: {}
+  openstack/openstack-chef-repo: {}
+  openstack/cookbook-openstack-block-storage: {}
+  openstack/cookbook-openstack-common: {}
+  openstack/cookbook-openstack-compute: {}
+  openstack/cookbook-openstack-dashboard: {}
+  openstack/cookbook-openstack-identity: {}
+  openstack/cookbook-openstack-image: {}
+  openstack/cookbook-openstack-integration-test: {}
+  openstack/cookbook-openstack-network: {}
+  openstack/cookbook-openstack-ops-database: {}
+  openstack/cookbook-openstack-ops-messaging: {}
+  openstack/cookbook-openstack-orchestration: {}
+  openstack/cookbook-openstack-telemetry: {}
+  openstack/cookbook-openstackclient: {}
