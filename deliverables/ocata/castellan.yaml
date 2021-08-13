@@ -1,0 +1,12 @@
+---
+launchpad: castellan
+team: oslo
+type: library
+release-model: cycle-with-intermediary
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/castellan
+        hash: ca3ac4a6b7e5167863caca17d28eacb0ec0a178f
+repository-settings:
+  openstack/castellan: {}
