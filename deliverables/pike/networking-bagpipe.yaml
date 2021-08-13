@@ -39,6 +39,10 @@ releases:
       - hash: e14e0acb4fa3f6d2be6d23939e4d5ed47d2f2773
         repo: openstack/networking-bagpipe
     version: pike-em
+  - projects:
+      - hash: 30eada2fb5b9bbe3d66dc6a98e1b66cf155bb077
+        repo: openstack/networking-bagpipe
+    version: pike-eol
 branches:
   - location: 7.0.0.0rc1
     name: stable/pike
