@@ -1,0 +1,12 @@
+---
+launchpad: masakari
+release-model: cycle-with-milestones
+team: masakari
+type: service
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/masakari
+        hash: fd71f8783212115ac102a7fc9cea60e7a84a5054
+repository-settings:
+  openstack/masakari: {}
