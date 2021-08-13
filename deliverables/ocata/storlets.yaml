@@ -1,0 +1,12 @@
+---
+launchpad: storlets
+team: storlets
+type: service
+release-model: cycle-with-intermediary
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/storlets
+        hash: 912428ff0cabca1f841fac3649677181b1290713
+repository-settings:
+  openstack/storlets: {}
