@@ -1,0 +1,12 @@
+---
+launchpad: neutron-lbaas-dashboard
+release-model: cycle-with-milestones
+team: octavia
+type: horizon-plugin
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: 6ef4eb97e85f88b89c5b286e160a00be0e883081
+repository-settings:
+  openstack/neutron-lbaas-dashboard: {}
