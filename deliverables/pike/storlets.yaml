@@ -1,0 +1,12 @@
+---
+launchpad: storlets
+team: storlets
+type: service
+release-model: cycle-with-intermediary
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/storlets
+        hash: b7d647bb10d2d4272138ce0aab9e99252c1bdfca
+repository-settings:
+  openstack/storlets: {}
