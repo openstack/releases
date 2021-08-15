@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   yoga/index
    xena/index
    wallaby/index
    victoria/index
