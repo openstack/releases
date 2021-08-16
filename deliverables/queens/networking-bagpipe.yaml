@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: f3a7c421a31abe769347cc306cc87c68c28e2dfb
+  - version: queens-eol
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 0f9e996bb8c39b2b9a5c999119ec51da9dd4b78b
 repository-settings:
   openstack/networking-bagpipe: {}
 branches:
