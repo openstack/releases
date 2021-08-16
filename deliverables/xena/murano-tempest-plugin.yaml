@@ -7,4 +7,9 @@ release-type: python-pypi
 repository-settings:
   openstack/murano-tempest-plugin: {}
 team: murano
+releases:
+  - version: 2.3.0
+    projects:
+      - repo: openstack/murano-tempest-plugin
+        hash: e30c8b624b4a11740d101573b5c47a7f8820da12
 type: tempest-plugin
