@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: 35519c0ce02092aaef6b802817b74d017a84b08b
+  - version: 9.1.3
+    projects:
+      - repo: openstack/masakari
+        hash: b965f3a253e7eca08ac765be90b7c1ae3d86369f
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1
