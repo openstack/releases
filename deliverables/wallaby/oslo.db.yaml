@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 503db6071acebdabffa994ef86829eb438249db4
+  - version: 8.5.1
+    projects:
+      - repo: openstack/oslo.db
+        hash: 3b452de5d2651d74732ea4548b03e37ffb8018f8
 branches:
   - name: stable/wallaby
     location: 8.5.0
