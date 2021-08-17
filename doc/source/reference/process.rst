@@ -801,10 +801,6 @@ R-6 week (Final Library Release deadline)
      release liaison. Discuss standing -1s to see if they should be granted
      an exception and wait until next week.
 
-#. Update the feature list and allowed stable branch names in
-   devstack-gate for the new stable branch. For
-   example, https://review.opendev.org/715272/
-
 #. At the end of the week, send weekly email content preparing for R-5 week::
 
     Development Focus
