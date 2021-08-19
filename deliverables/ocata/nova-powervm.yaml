@@ -1,0 +1,12 @@
+---
+launchpad: nova-powervm
+release-model: cycle-with-milestones
+team: PowerVMStackers
+type: other
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/nova-powervm
+        hash: acd9f683d2b31d06b8f885908b0a282ecbe3a4a1
+repository-settings:
+  openstack/nova-powervm: {}

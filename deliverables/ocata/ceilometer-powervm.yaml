@@ -1,0 +1,12 @@
+---
+launchpad: ceilometer-powervm
+release-model: cycle-with-milestones
+team: Telemetry
+type: service
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 036b3c3c615a856a2bf578d15c8343ec591823fc
+repository-settings:
+  openstack/ceilometer-powervm: {}
