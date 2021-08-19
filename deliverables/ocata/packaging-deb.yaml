@@ -1,0 +1,248 @@
+---
+team: packaging-deb
+type: other
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/deb-aodh
+        hash: c770d7c6625018bb4b16a3a3b048f4513fed0665
+      - repo: openstack/deb-barbican
+        hash: 67e4a3cb2d95afc639485487bcbc814d1f1bdcd1
+      - repo: openstack/deb-ceilometer
+        hash: 11cc70f5c4bfb64024c8ab98e5e1996ac92c6768
+      - repo: openstack/deb-ceilometermiddleware
+        hash: 43fd8191618eded23bd5be74f2a264c5028f195d
+      - repo: openstack/deb-cinder
+        hash: 163cc48a1dc34d14921d57a48febd59cc996216e
+      - repo: openstack/deb-congress
+        hash: 5795f7773f23f0f1ef17400dcd6f7b70c216603f
+      - repo: openstack/deb-designate
+        hash: 625d36d3b505caf9290e66804f1f5bf59d797c36
+      - repo: openstack/deb-designate-dashboard
+        hash: da92962798a57fa4e8b7feb6e4090810da377370
+      - repo: openstack/deb-glance
+        hash: 7336c91e73d4704804b7b0340dc03df1c8d01d42
+      - repo: openstack/deb-glare
+        hash: 2490d1e2cc294e26114498a8b40aef17579612ee
+      - repo: openstack/deb-heat
+        hash: b0bf108ee4cfbcced4292930de4a197051d4ca47
+      - repo: openstack/deb-horizon
+        hash: 52380b5dc1e21098d7590cbd5c58cb80349883f6
+      - repo: openstack/deb-ironic
+        hash: 9cd8cd07ee4e29d3fe77b289a0b2ddb13e036144
+      - repo: openstack/deb-ironic-inspector
+        hash: 4f8de0e3d6fbfc476021e83286e77596b4e2d90d
+      - repo: openstack/deb-ironic-ui
+        hash: d737372905e867de5bad1356b721cd53e3d98f09
+      - repo: openstack/deb-keystone
+        hash: 29140ea2c3628b3fdda38ffd8320203a7b85dbb9
+      - repo: openstack/deb-magnum
+        hash: d2db6a6737974e14e4241830cfaa2320154b88e1
+      - repo: openstack/deb-manila
+        hash: 2a125594a956151a3ccbe290629a9c5c7b9d7e79
+      - repo: openstack/deb-manila-ui
+        hash: 160c3420e9a8b16ba431244c8d900c8bdf046594
+      - repo: openstack/deb-mistral
+        hash: 9eae934a90e6eda40c7aa66ce5fce3b229a5729e
+      - repo: openstack/deb-murano
+        hash: c24d476f90dad99c8562637a9db26e0cfe32e957
+      - repo: openstack/deb-murano-agent
+        hash: 73bb77aa51e75d6a0851a0be8ee8f84dff87ed98
+      - repo: openstack/deb-murano-dashboard
+        hash: dab8d06e42770797b287ed9654fe5838d5c43a9b
+      - repo: openstack/deb-networking-arista
+        hash: 5ebdff8d41170d439f582b3e0cf7e7c837aef122
+      - repo: openstack/deb-networking-hyperv
+        hash: fc42ae060b4fdb72f673573b12d8561e536c06f4
+      - repo: openstack/deb-networking-l2gw
+        hash: a3c4e7c8c00a18a5d015ae136f66e64fa9f580e2
+      - repo: openstack/deb-networking-midonet
+        hash: 0b78411550a62590a904385d014ac5d240f7acac
+      - repo: openstack/deb-networking-mlnx
+        hash: f235f38378df442500a57b961e72e4651923979d
+      - repo: openstack/deb-networking-odl
+        hash: 0ec1047ebd5532783343b25b2603cfde53767e39
+      - repo: openstack/deb-networking-ovn
+        hash: e0f89d266f10f02f30d7ad35bd596cf195d64cbf
+      - repo: openstack/deb-neutron
+        hash: cf6190f1ef69d5d54431744db3d72aa556c691b1
+      - repo: openstack/deb-neutron-fwaas
+        hash: db7339d5aa08a74b65bb80d0e6c880ebaacb4fea
+      - repo: openstack/deb-neutron-lbaas
+        hash: e871cab1e1efa1ffa9ee35974206346d7b81dfb6
+      - repo: openstack/deb-neutron-taas
+        hash: 1011bb4e8e92cd09dba0eca468932fe3904d2032
+      - repo: openstack/deb-neutron-vpnaas
+        hash: 0ce0eeab2b2e35f6526764d7eb1600abea829c6d
+      - repo: openstack/deb-nova
+        hash: 67c4b585beb9f5841e5853266aa94b64013bd185
+      - repo: openstack/deb-openstack-trove
+        hash: 57e9fe2bc953e018f9e6728f872b5cc3784a3add
+      - repo: openstack/deb-python-aodhclient
+        hash: ed80ef4f71c6e511bc40b005850ab350adad0290
+      - repo: openstack/deb-python-automaton
+        hash: 7f26cd374ab5ea4a76777c492f455c1ff21041b5
+      - repo: openstack/deb-python-barbicanclient
+        hash: d10fa8071ed8bf81d72dc1b100dbdf4fa7415b8e
+      - repo: openstack/deb-python-castellan
+        hash: 4a3f938d922d49004b65e69f3d4c45a7fb422e43
+      - repo: openstack/deb-python-ceilometerclient
+        hash: a9d450abfad4a287cad093f3af97c1afe0cab443
+      - repo: openstack/deb-python-ceilometermiddleware
+        hash: d4b936f89b29888812eb7f33042c69480531a71a
+      - repo: openstack/deb-python-cinderclient
+        hash: 06f12b41d05d5694720d6fd7b8344704f7853c12
+      - repo: openstack/deb-python-cliff
+        hash: 4106ee04dfafedb53272f7f3b3cb42fe0e759537
+      - repo: openstack/deb-python-congressclient
+        hash: e611b4a2cd512e506f7522b1b3c6d84d2144cbef
+      - repo: openstack/deb-python-debtcollector
+        hash: 5169e8795cc769ce1ac48ec37b11fe807f008ae4
+      - repo: openstack/deb-python-designateclient
+        hash: 86764f6cdd3774425b02e693979b4698c57c3cd1
+      - repo: openstack/deb-python-django-openstack-auth
+        hash: c00909eb26c5a295891d6e2885b2ded0c664aa2d
+      - repo: openstack/deb-python-fuelclient
+        hash: c15b93ec28446ec49104c7c824648a17b862dd82
+      - repo: openstack/deb-python-futurist
+        hash: c3b037d751525293b2bd2b63fad60a04d78aa8d3
+      - repo: openstack/deb-python-glance-store
+        hash: f4a28d11b3ea9b712e251755b3ceaeeebc943c32
+      - repo: openstack/deb-python-glanceclient
+        hash: 38107a81f438b7783a4472dd06ddca974a4756eb
+      - repo: openstack/deb-python-heatclient
+        hash: ad9cd7a3a2f0e8672b55db2124cde2515e2435a2
+      - repo: openstack/deb-python-ironic-inspector-client
+        hash: 4a7581c44255f41b35de78ff4d0855b26fb6c9a8
+      - repo: openstack/deb-python-ironicclient
+        hash: 769a449073a99854a13db4a1c5bab1bd468a2c7e
+      - repo: openstack/deb-python-k8sclient
+        hash: c4b0a00c8d5c7f2f6d8a3c928a96008cf6404d3f
+      - repo: openstack/deb-python-keystoneauth1
+        hash: f4109234f989ca934c6e043ddcb417f32ec76217
+      - repo: openstack/deb-python-keystoneclient
+        hash: 8edbd50fdcdbb78a9dd45ead0cb77fabc53ccbea
+      - repo: openstack/deb-python-keystonemiddleware
+        hash: 2108764ba93fcb6b48530c79027dffdebed1f39f
+      - repo: openstack/deb-python-magnumclient
+        hash: f418af4f1a7ec85e3f9bf8f19a61258edaf60c0c
+      - repo: openstack/deb-python-manilaclient
+        hash: 33fd926888276fbbf67500da41c77f72f5f2894f
+      - repo: openstack/deb-python-mistralclient
+        hash: 4f22f17cc6dcc0f6147edce79466d24ff54cdfef
+      - repo: openstack/deb-python-monascaclient
+        hash: e36e0283deb3f3f89141aef9d11c3b0c337c3e26
+      - repo: openstack/deb-python-mox3
+        hash: 049aebd112f54b575b67809f3b4017de90b571b8
+      - repo: openstack/deb-python-muranoclient
+        hash: 9f87a5e4f5bdfcae415368f6e8f4d49ded52de8d
+      - repo: openstack/deb-python-neutron-lib
+        hash: 8b2160ab930fa1f6fe55a4d5c1e8b875ce6d9f45
+      - repo: openstack/deb-python-neutronclient
+        hash: 124cd01223d899618b6141d6ec9aa6ee0a1967c0
+      - repo: openstack/deb-python-novaclient
+        hash: a138a32f3996faaeaa7bd9af286d08d99aac3174
+      - repo: openstack/deb-python-openstackclient
+        hash: 8b308ec35ab5fdfcaeac649e0ea3f20d195d4812
+      - repo: openstack/deb-python-os-apply-config
+        hash: 1b8c5aa5f989974a83570f400d43a9233af42f75
+      - repo: openstack/deb-python-os-brick
+        hash: ffda2ba424bbfa57411159af54e6fcbaff9ba555
+      - repo: openstack/deb-python-os-client-config
+        hash: e4d06660a6e68ac8f3db080711684e3582db1336
+      - repo: openstack/deb-python-os-cloud-config
+        hash: 97faf83addb16b37d4fe24761d7037ea092eb1f0
+      - repo: openstack/deb-python-os-collect-config
+        hash: bfd9445f4e4b0ccc43c1b008ff1a2337211bc139
+      - repo: openstack/deb-python-os-net-config
+        hash: c9d6b67dee5113759f047b04c65c02615bbd9936
+      - repo: openstack/deb-python-os-refresh-config
+        hash: 5e945a8457a6dcfc9eab9bfae5c9a5c05b5d853e
+      - repo: openstack/deb-python-os-win
+        hash: 8877ffb84b2c5ea4a9e848b78a96df3e0c164b8e
+      - repo: openstack/deb-python-osc-lib
+        hash: 78f0722e8d3287f23fcdf254797fc9216d3353f9
+      - repo: openstack/deb-python-oslo.cache
+        hash: c25e9f0e9a4ce2da6f861e830c1505753caa3f6e
+      - repo: openstack/deb-python-oslo.concurrency
+        hash: 1e5fa527a18dfecadd1d2c2b3dc8cc4df43445cd
+      - repo: openstack/deb-python-oslo.config
+        hash: b316cc2ddc440df914e2a2b725995ec3421e732e
+      - repo: openstack/deb-python-oslo.context
+        hash: e926a55ca1ae78ddeb3c3154728175de05ac5813
+      - repo: openstack/deb-python-oslo.db
+        hash: 147e5fa7f1749508dd346f35b432bb8e00a2f61a
+      - repo: openstack/deb-python-oslo.i18n
+        hash: 32c25b97e5063e62578ef01fbf82f144016d8390
+      - repo: openstack/deb-python-oslo.log
+        hash: 664d4f66e9bafac139b12da3ef94bc26653ed159
+      - repo: openstack/deb-python-oslo.messaging
+        hash: d46d7a11957782e705b8d30cee389638d1e1bce1
+      - repo: openstack/deb-python-oslo.middleware
+        hash: 688bc8b7dc927640d57ca061dd4571c36a77b9f1
+      - repo: openstack/deb-python-oslo.policy
+        hash: 847fe8bf3482fe9f0dceaa753356e91077cb82d7
+      - repo: openstack/deb-python-oslo.privsep
+        hash: 8234eab2818969fb53914423431899d678ae2fd5
+      - repo: openstack/deb-python-oslo.reports
+        hash: 23d1d81e321e7991f0226f597b1b6f3246360873
+      - repo: openstack/deb-python-oslo.rootwrap
+        hash: f3952bf222660073497f0fa6c4015f9eb04b235e
+      - repo: openstack/deb-python-oslo.serialization
+        hash: ec5e9e54df951b00e1b4f333a2b3efa1209e8963
+      - repo: openstack/deb-python-oslo.service
+        hash: 20b8d2b479359e16344efcd00cf016bf0c9ec805
+      - repo: openstack/deb-python-oslo.utils
+        hash: 8a56300eb6596d781412346e193ee0263585fb6c
+      - repo: openstack/deb-python-oslo.versionedobjects
+        hash: dc465b997116707eab70a706e1906fa388238d35
+      - repo: openstack/deb-python-oslo.vmware
+        hash: e47889fe99eab3b40cc6e03df783fc5334cd5db2
+      - repo: openstack/deb-python-oslotest
+        hash: bb5bdd2ee0dab5fa4a658d098778be7795ef7955
+      - repo: openstack/deb-python-osprofiler
+        hash: 1dcdceddf915d150b288c46373505ff953ced9b0
+      - repo: openstack/deb-python-pycadf
+        hash: 96dbc66ceecf9f273c0b5cd6b7f5c2119aa4fe25
+      - repo: openstack/deb-python-saharaclient
+        hash: 1ace7bd95f1af0205b248c769826b4c93fc5ad06
+      - repo: openstack/deb-python-scciclient
+        hash: ca44f82e3bbd542c2ff7a6d2ea7f7341627b383b
+      - repo: openstack/deb-python-senlinclient
+        hash: 7e130b078fae03d16318b689cb91af8b456ba8d1
+      - repo: openstack/deb-python-shotgun
+        hash: 88eddc57ee41d888f8fd255f74681b93c7bf47d2
+      - repo: openstack/deb-python-swiftclient
+        hash: f8f575308c76747f3965a17de612b7743d2055c6
+      - repo: openstack/deb-python-tackerclient
+        hash: 70d6404503771e4b3ce0a2aae63a185410c44cd5
+      - repo: openstack/deb-python-taskflow
+        hash: c94b13a0264d477f4dc3b97bbd22878af25a4f3b
+      - repo: openstack/deb-python-tooz
+        hash: 01914eb6a0bb502b65af85cb682d8e5ab87b8e41
+      - repo: openstack/deb-python-troveclient
+        hash: c9a777c6a58d4cc4d7dcd49b61d91159727eee39
+      - repo: openstack/deb-python-watcherclient
+        hash: d94cb9c17fc174c60e0fb7618f1b4705e93e6a35
+      - repo: openstack/deb-python-zaqarclient
+        hash: 7da9f304b0e6c2e1e555344bc4d8119154e66d05
+      - repo: openstack/deb-sahara
+        hash: fc1b90b7435334d570a82652ac7ad6f754d87d6d
+      - repo: openstack/deb-sahara-dashboard
+        hash: deab563420900e1c448a1e0b7f44eea1385cfb66
+      - repo: openstack/deb-senlin
+        hash: fa2526328468670a6976987a2cc11bb1c3fb1b48
+      - repo: openstack/deb-senlin-dashboard
+        hash: 665d7471e84f0294f4c9d5881095e88c24e0b0b9
+      - repo: openstack/deb-stevedore
+        hash: 61661f154f904ac6d4d390e65481c099b045990c
+      - repo: openstack/deb-swift
+        hash: 36313a3e4117a637ad639c8866440d8d1732a753
+      - repo: openstack/deb-trove-dashboard
+        hash: 2035795523d32d66616eb526c1a9eeed0356febb
+      - repo: openstack/deb-watcher
+        hash: 8d61988b8fa28fa7d30f35364067361a7d7e9ddd
+      - repo: openstack/deb-zaqar
+        hash: 7d0184d34adc42491fb1334868dce845febecd7b
+      - repo: openstack/deb-zaqar-ui
+        hash: b8e8c8a5397e7b5fc07629f0ebf949b6070fd4a4
