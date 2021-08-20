@@ -84,13 +84,13 @@ cycle:
 - end: '2021-08-20'
   name: R-7
   start: '2021-08-16'
-  x-project:
-    - x-final-lib
+  project-specific:
+    - x-oslo-feature-freeze
 - end: '2021-08-27'
   name: R-6
   start: '2021-08-23'
-  project-specific:
-    - x-oslo-feature-freeze
+  x-project:
+    - x-final-lib
 - end: '2021-09-03'
   name: R-5
   start: '2021-08-30'
