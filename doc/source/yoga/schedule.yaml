@@ -69,12 +69,13 @@ cycle:
   start: '2022-02-07'
   x-project:
     - y-extra-atc-freeze
-    - y-final-lib
+  project-specific:
+    - y-oslo-feature-freeze
 - end: '2022-02-18'
   name: R-6
   start: '2022-02-14'
-  project-specific:
-    - y-oslo-feature-freeze
+  x-project:
+    - y-final-lib
 - end: '2022-02-25'
   name: R-5
   start: '2022-02-21'
