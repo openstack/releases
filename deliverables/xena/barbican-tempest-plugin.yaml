@@ -8,4 +8,9 @@ repository-settings:
   openstack/barbican-tempest-plugin:
     tarball-base: barbican_tempest_plugin
 team: barbican
+releases:
+  - version: 1.4.0
+    projects:
+      - repo: openstack/barbican-tempest-plugin
+        hash: 25e16b8a0f36fbfee8fcccd6926682f0958bcc8d
 type: tempest-plugin
