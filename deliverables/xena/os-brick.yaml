@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 7d3af72cc2c5b068dc73878c2a6bda431e1c8af5
+  - version: 5.0.0
+    projects:
+      - repo: openstack/os-brick
+        hash: f4931f592c7ab31f111d6cfc480ba5221d428e6c
+branches:
+  - location: 5.0.0
+    name: stable/xena
