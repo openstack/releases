@@ -1,0 +1,17 @@
+---
+storyboard: openstack/kayobe
+release-model: cycle-trailing
+team: kolla
+type: other
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/kayobe
+        hash: 8b7213aadb497dc20831cf7b446b9adc5c00bb95
+      - repo: openstack/kayobe-config
+        hash: c0f66371c011951fdee7630bd5d6bbcd74cde71c
+repository-settings:
+  openstack/kayobe: {}
+  openstack/kayobe-config:
+    flags:
+      - no-artifact-build-job
