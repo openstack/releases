@@ -1,0 +1,12 @@
+---
+launchpad: storlets
+team: storlets
+type: service
+release-model: cycle-with-intermediary
+releases:
+  - version: newton-eol
+    projects:
+      - repo: openstack/storlets
+        hash: a0b986b13cfb4d88d18bdc59ce8fe9d964ba0e00
+repository-settings:
+  openstack/storlets: {}
