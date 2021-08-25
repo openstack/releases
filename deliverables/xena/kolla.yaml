@@ -5,3 +5,6 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla: {}
+cycle-highlights:
+  - Updated Ansible playbooks to allow tuning of facts for improved performance
+  - Added integration with Hashicorp Vault for control plane secrets
