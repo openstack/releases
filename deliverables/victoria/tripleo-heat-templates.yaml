@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 72c85d0a69a6c9a7f15f9fc8571debb16115da8f
+  - version: 13.5.0
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 92d3283e83a53e2e4178ebc0a49b0fae15f46048
 branches:
   - name: stable/victoria
     location: 13.0.0
