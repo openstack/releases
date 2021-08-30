@@ -36,6 +36,10 @@ releases:
       - repo: openstack/cyborg
         hash: 973716aa23d033df3a23aa2b34ce533f3f320c8f
     diff-start: 3.0.0
+  - version: 4.0.1
+    projects:
+      - repo: openstack/cyborg
+        hash: bb718c84204c323f9c2080904f00b83b5f7baf2f
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1
