@@ -1,0 +1,12 @@
+---
+launchpad: karbor-dashboard
+release-model: cycle-with-intermediary
+team: karbor
+type: horizon-plugin
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: 88fa147398a5cc39ab9646f39a2ebc264d48418e
+repository-settings:
+  openstack/karbor-dashboard: {}
