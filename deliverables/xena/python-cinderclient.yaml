@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: e03111dea33d671661d01eadbb068d6ee6987cec
+  - version: 8.1.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: fab6ddf30c4bc0add1551d5de05b9bf336317063
+branches:
+  - name: stable/xena
+    location: 8.1.0
