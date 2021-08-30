@@ -40,6 +40,8 @@ cycle:
   start: '2021-12-13'
   x-project:
     - y-cycle-trail
+  project-specific:
+    - y-manila-spec-freeze
 - end: '2021-12-24'
   name: R-14
   start: '2021-12-20'
@@ -58,9 +60,13 @@ cycle:
 - end: '2022-01-21'
   name: R-10
   start: '2022-01-17'
+  project-specific:
+    - y-manila-new-driver-deadline
 - end: '2022-01-28'
   name: R-9
   start: '2022-01-24'
+  project-specific:
+    - y-manila-fpfreeze
 - end: '2022-02-04'
   name: R-8
   start: '2022-01-31'
