@@ -5,3 +5,8 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+cycle-highlights:
+  - Added OpenStackClient support to ``python-blazarclient``, allowing users to
+    interact with Blazar using ``openstack reservation`` commands, which
+    provides them with a similar command-line interface than when interacting
+    with other OpenStack projects.
