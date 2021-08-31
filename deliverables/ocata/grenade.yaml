@@ -1,0 +1,14 @@
+---
+launchpad: grenade
+release-model: untagged
+team: 'Quality Assurance'
+type: other
+stable-branch-type: tagless
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 960d6b8a24e4e1b2574e66fad33cefff66f4baa7
+repository-settings:
+  openstack/grenade: {}
+
