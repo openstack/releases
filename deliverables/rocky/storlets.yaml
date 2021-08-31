@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: 201f2b99411ee78af1882fc550166aa58d4b1d8a
+  - version: rocky-eol
+    projects:
+      - repo: openstack/storlets
+        hash: 8706370baf70b7e2351eb4247e3032cc3289d933
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky

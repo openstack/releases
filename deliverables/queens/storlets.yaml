@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: 633c7b9e4894bc075fbc27ce17fe63540a622133
+  - version: queens-eol
+    projects:
+      - repo: openstack/storlets
+        hash: 2ce1ae0d747572d3ca4fdffcf95e96405230e405
 branches:
   - name: stable/queens
     location: 1.0.0
