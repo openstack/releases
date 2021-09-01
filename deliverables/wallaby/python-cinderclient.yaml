@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: f7eb39500bea4ed4a535bf1c85373639ab262db5
+  - version: 7.4.1
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 4f72e6f0c218751d28c8442d401e2fd2abcec1ea
 branches:
   - name: stable/wallaby
     location: 7.4.0
