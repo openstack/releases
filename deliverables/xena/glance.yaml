@@ -5,6 +5,9 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - Support for unified quotas using keystone limits
+  - Moved policy enforcement in API layer
 repository-settings:
   openstack/glance: {}
 releases:
