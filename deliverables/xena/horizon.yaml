@@ -5,6 +5,10 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Horizon and all horizon plugins now support nodejs14 which is the current LTS
+    version of nodejs.
+  - Added support for creating Network QoS Policy using horizon.
 releases:
   - version: 20.0.0
     projects:
