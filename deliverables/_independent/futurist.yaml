@@ -5,3 +5,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/futurist: {}
+releases:
+  - version: 2.4.0
+    projects:
+      - repo: openstack/futurist
+        hash: d70c7e5f4686ba0ea9235b280f8bdd07fecfeccb
