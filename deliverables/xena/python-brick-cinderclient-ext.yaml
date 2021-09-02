@@ -6,3 +6,11 @@ team: cinder
 type: client-library
 repository-settings:
   openstack/python-brick-cinderclient-ext: {}
+releases:
+  - projects:
+      - hash: 0a5b1f76aa3b9905a4197263174ab31b301a4787
+        repo: openstack/python-brick-cinderclient-ext
+    version: 1.4.0
+branches:
+  - location: 1.4.0
+    name: stable/xena
