@@ -5,3 +5,23 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - Users can specify affinity based provisioning hints when creating
+    shares. Hints are tracked through the lifetime of the shares, and affect
+    further lifecycle operations such as share migration.
+  - Share servers can now be live migrated across storage systems by
+    preserving network allocations. Cloud administrators have a "check"
+    utility that verifies if a nondisruptive/live share server migration is
+    feasible.
+  - Feature parity between the manilaclient shell utility and the unified
+    OpenStackCLI has increased significantly enhancing usability of the Shared
+    File Systems API.
+  - Performance enhancements have been committed to pagination and filtering
+    of several resources.
+  - A new share driver has been added to support Pure Storage Flashblade
+    storage systems and it allows provisioning and managing of NFS shares.
+  - The NetApp driver added support for petabyte scale filesystems. It also
+    added support for "readable" replication of shares alongside "dr"
+    (disaster recovery) style replication. Users can mount read-only copies
+    of their shares provisioned across availability zones while still having
+    read/write access to the primary share.
