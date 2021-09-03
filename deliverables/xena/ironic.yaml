@@ -20,3 +20,12 @@ branches:
     location: 18.0.0
   - name: bugfix/18.1
     location: 18.1.0
+cycle-highlights:
+  - New ``custom-agent`` deployment interface for where the agent provides
+    knowledge of all deployment steps.
+  - Redfish BIOS firmware setting description registry is now available
+    as part of the detail list.
+  - Substantial API improvements in node list retrieval performance,
+    support for ``boot_mode`` and ``secure_boot`` state visibility
+    on a bare metal node as well as capability to set these states
+    as API actions.
