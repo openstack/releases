@@ -3,6 +3,34 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    Improved handling of user quotas around the creation of temporary
+    resources.  This includes the display of information in the
+    volume or snapshot detail response in Block Storage API microversion
+    3.65 concerning whether that resource consumes quota, and the ability
+    to filter a requested list of resources according to whether they
+    consume quota or not.
+  - |
+    Block Storage API microversion 3.66 removes the necessity to add a 'force'
+    flag when requesting a snapshot of an in-use volume, given that this is
+    not a problem for modern storage systems.
+  - |
+    Enhancement of the volume-type detail response to include non-sensitive
+    "extra-specs" information in order to provide more data for automated
+    systems to select a volume type.  Additionally, the volume type list can
+    be filtered by these non-sensitive extra-specs using the current Block
+    Storage API list filtering syntax for extra-specs.
+  - |
+    Removal of the long-deprecated Block Storage API version 2.  But not to
+    fear, Block Storage API version 3.0 was designed to be completely
+    compatible with version 2.  We're at microversion 3.66 in the Xena
+    release, so you'll want to get acquainted with all our great new features
+    anyway.
+  - |
+    Many current backend storage drivers have added support for features
+    exceeding the required driver functions, for example, multiattach and
+    the ability to take advantage of backend optimizations.
 repository-settings:
   openstack/cinder: {}
 releases:
