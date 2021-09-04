@@ -5,3 +5,12 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
+cycle-highlights:
+  - Kuryr logs now provide details with indication
+    of OpenStack Services that should be anlyzed when
+    experiencing issues that it's not able to recover
+    from.
+  - Kuryr allows setting the Load Balancer listener
+    timeout by setting an annotation to the Service.
+  - Kuryr can reconcile Load Balancer to correspond
+    to the Services specification.
