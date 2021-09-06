@@ -1,0 +1,13 @@
+---
+launchpad: rpm-packaging
+release-model: untagged
+team: Packaging-rpm
+type: other
+stable-branch-type: tagless
+releases:
+  - version: ocata-eol
+    projects:
+      - repo: openstack/rpm-packaging
+        hash: 88a7f01c61a6839ba117c37b2b7e2a319f39e9e7
+repository-settings:
+  openstack/rpm-packaging: {}
