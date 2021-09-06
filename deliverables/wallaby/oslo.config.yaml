@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: cfa256464e519468f227e676e2ca0829bf5c7e02
+  - version: 8.5.1
+    projects:
+      - repo: openstack/oslo.config
+        hash: de1dbeed235d2df7cf1528aef6ad4a70ddf8559f
 branches:
   - name: stable/wallaby
     location: 8.5.0
