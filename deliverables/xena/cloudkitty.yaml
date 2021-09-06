@@ -4,5 +4,19 @@ storyboard: openstack/cloudkitty
 release-model: cycle-with-rc
 team: cloudkitty
 type: service
+cycle-highlights:
+  - |
+    Adds an option to enable the use of custom queries with the Gnocchi
+    collector. Operators are now able to take full advantage of functions
+    that are available on Gnocchi such as any arithmetic operation,
+    logical operation and many others.
+  - |
+    We changed the `state` field in `cloudkitty_storage_states` table. The
+    goal is to use a more descriptive and meaningful name
+    ( `last_processed_timestamp`).
+  - |
+    The new "NOTNUMBOOL" mutator has been added. This mutator is, essentially,
+    an opposite of the "NUMBOOL" mutator as it returns 1.0 when quantity is 0
+    and 0.0 otherwise.
 repository-settings:
   openstack/cloudkitty: {}
