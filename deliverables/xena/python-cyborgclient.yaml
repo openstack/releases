@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: d051769d9f3dc1c5790b01a7cff2f92fb908848d
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 2a8dc2449a5b6ed58aa79b10a7bf4571d8214457
+branches:
+  - name: stable/xena
+    location: 1.5.0
