@@ -1019,7 +1019,7 @@ R-4 week
 
      .. warning::
 
-        Please use ``$series-table-branches`` as gerrit topic.
+        Please use ``$series-stable-branches`` as gerrit topic.
 
    - That patch will be used as a base
      to communicate with the team: if a team wants to wait for a specific patch
