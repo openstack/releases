@@ -6,3 +6,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-prometheus-exporter: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 40b97172d3853cf5db622ac5c3e94955ac5ff031
+branches:
+  - name: stable/xena
+    location: 3.0.0.0rc1
