@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-odl: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/networking-odl
+        hash: 40ca37f63bc08556d7d15ac67742be62ea6a2f20
+branches:
+  - name: stable/xena
+    location: 19.0.0.0rc1
