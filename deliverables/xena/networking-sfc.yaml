@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-sfc: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 04e1be1cc25cc84fb3e6b50656759bc325b4c223
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
