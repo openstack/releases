@@ -6,3 +6,11 @@ team: designate
 type: horizon-plugin
 repository-settings:
   openstack/designate-dashboard: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: b948e43365bec0d96bcda0f31f25f74b5a9b0971
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
