@@ -6,15 +6,24 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
 cycle-highlights:
-  - Distributed DHCP service is now available as an neutron-ovs-agent extension.
-    It provides basic DHCP functionality locally on compute nodes where VMs are
-    and no DHCP agents are needed in such case.
+  - Distributed DHCP service is now available as an neutron-ovs-agent
+    extension. It provides basic DHCP functionality locally on compute
+    nodes where VMs are and no DHCP agents are needed in such case.
   - Support stateless security groups with the latest OVN 21.06+. The
     ``stateful=False`` security groups are mapped to the new ``allow-stateless``
     OVN ACL verb.
-  - ECMP routes are now supported by Neutron. Multiple routes with the same
-    destination address are now consolidated into a single ECMP route.
-  - A new quota driver is added ``DbQuotaNoLockDriver``. This driver does not
-    create a unique lock per (resource, project_id). Such locks could lead to a
-    database deadlock state if the number of server requests exceeds the number
-    of resolved resource creations.
+  - ECMP routes are now supported by Neutron. Multiple routes with the
+    same destination address are now consolidated into a single ECMP
+    route.
+  - A new quota driver is added ``DbQuotaNoLockDriver``. This driver
+    does not create a unique lock per (resource, project_id). Such locks
+    could lead to a database deadlock state if the number of server
+    requests exceeds the number of resolved resource creations.
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 6db261962894b1667dd213b116e89246a3e54386
+branches:
+  - name: stable/xena
+    location: 19.0.0.0rc1
