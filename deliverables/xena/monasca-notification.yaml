@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-notification
+        hash: fa2454a3c9c524773891e53d2d61f9227a9a2d46
+branches:
+  - name: stable/xena
+    location: 5.0.0.0rc1
