@@ -8,3 +8,8 @@ repository-settings:
   openstack/glance-tempest-plugin: {}
 team: glance
 type: tempest-plugin
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/glance-tempest-plugin
+        hash: 174c3fac1d4e5827af301ee077c8921201318a30
