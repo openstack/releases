@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: c2d9a4f9cb050faf5b863acb0b5225195a8c6fe8
+branches:
+  - name: stable/xena
+    location: 12.0.0.0rc1
