@@ -7,3 +7,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent-builder: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 47ca82775cbfc8e9d9234e9c73d6b062d0e7ce05
+branches:
+  - name: stable/xena
+    location: 3.0.0
