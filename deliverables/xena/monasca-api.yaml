@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 7466a2f962ec5e14651ad9d5597753b3c05c3c25
+branches:
+  - name: stable/xena
+    location: 7.0.0.0rc1
