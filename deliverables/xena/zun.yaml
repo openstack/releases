@@ -5,3 +5,11 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/zun
+        hash: abd1e5c9f34c3b3c141600f0386e77ab41f7e89a
+branches:
+  - name: stable/xena
+    location: 8.0.0.0rc1
