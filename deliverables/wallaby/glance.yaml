@@ -31,6 +31,10 @@ releases:
       - repo: openstack/glance
         hash: 922e544ca2556994450e6972403ba4313318c5e0
     diff-start: 21.0.0.0rc1
+  - version: 22.1.0
+    projects:
+      - repo: openstack/glance
+        hash: 8499efd3205d84eff35ed4ed157685313d9e3fb7
 branches:
   - name: stable/wallaby
     location: 22.0.0.0rc1
