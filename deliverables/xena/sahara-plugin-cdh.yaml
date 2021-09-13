@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-cdh: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: fc27bc345ee4c3d5dce6b57988580046a3c3c7a5
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
