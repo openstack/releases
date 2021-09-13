@@ -8,6 +8,17 @@ repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
 cycle-highlights:
-  - Refactor documentation structure including API docs, user guide and contributor guide.
-  - Add placement resource cleanup mechanism in cyborg-conductor to avoid orphan resources.
-  - Improve Cyborg API with standard return value and add new operations for different API resources.
+  - Refactor documentation structure including API docs, user guide
+    and contributor guide.
+  - Add placement resource cleanup mechanism in cyborg-conductor to
+    avoid orphan resources.
+  - Improve Cyborg API with standard return value and add new operations
+    for different API resources.
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: d22831e78b295c5ac370ca1faf84e95924800fea
+branches:
+  - name: stable/xena
+    location: 7.0.0.0rc1
