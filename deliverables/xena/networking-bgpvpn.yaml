@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bgpvpn: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 78fc8e35cc92ede933f21e1ed35608047b5b6aa9
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
