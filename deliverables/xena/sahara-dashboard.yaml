@@ -5,3 +5,11 @@ team: sahara
 type: horizon-plugin
 repository-settings:
   openstack/sahara-dashboard: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 4604f95cb22c8322a3bef9e59969d659f22e1a0a
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
