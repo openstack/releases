@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: c7d9976e1527eba5ca59a503b08e5d785d2b6101
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
