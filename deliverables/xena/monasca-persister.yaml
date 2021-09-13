@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: cbc65411fee3b229c8c6d90eed83a1ca3ba090b7
+branches:
+  - name: stable/xena
+    location: 5.0.0.0rc1
