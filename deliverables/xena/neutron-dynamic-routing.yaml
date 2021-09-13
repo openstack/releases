@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-dynamic-routing: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 891ca86212f0f9fdce669d44b65daa9363d1b847
+branches:
+  - name: stable/xena
+    location: 19.0.0.0rc1
