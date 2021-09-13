@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: c833a9783ab8e164ca1a0f6f01010cc4e85c3294
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
