@@ -5,3 +5,11 @@ team: magnum
 type: horizon-plugin
 repository-settings:
   openstack/magnum-ui: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/magnum-ui
+        hash: bcd7fbfde73ebf6e0cbd13a511802f3ec50cbb45
+branches:
+  - name: stable/xena
+    location: 9.0.0.0rc1
