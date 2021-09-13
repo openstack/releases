@@ -5,3 +5,11 @@ team: solum
 type: horizon-plugin
 repository-settings:
   openstack/solum-dashboard: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 40714fdbe204135cb7879e4534b07e79b76f7f7f
+branches:
+  - name: stable/xena
+    location: 7.0.0.0rc1
