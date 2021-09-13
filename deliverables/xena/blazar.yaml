@@ -6,7 +6,15 @@ type: service
 repository-settings:
   openstack/blazar: {}
 cycle-highlights:
-  - Added OpenStackClient support to ``python-blazarclient``, allowing users to
-    interact with Blazar using ``openstack reservation`` commands, which
-    provides them with a similar command-line interface than when interacting
-    with other OpenStack projects.
+  - Added OpenStackClient support to ``python-blazarclient``, allowing
+    users to interact with Blazar using ``openstack reservation`` commands,
+    which provides them with a similar command-line interface than when
+    interacting with other OpenStack projects.
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 233e1c146d77cf0b2944f9dd24fa5d25423dce79
+branches:
+  - name: stable/xena
+    location: 8.0.0.0rc1
