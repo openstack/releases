@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 2329562d274b953851603f09f59b140b21a898b4
+branches:
+  - name: stable/xena
+    location: 11.0.0.0rc1
