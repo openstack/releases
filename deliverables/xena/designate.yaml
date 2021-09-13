@@ -6,8 +6,16 @@ release-model: cycle-with-rc
 team: designate
 type: service
 cycle-highlights:
-  - Designate now supports the CERT resource record type, enabling new use
-    cases such as secure email and certificate revocation list publication
+  - Designate now supports the CERT resource record type, enabling new
+    use cases such as secure email and certificate revocation list publication
     via DNS.
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 3b20a121646200e538736e59f7f433b0d528ba98
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
