@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4192182302a9f81b2cac5aff484161afc776c750
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
