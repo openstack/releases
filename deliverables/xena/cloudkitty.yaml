@@ -20,3 +20,11 @@ cycle-highlights:
     and 0.0 otherwise.
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: b9f63a1ae268562d4ae619f42ae2f1abfdc33fdd
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
