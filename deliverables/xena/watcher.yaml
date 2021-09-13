@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: 6dd2f2a9c100e8620d33855e3438e9c00976006a
+branches:
+  - name: stable/xena
+    location: 7.0.0.0rc1
