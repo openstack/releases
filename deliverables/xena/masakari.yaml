@@ -5,3 +5,11 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: 8f1da00982e02999c0362c47581d3437b9e44c4a
+branches:
+  - name: stable/xena
+    location: 12.0.0.0rc1
