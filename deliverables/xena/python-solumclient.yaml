@@ -5,3 +5,11 @@ team: solum
 type: client-library
 repository-settings:
   openstack/python-solumclient: {}
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-solumclient
+        hash: e43cee97ff3506984265aa5aa5ecaf9d7b871353
+branches:
+  - name: stable/xena
+    location: 3.4.0
