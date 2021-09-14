@@ -5,3 +5,11 @@ team: barbican
 type: client-library
 repository-settings:
   openstack/python-barbicanclient: {}
+releases:
+  - version: 5.2.0
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: ad49c406fe67459a4a667c78ad37782fb14bdbb7
+branches:
+  - name: stable/xena
+    location: 5.2.0
