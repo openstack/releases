@@ -6,3 +6,11 @@ team: freezer
 type: client-library
 repository-settings:
   openstack/python-freezerclient: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: a5496f759316e6b33b5b2d9593104a00b89b014d
+branches:
+  - name: stable/xena
+    location: 4.3.0
