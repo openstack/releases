@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: e49377a97435a2854d6d0d6509e5ad472f6c4fbc
+  - version: rocky-eol
+    projects:
+      - hash: 891f4e37eece4a20a83236783a03618ece09027e
+        repo: openstack/neutron-vpnaas-dashboard
 branches:
   - location: 1.4.0
     name: stable/rocky

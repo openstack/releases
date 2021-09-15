@@ -1,0 +1,12 @@
+---
+launchpad: neutron-vpnaas-dashboard
+team: neutron
+type: horizon-plugin
+release-model: cycle-with-intermediary
+releases:
+  - version: pike-eol
+    projects:
+      - hash: 8daf2cad73a5a5226a89c1a491eef18968991e48
+        repo: openstack/neutron-vpnaas-dashboard
+repository-settings:
+  openstack/neutron-vpnaas-dashboard: {}

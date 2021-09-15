@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 6818274acbfcd8f2fc2ece9f004d0eff13ee8bf1
+  - version: rocky-eol
+    projects:
+      - hash: 6818274acbfcd8f2fc2ece9f004d0eff13ee8bf1
+        repo: openstack/neutron-vpnaas
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky

@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 659a8cd7fe2581b7e7d7b1e60b18a4630c9d7058
+  - version: stein-eol
+    projects:
+      - hash: 659a8cd7fe2581b7e7d7b1e60b18a4630c9d7058
+        repo: openstack/neutron-vpnaas
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein
