@@ -5,3 +5,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/compute-hyperv: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 1971a6719e89eac9addd4048312c028a2bfbcd03
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
