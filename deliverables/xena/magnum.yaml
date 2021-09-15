@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: 6951ac4fc6b6178637fac7bd5d05096adb5c6bdc
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
