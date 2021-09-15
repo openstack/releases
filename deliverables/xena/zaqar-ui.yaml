@@ -6,3 +6,11 @@ team: zaqar
 type: horizon-plugin
 repository-settings:
   openstack/zaqar-ui: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 98d0021d8affbf124b451fc182bb96de327c63fe
+branches:
+  - name: stable/xena
+    location: 11.0.0.0rc1
