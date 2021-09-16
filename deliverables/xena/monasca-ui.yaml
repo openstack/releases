@@ -5,3 +5,11 @@ team: monasca
 type: horizon-plugin
 repository-settings:
   openstack/monasca-ui: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 9014bce3de6fed79f85b79ecf30031e6af7b7356
+branches:
+  - name: stable/xena
+    location: 5.0.0.0rc1
