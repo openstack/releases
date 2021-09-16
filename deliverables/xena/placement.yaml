@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: e7355066fc60c2944b9eef5f35c5c90499d51763
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
