@@ -5,3 +5,11 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: 2216af7834c76fbaef49fc28d2febc8468589272
+branches:
+  - name: stable/xena
+    location: 12.0.0.0rc1
