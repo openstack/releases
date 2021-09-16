@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 69a6eb481f7322cc69ae40f39630b81db6571a74
+branches:
+  - name: stable/xena
+    location: 4.0.0.0rc1
