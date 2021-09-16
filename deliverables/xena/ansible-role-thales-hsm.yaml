@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 storyboard: 1184
 repository-settings:
   openstack/ansible-role-thales-hsm: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: e82db3b3fc5088c393eb810bf52329444a91b4eb
+branches:
+  - name: stable/xena
+    location: 2.0.0.0rc1
