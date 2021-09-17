@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: cf5f1e5651052be52f17beeb400ac433303a9602
+branches:
+  - name: stable/xena
+    location: 20.0.0.0rc1
