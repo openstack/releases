@@ -6,3 +6,11 @@ team: sahara
 type: client-library
 repository-settings:
   openstack/python-saharaclient: {}
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 473ad0dd95433b6bead20eb290d3f29800c523b7
+branches:
+  - name: stable/xena
+    location: 3.4.0
