@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-spark: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 53aee26e0498854923a585df521c5043e621f5b8
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
