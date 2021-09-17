@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 8034258ef0ecb048c4167d7a0eb3691a9d23cc44
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
