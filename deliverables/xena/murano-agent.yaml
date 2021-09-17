@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: db57214bb80c0d0d39de706fe5e9daa031f7c09c
+branches:
+  - name: stable/xena
+    location: 8.0.0.0rc1
