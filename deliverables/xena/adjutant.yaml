@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/adjutant:
     tarball-base: python-adjutant
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant
+        hash: 7aa1fc69c31cf66e824875b24da10d1d6a1941e9
+branches:
+  - name: stable/xena
+    location: 3.0.0.0rc1
