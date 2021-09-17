@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-baremetal: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: cd69016601675016bccaaf611528a6439e254b68
+branches:
+  - name: stable/xena
+    location: 5.0.0.0rc1
