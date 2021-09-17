@@ -6,3 +6,11 @@ team: murano
 type: horizon-plugin
 repository-settings:
   openstack/murano-dashboard: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: fb7d081bc89d9d2a80f0d49a32413c81f2d04289
+branches:
+  - name: stable/xena
+    location: 12.0.0.0rc1
