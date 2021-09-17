@@ -5,3 +5,11 @@ team: heat
 type: horizon-plugin
 repository-settings:
   openstack/heat-dashboard: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 1f52db08edf78f642c059d94b3abb32e014c4876
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
