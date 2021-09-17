@@ -6,3 +6,11 @@ team: sahara
 type: service
 repository-settings:
   openstack/sahara: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: 2ce24b6f933eef8860947d8632d607867dfbf841
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
