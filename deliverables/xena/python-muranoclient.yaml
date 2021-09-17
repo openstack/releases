@@ -6,3 +6,11 @@ team: murano
 type: client-library
 repository-settings:
   openstack/python-muranoclient: {}
+releases:
+  - version: 2.3.0
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: c3dd9639679abac46e384e1bfdbaad67ec1943f7
+branches:
+  - name: stable/xena
+    location: 2.3.0
