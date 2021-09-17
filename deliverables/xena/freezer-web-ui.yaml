@@ -6,3 +6,11 @@ team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 39157c072a59b060f452581e5a5d0a2108be7978
+branches:
+  - name: stable/xena
+    location: 11.0.0.0rc1
