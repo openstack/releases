@@ -7,3 +7,11 @@ type: library
 repository-settings:
   openstack/keystoneauth:
     tarball-base: keystoneauth1
+releases:
+  - version: 4.4.0
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 112bcae1fbec355fcb58da07ae1d9f1adf8b77ba
+branches:
+  - name: stable/xena
+    location: 4.4.0
