@@ -5,3 +5,11 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 3c0fabfc24549976dd4430aa51c28ff5c01fc8f8
+branches:
+  - name: stable/xena
+    location: 6.0.0.0rc1
