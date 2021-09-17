@@ -6,3 +6,11 @@ team: keystone
 type: client-library
 repository-settings:
   openstack/python-keystoneclient: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: d5cb761763988217cdd00a7981a62e2083fd381f
+branches:
+  - name: stable/xena
+    location: 4.3.0
