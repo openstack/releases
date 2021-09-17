@@ -27,3 +27,11 @@ cycle-highlights:
     `API microversion 2.90 <https://docs.openstack.org/nova/latest/reference/api-microversion-history.html#maximum-in-xena>`_
     allows users to configure the hostname that will be exposed via the nova metadata service when
     creating or rebuilding their instance.
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 1c502ebaec29615f08d4af7dc6680f3141d70e67
+branches:
+  - name: stable/xena
+    location: 24.0.0.0rc1
