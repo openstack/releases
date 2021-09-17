@@ -5,3 +5,11 @@ team: senlin
 type: horizon-plugin
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: fef54bb8bd95cfbe34679ba6e1c47a6842f59e6e
+branches:
+  - name: stable/xena
+    location: 4.0.0.0rc1
