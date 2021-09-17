@@ -113,6 +113,7 @@ function process_repo {
     fi
     cd "openstack/$repo"
     prev_tag=$(get_last_tag)
+    echo "Existing versions for ${series}: ${current_series_tag}"
     if [ -z "$prev_tag" ]; then
         echo "$repo has not yet been released"
     else
@@ -162,8 +163,11 @@ $(git log --oneline --no-merges ${prev_tag}..${end_sha})
     echo
 }
 
+CWD=$(pwd)
 # Process each repo passed in to see if a release should be proposed
 for repo in $repos; do
+    cd ${CWD}
+    current_series_tag=$(get-versions-on-series ${series} ${repo})
     cd $MYTMPDIR
     echo
     process_repo "${repo/openstack\//}"
