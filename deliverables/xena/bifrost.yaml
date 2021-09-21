@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: dfa9eddb3f4b2cbed0e4fe4ec1604aac70d83bec
+  - version: 11.2.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 3cb30372cab8d66dc3c58f8761ca6ea8484940b8
 branches:
   - name: bugfix/11.0
     location: 11.0.0
   - name: bugfix/11.1
     location: 11.1.0
+  - name: stable/xena
+    location: 11.2.0
