@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: a43f6b4c5ef03ca2570b330a0af76020960e04a8
+  - version: 23.0.0.0rc2
+    projects:
+      - repo: openstack/glance
+        hash: aa7c4acdade2071084a35e42b35c1ec5a8c9990f
 branches:
   - name: stable/xena
     location: 23.0.0.0rc1
