@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 611a543ecddda22ed5f19af96bf6b2f690cdbf51
+  - version: 10.8.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 5ff2d13975676cb54b09ffac3a8fd83f9c622809
 branches:
   - name: bugfix/10.7
     location: 10.7.0
+  - name: stable/xena
+    location: 10.8.0
