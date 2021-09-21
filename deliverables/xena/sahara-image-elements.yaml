@@ -6,3 +6,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-image-elements: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: ded80db2667438313bab6d448d19ef2305f2e527
+branches:
+  - name: stable/xena
+    location: 15.0.0.0rc1
