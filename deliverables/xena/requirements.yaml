@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/xena
+    location:
+      openstack/requirements: 51fa0f216cc4a8b391bb68c504127219c115652f
