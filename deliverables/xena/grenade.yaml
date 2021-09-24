@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: d61a95325b3d052216aa13931c7a6d4a132a5843
+    name: stable/xena
 repository-settings:
   openstack/grenade: {}
