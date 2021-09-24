@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: c9f3e5bdd76430a7c14b9f02c3f8ba47214037ae
+    name: stable/xena
 repository-settings:
   openstack/devstack: {}
