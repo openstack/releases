@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 1c502ebaec29615f08d4af7dc6680f3141d70e67
+  - version: 24.0.0.0rc2
+    projects:
+      - repo: openstack/nova
+        hash: 928d3feffd674a842d4bb4348d2f0e0d7e93a8a5
 branches:
   - name: stable/xena
     location: 24.0.0.0rc1
