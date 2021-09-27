@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: deb31a0c4d35ea6c479bfe466b780ed07a489276
+  - version: 17.2.0
+    projects:
+      - repo: openstack/cinder
+        hash: 02b1b7a9cb47fc6f8a9dda1f8576348424cdd042
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
