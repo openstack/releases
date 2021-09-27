@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-ceph: ea0c1c768c99437504a1a6f2971dd0c5c1563ca5
+    name: stable/xena
 repository-settings:
   openstack/devstack-plugin-ceph: {}
