@@ -16,6 +16,10 @@ releases:
       - repo: openstack/masakari-dashboard
         hash: 7e7cd03fb11ef2bdb27a83fe349c56bb163e16b9
     diff-start: 2.0.0
+  - version: 3.0.1
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 57610fce4bc25da2f04fd29d20fd899955782e47
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
