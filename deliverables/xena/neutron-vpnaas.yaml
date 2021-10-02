@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 8de26cbfcd9563c5ff0637ac9cfd7d98f7a37e00
+  - version: 19.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 8de26cbfcd9563c5ff0637ac9cfd7d98f7a37e00
+    diff-start: 18.0.0
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1

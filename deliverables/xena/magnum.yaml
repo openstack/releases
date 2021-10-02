@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 6951ac4fc6b6178637fac7bd5d05096adb5c6bdc
+  - version: 13.0.0
+    projects:
+      - repo: openstack/magnum
+        hash: 6951ac4fc6b6178637fac7bd5d05096adb5c6bdc
+    diff-start: 12.0.0.0rc1
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

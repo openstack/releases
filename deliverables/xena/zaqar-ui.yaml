@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 98d0021d8affbf124b451fc182bb96de327c63fe
+  - version: 11.0.0
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 98d0021d8affbf124b451fc182bb96de327c63fe
+    diff-start: 10.0.0
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

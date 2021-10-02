@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: 40714fdbe204135cb7879e4534b07e79b76f7f7f
+  - version: 7.0.0
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 40714fdbe204135cb7879e4534b07e79b76f7f7f
+    diff-start: 6.0.0
 branches:
   - name: stable/xena
     location: 7.0.0.0rc1

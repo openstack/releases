@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: e61fba4a0bce1305366071addfba0b4cb290ad8f
+  - version: 13.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: e61fba4a0bce1305366071addfba0b4cb290ad8f
+    diff-start: 12.0.0
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

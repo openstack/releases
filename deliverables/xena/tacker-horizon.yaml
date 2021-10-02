@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 69a6eb481f7322cc69ae40f39630b81db6571a74
+  - version: 4.0.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 69a6eb481f7322cc69ae40f39630b81db6571a74
+    diff-start: 3.0.0
 branches:
   - name: stable/xena
     location: 4.0.0.0rc1

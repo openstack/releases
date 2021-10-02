@@ -16,6 +16,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 3b20a121646200e538736e59f7f433b0d528ba98
+  - version: 13.0.0
+    projects:
+      - repo: openstack/designate
+        hash: 3b20a121646200e538736e59f7f433b0d528ba98
+    diff-start: 12.0.0
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

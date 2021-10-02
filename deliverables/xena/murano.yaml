@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 8ab430b2f4963e985f3f0de066bb8ddf1e89b847
+  - version: 12.0.0
+    projects:
+      - repo: openstack/murano
+        hash: 8ab430b2f4963e985f3f0de066bb8ddf1e89b847
+    diff-start: 11.0.0
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1

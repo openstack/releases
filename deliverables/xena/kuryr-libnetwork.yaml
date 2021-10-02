@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: dbb7a4dff64326d547243ce092d5064a13bfabb0
+  - version: 8.0.0
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: dbb7a4dff64326d547243ce092d5064a13bfabb0
+    diff-start: 7.0.0
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1

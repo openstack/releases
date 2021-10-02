@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-mapr
         hash: 9c7912bf55f0dfeac38d310a8b8a01d7d4469536
+  - version: 6.0.0
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 9c7912bf55f0dfeac38d310a8b8a01d7d4469536
+    diff-start: 5.0.0
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

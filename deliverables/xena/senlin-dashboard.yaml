@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: fef54bb8bd95cfbe34679ba6e1c47a6842f59e6e
+  - version: 4.0.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: fef54bb8bd95cfbe34679ba6e1c47a6842f59e6e
+    diff-start: 3.0.0
 branches:
   - name: stable/xena
     location: 4.0.0.0rc1

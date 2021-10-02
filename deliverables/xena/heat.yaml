@@ -16,6 +16,11 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 4cf0ff641adc89aac3ca82604114506ff2234dfc
+  - version: 17.0.0
+    projects:
+      - repo: openstack/heat
+        hash: 4cf0ff641adc89aac3ca82604114506ff2234dfc
+    diff-start: 16.0.0
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1

@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: b8ddbc94a1ff1c8dcb3414afd1d5f5269a09f9da
+  - version: 9.0.0
+    projects:
+      - repo: openstack/octavia
+        hash: b8ddbc94a1ff1c8dcb3414afd1d5f5269a09f9da
+    diff-start: 8.0.0.0rc1
 branches:
   - name: stable/xena
     location: 9.0.0.0rc1

@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: fae46199bba14b9d0f746338803fffa898f6532c
+  - version: 5.0.0
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: fae46199bba14b9d0f746338803fffa898f6532c
+    diff-start: 4.0.0
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

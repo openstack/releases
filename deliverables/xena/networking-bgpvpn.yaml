@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 78fc8e35cc92ede933f21e1ed35608047b5b6aa9
+  - version: 15.0.0
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 78fc8e35cc92ede933f21e1ed35608047b5b6aa9
+    diff-start: 14.0.0
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1

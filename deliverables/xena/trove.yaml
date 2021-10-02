@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/trove
         hash: f3459e2662e86b275ac3baf01330753df4d3f092
+  - version: 16.0.0
+    projects:
+      - repo: openstack/trove
+        hash: f3459e2662e86b275ac3baf01330753df4d3f092
+    diff-start: 15.0.0.0rc1
 branches:
   - name: stable/xena
     location: 16.0.0.0rc1

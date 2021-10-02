@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 456b7301f9cef66780f2f4372c54583847a2ee7a
+  - version: 6.0.0
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 456b7301f9cef66780f2f4372c54583847a2ee7a
+    diff-start: 5.0.0
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

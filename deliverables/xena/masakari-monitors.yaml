@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: c2d9a4f9cb050faf5b863acb0b5225195a8c6fe8
+  - version: 12.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: c2d9a4f9cb050faf5b863acb0b5225195a8c6fe8
+    diff-start: 11.0.0
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1
