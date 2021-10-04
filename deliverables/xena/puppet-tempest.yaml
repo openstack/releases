@@ -22,3 +22,10 @@ releases:
       - hash: 178d99cece735a2605d28d33a6233207b4843b1f
         repo: openstack/puppet-tempest
     version: 19.3.0
+  - projects:
+      - hash: 569cd602f18096573d91bcd5ea4e31073c8f61a8
+        repo: openstack/puppet-tempest
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

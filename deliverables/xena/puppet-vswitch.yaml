@@ -22,3 +22,10 @@ releases:
       - hash: 3c71c8941a6a52dd4b60df709faa3f9858c37242
         repo: openstack/puppet-vswitch
     version: 15.3.0
+  - projects:
+      - hash: 2bbcb10ffa848c2491126b161050de923bd3ffa3
+        repo: openstack/puppet-vswitch
+    version: 15.4.0
+branches:
+  - name: stable/xena
+    location: 15.4.0

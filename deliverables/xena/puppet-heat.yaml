@@ -22,3 +22,10 @@ releases:
       - hash: d4564ce00b5fbae24b93c3d976b1a67f82861075
         repo: openstack/puppet-heat
     version: 19.3.0
+  - projects:
+      - hash: c43c38ccbfc2ce402a5949fb4e7bd8de1abd926c
+        repo: openstack/puppet-heat
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

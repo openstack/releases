@@ -22,3 +22,10 @@ releases:
       - hash: ba416716336ad625f4716e4352164388a21643c3
         repo: openstack/puppet-cloudkitty
     version: 8.3.0
+  - projects:
+      - hash: 0de46143eb4222b776b3f1c91a98fd2071047eef
+        repo: openstack/puppet-cloudkitty
+    version: 8.4.0
+branches:
+  - name: stable/xena
+    location: 8.4.0
