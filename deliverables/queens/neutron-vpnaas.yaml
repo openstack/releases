@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 3f36a0a552c30f103966ddfbd1373fd04aa8a9f4
+  - version: queens-eol
+    projects:
+      - hash: e97a9f1368ecd011c6111f0b835d62aa70fefe51
+        repo: openstack/neutron-vpnaas
 branches:
   - location: 12.0.0
     name: stable/queens

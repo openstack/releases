@@ -1,0 +1,14 @@
+---
+launchpad: neutron-vpnaas
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: e7b0c52ef8ce0915dd06bbfb660e0d9a94aeb8ac
+        repo: openstack/neutron-vpnaas
+    version: pike-eol
+team: neutron
+type: other
+repository-settings:
+  openstack/neutron-vpnaas: {}
+
