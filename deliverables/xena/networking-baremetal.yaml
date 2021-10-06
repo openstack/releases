@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: cd69016601675016bccaaf611528a6439e254b68
+  - version: 5.0.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: cd69016601675016bccaaf611528a6439e254b68
+    diff-start: 4.0.0
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

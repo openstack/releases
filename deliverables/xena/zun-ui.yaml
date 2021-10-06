@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: f27296e6d5605036c773bd947d646feadc30d919
+  - version: 8.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: f27296e6d5605036c773bd947d646feadc30d919
+    diff-start: 7.0.0
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1

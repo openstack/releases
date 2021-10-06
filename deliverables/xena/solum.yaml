@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 51b5559ae1a21c45039bf0f833933b984c6f5898
+  - version: 11.0.0
+    projects:
+      - repo: openstack/solum
+        hash: 51b5559ae1a21c45039bf0f833933b984c6f5898
+    diff-start: 10.0.0
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: 7aa1fc69c31cf66e824875b24da10d1d6a1941e9
+  - version: 3.0.0
+    projects:
+      - repo: openstack/adjutant
+        hash: 7aa1fc69c31cf66e824875b24da10d1d6a1941e9
+    diff-start: 2.0.0
 branches:
   - name: stable/xena
     location: 3.0.0.0rc1

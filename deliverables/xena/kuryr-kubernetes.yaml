@@ -18,6 +18,11 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 1a120c23f6d753c5ea66b920cc1d5ac14e17bffe
+  - version: 5.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 1a120c23f6d753c5ea66b920cc1d5ac14e17bffe
+    diff-start: 4.0.0
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 5876f70d9589e8bbd0b3f424d5eee9241e4b4d08
+  - version: 6.0.0
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 5876f70d9589e8bbd0b3f424d5eee9241e4b4d08
+    diff-start: 5.0.0
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

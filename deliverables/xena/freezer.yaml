@@ -16,6 +16,15 @@ releases:
         hash: ee8fc485e7228c0cdb66998ebb69713adb01a869
       - repo: openstack/freezer-dr
         hash: 9e969c8600851f434b143f8eb65281b01fba4d7f
+  - version: 11.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 38cb8cd520ea000a3b7e326056f7c4b09a2c86df
+      - repo: openstack/freezer-api
+        hash: ee8fc485e7228c0cdb66998ebb69713adb01a869
+      - repo: openstack/freezer-dr
+        hash: 9e969c8600851f434b143f8eb65281b01fba4d7f
+    diff-start: 10.0.0
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

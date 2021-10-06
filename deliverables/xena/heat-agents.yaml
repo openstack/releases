@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: ba45ab41a63c22e81546c3173299bed899ffecc6
+  - version: 3.0.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: ba45ab41a63c22e81546c3173299bed899ffecc6
+    diff-start: 2.2.0
 branches:
   - name: stable/xena
     location: 3.0.0.0rc1

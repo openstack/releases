@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: fb7d081bc89d9d2a80f0d49a32413c81f2d04289
+  - version: 12.0.0
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: fb7d081bc89d9d2a80f0d49a32413c81f2d04289
+    diff-start: 11.0.0
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1

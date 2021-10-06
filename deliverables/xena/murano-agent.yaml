@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: db57214bb80c0d0d39de706fe5e9daa031f7c09c
+  - version: 8.0.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: db57214bb80c0d0d39de706fe5e9daa031f7c09c
+    diff-start: 7.0.0
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1

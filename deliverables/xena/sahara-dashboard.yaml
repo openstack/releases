@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 4604f95cb22c8322a3bef9e59969d659f22e1a0a
+  - version: 15.0.0
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 4604f95cb22c8322a3bef9e59969d659f22e1a0a
+    diff-start: 14.0.0
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1

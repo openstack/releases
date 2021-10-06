@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: 1971a6719e89eac9addd4048312c028a2bfbcd03
+  - version: 13.0.0
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 1971a6719e89eac9addd4048312c028a2bfbcd03
+    diff-start: 12.0.0
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

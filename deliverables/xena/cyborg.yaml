@@ -19,6 +19,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: d22831e78b295c5ac370ca1faf84e95924800fea
+  - version: 7.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: d22831e78b295c5ac370ca1faf84e95924800fea
+    diff-start: 6.0.0.0rc1
 branches:
   - name: stable/xena
     location: 7.0.0.0rc1

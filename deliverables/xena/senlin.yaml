@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 2216af7834c76fbaef49fc28d2febc8468589272
+  - version: 12.0.0
+    projects:
+      - repo: openstack/senlin
+        hash: 2216af7834c76fbaef49fc28d2febc8468589272
+    diff-start: 11.0.0
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1

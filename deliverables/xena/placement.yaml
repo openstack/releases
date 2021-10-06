@@ -16,6 +16,11 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 1cf167fbadb058f5f8a07022bf4a53473b019221
+  - version: 6.0.0
+    projects:
+      - repo: openstack/placement
+        hash: 1cf167fbadb058f5f8a07022bf4a53473b019221
+    diff-start: 5.0.0
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

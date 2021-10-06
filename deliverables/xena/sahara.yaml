@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 2ce24b6f933eef8860947d8632d607867dfbf841
+  - version: 15.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: 2ce24b6f933eef8860947d8632d607867dfbf841
+    diff-start: 14.0.0
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1

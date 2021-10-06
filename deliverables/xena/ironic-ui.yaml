@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 0dd2333634a7c77c48c1454af4e1ea9f66811756
+  - version: 5.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 0dd2333634a7c77c48c1454af4e1ea9f66811756
+    diff-start: 4.3.0
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

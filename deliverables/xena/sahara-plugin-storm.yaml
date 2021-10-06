@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-storm
         hash: 0b922e0620e5b94058c94071b0b27655cd8f16b8
+  - version: 6.0.0
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: 0b922e0620e5b94058c94071b0b27655cd8f16b8
+    diff-start: 5.0.0
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
