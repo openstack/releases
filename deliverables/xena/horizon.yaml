@@ -6,8 +6,8 @@ type: service
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:
-  - Horizon and all horizon plugins now support nodejs14 which is the current LTS
-    version of nodejs.
+  - Horizon and all horizon plugins now support nodejs14 which is the
+    current LTS version of nodejs.
   - Added support for creating Network QoS Policy using horizon.
 releases:
   - version: 20.0.0
@@ -21,3 +21,4 @@ releases:
 branches:
   - name: stable/xena
     location: 20.1.0
+release-notes: https://docs.openstack.org/releasenotes/horizon/xena.html
