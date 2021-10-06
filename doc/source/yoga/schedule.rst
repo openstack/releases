@@ -226,6 +226,81 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Cinder
+------
+
+.. _y-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in Yoga must be approved by
+Friday 17 December 2021 (23:59 UTC).
+
+.. _y-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the Yoga
+release is Friday 21 January 2022 (20:00 UTC).  New drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.  (Note that because of where some
+holidays fall this cycle, this is later than the usual Milestone-2 deadline.)
+
+.. _y-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the Yoga release
+is Friday 21 January 2022 (20:00 UTC).  New target drivers must be (a) code
+complete including unit tests, (b) merged into the code repository, and (c)
+must have a 3rd Party CI running reliably.
+
+.. _y-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in four weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 24 February 2022.
+
+.. _y-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in three weeks.  Before
+the Cinder meeting this week, you should post a blueprint in Launchpad listing
+the Gerrit reviews of features you'd like to land in Yoga.  (You can look
+among the Wallaby and Xena blueprints for examples; contact the PTL if you
+have any questions.)  This will help the team prioritize reviews and give you
+candid early feedback on whether the features look ready.
+
+.. _y-cinder-os-brick-release:
+
+Cinder os-brick Yoga Release
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Changes to be included in the Yoga release of the os-brick library must
+be merged by Thursday 10 February 2022 (20:00 UTC).
+
+.. _y-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the Yoga release, its third party CI must be running
+properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
+
 Oslo
 ----
 
