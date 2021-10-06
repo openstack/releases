@@ -2,7 +2,7 @@
 Xena
 ====
 
-Projected Release Date: 06 October, 2021
+Projected Released: 06 October, 2021
 
 .. toctree::
    :maxdepth: 1
