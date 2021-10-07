@@ -23,6 +23,13 @@ Week after previous release
 
    Submit your changes by using the gerrit topic ``$series-init-series``.
 
+   .. warning::
+
+      At this point, the trailing deliverables of the previous series
+      are not necessarily released yet. Adding them here is not an issue,
+      however, we should be vigilant and ensure to create new releases
+      for the previous series first.
+
 #. Coordinate with the Infrastructure team to swap out the previous cycle
    signing key and establish the new one for the starting cycle.
 
