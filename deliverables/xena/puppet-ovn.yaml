@@ -22,3 +22,10 @@ releases:
       - hash: d8205fe819e831020e4b0a057caa59834f3f694e
         repo: openstack/puppet-ovn
     version: 19.3.0
+  - projects:
+      - hash: 7f0582d37c36bbe9a8f2270935f86914ee61dbc6
+        repo: openstack/puppet-ovn
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

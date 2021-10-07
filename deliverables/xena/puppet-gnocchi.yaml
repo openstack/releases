@@ -22,3 +22,10 @@ releases:
       - hash: fb66d022e10b7146d8d65089ee233ad90aa8a02a
         repo: openstack/puppet-gnocchi
     version: 19.3.0
+  - projects:
+      - hash: 2a2dd1c73060df3ef6293c89ddf08fe1440e88b2
+        repo: openstack/puppet-gnocchi
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

@@ -22,3 +22,10 @@ releases:
       - hash: ffbef544c89bc4733a4d5198af0bb65ccf6bd308
         repo: openstack/puppet-swift
     version: 19.3.0
+  - projects:
+      - hash: 053a3a2a56723e0ec43d1855ac7615657a4de8f0
+        repo: openstack/puppet-swift
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

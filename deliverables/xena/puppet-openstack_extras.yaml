@@ -22,3 +22,10 @@ releases:
       - hash: f796d50b1f22693767a4e4bca195ea907453a01a
         repo: openstack/puppet-openstack_extras
     version: 19.3.0
+  - projects:
+      - hash: c342e68300d079cd8f85fa40e5d70a6d43cf82cf
+        repo: openstack/puppet-openstack_extras
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

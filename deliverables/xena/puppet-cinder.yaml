@@ -22,3 +22,10 @@ releases:
       - hash: ee971b4e5ad6d73ae26f84354bd1c6d3cf4bb4b3
         repo: openstack/puppet-cinder
     version: 19.3.0
+  - projects:
+      - hash: 5ed5bade33fb5902ee79463e293462684584c269
+        repo: openstack/puppet-cinder
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

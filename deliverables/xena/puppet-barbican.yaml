@@ -22,3 +22,10 @@ releases:
       - hash: 06d42a7c53da919e687592041b4bc927588fb1fe
         repo: openstack/puppet-barbican
     version: 19.3.0
+  - projects:
+      - hash: 7a3cb25214b5f9e3c6f4cbd58459c0891212dd92
+        repo: openstack/puppet-barbican
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

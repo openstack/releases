@@ -22,3 +22,10 @@ releases:
       - hash: b305a80e69bfb3a85551c36ba38bccec3272fb26
         repo: openstack/puppet-trove
     version: 19.3.0
+  - projects:
+      - hash: 1cadc20de097bfc7f14c200437305773db566783
+        repo: openstack/puppet-trove
+    version: 19.4.0
+branches:
+  - name: stable/xena
+    location: 19.4.0

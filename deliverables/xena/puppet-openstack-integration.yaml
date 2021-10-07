@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+branches:
+  - name: stable/xena
+    location:
+      openstack/puppet-openstack-integration: 79b1d160ed70a2bb08e90cb2c6099fa0ca0c84b3

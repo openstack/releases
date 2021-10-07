@@ -22,3 +22,10 @@ releases:
       - hash: 1fc59c1e12890dc9a32aec53eab0c3ffd6f45fc9
         repo: openstack/puppet-placement
     version: 6.3.0
+  - projects:
+      - hash: 01824a82392f74e0050098b4ea7e1969bedaa172
+        repo: openstack/puppet-placement
+    version: 6.4.0
+branches:
+  - name: stable/xena
+    location: 6.4.0
