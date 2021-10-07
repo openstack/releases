@@ -1,0 +1,15 @@
+---
+launchpad: nova
+team: Release Management
+type: other
+release-type: python-pypi
+release-model: cycle-with-intermediary
+stable-branch-type: std-with-versions
+repository-settings:
+  openstack/release-test:
+    tarball-base: openstack-release-test
+# NOTE(hberaud) This deliverable was not released in wallaby,
+# however, I prefer to keep this sample project around even
+# if it was not used during wallaby, just in case we need to
+# test something urgent.
+# Note: deliverable was not released in xena
