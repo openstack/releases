@@ -16,6 +16,8 @@ branches:
     location: 6.0.0
   - name: stable/victoria
     location: 7.0.0
+  - name: stable/wallaby
+    location: 8.0.0
 releases:
   - projects:
       - hash: 0f37163303a00936b56522e2cc3310e38b87a343
@@ -45,6 +47,10 @@ releases:
     projects:
       - repo: openstack/tripleo-upgrade
         hash: 5af54898cbd55733d2c5f20d3b7e8ffb83140d05
+  - version: 8.0.0
+    projects:
+      - repo: openstack/tripleo-upgrade
+        hash: fefc4b8bc377cef757865b18a40fe24598bb757e
 team: tripleo
 type: other
 repository-settings:
