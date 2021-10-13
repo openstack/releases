@@ -43,6 +43,7 @@ cycle:
   x-project:
     - y-cycle-trail
   project-specific:
+    - y-cinder-spec-freeze
     - y-manila-spec-freeze
 - end: '2021-12-24'
   name: R-14
@@ -63,21 +64,27 @@ cycle:
   name: R-10
   start: '2022-01-17'
   project-specific:
+    - y-cinder-driver-deadline
+    - y-cinder-target-driver-deadline
     - y-manila-new-driver-deadline
 - end: '2022-01-28'
   name: R-9
   start: '2022-01-24'
   project-specific:
+    - y-cinder-feature-checkpoint
     - y-manila-fpfreeze
 - end: '2022-02-04'
   name: R-8
   start: '2022-01-31'
+  project-specific:
+    - y-cinder-driver-features-declaration
 - end: '2022-02-11'
   name: R-7
   start: '2022-02-07'
   x-project:
     - y-extra-atc-freeze
   project-specific:
+    - y-cinder-os-brick-release
     - y-oslo-feature-freeze
 - end: '2022-02-18'
   name: R-6
@@ -95,6 +102,8 @@ cycle:
     - y-rf
     - y-goals-complete
     - y-cycle-highlights
+  project-specific:
+    - y-cinder-ci-checkpoint
 - end: '2022-03-04'
   name: R-4
   start: '2022-02-28'
