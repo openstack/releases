@@ -5,3 +5,11 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 0aeb03b1c7a3d23af0ea894899b952ed2979926a
+branches:
+  - name: stable/xena
+    location: 13.0.0.0rc1
