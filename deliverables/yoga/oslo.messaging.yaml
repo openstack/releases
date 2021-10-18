@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.messaging: {}
+releases:
+  - version: 12.10.0
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: ca939fc0e4683efce87b567a9a074063a9c75b4f
