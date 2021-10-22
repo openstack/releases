@@ -11,3 +11,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: bf440c5dd206699558ba009937d3bd846d04f783
+      - repo: openstack/kayobe-config
+        hash: 9024800a25fcdad68351f86a09a34ecbd796d377
+      - repo: openstack/kayobe-config-dev
+        hash: 14ba88cd7c10b6aaf45863e4ddf13004f4b9db04
+branches:
+  - name: stable/xena
+    location: 11.0.0.0rc1
