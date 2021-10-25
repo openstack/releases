@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 0d02866365bc8b779aef9ebd0b79a52c96ae40e5
+  - version: 3.2.1
+    projects:
+      - repo: openstack/oslo.context
+        hash: b124eb7df2617be56a23819f670bd6e054f87ce7
 branches:
   - name: stable/wallaby
     location: 3.2.0
