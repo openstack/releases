@@ -111,9 +111,20 @@ class GerritChange(object):
                 approved = False
                 break
 
-            # Fetch PTL and release liaisons
+            # Fetch release liaisons
             liaisons = get_liaisons(team)
-            if 'email' in govteam['ptl']:
+
+            # Some teams follow the "distributed project lead" governance
+            # model so they are PTL-less but they have release liaisons
+            # defined. Fetch those liaisons.
+            if govteam.get('distributed', None):
+                distributed_ptl_liaisons = govteam['liaison']['release']
+                for liaison in distributed_ptl_liaisons:
+                    liaisons.append(liaison['email'])
+
+            # Fetch PTL's email address (note: some teams may be PTL-less,
+            # so don't assume we have PTL info
+            if 'email' in govteam.get('ptl', {}):
                 liaisons.append(govteam['ptl']['email'])
             LOG.debug('%s needs %s' % (deliv_file, liaisons))
 
