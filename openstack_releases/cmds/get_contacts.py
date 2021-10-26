@@ -63,7 +63,15 @@ def main():
                       file=sys.stderr)
                 return 1
 
-            contacts.add(Contact(team_data.ptl))
+            # Some teams may be PTL-less
+            if team_data.ptl.get('email', None):
+                contacts.add(Contact(team_data.ptl))
+            # At this point we consider this team as a team following the
+            # DPL governance model
+            else:
+                rel_liaisons = team_data.liaisons['release']
+                for liaison in rel_liaisons:
+                    contacts.add(Contact(liaison))
 
         if args.liaisons or args.all:
             for liaison in liaison_data.get(team_name.lower(), []):
