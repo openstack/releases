@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 57dbdeddb17bdd46111c35937652f9a81a91a417
+  - version: 3.1.2
+    projects:
+      - repo: openstack/oslo.context
+        hash: eff2f2f57248f17189d088901f39dc4ab7b0afe3
 branches:
   - name: stable/victoria
     location: 3.1.1
