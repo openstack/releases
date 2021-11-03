@@ -35,6 +35,10 @@ releases:
       - repo: openstack/manila
         hash: 2287838bdea03f020e9c2e5c91de435c4f01777f
     diff-start: 12.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/manila
+        hash: a1f8f4b293d6bb656109367f3531faea5f322402
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
