@@ -128,7 +128,9 @@ the date ranges during which each key was in general use.
   `key 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363`_
 
 .. Static key files are generated with the following command:
-   ( gpg2 --fingerprint 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ; gpg2 \
+   ( gpg --fingerprint --keyid-format=0xlong \
+   --list-options=no-show-uid-validity --list-sigs \
+   0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ; gpg \
    --armor --export 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ) > \
    doc/source/static/0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28.txt
 .. _`key 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28`: _static/0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28.txt
