@@ -16,6 +16,10 @@ releases:
       - repo: openstack/freezer-web-ui
         hash: e5992486617ea000a0999ae7fc40bd1cb626116a
     diff-start: 7.2.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: e5992486617ea000a0999ae7fc40bd1cb626116a
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1

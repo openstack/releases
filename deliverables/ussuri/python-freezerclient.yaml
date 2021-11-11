@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: c2cb528d27841595344473ebd96fa6ef8af7de59
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: c2cb528d27841595344473ebd96fa6ef8af7de59
 branches:
   - name: stable/ussuri
     location: 3.0.1
