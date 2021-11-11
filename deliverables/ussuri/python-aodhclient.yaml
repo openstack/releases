@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: a6f331e48de2cb7be8efa6e8235b6f1fc7634e43
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: a6f331e48de2cb7be8efa6e8235b6f1fc7634e43
 branches:
   - name: stable/ussuri
     location: 2.0.1

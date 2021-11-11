@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: b50cc037655b3fade67811f0eff00e0352efbae0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: b50cc037655b3fade67811f0eff00e0352efbae0
 branches:
   - name: stable/ussuri
     location: 2.0.0
