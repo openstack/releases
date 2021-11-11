@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: e11b0e74001fbf6e1cd906d8c0cc3a9758de52c6
+  - version: ussuri-em
+    projects:
+      - repo: openstack/glance
+        hash: e11b0e74001fbf6e1cd906d8c0cc3a9758de52c6
 branches:
   - name: stable/ussuri
     location: 20.0.0.0rc1
