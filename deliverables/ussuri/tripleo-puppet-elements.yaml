@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/tripleo-puppet-elements
         hash: bf4725d2b1dde7cb90edba8ebf9ffd3565dbdd70
+  - version: ussuri-em
+    projects:
+      - repo: openstack/tripleo-puppet-elements
+        hash: bf4725d2b1dde7cb90edba8ebf9ffd3565dbdd70
 branches:
   - location: 12.3.0
     name: stable/ussuri
