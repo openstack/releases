@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: bb718c84204c323f9c2080904f00b83b5f7baf2f
+  - version: ussuri-em
+    projects:
+      - repo: openstack/cyborg
+        hash: bb718c84204c323f9c2080904f00b83b5f7baf2f
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1

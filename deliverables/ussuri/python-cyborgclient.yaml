@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 40aad6e611ce53bdcaf47f50e33ba5e14dc8b41e
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 40aad6e611ce53bdcaf47f50e33ba5e14dc8b41e
 branches:
   - name: stable/ussuri
     location: 1.1.0
