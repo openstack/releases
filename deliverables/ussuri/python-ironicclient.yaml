@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: fc31b5e1bda8a72a5f18b31282f9d92efac7527c
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: fc31b5e1bda8a72a5f18b31282f9d92efac7527c
 branches:
   - name: stable/ussuri
     location: 4.1.0

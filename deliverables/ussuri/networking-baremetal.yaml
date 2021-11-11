@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: b80ab336977c9efc094b619f5eddf12b65bf3841
+  - version: ussuri-em
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: b80ab336977c9efc094b619f5eddf12b65bf3841
 branches:
   - name: stable/ussuri
     location: 2.0.0
