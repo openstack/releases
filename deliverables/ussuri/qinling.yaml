@@ -15,6 +15,10 @@ releases:
       - repo: openstack/qinling
         hash: 9a186fc483c7ceb70a6a83080048f924783a0cdb
     diff-start: 3.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/qinling
+        hash: 9a186fc483c7ceb70a6a83080048f924783a0cdb
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-qinlingclient
         hash: 39a95b63543b9e303140583f346ac5cb6857a7a7
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: 39a95b63543b9e303140583f346ac5cb6857a7a7
 branches:
   - name: stable/ussuri
     location: 5.0.1
