@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: dc5aaeb84f9f31f8f9fbd360179974a879aa29f1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-congressclient
+        hash: dc5aaeb84f9f31f8f9fbd360179974a879aa29f1
 branches:
   - name: stable/ussuri
     location: 2.0.1

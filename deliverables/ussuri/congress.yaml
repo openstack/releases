@@ -16,6 +16,10 @@ releases:
       - repo: openstack/congress
         hash: 85243abf63dfc7c086e28e9bdb3fb0b7c9d2ad94
     diff-start: 10.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/congress
+        hash: 85243abf63dfc7c086e28e9bdb3fb0b7c9d2ad94
 branches:
   - name: stable/ussuri
     location: 11.0.0.0rc1
