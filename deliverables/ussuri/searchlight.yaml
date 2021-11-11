@@ -19,6 +19,10 @@ releases:
       - repo: openstack/searchlight
         hash: 395df5034091e7a7d53cc6c63d2687871d3b9d95
     diff-start: 7.0.0.0rc1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/searchlight
+        hash: 395df5034091e7a7d53cc6c63d2687871d3b9d95
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
