@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: b2b1a36d0db096a5ccfe4084e291e2b5004f8bb7
+  - version: ussuri-em
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: b2b1a36d0db096a5ccfe4084e291e2b5004f8bb7
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1
