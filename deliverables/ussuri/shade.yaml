@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/shade
         hash: e7c7f29ae9b9ec84ad05ba984cb62a15e4c33e7e
+  - version: ussuri-em
+    projects:
+      - repo: openstack/shade
+        hash: e7c7f29ae9b9ec84ad05ba984cb62a15e4c33e7e
 branches:
   - name: stable/ussuri
     location: 1.33.0
