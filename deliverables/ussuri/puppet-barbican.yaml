@@ -30,6 +30,10 @@ releases:
       - hash: d7b35fe443e7388892315fcf3fc5069e1797fd08
         repo: openstack/puppet-barbican
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: d7b35fe443e7388892315fcf3fc5069e1797fd08
 branches:
   - name: stable/ussuri
     location: 16.3.0

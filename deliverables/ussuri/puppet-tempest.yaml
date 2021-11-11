@@ -30,6 +30,10 @@ releases:
       - hash: 83f8b142b8f27ef0a8cbac71b38657df7b3f7019
         repo: openstack/puppet-tempest
     version: 16.3.1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 83f8b142b8f27ef0a8cbac71b38657df7b3f7019
 branches:
   - name: stable/ussuri
     location: 16.3.0

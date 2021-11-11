@@ -30,6 +30,10 @@ releases:
       - hash: bc9bccd35af8eb2240faff67c3325a075dc4e085
         repo: openstack/puppet-trove
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-trove
+        hash: bc9bccd35af8eb2240faff67c3325a075dc4e085
 branches:
   - name: stable/ussuri
     location: 16.3.0

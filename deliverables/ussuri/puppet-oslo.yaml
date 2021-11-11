@@ -30,6 +30,10 @@ releases:
       - hash: bcab43d802e651ffe046a417a21ee80b95743ff5
         repo: openstack/puppet-oslo
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: bcab43d802e651ffe046a417a21ee80b95743ff5
 branches:
   - name: stable/ussuri
     location: 16.3.0

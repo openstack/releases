@@ -30,6 +30,10 @@ releases:
       - hash: 1bbfbd860805af39f03ec8bfe1f4f4e934970cc0
         repo: openstack/puppet-zaqar
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 1bbfbd860805af39f03ec8bfe1f4f4e934970cc0
 branches:
   - name: stable/ussuri
     location: 16.3.0

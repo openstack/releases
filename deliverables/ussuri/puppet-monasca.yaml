@@ -28,6 +28,10 @@ releases:
       - hash: 09296701c0a881a4485f6635fb58c8720fa4d5db
         repo: openstack/puppet-monasca
     version: 5.3.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: 09296701c0a881a4485f6635fb58c8720fa4d5db
 branches:
   - name: stable/ussuri
     location: 5.3.0

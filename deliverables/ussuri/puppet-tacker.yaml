@@ -30,6 +30,10 @@ releases:
       - hash: bfaed677653a0eeac50c5c4ed6f65325585b5341
         repo: openstack/puppet-tacker
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: bfaed677653a0eeac50c5c4ed6f65325585b5341
 branches:
   - name: stable/ussuri
     location: 16.3.0

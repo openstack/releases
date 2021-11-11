@@ -28,6 +28,10 @@ releases:
       - hash: 79ed3a3fe0bd563776db28ddb047728245cce359
         repo: openstack/puppet-senlin
     version: 3.3.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: 79ed3a3fe0bd563776db28ddb047728245cce359
 branches:
   - name: stable/ussuri
     location: 3.3.0

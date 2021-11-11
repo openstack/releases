@@ -30,6 +30,10 @@ releases:
       - hash: 5ef5a4a20c0d59b058abb159b1911d514a544b75
         repo: openstack/puppet-mistral
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 5ef5a4a20c0d59b058abb159b1911d514a544b75
 branches:
   - name: stable/ussuri
     location: 16.3.0
