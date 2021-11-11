@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: aea56f5269628bd2a1365bebe17776d8c3ba8300
+  - version: ussuri-em
+    projects:
+      - repo: openstack/blazar
+        hash: aea56f5269628bd2a1365bebe17776d8c3ba8300
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1
