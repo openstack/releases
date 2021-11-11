@@ -12,6 +12,10 @@ releases:
         hash: 7fc2b1055753b283d8bda21cb85adf560e58c476
     flags:
       - forced
+  - version: ussuri-em
+    projects:
+      - repo: openstack/karbor
+        hash: 7fc2b1055753b283d8bda21cb85adf560e58c476
 branches:
   - name: stable/ussuri
     location: 1.5.0
