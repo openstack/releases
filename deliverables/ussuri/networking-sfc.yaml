@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: ba57ca7d1f2d8f5986103cf114089f5ca159dd77
+  - version: ussuri-em
+    projects:
+      - repo: openstack/networking-sfc
+        hash: ba57ca7d1f2d8f5986103cf114089f5ca159dd77
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1

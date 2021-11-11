@@ -15,6 +15,10 @@ releases:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: 0fe9189a6eb09fd527b4886e02b23a6d7db3a0cf
     diff-start: 1.6.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 0fe9189a6eb09fd527b4886e02b23a6d7db3a0cf
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1

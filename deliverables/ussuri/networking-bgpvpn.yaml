@@ -20,6 +20,10 @@ releases:
       - repo: openstack/networking-bgpvpn
         hash: d6a93f62337ffd4db88337b627008c6d9a7d276e
     diff-start: 11.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: d6a93f62337ffd4db88337b627008c6d9a7d276e
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1

@@ -21,6 +21,10 @@ releases:
       - repo: openstack/networking-midonet
         hash: 42f1cfad564948d0b8dd0514c776e57197f8bc58
     diff-start: 9.0.0.0rc1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 42f1cfad564948d0b8dd0514c776e57197f8bc58
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1

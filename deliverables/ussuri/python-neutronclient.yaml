@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: ac04e5d415c03f8594e1d3344c51bfe6c9d3a49d
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: ac04e5d415c03f8594e1d3344c51bfe6c9d3a49d
 branches:
   - name: stable/ussuri
     location: 7.1.1

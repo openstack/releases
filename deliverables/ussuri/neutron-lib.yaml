@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 4f787b8d7e04ebdbdb39a2582f31dca7f941fb4e
+  - version: ussuri-em
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 4f787b8d7e04ebdbdb39a2582f31dca7f941fb4e
 branches:
   - name: stable/ussuri
     location: 2.3.0

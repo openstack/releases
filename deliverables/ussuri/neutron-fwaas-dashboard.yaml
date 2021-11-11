@@ -15,6 +15,10 @@ releases:
       - repo: openstack/neutron-fwaas-dashboard
         hash: d49e7ef3a3b7b8559d00535cc612ba096459c861
     diff-start: 2.1.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: d49e7ef3a3b7b8559d00535cc612ba096459c861
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1

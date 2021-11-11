@@ -20,6 +20,10 @@ releases:
       - repo: openstack/neutron-fwaas
         hash: 5e6c048856f06234e93d4306ae6a5b8e1d6917c4
     diff-start: 15.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 5e6c048856f06234e93d4306ae6a5b8e1d6917c4
 branches:
   - name: stable/ussuri
     location: 16.0.0.0rc1
