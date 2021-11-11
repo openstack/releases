@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/placement
         hash: de030ef7a78b1b9ee2da75552d1edc829f830aa4
+  - version: ussuri-em
+    projects:
+      - repo: openstack/placement
+        hash: de030ef7a78b1b9ee2da75552d1edc829f830aa4
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1

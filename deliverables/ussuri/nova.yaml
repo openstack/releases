@@ -77,6 +77,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 6667fcb92bfaf03a8a274dc26806c137aace6b49
+  - version: ussuri-em
+    projects:
+      - repo: openstack/nova
+        hash: 6667fcb92bfaf03a8a274dc26806c137aace6b49
 branches:
   - name: stable/ussuri
     location: 21.0.0.0rc1
