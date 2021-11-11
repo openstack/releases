@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: 80c09a5c1e275e72f1f31a86e676ff8f4fcd8b2a
+  - version: ussuri-em
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 80c09a5c1e275e72f1f31a86e676ff8f4fcd8b2a
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1

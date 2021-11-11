@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 830d4607c3f20910c5a044ab5aa4d91e6bdb042a
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 830d4607c3f20910c5a044ab5aa4d91e6bdb042a
 branches:
   - name: stable/ussuri
     location: 3.1.0

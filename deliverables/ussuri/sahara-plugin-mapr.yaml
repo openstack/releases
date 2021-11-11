@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-mapr
         hash: 320be90ca1f0ffa3a3c45d40ebd415538c6866c2
+  - version: ussuri-em
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 320be90ca1f0ffa3a3c45d40ebd415538c6866c2
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1

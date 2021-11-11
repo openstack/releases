@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-spark
         hash: 46b812ae54407bcfbd37706f2cadc9da47a4b0df
+  - version: ussuri-em
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 46b812ae54407bcfbd37706f2cadc9da47a4b0df
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
