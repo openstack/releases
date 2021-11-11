@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 17dc36a20a9ccad7af6129e8171ee2c9c263a40f
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 17dc36a20a9ccad7af6129e8171ee2c9c263a40f
 branches:
   - location: 1.0.1
     name: stable/ussuri
