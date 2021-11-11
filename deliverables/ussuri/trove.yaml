@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 48e39a07a60c9a7ce9b2fbfcc97a16bc2c56723f
+  - version: ussuri-em
+    projects:
+      - repo: openstack/trove
+        hash: 48e39a07a60c9a7ce9b2fbfcc97a16bc2c56723f
 branches:
   - name: stable/ussuri
     location: 13.0.0.0rc1
