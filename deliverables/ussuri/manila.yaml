@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: ad152a4717e66e19d0ad1bb209081cb7d61741b4
+  - version: ussuri-em
+    projects:
+      - repo: openstack/manila
+        hash: ad152a4717e66e19d0ad1bb209081cb7d61741b4
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
