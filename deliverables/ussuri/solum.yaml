@@ -15,6 +15,10 @@ releases:
       - repo: openstack/solum
         hash: f7c8d129e0bc19169f67d3073d2ab08194e66a12
     diff-start: 7.0.0.0rc1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/solum
+        hash: f7c8d129e0bc19169f67d3073d2ab08194e66a12
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1

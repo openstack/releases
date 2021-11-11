@@ -19,6 +19,10 @@ releases:
       - repo: openstack/solum-dashboard
         hash: 0e9cc012ade5eb475780087ebf79cba5cfeb0572
     diff-start: 3.0.0.0rc1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 0e9cc012ade5eb475780087ebf79cba5cfeb0572
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1

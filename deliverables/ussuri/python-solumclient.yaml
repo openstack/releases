@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 18f7d3851c217916af2d9f167d272e192e67b1ca
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 18f7d3851c217916af2d9f167d272e192e67b1ca
 branches:
   - name: stable/ussuri
     location: 3.1.0
