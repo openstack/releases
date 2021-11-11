@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: b07e4b55cc7caaa9786c511999a2e6a492a1759c
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: b07e4b55cc7caaa9786c511999a2e6a492a1759c
 branches:
   - name: stable/ussuri
     location: 2.1.0
