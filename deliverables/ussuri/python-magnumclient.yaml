@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 6d1a386e401095c169b069ac7d30930038159de3
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 6d1a386e401095c169b069ac7d30930038159de3
 branches:
   - name: stable/ussuri
     location: 3.0.0
