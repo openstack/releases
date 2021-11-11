@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 4cc0a483f988fb85d6eeeb941c76c273af2e47ee
+  - version: ussuri-em
+    projects:
+      - repo: openstack/senlin
+        hash: 4cc0a483f988fb85d6eeeb941c76c273af2e47ee
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1
