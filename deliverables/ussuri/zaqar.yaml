@@ -23,6 +23,10 @@ releases:
       - repo: openstack/zaqar
         hash: 22c457a55b3bdaec7c8aa31f2cf291c175082a80
     diff-start: 9.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/zaqar
+        hash: 22c457a55b3bdaec7c8aa31f2cf291c175082a80
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
