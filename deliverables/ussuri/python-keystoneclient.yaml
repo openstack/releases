@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: b58ebe2b7f6166bd42469d1512bdcaf2fd216b4a
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: b58ebe2b7f6166bd42469d1512bdcaf2fd216b4a
 branches:
   - name: stable/ussuri
     location: 4.0.0
