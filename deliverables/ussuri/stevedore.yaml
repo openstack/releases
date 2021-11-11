@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 5165a274b738ee132201fe97526fb82c7880c034
+  - version: ussuri-em
+    projects:
+      - repo: openstack/stevedore
+        hash: 5165a274b738ee132201fe97526fb82c7880c034
 branches:
   - name: stable/ussuri
     location: 1.32.0

@@ -59,6 +59,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 36b5e06c92337cd04d1c8ae4840dbc224faeaa9f
+  - version: ussuri-em
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 36b5e06c92337cd04d1c8ae4840dbc224faeaa9f
 branches:
   - name: feature/nats-driver
     location:

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: 314c4e7915909a74d463b5403ba2496683e13004
+  - version: ussuri-em
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 314c4e7915909a74d463b5403ba2496683e13004
 branches:
   - name: stable/ussuri
     location: 2.0.1
