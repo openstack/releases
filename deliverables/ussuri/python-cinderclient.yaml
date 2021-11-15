@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 350121f8e0330880c3f6a72fcd2836b9f7b3e799
+  - version: 7.0.2
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: d5f10f430d7e269f5e59467d3ee547ca3a3a62ae
 branches:
   - name: stable/ussuri
     location: 7.0.0
