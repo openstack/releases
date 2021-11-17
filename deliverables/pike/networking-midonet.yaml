@@ -39,6 +39,10 @@ releases:
       - hash: b629137f8dcdd4fe124a8137ee197a0e576f7ac5
         repo: openstack/networking-midonet
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 7a985f98a9db74ea8e3e3f51db650fc9a64eaa70
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike

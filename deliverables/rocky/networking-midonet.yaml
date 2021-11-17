@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: a209f95d627c9a37b65d6ff6b7bf601c911727bd
+  - version: rocky-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 5eec1f8634f67cb6ebcb60229d7245a4e112d516
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

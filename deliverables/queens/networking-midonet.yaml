@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 29847e1f0663689e709a2693bf24b4e7f8d827ad
+  - version: queens-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 3728633e220ca29bd8eaea048726e79868906dd3
 repository-settings:
   openstack/networking-midonet: {}
 branches:
