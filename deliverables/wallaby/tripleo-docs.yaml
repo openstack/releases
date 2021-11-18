@@ -1,0 +1,12 @@
+---
+launchpad: tripleo
+release-model: untagged
+team: tripleo
+type: other
+stable-branch-type: tagless
+repository-settings:
+  openstack/tripleo-docs: {}
+branches:
+  - name: stable/wallaby
+    location:
+      openstack/tripleo-docs: 77859636a2002221fda27b9ae1f3c774b5776b29
