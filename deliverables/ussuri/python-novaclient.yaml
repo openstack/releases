@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 3ef5b695ca600748d5c78bff6fd4eb9d6dac8599
+  - version: 17.0.1
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 437d63de296f387d0556527bbe9fc97969a2e3db
 branches:
   - name: stable/ussuri
     location: 17.0.0
