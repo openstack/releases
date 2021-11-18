@@ -5,3 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
+releases:
+  - version: 4.1.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: e13887ec984603fe2b3b43668bfc6eac121c2cfd
+branches:
+  - name: stable/xena
+    location: 4.1.0
