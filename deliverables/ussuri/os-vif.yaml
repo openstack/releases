@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: 1bd6ef387b759b4a6fb9c793b8a46592461dad22
+  - version: ussuri-em
+    projects:
+      - repo: openstack/os-vif
+        hash: 1bd6ef387b759b4a6fb9c793b8a46592461dad22
 branches:
   - name: stable/ussuri
     location: 2.0.0
