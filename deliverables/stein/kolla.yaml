@@ -50,6 +50,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 7bd72afbb4ad269f78a04279d8f59b5701c6f871
+  - version: stein-eol
+    projects:
+      - repo: openstack/kolla
+        hash: 1bc50ebba67b52ad545123627b25a0f893f350f7
 cycle-highlights:
   - Completed addition of images and playbooks for the OpenStack Monitoring
     service, Monasca.

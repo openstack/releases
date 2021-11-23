@@ -62,4 +62,8 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 8e33f72dbe80b21652bbdbb184be673c26c4ae99
+  - version: rocky-eol
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 1afbbeb874a6b4529c3df8785f2d822a96085c84
 release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/rocky.html
