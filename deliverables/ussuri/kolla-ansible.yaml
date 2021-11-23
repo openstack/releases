@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: a2eba02565a346ccd33ef459d503edd2fc29b38b
+  - version: 10.4.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 3c21a5391c4832031d3f468aa1cd22d584505c41
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
