@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-senlin: {}
+  openstack/puppet-senlin:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 8c534fb9ef16e720a59f594e702b1ae5a06350d4
