@@ -52,6 +52,10 @@ releases:
         hash: 5359d8c2d5dca52ba85f1d707b93bd56eb5b51e6
       - repo: openstack/kayobe-config-dev
         hash: cb096de2edc8a4eaab6b9fb1061a6e218ef238e0
+  - version: 8.2.0
+    projects:
+      - repo: openstack/kayobe
+        hash: 95dabea3465775a03694badc55f5ced944e1a0ac
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
