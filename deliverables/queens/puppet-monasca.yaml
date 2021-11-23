@@ -13,7 +13,9 @@ releases:
       - repo: openstack/puppet-monasca
         hash: 1dc9d678da87f7f32c507642e5b7a000589412e8
 repository-settings:
-  openstack/puppet-monasca: {}
+  openstack/puppet-monasca:
+    flags:
+      - retired
 branches:
   - location: 1.1.0
     name: stable/queens

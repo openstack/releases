@@ -4,7 +4,9 @@ release-model: cycle-trailing
 team: Puppet OpenStack
 type: other
 repository-settings:
-  openstack/puppet-monasca: {}
+  openstack/puppet-monasca:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: ea9f24a81cada2047bb5883840656b1e5f11cda3
