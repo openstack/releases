@@ -3,5 +3,10 @@ launchpad: puppet-mistral
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 55a69c92bdac1e3a0b2294103460ba8cc8a9b8ad
+        repo: openstack/puppet-mistral
+    version: 20.0.0
 repository-settings:
   openstack/puppet-mistral: {}

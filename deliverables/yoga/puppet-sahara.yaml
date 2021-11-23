@@ -3,5 +3,10 @@ launchpad: puppet-sahara
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 85e85562e84a62ead0eafe1298aee728ed7e4fb6
+        repo: openstack/puppet-sahara
+    version: 20.0.0
 repository-settings:
   openstack/puppet-sahara: {}

@@ -3,5 +3,10 @@ launchpad: puppet-oslo
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 056a1db5782709855b02bb47769a06457b03bae4
+        repo: openstack/puppet-oslo
+    version: 20.0.0
 repository-settings:
   openstack/puppet-oslo: {}

@@ -3,5 +3,10 @@ launchpad: puppet-watcher
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: da21235878994fc1726cdf6bf54ca477d87258ca
+        repo: openstack/puppet-watcher
+    version: 20.0.0
 repository-settings:
   openstack/puppet-watcher: {}

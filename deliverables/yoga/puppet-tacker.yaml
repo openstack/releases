@@ -3,5 +3,10 @@ launchpad: puppet-tacker
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 197a7783fb85f2a1bbd514fad801f5515a3b48dc
+        repo: openstack/puppet-tacker
+    version: 20.0.0
 repository-settings:
   openstack/puppet-tacker: {}

@@ -3,5 +3,10 @@ launchpad: puppet-murano
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 5e85bc045a2e94c6808de1492c2cca661941806e
+        repo: openstack/puppet-murano
+    version: 20.0.0
 repository-settings:
   openstack/puppet-murano: {}
