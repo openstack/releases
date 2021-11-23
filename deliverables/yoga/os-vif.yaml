@@ -7,3 +7,8 @@ type: library
 repository-settings:
   openstack/os-vif:
     tarball-base: os_vif
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/os-vif
+        hash: a85d276195d539ae457884ea36781891e8075ac7
