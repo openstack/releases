@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-freezer: {}
+  openstack/puppet-freezer:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: cea9164dc092eab2c3736de997b9a5db072cc425
