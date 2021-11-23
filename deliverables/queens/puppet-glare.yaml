@@ -13,7 +13,9 @@ releases:
       - repo: openstack/puppet-glare
         hash: 913815e03ddfe49b9ade30adf84882c1095235fe
 repository-settings:
-  openstack/puppet-glare: {}
+  openstack/puppet-glare:
+    flags:
+      - retired
 branches:
   - location: 1.0.0
     name: stable/queens

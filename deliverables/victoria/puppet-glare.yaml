@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-glare: {}
+  openstack/puppet-glare:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 116c4a5fb49a135ca61ea7ffd9a4ea82ee16fa81
