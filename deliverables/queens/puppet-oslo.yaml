@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 2259336c85029f753400df31a2fc6a8645b190a5
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: a010713f6c326cb210177cfcc1e8dc0dd05adb33
 repository-settings:
   openstack/puppet-oslo: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 8b519d29144c4eff2ba99114edb7b57b176963c0
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 3f3a6778bc62ca3f119ebf6d24e6d546f062cc86
 repository-settings:
   openstack/puppet-aodh: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: c9a95fd85754f10268262fd7ca4b62c77c166686
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 3d69c747d00747378e65c27dacb75d6d227418b7
 repository-settings:
   openstack/puppet-barbican: {}
 branches:

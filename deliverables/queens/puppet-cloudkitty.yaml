@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-cloudkitty
         hash: 128f85a2ee48109d5143ae181f67b93b22ee8d42
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: 56292df6d4512d96daf10160141e035de265e69d
 repository-settings:
   openstack/puppet-cloudkitty: {}
 branches:

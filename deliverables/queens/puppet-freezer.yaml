@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: 1fa310446f8c1d773a7ca87a22ff787562bc5013
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: 88c9a7968ffda1cac81a1f2f4cd9c7c28ca5ee5d
 repository-settings:
   openstack/puppet-freezer:
     flags:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-congress
         hash: 31b00f3a1bd2badd18ef3c9e7f54d41e0f56445f
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-congress
+        hash: d1557e6cc1fae206a794eb3c59b7c95c1925d130
 repository-settings:
   openstack/puppet-congress:
     flags:

@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 95e86b8fe7c89f9bfd238b4c0b0041f55e0ca918
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 71ed3ed28a9a1d469b006a3b9e7c0b32d5c152ff
 repository-settings:
   openstack/puppet-manila: {}
 branches:

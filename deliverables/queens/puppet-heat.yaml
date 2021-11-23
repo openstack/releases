@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 6577c1da4088d2fe31aa9f0214c73e235cf5e59e
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-heat
+        hash: d61d033160945ffb1d8eb6f64e8cbd2835636677
 repository-settings:
   openstack/puppet-heat: {}
 branches:

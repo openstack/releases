@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 84870ddc3fdacd255025d13f738872ba729d9a4f
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 404c95d7d397f60754e986e66189e15a7b9f98b1
 repository-settings:
   openstack/puppet-designate: {}
 branches:

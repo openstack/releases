@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: 36ff21904dc61202b4b6c4819dc1758bfc50c9d8
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 5ba471fa473803984bb6b170ef7bcc2570b883a8
 repository-settings:
   openstack/puppet-ovn: {}
 branches:

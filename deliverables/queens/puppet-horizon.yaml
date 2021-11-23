@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: 64559b87cece585a92852d7b213f7c44f38dfb28
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 83b6d1b325f2223c1f096b4da022ce4ec944b2d3
 repository-settings:
   openstack/puppet-horizon: {}
 branches:

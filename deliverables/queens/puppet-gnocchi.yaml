@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-gnocchi
         hash: 5dfa350b7ef005f8d31d2b9c5ffdd4715c8f989e
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 66f4a11301980e46e2f8336ec96997cd53a5cdbf
 repository-settings:
   openstack/puppet-gnocchi: {}
 branches:

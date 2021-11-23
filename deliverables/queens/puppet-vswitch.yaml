@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: fd94e91c16b492bf2c545dde507a5c8fc38a5918
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 5c13efb25d0494b66d76f24f8da67378d65dc90c
 repository-settings:
   openstack/puppet-vswitch: {}
 branches:

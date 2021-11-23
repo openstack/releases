@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: e7bfdc942e9659eae6335f27f22ec8d12b699617
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: bcb62e6a81beb14b0584e968b1237c8a8312ddfc
 repository-settings:
   openstack/puppet-trove: {}
 branches:

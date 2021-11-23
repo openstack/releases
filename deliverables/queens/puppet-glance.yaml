@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: e5a1256d33a780a6b99bf9cec28a9fbc1a1dc246
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-glance
+        hash: c19aac1c0e1100c135aa0776cb039da38b5881fc
 repository-settings:
   openstack/puppet-glance: {}
 branches:

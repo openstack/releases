@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-glare
         hash: 913815e03ddfe49b9ade30adf84882c1095235fe
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-glare
+        hash: 0faeac6fc8107bdcbc46f9a98670f8c9b8eff9aa
 repository-settings:
   openstack/puppet-glare:
     flags:
