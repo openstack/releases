@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: 4ad05407b199fc844ba4716f6e5e62f453374343
+  - version: ussuri-em
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 4ad05407b199fc844ba4716f6e5e62f453374343
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
