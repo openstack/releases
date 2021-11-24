@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 9dd0ea54c9727c431c0a2391a37dbc8f79069f64
+  - version: ussuri-em
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 9dd0ea54c9727c431c0a2391a37dbc8f79069f64
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
