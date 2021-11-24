@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: f4b1a3f224f919e3193a5662f380de9ea1bdf341
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: f4b1a3f224f919e3193a5662f380de9ea1bdf341
 branches:
   - name: stable/ussuri
     location: 4.0.0
