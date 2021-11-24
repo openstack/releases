@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: fd73b213026617a2949cebcc834b84246dd540a3
+  - version: ussuri-em
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: fd73b213026617a2949cebcc834b84246dd540a3
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1

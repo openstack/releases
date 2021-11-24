@@ -49,6 +49,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 0b4e05aeb6525a7f42c5f4d1193def75d9551529
+  - version: ussuri-em
+    projects:
+      - repo: openstack/octavia
+        hash: 0b4e05aeb6525a7f42c5f4d1193def75d9551529
 branches:
   - name: stable/ussuri
     location: 6.0.0.0rc1
