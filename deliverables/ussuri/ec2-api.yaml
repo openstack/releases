@@ -16,6 +16,10 @@ releases:
       - repo: openstack/ec2-api
         hash: 21c15aa680caabf3587627dd900469d77d13d9ae
     diff-start: 9.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/ec2-api
+        hash: 21c15aa680caabf3587627dd900469d77d13d9ae
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
