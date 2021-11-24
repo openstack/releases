@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 1feaf3673c6499805215dc4f5212af6f2f1284fa
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 1feaf3673c6499805215dc4f5212af6f2f1284fa
 branches:
   - name: stable/ussuri
     location: 3.3.1
