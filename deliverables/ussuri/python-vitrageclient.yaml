@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: 218d0c52345a7dfb30c50de37209b54ea7a5e566
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 218d0c52345a7dfb30c50de37209b54ea7a5e566
 branches:
   - name: stable/ussuri
     location: 4.0.1
