@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/kolla-cli
         hash: e99835c308291bb589a7b24c6848df927608b517
+  - version: ussuri-em
+    projects:
+      - repo: openstack/kolla-cli
+        hash: e99835c308291bb589a7b24c6848df927608b517
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
