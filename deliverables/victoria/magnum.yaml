@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 18176e5cfa91cb78a880eca8c78eada543a6cb08
+  - version: 11.2.0
+    projects:
+      - repo: openstack/magnum
+        hash: 7b6c844d92dd083b496617918e8da78f226a0400
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
