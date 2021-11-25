@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: f6074779f786c80fd6be9bccbf2949a6c9a20caa
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: f6074779f786c80fd6be9bccbf2949a6c9a20caa
 branches:
   - name: stable/ussuri
     location: 1.0.1

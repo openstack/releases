@@ -15,6 +15,10 @@ releases:
       - repo: openstack/aodh
         hash: 20d03d2ebed673b00c821fc49c8888b7c969d68d
     diff-start: 9.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/aodh
+        hash: 20d03d2ebed673b00c821fc49c8888b7c969d68d
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
