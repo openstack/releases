@@ -16,6 +16,10 @@ releases:
       - repo: openstack/tricircle
         hash: df984cdb321dd913eff98b3741da0238e7db011a
     diff-start: 7.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/tricircle
+        hash: df984cdb321dd913eff98b3741da0238e7db011a
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
