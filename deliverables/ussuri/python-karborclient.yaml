@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 6ded5189ba5deb55ebf389206e11e045b22bf969
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 6ded5189ba5deb55ebf389206e11e045b22bf969
 branches:
   - name: stable/ussuri
     location: 2.0.0
