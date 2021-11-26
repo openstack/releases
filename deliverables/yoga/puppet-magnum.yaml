@@ -3,5 +3,10 @@ launchpad: puppet-magnum
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: e22bbe0fd5a391cfc4fd3734a48c587b956469ae
+        repo: openstack/puppet-magnum
+    version: 20.0.0
 repository-settings:
   openstack/puppet-magnum: {}

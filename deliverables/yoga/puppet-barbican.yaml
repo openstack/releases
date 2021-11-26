@@ -3,5 +3,10 @@ launchpad: puppet-barbican
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: f6ca184ac03d22bfd88db0f070489117e30a3a4a
+        repo: openstack/puppet-barbican
+    version: 20.0.0
 repository-settings:
   openstack/puppet-barbican: {}

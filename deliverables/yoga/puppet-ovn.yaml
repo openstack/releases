@@ -3,5 +3,10 @@ launchpad: puppet-ovn
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 0ac27c813c32cd0d353b2f339c524d54f780d373
+        repo: openstack/puppet-ovn
+    version: 20.0.0
 repository-settings:
   openstack/puppet-ovn: {}

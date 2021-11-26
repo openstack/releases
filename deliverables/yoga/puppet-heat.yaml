@@ -3,5 +3,10 @@ launchpad: puppet-heat
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 93d2d31f07a7420f17f28ccb9178c54f11961ac6
+        repo: openstack/puppet-heat
+    version: 20.0.0
 repository-settings:
   openstack/puppet-heat: {}
