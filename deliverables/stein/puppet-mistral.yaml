@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 3d4b52146f2cac719d058c4d31d11a84b6f5abd5
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 23ca466d9b14c5e6d435da6e3233720dc8d9786e
 branches:
   - location: 14.4.0
     name: stable/stein

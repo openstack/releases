@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: 66592257f6a37635166f35efc584b77bd06f6876
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: d5e2460e2982ef8b9420d498e3b49ec3c9869e19
 branches:
   - location: 14.4.0
     name: stable/stein

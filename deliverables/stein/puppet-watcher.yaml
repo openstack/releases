@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-watcher
         hash: a3f8247319e6e4783f2b1e7270d6172fe807c7fe
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 8f114707f433b36cb893eca86c8e45ee4b118e08
 branches:
   - location: 14.4.0
     name: stable/stein

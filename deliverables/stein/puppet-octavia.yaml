@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: ffff502655b4634739aeaa2d07d04fe6adbf08a7
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 563febbfb74574abaa629fcfd31cb62f0a6a5404
 branches:
   - location: 14.4.0
     name: stable/stein

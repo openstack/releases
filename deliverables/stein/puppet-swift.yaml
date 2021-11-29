@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: 57f1edfa9fd035e3542d2da61db5913adb4eeeaa
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 2061a76a1dec45e46e827790c279d03a44ab3bff
 branches:
   - location: 14.4.0
     name: stable/stein

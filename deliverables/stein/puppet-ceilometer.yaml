@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: f47e88dcca4b0c335378e965e3ed60078e40a0e5
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: ec536b2cbdcc2f19c7c91a4942167f1177c4abdc
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-gnocchi
         hash: 209b6c23e6c6f171a4ab90b684b538f1128d7a2c
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 3ee8cb69e1845a0f6739c51516b809b432f121f7
 branches:
   - location: 14.4.0
     name: stable/stein

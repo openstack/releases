@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 1697b7cc261b2957091a95d1f97fc0c4403e6879
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 3bded1dba0b3be004e254c7ba023eec1788bd565
 branches:
   - location: 14.4.0
     name: stable/stein

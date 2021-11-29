@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: ff4e17360eaca2ceba974fefaf4ca80352989d05
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-glance
+        hash: f5eecf60fce7fa40344d38ac5dc83a01b8d80ab5
 branches:
   - location: 14.4.0
     name: stable/stein

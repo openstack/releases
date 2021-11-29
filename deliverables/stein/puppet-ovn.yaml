@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: 942635a3efd9b3ba4ff16627abd176adfc3f430e
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: d6140c3bdd9a1b0d437dc41e38199e415abd9089
 branches:
   - location: 14.4.0
     name: stable/stein

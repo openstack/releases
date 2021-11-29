@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/puppet-senlin
         hash: 3eec130aa97c85bb0cbfd344b9ae7f4d44f0a49f
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: ec9235b4adeeb62184e0fcf1e2f2335ffd9af01b
 branches:
   - location: 1.2.0
     name: stable/stein

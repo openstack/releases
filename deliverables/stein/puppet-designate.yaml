@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 9dfe38cf75dc4cbfcafac68490a60b0f11ef8940
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: efa77baa44cc798e1260797f1ecc3def5aa30386
 branches:
   - location: 14.4.0
     name: stable/stein
