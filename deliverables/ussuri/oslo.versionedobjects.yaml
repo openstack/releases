@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 4d2310b2a96358405ee4c855bd707937be165e50
+  - version: ussuri-em
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 4d2310b2a96358405ee4c855bd707937be165e50
 branches:
   - name: stable/ussuri
     location: 2.0.2

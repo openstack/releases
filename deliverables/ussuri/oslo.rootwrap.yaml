@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: fd21b6e096ea2ef718101c62b0e341db0199b5b7
+  - version: ussuri-em
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: fd21b6e096ea2ef718101c62b0e341db0199b5b7
 branches:
   - name: stable/ussuri
     location: 6.0.2

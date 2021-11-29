@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: b46cf94a25d45dd16362ffe7179c7f426c12e097
+  - version: ussuri-em
+    projects:
+      - repo: openstack/taskflow
+        hash: b46cf94a25d45dd16362ffe7179c7f426c12e097
 branches:
   - name: stable/ussuri
     location: 4.1.0

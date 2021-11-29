@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: bc4ffa9f1045a4a526d155612b29ab838cd0d6ff
+  - version: ussuri-em
+    projects:
+      - repo: openstack/debtcollector
+        hash: bc4ffa9f1045a4a526d155612b29ab838cd0d6ff
 branches:
   - name: stable/ussuri
     location: 2.0.1
