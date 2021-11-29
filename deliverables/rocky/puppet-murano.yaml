@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: e97a39ec13e97177faaa9c6b4aabd0b73efcb543
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 93abf349b1c49393c42676f4acfc42f5079a054b
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 198205ae1caa6fa49053fb9c1fc45056c74abf61
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 714de4b6b8be928f0a3893e03f07aac06f502d38
 branches:
   - location: 13.3.0
     name: stable/rocky

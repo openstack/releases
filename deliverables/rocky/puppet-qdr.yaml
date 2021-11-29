@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: b1e9f9677144ae819da70663924c303cffe038a1
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 67b99f57adad846c19580dbacac77852b18ff3b8
 branches:
   - location: 2.3.0
     name: stable/rocky

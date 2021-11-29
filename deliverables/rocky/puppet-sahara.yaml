@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: c1512ce1bfe203f6647382842385a3e14e7770a1
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 229e3c06bfd2f453abe236b506646164360c3b46
 branches:
   - location: 13.3.0
     name: stable/rocky

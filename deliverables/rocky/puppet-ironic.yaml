@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: d85f830a3bf7f059baa9364b89637eba20dc3a94
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 7bf5ca277d9d9d473ede0aa4f8991c14e2c47a00
 branches:
   - location: 13.3.0
     name: stable/rocky

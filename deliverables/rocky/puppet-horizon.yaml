@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: c02fb6f467b88ef0b624338f2eb64dcbb61aeec0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: c399a6a5ce35e271492b92604e3a63ff161c1fe5
 branches:
   - location: 13.3.0
     name: stable/rocky

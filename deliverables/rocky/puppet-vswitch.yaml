@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: 6a6eac8532710143cb7851ed5afd9b746ce0d6d6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 5ae98aa92e7e58e9ad2f74f0968447dee89300be
 branches:
   - location: 9.3.0
     name: stable/rocky

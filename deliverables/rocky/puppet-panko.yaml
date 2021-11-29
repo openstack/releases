@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-panko
         hash: ccab5c95a5f8d801226774de987ca4c367cbcbf8
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-panko
+        hash: ffd316334316cab14604d84f763bd1f0e995db2e
 branches:
   - location: 13.3.0
     name: stable/rocky

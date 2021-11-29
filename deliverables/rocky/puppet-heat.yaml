@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 1c5d32fc6557dd400dc27b1e9be977daae4d4acc
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 41c74eeed59cabf34b5c6ad68b7609b2ddbc6979
 branches:
   - location: 13.3.0
     name: stable/rocky

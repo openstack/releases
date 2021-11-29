@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: 38e2e3354b1f53456e675322c0187f0c26da7f6c
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 9fdaad0e769107247c15de7f42308aa7f3c145ed
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: e19b5906ef743989bf6ee1d83a2e3b275d5469dc
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 45524c504d7caac9ff09998e5322242660d8ed0a
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 7b0fee1278fec58577fddb3a829efc89270696d0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: a4a4f524487c22231427aa680976a676b426d248
 branches:
   - location: 13.3.0
     name: stable/rocky

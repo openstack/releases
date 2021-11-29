@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 08b3b47e33ebe2904ff602dd57d14985c564f085
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 41c95f000d92e75ee9e5f1c1b8436e6505e575af
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: cce1281bd66eb13329fb2d126fee7ae2e7072069
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 728eb7f6efea688d867473dee9d2f2d838fada9b
 branches:
   - location: 13.3.0
     name: stable/rocky

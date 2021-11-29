@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: 1f3e6f6f5e965c261d09f4ce5ff713fff5a6b8c8
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: af952f70f17a37fdee345c55e0822cd81a954a2b
 branches:
   - location: 13.3.0
     name: stable/rocky
