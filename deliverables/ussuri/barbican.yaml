@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 7cf483e205736483b4999abfe4baf6f626fff862
+  - version: ussuri-em
+    projects:
+      - repo: openstack/barbican
+        hash: 7cf483e205736483b4999abfe4baf6f626fff862
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
