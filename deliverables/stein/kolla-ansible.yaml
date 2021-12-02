@@ -50,4 +50,8 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 7467b7db959b160a2a404f61a318a2d9740dc2e7
+  - version: stein-eol
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 0000cb5796705848a21552aec73e126cd22eb4c6
 release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/stein.html

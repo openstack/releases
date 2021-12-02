@@ -62,6 +62,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 703dedbb7f34c2b7923847943ba88e08b6b69809
+  - version: rocky-eol
+    projects:
+      - repo: openstack/kolla
+        hash: dd0069addbfba430d1a8cf15e91005d0f0279c11
 cycle-highlights:
   - Added new docker images in kolla for logstash, monasca, prometheus,
     ravd, neutron-infoblox-ipam-driver and apache storm.
