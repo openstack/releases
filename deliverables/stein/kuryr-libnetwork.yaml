@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: f43ba07c783f291133b32dee0277d8e5035e3e8c
+  - version: stein-eol
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: f43ba07c783f291133b32dee0277d8e5035e3e8c
 repository-settings:
   openstack/kuryr-libnetwork: {}
 branches:

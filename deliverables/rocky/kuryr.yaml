@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 2f38e07a38be59305c573311a04c8d4b6de5a912
+  - version: rocky-eol
+    projects:
+      - repo: openstack/kuryr
+        hash: 2d0c066716fec85ff116df13d7a01f6c18991a5f
 repository-settings:
   openstack/kuryr: {}
 branches:
