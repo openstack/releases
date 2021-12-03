@@ -20,6 +20,10 @@ releases:
       - repo: openstack/designate
         hash: 37b3fa2ea454183e4a5c6a099eca5129959d10e1
     diff-start: 11.0.0
+  - version: 12.0.1
+    projects:
+      - repo: openstack/designate
+        hash: 04a6d3156ae6be9bbb3b50d618694af0e15352e7
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
