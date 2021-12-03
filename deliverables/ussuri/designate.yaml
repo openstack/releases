@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: a9ab61bc1d98248af108d895ce2cb7696818dcda
+  - version: ussuri-em
+    projects:
+      - repo: openstack/designate
+        hash: a9ab61bc1d98248af108d895ce2cb7696818dcda
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
