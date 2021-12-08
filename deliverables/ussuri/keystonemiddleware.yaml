@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 2ff74894c81cdc266c97d3aa99b055193cc3ee2b
+  - version: ussuri-em
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 2ff74894c81cdc266c97d3aa99b055193cc3ee2b
 branches:
   - name: stable/ussuri
     location: 9.0.0
