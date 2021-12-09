@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-congress: {}
+  openstack/puppet-congress:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 275362243cd958b0ba29fe9a212075cd3eb410d9
