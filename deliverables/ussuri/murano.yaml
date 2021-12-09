@@ -19,6 +19,10 @@ releases:
       - repo: openstack/murano
         hash: 4cbbf56b3bf374459137bb0a3832f89820296082
     diff-start: 8.0.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/murano
+        hash: 4cbbf56b3bf374459137bb0a3832f89820296082
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1
