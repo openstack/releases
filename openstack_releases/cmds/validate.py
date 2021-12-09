@@ -1595,12 +1595,22 @@ def validate_stable_branches(deliv, context):
                       'to independent repositories or bugfix '
                       'branches, skipping')
             else:
-                latest_release = deliv.releases[-1]
-                if location != latest_release.version:
+                try:
+                    latest_release = deliv.releases[-1]
+                    if location != latest_release.version:
+                        context.error(
+                            ('stable branches must be created from the '
+                             'latest tagged release, and %s for %s does not '
+                             'match %s' % (
+                                 location, branch.name,
+                                 latest_release.version))
+                        )
+                except IndexError:
                     context.error(
-                        ('stable branches must be created from the latest '
-                         'tagged release, and %s for %s does not match %s' % (
-                             location, branch.name, latest_release.version))
+                        'No tags found for deliverable within this '
+                        'series. Creating a tag is mandatory before '
+                        'creating a branch or stable-branch-type needs '
+                        'to be set as tagless.'
                     )
 
         elif branch_mode == 'tagless':
