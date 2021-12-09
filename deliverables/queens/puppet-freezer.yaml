@@ -13,7 +13,9 @@ releases:
       - repo: openstack/puppet-freezer
         hash: 1fa310446f8c1d773a7ca87a22ff787562bc5013
 repository-settings:
-  openstack/puppet-freezer: {}
+  openstack/puppet-freezer:
+    flags:
+      - retired
 branches:
   - location: 1.0.0
     name: stable/queens
