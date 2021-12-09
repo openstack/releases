@@ -6,3 +6,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - version: 12.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: f784e46bf352d3a5ee94bd420ba82bf0f625e7f4
+branches:
+  - name: bugfix/12.0
+    location: 12.0.0
