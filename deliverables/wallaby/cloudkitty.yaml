@@ -16,6 +16,10 @@ releases:
       - repo: openstack/cloudkitty
         hash: 208e78aaa85da30d68e59ed17914bd1cd000f52f
     diff-start: 13.0.0.0rc1
+  - version: 14.0.1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 875cacdd46b4a7b70b3affb4e63effd01ac098cb
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1
