@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 2e033d7b96eb4cb47642909cda5a87a4ec4e0fe9
+  - version: ussuri-em
+    projects:
+      - repo: openstack/watcher
+        hash: 2e033d7b96eb4cb47642909cda5a87a4ec4e0fe9
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1
