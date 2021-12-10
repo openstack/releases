@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 03c00a10d9d96da5a096bafa3b62e442866a3499
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 03c00a10d9d96da5a096bafa3b62e442866a3499
 branches:
   - name: stable/ussuri
     location: 0.5.0
