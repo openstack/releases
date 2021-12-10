@@ -25,6 +25,14 @@ releases:
       - repo: openstack/freezer-dr
         hash: 72de51b01c180fb18f062c7b47e25e8044aeb237
     diff-start: 7.2.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/freezer
+        hash: 851a17173b0e6f7f8d6d188406897b09c8b6b50e
+      - repo: openstack/freezer-api
+        hash: 11a19f2ea803c54ba78d41c964bc748a29752b99
+      - repo: openstack/freezer-dr
+        hash: 72de51b01c180fb18f062c7b47e25e8044aeb237
 branches:
   - name: stable/ussuri
     location: 8.0.0.0rc1
