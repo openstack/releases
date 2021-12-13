@@ -10,4 +10,11 @@ cycle-highlights:
   - Using ceph-ansible 6.0 (Pacific)
   - Ansible version is updated to the ansible-core 2.11
   - OVN deployment support is significantly improved
-  - Added role for Freezer deployment
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: a0cfc507ed1185df22275744786292a41621d609
+branches:
+  - name: stable/xena
+    location: 24.0.0.0rc1
