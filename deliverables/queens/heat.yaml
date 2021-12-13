@@ -49,6 +49,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 01e6439281bdf04e2baea5fb51bfc082da7087c1
+  - projects:
+      - hash: 14da305bf1a67ea1914a0b44d3ce3ee14f19399f
+        repo: openstack/heat
+    version: queens-eol
 repository-settings:
   openstack/heat:
     pypi-name: openstack-heat

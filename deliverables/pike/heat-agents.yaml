@@ -28,6 +28,10 @@ releases:
       - hash: 9751edd17098bb6d40bf8a214496f8607d7a2bd6
         repo: openstack/heat-agents
     version: pike-em
+  - projects:
+      - hash: dcc1c70fc3d1c8f21f71bdb0f2fb1b45e0350cd4
+        repo: openstack/heat-agents
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 1.4.0
