@@ -20,6 +20,10 @@ releases:
       - repo: openstack/neutron-dynamic-routing
         hash: bec4c152c697abb487e59a0639278c1a098c8f60
     diff-start: 18.0.0
+  - version: 19.1.0
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 3d5eddd70bccc6fad048afccb35099a1648f804c
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
