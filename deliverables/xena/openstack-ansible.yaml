@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: a0cfc507ed1185df22275744786292a41621d609
+  - version: 24.0.0.0rc2
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: b88a4783f1fe7b471259abd057719ae4c52cbf12
 branches:
   - name: stable/xena
     location: 24.0.0.0rc1
