@@ -2276,6 +2276,10 @@ releases:
         repo: openstack/openstack-ansible-rsyslog_server
   - version: ocata-eol
     projects:
+      - repo: openstack/openstack-ansible
+        hash: 0e5d7e2d0469784659457376487847af2c99929c
+      - repo: openstack/openstack-ansible-tests
+        hash: 787ca04db5ced2fde8256c72d7314fa32e0bec0f
       - repo: openstack/ansible-hardening
         hash: 48e217792e9c84a72cc965803b20bf35644425fc
       - repo: openstack/openstack-ansible-apt_package_pinning
