@@ -33,6 +33,10 @@ releases:
       - repo: openstack/octavia
         hash: d463897551017f6c4329e7109649af87e1ec88a9
     diff-start: 7.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/octavia
+        hash: a5d94247d15b028c57d8f6f9dbbd2daf0adb34d8
 branches:
   - name: stable/wallaby
     location: 8.0.0.0rc1
