@@ -45,6 +45,10 @@ releases:
       - repo: openstack/kayobe-config-dev
         hash: 0c0672b1b350e2444a23936f6a6da7cc682954d9
     diff-start: 10.0.0
+  - version: 11.0.1
+    projects:
+      - repo: openstack/kayobe
+        hash: dbf6c74808bfbee231f939881368ad8f330fc5e3
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1
