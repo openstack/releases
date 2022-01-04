@@ -6,3 +6,8 @@ team: heat
 type: client-library
 repository-settings:
   openstack/python-heatclient: {}
+releases:
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-heatclient
+        hash: db9a71f18e033912a713ab71b4180f10e1e3be36
