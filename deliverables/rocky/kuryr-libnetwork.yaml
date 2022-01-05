@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: da2b3fd4ce18a907ad409794d34242fdf8200dad
+  - version: rocky-eol
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: c8af640bb4852eb78933b7273e5ac70ef4b155fd
 branches:
   - name: stable/rocky
     location: 2.0.0

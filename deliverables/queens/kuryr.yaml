@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: da736d115bfeb10c9adf8d019696203bba5cbf8d
+  - version: queens-eol
+    projects:
+      - repo: openstack/kuryr
+        hash: b2e079efd42eefee5008719683adeccb7fb6ed47
 branches:
   - name: stable/queens
     location: 0.7.0
