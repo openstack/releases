@@ -16,6 +16,10 @@ releases:
       - repo: openstack/neutron-dynamic-routing
         hash: d7a66c491ea5b8001ad94193603b87afc6e4118f
     diff-start: 17.0.0
+  - version: 18.1.0
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: c5c86123754a44c20deda5e9c3de2ef4e864b7af
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1
