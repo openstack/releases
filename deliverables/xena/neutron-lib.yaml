@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 5ff14c63c86cd24720d41822d871a0a096aa821e
+  - version: 2.15.1
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 997be4d13b183b5f9bac1462da5aeaec0c44714d
 branches:
   - name: stable/xena
     location: 2.15.0
