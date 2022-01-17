@@ -26,6 +26,10 @@ releases:
       - repo: openstack/magnum
         hash: c2a4a22ac838a14e84685500e977cc1c5c94df2e
     diff-start: 11.0.0
+  - version: 12.1.0
+    projects:
+      - repo: openstack/magnum
+        hash: e750a5265cbe600949542938cd48679a0d4dcffd
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
