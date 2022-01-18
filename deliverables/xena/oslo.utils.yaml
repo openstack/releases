@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 2c74bb92e5e9561e2ad1386c2e14fb042d6dc062
+  - version: 4.10.1
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 5ce8a7f0f8ecec7a85a23ec3d7a7fb1cad14ceba
 branches:
   - name: stable/xena
     location: 4.10.0
