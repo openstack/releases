@@ -30,6 +30,10 @@ releases:
       - hash: 0c5c44650f16e8611b76af450bc8ae3c6f06a2e4
         repo: openstack/puppet-keystone
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 0c5c44650f16e8611b76af450bc8ae3c6f06a2e4
 branches:
   - name: stable/ussuri
     location: 16.3.0

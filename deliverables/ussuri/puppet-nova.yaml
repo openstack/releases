@@ -38,6 +38,10 @@ releases:
       - hash: a69f5bf4becedf6ce1df02a31ac9c87805f639a3
         repo: openstack/puppet-nova
     version: 16.6.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-nova
+        hash: a69f5bf4becedf6ce1df02a31ac9c87805f639a3
 branches:
   - name: stable/ussuri
     location: 16.3.0

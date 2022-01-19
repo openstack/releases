@@ -34,6 +34,10 @@ releases:
       - hash: 55dbae7a49e0b007d803ea3a4fd64ee7483f8a16
         repo: openstack/puppet-glance
     version: 16.5.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 55dbae7a49e0b007d803ea3a4fd64ee7483f8a16
 branches:
   - name: stable/ussuri
     location: 16.3.0

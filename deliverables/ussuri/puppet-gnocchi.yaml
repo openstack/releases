@@ -30,6 +30,10 @@ releases:
       - hash: 11859d474725f1d06dbeeb99bedcbdfe33775473
         repo: openstack/puppet-gnocchi
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 11859d474725f1d06dbeeb99bedcbdfe33775473
 branches:
   - name: stable/ussuri
     location: 16.3.0

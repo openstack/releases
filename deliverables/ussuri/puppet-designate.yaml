@@ -30,6 +30,10 @@ releases:
       - hash: 94758c0b2ee281f305eddf6c47dffc29a92a93fe
         repo: openstack/puppet-designate
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 94758c0b2ee281f305eddf6c47dffc29a92a93fe
 branches:
   - name: stable/ussuri
     location: 16.3.0

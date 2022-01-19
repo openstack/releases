@@ -34,6 +34,10 @@ releases:
       - hash: 3a8dde1a0f957c144b74631d46535eb7303e2406
         repo: openstack/puppet-ovn
     version: 16.5.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 3a8dde1a0f957c144b74631d46535eb7303e2406
 branches:
   - name: stable/ussuri
     location: 16.3.0

@@ -30,6 +30,10 @@ releases:
       - hash: f77ace6d66169890eb3b0091945aee8f37cc4167
         repo: openstack/puppet-cinder
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: f77ace6d66169890eb3b0091945aee8f37cc4167
 branches:
   - name: stable/ussuri
     location: 16.3.0

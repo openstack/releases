@@ -34,6 +34,10 @@ releases:
       - hash: 038626a8e03cf19c95189a4d28335baf23fbbe11
         repo: openstack/puppet-neutron
     version: 16.5.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 038626a8e03cf19c95189a4d28335baf23fbbe11
 branches:
   - name: stable/ussuri
     location: 16.3.0

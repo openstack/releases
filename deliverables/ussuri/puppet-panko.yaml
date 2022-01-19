@@ -32,6 +32,10 @@ releases:
       - hash: 346851f56dc9feaa5ffe376cbc2a6a78a9bb137b
         repo: openstack/puppet-panko
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 346851f56dc9feaa5ffe376cbc2a6a78a9bb137b
 branches:
   - name: stable/ussuri
     location: 16.3.0

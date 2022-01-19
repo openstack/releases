@@ -30,6 +30,10 @@ releases:
       - hash: 00b682ae2b95766e1e705ff2ee2e542902eaf49c
         repo: openstack/puppet-watcher
     version: 16.4.0
+  - version: ussuri-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 00b682ae2b95766e1e705ff2ee2e542902eaf49c
 branches:
   - name: stable/ussuri
     location: 16.3.0
