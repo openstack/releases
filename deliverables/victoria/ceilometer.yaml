@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ceilometer
         hash: 76d373b1e6e08db23210516acee6480f4e6c7f35
     diff-start: 14.0.0
+  - version: 15.1.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: e33a1f7dd6386bc3cbb45c41c3f0a74e03b5f1f5
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
