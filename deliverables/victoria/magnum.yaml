@@ -6,8 +6,8 @@ type: service
 repository-settings:
   openstack/magnum: {}
 cycle-highlights:
-  - Kubernetes cluster owner can now do CA cert rotate to re-generate CA of the
-    cluster, service account keys and the certs of all nodes.
+  - Kubernetes cluster owner can now do CA cert rotate to re-generate
+    CA of the cluster, service account keys and the certs of all nodes.
   - Label ``cinder_csi_enabled`` now defaults to True.
   - Default storage driver has changed from ``devicemapper`` to ``overlay2``.
 releases:
@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 7b6c844d92dd083b496617918e8da78f226a0400
+  - version: 11.2.1
+    projects:
+      - repo: openstack/magnum
+        hash: 4b1ba075ff0e5785cddba605e313a0aa82d84fb3
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
