@@ -15,6 +15,10 @@ releases:
       - repo: openstack/blazar
         hash: 3167277843986efe50a03dc15e04acf2ef742fef
     diff-start: 5.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/blazar
+        hash: 6fc1d3cb85c4c0d6d30a899d881df4aac081718e
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1
