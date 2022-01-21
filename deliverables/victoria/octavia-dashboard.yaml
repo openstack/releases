@@ -21,6 +21,10 @@ releases:
       - repo: openstack/octavia-dashboard
         hash: 3b3f91738ebb6c471662e399cea7acdcf9661f5c
     diff-start: 5.0.0.0rc1
+  - version: 6.0.1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 2f1d320104a112d63f7b5e2651e6ace733e0689b
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1
