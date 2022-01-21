@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 9e777ec9a471d32f6c28be742496f71a71295bc2
     diff-start: 3.0.0
+  - version: 4.0.1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4498a25d7e91aa1737a46f6016a2bf7d0bf92a31
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
