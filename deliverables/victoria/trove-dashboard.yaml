@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove-dashboard
         hash: 2ce3da5b3080146d3aa00aa7d583a477017ed7ba
     diff-start: 14.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 1e9ee5bc5e5a5a3da563b1b9bb73a374d40944a6
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
