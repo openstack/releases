@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: a79f255df7e8dccd10f2a35f15a99c79e69e3a56
+  - version: 11.3.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 631842adac29cc7be771a6893315652fe65d028e
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
