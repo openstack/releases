@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 9c254f81e090b623bcd467ed9b527efe6601f955
+  - version: 2.6.2
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 0b9d8e399f845999668a9d7ceaa3a638fd1c399f
 branches:
   - name: stable/victoria
     location: 2.6.0
