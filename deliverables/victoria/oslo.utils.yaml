@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 91497da3e6adb9139cdcd0bcadc059ff6b5be1ff
+  - version: 4.6.1
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 65aa4226d4bf286468da6df6759e364c1eb3e049
 branches:
   - name: stable/victoria
     location: 4.6.0
