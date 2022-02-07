@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.metrics
         hash: 43eee506b953e37cbb7d9a21e01f2c24706fd3fb
+  - version: 0.3.1
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: b90433530d1b0349b9952a43c85b80b9d6fb631e
 branches:
   - name: stable/xena
     location: 0.3.0
