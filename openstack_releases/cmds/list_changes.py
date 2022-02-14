@@ -29,7 +29,6 @@ import sys
 import tempfile
 
 from openstack_governance import governance
-import pyfiglet
 import requests
 
 from openstack_releases import defaults
@@ -44,10 +43,6 @@ from openstack_releases import yamlutils
 def header(title):
     print('\n%s' % title)
     print('-' * len(title))
-
-
-def banner(text):
-    pyfiglet.print_figlet(text, font='banner', width=120)
 
 
 def git_show(workdir, repo, title, ref):
@@ -294,14 +289,12 @@ def main():
                 if team_deliv:
                     print('found deliverable %s' % deliv.name)
                     for rn, repo in sorted(team_deliv.repositories.items()):
-                        follows_stable_policy = 'stable:follows-policy' in repo.tags
                         print('\nrepo %s\ntags:' % repo.name)
                         for t in repo.tags:
                             print('  %s' % t)
                         print('')
-                        if stable_branch and follows_stable_policy:
-                            banner('Needs Stable Policy Review')
-                            print()
+                        if stable_branch:
+                            print('Deliverable is on stable branch')
                 else:
                     print(('no deliverable %r found for team %r, '
                            'cannot report on governance status') %
