@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: ca721994a25674186864d75adc8237e112524fef
+  - version: 5.2.0
+    projects:
+      - repo: openstack/os-brick
+        hash: feb62fa2284e4ff72a76582a1546f8e9ec825937
+branches:
+  - location: 5.2.0
+    name: stable/yoga
