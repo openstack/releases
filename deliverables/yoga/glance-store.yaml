@@ -6,3 +6,11 @@ team: glance
 type: library
 repository-settings:
   openstack/glance_store: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/glance_store
+        hash: f3433ed1a5176bff85b3fe04dba2d4c76618a299
+branches:
+  - name: stable/yoga
+    location: 3.0.0
