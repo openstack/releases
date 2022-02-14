@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.serialization: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 6910f755c86330c741d3c7acb4d8f113dbe46e59
