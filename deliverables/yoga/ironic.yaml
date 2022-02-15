@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: cdc3b9538f3e874dc7d76a90b116ecef3a3603c7
+  - version: 20.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 7ac480412626c38fa3493088dbf49e29303491b6
 branches:
   - name: bugfix/19.0
     location: 19.0.0
+  - name: bugfix/20.0
+    location: 20.0.0
