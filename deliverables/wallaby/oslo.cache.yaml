@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 062d29b2562c4b1072ad3c1d08855848e2af6327
+  - version: 2.7.1
+    projects:
+      - repo: openstack/oslo.cache
+        hash: d0252f62f3b61253d0bcd953329f7b52e53c6e81
 branches:
   - name: stable/wallaby
     location: 2.7.0

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 83870bd2655f3250bb5d5aed7c9865ba0b5e4770
+  - version: 2.5.1
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 1634c00ce251e80581a337522c85c1d5836bbf16
 branches:
   - name: stable/wallaby
     location: 2.5.0

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 672919216bdf4209a2976e86f6e58850ffc9478f
+  - version: 4.2.1
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: b40ca5f7c83462dee043f812aaf515eee12bc7fb
 branches:
   - name: stable/wallaby
     location: 4.2.0
