@@ -17,6 +17,10 @@ releases:
       - repo: openstack/heat
         hash: 8e1e3d6011ba28f8a0e6ca7c09d1e61660a75f3f
     diff-start: 14.0.0
+  - version: 15.1.0
+    projects:
+      - repo: openstack/heat
+        hash: cbe9be5e7625d374fc6cfbb63b7e3ef5335bf330
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
