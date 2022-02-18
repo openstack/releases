@@ -126,6 +126,8 @@ the date ranges during which each key was in general use.
   `key 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035`_
 * 2021-10-27..present (Yoga Cycle key):
   `key 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363`_
+* future use (Zed Cycle key):
+  `key 0xa63ea142678138d1bb15f2e303bdfd64dd164087`_
 
 .. Static key files are generated with the following command:
    ( gpg --fingerprint --keyid-format=0xlong \
@@ -145,6 +147,7 @@ the date ranges during which each key was in general use.
 .. _`key 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da`: _static/0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da.txt
 .. _`key 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035`: _static/0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035.txt
 .. _`key 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363`: _static/0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363.txt
+.. _`key 0xa63ea142678138d1bb15f2e303bdfd64dd164087`: _static/0xa63ea142678138d1bb15f2e303bdfd64dd164087.txt
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack TaCT SIG`: https://governance.openstack.org/sigs/tact-sig.html
