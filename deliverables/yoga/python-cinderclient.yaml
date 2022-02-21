@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: fdc5124bf22ac728ca7182dc98151e5f78fccf03
+  - version: 8.3.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: ee59b68d717b871d034139bbb9c3546e4b17d950
+branches:
+  - name: stable/yoga
+    location: 8.3.0
