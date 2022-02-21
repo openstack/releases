@@ -6,3 +6,11 @@ team: cinder
 type: client-library
 repository-settings:
   openstack/python-brick-cinderclient-ext: {}
+releases:
+  - version: 1.5.0
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 0c89994666a0774893ff8df2bfb50a54d37fca6a
+branches:
+  - location: 1.5.0
+    name: stable/yoga
