@@ -5,5 +5,10 @@ launchpad: designate
 release-model: cycle-with-rc
 team: designate
 type: service
+cycle-highlights:
+  - The Designate community has focused on stability for Yoga. Increased test
+    coverage and great feedback from the community has helped us identify and
+    fix numerous race conditions and bugs.
+  - Designate now supports TXT records over 255 characters in length.
 repository-settings:
   openstack/designate: {}
