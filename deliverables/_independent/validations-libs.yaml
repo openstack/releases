@@ -1,6 +1,7 @@
 ---
 launchpad: tripleo
 release-type: python-pypi
+stable-branch-type: upstream
 team: tripleo
 type: other
 repository-settings:
@@ -46,3 +47,10 @@ releases:
     projects:
       - repo: openstack/validations-libs
         hash: 17e689536f1c0e2269434d99c9e83555ef918511
+  - version: 1.6.0
+    projects:
+      - repo: openstack/validations-libs
+        hash: eb5c38ee62e8bf3e13a8d10e1dd48ba5320e53b2
+branches:
+  - name: stable/1.6
+    location: 1.6.0
