@@ -5,6 +5,14 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Horizon added experimental support of System Scope. There is a
+    new entry System Scope added in context switcher menu which
+    allows users to switch to a system scope token so operations
+    that require this kind of token can be performed. It is disabled
+    by default in the Yoga release.
+  - Users can now perform Qos Rules CRUD operations to the Network QoS
+    Policy using horizon.
 releases:
   - version: 20.2.0
     projects:
