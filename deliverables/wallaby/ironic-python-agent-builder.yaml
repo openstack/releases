@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: 93292bfd5740dda108da40dc960940c9b7502ffe
+  - version: 2.8.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: e0b51e07f0b7a3e9a3aea170c479f3bfec7df5af
 branches:
   - name: stable/wallaby
     location: 2.7.0
