@@ -5,3 +5,9 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+cycle-highlights:
+  - A host availability calendar is now available in the Blazar dashboard.
+  - Implemented initial support for running preemptible instances on unreserved
+    hosts.
+  - Added a new API to query for resource properties of hosts, allowing them to
+    be used in creating leases more effectively.
