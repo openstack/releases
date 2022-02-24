@@ -7,3 +7,8 @@ team: glance
 type: service
 repository-settings:
   openstack/glance: {}
+cycle-highlights:
+  - Added support to get quota usage information.
+  - Added new APIs for cache related operations.
+  - Added support to append new metadef tags rather than overwriting the existing tags.
+  - Added support to fetch additional information about RBD store.
