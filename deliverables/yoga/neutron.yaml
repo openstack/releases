@@ -5,3 +5,14 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
+cycle-highlights:
+  - Local IP - a virtual IP which can be shared across multiple ports or VMs
+    is now available. Local IP is guaranteed to only be reachable within the
+    same physical server or node boundaries.
+  - Add support for VNIC type remote-managed to support port binding to
+    SmartNIC DPUs. SmartNIC DPU portbinding requires OVN version 21.12 or
+    above, compiled with OVN VIF version 21.12 or above.
+  - Support for minimum packet processing based scheduling. With this feature,
+    Nova instances can be scheduled to compute hosts that will honor the
+    minimum pps requirements of the instance as defined by QoS policies of its
+    ports.
