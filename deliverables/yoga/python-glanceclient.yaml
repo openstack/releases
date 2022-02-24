@@ -6,3 +6,11 @@ team: glance
 type: client-library
 repository-settings:
   openstack/python-glanceclient: {}
+releases:
+  - version: 3.6.0
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 626c50061f6d7a3566e8f0a68a60ff41c199bff2
+branches:
+  - name: stable/yoga
+    location: 3.6.0
