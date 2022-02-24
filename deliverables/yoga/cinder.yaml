@@ -3,5 +3,26 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    Block Storage API microversion 3.68 adds the ability for users
+    to request that a volume be re-imaged.  It has always been possible
+    in Block Storage API version 3 to create a bootable volume by
+    requesting that image data from the Image service be written to the
+    volume when the volume was created; now it's possible to do this to
+    an existing volume.
+  - |
+    The Block Storage API no longer requires that request URLs contain
+    a project ID.  This makes the API more consistent with other
+    OpenStack APIs.  For backward compatibility, legacy URLs containing
+    a project ID continue to be recognized.
+  - |
+    New backend drivers were added: Lightbits LightOS for NVMe/TCP, a
+    TOYOU NetStor Fibre Channel driver, and NEC V Series Storage drivers
+    (FC and iSCSI).
+  - |
+    Current backend storage drivers have added support for features
+    exceeding the required driver functions, for example, Active/Active
+    replication.
 repository-settings:
   openstack/cinder: {}
