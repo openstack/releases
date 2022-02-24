@@ -5,3 +5,10 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla: {}
+cycle-highlights:
+  - Binary images are deprecated and any support for them will be removed in the next release. Users are requested to migrate to source based images.
+  - Created an openstack.kolla Ansible collection to improve code reuse between Kolla projects.
+  - Added support for deploying Prometheus Libvirt exporter.
+  - Kayobe now supports building multiple overcloud disk images through direct use of diskimage-builder.
+  - Added support for Horizon custom themes.
+  - Zun deployment now supports using Cinder Ceph volumes.
