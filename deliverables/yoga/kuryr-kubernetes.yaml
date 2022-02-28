@@ -5,3 +5,8 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
+cycle-highlights:
+  - Enhanced debugging capabalities by including Kubernetes
+    events to resources managed by Kuryr.
+  - Improved Neutron resources management to reduce the
+    workload Kuryr puts on Neutron.
