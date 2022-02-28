@@ -5,3 +5,20 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+cycle-highlights:
+  - |
+    The usage of oslo.rootwrap is being deprecated in favor of oslo.privsep
+    in places where manila's micro services need elevated privileges to execute
+    actions on the host. The LVM share back end driver now uses privsep
+    dropping the need for a number of rootwrap entries.
+  - |
+    Shares can now be soft-deleted into a recycle bin where they can stay
+    for a configurable amount of time before being purged. While they're in
+    the recycle bin, they can be viewed and restored on demand.
+  - |
+    Cloud administrators can now direct provisioning of shares and replicas to
+    specific hosts via scheduler hints
+  - |
+    Users may now specify more than one subnet on their share networks
+    across any availability zone. This allows scaling the networks on the NAS
+    servers that export their shared file systems.
