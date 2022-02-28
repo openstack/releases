@@ -102,20 +102,12 @@ git stash list
 git branch -va | grep -E "$topic"
 
 for team in "${!files_by_team_release[@]}" ; do
-    declare -a emails=(
-        $(get-contacts --all "$team"| awk -F': ' '/Email/ {print $2}')
-    )
-    review_args=''
-    for email in ${emails[@]} ; do
-        review_args+=" --reviewers $email"
-    done
-
     branch_name=${team/ /_}-${topic}
     git checkout $branch_name
     git show --stat
     echo
     echo 'Push? (Ctrl-C to cancel)'
     read
-    git review -y -t $topic $review_args
+    git review -y -t $topic
 done
 git checkout master
