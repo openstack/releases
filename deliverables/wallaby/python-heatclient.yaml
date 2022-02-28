@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: b2a601c7e83bf08a6216478298c484c89f590c32
+  - version: 2.3.1
+    projects:
+      - repo: openstack/python-heatclient
+        hash: d16c245f5defdf811de8fe8615fa06ae6daae5b5
 branches:
   - name: stable/wallaby
     location: 2.3.0
