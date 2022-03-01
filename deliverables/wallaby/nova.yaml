@@ -57,6 +57,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: e39bbdc8afdbe1075265008f336336d3b76f0a27
+  - version: 23.2.0
+    projects:
+      - repo: openstack/nova
+        hash: cb935a313961721839c574d7dcba5568ada9b195
 branches:
   - name: stable/wallaby
     location: 23.0.0.0rc1
