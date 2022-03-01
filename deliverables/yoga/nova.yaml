@@ -5,3 +5,29 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    Nova provides work-in-progress support for Keystone's `unified limits
+    <https://docs.openstack.org/keystone/latest/admin/unified-limits.html>`_
+    in  order to allow operators to test this feature in non-production
+    systems so we can collect early feedback about performance.
+  - |
+    Nova `now implements
+    <https://docs.openstack.org/nova/latest/configuration/policy-concepts.html#nova-supported-scope-roles>`_
+    the scope concept and default system and project roles provided by
+    Keystone. This feature isn't yet enabled by default but operators are
+    encouraged to start using it before we switch from the legacy roles
+    in a next release.
+  - |
+    Support is added for network backends that leverage SmartNICs to
+    `offload the controlplane from the host server
+    <https://docs.openstack.org/nova/latest/admin/networking.html#sr-iov>`_.
+    This enables increased security by removing the control plane from the
+    host server and reduced overhead by leveraging the cpu and ram resources
+    on modern SmartNIC DPUs.
+  - |
+    Nova now provides AArch64, PPC64LE, MIPs, and s390x
+    `emulated architecture support
+    <https://docs.openstack.org/nova/latest/admin/hw-emulation-architecture.html>`_
+    independent of the host architecture. Please note this feature isn't fully
+    tested in our upstream CI so support should be considered experimental.
