@@ -7,3 +7,12 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - Added nova-cyborg interaction manual, updated Cyborg organizational
+    structure diagram, and refactoring API guidelines to improve user
+    experience.
+  - Proposes a spec of adding a new OWNER_NOVA trait and pre-filter the
+    trait for every Nova request group that is generated from the flavor,
+    to better improve Cyborg's vGPU support.
+  - Device profile API microversion 2.2 supports getting device profile
+    by name, now users can get device profile by name and uuid.
