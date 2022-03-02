@@ -12,3 +12,11 @@ cycle-highlights:
   - Added new APIs for cache related operations.
   - Added support to append new metadef tags rather than overwriting the existing tags.
   - Added support to fetch additional information about RBD store.
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: d4119be0543bdaefe78fc11e16c3a01b55aa9e3a
+branches:
+  - name: stable/yoga
+    location: 24.0.0.0rc1
