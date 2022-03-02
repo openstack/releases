@@ -16,3 +16,11 @@ cycle-highlights:
     to better improve Cyborg's vGPU support.
   - Device profile API microversion 2.2 supports getting device profile
     by name, now users can get device profile by name and uuid.
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 99404c804e373adb94ef51b07080f20eef72cc72
+branches:
+  - name: stable/yoga
+    location: 8.0.0.0rc1
