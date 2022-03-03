@@ -5,3 +5,14 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+cycle-highlights:
+  - Add the latest v2 APIs for ETSI NFV life-cycle management.
+  - Introduce several container supports such as using Docker private registry
+    images in a Kubernetes Cluster environment, adding interfaces for
+    Kubernetes VIM to handle Helm chart or so.
+  - Support multi-tenant policy for isolating resources from each other such as
+    Virtualized Infrastructure Managers(VIMs), Virtualized Network Function
+    Packages (VNF packages), and Virtualized Network Function Lifecycle
+    Management Interface (VNF LCM) related to ETSI NFV-SOL based VNF
+    management concerning tenants. Only allows VNF instantiation by VIM of
+    the same tenant.
