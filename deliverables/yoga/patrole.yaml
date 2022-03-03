@@ -7,3 +7,8 @@ stable-branch-type: none
 repository-settings:
   openstack/patrole:
     pypi-name: Patrole
+releases:
+  - projects:
+      - repo: openstack/patrole
+        hash: 7ce2d1472ec3a7b8562a59a553e45d9c26b723c3
+    version: 0.14.0
