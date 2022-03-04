@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 163cb01e46fc3f906154a7045fdbe9342cd446c7
+  - version: 5.8.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 63452f362dc42c1edc09e6f7ada08c834ab31923
+branches:
+  - name: stable/yoga
+    location: 5.8.0
