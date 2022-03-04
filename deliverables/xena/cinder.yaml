@@ -51,6 +51,10 @@ releases:
       - repo: openstack/cinder
         hash: 1eb7384cb6542784a904891666cca4abbe42841d
     diff-start: 18.0.0.0rc1
+  - version: 19.1.0
+    projects:
+      - repo: openstack/cinder
+        hash: 59b8b516c4c68fdb44247724624ceb3a8928acdb
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
