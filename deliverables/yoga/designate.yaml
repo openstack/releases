@@ -6,9 +6,17 @@ release-model: cycle-with-rc
 team: designate
 type: service
 cycle-highlights:
-  - The Designate community has focused on stability for Yoga. Increased test
-    coverage and great feedback from the community has helped us identify and
-    fix numerous race conditions and bugs.
+  - The Designate community has focused on stability for Yoga. Increased
+    test coverage and great feedback from the community has helped us
+    identify and fix numerous race conditions and bugs.
   - Designate now supports TXT records over 255 characters in length.
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 13ca3954a089e9ad2673c5a4d3339eca5513b108
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
