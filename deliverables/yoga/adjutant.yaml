@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/adjutant:
     tarball-base: python-adjutant
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant
+        hash: b305d7285f3ea2e12210e592702c4d66a31d6646
+branches:
+  - name: stable/yoga
+    location: 4.0.0.0rc1
