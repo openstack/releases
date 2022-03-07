@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 0eba22f331f5e998d5cdee2039e8f14772e78e5e
+branches:
+  - name: stable/yoga
+    location: 21.0.0.0rc1
