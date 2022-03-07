@@ -5,3 +5,11 @@ team: trove
 type: service
 repository-settings:
   openstack/trove: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 39322f5ad88cf5eef003af74294676a5563a8296
+branches:
+  - name: stable/yoga
+    location: 17.0.0.0rc1
