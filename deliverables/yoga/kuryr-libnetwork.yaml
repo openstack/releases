@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: e5daefc3c2dae2d4f65ef584eb257e841cd417e7
+branches:
+  - name: stable/yoga
+    location: 9.0.0.0rc1
