@@ -5,3 +5,11 @@ team: solum
 type: service
 repository-settings:
   openstack/solum: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/solum
+        hash: b56fd57651e8c4dfb6b1eca56b597bfd9779bae2
+branches:
+  - name: stable/yoga
+    location: 12.0.0.0rc1
