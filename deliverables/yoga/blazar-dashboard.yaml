@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/blazar-dashboard: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: fb9ae6e2c21991ec682109d5202b664377ce5c59
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
