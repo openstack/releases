@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-agent: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-agent
+        hash: dbb766218e3d1e99a965d26e03ba3872ea6aa339
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
