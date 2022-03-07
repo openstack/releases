@@ -26,3 +26,11 @@ cycle-highlights:
     replication.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: b69353b6c853489a12e726c064425dc5b5e8d841
+branches:
+  - name: stable/yoga
+    location: 20.0.0.0rc1
