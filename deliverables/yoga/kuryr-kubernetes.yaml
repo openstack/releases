@@ -6,7 +6,15 @@ type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
 cycle-highlights:
-  - Enhanced debugging capabalities by including Kubernetes
-    events to resources managed by Kuryr.
-  - Improved Neutron resources management to reduce the
-    workload Kuryr puts on Neutron.
+  - Enhanced debugging capabalities by including Kubernetes events to
+    resources managed by Kuryr.
+  - Improved Neutron resources management to reduce the workload Kuryr
+    puts on Neutron.
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 3f66afa57f5ce7fc647c2ea048e0f4c00daabf98
+branches:
+  - name: stable/yoga
+    location: 6.0.0.0rc1
