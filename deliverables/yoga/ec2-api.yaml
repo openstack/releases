@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: c1eaa49507e1ee7977940cdf14e01fd4f070e9a5
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
