@@ -6,3 +6,11 @@ team: heat
 type: other
 repository-settings:
   openstack/heat-agents: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/heat-agents
+        hash: d5ff1a8941e5f80e82412340d2296543fb23ef1c
+branches:
+  - name: stable/yoga
+    location: 4.0.0.0rc1
