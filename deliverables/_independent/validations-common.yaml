@@ -1,5 +1,6 @@
 ---
 launchpad: tripleo
+stable-branch-type: upstream
 release-type: python-pypi
 team: tripleo
 type: other
@@ -34,4 +35,11 @@ releases:
     projects:
       - repo: openstack/validations-common
         hash: cf7ebddc6a7cf0cdc3d829a3b34e6a3ece587ce3
+  - version: 1.6.0
+    projects:
+      - repo: openstack/validations-common
+        hash: a7ed9c1e88d9de64f5de8715acba188027212ed0
+branches:
+  - name: stable/1.6
+    location: 1.6.0
 release-notes: https://docs.openstack.org/releasenotes/validations-common/ussuri.html
