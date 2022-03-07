@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 3d753db83b1a75572330666d2a2a06412f0e9d7d
+branches:
+  - name: stable/yoga
+    location: 8.0.0.0rc1
