@@ -5,3 +5,11 @@ team: senlin
 type: service
 repository-settings:
   openstack/senlin: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/senlin
+        hash: 608e80b9ac6602b63614acf866cfd0e89da5f234
+branches:
+  - name: stable/yoga
+    location: 13.0.0.0rc1
