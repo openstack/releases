@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 49e654a3c914122d352c276aea888ce160786e31
+branches:
+  - name: stable/yoga
+    location: 6.0.0.0rc1
