@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-ceph: b0418e177f6d6059063dd1da2e1a3d228b83b309
+    name: stable/yoga
 repository-settings:
   openstack/devstack-plugin-ceph: {}
