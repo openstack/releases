@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: fab423469d3331fb4f81c7d794c3c87a268d4a49
+branches:
+  - name: stable/yoga
+    location: 16.0.0.0rc1
