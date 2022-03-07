@@ -5,3 +5,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/compute-hyperv: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 6143a64329f51ea20be4237457b32c63069ff991
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
