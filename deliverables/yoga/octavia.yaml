@@ -7,9 +7,18 @@ team: octavia
 type: service
 cycle-highlights:
   - Octavia load balancers now support deep observability by adding
-    ``PROMETHEUS`` listeners that expose a Prometheus exporter endpoint. The
-    Octavia amphora provider exposes over **150** unique metrics.
-  - The Octavia controllers and amphora instances can now be run with Federal
-    Information Processing Standard (FIPS) 140-2 enforcement enabled.
+    ``PROMETHEUS`` listeners that expose a Prometheus exporter endpoint.
+    The Octavia amphora provider exposes over **150** unique metrics.
+  - The Octavia controllers and amphora instances can now be run with
+    Federal Information Processing Standard (FIPS) 140-2 enforcement
+    enabled.
 repository-settings:
   openstack/octavia: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: 3c5bbbc189efe9f3ed4caae04a23d7a13718d368
+branches:
+  - name: stable/yoga
+    location: 10.0.0.0rc1
