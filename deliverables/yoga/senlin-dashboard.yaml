@@ -5,3 +5,11 @@ team: senlin
 type: horizon-plugin
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 7f5258c3d8cc9daaca95fc0d9766c258b3e37d2f
+branches:
+  - name: stable/yoga
+    location: 5.0.0.0rc1
