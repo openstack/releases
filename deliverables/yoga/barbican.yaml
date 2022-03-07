@@ -5,3 +5,11 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/barbican
+        hash: ffea7f79c9d4d1c37ecce44bc424eaff9704bdaa
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
