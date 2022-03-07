@@ -6,3 +6,11 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 02e6be64542dc892a950870ee010518f8a119d9e
+branches:
+  - name: stable/yoga
+    location: 16.0.0.0rc1
