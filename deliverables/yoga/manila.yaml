@@ -22,3 +22,11 @@ cycle-highlights:
     Users may now specify more than one subnet on their share networks
     across any availability zone. This allows scaling the networks on the NAS
     servers that export their shared file systems.
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 48afe551a0d162fc9f9cd18a715e71ac5ecdf8a5
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
