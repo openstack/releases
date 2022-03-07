@@ -5,3 +5,11 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/zun
+        hash: 164123eb75facec8820d3c4278403ba11276e1f1
+branches:
+  - name: stable/yoga
+    location: 9.0.0.0rc1
