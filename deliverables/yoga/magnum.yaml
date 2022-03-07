@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: 4c4bba1333c35c8687b4b410eac1c4208e338314
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
