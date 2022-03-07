@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/manila-ui: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/manila-ui
+        hash: 97ca7f03ecf0b04ff2a80241428430bd727a43c8
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
