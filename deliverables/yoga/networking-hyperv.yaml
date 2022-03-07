@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 7619f8c9974dcceeb4f04b43c30564a753c357ec
+branches:
+  - name: stable/yoga
+    location: 12.0.0.0rc1
