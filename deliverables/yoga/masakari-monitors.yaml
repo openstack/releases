@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: a89511e088488bb3122a44d191730ebf0b059005
+branches:
+  - name: stable/yoga
+    location: 13.0.0.0rc1
