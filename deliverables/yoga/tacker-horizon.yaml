@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: bb69fed635ab15629817e5a03fabe0e5600339c7
+branches:
+  - name: stable/yoga
+    location: 5.0.0.0rc1
