@@ -6,3 +6,11 @@ team: murano
 type: horizon-plugin
 repository-settings:
   openstack/murano-dashboard: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: ad3ddf6c20d7748f0a82f4b0ea399b94244dd1eb
+branches:
+  - name: stable/yoga
+    location: 13.0.0.0rc1
