@@ -5,3 +5,11 @@ team: heat
 type: horizon-plugin
 repository-settings:
   openstack/heat-dashboard: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 7729b7576040df7d264a5333472a2ef44fd55319
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
