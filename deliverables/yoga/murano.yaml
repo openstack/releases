@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: f0258fc8438fd4bd3c48d7c8ba4a4e1166a219bf
+branches:
+  - name: stable/yoga
+    location: 13.0.0.0rc1
