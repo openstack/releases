@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/aodh
+        hash: 74eadfbd58359b7ebe9e1e40ae6b6ff245146bb8
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
