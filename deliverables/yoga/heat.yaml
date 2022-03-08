@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/heat:
     tarball-base: openstack-heat
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: 968969b99cf9c1cfcde4f5c5345f7bcbd4e8db08
+branches:
+  - name: stable/yoga
+    location: 18.0.0.0rc1
