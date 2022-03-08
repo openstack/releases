@@ -5,3 +5,11 @@ team: zun
 type: horizon-plugin
 repository-settings:
   openstack/zun-ui: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/zun-ui
+        hash: 20ae779160643bcce708c04ddcdce21910bd5d41
+branches:
+  - name: stable/yoga
+    location: 9.0.0.0rc1
