@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 886928c12d71d8a2178aedf96a5797afc4476061
+  - version: 2.6.3
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 84b3519499b55332bfd150d537ad008b6d1c41b5
 branches:
   - name: stable/victoria
     location: 2.6.1
