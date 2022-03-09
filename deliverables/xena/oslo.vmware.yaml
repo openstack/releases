@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 3e3fa66cb6f6e845c3f53bea8a13771c1f2b748f
+  - version: 3.9.2
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: b9221561fcc8c008c51979512c1646219fb3989e
 branches:
   - name: stable/xena
     location: 3.9.1
