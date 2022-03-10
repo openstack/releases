@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-odl: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/networking-odl
+        hash: b57cfa8b4bc1d0afe8549c15e0016d944cd3f9d5
+branches:
+  - name: stable/yoga
+    location: 20.0.0.0rc1
