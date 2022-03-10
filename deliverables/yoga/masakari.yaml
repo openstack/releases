@@ -5,3 +5,11 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: 2c7d40360beadcd26b57ceeb0ffdf2fc4a652a9f
+branches:
+  - name: stable/yoga
+    location: 13.0.0.0rc1
