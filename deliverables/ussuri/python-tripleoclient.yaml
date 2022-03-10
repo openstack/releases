@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 2f54f40f64c8d718369f194526f477d9f70000fe
+  - version: ussuri-em
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 2f54f40f64c8d718369f194526f477d9f70000fe
 branches:
   - location: 13.3.0
     name: stable/ussuri
