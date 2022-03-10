@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: dc62636c1720e595491989167feefc6cd5ff24e1
+  - version: ussuri-em
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: dc62636c1720e595491989167feefc6cd5ff24e1
 branches:
   - name: stable/ussuri
     location: 6.1.0
