@@ -5,3 +5,11 @@ team: monasca
 type: horizon-plugin
 repository-settings:
   openstack/monasca-ui: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 75f1f95bba3436503102eaa450d82ecbaf92a3f0
+branches:
+  - name: stable/yoga
+    location: 6.0.0.0rc1
