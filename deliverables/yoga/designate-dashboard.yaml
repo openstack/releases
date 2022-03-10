@@ -6,3 +6,11 @@ team: designate
 type: horizon-plugin
 repository-settings:
   openstack/designate-dashboard: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: cddfd050e7fd766177eef8dce8c18d2a44180b21
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
