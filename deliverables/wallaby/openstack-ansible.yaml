@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: c2db3718f49a961a52487e09df7d7de5e053a926
+  - version: 23.2.2
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: e4d72c4715a8539ec3c258ac8ba865e95b5ea77b
 branches:
   - name: stable/wallaby
     location: 23.0.0.0rc1
