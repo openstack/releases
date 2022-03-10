@@ -7,3 +7,11 @@ team: octavia
 type: horizon-plugin
 repository-settings:
   openstack/octavia-dashboard: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: d8b97e62614dc312a0b23c3ce7dd3e753805fe1a
+branches:
+  - name: stable/yoga
+    location: 9.0.0.0rc1
