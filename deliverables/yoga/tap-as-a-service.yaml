@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/tap-as-a-service: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/tap-as-a-service
+        hash: c919ccd485060ec0511dda559c220f81b790c41c
+branches:
+  - name: stable/yoga
+    location: 9.0.0.0rc1
