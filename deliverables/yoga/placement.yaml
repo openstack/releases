@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: ff0f2dda7755dfee15af353348bd121e0965fa8c
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
