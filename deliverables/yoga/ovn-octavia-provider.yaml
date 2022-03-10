@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 type: other
 repository-settings:
   openstack/ovn-octavia-provider: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: ec5b1d5774a02607260ca372271728e897c7472f
+branches:
+  - name: stable/yoga
+    location: 2.0.0.0rc1
