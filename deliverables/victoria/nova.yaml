@@ -56,6 +56,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 7f00f7be226511840747643919d167c97a021bea
+  - version: 22.4.0
+    projects:
+      - repo: openstack/nova
+        hash: b5b57c4669da07c3ee4c53d290e6ac4819bf4e15
 branches:
   - name: stable/victoria
     location: 22.0.0.0rc1
