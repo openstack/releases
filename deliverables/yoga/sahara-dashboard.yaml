@@ -5,3 +5,11 @@ team: sahara
 type: horizon-plugin
 repository-settings:
   openstack/sahara-dashboard: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: da7235b34a6bb01dbe206769c3c619ee2fc847d8
+branches:
+  - name: stable/yoga
+    location: 16.0.0.0rc1
