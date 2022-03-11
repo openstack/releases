@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: 47599355271a24d903ff4f70a794b17f97360fec
+    name: stable/yoga
 repository-settings:
   openstack/devstack-plugin-container: {}
