@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: 14c3ffbe8e60835fdffe1b32638f01307b1a4875
+branches:
+  - name: stable/yoga
+    location: 14.0.0.0rc1
