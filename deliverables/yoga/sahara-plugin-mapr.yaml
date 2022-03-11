@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-mapr: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 2ca87aaf5fec7968c4148cc7f2dfc8dbfb46155f
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
