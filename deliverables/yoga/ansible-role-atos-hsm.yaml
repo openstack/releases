@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 storyboard: 1183
 repository-settings:
   openstack/ansible-role-atos-hsm: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: c9f757de685c2989198db633d677cf46ae4b282c
+branches:
+  - name: stable/yoga
+    location: 3.0.0.0rc1
