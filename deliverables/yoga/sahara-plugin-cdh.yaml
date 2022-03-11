@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-cdh: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 063c3ee8de7e56831ef6b3bc8807706bd5fd7cea
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
