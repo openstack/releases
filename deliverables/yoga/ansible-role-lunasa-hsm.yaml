@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 storyboard: 1180
 repository-settings:
   openstack/ansible-role-lunasa-hsm: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: 26da379c3a5c88dda5f30adf9fd39d4254a9cc10
+branches:
+  - name: stable/yoga
+    location: 3.0.0.0rc1
