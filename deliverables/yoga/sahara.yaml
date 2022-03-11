@@ -6,3 +6,11 @@ team: sahara
 type: service
 repository-settings:
   openstack/sahara: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/sahara
+        hash: f6a4a6e0b74ac59df29907b2db1980b8500004e8
+branches:
+  - name: stable/yoga
+    location: 16.0.0.0rc1
