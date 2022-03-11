@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 460589110a3e85c9a658a9bb10cdf85017c7c257
+branches:
+  - name: stable/yoga
+    location: 7.0.0.0rc1
