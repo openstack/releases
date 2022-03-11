@@ -31,3 +31,11 @@ cycle-highlights:
     <https://docs.openstack.org/nova/latest/admin/hw-emulation-architecture.html>`_
     independent of the host architecture. Please note this feature isn't fully
     tested in our upstream CI so support should be considered experimental.
+releases:
+  - version: 25.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 60094e663c30fd11bb0b1c6923de9e5056adf8be
+branches:
+  - name: stable/yoga
+    location: 25.0.0.0rc1
