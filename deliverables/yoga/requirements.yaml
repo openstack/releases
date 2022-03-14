@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/yoga
+    location:
+      openstack/requirements: 7379f417a63094fdcca0a5b26f5eaed8e65f6573
