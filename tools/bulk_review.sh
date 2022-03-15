@@ -112,6 +112,10 @@ for team in "${!files_by_team_release[@]}" ; do
 
     branch_name=${team/ /_}-${topic}
     git checkout $branch_name
+    git show --stat
+    echo
+    echo 'Push? (Ctrl-C to cancel)'
+    read
     git review -y -t $topic $review_args
 done
 git checkout master
