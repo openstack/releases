@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Produce files for every team that has repositories with follow-policy
-# with the content of open and unreleased changes.
+# Produce files for every team that has repositories with the content of
+# open and unreleased changes.
 
 if [[ $# -lt 1 ]]; then
     echo "Usage: $(basename $0) <branch>"
@@ -49,7 +49,7 @@ function get_open_patches {
 for team in ${OPENSTACK_TEAMS}; do
     echo "Checking repositories of team: ${team}"
 
-    REPOS=$(tox -e venv -- list-deliverables --tag stable:follows-policy -r \
+    REPOS=$(tox -e venv -- list-deliverables --repos \
             --series ${BRANCH} --team ${team} | grep "^openstack/")
 
     if [ -n "${REPOS}" ]; then
@@ -61,7 +61,6 @@ for team in ${OPENSTACK_TEAMS}; do
                 ${RESULT_DIR}/${team}.txt
         done
     else
-        echo " Tag stable:follows-policy not found for repositories of team " \
-             "'${team}'"
+        echo " No repositories found for team '${team}'"
     fi
 done
