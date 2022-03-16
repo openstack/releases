@@ -16,5 +16,12 @@ releases:
       - hash: 66294bfe3b4865dc1498e7d0f492f229d7fd5a13
         repo: openstack/puppet-placement
     version: 7.2.0
+  - projects:
+      - hash: 5fb0ca4dc9cc7d9fa81601f43953cb43fa7e03e6
+        repo: openstack/puppet-placement
+    version: 7.3.0
 repository-settings:
   openstack/puppet-placement: {}
+branches:
+  - name: stable/yoga
+    location: 7.3.0

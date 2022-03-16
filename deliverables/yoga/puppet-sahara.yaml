@@ -16,5 +16,12 @@ releases:
       - hash: 660c375c524ee4095a04d30ef2d79cbf3477d643
         repo: openstack/puppet-sahara
     version: 20.2.0
+  - projects:
+      - hash: 9c20c3d9098e955170fac08cf26bb6d16313e0d7
+        repo: openstack/puppet-sahara
+    version: 20.3.0
 repository-settings:
   openstack/puppet-sahara: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: 501185e2ff7371d65b4a8f565c781787445cc554
         repo: openstack/puppet-openstack_extras
     version: 20.2.0
+  - projects:
+      - hash: 25da23bdd2baf14b41b5ecf5c020fb059c2e355d
+        repo: openstack/puppet-openstack_extras
+    version: 20.3.0
 repository-settings:
   openstack/puppet-openstack_extras: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

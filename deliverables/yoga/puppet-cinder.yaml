@@ -16,5 +16,12 @@ releases:
       - hash: d17e37854eb70907d39830ada044ec22c885a492
         repo: openstack/puppet-cinder
     version: 20.2.0
+  - projects:
+      - hash: d0d981b6de20a8374f28a391b26e44b98d344a63
+        repo: openstack/puppet-cinder
+    version: 20.3.0
 repository-settings:
   openstack/puppet-cinder: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

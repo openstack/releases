@@ -16,5 +16,12 @@ releases:
       - hash: a0eeadb47cc3163870f93669bf8d195e3aaafae1
         repo: openstack/puppet-trove
     version: 20.2.0
+  - projects:
+      - hash: de17c05a96a10982e1162a47cfbfa29577103037
+        repo: openstack/puppet-trove
+    version: 20.3.0
 repository-settings:
   openstack/puppet-trove: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

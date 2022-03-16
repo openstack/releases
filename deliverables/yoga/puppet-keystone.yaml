@@ -16,5 +16,12 @@ releases:
       - hash: 7f801fa446a0f778b7a1b0052a32a7e07cbd5d15
         repo: openstack/puppet-keystone
     version: 20.2.0
+  - projects:
+      - hash: 39b471d289ba2bdfe873f0ef27493d36e68a5fa4
+        repo: openstack/puppet-keystone
+    version: 20.3.0
 repository-settings:
   openstack/puppet-keystone: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

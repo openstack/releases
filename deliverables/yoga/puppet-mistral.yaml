@@ -16,5 +16,12 @@ releases:
       - hash: d650221e5de18c9d9e4708ecc4b3fbd9b3a541ac
         repo: openstack/puppet-mistral
     version: 20.2.0
+  - projects:
+      - hash: ea9609f882b00e98d03d5967b67d5741398bf0a0
+        repo: openstack/puppet-mistral
+    version: 20.3.0
 repository-settings:
   openstack/puppet-mistral: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

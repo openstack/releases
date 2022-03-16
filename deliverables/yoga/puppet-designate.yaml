@@ -16,5 +16,12 @@ releases:
       - hash: be6fc6100994e09dbde70340d462b33e35d2a08e
         repo: openstack/puppet-designate
     version: 20.2.0
+  - projects:
+      - hash: 71716fcb89cc24cedbc6856c0d7560a00491f49a
+        repo: openstack/puppet-designate
+    version: 20.3.0
 repository-settings:
   openstack/puppet-designate: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

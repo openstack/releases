@@ -16,5 +16,12 @@ releases:
       - hash: ca0d488538ef921d0399d66e0dfcc34bfbc7ceb4
         repo: openstack/puppet-manila
     version: 20.2.0
+  - projects:
+      - hash: 4466c2a0a36003bae250356b20ad6136844e4dd9
+        repo: openstack/puppet-manila
+    version: 20.3.0
 repository-settings:
   openstack/puppet-manila: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

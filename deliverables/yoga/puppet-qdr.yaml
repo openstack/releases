@@ -16,5 +16,12 @@ releases:
       - hash: 23288b824a4b8bdade51deaa1eb2d1731a9b247b
         repo: openstack/puppet-qdr
     version: 9.2.0
+  - projects:
+      - hash: 9cfa6b5f7504844d8cb4f72042f5ab3870ec687c
+        repo: openstack/puppet-qdr
+    version: 9.3.0
 repository-settings:
   openstack/puppet-qdr: {}
+branches:
+  - name: stable/yoga
+    location: 9.3.0

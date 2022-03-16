@@ -16,5 +16,12 @@ releases:
       - hash: 5b944d508f7c8a8c106bef96f4bed4933bc8515d
         repo: openstack/puppet-vitrage
     version: 10.2.0
+  - projects:
+      - hash: 6b777ac43761fdcc93b18fe5b4198fdb08a32e49
+        repo: openstack/puppet-vitrage
+    version: 10.3.0
 repository-settings:
   openstack/puppet-vitrage: {}
+branches:
+  - name: stable/yoga
+    location: 10.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: 4145e07299062ecbb0d9f12e0dfbe8a85e600766
         repo: openstack/puppet-murano
     version: 20.2.0
+  - projects:
+      - hash: 5a0e611c9db247bbd721bc2642fe955a4d30c8f0
+        repo: openstack/puppet-murano
+    version: 20.3.0
 repository-settings:
   openstack/puppet-murano: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

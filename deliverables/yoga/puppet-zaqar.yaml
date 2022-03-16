@@ -16,5 +16,12 @@ releases:
       - hash: 64b0fe75249c6e2dbb2d6721fa33d8bffcd95180
         repo: openstack/puppet-zaqar
     version: 20.2.0
+  - projects:
+      - hash: 59a21631281354c9c6c831e903d09e1e6790bb29
+        repo: openstack/puppet-zaqar
+    version: 20.3.0
 repository-settings:
   openstack/puppet-zaqar: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

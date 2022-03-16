@@ -16,5 +16,12 @@ releases:
       - hash: 1e7f71c86bdc1184012cb0f5327c7e8cade8942b
         repo: openstack/puppet-neutron
     version: 20.2.0
+  - projects:
+      - hash: 38a19410183820b8e98cd8d096eaeb57bb380695
+        repo: openstack/puppet-neutron
+    version: 20.3.0
 repository-settings:
   openstack/puppet-neutron: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0
