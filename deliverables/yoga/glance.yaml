@@ -10,7 +10,8 @@ repository-settings:
 cycle-highlights:
   - Added support to get quota usage information.
   - Added new APIs for cache related operations.
-  - Added support to append new metadef tags rather than overwriting the existing tags.
+  - Added support to append new metadef tags rather than overwriting
+    the existing tags.
   - Added support to fetch additional information about RBD store.
 releases:
   - version: 24.0.0.0rc1
@@ -20,3 +21,4 @@ releases:
 branches:
   - name: stable/yoga
     location: 24.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/glance/yoga.html
