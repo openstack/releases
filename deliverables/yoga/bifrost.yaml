@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: f68572a6f823ada7c26f00cc89d9970d13283e8c
+  - version: 14.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: ffd08cef6b54999f31fdfb26363929bbded456cd
 branches:
   - name: bugfix/12.0
     location: 12.0.0
+  - name: stable/yoga
+    location: 14.0.0
