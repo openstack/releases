@@ -134,7 +134,6 @@ def parse_requirements(body):
     parawrap
     reno>=2.0.0
     sphinx>=1.6.2
-    pyfiglet>=0.7.5
 
     [sphinxext]
     sphinx<1.6.1,>=1.5.1
