@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 975d3dbcfe8ef7e8007444e5bb5c0b3f890e534e
+  - version: 2.29.1
+    projects:
+      - repo: openstack/swift
+        hash: 954032d5d245411e676a5722b7e581c97a0aaaf7
+branches:
+  - name: stable/yoga
+    location: 2.29.1
