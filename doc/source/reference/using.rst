@@ -965,7 +965,7 @@ list_stable_unreleased_changes.sh
 ---------------------------------
 
 Runs list_unreleased_changes.sh with the given branch for all
-repositories tagged with ``stable:follows-policy``.
+repositories.
 
 
 ::

@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Convenience wrapper to show the unreleased changes in all projects
-# claiming to have stable branches, so we don't have to remember the
+# Convenience wrapper to show the unreleased changes for a stable
+# $series in all projects, so we don't have to remember the
 # incantation.
 
 if [[ $# -ne 1 ]]; then
@@ -27,7 +27,6 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
     source $BASEDIR/.tox/venv/bin/activate
 fi
 
-repos="$(list-deliverables --repos --tag stable:follows-policy \
-            --series $SERIES)"
+repos="$(list-deliverables --repos --series $SERIES)"
 
 $TOOLSDIR/list_unreleased_changes.sh stable/$SERIES $repos
