@@ -74,12 +74,6 @@ def main():
         default=False,
         help='Show last release date (in verbose mode)',
     )
-    parser.add_argument(
-        '--show-tags',
-        action='store_true',
-        default=False,
-        help='Show tags associated with deliverable (in verbose mode)',
-    )
     model = parser.add_mutually_exclusive_group()
     model.add_argument(
         '--model',
@@ -105,12 +99,6 @@ def main():
         action='append',
         choices=sorted(deliverable_schema.release_types),
         help='deliverable type, such as "library" or "service"',
-    )
-    parser.add_argument(
-        '--tag',
-        default=[],
-        action='append',
-        help='look for one more more tags on the deliverable or team',
     )
     parser.add_argument(
         '--deliverables-dir',
@@ -185,8 +173,6 @@ def main():
         verbose_template += ' {type:15}'
     if not args.model:
         verbose_template += ' {model:15}'
-    if args.show_tags:
-        verbose_template += ' {tags}'
 
     if args.forced:
         args.all_releases = True
@@ -250,17 +236,6 @@ def main():
                 continue
         if args.missing_rc and deliv.is_released and 'rc' in deliv.latest_release:
             continue
-        if args.tag:
-            tags = deliv.tags
-            ignore = False
-            for t in args.tag:
-                if t not in tags:
-                    ignore = True
-                    break
-            if ignore:
-                continue
-
-        tag_str = '(' + ', '.join(deliv.tags) + ')'
 
         if args.missing_final and deliv.latest_release:
             if not ('rc' in deliv.latest_release or
@@ -321,7 +296,6 @@ def main():
                     team=deliv.team,
                     type=deliv.type,
                     model=deliv.model,
-                    tags=tag_str,
                 ))
         elif args.verbose:
             print(verbose_template.format(
@@ -331,7 +305,6 @@ def main():
                 team=deliv.team,
                 type=deliv.type,
                 model=deliv.model,
-                tags=tag_str,
             ))
         elif args.repos:
             if args.group_key and cur_group != deliv_group:

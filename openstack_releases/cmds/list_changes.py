@@ -289,10 +289,7 @@ def main():
                 if team_deliv:
                     print('found deliverable %s' % deliv.name)
                     for rn, repo in sorted(team_deliv.repositories.items()):
-                        print('\nrepo %s\ntags:' % repo.name)
-                        for t in repo.tags:
-                            print('  %s' % t)
-                        print('')
+                        print('\nrepo %s' % repo.name)
                         if stable_branch:
                             print('Deliverable is on stable branch')
                 else:

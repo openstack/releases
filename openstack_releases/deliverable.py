@@ -21,7 +21,6 @@ import os
 import os.path
 import weakref
 
-from openstack_governance import governance
 import pbr.version
 
 from openstack_releases import series_status
@@ -572,18 +571,6 @@ class Deliverable(object):
             if b['name'] == name:
                 return b['location']
         return None
-
-    @property
-    def tags(self):
-        if self._gov_data is None:
-            Deliverable._gov_data = governance.Governance.from_remote_repo()
-        try:
-            team = self._gov_data.get_team(self.team)
-            deliv = team.deliverables[self.name]
-        except (KeyError, ValueError):
-            # The deliverable is no longer listed under governance.
-            return []
-        return deliv.tags
 
     @property
     def filename(self):
