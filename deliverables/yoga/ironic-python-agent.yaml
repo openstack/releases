@@ -16,8 +16,14 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: b8b1991bea20bb34075cb9295b16256cf0dabc95
+  - version: 8.5.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: a247fbcc8c2a8d18ad4150fecab5b49caf4f6f25
 branches:
   - name: bugfix/8.3
     location: 8.3.0
   - name: bugfix/8.4
     location: 8.4.0
+  - name: stable/yoga
+    location: 8.5.0
