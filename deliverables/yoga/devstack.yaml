@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: a9d392cdbbe22b90400b1029d35f1285aaba455c
+    name: stable/yoga
 repository-settings:
   openstack/devstack: {}
