@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: 9b223d3e22f2078cce7972ce65fe19e5c3323f6b
+    name: stable/yoga
 repository-settings:
   openstack/grenade: {}
