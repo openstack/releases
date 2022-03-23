@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: b69353b6c853489a12e726c064425dc5b5e8d841
+  - version: 20.0.0.0rc2
+    projects:
+      - repo: openstack/cinder
+        hash: c0ff6fd9f934782149777d2ab69b87dabca6a907
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1
