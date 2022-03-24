@@ -15,15 +15,22 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 7ac480412626c38fa3493088dbf49e29303491b6
+  - version: 20.1.0
+    projects:
+      - repo: openstack/ironic
+        hash: 872ede25a072850873e20477bb8bc75fdce1ed37
 branches:
   - name: bugfix/19.0
     location: 19.0.0
   - name: bugfix/20.0
     location: 20.0.0
+  - name: stable/yoga
+    location: 20.1.0
 cycle-highlights:
   - The default deployment boot mode changed from `Legacy BIOS` to `UEFI`.
   - Booting final instances via network (as opposed to via a local bootloader)
-    is now deprecated, except for the cases of booting from volume or the
-    ramdisk deploy interface.
+    is now deprecated, except for the cases of booting from volume or
+    the ramdisk deploy interface.
   - New parameter `image_type` in `instance_info` field, used to distinguish
-    between partition and whole disk images instead of `kernel/ramdisk` pair.
+    between partition and whole disk images instead of `kernel/ramdisk`
+    pair.
