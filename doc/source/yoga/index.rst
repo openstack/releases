@@ -2,7 +2,7 @@
 Yoga
 ====
 
-Projected Release Date: 30 March, 2022
+Originally Released: 30 March, 2022
 
 .. toctree::
    :maxdepth: 1
