@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 49e654a3c914122d352c276aea888ce160786e31
+  - version: 6.0.0
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 49e654a3c914122d352c276aea888ce160786e31
+    diff-start: 5.0.0
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1

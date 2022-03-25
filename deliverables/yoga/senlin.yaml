@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 608e80b9ac6602b63614acf866cfd0e89da5f234
+  - version: 13.0.0
+    projects:
+      - repo: openstack/senlin
+        hash: 608e80b9ac6602b63614acf866cfd0e89da5f234
+    diff-start: 12.0.0
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1

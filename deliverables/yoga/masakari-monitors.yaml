@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: a89511e088488bb3122a44d191730ebf0b059005
+  - version: 13.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: a89511e088488bb3122a44d191730ebf0b059005
+    diff-start: 12.0.0
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1

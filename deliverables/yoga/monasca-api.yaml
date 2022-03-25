@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 3d753db83b1a75572330666d2a2a06412f0e9d7d
+  - version: 8.0.0
+    projects:
+      - repo: openstack/monasca-api
+        hash: 3d753db83b1a75572330666d2a2a06412f0e9d7d
+    diff-start: 7.0.0
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: d5ff1a8941e5f80e82412340d2296543fb23ef1c
+  - version: 4.0.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: d5ff1a8941e5f80e82412340d2296543fb23ef1c
+    diff-start: 3.0.0
 branches:
   - name: stable/yoga
     location: 4.0.0.0rc1

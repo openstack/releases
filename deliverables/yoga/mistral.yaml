@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 28f94b0c64ebbc04729c441c801682e312fc9c64
+  - version: 14.0.0
+    projects:
+      - repo: openstack/mistral
+        hash: 28f94b0c64ebbc04729c441c801682e312fc9c64
+    diff-start: 13.0.0
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

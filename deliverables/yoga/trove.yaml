@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/trove
         hash: a1815f6e0c436b4bdc15456c4f31abefff0d5c6e
+  - version: 17.0.0
+    projects:
+      - repo: openstack/trove
+        hash: a1815f6e0c436b4bdc15456c4f31abefff0d5c6e
+    diff-start: 16.0.0
 branches:
   - name: stable/yoga
     location: 17.0.0.0rc1

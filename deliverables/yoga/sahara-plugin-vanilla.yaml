@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 03e4216250c6269104d5ce51384ad048a6c34b65
+  - version: 7.0.0
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 03e4216250c6269104d5ce51384ad048a6c34b65
+    diff-start: 6.0.0
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

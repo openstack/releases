@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum
         hash: b56fd57651e8c4dfb6b1eca56b597bfd9779bae2
+  - version: 12.0.0
+    projects:
+      - repo: openstack/solum
+        hash: b56fd57651e8c4dfb6b1eca56b597bfd9779bae2
+    diff-start: 11.0.0
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1

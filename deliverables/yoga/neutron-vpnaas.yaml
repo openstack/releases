@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 8552d8e16836570b916a7815906f7d76915e921d
+  - version: 20.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 8552d8e16836570b916a7815906f7d76915e921d
+    diff-start: 19.0.0
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1

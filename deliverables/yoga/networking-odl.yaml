@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: b57cfa8b4bc1d0afe8549c15e0016d944cd3f9d5
+  - version: 20.0.0
+    projects:
+      - repo: openstack/networking-odl
+        hash: b57cfa8b4bc1d0afe8549c15e0016d944cd3f9d5
+    diff-start: 19.0.0
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1

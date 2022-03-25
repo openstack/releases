@@ -19,6 +19,11 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 3c5bbbc189efe9f3ed4caae04a23d7a13718d368
+  - version: 10.0.0
+    projects:
+      - repo: openstack/octavia
+        hash: 3c5bbbc189efe9f3ed4caae04a23d7a13718d368
+    diff-start: 9.0.0
 branches:
   - name: stable/yoga
     location: 10.0.0.0rc1

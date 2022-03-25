@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 7f5258c3d8cc9daaca95fc0d9766c258b3e37d2f
+  - version: 5.0.0
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 7f5258c3d8cc9daaca95fc0d9766c258b3e37d2f
+    diff-start: 4.0.0
 branches:
   - name: stable/yoga
     location: 5.0.0.0rc1

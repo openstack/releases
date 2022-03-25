@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 1d095558adb97e6a1dea441c93f08b5fa0b75671
+  - version: 16.0.0
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 1d095558adb97e6a1dea441c93f08b5fa0b75671
+    diff-start: 15.0.0
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1

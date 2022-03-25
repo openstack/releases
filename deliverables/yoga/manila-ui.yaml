@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 97ca7f03ecf0b04ff2a80241428430bd727a43c8
+  - version: 7.0.0
+    projects:
+      - repo: openstack/manila-ui
+        hash: 97ca7f03ecf0b04ff2a80241428430bd727a43c8
+    diff-start: 6.0.0
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

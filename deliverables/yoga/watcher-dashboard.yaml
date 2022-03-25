@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 146e547da934c2464ec5f49326eabed0eecfda96
+  - version: 7.0.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 146e547da934c2464ec5f49326eabed0eecfda96
+    diff-start: 6.0.0
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

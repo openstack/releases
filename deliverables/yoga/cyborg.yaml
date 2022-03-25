@@ -21,6 +21,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: 99404c804e373adb94ef51b07080f20eef72cc72
+  - version: 8.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: 99404c804e373adb94ef51b07080f20eef72cc72
+    diff-start: 7.0.0
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1

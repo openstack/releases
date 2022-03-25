@@ -16,6 +16,11 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: e9c19e2206839d4f73bb94aab579fbec596df8f4
+  - version: 9.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: e9c19e2206839d4f73bb94aab579fbec596df8f4
+    diff-start: 8.0.0
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

@@ -16,6 +16,15 @@ releases:
         hash: 8a477ffd8bab1c1f74061e1a9cb6b8b5573cba7c
       - repo: openstack/freezer-dr
         hash: b8e9db6060121d861447ff81e83b3be95f41172a
+  - version: 12.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 3eb84784c668ed9f442322abee4e48bd1bc51fd4
+      - repo: openstack/freezer-api
+        hash: 8a477ffd8bab1c1f74061e1a9cb6b8b5573cba7c
+      - repo: openstack/freezer-dr
+        hash: b8e9db6060121d861447ff81e83b3be95f41172a
+    diff-start: 11.0.0
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1

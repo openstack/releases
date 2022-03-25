@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 3f66afa57f5ce7fc647c2ea048e0f4c00daabf98
+  - version: 6.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 3f66afa57f5ce7fc647c2ea048e0f4c00daabf98
+    diff-start: 5.0.0
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1

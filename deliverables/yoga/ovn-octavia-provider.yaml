@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: ec5b1d5774a02607260ca372271728e897c7472f
+  - version: 2.0.0
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: ec5b1d5774a02607260ca372271728e897c7472f
+    diff-start: 1.1.1
 branches:
   - name: stable/yoga
     location: 2.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 01d74d0a87abe7d89a6ce14ca18c9fc40ae188ef
+  - version: 8.0.0
+    projects:
+      - repo: openstack/watcher
+        hash: 01d74d0a87abe7d89a6ce14ca18c9fc40ae188ef
+    diff-start: 7.0.0
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1

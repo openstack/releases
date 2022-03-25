@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: 6143a64329f51ea20be4237457b32c63069ff991
+  - version: 14.0.0
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 6143a64329f51ea20be4237457b32c63069ff991
+    diff-start: 13.0.0
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

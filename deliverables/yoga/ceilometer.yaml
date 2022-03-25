@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: bac34383c60b90ca674c1d3eb23cdb07d9233240
+  - version: 18.0.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: bac34383c60b90ca674c1d3eb23cdb07d9233240
+    diff-start: 17.0.0
 branches:
   - name: stable/yoga
     location: 18.0.0.0rc1

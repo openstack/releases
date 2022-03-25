@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 2ae6cd95f18a1675ec6059e6434ee58a1868b07f
+  - version: 14.0.0
+    projects:
+      - repo: openstack/magnum
+        hash: 2ae6cd95f18a1675ec6059e6434ee58a1868b07f
+    diff-start: 13.0.0
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

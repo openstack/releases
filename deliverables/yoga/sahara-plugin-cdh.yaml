@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-cdh
         hash: 063c3ee8de7e56831ef6b3bc8807706bd5fd7cea
+  - version: 7.0.0
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 063c3ee8de7e56831ef6b3bc8807706bd5fd7cea
+    diff-start: 6.0.0
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

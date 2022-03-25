@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 26274d2fd4c08dfdc21c09c8effc044241ef17fe
+  - version: 14.0.0
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 26274d2fd4c08dfdc21c09c8effc044241ef17fe
+    diff-start: 13.0.0
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

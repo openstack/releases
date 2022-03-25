@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 8f994a7d4e939713c16432374b1509bd178e70a0
+  - version: 13.0.0
+    projects:
+      - repo: openstack/murano
+        hash: 8f994a7d4e939713c16432374b1509bd178e70a0
+    diff-start: 12.0.0
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: fb9ae6e2c21991ec682109d5202b664377ce5c59
+  - version: 7.0.0
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: fb9ae6e2c21991ec682109d5202b664377ce5c59
+    diff-start: 6.0.0
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

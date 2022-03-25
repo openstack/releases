@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: cddfd050e7fd766177eef8dce8c18d2a44180b21
+  - version: 14.0.0
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: cddfd050e7fd766177eef8dce8c18d2a44180b21
+    diff-start: 13.0.0
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
