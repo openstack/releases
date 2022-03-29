@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: f6a4a6e0b74ac59df29907b2db1980b8500004e8
+  - version: 16.0.0.0rc2
+    projects:
+      - repo: openstack/sahara
+        hash: 02235e6cf3fb183f1e79ff79f8e12fcfcf3f0f3b
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
