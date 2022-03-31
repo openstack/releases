@@ -23,6 +23,8 @@ cycle:
 - end: '2022-05-06'
   name: R-22
   start: '2022-05-02'
+  project-specific:
+    - z-manila-bugsquash
 - end: '2022-05-13'
   name: R-21
   start: '2022-05-09'
@@ -31,6 +33,8 @@ cycle:
   start: '2022-05-16'
   x-project:
     - z-1
+  project-specific:
+    - z-manila-hackathon
 - end: '2022-05-27'
   name: R-19
   start: '2022-05-23'
@@ -54,6 +58,7 @@ cycle:
     - z-cycle-trail
   project-specific:
     - z-cinder-spec-freeze
+    - z-manila-spec-freeze
 - end: '2022-07-01'
   name: R-14
   start: '2022-06-27'
@@ -75,11 +80,14 @@ cycle:
 - end: '2022-07-29'
   name: R-10
   start: '2022-07-25'
+  project-specific:
+    - z-manila-new-driver-deadline
 - end: '2022-08-05'
   name: R-9
   start: '2022-08-01'
   project-specific:
     - z-cinder-feature-checkpoint
+    - z-manila-fpfreeze
 - end: '2022-08-12'
   name: R-8
   start: '2022-08-08'
@@ -112,6 +120,8 @@ cycle:
 - end: '2022-09-09'
   name: R-4
   start: '2022-09-05'
+  project-specific:
+    - z-manila-bugsquash
 - end: '2022-09-16'
   name: R-3
   start: '2022-09-12'

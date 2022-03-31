@@ -299,3 +299,44 @@ properly when the Cinder team does a final compliance check around the
 time of the third milestone.  See the `Driver Compliance
 <https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
 section of the Cinder Documentation for details.
+
+Manila
+------
+
+.. _z-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to Zed must be approved by the end of the week.
+
+.. _z-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _z-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
+
+.. _z-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted in order to fast-track the closure of bugs.
+
+.. _z-manila-hackathon:
+
+Manila Hackathon
+^^^^^^^^^^^^^^^^
+Manila community event promoted in order to tackle the implementation of
+features or tech debt areas.
