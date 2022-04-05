@@ -16,5 +16,12 @@ releases:
       - hash: 900dc1aed6bf5fd80ec2903524fb1ff5c6107659
         repo: openstack/puppet-glance
     version: 20.2.0
+  - projects:
+      - hash: 2948b4597f632f3bd95e945d3b6ce5b114ee3796
+        repo: openstack/puppet-glance
+    version: 20.3.0
 repository-settings:
   openstack/puppet-glance: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: 326cfc678c7d7ee0223102c5d2c5db72711cba2c
         repo: openstack/puppet-aodh
     version: 20.2.0
+  - projects:
+      - hash: ed325e53b64dbb7b588814b58ce38b154fdc2987
+        repo: openstack/puppet-aodh
+    version: 20.3.0
 repository-settings:
   openstack/puppet-aodh: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

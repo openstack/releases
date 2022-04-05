@@ -16,5 +16,12 @@ releases:
       - hash: 2bd81fd6508fac5ab615145f77eae8caf6d0d6ae
         repo: openstack/puppet-oslo
     version: 20.2.0
+  - projects:
+      - hash: fe6612cb6c40b5e02425caadb7aa93a5c0a23f29
+        repo: openstack/puppet-oslo
+    version: 20.3.0
 repository-settings:
   openstack/puppet-oslo: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

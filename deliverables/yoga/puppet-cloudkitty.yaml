@@ -16,5 +16,12 @@ releases:
       - hash: 658cbc14cab48727cff38eb6af566e696795adef
         repo: openstack/puppet-cloudkitty
     version: 9.2.0
+  - projects:
+      - hash: 4b524581bd28853d24ead404dfce9d34fd865333
+        repo: openstack/puppet-cloudkitty
+    version: 9.3.0
 repository-settings:
   openstack/puppet-cloudkitty: {}
+branches:
+  - name: stable/yoga
+    location: 9.3.0

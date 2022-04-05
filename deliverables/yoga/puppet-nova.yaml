@@ -16,5 +16,12 @@ releases:
       - hash: 02b85ba3a0b6d086c8060c8eb66eff44b798ccc3
         repo: openstack/puppet-nova
     version: 20.2.0
+  - projects:
+      - hash: 079d6f48b63cdbc1927465a0c2e5325fd4161a14
+        repo: openstack/puppet-nova
+    version: 20.3.0
 repository-settings:
   openstack/puppet-nova: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

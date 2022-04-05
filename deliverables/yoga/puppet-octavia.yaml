@@ -16,5 +16,12 @@ releases:
       - hash: 844a55ae6d41316b4f69f013b5ecb9ee5fed7f7e
         repo: openstack/puppet-octavia
     version: 20.2.0
+  - projects:
+      - hash: 1dd62c1854bc08d2aee17845b23b93084520d46c
+        repo: openstack/puppet-octavia
+    version: 20.3.0
 repository-settings:
   openstack/puppet-octavia: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

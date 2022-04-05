@@ -16,5 +16,12 @@ releases:
       - hash: e20a4659d27a3730d48c2899b1c3e766c5e26218
         repo: openstack/puppet-ovn
     version: 20.2.0
+  - projects:
+      - hash: 39cce31345923c00d97b81993764fbd5e4c254b6
+        repo: openstack/puppet-ovn
+    version: 20.3.0
 repository-settings:
   openstack/puppet-ovn: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

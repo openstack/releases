@@ -16,5 +16,12 @@ releases:
       - hash: 6aade7a04e4d0254c5533d9e4ef81557097e3037
         repo: openstack/puppet-magnum
     version: 20.2.0
+  - projects:
+      - hash: 693173b5d1f6335f3c8ee5f917a7debe3adcc5d6
+        repo: openstack/puppet-magnum
+    version: 20.3.0
 repository-settings:
   openstack/puppet-magnum: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: deacd17c89c2af33175bb6dc560133a77f824d80
         repo: openstack/puppet-barbican
     version: 20.2.0
+  - projects:
+      - hash: 0ac6151d689163ce7d20f7e5507a7e5fc51abaf3
+        repo: openstack/puppet-barbican
+    version: 20.3.0
 repository-settings:
   openstack/puppet-barbican: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

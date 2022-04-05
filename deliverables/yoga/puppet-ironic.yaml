@@ -16,5 +16,12 @@ releases:
       - hash: b9528eff307b68f301b32796541b91dbfad72b8c
         repo: openstack/puppet-ironic
     version: 20.2.0
+  - projects:
+      - hash: 58f113cba14ffb94094521a7ef6d5fde6fceb055
+        repo: openstack/puppet-ironic
+    version: 20.3.0
 repository-settings:
   openstack/puppet-ironic: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: 7abad2bd64eac98d9d853ab73fce34a2473b5b55
         repo: openstack/puppet-ec2api
     version: 20.2.0
+  - projects:
+      - hash: c1ee6f950709f3b2f527d0ec748949f24497fa8e
+        repo: openstack/puppet-ec2api
+    version: 20.3.0
 repository-settings:
   openstack/puppet-ec2api: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

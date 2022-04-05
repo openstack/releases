@@ -16,5 +16,12 @@ releases:
       - hash: 496260a6346e66741c45297a06382a3ee6a7925f
         repo: openstack/puppet-swift
     version: 20.2.0
+  - projects:
+      - hash: 4e983c272085dab457e6d6352ecd0fa2f66f67a3
+        repo: openstack/puppet-swift
+    version: 20.3.0
 repository-settings:
   openstack/puppet-swift: {}
+branches:
+  - name: stable/yoga
+    location: 20.3.0

@@ -16,5 +16,12 @@ releases:
       - hash: aeddb557c9ab8c1fa50707bf35d0acfc696c12a1
         repo: openstack/puppet-rally
     version: 8.2.0
+  - projects:
+      - hash: 18cddc6cecc91aa5117a7506f67a94ee3962f7dd
+        repo: openstack/puppet-rally
+    version: 8.3.0
 repository-settings:
   openstack/puppet-rally: {}
+branches:
+  - name: stable/yoga
+    location: 8.3.0
