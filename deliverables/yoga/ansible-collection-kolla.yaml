@@ -4,4 +4,14 @@ release-model: cycle-with-rc
 team: kolla
 type: trailing
 repository-settings:
-  openstack/ansible-collection-kolla: {}
+  openstack/ansible-collection-kolla:
+    flags:
+      - no-artifact-build-job
+releases:
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: 07b42a9c85a9a8e5b56307717d680185a819dfa9
+branches:
+  - name: stable/yoga
+    location: 1.0.0.0rc1
