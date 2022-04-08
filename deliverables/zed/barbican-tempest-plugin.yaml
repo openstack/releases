@@ -1,0 +1,11 @@
+---
+include-pypi-link: false
+launchpad: barbican
+release-model: cycle-with-intermediary
+stable-branch-type: none
+release-type: python-pypi
+repository-settings:
+  openstack/barbican-tempest-plugin:
+    tarball-base: barbican_tempest_plugin
+team: barbican
+type: tempest-plugin
