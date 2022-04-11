@@ -11,3 +11,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 5ede87656c05a95e34369417a660fd1b6d06bbfc
+      - repo: openstack/kayobe-config
+        hash: 7d449a92cc9969badc3d6050ac7baea624a496af
+      - repo: openstack/kayobe-config-dev
+        hash: c9eb56646322fae1529437295da48fdf3248ef47
+branches:
+  - name: stable/yoga
+    location: 12.0.0.0rc1
