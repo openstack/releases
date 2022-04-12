@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: 8ff41f23cac05d0b7ba4a731d34b9b2690ba5aa5
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 78a9a1cf6e300ac356fecea8ef05e19b61cebf2e
 branches:
   - location: 12.0.0
     name: stable/ussuri
