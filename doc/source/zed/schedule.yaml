@@ -37,6 +37,8 @@ cycle:
 - end: '2022-06-03'
   name: R-18
   start: '2022-05-30'
+  project-specific:
+    - z-cinder-mid-cycle-ptg-1
 - end: '2022-06-10'
   name: R-17
   start: '2022-06-06'
@@ -50,6 +52,8 @@ cycle:
   start: '2022-06-20'
   x-project:
     - z-cycle-trail
+  project-specific:
+    - z-cinder-spec-freeze
 - end: '2022-07-01'
   name: R-14
   start: '2022-06-27'
@@ -62,6 +66,9 @@ cycle:
   x-project:
     - z-2
     - z-mf
+  project-specific:
+    - z-cinder-driver-deadline
+    - z-cinder-target-driver-deadline
 - end: '2022-07-22'
   name: R-11
   start: '2022-07-18'
@@ -71,9 +78,13 @@ cycle:
 - end: '2022-08-05'
   name: R-9
   start: '2022-08-01'
+  project-specific:
+    - z-cinder-feature-checkpoint
 - end: '2022-08-12'
   name: R-8
   start: '2022-08-08'
+  project-specific:
+    - z-cinder-driver-features-declaration
 - end: '2022-08-19'
   name: R-7
   start: '2022-08-15'
@@ -96,6 +107,8 @@ cycle:
     - z-soft-sf
     - z-rf
     - z-cycle-highlights
+  project-specific:
+    - z-cinder-ci-checkpoint
 - end: '2022-09-09'
   name: R-4
   start: '2022-09-05'
