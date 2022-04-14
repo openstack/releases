@@ -17,6 +17,10 @@ releases:
       - repo: openstack/networking-midonet
         hash: af9b8a7444c72d69c1accdce70bcedba530f0ff8
     diff-start: 10.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/networking-midonet
+        hash: af9b8a7444c72d69c1accdce70bcedba530f0ff8
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

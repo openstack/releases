@@ -16,6 +16,10 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: 2f30efb0614c1f3e289d39969854eb3ed872f4e8
     diff-start: 12.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 2f30efb0614c1f3e289d39969854eb3ed872f4e8
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1
