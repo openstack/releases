@@ -16,6 +16,10 @@ releases:
       - repo: openstack/searchlight-ui
         hash: 7aa5bbf556c1e25eb3e252b04a6865a3f9afd45d
     diff-start: 8.0.0.0rc1
+  - version: victoria-em
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: 7aa5bbf556c1e25eb3e252b04a6865a3f9afd45d
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
