@@ -24,6 +24,10 @@ releases:
       - hash: 500e779016ea982bf63248e5781c54e3736afa0a
         repo: openstack/puppet-glare
     version: 6.4.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-glare
+        hash: 500e779016ea982bf63248e5781c54e3736afa0a
 branches:
   - name: stable/victoria
     location: 6.4.0

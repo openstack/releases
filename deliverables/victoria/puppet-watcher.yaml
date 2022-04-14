@@ -26,6 +26,10 @@ releases:
       - hash: 9414cf8d3a0b2f85f9f3701f32a67db2680280f3
         repo: openstack/puppet-watcher
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 9414cf8d3a0b2f85f9f3701f32a67db2680280f3
 branches:
   - name: stable/victoria
     location: 17.4.0

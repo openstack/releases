@@ -26,6 +26,10 @@ releases:
       - hash: 18f9c1b7fe47e83a45d976af2f6e48903f6f0271
         repo: openstack/puppet-vitrage
     version: 7.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: 18f9c1b7fe47e83a45d976af2f6e48903f6f0271
 branches:
   - name: stable/victoria
     location: 7.4.0

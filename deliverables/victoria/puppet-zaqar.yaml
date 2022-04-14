@@ -26,6 +26,10 @@ releases:
       - hash: 82e0b8b6cddc99dacd8a9b7af1de5dc41f86f56e
         repo: openstack/puppet-zaqar
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 82e0b8b6cddc99dacd8a9b7af1de5dc41f86f56e
 branches:
   - name: stable/victoria
     location: 17.4.0

@@ -30,6 +30,10 @@ releases:
       - hash: ce544c2634482d60d34834fdda96b60807a7451d
         repo: openstack/puppet-cloudkitty
     version: 6.6.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: ce544c2634482d60d34834fdda96b60807a7451d
 branches:
   - name: stable/victoria
     location: 6.5.0

@@ -34,6 +34,10 @@ releases:
       - hash: 026214ae118e076bf28c307d7a362b6dc0f733fb
         repo: openstack/puppet-neutron
     version: 17.7.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 026214ae118e076bf28c307d7a362b6dc0f733fb
 branches:
   - name: stable/victoria
     location: 17.5.0

@@ -26,6 +26,10 @@ releases:
       - hash: 246399d2069e9e05a506af27bb6d32b9dae52bdb
         repo: openstack/puppet-heat
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 246399d2069e9e05a506af27bb6d32b9dae52bdb
 branches:
   - name: stable/victoria
     location: 17.4.0

@@ -26,6 +26,10 @@ releases:
       - hash: ce93314446351d339bafbc4e2743d99665b4aab8
         repo: openstack/puppet-placement
     version: 4.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-placement
+        hash: ce93314446351d339bafbc4e2743d99665b4aab8
 branches:
   - name: stable/victoria
     location: 4.4.0

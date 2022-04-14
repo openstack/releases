@@ -26,6 +26,10 @@ releases:
       - hash: 7a3e8d06b4b877e619fbfffdbaa2a03214909c00
         repo: openstack/puppet-cinder
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 7a3e8d06b4b877e619fbfffdbaa2a03214909c00
 branches:
   - name: stable/victoria
     location: 17.4.0

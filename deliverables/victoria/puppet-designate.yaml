@@ -26,6 +26,10 @@ releases:
       - hash: 6b2b21876f36123f97d6688fee8597f437a22296
         repo: openstack/puppet-designate
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 6b2b21876f36123f97d6688fee8597f437a22296
 branches:
   - name: stable/victoria
     location: 17.4.0

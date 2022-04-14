@@ -26,6 +26,10 @@ releases:
       - hash: fb302e96d7d7d57360be90c83717df757296b3af
         repo: openstack/puppet-gnocchi
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: fb302e96d7d7d57360be90c83717df757296b3af
 branches:
   - name: stable/victoria
     location: 17.4.0
