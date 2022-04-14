@@ -16,6 +16,10 @@ releases:
       - repo: openstack/designate-dashboard
         hash: 7b1adbd7be137ff3e67fc051b4b1ffe8745f46c1
     diff-start: 10.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 7b1adbd7be137ff3e67fc051b4b1ffe8745f46c1
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
