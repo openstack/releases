@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: bf820e10c742c3aff610665d7ec1b7c56a1fea9f
+  - version: victoria-em
+    projects:
+      - repo: openstack/manila-ui
+        hash: bf820e10c742c3aff610665d7ec1b7c56a1fea9f
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

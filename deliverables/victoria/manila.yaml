@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 0f337b5d338a378aebb8e2f168c4042f5fb6bbd1
+  - version: victoria-em
+    projects:
+      - repo: openstack/manila
+        hash: 0f337b5d338a378aebb8e2f168c4042f5fb6bbd1
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

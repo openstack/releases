@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: eee6ca937c1358b00e95978e9ea81be82d93d422
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: eee6ca937c1358b00e95978e9ea81be82d93d422
 branches:
   - name: stable/victoria
     location: 2.3.0
