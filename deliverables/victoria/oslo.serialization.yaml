@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: fcd737e2b19a4fee58db79281b336342f0f09d7b
+  - version: victoria-em
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: fcd737e2b19a4fee58db79281b336342f0f09d7b
 branches:
   - name: stable/victoria
     location: 4.0.1

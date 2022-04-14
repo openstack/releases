@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 81e55722dc83744c7cc5fc6a062248843519db69
+  - version: victoria-em
+    projects:
+      - repo: openstack/oslo.db
+        hash: 81e55722dc83744c7cc5fc6a062248843519db69
 branches:
   - name: stable/victoria
     location: 8.4.0

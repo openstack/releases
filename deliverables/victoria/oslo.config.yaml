@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 0950f82ec59e1b4a2af66b5c5940a651a5cb574f
+  - version: victoria-em
+    projects:
+      - repo: openstack/oslo.config
+        hash: 0950f82ec59e1b4a2af66b5c5940a651a5cb574f
 branches:
   - name: stable/victoria
     location: 8.3.2
