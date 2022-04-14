@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher
         hash: 583c946061f8af815c32254655f4aed8f0c18dc9
     diff-start: 4.0.0.0rc1
+  - version: victoria-em
+    projects:
+      - repo: openstack/watcher
+        hash: 583c946061f8af815c32254655f4aed8f0c18dc9
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1
