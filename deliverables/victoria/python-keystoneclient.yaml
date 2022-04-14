@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 81229eb2c1606e99518fefc6b7bc2c4dd1221978
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 81229eb2c1606e99518fefc6b7bc2c4dd1221978
 branches:
   - name: stable/victoria
     location: 4.1.1
