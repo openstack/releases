@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 2e6778fe6d795783fb71a8910c202ca32cd70c39
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 2e6778fe6d795783fb71a8910c202ca32cd70c39
 branches:
   - name: stable/victoria
     location: 4.3.0
