@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: e33a1f7dd6386bc3cbb45c41c3f0a74e03b5f1f5
+  - version: victoria-em
+    projects:
+      - repo: openstack/ceilometer
+        hash: e33a1f7dd6386bc3cbb45c41c3f0a74e03b5f1f5
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
