@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: b5e08f227699b4f459336ee098b5b8576e5c0e50
+  - version: victoria-em
+    projects:
+      - repo: openstack/mistral-extra
+        hash: b5e08f227699b4f459336ee098b5b8576e5c0e50
 branches:
   - name: stable/victoria
     location: 10.1.0
