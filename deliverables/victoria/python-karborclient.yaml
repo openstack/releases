@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: c4b0bd2cdbb67e752ac5010e54a04e8734b601df
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-karborclient
+        hash: c4b0bd2cdbb67e752ac5010e54a04e8734b601df
 branches:
   - name: stable/victoria
     location: 2.1.0
