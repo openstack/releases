@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 6725696d1ba87bc4ab112eb203a270d3c81476fc
+  - version: victoria-em
+    projects:
+      - repo: openstack/heat-agents
+        hash: 6725696d1ba87bc4ab112eb203a270d3c81476fc
 branches:
   - name: stable/victoria
     location: 2.1.1

@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: cbe9be5e7625d374fc6cfbb63b7e3ef5335bf330
+  - version: victoria-em
+    projects:
+      - repo: openstack/heat
+        hash: cbe9be5e7625d374fc6cfbb63b7e3ef5335bf330
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
