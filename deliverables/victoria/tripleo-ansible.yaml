@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/tripleo-ansible
         hash: 8d4019d6ecb88c3dc6b71eb751d6d999be10e2d8
+  - version: victoria-em
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: 8d4019d6ecb88c3dc6b71eb751d6d999be10e2d8
 branches:
   - name: stable/victoria
     location: 2.0.0
