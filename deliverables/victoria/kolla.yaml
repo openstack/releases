@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: fe872a875facdff71a8ffc65929e89b8c67be513
+  - version: victoria-em
+    projects:
+      - repo: openstack/kolla
+        hash: fe872a875facdff71a8ffc65929e89b8c67be513
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
