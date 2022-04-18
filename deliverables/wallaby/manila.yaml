@@ -48,6 +48,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: e1e9670cfbf0069c95cfc777d8abdd9c2c379950
+  - version: 12.1.2
+    projects:
+      - repo: openstack/manila
+        hash: f5b2cdc23d61b41a739d4a74b477fec63972f1af
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
