@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: a1a85684c6406600666582566e412a74ce17d220
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: a1a85684c6406600666582566e412a74ce17d220
 branches:
   - name: stable/victoria
     location: 6.1.1
