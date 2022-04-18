@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 737fb34954c20857ae9da426135145f3f0e74bb9
+  - version: victoria-em
+    projects:
+      - repo: openstack/murano-agent
+        hash: 737fb34954c20857ae9da426135145f3f0e74bb9
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1

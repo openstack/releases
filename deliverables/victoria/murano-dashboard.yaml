@@ -16,6 +16,10 @@ releases:
       - repo: openstack/murano-dashboard
         hash: cf980359303c8de81f3e5f7358df39d9f9d7d3ef
     diff-start: 9.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: cf980359303c8de81f3e5f7358df39d9f9d7d3ef
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1
