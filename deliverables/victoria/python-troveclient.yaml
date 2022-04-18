@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 41a055526987d20ca36d933b29e698f4182a4587
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 41a055526987d20ca36d933b29e698f4182a4587
 branches:
   - name: stable/victoria
     location: 5.1.0
