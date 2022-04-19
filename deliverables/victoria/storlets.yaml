@@ -15,6 +15,10 @@ releases:
       - repo: openstack/storlets
         hash: 1a431d5c20a99d8797973de12b9a9b24a3600df5
     diff-start: 5.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/storlets
+        hash: 1a431d5c20a99d8797973de12b9a9b24a3600df5
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1
