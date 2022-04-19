@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: c2aa20175c425b5ace32ec6862dba1189ae1ad5a
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: c2aa20175c425b5ace32ec6862dba1189ae1ad5a
 branches:
   - name: stable/victoria
     location: 2.2.0
