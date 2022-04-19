@@ -7,6 +7,11 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+releases:
+  - projects:
+      - hash: d94785ceb702587131ce98a1b9f05b2869a66180
+        repo: openstack/requirements
+    version: newton-eol
 branches:
   - location:
       openstack/requirements: c589637b184e77901d37cc7faa93dbb906979448
