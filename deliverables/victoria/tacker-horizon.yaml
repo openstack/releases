@@ -15,6 +15,10 @@ releases:
       - repo: openstack/tacker-horizon
         hash: fe74538ae2e415381ad8a6489d30125442088526
     diff-start: 1.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: fe74538ae2e415381ad8a6489d30125442088526
 branches:
   - name: stable/victoria
     location: 2.0.0.0rc1
