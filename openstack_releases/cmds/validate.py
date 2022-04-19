@@ -30,7 +30,6 @@ import tempfile
 
 from openstack_governance import governance
 import requests
-import six
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
@@ -1560,7 +1559,7 @@ def validate_stable_branches(deliv, context):
         location = branch.location
 
         if branch_mode == 'std' or branch_mode == 'std-with-versions':
-            if not isinstance(location, six.string_types):
+            if not isinstance(location, str):
                 context.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (
@@ -1645,7 +1644,7 @@ def validate_stable_branches(deliv, context):
                     )
 
         elif branch_mode == 'upstream':
-            if not isinstance(location, six.string_types):
+            if not isinstance(location, str):
                 context.error(
                     ('branch location for %s is '
                      'expected to be a string but got a %s' % (

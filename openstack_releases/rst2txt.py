@@ -29,7 +29,6 @@ from docutils import core
 from docutils import nodes
 from docutils.utils import column_width
 from docutils import writers
-from six.moves import zip_longest
 
 from sphinx import addnodes
 
@@ -563,7 +562,7 @@ class TextTranslator(nodes.NodeVisitor):
             self.add_text(''.join(out) + self.nl)
 
         def writerow(row):
-            lines = zip_longest(*row)
+            lines = itertools.zip_longest(*row)
             for line in lines:
                 out = ['|']
                 for i, cell in enumerate(line):
