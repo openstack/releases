@@ -125,9 +125,9 @@ the date ranges during which each key was in general use.
   `key 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da`_
 * 2021-05-06..2021-10-27 (Xena Cycle key):
   `key 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035`_
-* 2021-10-27..present (Yoga Cycle key):
+* 2021-10-27..2022-04-09 (Yoga Cycle key):
   `key 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363`_
-* future use (Zed Cycle key):
+* 2022-04-09..present (Zed Cycle key):
   `key 0xa63ea142678138d1bb15f2e303bdfd64dd164087`_
 
 .. Static key files are generated with the following command:
