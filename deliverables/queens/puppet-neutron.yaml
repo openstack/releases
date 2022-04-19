@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: d924fa0ab73b1038026282679831a314f62f8576
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 9e4b885595bf4dfab66f3c601484d0e8b4b5e7d3
 repository-settings:
   openstack/puppet-neutron: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: 3bc0f6b33937d65ee65f002974d925425891612f
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 8816c5b79d5f0631507d2d0bcb0097b79066944c
 repository-settings:
   openstack/puppet-octavia: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: 8285d85bbf2c324ede9ab89bb4f069f407db6612
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 74e8eb230495506a9f3a17ce6c789cc69f8ead1e
 repository-settings:
   openstack/puppet-ironic: {}
 branches:

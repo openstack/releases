@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 29565d2c3f0277f5fe8b22e0a25a4879baaebdc7
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: b4dca1c08641fd10ed61ea31b12943e010836ddc
 repository-settings:
   openstack/puppet-murano: {}
 branches:

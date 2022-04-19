@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 8a17e07d4127f90927be95cee3a289c15003345f
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: b3d03b238634a665382d2244cf613d4061d25afb
 repository-settings:
   openstack/puppet-tempest: {}
 branches:

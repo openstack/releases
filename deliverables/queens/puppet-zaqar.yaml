@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: 03d6801b65d2244d9380aab1590f5021029f84e0
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 79b2126754042349dc0a9e3cb8c0f72c93e9497b
 repository-settings:
   openstack/puppet-zaqar: {}
 branches:

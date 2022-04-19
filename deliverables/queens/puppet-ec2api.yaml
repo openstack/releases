@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 424f2589d7824debbcd6fe975c3e82f99241b327
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: c41cea75f563c523ecea9df1adbee414cf0aa39a
 repository-settings:
   openstack/puppet-ec2api: {}
 branches:

@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-rally
         hash: 73389bb6b2db06eb76f3caa1d9799f5fe9406f98
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 735d347152c8971bbca89a6478d79dc41c153514
 repository-settings:
   openstack/puppet-rally: {}
 branches:

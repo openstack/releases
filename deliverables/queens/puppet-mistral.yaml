@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: ab885c40966396877e2650c146b78ca66924783a
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: df2fee2f3a914b23779cbd0f83510b18501419ac
 repository-settings:
   openstack/puppet-mistral: {}
 branches:

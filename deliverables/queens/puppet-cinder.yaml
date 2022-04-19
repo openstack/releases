@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 1a0856ace6e9edb7de0f8d6f75429f6b4867d106
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: a1e07150da61e82be9e64b0e3e298d4d06c8f680
 repository-settings:
   openstack/puppet-cinder: {}
 branches:

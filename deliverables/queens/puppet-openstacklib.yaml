@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: 4b30e6f02388ad2f551c10469893f1bd882ec5bd
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: ba8f6a95b947e7bf04c8e9df5be3973027c06cda
 repository-settings:
   openstack/puppet-openstacklib: {}
 branches:

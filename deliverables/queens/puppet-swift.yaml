@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: 1a67002f7452d71e6ad509b77917f70f9ad9ab41
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 0b188ee49a212bdaa495c90d4fd9409ae11b0fe1
 repository-settings:
   openstack/puppet-swift: {}
 branches:

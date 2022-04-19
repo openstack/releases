@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: b6d21977abebd4ecfcf45e2cfc9c5201fbefb46e
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: f1707b0293a2bc2b470882de0a2bc2260988714c
 repository-settings:
   openstack/puppet-keystone: {}
 branches:

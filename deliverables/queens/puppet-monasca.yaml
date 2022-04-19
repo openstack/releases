@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-monasca
         hash: 1dc9d678da87f7f32c507642e5b7a000589412e8
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: 2db4e7de03a045db17716efba156a24b5bb076e5
 repository-settings:
   openstack/puppet-monasca:
     flags:

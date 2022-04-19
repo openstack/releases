@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: 18f07a53b2dee27beb1de3176640dfe950c9f860
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: fefa0017f9bbf4ee05156125f5a1cdd166ad4ab3
 repository-settings:
   openstack/puppet-qdr: {}
 branches:
