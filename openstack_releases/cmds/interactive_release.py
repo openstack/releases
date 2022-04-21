@@ -20,8 +20,6 @@ import subprocess
 import sys
 import tempfile
 
-import six
-
 from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit import prompt
 from prompt_toolkit.validation import ValidationError
@@ -55,9 +53,9 @@ Notes:
 
 
 def to_unicode(blob, encoding='utf8'):
-    if isinstance(blob, six.text_type):
+    if isinstance(blob, str):
         return blob
-    elif isinstance(blob, six.binary_type):
+    elif isinstance(blob, bytes):
         return blob.decode(encoding)
     else:
         raise TypeError("Unable to convert %r to a text type" % blob)
