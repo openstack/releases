@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 3b7397864814da9efd20712765568babf17f3034
+  - version: victoria-em
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 3b7397864814da9efd20712765568babf17f3034
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
