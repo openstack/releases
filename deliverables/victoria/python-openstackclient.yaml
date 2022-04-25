@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 704656291946135f3403c0cb5951f6afeb83f6ac
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 704656291946135f3403c0cb5951f6afeb83f6ac
 branches:
   - name: stable/victoria
     location: 5.4.0
