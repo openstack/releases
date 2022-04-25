@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: ca13722a1c2909981fc20b43f1ed2ec4082567a6
+  - version: victoria-em
+    projects:
+      - repo: openstack/python-zunclient
+        hash: ca13722a1c2909981fc20b43f1ed2ec4082567a6
 branches:
   - name: stable/victoria
     location: 4.1.1
