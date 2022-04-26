@@ -15,6 +15,10 @@ releases:
       - repo: openstack/monasca-notification
         hash: f9978670b8437b106cc8a4fa88f6760da98c3b87
     diff-start: 2.0.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/monasca-notification
+        hash: f9978670b8437b106cc8a4fa88f6760da98c3b87
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

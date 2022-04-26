@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 91db19f328fdba583a185c4d54ee4061797b9477
+  - version: victoria-em
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 91db19f328fdba583a185c4d54ee4061797b9477
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
