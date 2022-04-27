@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: d6c6ab764e4c0e737b99f19b2495f1b9aab8c0d2
+  - version: victoria-em
+    projects:
+      - repo: openstack/swift
+        hash: d6c6ab764e4c0e737b99f19b2495f1b9aab8c0d2
 branches:
   - name: stable/victoria
     location: 2.26.0
