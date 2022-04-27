@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 6e640b336e1d08fd0404431871d046d9b4bc0c3d
+  - version: victoria-em
+    projects:
+      - repo: openstack/ironic
+        hash: 6e640b336e1d08fd0404431871d046d9b4bc0c3d
 branches:
   - name: bugfix/15.1
     location: 15.1.0
