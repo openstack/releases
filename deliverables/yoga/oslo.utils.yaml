@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: ad49b3ace4424637df4bae91bf82820e27341bc1
+  - version: 4.12.3
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 2c1b0628771695e546b0acb1e3c44c16c0c690db
 branches:
   - name: stable/yoga
     location: 4.12.2
