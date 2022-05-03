@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 2313b62638b293dad4c602844e871d8dd7cc2077
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 782a32d933f4a5ac319701312e393e94f208a7e5
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-vitrage
         hash: 22b7789dcdad336ec34ea3aca96bb6c5693267c7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: 810d65557a49e4607cd64b535a47b82fc396f0f1
 branches:
   - location: 3.3.0
     name: stable/rocky

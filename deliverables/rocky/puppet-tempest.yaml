@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 290d0432cb196b1e6155a34013c179e4b9903a58
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: c6fd255dd1ec5beec3543231a19a7bd677348417
 branches:
   - location: 13.3.0
     name: stable/rocky

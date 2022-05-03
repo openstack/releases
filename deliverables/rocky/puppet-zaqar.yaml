@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: 1df93eb033a3e701f19d148afd38691e62fc0360
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: b2e24e15fabaed0f0f7b627619ab44d9d548ec07
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 013e80fe1860c38659d4ddf7af8d08339a6ed9c7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 420bdb1f46e4bf1d90d7b411f072faddda34bad9
 branches:
   - location: 13.3.0
     name: stable/rocky

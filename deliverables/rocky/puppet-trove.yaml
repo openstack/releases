@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 51bec045099d76f4bf40e643bf50e13d54e57552
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 7bd85bc0a4be5aa43805c10f9ffbc8270aa8d0ff
 branches:
   - location: 13.3.0
     name: stable/rocky

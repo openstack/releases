@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: 8ab435c9e2c175917df9a226deb93ac0465ea4c4
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 0a95f9a4461f7a147244e331216ca4661e95af18
 branches:
   - location: 13.3.0
     name: stable/rocky

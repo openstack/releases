@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-monasca
         hash: e5212494ef136cfceeff152305ac9dbdd353b07a
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: 36f38bde1a4f50767cd10dc846ac98a28c5e81ad
 branches:
   - location: 2.3.0
     name: stable/rocky

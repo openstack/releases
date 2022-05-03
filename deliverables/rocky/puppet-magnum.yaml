@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: 066103382062f554f883fe54e0e4bae3ccb1398d
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 7b659aaf939afee72cc81428b18f0fa59eee6547
 branches:
   - location: 13.3.0
     name: stable/rocky

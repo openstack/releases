@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: 2c3dc778504c18695792203e308e74113ae81ba9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: c08c87b97f6af64da301bb5917fd64e8e1bca48d
 branches:
   - location: 13.3.0
     name: stable/rocky

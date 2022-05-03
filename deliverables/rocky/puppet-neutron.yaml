@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: b3e78bc5b4229f80d7856be0b2cb527b46c8debd
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 82f7454161d309fd1ff0faa915090b7997de3b87
 branches:
   - location: 13.3.0
     name: stable/rocky

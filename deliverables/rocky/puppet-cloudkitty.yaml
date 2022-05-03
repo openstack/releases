@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-cloudkitty
         hash: 5c80963d4053887abccb5d23e040f8833da23fb7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: bca06778ff29fa69c7954f857cb2543e2932b2d5
 branches:
   - location: 2.3.0
     name: stable/rocky

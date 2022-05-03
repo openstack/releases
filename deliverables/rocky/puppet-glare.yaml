@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-glare
         hash: 28c69354c5cf8f06f435f38c340be4864759ba5e
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-glare
+        hash: 5d092e68d7d61b9f6bac3a4866d055cd6d8fd047
 branches:
   - location: 2.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-rally
         hash: 095daaee73337d24f70e5f4d934733ca4b0a3728
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 3581732927abb39fb8ac38f5790ef84737240e20
 branches:
   - location: 1.3.0
     name: stable/rocky

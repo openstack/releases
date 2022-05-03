@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: f8107522bc71ee1cfc68b68cb4deed3a61844d1f
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 5efaf8ac385d939cce1f16959e5ebe0d715dd729
 branches:
   - location: 13.3.0
     name: stable/rocky

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 8c75648f02b4430ad872a654e30e86b6547e5845
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 422c333167b4dd9eb5426dc8fb9eef09929eb31b
 branches:
   - location: 13.3.0
     name: stable/rocky

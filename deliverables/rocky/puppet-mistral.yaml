@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 082509fed9b2d8d684a6eba239281dfd37b31b0f
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 8dc3b7e4a392f2a06bac0a8500753c32d19511fb
 branches:
   - location: 13.3.0
     name: stable/rocky

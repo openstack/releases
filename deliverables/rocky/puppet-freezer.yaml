@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: 7754cd4516abe7376ee24378f436bc0b82b71b18
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: d84bad69e77e13a8221e6e67c465328a64ec4f35
 branches:
   - location: 2.3.0
     name: stable/rocky
