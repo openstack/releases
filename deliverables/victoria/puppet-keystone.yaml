@@ -26,6 +26,10 @@ releases:
       - hash: 0906a373927b4b75288777a9867353d53285fb7f
         repo: openstack/puppet-keystone
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 0906a373927b4b75288777a9867353d53285fb7f
 branches:
   - name: stable/victoria
     location: 17.4.0

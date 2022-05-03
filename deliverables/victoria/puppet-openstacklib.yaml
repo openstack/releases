@@ -26,6 +26,10 @@ releases:
       - hash: f9f31edd9c3015b3755dc03b936f766b6a950e1f
         repo: openstack/puppet-openstacklib
     version: 17.4.1
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: f9f31edd9c3015b3755dc03b936f766b6a950e1f
 branches:
   - name: stable/victoria
     location: 17.4.0

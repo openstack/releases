@@ -26,6 +26,10 @@ releases:
       - hash: 03da7b3d4b49f2040c5a6ffed4bd0f04d3955f6c
         repo: openstack/puppet-mistral
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 03da7b3d4b49f2040c5a6ffed4bd0f04d3955f6c
 branches:
   - name: stable/victoria
     location: 17.4.0

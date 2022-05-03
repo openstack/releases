@@ -26,6 +26,10 @@ releases:
       - hash: 471fdd6fa60c35ce66847e9e3a369a0b2b307b07
         repo: openstack/puppet-ec2api
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 471fdd6fa60c35ce66847e9e3a369a0b2b307b07
 branches:
   - name: stable/victoria
     location: 17.4.0

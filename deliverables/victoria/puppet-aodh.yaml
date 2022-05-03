@@ -30,6 +30,10 @@ releases:
       - hash: 934512987547d35f3421f7a88be60e1939e4719c
         repo: openstack/puppet-aodh
     version: 17.6.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 934512987547d35f3421f7a88be60e1939e4719c
 branches:
   - name: stable/victoria
     location: 17.5.0

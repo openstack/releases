@@ -26,6 +26,10 @@ releases:
       - hash: 1d0da7bfa474cc6ea43697aaf1487a4d817b8e5b
         repo: openstack/puppet-horizon
     version: 17.5.0
+  - version: victoria-em
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 1d0da7bfa474cc6ea43697aaf1487a4d817b8e5b
 branches:
   - name: stable/victoria
     location: 17.4.0
