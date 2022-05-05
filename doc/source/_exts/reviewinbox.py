@@ -34,7 +34,7 @@ class ReviewInbox(rst.Directive):
     has_content = True
 
     def run(self):
-        url = 'https://review.opendev.org/#/dashboard/?'
+        url = 'https://review.opendev.org/dashboard/?'
         sections = []
 
         url += escape(urllib_parse.urlencode({
@@ -69,9 +69,6 @@ class ReviewInbox(rst.Directive):
             r'project:openstack/release-test OR '
             r'( project:openstack/releases file:^openstack_releases/.* ) OR '
             r'project:openstack/reno)'})))
-
-        sections.append(escape(urllib_parse.urlencode({
-            'All Releases': 'is:open project:openstack/releases'})))
 
         url += '&'.join(sections)
 
