@@ -94,7 +94,7 @@ def build_sdist(workdir, repo):
         'SKIP_GENERATE_AUTHORS': '1',
         'SKIP_WRITE_GIT_CHANGELOG': '1',
     }
-    cmd = [python, '-m', 'build' '--sdist', '--wheel']
+    cmd = [python, '-m', 'build', '--sdist', '--wheel']
     processutils.check_call(
         cmd,
         cwd=dest,
