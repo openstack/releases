@@ -43,6 +43,10 @@ releases:
       - hash: cea4e2c5904e3b2e32070afcec37db1f36668a67
         repo: openstack/neutron-lbaas-dashboard
     version: pike-em
+  - projects:
+      - hash: 8e87ca636468ce1ea26fd612909aadd4556923d3
+        repo: openstack/neutron-lbaas-dashboard
+    version: pike-eol
 branches:
   - location: 3.0.0.0rc1
     name: stable/pike

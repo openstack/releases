@@ -40,6 +40,10 @@ releases:
       - hash: 138084362d73f0b48ba03205e556d9344d1a5dd8
         repo: openstack/networking-ovn
     version: pike-em
+  - projects:
+      - hash: b9902dbb237a62eb6cae15ee943a0e871575330a
+        repo: openstack/networking-ovn
+    version: pike-eol
 branches:
   - location: 3.0.0.0rc1
     name: stable/pike

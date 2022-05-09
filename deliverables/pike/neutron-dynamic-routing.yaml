@@ -43,6 +43,10 @@ releases:
       - hash: 0ea1ff92fcdac01a7a652e73873b92c2cc94a73b
         repo: openstack/neutron-dynamic-routing
     version: pike-em
+  - projects:
+      - hash: 02388ecc432a606eeb149d0686071943e9fd459d
+        repo: openstack/neutron-dynamic-routing
+    version: pike-eol
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

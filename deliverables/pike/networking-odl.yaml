@@ -39,6 +39,10 @@ releases:
       - hash: 4b0e121be3558b6f10b7bd678b65ce4faf53fa78
         repo: openstack/networking-odl
     version: pike-em
+  - projects:
+      - hash: 47e49c71cf839b7a3200f73e338e85d1d8dcb5de
+        repo: openstack/networking-odl
+    version: pike-eol
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

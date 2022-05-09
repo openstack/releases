@@ -21,6 +21,10 @@ releases:
       - hash: d786cfd6994eda0a3cf73d7229bc95be12e6ae41
         repo: openstack/neutron-fwaas-dashboard
     version: pike-em
+  - projects:
+      - hash: 662c77de1ccffe819d6dbb6e5cd4e3e585a28e58
+        repo: openstack/neutron-fwaas-dashboard
+    version: pike-eol
 branches:
   - location: 1.0.0
     name: stable/pike
