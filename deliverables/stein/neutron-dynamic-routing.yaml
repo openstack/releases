@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: c27bb1f190a60d201d616bebd42c60dae6afa545
+  - version: stein-eol
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: f313f0e9c030849d62e6bc4c9511efe9623ab06f
 branches:
   - location: 14.0.0.0rc1
     name: stable/stein
