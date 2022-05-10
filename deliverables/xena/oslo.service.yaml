@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 13ee22cc6ef81298b73cc92bf35ab7919e1e752a
+  - version: 2.6.2
+    projects:
+      - repo: openstack/oslo.service
+        hash: 03d4fdda591222880cab058bd7b7c47e6ea82bf6
 branches:
   - name: stable/xena
     location: 2.6.0
