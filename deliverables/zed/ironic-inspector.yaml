@@ -7,3 +7,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-inspector: {}
+releases:
+  - version: 10.12.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 6513d3db37e19a6e0c20db88a1b8fa152e1ea76c
+branches:
+  - name: bugfix/10.12
+    location: 10.12.0
