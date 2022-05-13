@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-congress
         hash: bee0db95788cfae01856021ac6c56fa077003900
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-congress
+        hash: 21b69168d777331cf8fb2e8a5cd16c9ed3233e23
 branches:
   - location: 14.4.0
     name: stable/stein

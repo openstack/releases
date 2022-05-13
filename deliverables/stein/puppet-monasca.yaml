@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/puppet-monasca
         hash: 751f4b53bcd67be90144a753ef53f244b0e44b3f
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: 5f1b600bb7eecf54e1957b5c05b993fb3a4d3bea
 branches:
   - location: 3.4.0
     name: stable/stein

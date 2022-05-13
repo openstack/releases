@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: 70c2180c468ef6088b558cc70ccba5470424608b
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 3ba2a30714ee70f5e1ef62ef4402b0be427c61fb
 branches:
   - location: 14.4.0
     name: stable/stein

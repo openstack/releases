@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 2d4c081a8f083a121bf88f346493a0861cf3ecbf
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 495927a83098e7c9d5b33b1c25e73effc4737736
 branches:
   - location: 14.4.0
     name: stable/stein

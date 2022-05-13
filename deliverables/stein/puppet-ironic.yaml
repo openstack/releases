@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: f61b4eb761058b2be8ba4857426d1123561a7a52
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 8094aade353bfc236c485961ad5c75fc70aa236a
 branches:
   - location: 14.4.0
     name: stable/stein

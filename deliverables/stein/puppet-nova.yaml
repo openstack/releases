@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: aa4a91159de949a90ee0541ea5dd1d236251fde5
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 48dd78d22e87ddba998882cf7d7526590a9d57f7
 branches:
   - location: 14.4.0
     name: stable/stein

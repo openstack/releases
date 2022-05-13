@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 4119ed1fd8518f18544db09e55ce382820ad31fe
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 89a969cd1d0b44f1c37daedeb9f0ce8b124e2c63
 branches:
   - location: 14.4.0
     name: stable/stein

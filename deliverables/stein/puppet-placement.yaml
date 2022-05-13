@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/puppet-placement
         hash: 4e68e8fdba79f7cd7f78a4a7c64d60354b9a3af4
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 850647365a29590aba5ecd90e56a88f7e0962fa7
 branches:
   - location: 1.2.0
     name: stable/stein

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 8a9c68b52f75b9a1519328d05ea8a4ab2e6b994a
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 748c9cd06a7d40aadefa298aa0f976e3f72dcc04
 branches:
   - location: 14.4.0
     name: stable/stein

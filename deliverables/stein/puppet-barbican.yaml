@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: 121ae019e8d0bdf9bac988f464785a9097641ed7
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: e93acef84f3fc6f99f72b6d1d9e33203bc5db445
 branches:
   - location: 14.4.0
     name: stable/stein

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 15f273947e7ae65b91bdbeab0c614ffb4cc1d8df
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 471738d1c6230c67726311f33505dd8c072888f7
 branches:
   - location: 14.4.0
     name: stable/stein

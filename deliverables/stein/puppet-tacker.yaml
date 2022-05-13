@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: 9900f79b4c5466fe6509f7f1cf4c7756b8f4866c
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 2f62952075647928a7d94fb94fedb3adc1ed6a09
 branches:
   - location: 14.4.0
     name: stable/stein

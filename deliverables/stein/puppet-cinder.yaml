@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 14696d064115bcf3c44538468b1d5bcd6a93054e
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 25ecd103e76c69dbf6a2eceba183f86cab4224c9
 branches:
   - location: 14.4.0
     name: stable/stein

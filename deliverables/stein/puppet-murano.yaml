@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 0100ea1bf91d23ab98bf53250c1d3b7897bc5247
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 9a855f7c15b271269f37c8b5ef97c8038aad4496
 branches:
   - location: 14.4.0
     name: stable/stein

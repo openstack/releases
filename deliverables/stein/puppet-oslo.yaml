@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 8328a4ec5bb89b26bfe136e0d193254e175b5b84
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 4e5b7afac5bf53a521d74246e238c709e4118747
 branches:
   - location: 14.4.0
     name: stable/stein

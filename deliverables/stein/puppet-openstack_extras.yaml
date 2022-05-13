@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: d47187cf23501e559d1880ddcaadd033343c87bc
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: a570a861ba9b58dda18c9e49a634518f0bbfb465
 branches:
   - location: 14.4.0
     name: stable/stein
