@@ -1,4 +1,11 @@
 ---
+# Reno is a dependency of openstack/releases itself. This may create an
+# issue should PBR become uninstallable, as we won't be able to use
+# openstack/releases to release a fixed version.
+# Should this situation ever occur again, the proper way to fix it is to
+# push a tag to Reno manually, then retroactively submit the corresponding
+# change to openstack/releases. The change will update the metadata while
+# otherwise being a noop.
 storyboard: 933
 team: Release Management
 type: other
