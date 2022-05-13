@@ -47,6 +47,10 @@ releases:
       - hash: ecd495b7bfabcfe30f0b17a2510ac91b1d60b7b7
         repo: openstack/neutron-lbaas
     version: pike-em
+  - projects:
+      - hash: 9ee7379c9920b8ec6bb65bfb9624689805de9731
+        repo: openstack/neutron-lbaas
+    version: pike-eol
 branches:
   - location: 11.0.0.0rc1
     name: stable/pike

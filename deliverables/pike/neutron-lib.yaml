@@ -50,6 +50,10 @@ releases:
       - hash: 79dada36d10cdd5d64ba1c3ce3e7c67325a3727e
         repo: openstack/neutron-lib
     version: pike-em
+  - projects:
+      - hash: 05a54c68230017d2654746d49217ef6c39de6bca
+        repo: openstack/neutron-lib
+    version: pike-eol
 branches:
   - name: stable/pike
     location: 1.9.1

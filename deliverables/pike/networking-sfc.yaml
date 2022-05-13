@@ -39,6 +39,10 @@ releases:
       - hash: 14587aec2e2045723c3b0a3bd6d4fc14544b5898
         repo: openstack/networking-sfc
     version: pike-em
+  - projects:
+      - hash: 92f10a6e4d3568a7a36d632aabe6e90f1a4ea326
+        repo: openstack/networking-sfc
+    version: pike-eol
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
