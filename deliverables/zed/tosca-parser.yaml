@@ -6,3 +6,8 @@ team: heat
 type: library
 repository-settings:
   openstack/tosca-parser: {}
+releases:
+  - version: 2.6.0
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 88796c0072ce2d217c1eca49b512d2ee8cbbc08c
