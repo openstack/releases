@@ -6,3 +6,8 @@ team: manila
 type: client-library
 repository-settings:
   openstack/python-manilaclient: {}
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 91c0d7980713aecc220b7adaed1c97b4d88b3cc8
