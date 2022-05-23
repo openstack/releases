@@ -30,6 +30,10 @@ releases:
       - repo: openstack/neutron
         hash: 76fa860a1b5a6c1572cd5bbce0bf3824c660efab
     diff-start: 19.0.0.0rc1
+  - version: 20.1.0
+    projects:
+      - repo: openstack/neutron
+        hash: 5cc41f0ab10adfd987423a96f57b2e074c8bdac6
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1

@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 493afef940d548d02b997b0514643035a44ee030
+  - version: 19.3.0
+    projects:
+      - repo: openstack/neutron
+        hash: 2f5a42c637c23f1080eb55a9b0eea67b5f55d078
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
