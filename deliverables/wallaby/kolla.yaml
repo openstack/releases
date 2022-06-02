@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 0b45557bdf90e6927c456dcc0ebc6e1552e496be
+  - version: 12.2.0
+    projects:
+      - repo: openstack/kolla
+        hash: b0517b35627d02fa969c223070a9cf4d6e6a5916
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

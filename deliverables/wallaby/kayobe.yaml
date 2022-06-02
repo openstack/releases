@@ -49,6 +49,14 @@ releases:
         hash: 458754779cd0c68dd060fb515694e659a7824889
       - repo: openstack/kayobe-config-dev
         hash: 8ed513eec891af86c7aff1be0abb16eaa14dddc5
+  - version: 10.2.0
+    projects:
+      - repo: openstack/kayobe
+        hash: 313a98512ab387e3857760fa0a73afb09f598061
+      - repo: openstack/kayobe-config
+        hash: bcae6dc7b8850869c685429cc388c063661a8bdf
+      - repo: openstack/kayobe-config-dev
+        hash: 8c6df7cdda154f23e64de0d38926a97f0d794144
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1
