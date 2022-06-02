@@ -15,6 +15,10 @@ releases:
       - repo: openstack/tempest
         hash: c73e6b11dcc1fcd878ff62e353441a5c8c794c83
     version: 24.0.0
+  - version: ussuri-last
+    projects:
+      - repo: openstack/tempest
+        hash: abddb57fd1974c546a6228b4eb53c1d7bb69ab38
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest

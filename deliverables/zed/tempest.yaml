@@ -5,6 +5,11 @@ release-model: cycle-with-intermediary
 team: Quality Assurance
 type: other
 stable-branch-type: none
+releases:
+  - projects:
+      - repo: openstack/tempest
+        hash: abddb57fd1974c546a6228b4eb53c1d7bb69ab38
+    version: 31.0.0
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
