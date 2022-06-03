@@ -23,6 +23,10 @@ releases:
       - repo: openstack/glance
         hash: d4119be0543bdaefe78fc11e16c3a01b55aa9e3a
     diff-start: 23.0.0.0rc1
+  - version: 24.1.0
+    projects:
+      - repo: openstack/glance
+        hash: 1964876644c7086eff516832a19206d28891110d
 branches:
   - name: stable/yoga
     location: 24.0.0.0rc1
