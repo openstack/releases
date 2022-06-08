@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.vmware: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 42ca5ddb2660227269ae1e9ce5642338e55304f0
