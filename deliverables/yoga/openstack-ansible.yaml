@@ -6,3 +6,14 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+cycle-highlights:
+  - Ansible-core version upgraded to 2.12
+  - Added support for CentOS 9 Stream and Rocky linux 8
+  - Experimental support of Ubuntu 22.04
+  - Lsyncd on repo containers replaced with GlusterFS by default
+  - SSH key-based authentication replaced with certificate-based
+releases:
+  - version: 25.0.0.0b1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: d0dba508585843a25eb34bed4af343adb5e7ed70
