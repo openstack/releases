@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: f5d20263a54c5fe3d8f68affe0518eec1bd83be0
+  - version: queens-eol
+    projects:
+      - hash: 51639aa60a6de09a44ceb896eb3d31ac3c3fedd7
+        repo: openstack/networking-ovn
 repository-settings:
   openstack/networking-ovn: {}
 branches:
