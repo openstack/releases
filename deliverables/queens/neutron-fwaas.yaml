@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: 4c05f1f6617b49f6cc2dfb6c976e93c2a54d41bf
+  - version: queens-eol
+    projects:
+      - hash: eb661c6330eb70da4ff12e432165ac748ef6c8f8
+        repo: openstack/neutron-fwaas
 repository-settings:
   openstack/neutron-fwaas: {}
 branches:

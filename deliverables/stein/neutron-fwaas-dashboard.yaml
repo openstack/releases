@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas-dashboard
         hash: 585ea863b6a3660ea4564f030b4e979417451bcf
+  - version: stein-eol
+    projects:
+      - hash: 585ea863b6a3660ea4564f030b4e979417451bcf
+        repo: openstack/neutron-fwaas-dashboard
 branches:
   - location: 2.0.1
     name: stable/stein
