@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 4c38303620c8a3f38d7261a64ce8532979bf7560
+  - version: rocky-eol
+    projects:
+      - hash: af98891e7d7c1acaf97c25d155fbe3085f6bdc78
+        repo: openstack/networking-sfc
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

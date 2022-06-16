@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 5ea96a1c85710fb24f860267042fd52e64b59c87
+  - version: stein-eol
+    projects:
+      - hash: 8bee6b4896d7a5428b3e4053c7f3d0786412603f
+        repo: openstack/networking-sfc
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein

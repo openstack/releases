@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 931f5e435014b14e41614d067c1f115ff6be68aa
+  - version: queens-eol
+    projects:
+      - hash: bb7dfcab75016dd7511961f2aa2d6187b6838412
+        repo: openstack/networking-sfc
 repository-settings:
   openstack/networking-sfc: {}
 branches:
