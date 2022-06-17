@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 485cbdd463f2c0230c93f2c49364a6426600e42c
+  - version: 4.5.1
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 06887d653894dc539cc4af0652ee20ff2105f65d
 branches:
   - name: stable/yoga
     location: 4.5.0
