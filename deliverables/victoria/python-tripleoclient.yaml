@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: 7c2b3a67d10b4ce08fe2cbf53e88d57f01ac73dc
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: d41d32eee3ee1558b41f16093aaf2be21012bf4c
 branches:
   - name: stable/victoria
     location: 14.0.0

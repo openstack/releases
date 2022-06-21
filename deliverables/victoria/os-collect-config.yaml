@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-collect-config
         hash: 950978bc39785badd96414673cfc5d99a6c24145
+  - version: victoria-eol
+    projects:
+      - repo: openstack/os-collect-config
+        hash: 950978bc39785badd96414673cfc5d99a6c24145
 branches:
   - name: stable/victoria
     location: 12.0.0
