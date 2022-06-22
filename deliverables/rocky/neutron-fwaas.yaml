@@ -48,6 +48,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: dc6bdfe24da00ffc3858004f997a203ce13d9aa8
+  - version: rocky-eol
+    projects:
+      - hash: dc6bdfe24da00ffc3858004f997a203ce13d9aa8
+        repo: openstack/neutron-fwaas
 branches:
   - location: 13.0.0.0rc1
     name: stable/rocky
