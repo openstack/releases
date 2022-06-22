@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/networking-ovn
         hash: 5b9ed055237b9a9d39d1b174620c8afd0b45ce1d
+  - version: rocky-eol
+    projects:
+      - hash: 36f3e7092026188452cc217ed096ec728d8b736f
+        repo: openstack/networking-ovn
 branches:
   - location: 5.0.0.0rc1
     name: stable/rocky
