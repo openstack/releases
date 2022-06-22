@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: d406efdf423af7f0dc72b11553e9255b10b99759
+  - version: rocky-eol
+    projects:
+      - hash: 18d1cf6928ca276b0dab2f849aea293e3a8f42e7
+        repo: openstack/networking-bgpvpn
 branches:
   - location: 9.0.0.0rc1
     name: stable/rocky
