@@ -5,3 +5,8 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+releases:
+  - version: 22.2.0
+    projects:
+      - repo: openstack/horizon
+        hash: 2ebbb384a0c11b10d4b5a7e7f711c3066f9f3e2d
