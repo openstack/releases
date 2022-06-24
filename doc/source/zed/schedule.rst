@@ -300,6 +300,16 @@ time of the third milestone.  See the `Driver Compliance
 <https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
 section of the Cinder Documentation for details.
 
+Glance
+------
+
+.. _z-glance-spec-freeze:
+
+Glance Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Glance Specs for features to be implemented in Zed must be approved by 15th July 2022.
+
 Manila
 ------
 
