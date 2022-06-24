@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/os-apply-config
         hash: 39d7e01041bd99120d9f594a70418b0cb2ee4965
+  - version: victoria-eol
+    projects:
+      - repo: openstack/os-apply-config
+        hash: 39d7e01041bd99120d9f594a70418b0cb2ee4965
 branches:
   - name: stable/victoria
     location: 12.0.0

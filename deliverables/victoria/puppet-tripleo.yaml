@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: 480250ba7d1677f565b142aea84c594f742e3f1e
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: 6a03592488c315601ccc5a034bdf3906a17de196
 branches:
   - name: stable/victoria
     location: 13.4.0
