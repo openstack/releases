@@ -5,3 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: 7be24a5578c0eb94f5f1de21c2cfb02c43043e53
+branches:
+  - name: stable/yoga
+    location: 4.2.0
