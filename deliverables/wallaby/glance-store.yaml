@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: bfbea18d8774cb99a9d0a8949b962190c74aa9ad
+  - version: 2.5.1
+    projects:
+      - repo: openstack/glance_store
+        hash: 5f1cee6fa90268b17c7b6f842854a3b27e44994c
 branches:
   - name: stable/wallaby
     location: 2.5.0
