@@ -17,6 +17,10 @@ releases:
       - repo: openstack/octavia-dashboard
         hash: 08ba87ee6b367a09810781ca7de040372f905570
     diff-start: 6.0.0.0rc1
+  - version: 7.0.1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 76cf920eb476d0a8313e22a112c19429e77c7d14
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
