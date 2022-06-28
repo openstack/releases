@@ -27,6 +27,10 @@ releases:
       - repo: openstack/kuryr-kubernetes
         hash: 5ccf238ec20320c5894b69a6568f4f62d468d716
     diff-start: 3.0.0
+  - version: 4.0.1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 8ec71e7e3f0f4d05b5a96e62e56db0ef9dc3bd96
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1
