@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: fa53a60c149026ff6641e1e1d9bae240dd888f3d
+  - version: train-eol
+    projects:
+      - repo: openstack/kolla
+        hash: d967f400e2761e9022a6b2dedc2d307d32d1ea27
 cycle-highlights:
   - Switched to Python 3 in Debian and Ubuntu source images.
   - Introduced images and playbooks for Masakari, which supports instance

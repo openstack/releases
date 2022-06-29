@@ -53,4 +53,8 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 3a1b9470584fa3644be15d933de399472ac64812
+  - version: train-eol
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: e51134e009fb55c5ecf793d81a97cce9df603dd7
 release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/train.html
