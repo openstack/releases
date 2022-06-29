@@ -39,6 +39,10 @@ releases:
       - repo: openstack/cyborg
         hash: 7fbae955363fb8fc1366e92ee5502495ddbc61c2
     diff-start: 5.0.0.0rc1
+  - version: 6.0.1
+    projects:
+      - repo: openstack/cyborg
+        hash: ae38e4e9a9378b51d5f611c8b398635ed13bd1b5
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1
