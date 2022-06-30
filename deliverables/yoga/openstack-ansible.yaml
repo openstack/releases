@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: e7ea69c254639925e8ac4ba85805c5fa873460bd
+  - version: 25.0.0.0rc2
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: cc1bd29cb304042f8fb03b4bd770b1934904ba6b
 branches:
   - name: stable/yoga
     location: 25.0.0.0rc1
