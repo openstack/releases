@@ -1,0 +1,22 @@
+---
+storyboard: openstack/kayobe
+release-model: cycle-trailing
+team: kolla
+type: other
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/kayobe
+        hash: 836a714508cc494231b88f43fafd017397ece920
+      - repo: openstack/kayobe-config
+        hash: d0644c926eb9689041554a6549ddcac3d055cab1
+      - repo: openstack/kayobe-config-dev
+        hash: 22049a40798573cad1c60a7514933d56d54d2548
+repository-settings:
+  openstack/kayobe: {}
+  openstack/kayobe-config:
+    flags:
+      - no-artifact-build-job
+  openstack/kayobe-config-dev:
+    flags:
+      - no-artifact-build-job
