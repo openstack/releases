@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove-dashboard
         hash: 26a40acc6e641e449db1913edf46e899ecb13d09
     diff-start: 15.0.0
+  - version: 16.0.1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 3a6e79c3c0cabaf3293046647481a792895efb05
 branches:
   - name: stable/wallaby
     location: 16.0.0.0rc1
