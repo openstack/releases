@@ -53,6 +53,10 @@ Does the commit message include the name of the deliverable and a
 version number? If the request includes multiple deliverables it is OK
 to include a team name and date.
 
+Usually Adding new deliverable file is not allowed on stable branches.
+Adding a new deliverable is only allowed during the current series' life cycle
+or only for EOL tagging purpose.
+
 The Validation Report
 =====================
 
