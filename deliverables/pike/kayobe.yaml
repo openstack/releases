@@ -1,0 +1,22 @@
+---
+storyboard: openstack/kayobe
+release-model: cycle-trailing
+team: kolla
+type: other
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/kayobe
+        hash: f9ad13c59e55f61fb8a9638d0ccbdebaea82df5c
+      - repo: openstack/kayobe-config
+        hash: d3c1c01b6f0bfc01dc2ecd8df3b594d78bd1e1fb
+      - repo: openstack/kayobe-config-dev
+        hash: dc7031150d96f06789054a2f5eeaac66f2057c68
+repository-settings:
+  openstack/kayobe: {}
+  openstack/kayobe-config:
+    flags:
+      - no-artifact-build-job
+  openstack/kayobe-config-dev:
+    flags:
+      - no-artifact-build-job
