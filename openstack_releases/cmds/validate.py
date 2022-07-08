@@ -67,6 +67,11 @@ _CLOSED_SERIES = set([
     'ocata',
     'pike',
     'queens',
+    'rocky',
+    'stein',
+    'train',
+    'ussuri',
+    'victoria',
 ])
 
 _USES_PREVER = set([
