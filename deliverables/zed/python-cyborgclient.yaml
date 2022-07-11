@@ -6,3 +6,8 @@ team: cyborg
 type: client-library
 repository-settings:
   openstack/python-cyborgclient: {}
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 501d9f3e2c3a161b2ec0ae433d6c8b1f4ae32ea9
