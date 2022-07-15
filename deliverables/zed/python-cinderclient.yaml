@@ -6,3 +6,8 @@ team: cinder
 type: client-library
 repository-settings:
   openstack/python-cinderclient: {}
+releases:
+  - version: 9.0.0
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 2c7d463f376c4cb6259291a925ad6cfc48c00f09
