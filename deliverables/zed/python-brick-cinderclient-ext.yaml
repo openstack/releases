@@ -6,3 +6,8 @@ team: cinder
 type: client-library
 repository-settings:
   openstack/python-brick-cinderclient-ext: {}
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 6a1c4736a6ca6a8dfc66a585b2b418bb9789c327
