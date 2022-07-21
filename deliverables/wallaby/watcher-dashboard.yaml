@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 02bdd270ee5e45ab3286df434a0e7d03275db821
     diff-start: 4.0.0
+  - version: 5.0.1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: ce5b07f3a2c03c351ca216e7ece81da82e3262ae
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
