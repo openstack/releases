@@ -10,7 +10,7 @@
 
 - project:
     templates:
-      - openstack-python3-victoria-jobs
+      - openstack-python3-zed-jobs
       - build-openstack-docs-pti
     check:
       jobs:
@@ -19,12 +19,17 @@
             irrelevant-files:
               - ^doc/.*$
         - releases-tox-list-changes
-        - openstack-tox-py36:
+        - openstack-tox-py38:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
-        - openstack-tox-py37:
+        - openstack-tox-py39:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py310:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
@@ -46,12 +51,17 @@
             timeout: 10800
             irrelevant-files:
               - ^doc/.*$
-        - openstack-tox-py36:
+        - openstack-tox-py38:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
-        - openstack-tox-py37:
+        - openstack-tox-py39:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py310:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$

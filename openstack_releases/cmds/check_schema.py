@@ -45,20 +45,20 @@ _LIAISONS_SCHEMA = yamlutils.loads(
 )
 
 
-def is_date(validator, value, instance, schema):
-    if not isinstance(instance, str):
-        return
-    try:
-        return datetime.datetime.strptime(instance, "%Y-%m-%d")
-    except Exception:
-        yield jsonschema.ValidationError('Invalid date {!r}'.format(instance))
+def is_date(validator, instance):
+    return (
+        isinstance(instance, datetime.date) and
+        not isinstance(instance, datetime.datetime)
+    )
 
 
 def make_validator_with_date(schema_data):
+    draft4_validator = jsonschema.Draft4Validator
+    date_type_checker = draft4_validator.TYPE_CHECKER.redefine("date", is_date)
     return jsonschema.validators.extend(
-        validator=jsonschema.Draft4Validator(schema_data),
-        validators={'date': is_date},
-    )(schema_data, types={'date': datetime.date})
+        validator=draft4_validator,
+        type_checker=date_type_checker
+    )(schema=schema_data)
 
 
 def validate_one_file(filename, schema_data, debug):
