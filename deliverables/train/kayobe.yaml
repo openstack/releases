@@ -73,4 +73,12 @@ releases:
         hash: fa9b73a54d22955ffbd132bb37fedfd69b985538
       - repo: openstack/kayobe-config-dev
         hash: 9d3bbef893730ff7d65a325ed30986f01df78bb0
+  - version: train-eol
+    projects:
+      - repo: openstack/kayobe
+        hash: d8f66ea0791c1bdb903a46b78a38378b6eed99b4
+      - repo: openstack/kayobe-config
+        hash: fa9b73a54d22955ffbd132bb37fedfd69b985538
+      - repo: openstack/kayobe-config-dev
+        hash: c69b35e2fc930f9bd029dc8562a83adb5a0c76d7
 release-notes: https://docs.openstack.org/releasenotes/kayobe/train.html
