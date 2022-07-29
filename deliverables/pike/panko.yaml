@@ -22,6 +22,10 @@ releases:
       - hash: e5cad2242bbae6e3828b42aff812c30ef6be9346
         repo: openstack/panko
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/panko
+        hash: a5d3b771a84a99a2c271706d82fe0afc50478000
 branches:
   - location: 3.0.0
     name: stable/pike
