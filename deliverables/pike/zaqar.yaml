@@ -34,6 +34,10 @@ releases:
       - hash: 06537cb8b8a9eca10f836f17b3c79611bd1b5a28
         repo: openstack/zaqar
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 251e17990cd06ef356eadd416f1dd6a58493a14c
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
