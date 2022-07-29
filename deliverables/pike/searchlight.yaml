@@ -36,6 +36,10 @@ releases:
       - hash: 400005bdf7470c06973a1b2f5d4d398dacee5c0d
         repo: openstack/searchlight
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/searchlight
+        hash: b047e29417273c20b526ed3649bde107601a15ca
 release-notes: https://docs.openstack.org/releasenotes/searchlight/pike.html
 repository-settings:
   openstack/searchlight: {}

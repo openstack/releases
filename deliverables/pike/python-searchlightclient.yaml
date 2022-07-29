@@ -20,5 +20,9 @@ releases:
       - hash: 05c49a717ab1203e6dc6d3411f8e36dff099aebe
         repo: openstack/python-searchlightclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 85ad3c93ca910eb78d444b6c59d58fa0dbe117e0
 repository-settings:
   openstack/python-searchlightclient: {}
