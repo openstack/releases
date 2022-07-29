@@ -24,6 +24,10 @@ releases:
       - hash: 13f0b40881b73a587b2daaab2654f8bad5751743
         repo: openstack/python-freezerclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: b0a8a4c039f72e987bd96baf0294fe2de47788cf
 branches:
   - name: stable/pike
     location: 1.5.0
