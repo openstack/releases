@@ -28,5 +28,9 @@ releases:
       - hash: ba55c2431e54a22bf4ce4fabc9cf9dede9ca861d
         repo: openstack/vitrage-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: e899b717ac5665987da70bc69512d1fa06a0e81f
 repository-settings:
   openstack/vitrage-dashboard: {}

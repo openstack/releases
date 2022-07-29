@@ -27,6 +27,10 @@ releases:
       - hash: 157ef21a5070d4dadb26977aff76a6b3dd9e32b1
         repo: openstack/python-vitrageclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: ef7b14af2205ac43d8cdffe62991a3192a9f554b
 team: vitrage
 type: library
 repository-settings:
