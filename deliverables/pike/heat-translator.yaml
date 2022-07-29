@@ -21,6 +21,10 @@ releases:
       - hash: 2f927cefcd39e1ac1ee49c45f3a0f0749b7aebf3
         repo: openstack/heat-translator
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: aab4de15819fdecea8b99987a83222c0f47e16dd
 branches:
   - name: stable/pike
     location: 0.9.0
