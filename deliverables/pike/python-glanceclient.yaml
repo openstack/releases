@@ -23,6 +23,10 @@ releases:
       - hash: 2dfd7c7531724751116930accde87486fde03b01
         repo: openstack/python-glanceclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 082f917306940302aa77b5573e824659591f2fa1
 team: glance
 type: library
 repository-settings:

@@ -47,5 +47,9 @@ releases:
       - hash: 16a04e64aff661bd98d9f605e7d0a7ef97ea83d6
         repo: openstack/glance
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/glance
+        hash: f30376911218296b7051bbb2be7202a6263a7497
 repository-settings:
   openstack/glance: {}
