@@ -40,6 +40,10 @@ releases:
       - hash: bcdbbf5490ae587ad6a470c0720749bc4c406038
         repo: openstack/monasca-agent
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 0e9f2e0b36d353388fbdd2e59098b5c7a9c8a762
 branches:
   - location: 2.2.0
     name: stable/pike

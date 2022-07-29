@@ -14,6 +14,10 @@ releases:
       - hash: 5c1fd542bea2328d5468464174dfcba2097f66cd
         repo: openstack/monasca-thresh
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: b622975a2c6729469237b3faa45cd2bed55714b7
 branches:
   - location: 1.4.0
     name: stable/pike

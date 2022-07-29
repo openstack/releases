@@ -20,6 +20,10 @@ releases:
       - hash: 187d5ed61c2bf52e29160213c44ebfcc13b1d4cf
         repo: openstack/monasca-kibana-plugin
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: 525e712f9da2dec77e6c9f81b57d404421eb2ad8
 branches:
   - location: 1.1.2
     name: stable/pike

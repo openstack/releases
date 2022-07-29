@@ -21,6 +21,10 @@ releases:
       - hash: 0be76d0460ad91deb82af84d5c4361035e34f6fe
         repo: openstack/monasca-transform
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-transform
+        hash: 1620165048b7b7b7aee9601323e0ba6586e2aba0
 branches:
   - location: 0.11.0
     name: stable/pike

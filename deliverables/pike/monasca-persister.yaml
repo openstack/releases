@@ -24,6 +24,10 @@ releases:
       - hash: f2ded566df921a089a71b58f34aad7c1541e055e
         repo: openstack/monasca-persister
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: f2ded566df921a089a71b58f34aad7c1541e055e
 branches:
   - location: 1.7.0
     name: stable/pike

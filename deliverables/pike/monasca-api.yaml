@@ -24,6 +24,10 @@ releases:
       - hash: 2074098970511678d79cc43bc12816a767a56c84
         repo: openstack/monasca-api
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: bcb4d6ba77e0a26d0399660828b526e924560e61
 branches:
   - location: 2.2.0
     name: stable/pike

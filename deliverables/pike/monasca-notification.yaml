@@ -24,6 +24,10 @@ releases:
       - hash: cc13bcae010534e5ec04f6af95bf95a27e1474cd
         repo: openstack/monasca-notification
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 7c3151c9281f20a271034ab86bcb520b1fd99459
 branches:
   - location: 1.10.0
     name: stable/pike

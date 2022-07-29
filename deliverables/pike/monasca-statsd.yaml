@@ -16,6 +16,10 @@ releases:
       - hash: 0a65b69f4ea11fd3424ec14d80bf5e7bae5557dc
         repo: openstack/monasca-statsd
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: c36689457c9c7f61a471995000cfdbba661b5d09
 branches:
   - name: stable/pike
     location: 1.7.0

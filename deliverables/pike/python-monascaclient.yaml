@@ -21,6 +21,10 @@ releases:
       - hash: d78acec4d18c971a9e40b3c8e268505aefd339c7
         repo: openstack/python-monascaclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 03e3650d05da67377be777a1c80f85a1b56424d6
 branches:
   - name: stable/pike
     location: 1.7.0
