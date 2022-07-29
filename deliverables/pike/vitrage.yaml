@@ -37,5 +37,9 @@ releases:
       - hash: c3e081d8861738e86279a8c3c872d343efe35dc5
         repo: openstack/vitrage
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: ea7f4a21a6acec05b58c64c1151284134b3df403
 repository-settings:
   openstack/vitrage: {}
