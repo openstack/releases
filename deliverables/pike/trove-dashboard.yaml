@@ -36,6 +36,10 @@ releases:
       - hash: d198007df597604bfc14fd4a6862f4184661c540
         repo: openstack/trove-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: d198007df597604bfc14fd4a6862f4184661c540
 release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/pike.html
 repository-settings:
   openstack/trove-dashboard: {}

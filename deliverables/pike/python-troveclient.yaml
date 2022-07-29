@@ -29,6 +29,10 @@ releases:
       - hash: b10b8170cd21f9fd40a4a85fc26075a2737fbe31
         repo: openstack/python-troveclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 301cdb7d00c1f536150382a6a603ca8870484494
 branches:
   - name: stable/pike
     location: 2.12.0
