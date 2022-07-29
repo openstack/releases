@@ -17,6 +17,10 @@ releases:
       - hash: da85c37baea5ec7e37851b6b3f66119d2200a33b
         repo: openstack/python-designateclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 400d323d2b9d02337968827be398e94e56300030
 branches:
   - name: stable/pike
     location: 2.7.0

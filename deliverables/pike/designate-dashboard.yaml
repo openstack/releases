@@ -34,6 +34,10 @@ releases:
       - hash: 2f0ad3b4cc582130efcc02d7a00bb567ebc8ad4d
         repo: openstack/designate-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 0ca56f97e6e2bab0d9f363f730d1d02dd7f288c9
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
