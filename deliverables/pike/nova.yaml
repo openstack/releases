@@ -89,5 +89,9 @@ releases:
       - hash: c8359d087147919532617877d0fdc2792b500f23
         repo: openstack/nova
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/nova
+        hash: 2ed1664b12cf67cecb1d858b10d901b674a8149f
 repository-settings:
   openstack/nova: {}

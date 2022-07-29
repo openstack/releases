@@ -34,6 +34,10 @@ releases:
       - hash: 98aa3e5a0515cf148ee8b2c1a3ff22c5d9d78084
         repo: openstack/os-traits
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/os-traits
+        hash: 98aa3e5a0515cf148ee8b2c1a3ff22c5d9d78084
 branches:
   - name: stable/pike
     location: 0.3.3

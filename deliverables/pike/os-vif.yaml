@@ -35,6 +35,10 @@ releases:
       - hash: 5b4db2087a0f44fc5d5a951663f620cc24940df3
         repo: openstack/os-vif
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: 5b4db2087a0f44fc5d5a951663f620cc24940df3
 branches:
   - name: stable/pike
     location: 1.7.0
