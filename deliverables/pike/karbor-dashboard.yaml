@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/karbor-dashboard
         hash: f2f7e6f99bad7112a3682dd191374c75e2e9fc3d
+  - version: pike-eol
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: fe125f59d1fb7950abb9f2b9a126b82ec8323694
 branches:
   - location: 0.4.0
     name: stable/pike
