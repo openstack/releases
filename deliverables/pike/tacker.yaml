@@ -23,6 +23,10 @@ releases:
       - hash: 49ddf45f027825dfa2a3e1ff8f97bf8e10ade729
         repo: openstack/tacker
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 159d30af57da24d71d2cc1f3cf921cf7b6935c58
 release-notes: https://docs.openstack.org/releasenotes/tacker/pike.html
 repository-settings:
   openstack/tacker: {}

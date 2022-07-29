@@ -17,6 +17,10 @@ releases:
       - hash: 593762fb782c6dfea4546435a9927ac14515e3b6
         repo: openstack/python-tackerclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: c95b05707f30ffb66617edcb707c503d934e4cbd
 branches:
   - name: stable/pike
     location: 0.10.0
