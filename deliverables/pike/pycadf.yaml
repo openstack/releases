@@ -17,6 +17,10 @@ releases:
       - hash: 0c3fb9ded5b4f354dab896dcedd48a51095279bc
         repo: openstack/pycadf
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/pycadf
+        hash: a593b6eb9b78557d13690e6d4b3cacd15cab11cf
 branches:
   - name: stable/pike
     location: 2.6.0

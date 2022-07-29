@@ -27,6 +27,10 @@ releases:
       - hash: 0e7dc3ba1621a710d9dd46bfcf549955f74b4d81
         repo: openstack/python-keystoneclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: bcc00a10a6a5e42f261ad88feaec8019d68f25f8
 team: keystone
 type: library
 repository-settings:

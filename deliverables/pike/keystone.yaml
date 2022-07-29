@@ -45,6 +45,10 @@ releases:
       - hash: f5a41c44bf1bb5dd90cb872f7a37f00f53baa81a
         repo: openstack/keystone
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/keystone
+        hash: a405e4b71d7de31e81a01f07e02f189650eb66fe
 branches:
   - location: 12.0.0.0rc1
     name: stable/pike

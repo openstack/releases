@@ -16,6 +16,10 @@ releases:
       - hash: 7e6cf7d811ae29038a619ab6b60f5fd1d1cff8a3
         repo: openstack/ldappool
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ldappool
+        hash: 322717fc538816c9ab0aa2b00a5309d3f913e9d6
 branches:
   - name: stable/pike
     location: 2.1.0
