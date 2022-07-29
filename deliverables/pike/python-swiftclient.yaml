@@ -18,6 +18,10 @@ releases:
       - hash: 74a4a19b714a9496bf0967cb3482a59335803c82
         repo: openstack/python-swiftclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: aae4336bafa9b10896b71894ca278d10c3b467b1
 branches:
   - name: stable/pike
     location: 3.4.0
