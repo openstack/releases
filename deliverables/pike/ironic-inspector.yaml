@@ -29,6 +29,10 @@ releases:
       - hash: 99c88629ad879e5c50c113f2fcd62f49a711ce3f
         repo: openstack/ironic-inspector
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 9a1e8823050bd1e9f4d25075c30fe49d6b45274b
 branches:
   - location: 6.0.0
     name: stable/pike

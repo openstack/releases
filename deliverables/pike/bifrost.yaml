@@ -21,6 +21,10 @@ releases:
       - hash: 4664105c5899e08f29861bb8e87a5d05399a636d
         repo: openstack/bifrost
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: ed9daa41e4d18de8bad7240444f23403f78fd7ed
 branches:
   - name: stable/pike
     location: 4.0.0

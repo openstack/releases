@@ -27,6 +27,10 @@ releases:
       - hash: 50a2c1940d679fd492850ae9cefdc108804ff005
         repo: openstack/python-ironic-inspector-client
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: f72098748f1f058c256d791b500d9fced95631e7
 team: ironic
 type: library
 repository-settings:
