@@ -21,6 +21,10 @@ releases:
       - hash: 2aa81311ae93678bfa2e865f5297f3ee5ff2bbd9
         repo: openstack/tosca-parser
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 8b5dbbd9fb0d8728e585bd72cd7f6b5a9b539b26
 branches:
   - name: stable/pike
     location: 0.8.1
