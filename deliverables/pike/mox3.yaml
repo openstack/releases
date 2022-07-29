@@ -25,6 +25,10 @@ releases:
       - hash: 9d541186b8be846c3ed9dcc747f2cf3f25ee84fc
         repo: openstack/mox3
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/mox3
+        hash: daca408ac76135dca66f1cfde5d2107b14ca562a
 branches:
   - name: stable/pike
     location: 0.23.0

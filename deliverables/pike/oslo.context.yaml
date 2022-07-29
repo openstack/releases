@@ -37,6 +37,10 @@ releases:
       - hash: 3e2d05ebb36d3f178d60d200fb5a2166fd54c179
         repo: openstack/oslo.context
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: 3f0ca314b1c99f66ec59bee09aad31796749f98b
 branches:
   - name: stable/pike
     location: 2.17.0

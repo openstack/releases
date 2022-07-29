@@ -51,6 +51,10 @@ releases:
       - hash: c84d26cce698014c18acc19a98c79ae137dfbb66
         repo: openstack/oslo.i18n
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: c21bdff6acb1314fc2ff3b91569e2c366b8197eb
 team: oslo
 type: library
 repository-settings:

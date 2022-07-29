@@ -31,6 +31,10 @@ releases:
       - hash: 6a803b93059b02dc03eef46069bf6be924fd3ae5
         repo: openstack/oslo.concurrency
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 1b25351d1c63e573068fff3d16faca440bbdcabf
 team: oslo
 type: library
 repository-settings:

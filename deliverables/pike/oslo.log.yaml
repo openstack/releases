@@ -71,6 +71,10 @@ releases:
       - hash: edace72649030fae10b798634c7f1bb0b93b1446
         repo: openstack/oslo.log
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.log
+        hash: 76d1dee7b80c62172ea3900b75a47edf5b64cab4
 team: oslo
 type: library
 repository-settings:

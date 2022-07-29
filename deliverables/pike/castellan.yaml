@@ -52,6 +52,10 @@ releases:
       - hash: 93cf89bbe0ad68c71e830d317ab91ee71bc5d87b
         repo: openstack/castellan
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/castellan
+        hash: 3a39f97713eb7c2e26f657398894ecdd5663b405
 branches:
   - name: stable/pike
     location: 0.12.0

@@ -47,6 +47,10 @@ releases:
       - hash: ffde563983456203006fb0d0facb529395ffd231
         repo: openstack/oslo.vmware
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: d8e8e00d7a3311a842b52b164490badc9f7bb7bc
 team: oslo
 type: library
 repository-settings:

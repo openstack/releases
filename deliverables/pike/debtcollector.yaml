@@ -43,6 +43,10 @@ releases:
       - hash: 64e6a338e3551dd80c2c73684f6d985334649e4e
         repo: openstack/debtcollector
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/debtcollector
+        hash: 737f9a6347e8d396aff4af3e13bdb8c1987342e1
 team: oslo
 type: library
 repository-settings:
