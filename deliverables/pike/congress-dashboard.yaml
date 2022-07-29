@@ -29,6 +29,10 @@ releases:
       - hash: e06651e2023ef50ef827ca8b94429b79866b1b92
         repo: openstack/congress-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 3284cac89949d1cf529ca6ef39e5551506a34c4b
 branches:
   - location: 1.0.0.0rc1
     name: stable/pike

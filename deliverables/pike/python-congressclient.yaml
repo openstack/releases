@@ -21,6 +21,10 @@ releases:
       - hash: 5c64747b1561b48a47ddd21505b140e9fd6a6cf5
         repo: openstack/python-congressclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 93dfd7ebed3dd327cc41929e9f065cb9a080a8eb
 branches:
   - name: stable/pike
     location: 1.8.0
