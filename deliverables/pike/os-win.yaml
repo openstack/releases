@@ -29,6 +29,10 @@ releases:
       - hash: 22f35e9ce7b734d4f8f930147c9e257f3506f616
         repo: openstack/os-win
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 37fd8cf3dae38d087e9517160663e405b82803c8
 branches:
   - name: stable/pike
     location: 2.1.0
