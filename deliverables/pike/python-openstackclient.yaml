@@ -39,6 +39,10 @@ releases:
       - hash: f750ff452d82edf65d693214d542f6c1106e4e9c
         repo: openstack/python-openstackclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 9798e0516dbcd3d37f18e8baab072fdb52bacca1
 release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/pike.html
 repository-settings:
   openstack/python-openstackclient: {}

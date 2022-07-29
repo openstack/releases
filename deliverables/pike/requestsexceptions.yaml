@@ -13,6 +13,10 @@ releases:
       - hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
         repo: openstack/requestsexceptions
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/requestsexceptions
+        hash: 05008a713cd9dc38aaf5615b4c115b18868f0c75
 branches:
   - name: stable/pike
     location: 1.3.0

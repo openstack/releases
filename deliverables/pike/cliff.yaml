@@ -37,6 +37,10 @@ releases:
       - hash: d787a5d4c72161768bbe1a08d41a2cde157de351
         repo: openstack/cliff
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/cliff
+        hash: f7f4fc46c391ef8dabe7d4bdc71f8b6e241a1377
 branches:
   - name: stable/pike
     location: 2.8.0

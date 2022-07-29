@@ -23,6 +23,10 @@ releases:
       - hash: d409c3503d41e04eb4d768deecc6424b039ffd3c
         repo: openstack/os-client-config
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/os-client-config
+        hash: 61ee29325789c4b6fb1f651dbce27b46f0cf4845
 team: OpenStackSDK
 type: library
 repository-settings:

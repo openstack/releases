@@ -38,6 +38,10 @@ releases:
       - hash: 2a8ec5399d40b5daa2810d2ec3626c1d1444e9f7
         repo: openstack/osc-lib
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: a48e96f7d426649827f467bca73a626ca41f917e
 team: OpenStackSDK
 type: library
 repository-settings:

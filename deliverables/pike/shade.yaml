@@ -38,6 +38,10 @@ releases:
       - hash: 6cef59bc1fbcab8c75458f49714aae675b04c0b4
         repo: openstack/shade
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/shade
+        hash: 2eeb8ab1208475c61973c868d8a5445c8422f658
 storyboard: 760
 team: OpenStackSDK
 type: library
