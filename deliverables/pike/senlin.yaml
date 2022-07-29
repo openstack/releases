@@ -33,6 +33,10 @@ releases:
       - hash: 6e4824a698ad125fd14a7ae99a7ae366158adc83
         repo: openstack/senlin
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 0db09c3e98c3f33c3c0df6b0dc3cdf9fc3b1700c
 branches:
   - location: 4.0.0.0rc1
     name: stable/pike

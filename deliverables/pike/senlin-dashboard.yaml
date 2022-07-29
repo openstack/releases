@@ -20,6 +20,10 @@ releases:
       - hash: 8f151eae8a57d69b0a8baf21be0f4094203c6795
         repo: openstack/senlin-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: a7097c1c583e6bb7ac924bb3d4ca8e8208c9ad74
 release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/pike.html
 repository-settings:
   openstack/senlin-dashboard: {}
