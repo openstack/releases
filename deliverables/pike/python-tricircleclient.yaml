@@ -23,6 +23,10 @@ releases:
       - hash: 563f700b62de6b57671ec077293da6fa348c250a
         repo: openstack/python-tricircleclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 219831935466861688e24cc385a9deafa1755b18
 repository-settings:
   openstack/python-tricircleclient:
     tarball-base: tricircleclient
