@@ -20,6 +20,10 @@ releases:
       - hash: 7468d434634e608eba10e098ada4fdaa856d54fb
         repo: openstack/cloudkitty-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 70abcd53946136c808bb6c84aae64a1a7241b3dd
 repository-settings:
   openstack/cloudkitty-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/pike.html

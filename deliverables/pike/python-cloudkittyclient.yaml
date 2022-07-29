@@ -17,6 +17,10 @@ releases:
       - hash: 4c1629769f57f24c87e45d5f45c36b264da262d1
         repo: openstack/python-cloudkittyclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: d9b9857626d49dd9e5f551ce7218297fe4027ef5
 branches:
   - name: stable/pike
     location: 1.1.0
