@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/fuxi
         hash: 53d7c9ff8bfa95121abfca193ab138df6aa50ad2
+  - version: pike-eol
+    projects:
+      - repo: openstack/fuxi
+        hash: 58418bee97b1aed30eeae9f6fbff11188ece7054
 release-notes: https://docs.openstack.org/releasenotes/fuxi/pike.html
 repository-settings:
   openstack/fuxi: {}
