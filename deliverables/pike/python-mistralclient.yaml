@@ -37,5 +37,9 @@ releases:
       - hash: 27ed79076f7d70bca8e968c70571d9f1f645eacf
         repo: openstack/python-mistralclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 27ed79076f7d70bca8e968c70571d9f1f645eacf
 repository-settings:
   openstack/python-mistralclient: {}
