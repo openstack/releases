@@ -37,6 +37,10 @@ releases:
       - hash: 9115ca8d4d058c675b4956a05bb301fd6afb1846
         repo: openstack/murano-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: a79ffd69a5083860d4bdb003c9452dc0beb6703a
 branches:
   - location: 4.0.0.0rc1
     name: stable/pike

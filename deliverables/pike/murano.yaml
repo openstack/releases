@@ -37,6 +37,10 @@ releases:
       - hash: 0a833343e68ef9ef7ddca2c02eb57c2b9bb07d64
         repo: openstack/murano
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/murano
+        hash: 75f81017dc902977cf56cc634e45084855ed3f77
 branches:
   - location: 4.0.0.0rc1
     name: stable/pike
