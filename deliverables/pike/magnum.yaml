@@ -24,5 +24,9 @@ releases:
       - hash: 6777ba5640b5be87fe48561f9a8a63403b7d9d95
         repo: openstack/magnum
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 0cfdd98b8d043ec894e44e134c5e43017999b292
 repository-settings:
   openstack/magnum: {}
