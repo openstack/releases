@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: d5842f61962b72f093b750b864ec2d0b584f671a
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 5d5b18ac484037ff363a58ee958a5024608677ca
 branches:
   - name: stable/pike
     location: 0.6.0
