@@ -25,6 +25,10 @@ releases:
       - hash: 01ad858471eab4364fa7775640143c373e8042f4
         repo: openstack/monasca-ceilometer
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: 01ad858471eab4364fa7775640143c373e8042f4
 branches:
   - location: 1.5.0
     name: stable/pike

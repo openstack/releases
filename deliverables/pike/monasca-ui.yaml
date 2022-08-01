@@ -28,6 +28,10 @@ releases:
       - hash: 9d4bf2021bbe8e3c9b100fc74fb6ec2fd9768c52
         repo: openstack/monasca-ui
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 9d4bf2021bbe8e3c9b100fc74fb6ec2fd9768c52
 branches:
   - location: 1.8.0
     name: stable/pike
