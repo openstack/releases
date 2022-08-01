@@ -75,6 +75,10 @@ releases:
       - hash: 521180b7715af8e02cef8c9913779664452d8ef4
         repo: openstack/tooz
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/tooz
+        hash: c95f3cde3ba39b620fff8056faae01f98ff753cd
 team: oslo
 type: library
 repository-settings:

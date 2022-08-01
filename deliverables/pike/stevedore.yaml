@@ -39,6 +39,10 @@ releases:
       - hash: ce386fc16e38726c4928e442d800278ffdb12add
         repo: openstack/stevedore
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: e00bdabb80eabd13251b7f5b578b0cee231b35ae
 team: oslo
 type: library
 repository-settings:

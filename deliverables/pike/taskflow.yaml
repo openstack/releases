@@ -39,6 +39,10 @@ releases:
       - hash: 10c0220418b24eb4b48a58c57bc5dbacc84181a9
         repo: openstack/taskflow
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 4e98273c29ac48f6cdb4956955ef2b23154caa9a
 team: oslo
 type: library
 repository-settings:

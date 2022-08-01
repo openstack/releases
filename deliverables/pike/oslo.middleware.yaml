@@ -55,6 +55,10 @@ releases:
       - hash: f2c8f3866de9464c052e7df759a0115ba568809e
         repo: openstack/oslo.middleware
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 7355d905bc0e6b7d8884e290cc26895eed0f7179
 team: oslo
 type: library
 repository-settings:

@@ -43,6 +43,10 @@ releases:
       - hash: 0f9bc8bdbbeaebab57e0801024eed25e0aa7bd1f
         repo: openstack/futurist
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/futurist
+        hash: 9e862f982ed21f3a6b1b31625596a394eeffb3ae
 team: oslo
 type: library
 repository-settings:

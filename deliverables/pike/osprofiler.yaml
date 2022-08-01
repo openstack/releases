@@ -45,6 +45,10 @@ releases:
       - hash: 65bd14bc0412590fdc9113f8e289b62be26bdb9f
         repo: openstack/osprofiler
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 65df9fc03a17dbe1e95eaae1a4b32896779740e6
 branches:
   - name: stable/pike
     location: 1.11.0

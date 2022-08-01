@@ -39,6 +39,10 @@ releases:
       - hash: e6ef0fa15ac12e41a350bcfa1672ada4364798fd
         repo: openstack/automaton
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/automaton
+        hash: 5036b0779455a5432e6fc6a5939cbc3478c785f0
 team: oslo
 type: library
 repository-settings:

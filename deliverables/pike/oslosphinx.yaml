@@ -35,6 +35,10 @@ releases:
       - hash: 7d80407b43d2eb7198e72810c4ccfd3eaafe25da
         repo: openstack/oslosphinx
     version: 4.15.2
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslosphinx
+        hash: e0d8127961663f87395056171a8816a044f8478c
 team: oslo
 type: library
 repository-settings:

@@ -55,6 +55,10 @@ releases:
       - hash: 8ccec1adc0aff999ce6aec4a14aaedf4e68a579b
         repo: openstack/oslo.utils
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 1a95a6514b77885c932e8ba27e33f8f57624bafd
 team: oslo
 type: library
 repository-settings:

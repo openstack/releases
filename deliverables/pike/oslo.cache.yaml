@@ -51,6 +51,10 @@ releases:
       - hash: b240120b352a3ed5316248e1c2b648053a3dde99
         repo: openstack/oslo.cache
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 5fada0477dfc3cd045c3cbc3173dead64aeb217a
 team: oslo
 type: library
 repository-settings:

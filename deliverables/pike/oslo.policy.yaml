@@ -63,6 +63,10 @@ releases:
       - hash: 15ecb03d7fb36df8d17d54d58a7a72dfd4ef6bad
         repo: openstack/oslo.policy
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: b1e6a77f71c87dc3fc17dcaa164da1cf92b3cddc
 team: oslo
 type: library
 repository-settings:
