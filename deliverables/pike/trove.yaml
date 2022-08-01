@@ -36,6 +36,10 @@ releases:
       - hash: 7695661c2fd3be262f3879174fd3645106bfd3c7
         repo: openstack/trove
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/trove
+        hash: 08027d0ff997c02cb8ee4cd2ececd43b2712857e
 release-notes: https://docs.openstack.org/releasenotes/trove/pike.html
 repository-settings:
   openstack/trove: {}
