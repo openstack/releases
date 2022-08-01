@@ -20,6 +20,10 @@ releases:
       - hash: e38a2356b43e06aee7cb9f19e2ff51273abee87d
         repo: openstack/networking-hyperv
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 3a1e01cca65808f0825b017a731ba2b309a9f9cf
 release-notes: https://docs.openstack.org/releasenotes/networking-hyperv/pike.html
 repository-settings:
   openstack/networking-hyperv: {}
