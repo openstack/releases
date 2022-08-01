@@ -39,6 +39,10 @@ releases:
       - hash: 4936392c6415c163b371c187fe3037e3374a8a9b
         repo: openstack/python-novaclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 4936392c6415c163b371c187fe3037e3374a8a9b
 team: nova
 type: library
 repository-settings:
