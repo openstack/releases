@@ -38,6 +38,10 @@ releases:
         repo: openstack/congress
         tarball-base: openstack-congress
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/congress
+        hash: 9cf36abc8af30451e9753c5cef33ee5742dc1d7b
 branches:
   - location: 6.0.0.0rc1
     name: stable/pike
