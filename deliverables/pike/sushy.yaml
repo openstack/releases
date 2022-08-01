@@ -28,6 +28,10 @@ releases:
       - hash: ec068cdc16d1dd033791f15efb4a2dfbf5b4f802
         repo: openstack/sushy
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/sushy
+        hash: 61e48d6c1de0f9faa74e01210b67d0cbcc799c22
 branches:
   - name: stable/pike
     location: 1.0.0

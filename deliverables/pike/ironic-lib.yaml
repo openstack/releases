@@ -37,6 +37,10 @@ releases:
       - hash: 8fd929ba4e5e5d4a34590e04bb54fe728140dc50
         repo: openstack/ironic-lib
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: ee29c7b9082a5223ca923c2a7d594681ab115be4
 branches:
   - name: stable/pike
     location: 2.9.0

@@ -43,6 +43,10 @@ releases:
       - hash: bc6dc4965c20e1e738430dfe248ed893769016c0
         repo: openstack/python-ironicclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: a21a3abc23867213a3ba9f7d3191b992f277e389
 team: ironic
 type: library
 repository-settings:

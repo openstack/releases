@@ -34,6 +34,10 @@ releases:
       - hash: 8feaec80c73b475510df6a613a65e8c0128a9894
         repo: openstack/ironic-ui
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 97ebb7c915476b8b39292502675c2c03e9aa9994
 branches:
   - name: stable/pike
     location: 3.0.0

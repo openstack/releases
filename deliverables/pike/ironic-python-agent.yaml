@@ -34,6 +34,10 @@ releases:
       - hash: b2f097852ced50dbaedada3c5ab8c840486cd4b2
         repo: openstack/ironic-python-agent
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: a48a585c9be9341c3847095ed88c724e79bebab0
 branches:
   - location: 2.2.0
     name: stable/pike

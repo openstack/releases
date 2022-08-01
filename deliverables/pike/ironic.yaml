@@ -56,5 +56,9 @@ releases:
       - hash: 94eed4d40ff6ad27505f74205b1a3f34fba7f718
         repo: openstack/ironic
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ironic
+        hash: 24e8dbbd3f28df7fb51b54611bc065bd1e2913f1
 repository-settings:
   openstack/ironic: {}
