@@ -25,6 +25,10 @@ releases:
       - hash: 4a8cf8445ed34e88a1afae8b3c8028c9d897bbe6
         repo: openstack/python-watcherclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 3dc382f9cd6e5c5cc4f2843939af93f3292c7904
 branches:
   - name: stable/pike
     location: 1.3.0

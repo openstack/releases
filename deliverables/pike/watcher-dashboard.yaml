@@ -32,6 +32,10 @@ releases:
       - hash: ca1756712322b90efaabd9f297c153bdac09297e
         repo: openstack/watcher-dashboard
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 5db4d9eb8e892dc824c1eea363f875c83e2536c5
 release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/pike.html
 repository-settings:
   openstack/watcher-dashboard: {}

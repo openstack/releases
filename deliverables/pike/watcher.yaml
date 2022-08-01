@@ -42,5 +42,9 @@ releases:
       - hash: 30d6f07ceba2ac284bf5167e9bacfc6f8572b391
         repo: openstack/watcher
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 16113e255b65186876faa6e1888339a14dcb909d
 repository-settings:
   openstack/watcher: {}
