@@ -20,6 +20,10 @@ releases:
       - hash: e99543c7b85ac2dcb4cde22f7ff64eda4b9f4133
         repo: openstack/cloudkitty
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 2da6c82e19650c09f13bae1a60a2eebe3687c843
 repository-settings:
   openstack/cloudkitty: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/pike.html
