@@ -17,6 +17,10 @@ releases:
       - hash: 49c915f498fc8d91c98fcf4e07ceecdcf167fc5a
         repo: openstack/glance_store
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/glance_store
+        hash: d855e5978e514eed204ba252a61129c92929ae99
 branches:
   - name: stable/pike
     location: 0.21.0
