@@ -19,5 +19,9 @@ releases:
       - hash: 6bdb8a4f91bf28a639fea5bb38729f8c68d17606
         repo: openstack/tacker-horizon
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 1e0ef0eaa54341e6bb109914d308476185a14559
 repository-settings:
   openstack/tacker-horizon: {}
