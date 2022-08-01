@@ -41,6 +41,10 @@ releases:
       - hash: 8406c3c3958f6c839ba0c40e3a69e6f671b9937e
         repo: openstack/ceilometer
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 4a82ac59f86132fc72b2792dc23b1ab1ca698ce3
 branches:
   - location: 9.0.0
     name: stable/pike

@@ -17,6 +17,10 @@ releases:
       - hash: 0cea730b10000f9e16af33d1cbbe9ca2004a3880
         repo: openstack/ceilometermiddleware
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: f55f3448e5559c036f0f2dab7eeef9aa50d99682
 branches:
   - name: stable/pike
     location: 1.1.0

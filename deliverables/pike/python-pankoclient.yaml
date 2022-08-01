@@ -13,6 +13,10 @@ releases:
       - hash: f29cdbdd2a8137f30d0866f0e080045ccdd40583
         repo: openstack/python-pankoclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 5144005e651285e0140c6851ff83716bcbf0ac2e
 branches:
   - name: stable/pike
     location: 0.3.0

@@ -13,6 +13,10 @@ releases:
       - hash: eb827601af8929803285c09ead6996e6d60b14ef
         repo: openstack/python-aodhclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 62929d516a7406c1263fc5449bc4c46936609e42
 branches:
   - name: stable/pike
     location: 0.9.0
