@@ -27,6 +27,10 @@ releases:
       - hash: c1ca145bce9c4ad3c7d723d6035622065fd7daeb
         repo: openstack/zun
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/zun
+        hash: 4a9097ca3c2d2d3f5b0746b9f56dab177c16e09b
 repository-settings:
   openstack/zun: {}
 release-notes: https://docs.openstack.org/releasenotes/zun/pike.html

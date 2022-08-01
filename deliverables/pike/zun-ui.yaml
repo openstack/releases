@@ -23,6 +23,10 @@ releases:
       - hash: a12bf2fe33e9f2cecfc537c362299bb7073ccd0a
         repo: openstack/zun-ui
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/zun-ui
+        hash: 16bb77395e309d508eead8801d1ffcd03c5ec394
 release-notes: https://docs.openstack.org/releasenotes/zun-ui/pike.html
 repository-settings:
   openstack/zun-ui: {}

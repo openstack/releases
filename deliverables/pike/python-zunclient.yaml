@@ -29,6 +29,10 @@ releases:
       - hash: cfc25ae8977039f62329aab97e396c40c90e48d0
         repo: openstack/python-zunclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-zunclient
+        hash: db6d5dd89ea681b575835544f118d84574e688a6
 branches:
   - name: stable/pike
     location: 0.4.0
