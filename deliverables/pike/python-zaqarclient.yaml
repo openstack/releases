@@ -26,6 +26,10 @@ releases:
       - hash: bdb9615c018d9b9af0d93e7ff6843469b2a82d7b
         repo: openstack/python-zaqarclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: bdb9615c018d9b9af0d93e7ff6843469b2a82d7b
 branches:
   - name: stable/pike
     location: 1.7.0
