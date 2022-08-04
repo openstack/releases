@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 27eeee2a81452d1fd5578e5abcbb2262092df42a
+  - version: 3.8.2
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: dc1a4668581ecb2724ecac007ff5baf6d47bc432
 branches:
   - name: stable/wallaby
     location: 3.8.0
