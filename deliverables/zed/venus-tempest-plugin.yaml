@@ -1,0 +1,11 @@
+---
+include-pypi-link: false
+launchpad: openstack-venus
+release-model: cycle-with-intermediary
+stable-branch-type: none
+release-type: python-pypi
+repository-settings:
+  openstack/venus-tempest-plugin:
+    tarball-base: venus_tempest_plugin
+team: venus
+type: tempest-plugin
