@@ -128,10 +128,14 @@ def get_pypi_info(dist_name):
     canonical_name = packaging_utils.canonicalize_name(dist_name)
     LOG.debug('looking at PyPI for {!r}'.format(canonical_name))
     url = 'https://pypi.org/pypi/{}/json'.format(canonical_name)
-    LOG.debug(url)
     try:
-        return requests.get(url).json()
+        info = requests.get(url).json()
+        if info == {'message': 'Not Found'}:
+            LOG.debug('{} package not found on PyPI'.format(canonical_name))
+            return {}
+        return info
     except json.decoder.JSONDecodeError:
+        LOG.debug('Error parsing JSON response from PyPI')
         return {}
 
 
