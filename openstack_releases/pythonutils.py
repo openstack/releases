@@ -74,19 +74,6 @@ def build_sdist(workdir, repo):
         LOG.debug('did not find %s, maybe %s is not a python project',
                   setup_path, repo)
         return
-    use_tox = repo.endswith('/pbr')
-    if use_tox and not os.path.exists(os.path.join(dest, '.tox', 'venv')):
-        # Use tox to set up a virtualenv so we can install the
-        # dependencies for the package. This only seems to be
-        # necessary for pbr, but...
-        processutils.check_output(
-            ['tox', '-e', 'venv', '--notest'],
-            cwd=dest,
-        )
-    if use_tox:
-        python = '.tox/venv/bin/python3'
-    else:
-        python = 'python3'
 
     # Set some flags to turn off pbr functionality that we don't need.
     flags = {
@@ -94,7 +81,7 @@ def build_sdist(workdir, repo):
         'SKIP_GENERATE_AUTHORS': '1',
         'SKIP_WRITE_GIT_CHANGELOG': '1',
     }
-    cmd = [python, '-m', 'build', '--sdist', '--wheel']
+    cmd = ['python3', '-m', 'build', '--sdist', '--wheel']
     processutils.check_call(
         cmd,
         cwd=dest,
