@@ -570,8 +570,18 @@ Between Milestone-2 and Milestone-3
    switch to the cycle-with-rc model, which is much more suitable for
    deliverables that are only released once per cycle.
 
-   Propose a release model change for all deliverables meeting that criteria.
-   PTLs and release liaisons may decide to:
+   .. note::
+
+      Not every deliverable meeting the above criteria should be encouraged
+      to change release model. For example if there are very limited changes
+      per cycle, a single release without RCs is probably OK. A team may
+      also want to keep the possibility of releasing multiple times per
+      cycle.
+
+   Deliverables possibly meeting the criteria should be reviewed during the
+   release meeting, and a release model change should be proposed for all
+   deliverables where it could make sense. PTLs and release liaisons may
+   decide to:
 
    - immediately release an intermediary release (and -1 the proposed change)
    - confirm the release model change (+1 the proposed change)
