@@ -47,6 +47,10 @@ releases:
         repo: openstack/keystoneauth
         tarball-base: keystoneauth1
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: b82836ec0cc88a0c4f0b8c1ce0ff252f5e23654d
 team: keystone
 type: library
 repository-settings:

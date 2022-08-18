@@ -27,6 +27,10 @@ releases:
       - hash: 7ef56ff2a9146e7e8135646160fef3249a81cd5d
         repo: openstack/keystonemiddleware
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 6712e8b7125fcbcf891b7e89ecb240798dad28ac
 team: keystone
 type: library
 repository-settings:
