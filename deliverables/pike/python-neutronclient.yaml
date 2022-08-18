@@ -31,6 +31,10 @@ releases:
       - hash: 1331280bcc0b55eed8b7a7bee3788cdba59a15fa
         repo: openstack/python-neutronclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 61e1043ab0a8bfae285f86a8c04fe662190bc62a
 team: neutron
 type: library
 repository-settings:
