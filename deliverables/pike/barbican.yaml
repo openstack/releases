@@ -34,6 +34,10 @@ releases:
       - hash: 5e756a70861e66ee52b7b20d00fc9607ad21d133
         repo: openstack/barbican
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/barbican
+        hash: 18c147e04424df6dcf474bce6387be9da73ecb8d
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike

@@ -32,6 +32,10 @@ releases:
       - hash: 9f6dcb0617217241ea4260bd421b19dde35160b5
         repo: openstack/python-barbicanclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: dce6635acea945a08076b37c5071354152b6bcfa
 branches:
   - location: 4.5.2
     name: stable/pike
