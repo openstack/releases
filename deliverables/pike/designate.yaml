@@ -39,6 +39,10 @@ releases:
       - hash: af4fc94034d5a2153e29f7584944858515d55cdb
         repo: openstack/designate
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/designate
+        hash: 9466dd1dd274ad40d390d8fde1f9f79043466f60
 branches:
   - location: 5.0.0.0rc1
     name: stable/pike
