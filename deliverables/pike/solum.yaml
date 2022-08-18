@@ -23,6 +23,10 @@ releases:
       - hash: da251dc710bc45d6c1f86f68f966c466890f5787
         repo: openstack/solum
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/solum
+        hash: fcec9ad3e923a3dc2732a9af474dc30a6024e025
 release-notes: https://docs.openstack.org/releasenotes/solum/pike.html
 repository-settings:
   openstack/solum: {}

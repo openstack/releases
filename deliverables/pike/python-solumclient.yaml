@@ -24,6 +24,10 @@ releases:
       - hash: 6f5d8cf8d870746edfd291f62809c3f725a41e5b
         repo: openstack/python-solumclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: cfe6c0b34b307a7f25216113862247a9df6ff0b2
 branches:
   - name: stable/pike
     location: 2.5.0
