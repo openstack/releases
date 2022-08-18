@@ -19,6 +19,10 @@ releases:
       - hash: 3dc74b280a01363a64a8d3d368fcba2882ef31bd
         repo: openstack/magnum-ui
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/magnum-ui
+        hash: b5c7863bff3a8371b33a4a84e7a075a81d881cce
 release-notes: https://docs.openstack.org/releasenotes/magnum-ui/pike.html
 repository-settings:
   openstack/magnum-ui: {}

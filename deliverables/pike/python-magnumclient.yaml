@@ -21,6 +21,10 @@ releases:
       - hash: 2754b15cd4f2bf73441487a3dde526d61019849f
         repo: openstack/python-magnumclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 9388bc18fd24abc4f292294d949479517a100e49
 branches:
   - name: stable/pike
     location: 2.7.0
