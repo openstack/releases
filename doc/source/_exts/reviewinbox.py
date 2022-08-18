@@ -43,6 +43,7 @@ class ReviewInbox(rst.Directive):
 
         # Add the series specific data based on its current status
         series_status_data = series_status.SeriesStatus.default()
+        exclude_series = ''
         for series_name in series_status_data:
             series = series_status_data[series_name]
             if series.status not in ['development', 'maintained']:
@@ -52,23 +53,31 @@ class ReviewInbox(rst.Directive):
                 series_name = '_independent'
             sections.append(escape(urllib_parse.urlencode({
                 series.name.title(): QUERY_TEMPLATE.format(series_name)})))
-
-        # Now add our sections that never change
-        sections.append(escape(urllib_parse.urlencode({
-            'Other':
-            r'project:openstack/releases NOT file:^deliverables/.*'})))
-
-        sections.append(escape(urllib_parse.urlencode({
-            'Jobs':
-            r'project:openstack/project-config file:^roles/'
-            r'copy-release-tools-scripts/files/release-tools/.*'})))
+            # Since we are iterating over the releaseable series anyway, let's
+            # populate exclude_series. This will be useful for section 'Other'
+            # where we want to list EOL patches as well (which are in series in
+            # 'extended maintained' status)
+            exclude_series = exclude_series + r' -directory:deliverables/{}'.format(series_name)
 
         sections.append(escape(urllib_parse.urlencode({
-            'Tools':
+            'Tools and Jobs':
             r'(( project:openstack/releases file:^tools/.* ) OR '
             r'project:openstack/release-test OR '
             r'( project:openstack/releases file:^openstack_releases/.* ) OR '
-            r'project:openstack/reno)'})))
+            r'project:openstack/reno OR '
+            r'( project:openstack/project-config file:^roles/'
+            r'copy-release-tools-scripts/files/release-tools/.* ))'})))
+
+        other = {
+            'Other':
+            r'(( project:openstack/releases NOT file:^deliverables/.*) OR '
+            r'( project:openstack/releases '
+            r'directory:deliverables NOT label:Workflow-1 {}))'.format(exclude_series)
+        }
+        sections.append(escape(urllib_parse.urlencode(other)))
+
+        sections.append(escape(urllib_parse.urlencode({
+            'All Releases': 'is:open project:openstack/releases'})))
 
         url += '&'.join(sections)
 
