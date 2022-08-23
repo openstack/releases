@@ -1,0 +1,13 @@
+---
+launchpad: puppet-openstack-spec-helper
+release-model: untagged
+team: Puppet OpenStack
+type: other
+stable-branch-type: tagless
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 70d05a1cfc59861a8755b020f09cf4ed5093cdd9
+repository-settings:
+  openstack/puppet-openstack_spec_helper: {}

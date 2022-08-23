@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - projects:
+      - hash: d3b37b5697d955843d4b4780d9b6a379cdaaac85
+        repo: openstack/puppet-openstack-integration
+    version: rocky-eol
 branches:
   - name: stable/rocky
     location:

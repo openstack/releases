@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 4e1329129d632ceb6b745b0e17647e00856922a2
 branches:
   - name: stable/rocky
     location:

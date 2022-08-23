@@ -1,0 +1,13 @@
+---
+launchpad: puppet-openstack-spec-helper
+release-model: untagged
+team: Puppet OpenStack
+type: other
+stable-branch-type: tagless
+releases:
+  - version: queens-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 5d322cd3ecad8fb05d5008dd22bace597b9c88e7
+repository-settings:
+  openstack/puppet-openstack_spec_helper: {}
