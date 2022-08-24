@@ -6,3 +6,8 @@ team: Telemetry
 type: library
 repository-settings:
   openstack/ceilometermiddleware: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 5c01e19b3846c1a0308d68d428c0cee440172dae
