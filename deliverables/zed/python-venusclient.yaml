@@ -6,3 +6,8 @@ team: venus
 type: client-library
 repository-settings:
   openstack/python-venusclient: {}
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/python-venusclient
+        hash: 205416069ec36c13a66c642221c2eb4a1f611dbd
