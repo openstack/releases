@@ -6,9 +6,13 @@ team: venus
 type: service
 repository-settings:
   openstack/venus:
-    pypi-name: openstack-venus
+    tarball-base: openstack-venus
 releases:
   - version: 1.0.0.0b1
     projects:
       - repo: openstack/venus
         hash: 2953ee4b1744ca9c5130eb90d5e2c3e161cd95c7
+  - version: 1.0.0.0b2
+    projects:
+      - repo: openstack/venus
+        hash: f060b59cede279d722b916de422bab453c1411dd
