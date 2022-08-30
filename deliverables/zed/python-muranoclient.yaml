@@ -6,3 +6,8 @@ team: murano
 type: client-library
 repository-settings:
   openstack/python-muranoclient: {}
+releases:
+  - version: 2.5.0
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: fdbec7b17377c81d7d25e17eea884df91cc48511
