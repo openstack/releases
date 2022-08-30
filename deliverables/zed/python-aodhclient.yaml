@@ -7,3 +7,8 @@ type: client-library
 repository-settings:
   openstack/python-aodhclient:
     tarball-base: aodhclient
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: a1f47383a466da62f6722b3ef675e1adb92360a4
