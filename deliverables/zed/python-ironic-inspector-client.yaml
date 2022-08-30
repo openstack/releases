@@ -6,3 +6,8 @@ team: ironic
 type: client-library
 repository-settings:
   openstack/python-ironic-inspector-client: {}
+releases:
+  - version: 4.8.0
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 3a1444840ef5eacc4620f4392d9a05c117a2af2b
