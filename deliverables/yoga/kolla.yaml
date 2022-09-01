@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: f0cf958d4e87a02b3698bbe9ca879c8194c2291c
+  - version: 14.4.0
+    projects:
+      - repo: openstack/kolla
+        hash: b3e72210851a2a9e3e066a85bbb2341bb9fadba5
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

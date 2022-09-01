@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: cbaf7a2afe2247f9a5bbc0dbd78db88af7a0c91b
+  - version: 14.4.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 68ec08c03c804a7fc9a3197b827ab14d17e897b2
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
