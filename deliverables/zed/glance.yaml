@@ -5,6 +5,10 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - Extended the functionality of stores-detail API
+  - Added glance-download internal plugin to download the image from remote glance
+  - Added support for immediate caching of an image
 repository-settings:
   openstack/glance: {}
 releases:
