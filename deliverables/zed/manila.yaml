@@ -3,5 +3,27 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - Manila reached feature parity between the native client and OSC.
+    You can use the ``openstack share ..`` command line interface to
+    administer the Shared File System service (manila) on any deployment
+    alongside using it to provision and manage the life cycle of manila
+    resources. Refer to the `official documentation <https://docs.openstack
+    .org/python-manilaclient/latest/cli/osc_plugin_cli.html>`_ to find command
+    syntax and usage information. You may also view this documentation
+    directly in the CLI with ``openstack help share <subcommand>``. For
+    example, ``openstack help share create``.
+  - Users can now specify metadata while creating their share snapshots.
+    The behavior should be similar to Manila shares, where users are able
+    to query snapshots filtering by their metadata and also update and
+    delete the metadata of the given resources.
+  - The Ceph NFS driver now allows users to consume NFS clusters deployed
+    using cephadm. This presents many advantages, since the operator no
+    longer needs to maintain their own instances of NFS Ganesha apart of the
+    Ceph cluster.
+  - The share replica creation now accepts a share network parameter during
+    the creation of a share.
+  - The Macrosan driver was added to Manila. Administrators are now able
+    to add existing Macrosan storage to their clouds.
 repository-settings:
   openstack/manila: {}
