@@ -869,10 +869,6 @@ R-5 week (Milestone-3)
 
 #. Process any remaining library freeze exception.
 
-#. Early in the week, email openstack-discuss list to remind PTLs that
-   cycle-highlights are due this week so that they can be included in
-   release marketing preparations.
-
 #. Propose autoreleases (``process_auto_releases``) for
    ``cycle-with-intermediary`` client libraries which had commits that have
    not been included in a release.
@@ -1016,6 +1012,10 @@ R-4 week
 ========
 
 #. Process any remaining client library freeze exception.
+
+#. Early in the week, email openstack-discuss list to remind PTLs that
+   cycle-highlights are due this week so that they can be included in
+   release marketing preparations.
 
 #. Freeze all cycle-based library releases except for release-critical
    bugs. Independently-released libraries may still be released, but
