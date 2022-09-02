@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   antelope/index
    zed/index
    yoga/index
    xena/index

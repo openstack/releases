@@ -1,0 +1,107 @@
+---
+start-week: 2022-10-10
+release-week: 2023-03-20
+cycle:
+- end: '2022-10-07'
+  start: '2022-10-03'
+  x-project:
+  - z-final
+- end: '2022-10-14'
+  name: R-23
+  start: '2022-10-10'
+- end: '2022-10-21'
+  name: R-22
+  start: '2022-10-17'
+  x-project:
+    - a-ptg
+- end: '2022-10-28'
+  name: R-21
+  start: '2022-10-24'
+- end: '2022-11-04'
+  name: R-20
+  start: '2022-10-31'
+- end: '2022-11-11'
+  name: R-19
+  start: '2022-11-07'
+- end: '2022-11-18'
+  name: R-18
+  start: '2022-11-14'
+  x-project:
+    - a-1
+- end: '2022-11-25'
+  name: R-17
+  start: '2022-11-21'
+- end: '2022-12-02'
+  name: R-16
+  start: '2022-11-28'
+- end: '2022-12-09'
+  name: R-15
+  start: '2022-12-05'
+- end: '2022-12-16'
+  name: R-14
+  start: '2022-12-12'
+  x-project:
+    - a-cycle-trail
+- end: '2022-12-23'
+  name: R-13
+  start: '2022-12-19'
+- end: '2022-12-30'
+  name: R-12
+  start: '2022-12-26'
+- end: '2023-01-06'
+  name: R-11
+  start: '2023-01-02'
+  x-project:
+    - a-2
+    - a-mf
+- end: '2023-01-13'
+  name: R-10
+  start: '2023-01-09'
+- end: '2023-01-20'
+  name: R-9
+  start: '2023-01-16'
+- end: '2023-01-27'
+  name: R-8
+  start: '2023-01-23'
+- end: '2023-02-03'
+  name: R-7
+  start: '2023-01-30'
+  x-project:
+    - a-extra-atc-freeze
+- end: '2023-02-10'
+  name: R-6
+  start: '2023-02-06'
+  x-project:
+    - a-final-lib
+- end: '2023-02-17'
+  name: R-5
+  start: '2023-02-13'
+  x-project:
+    - a-3
+    - a-ff
+    - a-final-clientlib
+    - a-soft-sf
+    - a-rf
+    - a-cycle-highlights
+- end: '2023-02-24'
+  name: R-4
+  start: '2023-02-20'
+- end: '2023-03-03'
+  name: R-3
+  start: '2023-02-27'
+  x-project:
+    - a-rc1
+    - a-hard-sf
+- end: '2023-03-10'
+  name: R-2
+  start: '2023-03-06'
+- end: '2023-03-17'
+  name: R-1
+  start: '2023-03-13'
+  x-project:
+    - a-finalrc
+- end: '2023-03-24'
+  name: R+0
+  start: '2023-03-20'
+  x-project:
+  - a-final
