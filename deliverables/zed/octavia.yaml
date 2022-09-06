@@ -5,5 +5,14 @@ release-model: cycle-with-rc
 release-type: python-pypi
 team: octavia
 type: service
+cycle-highlights:
+  - Octavia load balancers now support multiple VIPs, these VIPs must be
+    allocated on subnets from the same network, enabling dual-stack (IPv4/IPv6)
+    load balancers.
+  - Notification support is available in Octavia, it sends notifications about
+    major events of the life-cycle of a load balancer.
+  - Octavia implements a failover circuit breaker, an optional feature that
+    prevents Octavia from automatically recreating Amphorae virtual machines
+    during cloud outages.
 repository-settings:
   openstack/octavia: {}
