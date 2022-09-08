@@ -178,8 +178,8 @@ The Antelope coordinated release will happen on Wednesday, 22 March, 2023.
 Cycle Highlights
 ----------------
 
-Cycle highlights need to be added to the release deliverables by feature
-freeze to be included in any marketing release messaging.
+Cycle highlights need to be added to the release deliverables after the
+feature freeze to be included in any marketing release messaging.
 Highlights may be added after this point, but they will likely only be
 useful for historical purposes.
 
