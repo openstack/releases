@@ -5,3 +5,25 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    `Virtual IOMMU devices <https://docs.openstack.org/nova/latest/admin/pci-passthrough.html#virtual-iommu-support>`_
+    can now be created and attached to an instance when running on a x86 host
+    and using the libvirt driver.
+  - |
+    Improved behavior for Windows guest by adding by default new `Hyper-V
+    enlightments <https://libvirt.org/formatdomain.html#hypervisor-features>`_
+    on all libvirt guests.
+  - |
+    All lifecycle actions are now fully supported for
+    `instances with vDPA ports <https://docs.openstack.org/nova/latest/admin/vdpa.html>`_
+    , including vDPA hot-plug live migration, suspend and attach/detach.
+  - |
+    Visible API improvements include :
+     the possibility to rebuild a volume-backed instance;
+     the ability to unshelve an instance to a specific host (admin only);
+     the change to only accept importing a public key but also with an extended
+     name pattern;
+     Nova policies removing system scopes for all APIs hence finishing to
+     implement `phase #1 of new RBAC guidelines <https://governance.openstack.org/tc/goals/selected/consistent-and-secure-rbac.html#phase-1>`_
+     that are opt-in.
