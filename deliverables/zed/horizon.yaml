@@ -5,6 +5,14 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Horizon and all horizon plugins now support the nodejs16 version of nodejs.
+  - Horizon and all horizon plugins now migrated to angularjs v1.8.2.2 from
+    v1.5.8.0.
+  - Horizon now allows an administrator to specify default user data while
+    launching an instance.
+  - Horizon added a new messages tab to show detailed Error/Failure messages
+    for corresponding volume backups.
 releases:
   - version: 22.2.0
     projects:
