@@ -7,3 +7,12 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - Added Xilinx FPGA driver, which can manage Xilinx FPGA devices,
+    including discovering devices' info and programming ``xclbin``.
+  - Proposes a spec of adding NVIDIA MIG for A100 devices.
+    Multi-Instance GPU (MIG) is new feature allows GPUs based on the
+    NVIDIA Ampere architecture (such as NVIDIA A100) to be securely
+    partitioned, which is different from VGPU feature, MIG driver
+    is need to managed compatible with PGPU and VGPU.
+  - Docs and unit tests completement.
