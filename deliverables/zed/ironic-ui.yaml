@@ -6,3 +6,11 @@ team: ironic
 type: horizon-plugin
 repository-settings:
   openstack/ironic-ui: {}
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 41924ff16e3036b67f70244bf3c8be69af9c3e76
+branches:
+  - name: stable/zed
+    location: 6.0.0
