@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/aodh
+        hash: 1ead679b313fce766448fea73d424cd1c11b57c7
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
