@@ -5,3 +5,11 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/storlets: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: 9bf2c3b3b9e9a738a825c63a6b43f84f5ddd2d66
+branches:
+  - name: stable/zed
+    location: 10.0.0.0rc1
