@@ -16,3 +16,11 @@ cycle-highlights:
     partitioned, which is different from VGPU feature, MIG driver
     is need to managed compatible with PGPU and VGPU.
   - Docs and unit tests completement.
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: bc8b25fe7b87efaf783e93047745f2c462f09147
+branches:
+  - name: stable/zed
+    location: 9.0.0.0rc1
