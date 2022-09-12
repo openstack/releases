@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 611edfa1155b954054979088e0a5623a1b5d0ee6
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
