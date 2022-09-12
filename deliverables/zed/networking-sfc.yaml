@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-sfc: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 021f2736ff35802db5c82e0b0f5308904912a037
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
