@@ -5,3 +5,11 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/barbican
+        hash: 304d5c0434f06bd9211642fc8663107b508b98a0
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
