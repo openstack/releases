@@ -21,3 +21,10 @@ releases:
     projects:
       - repo: openstack/skyline-apiserver
         hash: ce4d5bcc01cc59507199d19b8f79b9664bf5d707
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/skyline-apiserver
+        hash: c6fd1d4147ea002f57f6e9689d58f14e4574fab9
+branches:
+  - name: stable/zed
+    location: 1.0.0.0rc1
