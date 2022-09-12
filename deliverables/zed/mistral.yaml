@@ -6,3 +6,11 @@ team: mistral
 type: service
 repository-settings:
   openstack/mistral: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/mistral
+        hash: 95e30947d7daf2756efd97cdabacdd6d1508ff6b
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
