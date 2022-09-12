@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: e52bcb6626408d522b15dbd5bbe1d457e04e8173
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
