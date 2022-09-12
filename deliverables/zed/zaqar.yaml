@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: cdf45da5553f4daed20dc6bd8800360130c75f55
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
