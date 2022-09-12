@@ -5,3 +5,11 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: f8f89548f322107e56dcc1d016a2f88dd3ecb9f3
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
