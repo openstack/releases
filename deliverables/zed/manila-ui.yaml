@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/manila-ui: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/manila-ui
+        hash: 93070d335bd2d3cce1f703fc53e3f97b8555d1a2
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
