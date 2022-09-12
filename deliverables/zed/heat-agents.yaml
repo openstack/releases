@@ -6,3 +6,11 @@ team: heat
 type: other
 repository-settings:
   openstack/heat-agents: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/heat-agents
+        hash: 2e16aa4e57d0995617cfc0872cc3882430a37e56
+branches:
+  - name: stable/zed
+    location: 5.0.0.0rc1
