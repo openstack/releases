@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: eff24e0861b9aa7b900aeab245030a3e582a0de4
+branches:
+  - name: stable/zed
+    location: 10.0.0.0rc1
