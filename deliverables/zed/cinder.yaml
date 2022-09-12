@@ -21,3 +21,11 @@ cycle-highlights:
     PowerFlex drivers started reporting trimming/discard support.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 7809711a22ac5fc001c7c68a84a03799484ef4d2
+branches:
+  - name: stable/zed
+    location: 21.0.0.0rc1
