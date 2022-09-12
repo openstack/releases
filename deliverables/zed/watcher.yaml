@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: a43b040ebc2635a43920f9928201236a242c3ed4
+branches:
+  - name: stable/zed
+    location: 9.0.0.0rc1
