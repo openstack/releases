@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: fe0d9fc353fe991c99a5ee079b5c16142ab3475d
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
