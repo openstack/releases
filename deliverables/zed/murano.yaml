@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: 4434b57486eda599a15624dd27eca7ef18bcfa1f
+branches:
+  - name: stable/zed
+    location: 14.0.0.0rc1
