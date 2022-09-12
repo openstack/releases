@@ -5,6 +5,17 @@ team: skyline
 type: service
 repository-settings:
   openstack/skyline-apiserver: {}
+cycle-highlights:
+  - |
+    Supply login releated APIs.
+  - |
+    Supply sso(only support openid) related APIs.
+  - |
+    Supply prometheus releated APIs.
+  - |
+    Supply extension related APIs which encapsulates back-end OpenStack APIs.
+  - |
+    Supply system settings releated APIs.
 releases:
   - version: 1.0.0.0b2
     projects:
