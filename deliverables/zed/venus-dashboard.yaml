@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/venus-dashboard
         hash: 0ea27a424444f32a9d25cd2391457e1820df0594
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/venus-dashboard
+        hash: d3f37964c73319e0c2f2221f23b44963730b548c
+branches:
+  - name: stable/zed
+    location: 1.0.0.0rc1
