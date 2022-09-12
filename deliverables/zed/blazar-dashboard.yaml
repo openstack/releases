@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/blazar-dashboard: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 837eb584283fdfa9b36808816ace7177a023bb8f
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
