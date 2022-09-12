@@ -5,7 +5,8 @@ release-type: python-pypi
 team: venus
 type: service
 cycle-highlights:
-  - Support multi-dimensional retrieval of logs of openstack components, hosts, services, etc.
+  - Support multi-dimensional retrieval of logs of openstack components,
+    hosts, services, etc.
   - Added typical error log retrieval, such as mariadb connection error
   - Added the Horizon display plugin for venus (venus-dashboard)
   - Support Kolla-ansible-based deployment and Devstack-based deployment
@@ -21,3 +22,10 @@ releases:
     projects:
       - repo: openstack/venus
         hash: f060b59cede279d722b916de422bab453c1411dd
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/venus
+        hash: c34329597aaeee1ff2b9a898f6d51d2303f00c0c
+branches:
+  - name: stable/zed
+    location: 1.0.0.0rc1
