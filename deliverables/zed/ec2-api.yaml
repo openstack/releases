@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: 299c898cf4af1d96a4c683305d3c262285eccdaf
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
