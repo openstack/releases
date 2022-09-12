@@ -5,3 +5,11 @@ team: solum
 type: service
 repository-settings:
   openstack/solum: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/solum
+        hash: bdb968144cd4fb276a37f67ba492b57fd9ba63ad
+branches:
+  - name: stable/zed
+    location: 13.0.0.0rc1
