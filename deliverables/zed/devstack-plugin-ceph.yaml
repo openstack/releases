@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-ceph: 46186d062b1ef3d93385344140632dcebb665784
+    name: stable/zed
 repository-settings:
   openstack/devstack-plugin-ceph: {}
