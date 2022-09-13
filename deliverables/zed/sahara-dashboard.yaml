@@ -5,3 +5,11 @@ team: sahara
 type: horizon-plugin
 repository-settings:
   openstack/sahara-dashboard: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 0c57fd76c4c39efc1510df5aaceb22fcaa9e24ad
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
