@@ -20,3 +20,15 @@ branches:
     location: 20.2.0
   - name: bugfix/21.0
     location: 21.0.0
+cycle-highlights:
+  - Support for the `syslinux <https://wiki.syslinux.org/wiki/index.php?title=Syslinux_6_Changelog#Changes_in_6.04>`_
+    and the often separately packaged `isolinux <https://wiki.syslinux.org/wiki/index.php?title=ISOLINUX>`_
+    and `pxelinux <https://wiki.syslinux.org/wiki/index.php?title=PXELINUX>`_
+    are deprecated.
+  - The deprecated support for instance network booting (not to be confused
+    with the ramdisk deploy, iSCSI boot or Anaconda deploy) has been removed.
+    The `boot_option` capability is no longer supported.
+  - Ironic can automatically provide an instance requestor’s project, `lessee`
+    rights to the Bare Metal machine under the Role Based Access Control model.
+    This feature, is normally disabled, but can be enabled using the
+    `[conductor]automatic_lessee` configuration option.
