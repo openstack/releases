@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-mapr: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: ddbce89c8ba8d2b5cf9ebdd2a9a637775d8bee3e
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
