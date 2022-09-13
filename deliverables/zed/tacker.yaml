@@ -5,3 +5,11 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+cycle-highlights:
+  - Introduce ETSI NFV V2 APIs for CNF Heal, Scale and Rollback operation.
+  - Enable VNF AutoHealing triggered by FaultNotification.
+  - Add individual VNFc management using HOT.
+  - Support OpenID for Kubernetes VIM Authentication.
+  - Introduce Robot framework for ETSI NFV based auto testing.
+  - Support database synchronization between Tacker and Kubernetes to enable
+    maintainers to get status of pods from Tacker.
