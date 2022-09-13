@@ -3,5 +3,21 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    Block Storage API microversion 3.70 adds the ability for users
+    to transfer encrypted volumes across projects. Previously only
+    unencrypted volumes were supported to be transferred. Also all
+    the snapshots associated with the volume will be transferred
+    along with the encrypted volume.
+  - |
+    New backend drivers were added: DataCore iSCSI and FC,
+    Dell PowerStore NFS, Yadro Tatlin Unified iSCSI,
+    Dell PowerStore NVMe-TCP, Pure Storage NVMe-RoCE storage drivers.
+  - |
+    Many features were added to current drivers, for example, NetApp dataontap
+    implemented a new REST client to facilitate interaction with the backend,
+    Hitachi driver added a Port Scheduler, Dell EMC PowerStore, PowerMax and
+    PowerFlex drivers started reporting trimming/discard support.
 repository-settings:
   openstack/cinder: {}
