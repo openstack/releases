@@ -6,3 +6,11 @@ release-model: cycle-with-intermediary
 include-pypi-link: true
 repository-settings:
   openstack/networking-baremetal: {}
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 8c23e7e98540869b45d54831eac1c6dc37aee010
+branches:
+  - name: stable/zed
+    location: 6.0.0
