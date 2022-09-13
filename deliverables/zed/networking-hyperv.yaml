@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: f38702f4e666a342c05bb241f19d6cae1faec756
+branches:
+  - name: stable/zed
+    location: 13.0.0.0rc1
