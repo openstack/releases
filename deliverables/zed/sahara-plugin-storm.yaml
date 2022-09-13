@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-storm: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: ae96409b4001c64e5e07e72e72737b9178a3cce4
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
