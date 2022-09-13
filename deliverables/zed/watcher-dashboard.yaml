@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: b526383ebae37f3bdb6ef4be9245684967c46d65
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
