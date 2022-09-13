@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 24a80d355f29f50069cbac4489b395559f5d2b36
+branches:
+  - name: stable/zed
+    location: 6.0.0.0rc1
