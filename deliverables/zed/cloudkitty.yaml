@@ -6,3 +6,11 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: c9340b35f67699fcae0fa95f799deb4ebf1f1c99
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
