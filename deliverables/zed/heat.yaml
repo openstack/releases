@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/heat:
     tarball-base: openstack-heat
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: 7b1b373d248d585d205fc65783ec155d401b31ec
+branches:
+  - name: stable/zed
+    location: 19.0.0.0rc1
