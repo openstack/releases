@@ -7,7 +7,8 @@ team: glance
 type: service
 cycle-highlights:
   - Extended the functionality of stores-detail API
-  - Added glance-download internal plugin to download the image from remote glance
+  - Added glance-download internal plugin to download the image from
+    remote glance
   - Added support for immediate caching of an image
 repository-settings:
   openstack/glance: {}
@@ -20,3 +21,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: fbe32cb44b23b183ee6bf63d630de0629020d1ac
+  - version: 25.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: d45b7c26af2963bb811c5596a42be10cb75c0685
+branches:
+  - name: stable/zed
+    location: 25.0.0.0rc1
