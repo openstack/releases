@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-fwaas: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 553e6b64110d573a08a5470c00dfa282ac72b0b9
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
