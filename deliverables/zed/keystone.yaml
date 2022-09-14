@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 1ea9f7557dc442c56805f70b3f0c9393b427a770
+branches:
+  - name: stable/zed
+    location: 22.0.0.0rc1
