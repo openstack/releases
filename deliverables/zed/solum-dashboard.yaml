@@ -5,3 +5,11 @@ team: solum
 type: horizon-plugin
 repository-settings:
   openstack/solum-dashboard: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: f2d61f2e0258e30285731cc5fa66e86dacc9cb3e
+branches:
+  - name: stable/zed
+    location: 9.0.0.0rc1
