@@ -5,10 +5,14 @@ release-type: python-pypi
 team: venus
 type: service
 cycle-highlights:
-  - Support multi-dimensional retrieval of logs of openstack components, hosts, services, etc.
+  - Support multi-dimensional retrieval of logs of openstack components,
+    hosts, services, etc.
   - Added typical error log retrieval, such as mariadb connection error
   - Added the Horizon display plugin for venus (venus-dashboard)
   - Support Kolla-ansible-based deployment and Devstack-based deployment
+  - Added `Venus API <https://docs.openstack.org/api-ref/log-management/>`_
+    document to OpenStack API, users can better integrate with the Venus
+    project.
 repository-settings:
   openstack/venus:
     tarball-base: openstack-venus
