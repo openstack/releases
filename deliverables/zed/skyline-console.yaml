@@ -45,3 +45,10 @@ releases:
     projects:
       - repo: openstack/skyline-console
         hash: 73e9a6890351308e8669d4c6b3a0e77b41ed9c12
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/skyline-console
+        hash: 49dca855602ae2ae6bb9acfe718940fdafbdf183
+branches:
+  - name: stable/zed
+    location: 1.0.0.0rc1
