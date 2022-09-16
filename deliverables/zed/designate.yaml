@@ -7,3 +7,11 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 93dee6a3ff44fb7470b3008e8fbbaf99822bbe82
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
