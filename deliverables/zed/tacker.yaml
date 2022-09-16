@@ -13,3 +13,11 @@ cycle-highlights:
   - Introduce Robot framework for ETSI NFV based auto testing.
   - Support database synchronization between Tacker and Kubernetes to enable
     maintainers to get status of pods from Tacker.
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: c9a715a915322bbb0918d1fb61b15234d6c294d0
+branches:
+  - name: stable/zed
+    location: 8.0.0.0rc1
