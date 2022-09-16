@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bgpvpn: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 3cba4a40fcbbfb89e334533206712f1058d03672
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
