@@ -27,3 +27,11 @@ cycle-highlights:
      Nova policies removing system scopes for all APIs hence finishing to
      implement `phase #1 of new RBAC guidelines <https://governance.openstack.org/tc/goals/selected/consistent-and-secure-rbac.html#phase-1>`_
      that are opt-in.
+releases:
+  - version: 26.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 797779688f0515cfa5eb58f935a376cbc08d33e4
+branches:
+  - name: stable/zed
+    location: 26.0.0.0rc1
