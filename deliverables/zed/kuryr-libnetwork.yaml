@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: aac61e7cbf2f4ff3310635362ef49de48efa6494
+branches:
+  - name: stable/zed
+    location: 10.0.0.0rc1
