@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 658c68b593a4d83f59143dc6c7df81860d3f57cb
+branches:
+  - name: stable/zed
+    location: 9.0.0.0rc1
