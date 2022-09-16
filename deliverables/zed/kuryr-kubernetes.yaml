@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 0df1f9176bcd9c46dc706c395140ea02d015cf1b
+branches:
+  - name: stable/zed
+    location: 7.0.0.0rc1
