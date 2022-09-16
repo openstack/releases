@@ -7,10 +7,18 @@ repository-settings:
   openstack/neutron: {}
 cycle-highlights:
   - Neutron FWAAS is again a fully supported Neutron stadium project.
-  - Add OVN to the mechanism drivers that support minimum bandwidth QoS rule
-    and placement allocation.
+  - Add OVN to the mechanism drivers that support minimum bandwidth
+    QoS rule and placement allocation.
   - Add NDP proxy support to L3 routers.
-  - Support for baremetal provisioning using OVN’s built-in DHCP server has
-    been added for IPv4.
+  - Support for baremetal provisioning using OVN’s built-in DHCP server
+    has been added for IPv4.
   - Floating IP port forwarding API supports port ranges.
   - Add QoS rule type Packet per Second.
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 2956a01d0fb4cd83cd4a07f4359c5b5d80bc9278
+branches:
+  - name: stable/zed
+    location: 21.0.0.0rc1
