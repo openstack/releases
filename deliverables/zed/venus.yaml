@@ -25,3 +25,10 @@ releases:
     projects:
       - repo: openstack/venus
         hash: f060b59cede279d722b916de422bab453c1411dd
+  - version: 1.0.0.0rc1
+    projects:
+      - repo: openstack/venus
+        hash: c34329597aaeee1ff2b9a898f6d51d2303f00c0c
+branches:
+  - name: stable/zed
+    location: 1.0.0.0rc1
