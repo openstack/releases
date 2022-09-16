@@ -6,3 +6,11 @@ team: adjutant
 type: client-library
 repository-settings:
   openstack/python-adjutantclient: {}
+releases:
+  - version: 0.11.0
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 0930120e836e4d847f87248c3c2ada2d26581c56
+branches:
+  - name: stable/zed
+    location: 0.11.0
