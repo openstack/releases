@@ -5,3 +5,11 @@ team: trove
 type: service
 repository-settings:
   openstack/trove: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 0ec4d0487bfd990697752133335b799f409e4418
+branches:
+  - name: stable/zed
+    location: 18.0.0.0rc1
