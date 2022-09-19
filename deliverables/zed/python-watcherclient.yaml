@@ -6,3 +6,11 @@ team: watcher
 type: client-library
 repository-settings:
   openstack/python-watcherclient: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: e227f82fd63bc5d47492da3e3c2ed70182093ed9
+branches:
+  - name: stable/zed
+    location: 4.0.0
