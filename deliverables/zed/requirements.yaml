@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/zed
+    location:
+      openstack/requirements: 759b34c0a2d538464c8dc3e8ebd96f0f1bb2c090
