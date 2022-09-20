@@ -899,7 +899,7 @@ R-5 week (Milestone-3)
      release liaison. Discuss standing -1s to see if they should be granted
      an exception and wait until next week.
 
-#. Evaluate any libraries that did not have any change merged over the
+#. Evaluate any non-client libraries that did not have any change merged over the
    cycle to see if it is time to `transition them to the independent release
    model <https://releases.openstack.org/reference/release_models.html#openstack-related-libraries>`__.
 
