@@ -1146,7 +1146,15 @@ R-3 week (RC1 deadline)
 
        tox -e venv -- list-deliverables --unreleased \
        --model cycle-with-intermediary \
-       --type horizon-plugin --type other --type service --type tempest-plugin
+       --type horizon-plugin --type other --type service
+
+     .. note::
+
+        The command lists some deliverables that clearly don't need a release
+        (like requirements, release-tests). If there are multiple deliverables
+        that require a release, then feel free to use ``process_auto_releases``
+        to generate the patches. Please use ``$series-cwi-not-released`` as
+        topic.
 
    - cycle-with-rc that are not trailing deliverables and that have not done
      a RC1 yet, for which a release should be proposed from HEAD, and include
