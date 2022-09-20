@@ -8,3 +8,8 @@ repository-settings:
   openstack/oswin-tempest-plugin: {}
 team: winstackers
 type: tempest-plugin
+releases:
+  - version: 2.0.0
+    projects:
+      - repo: openstack/oswin-tempest-plugin
+        hash: 4fe48c2e38810942179505f59ff21dbc97ee0f74
