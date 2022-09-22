@@ -10,11 +10,11 @@ repository-settings:
 cycle-highlights:
   - Added Xilinx FPGA driver, which can manage Xilinx FPGA devices,
     including discovering devices' info and programming ``xclbin``.
-  - Proposes a spec of adding NVIDIA MIG for A100 devices.
-    Multi-Instance GPU (MIG) is new feature allows GPUs based on the
-    NVIDIA Ampere architecture (such as NVIDIA A100) to be securely
-    partitioned, which is different from VGPU feature, MIG driver
-    is need to managed compatible with PGPU and VGPU.
+  - Proposes a spec of adding NVIDIA MIG for A100 devices. Multi-Instance
+    GPU (MIG) is new feature allows GPUs based on the NVIDIA Ampere
+    architecture (such as NVIDIA A100) to be securely partitioned, which
+    is different from VGPU feature, MIG driver is need to managed compatible
+    with PGPU and VGPU.
   - Docs and unit tests completement.
 releases:
   - version: 9.0.0.0rc1
@@ -24,3 +24,4 @@ releases:
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/cyborg/zed.html
