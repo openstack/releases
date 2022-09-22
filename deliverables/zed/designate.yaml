@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 93dee6a3ff44fb7470b3008e8fbbaf99822bbe82
+  - version: 15.0.0.0rc2
+    projects:
+      - repo: openstack/designate
+        hash: 989835c8c96113d9baef5a7b395a5a353075988a
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
