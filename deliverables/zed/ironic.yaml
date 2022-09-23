@@ -15,20 +15,26 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 4a347b3069498d0f2b49105014e6e118b5972c0f
+  - version: 21.1.0
+    projects:
+      - repo: openstack/ironic
+        hash: fa2c3aa58ca98bca6eacf6eb8c66f5fdca8bc8f5
 branches:
   - name: bugfix/20.2
     location: 20.2.0
   - name: bugfix/21.0
     location: 21.0.0
+  - name: stable/zed
+    location: 21.1.0
 cycle-highlights:
   - Support for the `syslinux <https://wiki.syslinux.org/wiki/index.php?title=Syslinux_6_Changelog#Changes_in_6.04>`_
     and the often separately packaged `isolinux <https://wiki.syslinux.org/wiki/index.php?title=ISOLINUX>`_
     and `pxelinux <https://wiki.syslinux.org/wiki/index.php?title=PXELINUX>`_
     are deprecated.
   - The deprecated support for instance network booting (not to be confused
-    with the ramdisk deploy, iSCSI boot or Anaconda deploy) has been removed.
-    The `boot_option` capability is no longer supported.
-  - Ironic can automatically provide an instance requestor’s project, `lessee`
-    rights to the Bare Metal machine under the Role Based Access Control model.
-    This feature, is normally disabled, but can be enabled using the
-    `[conductor]automatic_lessee` configuration option.
+    with the ramdisk deploy, iSCSI boot or Anaconda deploy) has been
+    removed. The `boot_option` capability is no longer supported.
+  - Ironic can automatically provide an instance requestor’s project,
+    `lessee` rights to the Bare Metal machine under the Role Based Access
+    Control model. This feature, is normally disabled, but can be enabled
+    using the `[conductor]automatic_lessee` configuration option.
