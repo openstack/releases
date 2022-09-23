@@ -6,3 +6,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-image-elements: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 008b0d7e83bb75d89fed85db0a4a422519fd246b
+branches:
+  - name: stable/zed
+    location: 17.0.0.0rc1
