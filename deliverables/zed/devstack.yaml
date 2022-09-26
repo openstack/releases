@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: 0b0e6a647477131b5953858b3eed3d463412779f
+    name: stable/zed
 repository-settings:
   openstack/devstack: {}
