@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: 793f553bddfb74394f9d98eb5f1618b0caf2f9c3
+    name: stable/zed
 repository-settings:
   openstack/grenade: {}
