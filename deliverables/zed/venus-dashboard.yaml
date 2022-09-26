@@ -3,6 +3,11 @@ launchpad: openstack-venus
 release-model: cycle-with-rc
 team: venus
 type: horizon-plugin
+cycle-highlights:
+  - Support get module logs and render to a chart.
+  - Support get module logs filtered by module.
+  - Support get log storage days.
+  - Support deploying via devstack, it can be access and use in Horizon project.
 repository-settings:
   openstack/venus-dashboard: {}
 releases:
