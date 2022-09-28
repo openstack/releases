@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 2956a01d0fb4cd83cd4a07f4359c5b5d80bc9278
+  - version: 21.0.0.0rc2
+    projects:
+      - repo: openstack/neutron
+        hash: 8eefeb36b45770259ece9e7a60b48c427a1cf27a
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
