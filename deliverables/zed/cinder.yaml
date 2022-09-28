@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 7809711a22ac5fc001c7c68a84a03799484ef4d2
+  - version: 21.0.0.0rc2
+    projects:
+      - repo: openstack/cinder
+        hash: f1ebe259df3e81a241a708ecd50b6e550ac108ea
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
