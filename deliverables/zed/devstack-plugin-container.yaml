@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: b323f5b71a17ce17de4cff2b01742bf322063d26
+    name: stable/zed
 repository-settings:
   openstack/devstack-plugin-container: {}
