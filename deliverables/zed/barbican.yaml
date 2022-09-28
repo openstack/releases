@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 304d5c0434f06bd9211642fc8663107b508b98a0
+  - version: 15.0.0.0rc2
+    projects:
+      - repo: openstack/barbican
+        hash: 1068bc7ce96a3947c4e7b6430b4cd5f33ff3b261
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
