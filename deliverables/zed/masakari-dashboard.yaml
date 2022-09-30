@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: 83a8ea2363ebceda1911259ec95cfc7b7fe0bf89
+  - version: 7.0.0
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 83a8ea2363ebceda1911259ec95cfc7b7fe0bf89
+    diff-start: 6.0.0
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1

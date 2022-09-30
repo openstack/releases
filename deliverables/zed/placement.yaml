@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 5ec38f6d3b76619fac442a85a9b5c73dc606b83a
+  - version: 8.0.0
+    projects:
+      - repo: openstack/placement
+        hash: 5ec38f6d3b76619fac442a85a9b5c73dc606b83a
+    diff-start: 7.0.0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

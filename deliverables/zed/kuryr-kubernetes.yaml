@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 0df1f9176bcd9c46dc706c395140ea02d015cf1b
+  - version: 7.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 0df1f9176bcd9c46dc706c395140ea02d015cf1b
+    diff-start: 6.0.0
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1

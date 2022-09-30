@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: 02edabd8733744f9f33a851da51d6312301d8c74
+  - version: 14.0.0
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 02edabd8733744f9f33a851da51d6312301d8c74
+    diff-start: 13.0.0
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

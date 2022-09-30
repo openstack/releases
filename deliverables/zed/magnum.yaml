@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: b5a36932e9013308b5732c6bc62af375d62be979
+  - version: 15.0.0
+    projects:
+      - repo: openstack/magnum
+        hash: b5a36932e9013308b5732c6bc62af375d62be979
+    diff-start: 14.0.0.0rc1
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

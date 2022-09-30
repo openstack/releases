@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 3cba4a40fcbbfb89e334533206712f1058d03672
+  - version: 17.0.0
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 3cba4a40fcbbfb89e334533206712f1058d03672
+    diff-start: 16.0.0
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1

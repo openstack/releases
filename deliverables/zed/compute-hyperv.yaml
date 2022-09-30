@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: 4b80f61a5c4078ea6c2bbc922cc67faf23a12a19
+  - version: 15.0.0
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 4b80f61a5c4078ea6c2bbc922cc67faf23a12a19
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

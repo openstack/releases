@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: ab376f0ec739f3c6e69b8cff2e0dbb29465fad88
+  - version: 10.0.0
+    projects:
+      - repo: openstack/zun
+        hash: ab376f0ec739f3c6e69b8cff2e0dbb29465fad88
+    diff-start: 9.0.0
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1

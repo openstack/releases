@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas-dashboard
         hash: e41e5d10f31a9e34ba453d9fb6ec1ee3911af922
+  - version: 4.0.0
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: e41e5d10f31a9e34ba453d9fb6ec1ee3911af922
+    diff-start: ussuri-em
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1

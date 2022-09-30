@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 8175285adf94e19b682d54af8f51e96bcfe3e203
+  - version: 15.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 8175285adf94e19b682d54af8f51e96bcfe3e203
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

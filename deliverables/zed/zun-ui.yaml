@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: fd86b87a4301dcafcfb4fb6def38df8ab4006ccf
+  - version: 10.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: fd86b87a4301dcafcfb4fb6def38df8ab4006ccf
+    diff-start: 9.0.0
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1

@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 021f2736ff35802db5c82e0b0f5308904912a037
+  - version: 15.0.0
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 021f2736ff35802db5c82e0b0f5308904912a037
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

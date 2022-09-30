@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: c943f4a510a0f022ebce8364c2bc2e6fa23b3cf7
+  - version: 17.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: c943f4a510a0f022ebce8364c2bc2e6fa23b3cf7
+    diff-start: 16.0.0.0rc1
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1

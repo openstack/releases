@@ -21,6 +21,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: bc8b25fe7b87efaf783e93047745f2c462f09147
+  - version: 9.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: bc8b25fe7b87efaf783e93047745f2c462f09147
+    diff-start: 8.0.0
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1

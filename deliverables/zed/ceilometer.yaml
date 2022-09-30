@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 6f88ee6be9a3ae5c78587f1a2bc8cd2e9a5a2fa7
+  - version: 19.0.0
+    projects:
+      - repo: openstack/ceilometer
+        hash: 6f88ee6be9a3ae5c78587f1a2bc8cd2e9a5a2fa7
+    diff-start: 18.0.0
 branches:
   - name: stable/zed
     location: 19.0.0.0rc1

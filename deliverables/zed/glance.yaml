@@ -25,6 +25,11 @@ releases:
     projects:
       - repo: openstack/glance
         hash: d45b7c26af2963bb811c5596a42be10cb75c0685
+  - version: 25.0.0
+    projects:
+      - repo: openstack/glance
+        hash: d45b7c26af2963bb811c5596a42be10cb75c0685
+    diff-start: 24.0.0
 branches:
   - name: stable/zed
     location: 25.0.0.0rc1

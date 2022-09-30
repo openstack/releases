@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 24a80d355f29f50069cbac4489b395559f5d2b36
+  - version: 6.0.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 24a80d355f29f50069cbac4489b395559f5d2b36
+    diff-start: 5.0.0
 branches:
   - name: stable/zed
     location: 6.0.0.0rc1

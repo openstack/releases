@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: afcf34decc7dc55adc55ab366e03fbf472cd52ad
+  - version: 14.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: afcf34decc7dc55adc55ab366e03fbf472cd52ad
+    diff-start: 13.0.0
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

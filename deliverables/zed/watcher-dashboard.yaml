@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: b526383ebae37f3bdb6ef4be9245684967c46d65
+  - version: 8.0.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: b526383ebae37f3bdb6ef4be9245684967c46d65
+    diff-start: 7.0.0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

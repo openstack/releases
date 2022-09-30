@@ -32,6 +32,11 @@ releases:
     projects:
       - repo: openstack/manila
         hash: f8f89548f322107e56dcc1d016a2f88dd3ecb9f3
+  - version: 15.0.0
+    projects:
+      - repo: openstack/manila
+        hash: f8f89548f322107e56dcc1d016a2f88dd3ecb9f3
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

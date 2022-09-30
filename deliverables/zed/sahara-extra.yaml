@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+  - version: 16.0.0
+    projects:
+      - repo: openstack/sahara-extra
+        hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+    diff-start: ussuri-em
 branches:
   - name: stable/zed
     location: 16.0.0.0rc1

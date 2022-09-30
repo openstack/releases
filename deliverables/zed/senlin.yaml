@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 5d3bc56e01f163b62b6e5d53c53ec1bdcf792cc7
+  - version: 14.0.0
+    projects:
+      - repo: openstack/senlin
+        hash: 5d3bc56e01f163b62b6e5d53c53ec1bdcf792cc7
+    diff-start: 13.0.0
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

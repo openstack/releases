@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: c2e55249e8af4f408d68bdc1381d9c720b29bdad
+  - version: 15.0.0
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: c2e55249e8af4f408d68bdc1381d9c720b29bdad
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
