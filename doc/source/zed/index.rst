@@ -2,7 +2,7 @@
 Zed
 ===
 
-Projected Release Date: 05 October, 2022
+Originally Released: 05 October, 2022
 
 .. toctree::
    :maxdepth: 1
