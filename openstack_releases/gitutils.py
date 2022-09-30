@@ -445,6 +445,10 @@ def get_branch_base(workdir, repo, branch):
         LOG.warning('failed to retrieve branch base: %s [%s]',
                     e, e.output.strip())
         return None
+    if parents == '':
+        LOG.warning('branch base query result was empty for %s repository',
+                    repo)
+        return None
     parent = parents.splitlines()[-1]
     # Now get the ^^! commit
     cmd = [
