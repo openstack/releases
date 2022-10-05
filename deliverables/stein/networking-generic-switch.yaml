@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 0027c049002ece9f84f187c7fa6bcb4ceed642e3
+  - version: stein-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: a252b2fe93e509a4543d0d3e967e8524cb5f57a0
 branches:
   - location: 1.3.1
     name: stable/stein
