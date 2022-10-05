@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: cdf45da5553f4daed20dc6bd8800360130c75f55
+  - version: 15.0.0
+    projects:
+      - repo: openstack/zaqar
+        hash: cdf45da5553f4daed20dc6bd8800360130c75f55
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

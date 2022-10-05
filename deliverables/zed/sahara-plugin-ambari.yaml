@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-ambari
         hash: e52bcb6626408d522b15dbd5bbe1d457e04e8173
+  - version: 8.0.0
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: e52bcb6626408d522b15dbd5bbe1d457e04e8173
+    diff-start: 7.0.0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

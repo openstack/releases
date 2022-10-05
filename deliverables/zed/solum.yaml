@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum
         hash: bdb968144cd4fb276a37f67ba492b57fd9ba63ad
+  - version: 13.0.0
+    projects:
+      - repo: openstack/solum
+        hash: bdb968144cd4fb276a37f67ba492b57fd9ba63ad
+    diff-start: 12.0.0
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

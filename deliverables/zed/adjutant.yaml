@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: b305d7285f3ea2e12210e592702c4d66a31d6646
+  - version: 5.0.0
+    projects:
+      - repo: openstack/adjutant
+        hash: b305d7285f3ea2e12210e592702c4d66a31d6646
+    diff-start: 3.0.0
 branches:
   - name: stable/zed
     location: 5.0.0.0rc1

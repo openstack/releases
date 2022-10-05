@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 4bab5baccae7bcf437d0279384f1ac670095e759
+  - version: 15.0.0
+    projects:
+      - repo: openstack/ec2-api
+        hash: 4bab5baccae7bcf437d0279384f1ac670095e759
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 2b103c40a7eee5f2395db8779c380a95f7f7ca47
+  - version: 9.0.0
+    projects:
+      - repo: openstack/watcher
+        hash: 2b103c40a7eee5f2395db8779c380a95f7f7ca47
+    diff-start: 8.0.0
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1

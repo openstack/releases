@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 6cd493d42097a092ef133338a09835ea6158c7e7
+  - version: 8.0.0
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 6cd493d42097a092ef133338a09835ea6158c7e7
+    diff-start: 7.0.0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

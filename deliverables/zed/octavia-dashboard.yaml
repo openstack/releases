@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: a51d1976699daa417d9ce0e0525192c18dd195c8
+  - version: 10.0.0
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: a51d1976699daa417d9ce0e0525192c18dd195c8
+    diff-start: 9.0.0
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1

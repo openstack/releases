@@ -16,6 +16,15 @@ releases:
         hash: 6c06dc58f3cf897cc4134b040d02264203ce8e9b
       - repo: openstack/freezer-dr
         hash: ba060b277d6d109bd06539550de0c7d43ee7755b
+  - version: 13.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 0d47828fa9b390830c352faca454fe2fcf8bc80e
+      - repo: openstack/freezer-api
+        hash: 6c06dc58f3cf897cc4134b040d02264203ce8e9b
+      - repo: openstack/freezer-dr
+        hash: ba060b277d6d109bd06539550de0c7d43ee7755b
+    diff-start: 12.0.0
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

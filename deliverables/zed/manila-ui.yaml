@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 93070d335bd2d3cce1f703fc53e3f97b8555d1a2
+  - version: 8.0.0
+    projects:
+      - repo: openstack/manila-ui
+        hash: 93070d335bd2d3cce1f703fc53e3f97b8555d1a2
+    diff-start: 7.0.0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

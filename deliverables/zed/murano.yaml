@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 4434b57486eda599a15624dd27eca7ef18bcfa1f
+  - version: 14.0.0
+    projects:
+      - repo: openstack/murano
+        hash: 4434b57486eda599a15624dd27eca7ef18bcfa1f
+    diff-start: 13.0.0.0rc1
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

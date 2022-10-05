@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 1ead679b313fce766448fea73d424cd1c11b57c7
+  - version: 15.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: 1ead679b313fce766448fea73d424cd1c11b57c7
+    diff-start: 14.0.0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/magnum-ui
         hash: f8580d7c2b274dec8aed99bb2f83d7c18035ccbb
+  - version: 11.0.0
+    projects:
+      - repo: openstack/magnum-ui
+        hash: f8580d7c2b274dec8aed99bb2f83d7c18035ccbb
+    diff-start: 10.0.0
 branches:
   - name: stable/zed
     location: 11.0.0.0rc1

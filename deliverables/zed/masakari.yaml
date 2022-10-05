@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: 6773fa9b110d8d011d61d5cbefad3b984624676e
+  - version: 14.0.0
+    projects:
+      - repo: openstack/masakari
+        hash: 6773fa9b110d8d011d61d5cbefad3b984624676e
+    diff-start: 13.0.0
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

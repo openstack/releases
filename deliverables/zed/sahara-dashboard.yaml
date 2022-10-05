@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 0c57fd76c4c39efc1510df5aaceb22fcaa9e24ad
+  - version: 17.0.0
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 0c57fd76c4c39efc1510df5aaceb22fcaa9e24ad
+    diff-start: 16.0.0
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1

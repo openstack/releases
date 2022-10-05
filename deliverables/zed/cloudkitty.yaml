@@ -15,6 +15,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 15b2bfb8290720e08c7c124d52dccc3ae5d24d43
+  - version: 17.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 15b2bfb8290720e08c7c124d52dccc3ae5d24d43
+    diff-start: 16.0.0
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
