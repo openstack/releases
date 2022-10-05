@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: efadfc76208ca0aebd140c633995f755b4cb4202
+  - version: queens-eol
+    projects:
+      - repo: openstack/sushy
+        hash: efadfc76208ca0aebd140c633995f755b4cb4202
 branches:
   - name: stable/queens
     location: 1.3.0

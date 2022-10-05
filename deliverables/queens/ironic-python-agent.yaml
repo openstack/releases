@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: 71e134a5d352722a77c27924c91591609a60b645
+  - version: queens-eol
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 9ef7d9fd1d779a03a7c75c207b8a05edf2ddd98b
 branches:
   - location: 3.2.0
     name: stable/queens
