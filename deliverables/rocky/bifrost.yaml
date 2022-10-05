@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: f94b56f015d7bed100199231b40b7583796565d9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: de386d2234ee169f18e7f3d19472d1fedc687967
 branches:
   - location: 5.1.0
     name: stable/rocky

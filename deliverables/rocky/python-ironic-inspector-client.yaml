@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 53bf4e8a211f09e8caf3e4633393f47f51af3600
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 314f5eb3cd031924b986c419f6f2595e71969227
 branches:
   - location: 3.3.0
     name: stable/rocky

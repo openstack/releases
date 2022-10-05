@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: a48fe19ceeb64575e8b9619552014dc9c6853c90
+  - version: rocky-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: a48fe19ceeb64575e8b9619552014dc9c6853c90
 branches:
   - location: 1.2.0
     name: stable/rocky
