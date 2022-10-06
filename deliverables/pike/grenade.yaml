@@ -4,6 +4,11 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 948ef7833149dcb982054a947507b9e32f007d34
 branches:
   - location:
       openstack/grenade: 1e3a981a6cf6216daa60fcd7583ad6e9cb1cefcc

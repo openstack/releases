@@ -4,6 +4,11 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/devstack
+        hash: a0fab742f1c38a6082e04f958b8367ca4568e5e3
 branches:
   - location:
       openstack/devstack: 98ab7d9646730f02983380648831aa2682abcc0c
