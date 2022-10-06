@@ -37,6 +37,10 @@ releases:
       - hash: d01ab6f50754594d20bd7a05a807e5fc6661f08e
         repo: openstack/mistral-lib
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: f4a2a09ed3a8f7e7ad2240817924e36e20692ac2
 branches:
   - name: stable/pike
     location: 0.2.0
