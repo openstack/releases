@@ -23,6 +23,10 @@ releases:
       - hash: 52bce9d14566c8e0d22832c472a341e09ab67910
         repo: openstack/python-senlinclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 304f88d132d3851aca4e10e27f984a4dee9de373
 team: senlin
 type: library
 repository-settings:
