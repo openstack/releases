@@ -15,6 +15,10 @@ releases:
       - repo: openstack/barbican
         hash: ffea7f79c9d4d1c37ecce44bc424eaff9704bdaa
     diff-start: 13.0.0
+  - version: 14.0.1
+    projects:
+      - repo: openstack/barbican
+        hash: 6e126c91c59b686948dc6ddc5996fe99fa38a5b7
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
