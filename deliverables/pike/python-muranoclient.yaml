@@ -23,6 +23,10 @@ releases:
       - hash: 76593c6a140771d19f2b0d87cc181db792097ffa
         repo: openstack/python-muranoclient
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: deffc19f1d638d5da235f156407adf537ef44b99
 team: murano
 type: library
 repository-settings:

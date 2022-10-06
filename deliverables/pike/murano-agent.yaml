@@ -19,6 +19,10 @@ releases:
       - hash: c4c304fd38b014231951773319fe260bec39c128
         repo: openstack/murano-agent
     version: pike-em
+  - version: pike-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: d033c18656c4b6e27ea50488d1e329e559dab2fe
 release-notes: https://docs.openstack.org/releasenotes/murano-agent/pike.html
 repository-settings:
   openstack/murano-agent: {}
