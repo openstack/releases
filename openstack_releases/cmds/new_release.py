@@ -502,8 +502,8 @@ def main():
                              len(change_lines), repo, last_tag)
                 else:
                     LOG.info("%s changes to %s are:", len(change_lines), repo)
-                for sha, descr in change_lines[0:max_changes_show]:
-                    LOG.info("* %s %s", sha[:7], descr)
+                for _sha, descr in change_lines[0:max_changes_show]:
+                    LOG.info("* %s %s", _sha[:7], descr)
                 leftover_change_lines = change_lines[max_changes_show:]
                 if leftover_change_lines:
                     LOG.info("   and %s more changes...",
