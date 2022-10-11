@@ -3,5 +3,13 @@ launchpad: puppet-placement
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: fee2a7fd73358b7c037edebb9c44b63023e138dd
+        repo: openstack/puppet-placement
+    version: 8.0.0
 repository-settings:
   openstack/puppet-placement: {}
+branches:
+  - name: stable/zed
+    location: 8.0.0

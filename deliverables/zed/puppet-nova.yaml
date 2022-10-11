@@ -3,5 +3,13 @@ launchpad: puppet-nova
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 2000a2e6bda526c43aa4dd0fac6bc3e9b7a27866
+        repo: openstack/puppet-nova
+    version: 21.0.0
 repository-settings:
   openstack/puppet-nova: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

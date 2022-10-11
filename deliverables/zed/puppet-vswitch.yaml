@@ -3,5 +3,13 @@ launchpad: puppet-vswitch
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: feb79d61d3b05d9150ab6bd7a2301ae58f16a007
+        repo: openstack/puppet-vswitch
+    version: 17.0.0
 repository-settings:
   openstack/puppet-vswitch: {}
+branches:
+  - name: stable/zed
+    location: 17.0.0

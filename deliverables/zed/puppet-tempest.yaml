@@ -3,5 +3,13 @@ launchpad: puppet-tempest
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 79465b34b5b85ee686a5b94f7787e797983e745b
+        repo: openstack/puppet-tempest
+    version: 21.0.0
 repository-settings:
   openstack/puppet-tempest: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

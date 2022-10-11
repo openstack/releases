@@ -3,5 +3,13 @@ launchpad: puppet-watcher
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 32683a7882309a64e8641505dac0b1fd38ffa333
+        repo: openstack/puppet-watcher
+    version: 21.0.0
 repository-settings:
   openstack/puppet-watcher: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

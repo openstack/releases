@@ -3,5 +3,13 @@ launchpad: puppet-swift
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: b39a938a62e33dacc59f0ec16c77231fd5f306ad
+        repo: openstack/puppet-swift
+    version: 21.0.0
 repository-settings:
   openstack/puppet-swift: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

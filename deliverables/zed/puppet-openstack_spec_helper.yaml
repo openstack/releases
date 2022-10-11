@@ -6,5 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
-# Note: deliverable was not released in xena
-# Note: deliverable was not released in yoga
+branches:
+  - name: stable/zed
+    location:
+      openstack/puppet-openstack_spec_helper: cce6ff5fc236f66aae19bd5b1561681404f34f62

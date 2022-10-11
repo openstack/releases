@@ -3,5 +3,13 @@ launchpad: puppet-aodh
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: a1f3b1b006d0134dc36082a45501ef25ea2d6625
+        repo: openstack/puppet-aodh
+    version: 21.0.0
 repository-settings:
   openstack/puppet-aodh: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

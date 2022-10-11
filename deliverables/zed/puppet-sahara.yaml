@@ -3,5 +3,13 @@ launchpad: puppet-sahara
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 5b9f473c44d8724b8bb237554dafb6e39e43a720
+        repo: openstack/puppet-sahara
+    version: 21.0.0
 repository-settings:
   openstack/puppet-sahara: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0
