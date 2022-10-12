@@ -5,6 +5,11 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+cycle-highlights:
+  - Added support for microversions.
+  - Added new microversion 1.1 that includes a new API for registering
+    consumers of secrets. Previously consumers could only be registered
+    for Barbican container objects.
 releases:
   - version: 15.0.0.0rc1
     projects:
