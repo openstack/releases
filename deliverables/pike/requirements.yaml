@@ -15,5 +15,9 @@ releases:
       - repo: openstack/requirements
         hash: f5ce4279b968d04674ea32052cfe83f9a1aaddb8
         tarball-base: openstack_requirements
+  - version: pike-eol
+    projects:
+      - repo: openstack/requirements
+        hash: e0cb0c20b07a14a6ef1fd60f36c4e95f2964dc21
 repository-settings:
   openstack/requirements: {}
