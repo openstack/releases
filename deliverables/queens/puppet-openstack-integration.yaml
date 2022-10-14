@@ -1,0 +1,13 @@
+---
+launchpad: puppet-openstack-integration
+release-model: untagged
+stable-branch-type: tagless
+releases:
+  - projects:
+      - hash: 0630bddeccac6633c8459d83336653dfc49ffe16
+        repo: openstack/puppet-openstack-integration
+    version: queens-eol
+team: 'Puppet OpenStack'
+type: other
+repository-settings:
+  openstack/puppet-openstack-integration: {}

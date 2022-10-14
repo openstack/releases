@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: ce25f0c5be3d7c6f9212e91109d9bb18021379dd
 branches:
   - name: stable/stein
     location:
