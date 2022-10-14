@@ -6,3 +6,8 @@ team: nova
 type: client-library
 repository-settings:
   openstack/python-novaclient: {}
+releases:
+  - version: 18.2.0
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 2af1d0c51431b3a773e1e52158b9cf43e4645fdd
