@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 17c796b49171b6133e988f78c92d7c9b7ed3fcf3
+  - version: queens-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: fc3eaa73026fec9feec3ef4e6295d08215d8b4ce
 branches:
   - location: 7.1.0
     name: stable/queens

@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 5141cae6dc4eba2b609957b931b8d17ccdc8a007
+  - version: queens-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 5141cae6dc4eba2b609957b931b8d17ccdc8a007
 branches:
   - location: 1.0.0
     name: stable/queens

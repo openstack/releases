@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 4d06c1246b3705147e1ba2bac527d06b7adf7055
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 379702f543b5992801de7895d3cad35614787bed
 branches:
   - name: stable/queens
     location: 3.1.0

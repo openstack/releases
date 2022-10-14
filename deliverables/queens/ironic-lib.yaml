@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 370deed99b28169d27c8300ca779789c99f8ba6d
+  - version: queens-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 370deed99b28169d27c8300ca779789c99f8ba6d
 branches:
   - name: stable/queens
     location: 2.12.0

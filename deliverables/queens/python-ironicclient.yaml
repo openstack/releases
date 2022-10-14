@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: e945946df4b2bbd050c9f7b2ca3b8a3722b1f69b
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 876c132a536d7c8bf28f565d82bc28aba28735e7
 branches:
   - name: stable/queens
     location: 2.2.0

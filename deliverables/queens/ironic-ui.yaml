@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 6aa7e39514763a70fbcbe090df10a0b1b975f918
+  - version: queens-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 6aa7e39514763a70fbcbe090df10a0b1b975f918
 branches:
   - name: stable/queens
     location: 3.1.0

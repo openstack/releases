@@ -62,6 +62,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 05bf8f69d6eacd562cf3bba82bc7d692c00e8a3e
+  - version: queens-eol
+    projects:
+      - repo: openstack/ironic
+        hash: 7b5a86cf1673a19e9fdd66001fc6ec9fd7950cc1
 branches:
   - location: 10.1.0
     name: stable/queens
