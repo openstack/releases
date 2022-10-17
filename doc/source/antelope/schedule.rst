@@ -38,7 +38,7 @@ for future releases.
 Antelope-1 milestone
 --------------------
 
-16 November, 2022 is the Antelope-1 milestone. See project-specific notes
+17 November, 2022 is the Antelope-1 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _a-cycle-trail:
@@ -54,7 +54,7 @@ their Zed deliverables by 14 December, 2022.
 Antelope-2 milestone
 --------------------
 
-04 January, 2023 is the Antelope-2 milestone. See project-specific notes
+05 January, 2023 is the Antelope-2 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _a-mf:
@@ -80,7 +80,7 @@ projects and who do not have a code contribution this cycle, and therefore won't
 automatically be considered an Active Technical Contributor and allowed
 to vote. This is done by adding extra-atcs to
 https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
-before the Extra-ATC freeze on 01 February, 2023.
+before the Extra-ATC freeze on 02 February, 2023.
 
 .. _a-final-lib:
 
@@ -96,7 +96,7 @@ changes before feature freeze.
 Antelope-3 milestone
 --------------------
 
-15 February, 2023 is the Antelope-3 milestone. See project-specific notes
+16 February, 2023 is the Antelope-3 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _a-ff:
