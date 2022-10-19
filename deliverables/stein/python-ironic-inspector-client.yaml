@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 9bb11505d79c97e28b32c821dda0e47ef2ef1dc7
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 37defd6a1d6cc7d7e6d6d7d3d36b6ea59413aa0b
 branches:
   - location: 3.5.0
     name: stable/stein

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: e6378be7995dc57225f9ffa260afa5a03b0a580d
+  - version: stein-eol
+    projects:
+      - repo: openstack/sushy
+        hash: ee5458bbe3df6b7a12d2e7b35cadb8b7bc5a9cff
 branches:
   - name: stable/stein
     location: 1.8.0
