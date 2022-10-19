@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 877875a62fee39d8d287fae144c907e4a4fd146d
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 877875a62fee39d8d287fae144c907e4a4fd146d
 branches:
   - location: 2.5.0
     name: stable/rocky

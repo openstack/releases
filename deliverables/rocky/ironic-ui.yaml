@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: ca94a7661ef76f752e533e386ba929bb2a94b539
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: ca94a7661ef76f752e533e386ba929bb2a94b539
 branches:
   - location: 3.3.0
     name: stable/rocky
