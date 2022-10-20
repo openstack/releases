@@ -67,6 +67,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 528ec941da294b454221170e1919b7dc18d10e86
+  - version: train-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 6d3361872f584c610eec146f47f652c4132a2818
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

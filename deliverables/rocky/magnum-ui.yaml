@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/magnum-ui
         hash: c23a2d84f4f561adad65e49b0d960edd2fd82194
+  - version: rocky-eol
+    projects:
+      - repo: openstack/magnum-ui
+        hash: ed5b700bd2d85b96d36554224e1e1209240cc818
 repository-settings:
   openstack/magnum-ui: {}
 release-notes: https://docs.openstack.org/releasenotes/magnum-ui/rocky.html

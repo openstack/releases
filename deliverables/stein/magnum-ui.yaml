@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/magnum-ui
         hash: c9c8b713e93251eea04bdf5849f9de370c1b5c70
+  - version: stein-eol
+    projects:
+      - repo: openstack/magnum-ui
+        hash: 2e494fb673fc79dbbc94ff67644eaf8f42efce6c
 branches:
   - location: 5.1.0
     name: stable/stein
