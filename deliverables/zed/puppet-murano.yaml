@@ -3,5 +3,13 @@ launchpad: puppet-murano
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 66b2a1ebfa977f86cf5a4a13a4a221d78c93a31e
+        repo: openstack/puppet-murano
+    version: 21.0.0
 repository-settings:
   openstack/puppet-murano: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-ironic
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 0d764220e87fe38f38dd04c25030379b6e05b637
+        repo: openstack/puppet-ironic
+    version: 21.0.0
 repository-settings:
   openstack/puppet-ironic: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

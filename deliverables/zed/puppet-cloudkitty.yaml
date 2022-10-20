@@ -3,5 +3,13 @@ launchpad: puppet-cloudkitty
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 46524134fccead41ded9df49583b5234e4d338eb
+        repo: openstack/puppet-cloudkitty
+    version: 10.0.0
 repository-settings:
   openstack/puppet-cloudkitty: {}
+branches:
+  - name: stable/zed
+    location: 10.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-keystone
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: c8685a4ef41cb04e75d130eb145547fae91f1c4a
+        repo: openstack/puppet-keystone
+    version: 21.0.0
 repository-settings:
   openstack/puppet-keystone: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

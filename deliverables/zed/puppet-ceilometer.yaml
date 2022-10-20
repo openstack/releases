@@ -3,5 +3,13 @@ launchpad: puppet-ceilometer
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: c7eb9c1fc36175d040af4dfa86d428f688e47508
+        repo: openstack/puppet-ceilometer
+    version: 21.0.0
 repository-settings:
   openstack/puppet-ceilometer: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-zaqar
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 7018bff22260ec5570d3577e92b595c815d9000f
+        repo: openstack/puppet-zaqar
+    version: 21.0.0
 repository-settings:
   openstack/puppet-zaqar: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-qdr
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: dfe49c78947b9b19779abb04e334ffa0eb6d54a6
+        repo: openstack/puppet-qdr
+    version: 10.0.0
 repository-settings:
   openstack/puppet-qdr: {}
+branches:
+  - name: stable/zed
+    location: 10.0.0

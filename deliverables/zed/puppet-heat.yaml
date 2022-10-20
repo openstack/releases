@@ -3,5 +3,13 @@ launchpad: puppet-heat
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 2de13d78ea938f812a617e18a134dc67f6c0f270
+        repo: openstack/puppet-heat
+    version: 21.0.0
 repository-settings:
   openstack/puppet-heat: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

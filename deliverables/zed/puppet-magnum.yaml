@@ -3,5 +3,13 @@ launchpad: puppet-magnum
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: c7f71ef17a213538034b2b8ff462c0fd3c162404
+        repo: openstack/puppet-magnum
+    version: 21.0.0
 repository-settings:
   openstack/puppet-magnum: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

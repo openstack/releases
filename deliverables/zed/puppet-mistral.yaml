@@ -3,5 +3,13 @@ launchpad: puppet-mistral
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: c6bf5a6f5809c584e0c72b76487594b78704a1fc
+        repo: openstack/puppet-mistral
+    version: 21.0.0
 repository-settings:
   openstack/puppet-mistral: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

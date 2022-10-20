@@ -3,5 +3,13 @@ launchpad: puppet-openstacklib
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 8cf6305bc49cbf89441add8986bc18836d0bd142
+        repo: openstack/puppet-openstacklib
+    version: 21.0.0
 repository-settings:
   openstack/puppet-openstacklib: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

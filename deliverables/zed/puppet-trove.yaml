@@ -3,5 +3,13 @@ launchpad: puppet-trove
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 39e94a5d4621b19da6ca09848d2f3e6eaa1bc262
+        repo: openstack/puppet-trove
+    version: 21.0.0
 repository-settings:
   openstack/puppet-trove: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

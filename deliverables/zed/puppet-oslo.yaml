@@ -3,5 +3,13 @@ launchpad: puppet-oslo
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 99bea7cc244f2c21bd34824cffb8777281edc8d8
+        repo: openstack/puppet-oslo
+    version: 21.0.0
 repository-settings:
   openstack/puppet-oslo: {}
+branches:
+  - name: stable/zed
+    location: 21.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-vitrage
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 09c70ac0480ae248e9d601cd70e917275ced19af
+        repo: openstack/puppet-vitrage
+    version: 11.0.0
 repository-settings:
   openstack/puppet-vitrage: {}
+branches:
+  - name: stable/zed
+    location: 11.0.0

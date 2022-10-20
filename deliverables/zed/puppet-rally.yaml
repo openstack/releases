@@ -3,5 +3,13 @@ launchpad: puppet-rally
 release-model: cycle-with-rc
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: dd32b32aa0ad006f612c4758b91115c84f8e04de
+        repo: openstack/puppet-rally
+    version: 9.0.0
 repository-settings:
   openstack/puppet-rally: {}
+branches:
+  - name: stable/zed
+    location: 9.0.0
