@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: ae38e4e9a9378b51d5f611c8b398635ed13bd1b5
+  - version: wallaby-em
+    projects:
+      - repo: openstack/cyborg
+        hash: ae38e4e9a9378b51d5f611c8b398635ed13bd1b5
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1
