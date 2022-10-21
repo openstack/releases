@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 6bbae46890f458cbb0d7cb5dd87e80f07a305b53
+  - version: wallaby-em
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 6bbae46890f458cbb0d7cb5dd87e80f07a305b53
 branches:
   - name: stable/wallaby
     location: 2.10.1

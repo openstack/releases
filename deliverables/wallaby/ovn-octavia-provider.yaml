@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 7ef3cf6aecddb8a906765a8d918fcce8c56f94e6
+  - version: wallaby-em
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 7ef3cf6aecddb8a906765a8d918fcce8c56f94e6
 branches:
   - name: stable/wallaby
     location: 1.0.0
