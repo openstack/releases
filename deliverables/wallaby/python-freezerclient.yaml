@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: 2fe404f68f00f97ab8c5ac718f8fd026dfde28f3
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 2fe404f68f00f97ab8c5ac718f8fd026dfde28f3
 branches:
   - name: stable/wallaby
     location: 4.2.0
