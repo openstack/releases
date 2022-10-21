@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 9a0da35d3ad1fc628709c35e9f02c888a8fee6a3
+  - version: wallaby-em
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: 9a0da35d3ad1fc628709c35e9f02c888a8fee6a3
 branches:
   - name: stable/wallaby
     location: 14.1.0
