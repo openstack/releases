@@ -15,6 +15,10 @@ releases:
       - repo: openstack/sahara-plugin-spark
         hash: 31fc4cbef8416928d3aee7270aedb6448ce1d325
     diff-start: 4.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 31fc4cbef8416928d3aee7270aedb6448ce1d325
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
