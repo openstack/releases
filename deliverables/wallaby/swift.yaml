@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: c6a64036651e18f3d7d0715c5d4876257aaa0e6f
+  - version: wallaby-em
+    projects:
+      - repo: openstack/swift
+        hash: c6a64036651e18f3d7d0715c5d4876257aaa0e6f
 branches:
   - name: stable/wallaby
     location: 2.27.0
