@@ -32,6 +32,10 @@ releases:
       - hash: 3cfea75c6874fcff066fdd566adb5a6a4da5d26c
         repo: openstack/puppet-freezer
     version: 18.4.1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: 3cfea75c6874fcff066fdd566adb5a6a4da5d26c
 branches:
   - name: stable/wallaby
     location: 18.4.0

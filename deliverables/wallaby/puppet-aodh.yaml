@@ -30,6 +30,10 @@ releases:
       - hash: 5817b59f38c1cde9da220ab8790fb9fd1c3829f6
         repo: openstack/puppet-aodh
     version: 18.4.1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 5817b59f38c1cde9da220ab8790fb9fd1c3829f6
 branches:
   - name: stable/wallaby
     location: 18.4.0

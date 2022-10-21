@@ -28,6 +28,10 @@ releases:
       - hash: c83a1d5b37cda0320470d6c9297dc1da5c028737
         repo: openstack/puppet-panko
     version: 18.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-panko
+        hash: c83a1d5b37cda0320470d6c9297dc1da5c028737
 branches:
   - name: stable/wallaby
     location: 18.4.0

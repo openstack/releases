@@ -30,6 +30,10 @@ releases:
       - hash: 5edeebfa4466ef129017aa05e91d01a5925ffa2c
         repo: openstack/puppet-barbican
     version: 18.4.1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 5edeebfa4466ef129017aa05e91d01a5925ffa2c
 branches:
   - name: stable/wallaby
     location: 18.4.0

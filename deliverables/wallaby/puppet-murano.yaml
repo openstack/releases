@@ -26,6 +26,10 @@ releases:
       - hash: 8ceb65bf60ee2862698de7e52c6d7481bfae1108
         repo: openstack/puppet-murano
     version: 18.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 8ceb65bf60ee2862698de7e52c6d7481bfae1108
 branches:
   - name: stable/wallaby
     location: 18.4.0

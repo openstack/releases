@@ -26,6 +26,10 @@ releases:
       - hash: efb3e13790b354b435aac5cbbc4c8907d703226f
         repo: openstack/puppet-vitrage
     version: 8.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: efb3e13790b354b435aac5cbbc4c8907d703226f
 branches:
   - name: stable/wallaby
     location: 8.4.0

@@ -34,6 +34,10 @@ releases:
       - hash: c9fe15d977430a3fc1236cce21b40643cf90b02f
         repo: openstack/puppet-nova
     version: 18.6.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-nova
+        hash: c9fe15d977430a3fc1236cce21b40643cf90b02f
 branches:
   - name: stable/wallaby
     location: 18.4.0

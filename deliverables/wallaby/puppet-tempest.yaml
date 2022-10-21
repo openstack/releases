@@ -34,6 +34,10 @@ releases:
       - hash: 1276ff514a0775bb0a27ffb4f591106e7383d6ae
         repo: openstack/puppet-tempest
     version: 18.5.1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 1276ff514a0775bb0a27ffb4f591106e7383d6ae
 branches:
   - name: stable/wallaby
     location: 18.4.0

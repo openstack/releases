@@ -26,6 +26,10 @@ releases:
       - hash: b45833efeabc1ccda5c52dc7c673cc5217b5ee86
         repo: openstack/puppet-watcher
     version: 18.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: b45833efeabc1ccda5c52dc7c673cc5217b5ee86
 branches:
   - name: stable/wallaby
     location: 18.4.0
