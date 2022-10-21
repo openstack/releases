@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: d16c245f5defdf811de8fe8615fa06ae6daae5b5
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-heatclient
+        hash: d16c245f5defdf811de8fe8615fa06ae6daae5b5
 branches:
   - name: stable/wallaby
     location: 2.3.0
