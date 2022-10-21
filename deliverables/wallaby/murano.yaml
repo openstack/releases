@@ -15,6 +15,10 @@ releases:
       - repo: openstack/murano
         hash: 1c87ebf9a8a79d990e4a1ba44452b50efae77883
     diff-start: 10.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/murano
+        hash: 1c87ebf9a8a79d990e4a1ba44452b50efae77883
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1
