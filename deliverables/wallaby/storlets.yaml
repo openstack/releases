@@ -15,6 +15,10 @@ releases:
       - repo: openstack/storlets
         hash: f8e8ecb2b8c49f446beaf42805619c3d0523d070
     diff-start: 6.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/storlets
+        hash: f8e8ecb2b8c49f446beaf42805619c3d0523d070
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
