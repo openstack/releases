@@ -82,6 +82,48 @@ to vote. This is done by adding extra-atcs to
 https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
 before the Extra-ATC freeze on 02 February, 2023.
 
+2023.2 TC and PTL Elections
+---------------------------
+
+2023.2 Election Email Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date (February 8th, 2023
+at 00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+.. _b-election-nominations:
+
+2023.2 Election Nomination Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Candidates interested in serving for the next calendar year (TC), or
+development cycle (PTL) should announce their candidacies and platforms during
+this week.  Please see the `Election site`_ for specific timing information.
+
+.. _b-election-campaigning:
+
+2023.2 Election Campaigning Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.  Please see the `Election site`_ for
+specific timing information.
+
+.. _b-election-voting:
+
+2023.2 Election Polling Begins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Election polling for open seats on the TC and any required PTL elections.
+Please see the `Election site`_ for specific timing information.
+
+.. _b-election-close:
+
+2023.2 Election Polling Ends
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All polls close in the 2023.2 Election and results announced.  Please see the
+`Election site`_ for specific timing information.
+
+.. _Election site: https://governance.openstack.org/election/
+
 .. _a-final-lib:
 
 Final release for non-client libraries
