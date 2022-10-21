@@ -15,6 +15,10 @@ releases:
       - repo: openstack/zun-ui
         hash: aa4875f1218ff9f1cfa32640ccab28fe7b245410
     diff-start: 6.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/zun-ui
+        hash: aa4875f1218ff9f1cfa32640ccab28fe7b245410
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
