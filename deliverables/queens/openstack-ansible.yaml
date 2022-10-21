@@ -141,6 +141,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: 6ba95e889a312bf9f6214d1e7f76f78ae54edf20
+  - version: queens-eol
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 8351a5f9de8e621abe36cdaed8c1f2a4e1955913
 repository-settings:
   openstack/openstack-ansible: {}
 release-notes: https://docs.openstack.org/releasenotes/openstack-ansible/queens.html
