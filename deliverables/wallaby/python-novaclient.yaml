@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 5ee44275f64fe43aa4917301a9af63d81c0db9ee
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 5ee44275f64fe43aa4917301a9af63d81c0db9ee
 branches:
   - name: stable/wallaby
     location: 17.4.0
