@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 09b78fa80edba7317ab00b64a3f7f2b29c754fb8
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 09b78fa80edba7317ab00b64a3f7f2b29c754fb8
 branches:
   - name: stable/wallaby
     location: 4.6.1
