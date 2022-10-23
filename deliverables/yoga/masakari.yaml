@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: a649db91b59d1f7f7f0baffde29967ae1e836489
+  - version: 13.0.2
+    projects:
+      - repo: openstack/masakari
+        hash: f844b8f48e75c0853b19324d000a021c5f02d385
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
