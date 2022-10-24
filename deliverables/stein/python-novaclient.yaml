@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: c7e793c22e72d4d426a6d10e9c2cfa426fedd365
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-novaclient
+        hash: c7e793c22e72d4d426a6d10e9c2cfa426fedd365
 branches:
   - location: 13.0.0
     name: stable/stein

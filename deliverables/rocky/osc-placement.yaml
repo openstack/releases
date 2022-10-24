@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 9577cd899541b4c2a5b9fa74a59f4c346bd5addf
+  - version: rocky-eol
+    projects:
+      - repo: openstack/osc-placement
+        hash: b0af0d98cc81314e73f358de7f2c3d20a56ea043
 branches:
   - location: 1.3.0
     name: stable/rocky

@@ -25,5 +25,9 @@ releases:
     projects:
       - hash: af961861819a503d5ccc9b97c42c50154c779172
         repo: openstack/python-novaclient
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-novaclient
+        hash: af961861819a503d5ccc9b97c42c50154c779172
 repository-settings:
   openstack/python-novaclient: {}

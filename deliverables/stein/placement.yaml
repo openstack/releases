@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/placement
         hash: bdcbb2604bcbb195fa6e3a1b504ec2c31531308b
+  - version: stein-eol
+    projects:
+      - repo: openstack/placement
+        hash: 82fec67bd034eab870d40a3d166cdbafde106b96
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein

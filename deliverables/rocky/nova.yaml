@@ -76,6 +76,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: fd50cfacd2eb1da507e226be0f9b3c04e747685b
+  - version: rocky-eol
+    projects:
+      - repo: openstack/nova
+        hash: c7c85dff5fecc1d6470fe6a534a2930a75df12c8
 branches:
   - location: 18.0.0.0rc1
     name: stable/rocky
