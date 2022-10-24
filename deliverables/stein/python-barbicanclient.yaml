@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 1b282358166fe4c1d4dea896bd336b2850584f56
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: df303ea047906326180b98035ed773b5b5a6ab5c
 branches:
   - location: 4.8.1
     name: stable/stein

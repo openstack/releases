@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: e12aa561572d32e643c6dc46a1fa7576370e2f00
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 0c10571c8da593de7aa9300ccc4a37031c8008cf
 branches:
   - location: 4.6.0
     name: stable/queens
