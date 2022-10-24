@@ -17,6 +17,10 @@ releases:
       - repo: openstack/heat
         hash: af0dd44dabf56fd0095714c957afe562c83f20fb
     diff-start: 15.0.0
+  - version: 16.1.0
+    projects:
+      - repo: openstack/heat
+        hash: 167ece3673f6db5db8694dff9644a73216697185
 branches:
   - name: stable/wallaby
     location: 16.0.0.0rc1
