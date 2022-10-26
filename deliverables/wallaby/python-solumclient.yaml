@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 00e7fdeeccb3b57890576a68cd949c2415806eb9
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 00e7fdeeccb3b57890576a68cd949c2415806eb9
 branches:
   - name: stable/wallaby
     location: 3.3.0
