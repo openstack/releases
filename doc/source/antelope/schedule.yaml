@@ -34,6 +34,8 @@ cycle:
 - end: '2022-12-02'
   name: R-16
   start: '2022-11-28'
+  project-specific:
+    - a-cinder-mid-cycle-ptg-1
 - end: '2022-12-09'
   name: R-15
   start: '2022-12-05'
@@ -42,6 +44,8 @@ cycle:
   start: '2022-12-12'
   x-project:
     - a-cycle-trail
+  project-specific:
+    - a-cinder-spec-freeze
 - end: '2022-12-23'
   name: R-13
   start: '2022-12-19'
@@ -60,14 +64,22 @@ cycle:
 - end: '2023-01-20'
   name: R-9
   start: '2023-01-16'
+  project-specific:
+    - a-cinder-driver-deadline
+    - a-cinder-target-driver-deadline
 - end: '2023-01-27'
   name: R-8
   start: '2023-01-23'
+  project-specific:
+    - a-cinder-feature-checkpoint
 - end: '2023-02-03'
   name: R-7
   start: '2023-01-30'
   x-project:
     - a-extra-atc-freeze
+  project-specific:
+    - a-cinder-driver-features-declaration
+    - a-cinder-os-brick-release
 - end: '2023-02-10'
   name: R-6
   start: '2023-02-06'
@@ -82,6 +94,8 @@ cycle:
     - a-final-clientlib
     - a-soft-sf
     - a-rf
+  project-specific:
+    - a-cinder-ci-checkpoint
 - end: '2023-02-24'
   name: R-4
   start: '2023-02-20'
