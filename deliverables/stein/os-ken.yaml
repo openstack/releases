@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: a74bac9100379143647b59e4f2b48a73e1cb066e
+  - version: stein-eol
+    projects:
+      - repo: openstack/os-ken
+        hash: 57ee905af16f2f1bfd40cc9a61790f956c444103
 branches:
   - location: 0.3.1
     name: stable/stein

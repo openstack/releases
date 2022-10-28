@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: dcf96cd351a18ba96cffe77efc0a39e5c2071d3c
+  - version: queens-eol
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 37d25a3dd90083929828fded4c94b9248bfee8be
 branches:
   - name: stable/queens
     location: 1.13.0

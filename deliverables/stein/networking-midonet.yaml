@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 2b6c9a6bba6e948063c44391cc23f4d1fd76900a
+  - version: stein-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: a8f1b922e50594a0dba9e03bf365b487f7cb097e
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
