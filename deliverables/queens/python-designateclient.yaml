@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 65cc2922677c33e2c7259095e21901d1b80e373d
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 01edfe965c9951cca47404a2f123edc8383ef391
 branches:
   - name: stable/queens
     location: 2.9.0
