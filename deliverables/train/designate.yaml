@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: f9035b251e7de50d398d1a240923862237164f1b
+  - version: train-eol
+    projects:
+      - repo: openstack/designate
+        hash: 58e441e4b06bb607ce24b893fb0f80ff21742446
 cycle-highlights:
   - Removal of old deprecated code like Pool Manager and old Power DNS
     drivers which ensures less complexity for operators. (95% of all

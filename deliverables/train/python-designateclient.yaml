@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 093d8d7170cbf6ef8c7a7c0ff2a4dcd7ecd6361b
+  - version: train-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 1952d65ad57bd15d77c5b8f31ec102689281e7ea
 branches:
   - name: stable/train
     location: 3.0.0
