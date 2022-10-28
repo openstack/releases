@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: ffadf3868f3edd22cffb880591cd41710e685377
+  - version: stein-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: a3a7a0e73b2640d3218c66da2fa19527fbbe0401
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
