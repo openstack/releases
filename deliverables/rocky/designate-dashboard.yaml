@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 3f5a3294a65cbcd5485f4f705984f30091fff9ad
+  - version: rocky-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: e1e704c236329fae20d5596c4aee9450ceaf532d
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

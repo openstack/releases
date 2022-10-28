@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 200f5192fdaf1abe982fadd1344f756c760a0414
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 0953fd39cc57e3002914fff0d1a457bef6a32a86
 branches:
   - location: 2.10.0
     name: stable/rocky

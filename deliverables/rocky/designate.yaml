@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 34160d0602abe7fbc566191126698d8bac23ea9d
+  - version: rocky-eol
+    projects:
+      - repo: openstack/designate
+        hash: e4ee680f24d00b9633284c061edebaf0f62d7b3c
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky
