@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-ansible: {}
+branches:
+  - name: stable/zed
+    location: 5.0.0
 releases:
   - version: 4.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/tripleo-ansible
         hash: a153a410d3de05c86f22e4dc2d71fd02e79d5cde
+  - version: 5.0.0
+    projects:
+      - repo: openstack/tripleo-ansible
+        hash: d2323bb1e618b31349516330c8856daa1209dcc1

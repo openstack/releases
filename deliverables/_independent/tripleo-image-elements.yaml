@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-image-elements: {}
+branches:
+  - name: stable/zed
+    location: 15.0.0
 releases:
   - version: 14.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: cf9dd68ef7553f5970d049192007cc5665e6c7e7
+  - version: 15.0.0
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 275a56fc2a45756a001a94c70d496448ea29b9b2

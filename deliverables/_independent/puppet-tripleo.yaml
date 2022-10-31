@@ -4,6 +4,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/puppet-tripleo: {}
+branches:
+  - name: stable/zed
+    location: 17.0.0
 releases:
   - version: 15.0.0
     projects:
@@ -17,3 +20,7 @@ releases:
     projects:
       - repo: openstack/puppet-tripleo
         hash: e9e044d43a77b60f6d1400eda1d607b8dfc720d4
+  - version: 17.0.0
+    projects:
+      - repo: openstack/puppet-tripleo
+        hash: e40b7c4a230c72c5f0f43eaf174bfe82238c7f77
