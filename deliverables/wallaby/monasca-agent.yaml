@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 8547772515174ec785ba2bb2dcc88965e0b094f9
+  - version: wallaby-em
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 8547772515174ec785ba2bb2dcc88965e0b094f9
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
