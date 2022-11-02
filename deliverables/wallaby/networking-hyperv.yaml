@@ -16,6 +16,10 @@ releases:
       - repo: openstack/networking-hyperv
         hash: 1f6462a76e7c3f8fc57bf7b1d7d0fc3d39910935
     diff-start: 9.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 1f6462a76e7c3f8fc57bf7b1d7d0fc3d39910935
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1
