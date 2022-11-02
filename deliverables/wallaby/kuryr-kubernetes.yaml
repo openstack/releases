@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 8ec71e7e3f0f4d05b5a96e62e56db0ef9dc3bd96
+  - version: wallaby-em
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 8ec71e7e3f0f4d05b5a96e62e56db0ef9dc3bd96
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1
