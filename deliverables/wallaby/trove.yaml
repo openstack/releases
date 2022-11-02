@@ -31,6 +31,10 @@ releases:
       - repo: openstack/trove
         hash: 579b6142cf8a37fdc35cfa313151c8f1063c9001
     diff-start: 14.0.0.0rc1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/trove
+        hash: 579b6142cf8a37fdc35cfa313151c8f1063c9001
 branches:
   - name: stable/wallaby
     location: 15.0.0.0rc1
