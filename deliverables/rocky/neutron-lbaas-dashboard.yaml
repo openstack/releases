@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/neutron-lbaas-dashboard
         hash: 32c9501d6b960c56237be889ddf611ff0f4d9bf5
+  - version: rocky-eol
+    projects:
+      - repo: openstack/neutron-lbaas-dashboard
+        hash: 32c9501d6b960c56237be889ddf611ff0f4d9bf5
 branches:
   - location: 5.0.0.0rc1
     name: stable/rocky
