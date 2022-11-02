@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/os-net-config: {}
+branches:
+  - name: stable/zed
+    location: 16.0.0
 releases:
   - version: 15.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/os-net-config
         hash: 9c3f1f5804fceabc475d2c2c25cdf6ce8201c3f6
+  - version: 16.0.0
+    projects:
+      - repo: openstack/os-net-config
+        hash: 84f11c7468db316c2ce93beedb81059bdf14e483

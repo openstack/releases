@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/python-tripleoclient: {}
+branches:
+  - name: stable/zed
+    location: 19.0.0
 releases:
   - version: 17.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/python-tripleoclient
         hash: f449411e57b938121656ddbfea19f738f403bf39
+  - version: 19.0.0
+    projects:
+      - repo: openstack/python-tripleoclient
+        hash: 0cba88a0c14041df5d688eb5fc82a78527f70750

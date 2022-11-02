@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-heat-templates: {}
+branches:
+  - name: stable/zed
+    location: 17.0.0
 releases:
   - version: 15.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/tripleo-heat-templates
         hash: 10707e9768bafef1e492b4e3db8b25f2b1c8811d
+  - version: 17.0.0
+    projects:
+      - repo: openstack/tripleo-heat-templates
+        hash: dfcf977ee8d79863747c96b46d17cadce3bd1726

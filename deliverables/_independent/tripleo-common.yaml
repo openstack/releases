@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-common: {}
+branches:
+  - name: stable/zed
+    location: 17.0.0
 releases:
   - version: 16.0.0
     projects:
@@ -26,3 +29,7 @@ releases:
     projects:
       - repo: openstack/tripleo-common
         hash: af78a763f8ea8d5a9602c246c4b2944ea0935259
+  - version: 17.0.0
+    projects:
+      - repo: openstack/tripleo-common
+        hash: c0f8e094a52e0573c3f95e39f873f15c2fc9c371

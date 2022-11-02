@@ -5,6 +5,9 @@ team: tripleo
 type: other
 repository-settings:
   openstack/tripleo-validations: {}
+branches:
+  - name: stable/zed
+    location: 16.0.0
 releases:
   - version: 15.0.0
     projects:
@@ -18,3 +21,7 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: 4cc17957d273583b96ca48e1f9e7930bfdea01c4
+  - version: 16.0.0
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: 54aa994870fd17d70360cce424b971977ccf7459
