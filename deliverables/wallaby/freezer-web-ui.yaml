@@ -16,6 +16,10 @@ releases:
       - repo: openstack/freezer-web-ui
         hash: c1c0d57ede8f49dddf5a625db27a7ac387c3f0cb
     diff-start: 9.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: c1c0d57ede8f49dddf5a625db27a7ac387c3f0cb
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1
