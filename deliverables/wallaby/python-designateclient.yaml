@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 7a8d1560868643d24b3431db0a24058c23ceab35
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 7a8d1560868643d24b3431db0a24058c23ceab35
 branches:
   - name: stable/wallaby
     location: 4.2.0
