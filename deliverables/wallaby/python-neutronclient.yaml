@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: 29a9f5ef3908b5c7e45dbd010446c335a00e9ed4
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 29a9f5ef3908b5c7e45dbd010446c335a00e9ed4
 branches:
   - name: stable/wallaby
     location: 7.3.0

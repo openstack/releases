@@ -64,6 +64,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 93e7091a13f8471cfe77310802c12ede479e779f
+  - version: wallaby-em
+    projects:
+      - repo: openstack/neutron
+        hash: 93e7091a13f8471cfe77310802c12ede479e779f
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1
