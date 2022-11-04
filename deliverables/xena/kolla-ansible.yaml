@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 6cbb638d2341b7658046781900b9501d7729b538
+  - version: 13.6.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 6cdf008ca525f3f73ef744244c1e3da15b3833b6
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

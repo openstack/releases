@@ -58,6 +58,10 @@ releases:
         hash: add130e633e8a26b39323cc6692ab7395f8b8f5d
       - repo: openstack/kayobe-config-dev
         hash: 3fe65061d7336df6c4fe6f3668b52684982fc420
+  - version: 12.5.0
+    projects:
+      - repo: openstack/kayobe
+        hash: fd25eb9e04c86ce5faec70ef5cff15057bea3ca3
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1
