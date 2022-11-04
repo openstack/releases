@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: c1e3398b11c7a603a1fe2b773fec0d83fe34430a
+  - version: wallaby-em
+    projects:
+      - repo: openstack/oslo.service
+        hash: c1e3398b11c7a603a1fe2b773fec0d83fe34430a
 branches:
   - name: stable/wallaby
     location: 2.5.0

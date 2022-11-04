@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 7b48fffd01307223b53ef129bb6a0753a67abdce
+  - version: wallaby-em
+    projects:
+      - repo: openstack/stevedore
+        hash: 7b48fffd01307223b53ef129bb6a0753a67abdce
 branches:
   - name: stable/wallaby
     location: 3.3.0

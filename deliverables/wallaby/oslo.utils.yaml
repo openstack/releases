@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: a38b56a6f9438d256d6e0f9b03181015f2b27d8c
+  - version: wallaby-em
+    projects:
+      - repo: openstack/oslo.utils
+        hash: a38b56a6f9438d256d6e0f9b03181015f2b27d8c
 branches:
   - name: stable/wallaby
     location: 4.8.0
