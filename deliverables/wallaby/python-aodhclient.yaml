@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: b747ae3161d75d45e08349aaa6bbfac3a32f78a7
+  - version: wallaby-em
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: b747ae3161d75d45e08349aaa6bbfac3a32f78a7
 branches:
   - name: stable/wallaby
     location: 2.2.0
