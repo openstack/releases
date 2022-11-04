@@ -15,6 +15,10 @@ releases:
       - repo: openstack/senlin-dashboard
         hash: 65a29cbbe2345d73aff0eb8cb96ebeaf42cf97f6
     diff-start: 2.0.0.0rc1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 65a29cbbe2345d73aff0eb8cb96ebeaf42cf97f6
 branches:
   - name: stable/wallaby
     location: 3.0.0.0rc1
