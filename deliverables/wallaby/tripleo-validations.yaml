@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/tripleo-validations
         hash: d74d3fc952aea6eda73192eb235217c3ba1052f3
+  - version: wallaby-em
+    projects:
+      - repo: openstack/tripleo-validations
+        hash: d74d3fc952aea6eda73192eb235217c3ba1052f3
 branches:
   - name: stable/wallaby
     location: 14.1.0
