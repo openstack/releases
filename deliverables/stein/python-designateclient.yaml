@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: f0b7eb4d8c90ef516174538025629d8458d4180b
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 1088781ef22c8380cc6a1136db5d8e0d99459ffb
 branches:
   - location: 2.11.0
     name: stable/stein
