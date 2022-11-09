@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: e9d8ad0b5071177e0b96653007e9d11971965741
+  - version: queens-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 344d3df2194e7c2f00b7e6fefc350457cb4f7161
 branches:
   - location: 6.0.0.0rc1
     name: stable/queens
