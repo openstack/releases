@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 44ba650536b2a5bbe240295448a3a3972e119736
+  - version: queens-eol
+    projects:
+      - repo: openstack/magnum
+        hash: ee653e0fed831084dfd4a0039facf69cf5c36153
 branches:
   - name: stable/queens
     location: 6.0.0
