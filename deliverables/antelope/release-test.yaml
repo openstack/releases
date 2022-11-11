@@ -8,6 +8,11 @@ stable-branch-type: std-with-versions
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/release-test
+        hash: b3938e9d2fbd3a92854e662c095aecdd21d4a82b
 # NOTE(hberaud) This deliverable was not released in wallaby,
 # however, I prefer to keep this sample project around even
 # if it was not used during wallaby, just in case we need to
