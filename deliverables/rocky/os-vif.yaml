@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: ca9963c2944ebfd93757471f99e9185bf34f61d4
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: ca9963c2944ebfd93757471f99e9185bf34f61d4
 repository-settings:
   openstack/os-vif: {}
 branches:

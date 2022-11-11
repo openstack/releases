@@ -95,6 +95,10 @@ releases:
       - hash: 0f0693f0d8659c3374fb2a5c8e4d0c824d254bb3
         repo: openstack/nova
     version: queens-em
+  - version: queens-eol
+    projects:
+      - repo: openstack/nova
+        hash: 6d7646be5319d724a22aa76a6abe2d092de53ec7
 cycle-highlights:
   - |
     The performance of listing instances across a multi-cell cells v2

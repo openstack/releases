@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/os-traits
         hash: 91ab5ff372ccefccb2f3260eb3bcd5bad51d6daf
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-traits
+        hash: 469bfa32bba8dc7310386fcfbec65610afb097bc
 branches:
   - location: 0.9.0
     name: stable/rocky
