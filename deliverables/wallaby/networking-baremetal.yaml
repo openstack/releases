@@ -16,6 +16,10 @@ releases:
       - repo: openstack/networking-baremetal
         hash: 7b55f069dc8e952dcca2be3b972082ad97ec1bcd
     diff-start: 3.0.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 7b55f069dc8e952dcca2be3b972082ad97ec1bcd
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1
