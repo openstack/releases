@@ -5,3 +5,11 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: ae3de342e48bc4293564a3b532a66bfbf1326c0d
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
