@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 3dcc921af53bc5012e3c89ff464084a8d0f3cf22
+  - version: stein-eol
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 6c67800bcf9e40fce57765ae1ec0a5e06b5dec97
 branches:
   - location: 1.25.0
     name: stable/stein

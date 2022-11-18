@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 67865c701b6386b82cfed2ea74fe9462a23b7dc7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 48839690e1a4e6afcc1498441f19463bb8aef29a
 repository-settings:
   openstack/neutron-lib: {}
 release-notes: https://docs.openstack.org/releasenotes/neutron-lib/rocky.html

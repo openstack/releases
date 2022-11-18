@@ -56,6 +56,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: f8776cfc9ef9a72be3b23c10e6afc47e1b4862fb
+  - version: queens-eol
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: cdf619e7aeee817f74db6fff55d085c7fda4728f
 branches:
   - name: stable/queens
     location: 0.9.0

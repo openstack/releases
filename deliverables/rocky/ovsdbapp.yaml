@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 2b1552d8b044750afab5a0e43b5354b3b1d3e28d
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 212746fec7c5d85fbd0f538e14c49fe4444b55be
 repository-settings:
   openstack/ovsdbapp: {}
 branches:
