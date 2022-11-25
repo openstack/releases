@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: d6bd2be30abccf02208e277bdb191701eeeb3dfe
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 93a5b617873d3339e0b7dbbfb49979006f72bcef
 release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/queens.html
 repository-settings:
   openstack/python-vitrageclient: {}

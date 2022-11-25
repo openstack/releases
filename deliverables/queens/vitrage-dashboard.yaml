@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 4bf37570524ecf128635e5a471fd992bcea35c71
+  - version: queens-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: c0a6e99681520f9ceed22ce2ffccd8dca496654e
 repository-settings:
   openstack/vitrage-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/queens.html
