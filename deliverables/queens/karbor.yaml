@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/karbor
         hash: bba93226e606ef92fee56a5a67b9046d7b692d08
+  - version: queens-eol
+    projects:
+      - repo: openstack/karbor
+        hash: 33a9b2d12ac3d15f5ef89d12f514f3e75a04ce54
 branches:
   - location: 1.0.0
     name: stable/queens

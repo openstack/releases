@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/karbor-dashboard
         hash: bf31d5f2f14a7ff84c651ceed3bbbcbb18a1a533
+  - version: queens-eol
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: b6219bac05a150b1934bb26cbc23b603535db5eb
 branches:
   - location: 1.0.0
     name: stable/queens

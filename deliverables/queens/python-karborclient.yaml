@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 604007cbd3eaaa8274e6996220572e6b9433f79c
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-karborclient
+        hash: 6da5073a05bd2b489940d0b4072011ca23bb2a0e
 branches:
   - location: 1.0.0
     name: stable/queens
