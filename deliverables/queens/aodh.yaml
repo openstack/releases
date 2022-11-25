@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 149d3ad2193b4d17df801f82a0a6be62dba564db
+  - version: queens-eol
+    projects:
+      - repo: openstack/aodh
+        hash: fce6e7b430c4732425e2ab41ec2bd231abda4840
 repository-settings:
   openstack/aodh: {}
 branches:

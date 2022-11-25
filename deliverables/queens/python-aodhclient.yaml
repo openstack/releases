@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 86ac8fd3d31f19a88443a15609a2642c98a6cf7f
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 77beba4282518eb8aeee554b3f163d8ba579423e
 branches:
   - location: 1.0.0
     name: stable/queens
