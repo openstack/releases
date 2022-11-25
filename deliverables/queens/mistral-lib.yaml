@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: d61073add0c978c234c3b6f7d674b9d95d0b7e13
+  - version: queens-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: abf520d2f3de4b07541b1426656085be1eb47570
 branches:
   - location: 0.4.0
     name: stable/queens

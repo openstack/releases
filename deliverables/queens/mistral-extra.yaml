@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: e761742f652a981eddf8ea3b50e2eabea3ca6b97
+  - version: queens-eol
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 5d8f45de03ff933a4a474c91cd581dd7057613b5
 repository-settings:
   openstack/mistral-extra: {}
 branches:
