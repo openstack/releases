@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 4cce39afb58257f525cd355e0f413d64d68d05d6
+  - version: queens-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: 3028d9cdfef394568e719a7c1877c3ce31100ade
 branches:
   - name: stable/queens
     location: 3.4.0
