@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 7beb59325138cf68be577271e6a99e01f91aed9e
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 1ab07237413c0e376bc5eef215ca870d315f8631
 branches:
   - location: 2.6.0
     name: stable/queens

@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 00b817158420f522a07019693d8b4583f1806180
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 59cff94a36132c9c2072faae48f29159f678ad79
 branches:
   - name: stable/queens
     location: 1.9.0

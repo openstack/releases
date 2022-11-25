@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: 31a65144c18319fd5229f00decd2a1911a23c6c7
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 95010fc2786856b1a29f275472f08f2e9f005ac4
 branches:
   - location: 1.5.0
     name: stable/queens

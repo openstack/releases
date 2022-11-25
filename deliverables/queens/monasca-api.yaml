@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 9dfb29ef6e9b463b0de3576e8d401ce5b3636c7f
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: 9dfb29ef6e9b463b0de3576e8d401ce5b3636c7f
 branches:
   - location: 2.5.0
     name: stable/queens

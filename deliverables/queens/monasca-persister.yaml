@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: f46109b80a2fe97b20b53fa2c4a70beaafa6af93
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: f46109b80a2fe97b20b53fa2c4a70beaafa6af93
 branches:
   - location: 1.10.0
     name: stable/queens
