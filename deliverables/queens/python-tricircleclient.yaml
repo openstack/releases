@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-tricircleclient
         hash: fb3b78942c9f0e8d96a6c4f451d51a8cfc38ee9a
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 74500b13147028c5dd0474ea531a6756cc738ff8
 branches:
   - location: 0.3.0
     name: stable/queens
