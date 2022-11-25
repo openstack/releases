@@ -45,6 +45,14 @@ releases:
         hash: c24cd2be67848b2e7de08f311383c9ff39730f35
       - repo: openstack/freezer-dr
         hash: 1bcc0b44b8a4b9fd5472cb058e3d572339ab87ce
+  - version: queens-eol
+    projects:
+      - repo: openstack/freezer
+        hash: e95c41606285a5e03e6661720fc05376d16f1f97
+      - repo: openstack/freezer-api
+        hash: 7cd9d0027f51283948da9dc5f1c2e21677bce2c5
+      - repo: openstack/freezer-dr
+        hash: f863756518ee9acdc7d5aaaf35e218bb5b550fb5
 cycle-highlights:
   - Bug fixes
   - Policy in code
