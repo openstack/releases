@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 075cb4993d7dcd51a9e8928571e27d88e213b0fc
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: c91e61fc9f23361cf50a0b8b4459678f6f4ddc9b
 branches:
   - name: stable/queens
     location: 1.2.0

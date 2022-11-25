@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 91b85be715a9a56f07087feb967885118bc949d9
+  - version: queens-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 0bc2e4471b5a80214841bf470643bf10019b2eb4
 repository-settings:
   openstack/cloudkitty-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/queens.html
