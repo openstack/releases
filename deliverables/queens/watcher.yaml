@@ -37,6 +37,10 @@ releases:
       - repo: openstack/watcher
         hash: 5307f5a80ea81c69a1bc37aead007b441a4af450
         tarball-base: python-watcher
+  - version: queens-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 5307f5a80ea81c69a1bc37aead007b441a4af450
 repository-settings:
   openstack/watcher: {}
 release-notes: https://docs.openstack.org/releasenotes/watcher/queens.html
