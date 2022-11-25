@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 3670a0a8bbe08501d634189ffbf187098fb25fc7
+  - version: 13.0.2
+    projects:
+      - repo: openstack/barbican
+        hash: e32e2e421b00482d26f7e263855b0555ca8a94c5
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
