@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: cc13d5bde661c5152bbc5c4d2ba6e0b17f812e67
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 9da2e0bdd83d481091814a8c6f40ab3ff39ffa9c
 release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/queens.html
 repository-settings:
   openstack/python-keystoneclient: {}

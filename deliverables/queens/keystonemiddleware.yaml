@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: bc03de9ca412805490a39dfbd00b4f938e64895b
+  - version: queens-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 8d76546a752618be011a19415bf116da785cfeb3
 team: keystone
 type: library
 branches:

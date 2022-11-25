@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: a760e5760a50fa6c89f0548f3c332f3d2d52ab46
+  - version: queens-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: c35cee2be71944fc73f685adf23e07da11824242
 team: keystone
 type: library
 branches:

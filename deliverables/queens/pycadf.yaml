@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 21e59eabf4e112d2aab90aac6d6b2883952bd365
+  - version: queens-eol
+    projects:
+      - repo: openstack/pycadf
+        hash: d9f8c7dce1ecd0f813076a1bba54d541c929f11b
 branches:
   - name: stable/queens
     location: 2.7.0
