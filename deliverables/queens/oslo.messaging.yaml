@@ -63,6 +63,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 86976f4a45b45a6cdfa16454c011518dd85cbd7a
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 5d7ba77ca63f33d59b76930f284ec717d045c15d
 branches:
   - name: stable/queens
     location: 5.35.0

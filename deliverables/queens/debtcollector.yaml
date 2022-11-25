@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: e1271aaa9785c72ea67961c58ea9a17b64eb7b3f
+  - version: queens-eol
+    projects:
+      - repo: openstack/debtcollector
+        hash: b5ad74b2da75d443ff7c707da09802f9a0490d3a
 branches:
   - name: stable/queens
     location: 1.19.0

@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: 4f7f49a58628df35800b0f0fd209f4e04fc40832
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslotest
+        hash: c282f18dd07b47cbac861deae91b99b1354ae8c7
 branches:
   - name: stable/queens
     location: 3.2.0

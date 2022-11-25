@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 2472e8c9c27affe95c1541971a677a107a0d6ad4
+  - version: queens-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: f10075c4b36cd2375234e8bb93247be13869332a
 branches:
   - name: stable/queens
     location: 1.28.0

@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: 2eef34430671bac137a0e16d0d87197feb726464
+  - version: queens-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: c3f9d3dc91cfffa86e0fc921da82c261ca0f6b21
 branches:
   - name: stable/queens
     location: 1.15.1

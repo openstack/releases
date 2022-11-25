@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: c4ce1ab56cbbd8e7f2962e9578b19059244c825f
+  - version: queens-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 4ecc391ad3d41833e0a0c13e8010e0486546fffc
 branches:
   - name: stable/queens
     location: 3.1.0

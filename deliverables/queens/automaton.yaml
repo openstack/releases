@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 90f3ed251084952b43b89a172895a005182e6970
+  - version: queens-eol
+    projects:
+      - repo: openstack/automaton
+        hash: aabbec67b1e36fbe8ad9965c7aca23dfe46a9a56
 branches:
   - name: stable/queens
     location: 1.14.0

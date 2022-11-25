@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 8cce3af2c29753d1d1794083a468c7b07b78473c
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: d0b99227d9bf67316905d973d49cc85aa9a93c04
 branches:
   - name: stable/queens
     location: 3.35.0

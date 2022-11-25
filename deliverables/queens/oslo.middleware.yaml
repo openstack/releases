@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: abfd726a52bc5ac85083bac79cf905d4d8d2c903
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 26621ecfc60fd624a93eb19c2c6d3e378266901e
 branches:
   - name: stable/queens
     location: 3.34.0

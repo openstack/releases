@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: c1b787e682f1777064a5e7a66054b4842b39d21e
+  - version: queens-eol
+    projects:
+      - repo: openstack/tooz
+        hash: 5f47ac19f79f379aa0d4d79de460ab6a62914a7d
 branches:
   - name: stable/queens
     location: 1.59.0

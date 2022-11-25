@@ -10,3 +10,8 @@ branches:
     name: stable/queens
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
+releases:
+  - version: queens-eol
+    projects:
+      - repo: openstack/devstack-plugin-amqp1
+        hash: cb71a96dd6f42a7d3873cba54ab9b5ea609a9c54

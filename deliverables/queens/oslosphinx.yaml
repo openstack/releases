@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/oslosphinx
         hash: 1de073c3d2323aba6c9070da872482f2ed1f6b75
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslosphinx
+        hash: e5a23b033e1dbcb2cbe27871af04fda878d02736
 branches:
   - name: stable/queens
     location: 4.18.0

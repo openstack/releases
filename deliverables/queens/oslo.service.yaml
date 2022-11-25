@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 7e69bf9dce753c6f0c2a8f8f5e1996248a99274e
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.service
+        hash: 50e005a2f525fc3175e81abf3f5b09ff58222939
 branches:
   - name: stable/queens
     location: 1.29.0

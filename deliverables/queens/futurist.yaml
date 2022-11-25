@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 8fff2242ff53735255247a1b126727e374fe9159
+  - version: queens-eol
+    projects:
+      - repo: openstack/futurist
+        hash: 97c99647303b1a0368b74a9526eaf44d695bc3d1
 branches:
   - name: stable/queens
     location: 1.6.0

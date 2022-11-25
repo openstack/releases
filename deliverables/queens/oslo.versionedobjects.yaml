@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: b607dad267aff8ce87f956e9f2586b9e44a58f44
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 169ae15f26b50c9ab276e0df822ea2b193132165
 branches:
   - name: stable/queens
     location: 1.31.1

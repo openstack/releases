@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: c3c6ad2ec82f59592302930678616bf83957fe25
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: ade4e308271cecfc6d6e83a442d48f6378fa0126
 branches:
   - name: stable/queens
     location: 1.28.0

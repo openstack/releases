@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: d4ae9c0f0998bfbf78a2660e9771a5993d290bee
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 1f410e4f9b501d38460dc36dbbe10e0b35da6cd4
 branches:
   - name: stable/queens
     location: 2.23.0

@@ -10,3 +10,8 @@ branches:
     name: stable/queens
 repository-settings:
   openstack/devstack-plugin-kafka: {}
+releases:
+  - version: queens-eol
+    projects:
+      - repo: openstack/devstack-plugin-kafka
+        hash: 2ff6cd0f59b12d3b51ae0659869261a5cd71a66c

@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: e29dc73e9eaf009e7fccd17dcb96abdaf787efe7
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.log
+        hash: 17c6c52da826b9f84567556f25087746668199e2
 branches:
   - name: stable/queens
     location: 3.36.0

@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 79e468edacd717a69f5c279ffab80f3163b6b4e7
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: f30bb0406d2788082667929f01ff26dc58324ffc
 branches:
   - name: stable/queens
     location: 3.19.0

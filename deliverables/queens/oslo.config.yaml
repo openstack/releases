@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 6056677f35347cd82c12fc9020b02ef142dbe289
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.config
+        hash: 31c11ab4289efa1a91835f3daa928fe927ac4276
 branches:
   - name: stable/queens
     location: 5.2.0

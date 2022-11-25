@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: c7ac43b0ead276621029160ac7630a5bf8ef217c
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.reports
+        hash: e279ddfb25454516bdfb09c5b4ee5a0204536ffa
 branches:
   - name: stable/queens
     location: 1.26.0

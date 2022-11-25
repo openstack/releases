@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: bfdeba62be37cb0f175e9abbefe750591be0f16d
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: 8f5d25fc01b1157dbee3b794baf334488dff8d14
 branches:
   - name: stable/queens
     location: 2.20.0

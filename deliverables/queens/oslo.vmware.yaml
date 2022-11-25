@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 200706ed0ea56af48517442172f194cda6fa239e
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 543ef8ba36295d7079c594adb80d252f9e689d83
 branches:
   - name: stable/queens
     location: 2.26.0

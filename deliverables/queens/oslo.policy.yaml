@@ -61,6 +61,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 77d30c3b5e06a4cc90195ca6f352b26c4bf2d2d8
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 3a7f94a8cc909b9b9c9f32773dea043f659caa37
 branches:
   - name: stable/queens
     location: 1.33.1

@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: 68a64928ab46d960dc6ea8c9c48d850b4774891d
+  - version: queens-eol
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 3a8652e64a24d74b0f11fe07bc7505c1d4c76086
 branches:
   - name: stable/queens
     location: 5.13.0
