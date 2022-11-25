@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: a72e60dc3417f7c486eb2af04a0f0b66d03eebb4
+  - version: queens-eol
+    projects:
+      - repo: openstack/blazar
+        hash: b191343ae901e75aceae2c48b76e7ccd1703e1b1
 branches:
   - location: 1.0.0.0rc1
     name: stable/queens

@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 44fb789958ed7c2019d0b9b3749bd9c1837e3e3a
+  - version: queens-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 13bb63fd7589fc3a1fcb188b71d9febd38690eda
 repository-settings:
   openstack/blazar-dashboard: {}
 branches:
