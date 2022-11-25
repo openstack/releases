@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: ecbf74fbf83ae9d46fa3d6fa882f2d9e23406f86
+  - version: queens-eol
+    projects:
+      - repo: openstack/swift
+        hash: 4349546f3f154ea759b540a3c2f01cd414931883
 cycle-highlights:
   - Added symlink objects support. Symlink objects reference one other
     object in the cluster. Read requests pass through the symlink on

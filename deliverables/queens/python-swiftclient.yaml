@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 7d2acdb1b8ac1229b7a37b571c2953fe9580ced6
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 7d2acdb1b8ac1229b7a37b571c2953fe9580ced6
 branches:
   - name: stable/queens
     location: 3.5.0
