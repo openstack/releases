@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: fe30c1b1f4cf4fed18a0af8a29e8b45cec14cbdf
+  - version: queens-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 79ee6fac1891f3b68702d57e2182ff1e68ae3083
 branches:
   - location: 2.3.0
     name: stable/queens
