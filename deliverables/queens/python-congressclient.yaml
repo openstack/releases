@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: a8ec6c85255b94e997ce42fe60afed51e0517882
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 50eddf98f7126a6d9e25ae635749907bc9b29255
 branches:
   - name: stable/queens
     location: 1.9.0
