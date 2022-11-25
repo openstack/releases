@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: d61d76a0e7b788ef08ed9367a79d7f8aaa61c8f3
+  - version: queens-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: c34dde1d327c4f9af35ec989f3c677e50eede48f
 repository-settings:
   openstack/tacker-horizon: {}
