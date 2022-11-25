@@ -34,6 +34,10 @@ releases:
       - hash: 36ecdfd5f093977bc7154f023fa6c8b8b9267a05
         repo: openstack/puppet-placement
     version: 5.4.2
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 36ecdfd5f093977bc7154f023fa6c8b8b9267a05
 branches:
   - name: stable/wallaby
     location: 5.4.0

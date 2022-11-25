@@ -26,6 +26,10 @@ releases:
       - hash: 8b9e0802b8c1fde4895edc0d8c59c6d52d48ea11
         repo: openstack/puppet-trove
     version: 18.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 8b9e0802b8c1fde4895edc0d8c59c6d52d48ea11
 branches:
   - name: stable/wallaby
     location: 18.4.0

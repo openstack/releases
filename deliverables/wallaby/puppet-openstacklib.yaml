@@ -34,6 +34,10 @@ releases:
       - hash: cccd34926c88e56c7c6a13f24516e523a3cabf6e
         repo: openstack/puppet-openstacklib
     version: 18.5.1
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: cccd34926c88e56c7c6a13f24516e523a3cabf6e
 branches:
   - name: stable/wallaby
     location: 18.4.0

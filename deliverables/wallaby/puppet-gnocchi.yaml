@@ -34,6 +34,10 @@ releases:
       - hash: 457dee3856445b624e2de8be34e3602c6b270016
         repo: openstack/puppet-gnocchi
     version: 18.4.2
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 457dee3856445b624e2de8be34e3602c6b270016
 branches:
   - name: stable/wallaby
     location: 18.4.0

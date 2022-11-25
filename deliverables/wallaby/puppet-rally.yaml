@@ -26,6 +26,10 @@ releases:
       - hash: 60ceb112acd9e4a2a3b0e6b43556b97aad9caec6
         repo: openstack/puppet-rally
     version: 6.4.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 60ceb112acd9e4a2a3b0e6b43556b97aad9caec6
 branches:
   - name: stable/wallaby
     location: 6.4.0

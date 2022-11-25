@@ -38,6 +38,10 @@ releases:
       - hash: 65869f8f510268fa1f2bf8cda04af415a340edd3
         repo: openstack/puppet-ironic
     version: 18.7.0
+  - version: wallaby-em
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 65869f8f510268fa1f2bf8cda04af415a340edd3
 branches:
   - name: stable/wallaby
     location: 18.4.0
