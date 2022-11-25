@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 40327b75edcab608e9c9d9ac0993855de088926b
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 436a1910e7cbf96e7bf4fded636bf68674bf292e
 branches:
   - location: 2.8.0
     name: stable/queens
