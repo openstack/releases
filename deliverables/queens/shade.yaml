@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/shade
         hash: 2fe63a4d74dcff34f7a0dc90ec65f3e0cc0bf596
+  - version: queens-eol
+    projects:
+      - repo: openstack/shade
+        hash: 169bf56906fc48059b9ccfb38bda69fa0d13c349
 branches:
   - name: stable/queens
     location: 1.26.0

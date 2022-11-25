@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: 281183216b91b1a38b2e42dc2426e182e5cffab1
+  - version: queens-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: 2e981339d66fe6e0170332e721c9e3c0bc8b0c3d
 branches:
   - name: stable/queens
     location: 1.9.0

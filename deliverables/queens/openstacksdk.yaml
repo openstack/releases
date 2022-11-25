@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 3b9f3694101f92965ab421cc45554edd16eca99b
+  - version: queens-eol
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 1462454923d04a2d9c260edeb0f040eaa8b4a91c
 branches:
   - name: stable/queens
     location: 0.11.0

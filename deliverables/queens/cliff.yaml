@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 085310c89c744a78fa09d7b6eed32a3e325c18df
+  - version: queens-eol
+    projects:
+      - repo: openstack/cliff
+        hash: e9f25f5edb7a0b4e5a0a6efa1b5451156e3d0236
 branches:
   - name: stable/queens
     location: 2.11.0
