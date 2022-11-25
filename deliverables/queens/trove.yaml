@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 9e5186b95bba51d911a0de9e6d6bd412c478aef4
+  - version: queens-eol
+    projects:
+      - repo: openstack/trove
+        hash: bac67e878479c8edb34a952c850eb8b78d0f8e0c
 repository-settings:
   openstack/trove: {}
 branches:
