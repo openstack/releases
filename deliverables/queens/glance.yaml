@@ -52,6 +52,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 42fe71f9d770c70211f8e83759c7232f5ff2b75e
+  - version: queens-eol
+    projects:
+      - repo: openstack/glance
+        hash: cc4f74d112bb93cec0e51a37eea1d509b5ad1776
 repository-settings:
   openstack/glance: {}
 release-notes: https://docs.openstack.org/releasenotes/glance/queens.html

@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 626f503e22e738347ab65f4a01af1698894e2f11
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 564a328b8d3c51356ac3facb4852adabb7d0e42d
 team: glance
 type: client-library
 release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/queens.html
