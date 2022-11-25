@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: db60b7e8312c8051b8814aa10318b97e48a69e6a
+  - version: queens-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: 74ae8912bba9200b8b0c35f0b7cdf5d2025b4a4f
 branches:
   - name: stable/queens
     location: 1.0.0
