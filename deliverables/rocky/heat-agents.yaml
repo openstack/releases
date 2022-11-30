@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 41c7faf0c9f9fadaff137a9d9957b5163da56cd0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 41c7faf0c9f9fadaff137a9d9957b5163da56cd0
 branches:
   - name: stable/rocky
     location: 1.7.0

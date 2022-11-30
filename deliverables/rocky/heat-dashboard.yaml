@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 083270b2cb17631e5cdd85020c7e6a741d2f6b9b
+  - version: rocky-eol
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 083270b2cb17631e5cdd85020c7e6a741d2f6b9b
 branches:
   - name: stable/rocky
     location: 1.4.0
