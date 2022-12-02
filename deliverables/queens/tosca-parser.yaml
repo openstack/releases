@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 23cd991e884b67d41378a69ee30ef38b5d760e68
+  - version: queens-eol
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 78eab0a53f192824666c6517df7b73c477078928
 branches:
   - location: 0.9.0
     name: stable/queens
