@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: de3b3e9d32539a0c29141da3a92e561852bf1656
+  - version: queens-eol
+    projects:
+      - repo: openstack/murano
+        hash: e4677afec3ab0fd10e52d65057f8bb3c40b8a8a4
 repository-settings:
   openstack/murano: {}
 branches:
