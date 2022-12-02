@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: f83cfcafd49a12983d25653fd2bb86a11a74b247
+  - version: queens-eol
+    projects:
+      - repo: openstack/barbican
+        hash: 9436e5a2e2cb8e9e858eee2c9ecf9d5299b5faf2
 repository-settings:
   openstack/barbican: {}
 branches:

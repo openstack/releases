@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 3f6cccae4982e5a8fe1ca5a3fb198e1481a5891c
+  - version: rocky-eol
+    projects:
+      - repo: openstack/barbican
+        hash: 37bc0d00df8a3944cc78824343a1882ed4028dc1
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

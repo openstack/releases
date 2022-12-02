@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: f14511dd9d8806d777f81f33f34ef522245af6a0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 8dcca637c9a1349b56012ca342c3c643f9a2982f
 repository-settings:
   openstack/python-barbicanclient: {}
 branches:
