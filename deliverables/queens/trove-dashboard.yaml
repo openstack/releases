@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: bd33e730f52889a6979e7d751e6732ce06806774
+  - version: queens-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: fd0b87bde04d52ffcfe9bd84497ce26375002b45
 repository-settings:
   openstack/trove-dashboard: {}
 branches:

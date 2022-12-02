@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: e30e8db7e7e79e6409c22d4ea8c80e0ff5cc4672
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 32d98fd086e0f8615f34f8f22587b36ae355e98e
 release-notes: https://docs.openstack.org/releasenotes/python-troveclient/queens.html
 branches:
   - location: 2.14.0
