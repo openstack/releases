@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: fb4878589b9bc27eeb4857deaa7ab12287236302
+  - version: queens-eol
+    projects:
+      - repo: openstack/solum
+        hash: 1f2f859bc9df9021fd0412e21be28c7626884f5f
 branches:
   - location: 5.5.1
     name: stable/queens

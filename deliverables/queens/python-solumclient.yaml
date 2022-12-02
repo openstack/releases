@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: ca6a55f31a804273cd7b676fd5773baf34299b50
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 07a58ddeccb8a65f33d429b0b1d8ccfb15f3ca7d
 branches:
   - name: stable/queens
     location: 2.6.1
