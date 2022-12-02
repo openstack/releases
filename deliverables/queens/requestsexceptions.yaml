@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/requestsexceptions
         hash: d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
+  - version: queens-eol
+    projects:
+      - repo: openstack/requestsexceptions
+        hash: 4caa55618ad36ed0da8f3276ae4018eab87d3cca
 branches:
   - location: 1.4.0
     name: stable/queens
