@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 3b404d8dacbd60f2e4b15adae57f1d9142142912
+  - version: queens-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 323c3481cc8b51b1131fd7cef02c65370a835f4e
 cycle-highlights:
   - Support containerised vnf support to Kubernetes VIM
   - Support vnffg updation

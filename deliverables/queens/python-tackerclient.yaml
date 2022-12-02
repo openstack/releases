@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 8509a590aa3c2e60707c5427f5fde1e05878b8a8
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: d13eadfd1ceb5434264def0eb8a3bcaca152d3fe
 branches:
   - location: 0.11.0
     name: stable/queens
