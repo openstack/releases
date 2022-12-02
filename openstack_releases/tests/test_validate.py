@@ -2024,6 +2024,29 @@ class TestValidateStableBranches(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(1, len(self.ctx.errors))
 
+    def test_stable_branch_slurp_formatted_name(self):
+        deliverable_data = textwrap.dedent('''
+        releases:
+          - version: 99.0.3
+            projects:
+              - repo: openstack/release-test
+                hash: 0cd17d1ee3b9284d36b2a0d370b49a6f0bbb9660
+        branches:
+          - name: stable/2023.1
+            location: 99.0.3
+        repository-settings:
+          openstack/release-test: {}
+        ''')
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='antelope',
+            name='release-test',
+            data=yamlutils.loads(deliverable_data),
+        )
+        validate.validate_stable_branches(deliv, self.ctx)
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
     def test_version_not_in_deliverable(self):
         deliverable_data = textwrap.dedent('''
         releases:

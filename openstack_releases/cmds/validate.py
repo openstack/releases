@@ -1688,10 +1688,19 @@ def validate_stable_branches(deliv, context):
                             'for short term support. %s should be stable/%s '
                             'or bugfix/%s' % (
                                 branch.name, deliv.series, expected_version))
+                elif branch_mode == 'std':
+                    # Looking for SLURP naming (e.g: 2023.1)
+                    if re.search(r'^[0-9]{4}.[1]{1}$', series, re.I) is None:
+                        context.error(
+                            'cycle-based projects must match series names '
+                            'for stable branches. %s should be stable/%s '
+                            'or similar to something like stable/2023.1' % (
+                                branch.name, deliv.series))
                 else:
                     context.error(
                         'cycle-based projects must match series names '
-                        'for stable branches. %s should be stable/%s' % (
+                        'for stable branches. %s should be stable/%s '
+                        'or similar to something like stable/2023.1' % (
                             branch.name, deliv.series))
 
 
