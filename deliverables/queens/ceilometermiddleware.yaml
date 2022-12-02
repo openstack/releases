@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: e3169206b7c3f4636e99ad0611c17e2ab1078c76
+  - version: queens-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 9184840872844cb2c21f43e8e8738f07646e883b
 branches:
   - location: 1.2.0
     name: stable/queens

@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: 0be95b1d9d64751525820d8bbe1b56be99740ac6
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: d01c47c09766dc363bb934e11fb9fdb1491dccb2
 branches:
   - location: 0.4.0
     name: stable/queens

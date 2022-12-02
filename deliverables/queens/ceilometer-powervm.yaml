@@ -36,5 +36,9 @@ releases:
     projects:
       - repo: openstack/ceilometer-powervm
         hash: a29ca2b75ed3a4cdd6e725f1f6a1d8e026e1771d
+  - version: queens-eol
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 7171e9f4b8e5b1bd541895379218488712f7cecf
 repository-settings:
   openstack/ceilometer-powervm: {}
