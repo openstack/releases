@@ -77,6 +77,18 @@ You can find their releases listed here:
 
    independent
 
+.. _slurp:
+
+Releases with Skip Level Upgrade Release Process (SLURP)
+========================================================
+
+Releases can be marked as `Skip Level Upgrade Release Process`_ (or
+`SLURP`) releases. This practically means, that upgrades will be
+supported between these (`SLURP`) releases, in addition to between
+adjacent major releases.
+
+.. _Skip Level Upgrade Release Process: https://governance.openstack.org/tc/resolutions/20220210-release-cadence-adjustment.html
+
 Teams
 =====
 
