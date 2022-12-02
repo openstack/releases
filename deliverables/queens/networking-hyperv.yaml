@@ -9,6 +9,10 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 893048dd2e3ca3d3a57584e22f5d3de1d4884870
+  - version: queens-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: d46bdeaade003f174ab7bf9a035e4b0914bbcde9
 repository-settings:
   openstack/networking-hyperv: {}
 branches:

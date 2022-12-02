@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 99f1150a9c617137dde39a824736b3a82fb63fbe
+  - version: queens-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 59305c8d3d19076d19562b68848b99c912ce3eab
 branches:
   - name: stable/queens
     location: 3.0.0
