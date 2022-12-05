@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 191d2dbd3ea1591146106385271ed9c86f7e7c14
+  - version: queens-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4be5d687c72e603947165d989190e933fee9d240
 repository-settings:
   openstack/watcher-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/queens.html
