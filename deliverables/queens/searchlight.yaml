@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/searchlight
         hash: 49642e0dae1b0c2f22ae9136be6ad9a36ecdcaab
+  - version: queens-eol
+    projects:
+      - repo: openstack/searchlight
+        hash: 17f976ce95e08f024bc18d2d34e799b359a9d5bc
 branches:
   - location: 4.0.0.0rc1
     name: stable/queens

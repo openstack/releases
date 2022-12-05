@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: dd1f2331b12bc407781f38d847fdeafd9492f195
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 95d64c78f4ed9093d4193bb9be5b1051252ec417
 branches:
   - location: 1.3.0
     name: stable/queens
