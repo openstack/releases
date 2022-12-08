@@ -59,6 +59,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: f3edd4d6706c97da9c954edcac6ef976366a073e
+  - version: 13.8.0
+    projects:
+      - repo: openstack/kolla
+        hash: 2b222ce035a5be5ec037314fc838025ae4fe5d30
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
