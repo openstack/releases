@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: b8e8943601209d93d6d8c62401e3655ca1f78ca7
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: b8e8943601209d93d6d8c62401e3655ca1f78ca7
 branches:
   - location: 1.13.0
     name: stable/queens

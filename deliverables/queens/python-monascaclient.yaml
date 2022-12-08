@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 770f74861ef9ca218539f5bd387116d95eeb1f17
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 770f74861ef9ca218539f5bd387116d95eeb1f17
 release-notes: https://docs.openstack.org/releasenotes/python-monascaclient/queens.html
 repository-settings:
   openstack/python-monascaclient: {}

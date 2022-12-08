@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 00279530a1a99fca286ec348251ebd5bddd8977f
+  - version: queens-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 00279530a1a99fca286ec348251ebd5bddd8977f
 branches:
   - location: 1.12.0
     name: stable/queens
