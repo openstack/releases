@@ -4,4 +4,14 @@ release-model: cycle-with-rc
 team: kolla
 type: trailing
 repository-settings:
-  openstack/ansible-collection-kolla: {}
+  openstack/ansible-collection-kolla:
+    flags:
+      - no-artifact-build-job
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: 655307d3ceeb7868b964097abeddb3a2a18e8d7a
+branches:
+  - name: stable/zed
+    location: 2.0.0.0rc1
