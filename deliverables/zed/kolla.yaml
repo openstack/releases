@@ -5,3 +5,11 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 9c1d3ee16d78307c72967c1e213bb461952fdbcd
+branches:
+  - name: stable/zed
+    location: 15.0.0.0rc1
