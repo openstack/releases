@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 38d9bcb2aa374690bb83806457258cb6d3883af9
+  - version: queens-eol
+    projects:
+      - repo: openstack/glance_store
+        hash: cc7ecc1b54ead1045b0f2d1dd414ac2166088813
 branches:
   - name: stable/queens
     location: 0.23.0
