@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: b92f04af68b1ed96bb96256f820c99d3824b3eab
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: f664cf638347c83ade782f27383bb1f2bae5b0e1
 branches:
   - location: 1.6.0
     name: stable/queens
