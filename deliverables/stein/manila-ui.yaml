@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: cc52163a36cd4863ebe96bfef0a163b4190d01b2
+  - version: stein-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: 1acdccf134e95ca514ede715130a1ee699eb02d1
 branches:
   - location: 2.18.0
     name: stable/stein
