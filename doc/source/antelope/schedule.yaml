@@ -81,6 +81,7 @@ cycle:
   start: '2023-01-30'
   x-project:
     - a-extra-atc-freeze
+    - b-election-nominations
   project-specific:
     - a-cinder-driver-features-declaration
     - a-cinder-os-brick-release
@@ -98,6 +99,7 @@ cycle:
     - a-final-clientlib
     - a-soft-sf
     - a-rf
+    - b-election-campaigning
   project-specific:
     - a-cinder-ci-checkpoint
 - end: '2023-02-24'
@@ -105,6 +107,7 @@ cycle:
   start: '2023-02-20'
   x-project:
     - a-cycle-highlights
+    - b-election-voting
 - end: '2023-03-03'
   name: R-3
   start: '2023-02-27'
@@ -114,6 +117,8 @@ cycle:
 - end: '2023-03-10'
   name: R-2
   start: '2023-03-06'
+  x-project:
+    - b-election-close
 - end: '2023-03-17'
   name: R-1
   start: '2023-03-13'
