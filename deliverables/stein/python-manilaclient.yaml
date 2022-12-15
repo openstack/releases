@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 07564879ae4bdcb73e856b3aedcb79e4420fa7eb
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 30e5cef52b90e9745475103d6f8c0eccc62b15c5
 branches:
   - location: 1.27.0
     name: stable/stein
