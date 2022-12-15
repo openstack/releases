@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 056406e1fa91de8d6597dd251cef08195d35c7ef
+  - version: 15.0.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 056406e1fa91de8d6597dd251cef08195d35c7ef
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
