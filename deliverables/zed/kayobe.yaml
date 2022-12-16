@@ -11,3 +11,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 63e8a47206d6faaf69c18e6f33553f304ae42c2c
+      - repo: openstack/kayobe-config
+        hash: 0f8b0912b4101c0df7ab6b7a612a3f23afa38a95
+      - repo: openstack/kayobe-config-dev
+        hash: fad02cc64280a2c65e3b2cf359da8bc9a7fa9f6b
+branches:
+  - name: stable/zed
+    location: 13.0.0.0rc1
