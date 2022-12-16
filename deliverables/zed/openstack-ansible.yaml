@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: d94817820f654d3d73b247888961c4b82ac4209b
+  - diff-start: 25.0.0.0rc1
+    projects:
+      - hash: d94817820f654d3d73b247888961c4b82ac4209b
+        repo: openstack/openstack-ansible
+    version: 26.0.0
 branches:
   - name: stable/zed
     location: 26.0.0.0rc1
