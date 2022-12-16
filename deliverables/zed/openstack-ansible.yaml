@@ -6,3 +6,11 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+releases:
+  - version: 26.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: d94817820f654d3d73b247888961c4b82ac4209b
+branches:
+  - name: stable/zed
+    location: 26.0.0.0rc1
