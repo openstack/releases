@@ -6,3 +6,8 @@ team: keystone
 type: library
 repository-settings:
   openstack/keystonemiddleware: {}
+releases:
+  - version: 10.2.0
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: e05466c5f439cd05482f109e6eb97a50ba156698
