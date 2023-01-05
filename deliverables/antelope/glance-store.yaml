@@ -6,3 +6,8 @@ team: glance
 type: library
 repository-settings:
   openstack/glance_store: {}
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/glance_store
+        hash: 1a01fe7fd7a30ba1deed9628abf347b599363a27
