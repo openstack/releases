@@ -6,3 +6,8 @@ team: mistral
 type: service
 repository-settings:
   openstack/mistral: {}
+releases:
+  - version: 16.0.0.0b1
+    projects:
+      - repo: openstack/mistral
+        hash: 920d6b0336aebf86d321b5aa6e3d26ace6f3ae41
