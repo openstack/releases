@@ -18,6 +18,7 @@ from oslotest import base
 
 from openstack_releases._redirections import generate_constraints_redirections
 from openstack_releases import deliverable
+from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 
@@ -115,6 +116,49 @@ class TestRedirections(base.BaseTestCase):
         '''))
     )
 
+    # Series status data
+    SERIES_STATUS_DATA = series_status.SeriesStatus(
+        yamlutils.loads(textwrap.dedent('''
+            - name: stein
+              status: future
+              initial-release: 2019-04-11
+            - name: rocky
+              status: development
+              initial-release: 2018-08-30
+            - name: mitaka
+              status: maintained
+              initial-release: 2018-02-28
+        '''))
+    )
+
+    # Deliverable that looks like an open stable series with branch name
+    # matching the new stable branch naming
+    OPEN_STABLE_WITH_RELEASE_ID = deliverable.Deliverable(
+        team='requirements',
+        series='rocky',
+        name='requirements',
+        data=yamlutils.loads(textwrap.dedent('''
+        branches:
+          - name: stable/2018.2
+            location:
+              openstack/requirements: not_used
+        '''))
+    )
+
+    # Series status data with 'release-id'
+    SERIES_STATUS_DATA_WITH_RELEASE_ID = series_status.SeriesStatus(
+        yamlutils.loads(textwrap.dedent('''
+            - name: stein
+              release-id: 2019.1
+              status: development
+              initial-release: 2019-04-11
+            - name: rocky
+              release-id: 2018.2
+              status: maintained
+              initial-release: 2018-08-30
+        '''))
+    )
+
     def setUp(self):
         super().setUp()
 
@@ -124,7 +168,8 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=302, src='stein', ref_type='branch',
                                dst='master')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_development_release(self):
         deliverables = FakeDeliverables([
@@ -132,7 +177,8 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=302, src='stein', ref_type='branch',
                                dst='master')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_open_stable(self):
         deliverables = FakeDeliverables([
@@ -140,7 +186,8 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
                                dst='stable/rocky')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_open_unstable(self):
         deliverables = FakeDeliverables([
@@ -148,7 +195,8 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
                                dst='stable/rocky')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_stable_release(self):
         deliverables = FakeDeliverables([
@@ -156,7 +204,26 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=301, src='rocky', ref_type='branch',
                                dst='stable/rocky')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
+
+    def test_release_id_master(self):
+        deliverables = FakeDeliverables([
+            self.OPEN_DEVELOPMENT,
+        ])
+        self.assertEqual([dict(code=302, src=2019.1, ref_type='branch',
+                               dst='master')],
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA_WITH_RELEASE_ID))
+
+    def test_release_id_stable(self):
+        deliverables = FakeDeliverables([
+            self.OPEN_STABLE_WITH_RELEASE_ID,
+        ])
+        self.assertEqual([dict(code=301, src=2018.2, ref_type='branch',
+                               dst='stable/2018.2')],
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA_WITH_RELEASE_ID))
 
     def test_stable_eol(self):
         deliverables = FakeDeliverables([
@@ -164,7 +231,8 @@ class TestRedirections(base.BaseTestCase):
         ])
         self.assertEqual([dict(code=301, src='mitaka', ref_type='tag',
                                dst='mitaka-eol')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_all(self):
         deliverables = FakeDeliverables([
@@ -178,9 +246,11 @@ class TestRedirections(base.BaseTestCase):
                                dst='stable/rocky'),
                           dict(code=301, src='mitaka', ref_type='tag',
                                dst='mitaka-eol')],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
 
     def test_empty(self):
         deliverables = FakeDeliverables([])
         self.assertEqual([],
-                         generate_constraints_redirections(deliverables))
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))

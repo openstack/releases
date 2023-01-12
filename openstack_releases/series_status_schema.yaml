@@ -16,6 +16,8 @@ items:
   properties:
     name:
       type: "string"
+    release-id:
+      type: "number"
     status:
       type: "string"
       enum:

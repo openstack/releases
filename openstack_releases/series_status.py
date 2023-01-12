@@ -44,6 +44,10 @@ class Series(object):
             return None
 
     @property
+    def release_id(self):
+        return self._data.get('release-id', None)
+
+    @property
     def eol_date(self):
         return self._data.get('eol-date', None)
 
