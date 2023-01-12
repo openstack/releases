@@ -49,6 +49,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 82f63c992f5382e412acd7929dee31f1c4fa9943
+  - version: rocky-eol
+    projects:
+      - repo: openstack/heat
+        hash: b122028baea73a11f7459f2d378485e7deabcffd
 repository-settings:
   openstack/heat:
     pypi-name: openstack-heat

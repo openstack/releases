@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 3587b56872b401cf8cc85b4a263d97e8ac947185
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 3587b56872b401cf8cc85b4a263d97e8ac947185
 repository-settings:
   openstack/python-heatclient: {}
 branches:
