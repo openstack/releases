@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: c08609c2a69380fb84ad98f92ca354e376d42472
+  - version: queens-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 1adbf9c4db0e916e5d3bc9e58145316802133dff
 branches:
   - location: 5.0.0.0rc1
     name: stable/queens

@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 4afb7e1ab4c324e70f924df370971d7e30ec3bf6
+  - version: queens-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: e3c05dc3d4e0bfe590cf95e76b8448e0ea16d231
 repository-settings:
   openstack/senlin-dashboard: {}
 branches:

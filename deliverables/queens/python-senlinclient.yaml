@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: e6cdf2dac8493bead57d683cd407599803434ce8
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: e318859f24019e0d695c56deda7355774ba74802
 branches:
   - location: 1.7.0
     name: stable/queens
