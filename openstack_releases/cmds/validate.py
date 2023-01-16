@@ -1522,6 +1522,14 @@ def validate_branch_prefixes(deliv, context):
                 branch.name, _VALID_BRANCH_PREFIXES))
 
 
+def _is_branch_with_release_id(branch_name):
+    "Check if stable branch name matches the new format, like stable/2023.1."
+
+    prefix, branch_id = branch_name.split('/')
+    return (prefix == 'stable' and
+            re.search(r'^[0-9]{4}.[1-2]{1}$', branch_id, re.I) is not None)
+
+
 def validate_stable_branches(deliv, context):
     "Apply the rules for stable branches."
 
@@ -1679,18 +1687,21 @@ def validate_stable_branches(deliv, context):
             if series != deliv.series:
                 if branch_mode == 'std-with-versions':
                     # Not a normal stable branch, so it must be a versioned
-                    # bugfix branch (bugfix/3.1)
+                    # bugfix branch (bugfix/3.1) or the new format of stable
+                    # branches (for example: stable/2023.1)
                     expected_version = '.'.join(location.split('.')[0:2])
-                    if series != expected_version:
+                    if (series != expected_version and
+                            not _is_branch_with_release_id(branch.name)):
                         context.error(
                             'cycle-based projects must match series names '
                             'for stable branches, or branch based on version '
                             'for short term support. %s should be stable/%s '
-                            'or bugfix/%s' % (
+                            'or stable/<year>.<release_number> (for example: '
+                            'stable/2023.1) or bugfix/%s' % (
                                 branch.name, deliv.series, expected_version))
                 elif branch_mode == 'std':
                     # Looking for SLURP naming (e.g: 2023.1)
-                    if re.search(r'^[0-9]{4}.[1]{1}$', series, re.I) is None:
+                    if not _is_branch_with_release_id(branch.name):
                         context.error(
                             'cycle-based projects must match series names '
                             'for stable branches. %s should be stable/%s '
