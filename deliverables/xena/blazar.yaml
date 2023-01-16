@@ -20,6 +20,10 @@ releases:
       - repo: openstack/blazar
         hash: 233e1c146d77cf0b2944f9dd24fa5d25423dce79
     diff-start: 7.0.0
+  - version: 8.0.1
+    projects:
+      - repo: openstack/blazar
+        hash: 21d1a95d3094029c321082a1e570f8ab631dc41c
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
