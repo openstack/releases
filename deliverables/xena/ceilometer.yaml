@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: c724307a080469e25950e25093b3e70b92794415
+  - version: 17.0.2
+    projects:
+      - repo: openstack/ceilometer
+        hash: 320f50fbdf5d91e10259db87e5e97fae7ba43163
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1
