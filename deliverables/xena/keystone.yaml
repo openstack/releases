@@ -15,6 +15,10 @@ releases:
       - repo: openstack/keystone
         hash: cf5f1e5651052be52f17beeb400ac433303a9602
     diff-start: 19.0.0.0rc1
+  - version: 20.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 3a8a6c89c69819510571181adde62b68ed812752
 branches:
   - name: stable/xena
     location: 20.0.0.0rc1
