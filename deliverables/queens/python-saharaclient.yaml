@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: ee5f17307a1d7949ce2408f22c3678966d3272c1
+  - version: queens-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 896dafe2df92800bcfc25da25d6264b5c62f8df6
 branches:
   - name: stable/queens
     location: 1.5.0
