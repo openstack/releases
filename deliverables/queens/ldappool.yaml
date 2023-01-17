@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/ldappool
         hash: bf7190e1faa6793bd2b2784ab9e993e381244e35
+  - version: queens-eol
+    projects:
+      - repo: openstack/ldappool
+        hash: bf7190e1faa6793bd2b2784ab9e993e381244e35
 branches:
   - name: stable/queens
     location: 2.2.0
