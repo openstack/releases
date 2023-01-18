@@ -16,6 +16,10 @@ releases:
       - repo: openstack/designate-dashboard
         hash: b948e43365bec0d96bcda0f31f25f74b5a9b0971
     diff-start: 12.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 907727702f9b77ef25a585ab5d2414ecf758b767
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
