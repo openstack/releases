@@ -4,6 +4,11 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+releases:
+  - version: queens-eol
+    projects:
+      - repo: openstack/devstack
+        hash: 4da98ee6d48c159be8d48923f189dd923bb17e31
 branches:
   - location:
       openstack/devstack: 47467acf2f607c7e436eb3d42c5cf764011883f9

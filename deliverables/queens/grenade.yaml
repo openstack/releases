@@ -4,6 +4,11 @@ release-model: untagged
 team: 'Quality Assurance'
 type: other
 stable-branch-type: tagless
+releases:
+  - version: queens-eol
+    projects:
+      - repo: openstack/grenade
+        hash: b94f0a4c603f18d9d9f343d71bcf4baba1b73e8c
 branches:
   - location:
       openstack/grenade: fce6befbb50fdc774f16fa963dd51e2bb8eedd63
