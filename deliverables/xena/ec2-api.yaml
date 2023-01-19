@@ -20,6 +20,10 @@ releases:
       - repo: openstack/ec2-api
         hash: 183397ab052ae1673b4afc671ba1e0608100d20a
     diff-start: 12.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/ec2-api
+        hash: 6eaebd8672a4391b33885067a84cd4c2e204d584
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
