@@ -18,7 +18,8 @@ from sphinx.util import logging
 LOG = logging.getLogger(__name__)
 
 
-def generate_constraints_redirections(_deliverables, future_releases=[]):
+def generate_constraints_redirections(_deliverables, _series_status_data,
+                                      future_releases=[]):
     redirections = []
     # Loop through all the releases for requirements
     for deliv in _deliverables.get_deliverable_history('requirements'):
@@ -26,9 +27,12 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
         target = 'master'
         ref_type = 'branch'
 
+        release_id = _series_status_data[deliv.series].release_id
+        if not release_id:
+            release_id = deliv.series
         # Unless there is a specific stable branch
         for branch in deliv.branches:
-            if branch.name == 'stable/%s' % (deliv.series):
+            if branch.name == 'stable/%s' % (release_id):
                 target = branch.name
                 break
 
@@ -42,7 +46,7 @@ def generate_constraints_redirections(_deliverables, future_releases=[]):
         # Insert into the beginning of the list so that redirections are
         # master -> juno
         status = 302 if target == 'master' else 301
-        redirections.insert(0, dict(code=status, src=deliv.series,
+        redirections.insert(0, dict(code=status, src=release_id,
                                     ref_type=ref_type, dst=target))
 
     for series in future_releases:

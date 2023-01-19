@@ -515,6 +515,7 @@ def build_finished(app, exception):
                        if series.status == 'future']
     params = dict(
         redirections=generate_constraints_redirections(_deliverables,
+                                                       _series_status_data,
                                                        future_releases)
     )
 
