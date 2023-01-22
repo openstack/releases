@@ -6,3 +6,8 @@ team: zaqar
 type: horizon-plugin
 repository-settings:
   openstack/zaqar-ui: {}
+releases:
+  - version: 14.0.0.0b1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: a938631fedae9658e6fe34f803e916169f5483c9

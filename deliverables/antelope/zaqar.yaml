@@ -5,3 +5,8 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 16.0.0.0b1
+    projects:
+      - repo: openstack/zaqar
+        hash: 8049697fc962c61d56f4e7ed1208fdd40dd3e0ec
