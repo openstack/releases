@@ -35,6 +35,10 @@ releases:
       - repo: openstack/cinder
         hash: f1ebe259df3e81a241a708ecd50b6e550ac108ea
     diff-start: 20.0.0.0rc1
+  - version: 21.1.0
+    projects:
+      - repo: openstack/cinder
+        hash: c9459d9ac366f7a685a61bd9739b3126749961b9
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
