@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 4da113bb471965ee475f8f7baa2c3bc255235f69
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: b639e780b7f0f39fd5c0c2049ae6f856c205d61f
 branches:
   - name: stable/ussuri
     location: 2.0.0

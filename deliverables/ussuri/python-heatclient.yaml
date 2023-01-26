@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 9dede4eb2b824b21c0031507bd986796f535810c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 2fbc297aadb7288778756be6adcf4554ea1c00d8
 branches:
   - name: stable/ussuri
     location: 2.1.0
