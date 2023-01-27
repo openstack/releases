@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   bobcat/index
    antelope/index
    zed/index
    yoga/index
