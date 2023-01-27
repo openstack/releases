@@ -23,6 +23,14 @@ March 22, 2023 - October 4, 2023 (28 weeks)
 Cross-project events
 ====================
 
+.. _b-vptg:
+
+PTG (virtual)
+-------------
+
+From March 27 to March 31 we'll have a virtual PTG to plan the Bobcat release
+schedule.
+
 .. _b-1:
 
 Bobcat-1 milestone
