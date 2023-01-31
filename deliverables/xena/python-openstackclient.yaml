@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 6ce7da8aeb7e5d1347940433e087036e8e43eaa6
+  - version: 5.6.1
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: db417598ed958b3f1877906d5d1bc7c5896ea168
 branches:
   - name: stable/xena
     location: 5.6.0
