@@ -86,18 +86,19 @@ function eol_tag_matches_head {
 }
 
 function is_eol {
-    clone_repo ${repo} stable/${em_branch}
-    cd ${repo} && git checkout -f -q stable/${em_branch} 2>/dev/null
+    ${TOOLSDIR}/delete_stable_branch.py check --quiet ${repo} ${em_branch}
     if [[ $? -eq 0 ]]; then
         echo
         echo "${repo} contains eol stale branch (${em_branch})"
+        clone_repo ${repo} stable/${em_branch}
+        cd ${repo}
         if no_open_patches && eol_tag_matches_head; then
             read -p "> Do you want to delete the branch stable/${em_branch} from ${repo} repository? [y/N]: " YN
             if [ "${YN,,}" == "y" ]; then
                 if [ -z "$gerrit_username" ]; then
                     read -p "Gerrit username: " gerrit_username
                 fi
-                ${TOOLSDIR}/delete_stable_branch.py ${gerrit_username} ${repo} ${em_branch}
+                ${TOOLSDIR}/delete_stable_branch.py delete ${gerrit_username} ${repo} ${em_branch}
             fi
         fi
         cd ..
