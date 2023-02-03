@@ -80,7 +80,22 @@ function eol_tag_matches_head {
     [[ "$head" =~ "${em_branch}-eol" ]] && [[ "$head" =~ "origin/stable/${em_branch}" ]]
     matches=$?
     if [[ "$matches" -eq 1 ]] ; then
-        echo "stable/${em_branch} has patches on top of the ${em_branch}-eol tag"
+        tags=$(git tag)
+        [[ "$tags" =~ "${em_branch}-eol" ]]
+        eol_tag_exists=$?
+        if [[ "$eol_tag_exists" -eq 0 ]]; then
+            echo "WARNING !!! stable/${em_branch} has patches on top of the ${em_branch}-eol tag."
+            echo "Please check the branch and ${em_branch}-eol tag manually."
+            echo "Do not delete the branch if you are not sure!"
+            read -p "> If you are sure the branch can be deleted, then press D + Enter: " DELETE
+            if [ "${DELETE,,}" == "d" ]; then
+                matches=0
+            else
+                echo "Skipping."
+            fi
+        else
+            echo "No ${em_branch}-eol tag found! Branch cannot be deleted. Skipping."
+        fi
     fi
     return $matches
 }
