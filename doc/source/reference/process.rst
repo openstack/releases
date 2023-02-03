@@ -768,7 +768,7 @@ R-7 week (Extra-ATC deadline week)
     Non-client library freeze: $nclfreeze (R-6 week)
     Client library freeze: $milestone3 (R-5 week)
     $SERIES-3 milestone: $milestone3 (R-5 week)
-    Cycle Highlights Due: $milestone3 (R-5 week)
+    Cycle Highlights Due: $highlight (R-4 week)
     $series final release: $release-date
     $other-upcoming-event
 
