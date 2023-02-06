@@ -6,3 +6,8 @@ team: cinder
 type: library
 repository-settings:
   openstack/os-brick: {}
+releases:
+  - version: 6.2.0
+    projects:
+      - repo: openstack/os-brick
+        hash: 65f922b16706adf75c4bffe2790ee2a5f1dea412
