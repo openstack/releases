@@ -8,3 +8,8 @@ repository-settings:
   openstack/solum-tempest-plugin: {}
 team: solum
 type: tempest-plugin
+releases:
+  - version: 2.6.0
+    projects:
+      - repo: openstack/solum-tempest-plugin
+        hash: ca9c30e4dd0de9997468ef2714ba92eea276cdc3
