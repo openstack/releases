@@ -6,3 +6,8 @@ type: library
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/oslo.concurrency: {}
+releases:
+  - version: 5.1.0
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: d1f07ad353986e5dcd24821941ac0a079f31484b
