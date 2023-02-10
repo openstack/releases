@@ -5,3 +5,8 @@ type: library
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/castellan: {}
+releases:
+  - version: 4.1.0
+    projects:
+      - repo: openstack/castellan
+        hash: fe10397ac05b0376a75be57d7c6f31dc5f470e9e
