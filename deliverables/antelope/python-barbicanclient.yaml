@@ -5,3 +5,8 @@ team: barbican
 type: client-library
 repository-settings:
   openstack/python-barbicanclient: {}
+releases:
+  - version: 5.5.0
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: ad14b64a7a1a3d4d1315891c486a12e0a4567846
