@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/ansible-collection-kolla
         hash: 682ae88fb5bc003e510142ec0202d116e55207c9
+  - version: 1.3.0
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: c8bdf36686579e494dbd3fc9aa1496cff29fbf69
 branches:
   - name: stable/yoga
     location: 1.0.0.0rc1
