@@ -20,3 +20,14 @@ branches:
     location: 21.2.0
   - name: bugfix/21.3
     location: 21.3.0
+cycle-highlights:
+  - Adds support for service role in default policy, intended for service to
+    service communication.
+  - Ironic can now export application metrics from the ironic-conductor
+    service into prometheus, alongside hardware metrics. Previously these
+    were only accessible via statsd.
+  - Adds support for sharding Ironic nodes using a shard-key, to enable
+    external API clients to horizontal scale. See
+    https://docs.openstack.org/api-ref/baremetal/#shards for more information.
+  - Performance on the /v1/ports and /v1/portgroups API list endpoints has
+    been improved.
