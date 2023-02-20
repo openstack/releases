@@ -5,3 +5,11 @@ team: monasca
 type: library
 repository-settings:
   openstack/monasca-statsd: {}
+releases:
+  - version: 2.6.0
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: ca8dfbd871a8f8004a3a91e55cbb5f68920c2306
+branches:
+  - name: stable/2023.1
+    location: 2.6.0
