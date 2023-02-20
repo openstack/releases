@@ -21,6 +21,7 @@ import tempfile
 
 import openstack_releases
 from openstack_releases import defaults
+from openstack_releases import series_status
 from openstack_releases import yamlutils
 
 
@@ -103,7 +104,12 @@ def main():
                            args.series, '*.yaml')
     verbose('Scanning {}'.format(pattern))
     deliverable_files = sorted(glob.glob(pattern))
-    new_branch = 'stable/' + args.series
+
+    series_status_data = series_status.SeriesStatus.default()
+    release_id = series_status_data[args.series].release_id
+    if release_id is None:
+        release_id = args.series
+    new_branch = 'stable/' + str(release_id)
 
     for filename in deliverable_files:
         deliverable_name = os.path.basename(filename)[:-5]
