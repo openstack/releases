@@ -5,3 +5,30 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    `PCI devices can now be scheduled <https://docs.openstack.org/nova/latest/admin/pci-passthrough.html#pci-tracking-in-placement>`_
+    by Nova using the Placement API on a opt-in basis. This will help the
+    nova-scheduler service to better schedule flavors that use PCI
+    (non-Neutron related) resources, will generate less reschedules if an
+    instance cannot be created on a candidate and will help the nova-scheduler
+    to not miss valid candidates if the list was too large.
+  - |
+    Operators can now ask Nova to manage the power consumption of dedicated CPUs
+    so as to either offline them or change their governor if they're currently
+    not in use by any instance or if the instance is stopped.
+  - |
+    Nova will prevent unexpected compute service renames by `persisting a unique
+    compute UUID on local disk <https://docs.openstack.org/nova/latest/admin/compute-node-identification.html>`_.
+    This stored UUID will be considered the source of truth for knowing whether
+    the compute service hostame has been modified or not. As a reminder,
+    changing a compute hostname is forbidden, particularly when this compute is
+    currently running instances on top of it.
+  - |
+    `SPICE consoles <https://docs.openstack.org/nova/latest/admin/remote-console-access.html#spice-console>`_
+    can now be configured with compression settings which include choices of the
+    compression algorithm and the compression mode.
+  - Fully-Qualified Domain Names are now considered valid for an instance
+    hostname if you use the 2.94 API microversion.
+  - By opting into 2.95 API microversion, evacuated instances will remain
+    stopped on the destination host until manually started.
