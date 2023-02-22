@@ -3,5 +3,12 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - APIs for transferring shares between projects are now available. When
+    triggered, the transfer will create a key to be used by a user in the
+    destination project.
+  - Users can now specify metadata while creating their share networks.
+    The behavior should be similar to Manila shares, and users will be able
+    to update and delete the metadata of the given resources.
 repository-settings:
   openstack/manila: {}
