@@ -3,5 +3,21 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    New backend drivers were added: HPE XP iSCSI and FC,
+    Fungible NVMe-TCP, NetApp NVMe-TCP storage drivers.
+  - |
+    Many features were added to current drivers. Notable examples are Trisync
+    replication support for Pure driver, volume group snapshot support for
+    IBM SVF driver, Unisphere 10 support for Dell EMC PowerMax driver and
+    Host assisted migration and retype support for Hitachi VSP driver.
+    Apart from driver features, we also made improvements in the NVMe target
+    driver to add support for LVM+nvmet to enable CI testing even in the
+    absence of an NVMe backend.
+  - |
+    Many small bug fixes and improvements in operator experience, especially
+    around the cinder backup service, for example, incremental backup issue in
+    POSIX driver, create backup issue when volume doesn't exist, etc, were fixed.
 repository-settings:
   openstack/cinder: {}
