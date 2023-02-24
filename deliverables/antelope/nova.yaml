@@ -14,9 +14,10 @@ cycle-highlights:
     instance cannot be created on a candidate and will help the nova-scheduler
     to not miss valid candidates if the list was too large.
   - |
-    Operators can now ask Nova to manage the power consumption of dedicated CPUs
-    so as to either offline them or change their governor if they're currently
-    not in use by any instance or if the instance is stopped.
+    Operators can now ask Nova to `manage the power consumption of dedicated
+    CPUs <https://docs.openstack.org/nova/latest/admin/cpu-topologies.html#configuring-cpu-power-management-for-dedicated-cores>`_
+    so as to either offline them or change their governor if they're
+    currently not in use by any instance or if the instance is stopped.
   - |
     Nova will prevent unexpected compute service renames by `persisting a unique
     compute UUID on local disk <https://docs.openstack.org/nova/latest/admin/compute-node-identification.html>`_.
