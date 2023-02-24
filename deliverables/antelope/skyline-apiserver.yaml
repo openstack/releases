@@ -5,3 +5,7 @@ team: skyline
 type: service
 repository-settings:
   openstack/skyline-apiserver: {}
+cycle-highlights:
+  - Support keystone ssl verify. Add configuration item cafile to skyline configuration file.
+  - Add log_file config into skyline.yaml.sample. Now the log path of skyline is log_dir with log_file, no other hardcode path.
+  - The nginx.conf.j2 support both http and https. By default is http.
