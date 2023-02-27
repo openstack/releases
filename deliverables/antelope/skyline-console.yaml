@@ -15,3 +15,11 @@ cycle-highlights:
   - Support create cluster instance from template list.
   - Support Magnum in administrator platform.
   - Support upgrade cluster and show quota info when resize cluster.
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/skyline-console
+        hash: 0a192be466c1fe0ac0ca75f5937b23d56c83fb01
+branches:
+  - name: stable/2023.1
+    location: 2.0.0.0rc1
