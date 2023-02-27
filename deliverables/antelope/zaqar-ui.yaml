@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: a938631fedae9658e6fe34f803e916169f5483c9
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 253be454754ed18e779f4d654d7c27df24d96c4e
+branches:
+  - name: stable/2023.1
+    location: 14.0.0.0rc1
