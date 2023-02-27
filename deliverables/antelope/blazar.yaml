@@ -3,5 +3,13 @@ launchpad: blazar
 release-model: cycle-with-rc
 team: blazar
 type: service
+cycle-highlights:
+  - |
+    Added a new option to randomize host selection for physical host
+    reservations. This prevents Blazar from always allocating the same hosts.
+  - |
+    Added Resource Allocations API support in the Blazar command-line client.
+    This allows operators to query active and pending allocations for specific
+    hosts, or find which hosts are allocated to a specific reservation.
 repository-settings:
   openstack/blazar: {}
