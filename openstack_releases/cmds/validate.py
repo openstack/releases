@@ -1699,7 +1699,7 @@ def validate_stable_branches(deliv, context):
                             'or stable/<year>.<release_number> (for example: '
                             'stable/2023.1) or bugfix/%s' % (
                                 branch.name, deliv.series, expected_version))
-                elif branch_mode == 'std':
+                elif branch_mode == 'std' or branch_mode == 'tagless':
                     # Looking for SLURP naming (e.g: 2023.1)
                     if not _is_branch_with_release_id(branch.name):
                         context.error(
