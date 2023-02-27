@@ -21,3 +21,11 @@ cycle-highlights:
     POSIX driver, create backup issue when volume doesn't exist, etc, were fixed.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 4a1a39ecd7770b0cc8065035afa724e90f94942e
+branches:
+  - name: stable/2023.1
+    location: 22.0.0.0rc1
