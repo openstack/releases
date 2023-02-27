@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 7fce4cd9251f29ede3659b41a8cbd099134be29f
+branches:
+  - name: stable/2023.1
+    location: 11.0.0.0rc1
