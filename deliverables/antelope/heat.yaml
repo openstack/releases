@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/heat:
     tarball-base: openstack-heat
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/heat
+        hash: e582ef5b0b8cdf96e6af2b90b59a2f2b1c0d4ab0
+branches:
+  - name: stable/2023.1
+    location: 20.0.0.0rc1
