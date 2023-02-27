@@ -5,3 +5,11 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/storlets: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/storlets
+        hash: 34e8dbd49f542327ea252fc077fc245981e12769
+branches:
+  - name: stable/2023.1
+    location: 11.0.0.0rc1
