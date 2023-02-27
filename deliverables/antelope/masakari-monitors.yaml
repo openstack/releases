@@ -5,3 +5,11 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: cf646dfce2db86f01dd49349e1803da23de4ec85
+branches:
+  - name: stable/2023.1
+    location: 15.0.0.0rc1
