@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 storyboard: 1184
 repository-settings:
   openstack/ansible-role-thales-hsm: {}
+releases:
+  - version: 5.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: 49970b3ceb66a87c3d3e95ac77eda9ffd6b5a0f1
+branches:
+  - name: stable/2023.1
+    location: 5.0.0.0rc1
