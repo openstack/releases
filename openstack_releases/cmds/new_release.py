@@ -162,6 +162,20 @@ def get_last_release(release_history, deliverable, release_type):
     return None
 
 
+def get_stable_branch_id(series):
+    """Retrieve the stable branch ID of the series.
+
+    Returns the release-id if the series has such field, otherwise
+    returns the series name. This is needed for the new stable branch
+    naming style: stable/2023.1 (versus the old style: stable/zed).
+    """
+    series_status_data = series_status.SeriesStatus.default()
+    release_id = series_status_data[series].release_id
+    if release_id is None:
+        release_id = series
+    return str(release_id)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -450,7 +464,7 @@ def main():
             gitutils.clone_repo(workdir, repo)
 
             branches = gitutils.get_branches(workdir, repo)
-            version = 'origin/stable/%s' % series
+            version = 'origin/stable/%s' % get_stable_branch_id(series)
             if not any(branch for branch in branches
                        if branch.endswith(version)):
                 version = 'master'
@@ -531,7 +545,7 @@ def main():
     deliverable_info['releases'].append(new_release_info)
 
     if add_stable_branch:
-        branch_name = 'stable/{}'.format(series)
+        branch_name = 'stable/{}'.format(get_stable_branch_id(series))
 
         # First check if this branch is already defined
         if 'branches' in deliverable_info:
