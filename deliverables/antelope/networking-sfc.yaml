@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/networking-sfc: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 9d3ef7e7676cc22f96697453a842075b5b0ff52c
+branches:
+  - name: stable/2023.1
+    location: 16.0.0.0rc1
