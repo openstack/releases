@@ -5,3 +5,11 @@ team: solum
 type: service
 repository-settings:
   openstack/solum: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/solum
+        hash: 67d367971326ac2c8bba11668dbf5aedb6fd217b
+branches:
+  - name: stable/2023.1
+    location: 14.0.0.0rc1
