@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-fwaas: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 230e9bf38c97c0e243d1c8bd86bbd4b078bdce12
+branches:
+  - name: stable/2023.1
+    location: 18.0.0.0rc1
