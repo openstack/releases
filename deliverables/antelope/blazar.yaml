@@ -13,3 +13,11 @@ cycle-highlights:
     hosts, or find which hosts are allocated to a specific reservation.
 repository-settings:
   openstack/blazar: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: af4e4490dd880b152e4ea4ff0395b8b7d88627ca
+branches:
+  - name: stable/2023.1
+    location: 11.0.0.0rc1
