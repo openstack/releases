@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 8049697fc962c61d56f4e7ed1208fdd40dd3e0ec
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: cacace0da96066e6eaee1d1d8e73218b839cfcdc
+branches:
+  - name: stable/2023.1
+    location: 16.0.0.0rc1
