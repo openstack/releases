@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 include-pypi-link: true
 repository-settings:
   openstack/networking-bagpipe: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: c061c4aae981df48969f4a0857ff5692ea130df9
+branches:
+  - name: stable/2023.1
+    location: 18.0.0.0rc1
