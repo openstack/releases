@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-dynamic-routing: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 37a8a1aae61af97d18ee4b6f8f9bf08b8153bba8
+branches:
+  - name: stable/2023.1
+    location: 22.0.0.0rc1
