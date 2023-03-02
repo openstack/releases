@@ -14,3 +14,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: a5fffb92420eb8ccafc3c55e5171b56d48d94241
+  - version: 1.10.0
+    projects:
+      - repo: openstack/metalsmith
+        hash: 45670dfbe809ea26be8ea63ad334b6fad78facb4
+branches:
+  - name: stable/2023.1
+    location: 1.10.0
