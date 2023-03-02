@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 02176deb25b3a8f1bc02eb3d70f0a50ce22f02f7
+  - version: 3.2.0
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 5a8598c436a14efb1c718afe8ce1d0221d77104a
+branches:
+  - name: stable/2023.1
+    location: 3.2.0
