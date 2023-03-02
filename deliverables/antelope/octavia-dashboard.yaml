@@ -7,3 +7,11 @@ team: octavia
 type: horizon-plugin
 repository-settings:
   openstack/octavia-dashboard: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: d6bf1ed92d5d759414115e4ae010710666ea7751
+branches:
+  - name: stable/2023.1
+    location: 11.0.0.0rc1
