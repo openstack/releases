@@ -7,11 +7,20 @@ repository-settings:
   openstack/neutron: {}
 cycle-highlights:
   - Implementation of the secure role-based access control (sRBAC).
-  - Enabled the host multisegment support (only for ML2/OVS mechanism driver)
+  - Enabled the host multisegment support (only for ML2/OVS mechanism
+    driver)
   - Support of Neutron dynamic routing with ML2/OVN.
-  - Placement enablement for tunnelled networks and shared resources (tunnelled and
-    physical networks sharing the same interface).
+  - Placement enablement for tunnelled networks and shared resources
+    (tunnelled and physical networks sharing the same interface).
   - Support of SQLAlchemy 1.4 (prior to version 2.0).
   - Creation of a new OVN agent that will implement all needed functionalities
-    not provided by the ovn-controller. The first one to be migrated will be
-    the metadata service.
+    not provided by the ovn-controller. The first one to be migrated
+    will be the metadata service.
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 92766c85b642bdece24c629625bf80050882c797
+branches:
+  - name: stable/2023.1
+    location: 22.0.0.0rc1
