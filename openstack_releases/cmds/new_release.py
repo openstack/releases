@@ -464,10 +464,12 @@ def main():
             gitutils.clone_repo(workdir, repo)
 
             branches = gitutils.get_branches(workdir, repo)
-            version = 'origin/stable/%s' % get_stable_branch_id(series)
-            if not any(branch for branch in branches
-                       if branch.endswith(version)):
-                version = 'master'
+            version = 'master'
+            if series != '_independent':
+                version = 'origin/stable/%s' % get_stable_branch_id(series)
+                if not any(branch for branch in branches
+                           if branch.endswith(version)):
+                    version = 'master'
 
             sha = gitutils.sha_for_tag(workdir, repo, version)
 
