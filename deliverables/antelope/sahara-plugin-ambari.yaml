@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-ambari: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: f86e792d057dde7748383a03efbf7b404524f64e
+branches:
+  - name: stable/2023.1
+    location: 9.0.0.0rc1
