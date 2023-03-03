@@ -6,3 +6,11 @@ team: winstackers
 type: other
 repository-settings:
   openstack/networking-hyperv: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 6702d260d3d4c881aa41c0c3a995e6f825d60898
+branches:
+  - name: stable/2023.1
+    location: 14.0.0.0rc1
