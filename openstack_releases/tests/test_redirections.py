@@ -211,7 +211,7 @@ class TestRedirections(base.BaseTestCase):
         deliverables = FakeDeliverables([
             self.OPEN_DEVELOPMENT,
         ])
-        self.assertEqual([dict(code=302, src=2019.1, ref_type='branch',
+        self.assertEqual([dict(code=302, src='2019.1', ref_type='branch',
                                dst='master')],
                          generate_constraints_redirections(
                              deliverables, self.SERIES_STATUS_DATA_WITH_RELEASE_ID))
@@ -220,7 +220,7 @@ class TestRedirections(base.BaseTestCase):
         deliverables = FakeDeliverables([
             self.OPEN_STABLE_WITH_RELEASE_ID,
         ])
-        self.assertEqual([dict(code=301, src=2018.2, ref_type='branch',
+        self.assertEqual([dict(code=301, src='2018.2', ref_type='branch',
                                dst='stable/2018.2')],
                          generate_constraints_redirections(
                              deliverables, self.SERIES_STATUS_DATA_WITH_RELEASE_ID))

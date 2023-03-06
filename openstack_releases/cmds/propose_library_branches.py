@@ -106,10 +106,7 @@ def main():
     deliverable_files = sorted(glob.glob(pattern))
 
     series_status_data = series_status.SeriesStatus.default()
-    release_id = series_status_data[args.series].release_id
-    if release_id is None:
-        release_id = args.series
-    new_branch = 'stable/' + str(release_id)
+    new_branch = 'stable/' + series_status_data[args.series].release_id
 
     for filename in deliverable_files:
         deliverable_name = os.path.basename(filename)[:-5]

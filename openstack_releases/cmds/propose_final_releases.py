@@ -38,10 +38,7 @@ def get_stable_branch_id(series):
     naming style: stable/2023.1 (versus the old style: stable/zed).
     """
     series_status_data = series_status.SeriesStatus.default()
-    release_id = series_status_data[series].release_id
-    if release_id is None:
-        release_id = series
-    return str(release_id)
+    return series_status_data[series].release_id
 
 
 def get_prior_branch_point(workdir, repo, branch):
