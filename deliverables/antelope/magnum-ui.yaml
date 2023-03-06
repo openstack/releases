@@ -5,3 +5,11 @@ team: magnum
 type: horizon-plugin
 repository-settings:
   openstack/magnum-ui: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/magnum-ui
+        hash: 452ca7da23f4489bc0dd25cfd031d4f1db04dfa6
+branches:
+  - name: stable/2023.1
+    location: 12.0.0.0rc1
