@@ -6,10 +6,19 @@ release-model: cycle-with-rc
 team: designate
 type: service
 cycle-highlights:
-  - Designate zones can now be shared across multiple projects. This not only
-    allows two or more projects to manage recordsets in the zone, but enables
-    “Classless IN-ADDR.ARPA delegation” (RFC 2317) in Designate. Classless
-    IN-ADDR.ARPA delegation allows IP address DNS PTR record assignment in
-    smaller blocks without creating a DNS zone per address.
+  - Designate zones can now be shared across multiple projects. This
+    not only allows two or more projects to manage recordsets in the
+    zone, but enables “Classless IN-ADDR.ARPA delegation” (RFC 2317)
+    in Designate. Classless IN-ADDR.ARPA delegation allows IP address
+    DNS PTR record assignment in smaller blocks without creating a DNS
+    zone per address.
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 8910a2014be52808cb3f4a42953b2176e852d0ad
+branches:
+  - name: stable/2023.1
+    location: 16.0.0.0rc1
