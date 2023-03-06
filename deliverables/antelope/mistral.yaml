@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 920d6b0336aebf86d321b5aa6e3d26ace6f3ae41
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/mistral
+        hash: 4289317a914cd2542a23ccc2f3cdcb0d7fd00676
+branches:
+  - name: stable/2023.1
+    location: 16.0.0.0rc1
