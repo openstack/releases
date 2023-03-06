@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: df8c3e4a8b70be8697ac46f0acec9169752b4698
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant
+        hash: df8c3e4a8b70be8697ac46f0acec9169752b4698
+branches:
+  - name: stable/2023.1
+    location: 6.0.0.0rc1
