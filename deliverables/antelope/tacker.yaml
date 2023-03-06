@@ -8,9 +8,17 @@ repository-settings:
 cycle-highlights:
   - Support fallbackBestEffort in a grant request and re-selection for
     placement constraints or no availability zones usecases.
-  - AutoHeal and AutoScale triggered by an external monitoring tools such as
-    Prometheus without NFVO.
+  - AutoHeal and AutoScale triggered by an external monitoring tools
+    such as Prometheus without NFVO.
   - OAuth 2.0 Mutual-TLS Support for authentication of external servers.
   - Multi DBs backend support for PostgreSQL.
   - CNF auto scale via performance management threshold interface.
   - Update network configuration via Change Current VNF Package API.
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: af88b178a952a66cb5a9333f3d6cd48ba6fb16d9
+branches:
+  - name: stable/2023.1
+    location: 9.0.0.0rc1
