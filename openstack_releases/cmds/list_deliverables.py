@@ -19,6 +19,21 @@ import openstack_releases
 from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import schema
+from openstack_releases import series_status
+
+
+def get_stable_branch_id(series):
+    """Retrieve the stable branch ID of the series.
+
+    Returns the release-id if the series has such field, otherwise
+    returns the series name. This is needed for the new stable branch
+    naming style: stable/2023.1 (versus the old style: stable/zed).
+    """
+    series_status_data = series_status.SeriesStatus.default()
+    release_id = series_status_data[series].release_id
+    if release_id is None:
+        release_id = series
+    return str(release_id)
 
 
 def main():
@@ -220,7 +235,8 @@ def main():
                 continue
             if deliv.stable_branch_type is None:
                 continue
-            if deliv.get_branch_location('stable/' + series) is not None:
+            if deliv.get_branch_location('stable/' +
+               get_stable_branch_id(series)) is not None:
                 continue
         if args.unreleased and (deliv.is_released or not deliv.is_releasable):
             continue
