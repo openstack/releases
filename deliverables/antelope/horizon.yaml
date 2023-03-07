@@ -3,5 +3,13 @@ launchpad: horizon
 release-model: cycle-with-intermediary
 team: horizon
 type: service
+releases:
+  - projects:
+      - repo: openstack/horizon
+        hash: 5663e0865b458fc67005049e68bc4ef73786e495
+    version: 23.1.0
+branches:
+  - name: stable/2023.1
+    location: 23.1.0
 repository-settings:
   openstack/horizon: {}
