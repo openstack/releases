@@ -5,3 +5,9 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla-ansible: {}
+cycle-highlights:
+  - All services in containers are now running under systemd control.
+  - Support for deploying Skyline has been added.
+  - validate-config CLI option has been added, which will validate services
+    configuration files using oslo-config-validator.
+  - Trove service deployment now supports backend TLS.
