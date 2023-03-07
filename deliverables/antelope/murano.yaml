@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: b68a216bb7d8d8ec6c47d9c423c9dd3b58040f0f
+branches:
+  - name: stable/2023.1
+    location: 15.0.0.0rc1
