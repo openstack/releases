@@ -5,6 +5,8 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+cycle-highlights:
+  - Keystone now has OAuth 2.0 Mutual-TLS Support
 releases:
   - version: 23.0.0.0rc1
     projects:
