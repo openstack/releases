@@ -5,3 +5,11 @@ team: murano
 type: other
 repository-settings:
   openstack/murano-agent: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/murano-agent
+        hash: 1af685b7d92e1991c4478d5c6cb0c87ca79df44e
+branches:
+  - name: stable/2023.1
+    location: 11.0.0.0rc1
