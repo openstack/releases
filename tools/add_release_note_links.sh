@@ -17,12 +17,14 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-if [ -z "$1" ]; then
-    echo "Usage: $0 SERIES"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 SERIES RELEASE_ID"
+    echo "Example: $0 antelope 2023.1"
     exit 1
 fi
 
 SERIES="$1"
+RELEASE_ID="$2"
 
 # Set up and activate the virtualenv that contains the
 # edit-deliverable command.
@@ -49,7 +51,7 @@ for filename in deliverables/$SERIES/*.yaml; do
         echo "no notes at all, skipping"
         continue
     fi
-    series_url="${base}/${SERIES}.html"
+    series_url="${base}/${RELEASE_ID}.html"
     if ! url_exists $series_url; then
         echo "no release notes page at $series_url"
     else
