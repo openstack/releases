@@ -15,19 +15,25 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: e73c3c9c227eb71d760858ad1425fa82e9e9fe8a
+  - version: 21.4.0
+    projects:
+      - repo: openstack/ironic
+        hash: c172e08415f7f0ff82a497494a798790e4c3af42
 branches:
   - name: bugfix/21.2
     location: 21.2.0
   - name: bugfix/21.3
     location: 21.3.0
+  - name: stable/2023.1
+    location: 21.4.0
 cycle-highlights:
-  - Adds support for service role in default policy, intended for service to
-    service communication.
+  - Adds support for service role in default policy, intended for service
+    to service communication.
   - Ironic can now export application metrics from the ironic-conductor
-    service into prometheus, alongside hardware metrics. Previously these
-    were only accessible via statsd.
+    service into prometheus, alongside hardware metrics. Previously
+    these were only accessible via statsd.
   - Adds support for sharding Ironic nodes using a shard-key, to enable
-    external API clients to horizontal scale. See
-    https://docs.openstack.org/api-ref/baremetal/#shards for more information.
-  - Performance on the /v1/ports and /v1/portgroups API list endpoints has
-    been improved.
+    external API clients to horizontal scale. See https://docs.openstack.org/api-ref/baremetal/#shards
+    for more information.
+  - Performance on the /v1/ports and /v1/portgroups API list endpoints
+    has been improved.
