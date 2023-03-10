@@ -875,7 +875,11 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_not_descendent(self):
+    @mock.patch('openstack_releases.gitutils.get_stable_branch_id')
+    def test_not_descendent(self, get_stable_branch_id):
+        get_stable_branch_id.configure_mock(
+            return_value='meiji',
+        )
         deliv = deliverable.Deliverable(
             team='team',
             series='meiji',
