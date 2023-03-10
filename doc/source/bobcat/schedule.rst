@@ -286,3 +286,39 @@ properly when the Cinder team does a final compliance check around the
 time of the third milestone.  See the `Driver Compliance
 <https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
 section of the Cinder Documentation for details.
+
+Nova
+----
+
+.. _b-nova-stable-review-day:
+
+Nova Stable Branches Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 9 May 2023, Nova proposed backports against stable branches will be
+prioritized for reviews by the Nova core team.
+
+.. _b-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 6 June 2023 and 27 June 2023, Nova specifications targeting 2023.2
+implementation will be prioritized for reviews by the Nova core team.
+
+.. _b-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2023.2 Bobcat must be approved
+by 6 July 2023 (23:59 UTC).
+
+
+.. _b-nova-review-day:
+
+Nova Feature Review Day
+^^^^^^^^^^^^^^^^^^^^^^^
+
+On 7 July 2023 and 25 July 2023, Nova approved blueprints with open changes
+will be prioritized for reviews by the Nova core team.
