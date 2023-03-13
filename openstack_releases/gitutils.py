@@ -19,6 +19,7 @@ import subprocess
 
 from openstack_releases import links
 from openstack_releases import processutils
+from openstack_releases import series_status
 
 # Disable warnings about insecure connections.
 from requests.packages import urllib3
@@ -27,6 +28,20 @@ urllib3.disable_warnings()
 LOG = logging.getLogger(__name__)
 
 GIT_TAG_TEMPLATE = 'https://opendev.org/%s/src/tag/%s'
+
+
+def get_stable_branch_id(series):
+    """Retrieve the stable branch ID of the series.
+
+    Returns the release-id if the series has such field, otherwise
+    returns the series name. This is needed for the new stable branch
+    naming style: stable/2023.1 (versus the old style: stable/zed).
+    """
+    series_status_data = series_status.SeriesStatus.default()
+    release_id = series_status_data[series].release_id
+    if release_id is None:
+        release_id = series
+    return str(release_id)
 
 
 def find_modified_deliverable_files():
@@ -248,7 +263,7 @@ def check_branch_sha(workdir, repo, series, sha):
     if stable/N exists we could not create stable/N-1).
 
     """
-    remote_match = 'remotes/origin/stable/%s' % series
+    remote_match = 'remotes/origin/stable/%s' % get_stable_branch_id(series)
     try:
         containing_branches = _filter_branches(
             processutils.check_output(
