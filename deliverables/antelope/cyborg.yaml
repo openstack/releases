@@ -7,6 +7,14 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+cycle-highlights:
+  - Complete VGPU management feature. The configration is same as Nova side.
+    The difference is we delete mdev when the vm is destroy and assign VGPU
+    trait to create vm.
+  - Add a new group of APIs to manage the lifecycle of accelerator's
+    attributes.
+  - Support get attribute list filter by deployable_id and key.
+  - Change device_profile_uuid from request path to body in get api.
 releases:
   - version: 10.0.0.0rc1
     projects:
