@@ -18,7 +18,9 @@ fi
 
 # Figure out the current series from the releases directory.
 current_series=$(python -c 'import openstack_releases.defaults; \
-    print(openstack_releases.defaults.RELEASE)')
+    from openstack_releases import series_status; \
+    series_status_data = series_status.SeriesStatus.default(); \
+    print(series_status_data[openstack_releases.defaults.RELEASE].release_id)')
 if [ -z "$current_series" ]; then
     echo "Could not determine the current release series."
     exit 1
