@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 3808102790ca8ccb559c865ddea15876b5a19939
+  - version: 14.0.2
+    projects:
+      - repo: openstack/designate
+        hash: 86a8cc5f525f6e2ab5e287c027b3bd18b9fbfbd3
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
