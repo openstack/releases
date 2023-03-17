@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 569c9c011a2cc9e5f041633dde4a47257e4d8565
+  - version: 4.0.0.0rc2
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: b29211686375b7179641c8580264e11f85a63a24
 branches:
   - name: stable/2023.1
     location: 4.0.0.0rc1
