@@ -8,9 +8,9 @@ repository-settings:
 cycle-highlights:
   - Horizon and all horizon plugins now support the nodejs18 version
     of nodejs.
-  - Horizon added portforwarding support for the Floating IPs.
-    Users can now perform PortForwarding CRUD operations to the Network
-    Floating Ips using horizon.
+  - Horizon added portforwarding support for the Floating IPs. Users
+    can now perform PortForwarding CRUD operations to the Network Floating
+    Ips using horizon.
 releases:
   - projects:
       - repo: openstack/horizon
@@ -19,3 +19,4 @@ releases:
 branches:
   - name: stable/2023.1
     location: 23.1.0
+release-notes: https://docs.openstack.org/releasenotes/horizon/2023.1.html
