@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 5225304a268fbd7e5edc30ab6d2b0cbf3b92b565
+  - version: 8.0.0
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 5225304a268fbd7e5edc30ab6d2b0cbf3b92b565
+    diff-start: 6.0.0
 branches:
   - name: stable/2023.1
     location: 8.0.0.0rc1

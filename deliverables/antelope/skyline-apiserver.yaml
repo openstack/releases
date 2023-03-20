@@ -16,6 +16,11 @@ releases:
     projects:
       - repo: openstack/skyline-apiserver
         hash: 2723126f034b5e8aafaa89b28dd3b1febdd2aeb0
+  - version: 2.0.0
+    projects:
+      - repo: openstack/skyline-apiserver
+        hash: 2723126f034b5e8aafaa89b28dd3b1febdd2aeb0
+    diff-start: 1.0.0.0rc1
 branches:
   - name: stable/2023.1
     location: 2.0.0.0rc1

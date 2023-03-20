@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: aa91a3b6141dd3177d581c5517ae9fe37e75ab4c
+  - version: 16.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: aa91a3b6141dd3177d581c5517ae9fe37e75ab4c
+    diff-start: 15.0.0
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1

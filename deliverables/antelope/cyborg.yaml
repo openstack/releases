@@ -8,9 +8,9 @@ repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
 cycle-highlights:
-  - Complete VGPU management feature. The configration is same as Nova side.
-    The difference is we delete mdev when the vm is destroy and assign VGPU
-    trait to create vm.
+  - Complete VGPU management feature. The configration is same as Nova
+    side. The difference is we delete mdev when the vm is destroy and
+    assign VGPU trait to create vm.
   - Add a new group of APIs to manage the lifecycle of accelerator's
     attributes.
   - Support get attribute list filter by deployable_id and key.
@@ -20,6 +20,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: eafcc2fc64df6d8c8c2e3b709e9d4e7d5e7be9b7
+  - version: 10.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: eafcc2fc64df6d8c8c2e3b709e9d4e7d5e7be9b7
+    diff-start: 9.0.0
 branches:
   - name: stable/2023.1
     location: 10.0.0.0rc1

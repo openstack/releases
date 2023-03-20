@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 555d3ed3e65cf24ded7a71ef8671f82ba67a7bc6
+  - version: 7.0.0
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 555d3ed3e65cf24ded7a71ef8671f82ba67a7bc6
+    diff-start: 6.0.0
 branches:
   - name: stable/2023.1
     location: 7.0.0.0rc1

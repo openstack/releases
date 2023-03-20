@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 1af685b7d92e1991c4478d5c6cb0c87ca79df44e
+  - version: 11.0.0
+    projects:
+      - repo: openstack/murano-agent
+        hash: 1af685b7d92e1991c4478d5c6cb0c87ca79df44e
+    diff-start: 10.0.0
 branches:
   - name: stable/2023.1
     location: 11.0.0.0rc1
