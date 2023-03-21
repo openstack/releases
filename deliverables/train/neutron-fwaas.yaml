@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: 3c3efef25173bf61d140c8e25007829f80483b19
+  - version: train-eol
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 3c3efef25173bf61d140c8e25007829f80483b19
 branches:
   - name: stable/train
     location: 15.0.0.0rc1
