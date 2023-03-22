@@ -6,7 +6,8 @@ type: service
 repository-settings:
   openstack/magnum: {}
 cycle-highlights:
-  - Magnum has been updated to support Kubernetes v1.24 running on Fedora CoreOS 36 and 37.
+  - Magnum has been updated to support Kubernetes v1.24 running on Fedora
+    CoreOS 36 and 37.
 releases:
   - version: 16.0.0.0rc1
     projects:
@@ -15,3 +16,4 @@ releases:
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/magnum/2023.1.html
