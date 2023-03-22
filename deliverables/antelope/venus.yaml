@@ -8,13 +8,21 @@ repository-settings:
   openstack/venus:
     tarball-base: openstack-venus
 cycle-highlights:
-  - Infrastructure improvement：Use the MariaDB database to support the storage of key configuration data;
-  - Infrastructure improvement：Use the task scheduling framework Apscheduler to implement background periodic tasks, such as periodic cleaning of expired log data;
+  - Infrastructure improvement：Use the MariaDB database to support the
+    storage of key configuration data;
+  - Infrastructure improvement：Use the task scheduling framework Apscheduler
+    to implement background periodic tasks, such as periodic cleaning
+    of expired log data;
 releases:
   - version: 2.0.0.0rc1
     projects:
       - repo: openstack/venus
         hash: 69414d4f72941cc60ada422488464e19d6eb64ee
+  - version: 2.0.0
+    projects:
+      - repo: openstack/venus
+        hash: 69414d4f72941cc60ada422488464e19d6eb64ee
+    diff-start: 1.0.0
 branches:
   - name: stable/2023.1
     location: 2.0.0.0rc1

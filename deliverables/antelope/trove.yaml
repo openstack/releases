@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 2fbbb09d22039f672ef4a084617bff8748fba134
+  - version: 19.0.0
+    projects:
+      - repo: openstack/trove
+        hash: 2fbbb09d22039f672ef4a084617bff8748fba134
+    diff-start: 18.0.0
 branches:
   - name: stable/2023.1
     location: 19.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 73d5543f15ec188fafa1562f4142edd41afbad5c
+  - version: 18.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 73d5543f15ec188fafa1562f4142edd41afbad5c
+    diff-start: 17.0.0.0rc1
 branches:
   - name: stable/2023.1
     location: 18.0.0.0rc1

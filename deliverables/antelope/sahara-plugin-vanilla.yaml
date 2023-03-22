@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: d93365f15187ddb0f618317ad6a1d45d700acef5
+  - version: 9.0.0
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: d93365f15187ddb0f618317ad6a1d45d700acef5
+    diff-start: 8.0.0
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
