@@ -3,5 +3,13 @@ launchpad: puppet-manila
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: bd6f2d656f23249f16f6288efce775092232c594
+        repo: openstack/puppet-manila
+    version: 22.0.0
 repository-settings:
   openstack/puppet-manila: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

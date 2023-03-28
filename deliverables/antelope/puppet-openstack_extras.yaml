@@ -3,5 +3,13 @@ launchpad: puppet-openstack-extras
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 04f0e74bec7f44918ab5106628d7861f90078a58
+        repo: openstack/puppet-openstack_extras
+    version: 22.0.0
 repository-settings:
   openstack/puppet-openstack_extras: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

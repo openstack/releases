@@ -3,5 +3,13 @@ launchpad: puppet-horizon
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 6bc1b777fe9e184983daf08a51679ece3f78632c
+        repo: openstack/puppet-horizon
+    version: 22.0.0
 repository-settings:
   openstack/puppet-horizon: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

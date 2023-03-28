@@ -3,5 +3,13 @@ launchpad: puppet-oslo
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: cf34e145c413154fb72b8f6c4c6e9ec8963b7f33
+        repo: openstack/puppet-oslo
+    version: 22.0.0
 repository-settings:
   openstack/puppet-oslo: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

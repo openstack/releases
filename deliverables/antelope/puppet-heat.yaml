@@ -3,5 +3,13 @@ launchpad: puppet-heat
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: e50dcffab706614c0b03d7da36b28336dfee00ad
+        repo: openstack/puppet-heat
+    version: 22.0.0
 repository-settings:
   openstack/puppet-heat: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

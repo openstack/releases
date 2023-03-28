@@ -3,5 +3,13 @@ launchpad: puppet-cinder
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 1ebe28ed5f8066df87c7ba80205ae1ada3a8d205
+        repo: openstack/puppet-cinder
+    version: 22.0.0
 repository-settings:
   openstack/puppet-cinder: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

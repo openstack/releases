@@ -3,5 +3,13 @@ launchpad: puppet-gnocchi
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 285032344c1a55c48a0b8680a3275e4f8764f89b
+        repo: openstack/puppet-gnocchi
+    version: 22.0.0
 repository-settings:
   openstack/puppet-gnocchi: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

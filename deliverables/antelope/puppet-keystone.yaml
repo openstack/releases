@@ -3,5 +3,13 @@ launchpad: puppet-keystone
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 1624b814fd66372e1c28589c4d814d051a5dcc9f
+        repo: openstack/puppet-keystone
+    version: 22.0.0
 repository-settings:
   openstack/puppet-keystone: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0
