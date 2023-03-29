@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: 26da379c3a5c88dda5f30adf9fd39d4254a9cc10
     diff-start: 1.1.0
+  - version: xena-em
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: 26da379c3a5c88dda5f30adf9fd39d4254a9cc10
 branches:
   - name: stable/xena
     location: 2.0.0.0rc1
