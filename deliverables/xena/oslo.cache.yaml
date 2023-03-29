@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 55cb199f90b27cef203bca8edb9431f9d7ed841c
+  - version: xena-em
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 55cb199f90b27cef203bca8edb9431f9d7ed841c
 branches:
   - name: stable/xena
     location: 2.8.1
