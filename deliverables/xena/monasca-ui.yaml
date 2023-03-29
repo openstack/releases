@@ -19,6 +19,10 @@ releases:
       - repo: openstack/monasca-ui
         hash: ec5420dd33fc7cb9b91a5c9793987be379db8164
     diff-start: 4.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/monasca-ui
+        hash: ec5420dd33fc7cb9b91a5c9793987be379db8164
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
