@@ -30,6 +30,10 @@ releases:
       - hash: 8e59bdd0d04139f9b0971090ac979a8558e4dc29
         repo: openstack/puppet-oslo
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 8e59bdd0d04139f9b0971090ac979a8558e4dc29
 branches:
   - name: stable/xena
     location: 19.4.0

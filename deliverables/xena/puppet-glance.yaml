@@ -30,6 +30,10 @@ releases:
       - hash: cbbeee8feb5bd67596fd3c28dce62bbcf574439e
         repo: openstack/puppet-glance
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-glance
+        hash: cbbeee8feb5bd67596fd3c28dce62bbcf574439e
 branches:
   - name: stable/xena
     location: 19.4.0

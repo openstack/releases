@@ -26,6 +26,10 @@ releases:
       - hash: 117c42ad1ce47af9faa7302efcc1195b3534fd00
         repo: openstack/puppet-murano
     version: 19.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 117c42ad1ce47af9faa7302efcc1195b3534fd00
 branches:
   - name: stable/xena
     location: 19.4.0

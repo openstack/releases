@@ -26,6 +26,10 @@ releases:
       - hash: 34b1688db1713221c00c90b36d494d58e1d8edd4
         repo: openstack/puppet-aodh
     version: 19.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 34b1688db1713221c00c90b36d494d58e1d8edd4
 branches:
   - name: stable/xena
     location: 19.4.0

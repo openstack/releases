@@ -30,6 +30,10 @@ releases:
       - hash: aea7e211f51d76eb9d2c5a6a6f0e50a539d5fba0
         repo: openstack/puppet-vswitch
     version: 15.4.1
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: aea7e211f51d76eb9d2c5a6a6f0e50a539d5fba0
 branches:
   - name: stable/xena
     location: 15.4.0

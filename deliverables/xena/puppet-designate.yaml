@@ -30,6 +30,10 @@ releases:
       - hash: 734e498ac69fb0ef8d7cd4e66f66102aae655d08
         repo: openstack/puppet-designate
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 734e498ac69fb0ef8d7cd4e66f66102aae655d08
 branches:
   - name: stable/xena
     location: 19.4.0
