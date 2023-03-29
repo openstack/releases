@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove-dashboard
         hash: 4225bafca20d67a14c41f996440fb413943b452e
     diff-start: 16.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 4225bafca20d67a14c41f996440fb413943b452e
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1
