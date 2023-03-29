@@ -15,6 +15,10 @@ releases:
       - repo: openstack/sahara-plugin-cdh
         hash: fc27bc345ee4c3d5dce6b57988580046a3c3c7a5
     diff-start: 5.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: fc27bc345ee4c3d5dce6b57988580046a3c3c7a5
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

@@ -15,6 +15,10 @@ releases:
       - repo: openstack/sahara-plugin-ambari
         hash: 8034258ef0ecb048c4167d7a0eb3691a9d23cc44
     diff-start: 5.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 8034258ef0ecb048c4167d7a0eb3691a9d23cc44
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
