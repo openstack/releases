@@ -16,6 +16,10 @@ releases:
       - repo: openstack/networking-generic-switch
         hash: 6b8b7b5a96ab3480b1d81bdbcc49d230247e35d9
     diff-start: 5.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 6b8b7b5a96ab3480b1d81bdbcc49d230247e35d9
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
