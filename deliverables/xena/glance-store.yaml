@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: a4ba0c4fded13190f9161acedf6240f025718a77
+  - version: xena-em
+    projects:
+      - repo: openstack/glance_store
+        hash: a4ba0c4fded13190f9161acedf6240f025718a77
 branches:
   - name: stable/xena
     location: 2.7.0
