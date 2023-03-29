@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 98a5b71d1b0ca1de4675786d414f565bba517626
+  - version: xena-em
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 98a5b71d1b0ca1de4675786d414f565bba517626
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1
