@@ -57,6 +57,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 706ee6010a3720b9d9faf72d6782665b6eb083a7
+  - version: xena-em
+    projects:
+      - repo: openstack/nova
+        hash: 706ee6010a3720b9d9faf72d6782665b6eb083a7
 branches:
   - name: stable/xena
     location: 24.0.0.0rc1
