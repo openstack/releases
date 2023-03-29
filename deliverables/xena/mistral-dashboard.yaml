@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 2980dfc44f11400c75a1113e468f50e7c6d6396c
     diff-start: 12.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 2980dfc44f11400c75a1113e468f50e7c6d6396c
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
