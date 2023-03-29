@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 4192182302a9f81b2cac5aff484161afc776c750
     diff-start: 5.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4192182302a9f81b2cac5aff484161afc776c750
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
