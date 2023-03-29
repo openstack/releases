@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 3a8a6c89c69819510571181adde62b68ed812752
+  - version: xena-em
+    projects:
+      - repo: openstack/keystone
+        hash: 3a8a6c89c69819510571181adde62b68ed812752
 branches:
   - name: stable/xena
     location: 20.0.0.0rc1
