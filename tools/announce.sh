@@ -175,8 +175,11 @@ if [ -e setup.py ] ; then
     # be sending.
     echo "Priming setup_requires packages"
     python setup.py --name
-    project_name=$(python setup.py --name)
-    description="$(python setup.py --description)"
+    # NOTE(elod.illes): pbr startid to print '[pbr] Generating ChangeLog'
+    # this is related to some recent release (setuptools? virtualenv?)
+    # the 'tail' command needs to be removed as soon as that bug is fixed 
+    project_name=$(python setup.py --name | tail -1)
+    description="$(python setup.py --description| tail -1)"
 else
     # As a last resort, guess that the project name may be the same as that
     # of the local working directory at the point this script is invoked.
