@@ -9,7 +9,9 @@ releases:
         repo: openstack/puppet-tacker
     version: 21.0.0
 repository-settings:
-  openstack/puppet-tacker: {}
+  openstack/puppet-tacker:
+    flags:
+      - retired
 branches:
   - name: stable/zed
     location: 21.0.0
