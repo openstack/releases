@@ -3,5 +3,13 @@ launchpad: puppet-neutron
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 7ee14d9f9b3d9cf8311ec401aa56dcd93466add6
+        repo: openstack/puppet-neutron
+    version: 22.0.0
 repository-settings:
   openstack/puppet-neutron: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

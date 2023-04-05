@@ -3,5 +3,13 @@ launchpad: puppet-swift
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: b47246352e37f72198940271925bfeb256c4c9bb
+        repo: openstack/puppet-swift
+    version: 22.0.0
 repository-settings:
   openstack/puppet-swift: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

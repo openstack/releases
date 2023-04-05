@@ -3,5 +3,13 @@ launchpad: puppet-openstacklib
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 51c191ab4ac658987d086dc11ce1e4d97560871a
+        repo: openstack/puppet-openstacklib
+    version: 22.0.0
 repository-settings:
   openstack/puppet-openstacklib: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

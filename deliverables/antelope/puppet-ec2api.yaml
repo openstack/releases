@@ -3,5 +3,13 @@ launchpad: puppet-ec2api
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: ed9ed82d19b8cc0781be771123d2957ac4030663
+        repo: openstack/puppet-ec2api
+    version: 22.0.0
 repository-settings:
   openstack/puppet-ec2api: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

@@ -3,5 +3,13 @@ launchpad: puppet-trove
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 57934e7afbaeb7e6dde41946215dd3c883d21d99
+        repo: openstack/puppet-trove
+    version: 22.0.0
 repository-settings:
   openstack/puppet-trove: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

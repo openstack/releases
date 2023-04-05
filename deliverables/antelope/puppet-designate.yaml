@@ -3,5 +3,13 @@ launchpad: puppet-designate
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 0bbab85ffcb8a6532021147b5c339f47b428fa50
+        repo: openstack/puppet-designate
+    version: 22.0.0
 repository-settings:
   openstack/puppet-designate: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0

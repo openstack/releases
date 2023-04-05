@@ -3,5 +3,13 @@ launchpad: puppet-cloudkitty
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: a7bf345a3288e3833c45575a923dd6bae60efd11
+        repo: openstack/puppet-cloudkitty
+    version: 11.0.0
 repository-settings:
   openstack/puppet-cloudkitty: {}
+branches:
+  - name: stable/2023.1
+    location: 11.0.0

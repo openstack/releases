@@ -3,5 +3,13 @@ launchpad: puppet-glance
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: e554f5e8975587b10915a01f86d85b33f033ad30
+        repo: openstack/puppet-glance
+    version: 22.0.0
 repository-settings:
   openstack/puppet-glance: {}
+branches:
+  - name: stable/2023.1
+    location: 22.0.0
