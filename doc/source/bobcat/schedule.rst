@@ -209,3 +209,80 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Cinder
+------
+
+.. _b-cinder-mid-cycle-ptg-1:
+
+Cinder Mid Cycle PTG - 1
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will be conducting a mid-cycle PTG on 31st May (Wednesday) which is a
+continuation of 2023.2 Bobcat PTG to track progress and discuss topics in a
+similar manner as of PTG.
+
+Wednesday 31 May 2023 (1400-1600 UTC).
+
+.. _b-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in 2023.2 Bobcat must be
+approved by Friday 23 Jun 2023 (23:59 UTC).
+
+.. _b-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the 2023.2 Bobcat
+release is Friday 7 July 2023 (23:59 UTC) which is the same as Milestone 2.
+New drivers must be (a) code complete including unit tests, (b) merged into
+the code repository, and (c) must have a 3rd Party CI running reliably.
+
+.. _b-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the 2023.2 Bobcat
+release is Friday 7 July 2023 (23:59 UTC) which is the same as Milestone 2.
+New target drivers must be (a) code complete including unit tests,
+(b) merged into the code repository, and (c) must have a 3rd Party CI running
+reliably.
+
+.. _b-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in four weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 01 September 2023.
+
+.. _b-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in three weeks.  Before
+the Cinder meeting this week, you should post a blueprint in Launchpad listing
+the Gerrit reviews of features you'd like to land in 2023.2 Bobcat.  (You can
+look among the 2023.1 Antelope and Zed blueprints for examples; contact the
+PTL if you have any questions.)  This will help the team prioritize reviews
+and give you candid early feedback on whether the features look ready.
+
+.. _b-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the 2023.2 Bobcat release, its third party CI must be running
+properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
