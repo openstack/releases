@@ -42,6 +42,8 @@ cycle:
   start: '2023-05-29'
   x-project:
   - b-cycle-trail
+  project-specific:
+  - b-cinder-mid-cycle-ptg-1
 - end: '2023-06-09'
   name: R-17
   start: '2023-06-05'
@@ -53,6 +55,8 @@ cycle:
 - end: '2023-06-23'
   name: R-15
   start: '2023-06-19'
+  project-specific:
+  - b-cinder-spec-freeze
 - end: '2023-06-30'
   name: R-14
   start: '2023-06-26'
@@ -62,6 +66,9 @@ cycle:
   x-project:
   - b-2
   - b-mf
+  project-specific:
+  - b-cinder-driver-deadline
+  - b-cinder-target-driver-deadline
 - end: '2023-07-14'
   name: R-12
   start: '2023-07-10'
@@ -74,9 +81,13 @@ cycle:
 - end: '2023-08-04'
   name: R-9
   start: '2023-07-31'
+  project-specific:
+  - b-cinder-feature-checkpoint
 - end: '2023-08-11'
   name: R-8
   start: '2023-08-07'
+  project-specific:
+  - b-cinder-driver-features-declaration
 - end: '2023-08-18'
   name: R-7
   start: '2023-08-14'
@@ -100,6 +111,8 @@ cycle:
 - end: '2023-09-08'
   name: R-4
   start: '2023-09-04'
+  project-specific:
+  - b-cinder-ci-checkpoint
 - end: '2023-09-15'
   name: R-3
   start: '2023-09-11'
