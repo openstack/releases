@@ -37,8 +37,8 @@ function get_open_patches {
 
     OPEN_CHANGES=$(ssh -p 29418 review.opendev.org gerrit query status:open \
                 project:${REPO} branch:stable/${BRANCH} | \
-                awk '/url:|commitMessage:/ {$1=""; print $0}' | \
-                awk '!(NR%2){print buf " --" $0}{buf=$0}')
+                awk '/url:|subject:/ {$1=""; print $0}' | \
+                awk '(NR%2){buf=$0}!(NR%2){print $0 " --" buf}')
 
     if [ -n "${OPEN_CHANGES}" ]; then
         title "Changes waiting for review in ${REPO} (stable/${BRANCH})"
