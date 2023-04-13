@@ -31,6 +31,8 @@ cycle:
   start: '2023-05-08'
   x-project:
   - b-1
+  project-specific:
+    - b-nova-stable-review-day
 - end: '2023-05-19'
   name: R-20
   start: '2023-05-15'
@@ -47,6 +49,8 @@ cycle:
 - end: '2023-06-09'
   name: R-17
   start: '2023-06-05'
+  project-specific:
+    - b-nova-spec-review-day
 - end: '2023-06-16'
   name: R-16
   start: '2023-06-12'
@@ -60,6 +64,8 @@ cycle:
 - end: '2023-06-30'
   name: R-14
   start: '2023-06-26'
+  project-specific:
+    - b-nova-spec-review-day
 - end: '2023-07-07'
   name: R-13
   start: '2023-07-03'
@@ -69,6 +75,8 @@ cycle:
   project-specific:
   - b-cinder-driver-deadline
   - b-cinder-target-driver-deadline
+  - b-nova-spec-freeze
+  - b-nova-review-day
 - end: '2023-07-14'
   name: R-12
   start: '2023-07-10'
@@ -77,6 +85,8 @@ cycle:
   start: '2023-07-17'
 - end: '2023-07-28'
   name: R-10
+  project-specific:
+    - b-nova-review-day
   start: '2023-07-24'
 - end: '2023-08-04'
   name: R-9
