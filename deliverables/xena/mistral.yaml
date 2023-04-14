@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral
         hash: b2d6de569c7bba96cd3179189ffbcee6b7a28c1f
     diff-start: 12.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/mistral
+        hash: b2d6de569c7bba96cd3179189ffbcee6b7a28c1f
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
