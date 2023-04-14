@@ -15,6 +15,10 @@ releases:
       - repo: openstack/storlets
         hash: a513114c33d414037ec80bc6c5722dae52a90410
     diff-start: 7.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/storlets
+        hash: a513114c33d414037ec80bc6c5722dae52a90410
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
