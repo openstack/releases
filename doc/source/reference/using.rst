@@ -430,8 +430,7 @@ The top level of a deliverable file is a mapping with keys:
 
   ``none``
     This mode indicates that the deliverable should never have stable
-    branches. This is used for specific deliverables like tempest
-    or patrole.
+    branches. This is used for specific deliverables like tempest.
 
 ``cycle-highlights``
   A list of plain-text bullet points describing some of the top new
