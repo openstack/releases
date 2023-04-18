@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-tacker: {}
+  openstack/puppet-tacker:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: b5db20e1588b24f718414a118738989c0385deb1
