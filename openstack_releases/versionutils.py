@@ -51,8 +51,8 @@ def validate_version(versionstr, release_type='python-service', pre_ok=True):
 
     """
     if not pre_ok and looks_like_preversion(versionstr):
-        yield('Version %s looks like a pre-release and the release '
-              'model does not allow for it' % versionstr)
+        yield ('Version %s looks like a pre-release and the release '
+               'model does not allow for it' % versionstr)
 
     if release_type not in _VALIDATORS:
         yield 'Release Type %r not valid using \'python-service\' instead' % release_type
