@@ -17,6 +17,10 @@ releases:
       - repo: openstack/networking-sfc
         hash: 04e1be1cc25cc84fb3e6b50656759bc325b4c223
     diff-start: 12.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 04e1be1cc25cc84fb3e6b50656759bc325b4c223
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

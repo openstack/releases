@@ -16,6 +16,10 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: c833a9783ab8e164ca1a0f6f01010cc4e85c3294
     diff-start: 14.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: c833a9783ab8e164ca1a0f6f01010cc4e85c3294
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1
