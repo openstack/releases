@@ -16,6 +16,10 @@ releases:
       - repo: openstack/manila-ui
         hash: 299e102ba50755d79259d6d7ccab9ee8a7043fc7
     diff-start: 5.0.0.0rc1
+  - version: xena-em
+    projects:
+      - repo: openstack/manila-ui
+        hash: 299e102ba50755d79259d6d7ccab9ee8a7043fc7
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
