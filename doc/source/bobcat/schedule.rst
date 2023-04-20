@@ -366,3 +366,14 @@ Nova Feature Review Day
 
 On 7 July 2023 and 25 July 2023, Nova approved blueprints with open changes
 will be prioritized for reviews by the Nova core team.
+
+Oslo
+----
+
+.. _b-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
