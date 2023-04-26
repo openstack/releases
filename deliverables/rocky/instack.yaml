@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/instack
         hash: 1dca54c838b759eab1ae7c49871e2bba85dae06c
+  - version: rocky-eol
+    projects:
+      - repo: openstack/instack
+        hash: 3a698198de0c551cd381d77ea56c8752ea5605f0
 branches:
   - location: 9.1.0
     name: stable/rocky
