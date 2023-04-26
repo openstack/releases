@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-tricircleclient
         hash: a60ef68c25933eeb9b5636cf063f7340cfd6062d
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 363101cace902252f717a723fb97040f8b76cbdb
 repository-settings:
   openstack/python-tricircleclient:
     tarball-base: tricircleclient
