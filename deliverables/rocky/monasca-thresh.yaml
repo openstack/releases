@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: 5f76cf1668ee827155c3cb4c736575de96a5a5a2
+  - version: rocky-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: c2385200c84f648ce89c2a62346cb90701d22c18
 branches:
   - location: 2.3.0
     name: stable/rocky

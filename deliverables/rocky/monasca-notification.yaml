@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: ed235234329bae6e5de001aefd5ddadbd3178ced
+  - version: rocky-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 2f9bf1fdc199a1fe6163fd79fbd59ad64aedd75b
 branches:
   - location: 1.14.0
     name: stable/rocky
