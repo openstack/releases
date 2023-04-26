@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-qinlingclient
         hash: bb21ea9249e73574443d39045090b5770a468c33
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: 417546beee6a08aff4ff1e90fa9c2baa8148718c
 branches:
   - location: 2.0.0
     name: stable/rocky

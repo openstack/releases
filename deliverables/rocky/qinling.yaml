@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/qinling
         hash: 9d6bd96f9c70e6870fd67c55467526e365fb0ecc
+  - version: rocky-eol
+    projects:
+      - repo: openstack/qinling
+        hash: 185be7bb88474f4724e8ac69aca11fc111ce8d85
 branches:
   - location: 1.0.0.0rc1
     name: stable/rocky
