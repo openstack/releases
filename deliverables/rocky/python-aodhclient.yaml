@@ -15,6 +15,10 @@ releases:
       - repo: openstack/python-aodhclient
         hash: a5462e6623e5ff1e29d5ec39d9d6ac68e88eceae
         tarball-base: aodhclient
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: c531a3dbd5e9ca6e58236f587b335605097513fc
 repository-settings:
   openstack/python-aodhclient: {}
 branches:

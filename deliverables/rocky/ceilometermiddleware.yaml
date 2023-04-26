@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: 8332b9eaff3a59026e7af1a7339525440a960d51
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 043749a98aa65941896778bb90ebee3aad5c9aad
 branches:
   - location: 1.3.0
     name: stable/rocky

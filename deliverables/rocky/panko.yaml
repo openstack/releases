@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/panko
         hash: fb019f8414ff2dcdf52afeaaea9394d72395fb83
+  - version: rocky-eol
+    projects:
+      - repo: openstack/panko
+        hash: 1c4399d58e3946d3d0364a9a592352e05423a2a6
 branches:
   - location: 5.0.0
     name: stable/rocky

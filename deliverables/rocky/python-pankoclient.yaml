@@ -12,6 +12,10 @@ releases:
       - repo: openstack/python-pankoclient
         hash: 572aee9cf6ac618eb5d1ea325f9e59414d387dbf
         tarball-base: pankoclient
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 5683db14506b32d7d231764f3612bff4e7123bd5
 branches:
   - location: 0.5.0
     name: stable/rocky
