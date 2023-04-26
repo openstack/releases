@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: e8e3798f4126afb8633e5485b8c29cfa635d9cec
+  - version: rocky-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 384a91b947d07380d11cc6a4c7d82daa9cb89d4c
 branches:
   - location: 1.2.0
     name: stable/rocky

@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 06b7e527840128db437cd8af538a7b2ce761bc11
+  - version: rocky-eol
+    projects:
+      - repo: openstack/blazar
+        hash: 8855e603a111fa5468be110baf15498e6037696f
 branches:
   - location: 2.0.0.0rc1
     name: stable/rocky
