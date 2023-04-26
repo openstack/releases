@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/ceilometer-powervm
         hash: 1bd1f9e639f07b4f53be30ee887f9cced5d80d2a
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 1d060fc6899c663ad4425f38757f915fafe17790
 repository-settings:
   openstack/ceilometer-powervm: {}

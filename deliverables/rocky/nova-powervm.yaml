@@ -42,5 +42,9 @@ releases:
     projects:
       - repo: openstack/nova-powervm
         hash: 984b122668161703eee33918d570c61ae9c5b1ca
+  - version: rocky-eol
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 18ec580b404d0a75deee7490446893d057847f87
 repository-settings:
   openstack/nova-powervm: {}
