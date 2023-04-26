@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 0fc941f2802b787956c07e5aaf20f6272e689cf7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 7580aa483bd883d6a653931b480c26c921fc45cc
 branches:
   - location: 1.38.1
     name: stable/rocky

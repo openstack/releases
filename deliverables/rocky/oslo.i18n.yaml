@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: e690af4a3c2d6efd7afcde6d87196895030d7576
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 6049d30e114b802db04c9778f50218c059fc8455
 branches:
   - location: 3.21.0
     name: stable/rocky

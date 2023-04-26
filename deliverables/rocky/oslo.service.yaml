@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: d1295d45eedbae7f524026af207c8196a8925fa9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.service
+        hash: 5625fd792402c722a43adf434cd8efa04ebacd22
 branches:
   - location: 1.31.3
     name: stable/rocky

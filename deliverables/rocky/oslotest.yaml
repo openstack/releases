@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: 897823fbd61ae9ba015af38e9fed5a5728de64c2
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslotest
+        hash: 73083a78a7a019751ce44ce252f5cebaeb48c2d3
 branches:
   - location: 3.6.0
     name: stable/rocky

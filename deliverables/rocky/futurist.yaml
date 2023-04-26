@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 936a5d5f13a0c01bb45629aadbf4cd83013932e2
+  - version: rocky-eol
+    projects:
+      - repo: openstack/futurist
+        hash: 6da297e5fbe7c2367a4479c72a49fa79922c8fa3
 branches:
   - location: 1.7.0
     name: stable/rocky

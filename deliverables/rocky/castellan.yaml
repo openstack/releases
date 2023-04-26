@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: a99da51d83bd43ea4c6584a99906d4d325c499de
+  - version: rocky-eol
+    projects:
+      - repo: openstack/castellan
+        hash: 9300d5774d698d6da070b82fd33739321378a47e
 branches:
   - location: 0.18.0
     name: stable/rocky

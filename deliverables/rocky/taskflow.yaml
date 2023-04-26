@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: 22990d49b4bd6f020f67a6a39b8aa17a2819badb
+  - version: rocky-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 9bdab74f29278db353e8cad1b6cd43a549b317c0
 branches:
   - location: 3.2.0
     name: stable/rocky

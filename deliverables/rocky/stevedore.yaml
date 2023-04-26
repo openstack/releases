@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 64f70f245a1439138757910810873a0e3134ab53
+  - version: rocky-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: 39f61e4392ef3c0f1852b87a9d2cb0bc4f410bec
 branches:
   - location: 1.29.0
     name: stable/rocky

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: d3165af5b939b98e8f7c42a9613d556fa3f58a2c
+  - version: rocky-eol
+    projects:
+      - repo: openstack/debtcollector
+        hash: cd0ad83f9640f952a4983ea15a4341101f8fb0ba
 branches:
   - location: 1.20.0
     name: stable/rocky

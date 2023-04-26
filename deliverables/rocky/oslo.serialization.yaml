@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: fb15d638b1389ccc05d18c20ff478d483643c9d9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 8cc06c38fee450ca8ca7ae1a5d5d422f9eb76045
 branches:
   - location: 2.27.0
     name: stable/rocky
