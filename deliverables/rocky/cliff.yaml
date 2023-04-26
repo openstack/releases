@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: dd6abfffba239ff1be945dbd2b53a402d2757b46
+  - version: rocky-eol
+    projects:
+      - repo: openstack/cliff
+        hash: 3fcb33c5cf8970e8ec045176d8d83da51bc181fc
 branches:
   - location: 2.13.0
     name: stable/rocky

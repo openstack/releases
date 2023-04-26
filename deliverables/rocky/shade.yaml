@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/shade
         hash: df4c5819d2b1da148ef5a6e9a6fa09e684e707dc
+  - version: rocky-eol
+    projects:
+      - repo: openstack/shade
+        hash: ee02e57c4616309ee20926e0b6a225c683fe2741
 repository-settings:
   openstack/shade: {}
 branches:

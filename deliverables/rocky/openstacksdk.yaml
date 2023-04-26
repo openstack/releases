@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 3c7dfb3d190e6d14d36cce4bbc3e38280761a788
+  - version: rocky-eol
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 0b35298e9427aa7c8f9398c37d55d5420d8cc7fd
 repository-settings:
   openstack/openstacksdk: {}
 branches:
