@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: abacf8f2d43b0b5d2769849d48e78120c58fe163
+  - version: rocky-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 97282f76c7ef6c84c333c586130221642d1c2c8a
 repository-settings:
   openstack/sahara-extra: {}
 branches:
