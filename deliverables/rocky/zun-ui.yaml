@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: 7eb1e0b5dce3c34906cf3f0c048b6b703d3a8fb0
+  - version: rocky-eol
+    projects:
+      - repo: openstack/zun-ui
+        hash: 9af84c569e2924de2dfb74d667c15f5da1417dd0
 branches:
   - name: stable/rocky
     location: 2.0.0
