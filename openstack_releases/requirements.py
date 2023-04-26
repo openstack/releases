@@ -91,7 +91,7 @@ def get_requirements_at_ref(workdir, repo, ref):
 
     try:
         dest = gitutils.clone_repo(workdir, repo, ref=ref)
-        processutils.check_call(['python3', 'setup.py', 'sdist'], cwd=dest)
+        processutils.check_call(['python3', '-m', 'build', '--sdist', '--wheel'], cwd=dest)
         sdist_name = pythonutils.get_sdist_name(workdir, repo)
         requirements_filename = os.path.join(
             dest, sdist_name + '.egg-info', 'requires.txt',
