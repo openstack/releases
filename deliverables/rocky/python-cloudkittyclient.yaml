@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 37c6bb0c8b2fd9a67a8d15830f545949657e74eb
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 37c6bb0c8b2fd9a67a8d15830f545949657e74eb
 branches:
   - location: 2.0.0
     name: stable/rocky
