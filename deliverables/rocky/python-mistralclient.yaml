@@ -34,4 +34,8 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: f0ee48fa72bbbb29b06028f3c2a2600a1636fbe3
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 370d02b2c6292fe61b337a97715a125b57197c04
 release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/rocky.html
