@@ -58,6 +58,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: ad39c12c64c8ff017918a8790d69d5278ac379da
+  - version: rocky-eol
+    projects:
+      - repo: openstack/glance
+        hash: ad39c12c64c8ff017918a8790d69d5278ac379da
 repository-settings:
   openstack/glance: {}
 release-notes: https://docs.openstack.org/releasenotes/glance/rocky.html

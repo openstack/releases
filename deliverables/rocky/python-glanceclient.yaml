@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 535bc526ce0196232b7f1f2df8ba6343b77b55b5
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 535bc526ce0196232b7f1f2df8ba6343b77b55b5
 branches:
   - location: 2.12.0
     name: stable/rocky
