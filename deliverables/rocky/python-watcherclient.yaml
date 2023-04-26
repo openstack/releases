@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 582b52b1b8707f678c16a9f4c1c935b448befda3
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 582b52b1b8707f678c16a9f4c1c935b448befda3
 branches:
   - location: 2.1.0
     name: stable/rocky
