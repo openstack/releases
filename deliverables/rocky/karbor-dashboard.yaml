@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/karbor-dashboard
         hash: 3c83ccaac9431b6ede1872819180890c09aeb2c5
+  - version: rocky-eol
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: 18a2cd82de732dbc7b483e4255e78fe49e1ca838
 branches:
   - location: 1.1.0
     name: stable/rocky

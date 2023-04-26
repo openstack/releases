@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 7aca76b32b6f89774ab1659a90bcba08b62a1700
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-karborclient
+        hash: bce6f76f240d60d3c8bf87794a068e7193bbd06e
 repository-settings:
   openstack/python-karborclient: {}
 branches:
