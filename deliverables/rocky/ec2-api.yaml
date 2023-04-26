@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 99ef804daf090f7b107acf4484e829e6b7f2bb32
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: 97e9e63b61f7a846d5eed262bd3b570ad97e5d82
 branches:
   - location: 7.0.0
     name: stable/rocky
