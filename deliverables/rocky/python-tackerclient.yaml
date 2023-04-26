@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 71897e549f4f97db3df66522562fb8c702c379f6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: f9378b58a8c55058ff02d12ebf05a503d1487e50
 branches:
   - name: stable/rocky
     location: 0.14.0

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 5987ad8c56a61e3a6d8fcf37a2557926c585de41
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 24f6db6f5c90f0b6ef909e52b47f6d20eb5a7ec8
 cycle-highlights:
   - VNF Forwarding Graph support for Network Service. Operators can
     describe VNFFGD inside NSD to define the network connections among
