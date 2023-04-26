@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 08649a0a858b359164990d0e7418eb3f676d4394
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 19b0c8b51650b0e4e88aa86cf0fe566dcd4ad122
 branches:
   - location: 1.8.0
     name: stable/rocky
