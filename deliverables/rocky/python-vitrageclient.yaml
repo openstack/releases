@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: 76e7198fe9d9b7564fead345587aab9adfc043b6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: e2a3f092d8582a603f77936cd20eb661f14270d8
 cycle-highlights:
   - New API for alarm history
 release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/rocky.html
