@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 65f922b16706adf75c4bffe2790ee2a5f1dea412
+  - version: 6.2.1
+    projects:
+      - repo: openstack/os-brick
+        hash: 9bcd759e987aa2d28a79bdd6d9d0e2fac85f7eea
 branches:
   - name: stable/2023.1
     location: 6.2.0
