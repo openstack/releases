@@ -15,6 +15,10 @@ releases:
       - repo: openstack/murano-agent
         hash: db57214bb80c0d0d39de706fe5e9daa031f7c09c
     diff-start: 7.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/murano-agent
+        hash: db57214bb80c0d0d39de706fe5e9daa031f7c09c
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
