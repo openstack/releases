@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 67f04e32cc7d701ee60132645cf5cd1258fe1722
+  - version: rocky-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 3204a6cba6e870b3ad551ec95319383d2c8f8e36
 branches:
   - name: stable/rocky
     location: 1.1.1

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: ef481e8d9a99a0d2bb7b3f43370dc7a96583b8f6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 6892ca3122aed7d99ff89f6070456f8bb7573f58
 branches:
   - name: stable/rocky
     location: 2.0.0
