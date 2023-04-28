@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: ed499720094c3926636a9f80261a0cc3e7b649c6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: a1af24c651632c9a0b8565d43ccf408c03f6f5eb
 branches:
   - location: 0.9.0
     name: stable/rocky
