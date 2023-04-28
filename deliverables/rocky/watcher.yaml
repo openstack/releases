@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: a8974556ecc29f09e07f411fb745e61e68d8db92
+  - version: rocky-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 7c90c9c752db0a0fcb0fcca84d4b2f809012874a
 cycle-highlights:
   - |
     Watcher services can be launched in HA mode. From now on Watcher Decision
