@@ -15,6 +15,10 @@ releases:
       - repo: openstack/zun
         hash: abd1e5c9f34c3b3c141600f0386e77ab41f7e89a
     diff-start: 7.0.0
+  - version: xena-em
+    projects:
+      - repo: openstack/zun
+        hash: abd1e5c9f34c3b3c141600f0386e77ab41f7e89a
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
