@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 10cda2de665bed7ed9cc55b1c4d514a8a4c31528
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-zunclient
+        hash: fd5e7fbdd988d187ca7b9f9726ff62af5014ea48
 branches:
   - name: stable/rocky
     location: 2.1.0
