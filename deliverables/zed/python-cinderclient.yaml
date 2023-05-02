@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 730a8c7728a8481d4c74e4c93b2619025f7267ea
+  - version: 9.1.1
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 22a3169576b3fd91388e7b57ffd39e3760016796
 branches:
   - name: stable/zed
     location: 9.1.0
