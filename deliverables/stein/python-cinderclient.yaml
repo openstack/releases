@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 511224425804621550bf30403f7768eebe6f34ca
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 959c682dd9b655d492a5ccedf13a68c89a408e5e
 repository-settings:
   openstack/python-cinderclient: {}
 branches:
