@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: ca2a0e4db6e12c2ef861c5a7ed0c0c2498f50015
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 0388b18513074eee2879774de0b56767ebd687a2
 branches:
   - location: 0.9.0
     name: stable/rocky

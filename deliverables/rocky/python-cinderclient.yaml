@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 14547dfb1b9aced82d5d333ab329870461034565
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 388a28ef8ab2fcc27107f2950a762addb3b4afdb
 branches:
   - location: 4.0.1
     name: stable/rocky
