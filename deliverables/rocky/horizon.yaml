@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: ed23eb60d4674e7d50f9f13cc926d3e3bb4f1121
+  - version: rocky-eol
+    projects:
+      - repo: openstack/horizon
+        hash: c92595d6fe30e6010891b10f81a821cc2f0622f2
 repository-settings:
   openstack/horizon: {}
 branches:
