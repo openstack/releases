@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: bd644fec02ec592b8c79828583c689b28dd61675
+  - version: rocky-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 0aee4cd714a4566b2459fed9a6d7e62852c35e70
 branches:
   - location: 7.0.0.0rc1
     name: stable/rocky

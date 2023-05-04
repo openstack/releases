@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 38f3ab72b893102b99aaf56c366da5e6fa36212e
+  - version: rocky-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: ad805d2fb6af86e9b1c01caad6dd5f8fd3f2ceaf
 branches:
   - location: 5.0.0.0rc1
     name: stable/rocky
