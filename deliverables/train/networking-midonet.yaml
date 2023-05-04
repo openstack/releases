@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 466a03701ab77598aa42cd1f9784e1ddbfc1727a
+  - version: train-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: b2fc65e49653f0fc564355c5942660329b724698
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
