@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 48b730a31c4bf9d438c66a1161648f602f8ac9ea
+  - version: train-eol
+    projects:
+      - repo: openstack/heat
+        hash: 7edd3f32475bd7436eed488f9bbf796180daea88
 branches:
   - name: stable/train
     location: 13.0.0.0rc1

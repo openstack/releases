@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 805e130369efc4137a62979140d8671cdf3ee063
+  - version: train-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 96b819c87d374eda0ff30558945561bc150e3235
 repository-settings:
   openstack/heat-agents: {}
 branches:
