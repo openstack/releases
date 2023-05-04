@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 5aa4c5d88fec98cf4ca0536c511c61759e865ec9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/swift
+        hash: 887939b416b29c11e34b17c76eb657caf146caa8
 cycle-highlights:
   - Added an S3 API compatibility layer, so clients can use S3 clients
     to talk to a Swift cluster.
