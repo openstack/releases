@@ -235,7 +235,7 @@ Milestone-1
                 --unreleased \
                 --model cycle-with-intermediary \
                 --type client-library \
-                --type library
+                --type library \
        > /tmp/deliverables.log
 
    - Edit the generated file (``/tmp/deliverables.log``) to remove tox's logs.
