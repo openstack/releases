@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: e32e2e421b00482d26f7e263855b0555ca8a94c5
+  - version: xena-em
+    projects:
+      - repo: openstack/barbican
+        hash: e32e2e421b00482d26f7e263855b0555ca8a94c5
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
