@@ -7,3 +7,8 @@ team: glance
 type: service
 repository-settings:
   openstack/glance: {}
+releases:
+  - version: 27.0.0.0b1
+    projects:
+      - repo: openstack/glance
+        hash: b0ff3ca5fb041415c6ddb2ad7312f18e27b89148
