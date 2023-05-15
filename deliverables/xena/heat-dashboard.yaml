@@ -15,6 +15,10 @@ releases:
       - repo: openstack/heat-dashboard
         hash: 1f52db08edf78f642c059d94b3abb32e014c4876
     diff-start: 5.0.0
+  - version: 6.0.1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 4d1ce41ba402574ce25e854d47348be507b93e3f
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
