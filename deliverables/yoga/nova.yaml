@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 224b0a6cc779dc84605deac551390353cf8b4435
+  - version: 25.2.0
+    projects:
+      - repo: openstack/nova
+        hash: 217e21aacf3e28aa47098d44451cbe077b64206d
 branches:
   - name: stable/yoga
     location: 25.0.0.0rc1
