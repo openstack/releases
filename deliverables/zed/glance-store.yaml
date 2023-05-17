@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: ea4cdf474c166073934ff36029e54408bdd34b80
+  - version: 4.1.1
+    projects:
+      - repo: openstack/glance_store
+        hash: e9d2509926445fd95c9bba9e1cacacb85a5e58af
 branches:
   - name: stable/zed
     location: 4.1.0
