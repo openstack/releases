@@ -43,6 +43,10 @@ releases:
       - repo: openstack/nova
         hash: 2bb8689835a4631622201299d531a24f28aad281
     diff-start: 26.0.0.0rc1
+  - version: 27.1.0
+    projects:
+      - repo: openstack/nova
+        hash: f361ce2ab1c2cec12ace3ab6a3416747ccf1a630
 branches:
   - name: stable/2023.1
     location: 27.0.0.0rc1
