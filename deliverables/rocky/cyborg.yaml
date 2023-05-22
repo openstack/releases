@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: b727c1670ab24b68d7224e7967adff5145e45c40
+  - version: rocky-eol
+    projects:
+      - repo: openstack/cyborg
+        hash: 2ab6c5ab907a931fce3b14aa1faf12d0b4e4aad5
 branches:
   - location: 1.0.0.0rc1
     name: stable/rocky
