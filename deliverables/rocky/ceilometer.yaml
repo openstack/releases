@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: af40e1bf360dbadb6e064c116c8bd5e58e650878
+  - version: rocky-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 93baa22645d5ba64fa8b1d44cc97525437312256
 branches:
   - name: stable/rocky
     location: 11.0.0

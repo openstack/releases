@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: c723feffe0990892fc15774b2c817207b41006a8
+  - version: rocky-eol
+    projects:
+      - repo: openstack/aodh
+        hash: 887a4953ac82667ee77efca98527fa6b3c151ed5
 branches:
   - name: stable/rocky
     location: 7.0.0
