@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 319bfb3fb9153b15199816f6f997934cd78de585
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: f0edc6de2bdda0000fe49d5c068f3c285a9ed9c0
 branches:
   - location: 5.2.0
     name: stable/rocky

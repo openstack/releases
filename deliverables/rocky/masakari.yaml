@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: c742bb4973626cac269ec05cafc56543f8d6d5e6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/masakari
+        hash: ae176ea3d626469a0fe3b166c7df82a9e02207b0
 branches:
   - location: 6.0.0.0rc1
     name: stable/rocky

@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: bedf75e102f02a349c715a5082142145d90273d8
+  - version: rocky-eol
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 20e94e56b11f6f3daa6ed25ba2873c7b5e303155
 branches:
   - location: 6.0.0.0rc1
     name: stable/rocky
