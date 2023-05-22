@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 4d358c8f5de4f7feda17053fb363be033146c9dc
+  - version: rocky-eol
+    projects:
+      - repo: openstack/trove
+        hash: 239f9c6e4fa7d7bb9bab396f79336725a149126c
 branches:
   - location: 10.0.0.0rc1
     name: stable/rocky

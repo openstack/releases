@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 3adf5fe392102c088b72c4dac6f10eaf1f0e7983
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 0272fe638c636cdff9c7bb9d0f7bb6b246535a4d
 branches:
   - location: 2.16.0
     name: stable/rocky
