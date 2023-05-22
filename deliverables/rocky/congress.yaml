@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/congress
         hash: e4693afce7fa318f610d11988b5d484e19f559aa
+  - version: rocky-eol
+    projects:
+      - repo: openstack/congress
+        hash: 3ee83ca4899361d650216cda25032063fc2300e4
 branches:
   - location: 8.0.0.0rc1
     name: stable/rocky

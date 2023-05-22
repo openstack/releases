@@ -20,5 +20,9 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: c7cd43b5fbb2923c802be4c04933ff8e359ddb85
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 182295cdd7a6e5747cebe40a4a6bc162b298654b
 repository-settings:
   openstack/python-congressclient: {}
