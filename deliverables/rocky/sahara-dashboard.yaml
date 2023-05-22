@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 51a46eab08704053c9feea430831313740c847ae
+  - version: rocky-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 51a46eab08704053c9feea430831313740c847ae
 branches:
   - name: stable/rocky
     location: 9.0.0.0rc1

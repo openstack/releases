@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 2a66f9a7150cd92e45f29bb028b60863a27fa443
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 38f93a7d44296e41db53d79ff63d0b7ddcfaf70b
 repository-settings:
   openstack/python-saharaclient: {}
 branches:
