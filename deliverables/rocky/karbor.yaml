@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/karbor
         hash: 60a81a1492cd5d4bde4f1a636224b6bdd914073b
+  - version: rocky-eol
+    projects:
+      - repo: openstack/karbor
+        hash: 8534c19955ac7131bb9b3b893e8c186110088a53
 branches:
   - location: 1.1.0
     name: stable/rocky
