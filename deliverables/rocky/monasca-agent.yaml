@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 498d0549f94973640f7475512414b982e622dede
+  - version: rocky-eol
+    projects:
+      - repo: openstack/monasca-agent
+        hash: dd30180334c9bbbb39cc3f93e647ab19dffc757c
 branches:
   - location: 2.8.0
     name: stable/rocky

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: acb6a580eca69d3fff434f1f930849d5f1abf3d7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 9ef41ff2877afa163f743ac4e46f945f0458168c
 branches:
   - location: 1.12.1
     name: stable/rocky

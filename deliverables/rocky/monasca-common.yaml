@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: b2f734a7e9d7677a7851d77d932cf05d1dfafaa9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: 0f6e03a3c72171bf567d7f8941f1f8ed5aa4baee
 branches:
   - location: 2.11.0
     name: stable/rocky

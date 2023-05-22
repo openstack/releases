@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-log-api
         hash: cd3d6fee94e59bb5bb30d355f4b6969f7ba48562
+  - version: rocky-eol
+    projects:
+      - repo: openstack/monasca-log-api
+        hash: cd3d6fee94e59bb5bb30d355f4b6969f7ba48562
 branches:
   - location: 2.7.0
     name: stable/rocky
