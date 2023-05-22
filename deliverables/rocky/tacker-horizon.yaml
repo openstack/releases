@@ -15,5 +15,9 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: b701cb4d494cd05a409915aa7a455670f1b30dc6
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: dd77f0758ec2f9bc31b81dbbe40e9c17a89fc733
 repository-settings:
   openstack/tacker-horizon: {}
