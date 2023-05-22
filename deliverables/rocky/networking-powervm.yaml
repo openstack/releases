@@ -32,5 +32,9 @@ releases:
     projects:
       - repo: openstack/networking-powervm
         hash: fad0075e7e65fb8388b8be343a4dc2cc82b0ba8a
+  - version: rocky-eol
+    projects:
+      - repo: openstack/networking-powervm
+        hash: 7529889489aff1783136c2b5f10eaa8e54642793
 repository-settings:
   openstack/networking-powervm: {}
