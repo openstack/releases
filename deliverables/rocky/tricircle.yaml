@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 361e5e7a7285e469410df03e8dd1edfdd0243891
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tricircle
+        hash: 79691440a83d980a2b50040913c201cbb4697e11
 branches:
   - name: stable/rocky
     location: 5.1.0
