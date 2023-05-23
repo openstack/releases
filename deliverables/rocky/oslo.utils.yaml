@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: c49a426b6618426f9260eea10c1b2a9e1c5a4d65
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: c49a426b6618426f9260eea10c1b2a9e1c5a4d65
 branches:
   - location: 3.36.4
     name: stable/rocky

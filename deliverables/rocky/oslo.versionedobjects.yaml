@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: d46aea7e3c0411956f0b7afdcf08a7ae4500cdd9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: e8c4869de9cc469e5731b18829cf0536420c5ae1
 branches:
   - location: 1.33.3
     name: stable/rocky

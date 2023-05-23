@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: b1ba490ac5520f34f560b1be9290f020f6c8e2e7
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: 6fd8653370e533b89d809ddfa1d4d757a4fdcb97
 branches:
   - location: 2.21.0
     name: stable/rocky

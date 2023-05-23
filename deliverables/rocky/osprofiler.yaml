@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: 6c035399ad12ab9a9c5b1c8d455aea294107e3b4
+  - version: rocky-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 72958e606016a951ee7002d8da2baa5814b00e4f
 branches:
   - location: 2.3.0
     name: stable/rocky

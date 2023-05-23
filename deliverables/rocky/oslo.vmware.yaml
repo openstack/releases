@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 01e404f5c24d883f88a7e061214004351d7f41fd
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 3a6ece185a0aecd799bc3d2fc39cf267ed26b91d
 branches:
   - location: 2.31.0
     name: stable/rocky

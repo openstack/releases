@@ -73,6 +73,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 8bebba78a16d48d7355b7ecf3eac0ea611148981
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 171132ff69bb0edcc0ebe1044ae59d1a6d572fd3
 branches:
   - location: 8.1.0
     name: stable/rocky

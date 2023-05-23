@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: ce03d76925c2cc87d85eabad0437a40b74b9d206
+  - version: rocky-eol
+    projects:
+      - repo: openstack/automaton
+        hash: 770f4b257253908da3f228197f87f0a36b701dd6
 branches:
   - location: 1.15.0
     name: stable/rocky

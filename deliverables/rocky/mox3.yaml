@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/mox3
         hash: b0577a9a3698bfc306e5b022211d60b91d40d2b9
+  - version: rocky-eol
+    projects:
+      - repo: openstack/mox3
+        hash: aba0d2fd2268aafff513e504a501307e9c789432
 branches:
   - location: 0.26.0
     name: stable/rocky

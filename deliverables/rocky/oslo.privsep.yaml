@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: f7ba0aa49a35bcb1e6c67dbe3dc22cf33ccc436b
+  - version: rocky-eol
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: af755f3210088ab05897fed39722795a3647ee95
 branches:
   - location: 1.29.0
     name: stable/rocky

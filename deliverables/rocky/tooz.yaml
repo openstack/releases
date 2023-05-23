@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 747f022f2006f831e2e408d54268ded236bbcd7f
+  - version: rocky-eol
+    projects:
+      - repo: openstack/tooz
+        hash: c8ae30a010a782a971888a3633197f715f914074
 branches:
   - location: 1.62.0
     name: stable/rocky
