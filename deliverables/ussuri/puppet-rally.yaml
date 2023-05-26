@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-rally: {}
+  openstack/puppet-rally:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: ce023ecd62ea099c68d3f7a661a03693a186258f

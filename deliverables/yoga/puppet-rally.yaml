@@ -21,7 +21,9 @@ releases:
         repo: openstack/puppet-rally
     version: 8.3.0
 repository-settings:
-  openstack/puppet-rally: {}
+  openstack/puppet-rally:
+    flags:
+      - retired
 branches:
   - name: stable/yoga
     location: 8.3.0
