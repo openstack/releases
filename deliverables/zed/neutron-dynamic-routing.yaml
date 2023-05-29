@@ -16,6 +16,10 @@ releases:
       - repo: openstack/neutron-dynamic-routing
         hash: abfd71ce4210cf0edd18eab6812ff151d64e1caf
     diff-start: 20.0.0
+  - version: 21.0.1
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 962bb66743caf8b9052776a32ab71c83403dcd54
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
