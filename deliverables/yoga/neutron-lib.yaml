@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: fc15b1c87131b0c29b41ca6ea6bfa4e6ed4a80bd
+  - version: 2.20.2
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 467eafd20a229e24459ad225b458ff4e04e46fd8
 branches:
   - name: stable/yoga
     location: 2.20.0
