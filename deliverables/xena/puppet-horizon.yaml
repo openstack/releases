@@ -30,6 +30,10 @@ releases:
       - hash: 1300d5230dc797f1b2d310522fb9eca27c6f9442
         repo: openstack/puppet-horizon
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 1300d5230dc797f1b2d310522fb9eca27c6f9442
 branches:
   - name: stable/xena
     location: 19.4.0

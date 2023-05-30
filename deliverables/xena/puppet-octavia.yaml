@@ -30,6 +30,10 @@ releases:
       - hash: 6262ebb064179ad42e5c122538c4f401744e5100
         repo: openstack/puppet-octavia
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 6262ebb064179ad42e5c122538c4f401744e5100
 branches:
   - name: stable/xena
     location: 19.4.0

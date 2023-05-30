@@ -28,6 +28,10 @@ releases:
       - hash: 01a41dfc97f17b65fed4d318e7974443cc9ac349
         repo: openstack/puppet-senlin
     version: 6.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: 01a41dfc97f17b65fed4d318e7974443cc9ac349
 branches:
   - name: stable/xena
     location: 6.4.0

@@ -26,6 +26,10 @@ releases:
       - hash: c8b2eabac168b2363c13314da55e0a44dea360c2
         repo: openstack/puppet-rally
     version: 7.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-rally
+        hash: c8b2eabac168b2363c13314da55e0a44dea360c2
 branches:
   - name: stable/xena
     location: 7.4.0

@@ -30,6 +30,10 @@ releases:
       - hash: 8160f0bb7423cd972d629f08425f58895ee2faca
         repo: openstack/puppet-openstack_extras
     version: 19.4.1
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 8160f0bb7423cd972d629f08425f58895ee2faca
 branches:
   - name: stable/xena
     location: 19.4.0

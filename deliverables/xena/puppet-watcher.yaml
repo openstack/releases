@@ -26,6 +26,10 @@ releases:
       - hash: 170bff1c8d09b5a6ddb9aec07f4591a4c79dd678
         repo: openstack/puppet-watcher
     version: 19.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 170bff1c8d09b5a6ddb9aec07f4591a4c79dd678
 branches:
   - name: stable/xena
     location: 19.4.0

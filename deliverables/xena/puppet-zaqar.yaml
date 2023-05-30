@@ -26,6 +26,10 @@ releases:
       - hash: efdaf91e88b15d11e4bc4ac9976fe03c7615b58f
         repo: openstack/puppet-zaqar
     version: 19.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: efdaf91e88b15d11e4bc4ac9976fe03c7615b58f
 branches:
   - name: stable/xena
     location: 19.4.0

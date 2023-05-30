@@ -26,6 +26,10 @@ releases:
       - hash: 1c14963e28634de6bb9b2b90f3fddc13f3bde3b5
         repo: openstack/puppet-magnum
     version: 19.4.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 1c14963e28634de6bb9b2b90f3fddc13f3bde3b5
 branches:
   - name: stable/xena
     location: 19.4.0

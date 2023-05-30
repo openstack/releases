@@ -30,6 +30,10 @@ releases:
       - hash: ba4eb4117a092b6cee783a373f900c838adfdbeb
         repo: openstack/puppet-vitrage
     version: 9.4.1
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: ba4eb4117a092b6cee783a373f900c838adfdbeb
 branches:
   - name: stable/xena
     location: 9.4.0

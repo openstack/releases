@@ -30,6 +30,10 @@ releases:
       - hash: fdc70e210ffcfd7937dcd53a3d9b24c824685abe
         repo: openstack/puppet-gnocchi
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: fdc70e210ffcfd7937dcd53a3d9b24c824685abe
 branches:
   - name: stable/xena
     location: 19.4.0

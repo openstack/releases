@@ -30,6 +30,10 @@ releases:
       - hash: 58e5da769adef35b2e6bb2bc1c9adf007c12a9f3
         repo: openstack/puppet-manila
     version: 19.5.0
+  - version: xena-em
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 58e5da769adef35b2e6bb2bc1c9adf007c12a9f3
 branches:
   - name: stable/xena
     location: 19.4.0
