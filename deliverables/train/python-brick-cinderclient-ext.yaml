@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 8951feb3feed09ee687470e621adaac0dcd9e8e1
+  - version: train-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: cb38b08219a18fb86aaf41b4dbd63c527553f666
 branches:
   - location: 0.11.0
     name: stable/train

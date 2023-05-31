@@ -63,6 +63,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: daa211e28e790e3047444f0dcb5a0d26adb92dac
+  - version: train-eol
+    projects:
+      - repo: openstack/cinder
+        hash: 299553a4fe281cde9b14da34a470dcdb3ed17cc0
 branches:
   - name: stable/train
     location: 15.0.0.0rc1
