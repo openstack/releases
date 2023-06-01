@@ -7,3 +7,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent: {}
+releases:
+  - version: 9.5.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 4845fd04bab71fa393c374d932185dde16d020af
+branches:
+  - name: bugfix/9.5
+    location: 9.5.0
