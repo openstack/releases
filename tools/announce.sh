@@ -168,18 +168,18 @@ echo "$DIFF_START to $VERSION on $SERIES"
 
 relnotes_file="$RELNOTESDIR/$SHORTNAME-$VERSION"
 
-if [ -e setup.py ] ; then
-    # Some projects have setup_requires dependencies on packages that are
-    # not pre-installed, so run a setuptools command in a way to get them
-    # installed without capturing the output in the email we're going to
-    # be sending.
-    echo "Priming setup_requires packages"
-    python setup.py --name
-    # NOTE(elod.illes): pbr startid to print '[pbr] Generating ChangeLog'
-    # this is related to some recent release (setuptools? virtualenv?)
-    # the 'tail' command needs to be removed as soon as that bug is fixed 
-    project_name=$(python setup.py --name | tail -1)
-    description="$(python setup.py --description| tail -1)"
+# As we use importlib to retrieve information we have to pass the
+# importable name of the module, example: oslo.messaging => oslo_messaging
+modified_shortname=${SHORTNAME//\./_}
+
+# ensure that the package is a valid package that can be imported by
+# importlib.metadata
+python -m pip install .
+python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}'))"
+exit_code=$?
+if [ ${exit_code} -eq 0 ] ; then
+    project_name=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Name'])")
+    description=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Description'])")
 else
     # As a last resort, guess that the project name may be the same as that
     # of the local working directory at the point this script is invoked.
