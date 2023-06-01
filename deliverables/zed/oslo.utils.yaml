@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 760deb9cc4441fe573e2757447d14f2a7ab8673f
+  - version: 6.0.2
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 716c2e2b8e3ec640be2db6df93a611b0dbe06bc1
 branches:
   - name: stable/zed
     location: 6.0.1
