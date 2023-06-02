@@ -175,10 +175,8 @@ modified_shortname=${SHORTNAME//\./_}
 # ensure that the package is a valid package that can be imported by
 # importlib.metadata
 python -m pip install .
-python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}'))"
-exit_code=$?
-if [ ${exit_code} -eq 0 ] ; then
-    project_name=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Name'])")
+project_name=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Name'])" || true)
+if [ -n "${project_name}" ] ; then
     description=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Summary'])")
 else
     # As a last resort, guess that the project name may be the same as that
