@@ -179,7 +179,7 @@ python -c "import importlib.metadata; print(importlib.metadata.metadata('${modif
 exit_code=$?
 if [ ${exit_code} -eq 0 ] ; then
     project_name=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Name'])")
-    description=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Description'])")
+    description=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Summary'])")
 else
     # As a last resort, guess that the project name may be the same as that
     # of the local working directory at the point this script is invoked.
