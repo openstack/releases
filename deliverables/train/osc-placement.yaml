@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 8bbca01dbddb1eb374d708553ccaddb4f130116e
+  - version: train-eol
+    projects:
+      - repo: openstack/osc-placement
+        hash: 76e26bdb2f6cce7a2c942dd43f56d2ae1c621296
 branches:
   - name: stable/train
     location: 1.7.0
