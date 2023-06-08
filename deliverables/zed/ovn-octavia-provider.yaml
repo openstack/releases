@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: b22039aaf1a16d60d5b4617436dfc81ce080560c
+  - version: 3.1.1
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: d27ddcd3cabc2aaf5ac1a2abe9c060a25e8fd185
 branches:
   - name: stable/zed
     location: 3.0.0.0rc1

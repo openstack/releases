@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: c40779d5522ed07c14a56f77ab2ad476537eff0f
+  - version: 3.1.2
+    projects:
+      - repo: openstack/neutron-lib
+        hash: fdbece1bac3d4d42d7ced45077c1301f03fba5e6
 branches:
   - name: stable/zed
     location: 3.1.0
