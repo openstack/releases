@@ -30,6 +30,10 @@ releases:
       - repo: openstack/neutron
         hash: 37abad3e40e364acfd452847b1fc5b8f39098bc9
     diff-start: 21.0.0.0rc1
+  - version: 22.0.1
+    projects:
+      - repo: openstack/neutron
+        hash: e461aab2850ae4316772bd00e88574c392a1942e
 branches:
   - name: stable/2023.1
     location: 22.0.0.0rc1
