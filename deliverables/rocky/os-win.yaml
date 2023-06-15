@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: f6ccfb6ebb0c5b7bb206cadbc3882c6c5466e927
+  - version: rocky-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 2d753bac58c142a2c069f42c8bf009669997a327
 repository-settings:
   openstack/os-win: {}
 branches:

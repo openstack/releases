@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 4bc34c3178e31b78df186ff82dcc5c2bd602ec59
+  - version: rocky-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 4bc34c3178e31b78df186ff82dcc5c2bd602ec59
 branches:
   - location: 7.0.0
     name: stable/rocky
