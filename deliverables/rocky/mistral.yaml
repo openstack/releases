@@ -58,6 +58,10 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 4d3ef8887fb765c9edd36f62cc66904aff4c1b0e
+  - version: rocky-eol
+    projects:
+      - repo: openstack/mistral
+        hash: 2968b8bbb743ada6df7e36c969228bef42830224
 repository-settings:
   openstack/mistral: {}
 branches:
