@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 6e7db6c425c00cec907cd1cd88e5af78bfaa8898
+  - version: rocky-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 6e7db6c425c00cec907cd1cd88e5af78bfaa8898
 repository-settings:
   openstack/cloudkitty-dashboard: {}
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/rocky.html

@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: df869e4588c937dc0e78680a3b9fe9d0fc937e57
+  - version: rocky-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: df869e4588c937dc0e78680a3b9fe9d0fc937e57
 cycle-highlights:
   - Cloudkitty can now collect non-OpenStack metrics using a new Promotheus
     collector or the gnocchi collector.
