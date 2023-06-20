@@ -119,6 +119,21 @@ Week after previous release
     The last part can be major (major version bump), feature (minor version bump),
     and bugfix (bugfix, or the Z in X.Y.Z).
 
+    Reviews
+    =======
+
+    Because of the strict timing of the cycle schedule, it is important that you
+    review release patches within some days or usually until Thursdays EOB if
+    possible. Please look at the incoming review request emails (sent by gerrit)
+    from openstack/releases repository regularly or at least check your inbox at
+    least once or twice a week:
+
+        https://review.opendev.org/q/project:openstack/releases+reviewer:self+is:open
+
+    The above link shows a customised list of release patches that only contains
+    patches that you are added as reviewer. Release managers use a script to add
+    PTLs and release liaisons to their relevant release patches as reviewers.
+
     Release Liaisons
     ================
 
