@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 234ea50d5dfa3c6b71c15d32223a2ddf84c1aa1e
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: b8ab3e95b5dca13f7133d86903df0bbe43ac786e
 team: keystone
 type: client-library
 repository-settings:

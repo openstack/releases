@@ -45,6 +45,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: dbc64b48b5ac376c93cb70022698c5c87da17288
+  - version: rocky-eol
+    projects:
+      - repo: openstack/keystone
+        hash: 9a6d30dc23f9d380cb25a6ed7718df058aa1a063
 cycle-highlights:
   - |
     Support for a new hierarchical enforcement model has been implemented in
