@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: 56d5d9594f1254b313670ba73e1b4ac13f021f1a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/networking-odl
+        hash: 07d98314db6d6b513900fbb1b0536f221145244c
 branches:
   - name: stable/ussuri
     location: 16.0.0.0rc1
