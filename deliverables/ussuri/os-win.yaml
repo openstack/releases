@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 team: winstackers
 type: library
 repository-settings:
-  openstack/os-win: {}
+  openstack/os-win:
+    flags:
+      - retired
 releases:
   - version: 5.0.0
     projects:

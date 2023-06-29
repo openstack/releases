@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 team: winstackers
 type: other
 repository-settings:
-  openstack/networking-hyperv: {}
+  openstack/networking-hyperv:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 83daa422918cdbb15604f6ff0b751dcdb4ac63b0

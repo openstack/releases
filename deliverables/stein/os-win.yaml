@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 team: winstackers
 type: library
 repository-settings:
-  openstack/os-win: {}
+  openstack/os-win:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 5d7c91e627575001f8cc8da69028e135c1e21f91
