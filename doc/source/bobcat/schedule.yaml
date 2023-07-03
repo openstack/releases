@@ -2,152 +2,152 @@
 start-week: 2023-03-27
 release-week: 2023-10-02
 cycle:
-- end: '2023-03-24'
-  start: '2023-03-20'
-  x-project:
-  - a-final
-- end: '2023-03-31'
-  name: R-27
-  start: '2023-03-27'
-  x-project:
-  - b-vptg
-- end: '2023-04-07'
-  name: R-26
-  start: '2023-04-03'
-- end: '2023-04-14'
-  name: R-25
-  start: '2023-04-10'
-- end: '2023-04-21'
-  name: R-24
-  start: '2023-04-17'
-- end: '2023-04-28'
-  name: R-23
-  start: '2023-04-24'
-- end: '2023-05-05'
-  name: R-22
-  start: '2023-05-01'
-- end: '2023-05-12'
-  name: R-21
-  start: '2023-05-08'
-  x-project:
-  - b-1
-  project-specific:
-    - b-nova-stable-review-day
-- end: '2023-05-19'
-  name: R-20
-  start: '2023-05-15'
-- end: '2023-05-26'
-  name: R-19
-  start: '2023-05-22'
-  project-specific:
-    - b-manila-hackathon
-- end: '2023-06-02'
-  name: R-18
-  start: '2023-05-29'
-  x-project:
-  - b-cycle-trail
-  project-specific:
-  - b-cinder-mid-cycle-ptg-1
-- end: '2023-06-09'
-  name: R-17
-  start: '2023-06-05'
-  project-specific:
-    - b-nova-spec-review-day
-- end: '2023-06-16'
-  name: R-16
-  start: '2023-06-12'
-  x-project:
-  - b-summit
-- end: '2023-06-23'
-  name: R-15
-  start: '2023-06-19'
-  project-specific:
-  - b-cinder-spec-freeze
-- end: '2023-06-30'
-  name: R-14
-  start: '2023-06-26'
-  project-specific:
-    - b-manila-spec-freeze
-    - b-nova-spec-review-day
-- end: '2023-07-07'
-  name: R-13
-  start: '2023-07-03'
-  x-project:
-  - b-2
-  - b-mf
-  project-specific:
-  - b-cinder-driver-deadline
-  - b-cinder-target-driver-deadline
-  - b-nova-spec-freeze
-  - b-nova-review-day
-- end: '2023-07-14'
-  name: R-12
-  start: '2023-07-10'
-- end: '2023-07-21'
-  name: R-11
-  start: '2023-07-17'
-- end: '2023-07-28'
-  name: R-10
-  start: '2023-07-24'
-  project-specific:
-    - b-nova-review-day
-    - b-manila-new-driver-deadline
-- end: '2023-08-04'
-  name: R-9
-  start: '2023-07-31'
-  project-specific:
-  - b-cinder-feature-checkpoint
-  - b-manila-fpfreeze
-- end: '2023-08-11'
-  name: R-8
-  start: '2023-08-07'
-  project-specific:
-  - b-cinder-driver-features-declaration
-- end: '2023-08-18'
-  name: R-7
-  start: '2023-08-14'
-  x-project:
-  - b-extra-atc-freeze
-  project-specific:
-  - b-oslo-feature-freeze
-- end: '2023-08-25'
-  name: R-6
-  start: '2023-08-21'
-  x-project:
-  - b-final-lib
-- end: '2023-09-01'
-  name: R-5
-  start: '2023-08-28'
-  x-project:
-  - b-3
-  - b-ff
-  - b-final-clientlib
-  - b-soft-sf
-  - b-rf
-  - b-cycle-highlights
-- end: '2023-09-08'
-  name: R-4
-  start: '2023-09-04'
-  project-specific:
-  - b-cinder-ci-checkpoint
-- end: '2023-09-15'
-  name: R-3
-  start: '2023-09-11'
-  x-project:
-  - b-rc1
-  - b-hard-sf
-- end: '2023-09-22'
-  name: R-2
-  start: '2023-09-18'
-  project-specific:
-    - b-manila-bugsquash
-- end: '2023-09-29'
-  name: R-1
-  start: '2023-09-25'
-  x-project:
-  - b-finalrc
-- end: '2023-10-06'
-  name: R+0
-  start: '2023-10-02'
-  x-project:
-  - b-final
+  - end: '2023-03-24'
+    start: '2023-03-20'
+    x-project:
+      - a-final
+  - end: '2023-03-31'
+    name: R-27
+    start: '2023-03-27'
+    x-project:
+      - b-vptg
+  - end: '2023-04-07'
+    name: R-26
+    start: '2023-04-03'
+  - end: '2023-04-14'
+    name: R-25
+    start: '2023-04-10'
+  - end: '2023-04-21'
+    name: R-24
+    start: '2023-04-17'
+  - end: '2023-04-28'
+    name: R-23
+    start: '2023-04-24'
+  - end: '2023-05-05'
+    name: R-22
+    start: '2023-05-01'
+  - end: '2023-05-12'
+    name: R-21
+    start: '2023-05-08'
+    x-project:
+      - b-1
+    project-specific:
+      - b-nova-stable-review-day
+  - end: '2023-05-19'
+    name: R-20
+    start: '2023-05-15'
+  - end: '2023-05-26'
+    name: R-19
+    start: '2023-05-22'
+    project-specific:
+      - b-manila-hackathon
+  - end: '2023-06-02'
+    name: R-18
+    start: '2023-05-29'
+    x-project:
+      - b-cycle-trail
+    project-specific:
+      - b-cinder-mid-cycle-ptg-1
+  - end: '2023-06-09'
+    name: R-17
+    start: '2023-06-05'
+    project-specific:
+      - b-nova-spec-review-day
+  - end: '2023-06-16'
+    name: R-16
+    start: '2023-06-12'
+    x-project:
+      - b-summit
+  - end: '2023-06-23'
+    name: R-15
+    start: '2023-06-19'
+    project-specific:
+      - b-cinder-spec-freeze
+  - end: '2023-06-30'
+    name: R-14
+    start: '2023-06-26'
+    project-specific:
+      - b-manila-spec-freeze
+      - b-nova-spec-review-day
+  - end: '2023-07-07'
+    name: R-13
+    start: '2023-07-03'
+    x-project:
+      - b-2
+      - b-mf
+    project-specific:
+      - b-cinder-driver-deadline
+      - b-cinder-target-driver-deadline
+      - b-nova-spec-freeze
+      - b-nova-review-day
+  - end: '2023-07-14'
+    name: R-12
+    start: '2023-07-10'
+  - end: '2023-07-21'
+    name: R-11
+    start: '2023-07-17'
+  - end: '2023-07-28'
+    name: R-10
+    start: '2023-07-24'
+    project-specific:
+      - b-nova-review-day
+      - b-manila-new-driver-deadline
+  - end: '2023-08-04'
+    name: R-9
+    start: '2023-07-31'
+    project-specific:
+      - b-cinder-feature-checkpoint
+      - b-manila-fpfreeze
+  - end: '2023-08-11'
+    name: R-8
+    start: '2023-08-07'
+    project-specific:
+      - b-cinder-driver-features-declaration
+  - end: '2023-08-18'
+    name: R-7
+    start: '2023-08-14'
+    x-project:
+      - b-extra-atc-freeze
+    project-specific:
+      - b-oslo-feature-freeze
+  - end: '2023-08-25'
+    name: R-6
+    start: '2023-08-21'
+    x-project:
+      - b-final-lib
+  - end: '2023-09-01'
+    name: R-5
+    start: '2023-08-28'
+    x-project:
+      - b-3
+      - b-ff
+      - b-final-clientlib
+      - b-soft-sf
+      - b-rf
+      - b-cycle-highlights
+  - end: '2023-09-08'
+    name: R-4
+    start: '2023-09-04'
+    project-specific:
+      - b-cinder-ci-checkpoint
+  - end: '2023-09-15'
+    name: R-3
+    start: '2023-09-11'
+    x-project:
+      - b-rc1
+      - b-hard-sf
+  - end: '2023-09-22'
+    name: R-2
+    start: '2023-09-18'
+    project-specific:
+      - b-manila-bugsquash
+  - end: '2023-09-29'
+    name: R-1
+    start: '2023-09-25'
+    x-project:
+      - b-finalrc
+  - end: '2023-10-06'
+    name: R+0
+    start: '2023-10-02'
+    x-project:
+      - b-final
