@@ -5,7 +5,9 @@ release-model: cycle-with-rc
 team: winstackers
 type: other
 repository-settings:
-  openstack/networking-hyperv: {}
+  openstack/networking-hyperv:
+    flags:
+      - retired
 releases:
   - version: 13.0.0.0rc1
     projects:
