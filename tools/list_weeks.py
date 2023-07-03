@@ -15,7 +15,7 @@
 import argparse
 import datetime
 
-import yaml
+from openstack_releases import yamlutils
 
 
 def mk_entry(name, week, cross_project=None, project_specific=None):
@@ -84,10 +84,9 @@ for n, w in enumerate(weeks, 1):
     cycle.append(mk_entry(name, w, cross_project=cross_project))
 
 data = {
+    'start-week': '{:%Y-%m-%d}'.format(weeks[0]),
+    'release-week': '{:%Y-%m-%d}'.format(next_release_date),
     'cycle': cycle,
 }
 
-print('---')
-print('start-week: {:%Y-%m-%d}'.format(weeks[0]))
-print('release-week: {:%Y-%m-%d}'.format(next_release_date))
-print(yaml.dump(data, default_flow_style=False, explicit_start=False))
+print(yamlutils.dumps(data))
