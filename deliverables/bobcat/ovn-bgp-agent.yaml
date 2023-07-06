@@ -1,0 +1,12 @@
+---
+launchpad: ovn-bgp-agent
+team: neutron
+type: other
+release-model: cycle-with-rc
+repository-settings:
+  openstack/ovn-bgp-agent: {}
+releases:
+  - version: 1.0.0.0b1
+    projects:
+      - repo: openstack/ovn-bgp-agent
+        hash: c930d525635d70fa3a675de7f7a36f9171aaaf77
