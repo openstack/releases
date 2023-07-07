@@ -10,3 +10,8 @@ branches:
     name: stable/rocky
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/devstack-plugin-amqp1
+        hash: cf07f5f9c54e60fc49ca05057e3dee4ca6e76581
