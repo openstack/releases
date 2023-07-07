@@ -1,7 +1,7 @@
 ---
 launchpad: rpm-packaging
 release-model: untagged
-team: 'Packaging-rpm'
+team: Packaging-rpm
 type: other
 stable-branch-type: tagless
 branches:
@@ -10,3 +10,8 @@ branches:
     name: stable/rocky
 repository-settings:
   openstack/rpm-packaging: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/rpm-packaging
+        hash: 2a488d9bd16c98665573e55a72b04ffe12dd99da
