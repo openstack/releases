@@ -10,3 +10,8 @@ branches:
     name: stable/rocky
 repository-settings:
   openstack/devstack-plugin-kafka: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/devstack-plugin-kafka
+        hash: 206c51d016387ef3736d0a54ad4fc7ee6f3cf2d8
