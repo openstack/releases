@@ -24,6 +24,10 @@ releases:
       - repo: openstack/designate
         hash: 8910a2014be52808cb3f4a42953b2176e852d0ad
     diff-start: 15.0.0.0rc1
+  - version: 16.0.1
+    projects:
+      - repo: openstack/designate
+        hash: d3b6f0c3e914aabe34ab76df0fe4473e832c8a89
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
