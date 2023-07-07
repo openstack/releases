@@ -11,3 +11,8 @@ branches:
   - name: stable/rocky
     location:
       openstack/requirements: 823c3f00f131695f54fbf7593cbd5905fb632a44
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/requirements
+        hash: a619ac22d69ad07da7a1b5000613f263a2680afa
