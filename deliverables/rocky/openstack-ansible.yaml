@@ -128,6 +128,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: bf120aa4d6bc180332d02723e783d69ba37a0c77
+  - version: rocky-eol
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 90d57f2b39dbcd45b100619dc55c4bb3aaa82fd4
 branches:
   - location: 18.0.0.0rc1
     name: stable/rocky
