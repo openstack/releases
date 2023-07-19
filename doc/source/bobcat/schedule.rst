@@ -41,11 +41,11 @@ for relevant deadlines.
 
 .. _b-cycle-trail:
 
-Bobcat Cycle-Trailing Release Deadline
---------------------------------------
+Antelope Cycle-Trailing Release Deadline
+----------------------------------------
 
 All projects following the cycle-trailing release model must release
-their Bobcat deliverables by June 1st, 2023.
+their Antelope deliverables by June 1st, 2023.
 
 .. _b-summit:
 

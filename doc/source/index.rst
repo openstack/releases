@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   caracal/index
    bobcat/index
    antelope/index
    zed/index

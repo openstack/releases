@@ -1,0 +1,113 @@
+---
+start-week: 2023-10-09
+release-week: 2024-04-01
+cycle:
+  - end: '2023-10-06'
+    start: '2023-10-02'
+    x-project:
+      - b-final
+  - end: '2023-10-13'
+    name: R-25
+    start: '2023-10-09'
+  - end: '2023-10-20'
+    name: R-24
+    start: '2023-10-16'
+  - end: '2023-10-27'
+    name: R-23
+    start: '2023-10-23'
+    x-project:
+      - c-vptg
+  - end: '2023-11-03'
+    name: R-22
+    start: '2023-10-30'
+  - end: '2023-11-10'
+    name: R-21
+    start: '2023-11-06'
+  - end: '2023-11-17'
+    name: R-20
+    start: '2023-11-13'
+    x-project:
+      - c-1
+  - end: '2023-11-24'
+    name: R-19
+    start: '2023-11-20'
+  - end: '2023-12-01'
+    name: R-18
+    start: '2023-11-27'
+  - end: '2023-12-08'
+    name: R-17
+    start: '2023-12-04'
+    x-project:
+      - c-cycle-trail
+  - end: '2023-12-15'
+    name: R-16
+    start: '2023-12-11'
+  - end: '2023-12-22'
+    name: R-15
+    start: '2023-12-18'
+  - end: '2023-12-29'
+    name: R-14
+    start: '2023-12-25'
+  - end: '2024-01-05'
+    name: R-13
+    start: '2024-01-01'
+  - end: '2024-01-12'
+    name: R-12
+    start: '2024-01-08'
+    x-project:
+      - c-2
+      - c-mf
+  - end: '2024-01-19'
+    name: R-11
+    start: '2024-01-15'
+  - end: '2024-01-26'
+    name: R-10
+    start: '2024-01-22'
+  - end: '2024-02-02'
+    name: R-9
+    start: '2024-01-29'
+  - end: '2024-02-09'
+    name: R-8
+    start: '2024-02-05'
+  - end: '2024-02-16'
+    name: R-7
+    start: '2024-02-12'
+    x-project:
+      - c-extra-atcs
+  - end: '2024-02-23'
+    name: R-6
+    start: '2024-02-19'
+    x-project:
+      - c-final-lib
+  - end: '2024-03-01'
+    name: R-5
+    start: '2024-02-26'
+    x-project:
+      - c-3
+      - c-ff
+      - c-final-clientlib
+      - c-soft-sf
+      - c-rf
+      - c-cycle-highlights
+  - end: '2024-03-08'
+    name: R-4
+    start: '2024-03-04'
+  - end: '2024-03-15'
+    name: R-3
+    start: '2024-03-11'
+    x-project:
+      - c-rc1
+      - c-hard-sf
+  - end: '2024-03-22'
+    name: R-2
+    start: '2024-03-18'
+  - end: '2024-03-29'
+    name: R-1
+    start: '2024-03-25'
+    x-project:
+      - c-finalrc
+  - end: '2024-04-05'
+    name: R+0
+    start: '2024-04-01'
+    x-project:
+      - c-final
