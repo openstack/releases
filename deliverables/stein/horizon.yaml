@@ -53,6 +53,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 9e0e333ab5277b6c396f602862ff90398cb0242b
+  - version: stein-eol
+    projects:
+      - repo: openstack/horizon
+        hash: 4e260cb53c361be8d8468edf4a58b0a6b5fb0fa0
 repository-settings:
   openstack/horizon: {}
 branches:
