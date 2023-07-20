@@ -53,7 +53,7 @@ relevant deadlines.
 
 .. _y-cycle-trail:
 
-Yoga Cycle-Trailing Release Deadline
+Xena Cycle-Trailing Release Deadline
 ------------------------------------
 
 All projects following the cycle-trailing release model must release
