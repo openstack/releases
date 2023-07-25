@@ -20,9 +20,14 @@ releases:
       - hash: cd5746f34f6d98ee1364916e5071d9245d31d53c
         repo: openstack/puppet-ceilometer
     version: 20.3.0
+  - version: 20.4.0
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 735e3e9c9151297761796c83b709aa581dfff024
 repository-settings:
   openstack/puppet-ceilometer: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-ceilometer/yoga.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-ceilometer/yoga.html
