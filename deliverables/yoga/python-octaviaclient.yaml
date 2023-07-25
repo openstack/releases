@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: d65be0ec184783358ed52d4a57e62f4b9fd1a1e9
+  - version: 2.6.0
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 6502d66bb213d0e0af4b1b3c8b5e998d51d0e8be
 branches:
   - name: stable/yoga
     location: 2.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/yoga.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-octaviaclient/yoga.html
