@@ -27,6 +27,7 @@ from sphinx.util.nodes import nested_parse_with_titles
 
 from openstack_releases import deliverable
 from openstack_releases import links
+from openstack_releases import series_sorting
 from openstack_releases import series_status
 from openstack_releases._redirections import generate_constraints_redirections
 
@@ -384,7 +385,8 @@ class TeamDirective(rst.Directive):
         )
 
         all_series = reversed(sorted(
-            _deliverables.get_team_series(self.team_name)
+            _deliverables.get_team_series(self.team_name),
+            key=series_sorting.keyfunc
         ))
         # If independent is in the list, it should be sorted last
         all_series = sorted(all_series, key='independent'.__eq__)
