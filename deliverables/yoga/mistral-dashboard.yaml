@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 2980dfc44f11400c75a1113e468f50e7c6d6396c
     diff-start: 13.0.0
+  - version: 14.0.1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: c077728bfa6001f0cb1ac22b0bacd74eb1967b04
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
