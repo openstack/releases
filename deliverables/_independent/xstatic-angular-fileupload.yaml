@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+repository-settings:
+  openstack/xstatic-angular-fileupload:
+    tarball-base: XStatic-Angular-FileUpload
+releases:
+  - version: 12.2.13.0
+    projects:
+      - repo: openstack/xstatic-angular-fileupload
+        hash: 2f480b411cf20d1d6383bcec7a124ab4cb65e06c
