@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove-dashboard
         hash: 1602afbd7e3abfab2e40d931726474de5e9e3d70
     diff-start: 17.0.0
+  - version: 18.0.1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 8aa63e73453b5953068e9b511cbd759d20f0a690
 branches:
   - name: stable/yoga
     location: 18.0.0.0rc1
