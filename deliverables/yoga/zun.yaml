@@ -15,6 +15,10 @@ releases:
       - repo: openstack/zun
         hash: 164123eb75facec8820d3c4278403ba11276e1f1
     diff-start: 8.0.0
+  - version: 9.1.0
+    projects:
+      - repo: openstack/zun
+        hash: 77fcbbefead3fbd79be25971d9b94ce0359cecda
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1
