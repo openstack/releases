@@ -30,6 +30,10 @@ releases:
       - repo: openstack/tacker
         hash: 4bc3b13584bb09c723f3afa1ce1f6fae2258af00
     diff-start: 6.0.0.0rc1
+  - version: 7.1.0
+    projects:
+      - repo: openstack/tacker
+        hash: 2625c00375bb0ae407ecfb8ac60f80d6b10f5305
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1
