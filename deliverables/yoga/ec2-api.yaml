@@ -20,6 +20,10 @@ releases:
       - repo: openstack/ec2-api
         hash: 8c83fc46e95fdc2de8d8f31eb48a2c34e83dca8b
     diff-start: 13.0.0.0rc1
+  - version: 14.0.2
+    projects:
+      - repo: openstack/ec2-api
+        hash: a0ab299dd0a2c34d3ba4533ab659d0b27ee46f68
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
