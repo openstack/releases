@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: 1a1bd65089cb971d623cbbf14f0ea2aa8323b8af
+  - version: rocky-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: ec737aa3000ce474e72c0322e7a8ec995ebcf749
 branches:
   - location: 2.5.0
     name: stable/rocky

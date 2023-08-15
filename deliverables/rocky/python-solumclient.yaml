@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: dd7ed0f4a5286209e3bd4c80e9df7b1cb772533c
+  - version: rocky-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: aeb60832249a8ca2b360bd6836688ca24b548e48
 branches:
   - location: 2.7.1
     name: stable/rocky
