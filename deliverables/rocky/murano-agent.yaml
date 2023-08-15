@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 08fda6ea42bf355bc087bf99883b588e80952d37
+  - version: rocky-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: 1d162457eac4896ca8e0c9834c3885ed335e74b7
 branches:
   - name: stable/rocky
     location: 3.5.1

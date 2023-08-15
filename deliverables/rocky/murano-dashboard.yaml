@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: 7eaefa356eaac9459c0f3746f21116c32dced566
+  - version: rocky-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: d8939841bab52075271c9017486084fc38f9aa00
 branches:
   - location: 6.0.0.0rc1
     name: stable/rocky

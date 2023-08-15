@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: ba9f53100efa6cb00d9ab3174af0ae984dc7c734
+  - version: rocky-eol
+    projects:
+      - repo: openstack/murano
+        hash: d310e44e06fe6cfc19d3c4f4bf93803fe69abf5b
 branches:
   - location: 6.0.0.0rc1
     name: stable/rocky
