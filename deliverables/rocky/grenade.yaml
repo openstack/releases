@@ -1,7 +1,7 @@
 ---
 launchpad: grenade
 release-model: untagged
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 stable-branch-type: tagless
 branches:
@@ -10,3 +10,8 @@ branches:
     name: stable/rocky
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/grenade
+        hash: b6589818b35292c152eed6cc546a178b76254619

@@ -1,7 +1,7 @@
 ---
 launchpad: devstack
 release-model: untagged
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 stable-branch-type: tagless
 branches:
@@ -10,3 +10,8 @@ branches:
     name: stable/rocky
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: rocky-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 951ab426ae2d5a987e1305379c3173c190c8fcfb
