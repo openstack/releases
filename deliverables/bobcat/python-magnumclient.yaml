@@ -6,3 +6,8 @@ team: magnum
 type: client-library
 repository-settings:
   openstack/python-magnumclient: {}
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: ef63e2e1bb063f285fd669021dd70fbbbaca95f0
