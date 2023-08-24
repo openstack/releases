@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 62e42d38001d39dbc5c47d85e004057cdd53cf08
+  - version: 11.6.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 53778d62f16c446e2861877f20a91ac3ba6940da
 branches:
   - name: bugfix/11.5
     location: 11.5.0
+  - name: bugfix/11.6
+    location: 11.6.0
