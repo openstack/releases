@@ -7,4 +7,9 @@ release-type: python-pypi
 repository-settings:
   openstack/ironic-tempest-plugin: {}
 team: ironic
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/ironic-tempest-plugin
+        hash: 3c8235ed02c10940fc3889ae04d9ba7a6a8bbb34
 type: tempest-plugin
