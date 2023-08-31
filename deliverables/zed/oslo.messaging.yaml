@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: fa3195a3459cae3f4e9be43f114ee2d5eb7a60f1
+  - version: 14.0.2
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: bf0710d60fda74ec9d5afc31266edcee717c00eb
 branches:
   - name: stable/zed
     location: 14.0.0
