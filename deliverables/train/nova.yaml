@@ -107,6 +107,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 10df17638a1587f740c46a574c923df9348c3344
+  - version: train-eol
+    projects:
+      - repo: openstack/nova
+        hash: 8a24acd9240f2a2705ccd979577e0e2338a238ef
 branches:
   - name: stable/train
     location: 20.0.0.0rc1

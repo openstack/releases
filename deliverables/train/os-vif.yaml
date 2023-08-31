@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: 3a08cc4528c183ecf03d1795ca500bb9b745f12d
+  - version: train-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: 70e2c49b206d32fb4f17c7eccb6b820005ac3d94
 branches:
   - name: stable/train
     location: 1.17.0
