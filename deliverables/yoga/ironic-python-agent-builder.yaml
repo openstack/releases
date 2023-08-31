@@ -16,7 +16,12 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: ab25ed462d659e333e51a54f4e344469ccf5dc39
+  - version: 4.1.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 693ba68aa43153b025c4f18d0776af011e408ce4
 branches:
   - name: stable/yoga
     location: 4.0.1
-release-notes: https://docs.openstack.org/releasenotes/ironic-python-agent-builder/yoga.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-python-agent-builder/yoga.html
