@@ -6,3 +6,8 @@ team: blazar
 type: client-library
 repository-settings:
   openstack/python-blazarclient: {}
+releases:
+  - version: 3.7.0
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 9acb735cfe952f1b945d0a99caf561dcda16a58f
