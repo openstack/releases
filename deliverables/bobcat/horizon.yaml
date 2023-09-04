@@ -5,6 +5,13 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Horizon added TOTP authentication support, allowing users to enhance
+    their security by authenticating with Time-based One-Time Passwords.
+  - Horizon now migrated to XStatic-JQuery-Migrate v3.3.2.1 from v1.2.1.1
+    to include security fixes in the latest version.
+  - Horizon now migrated to XStatic-jQuery v3.5.1.1 from v1.12.4.1
+    to include security fixes in the latest version.
 releases:
   - version: 23.2.0
     projects:
