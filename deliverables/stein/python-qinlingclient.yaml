@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-qinlingclient
         hash: dd2ceebb7e0c85eb66f05f2825d506765ab792de
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: b11934949dd0c9deb5aace4224eea690b20dffde
 branches:
   - location: 2.1.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-qinlingclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-qinlingclient/stein.html

@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/qinling-dashboard
         hash: 94b9a551e27b09b232f85b501e96f82c65ba62a7
+  - version: stein-eol
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 7c6c5a67b760af163d41dbedfb8e37056178217b
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein

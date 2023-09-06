@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/qinling
         hash: 756b3dfcde38f7394c36fb2c310874ac28320b07
+  - version: stein-eol
+    projects:
+      - repo: openstack/qinling
+        hash: 0bb88ce95822ea7d201a300f123cec97e3e4e88f
 branches:
   - location: 2.0.0.0rc1
     name: stable/stein
