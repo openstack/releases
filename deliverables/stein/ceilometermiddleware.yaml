@@ -17,7 +17,12 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: 0ef20fbe009460a492dbd56acb535280973b8c20
+  - version: stein-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 2ae97a50caf5b025eb21b464ee6054e2e73a3b15
 branches:
   - location: 1.4.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/ceilometermiddleware/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/ceilometermiddleware/stein.html

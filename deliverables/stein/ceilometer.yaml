@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 6787bfc00397b6d38f51fb890fd1c2199b719eb2
+  - version: stein-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 6787bfc00397b6d38f51fb890fd1c2199b719eb2
 branches:
   - location: 12.0.0.0rc1
     name: stable/stein
