@@ -666,14 +666,14 @@ R-8 week
     General Information
     -------------------
 
-    Next week is the Extra-ATC freeze, in preparation for elections. All
+    Next week is the Extra-AC freeze, in preparation for elections. All
     contributions to OpenStack are valuable, but some are not expressed as
     Gerrit code changes. Please list active contributors to your project team
     who do not have a code contribution this cycle, and therefore won't
-    automatically be considered an Active Technical Contributor and allowed
-    to vote. This is done by adding extra-atcs to
+    automatically be considered an Active Contributor and allowed
+    to vote. This is done by adding extra-acs to
     https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
-    before the Extra-ATC freeze on $extraatc.
+    before the Extra-AC freeze on $extraac.
 
     A quick reminder of the upcoming freeze dates. Those vary depending on
     deliverable type:
@@ -709,14 +709,14 @@ R-8 week
     Upcoming Deadlines & Dates
     --------------------------
 
-    Extra-ATC freeze: $extraatc (R-7 week)
+    Extra-AC freeze: $extraac (R-7 week)
     Non-client library freeze: $nclfreeze (R-6 week)
     Client library freeze: $milestone3 (R-5 week)
     $SERIES-3 milestone: $milestone3 (R-5 week)
     $other-upcoming-event
 
 
-R-7 week (Extra-ATC deadline week)
+R-7 week (Extra-AC deadline week)
 ==================================
 
 #. Notify the Infrastructure team to `generate an artifact signing key`_
