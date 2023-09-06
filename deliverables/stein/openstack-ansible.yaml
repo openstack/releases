@@ -112,6 +112,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: f75f5dcd7fefc72b4485bcc634e9f4b14c39e978
+  - version: stein-eol
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 525d0e8bcb2e94a581293205f9998c84c5b29d35
 cycle-highlights:
   - Tooling optimizations have been done that will result in faster
     and more reliable deployments.
@@ -122,4 +126,5 @@ cycle-highlights:
 branches:
   - location: 19.0.0.0rc1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/openstack-ansible/stein.html
+release-notes:
+  https://docs.openstack.org/releasenotes/openstack-ansible/stein.html
