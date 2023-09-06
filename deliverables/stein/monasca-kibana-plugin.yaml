@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/monasca-kibana-plugin
         hash: 32e8d3f4770ef72f93595d5a85e26620a6ce0776
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-kibana-plugin
+        hash: 9f3db7b4e53e18603fe8ef3e0d4c21b44158bea5
 branches:
   - location: 1.4.0
     name: stable/stein

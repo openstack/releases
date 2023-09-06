@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: 24aef15057184d41c71f2d63f5442c8b37096afc
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: a65903a2c51fd979a8fa04298adf79adf58b020a
 branches:
   - location: 2.13.0
     name: stable/stein

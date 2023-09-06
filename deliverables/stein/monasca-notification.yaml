@@ -26,7 +26,12 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 5d573afee6960ff0aa41d8518ccf614846946379
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 5d573afee6960ff0aa41d8518ccf614846946379
 branches:
   - location: 1.16.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/monasca-notification/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/monasca-notification/stein.html

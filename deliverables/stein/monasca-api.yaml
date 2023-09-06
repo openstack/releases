@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 41871ffd6aeb817d10b42ffac76f6335db7304c2
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: a065165ed44222251da5c24a6808cb7b3be5b9fa
 branches:
   - location: 3.0.0
     name: stable/stein

@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: bcb16d134fcfac0fec1b34ef1b19216e1ce69ce7
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: ff0654dbdd66d142abf772df9b500401ac9d9f9e
 branches:
   - location: 1.14.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-monascaclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-monascaclient/stein.html
