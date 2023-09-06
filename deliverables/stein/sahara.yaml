@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 1fa76ce666539a2d8381cad5286993e27322b56a
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara
+        hash: c07f98d36281f13e263f2d0f0f6ebd267b6df9f1
 repository-settings:
   openstack/sahara: {}
 branches:

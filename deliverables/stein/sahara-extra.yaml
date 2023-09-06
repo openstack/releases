@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: 40a9ccae89a45ade9af268a456b3c4a138503d80
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: ae1820cab3687d3fb0b43d614c1c3b65f2bea284
 branches:
   - location: 9.3.0
     name: stable/stein

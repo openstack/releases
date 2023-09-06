@@ -21,9 +21,14 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 564380af2e297c86d31af092fdbb64a735b2d669
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: fd5e546cfc7d3de3404b2da0fb5c3677156c2175
 repository-settings:
   openstack/python-saharaclient: {}
 branches:
   - location: 2.2.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-saharaclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-saharaclient/stein.html

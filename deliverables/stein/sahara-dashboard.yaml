@@ -29,9 +29,14 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: a63c7b419bc54dc9401beda9b49eb5064e8c8b90
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: a63c7b419bc54dc9401beda9b49eb5064e8c8b90
 repository-settings:
   openstack/sahara-dashboard: {}
 branches:
   - location: 10.0.0.0rc1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/sahara-dashboard/stein.html

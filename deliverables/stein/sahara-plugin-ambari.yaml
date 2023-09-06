@@ -21,9 +21,14 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-ambari
         hash: 471f55da91df84b4f0317ca27dcf672185865e0e
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 9f0c1904a1691fe7f1d0b4d5312ddc58d2223d63
 repository-settings:
   openstack/sahara-plugin-ambari: {}
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-ambari/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/sahara-plugin-ambari/stein.html

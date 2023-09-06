@@ -21,9 +21,14 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-spark
         hash: a0df51e4f9712187721258588875e11ad80ab2fc
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 47a6a02ebd0de59fbcefa42b360543cc0721e3c8
 repository-settings:
   openstack/sahara-plugin-spark: {}
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-spark/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/sahara-plugin-spark/stein.html
