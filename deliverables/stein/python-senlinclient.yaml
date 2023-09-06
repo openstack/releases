@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 5f9c27da4fb4d614785637389fc62b1c8c036ec1
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 348d5d5dbd8a0999e2344388146dacaed7f54cf3
 branches:
   - location: 1.10.1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-senlinclient/stein.html

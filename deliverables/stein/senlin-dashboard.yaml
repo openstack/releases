@@ -18,7 +18,12 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: f4bb5779a939953c17bb052f77b414d6c9cca639
+  - version: stein-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 557bc45913d67bdf8addca723b95bc11a237133d
 branches:
   - location: 0.10.1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/senlin-dashboard/stein.html
