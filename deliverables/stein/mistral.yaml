@@ -68,6 +68,14 @@ releases:
         hash: 52d025aa12f917a307e2a903cdd1f260b2341e40
       - repo: openstack/mistral-extra
         hash: 9c2586f8d583ec884cf5a87b2baad491467e9c2e
+  - version: stein-eol
+    projects:
+      - repo: openstack/mistral
+        hash: 022248da421de4fd7b6470ef45d72877ee9361aa
+      - repo: openstack/mistral-dashboard
+        hash: 52d025aa12f917a307e2a903cdd1f260b2341e40
+      - repo: openstack/mistral-extra
+        hash: 9c2586f8d583ec884cf5a87b2baad491467e9c2e
 branches:
   - location: 8.0.0.0rc1
     name: stable/stein
