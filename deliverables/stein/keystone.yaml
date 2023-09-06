@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 95b2bbeab113d9f04d1c81f7f1b48bf692bce979
+  - version: stein-eol
+    projects:
+      - repo: openstack/keystone
+        hash: 1d9baa62ac4c3df8ef998d7c331deedece123123
 branches:
   - location: 15.0.0.0rc1
     name: stable/stein
