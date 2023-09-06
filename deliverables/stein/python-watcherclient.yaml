@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: db7a5e4bc9c46041228f1dd99fab353c41282761
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 47306018ba1c92910fda46ccc2580a5076942c33
 branches:
   - location: 2.2.0
     name: stable/stein
