@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: 77c4c65f093b104748f6b60768ad0eb7c1d84586
+  - version: stein-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: f10dc8677d9353e1f225cdefd9844468f393a745
 branches:
   - location: 2.6.0
     name: stable/stein
