@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: ed7a0ee6823806e3b008b75247a273bc8b3d2981
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 465a625ae3b432c538f4b8c6a13dd8aec5f21f50
 branches:
   - location: 1.2.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-muranoclient/stein.html

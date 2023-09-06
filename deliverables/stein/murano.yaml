@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 75a85b0c0c8d810f4b3cc246cc5adf3ba52ec006
+  - version: stein-eol
+    projects:
+      - repo: openstack/murano
+        hash: d9adc30cea02ae83ce5e13976a7e1a5cff7bfd20
 branches:
   - location: 7.0.0.0rc1
     name: stable/stein
