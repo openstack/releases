@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 307617805dfb2ca32761c2db3aaa472b6811a7bf
+  - version: stein-eol
+    projects:
+      - repo: openstack/zun
+        hash: a1c2fdeb60ad750f7ab3f3d74bd023152bcbe1fb
 branches:
   - location: 3.0.0.0rc1
     name: stable/stein
