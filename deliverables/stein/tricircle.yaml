@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: 4f27abf4d141fe47928f89516f22dea14f3e446c
+  - version: stein-eol
+    projects:
+      - repo: openstack/tricircle
+        hash: 5362b6d75ce0b02d0712906b2fdf6cd045de7c6b
 branches:
   - name: stable/stein
     location: 6.0.0

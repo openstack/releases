@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-tricircleclient
         hash: d7dc4eedb2116ff32410c8a501ffd85950ef6d64
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 61832327afe10efd5f9ce53246d7a64573d6ca68
 branches:
   - location: 0.5.0
     name: stable/stein
