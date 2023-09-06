@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: 5d6673e343a47fc4cf90e53b2e6e9fa37d7f601c
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 84a7d05c77525ed5a38de5a8c88515a6960f5587
 branches:
   - location: 2.7.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/stein.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-vitrageclient/stein.html

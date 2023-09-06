@@ -26,7 +26,12 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 1413c948c58174dfe58c7f80b93c1126a1466812
+  - version: stein-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 07e7d7f954952836cc4020cff3c8d18b137f8a55
 branches:
   - location: 1.9.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/stein.html
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage-dashboard/stein.html
