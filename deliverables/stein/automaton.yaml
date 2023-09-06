@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 0e9634c5fc82c89eb3e3b491caf50fc0e31a2333
+  - version: stein-eol
+    projects:
+      - repo: openstack/automaton
+        hash: dba7395c2355edae19f0f73a3b45825b6e8b564c
 branches:
   - location: 1.16.0
     name: stable/stein

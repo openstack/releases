@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 46575f02e8a9288bce1b646bcb777143451b1d4b
+  - version: stein-eol
+    projects:
+      - repo: openstack/castellan
+        hash: 3fa0fd86933a712fff259bbecc17971ff129caa4
 branches:
   - location: 1.2.2
     name: stable/stein
