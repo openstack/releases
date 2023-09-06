@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 75784f94b1411a325ab3bdff4c71d2e5aa2abc2b
+  - version: stein-eol
+    projects:
+      - repo: openstack/trove
+        hash: 169258a1c8e58e9eb771706ed054089b3a0b47a0
 branches:
   - location: 11.0.0.0rc1
     name: stable/stein

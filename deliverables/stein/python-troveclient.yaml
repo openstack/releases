@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: c3d667971d7c48cd6e069851252e494962fc251a
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: c3d667971d7c48cd6e069851252e494962fc251a
 branches:
   - location: 2.17.0
     name: stable/stein
