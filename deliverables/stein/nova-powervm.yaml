@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/nova-powervm
         hash: dbcf3ff41ba25e17c6caf7e76e0f5876c2038c29
+  - version: stein-eol
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 02447d42914ecd7b2ea559e576a47558ec774dfd
 repository-settings:
   openstack/nova-powervm:
     tarball-base: nova_powervm
