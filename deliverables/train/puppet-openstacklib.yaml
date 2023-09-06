@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: e3b61ab6cc4eeb5615d67b7a33af68abd7d48303
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: f818022cad511ed8ad38bd2c72ed6a4306a479a1
 branches:
   - name: stable/train
     location: 15.4.0

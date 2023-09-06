@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 9c6604aa0ac8e964df017b81c7b77f36a876ab88
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 75e38bb890dfc9ff9ef1d35227d31bad650c0df3
 branches:
   - name: stable/train
     location: 15.4.0

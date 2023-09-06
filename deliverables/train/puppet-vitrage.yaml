@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-vitrage
         hash: d6cc59890331b6d97085d9d55beea69ea60e8df6
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: a1c51073438b67be77c5ffa8e972d8a955c2af17
 branches:
   - name: stable/train
     location: 5.4.0

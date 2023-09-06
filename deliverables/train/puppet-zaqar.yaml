@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: 37d6b6777046ed5785a7187b21396bbd33a5bceb
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 61aab9920e0c8cecfe520ae34b88984ea3d09f74
 branches:
   - name: stable/train
     location: 15.4.0

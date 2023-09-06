@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - projects:
+      - hash: 42800f0b4ca717f94cead67f3b98d7418c7f15c1
+        repo: openstack/puppet-openstack-integration
+    version: train-eol
 branches:
   - name: stable/train
     location:

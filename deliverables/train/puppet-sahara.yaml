@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: e8c5a9de6772c9bc2cbd5330c8a7802653ce1eeb
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: b93e88d0d61485dcd946df8c700d0216e839a7a2
 branches:
   - name: stable/train
     location: 15.4.0

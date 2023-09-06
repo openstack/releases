@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: 688135153e4533d5c6831aa629fa660a06336b1d
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: d4a1b0032c56ad58eb8eedb7b9d3d2cbd3c8b617
 branches:
   - name: stable/train
     location: 15.4.0

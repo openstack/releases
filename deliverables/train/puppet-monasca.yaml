@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-monasca
         hash: 9f5bf736a77acbcfe3c53c009429a4ad91d41914
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: cc8c1a87d925e78319d630c9d2addd1caf01b6cd
 branches:
   - name: stable/train
     location: 4.4.0

@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 0eacf4d1f2a4ff59b2e2dbc23a6446aa60c86768
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 57d719b67c3a560907dfc4b2e9045d78c9c32bf7
 branches:
   - name: stable/train
     location: 15.4.0

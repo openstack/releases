@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 1dc5b6eb9aa39013e1c31bce7feea0d7648c72c7
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: dadf3b7bfd439c1466b697c1f08cddb0de0a20e4
 branches:
   - name: stable/train
     location: 15.4.0
