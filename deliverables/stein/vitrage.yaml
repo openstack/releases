@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: c3aaf5042f3ea33ddc66d093f63c3fe826f167ff
+  - version: stein-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: fc1de82c6669318bafad6e7d9da7afc4d592a9b9
 branches:
   - location: 4.3.0
     name: stable/stein
