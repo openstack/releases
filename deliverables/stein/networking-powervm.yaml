@@ -24,5 +24,9 @@ releases:
     projects:
       - repo: openstack/networking-powervm
         hash: 27610e36de0e2f65f5b7d9064d6a6f2ef1f480c4
+  - version: stein-eol
+    projects:
+      - repo: openstack/networking-powervm
+        hash: 0c4c24412f4ef053e41c6cd639888375ab3d2dca
 repository-settings:
   openstack/networking-powervm: {}
