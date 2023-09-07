@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-karborclient
         hash: 3216f64d14167c0330e9b96606f19d113007e303
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-karborclient
+        hash: f53be19a1632884f354c471e3e11781364d97877
 branches:
   - location: 1.2.0
     name: stable/stein
