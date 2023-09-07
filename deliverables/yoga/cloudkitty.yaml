@@ -16,6 +16,10 @@ releases:
       - repo: openstack/cloudkitty
         hash: 02e6be64542dc892a950870ee010518f8a119d9e
     diff-start: 15.0.0
+  - version: 16.0.1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 83f99abb930617a249fe902e44845fd6ab7f0bff
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
