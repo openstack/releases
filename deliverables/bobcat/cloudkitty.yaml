@@ -6,3 +6,8 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+
+cycle-highlights:
+  - Enabled multiple rating types for the same metric for gnocchi.
+  - Created indexes to allow SQL rewrites and optimizations
+  - Optimized Gnocchi fetcher processing time
