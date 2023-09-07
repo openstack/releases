@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: fb7ffcb8cdfc07ebcbd3fd25145e788d5b8f3fdb
+  - version: stein-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 89036deeb40847fed53d192f81d4afaa7f2c36fe
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
