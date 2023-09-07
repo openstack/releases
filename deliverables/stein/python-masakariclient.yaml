@@ -16,9 +16,14 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 96613b9b0560f6d5930c45f372deda5d8832bb49
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: e3a228cb1768e526787468a79b520afd501e42a3
 repository-settings:
   openstack/python-masakariclient: {}
 branches:
   - location: 5.4.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-masakariclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-masakariclient/stein.html
