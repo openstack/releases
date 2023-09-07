@@ -5,6 +5,11 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - Added the support to configure weight for each store to get rid
+    of the problem with existing location strategy while downloading
+    the image from specific store when multiple stores of same type
+    are available.
 repository-settings:
   openstack/glance: {}
 releases:
