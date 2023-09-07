@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 1fdb0eabdae270cda12c35a829867d52a7250d28
+  - version: stein-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 334965654ba3ce5a62a25ede5250c2e2c05c064d
 branches:
   - location: 1.2.0
     name: stable/stein
