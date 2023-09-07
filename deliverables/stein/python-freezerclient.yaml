@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: cc92d7cc2cf35ed791d29879b2aed5b08e6bf4e0
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 04824ac4de93496b73d2cac54bc4f30f51c8c211
 branches:
   - location: 2.1.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-freezerclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-freezerclient/stein.html
