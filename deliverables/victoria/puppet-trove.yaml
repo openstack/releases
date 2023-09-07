@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: d31526fb6e670fc0706ec9a74729cf0e6661ba07
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 1b9ed551c0823dac3c30544b9eb4397e3a181ad4
 branches:
   - name: stable/victoria
     location: 17.4.0

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: d3345c2e79d71d8826b9ca37031f37d372522f66
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: 90d74382e4bf97e036645dca5285d6adc1110fe8
 branches:
   - name: stable/victoria
     location: 6.4.0

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-senlin
         hash: 16fb2017c52bef29fa71adcc287b8824af5ec714
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: a55a84c67ba1ae986df2c108f7d331d9c603fbf3
 branches:
   - name: stable/victoria
     location: 4.4.0

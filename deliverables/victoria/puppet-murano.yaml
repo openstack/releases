@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 1d7a79e9f2e79756c0517d3e6108fd5ce72c0108
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 3fd7252dce098bc70289d9ad1d857ce1ae6af226
 branches:
   - name: stable/victoria
     location: 17.4.0

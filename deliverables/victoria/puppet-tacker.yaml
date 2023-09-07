@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: b3145f9de96c2c563f457e4f4a87c75cb777205c
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: b3145f9de96c2c563f457e4f4a87c75cb777205c
 branches:
   - name: stable/victoria
     location: 17.4.0

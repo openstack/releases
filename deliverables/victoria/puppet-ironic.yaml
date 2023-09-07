@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: ac54952e23346ddba12690ce520582ac26920bdb
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 860d3e7bcba620d99d1a449e3b9fcbafa8294e40
 branches:
   - name: stable/victoria
     location: 17.4.0

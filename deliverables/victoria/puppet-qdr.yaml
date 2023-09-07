@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: 72f3831b2b857611a41ffa7f5466617ea54b15fd
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 00776bc5af24ec6ba86c49ad07608bd9f6b3d033
 branches:
   - name: stable/victoria
     location: 6.4.0

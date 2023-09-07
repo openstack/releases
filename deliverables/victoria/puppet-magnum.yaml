@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: df1170df5640e2a0420da50f63fb80b3689b3404
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: df1170df5640e2a0420da50f63fb80b3689b3404
 branches:
   - name: stable/victoria
     location: 17.4.0
