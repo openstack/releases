@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 6d03e61986418a3a95635405ae65ae9f28a5c61e
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 65f5584541f434e589baa829473fd77cfad837b3
 branches:
   - location: 1.2.0
     name: stable/stein

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/panko
         hash: 91f809625560d770f39299f782eff2b56ec84874
+  - version: stein-eol
+    projects:
+      - repo: openstack/panko
+        hash: cc4fbd4704f89e570e36b7a5f652fadf68f3eb6f
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
