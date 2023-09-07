@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: 3a673ec6b252c517d8dd172817016c8998de823d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 3a673ec6b252c517d8dd172817016c8998de823d
 branches:
   - name: stable/ussuri
     location: 16.3.0

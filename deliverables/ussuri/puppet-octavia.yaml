@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: 3f3f8a82b63269dd1f4369fcfe757fa9da77f839
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 52771825e27bd2d90de66b5e714a488e71d4327e
 branches:
   - name: stable/ussuri
     location: 16.3.0

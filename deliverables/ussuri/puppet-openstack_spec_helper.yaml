@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 6fa861cf0699d09d038c65807770763438019647
 branches:
   - name: stable/ussuri
     location:

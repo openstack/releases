@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-vitrage
         hash: 02298cd18b70fdc5abf1cd5e95839769718f88c3
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: 02298cd18b70fdc5abf1cd5e95839769718f88c3
 branches:
   - name: stable/ussuri
     location: 6.3.0

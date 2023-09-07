@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 92e0775247e445c5512f2e6326f208288930457d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 92e0775247e445c5512f2e6326f208288930457d
 branches:
   - name: stable/ussuri
     location: 16.3.0

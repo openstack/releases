@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: a49a924bcfce320570c65de900b2cc23a5aa8c4b
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: a49a924bcfce320570c65de900b2cc23a5aa8c4b
 branches:
   - name: stable/ussuri
     location: 5.3.0

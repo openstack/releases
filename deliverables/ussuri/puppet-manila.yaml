@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 059744c52c2e755164317c926316565f8ff7eee8
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: d83294f2849383eba1e4d98b0b32000edc53523d
 branches:
   - name: stable/ussuri
     location: 16.3.0

@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: 5a2807faa638caf5d2884e61fe62bf9ba9b89b8b
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 1744edb487307ebc46789187df1397f8e846d0b3
 branches:
   - name: stable/ussuri
     location: 16.3.0

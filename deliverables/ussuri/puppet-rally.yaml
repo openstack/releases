@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/puppet-rally
         hash: 03539c61e0dd9ec7e4341339d6f56df3aa17ca16
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 03539c61e0dd9ec7e4341339d6f56df3aa17ca16
 branches:
   - name: stable/ussuri
     location: 4.3.0

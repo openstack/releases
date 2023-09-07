@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: e500d0b4ecfddd330105ead1739ce044a92e3a18
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 4c723fe0b07d74eb9aed1a433fc54b318ea5f249
 branches:
   - name: stable/ussuri
     location: 16.3.0
