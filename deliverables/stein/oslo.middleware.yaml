@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: acfa72e838434c063fcb6681936b6d71e015c608
+  - version: stein-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: fba3b78fad2356f2715270a6f7d1ffbc27f63fd5
 branches:
   - location: 3.37.1
     name: stable/stein

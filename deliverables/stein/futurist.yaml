@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 481e940785d86b46cd5260ce1052240ab66b60b4
+  - version: stein-eol
+    projects:
+      - repo: openstack/futurist
+        hash: 75a98bf69e24702b785484fbc12eafa81e999d5c
 branches:
   - location: 1.8.1
     name: stable/stein

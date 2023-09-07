@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 27a8395660e483e6c527f5f0b34c336b08ef7e22
+  - version: stein-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: caf65ed26066b5f7d13cc50e67f1df852414b2dc
 branches:
   - location: 1.30.1
     name: stable/stein

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: 38c374bcb35b74469ea9363455a2ae2d09738e0f
+  - version: stein-eol
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: b38b0cae1f95461e128b5ca6c6f7a2a447843e0e
 branches:
   - location: 5.15.2
     name: stable/stein

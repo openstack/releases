@@ -21,7 +21,12 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: bc2a1fb5259e64596a8071a592dc8eb1b6990ae0
+  - version: stein-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 28415bfb16d492cc4024b5bd090f21428429f1b0
 branches:
   - location: 2.28.2
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/oslo.serialization/stein.html

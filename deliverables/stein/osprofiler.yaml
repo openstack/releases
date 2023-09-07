@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: b7ce08f35f9debff34e49363b316ddf8474c1662
+  - version: stein-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 2dc5a92894dda720826aa5fd4868191c719f4469
 branches:
   - location: 2.6.0
     name: stable/stein

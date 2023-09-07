@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/mox3
         hash: 543e2cc3772f0ec856de314c1cd0088baa341f22
+  - version: stein-eol
+    projects:
+      - repo: openstack/mox3
+        hash: 2f97938c74395b78f05a0c80f67aa1c71b2dbe53
 branches:
   - location: 0.27.0
     name: stable/stein

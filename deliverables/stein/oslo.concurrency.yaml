@@ -25,7 +25,12 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: e11481b8f6141ec33f132b1059c421ea6c4ca34b
+  - version: stein-eol
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 22b502c82fc8d5588622b15faf8dc0f1a892c87f
 branches:
   - location: 3.29.1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/oslo.concurrency/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/oslo.concurrency/stein.html

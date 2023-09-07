@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: fa57185b4bef16cbb7e2108cb8c3fcf2d8461d6c
+  - version: stein-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: cc15d71d666680bdc33cd4b28ca22ad2eb09e697
 branches:
   - location: 0.2.1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/oslo.upgradecheck/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/oslo.upgradecheck/stein.html
