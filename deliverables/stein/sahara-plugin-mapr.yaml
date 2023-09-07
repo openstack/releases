@@ -29,9 +29,14 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-mapr
         hash: f58087bbb184b22dfa25a5ceb8f8cdf18499800d
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: f58087bbb184b22dfa25a5ceb8f8cdf18499800d
 repository-settings:
   openstack/sahara-plugin-mapr: {}
 branches:
   - location: 1.0.0.0rc1
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-mapr/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/sahara-plugin-mapr/stein.html

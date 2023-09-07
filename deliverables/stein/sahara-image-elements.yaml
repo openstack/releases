@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: 04810f9523f6201cb7f806ebecb2ba8e22c4467a
+  - version: stein-eol
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 04810f9523f6201cb7f806ebecb2ba8e22c4467a
 branches:
   - location: 10.0.0.0rc1
     name: stable/stein
