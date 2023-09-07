@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/shade
         hash: b23000c66017e49615a3226fd7d8682a408aa444
+  - version: stein-eol
+    projects:
+      - repo: openstack/shade
+        hash: 61841a06a1585ee086b796c4fc803c5ade56119e
 repository-settings:
   openstack/shade: {}
 branches:

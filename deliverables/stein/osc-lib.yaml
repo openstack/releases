@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: 9b610ea3507d466cd3aa2f9720c849ec11045e81
+  - version: stein-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: 71fba9788205d91937a826c3ae2915c956657cc9
 branches:
   - location: 1.12.1
     name: stable/stein
