@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/os-acc
         hash: 0506812fff952bf8df0942cbe7d45a07d464ec38
+  - version: stein-eol
+    projects:
+      - repo: openstack/os-acc
+        hash: a78513033bb185aa4817817fb83b8126bf41b990
 branches:
   - location: 0.2.0
     name: stable/stein
