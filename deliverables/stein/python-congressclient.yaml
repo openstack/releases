@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: b7044328112bdeda1b7bc36da1e5c8f863b3c72a
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: ab404635582e986377d539091eb13d6c7fc3577f
 repository-settings:
   openstack/python-congressclient: {}
 branches:

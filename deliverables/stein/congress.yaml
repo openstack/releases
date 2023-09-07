@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 4977fe3dacbf4de25e8568141d9bdbf7363a5288
+  - version: stein-eol
+    projects:
+      - repo: openstack/congress
+        hash: b565c87d0224abb76d3710a4238df433f75ffbf3
 branches:
   - location: 9.0.0.0rc1
     name: stable/stein
