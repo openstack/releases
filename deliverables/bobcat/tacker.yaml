@@ -5,3 +5,12 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+cycle-highlights:
+  - CNF auto scale via Performance Management Threshold API. Prometheus Plugin
+    for Prometheus is also provided as for external monitoring feature.
+  - Support multiple conductors onboarding for N-Act tacker cluster
+    enables all conductors to download/delete VNF Package.
+  - Revise APIs for fine-grained access control enables to add attributes
+    for enhanced Tacker policy, convert special roles to API attributes or so.
+  - Support Anti-Affinity rules in AZ reselection.
+  - Terraform Infra-driver for VNF Instantiation and Termination.
