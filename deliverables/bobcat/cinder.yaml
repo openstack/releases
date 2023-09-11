@@ -3,5 +3,20 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    New backend drivers were added: Yadro Tatlin Unified FC Driver,
+    TOYOU NetStor TYDS iSCSI driver, Pure Storage FlashArray NVMe-TCP support.
+  - |
+    New driver features were added, notably, QoS support for
+    Fujitsu ETERNUS DX driver, replication-enabled consistency groups support
+    for Pure Storage driver, and Active/Active support for NetApp NFS driver.
+  - |
+    A critical security issue, CVE-2023-2088, was fixed.
+  - |
+    Along with many bug fixes, some major ones are: fixed issues when
+    restoring full backups to non RBD volumes, ability to restore backups
+    into sparse volumes, restricted non-admins to create multiattach volume
+    using the multiatach parameter, etc.
 repository-settings:
   openstack/cinder: {}
