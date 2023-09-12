@@ -5,3 +5,11 @@ team: manila
 type: service
 repository-settings:
   openstack/manila: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: c09846b1b7905481a20973140685ca00cc6e6018
+branches:
+  - name: stable/2023.2
+    location: 17.0.0.0rc1
