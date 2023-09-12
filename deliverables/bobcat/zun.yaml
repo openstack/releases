@@ -5,3 +5,11 @@ team: zun
 type: service
 repository-settings:
   openstack/zun: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/zun
+        hash: 4fa358474ee337f27bfaf8b98e886cc8d10ada50
+branches:
+  - name: stable/2023.2
+    location: 12.0.0.0rc1
