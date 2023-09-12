@@ -6,3 +6,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-image-elements: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: ace7eda8cdcc93592216954cc4a945988f2ab6d1
+branches:
+  - name: stable/2023.2
+    location: 19.0.0.0rc1
