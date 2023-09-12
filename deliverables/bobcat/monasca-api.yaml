@@ -5,3 +5,11 @@ team: monasca
 type: service
 repository-settings:
   openstack/monasca-api: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-api
+        hash: 1421da749be2ab926d60c14024c12f664a7a85f4
+branches:
+  - name: stable/2023.2
+    location: 11.0.0.0rc1
