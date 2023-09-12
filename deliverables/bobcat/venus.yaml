@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/venus:
     tarball-base: openstack-venus
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/venus
+        hash: caaebe69fd5d01914411eee6f05de1be59fbcc76
+branches:
+  - name: stable/2023.2
+    location: 3.0.0.0rc1
