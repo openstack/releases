@@ -5,3 +5,11 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+releases:
+  - version: 28.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 1f60a71e0ac8527f0f528e950198670f3e0583bb
+branches:
+  - name: stable/2023.2
+    location: 28.0.0.0rc1
