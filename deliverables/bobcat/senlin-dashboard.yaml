@@ -5,3 +5,11 @@ team: senlin
 type: horizon-plugin
 repository-settings:
   openstack/senlin-dashboard: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: a2e6e8b89f9bc031445161dfded7ad632a9ecfe6
+branches:
+  - name: stable/2023.2
+    location: 8.0.0.0rc1
