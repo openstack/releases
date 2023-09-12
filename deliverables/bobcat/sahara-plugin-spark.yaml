@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-spark: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: c68cb5e9da50822fcdf498db5c2c8adcd1b04acb
+branches:
+  - name: stable/2023.2
+    location: 10.0.0.0rc1
