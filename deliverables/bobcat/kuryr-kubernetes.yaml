@@ -5,3 +5,11 @@ team: kuryr
 type: other
 repository-settings:
   openstack/kuryr-kubernetes: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 4993c7a4b2d7e4b053832bf39602f2573fad6266
+branches:
+  - name: stable/2023.2
+    location: 9.0.0.0rc1
