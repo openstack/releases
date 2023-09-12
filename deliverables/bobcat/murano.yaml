@@ -5,3 +5,11 @@ team: murano
 type: service
 repository-settings:
   openstack/murano: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/murano
+        hash: c898a310afbc27f12190446ef75d8b0bd12115eb
+branches:
+  - name: stable/2023.2
+    location: 16.0.0.0rc1
