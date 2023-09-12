@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-persister: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 1ea4e21eb231e4fe193e62f1b03b957c9d4281c8
+branches:
+  - name: stable/2023.2
+    location: 9.0.0.0rc1
