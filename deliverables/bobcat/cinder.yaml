@@ -20,3 +20,11 @@ cycle-highlights:
     using the multiatach parameter, etc.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 23.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 265d813dc90e6a6adc442285cb82ddaddca9cfb5
+branches:
+  - name: stable/2023.2
+    location: 23.0.0.0rc1
