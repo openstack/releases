@@ -5,3 +5,11 @@ team: sahara
 type: other
 repository-settings:
   openstack/sahara-plugin-mapr: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: e745b5f47c9c6a02b80581d1ea69a46723330b31
+branches:
+  - name: stable/2023.2
+    location: 10.0.0.0rc1
