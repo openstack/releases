@@ -5,3 +5,11 @@ team: sahara
 type: horizon-plugin
 repository-settings:
   openstack/sahara-dashboard: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: c830376eaf5a8328347b1eacf5fa2fadda67a76b
+branches:
+  - name: stable/2023.2
+    location: 19.0.0.0rc1
