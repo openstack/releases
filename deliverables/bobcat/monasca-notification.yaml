@@ -5,3 +5,11 @@ team: monasca
 type: other
 repository-settings:
   openstack/monasca-notification: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 5225304a268fbd7e5edc30ab6d2b0cbf3b92b565
+branches:
+  - name: stable/2023.2
+    location: 9.0.0.0rc1
