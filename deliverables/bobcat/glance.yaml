@@ -10,6 +10,8 @@ cycle-highlights:
     of the problem with existing location strategy while downloading
     the image from specific store when multiple stores of same type
     are available.
+  - Added support for RBD driver to move images to the trash if they
+    cannot be deleted immediately due to having snapshots.
 repository-settings:
   openstack/glance: {}
 releases:
@@ -21,3 +23,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: b350184f40bf75cff279e48f8979a4ce255f3068
+  - version: 27.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 7cb1d5e0aedc65da102a60d10807f0a52ca15bfc
+branches:
+  - name: stable/2023.2
+    location: 27.0.0.0rc1
