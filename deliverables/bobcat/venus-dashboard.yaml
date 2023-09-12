@@ -5,3 +5,11 @@ team: venus
 type: horizon-plugin
 repository-settings:
   openstack/venus-dashboard: {}
+releases:
+  - version: 3.0.0.0rc1
+    projects:
+      - repo: openstack/venus-dashboard
+        hash: 2b9ff5f0d19f51b2e425afcadce7d5d0497ec5eb
+branches:
+  - name: stable/2023.2
+    location: 3.0.0.0rc1
