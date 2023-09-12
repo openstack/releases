@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/blazar-dashboard: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: fa1a31a44874d785ad7dd4d550f34ea18cf0d910
+branches:
+  - name: stable/2023.2
+    location: 10.0.0.0rc1
