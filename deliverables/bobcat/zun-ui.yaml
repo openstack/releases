@@ -5,3 +5,11 @@ team: zun
 type: horizon-plugin
 repository-settings:
   openstack/zun-ui: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/zun-ui
+        hash: 2fea47223d249eee93938b1f6626844840a1b0eb
+branches:
+  - name: stable/2023.2
+    location: 12.0.0.0rc1
