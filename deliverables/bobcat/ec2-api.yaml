@@ -6,3 +6,11 @@ team: ec2-api
 type: service
 repository-settings:
   openstack/ec2-api: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/ec2-api
+        hash: 32740781f6050cbb08847066fc2fef996d93f2a1
+branches:
+  - name: stable/2023.2
+    location: 17.0.0.0rc1
