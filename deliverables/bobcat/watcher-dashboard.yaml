@@ -6,3 +6,11 @@ team: watcher
 type: horizon-plugin
 repository-settings:
   openstack/watcher-dashboard: {}
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 2114b979df67873f9251101b5351fbf5a5ab56a6
+branches:
+  - name: stable/2023.2
+    location: 10.0.0.0rc1
