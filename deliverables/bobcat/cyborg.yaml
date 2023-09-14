@@ -7,3 +7,11 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: ab8b8514242895b8adc2ec3dfbbb63a49f02c89e
+branches:
+  - name: stable/2023.2
+    location: 11.0.0.0rc1
