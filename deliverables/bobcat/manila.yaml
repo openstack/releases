@@ -3,5 +3,40 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - |
+    Manila shares and access rules can now be locked against deletion.
+    A generic ``resource locks`` framework has been introduced to facilitate
+    this. Users can also hide sensitive fields of access rules with this
+    feature.
+  - |
+    Shares can be backed up and restored generically with the help of the
+    manila-data manager service. Driver-powered share backups will extend this
+    feature in future releases.
+  - |
+    Added new Manila drivers to support Dell PowerFlex and Dell PowerStore
+    storage backends. The driver for PowerFlex supports managing NFS shares
+    while the driver for PowerStore supports managing NFS and CIFS shares.
+  - |
+    Added the NetAppAIQWeigher scheduler weigher that harnesses artificial
+    intelligence to handle provisioning and placement decisions.
+  - |
+    Share access rules can be filtered with rule parameters such as access_to,
+    access_type, access_key and access_level.
+  - |
+    Added the possibility to display the total count of snapshots when
+    paginating snapshots.
+  - |
+    Added share type information to notifications with oslo.messaging. It is
+    useful for billing to be able to charge customers differently for shares of
+    different types.
+  - |
+    Administrators are now able to to set a maximum share extend size
+    restriction which can be set on a per share-type granularity through the
+    ‘provisioning:max_share_extend_size’ extra-spec.
+  - |
+    Usage of the “manila” CLI client is discouraged in favor of the
+    “openstack” CLI. The “manila” CLI client is deprecated and will be removed
+    in a future release.
 repository-settings:
   openstack/manila: {}
