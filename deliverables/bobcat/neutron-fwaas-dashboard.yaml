@@ -5,3 +5,11 @@ type: horizon-plugin
 release-model: cycle-with-rc
 repository-settings:
   openstack/neutron-fwaas-dashboard: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: c74c81b422a5afa79f45f7ae00504cd364472fd2
+branches:
+  - name: stable/2023.2
+    location: 6.0.0.0rc1
