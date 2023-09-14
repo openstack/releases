@@ -11,3 +11,11 @@ cycle-highlights:
   - Enabled multiple rating types for the same metric for gnocchi.
   - Created indexes to allow SQL rewrites and optimizations
   - Optimized Gnocchi fetcher processing time
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 60077a3cc47eaa49e33930bfe4253bff784c6a63
+branches:
+  - name: stable/2023.2
+    location: 19.0.0.0rc1
