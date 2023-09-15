@@ -7,3 +7,11 @@ release-type: neutron
 include-pypi-link: true
 repository-settings:
   openstack/tap-as-a-service: {}
+releases:
+  - version: 12.0.0.0rc1
+    projects:
+      - repo: openstack/tap-as-a-service
+        hash: 42491e35e1b14a41dd82944717c6bc6b2967f88d
+branches:
+  - name: stable/2023.2
+    location: 12.0.0.0rc1
