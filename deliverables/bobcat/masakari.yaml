@@ -5,3 +5,11 @@ team: masakari
 type: service
 repository-settings:
   openstack/masakari: {}
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/masakari
+        hash: d4feef4b969634e7c1945790c67e0ba7aa39368c
+branches:
+  - name: stable/2023.2
+    location: 16.0.0.0rc1
