@@ -7,3 +7,11 @@ type: service
 repository-settings:
   openstack/placement:
     tarball-base: openstack-placement
+releases:
+  - version: 10.0.0.0rc1
+    projects:
+      - repo: openstack/placement
+        hash: cf2678f2b9a65c184643a46038efb7687afe70f9
+branches:
+  - name: stable/2023.2
+    location: 10.0.0.0rc1
