@@ -18,14 +18,21 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: f06e6591709114c148ab806334b41ec4cff3f2f7
-
+  - version: 23.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 741f504c7badb3f6799977bd1e98ca5a9b7d1f53
 cycle-highlights:
-  - Limit the rate at which instances can query the metadata service in order
-    to protect the OpenStack deployment from DoS or misbehaved instances.
-  - The Neutron service has enabled the new API policies (RBAC) with system
-    scope and default roles by default.
-  - A new port hint attribute "ovs-tx-steering", to modify the behaviour of
-    the local Open vSwitch Userspace transmit packet steering feature.
-  - New API which allows to define a set of security group rules to be used
-    automatically in every new ``default`` and/or custom security group created
-    for any project.
+  - Limit the rate at which instances can query the metadata service
+    in order to protect the OpenStack deployment from DoS or misbehaved
+    instances.
+  - The Neutron service has enabled the new API policies (RBAC) with
+    system scope and default roles by default.
+  - A new port hint attribute "ovs-tx-steering", to modify the behaviour
+    of the local Open vSwitch Userspace transmit packet steering feature.
+  - New API which allows to define a set of security group rules to
+    be used automatically in every new ``default`` and/or custom security
+    group created for any project.
+branches:
+  - name: stable/2023.2
+    location: 23.0.0.0rc1
