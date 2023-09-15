@@ -6,3 +6,11 @@ team: OpenStackSDK
 type: other
 repository-settings:
   openstack/python-openstackclient: {}
+releases:
+  - version: 6.3.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 08faf81d0d81153d0b11d155a2162f00c039cb3f
+branches:
+  - name: stable/2023.2
+    location: 6.3.0
