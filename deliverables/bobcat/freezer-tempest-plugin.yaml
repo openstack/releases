@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: freezer_tempest_plugin
 team: freezer
 type: tempest-plugin
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/freezer-tempest-plugin
+        hash: f8fe406aafb82878837706984b9a441a46aaf088
