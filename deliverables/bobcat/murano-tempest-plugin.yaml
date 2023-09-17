@@ -8,3 +8,8 @@ repository-settings:
   openstack/murano-tempest-plugin: {}
 team: murano
 type: tempest-plugin
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/murano-tempest-plugin
+        hash: d2b794cbf0f33c39db85d0a59e38851f579b1d5a
