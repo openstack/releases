@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 4de9627b99678598c6a99ca952d88177d3f44e14
+  - version: train-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 783bf7d5b44df3f8353ec51812729d6c754d0318
 branches:
   - location: 2.1.0
     name: stable/train
-release-notes: https://docs.openstack.org/releasenotes/networking-generic-switch/train.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/networking-generic-switch/train.html
