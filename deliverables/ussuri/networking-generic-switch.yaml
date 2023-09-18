@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 8a48190f38b87984d25364accd7ef2bbef35db4d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 363ee2b3920b47131dad3c8cb3df5a721974796c
 branches:
   - name: stable/ussuri
     location: 3.0.0
-release-notes: https://docs.openstack.org/releasenotes/networking-generic-switch/ussuri.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/networking-generic-switch/ussuri.html
