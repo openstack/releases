@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 5363ca11c9d4d9a5a9cf5a2be2fc40c52659f258
+  - version: 14.1.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: caebf7620e94999ee6cfb5bcfad1db50572008bf
 branches:
   - name: stable/2023.2
     location: 14.0.0
