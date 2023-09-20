@@ -2628,7 +2628,19 @@ class TestValidateSeriesOpen(base.BaseTestCase):
             mock.Mock(return_value=True),
         ))
 
-    def test_series_is_open(self):
+    @mock.patch('openstack_releases.defaults.RELEASE', 'b')
+    @mock.patch('openstack_releases.series_status.SeriesStatus.default')
+    def test_series_is_open(self, series_data):
+        _series_status_data = yamlutils.loads(textwrap.dedent('''
+        - name: b
+          status: development
+          initial-release: 2018-02-28
+        - name: a
+          status: maintained
+          initial-release: 2017-02-22
+        '''))
+        series_data.return_value = series_status.SeriesStatus(
+            _series_status_data)
         series_a_dir = self.tmpdir + '/a'
         series_a_filename = series_a_dir + '/automaton.yaml'
         series_b_dir = self.tmpdir + '/b'
@@ -2665,7 +2677,66 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_no_earlier_series(self):
+    @mock.patch('openstack_releases.defaults.RELEASE', 'b')
+    @mock.patch('openstack_releases.series_status.SeriesStatus.default')
+    def test_series_is_open_with_release_id(self, series_data):
+        _series_status_data = yamlutils.loads(textwrap.dedent('''
+        - name: b
+          status: development
+          initial-release: 2018-02-28
+        - name: a
+          status: maintained
+          release-id: 2017.1
+          initial-release: 2017-02-22
+        '''))
+        series_data.return_value = series_status.SeriesStatus(
+            _series_status_data)
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/automaton.yaml'
+        series_b_dir = self.tmpdir + '/b'
+        series_b_filename = series_b_dir + '/automaton.yaml'
+        os.makedirs(series_a_dir)
+        os.makedirs(series_b_dir)
+        branch_data = textwrap.dedent('''
+        ---
+        branches:
+          - name: stable/2017.1
+            location: 1.4.0
+        ''')
+        deliverable_data = textwrap.dedent('''
+        ---
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(branch_data)
+        with open(series_b_filename, 'w') as f:
+            f.write(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='b',
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.ctx.set_filename(series_b_filename)
+        validate.validate_series_open(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    @mock.patch('openstack_releases.defaults.RELEASE', 'b')
+    @mock.patch('openstack_releases.series_status.SeriesStatus.default')
+    def test_no_earlier_series(self, series_data):
+        _series_status_data = yamlutils.loads(textwrap.dedent('''
+        - name: b
+          status: development
+          initial-release: 2018-08-30
+        '''))
+        series_data.return_value = series_status.SeriesStatus(
+            _series_status_data)
         series_b_dir = self.tmpdir + '/b'
         series_b_filename = series_b_dir + '/automaton.yaml'
         os.makedirs(series_b_dir)
@@ -2712,7 +2783,19 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    def test_no_stable_branch(self):
+    @mock.patch('openstack_releases.defaults.RELEASE', 'b')
+    @mock.patch('openstack_releases.series_status.SeriesStatus.default')
+    def test_no_stable_branch(self, series_data):
+        _series_status_data = yamlutils.loads(textwrap.dedent('''
+        - name: b
+          status: development
+          initial-release: 2018-08-30
+        - name: a
+          status: maintained
+          initial-release: 2018-02-28
+        '''))
+        series_data.return_value = series_status.SeriesStatus(
+            _series_status_data)
         series_a_dir = self.tmpdir + '/a'
         series_a_filename = series_a_dir + '/automaton.yaml'
         series_b_dir = self.tmpdir + '/' + defaults.RELEASE
@@ -2744,6 +2827,55 @@ class TestValidateSeriesOpen(base.BaseTestCase):
         validate.validate_series_open(deliv, self.ctx)
         self.ctx.show_summary()
         self.assertEqual(1, len(self.ctx.warnings))
+        self.assertIn('There is no stable/a branch defined', self.ctx.warnings[0])
+        self.assertEqual(0, len(self.ctx.errors))
+
+    @mock.patch('openstack_releases.defaults.RELEASE', 'b')
+    @mock.patch('openstack_releases.series_status.SeriesStatus.default')
+    def test_no_stable_branch_with_release_id(self, series_data):
+        _series_status_data = yamlutils.loads(textwrap.dedent('''
+        - name: b
+          status: development
+          initial-release: 2018-08-30
+        - name: a
+          status: maintained
+          release-id: 2018.1
+          initial-release: 2018-02-28
+        '''))
+        series_data.return_value = series_status.SeriesStatus(
+            _series_status_data)
+        series_a_dir = self.tmpdir + '/a'
+        series_a_filename = series_a_dir + '/automaton.yaml'
+        series_b_dir = self.tmpdir + '/' + defaults.RELEASE
+        series_b_filename = series_b_dir + '/automaton.yaml'
+        os.makedirs(series_a_dir)
+        os.makedirs(series_b_dir)
+        branch_data = textwrap.dedent('''
+        ---
+        ''')
+        deliverable_data = textwrap.dedent('''
+        ---
+        releases:
+          - version: 1.5.0
+            projects:
+              - repo: openstack/automaton
+                hash: be2885f544637e6ee6139df7dc7bf937925804dd
+        ''')
+        with open(series_a_filename, 'w') as f:
+            f.write(branch_data)
+        with open(series_b_filename, 'w') as f:
+            f.write(deliverable_data)
+        deliv = deliverable.Deliverable(
+            team='team',
+            series=defaults.RELEASE,
+            name='name',
+            data=yamlutils.loads(deliverable_data),
+        )
+        self.ctx.set_filename(series_b_filename)
+        validate.validate_series_open(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(1, len(self.ctx.warnings))
+        self.assertIn('There is no stable/2018.1 branch defined', self.ctx.warnings[0])
         self.assertEqual(0, len(self.ctx.errors))
 
 

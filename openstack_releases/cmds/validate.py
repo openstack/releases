@@ -42,6 +42,7 @@ from openstack_releases import project_config
 from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import requirements
+from openstack_releases import series_status
 from openstack_releases import versionutils
 from openstack_releases import xstaticutils
 
@@ -236,7 +237,8 @@ def validate_series_open(deliv, context):
     previous_series = os.path.basename(
         os.path.dirname(previous_deliverable_file)
     )
-    expected_branch = 'stable/' + previous_series
+    series_status_data = series_status.SeriesStatus.default()
+    expected_branch = 'stable/' + series_status_data[previous_series].release_id
     previous_deliverable = deliverable.Deliverable.read_file(
         previous_deliverable_file
     )
