@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 93ca4f46d2f6084f9eaef31f7f5e19cc36ff3ebd
+  - version: 6.2.1
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 8a8e8fab4ebaf421c4de6a8a9b60d9a5c5e3f7ff
+branches:
+  - name: stable/2023.2
+    location: 6.2.1
