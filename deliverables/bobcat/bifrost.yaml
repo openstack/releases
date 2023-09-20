@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 16b34f378d013b118fa0bfa2c9aa77c517ebc4e3
+  - version: 17.1.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 12462b8989e37095304d3ea0e672f77b7a08d296
+branches:
+  - name: stable/2023.2
+    location: 17.1.0
