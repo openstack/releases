@@ -6,3 +6,17 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+cycle-highlights:
+  - |
+    Ansible Core version is updated to 2.15 series. With that required
+    collections were updated to the latest versions as well.
+  - |
+    Added support for RabbitMQ quorum queues. As part of migration process to
+    quorum queues vhost names will be changed from ``/<service>`` to
+    ``<service`` (ie ``/nova`` -> ``nova``).
+    At the same time in case of continue using classic queues, their version
+    will be changed to 2.
+  - |
+    RabbitMQ is upgraded to 3.12 series
+  - |
+    Added support for Debian 12 (Bookworm)
