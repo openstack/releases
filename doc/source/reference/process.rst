@@ -569,6 +569,11 @@ Week after Milestone-2
    The generated output can be used to set up the schedule similar to what was
    done for the `Ussuri release <https://review.opendev.org/#/c/679822/>`_.
 
+   .. note::
+
+      Use ``format-yaml doc/source/$series/schedule.yaml`` before pushing
+      the patch to gerrit to check consistency.
+
 
 Between Milestone-2 and Milestone-3
 ===================================
