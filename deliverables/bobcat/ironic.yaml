@@ -15,11 +15,17 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 461d85502df4a7dc1dcbe1d1cc52014598398fe4
+  - version: 23.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: f78f87227191edaa2ee91aca604f815c49a1da6a
 branches:
   - name: bugfix/22.0
     location: 22.0.0
   - name: bugfix/22.1
     location: 22.1.0
+  - name: stable/2023.2
+    location: 23.0.0
 cycle-highlights:
   - Ironic now has support for complex parent-child device topologies. This
     feature, primarily targeted at orchestration of DPUs, allows nodes to have
