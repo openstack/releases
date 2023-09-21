@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 9a29488f195479ca90abad72fc1d344839b25b6e
+  - version: 4.2.1
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 160f08d50d29a91324e837f005845c0a52284404
+branches:
+  - name: stable/2023.2
+    location: 4.2.1
