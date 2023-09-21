@@ -142,7 +142,7 @@ frozen until the stable branches are created, with the release candidates.
 RC1 target week
 ---------------
 
-The week of March 11, 2023 is the target date for projects following the
+The week of March 11, 2024 is the target date for projects following the
 `release:cycle-with-rc`_ model to issue their first release candidate.
 
 .. _c-hard-sf:
@@ -159,7 +159,7 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of March 25, 2023 is the last week to issue release
+The week of March 25, 2024 is the last week to issue release
 candidates or intermediary releases before release week. During release week,
 only final-release-critical releases will be accepted (at the discretion of
 the release team).
@@ -169,7 +169,7 @@ the release team).
 Caracal release
 ---------------
 
-The Caracal coordinated release will happen on Wednesday, April 3, 2023.
+The Caracal coordinated release will happen on Wednesday, April 3, 2024.
 
 .. _c-cycle-highlights:
 
