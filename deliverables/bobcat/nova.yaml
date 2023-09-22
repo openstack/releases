@@ -5,6 +5,41 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    The Ironic driver ``[ironic]/peer_list`` configuration option has been
+    deprecated. The Ironic driver now more closely models other Nova drivers by
+    having a single compute have exclusive control over assigned nodes.
+    If high availability of a single compute service is required, operators
+    should use active/passive failover.
+  - |
+    The legacy quota driver is now deprecated and a
+    `nova-manage limits command <https://docs.openstack.org/nova/latest/cli/nova-manage.html#limits-migrate-to-unified-limits>`_
+    is provided in order to migrate the orginal limits into Keystone. We plan to
+    change the default quota driver to the unified limits driver in an upcoming
+    release. It is recommended that you begin planning and executing a migration
+    to unified limits as soon as possible.
+  - |
+    QEMU in its TCG mode (i.e. full system emulation) uses a translation
+    block (TB) cache as an optimization during dynamic code translation.
+    The libvirt driver can now configure the tb-cache size when the virt type is
+    ``qemu``. This helps running VMs with small memory size.
+    In order to use this feature, a configuration option
+    ``[libvirt]/tb_cache_size`` has been introduced.
+  - |
+    Two new scheduler weighers have been introduced. One helps sorting the nodes
+    by the number of active instances they run, the other helps sorting by
+    the hypervisor version each compute runs. Accordingly, you can place your
+    instances with different strategies, eg. by allocating them to more recent
+    nodes or by reducing the number of noisy instance neighbors.
+  - |
+    It is now possible to define different authorization policies for migration
+    with and without a target host.
+  - |
+    A couple of other improvements target reducing the number of bugs we have,
+    one checking at reboot if stale volume attachments still reside and another
+    one ensuring a strict linkage between a compute, a service and the instances
+    it runs.
 releases:
   - version: 28.0.0.0rc1
     projects:
