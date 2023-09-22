@@ -7,4 +7,9 @@ stable-branch-type: none
 release-type: python-pypi
 repository-settings:
   openstack/sahara-tests: {}
+releases:
+  - version: 0.18.0
+    projects:
+      - repo: openstack/sahara-tests
+        hash: f67f18fbdef1e3f88276d1a421c75b2d80d7605a
 # Note: deliverable was not released in antelope
