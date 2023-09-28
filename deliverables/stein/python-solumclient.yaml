@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 977717e756a6f4479480474777d2931c4860e7a6
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 9841840367f9c0d4495ea4af65096e8afe3be0cb
 branches:
   - location: 2.8.0
     name: stable/stein

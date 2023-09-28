@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: c9d7760774ed7a749831592e426e14c6b5fba033
+  - version: stein-eol
+    projects:
+      - repo: openstack/solum
+        hash: e6a78919076229d90ff67650c8dac82fd390fde4
 branches:
   - location: 6.0.0.0rc1
     name: stable/stein
