@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 89af8f0192a3446e416efe2215b47c4e3a89809d
+  - version: stein-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 89af8f0192a3446e416efe2215b47c4e3a89809d
 branches:
   - location: 6.0.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/keystonemiddleware/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/keystonemiddleware/stein.html
