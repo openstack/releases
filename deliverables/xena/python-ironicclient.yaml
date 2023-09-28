@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 4ac24dec7548cba6f1aeb20dde4cba68b0868783
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 4ac24dec7548cba6f1aeb20dde4cba68b0868783
 branches:
   - name: stable/xena
     location: 4.8.0
-release-notes: https://docs.openstack.org/releasenotes/python-ironicclient/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-ironicclient/xena.html
