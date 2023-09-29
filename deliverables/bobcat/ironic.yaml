@@ -27,43 +27,46 @@ branches:
   - name: stable/2023.2
     location: 23.0.0
 cycle-highlights:
-  - Ironic now has support for complex parent-child device topologies. This
-    feature, primarily targeted at orchestration of DPUs, allows nodes to have
-    parent/child relationships. This allows for more complex logic to be
-    coordinated between a node and its children. When a node with children runs
-    a step-based action, those steps can include actions to be run on the child
-    node. See `parent node documentation <https://docs.openstack.org/ironic/latest/admin/cleaning.html#parent-nodes>`_
+  - Ironic now has support for complex parent-child device topologies.
+    This feature, primarily targeted at orchestration of DPUs, allows
+    nodes to have parent/child relationships. This allows for more complex
+    logic to be coordinated between a node and its children. When a
+    node with children runs a step-based action, those steps can include
+    actions to be run on the child node. See `parent node documentation
+    <https://docs.openstack.org/ironic/latest/admin/cleaning.html#parent-nodes>`_
     for more information.
   - Ironic now has basic support for servicing nodes. Servicing allows
-    operators to use steps, like you would for cleaning, to perform service
-    on deployed nodes in ``ACTIVE`` state. Previously, Ironic would not
-    perform operations on active nodes. See
-    `Node servicing documentation <https://docs.openstack.org/ironic/latest/admin/servicing>`_
+    operators to use steps, like you would for cleaning, to perform
+    service on deployed nodes in ``ACTIVE`` state. Previously, Ironic
+    would not perform operations on active nodes. See `Node servicing
+    documentation <https://docs.openstack.org/ironic/latest/admin/servicing>`_
     for more information.
-  - Ironic has promoted support for firmware upgrading and information to a
-    new interface and API named ``FirmwareInterface``. This includes new API
-    support, at ``/v1/nodes/{node_ident}/firmware`` for getting firmware
-    information. In addition, operators can use the csteps provided by the new
-    ``FirmwareInterface`` their firmware upgrade process for step-based
-    automations, such as deployment, cleaning, or servicing. While the structure
-    and API is in place for firmware management, our first driver, for redfish
-    hardware, is coming next release.
-  - Additional steps for servicing, cleaning, and deployment have been added.
-    The first new step, ``wait``, waits for a specified amount of time or
-    until the next heartbeat. The second new step, ``hold``, stops evaluation
-    of steps until the ``unhold`` verb is submitted to the provision state API
-    for that node. When a node is held, it will be parked a new "hold"
-    provision_state, either ``clean hold``, ``deploy hold`` or
-    ``service hold``. Additionally, Ironic has added support for power control
-    via steps named, ``power_on``, ``power_off``, and ``reboot``; deployers who
-    already have custom steps with these names must rename them. These new steps
-    are useful for integrating with external systems that need to perform
-    actions on a node or for orchestrating complex workflows involving child
-    nodes.
-  - Ironic conductor services now honor the value of
-    ``[DEFAULT]/graceful_shutdown_timeout``, waiting that number of seconds
-    to complete operations before forcing them to abort. 
-  - Operators are now able to disable MD5 use to verify images in Ironic by
-    setting  ``[agent]/allow_md5_checksum`` to false. This option defaults
-    to ``true`` to preserve existing behavior in this release; but we expect
-    to disable MD5 support by default in a future release.
+  - Ironic has promoted support for firmware upgrading and information
+    to a new interface and API named ``FirmwareInterface``. This includes
+    new API support, at ``/v1/nodes/{node_ident}/firmware`` for getting
+    firmware information. In addition, operators can use the csteps
+    provided by the new ``FirmwareInterface`` their firmware upgrade
+    process for step-based automations, such as deployment, cleaning,
+    or servicing. While the structure and API is in place for firmware
+    management, our first driver, for redfish hardware, is coming next
+    release.
+  - Additional steps for servicing, cleaning, and deployment have been
+    added. The first new step, ``wait``, waits for a specified amount
+    of time or until the next heartbeat. The second new step, ``hold``,
+    stops evaluation of steps until the ``unhold`` verb is submitted
+    to the provision state API for that node. When a node is held, it
+    will be parked a new "hold" provision_state, either ``clean hold``,
+    ``deploy hold`` or ``service hold``. Additionally, Ironic has added
+    support for power control via steps named, ``power_on``, ``power_off``,
+    and ``reboot``; deployers who already have custom steps with these
+    names must rename them. These new steps are useful for integrating
+    with external systems that need to perform actions on a node or
+    for orchestrating complex workflows involving child nodes.
+  - Ironic conductor services now honor the value of ``[DEFAULT]/graceful_shutdown_timeout``,
+    waiting that number of seconds to complete operations before forcing
+    them to abort.
+  - Operators are now able to disable MD5 use to verify images in Ironic
+    by setting  ``[agent]/allow_md5_checksum`` to false. This option
+    defaults to ``true`` to preserve existing behavior in this release;
+    but we expect to disable MD5 support by default in a future release.
+release-notes: https://docs.openstack.org/releasenotes/ironic/2023.2.html
