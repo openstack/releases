@@ -146,8 +146,10 @@ the date ranges during which each key was in general use.
   `key 0xa63ea142678138d1bb15f2e303bdfd64dd164087`_
 * 2022-10-07..2023-03-31 (2023.1/Antelope Cycle key):
   `key 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4`_
-* 2023-03-31..present (2023.2/Bobcat Cycle key):
+* 2023-03-31..2023-10-09 (2023.2/Bobcat Cycle key):
   `key 0x815afec729392386480e076dcc0dfe2d21c023c9`_
+* 2023-10-09..present (2024.1/Caracal Cycle key):
+  `key 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318`_
 
 .. Static key files are generated with the following command:
    ( gpg --fingerprint --keyid-format=0xlong \
@@ -170,6 +172,7 @@ the date ranges during which each key was in general use.
 .. _`key 0xa63ea142678138d1bb15f2e303bdfd64dd164087`: _static/0xa63ea142678138d1bb15f2e303bdfd64dd164087.txt
 .. _`key 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4`: _static/0xa7475c5f2122fec3f90343223fe3bf5aad1080e4.txt
 .. _`key 0x815afec729392386480e076dcc0dfe2d21c023c9`: _static/0x815afec729392386480e076dcc0dfe2d21c023c9.txt
+.. _`key 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318`: _static/0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318.txt
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack TaCT SIG`: https://governance.openstack.org/sigs/tact-sig.html
