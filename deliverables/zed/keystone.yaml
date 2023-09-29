@@ -15,6 +15,10 @@ releases:
       - repo: openstack/keystone
         hash: 1ea9f7557dc442c56805f70b3f0c9393b427a770
     diff-start: 21.0.0
+  - version: 22.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 0f6b645ce8ffbca9a33c5ab971a46941e96b8c1c
 branches:
   - name: stable/zed
     location: 22.0.0.0rc1
