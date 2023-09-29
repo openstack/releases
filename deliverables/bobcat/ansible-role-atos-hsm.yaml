@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-atos-hsm
         hash: f5c86dff4ee246f0ecbfb2d753e2c90912e7bb02
+  - version: 6.0.0.0rc2
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: 8b62cf9d8dec364a1473a4bda91dc27a5e936886
 branches:
   - name: stable/2023.2
     location: 6.0.0.0rc1
