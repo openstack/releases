@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: python-observabilityclient
+release-model: cycle-with-intermediary
+team: Telemetry
+type: client-library
+repository-settings:
+  openstack/python-observabilityclient: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/python-observabilityclient
+        hash: 26687730b3c0f9c95fadfd378c9887cbd0c16ba4
