@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-events-api
         hash: 04633984a03e901d077b794b7c185a87756595a7
+  - version: 8.0.0
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: 04633984a03e901d077b794b7c185a87756595a7
+    diff-start: xena-em
 branches:
   - name: stable/2023.2
     location: 8.0.0.0rc1

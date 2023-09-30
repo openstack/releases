@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 9c240d27651361e7723d30ab231cf1b86d0a8642
+  - version: 12.0.0
+    projects:
+      - repo: openstack/zun
+        hash: 9c240d27651361e7723d30ab231cf1b86d0a8642
+    diff-start: 11.0.0
 branches:
   - name: stable/2023.2
     location: 12.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: c830376eaf5a8328347b1eacf5fa2fadda67a76b
+  - version: 19.0.0
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: c830376eaf5a8328347b1eacf5fa2fadda67a76b
+    diff-start: 18.0.0
 branches:
   - name: stable/2023.2
     location: 19.0.0.0rc1

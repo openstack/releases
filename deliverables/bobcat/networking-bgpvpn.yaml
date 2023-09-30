@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: f9491f5197082858bf264640ffd97e70dcc0dd84
+  - version: 19.0.0
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: f9491f5197082858bf264640ffd97e70dcc0dd84
+    diff-start: 18.0.0
 branches:
   - name: stable/2023.2
     location: 19.0.0.0rc1

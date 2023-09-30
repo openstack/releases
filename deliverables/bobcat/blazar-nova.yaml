@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 021780c99d85eeb4cf5ba653bd1c1501e2c88130
+  - version: 4.0.0
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 021780c99d85eeb4cf5ba653bd1c1501e2c88130
+    diff-start: 3.0.0
 branches:
   - name: stable/2023.2
     location: 4.0.0.0rc1

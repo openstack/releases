@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: cf383ae3a56438a7814b6897d85e00534fb86580
+  - version: 12.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: cf383ae3a56438a7814b6897d85e00534fb86580
+    diff-start: 11.0.0
 branches:
   - name: stable/2023.2
     location: 12.0.0.0rc1

@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 5c0277ffc81786e84e25f017528a45b27f32ce6e
+  - version: 12.0.0
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 5c0277ffc81786e84e25f017528a45b27f32ce6e
+    diff-start: 11.0.0
 branches:
   - name: stable/2023.2
     location: 12.0.0.0rc1

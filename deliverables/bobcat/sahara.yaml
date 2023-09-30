@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: f061c30f2bae19a135585fead245554579b062b7
+  - version: 19.0.0
+    projects:
+      - repo: openstack/sahara
+        hash: f061c30f2bae19a135585fead245554579b062b7
+    diff-start: 18.0.0
 branches:
   - name: stable/2023.2
     location: 19.0.0.0rc1
