@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 4aa998d492143f63d5ac32c6c000dff81e69a7af
+  - version: 16.0.0
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 4aa998d492143f63d5ac32c6c000dff81e69a7af
+    diff-start: 15.0.0
 branches:
   - name: stable/2023.2
     location: 16.0.0.0rc1

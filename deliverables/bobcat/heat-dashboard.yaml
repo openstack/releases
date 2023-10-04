@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 2bbd7e87efc7b30af296eabb846b45feb435cd34
+  - version: 10.0.0
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 2bbd7e87efc7b30af296eabb846b45feb435cd34
+    diff-start: 9.0.0
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1

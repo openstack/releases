@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 097d12aee254ab8bd89b87f3e7463a996e6813d9
+  - version: 9.0.0
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 097d12aee254ab8bd89b87f3e7463a996e6813d9
+    diff-start: 6.0.0
 branches:
   - name: stable/2023.2
     location: 9.0.0.0rc1

@@ -8,8 +8,8 @@ repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
 cycle-highlights:
-  - Complete device enable/disable feature that reserve the device
-    using flexiable.
+  - Complete device enable/disable feature that reserve the device using
+    flexiable.
   - Complete the POC of vGPU management by Cyborg in the kolla env.
   - Fix bugs and doc improvement.
 releases:
@@ -17,6 +17,11 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: ab8b8514242895b8adc2ec3dfbbb63a49f02c89e
+  - version: 11.0.0
+    projects:
+      - repo: openstack/cyborg
+        hash: ab8b8514242895b8adc2ec3dfbbb63a49f02c89e
+    diff-start: 10.0.0
 branches:
   - name: stable/2023.2
     location: 11.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: cf30defab9e28922bb017613ea07d766afa20dd8
+  - version: 11.0.0
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: cf30defab9e28922bb017613ea07d766afa20dd8
+    diff-start: 9.0.0
 branches:
   - name: stable/2023.2
     location: 11.0.0.0rc1
