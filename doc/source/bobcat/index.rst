@@ -2,7 +2,7 @@
 2023.2 Bobcat
 =============
 
-Projected Release Date: October 4, 2023
+Originally Released: October 4, 2023
 
 .. toctree::
    :maxdepth: 1
