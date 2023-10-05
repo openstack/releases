@@ -3,5 +3,13 @@ launchpad: puppet-tempest
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 20871082dd2ba688022e77975e291f15cf7c9e6a
+        repo: openstack/puppet-tempest
+    version: 23.0.0
 repository-settings:
   openstack/puppet-tempest: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

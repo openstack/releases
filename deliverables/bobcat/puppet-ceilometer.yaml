@@ -3,5 +3,13 @@ launchpad: puppet-ceilometer
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 235f1064dd3d61b4e407c5cf7fc68976ee920c3c
+        repo: openstack/puppet-ceilometer
+    version: 23.0.0
 repository-settings:
   openstack/puppet-ceilometer: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

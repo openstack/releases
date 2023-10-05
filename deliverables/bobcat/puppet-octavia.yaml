@@ -3,5 +3,13 @@ launchpad: puppet-octavia
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 30c6ddbdfae23b1db1a5b2f9a8aab5f9682c2915
+        repo: openstack/puppet-octavia
+    version: 23.0.0
 repository-settings:
   openstack/puppet-octavia: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0
