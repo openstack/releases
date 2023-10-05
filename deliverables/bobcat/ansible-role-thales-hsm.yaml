@@ -19,6 +19,10 @@ releases:
       - repo: openstack/ansible-role-thales-hsm
         hash: f74caaa6a0bb073f303bf812bd7cc9c43392cf9a
     diff-start: 6.0.0.0rc1
+  - version: 6.0.1
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: a81148ed0c16fd8d3054c02ed4a92d9d930319a6
 branches:
   - name: stable/2023.2
     location: 6.0.0.0rc1
