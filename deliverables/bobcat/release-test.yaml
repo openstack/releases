@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: 23525b97d05ff0527510d6dead611875279ec4e7
+  - version: 5.0.0
+    projects:
+      - repo: openstack/release-test
+        hash: bcb0eea32d726797a7a4b5fea5db768cecc28c93
+branches:
+  - name: stable/2023.2
+    location: 5.0.0
