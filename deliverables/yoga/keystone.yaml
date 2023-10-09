@@ -15,6 +15,10 @@ releases:
       - repo: openstack/keystone
         hash: 0eba22f331f5e998d5cdee2039e8f14772e78e5e
     diff-start: 20.0.0
+  - version: 21.0.1
+    projects:
+      - repo: openstack/keystone
+        hash: 7852ca24a4eb86cb271ef7ec5e07f8f9c97f926d
 branches:
   - name: stable/yoga
     location: 21.0.0.0rc1
