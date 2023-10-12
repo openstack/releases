@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 280acd2dff27d49d7606877edc3f17482f7444f6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: b7394363f696bce0add4998351d3c970addd7516
 branches:
   - name: stable/wallaby
     location: 3.4.0

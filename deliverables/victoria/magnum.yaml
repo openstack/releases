@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 4b1ba075ff0e5785cddba605e313a0aa82d84fb3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 6528052c1196e7032c7190c7b01017efa6f78b31
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

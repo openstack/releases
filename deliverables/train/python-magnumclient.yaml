@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 8106c5ff0020aefd755af66cdf8f2c49bb68f969
+  - version: train-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: 4a254d8454662976997e802e5d6925688576b30c
 branches:
   - name: stable/train
     location: 2.15.0

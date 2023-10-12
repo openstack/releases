@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: ab601bd7ab83f91527142d1eccc9841542204c97
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: c2df5a3f8a80962c4bf5eaeedcb046a3333916cd
 branches:
   - name: stable/xena
     location: 3.5.0

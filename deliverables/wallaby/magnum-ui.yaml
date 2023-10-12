@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/magnum-ui
         hash: e523a37bde515954478c14bb9e510f5c53cbe981
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/magnum-ui
+        hash: e523a37bde515954478c14bb9e510f5c53cbe981
 branches:
   - name: stable/wallaby
     location: 8.0.0.0rc1
