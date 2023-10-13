@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-ceilometer
         hash: 589854bd988fcfe310131912fab4026f0a5ad7c6
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-ceilometer
+        hash: 16526eba9bc423a1e4b82786b6da690a7ac6ee48
 branches:
   - location: 1.9.1
     name: stable/stein

@@ -18,7 +18,12 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 9900e18422f46f4aac2487444d174c7b41b63ca7
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 5627fccf6b21c8fc6ae130e80e14f345d118b885
 branches:
   - location: 1.14.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/monasca-persister/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/monasca-persister/stein.html

@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 0156d20a4d25bb93fd62732749dcb8cabcf8dd2f
+  - version: stein-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: f9598cd093081be4b7fa4cbd28ef6b80a1b6b1b3
 branches:
   - location: 1.11.0
     name: stable/stein
