@@ -3,5 +3,13 @@ launchpad: puppet-vswitch
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: ec83ceaf4ec60e7c911cf5d69269c519315c6638
+        repo: openstack/puppet-vswitch
+    version: 19.0.0
 repository-settings:
   openstack/puppet-vswitch: {}
+branches:
+  - name: stable/2023.2
+    location: 19.0.0

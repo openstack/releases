@@ -3,5 +3,13 @@ launchpad: puppet-qdr
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 2f71846a72f28a267f82abd347f4a46d982a4d9b
+        repo: openstack/puppet-qdr
+    version: 12.0.0
 repository-settings:
   openstack/puppet-qdr: {}
+branches:
+  - name: stable/2023.2
+    location: 12.0.0

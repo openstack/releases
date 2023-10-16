@@ -3,5 +3,13 @@ launchpad: puppet-placement
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 45ec0662fb372d3c2cd7b0e1308537619e010a21
+        repo: openstack/puppet-placement
+    version: 10.0.0
 repository-settings:
   openstack/puppet-placement: {}
+branches:
+  - name: stable/2023.2
+    location: 10.0.0

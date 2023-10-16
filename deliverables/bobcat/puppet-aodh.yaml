@@ -3,5 +3,13 @@ launchpad: puppet-aodh
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 564dff87ae0dc03e76eee6af8d57f72795d4bd8e
+        repo: openstack/puppet-aodh
+    version: 23.0.0
 repository-settings:
   openstack/puppet-aodh: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

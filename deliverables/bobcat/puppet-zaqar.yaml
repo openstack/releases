@@ -3,5 +3,13 @@ launchpad: puppet-zaqar
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 2d8f3e3ef0ffd8b54ed0e81fa41521e01a941608
+        repo: openstack/puppet-zaqar
+    version: 23.0.0
 repository-settings:
   openstack/puppet-zaqar: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

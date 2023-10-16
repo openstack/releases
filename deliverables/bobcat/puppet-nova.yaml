@@ -3,5 +3,13 @@ launchpad: puppet-nova
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: d8ae3ba6839d37c83d262242677004e4476bfd4c
+        repo: openstack/puppet-nova
+    version: 23.0.0
 repository-settings:
   openstack/puppet-nova: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

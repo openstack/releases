@@ -3,5 +3,13 @@ launchpad: puppet-ironic
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 7d85110fad5f85be86ac2d6b38fa002fca4ce6b1
+        repo: openstack/puppet-ironic
+    version: 23.0.0
 repository-settings:
   openstack/puppet-ironic: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0

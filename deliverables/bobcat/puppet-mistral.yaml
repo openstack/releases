@@ -3,5 +3,13 @@ launchpad: puppet-mistral
 release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
+releases:
+  - projects:
+      - hash: 29899b8bdaf68c39ded1fc0cbb104673f61474a5
+        repo: openstack/puppet-mistral
+    version: 23.0.0
 repository-settings:
   openstack/puppet-mistral: {}
+branches:
+  - name: stable/2023.2
+    location: 23.0.0
