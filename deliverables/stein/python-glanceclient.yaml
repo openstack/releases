@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 44a4dbd6ce2642daeaca9f45ac99e2d1b39e805a
+  - version: stein-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 4993b46d179d4e1c38fc4456a98e38c007385ce6
 branches:
   - location: 2.16.0
     name: stable/stein
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/stein.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/python-glanceclient/stein.html
