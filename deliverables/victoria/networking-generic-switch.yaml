@@ -24,7 +24,12 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 8c1a1c7a7fd59ae147ddf07c09166c1597a56bef
+  - version: victoria-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 8c1a1c7a7fd59ae147ddf07c09166c1597a56bef
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-generic-switch/victoria.html
+release-notes: 
+  https://docs.openstack.org/releasenotes/networking-generic-switch/victoria.html
