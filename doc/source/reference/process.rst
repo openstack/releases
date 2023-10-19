@@ -176,7 +176,7 @@ Week after previous release
 
     https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
 
-    By default, all your team deliverables from the $SERIES release are
+    By default, all your team deliverables from the $PREVIOUS_SERIES release are
     continued in $SERIES with a similar release model.
 
     Upcoming Deadlines & Dates
