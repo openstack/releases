@@ -27,7 +27,7 @@ import yaml
 
 TEAM_EXCEPTIONS = [
     # Teams that are likely to be moved off TC governance
-    'Infrastructure',
+    'ironic',
 ]
 
 
