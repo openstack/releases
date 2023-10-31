@@ -50,6 +50,12 @@ releases:
         hash: 6accbcf6654423ee0a48ba8382b7fd7e0c2b00fa
       - repo: openstack/kayobe-config-dev
         hash: 662aada627a8b2e01ce6c979cb339fcaeb34a2d2
+  - version: 13.3.0
+    projects:
+      - repo: openstack/kayobe
+        hash: b5f566ffecf8945ac128a397f58534d56b2aae5c
+      - repo: openstack/kayobe-config-dev
+        hash: 0f89c564bb675bdabb58b7756eb20c76437d630f
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1
