@@ -210,3 +210,93 @@ Oslo Feature Freeze
 
 All new Oslo features must be proposed and substantially complete, with unit
 tests by the end of the week.
+
+Cinder
+------
+
+.. _c-cinder-mid-cycle-ptg-1:
+
+Cinder Mid Cycle PTG - 1
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will be conducting a mid-cycle PTG on 6th December, 2023 (Wednesday) which
+is a continuation of 2024.1 Caracal PTG to track progress and discuss new
+topics in a similar manner as of PTG.
+
+Wednesday 6th December 2023 (1400-1600 UTC).
+
+.. _c-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in 2024.1 Caracal must be
+approved by Friday 22 December 2022 (23:59 UTC).
+
+.. _c-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the 2024.1
+Caracal release is Friday 26 January 2024 (20:00 UTC).  New drivers must be
+(a) code complete including unit tests, (b) merged into the code repository,
+and (c) must have a 3rd Party CI running reliably.  (Note that because of
+where some holidays fall this cycle, this is later than the usual Milestone-2
+deadline.)
+
+.. _c-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the 2024.1 Caracal
+release is Friday 26 January 2024 (20:00 UTC).  New target drivers must be
+(a) code complete including unit tests, (b) merged into the code repository,
+and (c) must have a 3rd Party CI running reliably.
+
+.. _c-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in four weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 01 March 2024.
+
+.. _c-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in two weeks.  Before
+the Cinder meeting this week, you should post a blueprint in Launchpad listing
+the Gerrit reviews of features you'd like to land in 2024.1 Caracal.  (You
+can look among the 2023.1 and 2023.2 blueprints for examples; contact the PTL
+if you have any questions.)  This will help the team prioritize reviews and
+give you candid early feedback on whether the features look ready.
+
+.. _c-cinder-mid-cycle-ptg-2:
+
+Cinder Mid Cycle PTG - 2
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will be conducting Midcycle-2 PTG on 14th February, 2024 (Wednesday) which
+is a continuation of 2024.1 Caracal Midcycle-1 PTG to track progress and
+discuss new topics in a similar manner as of Midcycle-1 PTG.
+
+Wednesday 14th February 2024 (1400-1600 UTC).
+
+.. _c-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the 2024.1 Caracal release, its third party CI must be
+running properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
