@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: 0cb9808be58f2102d3a22359dfc8dd802da91c69
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 7906dc6ced122609669df8f8e50cd2f1d8c3562f
 branches:
   - name: stable/victoria
     location: 17.4.0

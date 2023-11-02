@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-monasca
         hash: 9b34a40f2438e350c0e60e159f2b3b18a34ef7f7
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-monasca
+        hash: adb95007e91c8b02a99ad5492005187a841ee3e3
 branches:
   - name: stable/victoria
     location: 6.4.0

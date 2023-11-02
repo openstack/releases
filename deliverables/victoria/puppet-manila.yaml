@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: d45683a5f85587798c192085219b24060652009b
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: d45683a5f85587798c192085219b24060652009b
 branches:
   - name: stable/victoria
     location: 17.4.0

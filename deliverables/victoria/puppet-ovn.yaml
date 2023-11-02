@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: 3af845c4d2799c9dfd8c444f48b4971312b9a82e
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 947d0e143c75d6d97a16178afb489371dcebb5fd
 branches:
   - name: stable/victoria
     location: 17.4.0

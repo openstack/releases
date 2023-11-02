@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-rally
         hash: f1965b847173fea47039ce679833ab88e1b53060
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: cc6af6673e2c4d37306716bc0d21a8807a39ca62
 branches:
   - name: stable/victoria
     location: 5.4.0

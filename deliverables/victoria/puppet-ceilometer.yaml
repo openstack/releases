@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: 93358ab4c1baa6e905ed1bd61a10977f29ef7b74
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 93358ab4c1baa6e905ed1bd61a10977f29ef7b74
 branches:
   - name: stable/victoria
     location: 17.4.0

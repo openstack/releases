@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-panko
         hash: 7c0990900acb03b4c7428f38ea6219b2447e8969
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-panko
+        hash: 37d6792c833e8b5391fd6e1f79d319e7bc5245ac
 branches:
   - name: stable/victoria
     location: 17.5.0

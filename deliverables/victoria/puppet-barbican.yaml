@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-barbican
         hash: b648da9fae894d15a1712854f028e9a75a7969ec
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: b648da9fae894d15a1712854f028e9a75a7969ec
 branches:
   - name: stable/victoria
     location: 17.4.0

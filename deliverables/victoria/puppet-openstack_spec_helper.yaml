@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 1b266f6e3fce69aa93c37136831ccb104a07b6f6
 branches:
   - name: stable/victoria
     location:

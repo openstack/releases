@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 6dbd13e43162be7fc0eaa52cb4601a073e8fa3f5
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 5330f51f8c7866b835f3a9a028935b27580cc773
 branches:
   - name: stable/victoria
     location: 17.4.0

@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: 4ebe394d62b597bcafde312f6e28e11bb9806e02
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: c0687060b86185d6f3258fbc5139d2c8be6fd2d5
 branches:
   - name: stable/victoria
     location: 17.4.1

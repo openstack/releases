@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: f9f31edd9c3015b3755dc03b936f766b6a950e1f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 830038ff57e1a2247f4e7d9b70d319d745dff772
 branches:
   - name: stable/victoria
     location: 17.4.0

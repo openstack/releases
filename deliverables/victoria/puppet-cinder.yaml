@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 7a3e8d06b4b877e619fbfffdbaa2a03214909c00
+  - version: victoria-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 16de559d75f94e8fd8ebba95a556fe12fd1a07aa
 branches:
   - name: stable/victoria
     location: 17.4.0
