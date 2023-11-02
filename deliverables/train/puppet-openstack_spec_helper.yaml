@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 66d22f2b9d36e0890197036397cf6ea7407ad339
 branches:
   - name: stable/train
     location:

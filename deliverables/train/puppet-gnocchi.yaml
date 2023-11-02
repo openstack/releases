@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-gnocchi
         hash: c830d4b600491fb48fcefdace437c6cbb5c8ece8
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: ea090a675f7ea7de5525638959cb7fe99dd2f814
 branches:
   - name: stable/train
     location: 15.4.0

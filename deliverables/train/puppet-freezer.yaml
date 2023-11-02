@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: da01b03253e22bec1fd5c41be2fe9f96ca2f2b55
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: 2cd4966d7458214fc1746230d9f954e6b606be6b
 branches:
   - name: stable/train
     location: 4.4.0

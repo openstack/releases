@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-congress
         hash: 89038da276a4170d333eb30156af5b3437978b2b
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-congress
+        hash: e8b1a7f5c9019a25c100c03d144b5762a5b2fd92
 branches:
   - name: stable/train
     location: 15.4.0

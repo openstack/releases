@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-placement
         hash: 8fe110ecea431a9e5380e1295989158c43bdf2e2
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 65f9bf4ad6092cda28f4544d0de8710ce06ee8f8
 branches:
   - name: stable/train
     location: 2.4.0

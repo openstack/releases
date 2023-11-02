@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-senlin
         hash: ad13f21a25551b427afbf660bbbf6be7783ec862
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: 8563c05051c078ae47853f739e9e1975f1517b53
 branches:
   - name: stable/train
     location: 2.4.0

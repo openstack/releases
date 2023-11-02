@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: 2f54828532fd829e858ca25b5ebd5ba36211caf3
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: a56b33a9d2608a9fe5e2bc37bd456e8d0ae6b30e
 branches:
   - name: stable/train
     location: 15.4.0

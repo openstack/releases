@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 31e48ae3649a5245b3f33be3b18f586cf090e1eb
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 1cce62f65ae7a9eaa9c4c081946874754892c944
 branches:
   - name: stable/train
     location: 15.4.0

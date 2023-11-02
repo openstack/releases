@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 7f36270bf244f8b780fd71aade2ffaca103ebfe2
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: edf99a145f96a8754d02ab0aaebdad6caf508650
 branches:
   - name: stable/train
     location: 15.4.0

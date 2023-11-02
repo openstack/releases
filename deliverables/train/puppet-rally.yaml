@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-rally
         hash: 3e149ef166d03add395e62c1fe33ff94a4e6313a
+  - version: train-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: a2a6439ec13a1b9098b257cdca03ce1ab7637d4a
 branches:
   - name: stable/train
     location: 3.4.0
