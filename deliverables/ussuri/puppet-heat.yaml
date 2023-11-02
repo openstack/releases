@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: d267572494f2eaac67553f2ed6471b155c4534b4
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 5fed3d85fe0928d93f88c3ef1d5016968e667555
 branches:
   - name: stable/ussuri
     location: 16.3.0

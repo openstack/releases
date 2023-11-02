@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: 0e1cfd2ea256b3127b5f60beccc9196b33a5b12a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 80b61b19cb381992414d9681603c997959c4b43f
 branches:
   - name: stable/ussuri
     location: 16.3.0

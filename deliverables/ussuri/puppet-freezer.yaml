@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: b3b4c328294dc1c07238658f05ba37b9af4b7598
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: c5d291786e60eb5c45ba7fae446180958ee47c0e
 branches:
   - name: stable/ussuri
     location: 5.3.0

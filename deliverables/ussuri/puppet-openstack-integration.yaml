@@ -6,6 +6,11 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: d42cc96b8951e1b124e8d9122ee98a303dcc7e40
 branches:
   - name: stable/ussuri
     location:

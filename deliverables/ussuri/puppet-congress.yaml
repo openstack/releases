@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-congress
         hash: 6f2fc35212ea1bd76c6d1657b73fdf956de35552
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-congress
+        hash: df0adca61ed35e0496c487f6a2d622bf35f4f6c7
 branches:
   - name: stable/ussuri
     location: 16.3.0

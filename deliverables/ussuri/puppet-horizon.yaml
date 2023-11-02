@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: 5c87c935880954d368b851a40786b97ec109811d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: d2a428f9b6a2782d0b3a8320a4cccd2c871dd9fe
 branches:
   - name: stable/ussuri
     location: 16.3.0
