@@ -40,18 +40,18 @@ def get_sdist_name(workdir, repo):
         # Use tox to set up a virtualenv so we can install the
         # dependencies for the package. This only seems to be
         # necessary for pbr, but...
-        processutils.check_output(
-            ['tox', '-e', 'venv', '--notest'],
+        processutils.check_call(
+            ['tox', '-vv', 'devenv', '-c', 'tox.ini', 'pbrenv'],
             cwd=dest,
         )
     if use_tox:
-        python = '.tox/venv/bin/python3'
+        python = 'pbrenv/bin/python3'
     else:
         python = 'python3'
     # Run it once and discard the result to ensure any setup_requires
     # dependencies are installed.
     cmd = [python, 'setup.py', '--name']
-    processutils.check_output(cmd, cwd=dest)
+    processutils.check_call(cmd, cwd=dest)
     # Run it again to get a clean version of the name.
     LOG.debug('Running: %s in %s' % (' '.join(cmd), dest))
     out = processutils.check_output(cmd, cwd=dest).decode('utf-8')
