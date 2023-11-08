@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 91a4079d84cec7ea384b301b5ba0cb79db495503
+  - version: 16.2.0
+    projects:
+      - repo: openstack/kolla
+        hash: 9ee9677f9df92bdf34be4ca42140e48868ee36ba
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
