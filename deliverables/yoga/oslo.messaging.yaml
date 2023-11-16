@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 8ee7638a860c48785d94bfda8d336b6239da5013
+  - version: 12.13.3
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 047da4e5ed8f853c1e69f73acaa9e655c88ab6e7
 branches:
   - name: stable/yoga
     location: 12.13.0
