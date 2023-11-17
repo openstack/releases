@@ -304,9 +304,9 @@ Milestone-1
     -----------------
 
     We are now past the $SERIES-1 milestone. Teams should now be focused on
-    feature development and completion of release cycle goals [0].
+    feature development and completion of goals [0].
 
-    [0] https://governance.openstack.org/tc/goals/selected/$SERIES/index.html
+    [0] https://governance.openstack.org/tc/goals/selected/index.html
 
     General Information
     -------------------
