@@ -300,3 +300,33 @@ running properly when the Cinder team does a final compliance check around the
 time of the third milestone.  See the `Driver Compliance
 <https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
 section of the Cinder Documentation for details.
+
+
+Nova
+----
+
+.. _c-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 7 November 2023 and 5 December 2023, Nova specifications targeting 2024.1
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _c-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2024.1 Caracal must be
+approved by 11 January 2024 (23:59 UTC).
+
+
+.. _c-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 15 November 2023 and 10 January 2024, Nova prioritized blueprints and
+bugfixes with open changes will be reviewed by the Nova core team.

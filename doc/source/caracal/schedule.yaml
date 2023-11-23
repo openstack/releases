@@ -23,11 +23,15 @@ cycle:
   - end: '2023-11-10'
     name: R-21
     start: '2023-11-06'
+    project-specific:
+      - c-nova-spec-review-day
   - end: '2023-11-17'
     name: R-20
     start: '2023-11-13'
     x-project:
       - c-1
+    project-specific:
+      - c-nova-review-day
   - end: '2023-11-24'
     name: R-19
     start: '2023-11-20'
@@ -41,6 +45,7 @@ cycle:
       - c-cycle-trail
     project-specific:
       - c-cinder-mid-cycle-ptg-1
+      - c-nova-spec-review-day
   - end: '2023-12-15'
     name: R-16
     start: '2023-12-11'
@@ -61,6 +66,9 @@ cycle:
     x-project:
       - c-2
       - c-mf
+    project-specific:
+      - c-nova-review-day
+      - c-nova-spec-freeze
   - end: '2024-01-19'
     name: R-11
     start: '2024-01-15'
