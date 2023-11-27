@@ -4,4 +4,14 @@ release-model: cycle-with-rc
 team: kolla
 type: trailing
 repository-settings:
-  openstack/ansible-collection-kolla: {}
+  openstack/ansible-collection-kolla:
+    flags:
+      - no-artifact-build-job
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: dcd94f663f406c056e7f4f90c779397b5400b598
+branches:
+  - name: stable/2023.2
+    location: 4.0.0.0rc1
