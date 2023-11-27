@@ -6,32 +6,31 @@ type: trailing
 stable-branch-type: tagless
 repository-settings:
   openstack/ansible-role-qdrouterd: {}
+  openstack/ansible-role-pki: {}
   openstack/ansible-role-python_venv_build: {}
   openstack/ansible-role-systemd_mount: {}
   openstack/ansible-role-systemd_networkd: {}
   openstack/ansible-role-systemd_service: {}
+  openstack/ansible-role-uwsgi: {}
+  openstack/ansible-role-zookeeper: {}
   openstack/ansible-hardening: {}
   openstack/openstack-ansible-apt_package_pinning: {}
   openstack/openstack-ansible-ceph_client: {}
-  openstack/openstack-ansible-galera_client: {}
   openstack/openstack-ansible-galera_server: {}
   openstack/openstack-ansible-haproxy_server: {}
   openstack/openstack-ansible-lxc_container_create: {}
   openstack/openstack-ansible-lxc_hosts: {}
   openstack/openstack-ansible-memcached_server: {}
-  openstack/openstack-ansible-nspawn_container_create: {}
-  openstack/openstack-ansible-nspawn_hosts: {}
   openstack/openstack-ansible-openstack_hosts: {}
   openstack/openstack-ansible-openstack_openrc: {}
   openstack/openstack-ansible-ops: {}
-  openstack/openstack-ansible-os_almanach: {}
+  openstack/openstack-ansible-os_adjutant: {}
   openstack/openstack-ansible-os_aodh: {}
   openstack/openstack-ansible-os_barbican: {}
   openstack/openstack-ansible-os_blazar: {}
   openstack/openstack-ansible-os_ceilometer: {}
   openstack/openstack-ansible-os_cinder: {}
   openstack/openstack-ansible-os_cloudkitty: {}
-  openstack/openstack-ansible-os_congress: {}
   openstack/openstack-ansible-os_designate: {}
   openstack/openstack-ansible-os_glance: {}
   openstack/openstack-ansible-os_gnocchi: {}
@@ -40,29 +39,80 @@ repository-settings:
   openstack/openstack-ansible-os_ironic: {}
   openstack/openstack-ansible-os_keystone: {}
   openstack/openstack-ansible-os_magnum: {}
+  openstack/openstack-ansible-os_manila: {}
   openstack/openstack-ansible-os_masakari: {}
-  openstack/openstack-ansible-os_molteniron: {}
-  openstack/openstack-ansible-os_monasca: {}
-  openstack/openstack-ansible-os_monasca-agent: {}
+  openstack/openstack-ansible-os_mistral: {}
+  openstack/openstack-ansible-os_murano: {}
   openstack/openstack-ansible-os_neutron: {}
   openstack/openstack-ansible-os_nova: {}
   openstack/openstack-ansible-os_octavia: {}
-  openstack/openstack-ansible-os_panko: {}
+  openstack/openstack-ansible-os_placement: {}
   openstack/openstack-ansible-os_rally: {}
   openstack/openstack-ansible-os_sahara: {}
-  openstack/openstack-ansible-os_searchlight: {}
+  openstack/openstack-ansible-os_senlin: {}
   openstack/openstack-ansible-os_swift: {}
   openstack/openstack-ansible-os_tacker: {}
   openstack/openstack-ansible-os_tempest: {}
   openstack/openstack-ansible-os_trove: {}
-  openstack/openstack-ansible-os_watcher: {}
-  openstack/openstack-ansible-os_zaqar: {}
   openstack/openstack-ansible-os_zun: {}
-  openstack/openstack-ansible-pip_install: {}
   openstack/openstack-ansible-plugins: {}
   openstack/openstack-ansible-rabbitmq_server: {}
-  openstack/openstack-ansible-repo_build: {}
   openstack/openstack-ansible-repo_server: {}
-  openstack/openstack-ansible-rsyslog_client: {}
-  openstack/openstack-ansible-rsyslog_server: {}
   openstack/openstack-ansible-tests: {}
+branches:
+  - location:
+      openstack/ansible-role-qdrouterd: 1c5b5990da9293e8c28d7fbbe69bf6f674f8bf00
+      openstack/ansible-role-pki: 30b72fcdd9999a02b8661233e78897358a9d4a17
+      openstack/ansible-role-python_venv_build: 158ef2dbf1f38843d501e1ecbbaf2fc7f01fa70e
+      openstack/ansible-role-systemd_mount: 6869e5fa2047fd3141938d72f6fa1f1206bd75ac
+      openstack/ansible-role-systemd_networkd: 1e6fc97dbe3473abc59af540195a8bec36aceb5b
+      openstack/ansible-role-systemd_service: a0fb5a6df2df91a969b7a6741e47a2df817935fe
+      openstack/ansible-role-uwsgi: 371ff2c1d8433909f34395159f655ce9d82a0359
+      openstack/ansible-role-zookeeper: be98c723945a27936e28a8ab9a216df179e52ca5
+      openstack/ansible-hardening: b31cd46c180bb12d7ab2dffa3486a32e8353b91c
+      openstack/openstack-ansible-apt_package_pinning: b7b2134b9db6fdeac7dcdde3c42f2329616acf5e
+      openstack/openstack-ansible-ceph_client: 43c9071f4f3acc827fd079ba0823bcbd4052b5e2
+      openstack/openstack-ansible-galera_server: 229ae217c1e127979cd5370414e6d2b13c910055
+      openstack/openstack-ansible-haproxy_server: 2cc2fceaf6369ccbdda048d8e26a276e90f818a1
+      openstack/openstack-ansible-lxc_container_create: 0b897c1eb03a62ec39b9c8ac15391bd5e4e8968b
+      openstack/openstack-ansible-lxc_hosts: 3d6a3d812df8c2d494af58cfe8d5f4df085dcce1
+      openstack/openstack-ansible-memcached_server: 5838d27dab61c4db1386b1564a8dfb0b66bec94b
+      openstack/openstack-ansible-openstack_hosts: a93a9526529da22c15a28c7961e25767d3464af0
+      openstack/openstack-ansible-openstack_openrc: a4fa93cf18d25b36a49c33224fc31d8434cd2be9
+      openstack/openstack-ansible-ops: 12e85362a6ebf73c9a8935631c4e0d6166dcb254
+      openstack/openstack-ansible-os_adjutant: 81c081eb18bd48d9e2d1be803e118b1b26c0c005
+      openstack/openstack-ansible-os_aodh: c6b7df85a87fe200e0b8e0e140f8c30d739e0cac
+      openstack/openstack-ansible-os_barbican: ea5e1adf63ee9f1cd3334d1e0b3288edc9cd7894
+      openstack/openstack-ansible-os_blazar: 856b4401a1149a70392494fea418e960bb81f883
+      openstack/openstack-ansible-os_ceilometer: 2f0f0ff4b1c6331337458898f436e7b74cfd6b4f
+      openstack/openstack-ansible-os_cinder: b9b06052cba70b65d797112c441d244f7efa48aa
+      openstack/openstack-ansible-os_cloudkitty: 10164be39e121441a50819d0ccfe2594fc2e12eb
+      openstack/openstack-ansible-os_designate: e7f7e7d122aa6c0fc8c99355f9888406b495c528
+      openstack/openstack-ansible-os_glance: e4acad2bb660d2776bc86e30e7791f9f9adb5c4e
+      openstack/openstack-ansible-os_gnocchi: d44b25ebb804af75dae8e02b36b79493a7e84607
+      openstack/openstack-ansible-os_heat: a78b40a491622af0f6c8e39a8161956990d3c9cd
+      openstack/openstack-ansible-os_horizon: d4ef66fc028477709d6e4bd36a2bb39c957c3eae
+      openstack/openstack-ansible-os_ironic: ed85e8d2b1e925463ef9c4a142b70e49dabd27ea
+      openstack/openstack-ansible-os_keystone: 7dbec322737844620d4fd2d09415cae07325b3de
+      openstack/openstack-ansible-os_magnum: be34b1eea67cbb91bc3fbfc70db5fd24c8335a58
+      openstack/openstack-ansible-os_manila: 54e3c21c8594e3764708cfc69ef46342fcb26748
+      openstack/openstack-ansible-os_masakari: 9b16df267ad14fb083f792e870be3eb5d778cbb6
+      openstack/openstack-ansible-os_mistral: 8ac4957d11e4cf2e504311deccad9adee2c54764
+      openstack/openstack-ansible-os_murano: 5722ebe72af71876cd3113c4d1335c64848a53b7
+      openstack/openstack-ansible-os_neutron: ef4d3278556c6e34f79b195cfb3e0d300f7184f7
+      openstack/openstack-ansible-os_nova: 20e83153bb27ceef7c860526c5b838d2fc8a711b
+      openstack/openstack-ansible-os_octavia: e3c74d18e3d79b512f68053120f0b97169e0f58b
+      openstack/openstack-ansible-os_placement: e32db7ae7590e451a67d1e6f69c4021d3d9ac68d
+      openstack/openstack-ansible-os_rally: e44c99e64a4bf07ad0cb1d5e07e476274ef042bb
+      openstack/openstack-ansible-os_sahara: 3f7085e58a1c89f2f2f7128d5264951bd888dd6b
+      openstack/openstack-ansible-os_senlin: 1053e24b369f88f030c2649ea577494062189562
+      openstack/openstack-ansible-os_swift: 0ba35bf8416e3e1f1edb4171c895a4c3e34ca6ab
+      openstack/openstack-ansible-os_tacker: c15dc767fd2ea583227e22ca250d5ecbf423900d
+      openstack/openstack-ansible-os_tempest: 843f1cabd70481618329f8de9f8b2ffb0d584aa4
+      openstack/openstack-ansible-os_trove: d1d727c7521d12f9c04019d422a5bfc01490bd30
+      openstack/openstack-ansible-os_zun: 3125263df0ada02ec8c5a160e47fe35e4e87cec8
+      openstack/openstack-ansible-plugins: dcec963fc7a137614a2d84bf6c52044e6a1f0995
+      openstack/openstack-ansible-rabbitmq_server: 83d8ec2a3049e81c8cdb07acc97f16ab2d57e08e
+      openstack/openstack-ansible-repo_server: 27078e06e8398d0a2030b77f32089277206957de
+      openstack/openstack-ansible-tests: d163850d7c24df3ed5cb80bf5a38937ca8e0fb4c
+    name: stable/2023.2
