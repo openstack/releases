@@ -6,3 +6,11 @@ team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+releases:
+  - version: 23.1.0
+    projects:
+      - repo: openstack/ironic
+        hash: 281cebedd6e436033dbf47fabe714c941b0a5e69
+branches:
+  - name: bugfix/23.1
+    location: 23.1.0
