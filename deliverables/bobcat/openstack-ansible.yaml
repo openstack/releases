@@ -20,3 +20,11 @@ cycle-highlights:
     RabbitMQ is upgraded to 3.12 series
   - |
     Added support for Debian 12 (Bookworm)
+releases:
+  - version: 28.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: c9f50fd949c4cbd61a00b4777eecbe99abc27301
+branches:
+  - name: stable/2023.2
+    location: 28.0.0.0rc1
