@@ -16,6 +16,10 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
+#
+# Note: the check-release-approval job uses a somewhat modified version of this
+# script, that can be found in openstack/project-config repository at:
+# roles/check-release-approval/files/check_approval.py
 
 import argparse
 import json
@@ -111,19 +115,19 @@ class GerritChange(object):
                 approved = False
                 break
 
-            # Fetch release liaisons
+            # Fetch release liaisons from data/release_liaisons.yaml
             liaisons = get_liaisons(team)
 
             # Some teams follow the "distributed project lead" governance
             # model so they are PTL-less but they have release liaisons
             # defined. Fetch those liaisons.
-            if govteam.get('distributed', None):
-                distributed_ptl_liaisons = govteam['liaison']['release']
-                for liaison in distributed_ptl_liaisons:
+            if govteam.get('leadership_type') == 'distributed':
+                distributed_release_liaisons = govteam['liaisons']['release']
+                for liaison in distributed_release_liaisons:
                     liaisons.append(liaison['email'])
 
             # Fetch PTL's email address (note: some teams may be PTL-less,
-            # so don't assume we have PTL info
+            # so don't assume we have PTL info)
             if 'email' in govteam.get('ptl', {}):
                 liaisons.append(govteam['ptl']['email'])
             LOG.debug('%s needs %s' % (deliv_file, liaisons))
