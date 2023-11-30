@@ -55,8 +55,9 @@ series=($(list-maintained-series))
 export PAGER=
 
 for current_series in "${series[@]}"; do
-    echo -e "\nUnbranched projects for ${current_series}:\n"
-    grep -L "stable/${current_series}" ${BASEDIR}/deliverables/${current_series}/*.yaml | \
+    release_id=($(get-series-id ${current_series}))
+    echo -e "\nUnbranched projects for ${current_series} (id: ${release_id}):\n"
+    grep -L "stable/${release_id}" ${BASEDIR}/deliverables/${current_series}/*.yaml | \
         sed 's@'"${BASEDIR}"'\/@@g' | \
         grep -v tempest | \
         grep -v patrol
