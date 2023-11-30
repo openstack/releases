@@ -5,3 +5,11 @@ team: cinder
 type: trailing
 repository-settings:
   openstack/cinderlib: {}
+releases:
+  - version: 5.2.0
+    projects:
+      - repo: openstack/cinderlib
+        hash: ab28330d859899b2b9ff1ec85904344915751e26
+branches:
+  - name: stable/2023.2
+    location: 5.2.0
