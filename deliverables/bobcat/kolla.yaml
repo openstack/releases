@@ -3,6 +3,16 @@ launchpad: kolla
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    New container image: ``ironic-prometheus-exporter``.
+  - |
+    Let's Encrypt images have been improved with orchestration scripts
+    utilized by Kolla-Ansible automation.
+  - |
+    ``magnum-cluster-api`` driver has been added to ``magnum`` container images.
+  - |
+    Added support for ``Debian Bookworm/12`` images.
 repository-settings:
   openstack/kolla: {}
 releases:
