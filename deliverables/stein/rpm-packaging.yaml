@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/rpm-packaging: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/rpm-packaging
+        hash: f444512fc1b556b42e653915015c0969ee325cf2
