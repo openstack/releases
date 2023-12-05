@@ -6,3 +6,8 @@ team: OpenStackSDK
 type: other
 repository-settings:
   openstack/python-openstackclient: {}
+releases:
+  - version: 6.4.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 1da22d0de41ee83be8f290d72d7cdcc65ccffafd
