@@ -3,6 +3,23 @@ launchpad: kolla-ansible
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    ``HAProxy`` backends now support ``http/2``.
+  - |
+    ``Let's Encrypt`` TLS certificate service integration with OpenStack
+    deployment has been added.
+  - |
+    ``Debian Bookworm/12`` support has been added.
+  - |
+    ``Podman`` support has been added as alternative to Docker.
+  - |
+    Added support for ``ansible-core`` only installation.
+  - |
+    Added support for Glance/Cinder-backup S3 backend.
+  - |
+    Added support for using RabbitMQ Quorum queues - and this is the default
+    now.
 repository-settings:
   openstack/kolla-ansible: {}
 releases:
