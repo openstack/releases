@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/searchlight-ui
         hash: d22b03e2e10f8d24e09f10087367e0f3ccefece4
+  - version: train-eol
+    projects:
+      - repo: openstack/searchlight-ui
+        hash: a7b1b05ec66bbb852920d093334bc62de1af021c
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
