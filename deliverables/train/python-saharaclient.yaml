@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 3107b452467537f4eef3d9ecfb5e35d110d19662
+  - version: train-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: fed36d80f19991290f2539becf64ae08fd3a2b1e
 branches:
   - name: stable/train
     location: 2.3.0

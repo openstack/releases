@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 9fcba44db76227e324ccdf7682fe94d75738712e
+  - version: train-eol
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: edb58e255346d8810bf1f2a064f1bc3d09890275
 branches:
   - name: stable/train
     location: 2.0.0.0rc1
