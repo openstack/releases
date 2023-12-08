@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 54bf2c054d7b8287de5cb20dfbf03af0383c29c9
+  - version: train-eol
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: d6675983c493f654685cb8ee8a01a5c55e9d65f6
 branches:
   - name: stable/train
     location: 4.0.0

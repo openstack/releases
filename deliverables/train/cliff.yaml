@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 6b6b1863ff757f07c73b1285dc6a2cb48a546f8e
+  - version: train-eol
+    projects:
+      - repo: openstack/cliff
+        hash: f91e5d7656bfb782385b8ce7d27638c09680f99a
 branches:
   - name: stable/train
     location: 2.16.0

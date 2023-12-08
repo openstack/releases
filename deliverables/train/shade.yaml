@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/shade
         hash: 47fe056533be356f8021ed961c8a56c39882a5c3
+  - version: train-eol
+    projects:
+      - repo: openstack/shade
+        hash: e1e0f47e31f933648042b1c23a326917c605c8aa
 branches:
   - name: stable/train
     location: 1.32.0
