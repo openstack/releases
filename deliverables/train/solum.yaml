@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 24fa3f5e3d05162599748dc86419dadc0c71f346
+  - version: train-eol
+    projects:
+      - repo: openstack/solum
+        hash: be9bb5ab153c28e06f4f21285a3f316e7918db11
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
