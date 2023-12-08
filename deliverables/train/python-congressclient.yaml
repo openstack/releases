@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-congressclient
         hash: 595b3177017098b442a074e0138799a90310940e
+  - version: train-eol
+    projects:
+      - repo: openstack/python-congressclient
+        hash: 74a2ec378702c5386b275b4fd04d5b4b4ddc5408
 branches:
   - location: 1.13.0
     name: stable/train
