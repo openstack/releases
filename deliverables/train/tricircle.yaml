@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/tricircle
         hash: deb146a18ccf87553bd9ed61295d09846aad2741
+  - version: train-eol
+    projects:
+      - repo: openstack/tricircle
+        hash: cac23fb92a9eeea9898b8b24abd7e3b55579ab98
 branches:
   - name: stable/train
     location: 7.0.0.0rc1
