@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: a9c4bfab354496827ec802f60a46c531107f5de4
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 0eda7697b0b6bc2cfdc00a0db03bca466e36cdf1
 branches:
   - name: stable/train
     location: 2.29.2

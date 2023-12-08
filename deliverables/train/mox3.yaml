@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/mox3
         hash: 0a1e5b96f423ebd10cf1c554cf51847d0436b95f
+  - version: train-eol
+    projects:
+      - repo: openstack/mox3
+        hash: e260f5061a15b08ba3386137f2c5696ce1d171ec
 branches:
   - name: stable/train
     location: 0.28.0

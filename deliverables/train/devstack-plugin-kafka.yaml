@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/devstack-plugin-kafka: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/devstack-plugin-kafka
+        hash: 888069407c64014d01f4ee8a3d1a7eef572c2d0b

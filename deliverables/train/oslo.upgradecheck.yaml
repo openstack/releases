@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: e1df576e98306aed32a27929d006b0f2bd77d34e
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 7871352b689ed34e0834d8ad8be70a508e045e44
 branches:
   - name: stable/train
     location: 0.3.2

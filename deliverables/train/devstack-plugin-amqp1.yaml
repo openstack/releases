@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/devstack-plugin-amqp1
+        hash: ba289a1b060696d1d907ec579bd3d02481613e8e

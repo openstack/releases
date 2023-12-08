@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: c59246530f418fa21b9e0d383a123560f11c839c
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 8b49bd55e5f2274d14745e95241b35f7b1c9e853
 branches:
   - name: stable/train
     location: 2.34.1

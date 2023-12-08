@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 3e3037886e8021911e10f492c0502951bff5104e
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: cee830690f19a5afbd952f9d227999160a026be7
 branches:
   - name: stable/train
     location: 1.37.0

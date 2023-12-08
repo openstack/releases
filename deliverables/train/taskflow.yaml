@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: f0eae2cc7c1222ee1bbc1a0018337fb2a2289de2
+  - version: train-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: fbe58dd15c18e6e629def8b39587b712b2088eae
 branches:
   - name: stable/train
     location: 3.7.1
