@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: b1f62a005c61555205931985f6a871e57b2adcab
+  - version: train-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: 1442151bd3b2b8f63ef076d40226879cb095c723
 branches:
   - location: 2.19.0
     name: stable/train
