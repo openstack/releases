@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: 40df70a4ea491ce47d487a5925a9b90979ad3ec3
+  - version: train-eol
+    projects:
+      - repo: openstack/sushy
+        hash: 484e642b1c95fabfde7c628c8b0ad4d8e3cc7d38
 branches:
   - name: stable/train
     location: 2.0.0

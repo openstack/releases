@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: acdc7adb1c5e7e9e86a5d2ba08c3f7678732d4db
+  - version: train-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 374b849db2aaef18f721130bb0901fb4c195ec8f
 branches:
   - name: stable/train
     location: 2.21.0

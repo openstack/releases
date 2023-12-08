@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 75f09a9b7707f93bd1fb6c4b948814bc590f28ef
+  - version: train-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: d0d3c45d364c4001ac6ef894a972da50277c0fe8
 branches:
   - location: 1.4.0
     name: stable/train
