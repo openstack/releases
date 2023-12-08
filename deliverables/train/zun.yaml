@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: a3b0a0829feed3560abf90f00dbea0ca40387d5f
+  - version: train-eol
+    projects:
+      - repo: openstack/zun
+        hash: ba0b690c97678d327cdced67ac35ebc8a22715e7
 branches:
   - location: 4.0.0.0rc1
     name: stable/train
