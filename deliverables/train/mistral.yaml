@@ -54,6 +54,12 @@ releases:
         hash: 30039178714ea776df2b60a0f49427c239eb6d22
       - repo: openstack/mistral-extra
         hash: 559c7ef5a977583dd4f1b931880d4154ebf565b5
+  - version: train-eol
+    projects:
+      - repo: openstack/mistral
+        hash: c66cf75a50bf2772b0b23f89f1a911d3d5f72875
+      - repo: openstack/mistral-extra
+        hash: 559c7ef5a977583dd4f1b931880d4154ebf565b5
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
