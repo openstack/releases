@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 45c962d72bdccdc2181afe3e49a42c4e980d5da5
+  - version: train-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: ffc359b775b4b1dbc0ecb47e7f3af3de582ad227
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

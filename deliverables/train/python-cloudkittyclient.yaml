@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: c5d1526dec78acf525114c532502acdfe00caebf
+  - version: train-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: c5d1526dec78acf525114c532502acdfe00caebf
 branches:
   - name: stable/train
     location: 3.0.0
