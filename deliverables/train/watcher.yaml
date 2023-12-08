@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 70a24cb009e3318c55ca94727f5f6325dc3c8db6
+  - version: train-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 837e6589994407131b837a2af2c09c1748f4e194
 branches:
   - name: stable/train
     location: 3.0.0.0rc1
