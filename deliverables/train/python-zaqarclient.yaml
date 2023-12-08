@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 9038bf6ba93c24c9a61447dfcb14e436f1267066
+  - version: train-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: fad3e46f89cccd6b548d704b6e22c613085eedfa
 branches:
   - name: stable/train
     location: 1.12.0

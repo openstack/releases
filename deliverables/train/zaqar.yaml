@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 15a8ad7b3939ac958cd6d65ea908a667c240febb
+  - version: train-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 40d43e7f55add2794b3c0591273a7e5795fadc64
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
