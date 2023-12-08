@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: d400f7a2bb41aac6bd1a64add1565148e5439535
+  - version: train-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: e4e6efc9f96d01afc693a9924d9c322d2b9b3d90
 branches:
   - name: stable/train
     location: 2.6.0
