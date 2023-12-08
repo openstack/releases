@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: 9eff08c7a8041c28a5f9c5ecb2b9915e7f42ce8c
+  - version: train-eol
+    projects:
+      - repo: openstack/masakari
+        hash: 9eff08c7a8041c28a5f9c5ecb2b9915e7f42ce8c
 branches:
   - name: stable/train
     location: 8.0.0.0rc1
