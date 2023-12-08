@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/rpm-packaging: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/rpm-packaging
+        hash: 66b129071fffb26714633bd9e76b0380ad139e65
