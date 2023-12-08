@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/nova-powervm
         hash: 5de7a5ebdca34ba56407c9e8cece6953278ce27f
+  - version: train-eol
+    projects:
+      - repo: openstack/nova-powervm
+        hash: 1da3fcd72d3a5bb44996e07d7ebd88d7431685e4
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ceilometer-powervm
         hash: f3008d1ee22329e0cd8e76aaf8b7b4a2a56af876
+  - version: train-eol
+    projects:
+      - repo: openstack/ceilometer-powervm
+        hash: 84b97fcedd321dc5a9dce641328f7e6b4ae71a0b
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
