@@ -55,6 +55,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 5bbd35678485f4836b808c8fbd3157f3345e8660
+  - version: train-eol
+    projects:
+      - repo: openstack/glance
+        hash: eb6ad61c1edafd79fa3fd583f119838de6771838
 branches:
   - name: stable/train
     location: 19.0.0.0rc1
