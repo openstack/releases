@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: 28b55860a2e71fe1fd015d868d64500d3b36470c
+  - version: train-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: bee472d5f5b11bed1eb5bb67c06717fd8bc4008c
 branches:
   - name: stable/train
     location: 0.7.0

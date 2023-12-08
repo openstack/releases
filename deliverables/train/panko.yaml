@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/panko
         hash: d2ba20f241ec0fdc8f31462dbe3646117e91f736
+  - version: train-eol
+    projects:
+      - repo: openstack/panko
+        hash: f0962c315a8e57340e651f49a52d9288f2101902
 branches:
   - name: stable/train
     location: 7.0.0.0rc1

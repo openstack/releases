@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: a8651ec642058a17cd7a6b3648d8250450a73efb
+  - version: train-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: d672fc2117fb74803e52fd34fd8205fd769c5c7b
 branches:
   - name: stable/train
     location: 1.3.0
