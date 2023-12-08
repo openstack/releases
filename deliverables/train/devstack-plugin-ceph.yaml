@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: 921f64aa09193a7224e429950169db5b77fab3d2

@@ -1,7 +1,7 @@
 ---
 launchpad: devstack
 release-model: untagged
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 stable-branch-type: tagless
 branches:
@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 4b70b7584e12b2b09f34b62fda5e1b5e9075348b
