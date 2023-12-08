@@ -70,6 +70,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: c65455965aec303b55bc76388314a2b96a2bc12c
+  - version: train-eol
+    projects:
+      - repo: openstack/keystone
+        hash: 9d699a73fda748a6f280cbd61568b847316faa0a
 branches:
   - name: stable/train
     location: 16.0.0.0rc1
