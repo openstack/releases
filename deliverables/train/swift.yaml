@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 81d845f34e4d350c90af05117fcb0152958b4b3d
+  - version: train-eol
+    projects:
+      - repo: openstack/swift
+        hash: 70b68dbf65c7bc67795a8dee65f01c14f9eb94e5
 branches:
   - name: stable/train
     location: 2.23.0
