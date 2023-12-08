@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 4f698865318df4e72b7521aaad34fc0d2ff22dac
+  - version: train-eol
+    projects:
+      - repo: openstack/murano
+        hash: 52a5fc33587c2fbf6aa656b4e3fd9db927aa2bc8
 branches:
   - name: stable/train
     location: 8.0.0.0rc1
