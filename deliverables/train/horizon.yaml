@@ -45,6 +45,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: b72b7e7ac92bd8ce246e9539d2442d729dec4cde
+  - version: train-eol
+    projects:
+      - repo: openstack/horizon
+        hash: f9e08ed8df234052c2a7d204b6922abd3e42775b
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:
