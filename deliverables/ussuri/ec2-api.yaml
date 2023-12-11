@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 21c15aa680caabf3587627dd900469d77d13d9ae
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: 69bfd10cebfe83060f2ab6155cdf72a74e772fd3
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
