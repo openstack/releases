@@ -18,7 +18,12 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 621a392d3219726d970387e62f3bb9299e26aa7a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 75179f8ef6e35f7ebacbd47301c9e7da895f57f2
 branches:
   - name: stable/ussuri
     location: 6.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-masakariclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-masakariclient/ussuri.html

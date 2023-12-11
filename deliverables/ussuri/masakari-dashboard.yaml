@@ -28,7 +28,12 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: 93fc60e681a190caecc65fc3e132ec0cd9a671c0
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 93fc60e681a190caecc65fc3e132ec0cd9a671c0
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/masakari-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/masakari-dashboard/ussuri.html
