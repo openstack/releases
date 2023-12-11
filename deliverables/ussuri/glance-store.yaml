@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: ca0c58b52756058b6d51bf6a47aeac3d525c1e16
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/glance_store
+        hash: ca0c58b52756058b6d51bf6a47aeac3d525c1e16
 branches:
   - location: 2.0.0
     name: stable/ussuri
