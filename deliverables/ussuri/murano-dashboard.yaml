@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: 22efa8fd7fb3f5838246b37501418a25158b4d01
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: cc236be2c4ebd9e277e87da3b10f826e203939e1
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/murano-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/murano-dashboard/ussuri.html
