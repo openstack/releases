@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: ab2c91efca0613bd67f2e74af06654114e0a4448
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/horizon
+        hash: 47153196bef8cb4938170f33c5a8098c6d00a089
 branches:
   - name: stable/ussuri
     location: 18.3.0
