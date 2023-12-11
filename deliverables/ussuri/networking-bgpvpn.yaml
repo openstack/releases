@@ -24,7 +24,12 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: d6a93f62337ffd4db88337b627008c6d9a7d276e
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 5918ad70dc3b9c2c3f09b8c337b947055beba328
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-bgpvpn/ussuri.html

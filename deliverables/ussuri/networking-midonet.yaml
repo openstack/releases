@@ -25,7 +25,12 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: 42f1cfad564948d0b8dd0514c776e57197f8bc58
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 7bebd5e1ee8415e1808b10c960f5722a207e79f7
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-midonet/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-midonet/ussuri.html
