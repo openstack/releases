@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: 4cc0a483f988fb85d6eeeb941c76c273af2e47ee
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 5d79a976cffcc8c136da208bea4c7f0e717f8b43
 branches:
   - name: stable/ussuri
     location: 9.0.0.0rc1
