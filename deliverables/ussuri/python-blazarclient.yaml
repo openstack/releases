@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: e7685d5df62af027034697fe90dc9fca25cde4c7
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 89f0057ab38da45fe00c0c4ded71f47f7564699e
 branches:
   - name: stable/ussuri
     location: 3.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-blazarclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-blazarclient/ussuri.html

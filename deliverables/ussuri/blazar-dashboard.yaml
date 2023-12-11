@@ -24,7 +24,12 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 168b4ae052480912fa6fdd2c77e16cd871528303
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 22a4289b734094a687974618befc5ef851929f31
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar-dashboard/ussuri.html
