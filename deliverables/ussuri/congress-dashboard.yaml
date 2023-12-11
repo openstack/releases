@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: e298ddce8a91bb88a2b8ef15777eed02e23c7365
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: 9995fd9b75129ec5436afafa5edca7b2ea1eeab8
 branches:
   - name: stable/ussuri
     location: 6.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/congress-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/congress-dashboard/ussuri.html

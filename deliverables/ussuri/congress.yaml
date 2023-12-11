@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 85243abf63dfc7c086e28e9bdb3fb0b7c9d2ad94
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/congress
+        hash: 85243abf63dfc7c086e28e9bdb3fb0b7c9d2ad94
 branches:
   - name: stable/ussuri
     location: 11.0.0.0rc1
