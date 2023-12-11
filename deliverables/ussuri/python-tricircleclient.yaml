@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-tricircleclient
         hash: 27bfddea9d3d13670b4aae40698b88751633132f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-tricircleclient
+        hash: 4ca489ed0a39071d95765baffa91a030d3e66973
 branches:
   - name: stable/ussuri
     location: 1.0.0
