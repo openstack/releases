@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 9a2f2d4b9caea39ec82823a8d9187f7ddd21aeab
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 3cd439d34ccd28ce730f89859e913ac8284de2b7
 branches:
   - location: 4.0.0
     name: stable/ussuri
-release-notes: https://docs.openstack.org/releasenotes/python-designateclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-designateclient/ussuri.html
