@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/qinling-dashboard
         hash: d35109723ab1eae00c98e862d14d78ce9c730516
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 72370fa06462f978f04cd3fff8ed56493cfaa54c
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
