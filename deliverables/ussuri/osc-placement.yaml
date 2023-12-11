@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 1d6cb4cf0c49728b28191527ded74709128939bc
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/osc-placement
+        hash: 1b2751493465062ce9f79d64d086521fb8c030c4
 branches:
   - name: stable/ussuri
     location: 2.0.0
