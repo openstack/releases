@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: b07e4b55cc7caaa9786c511999a2e6a492a1759c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: c0e8e687fd6b2d4854a1c8f3a7ea88a30a5ec624
 branches:
   - name: stable/ussuri
     location: 2.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-monascaclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-monascaclient/ussuri.html

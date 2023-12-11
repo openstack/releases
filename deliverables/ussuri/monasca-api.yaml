@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 36f18ae01d65eb369d8169825aef35aad0d3d037
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: 9d524547e2c2862d59e8ace92b886c8b9395c00c
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1

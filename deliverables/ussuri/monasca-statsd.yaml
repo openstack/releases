@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 20463329439293958e87d8deebeb9f51ac7dfd5a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 2f3149210cd2abbe0a83aaeb1324775b651fc828
 branches:
   - name: stable/ussuri
     location: 2.0.0
