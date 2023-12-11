@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 3371c543036a0f9f7b485489c490de4bd8cb52d1
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 0ed375bf451ced218d5de0326fe5a77afb239516
 branches:
   - name: stable/ussuri
     location: 2.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-manilaclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-manilaclient/ussuri.html
