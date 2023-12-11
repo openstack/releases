@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 91073f4ea1d919604dc161a231b21de006a2a0cd
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/pycadf
+        hash: 6fe11b5188bbdbb39bff511fa0227e5785be17f7
 branches:
   - name: stable/ussuri
     location: 3.0.0
