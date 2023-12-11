@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sushy-cli
         hash: 08e20acc9ddbd6611e5fabadfade742e96afc365
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sushy-cli
+        hash: b65d5ef549848d66fb07156be3ce94622d6f54fa
 branches:
   - name: stable/ussuri
     location: 0.2.0

@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: c9b1afff70813b151e297e98fa2963097dcee4a9
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 34019fd082c66dff62576cf4d7c447eb925e3182
 branches:
   - name: stable/ussuri
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-ironic-inspector-client/ussuri.html

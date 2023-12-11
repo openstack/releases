@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: b80ab336977c9efc094b619f5eddf12b65bf3841
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 81a43d062a339877e8db515cdc6d95ac80bff1a5
 branches:
   - name: stable/ussuri
     location: 2.0.0
-release-notes: https://docs.openstack.org/releasenotes/networking-baremetal/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-baremetal/ussuri.html

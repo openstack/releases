@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 928a7dcc338a871b723fd9425c74f0b77b36f6fd
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 44c4b4e39c32e70c9101905491ba7743b597e468
 branches:
   - name: stable/ussuri
     location: 10.1.0
@@ -38,4 +42,5 @@ cycle-highlights:
   - |
     Support for scoped introspection rules which allow to have (and keep)
     rules per node subsets, such as different hardware deliveries.
-release-notes: https://docs.openstack.org/releasenotes/ironic-inspector/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-inspector/ussuri.html
