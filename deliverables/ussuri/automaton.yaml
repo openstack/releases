@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 8f1e43661322310cbf72c4ef3baf96f0d58e8d9f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/automaton
+        hash: f54a899129fa89f604470d691f87c2bde9d5cbd7
 branches:
   - name: stable/ussuri
     location: 2.0.1

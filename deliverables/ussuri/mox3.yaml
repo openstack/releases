@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/mox3
         hash: fa22a336bfb79320ee9bef31099f9d4de733c89b
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/mox3
+        hash: f2a7a07b20ad91662f46bc847e073fa3b7874b36
 branches:
   - name: stable/ussuri
     location: 1.0.0

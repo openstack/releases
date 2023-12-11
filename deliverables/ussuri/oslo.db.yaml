@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: f6c558764a8ef98d74f3a0fc24fed42a3be9226f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.db
+        hash: 5625eeabfcf9996b1e1546f592ff0e5ead8a31a9
 branches:
   - name: stable/ussuri
     location: 8.1.0

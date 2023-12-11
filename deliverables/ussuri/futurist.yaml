@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 4836b632dd229ad0bbb73f029c62f016cc1e8cc5
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/futurist
+        hash: 265b4db029a7258204fd4fc24642d785f0769f36
 branches:
   - name: stable/ussuri
     location: 2.1.1

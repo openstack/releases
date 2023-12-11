@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 485c770abf768383277c55f09146da0528c06953
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 80bbd9cde33eb39cc52c4b77c941aae9a8d44513
 branches:
   - name: stable/ussuri
     location: 1.0.2

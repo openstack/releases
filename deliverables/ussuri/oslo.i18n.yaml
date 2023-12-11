@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 34aaaf2eb5dccba9b31010642052d12c11cc269d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 76fd064a7ff3e7c13fc02f9990b638f3d5b8e082
 branches:
   - name: stable/ussuri
     location: 4.0.1

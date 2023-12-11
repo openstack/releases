@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: 6e6d76aafe24168b35e008e44b670af635ee2c5b
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 89e567628b07d0fd7139ade9e9e550513b621fc2
 branches:
   - name: stable/ussuri
     location: 3.1.0

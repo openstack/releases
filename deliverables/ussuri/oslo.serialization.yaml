@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: ab5c68d301dcd409a1112da6f2f89b0f2fc13183
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 10410f73d636c0e3092f2ec1b1f2f0b09da94ac0
 branches:
   - name: stable/ussuri
     location: 3.1.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/ussuri.html
