@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 50adf437174ded0791c00e55b64c87679bf84eb1

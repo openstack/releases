@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: 67da31fa430b99bbe13dc53bbcf81d0e7688523f

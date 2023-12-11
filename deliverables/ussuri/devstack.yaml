@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/devstack
+        hash: b11a403c37f9873cdaaa6afc31619ab72b0fd8c2
