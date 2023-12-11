@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 7bda108ddfafc322687302d312e3e7b2fdeeb4c7
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 82e1a837bc2f5c90f80e56a2b0c9d0fbfda7f9d4
 branches:
   - name: stable/ussuri
     location: 1.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-tackerclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-tackerclient/ussuri.html
