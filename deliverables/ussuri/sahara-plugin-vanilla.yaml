@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: ec604cbf32688206fa42d4d5e27083c443eee65f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 39c1a144ceb2b5d37f479f347b370817fc9b2d9f
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-vanilla/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-vanilla/ussuri.html

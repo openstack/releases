@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: c45a7073733bed15992ef776303c7633d0b4aa18
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: d3be69a39bd27ff49e6b7848c00ba9b27c1d9b38
 branches:
   - name: stable/ussuri
     location: 11.0.0.0rc1

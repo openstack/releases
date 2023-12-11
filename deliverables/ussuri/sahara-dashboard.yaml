@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 0fa9e96aa8588063edf95c7b5dd45e982f82bedc
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 0fa9e96aa8588063edf95c7b5dd45e982f82bedc
 branches:
   - name: stable/ussuri
     location: 12.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-dashboard/ussuri.html

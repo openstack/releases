@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-ambari
         hash: 860469398fa201c4bf64e3b4661b206bae00b3d0
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 51f2c51617f0d9dca4d439bc6f77c3c39e82ad2a
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-ambari/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-ambari/ussuri.html
