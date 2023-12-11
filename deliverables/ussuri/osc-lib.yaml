@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: fea31fb97151b4a4a4c07f7677869ee61921d1fb
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: cc4c25e1a85a508b60132f0155096336341a5dbd
 branches:
   - name: stable/ussuri
     location: 2.0.0

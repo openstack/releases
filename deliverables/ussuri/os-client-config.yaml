@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/os-client-config
         hash: bc96c23a9c44cee8f54d7349b288a406cec3f10a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/os-client-config
+        hash: 7868a144a48a17648f4ceb712932b63c2d76e457
 branches:
   - name: stable/ussuri
     location: 2.1.0
-release-notes: https://docs.openstack.org/releasenotes/os-client-config/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-client-config/ussuri.html
