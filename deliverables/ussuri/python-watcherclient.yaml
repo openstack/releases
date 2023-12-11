@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 5946fbb5b1f316a9b0e2509e06a318993930e8e4
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 57e9847178ce4ac3c3984e305acdadf1c7be2242
 branches:
   - name: stable/ussuri
     location: 3.0.0
