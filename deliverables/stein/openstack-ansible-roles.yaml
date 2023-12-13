@@ -143,6 +143,8 @@ branches:
 releases:
   - version: stein-eol
     projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: 1518dbd7921f76bfda941208e808ee183e3b6049
       - repo: openstack/ansible-role-qdrouterd
         hash: eac5f430863fb71b90fd89a0077558192517da17
       - repo: openstack/ansible-role-python_venv_build
@@ -153,6 +155,8 @@ releases:
         hash: 311961b7e93b8f23011cdff9fbf927e970a9e2e8
       - repo: openstack/ansible-role-systemd_service
         hash: 7f22ad73e990f8a15d9cda697f1d15d35ba5936c
+      - repo: openstack/ansible-role-thales-hsm
+        hash: 1d88cc9cd3efa4cfb35e86f1a89566d728c0f602
       - repo: openstack/ansible-hardening
         hash: a9e1753ecc40ad7e2827853f483d70cad6227835
       - repo: openstack/openstack-ansible-apt_package_pinning
