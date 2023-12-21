@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: e50c885f670bae722e1f2a9e86e60d6de80ce9c6
+  - version: train-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 029294ccd5d31059376e347270734fd02374e1c5
 branches:
   - name: stable/train
     location: 3.0.0
