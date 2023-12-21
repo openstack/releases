@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: 13f14d1ec4984f8fd9559c7c05c1c3adfc690175
+  - version: train-eol
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: f0e829e35364495999bd285ac0d19d1a572eb44e
 branches:
   - name: stable/train
     location: 1.0.0.0rc1
