@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/congress
         hash: 8d0a830165a031efcedba37f30ca214035e5d860
+  - version: train-eol
+    projects:
+      - repo: openstack/congress
+        hash: 6c524a752706c60cc97418f71e22bd9de2f6cb70
 branches:
   - name: stable/train
     location: 10.0.0.0rc1

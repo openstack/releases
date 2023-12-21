@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/congress-dashboard
         hash: 8f0ba864891c432f07bec2975fc996e18b94e52b
+  - version: train-eol
+    projects:
+      - repo: openstack/congress-dashboard
+        hash: a91053b8d08f71cef8d2029545fcdc860034d8c5
 branches:
   - name: stable/train
     location: 5.0.0.0rc1
