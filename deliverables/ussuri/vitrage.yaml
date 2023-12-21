@@ -26,9 +26,14 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 46936dc052a41bff4dffca620b56c2cab2c22802
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: f2551cc0f2bce799c98a0ac6168285bd0e5f5739
 branches:
   - name: stable/ussuri
     location: 7.1.0
 cycle-highlights:
-  - Added more concise and friendly `Template Version 3 syntax <https://docs.openstack.org/vitrage/latest/contributor/vitrage-templates.html#template-structure>`_.
+  - Added more concise and friendly `Template Version 3 syntax
+    <https://docs.openstack.org/vitrage/latest/contributor/vitrage-templates.html#template-structure>`_.
 release-notes: https://docs.openstack.org/releasenotes/vitrage/ussuri.html

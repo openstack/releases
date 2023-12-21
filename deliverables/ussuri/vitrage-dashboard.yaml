@@ -18,7 +18,12 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 80bf67779b84a1d839e8c0df2ec78e6991725182
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 387b1b4909aa64c25484cbfd1994c56d79b4f671
 branches:
   - name: stable/ussuri
     location: 3.1.0
-release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage-dashboard/ussuri.html
