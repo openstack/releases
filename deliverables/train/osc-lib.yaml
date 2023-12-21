@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: a0d9746eb5ec8d646bb40507a138a2e8176bebda
+  - version: train-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: 8185f009b7fa707fb0b7147118d5e8bc721e6698
 branches:
   - name: stable/train
     location: 1.14.1
