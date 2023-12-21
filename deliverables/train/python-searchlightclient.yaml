@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: de228e7b38a23c548394880d4e3c74fe6924b0e9
+  - version: train-eol
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: d69d34c39b79543c633dcb7fe51037239a4f00d6
 branches:
   - name: stable/train
     location: 1.6.0
