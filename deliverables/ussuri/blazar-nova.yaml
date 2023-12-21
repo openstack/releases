@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 9f030ebc27572909b9315f1a6dd88f36c00ae72c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 6d9f33cb99dcced4c74eca79385b7b58ac026b15
 branches:
   - name: stable/ussuri
     location: 2.0.0
