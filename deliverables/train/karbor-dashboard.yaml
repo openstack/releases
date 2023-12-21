@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/karbor-dashboard
         hash: 374898665173c73dc97bea05ce1a7e83f09de094
+  - version: train-eol
+    projects:
+      - repo: openstack/karbor-dashboard
+        hash: fad0e74b08eada487deeed43a48c3f6ada29fb20
 branches:
   - name: stable/train
     location: 1.3.0

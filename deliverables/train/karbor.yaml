@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/karbor
         hash: 4108ed826096bc6c74e873aa87fda1a761ec2ee4
+  - version: train-eol
+    projects:
+      - repo: openstack/karbor
+        hash: b9fc283f2a2b3d96d7154e5fc97ee2e26d8795c4
 branches:
   - name: stable/train
     location: 1.4.0
