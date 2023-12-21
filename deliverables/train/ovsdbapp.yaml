@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 11ca35873fdb4d6e07b8b01d132ba85c69d62c74
+  - version: train-eol
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: fdfd76e420e3d2c55e86d1a9f8a0a01a641137e8
 branches:
   - name: stable/train
     location: 0.17.0
