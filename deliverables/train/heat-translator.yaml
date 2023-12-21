@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 57ff1f98ca11857e7acb432551f392114eb37ded
+  - version: train-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: cbd4af5b54cf5ca3e5c01bb27e6ec74791b186b3
 branches:
   - name: stable/train
     location: 1.4.1
