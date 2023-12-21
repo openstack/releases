@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 1879195d64b877e167534ba4371dfda6d4ed1672
+  - version: train-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 10819cf36fa27e80f60075d89b98e9c8decf630b
 branches:
   - name: stable/train
     location: 13.0.0.0rc1
