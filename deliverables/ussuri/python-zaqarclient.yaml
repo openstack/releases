@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 9750ac638094e630fa9b3b62d54cdab32d0b5ff6
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 9750ac638094e630fa9b3b62d54cdab32d0b5ff6
 branches:
   - name: stable/ussuri
     location: 1.13.1
-release-notes: https://docs.openstack.org/releasenotes/python-zaqarclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-zaqarclient/ussuri.html

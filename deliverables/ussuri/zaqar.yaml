@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 22c457a55b3bdaec7c8aa31f2cf291c175082a80
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 24c033c03c7de9d4bd5cb05a819666025a258148
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
