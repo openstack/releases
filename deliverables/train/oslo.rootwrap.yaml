@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: c6babc72223b1be3c01c0d9fa80d5267d92f93c7
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 4f0cf26de8f4cc203eda8dff42d23805513c2f97
 branches:
   - name: stable/train
     location: 5.16.1

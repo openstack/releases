@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: a052897f2da740bfd346368ef7cac15aa530fc7e
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 51edcdd4a70ed4ad788ec98cb2f43fb57401ea13
 branches:
   - name: stable/train
     location: 0.1.1

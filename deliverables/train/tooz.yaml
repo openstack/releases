@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 13a6dffa32789ac91b724977ed1d73375baf0824
+  - version: train-eol
+    projects:
+      - repo: openstack/tooz
+        hash: dc572af710f97bd47ade7e3262f9653a0fe52f23
 branches:
   - name: stable/train
     location: 1.66.2

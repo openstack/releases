@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: d431c7a55153fc828ffa44dddd33d7d438e1ee3d
+  - version: train-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: 30ffa278735aa0f14e80c703ccfb4252e0a4a879
 branches:
   - name: stable/train
     location: 2.8.2

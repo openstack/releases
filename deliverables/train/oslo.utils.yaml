@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: f4deaad463efacaaaf429ac37bf5d37903cb4f55
+  - version: train-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 1a900052a642de9399555c698f9f47f5e99e7af2
 branches:
   - name: stable/train
     location: 3.41.1

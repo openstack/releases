@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 6817543c3003a29f65729703f63ed3d35d30ff84
+  - version: train-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: b1587cc274abacafe2d509bac42e9b7068b5c17d
 branches:
   - name: stable/train
     location: 1.31.0
