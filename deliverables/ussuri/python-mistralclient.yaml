@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 0f09c1e8cb090a7aa4f08f76dabaf3fb79f608bf
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: d72761d469209d3ee8c17bb29265125a272d10d4
 branches:
   - name: stable/ussuri
     location: 4.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-mistralclient/ussuri.html

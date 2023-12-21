@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 44a27384601113cdc5068940d07b85a003ed2211
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 39739d466535f184208c8eba39e0cf9ea98e1330
 branches:
   - name: stable/ussuri
     location: 2.1.0
