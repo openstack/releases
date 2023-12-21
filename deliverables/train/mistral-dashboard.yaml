@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/mistral-dashboard
         hash: 82df9c6400eb1c5e74c14df16439fcfb5491ddfd
+  - version: train-eol
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: a5ecabcb85d9ef1a644c2deaa3b96a2a95b7a5b5
 branches:
   - name: stable/train
     location: 9.0.0.0rc1
