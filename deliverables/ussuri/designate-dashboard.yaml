@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 41c19d9159519bd919d7e230ab0fca7c4324121d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 0859e4e16f622991382ce3cc86951c0458d555c1
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/designate-dashboard/ussuri.html
