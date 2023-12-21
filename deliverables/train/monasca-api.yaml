@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: bee0294293cef65ee972a63e6d8b4c6c4ca16d7a
+  - version: train-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: 558aaed72e7a38fd7ab0ba05c0cb668a459e7655
 branches:
   - name: stable/train
     location: 3.1.0

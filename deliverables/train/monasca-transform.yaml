@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/monasca-transform
         hash: 0184fd27cd9e7aa8ffdc71fa59e8ab9eac91e165
+  - version: train-eol
+    projects:
+      - repo: openstack/monasca-transform
+        hash: df188d53136b4b979de6da7d22f869041b5886f4
 branches:
   - name: stable/train
     location: 0.18.0
