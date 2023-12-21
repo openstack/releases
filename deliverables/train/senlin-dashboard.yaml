@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: cb2b2cb109db5b94ecd506d64ba85ee07208eb79
+  - version: train-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 2296a59dc0d2d1688034c4bb33ee417aa96af233
 branches:
   - location: 0.11.0
     name: stable/train
