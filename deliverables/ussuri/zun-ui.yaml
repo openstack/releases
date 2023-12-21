@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: 08e0830f356f80aa4e0797aa877943cd319fae5c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/zun-ui
+        hash: c4114bd4d1612a3610ddf4838528d587e219e619
 branches:
   - name: stable/ussuri
     location: 5.0.0.0rc1
