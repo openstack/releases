@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/qinling-dashboard
         hash: 8c10ec4ad1cec1bb465694537e6551384028127a
+  - version: train-eol
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 70b560902c99dd82497d1fb6f81596963a38e32d
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

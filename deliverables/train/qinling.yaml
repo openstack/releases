@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/qinling
         hash: 5329b7952585f54fc87e2b70454454b81a494395
+  - version: train-eol
+    projects:
+      - repo: openstack/qinling
+        hash: 857921818cca0af3b0f57a28ef3d81a10a7f9743
 branches:
   - name: stable/train
     location: 3.0.0.0rc1

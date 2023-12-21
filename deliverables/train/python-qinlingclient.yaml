@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-qinlingclient
         hash: 7e251a205233131131d06200a8cc76a510431ccc
+  - version: train-eol
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: 51bec116171817e54622855df833aa50f06ac542
 branches:
   - name: stable/train
     location: 4.0.0
