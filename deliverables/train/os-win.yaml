@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 3bdedd9f38eab5e94b2d1761d35773d9b88fbd7d
+  - version: train-eol
+    projects:
+      - repo: openstack/os-win
+        hash: fcf61a91cd6d801c09304eb8ac4e0e387b07cc05
 branches:
   - location: 4.3.1
     name: stable/train
