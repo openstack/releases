@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: e0405ceff6d3499e8f3786df9d678ffaab6ad95f
+  - version: train-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 0575a4e593f6a225ca916eff2030bf6f77df999e
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

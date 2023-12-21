@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 62fdb73dae226ae812c756e98969f8db215b901a
+  - version: train-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 5ab4ac10a2803af4e088f617714bca0ed5caeeaf
 branches:
   - location: 2.4.0
     name: stable/train
