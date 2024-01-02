@@ -11,3 +11,8 @@ branches:
   - name: stable/stein
     location:
       openstack/requirements: 898666b755fe209d391a256d64e48bb22c1a7d25
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/requirements
+        hash: 8ca8e28da38bbbc9f66c683f2ad71f34cdc6337a
