@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 3d5fa687e38e511cc487fa18c298177b431522c5

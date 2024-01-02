@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/devstack-plugin-kafka: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/devstack-plugin-kafka
+        hash: 2b711840542981c7fec3cf044632945c20483cbe

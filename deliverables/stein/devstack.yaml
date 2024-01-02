@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/devstack
+        hash: 3021397dc82f05d1512065effd6dc908aa6c4838

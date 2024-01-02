@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 541d79af779f66a1ce3df81f3e72f8a29b9570ec

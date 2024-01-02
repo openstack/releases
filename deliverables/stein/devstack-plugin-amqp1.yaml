@@ -10,3 +10,8 @@ branches:
     name: stable/stein
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
+releases:
+  - version: stein-eol
+    projects:
+      - repo: openstack/devstack-plugin-amqp1
+        hash: f40ac20c51595a45a95590d034a6909f4c5e8f5e
