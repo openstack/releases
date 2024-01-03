@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 5783b9fff46544e1d50f1d3eafc254095f9f9b99
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/tacker
+        hash: de9fdf5fc6c7c04a77442f6bc7e39331f55578f0
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: ab081554d0c63a0459deae1fcb38ea663c1ca8ea
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: e5db2d3a1e563ae806a310717d439506fb5e1f63
 branches:
   - name: stable/ussuri
     location: 1.0.0.0rc1
