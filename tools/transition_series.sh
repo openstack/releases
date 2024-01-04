@@ -10,7 +10,7 @@ BASEDIR=$(dirname $TOOLSDIR)
 if [[ $# -lt 2 ]]; then
     echo "Usage: $(basename $0) <series> <tag>"
     echo ""
-    echo "<tag> either 'em' or 'eol'"
+    echo "<tag> either 'em', 'eom' or 'eol'"
     exit 1
 fi
 
