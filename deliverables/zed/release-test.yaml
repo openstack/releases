@@ -8,6 +8,14 @@ stable-branch-type: std-with-versions
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - version: 3.9.0
+    projects:
+      - repo: openstack/release-test
+        hash: d2183f292d5d532e2836ed1a4dbf8a7206e776d1
+branches:
+  - name: stable/zed
+    location: 3.9.0
 # NOTE(hberaud) This deliverable was not released in wallaby,
 # however, I prefer to keep this sample project around even
 # if it was not used during wallaby, just in case we need to
