@@ -55,8 +55,13 @@ updates.
    releases/*
 
 .. note::
-   The schedule of `Maintenance phases`_ changed during Ocata.
+   The schedule of `Maintenance phases`_ changed during Ocata
+   and also during 2024.1 Caracal.
    The `old phases`_ were used until Newton.
+   The last series that transitioned to Extended Maintenance was Xena.
+   The replacement of Extended Maintenance process to Unmaintained
+   was formulated in the `2023-07-24 Unmaintained status replaces
+   Extended Maintenance`_ resolution.
 
 .. _extended-maintenance-note:
 
@@ -68,6 +73,7 @@ updates.
 
 .. _Maintenance phases: https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases
 .. _old phases: https://github.com/openstack/project-team-guide/blob/1c837bf0~/doc/source/stable-branches.rst
+.. _2023-07-24 Unmaintained status replaces Extended Maintenance: https://governance.openstack.org/tc/resolutions/20230724-unmaintained-branches.html
 
 Series-Independent Releases
 ===========================
