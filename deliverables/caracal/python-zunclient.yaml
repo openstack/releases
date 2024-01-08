@@ -6,3 +6,8 @@ team: zun
 type: client-library
 repository-settings:
   openstack/python-zunclient: {}
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/python-zunclient
+        hash: b236ba567181b7d35b9d79092519dc01d6f1a8e0
