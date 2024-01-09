@@ -1,7 +1,7 @@
 ---
 include-pypi-link: true
 launchpad: yaql
-team: murano
+team: heat
 type: library
 releases:
   - version: "0.2"
@@ -64,5 +64,9 @@ releases:
     projects:
       - repo: openstack/yaql
         hash: c3bda9eeb1d802cd95b3120925d3786a4f060025
+  - version: 2.0.1
+    projects:
+      - repo: openstack/yaql
+        hash: 72ae6e24d45ad484ac781c9b0b34a19c872ab046
 repository-settings:
   openstack/yaql: {}
