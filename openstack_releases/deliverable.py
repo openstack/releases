@@ -59,11 +59,12 @@ def _safe_semver(v):
 
 def _version_sort_key(release):
     """Return a value we can compare for sorting."""
-    # NOTE(dhellmann): We want EOL and EM tags to sort last. This assumes we
-    # won't have more than 1000 major releases of anything, and I
-    # surely hope that is a safe assumption.
+    # NOTE(dhellmann): We want EOL, EOM and EM tags to sort last. This
+    # assumes we won't have more than 1000 major releases of anything,
+    # and I surely hope that is a safe assumption.
     version_string = release['version']
     if version_string.endswith('-eol') or \
+        version_string.endswith('-eom') or \
         version_string.endswith('-em') or \
         version_string.endswith('-last'):
         return _safe_semver('1000.0.0')
@@ -332,6 +333,16 @@ class Release(object):
     @property
     def eol_series(self):
         if self.is_eol:
+            return self.version.rpartition('-')[0]
+        return ''
+
+    @property
+    def is_eom(self):
+        return self.version.endswith('-eom')
+
+    @property
+    def eom_series(self):
+        if self.is_eom:
             return self.version.rpartition('-')[0]
         return ''
 
