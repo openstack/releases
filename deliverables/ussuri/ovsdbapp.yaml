@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 7e400f117f5269930fe11caff153a4966dbf614c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: cf4e7308149cc9d63aeb68ffa3cb83ace599789b
 branches:
   - name: stable/ussuri
     location: 1.1.0

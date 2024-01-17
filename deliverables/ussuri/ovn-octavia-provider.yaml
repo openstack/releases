@@ -26,7 +26,12 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 4d20d3243fc7376bb31c94834d43550f1200ffcd
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: da84037045beac08db2fdf080fac23ea098905af
 branches:
   - name: stable/ussuri
     location: 0.1.0
-release-notes: https://docs.openstack.org/releasenotes/ovn-octavia-provider/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ovn-octavia-provider/ussuri.html

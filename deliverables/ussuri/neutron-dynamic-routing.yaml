@@ -28,7 +28,12 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 31ea570fee8a4b5b7713aa9056c668d41b48ff82
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 42000ee7a5383b4e3883c11e574cafe075ba245e
 branches:
   - name: stable/ussuri
     location: 16.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-dynamic-routing/ussuri.html

@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: 0fe9189a6eb09fd527b4886e02b23a6d7db3a0cf
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: f9ae8cd4d9825ddabb5c6ba60961757c572447d2
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/ussuri.html

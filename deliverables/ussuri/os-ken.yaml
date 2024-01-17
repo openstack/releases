@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 1f751b2d7d385a75d4255934694177d6fd6f012f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/os-ken
+        hash: 308d371c1bd9a3c2b8e73f2d776741f95af8fea6
 branches:
   - name: stable/ussuri
     location: 1.0.0
