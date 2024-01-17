@@ -13,6 +13,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: 055b8a76be84ece98464114712f086571c009d28
+  - version: yoga-eom
+    projects:
+      - repo: openstack/release-test
+        hash: 421f85e891bf14670b20e77bae912a962aaa7ada
 branches:
   - name: stable/yoga
     location: 3.8.0
