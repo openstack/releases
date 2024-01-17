@@ -198,7 +198,7 @@ def main():
     parser.add_argument(
         'release_type',
         choices=('bugfix', 'feature', 'major', 'milestone', 'rc',
-                 'procedural', 'eol', 'em', 'releasefix'),
+                 'procedural', 'eol', 'eom', 'em', 'releasefix'),
         help='the type of release to generate',
     )
     parser.add_argument(
@@ -248,6 +248,7 @@ def main():
     is_procedural = args.release_type in 'procedural'
     is_retagging = is_procedural or args.release_type == 'releasefix'
     is_eol = args.release_type == 'eol'
+    is_eom = args.release_type == 'eom'
     is_em = args.release_type == 'em'
     force_tag = args.force
 
@@ -400,7 +401,7 @@ def main():
             LOG.info('using release from same series as diff-start: %r',
                      diff_start)
 
-    elif is_eol or is_em:
+    elif is_eol or is_eom or is_em:
         last_version_hashes = {
             p['repo']: p['hash']
             for p in last_release['projects']
@@ -487,7 +488,7 @@ def main():
             }
             projects.append(new_project)
 
-        elif is_eol or is_em:
+        elif is_eol or is_eom or is_em:
             changes += 1
             LOG.info('tagging %s %s at %s',
                      repo,
