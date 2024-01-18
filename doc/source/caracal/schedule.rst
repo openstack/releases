@@ -330,3 +330,46 @@ Nova Implementation Review Day
 
 On 15 November 2023 and 10 January 2024, Nova prioritized blueprints and
 bugfixes with open changes will be reviewed by the Nova core team.
+
+Manila
+------
+
+.. _c-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2024.1 Caracal must be approved by the end of the
+week.
+
+.. _c-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _c-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week.
+
+.. _c-manila-hackathon:
+
+Manila Hackathon
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted in order to tackle the implementation of
+features or tech debt areas.
+
+.. _c-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted in order to fast-track the closure of bugs.
