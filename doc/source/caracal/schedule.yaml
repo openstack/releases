@@ -112,12 +112,13 @@ cycle:
       - c-final-clientlib
       - c-soft-sf
       - c-rf
-      - c-cycle-highlights
     project-specific:
       - c-cinder-ci-checkpoint
   - end: '2024-03-08'
     name: R-4
     start: '2024-03-04'
+    x-project:
+      - c-cycle-highlights
   - end: '2024-03-15'
     name: R-3
     start: '2024-03-11'
