@@ -15,6 +15,12 @@ releases:
       - repo: openstack/ansible-role-atos-hsm
         hash: c9f757de685c2989198db633d677cf46ae4b282c
     diff-start: 2.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: 6a028735e1340ececc01552c1091aaef69230895
 branches:
   - name: stable/yoga
     location: 3.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

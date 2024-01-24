@@ -15,6 +15,12 @@ releases:
       - repo: openstack/ansible-role-thales-hsm
         hash: e82db3b3fc5088c393eb810bf52329444a91b4eb
     diff-start: 2.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: 1a010eb733634a98d81f0ecaeeb3b93a303a625d
 branches:
   - name: stable/yoga
     location: 3.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
