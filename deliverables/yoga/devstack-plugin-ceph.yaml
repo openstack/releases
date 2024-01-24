@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-ceph: b0418e177f6d6059063dd1da2e1a3d228b83b309
     name: stable/yoga
+  - name: unmaintained/yoga
+    location: yoga-eom
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: yoga-eom
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: 4b81ab92438d7d204c7090e9b64bcf00ae1229ee

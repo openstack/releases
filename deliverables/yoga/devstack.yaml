@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack: a9d392cdbbe22b90400b1029d35f1285aaba455c
     name: stable/yoga
+  - name: unmaintained/yoga
+    location: yoga-eom
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: yoga-eom
+    projects:
+      - repo: openstack/devstack
+        hash: eb076e8871d9ad0c7fd83b57df6a26f95a4648e0
