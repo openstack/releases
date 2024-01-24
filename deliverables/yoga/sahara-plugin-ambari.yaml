@@ -15,7 +15,14 @@ releases:
       - repo: openstack/sahara-plugin-ambari
         hash: 460589110a3e85c9a658a9bb10cdf85017c7c257
     diff-start: 6.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 460589110a3e85c9a658a9bb10cdf85017c7c257
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-ambari/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-ambari/yoga.html

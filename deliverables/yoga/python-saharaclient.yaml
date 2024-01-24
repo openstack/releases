@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 2f01b878a9e07bc712fae9c6c2c5f823bd986dd6
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: c9c450351ac1f3922c8974c887128b950d6dc463
 branches:
   - name: stable/yoga
     location: 3.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-saharaclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-saharaclient/yoga.html

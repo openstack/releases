@@ -15,7 +15,14 @@ releases:
       - repo: openstack/sahara-plugin-storm
         hash: 960d5f6e49e3f27e2f40939df02d8e8ed0888bb5
     diff-start: 6.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: 960d5f6e49e3f27e2f40939df02d8e8ed0888bb5
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-storm/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-storm/yoga.html
