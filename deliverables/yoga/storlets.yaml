@@ -15,7 +15,13 @@ releases:
       - repo: openstack/storlets
         hash: 1e79cc04452c30cd60bf704aaa8951f654cd189a
     diff-start: 8.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/storlets
+        hash: 9c91632cadfefa8a3bb69b7bca1dc06e029f853f
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/storlets/yoga.html
