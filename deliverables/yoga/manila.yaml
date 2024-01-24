@@ -48,7 +48,13 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 84111ad7cb4496d1083703fba8f0e55002347363
+  - version: yoga-eom
+    projects:
+      - repo: openstack/manila
+        hash: 84111ad7cb4496d1083703fba8f0e55002347363
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/manila/yoga.html

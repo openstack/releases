@@ -27,7 +27,14 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: fe37b459b5b43ea549f44b29441becb4c8e67308
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 8fe462e726c5ffa549fc32a91f3966b22f1886f3
 branches:
   - name: stable/yoga
     location: 3.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-manilaclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-manilaclient/yoga.html
