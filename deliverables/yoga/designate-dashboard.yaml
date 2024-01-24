@@ -20,8 +20,14 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: f2e7a138aabe28d61e7a512c6b2fedd251cc2342
+  - version: yoga-eom
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: f2e7a138aabe28d61e7a512c6b2fedd251cc2342
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes:
   https://docs.openstack.org/releasenotes/designate-dashboard/yoga.html

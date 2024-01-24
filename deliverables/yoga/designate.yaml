@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 3cce8991b85af30960d65541a2e84532f01aa4e1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/designate
+        hash: 3cce8991b85af30960d65541a2e84532f01aa4e1
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/designate/yoga.html
