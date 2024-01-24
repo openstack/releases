@@ -13,7 +13,13 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 283af66f3097415b4013fde61f29b5d3b7b02a32
+  - version: yoga-eom
+    projects:
+      - repo: openstack/os-win
+        hash: 31abc0ec229277e03bc9778b7ba0c80b3d32c25c
 branches:
   - name: stable/yoga
     location: 5.6.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/os-win/yoga.html
