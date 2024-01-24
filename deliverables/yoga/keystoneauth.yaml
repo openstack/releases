@@ -12,7 +12,13 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 8da0a63569841f82ed73ef1900ed4818bcd0801a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 063c859847aaee113c67167168fa7f94dd0cab18
 branches:
   - name: stable/yoga
     location: 4.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/keystoneauth/yoga.html

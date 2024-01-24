@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 100253d52e0c62dffffddb6f046ad660a9bce1a9
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 07ddfa8b010da1f1a65e1f00a95020c36c101751
 branches:
   - name: stable/yoga
     location: 4.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-keystoneclient/yoga.html
