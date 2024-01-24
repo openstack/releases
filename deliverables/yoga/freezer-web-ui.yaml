@@ -16,6 +16,12 @@ releases:
       - repo: openstack/freezer-web-ui
         hash: ed5462edace65a69667e1f2f42cce343cc5bbeea
     diff-start: 11.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 985cce10511687e1f58625be3755f4164ae17605
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

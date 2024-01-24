@@ -25,7 +25,17 @@ releases:
       - repo: openstack/freezer-dr
         hash: b8e9db6060121d861447ff81e83b3be95f41172a
     diff-start: 11.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/freezer
+        hash: 14b1db6780d44ebb2c38f27983aab028fbd7372a
+      - repo: openstack/freezer-api
+        hash: fbb4a5aba080e5ebd57d0a3cedc40027b2ac34de
+      - repo: openstack/freezer-dr
+        hash: 27aff441dda733e5588877021d92f3430240e061
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/freezer/yoga.html
