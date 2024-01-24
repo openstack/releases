@@ -15,7 +15,13 @@ releases:
       - repo: openstack/monasca-api
         hash: 3d753db83b1a75572330666d2a2a06412f0e9d7d
     diff-start: 7.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-api
+        hash: d2b32c9c3d03deb7d1a4e98f755668fd8f3ff939
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/monasca-api/yoga.html
