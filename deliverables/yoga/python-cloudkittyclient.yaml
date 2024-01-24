@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 783cc22662ad4195c3ad0289985177e5e32ec480
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: fd63893bbeb56c2fef63b22a78b1c8a892635dac
 branches:
   - name: stable/yoga
     location: 4.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-cloudkittyclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cloudkittyclient/yoga.html
