@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 9f493854b4b389e477d17abf9877850b37782cf4
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 5380524aa8c8b4c189dcef3548ae9c803975b66f
 branches:
   - name: stable/yoga
     location: 5.1.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/ironic-ui/yoga.html

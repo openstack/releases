@@ -42,7 +42,13 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: fdbcb175b6941cd9e5be546b783194880a3fd322
+  - version: yoga-eom
+    projects:
+      - repo: openstack/sushy
+        hash: fdbcb175b6941cd9e5be546b783194880a3fd322
 branches:
   - name: stable/yoga
     location: 4.1.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/sushy/yoga.html

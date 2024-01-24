@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 3ebfdf05e1939e915e50bd88548926711decce8b
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 561fed27c7959b72aa74a46026a62fc1f941139b
 branches:
   - name: bugfix/10.9
     location: 10.9.0
@@ -27,4 +31,6 @@ branches:
     location: 10.10.0
   - name: stable/yoga
     location: 10.11.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/ironic-inspector/yoga.html

@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: e205816df70c8acbecae2be9484699f3eb832e1b
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 29fb9e75f6cdd6c1feaebc2fff14897eb94f8410
 branches:
   - name: stable/yoga
     location: 5.2.0
+  - name: unmaintained/yoga
+    location: yoga-eom

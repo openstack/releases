@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: bc3317c7a024656cdb221df5f891a485af65e786
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ironic
+        hash: bc3317c7a024656cdb221df5f891a485af65e786
 branches:
   - name: bugfix/19.0
     location: 19.0.0
@@ -38,6 +42,8 @@ branches:
     location: 20.0.0
   - name: stable/yoga
     location: 20.1.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 cycle-highlights:
   - The default deployment boot mode changed from `Legacy BIOS` to `UEFI`.
   - Booting final instances via network (as opposed to via a local bootloader)
