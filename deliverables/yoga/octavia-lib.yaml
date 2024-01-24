@@ -12,7 +12,13 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: 4f217dd4fa7e932d19d756e73469529a5b4f99c6
+  - version: yoga-eom
+    projects:
+      - repo: openstack/octavia-lib
+        hash: c6aebb6ef4d6c6f579bb31272af579e1825f98fe
 branches:
   - name: stable/yoga
     location: 2.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/octavia-lib/yoga.html
