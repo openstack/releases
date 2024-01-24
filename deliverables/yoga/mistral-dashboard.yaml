@@ -20,6 +20,12 @@ releases:
     projects:
       - repo: openstack/mistral-dashboard
         hash: c077728bfa6001f0cb1ac22b0bacd74eb1967b04
+  - version: yoga-eom
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: c077728bfa6001f0cb1ac22b0bacd74eb1967b04
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

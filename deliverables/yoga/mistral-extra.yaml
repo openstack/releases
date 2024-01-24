@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: dcfc5d2b3b568ded839ffedafa1c81f4b8a11585
+  - version: yoga-eom
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 4beae859c64356a77f64d7135426fcf0c6f39738
 branches:
   - name: stable/yoga
     location: 11.2.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral-extra/yoga.html
