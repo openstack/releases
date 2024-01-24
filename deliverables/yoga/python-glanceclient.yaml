@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 626c50061f6d7a3566e8f0a68a60ff41c199bff2
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 8839d27c30e1fc310fed274a5d1b08612e548097
 branches:
   - name: stable/yoga
     location: 3.6.0
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-glanceclient/yoga.html
