@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: ee59b68d717b871d034139bbb9c3546e4b17d950
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: b80d1e6a2afe9ccea7d28ac9974112c1768463df
 branches:
   - name: stable/yoga
     location: 8.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-cinderclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cinderclient/yoga.html
