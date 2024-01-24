@@ -15,7 +15,14 @@ releases:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: f0a1186b5f0328837fe4038d4dda766b4cb8987f
     diff-start: 5.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: c4322db385b9e40d344211f59837c0bdee66a71c
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/yoga.html

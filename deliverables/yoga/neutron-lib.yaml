@@ -39,7 +39,13 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 467eafd20a229e24459ad225b458ff4e04e46fd8
+  - version: yoga-eom
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 467eafd20a229e24459ad225b458ff4e04e46fd8
 branches:
   - name: stable/yoga
     location: 2.20.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron-lib/yoga.html

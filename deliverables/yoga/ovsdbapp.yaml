@@ -30,6 +30,12 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: ab3e0cb0d0865417efbf103f44954573a5ba92ac
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: ab3e0cb0d0865417efbf103f44954573a5ba92ac
 branches:
   - name: stable/yoga
     location: 1.15.1
+  - name: unmaintained/yoga
+    location: yoga-eom

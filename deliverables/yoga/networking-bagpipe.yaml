@@ -16,7 +16,14 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: fab423469d3331fb4f81c7d794c3c87a268d4a49
     diff-start: 15.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: d9bd4c660ee10c8de39d4b83090aefb79933fc00
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-bagpipe/yoga.html
