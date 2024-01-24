@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 0b8fba577f4ba2ff5131f71fc72ef846400ccc88
+  - version: yoga-eom
+    projects:
+      - repo: openstack/heat-translator
+        hash: ddb9cc951078dcf3538935b5965add83eb533c20
 branches:
   - name: stable/yoga
     location: 2.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
