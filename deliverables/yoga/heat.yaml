@@ -21,7 +21,13 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 41a6b91362c3cf90bd3692c88b9840d6b1a8d56b
+  - version: yoga-eom
+    projects:
+      - repo: openstack/heat
+        hash: 637d3d50695d7ebc06019d43d0a1f8ca1f3ad275
 branches:
   - name: stable/yoga
     location: 18.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/heat/yoga.html

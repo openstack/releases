@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: a9abc54844fd7deb25e6860f1114dd22db367281
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 908771b55d9f17b5a1d8d37c7d34c20642437531
 branches:
   - name: stable/yoga
     location: 2.5.1
-release-notes: https://docs.openstack.org/releasenotes/python-heatclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-heatclient/yoga.html

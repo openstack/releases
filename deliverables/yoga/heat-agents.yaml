@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: d8c47efe1f00b0a99e8458564df839cba929b721
+  - version: yoga-eom
+    projects:
+      - repo: openstack/heat-agents
+        hash: d8c47efe1f00b0a99e8458564df839cba929b721
 branches:
   - name: stable/yoga
     location: 4.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-agents/yoga.html
