@@ -21,7 +21,13 @@ releases:
       - repo: openstack/blazar
         hash: e9c19e2206839d4f73bb94aab579fbec596df8f4
     diff-start: 8.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/blazar
+        hash: def1eac07d3e2fbcc9f8f07f926f20f88ddea990
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/blazar/yoga.html

@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: cf8f802c946f243f70f20be8973503e8d194f482
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: cf8f802c946f243f70f20be8973503e8d194f482
 branches:
   - name: stable/yoga
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-blazarclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-blazarclient/yoga.html
