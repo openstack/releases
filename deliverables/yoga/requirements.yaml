@@ -11,3 +11,10 @@ branches:
   - name: stable/yoga
     location:
       openstack/requirements: 7379f417a63094fdcca0a5b26f5eaed8e65f6573
+  - name: unmaintained/yoga
+    location: yoga-eom
+releases:
+  - version: yoga-eom
+    projects:
+      - repo: openstack/requirements
+        hash: 7708c793ab67cd579f3576196a3b510e6c226996
