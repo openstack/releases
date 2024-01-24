@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 04722bbed80c9bd75253876031307b5e5abfefa3
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 04722bbed80c9bd75253876031307b5e5abfefa3
 branches:
   - name: stable/yoga
     location: 3.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
