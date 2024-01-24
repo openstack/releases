@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 24cf3b7f15ede1da37f5d1e649c5efaadd80442b
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 24cf3b7f15ede1da37f5d1e649c5efaadd80442b
 repository-settings:
   openstack/puppet-manila: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-manila/yoga.html

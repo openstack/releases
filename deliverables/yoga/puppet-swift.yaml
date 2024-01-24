@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: c68816745156acf4b29197e5b35db9a505886ea5
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-swift
+        hash: c68816745156acf4b29197e5b35db9a505886ea5
 repository-settings:
   openstack/puppet-swift: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-swift/yoga.html

@@ -24,10 +24,16 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: ba3be4e2f2c62f0b4eecd38d48885d0709c9514e
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 8840ae2f5a17952ac003b672cb98cf277767cdfe
 repository-settings:
   openstack/puppet-openstack_extras: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes:
   https://docs.openstack.org/releasenotes/puppet-openstack_extras/yoga.html

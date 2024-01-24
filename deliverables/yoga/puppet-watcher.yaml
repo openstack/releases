@@ -28,9 +28,15 @@ releases:
       - hash: bb092e8359e59b33a1c56e63912c8445bfe531d8
         repo: openstack/puppet-watcher
     version: 20.3.2
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: bb092e8359e59b33a1c56e63912c8445bfe531d8
 repository-settings:
   openstack/puppet-watcher: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-watcher/yoga.html

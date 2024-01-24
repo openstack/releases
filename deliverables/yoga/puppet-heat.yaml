@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 2ae5641f33c671feedbb7373c488cc85d6a4bb00
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 2ae5641f33c671feedbb7373c488cc85d6a4bb00
 repository-settings:
   openstack/puppet-heat: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/yoga.html

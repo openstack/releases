@@ -20,6 +20,10 @@ releases:
       - hash: 6f6227c979e6fbb84e1557524d6d761a14d808b9
         repo: openstack/puppet-tacker
     version: 20.3.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 0577d52aa0ce867291ba45cb9e28b3150336eee7
 repository-settings:
   openstack/puppet-tacker:
     flags:
@@ -27,4 +31,6 @@ repository-settings:
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-tacker/yoga.html

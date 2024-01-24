@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-gnocchi
         hash: db3a1b4d41290c558daf7eeb509ecc48b323f60d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: db3a1b4d41290c558daf7eeb509ecc48b323f60d
 repository-settings:
   openstack/puppet-gnocchi: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-gnocchi/yoga.html

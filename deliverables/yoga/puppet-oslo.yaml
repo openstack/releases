@@ -24,9 +24,15 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 0434216bea94c281228d3c0aeafd4f0619fde2b0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 0434216bea94c281228d3c0aeafd4f0619fde2b0
 repository-settings:
   openstack/puppet-oslo: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-oslo/yoga.html

@@ -24,9 +24,15 @@ releases:
       - hash: d1a51385a86479d87202b0684e99f0c409f5995a
         repo: openstack/puppet-barbican
     version: 20.3.1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: d1a51385a86479d87202b0684e99f0c409f5995a
 repository-settings:
   openstack/puppet-barbican: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-barbican/yoga.html

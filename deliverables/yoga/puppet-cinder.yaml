@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: a4fa12dd7682680a5ac567ada165bdec98f4ca4a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: a4fa12dd7682680a5ac567ada165bdec98f4ca4a
 repository-settings:
   openstack/puppet-cinder: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/yoga.html

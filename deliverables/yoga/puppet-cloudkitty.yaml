@@ -24,9 +24,16 @@ releases:
       - hash: 944bba4f6bdeddc524924852e41e7515ef4fa027
         repo: openstack/puppet-cloudkitty
     version: 9.3.1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: 944bba4f6bdeddc524924852e41e7515ef4fa027
 repository-settings:
   openstack/puppet-cloudkitty: {}
 branches:
   - name: stable/yoga
     location: 9.3.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-cloudkitty/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-cloudkitty/yoga.html

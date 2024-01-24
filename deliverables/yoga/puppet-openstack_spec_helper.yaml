@@ -6,8 +6,15 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: a8b9caa5a1a61e06789682c0895e7fb1b8ea4941
 branches:
   - name: stable/yoga
     location:
       openstack/puppet-openstack_spec_helper: 35c6633402c8835d6a431a2d793e7c9915dd18d0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_spec_helper/yoga.html

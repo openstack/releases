@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: f0cd43995ace7b5146b3affb0072a3f169e55f68
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: f0cd43995ace7b5146b3affb0072a3f169e55f68
 repository-settings:
   openstack/puppet-octavia: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-octavia/yoga.html

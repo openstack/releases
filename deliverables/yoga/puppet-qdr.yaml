@@ -20,9 +20,15 @@ releases:
       - hash: 9cfa6b5f7504844d8cb4f72042f5ab3870ec687c
         repo: openstack/puppet-qdr
     version: 9.3.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 35338b6e27679e1a88e2ea6d769c09a0a884b561
 repository-settings:
   openstack/puppet-qdr: {}
 branches:
   - name: stable/yoga
     location: 9.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-qdr/yoga.html

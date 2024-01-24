@@ -24,9 +24,15 @@ releases:
       - hash: 17ebe7d38036ece2301082a5f9f3788eceefbf4d
         repo: openstack/puppet-murano
     version: 20.3.1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 17ebe7d38036ece2301082a5f9f3788eceefbf4d
 repository-settings:
   openstack/puppet-murano: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-murano/yoga.html

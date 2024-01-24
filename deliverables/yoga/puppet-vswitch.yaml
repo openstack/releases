@@ -24,9 +24,15 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: 3be618545f4edf2618644f2b2ed831de8446d59a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 3be618545f4edf2618644f2b2ed831de8446d59a
 repository-settings:
   openstack/puppet-vswitch: {}
 branches:
   - name: stable/yoga
     location: 16.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/yoga.html
