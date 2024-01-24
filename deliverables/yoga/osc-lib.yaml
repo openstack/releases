@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: 78d276e7223420212a6f63239d48cc794d2054ef
+  - version: yoga-eom
+    projects:
+      - repo: openstack/osc-lib
+        hash: cd83b7d460e18b98c2efde06f4d29dba11b55d40
 branches:
   - name: stable/yoga
     location: 2.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/osc-lib/yoga.html

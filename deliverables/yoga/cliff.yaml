@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: a04a48f4f7dc72b1bcc95a5c6a550c7650e35ab3
+  - version: yoga-eom
+    projects:
+      - repo: openstack/cliff
+        hash: d5a5d7c7c5a6470041633fffb06c1f9a696809ac
 branches:
   - name: stable/yoga
     location: 3.10.1
+  - name: unmaintained/yoga
+    location: yoga-eom

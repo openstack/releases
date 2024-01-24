@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 4ceff8f3bbca2f448635011efc01fe950ad0c7bc
+  - version: yoga-eom
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 637dfce02adcc3da3ea8136b2356914ba838ad79
 branches:
   - name: stable/yoga
     location: 0.61.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/openstacksdk/yoga.html
