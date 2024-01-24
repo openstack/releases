@@ -16,6 +16,12 @@ releases:
       - repo: openstack/adjutant-ui
         hash: 104c474479e9a89d22b96777378ff59983c03393
     diff-start: 3.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 4464d9cb53beb1f5b14a51c49a84fc0efe925aec
 branches:
   - name: stable/yoga
     location: 4.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
