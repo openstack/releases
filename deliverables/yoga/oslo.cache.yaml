@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: d75020b33541ade07c8c9415e29992042896ef19
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 3546ea25f1d7df62ce52fe2868a491e8aa7c9e06
 branches:
   - name: stable/yoga
     location: 2.10.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.cache/yoga.html

@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 3400cc28719d0fd9765c9e82527cea9fa2f44f6a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.context
+        hash: bba3492eb7a1984e52ff3151776fba1376568682
 branches:
   - name: stable/yoga
     location: 4.1.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.context/yoga.html

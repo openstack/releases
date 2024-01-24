@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: aaca11018739b27539025f8a763b41ee9deac6a8
+  - version: yoga-eom
+    projects:
+      - repo: openstack/automaton
+        hash: 05b4c9401bdb18598d7f171609b04632e2f585f1
 branches:
   - name: stable/yoga
     location: 2.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/automaton/yoga.html

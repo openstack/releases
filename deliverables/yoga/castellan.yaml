@@ -18,7 +18,13 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: d0d3735f4b580370cfa57738bd1c65326518d89a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/castellan
+        hash: d0d3735f4b580370cfa57738bd1c65326518d89a
 branches:
   - name: stable/yoga
     location: 3.10.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/castellan/yoga.html

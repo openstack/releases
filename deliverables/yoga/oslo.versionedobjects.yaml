@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 25d34d68dafd12fcc4fc843975b8b97994f2bd58
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: c2c86a682e7d05fbeda67a73afb0135daa06eeea
 branches:
   - name: stable/yoga
     location: 2.6.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.versionedobjects/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.versionedobjects/yoga.html

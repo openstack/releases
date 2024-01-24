@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 2b26dea61a2c6fc97278acf7bb1f9a690fed2c96
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 259cb14b13827fcf0273224e6043add2f1504081
 branches:
   - name: stable/yoga
     location: 2.7.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/yoga.html
