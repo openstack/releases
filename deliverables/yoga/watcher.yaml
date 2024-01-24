@@ -16,7 +16,13 @@ releases:
       - repo: openstack/watcher
         hash: 01d74d0a87abe7d89a6ce14ca18c9fc40ae188ef
     diff-start: 7.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/watcher
+        hash: eafc615725cf87a9320c963b0864f7bba191e9f1
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/watcher/yoga.html
