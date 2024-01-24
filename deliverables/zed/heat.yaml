@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 49b59a8f09cb011a50fa3c11501da07b13f8f3da
+  - version: 19.0.2
+    projects:
+      - repo: openstack/heat
+        hash: d3948706a3ff28d0160157f76f1e18244a8dad5c
 branches:
   - name: stable/zed
     location: 19.0.0.0rc1
