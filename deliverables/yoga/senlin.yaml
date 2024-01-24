@@ -15,7 +15,13 @@ releases:
       - repo: openstack/senlin
         hash: 608e80b9ac6602b63614acf866cfd0e89da5f234
     diff-start: 12.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/senlin
+        hash: 6129dcf21eaab752fc8c236a1548867940d89413
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/senlin/yoga.html
