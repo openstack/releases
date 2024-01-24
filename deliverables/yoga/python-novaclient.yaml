@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 63d368168c87bc0b9a9b7928b42553c609e46089
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 79c21ab698055504567c45a31e18c7cc1eedf50b
 branches:
   - name: stable/yoga
     location: 17.7.0
-release-notes: https://docs.openstack.org/releasenotes/python-novaclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-novaclient/yoga.html

@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: cf9c15d034b534e50b456a8a2f6b6a4d5b89a24b
+  - version: yoga-eom
+    projects:
+      - repo: openstack/os-vif
+        hash: cf9c15d034b534e50b456a8a2f6b6a4d5b89a24b
 branches:
   - name: stable/yoga
     location: 2.7.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/os-vif/yoga.html
