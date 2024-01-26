@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 23ff7b436112b567b94df48afd07b6069321b2af
+  - version: 7.0.1
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 5ea181e2e6ee8f5b832d64645d7d52c25896821f
 branches:
   - name: stable/zed
     location: 7.0.0
-release-notes: https://docs.openstack.org/releasenotes/networking-generic-switch/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-generic-switch/zed.html
