@@ -12,7 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: ddbd6594d5590aaa1d15387d75518e5589c6febe
+  - version: 5.0.1
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: f5601707dc58f795a3600cefda7ffd98c7e2a37b
 branches:
   - name: stable/zed
     location: 5.0.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-python-agent-builder/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-python-agent-builder/zed.html
