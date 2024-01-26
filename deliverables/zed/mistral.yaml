@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral
         hash: 95e30947d7daf2756efd97cdabacdd6d1508ff6b
     diff-start: 14.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/mistral
+        hash: 0958cb23666122fee11e440a7596234b96bf9ddf
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
