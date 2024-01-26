@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: cde74751b5fe4016f002c3031c0c88100eb08619
+  - version: 11.0.2
+    projects:
+      - repo: openstack/octavia
+        hash: 000b577f3e9c9ff7cb893e9f6e635753017a78c6
 branches:
   - name: stable/zed
     location: 11.0.0.0rc1
