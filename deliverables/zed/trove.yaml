@@ -15,6 +15,10 @@ releases:
       - repo: openstack/trove
         hash: 0ec4d0487bfd990697752133335b799f409e4418
     diff-start: 17.0.0.0rc1
+  - version: 18.0.1
+    projects:
+      - repo: openstack/trove
+        hash: c8579f514357f83b7b786f0389780cebdb453224
 branches:
   - name: stable/zed
     location: 18.0.0.0rc1
