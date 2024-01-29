@@ -867,6 +867,19 @@ This script list these stable/branches and offers to delete them.
 
    Only release managers have the access rights to delete branches.
 
+tools/abandon_patches_on_branch.sh
+----------------------------------
+
+A script to help abandoning open patches when a given branch transitions
+to ``Unmaintained`` or ``End of Life`` and all patches on stable/<series>
+branch needs to be abandoned in order to be able to delete that branch.
+
+Example:
+
+::
+
+  tools/abandon_patches_on_branch.sh yoga $(list-deliverables --series yoga)
+
 tools/list_unbranched_projects.sh
 ---------------------------------
 
