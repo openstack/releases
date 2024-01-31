@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - name: Return artifact to Zuul
+      zuul_return:
+        data:
+          zuul:
+            artifacts:
+              - name: list-changes results
+                url: tox/list-changes/list-changes-results.log
+
