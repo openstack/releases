@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   dalmatian/index
    caracal/index
    bobcat/index
    antelope/index
