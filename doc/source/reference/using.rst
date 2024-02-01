@@ -844,6 +844,29 @@ these stale branches.
 
    Only release managers have the access rights to delete branches.
 
+tools/list_eom_stale_branches.sh
+---------------------------------
+
+A script to detect deliverables that have EOM stale branches and optionally
+delete them.
+
+Example:
+
+::
+
+  tools/list_eom_stale_branches.sh <series>
+
+With the new process changes maintained branches don't move into
+Extended Maintenance anymore, but into Unmaintained phase. The HEAD of
+the stable branches are tagged with <series>-eom tag and a branch
+called unmaintained/<series> is cut from that tag. The stable/<series>
+branch needs to be deleted afterwards.
+This script list these stable/branches and offers to delete them.
+
+.. note::
+
+   Only release managers have the access rights to delete branches.
+
 tools/list_unbranched_projects.sh
 ---------------------------------
 
