@@ -16,6 +16,12 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: c1d7fe16ff4da5a1d1dc61e379b58ace9945b818
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 621b4aef88edcb34712c2060a27a9f10431974d7
 branches:
   - name: stable/yoga
     location: 2.4.1
+  - name: unmaintained/yoga
+    location: yoga-eom

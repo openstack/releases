@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 82feb96ed324dca8cbf4773bbdf91eb9e33d7b67
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ceilometer
+        hash: 53f31524ee9ea0082ad17b9ee2d0005b5f85df30
 branches:
   - name: stable/yoga
     location: 18.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/ceilometer/yoga.html
