@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: 768aa174427a28fb0df96bccde70f06f1d831b6f
+  - version: 9.9.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: c3e3cf2aefd798a66d2aeff7b9af975d368c179b
 branches:
   - name: bugfix/9.8
     location: 9.8.0
+  - name: bugfix/9.9
+    location: 9.9.0
