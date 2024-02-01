@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: f5147debb9af3eb9b5a9ce61d8c5177470bdfc9a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/barbican
+        hash: f5147debb9af3eb9b5a9ce61d8c5177470bdfc9a
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/barbican/yoga.html
