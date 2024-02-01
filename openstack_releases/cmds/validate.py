@@ -264,6 +264,14 @@ def validate_series_open(deliv, context):
 def validate_series_first(deliv, context):
     "The first release in a series needs to end with '.0'."
 
+    if deliv.model == 'untagged':
+        print('this rule does not apply to untagged deliverables')
+        return
+
+    if deliv.stable_branch_type == 'tagless':
+        print('this rule does not apply to tagless deliverables')
+        return
+
     if deliv.type == 'tempest-plugin':
         print('this rule does not apply to branchless tempest plugins')
         return
