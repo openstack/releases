@@ -1,6 +1,7 @@
 - job:
     name: releases-tox-list-changes
     parent: openstack-tox
+    post-run: playbooks/releases-tox-list-changes/post.yaml
     timeout: 3600
     vars:
       tox_envlist: list-changes
