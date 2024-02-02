@@ -108,11 +108,58 @@ class TestRedirections(base.BaseTestCase):
         series='mitaka',
         name='requirements',
         data=yamlutils.loads(textwrap.dedent('''
+        branches:
+          - name: stable/mitaka
+            location:
+              openstack/requirements: not_used
         releases:
           - projects:
               - hash: not_used
                 repo: openstack/requirements
             version: mitaka-eol
+        '''))
+    )
+    # Deliverable that looks like a closed (unmaintained) stable series
+    STABLE_EOM_EOL = deliverable.Deliverable(
+        team='requirements',
+        series='mitaka',
+        name='requirements',
+        data=yamlutils.loads(textwrap.dedent('''
+        branches:
+          - name: stable/mitaka
+            location:
+              openstack/requirements: not_used
+          - name: unmaintained/mitaka
+            location: mitaka-eom
+        releases:
+          - projects:
+              - hash: not_used
+                repo: openstack/requirements
+            version: mitaka-eom
+          - projects:
+              - hash: also_not_used
+                repo: openstack/requirements
+            version: mitaka-eol
+        '''))
+    )
+    # Deliverable that looks like a closed (unmaintained) stable series, but with
+    # an open 'unmaintained' branch
+    STABLE_EOM_UNMAINTAINED = deliverable.Deliverable(
+        team='requirements',
+        series='mitaka',
+        name='requirements',
+        data=yamlutils.loads(textwrap.dedent('''
+        branches:
+          - name: stable/mitaka
+            location:
+              openstack/requirements: not_used
+          - name: unmaintained/mitaka
+            location: mitaka-eom
+        releases:
+          - projects:
+              - hash: not_used
+                repo: openstack/requirements
+            version: mitaka-eom
         '''))
     )
 
@@ -234,6 +281,24 @@ class TestRedirections(base.BaseTestCase):
                          generate_constraints_redirections(
                              deliverables, self.SERIES_STATUS_DATA))
 
+    def test_stable_eom(self):
+        deliverables = FakeDeliverables([
+            self.STABLE_EOM_EOL,
+        ])
+        self.assertEqual([dict(code=301, src='mitaka', ref_type='tag',
+                               dst='mitaka-eol')],
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
+
+    def test_stable_eom_unmaintained(self):
+        deliverables = FakeDeliverables([
+            self.STABLE_EOM_UNMAINTAINED,
+        ])
+        self.assertEqual([dict(code=301, src='mitaka', ref_type='branch',
+                               dst='unmaintained/mitaka')],
+                         generate_constraints_redirections(
+                             deliverables, self.SERIES_STATUS_DATA))
+
     def test_all(self):
         deliverables = FakeDeliverables([
             self.STABLE_EOL,
@@ -254,3 +319,5 @@ class TestRedirections(base.BaseTestCase):
         self.assertEqual([],
                          generate_constraints_redirections(
                              deliverables, self.SERIES_STATUS_DATA))
+
+    # FIXME(tonyb): Add testcase for future_releases

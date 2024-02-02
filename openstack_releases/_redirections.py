@@ -30,14 +30,32 @@ def generate_constraints_redirections(_deliverables, _series_status_data,
         release_id = _series_status_data[deliv.series].release_id
         if not release_id:
             release_id = deliv.series
-        # Unless there is a specific stable branch
+        # Unless there is a stable or unmaintained branch
+        # Look at all branches We can't rely the ordering in the deliverable
+        # file
         for branch in deliv.branches:
-            if branch.name == 'stable/%s' % (release_id):
+            # Set the target when the branch is 'stable/'
+            # but ONLY If the target would otherwise be the master branch
+            if target == 'master' and branch.name == 'stable/%s' % (release_id):
                 target = branch.name
-                break
+            # An open unmaintained branch should become the target in
+            # preference over a master or stable branch
+            elif branch.name == 'unmaintained/%s' % (release_id):
+                target = branch.name
 
-        # Or we have a ${series}-eol tag
+        # After looking at all the branches we now look for ${series}-eom
+        # or a ${series}-eol tag
         for release in deliv.releases:
+            # an EOM release is a probable target.
+            if release.is_eom:
+                # Select the EOM tag instad of a master or stable branch.
+                # however if there is an unmaintained branch that's the
+                # expected target until the series is marked EOL
+                if target == 'master' or target == 'stable/%s' % (release_id):
+                    target = str(release.version)
+                    ref_type = 'tag'
+            # If a series is marked as EOL then we that tag is the correct
+            # destination, no options
             if release.is_eol:
                 target = str(release.version)
                 ref_type = 'tag'
