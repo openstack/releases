@@ -16,7 +16,14 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 146e547da934c2464ec5f49326eabed0eecfda96
     diff-start: 6.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: ee6dc9102ccbb842cbd23d2d1089fcb4e5373036
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher-dashboard/yoga.html
