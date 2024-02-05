@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 83f99abb930617a249fe902e44845fd6ab7f0bff
+  - version: yoga-eom
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 119e8577b842fb7027af32fae780d9e017317283
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/yoga.html
