@@ -24,6 +24,12 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: a0ab299dd0a2c34d3ba4533ab659d0b27ee46f68
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ec2-api
+        hash: a0ab299dd0a2c34d3ba4533ab659d0b27ee46f68
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
