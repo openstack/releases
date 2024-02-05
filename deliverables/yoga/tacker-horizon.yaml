@@ -15,6 +15,12 @@ releases:
       - repo: openstack/tacker-horizon
         hash: bb69fed635ab15629817e5a03fabe0e5600339c7
     diff-start: 4.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 98d0ade5947021edd72e128ca9683e682d2c7072
 branches:
   - name: stable/yoga
     location: 5.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

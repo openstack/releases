@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 60d40de31362201edb4b5f3c004eadf6ce21b824
+  - version: yoga-eom
+    projects:
+      - repo: openstack/tosca-parser
+        hash: d9a261faef6dcba7640ea382739d6e46ccbabb9d
 branches:
   - name: stable/yoga
     location: 2.5.1
+  - name: unmaintained/yoga
+    location: yoga-eom
