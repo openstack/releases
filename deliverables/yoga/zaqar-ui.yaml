@@ -16,7 +16,13 @@ releases:
       - repo: openstack/zaqar-ui
         hash: d0dbfd41bdcb9e9eb0fe5cac86efab139b3091b0
     diff-start: 11.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 360287f563f361665efa24ae1a0f3d58e40baae0
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/zaqar-ui/yoga.html

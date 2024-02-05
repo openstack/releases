@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: e388947aae2c1440ffc8c635d9dc2f702dc2cb27
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: e388947aae2c1440ffc8c635d9dc2f702dc2cb27
 branches:
   - name: stable/yoga
     location: 2.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
