@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 77fcbbefead3fbd79be25971d9b94ce0359cecda
+  - version: yoga-eom
+    projects:
+      - repo: openstack/zun
+        hash: 77fcbbefead3fbd79be25971d9b94ce0359cecda
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/zun/yoga.html

@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 2284443ac9572ef337df38424f69a820c369de38
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 382bab7c237ccf2c15dd4f1f2d721e220d39c6bf
 branches:
   - name: stable/yoga
     location: 4.4.0
+  - name: unmaintained/yoga
+    location: yoga-eom
