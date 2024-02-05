@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 667e2ec1f4d179c1ec9bd5f89ed12a50cad71e24
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/tooz
+        hash: bcfbdb86bc8014966786e66bbfab8a907fec9281
 branches:
   - name: stable/ussuri
     location: 2.3.0

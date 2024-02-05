@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: cdee551ae6145e4646809bf65e71817a63328d9a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslotest
+        hash: 4e72f8d771e6e35ae69e639bb48961c07b0b9d5c
 branches:
   - name: stable/ussuri
     location: 4.2.0

@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 8b2aaa3f6cdcd1840b2b101dd3d0d9bc2034ad9d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 894b912d828c7746bf8c4ce4f2416500ad0f9b1a
 branches:
   - name: stable/ussuri
     location: 4.0.2
-release-notes: https://docs.openstack.org/releasenotes/oslo.middleware/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.middleware/ussuri.html

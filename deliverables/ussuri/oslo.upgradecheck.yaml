@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: b93610d0e3a163061de7a62e808ece41cd621589
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 910cf672b90cceeee2fa744f892ab0a0ac3ed6f5
 branches:
   - name: stable/ussuri
     location: 1.0.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.upgradecheck/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.upgradecheck/ussuri.html

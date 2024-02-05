@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 47fcc64a8cdae0a98258c90b12159d75dcaa13ca
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: 555c854d03babc2055c04f2cf45da42ba64ac907
 branches:
   - name: stable/ussuri
     location: 3.0.2

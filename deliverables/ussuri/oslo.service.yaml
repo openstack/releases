@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: b52454d1d07701a49d14b4c1b52b5d7cec10084e
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.service
+        hash: bb2019d06d33db5cec9e479b5012719d5dae20af
 branches:
   - name: stable/ussuri
     location: 2.1.1

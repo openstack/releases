@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: c9c34169deab26418e693eeb78b98319b922a168
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: b05beeaf8a121d4acb8ee52221aeecee0a9ca848
 branches:
   - name: stable/ussuri
     location: 3.3.1

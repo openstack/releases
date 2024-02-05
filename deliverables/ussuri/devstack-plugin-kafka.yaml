@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-kafka: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/devstack-plugin-kafka
+        hash: 82a36f62fe48e8d4cfbf27adc464e9349dcf93d6

@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-amqp1: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/devstack-plugin-amqp1
+        hash: a4636c4350e3bbeec22ee63e385af967c73bbca5

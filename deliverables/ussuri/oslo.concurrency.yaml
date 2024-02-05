@@ -31,7 +31,12 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: adde6d913fd13b8c2369fa32e15fddf52b42a874
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 95ac6392a0dbfd816f6300c860a8d8dd2e04bdd3
 branches:
   - name: stable/ussuri
     location: 4.0.2
-release-notes: https://docs.openstack.org/releasenotes/oslo.concurrency/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.concurrency/ussuri.html
