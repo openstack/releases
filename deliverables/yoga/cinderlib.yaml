@@ -10,7 +10,13 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: 7be24a5578c0eb94f5f1de21c2cfb02c43043e53
+  - version: yoga-eom
+    projects:
+      - repo: openstack/cinderlib
+        hash: 4f8a6a5e6200e0f84b4bc4bf96487e8b65d97edc
 branches:
   - name: stable/yoga
     location: 4.2.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/cinderlib/yoga.html

@@ -31,7 +31,13 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: e57201a2843c2dd9cc6744cb8148dd6e3ed8f52f
+  - version: yoga-eom
+    projects:
+      - repo: openstack/os-brick
+        hash: 994cfb3f38b7481c8bf06a615bd9959f93bbd142
 branches:
   - location: 5.2.0
     name: stable/yoga
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/os-brick/yoga.html

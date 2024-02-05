@@ -64,7 +64,13 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: f6d69ab251f212c8b6a0f2f26cda619ffa67b71a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/cinder
+        hash: f6d69ab251f212c8b6a0f2f26cda619ffa67b71a
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/cinder/yoga.html
