@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 20d234bc370056184a0885e6e6f735db056668a2
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 20d234bc370056184a0885e6e6f735db056668a2
 branches:
   - name: stable/yoga
     location: 0.10.0
+  - name: unmaintained/yoga
+    location: yoga-eom
