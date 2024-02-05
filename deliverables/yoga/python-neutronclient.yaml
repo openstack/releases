@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: 6ca3341352e17f8ea4e79627c5a96c519b73a7b6
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: ecb2724e443dbd7c712dbf9ea7136d5f990fc8e8
 branches:
   - name: stable/yoga
     location: 7.8.0
-release-notes: https://docs.openstack.org/releasenotes/python-neutronclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-neutronclient/yoga.html

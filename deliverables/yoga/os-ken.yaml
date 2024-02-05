@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 58a39392397cd01e174c4736fa31a9a5617f1ff0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/os-ken
+        hash: a70c93eb42c78a4222437c7930a3cc985613ffc3
 branches:
   - name: stable/yoga
     location: 2.3.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/os-ken/yoga.html

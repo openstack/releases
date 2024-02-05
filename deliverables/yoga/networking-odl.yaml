@@ -17,7 +17,13 @@ releases:
       - repo: openstack/networking-odl
         hash: b57cfa8b4bc1d0afe8549c15e0016d944cd3f9d5
     diff-start: 19.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/networking-odl
+        hash: 1c3c039b71f07ff03a4f87f90df59a756667aa10
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/networking-odl/yoga.html

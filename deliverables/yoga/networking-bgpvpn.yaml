@@ -16,7 +16,14 @@ releases:
       - repo: openstack/networking-bgpvpn
         hash: 1d095558adb97e6a1dea441c93f08b5fa0b75671
     diff-start: 15.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 370bf1381fae437899c13a3512090dff58661e45
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-bgpvpn/yoga.html
