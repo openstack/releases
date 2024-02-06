@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 72b90fed4c62cf75497a7d66714f5fb0aa91f18b
+  - version: train-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 34ffb6a83deb1692d88e1ab502d52a2ccb5027ea
 branches:
   - name: stable/train
     location: 3.8.1
