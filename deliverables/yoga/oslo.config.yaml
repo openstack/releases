@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 966c588a0c5b973a324ebe1390f8a0f064a44540
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.config
+        hash: 966c588a0c5b973a324ebe1390f8a0f064a44540
 branches:
   - name: stable/yoga
     location: 8.8.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.config/yoga.html

@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: 1559e0371e0685284a761773f25fa5d4260e5a1c
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 52221655924869c675c9c20205ed9fca7fbc7074
 branches:
   - name: stable/yoga
     location: 1.5.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.upgradecheck/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.upgradecheck/yoga.html

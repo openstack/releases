@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: 6910f755c86330c741d3c7acb4d8f113dbe46e59
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: abde6e67c62c09944148f01c3f2026b9a046d55f
 branches:
   - name: stable/yoga
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/yoga.html

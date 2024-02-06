@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 63536c6da62a8365ecc2b13ec40e4f0a92bc49da
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 63536c6da62a8365ecc2b13ec40e4f0a92bc49da
 branches:
   - name: stable/yoga
     location: 1.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.limit/yoga.html

@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 2f72b30cbabef86be3ca91c45346f3d9ec92a75a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 30f7a248dcf1228e09d106559fb6653d55b8ab88
 branches:
   - name: stable/yoga
     location: 4.5.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.middleware/yoga.html

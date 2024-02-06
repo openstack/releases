@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 7bc343173751330d2e989c28bc6fefed56d358d6
+  - version: yoga-eom
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 48a0867a40ac3233b60a23c95fdc8d4c60c19333
 branches:
   - name: stable/yoga
     location: 3.10.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/yoga.html
