@@ -15,6 +15,12 @@ releases:
       - repo: openstack/solum-dashboard
         hash: a9d4f857b10b564398c06f7c69e9240c960db99b
     diff-start: 7.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 0e1623a6228cea2d29f745682b55bc810c1d7945
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
