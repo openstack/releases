@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 0afed7462dfd962ce7061b662ace72132b475c4d
+  - version: train-eol
+    projects:
+      - repo: openstack/metalsmith
+        hash: f16854ffa15c101e9fe0c4663cb7e71145296081
 branches:
   - location: 0.15.0
     name: stable/train

@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 14332ab8c7c67b203c938e7eb1bf09a84e72d509
+  - version: train-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 14332ab8c7c67b203c938e7eb1bf09a84e72d509
 branches:
   - location: 7.0.0
     name: stable/train
