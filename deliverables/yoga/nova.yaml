@@ -65,7 +65,13 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 5ec73eb2768a628089fd54968b19fa5382c6df38
+  - version: yoga-eom
+    projects:
+      - repo: openstack/nova
+        hash: 5ec73eb2768a628089fd54968b19fa5382c6df38
 branches:
   - name: stable/yoga
     location: 25.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/nova/yoga.html

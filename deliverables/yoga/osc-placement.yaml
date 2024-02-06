@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 73e496ff6cde291bb9cd2d42c64cb3b4c7afdf8a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/osc-placement
+        hash: d2c170d778c7aadccae602b9e7e95144b9d888ad
 branches:
   - name: stable/yoga
     location: 3.2.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/osc-placement/yoga.html
