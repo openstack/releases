@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-spark
         hash: 5fa6190700508bb5ec1a9919952db804d2a2a334
+  - version: train-eol
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 93561cc3f941105b05bb15160179d4bb2737a4ce
 branches:
   - name: stable/train
     location: 2.0.0.0rc1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: b7c24df8582bda0dcbdf8d621efd2d13b0860e2c
+  - version: train-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 566ce8b3a42b8525281fe6be0191e364203c6fcf
 branches:
   - name: stable/train
     location: 10.0.0.0rc1
