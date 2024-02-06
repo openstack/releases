@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-searchlightclient
         hash: 0f797327e4c9aa8a35fa5d799cebbded71581348
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-searchlightclient
+        hash: 9b2b8f82136efefb9a29b8a8e9655cff97a007b2
 branches:
   - name: stable/ussuri
     location: 2.0.1
