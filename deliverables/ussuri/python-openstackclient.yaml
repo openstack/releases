@@ -31,7 +31,12 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: c827e70fc502f5c5bd14f35d10ede6c9c5901c25
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 9fac399c27c377ff125a6a3b116863d48e42cc7a
 branches:
   - name: stable/ussuri
     location: 5.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-openstackclient/ussuri.html
