@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: f585666ea93707b0dbe62d9e73f686058247e2bc
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 1eb5f317e16f84a17a337882a04b04e9d9111df5
 branches:
   - name: stable/ussuri
     location: 12.0.0

@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: dcc33690b70d8a4cf75444f09d7872860da7e56f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 8a7b700bda5994d5c854df55edc8cda5819811f2
 branches:
   - name: stable/ussuri
     location: 10.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cloudkitty-dashboard/ussuri.html
