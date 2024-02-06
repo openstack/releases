@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/tripleo-image-elements
         hash: 9b50a3ce5436fc47cbe79eb26f1b26584579cb08
+  - version: train-eol
+    projects:
+      - repo: openstack/tripleo-image-elements
+        hash: 81dce34e639e77c5d1a99f651f12f875bc59a082
 branches:
   - name: stable/train
     location: 10.6.0
