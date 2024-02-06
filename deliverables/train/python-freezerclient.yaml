@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: db341f8d0ad37d0187dbfc3fe78b32487117228f
+  - version: train-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 17b7365da987f245d69ede6895ac0baf56483dac
 branches:
   - name: stable/train
     location: 2.2.0
