@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: db7a5abd655d871cc036a4b59eeb4225f028e2da
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: db7a5abd655d871cc036a4b59eeb4225f028e2da
 branches:
   - name: stable/ussuri
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/trove-dashboard/ussuri.html
