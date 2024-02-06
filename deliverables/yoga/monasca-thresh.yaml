@@ -17,6 +17,12 @@ releases:
       - repo: openstack/monasca-thresh
         hash: d256f05be6235dbaaff8ba738e6196b9c6241911
     diff-start: 5.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: c79502120bc6726502fc16f97b1c27e6ecd01e99
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

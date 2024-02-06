@@ -15,7 +15,14 @@ releases:
       - repo: openstack/monasca-notification
         hash: 975f46d226e479180c6499fe34073225aeadefdb
     diff-start: 5.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 50dac47ff801b784b9ad3cb701f6c9b04d0fa350
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-notification/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-notification/yoga.html

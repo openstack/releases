@@ -10,6 +10,12 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: ffce75af6c8413ec9952c3ebfceb6d99493c83b3
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-common
+        hash: 0e9a0b9fcaf4700f507e602efd213928c2d504dc
 branches:
   - name: stable/yoga
     location: 3.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom

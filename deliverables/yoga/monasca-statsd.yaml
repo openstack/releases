@@ -10,6 +10,12 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 116019af619acb172c7b584895ca86a6efadf825
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: df8f364730bb5b42e317b8454eaeabe291715b94
 branches:
   - name: stable/yoga
     location: 2.4.0
+  - name: unmaintained/yoga
+    location: yoga-eom

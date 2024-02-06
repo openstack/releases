@@ -15,6 +15,12 @@ releases:
       - repo: openstack/monasca-ui
         hash: 75f1f95bba3436503102eaa450d82ecbaf92a3f0
     diff-start: 5.0.0.0rc1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 999262be05b5b1230b39778b63d192cee7508502
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom

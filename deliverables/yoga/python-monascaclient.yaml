@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 7c9a22bd0d408f4cd068863224ef434d7b17086d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 40e2692569187fcfe04e30e451ba4886c1636261
 branches:
   - name: stable/yoga
     location: 2.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-monascaclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-monascaclient/yoga.html
