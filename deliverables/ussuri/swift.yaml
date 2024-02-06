@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 4b0d6a87e9b2d0a032fe3b3a85e6fef0e5e8839f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/swift
+        hash: 1721d8586c53609f75070e10e21de9fcf262c0bc
 branches:
   - name: stable/ussuri
     location: 2.25.0
