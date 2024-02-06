@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 2da90bb62821e080df554aab36a11346839f29e6
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 3030c8893d920673d8a94c886245680a9454e3f0
 branches:
   - name: stable/ussuri
     location: 1.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/senlin-dashboard/ussuri.html

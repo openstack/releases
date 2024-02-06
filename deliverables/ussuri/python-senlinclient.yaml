@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: d9430360beb9c7104470a6804feab87adae2817f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 8d372d801f91f7f7a3d9585bda2c9c0784a87751
 branches:
   - name: stable/ussuri
     location: 2.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-senlinclient/ussuri.html
