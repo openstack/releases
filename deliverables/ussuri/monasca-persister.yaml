@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 2d4bd37d0563ddece44c4e44a0eaeaaadac0f43c
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 2d4bd37d0563ddece44c4e44a0eaeaaadac0f43c
 branches:
   - name: stable/ussuri
     location: 2.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-persister/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-persister/ussuri.html

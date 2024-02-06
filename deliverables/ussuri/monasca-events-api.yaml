@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/monasca-events-api
         hash: 2550100ada77785e0af8e85f08afb806a6383e0a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/monasca-events-api
+        hash: 2550100ada77785e0af8e85f08afb806a6383e0a
 branches:
   - name: stable/ussuri
     location: 1.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-events-api/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-events-api/ussuri.html
