@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 18793de7eb16569bc99171f74259bc81239c9681
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 57a39001cef0baffb9c74b1ba80013744ea9223f
 branches:
   - name: stable/ussuri
     location: 5.0.1
