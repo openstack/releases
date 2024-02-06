@@ -21,7 +21,9 @@ releases:
         repo: openstack/puppet-qdr
     version: 9.3.0
 repository-settings:
-  openstack/puppet-qdr: {}
+  openstack/puppet-qdr:
+    flags:
+      - retired
 branches:
   - name: stable/yoga
     location: 9.3.0
