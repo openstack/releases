@@ -15,7 +15,13 @@ releases:
       - repo: openstack/senlin-dashboard
         hash: 7f5258c3d8cc9daaca95fc0d9766c258b3e37d2f
     diff-start: 4.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 1f00888ef099f6828fa0c6758f37ea4f9f30cb87
 branches:
   - name: stable/yoga
     location: 5.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/yoga.html
