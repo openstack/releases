@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 7852ca24a4eb86cb271ef7ec5e07f8f9c97f926d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/keystone
+        hash: 0a318bef48bc43b35f9fb1476af466382c0b76f9
 branches:
   - name: stable/yoga
     location: 21.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/keystone/yoga.html
