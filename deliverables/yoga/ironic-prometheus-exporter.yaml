@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: ed207dc3cd362642568e0d87cdb1239ca1d11bbd
+  - version: yoga-eom
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: eb27243efd256f5aa4121228e6f0aef8df5432c6
 branches:
   - name: stable/yoga
     location: 3.1.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/yoga.html

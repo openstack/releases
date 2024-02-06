@@ -23,9 +23,15 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 6412c7a1bfcea63ea83bba3186a9a58c88db600f
+  - version: yoga-eom
+    projects:
+      - repo: openstack/bifrost
+        hash: 2ed14802e4b953ac484e0fa9a20169bed86c918d
 branches:
   - name: bugfix/12.0
     location: 12.0.0
   - name: stable/yoga
     location: 14.0.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/bifrost/yoga.html
