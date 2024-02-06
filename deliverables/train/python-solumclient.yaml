@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: b3e7f9dd4edf032074b5f67a3a92a6c8cfafa8fa
+  - version: train-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 1161287f6b5f8a3b43c92a9efdb87737f153e049
 branches:
   - location: 2.9.0
     name: stable/train
