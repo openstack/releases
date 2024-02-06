@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/qinling
         hash: 9a186fc483c7ceb70a6a83080048f924783a0cdb
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/qinling
+        hash: f00784c7772017cc17168023111a6ba482d41f9b
 branches:
   - name: stable/ussuri
     location: 4.0.0.0rc1
