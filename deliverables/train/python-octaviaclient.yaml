@@ -26,4 +26,8 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: b5397ea3e45935246824eedf96727979e3323d0b
+  - version: train-eol
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: b6642c9a0489b4980a1098487325c31fa3163dad
 release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/train.html
