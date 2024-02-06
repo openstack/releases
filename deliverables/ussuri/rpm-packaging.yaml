@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/rpm-packaging: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/rpm-packaging
+        hash: 8dab3ca57dd82d635e28412d93ec8729127fcd44
