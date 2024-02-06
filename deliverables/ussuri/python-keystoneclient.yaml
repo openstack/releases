@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: b58ebe2b7f6166bd42469d1512bdcaf2fd216b4a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: da3ce1bbb8b8150c6ccf8044af817dc9994d5d6e
 branches:
   - name: stable/ussuri
     location: 4.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-keystoneclient/ussuri.html
