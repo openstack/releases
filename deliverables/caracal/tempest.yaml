@@ -8,3 +8,8 @@ stable-branch-type: none
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
+releases:
+  - projects:
+      - repo: openstack/tempest
+        hash: 7edc9f524154d28d2668864a64abce502c4471df
+    version: 37.0.0
