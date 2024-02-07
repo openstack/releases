@@ -21,6 +21,7 @@ import getpass
 import json
 import sys
 
+from oslo_utils import timeutils
 import requests
 
 
@@ -38,17 +39,17 @@ def delete_branch(username, project_name, branch_id):
            f'branches/stable%2F{branch_id}')
     response = requests.delete(url, auth=gerrit_auth)
     if response.status_code == 204:
-        print(f'Branch stable/{branch_id} successfully deleted '
+        print(f'{timeutils.utcnow()} | Branch stable/{branch_id} successfully deleted '
               f'from {project_name}!')
         return 0
     elif response.status_code == 401:
-        print('401 Unauthorized.')
+        print(f'{timeutils.utcnow()} | 401 Unauthorized.')
         return 1
     else:
         # NOTE(elod.illes): other possible errors from gerrit:
         # 404: In case of project or branch is not found
         # 409: Branch has open changes
-        print(f'Delete failed ({response.status_code}): {response.text}')
+        print(f'{timeutils.utcnow()} | Delete failed ({response.status_code}): {response.text}')
         return 2
 
 
