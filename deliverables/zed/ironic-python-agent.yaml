@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: c1ea3f71459ea966e6afbc5091e1baba3ce9e37f
+  - version: 9.1.1
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: f1c519a46e94c8d33a6c5d61e4f6192a1233cefd
 branches:
   - name: bugfix/8.6
     location: 8.6.0
@@ -27,4 +31,5 @@ branches:
     location: 9.0.0
   - name: stable/zed
     location: 9.1.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-python-agent/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-python-agent/zed.html
