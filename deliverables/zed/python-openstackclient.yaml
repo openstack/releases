@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 27b2496e03ceb95b56b3b1b68a57058fe90251b5
+  - version: 6.0.1
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 0c07b165ef7abb9a16ddc89ac10998c87ef0d306
 branches:
   - name: stable/zed
     location: 6.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-openstackclient/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-openstackclient/zed.html
