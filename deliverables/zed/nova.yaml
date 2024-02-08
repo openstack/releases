@@ -57,6 +57,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 3ada047b2729ef7e0875f267ee330bcc33174758
+  - version: 26.2.2
+    projects:
+      - repo: openstack/nova
+        hash: 226f3e95c1cdadd1845c7adee55f5c5f29f3a7a8
 branches:
   - name: stable/zed
     location: 26.0.0.0rc1
