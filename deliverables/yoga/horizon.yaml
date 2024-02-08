@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: eb57aa5300be01a349684a8aa07d9a973357cf7d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/horizon
+        hash: eb57aa5300be01a349684a8aa07d9a973357cf7d
 branches:
   - name: stable/yoga
     location: 22.0.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/horizon/yoga.html
