@@ -18,7 +18,13 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 19879831272b37b5e49f73a4d49f1a4587ccd7c7
+  - version: yoga-eom
+    projects:
+      - repo: openstack/swift
+        hash: 2a73f12a4500eabcd0dcdea39ae5ae73a0c3fe4f
 branches:
   - name: stable/yoga
     location: 2.29.1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/swift/yoga.html
