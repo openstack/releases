@@ -678,6 +678,8 @@ R-8 week
     A quick reminder of the upcoming freeze dates. Those vary depending on
     deliverable type:
 
+    * Oslo libraries are entering feature freeze next week, $extraac.
+
     * General libraries (except client libraries) need to have their last
     feature release before Non-client library freeze ($nclfreeze). Their
     stable branches are cut early.
@@ -697,22 +699,25 @@ R-8 week
 
     Finally, now is also a good time to start planning what highlights you
     want for your deliverables in the cycle highlights. The deadline to
-    submit an initial version for those is set to Feature freeze ($milestone3).
+    submit an initial version for those is set to one week after Feature
+    freeze ($highlights).
 
     Background on cycle-highlights:
     http://lists.openstack.org/pipermail/openstack-dev/2017-December/125613.html
     Project Team Guide, Cycle-Highlights:
     https://docs.openstack.org/project-team-guide/release-management.html#cycle-highlights
-    knelson [at] openstack.org/diablo_rojo on IRC is available if you need
-    help selecting or writing your highlights
+    jeremy [at] openstack.org/fungi on IRC is available if you need
+    help selecting or writing your highlights.
 
     Upcoming Deadlines & Dates
     --------------------------
 
     Extra-AC freeze: $extraac (R-7 week)
+    Oslo feature freeze: $extraac (R-7 week)
     Non-client library freeze: $nclfreeze (R-6 week)
     Client library freeze: $milestone3 (R-5 week)
     $SERIES-3 milestone: $milestone3 (R-5 week)
+    Cycle highlights deadline: $highlights (R-4 week)
     $other-upcoming-event
 
 
