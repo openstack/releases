@@ -35,7 +35,13 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 357e5ba1bb3a3a28baf844db698d1bfeff7593c1
+  - version: yoga-eom
+    projects:
+      - repo: openstack/glance
+        hash: 357e5ba1bb3a3a28baf844db698d1bfeff7593c1
 branches:
   - name: stable/yoga
     location: 24.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/glance/yoga.html
