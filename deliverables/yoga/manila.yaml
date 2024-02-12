@@ -44,6 +44,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 3ba4d99288a372e5d9f7cf9f108399af92041553
+  - version: 14.2.0
+    projects:
+      - repo: openstack/manila
+        hash: 84111ad7cb4496d1083703fba8f0e55002347363
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
