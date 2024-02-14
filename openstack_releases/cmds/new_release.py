@@ -583,6 +583,26 @@ def main():
                 'location': new_version,
             })
 
+    if is_eom:
+        add_unmaintained_branch = True
+        branch_name = 'unmaintained/{}'.format(get_stable_branch_id(series))
+
+        # First check if this branch is already defined
+        if 'branches' in deliverable_info:
+            for branch in deliverable_info['branches']:
+                if branch.get('name') == branch_name:
+                    LOG.debug('Branch %s already exists, skipping',
+                              branch_name)
+                    add_unmaintained_branch = False
+                    break
+
+        if add_unmaintained_branch:
+            LOG.info('adding unmaintained branch at %s', new_version)
+            deliverable_info.setdefault('branches', []).append({
+                'name': branch_name,
+                'location': new_version,
+            })
+
     create_release = changes > 0
     if create_release and args.interactive:
         create_release = yes_no_prompt(
