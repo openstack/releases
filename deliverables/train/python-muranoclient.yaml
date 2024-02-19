@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 2f501776a607db3862ce89dbaf22c9d48e7e7f87
+  - version: train-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 55e2e4b86b88265c97bd1b137717caeda0c83864
 branches:
   - location: 1.3.0
     name: stable/train

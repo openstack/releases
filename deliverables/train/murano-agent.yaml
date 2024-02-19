@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: a026aa2e2f38bcfe072fb9cdfa6e9719f6fda5c6
+  - version: train-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: f88dad6371dfe4f7b0e1f680467098946054a312
 branches:
   - name: stable/train
     location: 4.0.0.0rc1
