@@ -24,7 +24,12 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: abcd7c04b27409b08b62c4311944bbe3a24b1ccd
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: abcd7c04b27409b08b62c4311944bbe3a24b1ccd
 branches:
   - name: stable/ussuri
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher-dashboard/ussuri.html
