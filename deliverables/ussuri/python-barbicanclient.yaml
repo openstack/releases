@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: e5fdd10f04488d6f6e252a63c57bf2be92a06c8f
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 21e7796bcaf8b2dfcf9b35bdd3e31c0845d54ee1
 branches:
   - name: stable/ussuri
     location: 4.10.0
