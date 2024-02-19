@@ -18,7 +18,12 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 5744d42ddbade54f8c149780fba7b2b0f5be3f2a
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: a20b829f1e601074115cc58a08c3c56e4c41fb41
 branches:
   - name: stable/ussuri
     location: 2.0.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/ussuri.html

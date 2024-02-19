@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: feb6e927384259b3d14d34cfa60d5ddf9a89d820
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: feb6e927384259b3d14d34cfa60d5ddf9a89d820
 branches:
   - name: stable/ussuri
     location: 4.0.0

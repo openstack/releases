@@ -26,12 +26,18 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 0c17549c2c81fcb2e3ce256d93f80befe36c2d0d
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ironic
+        hash: 53f933c7fa08b358a2fb15fe25b99fd31ceea627
 cycle-highlights:
   - Support for a hardware `retirement workflow <https://docs.openstack.org/ironic/latest/admin/retirement.html>`_
     to enable automation of hardware decommission in managed clouds.
-  - Multitenancy `concepts and additional policy options <https://docs.openstack.org/ironic/latest/admin/node-multitenancy.html>`_
+  - Multitenancy `concepts and additional policy options
+    <https://docs.openstack.org/ironic/latest/admin/node-multitenancy.html>`_
     are available for non-administrator usage of Ironic.
-  - Addition of `authentication of interactions <https://docs.openstack.org/ironic/latest/admin/agent-token.html>`_
+  - Addition of `authentication of interactions
+    <https://docs.openstack.org/ironic/latest/admin/agent-token.html>`_
     between Ironic and its remote agent enabling deployment over untrusted
     networks.
   - UEFI and device selection is now available for Software RAID.

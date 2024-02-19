@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: 2aead8bf81e6fa559a8d5d36c5489de98517bb87
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/sushy
+        hash: 8903c6fa14749a9a314bb83d1f0e0ccf0d4d16b0
 branches:
   - name: stable/ussuri
     location: 3.2.0

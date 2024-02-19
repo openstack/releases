@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 79901aff5f3c3091fd320902c806e343fb829c04
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 7d2150578e5c5d271f86fd20b0e75ee070ca1d3f
 branches:
   - name: stable/ussuri
     location: 4.2.0

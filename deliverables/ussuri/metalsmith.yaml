@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 43bd9d41bd0864b0393f7d1cfd934536f3f0150b
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/metalsmith
+        hash: 44e348ff53b9d4ac88d59c245bb0bd053d67bfe0
 branches:
   - name: stable/ussuri
     location: 1.0.0

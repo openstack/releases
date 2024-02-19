@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 2adb7bccde4dbb385671fca8f734bc9bdafd6d71
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 06a8945fbd0c3a92faa1557e5ec6708fd68195f4
 branches:
   - name: stable/ussuri
     location: 8.0.0
