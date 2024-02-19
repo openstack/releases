@@ -1197,9 +1197,9 @@ def validate_version_numbers(deliv, context):
                 context.error(
                     "LAST tag {} should match branch name (e.g {}-last)".format(
                         release.version, deliv.series))
-            if not deliv.series_info.is_em:
+            if not (deliv.series_info.is_em or deliv.series_info.is_eom):
                 context.error(
-                    "LAST tag {} aren't allowed on a series ({}) that are not EM".format(
+                    "LAST tag {} aren't allowed on a series ({}) that are not EM or Unmaintained".format(
                         release.version, deliv.series))
             continue
 

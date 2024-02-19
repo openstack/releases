@@ -56,6 +56,10 @@ class Series(object):
         return self.status == 'extended maintenance'
 
     @property
+    def is_eom(self):
+        return self.status == 'unmaintained'
+
+    @property
     def is_maintained(self):
         return self.status == 'maintained' or self.status == 'development'
 
