@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: 9d1b9e3e9bd2d88749eae279d65149301f3db5a9
+  - version: yoga-eom
+    projects:
+      - repo: openstack/masakari
+        hash: fa893724c443e976172cc07ee7b9a8c0d3525f25
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/masakari/yoga.html

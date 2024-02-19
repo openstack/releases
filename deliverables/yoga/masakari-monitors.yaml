@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 8bb6b0e87aad7b7e2f2dfdc8b84ae711ee0ef40a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: af3c058f959ed036e01180e922f1e7d32e60cda1
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/masakari-monitors/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/masakari-monitors/yoga.html
