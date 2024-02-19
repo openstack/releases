@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 5415b96d1e58615fa80fee2eb74dc9cda90d8e2a
+  - version: train-eol
+    projects:
+      - repo: openstack/aodh
+        hash: de9079b4dcef5ffc219c65719d4d071af28efc8f
 branches:
   - name: stable/train
     location: 9.0.0.0rc1

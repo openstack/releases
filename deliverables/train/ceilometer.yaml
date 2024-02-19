@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 527e58bb852d3ef3a42e72691dc4a16b0e8006f8
+  - version: train-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: ea2c9adc2f0e27062189f2b77ace72e8f37ae8eb
 branches:
   - name: stable/train
     location: 13.0.0.0rc1
