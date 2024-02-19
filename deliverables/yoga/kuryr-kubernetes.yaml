@@ -24,7 +24,13 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: f51aa74b2a1864765c981d64188b3054f7e41ab3
+  - version: yoga-eom
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: f51aa74b2a1864765c981d64188b3054f7e41ab3
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr-kubernetes/yoga.html

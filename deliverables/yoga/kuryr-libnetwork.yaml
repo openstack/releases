@@ -15,7 +15,13 @@ releases:
       - repo: openstack/kuryr-libnetwork
         hash: e5daefc3c2dae2d4f65ef584eb257e841cd417e7
     diff-start: 8.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 49078002d6575ec6ba4121c3b3fe8d6517ba36e3
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr-libnetwork/yoga.html

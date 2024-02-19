@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 5b38e84ef8a0a62ee44d53ddd1cda377b0d9d934
+  - version: yoga-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: d8cb765e69ee26fcd6293a5871093fb2397d96de
 branches:
   - name: stable/yoga
     location: 2.5.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr/yoga.html
