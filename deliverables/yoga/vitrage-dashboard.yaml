@@ -10,7 +10,14 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: eb6e8c1deb33d11d65926e040ddc96a814960c7d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 7dced3895a298ba6fa653409cc8bf7444c20c125
 branches:
   - name: stable/yoga
     location: 3.5.0
-release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage-dashboard/yoga.html
