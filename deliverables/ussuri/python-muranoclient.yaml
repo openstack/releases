@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 59d867d409dc02b0d2e705c802ab2049f567bcc1
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: a32a19954e6d8b69082390a509d88476e167f04d
 branches:
   - name: stable/ussuri
     location: 2.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/ussuri.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-muranoclient/ussuri.html
