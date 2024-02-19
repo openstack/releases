@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 60817623ccbbfd7b4eee5b24be6ac4d82e9c3e8e
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-troveclient
+        hash: dbffc2f78f167591b0066ec256b80ff02f48543c
 branches:
   - name: stable/yoga
     location: 7.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-troveclient/yoga.html
+  - name: unmaintained/yoga
+    location: yoga-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-troveclient/yoga.html

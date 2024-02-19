@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: f07e85ded52abe31eaad6340d07f0d16c0a40c33
+  - version: yoga-eom
+    projects:
+      - repo: openstack/trove
+        hash: 29e54a6e1fce836fc5a44f305acdee8020f6e065
 branches:
   - name: stable/yoga
     location: 17.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/yoga.html
