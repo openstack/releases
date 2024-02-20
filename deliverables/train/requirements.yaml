@@ -11,3 +11,8 @@ branches:
   - name: stable/train
     location:
       openstack/requirements: aaf24f51199e298c89c73fcb1bbb4e488c52bde0
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/requirements
+        hash: c5e371c0153b5d22200c810d1c84e88d6df9f072
