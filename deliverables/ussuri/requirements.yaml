@@ -11,3 +11,8 @@ branches:
   - name: stable/ussuri
     location:
       openstack/requirements: b85e113e6c2388482ffc8b778c8757ba49ad4615
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/requirements
+        hash: 02ef245c6ee3d16c2982abf4b9e1ad4b929cf340
