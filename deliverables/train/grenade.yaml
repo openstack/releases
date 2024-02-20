@@ -1,7 +1,7 @@
 ---
 launchpad: grenade
 release-model: untagged
-team: 'Quality Assurance'
+team: Quality Assurance
 type: other
 stable-branch-type: tagless
 branches:
@@ -10,3 +10,8 @@ branches:
     name: stable/train
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: train-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 136656308b5532853107d7c70421e9f8e620bf2c
