@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/tripleo-ansible: {}
+  openstack/tripleo-ansible:
+    flags:
+      - retired
 releases:
   - version: 3.0.0
     projects:

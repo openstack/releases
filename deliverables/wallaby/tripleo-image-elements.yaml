@@ -5,7 +5,9 @@ release-type: python-pypi
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/tripleo-image-elements: {}
+  openstack/tripleo-image-elements:
+    flags:
+      - retired
 releases:
   - version: 13.0.0
     projects:
