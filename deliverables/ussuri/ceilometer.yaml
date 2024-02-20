@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: f18675aed4e0c96e73ae58fc10e26020fd6ad824
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: bcada72c3aaeeb2a86de3368b1787a9253c9d55b
 branches:
   - name: stable/ussuri
     location: 14.0.0.0rc1
