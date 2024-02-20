@@ -10,3 +10,8 @@ branches:
     name: stable/ussuri
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: ussuri-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: e37ec8fa5eedbfcab39bfd1f1281286826e7bc45
