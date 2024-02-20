@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 1f5edf419d5c64cd428661d3ac666488f9e4a6a6
+  - version: yoga-eom
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: d8158debd084d7d3d362fb865acee31a7fa9a7bc
 branches:
   - name: stable/yoga
     location: 3.6.0
+  - name: unmaintained/yoga
+    location: yoga-eom
