@@ -16,7 +16,13 @@ releases:
       - repo: openstack/murano-dashboard
         hash: ad3ddf6c20d7748f0a82f4b0ea399b94244dd1eb
     diff-start: 12.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 06c357a470198e132617e72a8a9db9e0190d50f5
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/murano-dashboard/yoga.html

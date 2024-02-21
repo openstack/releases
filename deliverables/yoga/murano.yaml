@@ -19,7 +19,13 @@ releases:
       - repo: openstack/murano
         hash: 8f994a7d4e939713c16432374b1509bd178e70a0
     diff-start: 12.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/murano
+        hash: 2d28f9e2affcb2dcff0508f70257605eaacf061a
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/murano/yoga.html
