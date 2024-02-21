@@ -20,6 +20,10 @@ releases:
       - hash: 18cddc6cecc91aa5117a7506f67a94ee3962f7dd
         repo: openstack/puppet-rally
     version: 8.3.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 45f8babc6a22612463e0f7f1fe3fb0d6dfa24cb7
 repository-settings:
   openstack/puppet-rally:
     flags:
@@ -27,4 +31,6 @@ repository-settings:
 branches:
   - name: stable/yoga
     location: 8.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-rally/yoga.html

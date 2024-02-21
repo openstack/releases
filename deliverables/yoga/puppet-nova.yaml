@@ -32,9 +32,15 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: 5664401e96a9d24e04459b4884b6656ec60de7e9
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 7e132371f0aa5e0b67d58bde21d44c4350927746
 repository-settings:
   openstack/puppet-nova: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-nova/yoga.html

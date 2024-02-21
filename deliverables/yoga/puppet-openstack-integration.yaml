@@ -6,7 +6,14 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - projects:
+      - hash: 0a8901e98804ca8d9ef68d3e913fa8f85b04b3ae
+        repo: openstack/puppet-openstack-integration
+    version: yoga-eom
 branches:
   - name: stable/yoga
     location:
       openstack/puppet-openstack-integration: 28bc055fb92adfb1a4d801d97b99b583f61298d3
+  - name: unmaintained/yoga
+    location: yoga-eom

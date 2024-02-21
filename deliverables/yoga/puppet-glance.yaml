@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 0e90a9c98e637ef07366f267ba1fc962401e3c3d
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 0e90a9c98e637ef07366f267ba1fc962401e3c3d
 repository-settings:
   openstack/puppet-glance: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/yoga.html

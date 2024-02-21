@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: de753672632dfc7b6f916710943f1cd7efb0810e
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: de753672632dfc7b6f916710943f1cd7efb0810e
 repository-settings:
   openstack/puppet-keystone: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-keystone/yoga.html

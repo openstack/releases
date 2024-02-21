@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: e0f422583228dfbf8a2e36f150f990daac65503a
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-designate
+        hash: e0f422583228dfbf8a2e36f150f990daac65503a
 repository-settings:
   openstack/puppet-designate: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-designate/yoga.html

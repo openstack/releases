@@ -24,9 +24,15 @@ releases:
     projects:
       - repo: openstack/puppet-horizon
         hash: 372a37e07f7e9cb553e8617a726330fdbac3e9af
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 698a62196afff960fab356afa32af4b4930dadce
 repository-settings:
   openstack/puppet-horizon: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/yoga.html

@@ -28,9 +28,15 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 92e04d9f7f5c892e2d289dabe1891cb2a759f8f5
+  - version: yoga-eom
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 92e04d9f7f5c892e2d289dabe1891cb2a759f8f5
 repository-settings:
   openstack/puppet-trove: {}
 branches:
   - name: stable/yoga
     location: 20.3.0
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/yoga.html
