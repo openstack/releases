@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.policy: {}
+releases:
+  - version: 4.3.0
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 4b7a6f7753e282a5059bdbbf10258de8016fbffb
