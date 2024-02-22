@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: 26da379c3a5c88dda5f30adf9fd39d4254a9cc10
     diff-start: 1.1.0
+  - version: 4.0.1
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: d93586cc73922a30bbbb58e48e09a294e7a6ecfe
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1
