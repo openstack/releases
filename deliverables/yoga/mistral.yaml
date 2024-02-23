@@ -16,7 +16,13 @@ releases:
       - repo: openstack/mistral
         hash: 28f94b0c64ebbc04729c441c801682e312fc9c64
     diff-start: 13.0.0
+  - version: yoga-eom
+    projects:
+      - repo: openstack/mistral
+        hash: 77116d0dfdcc891f37817e9f1678d6c4c10aeb32
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
+  - name: unmaintained/yoga
+    location: yoga-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral/yoga.html
