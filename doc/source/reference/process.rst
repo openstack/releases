@@ -872,7 +872,7 @@ R-6 week (Final Library Release deadline)
     has to be raised as a Feature Freeze Exception (FFE) and approved by the
     team PTL.
 
-    Finally, feature freeze is also the deadline for submitting a first version
+    Finally, feature freeze is also a good time for submitting a first version
     of your cycle-highlights. Cycle highlights are the raw data that helps shape
     what is communicated in press releases and other release activity at the
     end of the cycle, avoiding direct contacts from marketing folks. See
