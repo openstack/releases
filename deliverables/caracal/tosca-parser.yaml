@@ -6,3 +6,8 @@ team: tacker
 type: library
 repository-settings:
   openstack/tosca-parser: {}
+releases:
+  - version: 2.10.0
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 283cb6a375070c844547e18e119bcad53e8489ca
