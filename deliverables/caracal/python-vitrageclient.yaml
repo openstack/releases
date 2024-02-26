@@ -6,3 +6,8 @@ team: vitrage
 type: client-library
 repository-settings:
   openstack/python-vitrageclient: {}
+releases:
+  - version: 5.0.0
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: f1c8eeb3478a90ae67a5b69cf75bea61d035051c
