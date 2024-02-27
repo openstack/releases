@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 2ce24b6f933eef8860947d8632d607867dfbf841
+  - version: xena-eol
+    projects:
+      - repo: openstack/sahara
+        hash: 53b309ff57aae9f446bc8436be51ebfbce4e193c
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1

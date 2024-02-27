@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 473ad0dd95433b6bead20eb290d3f29800c523b7
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 03562493bb1368fe46f4a0a46d64532793d4661a
 branches:
   - name: stable/xena
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-saharaclient/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-saharaclient/xena.html

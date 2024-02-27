@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-vanilla
         hash: 07e627e3e8290823b63dea154ff32c98741c6f9e
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 07e627e3e8290823b63dea154ff32c98741c6f9e
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-vanilla/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-vanilla/wallaby.html

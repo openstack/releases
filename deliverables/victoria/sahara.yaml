@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: d32f7d6cf9fe188b83eb01b885065723cfd3d9fb
+  - version: victoria-eol
+    projects:
+      - repo: openstack/sahara
+        hash: e06a9b5cae444951a4ace9e9b3efde5b596aa896
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1

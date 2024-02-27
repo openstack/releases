@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/sahara-extra
         hash: cf5762829e5ac2f348d793f950f72dc234ce785e
+  - version: xena-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 4f17ef1e7547612e1f6342a96ef0500a79e65824
 branches:
   - name: stable/xena
     location: 14.0.0.0rc1

@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 084b61a636789ec32ddc9d34f34fc4ab7fb7ec0a
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 0948f8d3dab4f967f7704f9adee4ff6cacdfc0d4
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-dashboard/wallaby.html

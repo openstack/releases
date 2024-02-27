@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: f18611595861d82d27d9d8322215784ed9d0ee31
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sahara
+        hash: 5d3d87d5c775ed805079e025745985d7a81d57c3
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1
