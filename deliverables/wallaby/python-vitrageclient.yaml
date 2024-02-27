@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: 8293be5fed973d6e4a06a18e4aad16868412e021
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 5be80c9b13c5a12cba9fc05328865287bd7b10b4
 branches:
   - name: stable/wallaby
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-vitrageclient/wallaby.html

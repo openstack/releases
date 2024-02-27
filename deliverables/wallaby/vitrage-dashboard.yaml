@@ -14,7 +14,14 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 227cf737817e7c8d6eb923bc3853d61d9fb6eaae
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 696ef094940433778013ced3ec70c71570b8519d
 branches:
   - name: stable/wallaby
     location: 3.3.0
-release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage-dashboard/wallaby.html
