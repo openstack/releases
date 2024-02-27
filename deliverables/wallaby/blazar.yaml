@@ -26,7 +26,13 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 60622bc6491ef1b6e5cdd5b2ac8e89a995ea9adc
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/blazar
+        hash: 95a3d4d821dfb8c4fe48aff7c59cd879df69810c
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/blazar/wallaby.html

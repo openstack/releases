@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: f90eac95dd90c5fd7c126e16cb9c1cdf9acd367c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: c0af4dd63fd384061641808fd65c5306183fcb56
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar-dashboard/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar-dashboard/wallaby.html

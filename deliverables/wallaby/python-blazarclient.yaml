@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: d7543688a2a512046afbbf895dbe7296628f3de0
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: d7543688a2a512046afbbf895dbe7296628f3de0
 branches:
   - name: stable/wallaby
     location: 3.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-blazarclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-blazarclient/wallaby.html
