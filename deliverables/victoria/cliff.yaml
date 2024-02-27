@@ -23,6 +23,12 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 6ac510d0cd25c8c3c76d56dd8e100ca2a6f8b962
+  - version: victoria-eom
+    projects:
+      - repo: openstack/cliff
+        hash: 37ce807c09fb1dd5770d84b1c8b4d4fd8a2270dc
 branches:
   - name: stable/victoria
     location: 3.4.0
+  - name: unmaintained/victoria
+    location: victoria-eom

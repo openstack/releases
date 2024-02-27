@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: 415a6c7b191ac665fb7763d12d1b427b7b630586
+  - version: xena-eom
+    projects:
+      - repo: openstack/osc-lib
+        hash: b3cb7b86e7e34876177c4e92f83a59d3c369a7c1
 branches:
   - name: stable/xena
     location: 2.4.2
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/osc-lib/xena.html
