@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 8a6848e402a59929ce43051831933605926e72a6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 0ff5dce8f45e7710c232166ff0ebcf610be982b2
 branches:
   - name: stable/wallaby
     location: 2.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-muranoclient/wallaby.html

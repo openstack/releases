@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: d3ab74e495234ba38d3cbfd22006bfa2ae7da25c
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: 029d973df0eec8ac8d5d2f1977910ffe72e552b0
 branches:
   - name: stable/victoria
     location: 2.1.1
-release-notes: https://docs.openstack.org/releasenotes/python-muranoclient/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-muranoclient/victoria.html

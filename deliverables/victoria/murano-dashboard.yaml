@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: cf980359303c8de81f3e5f7358df39d9f9d7d3ef
+  - version: victoria-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 122fbb8548a4c1507462a9c7b27f7521b05ded3a
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/murano-dashboard/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/murano-dashboard/victoria.html

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 8ab430b2f4963e985f3f0de066bb8ddf1e89b847
+  - version: xena-eol
+    projects:
+      - repo: openstack/murano
+        hash: 8de36ff8c95a8000bd3b82f639775ce4d06fd4a0
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1
