@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: caeeb51c70c7417811f69b916c38d2f41cc2f384
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 89ccceda42d0bb33993a2a980cdf8de408687f7a
 branches:
   - name: stable/wallaby
     location: 2.2.0
-release-notes: https://docs.openstack.org/releasenotes/ceilometermiddleware/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ceilometermiddleware/wallaby.html

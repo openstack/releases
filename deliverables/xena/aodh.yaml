@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: e6d55b1ea9ee852cc56002c865c9443b526f2f58
+  - version: xena-eom
+    projects:
+      - repo: openstack/aodh
+        hash: dd23f13d20de205dddd048e30ab97c7d36c622cd
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/aodh/xena.html

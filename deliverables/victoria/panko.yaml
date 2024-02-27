@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/panko
         hash: 046c9460c60808ebbbee1ac988160e09ce88a27d
+  - version: victoria-eom
+    projects:
+      - repo: openstack/panko
+        hash: 4d0c0d66da6833e5283d71fe5bdee9594e4b651c
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/panko/victoria.html

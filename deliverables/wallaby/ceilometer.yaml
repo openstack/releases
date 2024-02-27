@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: e5d121d496e22ecc42547342ddf7dd6019dac75e
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ceilometer
+        hash: 6587b9b64e5c1c9a1c8e25c241dc6b79339a93c9
 branches:
   - name: stable/wallaby
     location: 16.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/ceilometer/wallaby.html
