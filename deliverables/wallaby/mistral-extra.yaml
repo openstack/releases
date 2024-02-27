@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: dfc6c56490eb358018f79822ae9847e2be89d8b3
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/mistral-extra
+        hash: d34df63c3aa88e9cade80a8bfc99a594ede043f1
 branches:
   - name: stable/wallaby
     location: 11.0.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral-extra/wallaby.html

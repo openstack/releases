@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 3c83837f6ce1e4ab74fb519a63e82eaae70f9d2d
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/mistral
+        hash: b1a8bbdc7b2809bcdc639d6b1378665be6126dd5
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral/wallaby.html
