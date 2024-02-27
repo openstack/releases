@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 3c248bbb89ad8fc193279bd2052ed70f919f4b8f
+  - version: xena-eom
+    projects:
+      - repo: openstack/ironic
+        hash: febf9d895d9d4c62a713e88a3d2af089e8831094
 branches:
   - name: bugfix/18.0
     location: 18.0.0
@@ -42,6 +46,8 @@ branches:
     location: 18.1.0
   - name: stable/xena
     location: 18.2.0
+  - name: unmaintained/xena
+    location: xena-eom
 cycle-highlights:
   - New ``custom-agent`` deployment interface for where the agent provides
     knowledge of all deployment steps.

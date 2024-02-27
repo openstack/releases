@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 4f148688ac7cee6f2912113d8fa6e6a45935aa57
+  - version: victoria-eom
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 8db25350cbcb8d4a69b9fba885f766c7a416ae63
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-baremetal/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-baremetal/victoria.html

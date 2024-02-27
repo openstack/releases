@@ -28,9 +28,16 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 8f9707699f4809bac9e7c10484829ecd35de1b84
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 9fef41df61ed133b5f162190ef690f413a6ccda1
 branches:
   - name: bugfix/10.5
     location: 10.5.0
   - name: stable/wallaby
     location: 10.6.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-inspector/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-inspector/wallaby.html

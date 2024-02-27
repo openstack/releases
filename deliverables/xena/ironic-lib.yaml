@@ -27,6 +27,12 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: b19124eae2f3633c5a1bf638fffc5918f2d8aa49
+  - version: xena-eom
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 77837eeba9e6cdfee77c1ab61cdcb7fbfdfec267
 branches:
   - name: stable/xena
     location: 5.0.0
+  - name: unmaintained/xena
+    location: xena-eom
