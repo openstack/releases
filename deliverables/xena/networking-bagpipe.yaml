@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: c833a9783ab8e164ca1a0f6f01010cc4e85c3294
+  - version: xena-eom
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 39546f061193de8d46d6ca6141122f83bb18621a
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-bagpipe/xena.html

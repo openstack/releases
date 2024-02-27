@@ -21,7 +21,14 @@ releases:
     projects:
       - repo: openstack/networking-midonet
         hash: af9b8a7444c72d69c1accdce70bcedba530f0ff8
+  - version: victoria-eom
+    projects:
+      - repo: openstack/networking-midonet
+        hash: 653ffae3778f9f8a398d003a3a58cf02e2d4918c
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-midonet/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-midonet/victoria.html

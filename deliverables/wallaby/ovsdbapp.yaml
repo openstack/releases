@@ -38,6 +38,12 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 65d02f06d2318c20ee01ba760bbb74f6eafabebf
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 65d02f06d2318c20ee01ba760bbb74f6eafabebf
 branches:
   - name: stable/wallaby
     location: 1.9.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom

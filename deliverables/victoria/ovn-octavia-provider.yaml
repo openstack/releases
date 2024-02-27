@@ -30,7 +30,14 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 62891fa3c29f1e2748250f65108f4383c6cce7fb
+  - version: victoria-eom
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 5246f946b603fe949450003ae745dd5a4585b581
 branches:
   - name: stable/victoria
     location: 0.3.0
-release-notes: https://docs.openstack.org/releasenotes/ovn-octavia-provider/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ovn-octavia-provider/victoria.html

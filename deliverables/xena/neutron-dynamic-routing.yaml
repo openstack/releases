@@ -32,7 +32,14 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 5648f4001372537a4c633254cf3055b340eed799
+  - version: xena-eom
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 5648f4001372537a4c633254cf3055b340eed799
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-dynamic-routing/xena.html

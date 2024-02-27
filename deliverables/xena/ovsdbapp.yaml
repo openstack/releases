@@ -34,6 +34,12 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 8202d53fd9d972c7385bb93a392dbba2c1d9aa3b
+  - version: xena-eom
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 8202d53fd9d972c7385bb93a392dbba2c1d9aa3b
 branches:
   - name: stable/xena
     location: 1.12.0
+  - name: unmaintained/xena
+    location: xena-eom

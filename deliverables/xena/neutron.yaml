@@ -65,7 +65,13 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: edfb66d1575aaabc49d321f1f6135d2f6cfe32b0
+  - version: xena-eom
+    projects:
+      - repo: openstack/neutron
+        hash: f99ec47c4c437fb8bb967d4b5705edb02993bd72
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron/xena.html
