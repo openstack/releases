@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 6a33b44d7f989043e448030c518210744b35a08e
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 671a8fbce92a675bf04035e1352f26b0449d3373
 branches:
   - name: stable/wallaby
     location: 3.2.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom

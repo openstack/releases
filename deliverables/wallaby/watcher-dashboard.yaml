@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: ce5b07f3a2c03c351ca216e7ece81da82e3262ae
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: ce5b07f3a2c03c351ca216e7ece81da82e3262ae
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher-dashboard/wallaby.html

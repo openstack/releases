@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 4498a25d7e91aa1737a46f6016a2bf7d0bf92a31
+  - version: victoria-eom
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4498a25d7e91aa1737a46f6016a2bf7d0bf92a31
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher-dashboard/victoria.html

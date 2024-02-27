@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 80f728b14f821f98a87c230516fea96d167d6550
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: f170e7715eeba2c63fac437a6f67313380933e8e
 branches:
   - name: stable/victoria
     location: 3.1.1
+  - name: unmaintained/victoria
+    location: victoria-eom
