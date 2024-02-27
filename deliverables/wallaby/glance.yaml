@@ -43,7 +43,13 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 677c89c23631e9083261a1a18ed438d8966e0de2
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/glance
+        hash: 883fc8a73c6db3aafeae947465ec9868d23c7538
 branches:
   - name: stable/wallaby
     location: 22.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/glance/wallaby.html

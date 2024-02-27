@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: f802c710835e2e9ac42964c7282bbb4e539b38c5
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: cfed22fcf19a97ddcfc0b0ffdb28e2b0f02d5ea3
 branches:
   - name: stable/wallaby
     location: 3.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-glanceclient/wallaby.html

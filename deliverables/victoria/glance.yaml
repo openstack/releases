@@ -43,7 +43,13 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 31a574b4e562fb8d3c00562d63cc5f8ee274221c
+  - version: victoria-eom
+    projects:
+      - repo: openstack/glance
+        hash: a2bd78bd1c012ce8ade4706c3d08bfeb8d1460f2
 branches:
   - name: stable/victoria
     location: 21.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/glance/victoria.html

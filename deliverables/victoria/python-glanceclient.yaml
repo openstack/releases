@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 8a63928e2ef1e50875db675105f910a511a0242e
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: c8da14633639110c773383a542580c372ebbe8c5
 branches:
   - name: stable/victoria
     location: 3.2.2
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-glanceclient/victoria.html
