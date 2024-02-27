@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 3659bdad861c1648dc53a1f66c968e82b498eb9c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 2ea733ee0f1fa103d34344cdf618ea322ab229e8
 branches:
   - name: stable/wallaby
     location: 9.2.0
-release-notes: https://docs.openstack.org/releasenotes/keystonemiddleware/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/keystonemiddleware/wallaby.html

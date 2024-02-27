@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/pycadf
         hash: 4179996d52dbd37f3fd966225b4157343a75239c
+  - version: victoria-eol
+    projects:
+      - repo: openstack/pycadf
+        hash: 0475709c0734d8314637298de2fd2b005ad5a1cb
 branches:
   - name: stable/victoria
     location: 3.1.1
