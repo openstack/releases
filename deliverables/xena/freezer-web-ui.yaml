@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: 39157c072a59b060f452581e5a5d0a2108be7978
+  - version: xena-eol
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 42691a96aea3caa4ec1320f215b0984f303e55c4
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

@@ -33,6 +33,14 @@ releases:
         hash: e02a4928176cb3816074d7f8a76d6024ce3acf56
       - repo: openstack/freezer-dr
         hash: 599c2bedb3952176aa0056fc47fd82bc64e411d2
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/freezer
+        hash: 19f1c204fb98baa3258f6b52578cdb23275db7c4
+      - repo: openstack/freezer-api
+        hash: ff346a456bee71701ac7feefe99b6ae9c1268e24
+      - repo: openstack/freezer-dr
+        hash: 44df91a4e04fb8bb5f7d00faaa115ed8982c00ae
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1

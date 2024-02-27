@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: 1f5004d5214e46064ba6f3444ff813715e7808ff
+  - version: victoria-eol
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 70df01fc5d8e6d9925d76ad1d4158d0021021280
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

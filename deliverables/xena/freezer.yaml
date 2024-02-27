@@ -33,6 +33,14 @@ releases:
         hash: ee8fc485e7228c0cdb66998ebb69713adb01a869
       - repo: openstack/freezer-dr
         hash: 9e969c8600851f434b143f8eb65281b01fba4d7f
+  - version: xena-eol
+    projects:
+      - repo: openstack/freezer
+        hash: 216d2f3a6cf8884a6174d40614c35d62abfb8f35
+      - repo: openstack/freezer-api
+        hash: ee8fc485e7228c0cdb66998ebb69713adb01a869
+      - repo: openstack/freezer-dr
+        hash: 0bc9a905215b32766e56c731f3b365ea096e6db9
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1
