@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 6da23dd284e9307cdf1fed1bdfb0dc558beed753
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 70716614eb48697e3dd049cb6575d1bb41f5f59a
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/zaqar-ui/wallaby.html
