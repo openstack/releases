@@ -21,6 +21,12 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: 846e255d782d40f27f786013a5a54ef5a5d96582
+  - version: victoria-eom
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: ec37516a686fe45f85807d17d82f66237a81036f
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom

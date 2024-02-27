@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: 77fbd159408be1f9e79fbe5640a6c82baed76b65
+  - version: xena-eom
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 136938945887dece898f4ed8df3c570245234f53
 branches:
   - name: stable/xena
     location: 2.3.0
+  - name: unmaintained/xena
+    location: xena-eom

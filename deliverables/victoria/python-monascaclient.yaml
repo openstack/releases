@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 4c3eef6277f679da2e7773fabed416029e55a5e9
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: e98930a2da986cf5c0012207dd146a3df3964077
 branches:
   - name: stable/victoria
     location: 2.2.1
-release-notes: https://docs.openstack.org/releasenotes/python-monascaclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-monascaclient/victoria.html

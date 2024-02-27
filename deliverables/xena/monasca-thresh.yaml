@@ -21,6 +21,12 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: d256f05be6235dbaaff8ba738e6196b9c6241911
+  - version: xena-eom
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: 92feebd7ca69568dec8d1be59b5286658abb0c4b
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom

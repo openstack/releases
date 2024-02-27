@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: ed2c0d24f7bb4bf1e91beb7ff815bc008868efe7
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: 03760c803c4834cbb4a5959f17de23854d102f3a
 branches:
   - name: stable/wallaby
     location: 2.2.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
