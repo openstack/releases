@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 40bf033a73c5428a5135e828a0c9967854652114
+  - version: victoria-eom
+    projects:
+      - repo: openstack/zun
+        hash: 29c0068259b6f425181f0e067c14c2e067b4e293
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/zun/victoria.html

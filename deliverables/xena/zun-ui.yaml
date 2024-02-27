@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: f27296e6d5605036c773bd947d646feadc30d919
+  - version: xena-eom
+    projects:
+      - repo: openstack/zun-ui
+        hash: 9d538ffe0f4c4ff0633d94977099b915e90f8185
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/zun-ui/xena.html

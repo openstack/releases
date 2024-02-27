@@ -19,9 +19,15 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 6ac7a3ee5322164995248f4534f807e897991180
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/zun
+        hash: 43b495a0e37d1bbf5b88ceb1f5edbf4c90cf67a7
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 cycle-highlights:
   - Introduce the python-binding for iteracting with CRI runtime via
     GRPC
