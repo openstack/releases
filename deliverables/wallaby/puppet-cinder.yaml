@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 592f74a93d00390cb7c16642d0ce88525f50651c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: c693cd9cdd766faff5a0ead41478717d17ba4a26
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/wallaby.html

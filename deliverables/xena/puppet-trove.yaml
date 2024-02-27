@@ -30,7 +30,13 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 1cadc20de097bfc7f14c200437305773db566783
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 5b6ad03310c300daf2ecfb9b904c3d66dcd9692b
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/xena.html

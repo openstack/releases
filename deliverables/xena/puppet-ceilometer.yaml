@@ -34,7 +34,14 @@ releases:
     projects:
       - repo: openstack/puppet-ceilometer
         hash: 842aaeb72ae6a2ccc67cd754554224d2e7653183
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 78dbc6531f2bb895097567ebbeb81436b3768a9f
 branches:
   - name: stable/xena
     location: 19.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-ceilometer/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-ceilometer/xena.html

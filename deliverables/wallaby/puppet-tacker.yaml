@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: 68c3331e90743de0352f25d8841f4ee3340a76f4
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 1dcde391e7e93474484a8d20fd96d681a4a01ebf
 branches:
   - name: stable/wallaby
     location: 18.4.0

@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-senlin
         hash: 9496da69b1a710a70429573315a35218f3fb57cb
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-senlin
+        hash: 89d19ca72dd39e793e4a5797718b23e8e1ef39de
 branches:
   - name: stable/wallaby
     location: 5.4.0

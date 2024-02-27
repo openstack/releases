@@ -38,7 +38,14 @@ releases:
     projects:
       - repo: openstack/puppet-octavia
         hash: 35f7824b0b037427f7e976a5baa726f322c273e4
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: c287bb28d488693ca7dc8903769a4feae00cb08f
 branches:
   - name: stable/wallaby
     location: 18.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-octavia/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-octavia/wallaby.html

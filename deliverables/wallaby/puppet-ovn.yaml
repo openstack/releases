@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: df9d0e7467be0ff86ab35f253eac0311a74ab89f
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 7805f7e0be9ea4217a3631fcd1e1d3e6eaf3dcd8
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-ovn/wallaby.html

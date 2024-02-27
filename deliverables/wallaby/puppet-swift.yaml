@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: c4e12034e1c002c336ac5e7760e8f2839690fdc4
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 3e41d95091960c7d8a90befcb1d200a253335907
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-swift/wallaby.html

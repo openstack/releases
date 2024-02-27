@@ -38,7 +38,14 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: e9796789afd1b6473959955e86c61de027a7f0a7
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: e597c4e312f5e88eb69c0b5bf806b4c62d668703
 branches:
   - name: stable/wallaby
     location: 18.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-keystone/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-keystone/wallaby.html

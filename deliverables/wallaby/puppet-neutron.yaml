@@ -38,7 +38,14 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 2094101f9be1075b58101299dffc87862919a685
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: bdccc30975ee6e8c82370ab45eff3528cbd08ff1
 branches:
   - name: stable/wallaby
     location: 18.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-neutron/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-neutron/wallaby.html

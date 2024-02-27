@@ -30,7 +30,13 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: 8d30113a2a40e4f13d50b3c98df2e632f8582d08
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: ae439d5cd7ef9ccd5de6ef413965068669fa307b
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-sahara/wallaby.html

@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 23c7017929fa89147d3d55ca479208be28173e7f
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 23c7017929fa89147d3d55ca479208be28173e7f
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-mistral/xena.html

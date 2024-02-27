@@ -30,7 +30,13 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 4a997f2ef3873da56a75a9e970e24df10face380
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 9ddf5b2fef840f604a6109c6e18971b9930d7bc9
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/wallaby.html

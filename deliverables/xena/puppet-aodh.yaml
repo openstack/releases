@@ -30,7 +30,13 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 34b1688db1713221c00c90b36d494d58e1d8edd4
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 2521ec80a44b0750c7a261e59909f5d6ba82d936
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/xena.html
