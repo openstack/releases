@@ -24,7 +24,13 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: 8d14a1c6a9eeaef0fdae9ea1210d3310a3498d78
+  - version: xena-eom
+    projects:
+      - repo: openstack/os-vif
+        hash: 8d14a1c6a9eeaef0fdae9ea1210d3310a3498d78
 branches:
   - name: stable/xena
     location: 2.6.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/os-vif/xena.html

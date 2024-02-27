@@ -64,7 +64,13 @@ releases:
     projects:
       - repo: openstack/nova
         hash: b5b57c4669da07c3ee4c53d290e6ac4819bf4e15
+  - version: victoria-eom
+    projects:
+      - repo: openstack/nova
+        hash: b58386b0918c7cf0dfaeec05c797bd7f629e9e15
 branches:
   - name: stable/victoria
     location: 22.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/nova/victoria.html

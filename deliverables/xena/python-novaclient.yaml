@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 8066f8c745054caeb7bd66d4c2be15ab5fac1d1f
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 88d9268b5f3663c8dfea0bd267ed14c5b9348f3b
 branches:
   - name: stable/xena
     location: 17.6.0
-release-notes: https://docs.openstack.org/releasenotes/python-novaclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-novaclient/xena.html

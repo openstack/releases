@@ -24,7 +24,13 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: 6b2050be4a9d90ab81bd77a6b2acc8fe451be379
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/os-vif
+        hash: bac7f7d9d4337c60bf684d5b518c79f9aff95771
 branches:
   - name: stable/wallaby
     location: 2.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/os-vif/wallaby.html

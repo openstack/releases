@@ -21,7 +21,13 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 471e4cc8b78d4382820bbb5245e15d648e7cc136
+  - version: victoria-eom
+    projects:
+      - repo: openstack/placement
+        hash: 93bd7f23ad6e993185e32f038db90bb81e8746e2
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/placement/victoria.html
