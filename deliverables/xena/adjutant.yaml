@@ -24,6 +24,12 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: f8cd1d888fc2335dbc9edcd63e4aa5ff54fac8b7
+  - version: xena-eom
+    projects:
+      - repo: openstack/adjutant
+        hash: af4cf0debaf8eb7d98a20e267e475430ed7bc215
 branches:
   - name: stable/xena
     location: 3.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom

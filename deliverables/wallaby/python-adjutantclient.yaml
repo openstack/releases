@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 32ef2538fc97893c555e438070281d5599bf1ebc
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: a162922973abacd2b30a0d89a4ff30dc7c831ed9
 branches:
   - name: stable/wallaby
     location: 0.8.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
