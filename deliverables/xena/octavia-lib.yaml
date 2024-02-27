@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: ee07c4e5b175a4eb53d7ddfd792227b945d75931
+  - version: xena-eom
+    projects:
+      - repo: openstack/octavia-lib
+        hash: 70bce82a1a57e2c8bc7eff41d22cb085238d1f57
 branches:
   - name: stable/xena
     location: 2.4.1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/octavia-lib/xena.html

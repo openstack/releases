@@ -25,7 +25,14 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 775cf1399ef9a88f199cebbc06ccad5611f5dae6
+  - version: xena-eom
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 35188073b2d7ca5b908ef985d28ae4f61a5aff77
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/octavia-dashboard/xena.html
