@@ -39,7 +39,13 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 84b3519499b55332bfd150d537ad008b6d1c41b5
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslo.cache
+        hash: f0ddb8a63f8b36224b365c962004f17f83dd5ca4
 branches:
   - name: stable/victoria
     location: 2.6.1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.cache/victoria.html

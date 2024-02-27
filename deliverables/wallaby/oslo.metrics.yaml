@@ -21,9 +21,15 @@ releases:
     projects:
       - repo: openstack/oslo.metrics
         hash: ff38ac6fffca85181de31607cd5a060e2f66ff8c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: ff38ac6fffca85181de31607cd5a060e2f66ff8c
 repository-settings:
   openstack/oslo.metrics: {}
 branches:
   - name: stable/wallaby
     location: 0.2.1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.metrics/wallaby.html

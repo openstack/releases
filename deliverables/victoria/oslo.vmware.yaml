@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: aa5a4b1171d1bb0a9f87b0ca7c3afab3204fc57c
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: b707e98e7fbfceee7fe009368f9d9b7d4b11ca88
 branches:
   - name: stable/victoria
     location: 3.7.0
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/victoria.html

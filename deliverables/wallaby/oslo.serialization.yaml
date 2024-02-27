@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: bbe5d5a4f072b3bf986511fa6dd0a9bf2b21e00c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: bbe5d5a4f072b3bf986511fa6dd0a9bf2b21e00c
 branches:
   - name: stable/wallaby
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/wallaby.html

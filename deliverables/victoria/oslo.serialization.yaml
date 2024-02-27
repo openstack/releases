@@ -27,7 +27,14 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: fcd737e2b19a4fee58db79281b336342f0f09d7b
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: fcd737e2b19a4fee58db79281b336342f0f09d7b
 branches:
   - name: stable/victoria
     location: 4.0.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/victoria.html

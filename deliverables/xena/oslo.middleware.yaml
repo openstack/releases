@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: da7987ca926e9bd82ff2989a920ea9740da24f95
+  - version: xena-eom
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: b4b7fa745dfdd076b7568327b0b7995f0d348c96
 branches:
   - name: stable/xena
     location: 4.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.middleware/xena.html

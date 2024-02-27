@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: 9b29c909dbb418e75b5841de09d0df0bae7c91d1
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslo.log
+        hash: 2bba920089bdf022c053fcbab0ef8989c87ab5cd
 branches:
   - name: stable/victoria
     location: 4.4.0
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.log/victoria.html

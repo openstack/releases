@@ -31,7 +31,13 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 639b47198b3334c33f4675a9210c31922c50be52
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/oslo.policy
+        hash: de7f51e0eb743b9d29424b7cc600cf73bec638e0
 branches:
   - name: stable/wallaby
     location: 3.7.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.policy/wallaby.html
