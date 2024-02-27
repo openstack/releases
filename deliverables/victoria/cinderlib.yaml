@@ -8,6 +8,8 @@ repository-settings:
 branches:
   - location: 3.0.0
     name: stable/victoria
+  - name: unmaintained/victoria
+    location: victoria-eom
 releases:
   - version: 3.0.0
     projects:
@@ -21,4 +23,8 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: afd28b9875f15416a1340c4c95cdf46c8c6bfcae
+  - version: victoria-eom
+    projects:
+      - repo: openstack/cinderlib
+        hash: dcf2a4b5e567acdff2f36dc154d20721062d2898
 release-notes: https://docs.openstack.org/releasenotes/cinderlib/victoria.html

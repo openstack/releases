@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 4f72e6f0c218751d28c8442d401e2fd2abcec1ea
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 3d309b785ad7a58fb13176d1a9b9770afb36c238
 branches:
   - name: stable/wallaby
     location: 7.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-cinderclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cinderclient/wallaby.html

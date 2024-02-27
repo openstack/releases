@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: fab6ddf30c4bc0add1551d5de05b9bf336317063
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 64943b71b0f76b488dbf6bb11a0d7d3c905b97ec
 branches:
   - name: stable/xena
     location: 8.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-cinderclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cinderclient/xena.html

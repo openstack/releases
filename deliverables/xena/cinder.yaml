@@ -71,7 +71,13 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: cd172e5dad8e866293f88c3f25c8e182175fd903
+  - version: xena-eom
+    projects:
+      - repo: openstack/cinder
+        hash: f8ea857720addd986dd50432d49880c36ae1fd54
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/cinder/xena.html

@@ -52,7 +52,13 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 3aa3968342ff16fba8e4426f5301f670aa72fc51
+  - version: victoria-eom
+    projects:
+      - repo: openstack/cinder
+        hash: ed500fc9a3adca11ed2d184b78f35ac2133ada44
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/cinder/victoria.html
