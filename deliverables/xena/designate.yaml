@@ -33,7 +33,13 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 019b1ae9cb54f06f7b754024687e9f0fdfad9534
+  - version: xena-eom
+    projects:
+      - repo: openstack/designate
+        hash: 64655c9076a5487fc2dea59a109c7d0d5201b0e9
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/designate/xena.html

@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/designate
         hash: f2557474951e96677939dc768c98a02543380b72
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/designate
+        hash: 66498722ddec222d2512b1396fb25d3d473e341e
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/designate/wallaby.html
