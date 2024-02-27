@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: f8e8ecb2b8c49f446beaf42805619c3d0523d070
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/storlets
+        hash: d6edad01309e06baadd84fa7af9fa5d7e0fc05e2
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/storlets/wallaby.html
