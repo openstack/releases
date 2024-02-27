@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: b3981c6f8b013affa484fac1270ef57b8b292261
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: 5b8127c9ffaadcd2ed9524db9e16cda21e818c94
 branches:
   - name: stable/wallaby
     location: 1.1.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom

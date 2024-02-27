@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/ansible-role-atos-hsm
         hash: c9f757de685c2989198db633d677cf46ae4b282c
+  - version: xena-eom
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: ebd5421c6de25f4588c67aa7adc8f233f70b3823
 branches:
   - name: stable/xena
     location: 2.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom

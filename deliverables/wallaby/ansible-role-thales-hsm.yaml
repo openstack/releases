@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/ansible-role-thales-hsm
         hash: e82db3b3fc5088c393eb810bf52329444a91b4eb
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: f95c0fc15d1d7eba661abb6f04a02631ba4cf62c
 branches:
   - name: stable/wallaby
     location: 1.0.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
