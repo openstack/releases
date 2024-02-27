@@ -14,7 +14,14 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: d5b24b2a5732d8d0c55c543fd92b10d81b4ea215
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: e4baa9aff71fe3a98601107f66c64462d5755a9d
 branches:
   - name: stable/xena
     location: 7.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-masakariclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-masakariclient/xena.html
