@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 6d689be76c1b0c55206b46a190608e8336fb927f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/solum
+        hash: a2a1d60b3c3ef4456a3f73df28d1cc24692e82d9
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1

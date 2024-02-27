@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: e43cee97ff3506984265aa5aa5ecaf9d7b871353
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 7f2a98b9a21215091c67759305cfbcfe185aea1a
 branches:
   - name: stable/xena
     location: 3.4.0

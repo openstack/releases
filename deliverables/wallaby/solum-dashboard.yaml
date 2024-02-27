@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/solum-dashboard
         hash: 874e693c34c6e2fb4d9a9a9a9cdd7d44d41df626
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 0b603ae72fb39b4cf7df87f4d79524f29337250f
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1

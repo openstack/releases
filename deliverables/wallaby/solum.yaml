@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 86765728bbe9d6287845d10f8a0201e8b3f447b6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/solum
+        hash: 137ea9f4afe629459d78028ac02eb154891ae983
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1
