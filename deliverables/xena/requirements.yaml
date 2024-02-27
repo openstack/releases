@@ -11,3 +11,10 @@ branches:
   - name: stable/xena
     location:
       openstack/requirements: 51fa0f216cc4a8b391bb68c504127219c115652f
+  - name: unmaintained/xena
+    location: xena-eom
+releases:
+  - version: xena-eom
+    projects:
+      - repo: openstack/requirements
+        hash: 4beb369bc42eed6a2155206588bc0a2860a94ebc
