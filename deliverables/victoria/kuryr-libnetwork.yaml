@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/kuryr-libnetwork
         hash: c587fc063d8e1f9956daff6a864f5378238106f7
+  - version: victoria-eom
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 402b764c2f6a1290125d03b5280a5c6b7666b44c
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/kuryr-libnetwork/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/kuryr-libnetwork/victoria.html

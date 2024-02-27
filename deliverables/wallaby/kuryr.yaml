@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: f9737498168abe81b442649a296e85198d96e29a
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: ab0929857feba2b498b90df6400bf80f1d68489f
 branches:
   - name: stable/wallaby
     location: 2.3.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr/wallaby.html
