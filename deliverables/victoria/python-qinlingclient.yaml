@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-qinlingclient
         hash: cf8f0cf5c82813823f9b225bd01ddff732e55fe3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-qinlingclient
+        hash: 47fe86d3ad64696b618a7ae131ace2bdeb7f20fe
 branches:
   - name: stable/victoria
     location: 5.1.1
-release-notes: https://docs.openstack.org/releasenotes/python-qinlingclient/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-qinlingclient/victoria.html
