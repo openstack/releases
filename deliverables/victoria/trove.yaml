@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 5165a170c09331643b57e08ecbca85e96bad4ce3
+  - version: victoria-eom
+    projects:
+      - repo: openstack/trove
+        hash: 2c6398293f6209bfc37be7ab545a7fc934e908e7
 branches:
   - name: stable/victoria
     location: 14.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/victoria.html

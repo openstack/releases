@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 3a6e79c3c0cabaf3293046647481a792895efb05
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 3a6e79c3c0cabaf3293046647481a792895efb05
 branches:
   - name: stable/wallaby
     location: 16.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/trove-dashboard/wallaby.html

@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 4225bafca20d67a14c41f996440fb413943b452e
+  - version: xena-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: f1c3e51bed9b26688cd7f357e65c3bd06e23e31a
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/xena.html

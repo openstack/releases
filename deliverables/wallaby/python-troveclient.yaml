@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: c7319d8fe8cb6cfd5c423472283aadffb12ed52c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-troveclient
+        hash: d0fbad4aa2990548894f1f4b4778fbfb0f768f73
 branches:
   - name: stable/wallaby
     location: 7.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-troveclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-troveclient/wallaby.html
