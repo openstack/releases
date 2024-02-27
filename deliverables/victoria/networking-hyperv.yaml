@@ -22,7 +22,14 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: fca3366641786aabae43178154e3c60e3042c20c
+  - version: victoria-eom
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 7ac2571424c9226bd8ac6222020f3625831c6d0f
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-hyperv/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-hyperv/victoria.html
