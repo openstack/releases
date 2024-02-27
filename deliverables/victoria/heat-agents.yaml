@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 6725696d1ba87bc4ab112eb203a270d3c81476fc
+  - version: victoria-eom
+    projects:
+      - repo: openstack/heat-agents
+        hash: 5308254d772bde453425e5db3782d0747a43adf6
 branches:
   - name: stable/victoria
     location: 2.1.1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-agents/victoria.html
