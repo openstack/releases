@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: 9b223d3e22f2078cce7972ce65fe19e5c3323f6b
     name: stable/yoga
+  - name: unmaintained/yoga
+    location: yoga-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: yoga-eom
+    projects:
+      - repo: openstack/grenade
+        hash: fd4ded5792bd66fe29eeccb36bd69dbd3f9bfe43
