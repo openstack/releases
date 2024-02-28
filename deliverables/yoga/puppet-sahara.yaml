@@ -29,7 +29,9 @@ releases:
       - repo: openstack/puppet-sahara
         hash: 8b82f3c4a09174352c21356e34a860fcbf04055f
 repository-settings:
-  openstack/puppet-sahara: {}
+  openstack/puppet-sahara:
+    flags:
+      - retired
 branches:
   - name: stable/yoga
     location: 20.3.0

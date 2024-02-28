@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-sahara: {}
+  openstack/puppet-sahara:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: d9812ec5be4fd6edbdfaa0d76f8eab7d3dd5edda
