@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: 03083c3dabdd4dc0c945a8cfcca0b9ba8852063e
+  - version: 3.1.1
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: c2522501c3fd90cddfdb5913b525be3d9dfdf5c4
 branches:
   - name: stable/zed
     location: 3.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-octaviaclient/zed.html
