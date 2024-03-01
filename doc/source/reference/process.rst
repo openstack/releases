@@ -1021,9 +1021,6 @@ R-5 week (Milestone-3)
     changes should be added there to make sure the consumers of your release
     notes see them.
 
-    Finally, if you haven't proposed $series cycle-highlights yet, you are
-    already late to the party. Please see $email for details.
-
     Upcoming Deadlines & Dates
     --------------------------
 
