@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: d27ddcd3cabc2aaf5ac1a2abe9c060a25e8fd185
+  - version: 3.1.2
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 2a98dbb555626cb844cd1b804c1fb49049b7c86c
 branches:
   - name: stable/zed
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/ovn-octavia-provider/zed.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ovn-octavia-provider/zed.html
