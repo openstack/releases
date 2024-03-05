@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: fb318e704f68c92cb7391d9e44d598c6101ebec4
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/blazar-nova
+        hash: c71d01e3955a5904d1f557840285292422cbefe6
 branches:
   - name: stable/wallaby
     location: 2.2.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom

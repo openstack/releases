@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: e653050bc27ae99dbbd59bb6c4beb8f34486c0ba
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: e653050bc27ae99dbbd59bb6c4beb8f34486c0ba
 branches:
   - name: stable/xena
     location: 3.3.1
-release-notes: https://docs.openstack.org/releasenotes/python-blazarclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-blazarclient/xena.html

@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 5c7608dfa24dc5a5a3f18af09d35e8ea8760aee5
+  - version: victoria-eom
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 916463f5d7f32a33fa40408d60514064e94eedbe
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar-dashboard/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar-dashboard/victoria.html
