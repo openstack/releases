@@ -10,3 +10,15 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: b1db5137836790e6f8fa33098d228d244da2337e
+cycle-highlights:
+  - Support was added for the external-gateway-multihoming API extension.
+    The L3 service plugins supporting it can now create multiple gateway
+    ports per router. It is currently limited to the L3 OVN plugin.
+  - Bidirectional Forwarding Detection (BFD) and Equal-Cost Multi-Path (ECMP)
+    configuration options are now supported on default routes. Both
+    configuration options have a default value of ‘False’ and are only
+    supported with the OVN driver.
+  - Metadata over IPv6 is now supported in the OVN driver.
+  - The L3 OVN scheduler was updated to better distribute gateways over
+    chassis in different eligible Availability Zones (AZs), making it more
+    resilient to failure.
