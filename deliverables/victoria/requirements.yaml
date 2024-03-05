@@ -11,3 +11,10 @@ branches:
   - name: stable/victoria
     location:
       openstack/requirements: fc679c617443a8f99601c67454842dd51d02b94c
+  - name: unmaintained/victoria
+    location: victoria-eom
+releases:
+  - version: victoria-eom
+    projects:
+      - repo: openstack/requirements
+        hash: a88a0be4666544c304fdb6f77eecc5800fd89b11

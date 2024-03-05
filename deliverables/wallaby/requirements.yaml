@@ -11,3 +11,10 @@ branches:
   - name: stable/wallaby
     location:
       openstack/requirements: 040e24a73f93c5f1c81fc2312a3552f4cb972cc5
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/requirements
+        hash: 015717ea1bcc3aa5060bf2257f8438d7b8655621
