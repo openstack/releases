@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: 3208f7fbcae31f84f0d8b0ff05ef63f5f7f2a075
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/octavia-lib
+        hash: f7f79e5c2dfc33392b04cf0badda0d9cbfe65e24
 branches:
   - name: stable/wallaby
     location: 2.3.1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/octavia-lib/wallaby.html

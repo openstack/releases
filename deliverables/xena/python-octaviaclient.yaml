@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: 6ef3eed57378490ab9731cc5f3c0975aa0a4d4e9
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 67ca30b8052d5669fbf93550526d498fb5f547cb
 branches:
   - name: stable/xena
     location: 2.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-octaviaclient/xena.html
