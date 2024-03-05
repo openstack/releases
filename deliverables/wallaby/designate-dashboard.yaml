@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: ec54320a2d4ede78b6982c2f7bdfe0e2d1f9fccb
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: aedd7ec53408961be11809728fee948cde4eb496
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate-dashboard/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/designate-dashboard/wallaby.html

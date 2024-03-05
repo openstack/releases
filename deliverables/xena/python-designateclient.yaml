@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 018b722f43c0d2ae59edee3051cf52160e0c73d9
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 018b722f43c0d2ae59edee3051cf52160e0c73d9
 branches:
   - name: stable/xena
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-designateclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-designateclient/xena.html

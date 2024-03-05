@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 907727702f9b77ef25a585ab5d2414ecf758b767
+  - version: xena-eom
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 907727702f9b77ef25a585ab5d2414ecf758b767
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/designate-dashboard/xena.html

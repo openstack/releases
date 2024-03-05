@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 055d1601beb95644e37976d9f4aa3601d5084bc1
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 637755a89ab0fe4abe4ab82af4e605b132bbcf65
 branches:
   - name: stable/victoria
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-designateclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-designateclient/victoria.html
