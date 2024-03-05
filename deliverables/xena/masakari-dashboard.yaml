@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: fae46199bba14b9d0f746338803fffa898f6532c
+  - version: xena-eom
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: fae46199bba14b9d0f746338803fffa898f6532c
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/masakari-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/masakari-dashboard/xena.html
