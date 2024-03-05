@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: d3fdbcdf60e85fe738fd84809703c4230b4b915f
+  - version: xena-eom
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 998e7bdc62c1797b730bf872abfff93668025ff9
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/cloudkitty-dashboard/xena.html

@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 502e42154aa75d67fb823c362577712fe3b6971d
+  - version: xena-eom
+    projects:
+      - repo: openstack/cloudkitty
+        hash: f647e44f422bb3b78b16e8c4193260308807fff8
 branches:
   - name: stable/xena
     location: 15.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/xena.html

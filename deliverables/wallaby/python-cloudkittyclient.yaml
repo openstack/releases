@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 1e8b06243e4d0131c4b053bd67ff94478d6fb673
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 628c2406c6016026131c8a3db7f82c52b123ce1a
 branches:
   - name: stable/wallaby
     location: 4.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-cloudkittyclient/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cloudkittyclient/wallaby.html
