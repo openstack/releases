@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: a241c9c48f8105d071d7da7c620fc3afe6fd0f7c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/heat-translator
+        hash: d4208a6a56e414ab4e774700218426f5ae8ad295
 branches:
   - name: stable/wallaby
     location: 2.2.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom

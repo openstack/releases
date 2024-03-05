@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: fe74538ae2e415381ad8a6489d30125442088526
+  - version: victoria-eom
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: d469727485f3cd0024659eadd9f5e807b629d745
 branches:
   - name: stable/victoria
     location: 2.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom

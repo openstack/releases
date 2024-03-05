@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 43b19f63078a93b2b7ce717e313993cb51e34a3b
+  - version: xena-eom
+    projects:
+      - repo: openstack/tacker
+        hash: 43b19f63078a93b2b7ce717e313993cb51e34a3b
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/tacker/xena.html

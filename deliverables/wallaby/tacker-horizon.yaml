@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 70566f48610c5917f9b24b9804f843a76a4effef
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: e9271d5919b4bd76e4884f781aa0d6a612240d1e
 branches:
   - name: stable/wallaby
     location: 3.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom

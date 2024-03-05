@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: a1c2cbe960766629c74f3d26a46219b52f5f1bb3
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 12d325ecf041da085b03774624f90d01303c2e95
 branches:
   - name: stable/wallaby
     location: 2.3.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
