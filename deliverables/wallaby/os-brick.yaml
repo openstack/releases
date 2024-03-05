@@ -39,7 +39,13 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: cf69f9247061bd0a945a6fb6bf688acff617eb2c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/os-brick
+        hash: 5dcda6b961fa765c817f94a782a6fff48295c89a
 branches:
   - location: 4.3.0
     name: stable/wallaby
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/os-brick/wallaby.html

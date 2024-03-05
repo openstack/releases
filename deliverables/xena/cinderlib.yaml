@@ -14,7 +14,13 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: e13887ec984603fe2b3b43668bfc6eac121c2cfd
+  - version: xena-eom
+    projects:
+      - repo: openstack/cinderlib
+        hash: 9f83b47cdcd80a5e1e53770bacb70b16636090a3
 branches:
   - name: stable/xena
     location: 4.1.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/cinderlib/xena.html
