@@ -24,6 +24,12 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 2fff77e0e8680cee03a8dcf6f2c877164b8b9c10
+  - version: victoria-eom
+    projects:
+      - repo: openstack/ec2-api
+        hash: dede404dddcfc61661f6ccc8012b2b4b416dc490
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
