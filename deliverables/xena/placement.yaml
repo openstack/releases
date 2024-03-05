@@ -25,7 +25,13 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 1cf167fbadb058f5f8a07022bf4a53473b019221
+  - version: xena-eom
+    projects:
+      - repo: openstack/placement
+        hash: f96984abd48f4d938d0fff0bab9b12ed933e320e
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/placement/xena.html
