@@ -7,3 +7,9 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+cycle-highlights:
+  - |
+    Designate now supports Catalog Zones (RFC 9432). This can improve the
+    scalability of Designate pools managing a large number of zones and
+    significantly reduce the provisioning time when adding additional DNS
+    servers to a Designate pool.
