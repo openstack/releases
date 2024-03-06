@@ -17,7 +17,13 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: d571260d41bfe309412570785665a9afd8d8eef2
+  - version: xena-eom
+    projects:
+      - repo: openstack/os-win
+        hash: 53f3b50548cd68b36450e1846e0d6c81a1c30722
 branches:
   - name: stable/xena
     location: 5.5.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/os-win/xena.html

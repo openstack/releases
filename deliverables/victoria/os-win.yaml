@@ -21,7 +21,13 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 028770ce27ef94e3718f61fd15be1646174a81d9
+  - version: victoria-eom
+    projects:
+      - repo: openstack/os-win
+        hash: d92ed09680af8833b2c4523f33f5eaf5c3078ed4
 branches:
   - name: stable/victoria
     location: 5.1.0
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/os-win/victoria.html
