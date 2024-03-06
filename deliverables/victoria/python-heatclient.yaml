@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: bb22add60c5d7a206ed8023d78fd155e256253a0
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-heatclient
+        hash: defd40074f5904d42357f6f7f82fcf6a25064ef6
 branches:
   - name: stable/victoria
     location: 2.2.1
-release-notes: https://docs.openstack.org/releasenotes/python-heatclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-heatclient/victoria.html
