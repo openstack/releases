@@ -14,7 +14,14 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 556a43ef3193a1fa5ea127c64f98c0d5e9972afa
+  - version: xena-eom
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: c7605c589037c750cb2db7e36e3bfb2cf1bc5886
 branches:
   - name: stable/xena
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage-dashboard/xena.html

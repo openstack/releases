@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: b8636808065da1202ed8fd606dda7e39268e629e
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: adce598e67ab30ab2997f61ad9d8eeadaaeef688
 branches:
   - name: stable/victoria
     location: 4.1.1
-release-notes: https://docs.openstack.org/releasenotes/python-vitrageclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-vitrageclient/victoria.html
