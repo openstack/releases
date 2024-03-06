@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 632061cb68e7d61a5c8987eede6053dbbad3e703
+  - version: victoria-eom
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: a99d5db87de283b027df533b0189828d69385656
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-dynamic-routing/victoria.html

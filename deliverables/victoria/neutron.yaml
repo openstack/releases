@@ -66,7 +66,13 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 37c2e6b708678d2e648f111d102b6394f4e704b0
+  - version: victoria-eom
+    projects:
+      - repo: openstack/neutron
+        hash: 76140f8a6d73cd0e791ce974b28bdb7f1f7ccdc9
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron/victoria.html

@@ -28,7 +28,14 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 1ba3fb13b63827935d93d4b0d50ca653e217f61c
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 1ba3fb13b63827935d93d4b0d50ca653e217f61c
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-dynamic-routing/wallaby.html

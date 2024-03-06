@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: f0a1186b5f0328837fe4038d4dda766b4cb8987f
+  - version: xena-eom
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: f0a1186b5f0328837fe4038d4dda766b4cb8987f
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/xena.html
