@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: de25d65c1487a2d7ec0f4e94e65593d5e8e8f552
+  - version: 15.6.0
+    projects:
+      - repo: openstack/kolla
+        hash: 9eb088b63020ba22b1950eb6b248150721098b9c
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
