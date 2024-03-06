@@ -64,7 +64,13 @@ releases:
       - repo: openstack/manila
         hash: af9d0658aad17d4ad9e5053e5c5b07df7924bd58
 
+  - version: xena-eom
+    projects:
+      - repo: openstack/manila
+        hash: 8ab5ec6b4f9393d940da6222188be2341816aace
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/manila/xena.html
