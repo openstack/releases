@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 07343c853af4e9b74fe11faaa2bbc1a8c1e62b78
+  - version: xena-eom
+    projects:
+      - repo: openstack/horizon
+        hash: 050914d8b68bf049097bdd5656084df9ba64e684
 branches:
   - name: stable/xena
     location: 20.1.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/horizon/xena.html

@@ -39,7 +39,13 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: beed6bf6f6f83df9972db5fb539d64175ce12ce9
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/horizon
+        hash: 9b1a13e0837b9f0ac3e0e919ad0a270d417003db
 branches:
   - name: stable/wallaby
     location: 19.1.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/horizon/wallaby.html
