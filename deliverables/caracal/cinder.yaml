@@ -3,5 +3,16 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    New driver features were added, notably, Fujitsu ETERNUS DX extend
+    volume on RAID group, Pure Storage synchronous replication, NetApp
+    iSCSI LUN space allocation, Dell PowerFlex Active-Active support.
+  - |
+    Along with many bug fixes, some major ones are: series of fixes to
+    make the NVMe connector more robust, fixing partial scanning issue
+    in fibre channel connector, addressed volumes preserving sparseness
+    when reimaging, RBD now able to delete volumes with volume/snapshot
+    dependencies.
 repository-settings:
   openstack/cinder: {}
