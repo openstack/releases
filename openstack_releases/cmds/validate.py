@@ -72,8 +72,6 @@ _CLOSED_SERIES = set([
     'stein',
     'train',
     'ussuri',
-    'victoria',
-    'wallaby',
 ])
 
 _USES_PREVER = set([
