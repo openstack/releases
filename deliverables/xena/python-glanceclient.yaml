@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 74a55bd2fc0bd5fcab75d6be197eff0882470da7
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: f0ccd09ad5976cc67eaca244c820a7106aecf4c5
 branches:
   - name: stable/xena
     location: 3.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-glanceclient/xena.html
