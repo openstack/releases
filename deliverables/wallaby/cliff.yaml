@@ -23,6 +23,12 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 117a1005dc208b55aba93652856c8001b28a48ce
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/cliff
+        hash: 0dfc3377f19f8aa3cb8550685d5c891950e797ef
 branches:
   - name: stable/wallaby
     location: 3.7.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
