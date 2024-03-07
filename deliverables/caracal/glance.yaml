@@ -5,6 +5,17 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - From Caracal, users now by default can use Central Database for caching.
+  - Sqlite cache driver has been deprecated and new centralized_db cache
+    driver is introduced.
+  - glance-cache-manage command has been deprecated in favor of the new Cache
+    API.
+  - The glance scrubber utility and its associated configuration options have
+    been deprecated.
+  - location_strategy option has been deprecated since in Bobcat, a new
+    weighing mechanism has been introduced, which makes the location strategy
+    obsolete.
 repository-settings:
   openstack/glance: {}
 releases:
