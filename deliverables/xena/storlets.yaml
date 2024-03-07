@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: a513114c33d414037ec80bc6c5722dae52a90410
+  - version: xena-eom
+    projects:
+      - repo: openstack/storlets
+        hash: b524ed936708d74bb9c5064da6866879feb67a14
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/storlets/xena.html
