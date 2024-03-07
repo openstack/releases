@@ -6,3 +6,10 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+cycle-highlights:
+  - Added support for VPNaaS setup with ``ml2.ovn`` neutron_plugin_driver.
+  - Added support for OVN BGP Agent installation.
+  - Added support for OVN driver for Octavia.
+  - Added experimental way for deploying Magnum with Vexxhost Cluster API driver.
+  - Implemented ``openstack.osa.openstack_resources`` role for creation and management
+    of common resources inside OpenStack
