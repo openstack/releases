@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 0461d8e766b8ba7ea6f3754c70e2f2acd8a457f7
+  - version: xena-eom
+    projects:
+      - repo: openstack/automaton
+        hash: 363c487fb5ed10cc5c8636435bd9335aa8c7f6ef
 branches:
   - name: stable/xena
     location: 2.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/automaton/xena.html

@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/futurist
         hash: 1a1c6f89c4a5d6d36edc66674e251e7e6dd04c30
+  - version: victoria-eom
+    projects:
+      - repo: openstack/futurist
+        hash: 34b6340c12de7d330cd003516b719d0d2d8288dd
 branches:
   - name: stable/victoria
     location: 2.3.0
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/futurist/victoria.html

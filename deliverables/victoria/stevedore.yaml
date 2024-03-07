@@ -39,7 +39,13 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 274eaa6c5487124fae3a19fa8aa80ea7d889105b
+  - version: victoria-eom
+    projects:
+      - repo: openstack/stevedore
+        hash: 7bd3b30a22fd5d6d7ec5fea6f4ad48dd925a60a7
 branches:
   - name: stable/victoria
     location: 3.2.2
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/stevedore/victoria.html

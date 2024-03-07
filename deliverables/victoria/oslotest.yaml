@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/oslotest
         hash: aaf3a726ba8a941ee1c834e4be7acd68516b4362
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslotest
+        hash: f283a880ca23714b63f9df8df0695be0a07f50eb
 branches:
   - name: stable/victoria
     location: 4.4.1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/oslotest/victoria.html

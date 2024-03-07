@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: 2b94a4f9ebeafc825d2b06e15a1b397072e31fbc
+  - version: xena-eom
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 523dc380f0fa5c5826e71a2af1b8b714810cb157
 branches:
   - name: stable/xena
     location: 4.2.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/xena.html

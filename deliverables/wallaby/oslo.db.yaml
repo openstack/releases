@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 26fd6fbc1ca4229c81a99937979aa2628e8f5e33
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/oslo.db
+        hash: 26fd6fbc1ca4229c81a99937979aa2628e8f5e33
 branches:
   - name: stable/wallaby
     location: 8.5.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.db/wallaby.html

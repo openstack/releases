@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 1a7bd66a7179ca374e996e76f346def33787a21f
+  - version: xena-eom
+    projects:
+      - repo: openstack/oslo.config
+        hash: 3290e603dd855f5575fc30acd213bd50670810b8
 branches:
   - name: stable/xena
     location: 8.7.1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.config/xena.html

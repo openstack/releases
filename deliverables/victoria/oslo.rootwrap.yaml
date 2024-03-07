@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: ed1659a5e30967edecc98ff085578e7577151aef
+  - version: victoria-eom
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 615615a5c61cd1e6d7cda946b669055b7f4e8d5a
 branches:
   - name: stable/victoria
     location: 6.2.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.rootwrap/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.rootwrap/victoria.html

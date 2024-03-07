@@ -22,7 +22,13 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 4eb212b826d1befd179d9321e1ebc88a0c55c3b7
+  - version: xena-eom
+    projects:
+      - repo: openstack/castellan
+        hash: 28458a85bb00ab6529d4efd5cfd1245d2292c96a
 branches:
   - name: stable/xena
     location: 3.9.1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/castellan/xena.html

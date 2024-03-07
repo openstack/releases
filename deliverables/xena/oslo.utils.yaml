@@ -35,7 +35,13 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 90a504672071d61bdae3206c4764bd3528c165d6
+  - version: xena-eom
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 3ae82df28d7882dc4d13e9332b273a1b42fa82ce
 branches:
   - name: stable/xena
     location: 4.10.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.utils/xena.html
