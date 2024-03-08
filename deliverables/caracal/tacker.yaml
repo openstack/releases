@@ -5,3 +5,13 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+cycle-highlights:
+  - Introduce a sample of management driver for deploying Cilium.
+  - Update tacker-horizon for supporting NFV Orchestration API V2.0 operations.
+  - Drop legacy APIs introduced before ETSI NFV SOL standards support.
+  - Revise documentation for fixing lack of usecases or usages of support
+    tools, dropping descriptions of legacy features such as VNFFG, and
+    improving structure of the docs for maintaenance.
+  - Several bug fixes including Terraform infra-driver, invalid behavior
+    of placementConstraints or so.
+  - Terminate huge amount of useless logs in test results on zuul.
