@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-qdr: {}
+  openstack/puppet-qdr:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: d1166d3db0acac2f2735b6af30974add9e7f4752

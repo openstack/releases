@@ -9,7 +9,9 @@ releases:
         repo: openstack/puppet-qdr
     version: 10.0.0
 repository-settings:
-  openstack/puppet-qdr: {}
+  openstack/puppet-qdr:
+    flags:
+      - retired
 branches:
   - name: stable/zed
     location: 10.0.0
