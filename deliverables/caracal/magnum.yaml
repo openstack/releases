@@ -3,5 +3,29 @@ launchpad: magnum
 release-model: cycle-with-rc
 team: magnum
 type: service
+cycle-highlights:
+  - |
+    ``RBAC``: API policies new defaults and scope are enabled by default.
+  - |
+    Support for ``Kubernetes v1.27`` has been added.
+  - |
+    Multiple drivers offering the same functionality (e.g. vm, ubuntu,
+    kubernetes) can now be installed and selected by Cluster Template instead
+    of a single driver suppressing the other.
+  - |
+    Magnum will now no longer keep image tag labels (e.g. cloud_provider_tag,
+    flannel_tag) static. Please specify explicitly all image tags for the
+    images your Cluster Templates will be using, to prevent a future change
+    breaking your Cluster Templates. Refer to the documentation under
+    ``Supported Labels`` for a list of labels Magnum is tested with.
+  - |
+    Project gating for Heat driver cluster creation and testing has been added.
+  - |
+    Deprecated drivers ``k8s_coreos_v1``, ``k8s_fedora_atomic_v1``,
+    ``k8s_fedora_ironic_v1`` and ``Docker Swarm`` have been removed.
+  - |
+    ``Cilium`` ``Kubernetes`` network driver has been added to supported
+    CNI list. No in-tree drivers deploy Cilium this cycle, but out-of-tree
+    drivers may now implement this CNI.
 repository-settings:
   openstack/magnum: {}
