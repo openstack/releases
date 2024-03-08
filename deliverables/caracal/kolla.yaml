@@ -3,5 +3,14 @@ launchpad: kolla
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    Add possibility to override  ``Prometheus``, ``Lets Encrypt`` and ``etcd``
+    versions and checksums in `kolla-build.conf`.
+  - |
+    Build summaries exportable as JSON, specified by ``summary_json_file``
+    option.
+  - |
+    Integrated HAProxy Prometheus metrics; deprecated standalone exporter.
 repository-settings:
   openstack/kolla: {}

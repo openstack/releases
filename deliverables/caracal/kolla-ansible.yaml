@@ -3,5 +3,20 @@ launchpad: kolla-ansible
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    Enabled elevated access for project-scoped service roles in Ironic,
+    aligning with new policy. Added the service role to Ironic service users.
+  - |
+    Introduced Fluentd Plugin Systemd for log reading from ``/var/log/journal``,
+    configurable via `enable_fluentd_systemd` in ``/etc/kolla/globals.yml``.
+  - |
+    Added log retention feature in OpenSearch, replacing Elasticsearch Curator,
+    with customizable retention periods.
+  - |
+    New ``neutron_dns_integration`` and ``neutron_dns_domain`` variables for DNS
+    integration settings in neutron.
+  - |
+    Horizon role updated to preferred ``local_settings.d`` configuration model.
 repository-settings:
   openstack/kolla-ansible: {}
