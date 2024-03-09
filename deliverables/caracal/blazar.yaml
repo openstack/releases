@@ -5,3 +5,8 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+cycle-highlights:
+  - Better handling of usage enforcement exceptions, to prevent leases from
+    going into error state when updates are denied by policy.
+  - Support for specifying a custom CA bundle, which can be used for
+    compatibility with internal TLS deployments.
