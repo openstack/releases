@@ -5,3 +5,11 @@ team: tacker
 type: horizon-plugin
 repository-settings:
   openstack/tacker-horizon: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: a1840d24babe2f259d76833894a8b9774a275e34
+branches:
+  - name: stable/2024.1
+    location: 9.0.0.0rc1
