@@ -12,3 +12,11 @@ cycle-highlights:
     has merged.
   - Keystone now honors domain attribute mapping rules.
   - Application Credential validation speed has been improved.
+releases:
+  - version: 25.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 4121cf6cb7c3d5e585df827d72e08296664f7326
+branches:
+  - name: stable/2024.1
+    location: 25.0.0.0rc1
