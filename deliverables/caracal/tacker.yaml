@@ -15,3 +15,11 @@ cycle-highlights:
   - Several bug fixes including Terraform infra-driver, invalid behavior
     of placementConstraints or so.
   - Terminate huge amount of useless logs in test results on zuul.
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: b4d82e774cd51d0e05a0191506251951ea549901
+branches:
+  - name: stable/2024.1
+    location: 11.0.0.0rc1
