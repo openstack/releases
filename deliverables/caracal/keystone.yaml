@@ -5,3 +5,10 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+cycle-highlights:
+  - |
+    `Consistent and secure RBAC (Phase 1)
+    <https://governance.openstack.org/tc/goals/selected/consistent-and-secure-rbac.html#phase-1>`_
+    has merged.
+  - Keystone now honors domain attribute mapping rules.
+  - Application Credential validation speed has been improved.
