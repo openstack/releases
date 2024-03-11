@@ -1,8 +1,15 @@
 ---
-storyboard: openstack/kayobe
+launchpad: kayobe
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    Added support for environment specific hooks as an extension to the
+    multiple environments feature.
+  - |
+    Added support for using OS package repositories that require
+    authentication.
 repository-settings:
   openstack/kayobe: {}
   openstack/kayobe-config:
