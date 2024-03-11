@@ -6,3 +6,11 @@ team: cloudkitty
 type: horizon-plugin
 repository-settings:
   openstack/cloudkitty-dashboard: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 944b68d74791d1db93d5164b9983848e4aad6533
+branches:
+  - name: stable/2024.1
+    location: 18.0.0.0rc1
