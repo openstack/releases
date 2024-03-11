@@ -6,3 +6,11 @@ release-model: cycle-with-rc
 release-type: neutron
 repository-settings:
   openstack/neutron-vpnaas: {}
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: 53b060dbe13b5b1c06a8c4e37def2cf79e699f95
+branches:
+  - name: stable/2024.1
+    location: 24.0.0.0rc1
