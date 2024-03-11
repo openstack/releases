@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - name: stable/2024.1
+    location:
+      openstack/devstack-plugin-ceph: 6e0ab534c0523d10f9ede34042c89d858a67d600
 repository-settings:
   openstack/devstack-plugin-ceph: {}
