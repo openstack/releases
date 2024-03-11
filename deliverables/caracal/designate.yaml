@@ -13,3 +13,11 @@ cycle-highlights:
     scalability of Designate pools managing a large number of zones and
     significantly reduce the provisioning time when adding additional DNS
     servers to a Designate pool.
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 018c7ee862d0bf31fa08ae92339c5f6f0b738a73
+branches:
+  - name: stable/2024.1
+    location: 18.0.0.0rc1
