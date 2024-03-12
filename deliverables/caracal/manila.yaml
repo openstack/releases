@@ -3,5 +3,25 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - Creating share networks with Manila's UI Dashboard will now follow a
+    two-step workflow, as part of a change to support multiple share network
+    subnets.
+  - Users can specify a custom export location for their shares, making mount
+    paths predictable. A prefix should be configured by the administrators,
+    else Manila will use the project ID as a prefix to the custom mount point
+    name.
+  - While disabling a service, you can now specify a reason for it. When
+    the service is enabled again, the reason will be automatically removed.
+  - Administrators are now able to configure metadata options that can only
+    be manipulated by more privileged users through a new config option.
+  - Shares created using the CEPHFS protocol will now feature the backing
+    filesystem name in the share metadata, making it easier to mount shares.
+  - A new driver-advantaged share backup implementation has been added with
+    NetApp ONTAP storage systems.
+  - Administrators can now enable a deferred approach for share and share
+    snapshot deletions. With this approach, user quotas are immediately
+    released while deletions are processed within back-end storage systems
+    in periodic intervals.
 repository-settings:
   openstack/manila: {}
