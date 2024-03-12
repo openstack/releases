@@ -14,3 +14,12 @@ releases:
 branches:
   - name: stable/2024.1
     location: 20.0.0.0rc1
+cycle-highlights:
+  - Removal of Monasca fetcher and collector.
+  - Add OpenSearch as a v2 storage backend.
+  - Add description option to a rating metric definition.
+  - Support to SQL Alchemy 2.0.
+  - Add support to InfluxDB v2 as storage backend.
+  - Add groupby options by different timeframes.
+  - Optimize CloudKitty reprocessing process.
+  - Patch for `use_all_resource_revisions` option.
