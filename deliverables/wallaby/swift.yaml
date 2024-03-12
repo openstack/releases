@@ -14,9 +14,15 @@ releases:
     projects:
       - repo: openstack/swift
         hash: c6a64036651e18f3d7d0715c5d4876257aaa0e6f
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/swift
+        hash: 16dbcae9df9773f2b2bfea41fd4156e16aa14b37
 branches:
   - name: stable/wallaby
     location: 2.27.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 cycle-highlights:
   - Static large object segments can now be deleted asynchronously;
     multipart uploads deleted through the S3 API will always be deleted

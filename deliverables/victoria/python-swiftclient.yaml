@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 9d8db8f6126542dc18ea1b14e078d64cc1a254e4
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 73a16ecaa90a5951db7e9b138e673625338b571a
 branches:
   - name: stable/victoria
     location: 3.10.1
-release-notes: https://docs.openstack.org/releasenotes/python-swiftclient/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-swiftclient/victoria.html
