@@ -20,6 +20,12 @@ releases:
     projects:
       - repo: openstack/adjutant-ui
         hash: 104c474479e9a89d22b96777378ff59983c03393
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 104c474479e9a89d22b96777378ff59983c03393
 branches:
   - name: stable/wallaby
     location: 2.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom

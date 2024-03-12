@@ -20,6 +20,12 @@ releases:
     projects:
       - repo: openstack/adjutant-ui
         hash: 92f8bdc649b96e437bec23dbf334cbdd9fc3ec7b
+  - version: victoria-eom
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 58504b599f73194ab0b0f296ded526eb2394fc7d
 branches:
   - name: stable/victoria
     location: 1.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
