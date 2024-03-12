@@ -1242,6 +1242,10 @@ R-3 week (RC1 deadline)
     them up for $next-series development, though the focus should still be on
     finishing up $series until the final release.
 
+    Opening up the new development cycle is also a good opportunity to teams
+    to revise their zuul jobs and used nodesets and clean up all unnecessary
+    ones.
+
     For projects with translations, watch for any translation patches coming
     through and merge them quickly. A new release should be produced so that
     translations are included in the final $series release.
