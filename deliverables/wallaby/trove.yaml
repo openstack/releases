@@ -35,7 +35,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 579b6142cf8a37fdc35cfa313151c8f1063c9001
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/trove
+        hash: bd4e97b4d71d18e76e25ad58b31219ebf1236e50
 branches:
   - name: stable/wallaby
     location: 15.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/wallaby.html

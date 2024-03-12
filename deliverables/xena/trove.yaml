@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 71d8400db5403e37f17340bc05b2a22324d334cd
+  - version: xena-eom
+    projects:
+      - repo: openstack/trove
+        hash: 8d43fe17a20f62c46146810458fb0fd283c77b2a
 branches:
   - name: stable/xena
     location: 16.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/xena.html

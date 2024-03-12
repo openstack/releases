@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 1e9ee5bc5e5a5a3da563b1b9bb73a374d40944a6
+  - version: victoria-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 1e9ee5bc5e5a5a3da563b1b9bb73a374d40944a6
 branches:
   - name: stable/victoria
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/trove-dashboard/victoria.html
