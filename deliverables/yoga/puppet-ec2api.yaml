@@ -25,7 +25,9 @@ releases:
       - repo: openstack/puppet-ec2api
         hash: 6b78a13d357e7c753071dfcdbcbc1aa4789690e7
 repository-settings:
-  openstack/puppet-ec2api: {}
+  openstack/puppet-ec2api:
+    flags:
+      - retired
 branches:
   - name: stable/yoga
     location: 20.3.0

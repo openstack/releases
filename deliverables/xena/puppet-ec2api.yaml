@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-ec2api: {}
+  openstack/puppet-ec2api:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 2484e981bf40fe6ecab3d01ba97571b1149c1180
