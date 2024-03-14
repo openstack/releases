@@ -12,3 +12,11 @@ cycle-highlights:
     Octavia Amphora based load balancers now support using SR-IOV Virtual
     Functions (VF) for the load balancer VIP ports. This can significantly
     reduce latency for traffic flowing through the load balancer.
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: 9f1a6e47d7eb77492bfcc68adb1392f163ce6d26
+branches:
+  - name: stable/2024.1
+    location: 14.0.0.0rc1
