@@ -10,3 +10,11 @@ cycle-highlights:
     going into error state when updates are denied by policy.
   - Support for specifying a custom CA bundle, which can be used for
     compatibility with internal TLS deployments.
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 6a2219a4eb54e49ff9730af51767940a730f7a4b
+branches:
+  - name: stable/2024.1
+    location: 13.0.0.0rc1
