@@ -35,6 +35,12 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 27305f013923db12d5a5b153ab10caa0046c3d6f
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 5a9995e5671d12070f8215bc0da22e338204ea4b
 branches:
   - name: stable/wallaby
     location: 4.6.1
+  - name: unmaintained/wallaby
+    location: wallaby-eom

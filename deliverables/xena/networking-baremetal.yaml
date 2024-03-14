@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: cd69016601675016bccaaf611528a6439e254b68
+  - version: xena-eom
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 81cb49ed4967435fefbaffef7981c94291637e0a
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-baremetal/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-baremetal/xena.html

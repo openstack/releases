@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 57d439d24245c61ce91d6f2532a95d65fbc08639
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ironic
+        hash: 663a97f8c39ad212603168b1369ca778e5b9aaef
 branches:
   - name: bugfix/16.1
     location: 16.1.0
@@ -50,6 +54,8 @@ branches:
     location: 16.2.0
   - name: stable/wallaby
     location: 17.0.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 cycle-highlights:
   - Redfish capability enhancements covering Out of Band hardware RAID
     configuration, and automatic Secure Boot setting enablement.

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/sushy-cli
         hash: 911616593885ea424484ecb8be50993834e1eb4d
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sushy-cli
+        hash: 10b3508578428a0b052846698c761cf1895f2c6d
 branches:
   - name: stable/wallaby
     location: 0.4.0

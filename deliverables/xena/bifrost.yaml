@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 44a3884ae00afd2e1dad9e9cea81deb7d1a4d2d8
+  - version: xena-eom
+    projects:
+      - repo: openstack/bifrost
+        hash: 14f1836f86b165ba1cbfb0208bb1fda854dcbe08
 branches:
   - name: bugfix/11.0
     location: 11.0.0
@@ -38,4 +42,6 @@ branches:
     location: 11.1.0
   - name: stable/xena
     location: 11.2.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/bifrost/xena.html

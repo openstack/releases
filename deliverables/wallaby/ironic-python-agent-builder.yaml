@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: e0b51e07f0b7a3e9a3aea170c479f3bfec7df5af
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 43aabaa16f8e04ed2d562a597f51d18c6ae53a68
 branches:
   - name: stable/wallaby
     location: 2.7.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-python-agent-builder/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-python-agent-builder/wallaby.html

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 38a71741e9e135ec345fa65f2e249a089a05de09
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/bifrost
+        hash: 80db3cd8a950548b44bee6662b74a92cb9a1e39f
 branches:
   - name: bugfix/10.0
     location: 10.0.0
@@ -34,4 +38,6 @@ branches:
     location: 10.1.0
   - name: stable/wallaby
     location: 10.2.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/bifrost/wallaby.html

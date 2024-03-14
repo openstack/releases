@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: 0b292a1f4749e776ac449db4881af7848ee62bca
+  - version: victoria-eom
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: c5e06744f9fc071e7cd8361077f4f6e37fffb76d
 branches:
   - name: bugfix/6.2
     location: 6.2.0
@@ -47,4 +51,7 @@ branches:
     location: 6.3.0
   - name: stable/victoria
     location: 6.4.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-python-agent/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-python-agent/victoria.html

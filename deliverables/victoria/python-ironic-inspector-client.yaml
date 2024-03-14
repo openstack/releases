@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: d046ba7a1d4f32362698b3f8e9ba15c16fed0fa5
+  - version: victoria-eom
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: a53bd607926d5ee805447006aaf702471d351171
 branches:
   - name: stable/victoria
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-ironic-inspector-client/victoria.html
