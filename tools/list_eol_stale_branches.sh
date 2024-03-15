@@ -54,7 +54,7 @@ BASEDIR=$(dirname $TOOLSDIR)
 source $TOOLSDIR/functions
 enable_tox_venv
 
-em_series=($(list-em-series))
+eom_series=($(list-eom-series))
 
 # Make sure no pager is configured so the output is not blocked
 export PAGER=
@@ -64,28 +64,28 @@ setup_temp_space 'list-eol-stale-branches'
 branch=$(series_to_branch "$series")
 
 function no_open_patches {
-    req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${em_branch}"
+    req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${eom_branch}"
     patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
     [ -z "${patches}" ]
     no_opens=$?
     if [[ "$no_opens" -eq 1 ]]; then
         echo "Patches remained open on stale branch (make sure to abandon them):"
-        echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${em_branch}"
+        echo "https://review.opendev.org/q/status:open+project:${repo}+branch:stable/${eom_branch}"
     fi
     return $no_opens
 }
 
 function eol_tag_matches_head {
     head=$(git log --oneline --decorate -1)
-    [[ "$head" =~ "${em_branch}-eol" ]] && [[ "$head" =~ "origin/stable/${em_branch}" ]]
+    [[ "$head" =~ "${eom_branch}-eol" ]] && [[ "$head" =~ "origin/stable/${eom_branch}" ]]
     matches=$?
     if [[ "$matches" -eq 1 ]] ; then
         tags=$(git tag)
-        [[ "$tags" =~ "${em_branch}-eol" ]]
+        [[ "$tags" =~ "${eom_branch}-eol" ]]
         eol_tag_exists=$?
         if [[ "$eol_tag_exists" -eq 0 ]]; then
-            echo "WARNING !!! stable/${em_branch} has patches on top of the ${em_branch}-eol tag."
-            echo "Please check the branch and ${em_branch}-eol tag manually."
+            echo "WARNING !!! stable/${eom_branch} has patches on top of the ${eom_branch}-eol tag."
+            echo "Please check the branch and ${eom_branch}-eol tag manually."
             echo "Do not delete the branch if you are not sure!"
             read -p "> If you are sure the branch can be deleted, then press D + Enter: " DELETE
             if [ "${DELETE,,}" == "d" ]; then
@@ -94,40 +94,40 @@ function eol_tag_matches_head {
                 echo "Skipping."
             fi
         else
-            echo "No ${em_branch}-eol tag found! Branch cannot be deleted. Skipping."
+            echo "No ${eom_branch}-eol tag found! Branch cannot be deleted. Skipping."
         fi
     fi
     return $matches
 }
 
 function is_eol {
-    ${TOOLSDIR}/delete_stable_branch.py check --quiet ${repo} ${em_branch}
+    ${TOOLSDIR}/delete_stable_branch.py check --quiet ${repo} ${eom_branch}
     if [[ $? -eq 0 ]]; then
         echo
-        echo "${repo} contains eol stale branch (${em_branch})"
-        clone_repo ${repo} stable/${em_branch}
+        echo "${repo} contains eol stale branch (${eom_branch})"
+        clone_repo ${repo} stable/${eom_branch}
         cd ${repo}
         if no_open_patches && eol_tag_matches_head; then
-            read -p "> Do you want to delete the branch stable/${em_branch} from ${repo} repository? [y/N]: " YN
+            read -p "> Do you want to delete the branch stable/${eom_branch} from ${repo} repository? [y/N]: " YN
             if [ "${YN,,}" == "y" ]; then
                 if [ -z "$gerrit_username" ]; then
                     read -p "Gerrit username: " gerrit_username
                 fi
-                ${TOOLSDIR}/delete_stable_branch.py delete ${gerrit_username} ${repo} ${em_branch}
+                ${TOOLSDIR}/delete_stable_branch.py delete ${gerrit_username} ${repo} ${eom_branch}
             fi
         fi
         cd ..
     fi
 }
 
-for em_branch in "${em_series[@]}"; do
-    repos=$(list-deliverables -r --series "${em_branch}" --is-eol)
+for eom_branch in "${eom_series[@]}"; do
+    repos=$(list-deliverables -r --series "${eom_branch}" --is-eol)
 
     # Show the eol stale branches for each repository.
     for repo in ${repos}; do
         cd ${MYTMPDIR}
         echo
-        echo " --- $repo ($em_branch) --- "
-        is_eol "${repo}" "${em_branch}"
+        echo " --- $repo ($eom_branch) --- "
+        is_eol "${repo}" "${eom_branch}"
     done
 done

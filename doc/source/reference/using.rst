@@ -1014,11 +1014,11 @@ is equivalent to:
 
   ./list_unreleased_changes.sh stable/liberty $(list-deliverables --repos --series liberty)
 
-list-em-series
---------------
+list-eom-series
+---------------
 
-Command to list all series tagged as in extended maintenance.
+Command to list all series tagged as in end of maintenance ("Unmaintained").
 
 ::
 
-  tox -e venv -- list-em-series
+  tox -e venv -- list-eom-series
