@@ -5,3 +5,11 @@ team: barbican
 type: service
 repository-settings:
   openstack/barbican: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/barbican
+        hash: b6edfda3443f80b20915e020143573b84114a252
+branches:
+  - name: stable/2024.1
+    location: 18.0.0.0rc1
