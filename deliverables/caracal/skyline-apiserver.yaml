@@ -5,3 +5,11 @@ team: skyline
 type: service
 repository-settings:
   openstack/skyline-apiserver: {}
+releases:
+  - version: 4.0.0.0rc1
+    projects:
+      - repo: openstack/skyline-apiserver
+        hash: 86c2fd5ce74edb6f06ca6309d0ecc69b195434cf
+branches:
+  - name: stable/2024.1
+    location: 4.0.0.0rc1
