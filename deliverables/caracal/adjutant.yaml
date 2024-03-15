@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/adjutant:
     tarball-base: python-adjutant
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant
+        hash: 8deababd1b1639400485903d88d15252c0a14b6c
+branches:
+  - name: stable/2024.1
+    location: 8.0.0.0rc1
