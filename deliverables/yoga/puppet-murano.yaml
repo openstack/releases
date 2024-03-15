@@ -29,7 +29,9 @@ releases:
       - repo: openstack/puppet-murano
         hash: 17ebe7d38036ece2301082a5f9f3788eceefbf4d
 repository-settings:
-  openstack/puppet-murano: {}
+  openstack/puppet-murano:
+    flags:
+      - retired
 branches:
   - name: stable/yoga
     location: 20.3.0
