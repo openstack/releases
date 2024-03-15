@@ -5,7 +5,14 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+releases:
+  - version: 2.33.0
+    projects:
+      - repo: openstack/swift
+        hash: 5f95b6b26db1c86dd9c5276c4124dd80041df75f
 branches:
+  - name: stable/2024.1
+    location: 2.33.0
   - name: feature/mpu
     location:
       openstack/swift: 627448362abc1f83d9385165de232f47545f18e7
