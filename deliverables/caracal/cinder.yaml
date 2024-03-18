@@ -16,3 +16,11 @@ cycle-highlights:
     dependencies.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: aec1c88712a2c3623594da658476cd2a478bcbbb
+branches:
+  - name: stable/2024.1
+    location: 24.0.0.0rc1
