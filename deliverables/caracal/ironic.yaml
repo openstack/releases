@@ -15,43 +15,53 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 9050f66a1b8ec8778fec06fd00a7f2254663608c
+  - version: 24.1.0
+    projects:
+      - repo: openstack/ironic
+        hash: 99b1f9c47985be3a93a71558b444badfec0e16fd
 branches:
   - name: bugfix/23.1
     location: 23.1.0
   - name: bugfix/24.0
     location: 24.0.0
+  - name: stable/2024.1
+    location: 24.1.0
 cycle-highlights:
   - Ironic has enabled RBAC support by default by changing the default
     values of ``[oslo_policy]enforce_scope`` and
-    ``[oslo_policy]enforce_new_defaults`` to ``True``. Additionally, we
-    added ``[DEFAULT]rbac_service_project_name`` to define a project where
-    users in that project are treated as having a service role.
-    Please see Ironic release notes for full details.
+    ``[oslo_policy]enforce_new_defaults`` to ``True``.
+    Additionally, we added ``[DEFAULT]rbac_service_project_name``
+    to define a project where users in that project are treated as having
+    a service role. Please see Ironic release notes for full details.
   - Ironic has added the ability to drain active tasks from a conductor
     before shutdown. Sending a ``SIGUSR2`` signal to an ironic-conductor
     will now attempt to complete running tasks with a timeout of
-    ``[DEFAULT]drain_shutdown_timeout``. No new tasks will be started on
-    the conductor while it's draining.
-  - Ironic now has basic testing for OVN-based deployments, using the OVN
-    DHCP service. This includes lightly tested support for OVN VTEP switches.
-    Operators considering use of this support should read
-    `Ironic OVN documentation <https://docs.openstack.org/ironic/latest/admin/ovn-networking.html>`_
+    ``[DEFAULT]drain_shutdown_timeout``. No new tasks will be started on the
+    conductor while it's draining.
+  - Ironic now has basic testing for OVN-based deployments, using the
+    OVN DHCP service. This includes lightly tested support for OVN VTEP
+    switches. Operators considering use of this support should read
+    `Ironic OVN documentation
+    <https://docs.openstack.org/ironic/latest/admin/ovn-networking.html>`_
     for more information and details on limitations.
   - Several Ironic drivers have been deprecated in favor of more modern,
     redfish-based drivers. The ``ibmc``, ``xclarity``, and ``idrac-wsman``
     drivers will be removed during a future development cycle. Operators
-    utilizing these drivers are encouraged to use the redfish hardware type
-    instead. Additionally, users of the ``ilo`` hardware type on newer ILO6-based
-    hardware will now be prompted to use ``redfish`` instead.
-  - Ironic now supports UEFI HTTP mode booting. The ``http`` boot interface is
-    based upon the ``pxe`` interface, and ``http-ipxe`` is based upon ``ipxe``.
-  - Ironic now supports in-band inspection and node auto-discovery without an
-    additional ironic-inspector service. An online data migration was added which
-    migrates inspection interface on idle nodes to ``agent`` if inspector-based
-    inspection is disabled, and agent-based inspection is enabled.
+    utilizing these drivers are encouraged to use the redfish hardware
+    type instead. Additionally, users of the ``ilo`` hardware type on
+    newer ILO6-based hardware will now be prompted to use ``redfish``
+    instead.
+  - Ironic now supports UEFI HTTP mode booting. The ``http`` boot interface
+    is based upon the ``pxe`` interface, and ``http-ipxe`` is based
+    upon ``ipxe``.
+  - Ironic now supports in-band inspection and node auto-discovery without
+    an additional ironic-inspector service. An online data migration
+    was added which migrates inspection interface on idle nodes to ``agent``
+    if inspector-based inspection is disabled, and agent-based inspection
+    is enabled.
   - Ironic will now reserve a small number of worker threads for user-interactive
-    API usage. Previously, an overloaded Ironic cluster could fail API calls if many
-    nodes performed provisioning actions at the same time.
+    API usage. Previously, an overloaded Ironic cluster could fail API
+    calls if many nodes performed provisioning actions at the same time.
   - Ironic now supports pulling down images from a web server authenticated
-    using basic auth. This permits standalone Ironic users to secure their
-    external image repositories.
+    using basic auth. This permits standalone Ironic users to secure
+    their external image repositories.
