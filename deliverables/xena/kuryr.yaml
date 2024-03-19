@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 764de32607059a9a1a0bd37c46609815a1abe1ba
+  - version: xena-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: 80969dbc9114075e1973b5da9eecc4f62aa5b52c
 branches:
   - name: stable/xena
     location: 2.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr/xena.html
