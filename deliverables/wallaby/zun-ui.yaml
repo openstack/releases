@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: aa4875f1218ff9f1cfa32640ccab28fe7b245410
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/zun-ui
+        hash: cab18083f307b3c805bc9951c24ed0dab088ebad
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/zun-ui/wallaby.html
