@@ -5,9 +5,18 @@ team: cinder
 type: service
 cycle-highlights:
   - |
+    Following drivers with inactive CI were marked unsupported:
+
+    * Windows iSCSI Driver
+    * Windows SMB Driver
+    * Dell SC Series Storage Driver (iSCSI, FC)
+    * Dell VNX Storage Driver (FC, iSCSI)
+    * Dell XtremeIO Storage Driver (iSCSI, FC)
+  - |
     New driver features were added, notably, Fujitsu ETERNUS DX extend
     volume on RAID group, Pure Storage synchronous replication, NetApp
-    iSCSI LUN space allocation, Dell PowerFlex Active-Active support.
+    iSCSI LUN space allocation, Dell PowerFlex Active-Active support,
+    Dell PowerMax configurable SRDF snapshots.
   - |
     Along with many bug fixes, some major ones are: series of fixes to
     make the NVMe connector more robust, fixing partial scanning issue
