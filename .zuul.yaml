@@ -9,16 +9,21 @@
       - ^data/.*$
       - ^doc/.*$
 
+- job:
+    name: releases-tox-validate
+    parent: openstack-tox-validate
+    post-run: playbooks/releases-tox-validate/post.yaml
+    timeout: 3600
+    irrelevant-files:
+      - ^doc/.*$
+
 - project:
     templates:
       - openstack-python3-jobs
       - build-openstack-docs-pti
     check:
       jobs:
-        - openstack-tox-validate:
-            timeout: 3600
-            irrelevant-files:
-              - ^doc/.*$
+        - releases-tox-validate
         - releases-tox-list-changes
         - openstack-tox-py38:
             irrelevant-files:
@@ -53,10 +58,8 @@
         - check-release-approval
     gate:
       jobs:
-        - openstack-tox-validate:
+        - releases-tox-validate:
             timeout: 10800
-            irrelevant-files:
-              - ^doc/.*$
         - openstack-tox-py38:
             irrelevant-files:
               - ^data/.*$

@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - name: Return artifact to Zuul
+      zuul_return:
+        data:
+          zuul:
+            artifacts:
+              - name: tox-validate results
+                url: tox/validate/validate-request-results.log
+
