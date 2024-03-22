@@ -103,6 +103,7 @@ cycle:
     start: '2024-02-19'
     x-project:
       - c-final-lib
+      - d-election-nominations
   - end: '2024-03-01'
     name: R-5
     start: '2024-02-26'
@@ -112,6 +113,8 @@ cycle:
       - c-final-clientlib
       - c-soft-sf
       - c-rf
+      - d-election-nominations
+      - d-election-email-deadline
     project-specific:
       - c-cinder-ci-checkpoint
   - end: '2024-03-08'
@@ -119,20 +122,25 @@ cycle:
     start: '2024-03-04'
     x-project:
       - c-cycle-highlights
+      - d-election-campaigning
   - end: '2024-03-15'
     name: R-3
     start: '2024-03-11'
     x-project:
       - c-rc1
       - c-hard-sf
+      - d-election-voting
   - end: '2024-03-22'
     name: R-2
     start: '2024-03-18'
+    x-project:
+      - d-election-voting
   - end: '2024-03-29'
     name: R-1
     start: '2024-03-25'
     x-project:
       - c-finalrc
+      - d-election-close
   - end: '2024-04-05'
     name: R+0
     start: '2024-04-01'
