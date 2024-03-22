@@ -7,3 +7,7 @@ release-model: cycle-with-intermediary
 stable-branch-type: tagless
 repository-settings:
   openstack/requirements: {}
+branches:
+  - name: stable/2024.1
+    location:
+      openstack/requirements: 93a3e51432519a14a378a729554b5273675e945b
