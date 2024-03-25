@@ -28,16 +28,14 @@ branches:
     location: 24.1.0
 cycle-highlights:
   - Ironic has enabled RBAC support by default by changing the default
-    values of ``[oslo_policy]enforce_scope`` and
-    ``[oslo_policy]enforce_new_defaults`` to ``True``.
-    Additionally, we added ``[DEFAULT]rbac_service_project_name``
+    values of ``[oslo_policy]enforce_scope`` and ``[oslo_policy]enforce_new_defaults``
+    to ``True``. Additionally, we added ``[DEFAULT]rbac_service_project_name``
     to define a project where users in that project are treated as having
     a service role. Please see Ironic release notes for full details.
   - Ironic has added the ability to drain active tasks from a conductor
     before shutdown. Sending a ``SIGUSR2`` signal to an ironic-conductor
-    will now attempt to complete running tasks with a timeout of
-    ``[DEFAULT]drain_shutdown_timeout``. No new tasks will be started on the
-    conductor while it's draining.
+    will now attempt to complete running tasks with a timeout of ``[DEFAULT]drain_shutdown_timeout``.
+    No new tasks will be started on the conductor while it's draining.
   - Ironic now has basic testing for OVN-based deployments, using the
     OVN DHCP service. This includes lightly tested support for OVN VTEP
     switches. Operators considering use of this support should read
@@ -65,3 +63,4 @@ cycle-highlights:
   - Ironic now supports pulling down images from a web server authenticated
     using basic auth. This permits standalone Ironic users to secure
     their external image repositories.
+release-notes: https://docs.openstack.org/releasenotes/ironic/2024.1.html

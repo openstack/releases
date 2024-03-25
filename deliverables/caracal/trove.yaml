@@ -4,8 +4,9 @@ release-model: cycle-with-rc
 team: trove
 type: service
 cycle-highlights:
-  - Trove now supports the network isolation between the management network and the
-    business network by implementing a simple docker network driver in Guest agent.
+  - Trove now supports the network isolation between the management
+    network and the business network by implementing a simple docker
+    network driver in Guest agent.
 repository-settings:
   openstack/trove: {}
 releases:
@@ -16,3 +17,4 @@ releases:
 branches:
   - name: stable/2024.1
     location: 21.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/trove/2024.1.html
