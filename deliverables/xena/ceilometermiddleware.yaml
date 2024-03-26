@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: 082dabb1b7186f614664f69db32f80918b20d624
+  - version: xena-eom
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 2f651b1e4652ccdadc9b2e6057957af0b48d143a
 branches:
   - name: stable/xena
     location: 2.3.0
-release-notes: https://docs.openstack.org/releasenotes/ceilometermiddleware/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ceilometermiddleware/xena.html

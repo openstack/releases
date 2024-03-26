@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: b3613ff708844f2b7cb30976e904af96ae3981ed
+  - version: victoria-eom
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 63a5ce4719c498d8736dc3dccbfd213e6283011a
 branches:
   - name: stable/victoria
     location: 2.1.0
-release-notes: https://docs.openstack.org/releasenotes/ceilometermiddleware/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ceilometermiddleware/victoria.html

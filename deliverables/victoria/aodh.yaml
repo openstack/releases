@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 8635b67777e3aa0c90eccdbcb5753e33a1750aeb
+  - version: victoria-eom
+    projects:
+      - repo: openstack/aodh
+        hash: c6f34ce2636b383db58c6cf83839fbd772bb6ea6
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/aodh/victoria.html
