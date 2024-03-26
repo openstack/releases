@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 112bcae1fbec355fcb58da07ae1d9f1adf8b77ba
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 2504ca98bfe8459f0fdc3e7c9510c8c663055b90
 branches:
   - name: stable/wallaby
     location: 4.3.1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/keystoneauth/wallaby.html

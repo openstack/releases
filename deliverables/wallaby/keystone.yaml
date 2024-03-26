@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 6c75b657352a86e50e63aec44d28784d8863df99
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/keystone
+        hash: 8c5d283af91478e1203491d656ae6b236e2d84fb
 branches:
   - name: stable/wallaby
     location: 19.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/keystone/wallaby.html

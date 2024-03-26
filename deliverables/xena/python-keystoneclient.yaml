@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: d5cb761763988217cdd00a7981a62e2083fd381f
+  - version: xena-eom
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 0678eac95aa98b50a5fd0fb9fa55031508c99d26
 branches:
   - name: stable/xena
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-keystoneclient/xena.html
