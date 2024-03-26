@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: acd70beba1bdf7189291a6a1a65ce45393ecac6d
+  - version: xena-eom
+    projects:
+      - repo: openstack/mistral-extra
+        hash: 578355f349d19b5529a07ca1f3492422f1c1d232
 branches:
   - name: stable/xena
     location: 11.1.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral-extra/xena.html

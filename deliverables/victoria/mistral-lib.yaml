@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 245c1272f2219991194cfead55d03277e68cccd7
+  - version: victoria-eom
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 1110feefe6c47efbe74f1d5fbd0ec27e8bdbc646
 branches:
   - name: stable/victoria
     location: 2.3.0
+  - name: unmaintained/victoria
+    location: victoria-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral-lib/victoria.html
