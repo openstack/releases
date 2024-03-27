@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 92c93e9f1e9a9b835025e882ef862865f20d1014
+  - version: victoria-eom
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 2d4becf5803f8ceb79dcc04f896b2e07d774f073
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-persister/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-persister/victoria.html

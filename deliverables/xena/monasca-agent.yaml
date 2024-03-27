@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 170afab95203989e3e3247275d71e56be7966800
+  - version: xena-eom
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 284233aa9e53601548ae2ec435331b59974aa5a7
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom

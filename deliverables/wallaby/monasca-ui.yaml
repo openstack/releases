@@ -23,6 +23,12 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 8eef491ad5f4e719f190b367d155134bdc32eaf2
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 8eef491ad5f4e719f190b367d155134bdc32eaf2
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom

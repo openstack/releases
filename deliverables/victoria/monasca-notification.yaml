@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: f9978670b8437b106cc8a4fa88f6760da98c3b87
+  - version: victoria-eom
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 3a17e34451846a77d8dbca1fa059d59f2cd629b0
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-notification/victoria.html
+  - name: unmaintained/victoria
+    location: victoria-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-notification/victoria.html

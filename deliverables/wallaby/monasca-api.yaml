@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: e576fc49399acb36b0189cc5b8398379864991e8
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/monasca-api
+        hash: bb09b2b0a03c00c6e711c68360ce6b659d274694
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/monasca-api/wallaby.html

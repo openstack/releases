@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: fa2454a3c9c524773891e53d2d61f9227a9a2d46
+  - version: xena-eom
+    projects:
+      - repo: openstack/monasca-notification
+        hash: a94f013ff4addceb93ab556b666f63da7ea820e5
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-notification/xena.html
+  - name: unmaintained/xena
+    location: xena-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-notification/xena.html

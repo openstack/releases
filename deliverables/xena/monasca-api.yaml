@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 7466a2f962ec5e14651ad9d5597753b3c05c3c25
+  - version: xena-eom
+    projects:
+      - repo: openstack/monasca-api
+        hash: 95c5b62addc2687395cd2cac22779a90fa7ea456
 branches:
   - name: stable/xena
     location: 7.0.0.0rc1
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/monasca-api/xena.html

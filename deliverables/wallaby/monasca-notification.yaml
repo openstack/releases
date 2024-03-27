@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: b7f87925990f7f816a9b61ed542322d544d30265
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/monasca-notification
+        hash: b7f87925990f7f816a9b61ed542322d544d30265
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/monasca-notification/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/monasca-notification/wallaby.html
