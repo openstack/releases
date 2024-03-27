@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack: 680298e7c67a4250f2edf603ffb90510d5cbf496
     name: stable/victoria
+  - name: unmaintained/victoria
+    location: victoria-eom
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: victoria-eom
+    projects:
+      - repo: openstack/devstack
+        hash: 326163c1aed4fda2b763237a98a6bb7018b1faad

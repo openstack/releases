@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-ceph: c55c49121acdb38a0d8d4a7ee6a89c9dec37507a
     name: stable/victoria
+  - name: unmaintained/victoria
+    location: victoria-eom
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: victoria-eom
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: d434e9c91dd2383aa661f0af0c1604c5c89356df

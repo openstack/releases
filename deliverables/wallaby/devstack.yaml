@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack: a64c843052529cf5c8ac8cf8eb46c59b103b4b47
     name: stable/wallaby
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/devstack
+        hash: ec783f0b044012d3d7e1410d3b599e67fc9dd624

@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: 08199218df99ead17d7c34256ed0969b8ae3b3af
     name: stable/wallaby
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/grenade
+        hash: e280e4d4f1b5ba019478f36fd2a6f7c5bb276a76

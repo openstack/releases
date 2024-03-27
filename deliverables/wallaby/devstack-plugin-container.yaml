@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-container: d4de1bb9905aebff7e3620d08aa65dc334d435b8
     name: stable/wallaby
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 6ba48627e046a7c06d9bc33e70419c3cbc3a4025

@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-ceph: c55c49121acdb38a0d8d4a7ee6a89c9dec37507a
     name: stable/wallaby
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: a04376dba90cd7afa692fd9c135ee19e6a169ab2

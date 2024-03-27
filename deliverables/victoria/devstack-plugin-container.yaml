@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-container: 74bf39e6a6ba5a83b1f30b7213b0e2d5545cf1c0
     name: stable/victoria
+  - name: unmaintained/victoria
+    location: victoria-eom
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: victoria-eom
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: a4c0ad5d223c908b2fdbcfea18d3c8b086a9bc1f

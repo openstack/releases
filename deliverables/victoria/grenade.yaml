@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: bee397ed880d17c35ec68028ef67d7e3dd0d8798
     name: stable/victoria
+  - name: unmaintained/victoria
+    location: victoria-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: victoria-eom
+    projects:
+      - repo: openstack/grenade
+        hash: 15cfe2b6f34314d5fb8b6b29179da106b76b108d

@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: d61a95325b3d052216aa13931c7a6d4a132a5843
     name: stable/xena
+  - name: unmaintained/xena
+    location: xena-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: xena-eom
+    projects:
+      - repo: openstack/grenade
+        hash: 803429361397484c42cbefb6094c9588ffe7296b

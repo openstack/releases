@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack: c9f3e5bdd76430a7c14b9f02c3f8ba47214037ae
     name: stable/xena
+  - name: unmaintained/xena
+    location: xena-eom
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: xena-eom
+    projects:
+      - repo: openstack/devstack
+        hash: de9a15adbcc12dacef5b58da18c72d65c087651a
