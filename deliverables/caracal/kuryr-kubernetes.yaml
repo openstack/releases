@@ -10,8 +10,13 @@ releases:
     projects:
       - repo: openstack/kuryr-kubernetes
         hash: 0c1fe5fd3c5b441c8d0b8e36997f4293ea891a27
+  - version: 10.0.0
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 0c1fe5fd3c5b441c8d0b8e36997f4293ea891a27
+    diff-start: 9.0.0
 branches:
   - name: stable/2024.1
     location: 10.0.0.0rc1
-release-notes:
+release-notes: 
   https://docs.openstack.org/releasenotes/kuryr-kubernetes/2024.1.html

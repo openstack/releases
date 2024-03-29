@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 20d29d8a76847d923c38f182ae05070000cdf811
+  - version: 18.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: 20d29d8a76847d923c38f182ae05070000cdf811
+    diff-start: 17.0.0
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1

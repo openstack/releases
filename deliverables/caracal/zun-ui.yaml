@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: da848a4c00270ff43c783695f4107d6d7f2c32bf
+  - version: 13.0.0
+    projects:
+      - repo: openstack/zun-ui
+        hash: da848a4c00270ff43c783695f4107d6d7f2c32bf
+    diff-start: 12.0.0
 branches:
   - name: stable/2024.1
     location: 13.0.0.0rc1
