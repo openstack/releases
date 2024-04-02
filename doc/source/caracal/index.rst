@@ -2,7 +2,7 @@
 2024.1 Caracal
 ===============
 
-Projected Release Date: April 3, 2024
+Originally Released: April 3, 2024
 
 .. toctree::
    :maxdepth: 1
