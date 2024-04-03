@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: b6edfda3443f80b20915e020143573b84114a252
+  - version: 18.0.0
+    projects:
+      - repo: openstack/barbican
+        hash: b6edfda3443f80b20915e020143573b84114a252
+    diff-start: 17.0.0
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
