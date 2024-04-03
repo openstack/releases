@@ -8,8 +8,7 @@ repository-settings:
 cycle-highlights:
   - Horizon and all horizon plugins now support the nodejs20 version
     of nodejs.
-  - Horizon now uses Django 4.2 as default and dropped Django 3.2
-    support.
+  - Horizon now uses Django 4.2 as default and dropped Django 3.2 support.
 releases:
   - version: 23.4.0
     projects:
@@ -22,3 +21,4 @@ releases:
 branches:
   - name: stable/2024.1
     location: 24.0.0
+release-notes: https://docs.openstack.org/releasenotes/horizon/2024.1.html
