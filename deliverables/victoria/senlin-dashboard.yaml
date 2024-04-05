@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 6c5d0219657f39215fa29cde73359401adbdb5cc
+  - version: victoria-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: d4e442488378589d2f3b25bc00315809dba51b75
 branches:
   - name: stable/victoria
     location: 2.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/senlin-dashboard/victoria.html

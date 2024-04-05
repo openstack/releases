@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 65a29cbbe2345d73aff0eb8cb96ebeaf42cf97f6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 1a829a19ab9ba7b2e46bf81ca929e7ef2c906901
 branches:
   - name: stable/wallaby
     location: 3.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/senlin-dashboard/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/senlin-dashboard/wallaby.html

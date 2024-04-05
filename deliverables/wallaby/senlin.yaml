@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: e111000aab550635f8dcc3b678a2ae2b6c8b137f
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 2f4166b23ab1fe0f66c15d65d738deda4b7b0836
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1
