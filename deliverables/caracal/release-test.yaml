@@ -7,3 +7,11 @@ release-model: cycle-with-intermediary
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/release-test
+        hash: c0e02a64085a71af6d025316973795edb77e75c5
+branches:
+  - name: stable/2024.1
+    location: 6.0.0
