@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 51b5559ae1a21c45039bf0f833933b984c6f5898
+  - version: xena-eol
+    projects:
+      - repo: openstack/solum
+        hash: 557d67c02f09384eb4c0d9d45bf52dcb08c3e2ba
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1
