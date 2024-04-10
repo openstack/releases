@@ -203,3 +203,39 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Manila
+------
+
+.. _d-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2024.2 Dalmatian must be approved by the end of
+the week.
+
+.. _d-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _d-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week. Collaborative
+review sessions must be proposed at this timeline, in order to speed up the
+review process.
+
+.. _d-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted in order to fast-track the closure of bugs.
