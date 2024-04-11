@@ -9,7 +9,9 @@ releases:
         repo: openstack/puppet-ec2api
     version: 23.0.0
 repository-settings:
-  openstack/puppet-ec2api: {}
+  openstack/puppet-ec2api:
+    flags:
+      - retired
 branches:
   - name: stable/2023.2
     location: 23.0.0
