@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: a5496f759316e6b33b5b2d9593104a00b89b014d
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: a8d1ba7b88dc2e9b8ed51782d1a7c44b13d77a75
 branches:
   - name: stable/xena
     location: 4.3.0

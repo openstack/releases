@@ -33,6 +33,14 @@ releases:
         hash: db0c4dd3c717d2e2bf67ef7e50fa1e2fa7bef6d4
       - repo: openstack/freezer-dr
         hash: 7d4c5ad01c780ea9874575464bae4f33877ebc23
+  - version: victoria-eol
+    projects:
+      - repo: openstack/freezer
+        hash: 9e0e12ba36fcd8fc05d996855f38f6083b33b1f7
+      - repo: openstack/freezer-api
+        hash: db0c4dd3c717d2e2bf67ef7e50fa1e2fa7bef6d4
+      - repo: openstack/freezer-dr
+        hash: 7d4c5ad01c780ea9874575464bae4f33877ebc23
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
