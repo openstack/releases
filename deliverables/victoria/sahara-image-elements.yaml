@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: ded80db2667438313bab6d448d19ef2305f2e527
+  - version: victoria-eol
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 3a3677d28f4fa2dacbb789243b6fdbc8506ba8e5
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1

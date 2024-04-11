@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-cdh
         hash: 8429c530fad71e04e3bfb9bf26d21fbe9a8bc435
+  - version: victoria-eol
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 4d84392836047c40c6a4ff36f3be8b4a27c322f7
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-cdh/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-cdh/victoria.html

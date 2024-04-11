@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-storm
         hash: c1237046988eb6db33f5fb6691276ef01ed85870
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: c1237046988eb6db33f5fb6691276ef01ed85870
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-storm/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-storm/wallaby.html

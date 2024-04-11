@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 401e663f6791bfb813c75f1acba40f1fb4db196c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 30ceb58be0e665cac3a315890d192afd781d14ef
 branches:
   - name: stable/wallaby
     location: 3.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-saharaclient/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-saharaclient/wallaby.html

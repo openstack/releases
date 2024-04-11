@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 3fc494d1730b90a3e49855c2498958c92a2c1ee5
+  - version: victoria-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 52e7c554db03e33d9a0e2b552af45005ff3c877a
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-dashboard/victoria.html
