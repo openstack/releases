@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: Puppet OpenStack
 type: trailing
 repository-settings:
-  openstack/puppet-murano: {}
+  openstack/puppet-murano:
+    flags:
+      - retired
 releases:
   - projects:
       - hash: 7a78d2ee5f4a58371c7be954c304c873311b09a6
