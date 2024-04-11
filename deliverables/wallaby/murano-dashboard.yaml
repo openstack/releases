@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: dd78672b3f45b802efc4af2569ceb11e4abdd1ba
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: c01fbfcaeabd74f2a6b5edbe07c7d9d7515a9dea
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/murano-dashboard/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/murano-dashboard/wallaby.html

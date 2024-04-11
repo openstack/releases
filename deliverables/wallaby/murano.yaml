@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 1c87ebf9a8a79d990e4a1ba44452b50efae77883
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/murano
+        hash: 984536cf8d1ea89b5fb62e350e0f008cf0e8329d
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1
