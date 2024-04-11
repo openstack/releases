@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/qinling-dashboard
         hash: 14da97ed539bbeb03bf79a1e10e451b5a280dbae
+  - version: victoria-eol
+    projects:
+      - repo: openstack/qinling-dashboard
+        hash: 6df246288f6d4fb6d198d053861613e77c15bf9d
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/qinling-dashboard/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/qinling-dashboard/victoria.html
