@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-tacker
         hash: 27bcf13c7e918dce4bb5079824d25d9f363438a5
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: 73be414d66d404b7394df12cb7861ebe18ce0510
 branches:
   - name: stable/xena
     location: 19.4.0

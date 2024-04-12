@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: aea7e211f51d76eb9d2c5a6a6f0e50a539d5fba0
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: aea7e211f51d76eb9d2c5a6a6f0e50a539d5fba0
 branches:
   - name: stable/xena
     location: 15.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/xena.html

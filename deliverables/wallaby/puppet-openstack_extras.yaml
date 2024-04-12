@@ -34,7 +34,14 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: 3c2ac686c894d1bcf82a3cced2610b4799079f4f
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 504e1a0f297c7fc57a194a73f84db7532a543cc7
 branches:
   - name: stable/wallaby
     location: 18.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_extras/wallaby.html
+  - name: unmaintained/wallaby
+    location: wallaby-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-openstack_extras/wallaby.html

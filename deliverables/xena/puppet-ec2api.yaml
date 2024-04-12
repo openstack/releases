@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: f74f33e5d78a4c01e8580c9558b7d8a5b5488afc
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: f9d8d562638fa217944c1c7deb7d4711d0de9613
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-ec2api/xena.html

@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: 34f6ed4dc6a05d677fb7ec8d773dfbb1ffe0c480
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 8a575de16680c7e8fce258c633ed75d6f62d29a3
 branches:
   - name: stable/wallaby
     location: 7.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-qdr/wallaby.html

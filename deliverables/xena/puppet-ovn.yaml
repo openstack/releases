@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: f648d1a689bfce58da606e9dfc5b702e297ed038
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: f648d1a689bfce58da606e9dfc5b702e297ed038
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-ovn/xena.html

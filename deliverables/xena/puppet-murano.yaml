@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/puppet-murano
         hash: 117c42ad1ce47af9faa7302efcc1195b3534fd00
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 902077a9f15b54d63ee062901ccaa84d316b6cff
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-murano/xena.html

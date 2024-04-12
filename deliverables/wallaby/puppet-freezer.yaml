@@ -36,7 +36,12 @@ releases:
     projects:
       - repo: openstack/puppet-freezer
         hash: 3cfea75c6874fcff066fdd566adb5a6a4da5d26c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-freezer
+        hash: dcfdb9433f0f053d2c4f05cd5f4b16bed7ba752b
 branches:
   - name: stable/wallaby
     location: 18.4.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-freezer/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-freezer/wallaby.html

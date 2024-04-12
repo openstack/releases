@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/puppet-aodh
         hash: 5817b59f38c1cde9da220ab8790fb9fd1c3829f6
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 3e47b5ac9dc4f205a73c8ccbfbebdc47902d53d5
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/wallaby.html

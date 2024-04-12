@@ -30,7 +30,13 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: efdaf91e88b15d11e4bc4ac9976fe03c7615b58f
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: a4481a864c12dc33f8da4c788a5ccf15311708ac
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-zaqar/xena.html

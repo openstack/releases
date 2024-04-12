@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: f1ee98b833984073016afb932a29246f5b0ea303
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 255ec9b3718f0def74974ad9659ddc58b8215694
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/wallaby.html

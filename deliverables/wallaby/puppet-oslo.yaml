@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: b98fe2d6d4a8150e3a55e69abd5f48f60780249a
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: a0f6611aefbf066d001a8f79420af0dd656eca67
 branches:
   - name: stable/wallaby
     location: 18.4.0
+  - name: unmaintained/wallaby
+    location: wallaby-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-oslo/wallaby.html

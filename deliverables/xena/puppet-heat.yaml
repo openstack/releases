@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/puppet-heat
         hash: 30c1b53ef28b7a0187d9d7e4479ea4b27c112d33
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 30c1b53ef28b7a0187d9d7e4479ea4b27c112d33
 branches:
   - name: stable/xena
     location: 19.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/xena.html

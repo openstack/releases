@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/puppet-qdr
         hash: b7374739795711d01ccd2e8c8cf03e6c5491cfc3
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-qdr
+        hash: 3f392614d03ea738a4da56bb474ce5f31f6d32f3
 branches:
   - name: stable/xena
     location: 8.4.0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-qdr/xena.html
