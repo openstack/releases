@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/puppet-sahara
         hash: 8a1edfe493df7c467bee60e2c1ea009e7c95e45b
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: 8a1edfe493df7c467bee60e2c1ea009e7c95e45b
 branches:
   - name: stable/xena
     location: 19.4.0
