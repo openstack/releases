@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-vswitch: {}
+releases:
+  - projects:
+      - hash: d35e531a0bb0b69733ec62b8d39c06b1c6134ef2
+        repo: openstack/puppet-vswitch
+    version: 20.0.0
+branches:
+  - name: stable/2024.1
+    location: 20.0.0

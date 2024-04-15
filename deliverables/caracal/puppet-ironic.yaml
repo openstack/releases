@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-ironic: {}
+releases:
+  - projects:
+      - hash: e1ce176ff97c9cfc4c4fd58472192760e7d97b51
+        repo: openstack/puppet-ironic
+    version: 24.0.0
+branches:
+  - name: stable/2024.1
+    location: 24.0.0

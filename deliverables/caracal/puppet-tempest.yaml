@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-tempest: {}
+releases:
+  - projects:
+      - hash: 24853f714e2498a710250f694f834b963fa2d901
+        repo: openstack/puppet-tempest
+    version: 24.0.0
+branches:
+  - name: stable/2024.1
+    location: 24.0.0
