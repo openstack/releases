@@ -557,6 +557,11 @@ Week after Milestone-2
 
 #. Review any remaining milestone-2 exceptions
 
+#. Now that we are past MembershipFreeze, we should check if the OpenStack map
+   will need to be updated to reflect future final release contents. If any
+   changes are needed, those should be proposed in Gerrit as changes to the
+   ``openinfra/openstack-map`` repository.
+
 #. Plan the next release cycle schedule based on the number of desired weeks or
    by making sure the cycle ends within a few weeks of the next developer
    event. Using the Monday of the close of the last cycle, and the
