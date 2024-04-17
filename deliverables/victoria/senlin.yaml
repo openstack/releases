@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: aca5b42d81bf3ec422ea6452027f3527c3b5443b
+  - version: victoria-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 1dd9588ae8f9223565177967a319d463560b4d21
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1

@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: e6edaee89249f88e7824cc7a175e903f09340ab4
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: a804fd3408f8dbb0d363c5af9bc5ee8bd6eebf5e
 branches:
   - name: stable/wallaby
     location: 2.2.1
-release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-senlinclient/wallaby.html

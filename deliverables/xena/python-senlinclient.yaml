@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 9e21cdfd1aff56a6ab3b6a44286f7431d6cf53ad
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: b438b68bb00964df072d9d6087c6391ae725eec8
 branches:
   - name: stable/xena
     location: 2.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-senlinclient/xena.html

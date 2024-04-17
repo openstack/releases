@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 13530356a8a26a8f59627de8c8790bc3a9d9fbfd
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: ff1bdb868512e960e2e3461d2912d314642de1fa
 branches:
   - name: stable/victoria
     location: 2.1.1
-release-notes: https://docs.openstack.org/releasenotes/python-senlinclient/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-senlinclient/victoria.html
