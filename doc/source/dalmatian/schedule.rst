@@ -36,7 +36,7 @@ release schedule.
 Dalmatian-1 milestone
 ---------------------
 
-30 May, 2024 is the Dalmatian-1 milestone. See project-specific notes
+May 16, 2024 is the Dalmatian-1 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _d-cycle-trail:
@@ -45,14 +45,14 @@ for relevant deadlines.
 ----------------------------------------------
 
 All projects following the cycle-trailing release model must release
-their 2024.1 Caracal deliverables by 13 June, 2024.
+their 2024.1 Caracal deliverables by June 6, 2024.
 
 .. _d-2:
 
 Dalmatian-2 milestone
 ---------------------
 
-18 July, 2024 is the Dalmatian-2 milestone. See project-specific notes
+July 4, 2024 is the Dalmatian-2 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _d-mf:
@@ -94,7 +94,7 @@ changes before feature freeze.
 Dalmatian-3 milestone
 ---------------------
 
-29 August, 2024 is the Dalmatian-3 milestone. See project-specific notes
+August 29, 2024 is the Dalmatian-3 milestone. See project-specific notes
 for relevant deadlines.
 
 .. _d-ff:
@@ -142,7 +142,7 @@ frozen until the stable branches are created, with the release candidates.
 RC1 target week
 ---------------
 
-The week of 9 September, 2024 is the target date for projects following the
+The week of September 9, 2024 is the target date for projects following the
 `release:cycle-with-rc`_ model to issue their first release candidate.
 
 .. _d-hard-sf:
@@ -159,7 +159,7 @@ finish up their efforts.
 Final RCs and intermediary releases
 -----------------------------------
 
-The week of 23 September, 2024 is the last week to issue release
+The week of September 23, 2024 is the last week to issue release
 candidates or intermediary releases before release week. During release week,
 only final-release-critical releases will be accepted (at the discretion of
 the release team).
@@ -169,7 +169,7 @@ the release team).
 Dalmatian release
 -----------------
 
-The Dalmatian coordinated release will happen on Wednesday, 2 October, 2024.
+The Dalmatian coordinated release will happen on Wednesday, October 2, 2024.
 
 .. _d-cycle-highlights:
 
