@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 340a4b264a09c961aa5dfb7886e0e919daf1c051
+  - version: zed-eom
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 4ee0571c51d470bf3bc9d1adb4d76f8e8c0b170f
 branches:
   - name: stable/zed
     location: 5.3.0
+  - name: unmaintained/zed
+    location: zed-eom
