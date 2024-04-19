@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: f2999ce752e111d93a74c73cae5cccfceb4467c2
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: c8df7867b2ce03eaf95888842888506fafd459bd
 branches:
   - name: stable/zed
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-glanceclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-glanceclient/zed.html
