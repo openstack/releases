@@ -33,7 +33,13 @@ releases:
     projects:
       - repo: openstack/venus
         hash: c34329597aaeee1ff2b9a898f6d51d2303f00c0c
+  - version: zed-eom
+    projects:
+      - repo: openstack/venus
+        hash: b7e20dd2545b41cd4d193a7534229aa4a7d96e71
 branches:
   - name: stable/zed
     location: 1.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/venus/zed.html
