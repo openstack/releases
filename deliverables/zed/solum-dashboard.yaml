@@ -15,6 +15,12 @@ releases:
       - repo: openstack/solum-dashboard
         hash: f2d61f2e0258e30285731cc5fa66e86dacc9cb3e
     diff-start: 8.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: f007d1868db212abaea37312936a80594b1c665c
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

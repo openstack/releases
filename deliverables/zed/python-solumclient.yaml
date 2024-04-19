@@ -14,6 +14,12 @@ releases:
     projects:
       - repo: openstack/python-solumclient
         hash: 319a84d6798d771c6f2eb0910c8bbfe53229e8f3
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-solumclient
+        hash: 95ef73f2778ea6a9ad77da306ee35cdd82add3fb
 branches:
   - name: stable/zed
     location: 3.6.1
+  - name: unmaintained/zed
+    location: zed-eom
