@@ -15,7 +15,13 @@ releases:
       - repo: openstack/heat-dashboard
         hash: 126c5e958b331afbdb2546ef597e3b8baca249e5
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 5d1ef0faf10c77490051984e850ce0431054db7f
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-dashboard/zed.html

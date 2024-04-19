@@ -16,7 +16,13 @@ releases:
       - repo: openstack/heat-agents
         hash: 2e16aa4e57d0995617cfc0872cc3882430a37e56
     diff-start: 4.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/heat-agents
+        hash: a71dbdc6e4b69c7ec122fbfb4df66cd657593194
 branches:
   - name: stable/zed
     location: 5.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-agents/zed.html
