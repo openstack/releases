@@ -16,7 +16,14 @@ releases:
       - repo: openstack/masakari-dashboard
         hash: 83a8ea2363ebceda1911259ec95cfc7b7fe0bf89
     diff-start: 6.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 339560b21aef3ae8ff5d2b6395dbb60efd09c4ec
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/masakari-dashboard/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/masakari-dashboard/zed.html
