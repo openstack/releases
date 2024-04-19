@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/neutron-fwaas
         hash: 7c860a0c74aabfe50407c46872a60864047d4ae8
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: 7c860a0c74aabfe50407c46872a60864047d4ae8
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron-fwaas/zed.html

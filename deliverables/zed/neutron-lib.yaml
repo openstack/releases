@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: fdbece1bac3d4d42d7ced45077c1301f03fba5e6
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron-lib
+        hash: fdbece1bac3d4d42d7ced45077c1301f03fba5e6
 branches:
   - name: stable/zed
     location: 3.1.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron-lib/zed.html

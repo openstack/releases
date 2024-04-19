@@ -16,7 +16,13 @@ releases:
       - repo: openstack/networking-bgpvpn
         hash: 3cba4a40fcbbfb89e334533206712f1058d03672
     diff-start: 16.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 1d2b7b0c947fb47fe0db2ecea63a78675e03cffc
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/networking-bgpvpn/zed.html

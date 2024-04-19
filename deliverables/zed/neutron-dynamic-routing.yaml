@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 962bb66743caf8b9052776a32ab71c83403dcd54
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 962bb66743caf8b9052776a32ab71c83403dcd54
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-dynamic-routing/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-dynamic-routing/zed.html
