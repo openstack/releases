@@ -15,7 +15,14 @@ releases:
       - repo: openstack/sahara-plugin-spark
         hash: 4999d4c3f24b8e77e9a4766fc07e2f2a321c32da
     diff-start: 8.0.0.0rc1
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 4999d4c3f24b8e77e9a4766fc07e2f2a321c32da
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-spark/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-spark/zed.html

@@ -16,7 +16,13 @@ releases:
       - repo: openstack/sahara
         hash: c943f4a510a0f022ebce8364c2bc2e6fa23b3cf7
     diff-start: 16.0.0.0rc1
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara
+        hash: 9a8ced98cbb1f93fde69749ebbe120bb95509460
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/sahara/zed.html

@@ -15,7 +15,14 @@ releases:
       - repo: openstack/sahara-plugin-ambari
         hash: e52bcb6626408d522b15dbd5bbe1d457e04e8173
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara-plugin-ambari
+        hash: 1b900178ee53ead16816c15c0e85d604ec4394ce
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-plugin-ambari/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-plugin-ambari/zed.html

@@ -15,6 +15,12 @@ releases:
       - repo: openstack/sahara-extra
         hash: cf5762829e5ac2f348d793f950f72dc234ce785e
     diff-start: ussuri-em
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara-extra
+        hash: cf5762829e5ac2f348d793f950f72dc234ce785e
 branches:
   - name: stable/zed
     location: 16.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
