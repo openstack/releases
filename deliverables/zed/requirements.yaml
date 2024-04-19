@@ -11,3 +11,10 @@ branches:
   - name: stable/zed
     location:
       openstack/requirements: 759b34c0a2d538464c8dc3e8ebd96f0f1bb2c090
+  - name: unmaintained/zed
+    location: zed-eom
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/requirements
+        hash: 9c379d80fceba448eebe6c3121184435b49c48ec
