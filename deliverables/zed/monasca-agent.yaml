@@ -15,6 +15,12 @@ releases:
       - repo: openstack/monasca-agent
         hash: 29be6e96a6c590221e7d2fd1e30dffc7aec519a9
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 29be6e96a6c590221e7d2fd1e30dffc7aec519a9
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

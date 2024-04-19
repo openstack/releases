@@ -15,6 +15,12 @@ releases:
       - repo: openstack/monasca-notification
         hash: 5225304a268fbd7e5edc30ab6d2b0cbf3b92b565
     diff-start: 6.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 5225304a268fbd7e5edc30ab6d2b0cbf3b92b565
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
