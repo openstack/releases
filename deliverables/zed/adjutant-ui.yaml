@@ -16,6 +16,12 @@ releases:
       - repo: openstack/adjutant-ui
         hash: 104c474479e9a89d22b96777378ff59983c03393
     diff-start: 0.5.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 104c474479e9a89d22b96777378ff59983c03393
 branches:
   - name: stable/zed
     location: 5.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
