@@ -25,7 +25,17 @@ releases:
       - repo: openstack/freezer-dr
         hash: ba060b277d6d109bd06539550de0c7d43ee7755b
     diff-start: 12.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/freezer
+        hash: 6c7d8a3ab9cb51fd1d185ce084292e09837139c7
+      - repo: openstack/freezer-api
+        hash: ef4e4efef8503c6f4a4f527f326a2b8cd10a327c
+      - repo: openstack/freezer-dr
+        hash: ba060b277d6d109bd06539550de0c7d43ee7755b
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/freezer/zed.html
