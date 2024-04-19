@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 0d0d339cc6050122babb82d402c4d045d49c6629
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 92b924eb813512328969a9d12413ed0e4089f3b6
 branches:
   - name: stable/zed
     location: 5.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-designateclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-designateclient/zed.html
