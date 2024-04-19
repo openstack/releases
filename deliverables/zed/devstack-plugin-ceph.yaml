@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-ceph: 46186d062b1ef3d93385344140632dcebb665784
     name: stable/zed
+  - name: unmaintained/zed
+    location: zed-eom
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: f6aebfc076b9e51ab4a33d4f5727267589227ac7

@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: 793f553bddfb74394f9d98eb5f1618b0caf2f9c3
     name: stable/zed
+  - name: unmaintained/zed
+    location: zed-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/grenade
+        hash: 9e28c1dcbae58565ecb29fdb8d2234b94f24f779
