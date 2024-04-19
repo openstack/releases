@@ -16,6 +16,12 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 43903b7f3cd0fb7fe04da88517148539e865b9fc
     diff-start: 14.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 6c7a324351b4f5a82d2bf60dc2248f76a34820d5
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
