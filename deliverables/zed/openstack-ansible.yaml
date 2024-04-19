@@ -60,7 +60,13 @@ releases:
       - hash: 6d4d953d645dbd0abbfff5cb19892810884c7edb
         repo: openstack/openstack-ansible
     version: 26.5.3
+  - version: zed-eom
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 6d4d953d645dbd0abbfff5cb19892810884c7edb
 branches:
   - name: stable/zed
     location: 26.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/openstack-ansible/zed.html
