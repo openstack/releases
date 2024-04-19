@@ -15,6 +15,12 @@ releases:
       - repo: openstack/tacker-horizon
         hash: 24a80d355f29f50069cbac4489b395559f5d2b36
     diff-start: 5.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 2a7b73daec6fe9a6847f94aa24faca63f9760b51
 branches:
   - name: stable/zed
     location: 6.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

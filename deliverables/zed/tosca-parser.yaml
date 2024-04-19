@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 88796c0072ce2d217c1eca49b512d2ee8cbbc08c
+  - version: zed-eom
+    projects:
+      - repo: openstack/tosca-parser
+        hash: e83a52340e866e1d862f6935d580f8d9bb3e3d5b
 branches:
   - name: stable/zed
     location: 2.6.0
+  - name: unmaintained/zed
+    location: zed-eom
