@@ -15,7 +15,13 @@ releases:
       - repo: openstack/murano-agent
         hash: eff24e0861b9aa7b900aeab245030a3e582a0de4
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/murano-agent
+        hash: 492377751883474110197213a3680012816986e2
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/murano-agent/zed.html
