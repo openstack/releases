@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 2cb1dada5bbc14cff89faa41f172193252de703e
+  - version: zed-eom
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 5b8f4bb4eb3150620a0bea6e506d7c1af312bc77
 branches:
   - name: stable/zed
     location: 2.6.1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/blazar-nova/zed.html
