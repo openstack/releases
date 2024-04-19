@@ -12,9 +12,15 @@ releases:
       - hash: 785247f848b86f23572436a59dd43d36b4b63740
         repo: openstack/puppet-glance
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 785247f848b86f23572436a59dd43d36b4b63740
 repository-settings:
   openstack/puppet-glance: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/zed.html

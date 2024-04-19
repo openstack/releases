@@ -12,9 +12,15 @@ releases:
       - hash: 29a0d8718d977f91821c547ed1dd22f6d4d9532f
         repo: openstack/puppet-horizon
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 29a0d8718d977f91821c547ed1dd22f6d4d9532f
 repository-settings:
   openstack/puppet-horizon: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/zed.html

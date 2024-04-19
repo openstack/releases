@@ -8,6 +8,10 @@ releases:
       - hash: 66b2a1ebfa977f86cf5a4a13a4a221d78c93a31e
         repo: openstack/puppet-murano
     version: 21.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: 8f0a1d148d59e7031e56704efd998dd904ba1db2
 repository-settings:
   openstack/puppet-murano:
     flags:

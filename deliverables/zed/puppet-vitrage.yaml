@@ -12,9 +12,15 @@ releases:
       - hash: ed8b47292e19997651a4169fd0dae627f685af6b
         repo: openstack/puppet-vitrage
     version: 11.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: ed8b47292e19997651a4169fd0dae627f685af6b
 repository-settings:
   openstack/puppet-vitrage: {}
 branches:
   - name: stable/zed
     location: 11.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vitrage/zed.html

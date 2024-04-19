@@ -8,9 +8,15 @@ releases:
       - hash: aa8b3613c2717112abe563bc4c7a4dee22792b03
         repo: openstack/puppet-ovn
     version: 21.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 62933cf35bc072a10d1429426bed0dd6897540d5
 repository-settings:
   openstack/puppet-ovn: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-ovn/zed.html

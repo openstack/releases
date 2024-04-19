@@ -10,4 +10,12 @@ branches:
   - name: stable/zed
     location:
       openstack/puppet-openstack_spec_helper: cce6ff5fc236f66aae19bd5b1561681404f34f62
-release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_spec_helper/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-openstack_spec_helper/zed.html
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 98867eb518f0b73e6117dd35a86800ff19f4d45e

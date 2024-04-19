@@ -12,9 +12,15 @@ releases:
       - hash: 8e2dd1148c544cc3f533bb372a98160e8a5e3b16
         repo: openstack/puppet-designate
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 8e2dd1148c544cc3f533bb372a98160e8a5e3b16
 repository-settings:
   openstack/puppet-designate: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-designate/zed.html

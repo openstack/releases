@@ -12,9 +12,15 @@ releases:
       - hash: 974a264d0369ba7f7d36acec2498ddf717ea1175
         repo: openstack/puppet-manila
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 974a264d0369ba7f7d36acec2498ddf717ea1175
 repository-settings:
   openstack/puppet-manila: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-manila/zed.html

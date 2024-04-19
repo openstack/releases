@@ -12,9 +12,15 @@ releases:
       - hash: c59da67a5b685eabd14560ba8a19cfed6bd71a71
         repo: openstack/puppet-aodh
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: c59da67a5b685eabd14560ba8a19cfed6bd71a71
 repository-settings:
   openstack/puppet-aodh: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/zed.html

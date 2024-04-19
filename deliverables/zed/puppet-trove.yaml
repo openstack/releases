@@ -12,9 +12,15 @@ releases:
       - hash: cf0866a1c23653236a51238f76aecc5008e705d3
         repo: openstack/puppet-trove
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-trove
+        hash: cf0866a1c23653236a51238f76aecc5008e705d3
 repository-settings:
   openstack/puppet-trove: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/zed.html
