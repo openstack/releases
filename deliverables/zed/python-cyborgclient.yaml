@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 501d9f3e2c3a161b2ec0ae433d6c8b1f4ae32ea9
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: ef853bdbe89624184d86f5fa84d85d49caa596e4
 branches:
   - name: stable/zed
     location: 2.0.0
+  - name: unmaintained/zed
+    location: zed-eom

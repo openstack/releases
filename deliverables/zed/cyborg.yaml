@@ -26,7 +26,13 @@ releases:
       - repo: openstack/cyborg
         hash: bc8b25fe7b87efaf783e93047745f2c462f09147
     diff-start: 8.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/cyborg
+        hash: 1333fb6d1a5adcf89c90d6e62460f15199ba195a
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/cyborg/zed.html
