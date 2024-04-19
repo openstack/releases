@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: be9517cb027d960caf4c9c8171b3ad2568bedae9
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 7c3f3bc615cb91cd0106f91b0452bf7968ff3598
 branches:
   - name: stable/zed
     location: 18.1.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/python-novaclient/zed.html
