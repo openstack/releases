@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: d438afaff1ae7d5b2a59ed504f9a23a7f878dbdb
+  - version: zed-eom
+    projects:
+      - repo: openstack/osc-lib
+        hash: 4b1808da4837628d8c03a02ba4aa2a7a6c3da94f
 branches:
   - name: stable/zed
     location: 2.6.2
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/osc-lib/zed.html

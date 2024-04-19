@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 433815dde50cc253e33f56b5e7babd64137174e0
+  - version: zed-eom
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 7c19c4e65a6c9af994c362ee32190f6f642385ab
 branches:
   - name: stable/zed
     location: 0.101.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/openstacksdk/zed.html
