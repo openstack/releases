@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: c2522501c3fd90cddfdb5913b525be3d9dfdf5c4
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: c2522501c3fd90cddfdb5913b525be3d9dfdf5c4
 branches:
   - name: stable/zed
     location: 3.1.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-octaviaclient/zed.html

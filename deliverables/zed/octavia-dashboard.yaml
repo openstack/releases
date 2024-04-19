@@ -21,7 +21,13 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: bd1a329b46d18baa42a9ba48d8031549a97a7bf2
+  - version: zed-eom
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: bd1a329b46d18baa42a9ba48d8031549a97a7bf2
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/octavia-dashboard/zed.html
