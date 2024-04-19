@@ -23,9 +23,15 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 72a4fc0f3ccf7a5ca9fc40e5364e14f881ec27b2
+  - version: zed-eom
+    projects:
+      - repo: openstack/keystone
+        hash: f63062d47712406a807ce07b4ff3ec6213b0e824
 branches:
   - name: stable/zed
     location: 22.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 cycle-highlights:
   - Implemented `OAuth 2.0 credentials grant
     <https://specs.openstack.org/openstack/keystone-specs/specs/keystone/yoga/oauth2-client-credentials-ext.html>`_

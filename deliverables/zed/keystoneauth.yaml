@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 61c3dc7b38d53d6558b479db4ffbfbd1038994c9
+  - version: zed-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 61c3dc7b38d53d6558b479db4ffbfbd1038994c9
 branches:
   - name: stable/zed
     location: 5.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/keystoneauth/zed.html
