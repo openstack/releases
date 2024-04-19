@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: f388eb981dacd3f363fb23fd70ac22c5eb35edf8
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.context
+        hash: 65212d2c0568bae0b26b6847ffa148ed33096d4b
 branches:
   - name: stable/zed
     location: 5.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.context/zed.html

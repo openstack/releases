@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: dd2a819915d6410e95becc5b16263585975c4460
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: d0d643baf4831f3c95e4b181cfae40010bec22ef
 branches:
   - name: stable/zed
     location: 5.0.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.serialization/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.serialization/zed.html

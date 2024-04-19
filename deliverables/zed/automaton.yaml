@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 0ea747e6bf3ab116d46882394346f094482cfd75
+  - version: zed-eom
+    projects:
+      - repo: openstack/automaton
+        hash: 093cd0ebd986823a64062140797f7281236aa4a6
 branches:
   - name: stable/zed
     location: 3.0.1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/automaton/zed.html

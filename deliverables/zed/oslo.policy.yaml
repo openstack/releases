@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 5bd767be790f21d6ec0af0589f50137b207d94e8
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 5175435d3df351e27f585143ad1938323f992c0b
 branches:
   - name: stable/zed
     location: 4.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.policy/zed.html

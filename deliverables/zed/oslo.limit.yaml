@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: beb080d1a29eb74b7a2c6418216f673a02b1e56d
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 4eea87f2d25a1405b4e53ff88141cc7cc119a633
 branches:
   - name: stable/zed
     location: 2.0.1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.limit/zed.html

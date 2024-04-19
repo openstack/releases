@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: b3a2b19a4cc0390833735f5422d0d9879e09c748
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 52526d77e0009f528fc4ee9d2b6784f2d726ce67
 branches:
   - name: stable/zed
     location: 2.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.upgradecheck/zed.html
