@@ -15,7 +15,13 @@ releases:
       - repo: openstack/trove-dashboard
         hash: cac088235db651a30c7e9ecf9b1a9551253c24e3
     diff-start: 18.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 9b689c15d01ed04cc205cb083617dadc3ebf370f
 branches:
   - name: stable/zed
     location: 19.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/zed.html

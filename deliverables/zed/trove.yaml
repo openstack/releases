@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: c8579f514357f83b7b786f0389780cebdb453224
+  - version: zed-eom
+    projects:
+      - repo: openstack/trove
+        hash: 794e58e7406da324e185a16696750b07290ffa3e
 branches:
   - name: stable/zed
     location: 18.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/zed.html
