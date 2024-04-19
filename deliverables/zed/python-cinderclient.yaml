@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 22a3169576b3fd91388e7b57ffd39e3760016796
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: 22a3169576b3fd91388e7b57ffd39e3760016796
 branches:
   - name: stable/zed
     location: 9.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-cinderclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cinderclient/zed.html

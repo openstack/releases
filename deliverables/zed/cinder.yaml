@@ -55,7 +55,13 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: bd2d192c6b76961ec665d922694a21b1f38a0f16
+  - version: zed-eom
+    projects:
+      - repo: openstack/cinder
+        hash: f74e2729554bee01b0a3e631a8001bb39e540433
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/cinder/zed.html

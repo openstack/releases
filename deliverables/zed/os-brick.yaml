@@ -23,7 +23,13 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 8282b14889872d48ccc49312cb0901773b914c38
+  - version: zed-eom
+    projects:
+      - repo: openstack/os-brick
+        hash: a6212f5bf1170a002291afc0427eb44b1f2801aa
 branches:
   - name: stable/zed
     location: 6.1.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/os-brick/zed.html
