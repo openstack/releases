@@ -15,6 +15,12 @@ releases:
       - repo: openstack/ansible-role-atos-hsm
         hash: f5c86dff4ee246f0ecbfb2d753e2c90912e7bb02
     diff-start: 3.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: c04a6df99f993b75378008f16f4372ad47cefc45
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

@@ -15,6 +15,12 @@ releases:
       - repo: openstack/ansible-role-thales-hsm
         hash: 49970b3ceb66a87c3d3e95ac77eda9ffd6b5a0f1
     diff-start: 3.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: 69177770c9e2bd328a587b4c113cd9d7081424e6
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
