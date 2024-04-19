@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 07d4e86ca48c3615c2a6e989533ebfd96cd4e760
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 3f07486434fd6d2fe17f544818ef7b6211b49413
 branches:
   - name: stable/zed
     location: 4.6.0
-release-notes: https://docs.openstack.org/releasenotes/python-cloudkittyclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-cloudkittyclient/zed.html

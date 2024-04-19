@@ -16,7 +16,14 @@ releases:
       - repo: openstack/cloudkitty-dashboard
         hash: 8175285adf94e19b682d54af8f51e96bcfe3e203
     diff-start: 14.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: d90a4d02cb1b74f72af3d619561e045f4de7fbf2
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cloudkitty-dashboard/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/cloudkitty-dashboard/zed.html

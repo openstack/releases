@@ -24,7 +24,13 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 56ec4f19a10eb9769b3144e3c4682595b53af4ab
+  - version: zed-eom
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 2b0adbcd55007d4e08c1878b3c1ca96733c1effd
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/zed.html
