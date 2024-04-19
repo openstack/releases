@@ -15,7 +15,13 @@ releases:
       - repo: openstack/kuryr-libnetwork
         hash: aac61e7cbf2f4ff3310635362ef49de48efa6494
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: fe70d29f56867a9c4b12156b1cfb5c5ec47d0dc2
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr-libnetwork/zed.html
