@@ -6,7 +6,14 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 752d27d6bce91fb477de02343e420dc8db538719
 branches:
   - name: stable/xena
     location:
       openstack/puppet-openstack-integration: 79b1d160ed70a2bb08e90cb2c6099fa0ca0c84b3
+  - name: unmaintained/xena
+    location: xena-eom
