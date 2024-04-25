@@ -6,3 +6,8 @@ team: Telemetry
 type: client-library
 repository-settings:
   openstack/python-observabilityclient: {}
+releases:
+  - version: 0.2.0
+    projects:
+      - repo: openstack/python-observabilityclient
+        hash: 0dea42c1e13e8e6be0d725c86e5e08405603bee3
