@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/puppet-ec2api
         hash: 6b78a13d357e7c753071dfcdbcbc1aa4789690e7
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 6b78a13d357e7c753071dfcdbcbc1aa4789690e7
 repository-settings:
   openstack/puppet-ec2api:
     flags:
