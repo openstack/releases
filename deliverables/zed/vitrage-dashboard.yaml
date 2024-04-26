@@ -10,7 +10,13 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 3025f2b4f01e86e8585c5a951467d32f347842a0
+  - version: zed-eom
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: f8cf5b2e39a31651668e424143988f469df879c6
 branches:
   - name: stable/zed
     location: 3.6.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/vitrage-dashboard/zed.html

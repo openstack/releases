@@ -10,7 +10,13 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 9a9710558b34b15eee7f67e94ad04c8fc022d2e8
+  - version: zed-eom
+    projects:
+      - repo: openstack/vitrage
+        hash: 432aec7aa13b43ad34f635e3cc87a3c20011d3f1
 branches:
   - name: stable/zed
     location: 9.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/vitrage/zed.html
