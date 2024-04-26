@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-container: b323f5b71a17ce17de4cff2b01742bf322063d26
     name: stable/zed
+  - name: unmaintained/zed
+    location: zed-eom
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 7fc56c721c1e4cb470192cf6f3f953ccc59e0d33
