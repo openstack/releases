@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 0930120e836e4d847f87248c3c2ada2d26581c56
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 98759c95ef6a3862d2a3529d9db5e5cd69fc2ec2
 branches:
   - name: stable/zed
     location: 0.11.0
+  - name: unmaintained/zed
+    location: zed-eom
