@@ -16,7 +16,13 @@ releases:
       - repo: openstack/zaqar-ui
         hash: 9b2623ca3aecd9bd7322c7d807969c744ba4cc16
     diff-start: 12.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 39d12d3d354fb3f56d8b6fbdbf6c9308af9d38b9
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/zaqar-ui/zed.html

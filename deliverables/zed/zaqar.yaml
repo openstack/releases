@@ -15,7 +15,13 @@ releases:
       - repo: openstack/zaqar
         hash: cdf45da5553f4daed20dc6bd8800360130c75f55
     diff-start: 14.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/zaqar
+        hash: fb1aebcdec428c4150bc2cc45fae5e1c4cd91a99
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/zaqar/zed.html
