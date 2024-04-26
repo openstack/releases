@@ -15,7 +15,13 @@ releases:
       - repo: openstack/storlets
         hash: 9bf2c3b3b9e9a738a825c63a6b43f84f5ddd2d66
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/storlets
+        hash: 8c56e44caf26539591680ec7e1bb3b1484d4bd24
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/storlets/zed.html
