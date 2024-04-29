@@ -34,7 +34,13 @@ releases:
     projects:
       - repo: openstack/glance
         hash: b1e5292248fefb7cd1ff4292c9b94d336f4cf73b
+  - version: zed-eom
+    projects:
+      - repo: openstack/glance
+        hash: 06a18202ab52c64803f044b8f848ed1c160905d2
 branches:
   - name: stable/zed
     location: 25.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/glance/zed.html

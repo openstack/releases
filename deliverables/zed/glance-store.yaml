@@ -23,6 +23,12 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: e9d2509926445fd95c9bba9e1cacacb85a5e58af
+  - version: zed-eom
+    projects:
+      - repo: openstack/glance_store
+        hash: f7f87019adbcdb069ea23ccb7b3e187cb52eaf55
 branches:
   - name: stable/zed
     location: 4.1.0
+  - name: unmaintained/zed
+    location: zed-eom
