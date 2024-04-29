@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: e79907c521149872c1b495355a3a7b3a0c7e3479
+  - version: zed-eom
+    projects:
+      - repo: openstack/magnum
+        hash: 0ee979099a01ae2c8b1b5d6757897a8993e4e34c
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/magnum/zed.html

@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/python-magnumclient
         hash: 85174f1b44e21bb23d976fa88e167d9eceb29ec1
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-magnumclient
+        hash: faa5d80bcc0843833957509a9e087c1c19778ab9
 branches:
   - name: stable/zed
     location: 4.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-magnumclient/zed.html

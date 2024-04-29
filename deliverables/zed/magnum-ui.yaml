@@ -15,7 +15,13 @@ releases:
       - repo: openstack/magnum-ui
         hash: f8580d7c2b274dec8aed99bb2f83d7c18035ccbb
     diff-start: 10.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/magnum-ui
+        hash: cb7a09b0d31297867f3c5513ea0d5474b25f1be5
 branches:
   - name: stable/zed
     location: 11.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/magnum-ui/zed.html
