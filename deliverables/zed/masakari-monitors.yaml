@@ -15,7 +15,13 @@ releases:
       - repo: openstack/masakari-monitors
         hash: afcf34decc7dc55adc55ab366e03fbf472cd52ad
     diff-start: 13.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 475ec0447a21f7d54279fe3056d69135be6fad4b
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/masakari-monitors/zed.html

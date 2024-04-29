@@ -10,7 +10,14 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 9ddb79eaba26cf8b00b262918096ae65e2284451
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 893e0cf5680d3f2addbb2b8702ff1dbbc49bd436
 branches:
   - name: stable/zed
     location: 8.0.0
-release-notes: https://docs.openstack.org/releasenotes/python-masakariclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-masakariclient/zed.html
