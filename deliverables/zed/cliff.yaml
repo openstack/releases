@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 58c853d1015c8bde2afa777a9bb1246a65645f3f
+  - version: zed-eom
+    projects:
+      - repo: openstack/cliff
+        hash: 8e7453fabf42922e806c47fb11135473b1aa1c66
 branches:
   - name: stable/zed
     location: 4.0.0
+  - name: unmaintained/zed
+    location: zed-eom
