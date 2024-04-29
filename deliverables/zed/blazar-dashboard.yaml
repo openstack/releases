@@ -16,7 +16,13 @@ releases:
       - repo: openstack/blazar-dashboard
         hash: 837eb584283fdfa9b36808816ace7177a023bb8f
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: ac7151a20837fb3d3595b134bb8e2448f092f933
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/blazar-dashboard/zed.html

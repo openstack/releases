@@ -18,7 +18,13 @@ releases:
       - repo: openstack/blazar
         hash: 9ed6780f11630fca6d881d220109e30085ba11de
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/blazar
+        hash: b826d6dcf72948bdf8ede9c246014b8e60e6c169
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/blazar/zed.html
