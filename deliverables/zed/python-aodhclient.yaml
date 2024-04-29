@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: a1f47383a466da62f6722b3ef675e1adb92360a4
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: fe17cce7c1c14e03983e12d7a1973808ff668970
 branches:
   - name: stable/zed
     location: 3.0.0
+  - name: unmaintained/zed
+    location: zed-eom

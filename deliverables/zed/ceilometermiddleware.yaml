@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: 5c01e19b3846c1a0308d68d428c0cee440172dae
+  - version: zed-eom
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 610ca284cced47c6f324a3e8b176d2648e3a7252
 branches:
   - name: stable/zed
     location: 3.0.0
-release-notes: https://docs.openstack.org/releasenotes/ceilometermiddleware/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ceilometermiddleware/zed.html
