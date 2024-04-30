@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: e9c48c74ee8033eab247269740b0b8764d55669a
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 1ce212d7bb9a76e7e8513384c3a9748f3130601a
 branches:
   - name: stable/zed
     location: 4.5.0
+  - name: unmaintained/zed
+    location: zed-eom

@@ -15,7 +15,13 @@ releases:
       - repo: openstack/zun-ui
         hash: fd86b87a4301dcafcfb4fb6def38df8ab4006ccf
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/zun-ui
+        hash: 0bdc19f0c761c3acfd93fcec1761136f03146812
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/zun-ui/zed.html
