@@ -12,7 +12,7 @@ cycle-highlights:
     from v1.5.8.0.
   - Horizon now allows an administrator to specify default user data
     while launching an instance.
-  - Horizon added a new messages tab to show detailed Error/Failure
+  - Horizon added a new messages tab to show detailed Error/Failure
     messages for corresponding volume backups.
 releases:
   - version: 22.2.0
@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 8e624332831ec0a2638f917327abf971a407cf64
+  - version: 23.0.2
+    projects:
+      - repo: openstack/horizon
+        hash: 5de40f9b222608d35c5a0919117259e966217a86
 branches:
   - name: stable/zed
     location: 23.0.0
