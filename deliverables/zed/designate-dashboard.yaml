@@ -16,7 +16,14 @@ releases:
       - repo: openstack/designate-dashboard
         hash: c2e55249e8af4f408d68bdc1381d9c720b29bdad
     diff-start: 14.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: c2a6a5e0d9fa1ec36c80136edb355e57918ad9d0
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate-dashboard/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/designate-dashboard/zed.html
