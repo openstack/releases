@@ -16,7 +16,14 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: 611edfa1155b954054979088e0a5623a1b5d0ee6
     diff-start: 16.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 1b474c3333b25970431ade31d90a38af3f47fb7a
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-bagpipe/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-bagpipe/zed.html

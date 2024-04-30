@@ -26,6 +26,12 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: 97e738dc2b81590120d76a9ec6ac521067a536b7
+  - version: zed-eom
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 6964f4b668740c137c46f6c623d9fd6d3c5f9f95
 branches:
   - name: stable/zed
     location: 2.1.0
+  - name: unmaintained/zed
+    location: zed-eom

@@ -15,7 +15,14 @@ releases:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: aad36ddaa0b84ee256bd90e54370a01fdf4ed0a9
     diff-start: 6.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 1126c361e026976175023c68c9e33272f9bd995a
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/zed.html

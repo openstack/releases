@@ -48,7 +48,13 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: a418da89c11d9f1a15c7880c443c84a2afed84d7
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron
+        hash: a418da89c11d9f1a15c7880c443c84a2afed84d7
 branches:
   - name: stable/zed
     location: 21.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/neutron/zed.html

@@ -17,7 +17,13 @@ releases:
       - repo: openstack/tap-as-a-service
         hash: fc72381ad62926383ee944e043f1ec0d7104e6af
     diff-start: 9.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/tap-as-a-service
+        hash: 3de04a4a8c1686f8b3d78cde75e46dabab93d500
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/tap-as-a-service/zed.html

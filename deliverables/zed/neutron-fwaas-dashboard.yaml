@@ -15,7 +15,14 @@ releases:
       - repo: openstack/neutron-fwaas-dashboard
         hash: e41e5d10f31a9e34ba453d9fb6ec1ee3911af922
     diff-start: ussuri-em
+  - version: zed-eom
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: c6d38f25a2d7d9fa7f8e2ddbf309337a643119bd
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron-fwaas-dashboard/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-fwaas-dashboard/zed.html
