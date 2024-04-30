@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 662e530d8d4e8e74ba087733f1f51cb98d5145cc
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: ced390133f21e2d0e6438f0a76d9db65b674f742
 branches:
   - name: stable/zed
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-swiftclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-swiftclient/zed.html

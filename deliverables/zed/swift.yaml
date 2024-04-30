@@ -14,7 +14,13 @@ releases:
     projects:
       - repo: openstack/swift
         hash: fbec7694e554252f685f82ff2a895f86ab5ae8b1
+  - version: zed-eom
+    projects:
+      - repo: openstack/swift
+        hash: 1217b3bede4b60360b5a5de85abf826b3d1e8778
 branches:
   - name: stable/zed
     location: 2.30.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/swift/zed.html
