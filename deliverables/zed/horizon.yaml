@@ -31,7 +31,13 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 5de40f9b222608d35c5a0919117259e966217a86
+  - version: zed-eom
+    projects:
+      - repo: openstack/horizon
+        hash: 5de40f9b222608d35c5a0919117259e966217a86
 branches:
   - name: stable/zed
     location: 23.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/horizon/zed.html
