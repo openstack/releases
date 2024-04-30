@@ -65,7 +65,13 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 3d1a705fc85a0f0a46e7cbc322e98fff892e21b8
+  - version: zed-eom
+    projects:
+      - repo: openstack/nova
+        hash: 3d1a705fc85a0f0a46e7cbc322e98fff892e21b8
 branches:
   - name: stable/zed
     location: 26.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/nova/zed.html
