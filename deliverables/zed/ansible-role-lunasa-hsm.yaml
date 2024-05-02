@@ -19,6 +19,12 @@ releases:
     projects:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: d93586cc73922a30bbbb58e48e09a294e7a6ecfe
+  - version: zed-eom
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: d93586cc73922a30bbbb58e48e09a294e7a6ecfe
 branches:
   - name: stable/zed
     location: 4.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

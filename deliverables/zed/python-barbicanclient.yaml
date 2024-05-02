@@ -10,6 +10,12 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 771eb8640288bce0f4976d6c8481ccf27f94ced9
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 2b09bf97e745ad4c7a7311211fa9dad3100981ce
 branches:
   - name: stable/zed
     location: 5.4.0
+  - name: unmaintained/zed
+    location: zed-eom

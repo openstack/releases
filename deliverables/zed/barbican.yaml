@@ -32,7 +32,13 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 7d6749fcb1ad16a3350de82cd8e523d5b55306f8
+  - version: zed-eom
+    projects:
+      - repo: openstack/barbican
+        hash: 6212181afe2b3d79fbcaa77c5270302e7baeace6
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/barbican/zed.html
