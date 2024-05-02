@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 717c824bf48dbad86611a1b34b585189e33fcc26
+  - version: 12.1.2
+    projects:
+      - repo: openstack/oslo.db
+        hash: 8620d4d3af8aabb4da15a9190aaf96d3fdb516be
 branches:
   - name: stable/zed
     location: 12.1.0
