@@ -6,7 +6,14 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
+releases:
+  - version: wallaby-eom
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 3cef1a78c1efde2db3e37fe23aa8253cf2e704e4
 branches:
   - name: stable/wallaby
     location:
       openstack/puppet-openstack-integration: d50073e8ee4e9f4cbc8823dfa93275d886c7169e
+  - name: unmaintained/wallaby
+    location: wallaby-eom

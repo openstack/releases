@@ -6,8 +6,15 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack_spec_helper: {}
+releases:
+  - version: xena-eom
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 02b32ac014030f5ca37bd82759f90f4e671272b9
 branches:
   - name: stable/xena
     location:
       openstack/puppet-openstack_spec_helper: baaf87e690176c32c3fcf90ced3f7df6b36aa0b0
+  - name: unmaintained/xena
+    location: xena-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_spec_helper/xena.html
