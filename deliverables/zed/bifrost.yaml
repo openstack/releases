@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: fb0fa90a5efc8f2ea38728cc50f8024877e867d8
+  - version: zed-eom
+    projects:
+      - repo: openstack/bifrost
+        hash: fb0fa90a5efc8f2ea38728cc50f8024877e867d8
 branches:
   - name: stable/zed
     location: 15.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/bifrost/zed.html

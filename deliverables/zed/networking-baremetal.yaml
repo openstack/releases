@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 8c23e7e98540869b45d54831eac1c6dc37aee010
+  - version: zed-eom
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: c501fcb7093f0f759f1b0da159962424ddf1d62d
 branches:
   - name: stable/zed
     location: 6.0.0
-release-notes: https://docs.openstack.org/releasenotes/networking-baremetal/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-baremetal/zed.html

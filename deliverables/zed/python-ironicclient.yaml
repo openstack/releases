@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: 18ec45ed40c54f2df79754c1c038d1b8755af8a5
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 55e16b809abeb3dd3777524f70e615cc68163e4d
 branches:
   - name: stable/zed
     location: 5.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-ironicclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-ironicclient/zed.html

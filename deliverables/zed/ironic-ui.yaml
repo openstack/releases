@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 41924ff16e3036b67f70244bf3c8be69af9c3e76
+  - version: zed-eom
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 345471ca34a0cace2604e68371b67802296a63e9
 branches:
   - name: stable/zed
     location: 6.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/ironic-ui/zed.html

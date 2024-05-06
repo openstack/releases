@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 9eaf49b58c8843e667e8d4428d48f4380e0cc3a2
+  - version: zed-eom
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: ef1bb3bb15209f83d888ad8979eca534abe5606e
 branches:
   - name: stable/zed
     location: 4.0.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/zed.html
