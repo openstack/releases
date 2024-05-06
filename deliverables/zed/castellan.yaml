@@ -14,7 +14,13 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 73569c8ff07706c33bd8961a9ab03a94bcb47a63
+  - version: zed-eom
+    projects:
+      - repo: openstack/castellan
+        hash: 14f9853ef54cec1cf9341a0846cb8c55dfd17e58
 branches:
   - name: stable/zed
     location: 4.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/castellan/zed.html

@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 51e1882de1e14878aabf95e198fd852281626645
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: d3266ae5a30ddefde40bcf2f622bd9223a4e9ab4
 branches:
   - name: stable/zed
     location: 5.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.middleware/zed.html

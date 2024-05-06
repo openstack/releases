@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 2b1202938afad9ac174f86f1e6b2ec7a0bf5c743
+  - version: zed-eom
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: f16fe7da5e2e86dbbf4c4652255db67c81bba8f4
 branches:
   - name: stable/zed
     location: 3.0.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.versionedobjects/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.versionedobjects/zed.html
