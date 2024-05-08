@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: e227f82fd63bc5d47492da3e3c2ed70182093ed9
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: e7b9945933ba7062d9a18afda3de174904ccdecf
 branches:
   - name: stable/zed
     location: 4.0.0
+  - name: unmaintained/zed
+    location: zed-eom

@@ -20,7 +20,13 @@ releases:
       - repo: openstack/watcher
         hash: 2b103c40a7eee5f2395db8779c380a95f7f7ca47
     diff-start: 8.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/watcher
+        hash: 003b19317bde4cb212f78def0da3113b543138d3
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/watcher/zed.html
