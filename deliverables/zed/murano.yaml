@@ -15,7 +15,13 @@ releases:
       - repo: openstack/murano
         hash: 4434b57486eda599a15624dd27eca7ef18bcfa1f
     diff-start: 13.0.0.0rc1
+  - version: zed-eom
+    projects:
+      - repo: openstack/murano
+        hash: 6e16b0b6388190b64c34de18322b46f1f0d5c430
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/murano/zed.html

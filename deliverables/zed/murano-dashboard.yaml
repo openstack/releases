@@ -16,7 +16,13 @@ releases:
       - repo: openstack/murano-dashboard
         hash: 02edabd8733744f9f33a851da51d6312301d8c74
     diff-start: 13.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: b0c2429b705520edc50e60f0f17a1647cac685bc
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/murano-dashboard/zed.html
