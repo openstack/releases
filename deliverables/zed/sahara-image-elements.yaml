@@ -16,6 +16,12 @@ releases:
       - repo: openstack/sahara-image-elements
         hash: 008b0d7e83bb75d89fed85db0a4a422519fd246b
     diff-start: victoria-em
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: c6ac80e71ec7755099598bd7cb283a6b49db8125
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom

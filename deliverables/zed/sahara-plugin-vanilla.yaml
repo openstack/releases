@@ -15,6 +15,12 @@ releases:
       - repo: openstack/sahara-plugin-vanilla
         hash: 6cd493d42097a092ef133338a09835ea6158c7e7
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: 6cd493d42097a092ef133338a09835ea6158c7e7
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
