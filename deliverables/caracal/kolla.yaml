@@ -14,3 +14,11 @@ cycle-highlights:
     Integrated HAProxy Prometheus metrics; deprecated standalone exporter.
 repository-settings:
   openstack/kolla: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/kolla
+        hash: 45ee2b49524cc0f614ab328615592b2d7ee0fd5b
+branches:
+  - name: stable/2024.1
+    location: 18.0.0.0rc1

@@ -20,3 +20,11 @@ cycle-highlights:
     Horizon role updated to preferred ``local_settings.d`` configuration model.
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 652a8f8f72a07d51a525ec63ec5fcf09b4219ef4
+branches:
+  - name: stable/2024.1
+    location: 18.0.0.0rc1
