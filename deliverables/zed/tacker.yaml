@@ -27,7 +27,13 @@ releases:
       - repo: openstack/tacker
         hash: 7ef5b78601cb4a65804b6ea8de5e2e75428ff0e0
     diff-start: 7.0.0.0rc1
+  - version: zed-eom
+    projects:
+      - repo: openstack/tacker
+        hash: 7ef5b78601cb4a65804b6ea8de5e2e75428ff0e0
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/tacker/zed.html
