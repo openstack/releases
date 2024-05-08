@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: bc8e9e73b1ecbcf9cae8c5bfe013c68469b60cef
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: aab26ecf880b901f759791e84cfc20ed4d2bb791
 branches:
   - name: stable/zed
     location: 5.0.1
-release-notes: https://docs.openstack.org/releasenotes/python-keystoneclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-keystoneclient/zed.html
