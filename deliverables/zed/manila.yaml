@@ -57,7 +57,13 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 9b2916254cded2266a2594be1748fa4d88de5e9b
+  - version: zed-eom
+    projects:
+      - repo: openstack/manila
+        hash: 9b2916254cded2266a2594be1748fa4d88de5e9b
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/manila/zed.html

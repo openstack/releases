@@ -16,7 +16,13 @@ releases:
       - repo: openstack/manila-ui
         hash: 93070d335bd2d3cce1f703fc53e3f97b8555d1a2
     diff-start: 7.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/manila-ui
+        hash: 18bdfe774cfbddb2f997b405eb5172e44f014d4a
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/manila-ui/zed.html
