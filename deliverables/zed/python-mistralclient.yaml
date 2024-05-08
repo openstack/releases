@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 8b9f313e3b9ddf3f057d2bf0a885070adcacb725
+  - version: zed-eom
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 8b9f313e3b9ddf3f057d2bf0a885070adcacb725
 branches:
   - name: stable/zed
     location: 4.5.0
-release-notes: https://docs.openstack.org/releasenotes/python-mistralclient/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-mistralclient/zed.html

@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 18e4c693244254884178908d2126aa702496afa1
+  - version: zed-eom
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 5045133e98f497281c93cf2317ace6cffcd8e1ba
 branches:
   - name: stable/zed
     location: 2.7.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral-lib/zed.html
