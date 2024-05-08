@@ -15,7 +15,13 @@ releases:
       - repo: openstack/senlin
         hash: 5d3bc56e01f163b62b6e5d53c53ec1bdcf792cc7
     diff-start: 13.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/senlin
+        hash: b6ef17b0f787fb7a0609ba36dc13097882a6a3ff
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/senlin/zed.html
