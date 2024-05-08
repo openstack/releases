@@ -15,7 +15,13 @@ releases:
       - repo: openstack/kuryr-kubernetes
         hash: 0df1f9176bcd9c46dc706c395140ea02d015cf1b
     diff-start: 6.0.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 7fbc04c09080049ad24e9d4696d9fe209ad10e99
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr-kubernetes/zed.html

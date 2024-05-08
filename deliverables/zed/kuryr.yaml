@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 415a54249b6ff83932428d9957ab889678c13455
+  - version: zed-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: 2719d659d97e57929752a4cc9757d79894afd06f
 branches:
   - name: stable/zed
     location: 2.6.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr/zed.html
