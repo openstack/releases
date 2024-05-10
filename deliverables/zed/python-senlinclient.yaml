@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 team: senlin
 type: client-library
 repository-settings:
-  openstack/python-senlinclient: {}
+  openstack/python-senlinclient:
+    flags:
+      - retired
 releases:
   - version: 2.5.0
     projects:
