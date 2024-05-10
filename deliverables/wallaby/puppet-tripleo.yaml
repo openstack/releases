@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/puppet-tripleo: {}
+  openstack/puppet-tripleo:
+    flags:
+      - retired
 releases:
   - version: 14.0.0
     projects:

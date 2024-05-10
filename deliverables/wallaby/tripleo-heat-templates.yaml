@@ -5,7 +5,9 @@ release-type: python-pypi
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/tripleo-heat-templates: {}
+  openstack/tripleo-heat-templates:
+    flags:
+      - retired
 cycle-highlights:
   - |
     Moving `network <https://opendev.org/openstack/tripleo-specs/src/branch/master/specs/wallaby/triplo-network-data-v2.rst>`_

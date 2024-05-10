@@ -5,7 +5,9 @@ release-type: python-pypi
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/os-net-config: {}
+  openstack/os-net-config:
+    flags:
+      - retired
 releases:
   - version: 14.0.0
     projects:

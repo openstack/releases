@@ -5,7 +5,9 @@ release-type: python-pypi
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/python-tripleoclient: {}
+  openstack/python-tripleoclient:
+    flags:
+      - retired
 releases:
   - version: 15.0.0
     projects:

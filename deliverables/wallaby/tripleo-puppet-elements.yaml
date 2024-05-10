@@ -5,7 +5,9 @@ release-type: python-pypi
 team: tripleo
 type: trailing
 repository-settings:
-  openstack/tripleo-puppet-elements: {}
+  openstack/tripleo-puppet-elements:
+    flags:
+      - retired
 releases:
   - version: 14.0.0
     projects:
