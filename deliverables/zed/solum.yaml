@@ -4,7 +4,9 @@ release-model: cycle-with-rc
 team: solum
 type: service
 repository-settings:
-  openstack/solum: {}
+  openstack/solum:
+    flags:
+      - retired
 releases:
   - version: 13.0.0.0rc1
     projects:

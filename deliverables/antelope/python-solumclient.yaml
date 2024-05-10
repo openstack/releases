@@ -4,7 +4,9 @@ release-model: cycle-with-intermediary
 team: solum
 type: client-library
 repository-settings:
-  openstack/python-solumclient: {}
+  openstack/python-solumclient:
+    flags:
+      - retired
 releases:
   - version: 3.7.0
     projects:
