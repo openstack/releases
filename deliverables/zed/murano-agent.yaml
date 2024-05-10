@@ -4,7 +4,9 @@ release-model: cycle-with-rc
 team: murano
 type: other
 repository-settings:
-  openstack/murano-agent: {}
+  openstack/murano-agent:
+    flags:
+      - retired
 releases:
   - version: 10.0.0.0rc1
     projects:
