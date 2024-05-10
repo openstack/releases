@@ -20,9 +20,15 @@ releases:
       - hash: a4074c3daecef6a699a167af4f8b33f352535c70
         repo: openstack/puppet-nova
     version: 21.3.0
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-nova
+        hash: a4074c3daecef6a699a167af4f8b33f352535c70
 repository-settings:
   openstack/puppet-nova: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-nova/zed.html

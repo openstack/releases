@@ -8,6 +8,10 @@ releases:
       - hash: dd32b32aa0ad006f612c4758b91115c84f8e04de
         repo: openstack/puppet-rally
     version: 9.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-rally
+        hash: 032014d432df46837b38a18f3f82cb1a5ccd7674
 repository-settings:
   openstack/puppet-rally:
     flags:

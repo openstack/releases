@@ -8,6 +8,10 @@ releases:
       - hash: 5b9f473c44d8724b8bb237554dafb6e39e43a720
         repo: openstack/puppet-sahara
     version: 21.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: b014c4dbbbc8f4607870f0abb6b4106b37ac36fd
 repository-settings:
   openstack/puppet-sahara:
     flags:

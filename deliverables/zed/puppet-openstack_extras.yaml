@@ -16,9 +16,16 @@ releases:
       - hash: 14fc0b6418eccacceb0f0221b51aa0ac7cef2c29
         repo: openstack/puppet-openstack_extras
     version: 21.0.2
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 14fc0b6418eccacceb0f0221b51aa0ac7cef2c29
 repository-settings:
   openstack/puppet-openstack_extras: {}
 branches:
   - name: stable/zed
     location: 21.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_extras/zed.html
+  - name: unmaintained/zed
+    location: zed-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-openstack_extras/zed.html

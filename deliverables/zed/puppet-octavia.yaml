@@ -12,9 +12,15 @@ releases:
       - hash: 12a213a089d2101894c85973eed5e26356dd5402
         repo: openstack/puppet-octavia
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 12a213a089d2101894c85973eed5e26356dd5402
 repository-settings:
   openstack/puppet-octavia: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-octavia/zed.html

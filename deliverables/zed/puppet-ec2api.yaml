@@ -8,6 +8,10 @@ releases:
       - hash: 45515d1909f50cf919c51469502e93f4c5f1205e
         repo: openstack/puppet-ec2api
     version: 21.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 3c714e5e7bbe19d92b105152a639f4b61b81563b
 repository-settings:
   openstack/puppet-ec2api:
     flags:

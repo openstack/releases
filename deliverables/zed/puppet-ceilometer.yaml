@@ -12,9 +12,15 @@ releases:
       - hash: 297187842681a8490186b6a363169bc4522ec91f
         repo: openstack/puppet-ceilometer
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 297187842681a8490186b6a363169bc4522ec91f
 repository-settings:
   openstack/puppet-ceilometer: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-ceilometer/zed.html

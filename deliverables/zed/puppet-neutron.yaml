@@ -12,9 +12,15 @@ releases:
       - hash: 95f2788d1471e764b9e9ce1477c4e3fc27050cd1
         repo: openstack/puppet-neutron
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 95f2788d1471e764b9e9ce1477c4e3fc27050cd1
 repository-settings:
   openstack/puppet-neutron: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-neutron/zed.html

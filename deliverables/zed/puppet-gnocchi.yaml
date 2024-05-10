@@ -12,9 +12,15 @@ releases:
       - hash: 748918b4fdb1e67b9ce6b161c15401c86099e784
         repo: openstack/puppet-gnocchi
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 748918b4fdb1e67b9ce6b161c15401c86099e784
 repository-settings:
   openstack/puppet-gnocchi: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-gnocchi/zed.html

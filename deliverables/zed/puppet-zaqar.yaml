@@ -12,9 +12,15 @@ releases:
       - hash: d1ab98ef1c67a0ef57beebc442f2cf079a58cc55
         repo: openstack/puppet-zaqar
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: d1ab98ef1c67a0ef57beebc442f2cf079a58cc55
 repository-settings:
   openstack/puppet-zaqar: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-zaqar/zed.html

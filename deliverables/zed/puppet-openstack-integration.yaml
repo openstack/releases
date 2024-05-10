@@ -10,3 +10,10 @@ branches:
   - name: stable/zed
     location:
       openstack/puppet-openstack-integration: 4334e4b7adba3e7121d14a1748cdfc9004149592
+  - name: unmaintained/zed
+    location: zed-eom
+releases:
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 010c74fac2f335d16de0258e6c940f7d5a4558e7

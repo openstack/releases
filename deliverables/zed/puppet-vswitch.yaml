@@ -12,9 +12,15 @@ releases:
       - hash: 96631fa3f26ae1435f79144fbbf43db21ccf74b1
         repo: openstack/puppet-vswitch
     version: 17.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 96631fa3f26ae1435f79144fbbf43db21ccf74b1
 repository-settings:
   openstack/puppet-vswitch: {}
 branches:
   - name: stable/zed
     location: 17.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/zed.html

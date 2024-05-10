@@ -12,9 +12,15 @@ releases:
       - hash: ba0f2c3eecfb27e3d4bfe0a38e2b3cda10485de9
         repo: openstack/puppet-barbican
     version: 21.0.1
+  - version: zed-eom
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: ba0f2c3eecfb27e3d4bfe0a38e2b3cda10485de9
 repository-settings:
   openstack/puppet-barbican: {}
 branches:
   - name: stable/zed
     location: 21.0.0
+  - name: unmaintained/zed
+    location: zed-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-barbican/zed.html

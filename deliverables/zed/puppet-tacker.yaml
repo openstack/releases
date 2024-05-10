@@ -8,6 +8,10 @@ releases:
       - hash: b3e9e291e4e2daf2db57b4ac1d51aae847eb5795
         repo: openstack/puppet-tacker
     version: 21.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-tacker
+        hash: de3f07c4332350ee09ae6c837b373a2dd71e222c
 repository-settings:
   openstack/puppet-tacker:
     flags:
