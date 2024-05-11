@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 stable-branch-type: none
 release-type: python-pypi
 repository-settings:
-  openstack/ec2api-tempest-plugin: {}
+  openstack/ec2api-tempest-plugin:
+    flags:
+      - retired
 team: ec2-api
 type: tempest-plugin
 releases:
