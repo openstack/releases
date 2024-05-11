@@ -4,7 +4,9 @@ release-model: cycle-with-rc
 team: sahara
 type: other
 repository-settings:
-  openstack/sahara-plugin-cdh: {}
+  openstack/sahara-plugin-cdh:
+    flags:
+      - retired
 releases:
   - version: 7.0.0.0rc1
     projects:

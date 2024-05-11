@@ -5,7 +5,9 @@ release-type: python-pypi
 team: sahara
 type: other
 repository-settings:
-  openstack/sahara-image-elements: {}
+  openstack/sahara-image-elements:
+    flags:
+      - retired
 releases:
   - version: 17.0.0.0rc1
     projects:
