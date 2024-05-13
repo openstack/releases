@@ -18,3 +18,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: e90a61d3ff0720bfb7abd0621ca2041209dca063
+  - version: 29.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: cc9e7e2a8f88d4244d485bf0e99462186bc695b3
+branches:
+  - name: stable/2024.1
+    location: 29.0.0.0rc1
