@@ -26,8 +26,9 @@ import yaml
 
 
 TEAM_EXCEPTIONS = [
-    # Teams that are likely to be moved off TC governance
-    'ironic',
+    # Those teams have been granted special rights
+    'ironic',            # See https://review.opendev.org/866937
+    'Puppet OpenStack',  # See https://review.opendev.org/905976
 ]
 
 
