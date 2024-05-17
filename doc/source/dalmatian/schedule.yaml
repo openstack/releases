@@ -28,6 +28,8 @@ cycle:
     name: R-20
     x-project:
       - d-1
+    project-specific:
+      - d-nova-spec-review-day
   - start: '2024-05-20'
     end: '2024-05-24'
     name: R-19
@@ -55,6 +57,8 @@ cycle:
     name: R-13
     x-project:
       - d-2
+    project-specific:
+      - d-nova-spec-review-day
   - start: '2024-07-08'
     end: '2024-07-12'
     name: R-12
@@ -63,9 +67,13 @@ cycle:
   - start: '2024-07-15'
     end: '2024-07-19'
     name: R-11
+    project-specific:
+      - d-nova-spec-freeze
   - start: '2024-07-22'
     end: '2024-07-26'
     name: R-10
+    project-specific:
+      - d-nova-review-day
   - start: '2024-07-29'
     end: '2024-08-02'
     name: R-9

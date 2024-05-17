@@ -239,3 +239,32 @@ Manila Bugsquash
 ^^^^^^^^^^^^^^^^
 
 Manila community event promoted in order to fast-track the closure of bugs.
+
+
+Nova
+----
+
+.. _d-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 14 May 2024 and 2 July 2024, Nova specifications targeting 2024.2 Dalmatian
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _d-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2024.2 Dalmatian must be
+approved by 18 July 2024 (23:59 UTC).
+
+.. _d-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 23 July 2024, Nova "quickwin" patches (small code changes) will be reviewed
+by the Nova core team.
