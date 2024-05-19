@@ -13,3 +13,8 @@ cycle-highlights:
   - Added experimental way for deploying Magnum with Vexxhost Cluster API driver.
   - Implemented ``openstack.osa.openstack_resources`` role for creation and management
     of common resources inside OpenStack
+releases:
+  - version: 29.0.0.0b1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: e90a61d3ff0720bfb7abd0621ca2041209dca063
