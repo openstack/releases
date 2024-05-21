@@ -4,7 +4,9 @@ release-model: cycle-with-rc
 team: sahara
 type: other
 repository-settings:
-  openstack/sahara-plugin-ambari: {}
+  openstack/sahara-plugin-ambari:
+    flags:
+      - retired
 releases:
   - version: 6.0.0.0rc1
     projects:

@@ -5,7 +5,9 @@ release-type: python-pypi
 team: sahara
 type: service
 repository-settings:
-  openstack/sahara: {}
+  openstack/sahara:
+    flags:
+      - retired
 releases:
   - version: 16.0.0.0rc1
     projects:
