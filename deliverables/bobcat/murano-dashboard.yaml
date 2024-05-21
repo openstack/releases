@@ -5,7 +5,9 @@ release-type: horizon
 team: murano
 type: horizon-plugin
 repository-settings:
-  openstack/murano-dashboard: {}
+  openstack/murano-dashboard:
+    flags:
+      - retired
 releases:
   - version: 16.0.0.0rc1
     projects:
