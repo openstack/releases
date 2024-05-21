@@ -5,7 +5,9 @@ release-model: cycle-with-rc
 team: ec2-api
 type: service
 repository-settings:
-  openstack/ec2-api: {}
+  openstack/ec2-api:
+    flags:
+      - retired
 releases:
   - version: 15.0.0.0rc1
     projects:
