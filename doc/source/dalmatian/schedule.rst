@@ -268,3 +268,52 @@ Nova Implementation Review Day
 
 On 23 July 2024, Nova "quickwin" patches (small code changes) will be reviewed
 by the Nova core team.
+
+
+2025.1 TC and PTL Elections
+===========================
+
+.. _e-election-nominations:
+
+2025.1 Election Nominations Open
+--------------------------------
+Candidates interested in serving for the next calendar year (TC), or
+development cycle (PTL) should announce their candidacies and platforms during
+this two week window. The nomination period runs between 2024-08-14 23:45 UTC
+and 2024-08-28 23:45 UTC. Please see the `Election site`_ for
+more information.
+
+.. _e-election-email-deadline:
+
+2025.1 Election Email Deadline
+------------------------------
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by 2024-08-28 00:00 UTC.
+Electorate rolls are generated after this date and ballots will
+be sent to the listed preferred gerrit email address.
+
+.. _e-election-campaigning:
+
+2025.1 Election Campaigning Week
+--------------------------------
+Election Campaigning window is between 2024-08-28 23:45 UTC and 2024-09-04
+23:45 UTC. The electorate can use this time to ask candidates questions about
+their platforms and debate topics before polling begins. Please see the
+`Election site`_ for specific timing information.
+
+.. _e-election-voting:
+
+2025.1 Election Polling Open
+----------------------------
+Election polling for open seats on the TC and any required PTL elections
+begins at 2024-09-04 23:45 UTC. Please see the `Election site`_ for
+more information.
+
+.. _e-election-close:
+
+2025.1 Election Polling End
+---------------------------
+All polls close in the 2025.1 Election at 2024-09-18 23:45 UTC and
+results are announced. Please see the `Election site`_ for more information.
+
+.. _Election site: https://governance.openstack.org/election/
