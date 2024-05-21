@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 stable-branch-type: none
 release-type: python-pypi
 repository-settings:
-  openstack/solum-tempest-plugin: {}
+  openstack/solum-tempest-plugin:
+    flags:
+      - retired
 team: solum
 type: tempest-plugin
 releases:

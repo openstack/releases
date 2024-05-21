@@ -4,7 +4,9 @@ release-model: cycle-with-rc
 team: solum
 type: horizon-plugin
 repository-settings:
-  openstack/solum-dashboard: {}
+  openstack/solum-dashboard:
+    flags:
+      - retired
 releases:
   - version: 11.0.0.0rc1
     projects:
