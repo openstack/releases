@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tempest
         hash: 1580f6f8437bd07e008ce8451388765d4b9b268f
+  - version: zed-last
+    projects:
+      - repo: openstack/tempest
+        hash: 5b9b80e3c9f3723c1a935c4874d9c531c1155ddd
 repository-settings:
   openstack/tempest:
     pypi-name: Tempest
