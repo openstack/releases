@@ -5,3 +5,8 @@ team: magnum
 type: other
 repository-settings:
   openstack/magnum-capi-helm: {}
+releases:
+  - version: 1.0.0
+    projects:
+      - repo: openstack/magnum-capi-helm
+        hash: 1f1edec3288be51397f13c886d657bdfeb6cdfe1
