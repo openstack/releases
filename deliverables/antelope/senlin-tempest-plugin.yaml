@@ -5,7 +5,9 @@ release-model: cycle-with-intermediary
 stable-branch-type: none
 release-type: python-pypi
 repository-settings:
-  openstack/senlin-tempest-plugin: {}
+  openstack/senlin-tempest-plugin:
+    flags:
+      - retired
 team: senlin
 type: tempest-plugin
 releases:
