@@ -88,11 +88,13 @@ cycle:
     name: R-7
     x-project:
       - d-extra-acs
+      - e-election-nominations
   - start: '2024-08-19'
     end: '2024-08-23'
     name: R-6
     x-project:
       - d-final-lib
+      - e-election-nominations
   - start: '2024-08-26'
     end: '2024-08-30'
     name: R-5
@@ -102,20 +104,29 @@ cycle:
       - d-final-clientlib
       - d-soft-sf
       - d-rf
+      - e-election-nominations
+      - e-election-email-deadline
+      - e-election-campaigning
   - start: '2024-09-02'
     end: '2024-09-06'
     name: R-4
     x-project:
       - d-cycle-highlights
+      - e-election-campaigning
+      - e-election-voting
   - start: '2024-09-09'
     end: '2024-09-13'
     name: R-3
     x-project:
       - d-rc1
       - d-hard-sf
+      - e-election-voting
   - start: '2024-09-16'
     end: '2024-09-20'
     name: R-2
+    x-project:
+      - e-election-voting
+      - e-election-close
   - start: '2024-09-23'
     end: '2024-09-27'
     name: R-1
