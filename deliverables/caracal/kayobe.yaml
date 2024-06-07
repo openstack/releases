@@ -18,3 +18,15 @@ repository-settings:
   openstack/kayobe-config-dev:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/kayobe
+        hash: 6c6400f7cee845be0e5143036b5baa6e41c56fa3
+      - repo: openstack/kayobe-config
+        hash: 9fb58db6959419b0bc4c2d49c9a2e8f9416484bd
+      - repo: openstack/kayobe-config-dev
+        hash: 75047ec8c03a8da2b568f4f0f36d5e83bd1e988b
+branches:
+  - name: stable/2024.1
+    location: 16.0.0.0rc1
