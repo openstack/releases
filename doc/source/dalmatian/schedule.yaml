@@ -44,9 +44,13 @@ cycle:
   - start: '2024-06-10'
     end: '2024-06-14'
     name: R-16
+    project-specific:
+      - d-cinder-mid-cycle-ptg-1
   - start: '2024-06-17'
     end: '2024-06-21'
     name: R-15
+    project-specific:
+      - d-cinder-spec-freeze
   - start: '2024-06-24'
     end: '2024-06-28'
     name: R-14
@@ -58,6 +62,8 @@ cycle:
     x-project:
       - d-2
     project-specific:
+      - d-cinder-driver-deadline
+      - d-cinder-target-driver-deadline
       - d-nova-spec-review-day
   - start: '2024-07-08'
     end: '2024-07-12'
@@ -78,6 +84,7 @@ cycle:
     end: '2024-08-02'
     name: R-9
     project-specific:
+      - d-cinder-feature-checkpoint
       - d-manila-fpfreeze
       - d-manila-new-driver-deadline
   - start: '2024-08-05'
@@ -89,6 +96,9 @@ cycle:
     x-project:
       - d-extra-acs
       - e-election-nominations
+    project-specific:
+      - d-cinder-driver-features-declaration
+      - d-cinder-mid-cycle-ptg-2
   - start: '2024-08-19'
     end: '2024-08-23'
     name: R-6
@@ -114,6 +124,8 @@ cycle:
       - d-cycle-highlights
       - e-election-campaigning
       - e-election-voting
+    project-specific:
+      - d-cinder-ci-checkpoint
   - start: '2024-09-09'
     end: '2024-09-13'
     name: R-3

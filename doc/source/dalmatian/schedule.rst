@@ -203,6 +203,94 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Cinder
+------
+
+.. _d-cinder-mid-cycle-ptg-1:
+
+Cinder Mid Cycle PTG - 1
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will be conducting a mid-cycle PTG on 12 June, 2024 (Wednesday) which
+is a continuation of 2024.2 Dalmatian PTG to track progress and discuss
+new topics in a similar manner as of PTG.  We will start at 1400 UTC and
+conclude at 1600 UTC.
+
+.. _d-cinder-spec-freeze:
+
+Cinder Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Cinder Specs for features to be implemented in 2024.2 Dalmatian must
+be approved by Friday 21 June 2024 (23:59 UTC).
+
+.. _d-cinder-driver-deadline:
+
+Cinder New Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new backend driver to Cinder for the 2024.2
+Dalmatian release is Friday 5 July 2024 (20:00 UTC).  New drivers must
+be (a) code complete including unit tests, (b) merged into the code
+repository, and (c) must have a 3rd Party CI running reliably.  (Note
+that because of where some holidays fall this cycle, this is later than
+the usual Milestone-2 deadline.)
+
+.. _d-cinder-target-driver-deadline:
+
+Cinder New Target Driver Merge Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The deadline for merging a new target driver to Cinder for the 2024.2
+Dalmatian release is Friday 5 July 2024 (20:00 UTC).  New target drivers
+must be (a) code complete including unit tests, (b) merged into the code
+repository, and (c) must have a 3rd Party CI running reliably.
+
+.. _d-cinder-feature-checkpoint:
+
+Cinder New Feature Status Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your new Cinder feature requires client support, keep in mind that the final
+release for client libraries is in four weeks.  Thus your Cinder feature
+should be substantially complete with unit tests by this time so that any
+client changes can be reviewed, tested, and merged before 26 August 2024.
+
+.. _d-cinder-driver-features-declaration:
+
+Cinder Driver Features Declaration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New features added to Cinder drivers must be merged at the time of the
+OpenStack-wide Feature Freeze, which is coming up in two weeks.  Before
+the Cinder meeting this week, you should post a blueprint in Launchpad listing
+the Gerrit reviews of features you'd like to land in 2024.2 Dalmatian.  (You
+can look among the 2023.2 and 2024.1 blueprints for examples; contact the PTL
+if you have any questions.)  This will help the team prioritize reviews and
+give you candid early feedback on whether the features look ready.
+
+.. _d-cinder-mid-cycle-ptg-2:
+
+Cinder Mid Cycle PTG - 2
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will be conducting Midcycle-2 PTG on 14th August, 2024 (Wednesday) which
+is a continuation of 2024.2 Dalmatian Midcycle-1 PTG to track progress and
+discuss new topics in a similar manner as of Midcycle-1 PTG.  We will start
+at 1400 UTC and conclude at 1600 UTC.
+
+.. _d-cinder-ci-checkpoint:
+
+Cinder 3rd Party CI Compliance Checkpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a reminder that in order for a Cinder driver to be considered
+'supported' in the 2024.2 Dalmatian release, its third party CI must be
+running properly when the Cinder team does a final compliance check around the
+time of the third milestone.  See the `Driver Compliance
+<https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
+section of the Cinder Documentation for details.
+
 Manila
 ------
 
