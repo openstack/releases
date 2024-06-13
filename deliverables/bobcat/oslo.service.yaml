@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: e94d47a9647799d29a41890d620d02d27369a282
+  - version: 3.2.1
+    projects:
+      - repo: openstack/oslo.service
+        hash: daa2baa4b3a33a394d8a1c89ead925c253aff271
 branches:
   - name: stable/2023.2
     location: 3.2.0
