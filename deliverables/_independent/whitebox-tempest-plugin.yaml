@@ -1,0 +1,22 @@
+---
+include-pypi-link: false
+storyboard: openstack/whitebox-tempest-plugin
+stable-branch-type: none
+release-type: python-pypi
+repository-settings:
+  openstack/whitebox-tempest-plugin: {}
+team: Quality Assurance
+type: tempest-plugin
+releases:
+  - version: 0.0.1
+    projects:
+      - repo: openstack/whitebox-tempest-plugin
+        hash: c74bb93b6d20246e6f9ee086ca5b32fba0131494
+  - version: 0.0.2
+    projects:
+      - repo: openstack/whitebox-tempest-plugin
+        hash: c74bb93b6d20246e6f9ee086ca5b32fba0131494
+  - version: 0.0.3
+    projects:
+      - repo: openstack/whitebox-tempest-plugin
+        hash: d78d93803ee7ea2efa5b17e15227c897fbe95b62
