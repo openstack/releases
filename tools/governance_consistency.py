@@ -81,13 +81,15 @@ def main(args=sys.argv[1:]):
     print(" (excluding deliverables from " + str(TEAM_EXCEPTIONS) + " team(s)")
     print(" and deliverables specifically marked as being externally managed)")
     print()
-    for d in deliv_in_governance(args) - deliv_in_releases(args):
+    delta1 = deliv_in_governance(args) - deliv_in_releases(args)
+    for d in sorted(delta1):
         print('- ' + d)
 
     print()
     print("Defined in deliverable files but not in (active) governance:")
     print()
-    for d in deliv_in_releases(args) - deliv_in_governance(args):
+    delta2 = deliv_in_releases(args) - deliv_in_governance(args)
+    for d in sorted(delta2):
         print('- ' + d)
 
 
