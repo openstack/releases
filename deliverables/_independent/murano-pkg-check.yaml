@@ -21,4 +21,6 @@ releases:
       - repo: openstack/murano-pkg-check
         hash: 47f7379e5e91eac2ba9ede6645cb56ff305d2c0c
 repository-settings:
-  openstack/murano-pkg-check: {}
+  openstack/murano-pkg-check:
+    flags:
+      - retired
