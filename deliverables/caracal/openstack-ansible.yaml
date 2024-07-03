@@ -10,9 +10,10 @@ cycle-highlights:
   - Added support for VPNaaS setup with ``ml2.ovn`` neutron_plugin_driver.
   - Added support for OVN BGP Agent installation.
   - Added support for OVN driver for Octavia.
-  - Added experimental way for deploying Magnum with Vexxhost Cluster API driver.
-  - Implemented ``openstack.osa.openstack_resources`` role for creation and management
-    of common resources inside OpenStack
+  - Added experimental way for deploying Magnum with Vexxhost Cluster
+    API driver.
+  - Implemented ``openstack.osa.openstack_resources`` role for creation
+    and management of common resources inside OpenStack
 releases:
   - version: 29.0.0.0b1
     projects:
@@ -38,3 +39,5 @@ releases:
 branches:
   - name: stable/2024.1
     location: 29.0.0.0rc1
+release-notes:
+  https://docs.openstack.org/releasenotes/openstack-ansible/2024.1.html
