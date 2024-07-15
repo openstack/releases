@@ -45,6 +45,11 @@
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
+        - openstack-tox-py312:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
         - openstack-tox-pep8:
             irrelevant-files:
               - ^data/.*$
