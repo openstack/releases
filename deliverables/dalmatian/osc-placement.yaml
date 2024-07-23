@@ -6,3 +6,8 @@ team: nova
 type: client-library
 repository-settings:
   openstack/osc-placement: {}
+releases:
+  - version: 4.4.0
+    projects:
+      - repo: openstack/osc-placement
+        hash: f40890c972ed51dde0dac4d40c844d2d8a142c4e
