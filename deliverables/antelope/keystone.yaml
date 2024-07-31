@@ -22,6 +22,10 @@ releases:
       - repo: openstack/keystone
         hash: 50495ae263daee3966dd0192692f7109e9926077
 
+  - version: 23.0.2
+    projects:
+      - repo: openstack/keystone
+        hash: c725173cff5d31e42b2b4857628bf59d99b601a5
 branches:
   - name: stable/2023.1
     location: 23.0.0.0rc1
