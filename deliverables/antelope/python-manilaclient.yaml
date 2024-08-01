@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 2689f0df9274ead3d200d8ad87120d01a7361152
+  - version: 4.4.2
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 96e51a3d60088a8a8c5ab776159b93237632216b
 branches:
   - name: stable/2023.1
     location: 4.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-manilaclient/2023.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/python-manilaclient/2023.1.html
