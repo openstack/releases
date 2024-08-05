@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   epoxy/index
    dalmatian/index
    caracal/index
    bobcat/index

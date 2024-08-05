@@ -1,4 +1,12 @@
 ---
+- name: epoxy
+  release-id: 2025.1
+  status: future
+  slurp: yes
+  initial-release: 2025-04-02
+  next-phase:
+    status: development
+    date: 2024-10-02
 - name: dalmatian
   release-id: 2024.2
   status: development
