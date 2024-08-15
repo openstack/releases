@@ -50,6 +50,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: ca8aa766c82082e2e579e4e1aed36306408c45ad
+  - version: 28.3.1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: df7c1e62f90e298a8cb60d05109629993d4a050c
 branches:
   - name: stable/2023.2
     location: 28.0.0.0rc1
