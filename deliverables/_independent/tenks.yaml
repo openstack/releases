@@ -9,6 +9,12 @@ releases:
       - hash: b783f1c66daeb4a8c2636025c74d17f167d9ca11
         repo: openstack/tenks
     version: 1.0.0
+  - version: 2.0.0
+    projects:
+      - repo: openstack/tenks
+        hash: 2ca88097dcd3f3f9ce4f158ed487e7444859c782
 branches:
   - location: 1.0.0
     name: stable/1.0
+  - location: 2.0.0
+    name: stable/2.0
