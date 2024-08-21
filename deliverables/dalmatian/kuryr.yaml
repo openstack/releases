@@ -6,3 +6,8 @@ type: library
 repository-settings:
   openstack/kuryr:
     tarball-base: kuryr-lib
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/kuryr
+        hash: 84c22b9a8516b86761fd52646e8510b36fd3d415
