@@ -20,3 +20,35 @@ branches:
     location: 25.0.0
   - name: bugfix/26.0
     location: 26.0.0
+cycle-highlights:
+  - Ironic has added ``runbooks``, a new API concept to enable self-service
+    of maintenance items on nodes by project members. Runbooks are curated
+    lists of steps that can be run on nodes only associated via traits and
+    used in lieu of an explicit list of steps for manual cleaning or servicing.
+    They also follow RBAC rules, allowing projects to limit who can CRUD
+    and use a runbook.
+  - Ironic has removed the deprecated ``ibmc``, ``xclarity``, and
+    ``idrac-wsman`` drivers, in favor of more modern, redfish-based drivers.
+  - Ironic has extended the functionality of the generic virtual media devices
+    API, allowing to fetch the list of virtual media devices attached to
+    a node.
+  - Ironic has updated the Redfish interoperability profile to version 1.1.0
+    that adds a lot of missing resources and fields, and clarifies their
+    purpose.
+  - Ironic has added the configuration options
+    ``disallowed_enrollment_boot_modes`` and
+    ``disallowed_deployment_boot_modes`` to allow or disallow specific boot
+    modes for node enrollment and/or deployment. By default all boot modes
+    are allowed.
+  - Ironic now allows to perform firmware updates on active nodes with the
+    firmware interface, using the redfish driver firmware update feature
+    as a service step.
+  - Ironic has enhanced multiple security aspects, for example it now requires
+    rescue passwords to be hashed, it has reduced the logged nodes information
+    during the cleaning phase to avoid showing sensitive data, and it has
+    hardened the communication between the ironic services and the ironic
+    agent requiring an HTTPS url by default.
+  - Ironic now discourages the use of ``partition`` images, in favor of
+    ``whole disk images``. UEFI Partition images, where EFI assets are copied
+    from a partition image, are the only partition images Ironic intends to
+    test on a regular basis moving forward.
