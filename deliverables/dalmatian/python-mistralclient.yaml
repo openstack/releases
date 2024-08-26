@@ -6,3 +6,8 @@ launchpad: python-mistralclient
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/python-mistralclient: {}
+releases:
+  - version: 5.3.0
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 926301e46b3cce45528572a13966107035ea4a30
