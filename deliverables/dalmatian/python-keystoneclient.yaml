@@ -6,3 +6,8 @@ team: keystone
 type: client-library
 repository-settings:
   openstack/python-keystoneclient: {}
+releases:
+  - version: 5.5.0
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: a63564959b6f120241df12651ed7fb6d5f6877b6
