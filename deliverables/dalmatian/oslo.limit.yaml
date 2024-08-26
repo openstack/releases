@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.limit: {}
+releases:
+  - version: 2.5.0
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 25f58f919cf91ef72ca5272d42541aa0e503a48b
