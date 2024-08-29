@@ -6,3 +6,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-prometheus-exporter: {}
+releases:
+  - version: 4.4.0
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: ff726aca1a9d9a69977bc6d48be652a26ff235fe
