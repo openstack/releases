@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.serialization
         hash: b4be3a46032bd20c83847dd4ec32c49feddc5768
+  - version: 5.1.2
+    projects:
+      - repo: openstack/oslo.serialization
+        hash: 808ef7d16bc85847b0c41e646a030daeb3fd2ac5
 branches:
   - name: stable/2023.1
     location: 5.1.1
