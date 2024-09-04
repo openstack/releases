@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 65b99bdf1a850dd7d7c8e7c8e613d3966d52b25c
+  - version: 8.6.0
+    projects:
+      - repo: openstack/python-troveclient
+        hash: c1cd6816cb976a6248f1ad0785d12de5fba53a06
+branches:
+  - name: stable/2024.2
+    location: 8.6.0
