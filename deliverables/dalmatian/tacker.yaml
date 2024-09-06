@@ -5,3 +5,13 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+cycle-highlights:
+  - Revise for getting better performance of list APIs.
+  - Introduce VNF package generator which enables users to setup the
+    packages from simple command line tool.
+  - Migrate SQLAlchemy from 1.0 to 2.0.
+  - Refactor functional tests to reduce failures of a wrong status
+    transitions of VNFs, an unexpected timeout of operation or
+    wrong configuration.
+  - Revise document structure and the contents of whole usecases and
+    CLI documents.
