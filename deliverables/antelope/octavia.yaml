@@ -21,6 +21,10 @@ releases:
       - repo: openstack/octavia
         hash: 4486d2416f600df15df1b5c98a676f898e2b1d42
     diff-start: 11.0.0
+  - version: 12.0.1
+    projects:
+      - repo: openstack/octavia
+        hash: 7f6ad90c6218e1e8e31db7cb822e3736c4d3d5a1
 branches:
   - name: stable/2023.1
     location: 12.0.0.0rc1
