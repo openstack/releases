@@ -5,3 +5,11 @@ team: keystone
 type: service
 repository-settings:
   openstack/keystone: {}
+releases:
+  - version: 26.0.0.0rc1
+    projects:
+      - repo: openstack/keystone
+        hash: 97431ec99b255f3e04d4b21d38412e5d6b798618
+branches:
+  - name: stable/2024.2
+    location: 26.0.0.0rc1
