@@ -30,3 +30,11 @@ cycle-highlights:
     another one created a new ``nova.wsgi`` WSGI module that allows different
     WSGI servers to set their WSGI application the same way (using module
     instead of a binary).
+releases:
+  - version: 30.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 9c36174539d39e78e8491c565c09558299e42d35
+branches:
+  - name: stable/2024.2
+    location: 30.0.0.0rc1
