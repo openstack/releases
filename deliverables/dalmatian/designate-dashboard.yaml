@@ -6,3 +6,11 @@ team: designate
 type: horizon-plugin
 repository-settings:
   openstack/designate-dashboard: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: db8894f0cc0526485c8578d57689a197a9081425
+branches:
+  - name: stable/2024.2
+    location: 19.0.0.0rc1
