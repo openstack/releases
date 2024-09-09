@@ -6,3 +6,11 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: a9dc3794a69cef47d3e4b91ac2248e5670d81429
+branches:
+  - name: stable/2024.2
+    location: 13.0.0.0rc1
