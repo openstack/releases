@@ -4,5 +4,21 @@ launchpad: openstack-ansible
 release-model: cycle-with-rc
 team: OpenStackAnsible
 type: trailing
+cycle-highlights:
+  - Added support for deployment on Ubuntu 24.04 (Noble Numbat)
+  - Ansible Core version is updated to 2.17 series.
+  - |
+    Adopted usage of deb822 format for APT repositories for Debian and Ubuntu.
+    This is not a backwards compatible change, so all deployments defining
+    custom repositories will need to adapt their variables to match the
+    deb822 format during upgrade.
+  - |
+    All playbooks were moved into the openstack.osa collection.
+    They were also renamed to better describe the playbook purpose.
+    So now you can run playbooks like this from any directory:
+    ``openstack-ansible openstack.osa.nova``
+    Playbooks inside the integrated repository were left for backwards
+    compatibility, but they simply import the corresponding playbook
+    from the openstack.osa collection.
 repository-settings:
   openstack/openstack-ansible: {}
