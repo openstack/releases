@@ -3,5 +3,19 @@ launchpad: cinder
 release-model: cycle-with-rc
 team: cinder
 type: service
+cycle-highlights:
+  - |
+    New driver features were added, notably, Dell PowerStore
+    active-active support, Dell PowerStore QoS support, NetApp added
+    support to active/active mode in ISCSI/FC drivers, HPE Nimble
+    replication, and StorPool added support clone-across-pools
+    capability.
+  - |
+    Along with many bug fixes, Cinder saw improved checks for images
+    downloaded to volumes to address OSSA-2024-001 and significant
+    improvements to the Fujitsu, HPE, Hitachi, and PowerStore drivers.
+  - |
+    The Quobyte volume driver and the GlusterFS backup driver have been
+    deprecated.
 repository-settings:
   openstack/cinder: {}
