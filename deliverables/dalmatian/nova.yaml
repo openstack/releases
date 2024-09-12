@@ -5,3 +5,28 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    With the libvirt driver and libvirt version 7.3.0 or newer, mediated
+    devices for vGPUs are now persisted across reboots of a compute host.
+  - |
+    Instances with UEFI firmware can now be launched with stateless firmware if
+    their image has the ``hw_firmware_stateless`` property and if the compute
+    services have libvirt 8.6.0 or later.
+  - |
+    Nova now automatically detects vTPM support for compute services if
+    libvirt version is above 8.0.0 and if ``swtpm`` is installed on the node.
+    It will also automatically get the TPM models that are supported.
+  - |
+    You can now require TLS connections for SPICE consoles if you set the
+    ``[spice]/require_secure`` configuration option to ``True``.
+  - |
+    ``AggregateMultitenancyIsolation`` scheduler filter now supports multiple
+    aggregate keys prefixed by ``filter_tenant_id`` which removes the
+    limitation on the number of tenants an aggregate of hosts can relate to.
+  - |
+    A couple of other improvements target reducing the number of bugs we have:
+    one is changing how the Ironic driver sends metadata to the Ironic API, and
+    another one created a new ``nova.wsgi`` WSGI module that allows different
+    WSGI servers to set their WSGI application the same way (using module
+    instead of a binary).
