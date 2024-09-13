@@ -6,5 +6,14 @@ type: service
 repository-settings:
   openstack/blazar: {}
 cycle-highlights:
-  - Blazar introduced support for reserving compute instances based on existing
-    Nova flavors. This can be used to provide reservation of GPU instances.
+  - Blazar introduced support for reserving compute instances based
+    on existing Nova flavors. This can be used to provide reservation
+    of GPU instances.
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 4761389a202e76822f7f19eea94eb10a2377060e
+branches:
+  - name: stable/2024.2
+    location: 14.0.0.0rc1
