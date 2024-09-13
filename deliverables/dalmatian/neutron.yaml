@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 305e1451bbc980258d7f1accdbba83e5b08ab59e
+  - version: 25.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: dd3853007bb36999d391a823505fbe0c279d2317
 cycle-highlights:
   - Manager role support was added to the Neutron APIs, meeting the next
     phase of the Secure RBAC community goals.
@@ -20,3 +24,6 @@ cycle-highlights:
   - OVN routers can now be attached to tunnelled external gateway networks.
   - Support was added for nested SNAT in the ML2/OVN driver, bringing
     it in line with existing behavior in other drivers.
+branches:
+  - name: stable/2024.2
+    location: 25.0.0.0rc1
