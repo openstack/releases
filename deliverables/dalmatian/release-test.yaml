@@ -8,3 +8,8 @@ repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
 # Note: deliverable was not released in caracal
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/release-test
+        hash: 2871df0a8ae716f2db0230f0d7d2fc77af188bd7
