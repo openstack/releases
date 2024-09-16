@@ -8,3 +8,8 @@ repository-settings:
   openstack/designate-tempest-plugin: {}
 team: designate
 type: tempest-plugin
+releases:
+  - version: 0.23.0
+    projects:
+      - repo: openstack/designate-tempest-plugin
+        hash: bb1996d7a87c7a68262506b8d5185b81b436e4c4
