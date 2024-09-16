@@ -168,26 +168,15 @@ echo "$DIFF_START to $VERSION on $SERIES"
 
 relnotes_file="$RELNOTESDIR/$SHORTNAME-$VERSION"
 
-# As we use importlib to retrieve information we have to pass the
-# importable name of the module, example: oslo.messaging => oslo_messaging
-modified_shortname=${SHORTNAME//\./_}
-
-# ensure that the package is a valid package that can be imported by
-# importlib.metadata
-python -m pip install .
-project_name=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Name'])" || true)
-if [ -n "${project_name}" ] ; then
-    description=$(python -c "import importlib.metadata; print(importlib.metadata.metadata('${modified_shortname}')['Summary'])")
-else
-    # As a last resort, guess that the project name may be the same as that
-    # of the local working directory at the point this script is invoked.
-    project_name="$(basename $(pwd))"
-fi
 
 # If we are running in the context of a Zuul CI system,
 # we can just infer the project name from the repo name it supplies.
 if [ -n "$ZUUL_PROJECT" ] ; then
     project_name="$(basename ${ZUUL_PROJECT})"
+else
+    # As a last resort, guess that the project name may be the same as that
+    # of the local working directory at the point this script is invoked.
+    project_name="$(basename $(pwd))"
 fi
 
 echo
@@ -200,7 +189,6 @@ release-notes \
     --publishing-dir-name "$SHORTNAME" \
     . "$project_name" "$DIFF_START" "$VERSION" \
     $include_pypi_link \
-    --description "$description" \
     | tee $relnotes_file
 
 echo
