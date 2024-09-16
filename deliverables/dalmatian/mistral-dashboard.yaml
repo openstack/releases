@@ -6,3 +6,11 @@ team: mistral
 type: horizon-plugin
 repository-settings:
   openstack/mistral-dashboard: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 63daad463aa1b85c4f6b92a0c53ae17c57df9a31
+branches:
+  - name: stable/2024.2
+    location: 19.0.0.0rc1
