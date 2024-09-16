@@ -5,3 +5,11 @@ team: trove
 type: service
 repository-settings:
   openstack/trove: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/trove
+        hash: 3818b4d3498d093506000bd07142594cdb66c237
+branches:
+  - name: stable/2024.2
+    location: 22.0.0.0rc1
