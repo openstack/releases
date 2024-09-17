@@ -4,34 +4,34 @@ release-model: cycle-with-rc
 team: manila
 type: service
 cycle-highlights:
-  - A new share driver has been added to allow provisioning and managing NFS
-    shares with a VAST DATA Storage appliance. Users can also take
+  - A new share driver has been added to allow provisioning and managing
+    NFS shares with a VAST DATA Storage appliance. Users can also take
     point-in-time backups of these shares through snapshots.
-  - Users now have the ability to manipulate storage capabilities through share
-    metadata. Cloud operators can determine which capabilities are updatable;
-    and users are notified about the status of the updates through asynchronous
-    user messages.
-  - It is now possible to specify pre-created NetApp ONTAP efficiency policies
-    through the use of the ``netapp:efficiency_policy`` share type extra spec.
-  - The ``manila-manage service list`` command can now provide the response in
-    json and yaml formats.
-  - The NetApp ONTAP driver now supports creating Write Once Read Many (WORM)
-    shares through the use of the NetApp storage SnapLock feature.
-  - Manila now supports scheduling shares on hosts that are currently running
-    and marked as being under maintenance (disabled).
-  - When creating access rules with a deletion lock, the corresponding shares
-    will also be locked to prevent disconnections.
-  - Users can now set and unset metadata on share export locations. The
-    behavior is similar to Manila shares. A new configuration option named
-    ``admin_only_el_metadata`` was added in order to allow administrators
+  - Users now have the ability to manipulate storage capabilities through
+    share metadata. Cloud operators can determine which capabilities
+    are updatable; and users are notified about the status of the updates
+    through asynchronous user messages.
+  - It is now possible to specify pre-created NetApp ONTAP efficiency
+    policies through the use of the ``netapp:efficiency_policy`` share
+    type extra spec.
+  - The ``manila-manage service list`` command can now provide the response
+    in json and yaml formats.
+  - The NetApp ONTAP driver now supports creating Write Once Read Many
+    (WORM) shares through the use of the NetApp storage SnapLock feature.
+  - Manila now supports scheduling shares on hosts that are currently
+    running and marked as being under maintenance (disabled).
+  - When creating access rules with a deletion lock, the corresponding
+    shares will also be locked to prevent disconnections.
+  - Users can now set and unset metadata on share export locations.
+    The behavior is similar to Manila shares. A new configuration option
+    named ``admin_only_el_metadata`` was added in order to allow administrators
     to prevent end users to update certain metadata keys.
-  - Cloud operators can now refresh share export locations through a new API
-    instead of restarting Manila's share manager service. This improves the
-    uptime and availability of the cloud.
-  - The Shared File Systems service now requires a user's scope
-    to be set within the OpenStack Identity service by default.
-    This behavior can be turned off, however, it is highly discouraged to do
-    so.
+  - Cloud operators can now refresh share export locations through a
+    new API instead of restarting Manila's share manager service. This
+    improves the uptime and availability of the cloud.
+  - The Shared File Systems service now requires a user's scope to be
+    set within the OpenStack Identity service by default. This behavior
+    can be turned off, however, it is highly discouraged to do so.
 repository-settings:
   openstack/manila: {}
 releases:
@@ -42,3 +42,4 @@ releases:
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/manila/2024.2.html
