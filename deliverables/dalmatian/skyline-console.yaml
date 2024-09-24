@@ -5,6 +5,18 @@ team: skyline
 type: service
 repository-settings:
   openstack/skyline-console: {}
+cycle-highlights:
+  - Support Korean i18n for Skyline Console.
+  - Support Russian i18n for Skyline Console.
+  - Support Turkish i18n for Skyline Console.
+  - Support create non-boot-from-volume instances. If users don't deploy cinder,
+    they can create instances from skyline now.
+  - When users to create instances, the inject username comes from image metadata
+    or if not exists, users can input their own username.
+  - Support FWaaS v2 for Skyline Console.
+  - The RBAC Policies has been added to Networks.
+  - Support unrestricted attribute for application credentials.
+  - Support disable/enable SNAT for router.
 releases:
   - version: 5.0.0.0rc1
     projects:
