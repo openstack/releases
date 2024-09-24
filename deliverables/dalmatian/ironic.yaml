@@ -48,6 +48,9 @@ cycle-highlights:
   - Ironic now allows to perform firmware updates on active nodes with
     the firmware interface, using the redfish driver firmware update
     feature as a service step.
+  - Ironic support for automatically setting the lessee fields on nodes has
+    been enhanced to support builds made via Nova, and the feature is enabled
+    by default.
   - Ironic has enhanced multiple security aspects, for example it now
     requires rescue passwords to be hashed, it has reduced the logged
     nodes information during the cleaning phase to avoid showing sensitive
