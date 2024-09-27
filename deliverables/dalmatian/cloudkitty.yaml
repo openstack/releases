@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 76850ca060117b0630fb2b6c0cb6f90f07f4c7bc
+  - version: 21.0.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 76850ca060117b0630fb2b6c0cb6f90f07f4c7bc
+    diff-start: 20.0.0
 branches:
   - name: stable/2024.2
     location: 21.0.0.0rc1

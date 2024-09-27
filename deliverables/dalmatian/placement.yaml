@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 164e6548dac9419d4f14d1aa2031641da6595f43
+  - version: 12.0.0
+    projects:
+      - repo: openstack/placement
+        hash: 164e6548dac9419d4f14d1aa2031641da6595f43
+    diff-start: 11.0.0
 branches:
   - name: stable/2024.2
     location: 12.0.0.0rc1

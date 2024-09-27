@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/venus
         hash: e678899a821ba425ba3bd69c11c3bcc4fd13ca2f
+  - version: 5.0.0
+    projects:
+      - repo: openstack/venus
+        hash: e678899a821ba425ba3bd69c11c3bcc4fd13ca2f
+    diff-start: 4.0.0
 branches:
   - name: stable/2024.2
     location: 5.0.0.0rc1

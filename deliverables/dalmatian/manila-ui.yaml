@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: f26915f8fa43d1f6cb948465e9d512e16de846c6
+  - version: 12.0.0
+    projects:
+      - repo: openstack/manila-ui
+        hash: f26915f8fa43d1f6cb948465e9d512e16de846c6
+    diff-start: 11.0.0
 branches:
   - name: stable/2024.2
     location: 12.0.0.0rc1

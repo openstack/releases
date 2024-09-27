@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant-ui
         hash: bab31ad14dbf75019abf3132363910614865b23e
+  - version: 9.0.0
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: bab31ad14dbf75019abf3132363910614865b23e
+    diff-start: 8.0.0
 branches:
   - name: stable/2024.2
     location: 9.0.0.0rc1

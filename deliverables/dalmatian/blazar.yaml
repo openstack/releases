@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 4761389a202e76822f7f19eea94eb10a2377060e
+  - version: 14.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: 4761389a202e76822f7f19eea94eb10a2377060e
+    diff-start: 13.0.0
 branches:
   - name: stable/2024.2
     location: 14.0.0.0rc1

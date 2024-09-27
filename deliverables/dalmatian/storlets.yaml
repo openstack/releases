@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: a4a60484cae11b378083046451f62a2731675958
+  - version: 14.0.0
+    projects:
+      - repo: openstack/storlets
+        hash: a4a60484cae11b378083046451f62a2731675958
+    diff-start: 13.0.0
 branches:
   - name: stable/2024.2
     location: 14.0.0.0rc1

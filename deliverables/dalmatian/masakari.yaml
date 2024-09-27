@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: d6bd0ae227b765683c7d966513b7de9a3b024fbf
+  - version: 18.0.0
+    projects:
+      - repo: openstack/masakari
+        hash: d6bd0ae227b765683c7d966513b7de9a3b024fbf
+    diff-start: 17.0.0
 branches:
   - name: stable/2024.2
     location: 18.0.0.0rc1

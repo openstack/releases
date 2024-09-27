@@ -18,6 +18,11 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 363ffa6e9e1ab5968f87d45bc2f1cb6394f48b9f
+  - version: 25.0.0
+    projects:
+      - repo: openstack/neutron
+        hash: 363ffa6e9e1ab5968f87d45bc2f1cb6394f48b9f
+    diff-start: 24.0.0.0rc1
 cycle-highlights:
   - Manager role support was added to the Neutron APIs, meeting the
     next phase of the Secure RBAC community goals.

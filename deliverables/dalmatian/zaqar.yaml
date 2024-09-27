@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 70e9d869d4b0fd836f43dbd67fd631dcab93e2a1
+  - version: 19.0.0
+    projects:
+      - repo: openstack/zaqar
+        hash: 70e9d869d4b0fd836f43dbd67fd631dcab93e2a1
+    diff-start: 18.0.0
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
