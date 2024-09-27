@@ -9,10 +9,10 @@ cycle-highlights:
   - Support Korean i18n for Skyline Console.
   - Support Russian i18n for Skyline Console.
   - Support Turkish i18n for Skyline Console.
-  - Support create non-boot-from-volume instances. If users don't deploy cinder,
-    they can create instances from skyline now.
-  - When users to create instances, the inject username comes from image metadata
-    or if not exists, users can input their own username.
+  - Support create non-boot-from-volume instances. If users don't deploy
+    cinder, they can create instances from skyline now.
+  - When users to create instances, the inject username comes from image
+    metadata or if not exists, users can input their own username.
   - Support FWaaS v2 for Skyline Console.
   - The RBAC Policies has been added to Networks.
   - Support unrestricted attribute for application credentials.
@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/skyline-console
         hash: d037b061f41758023f2434b4752e866da766fe03
+  - version: 5.0.0.0rc2
+    projects:
+      - repo: openstack/skyline-console
+        hash: 5501bad74a522df44e2fbaa67796856782c70dcd
 branches:
   - name: stable/2024.2
     location: 5.0.0.0rc1
