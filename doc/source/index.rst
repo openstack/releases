@@ -95,7 +95,33 @@ Releases with Skip Level Upgrade Release Process (SLURP)
 Releases can be marked as `Skip Level Upgrade Release Process`_ (or
 `SLURP`) releases. This practically means, that upgrades will be
 supported between these (`SLURP`) releases, in addition to between
-adjacent major releases.
+adjacent major releases. For example the upgrade paths starting with
+the 2023.1 Antelope release look like this:
+
+.. graphviz::
+
+   digraph openstack_releases {
+     label="OpenStack Upgrade Paths"
+     splines=false;
+     nodesep=1;
+     rankdir="LR";
+     node [shape=box];
+
+     A [label="2023.1\nAntelope"];
+     C [label="2024.1\nCaracal"];
+     B [label="2023.2\nBobcat"];
+     E [label="2025.1\nEpoxy"];
+     D [label="2024.2\nDalmatian"];
+
+     A -> C [xlabel="SLURP"];
+     A -> B;
+     B -> C;
+
+     C -> E [xlabel="SLURP"];
+     C -> D;
+     D -> E;
+
+   }
 
 .. _Skip Level Upgrade Release Process: https://governance.openstack.org/tc/resolutions/20220210-release-cadence-adjustment.html
 
