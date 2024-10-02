@@ -2,7 +2,7 @@
 2024.2 Dalmatian
 ================
 
-Projected Release Date: 02 October, 2024
+Originally Released: 02 October, 2024
 
 .. toctree::
    :maxdepth: 1
