@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-ovn: {}
+releases:
+  - projects:
+      - hash: d6f4f833ec60d1dd387cb314ac9ddd012b39a07a
+        repo: openstack/puppet-ovn
+    version: 25.0.0
+branches:
+  - name: stable/2024.2
+    location: 25.0.0

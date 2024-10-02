@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-oslo: {}
+releases:
+  - projects:
+      - hash: c9fe3c109ff1f1ce70a644f2b23719014956702e
+        repo: openstack/puppet-oslo
+    version: 25.0.0
+branches:
+  - name: stable/2024.2
+    location: 25.0.0
