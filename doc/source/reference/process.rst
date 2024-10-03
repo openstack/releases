@@ -973,7 +973,10 @@ R-5 week (Milestone-3)
    by the proposal bot, but do approve changes for new OpenStack deliverable
    releases.
 
-#. At the end of the week, send weekly email content for R-4 week::
+#. At the end of the week, send weekly email content for R-4 week.
+
+   Note: String freezes are applied to `I18n team target projects <https://translate.openstack.org/>`_
+   and with ``cycle-with-rc`` or ``cycle-with-intermediary`` release model::
 
     Development Focus
     -----------------
@@ -1362,7 +1365,7 @@ R-2 week
         master->master instead of previous->master. At the end of Ocata
         this caused trouble for the Ironic team, for example.
 
-   - Remind the I18n PTL to update the translation tools for the new stable
+   - Remind the I18n SIG lead to update the translation tools for the new stable
      series.
 
    - If the previous list is empty then we can remind the requirements
