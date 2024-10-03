@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 8293efd983df920326a8371669efd0b5cb4016cb
+  - version: 24.1.3
+    projects:
+      - repo: openstack/ironic
+        hash: ebce0fd0845de411171127a55002ae7c9605de57
 branches:
   - name: bugfix/23.1
     location: 23.1.0
@@ -47,7 +51,7 @@ cycle-highlights:
   - Ironic now has basic testing for OVN-based deployments, using the
     OVN DHCP service. This includes lightly tested support for OVN VTEP
     switches. Operators considering use of this support should read
-    `Ironic OVN documentation
+    `Ironic OVN documentation 
     <https://docs.openstack.org/ironic/latest/admin/ovn-networking.html>`_
     for more information and details on limitations.
   - Several Ironic drivers have been deprecated in favor of more modern,

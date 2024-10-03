@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 5857ca0cd5bc4949f77b9f3b6c3e0d7ab97f6b88
+  - version: 26.1.1
+    projects:
+      - repo: openstack/ironic
+        hash: 2127cc4c93770778457fde0582c1bba258c67e02
 branches:
   - name: bugfix/25.0
     location: 25.0.0
@@ -48,9 +52,9 @@ cycle-highlights:
   - Ironic now allows to perform firmware updates on active nodes with
     the firmware interface, using the redfish driver firmware update
     feature as a service step.
-  - Ironic support for automatically setting the lessee fields on nodes has
-    been enhanced to support builds made via Nova, and the feature is enabled
-    by default.
+  - Ironic support for automatically setting the lessee fields on nodes
+    has been enhanced to support builds made via Nova, and the feature
+    is enabled by default.
   - Ironic has enhanced multiple security aspects, for example it now
     requires rescue passwords to be hashed, it has reduced the logged
     nodes information during the cleaning phase to avoid showing sensitive
