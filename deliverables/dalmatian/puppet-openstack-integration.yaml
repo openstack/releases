@@ -6,9 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/puppet-openstack-integration: {}
-# Note: deliverable was not released in xena
-# Note: deliverable was not released in yoga
-# Note: deliverable was not released in zed
-# Note: deliverable was not released in antelope
-# Note: deliverable was not released in bobcat
-# Note: deliverable was not released in caracal
+branches:
+  - name: stable/2024.2
+    location:
+      openstack/puppet-openstack-integration: 0d756eca70d64666ae4664bbc5b563204151686a

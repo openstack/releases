@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-ceilometer: {}
+releases:
+  - projects:
+      - hash: e414001a2f2c9089f43223d78e1324e3b986c9c9
+        repo: openstack/puppet-ceilometer
+    version: 25.0.0
+branches:
+  - name: stable/2024.2
+    location: 25.0.0
