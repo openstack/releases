@@ -22,3 +22,8 @@ cycle-highlights:
     from the openstack.osa collection.
 repository-settings:
   openstack/openstack-ansible: {}
+releases:
+  - version: 30.0.0.0b1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 80e6a1a4433d0db889a108f437fb9ed62105acb0
