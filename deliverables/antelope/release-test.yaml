@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: b3938e9d2fbd3a92854e662c095aecdd21d4a82b
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/release-test
+        hash: 977439fe9f9a3aebebd426137d24eccd1be520a8
 branches:
   - name: stable/2023.1
     location: 4.0.0
@@ -22,3 +26,5 @@ branches:
 # Note: deliverable was not released in xena
 # Note: deliverable was not released in yoga
 # Note: deliverable was not released in zed
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
