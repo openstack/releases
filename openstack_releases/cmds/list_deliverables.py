@@ -113,6 +113,13 @@ def main():
         help='deliverable type, such as "library" or "service"',
     )
     parser.add_argument(
+        '--except-type',
+        default=[],
+        action='append',
+        choices=sorted(deliverable_schema.release_types),
+        help='exclude type, such as "tempest-plugin" or "service"',
+    )
+    parser.add_argument(
         '--deliverables-dir',
         default=openstack_releases.deliverable_dir,
         help='location of deliverable files',
@@ -227,6 +234,8 @@ def main():
             continue
         if args.cycle_based_no_trailing and (not deliv.is_cycle_based or
                                              deliv.type == 'trailing'):
+            continue
+        if args.except_type and deliv.type in args.except_type:
             continue
         if args.type and deliv.type not in args.type:
             continue
