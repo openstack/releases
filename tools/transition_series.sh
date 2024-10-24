@@ -25,7 +25,7 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
 fi
 
 echo "Finding deliverables for $series series..."
-deliverables=$(list-deliverables --series $series)
+deliverables=$(list-deliverables --series $series --except-type tempest-plugin)
 
 errors=()
 for deliverable in $deliverables; do
