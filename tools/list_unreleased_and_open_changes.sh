@@ -16,21 +16,23 @@
 # open and unreleased changes.
 
 if [[ $# -lt 1 ]]; then
-    echo "Usage: $(basename $0) <branch>"
-    echo "branch should be e.g. ocata"
+    echo "Usage: $(basename $0) <series>"
+    echo "series should be e.g. antelope"
     exit 1
 fi
-
-BRANCH=${1}
-RESULT_DIR="$BRANCH-$(date '+%Y%m%d-%H%M')"
-mkdir -p $RESULT_DIR
-
-OPENSTACK_TEAMS=$(grep team deliverables/${BRANCH}/*.yaml | cut -f3 -d: | \
-                sort -u)
 
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
 source $TOOLSDIR/functions
+enable_tox_venv
+
+SERIES=${1}
+BRANCH=$(get-series-id ${SERIES})
+RESULT_DIR="$SERIES-$(date '+%Y%m%d-%H%M')"
+mkdir -p $RESULT_DIR
+
+OPENSTACK_TEAMS=$(grep team deliverables/${SERIES}/*.yaml | cut -f3 -d: | \
+                sort -u)
 
 function get_open_patches {
     REPO=$1
@@ -49,8 +51,8 @@ function get_open_patches {
 for team in ${OPENSTACK_TEAMS}; do
     echo "Checking repositories of team: ${team}"
 
-    REPOS=$(tox -e venv -- list-deliverables --repos \
-            --series ${BRANCH} --team ${team} | grep "^openstack/")
+    REPOS=$(list-deliverables --repos \
+            --series ${SERIES} --team ${team} | grep "^openstack/")
 
     if [ -n "${REPOS}" ]; then
         echo "List of open and unreleased changes of team '${team}' " \
