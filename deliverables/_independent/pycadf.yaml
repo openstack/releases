@@ -5,3 +5,8 @@ team: keystone
 type: library
 repository-settings:
   openstack/pycadf: {}
+releases:
+  - version: 4.0.0
+    projects:
+      - repo: openstack/pycadf
+        hash: dcfda50d90ad3bb2c09f194c1b75476f2d21478e
