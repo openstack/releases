@@ -1186,10 +1186,27 @@ class TestValidateNewReleasesInOpenSeries(base.BaseTestCase):
 
 class TestValidateVersionNumbers(base.BaseTestCase):
 
+    _series_status_data = yamlutils.loads(textwrap.dedent('''
+    - name: antelope
+      release-id: 2023.1
+      status: maintained
+      initial-release: 2023-03-22
+    - name: bobcat
+      release-id: 2023.2
+      status: unmaintained
+      initial-release: 2023-10-22
+    '''))
+
     def setUp(self):
         super().setUp()
         self.ctx = validate.ValidationContext()
         gitutils.clone_repo(self.ctx.workdir, 'openstack/release-test')
+        self.series_status = series_status.SeriesStatus(
+            self._series_status_data)
+        self.useFixture(fixtures.MockPatch(
+            'openstack_releases.deliverable.Deliverable._series_status_data',
+            self.series_status,
+        ))
 
     @mock.patch('openstack_releases.versionutils.validate_version')
     def test_invalid_version(self, validate_version):
@@ -1289,6 +1306,27 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
+    def test_eol_valid_version_with_release_id(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='antelope',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '2023.1-eol',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
     def test_eom_valid_version(self):
         deliv = deliverable.Deliverable(
             team='team',
@@ -1310,6 +1348,27 @@ class TestValidateVersionNumbers(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
+    def test_eom_valid_version_with_release_id(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='antelope',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '2023.1-eom',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
     def test_em_valid_version(self):
         deliv = deliverable.Deliverable(
             team='team',
@@ -1319,6 +1378,27 @@ class TestValidateVersionNumbers(base.BaseTestCase):
                 'artifact-link-mode': 'none',
                 'releases': [
                     {'version': 'ocata-em',
+                     'projects': [
+                         {'repo': 'openstack/release-test',
+                          'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},
+                     ]}
+                ],
+            }
+        )
+        validate.validate_version_numbers(deliv, self.ctx)
+        self.ctx.show_summary()
+        self.assertEqual(0, len(self.ctx.warnings))
+        self.assertEqual(0, len(self.ctx.errors))
+
+    def test_tempest_last_valid_version_with_release_id(self):
+        deliv = deliverable.Deliverable(
+            team='team',
+            series='bobcat',
+            name='name',
+            data={
+                'artifact-link-mode': 'none',
+                'releases': [
+                    {'version': '2023.2-last',
                      'projects': [
                          {'repo': 'openstack/release-test',
                           'hash': 'a26e6a2e8a5e321b2e3517dbb01a7b9a56a8bfd5'},

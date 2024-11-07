@@ -1149,7 +1149,7 @@ def validate_version_numbers(deliv, context):
                     'EOL tag {} on independent deliverable, branch not validated'.format(
                         release.version))
                 continue
-            if release.eol_series != deliv.series:
+            if release.eol_series != gitutils.get_stable_branch_id(deliv.series):
                 context.error(
                     'EOL tag {} does not refer to the {} series.'.format(
                         release.version, deliv.series))
@@ -1163,7 +1163,7 @@ def validate_version_numbers(deliv, context):
                     'EOM tag {} on independent deliverable, branch not validated'.format(
                         release.version))
                 continue
-            if release.eom_series != deliv.series:
+            if release.eom_series != gitutils.get_stable_branch_id(deliv.series):
                 context.error(
                     'EOM tag {} does not refer to the {} series.'.format(
                         release.version, deliv.series))
@@ -1191,10 +1191,10 @@ def validate_version_numbers(deliv, context):
                     'LAST tag {} on independent deliverable, branch not validated'.format(
                         release.version))
                 continue
-            if release.version != "{}-last".format(deliv.series):
+            if release.version != "{}-last".format(gitutils.get_stable_branch_id(deliv.series)):
                 context.error(
-                    "LAST tag {} should match branch name (e.g {}-last)".format(
-                        release.version, deliv.series))
+                    "LAST tag {} should match branch name (e.g {}-last for series {})".format(
+                        release.version, gitutils.get_stable_branch_id(deliv.series), deliv.series))
             if not (deliv.series_info.is_em or deliv.series_info.is_eom):
                 context.error(
                     "LAST tag {} aren't allowed on a series ({}) that are not EM or Unmaintained".format(
