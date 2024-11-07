@@ -295,7 +295,13 @@ def main():
     except RuntimeError as err:
         error(err)
     if last_release:
-        last_version = last_release['version'].split('.')
+        # Split last_version e.g. 2.1.0 to ['2', '1', '0'], but
+        # do not split e.g. 2023.1-eom tag to ['2023', '1-eom']
+        if (f"{get_stable_branch_id(series)}-eol" == last_release['version'] or
+                f"{get_stable_branch_id(series)}-eom" == last_release['version']):
+            last_version = [last_release['version']]
+        else:
+            last_version = last_release['version'].split('.')
     else:
         last_version = None
     LOG.debug('last_version %r', last_version)
@@ -306,7 +312,7 @@ def main():
     add_intermediate_branch = args.intermediate_branch
 
     # Validate new tag can be applied
-    if last_version and 'eol' in last_version[0]:
+    if last_version and f'{get_stable_branch_id(series)}-eol' in last_version[0]:
         raise ValueError('Cannot create new release after EOL tagging.')
 
     if last_version is None:
@@ -408,9 +414,11 @@ def main():
         }
         increment = None
         new_version_parts = None
-        new_version = '{}-{}'.format(args.series, args.release_type)
+        new_version = '{}-{}'.format(get_stable_branch_id(args.series), args.release_type)
 
     else:
+        if last_version and f'{get_stable_branch_id(series)}-eom' in last_version[0]:
+            raise ValueError('Cannot create new release after EOM tagging.')
         increment = {
             'bugfix': (0, 0, 1),
             'feature': (0, feature_increment(last_release), 0),
@@ -464,10 +472,13 @@ def main():
             branches = gitutils.get_branches(workdir, repo)
             version = 'master'
             if series != '_independent':
-                version = 'origin/stable/%s' % get_stable_branch_id(series)
+                version = 'origin/unmaintained/%s' % get_stable_branch_id(series)
                 if not any(branch for branch in branches
                            if branch.endswith(version)):
-                    version = 'master'
+                    version = 'origin/stable/%s' % get_stable_branch_id(series)
+                    if not any(branch for branch in branches
+                               if branch.endswith(version)):
+                        version = 'master'
 
             sha = gitutils.sha_for_tag(workdir, repo, version)
 
