@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: a3445ded36bcb2f65e5e5e66885470729898e76f
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 6dcf75021ebc79ba07b2330942777d018217c21b
 branches:
   - name: stable/2023.1
     location: 4.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
