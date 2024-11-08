@@ -16,8 +16,14 @@ releases:
       - repo: openstack/masakari-dashboard
         hash: c1928878d0fefa79a080aeb34693b629f9f822fb
     diff-start: 7.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 8c7435371df311c8c362fa99007d0d76852d7d79
 branches:
   - name: stable/2023.1
     location: 8.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/masakari-dashboard/2023.1.html
