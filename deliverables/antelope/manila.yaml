@@ -38,7 +38,13 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 3c01b7181572c95dac462eb19c3121e36cb0fe95
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/manila
+        hash: 3c01b7181572c95dac462eb19c3121e36cb0fe95
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/manila/2023.1.html
