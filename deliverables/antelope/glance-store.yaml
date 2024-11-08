@@ -27,6 +27,12 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 45ad5df01fa7062ba7d3ec99966531623e35ab57
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/glance_store
+        hash: 97b6f4c030189a80df0b525420a3760ae3a81941
 branches:
   - name: stable/2023.1
     location: 4.3.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
