@@ -46,7 +46,13 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 3a39a79eed39fb844aecadd524cf4cc54d812cdf
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/kolla
+        hash: 7ba43d2820cd91b1108e5473eb0a9c26ae4a9cb8
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/kolla/2023.1.html
