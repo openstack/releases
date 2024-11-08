@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 6be287cbf0d2804152f40e89e95e8b1e217fa026
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/trove
+        hash: 6be287cbf0d2804152f40e89e95e8b1e217fa026
 branches:
   - name: stable/2023.1
     location: 19.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/trove/2023.1.html
