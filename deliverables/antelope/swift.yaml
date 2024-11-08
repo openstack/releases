@@ -14,7 +14,13 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 049ffd5a89f9e9b9de3ac51c5d34cf81e9d9bd06
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/swift
+        hash: 27d66a63f3bb85df5a110e86ae6a286770d902eb
 branches:
   - name: stable/2023.1
     location: 2.31.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/swift/2023.1.html
