@@ -72,7 +72,14 @@ releases:
       - hash: 69fd3985f51243ac8d7db92b81bca9328b0adbe0
         repo: openstack/openstack-ansible
     version: 27.6.2
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 69fd3985f51243ac8d7db92b81bca9328b0adbe0
 branches:
   - name: stable/2023.1
     location: 27.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/openstack-ansible/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/openstack-ansible/2023.1.html
