@@ -24,9 +24,15 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: e96c503154ff8f3560b1601ee4616549d8c5b161
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 9d4e6e20b98e840e8b52598ca1882e0f47906457
 branches:
   - name: stable/2023.1
     location: 5.1.2
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 cycle-highlights:
   - Keystone auth has a new plugin for OAuth 2.0 Device Authorization
     Grant

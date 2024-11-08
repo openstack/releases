@@ -26,7 +26,13 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: c725173cff5d31e42b2b4857628bf59d99b601a5
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/keystone
+        hash: ea5b0b0f35a443dc196f2f2d60704dd0dca8b3ab
 branches:
   - name: stable/2023.1
     location: 23.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/keystone/2023.1.html
