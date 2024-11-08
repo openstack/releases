@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 85e4f08309490fa2ab6f0b581b3d645d2dbb5c4b
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-novaclient
+        hash: fa98233d57154a4819f5f498065cda778ce7622a
 branches:
   - name: stable/2023.1
     location: 18.3.0
-release-notes: https://docs.openstack.org/releasenotes/python-novaclient/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-novaclient/2023.1.html

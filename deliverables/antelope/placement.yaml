@@ -21,7 +21,13 @@ releases:
       - repo: openstack/placement
         hash: 9fa635bd60cff51effc7ae65e8562664ce7ce24c
     diff-start: 8.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/placement
+        hash: b3652feea1855c9481c9441976379d9851c0c62f
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/placement/2023.1.html

@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: b6505e20baa3e240aeb9aa2c238c470eea95e0f1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/osc-placement
+        hash: d62189f0077e580be2899863569df2fb446e100a
 branches:
   - name: stable/2023.1
     location: 4.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/osc-placement/2023.1.html
