@@ -29,7 +29,13 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: 0f0d85cf95b64c33559637979da5db838d2f2add
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/cyborg
+        hash: 0f0d85cf95b64c33559637979da5db838d2f2add
 branches:
   - name: stable/2023.1
     location: 10.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/cyborg/2023.1.html
