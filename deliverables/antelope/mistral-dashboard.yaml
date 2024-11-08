@@ -20,6 +20,12 @@ releases:
       - repo: openstack/mistral-dashboard
         hash: 27fe8009b5a9f929b4cbb4792af4c44b11d9cf84
     diff-start: 15.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: a64846315cc5c61a627dce0a4a7efb71b06d27e6
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
