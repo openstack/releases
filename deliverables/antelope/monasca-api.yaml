@@ -15,6 +15,12 @@ releases:
       - repo: openstack/monasca-api
         hash: 658c68b593a4d83f59143dc6c7df81860d3f57cb
     diff-start: 8.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/monasca-api
+        hash: 9b270faeb26890f49dd1700d6001f6c3e9e9be11
 branches:
   - name: stable/2023.1
     location: 10.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
