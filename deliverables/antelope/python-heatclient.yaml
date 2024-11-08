@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: 712739e5e7322f270467bbf49d5062a241db98dd
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-heatclient
+        hash: 14ef7118f7684ad6d48c2a83d7d9151103a8f96f
 branches:
   - name: stable/2023.1
     location: 3.2.0
-release-notes: https://docs.openstack.org/releasenotes/python-heatclient/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-heatclient/2023.1.html

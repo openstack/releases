@@ -15,7 +15,13 @@ releases:
       - repo: openstack/heat-dashboard
         hash: fa9efec740b54cf05f6607098a4fbf13e5e58f8b
     diff-start: 8.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 007a7a5a3b338543dd6e3badd04967324e8f0e9b
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-dashboard/2023.1.html
