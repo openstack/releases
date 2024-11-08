@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: 1de4b6ede7d936e025abbba0496432db34010439
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: bc4c1789629e789f0d0e425d766fbda034b8a763
 branches:
   - name: stable/2023.1
     location: 7.1.0
-release-notes: https://docs.openstack.org/releasenotes/networking-generic-switch/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-generic-switch/2023.1.html
