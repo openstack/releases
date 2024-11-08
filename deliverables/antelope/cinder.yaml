@@ -55,7 +55,13 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 022be6cfb5fddbdd75bbb5d9acc115e9cf6cd868
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/cinder
+        hash: 022be6cfb5fddbdd75bbb5d9acc115e9cf6cd868
 branches:
   - name: stable/2023.1
     location: 22.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/cinder/2023.1.html
