@@ -25,8 +25,14 @@ releases:
     projects:
       - repo: openstack/skyline-apiserver
         hash: 8c3e165638fa3bcb057cf4fa933a61013bf36694
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/skyline-apiserver
+        hash: 8c3e165638fa3bcb057cf4fa933a61013bf36694
 branches:
   - name: stable/2023.1
     location: 2.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/skyline-apiserver/2023.1.html
