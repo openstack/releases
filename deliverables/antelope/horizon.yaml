@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: e5eeaca1f0f6d0230174476b7c3ff53340ed10c4
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/horizon
+        hash: 734db215e73bbf540718c1f255d3e1064ce347f1
 branches:
   - name: stable/2023.1
     location: 23.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/horizon/2023.1.html
