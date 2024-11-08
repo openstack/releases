@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: fb9a3a9b2daa21317d0adceca86215c393e975e6
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/cliff
+        hash: c138787c0b5a30b48bd75e3fd61585d29c9d8949
 branches:
   - name: stable/2023.1
     location: 4.2.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
