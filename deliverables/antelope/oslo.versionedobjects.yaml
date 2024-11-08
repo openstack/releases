@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: b4ea8348085a3d9725b4a0d497b937deb2d759ac
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: d526c793a8aba2a6e449c915c1dbc81f9fb64460
 branches:
   - name: stable/2023.1
     location: 3.1.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.versionedobjects/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.versionedobjects/2023.1.html

@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: c4acc5639fd2329372142e39464fcca0209b0018
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/stevedore
+        hash: 6c179d16504de5fa821fbd5e8c38ba4c0a040738
 branches:
   - name: stable/2023.1
     location: 5.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/stevedore/2023.1.html

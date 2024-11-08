@@ -19,7 +19,13 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: fdfc4e61b58cb2b1a9a6188c139fb5271301fecf
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/oslo.log
+        hash: fdfc4e61b58cb2b1a9a6188c139fb5271301fecf
 branches:
   - name: stable/2023.1
     location: 5.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.log/2023.1.html

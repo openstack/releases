@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 7696282cb5bead6d7c6320ff287fb635500bd9a6
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/oslo.context
+        hash: 0b6fea6342f9670e9f98c09f17c360918660853a
 branches:
   - name: stable/2023.1
     location: 5.1.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.context/2023.1.html
