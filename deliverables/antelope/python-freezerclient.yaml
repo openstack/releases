@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-freezerclient
         hash: 2b112fc493e13ca21d24d405d9659d04e6536ebd
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 2b112fc493e13ca21d24d405d9659d04e6536ebd
 branches:
   - name: stable/2023.1
     location: 5.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
