@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.db: {}
+releases:
+  - version: 17.0.0
+    projects:
+      - repo: openstack/oslo.db
+        hash: ae9b02dca6e5fc428831f1bd86b04e2122681af9
