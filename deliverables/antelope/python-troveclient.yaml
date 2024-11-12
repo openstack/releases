@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 5a20908cd0852a98fdbf5355902366780ed4961f
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 7366f30070eb350711cdcd6206afbc4120d02627
 branches:
   - name: stable/2023.1
     location: 8.1.0
-release-notes: https://docs.openstack.org/releasenotes/python-troveclient/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-troveclient/2023.1.html

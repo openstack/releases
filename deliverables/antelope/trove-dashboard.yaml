@@ -15,7 +15,14 @@ releases:
       - repo: openstack/trove-dashboard
         hash: 8309206de77a2079193f64fb29669b2ef5594a46
     diff-start: 19.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 1e4815e25439a929612148022773dcd54fdf94d7
 branches:
   - name: stable/2023.1
     location: 20.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/trove-dashboard/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/trove-dashboard/2023.1.html
