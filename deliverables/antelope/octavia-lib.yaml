@@ -16,7 +16,13 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: 5ec74a4dbeda9b65fbe3cdae078fca713a1dad74
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/octavia-lib
+        hash: 5ec74a4dbeda9b65fbe3cdae078fca713a1dad74
 branches:
   - name: stable/2023.1
     location: 3.2.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/octavia-lib/2023.1.html

@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: 6e306cc55018d38b99026d473abf90b2b586f35e
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: aedbc6f60a4d528930b0700ee06bfeb996df16ef
 branches:
   - name: stable/2023.1
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/python-octaviaclient/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/python-octaviaclient/2023.1.html
