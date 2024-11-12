@@ -16,7 +16,13 @@ releases:
       - repo: openstack/watcher
         hash: e7cda537e7fd62649b7e35f653fbf0499822e99c
     diff-start: 9.0.0.0rc1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/watcher
+        hash: c014f81a8647287f6dcc339321c1256f5a2e82d5
 branches:
   - name: stable/2023.1
     location: 10.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/watcher/2023.1.html

@@ -16,7 +16,14 @@ releases:
       - repo: openstack/watcher-dashboard
         hash: 0c7d458d631737d90787311fffd37677becf8f77
     diff-start: 8.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: b77d5c2b17418b7068665658edf58809e4f91170
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher-dashboard/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher-dashboard/2023.1.html
