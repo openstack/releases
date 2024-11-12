@@ -62,6 +62,10 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 0d313c0875d9d4326c8b3c951bc23d492ad67eb7
+  - version: 17.3.1
+    projects:
+      - repo: openstack/manila
+        hash: 3542e485295b789b025fc2ece5683b285b11f2b2
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
