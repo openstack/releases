@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack-plugin-ceph: 863a01b03286e6595d68ac7f2560c857bcf944c5
     name: stable/2023.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: 11260fcbc95a9b13a91fef5ff259fd998651254c
