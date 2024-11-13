@@ -16,7 +16,14 @@ releases:
       - repo: openstack/designate-dashboard
         hash: b89a1e5177294c1deeace9aaf8cad93bfada8ed8
     diff-start: 15.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 7bc6a1fc3828d529df37b05f15a84dc8be4223b7
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate-dashboard/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/designate-dashboard/2023.1.html
