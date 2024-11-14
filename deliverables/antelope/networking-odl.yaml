@@ -17,7 +17,13 @@ releases:
       - repo: openstack/networking-odl
         hash: d8316e6f531e7568fdb9dca6fae89902eb566c40
     diff-start: 21.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/networking-odl
+        hash: 404db086fccf450f8e485301c8ddfe4191581299
 branches:
   - name: stable/2023.1
     location: 22.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/networking-odl/2023.1.html

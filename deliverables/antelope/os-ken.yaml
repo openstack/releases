@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 6b427e4b5c457b86bd35d4580c88c1a42d3ac32a
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/os-ken
+        hash: 6b427e4b5c457b86bd35d4580c88c1a42d3ac32a
 branches:
   - name: stable/2023.1
     location: 2.6.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/os-ken/2023.1.html
