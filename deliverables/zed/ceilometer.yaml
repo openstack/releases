@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: a0e2230e3b9dc0f741bb71060950260c4c33148b
+  - version: zed-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: a0e2230e3b9dc0f741bb71060950260c4c33148b
 branches:
   - name: stable/zed
     location: 19.0.0.0rc1

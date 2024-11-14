@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 1ea4e21eb231e4fe193e62f1b03b957c9d4281c8
+  - version: zed-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 9b9993e317e8db6e63c9d39954ee8012ad18e6cc
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1

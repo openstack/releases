@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: d593976c339a7bea79a8e2f7c1949a3c105411c0
+  - version: zed-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 06dd3559f8616c57462ee646168e4a6069dd30ee
 branches:
   - name: stable/zed
     location: 11.0.0.0rc1

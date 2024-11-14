@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 6c23448f0c4a2a9a52344aa935a1b28020e6e70d
+  - version: zed-eol
+    projects:
+      - repo: openstack/aodh
+        hash: 6c23448f0c4a2a9a52344aa935a1b28020e6e70d
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

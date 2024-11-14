@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 3380d6848a13171d1c3ab8ab2776eae163226ee0
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 3380d6848a13171d1c3ab8ab2776eae163226ee0
 repository-settings:
   openstack/puppet-keystone: {}
 branches:

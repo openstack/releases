@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/monasca-thresh
         hash: d256f05be6235dbaaff8ba738e6196b9c6241911
+  - version: zed-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: d256f05be6235dbaaff8ba738e6196b9c6241911
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1

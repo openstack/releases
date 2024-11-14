@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: 6130d71c626d313b1784df0f3714500fa0f45d26
+  - version: zed-eol
+    projects:
+      - repo: openstack/adjutant
+        hash: 6130d71c626d313b1784df0f3714500fa0f45d26
 branches:
   - name: stable/zed
     location: 5.0.0.0rc1

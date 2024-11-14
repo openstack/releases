@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: ea0d0c6e286b15d6eda70bdbdfc2a8c67d7e895d
+  - version: zed-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: ea0d0c6e286b15d6eda70bdbdfc2a8c67d7e895d
 branches:
   - name: bugfix/10.12
     location: 10.12.0

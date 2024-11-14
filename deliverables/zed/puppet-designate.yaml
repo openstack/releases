@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: 8e2dd1148c544cc3f533bb372a98160e8a5e3b16
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 8e2dd1148c544cc3f533bb372a98160e8a5e3b16
 repository-settings:
   openstack/puppet-designate: {}
 branches:

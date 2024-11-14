@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: df507fd2d3e50a1468f73733c53f5242699a26e8
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: df507fd2d3e50a1468f73733c53f5242699a26e8
 repository-settings:
   openstack/puppet-cinder: {}
 branches:
