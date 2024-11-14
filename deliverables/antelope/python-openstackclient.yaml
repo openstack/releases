@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 02172959fe229ad92487d56fef10f781d98da166
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 02172959fe229ad92487d56fef10f781d98da166
 branches:
   - name: stable/2023.1
     location: 6.2.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-openstackclient/2023.1.html

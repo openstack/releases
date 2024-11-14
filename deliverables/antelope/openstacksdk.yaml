@@ -27,7 +27,13 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: eee309c588b173fcea383b3837ad44f3d18160ef
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/openstacksdk
+        hash: eee309c588b173fcea383b3837ad44f3d18160ef
 branches:
   - name: stable/2023.1
     location: 1.0.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/openstacksdk/2023.1.html
