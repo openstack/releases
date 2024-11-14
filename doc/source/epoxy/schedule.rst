@@ -196,3 +196,13 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Oslo
+----
+
+.. _e-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
