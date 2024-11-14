@@ -15,6 +15,12 @@ releases:
       - repo: openstack/tacker-horizon
         hash: 555d3ed3e65cf24ded7a71ef8671f82ba67a7bc6
     diff-start: 6.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 765495ab62e77b6e46f77d6a1f8570410e67ce18
 branches:
   - name: stable/2023.1
     location: 7.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
