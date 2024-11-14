@@ -20,7 +20,13 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 00f7ce23f9de6afd7557757b94b9f4fb240b6dd2
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 00f7ce23f9de6afd7557757b94b9f4fb240b6dd2
 branches:
   - name: stable/2023.1
     location: 18.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/cloudkitty/2023.1.html
