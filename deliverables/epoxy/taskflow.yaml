@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/taskflow: {}
+releases:
+  - version: 5.10.0
+    projects:
+      - repo: openstack/taskflow
+        hash: ca0b7bbe6e8861804aceb1b6b8ce884917c99dda
