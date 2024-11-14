@@ -123,10 +123,11 @@ function series_to_branch {
     typeset series="$1"
 
     typeset default=$(python -c 'from openstack_releases import defaults; print(defaults.RELEASE)')
+    typeset branch_name=$(python -c "from openstack_releases import gitutils; print(gitutils.get_stable_branch_id(\"$series\"))")
     if [ "$series" = "$default" ]; then
         echo "master"
     else
-        echo "stable/$series"
+        echo "stable/$branch_name"
     fi
 }
 
