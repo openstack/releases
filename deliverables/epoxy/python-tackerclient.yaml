@@ -6,3 +6,8 @@ team: tacker
 type: client-library
 repository-settings:
   openstack/python-tackerclient: {}
+releases:
+  - version: 2.2.0
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 7761e073aaefc2f773277ed8baffd3069a063329
