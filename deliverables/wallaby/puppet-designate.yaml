@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/puppet-designate
         hash: f4c0b892eb3d95df1091ac25e06b48d9bd2243b2
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: f4c0b892eb3d95df1091ac25e06b48d9bd2243b2
 branches:
   - name: stable/wallaby
     location: 18.4.0

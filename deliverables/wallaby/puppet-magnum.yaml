@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: 60772fed27614fc4fe67e987c8babcfd977959da
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 60772fed27614fc4fe67e987c8babcfd977959da
 branches:
   - name: stable/wallaby
     location: 18.4.0

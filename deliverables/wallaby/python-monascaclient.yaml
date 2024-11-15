@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 7fc0a43e02346f1e68de1ccba00c64a097072046
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 7fc0a43e02346f1e68de1ccba00c64a097072046
 branches:
   - name: stable/wallaby
     location: 2.3.0

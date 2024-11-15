@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 9dd1a093adce4f60078883d58c2e8c4189433452
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 792d88f289201ea838bfd8b28b69fd0911160876
 branches:
   - name: stable/wallaby
     location: 4.5.0

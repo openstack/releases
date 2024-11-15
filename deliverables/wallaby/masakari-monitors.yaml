@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: cce2c7ade70f837d6e2d690cf690d6b313c4529e
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 709afa75aeb8a307c8836ac337e9a6489bdec178
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1

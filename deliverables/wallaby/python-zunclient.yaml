@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 91328194e178e2f07fa28002039b3f88c44a57d1
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 91328194e178e2f07fa28002039b3f88c44a57d1
 branches:
   - name: stable/wallaby
     location: 4.2.0
