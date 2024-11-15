@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 2d4becf5803f8ceb79dcc04f896b2e07d774f073
+  - version: victoria-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 4179a2e60ba0c580f45b5298a100ec48d5a7a7e0
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

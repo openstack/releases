@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: c9ae1e17c25aeae8d421b3669dae781bebda7b56
+  - version: victoria-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: c9ae1e17c25aeae8d421b3669dae781bebda7b56
 branches:
   - name: stable/victoria
     location: 2.1.0

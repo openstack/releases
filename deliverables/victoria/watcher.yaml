@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: ab64069e237daa2a8868a8db67ece5fea39a645a
+  - version: victoria-eol
+    projects:
+      - repo: openstack/watcher
+        hash: ab64069e237daa2a8868a8db67ece5fea39a645a
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

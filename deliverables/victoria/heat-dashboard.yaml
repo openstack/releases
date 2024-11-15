@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: c0fa2a8ca1c9883106f2624203ebba9867409e2f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: c0fa2a8ca1c9883106f2624203ebba9867409e2f
 branches:
   - name: stable/victoria
     location: 4.0.0.0rc1

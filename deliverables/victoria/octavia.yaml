@@ -55,6 +55,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 881e93fc8005533a487b67148021f1ae791c7384
+  - version: victoria-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 21533439d7e85cb78a96cce38846c8913c57a47e
 branches:
   - name: stable/victoria
     location: 7.0.0.0rc1

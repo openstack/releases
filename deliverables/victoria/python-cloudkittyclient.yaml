@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: d1cb3b1e691e436544d824f74fca2c0d7a1d1eaf
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: d1cb3b1e691e436544d824f74fca2c0d7a1d1eaf
 branches:
   - name: stable/victoria
     location: 4.1.0

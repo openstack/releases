@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 849c8001963f88ad0828a9bc0686374581130030
+  - version: victoria-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: 849c8001963f88ad0828a9bc0686374581130030
 branches:
   - name: stable/victoria
     location: 7.3.0

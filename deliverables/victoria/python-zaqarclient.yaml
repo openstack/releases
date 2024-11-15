@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 18c30dda0668130e409250e537b5912ba6b76f3a
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 18c30dda0668130e409250e537b5912ba6b76f3a
 branches:
   - name: stable/victoria
     location: 2.0.1

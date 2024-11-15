@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 6f116bea85e5677f9eaa2cae5c7c6684a995bba2
+  - version: victoria-eol
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 4efa3bc16b6b091fe5b8346b5cd3401a3bd2c94f
 branches:
   - name: stable/victoria
     location: 10.0.0.0rc1

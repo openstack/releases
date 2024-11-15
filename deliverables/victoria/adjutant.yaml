@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: acc4a44e87758a6bedabbc12d35b059d437f58ef
+  - version: victoria-eol
+    projects:
+      - repo: openstack/adjutant
+        hash: acc4a44e87758a6bedabbc12d35b059d437f58ef
 branches:
   - name: stable/victoria
     location: 1.0.0.0rc1

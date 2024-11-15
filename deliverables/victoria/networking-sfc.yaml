@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 1a51c0f52e4fa8275333904d617f3b24a7458f4f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 1a51c0f52e4fa8275333904d617f3b24a7458f4f
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

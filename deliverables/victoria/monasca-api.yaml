@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: fabfa069722992045c35cb53bafd0bafbb5ece9e
+  - version: victoria-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: fabfa069722992045c35cb53bafd0bafbb5ece9e
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

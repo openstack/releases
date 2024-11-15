@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: c6f34ce2636b383db58c6cf83839fbd772bb6ea6
+  - version: victoria-eol
+    projects:
+      - repo: openstack/aodh
+        hash: c6f34ce2636b383db58c6cf83839fbd772bb6ea6
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

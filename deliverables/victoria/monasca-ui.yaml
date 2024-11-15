@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 0204730de1ad3ceb049652f437ca8709b779f1f4
+  - version: victoria-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 0204730de1ad3ceb049652f437ca8709b779f1f4
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

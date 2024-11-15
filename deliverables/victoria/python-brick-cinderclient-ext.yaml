@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 6eeacc0523dacea0ebbb66be30329ee6e83d862f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: c67966d54f239e74f849a89d67b1c5f13bb595ea
 branches:
   - name: stable/victoria
     location: 1.1.1

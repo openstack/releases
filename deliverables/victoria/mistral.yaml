@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 6ea2ccc111d87acf3d9b5533364a348c961d97b4
+  - version: victoria-eol
+    projects:
+      - repo: openstack/mistral
+        hash: 6ea2ccc111d87acf3d9b5533364a348c961d97b4
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

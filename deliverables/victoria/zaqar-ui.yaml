@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 7e708d4c3954db7063093722ae721897c3ed8a08
+  - version: victoria-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 7e708d4c3954db7063093722ae721897c3ed8a08
 branches:
   - name: stable/victoria
     location: 9.0.0.0rc1
