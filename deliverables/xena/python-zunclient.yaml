@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-zunclient
         hash: 4044351134b914ab9176e23a8288ba9d5d7a1116
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-zunclient
+        hash: 4044351134b914ab9176e23a8288ba9d5d7a1116
 branches:
   - name: stable/xena
     location: 4.3.0

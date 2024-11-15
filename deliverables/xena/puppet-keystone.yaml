@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-keystone
         hash: 11dbf38cfda264caf046626027557761077c5b4b
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: 11dbf38cfda264caf046626027557761077c5b4b
 branches:
   - name: stable/xena
     location: 19.4.0

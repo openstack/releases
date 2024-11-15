@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 5b1d3198b1f192ee8f2d73762dc9fbc35f5f0722
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: e5f8a11ace93527d7fa673cdce0eb7cb123a61da
 branches:
   - name: stable/xena
     location: 4.6.0

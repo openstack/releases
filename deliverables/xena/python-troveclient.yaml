@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 10890b020445758ad8cc4bac6bf3e826c3f6f37d
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 10890b020445758ad8cc4bac6bf3e826c3f6f37d
 branches:
   - name: stable/xena
     location: 7.1.1

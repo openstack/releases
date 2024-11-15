@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 29572e2c3354f37570bf7552aea6438d4dbd7bc9
+  - version: xena-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 29572e2c3354f37570bf7552aea6438d4dbd7bc9
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: ec3155027a298f9049db1d1c30ec91b94d1a85da
+  - version: xena-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: ec3155027a298f9049db1d1c30ec91b94d1a85da
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

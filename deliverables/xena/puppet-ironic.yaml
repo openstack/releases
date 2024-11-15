@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-ironic
         hash: 1af3df3eeb44a39c8d96c60510b14f27d675408a
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 1af3df3eeb44a39c8d96c60510b14f27d675408a
 branches:
   - name: stable/xena
     location: 19.4.0
