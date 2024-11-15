@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: f825b5ba738e4ce898e34645244acd315afd492f
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: fd5b39721b908ee7090bbdd26762f698463246cf
 branches:
   - location: 1.5.0
     name: stable/yoga

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: 2cf19123102d58986071ac1cdbd4b53b544fe2c8
+  - version: yoga-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: b87981e98dec8aa8547c57467f17fa81962580a5
 branches:
   - name: stable/yoga
     location: 2.4.1

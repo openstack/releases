@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: 561fed27c7959b72aa74a46026a62fc1f941139b
+  - version: yoga-eol
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 855686893129bba90b31065b77f47c72dafb97ed
 branches:
   - name: bugfix/10.9
     location: 10.9.0

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/heat-dashboard
         hash: 36ae65ee9da09aa486541740b58ffd6aea748513
+  - version: yoga-eol
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 102be87c202ce3b15b98aa8cec140a34edc77f01
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

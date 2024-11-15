@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: af3c058f959ed036e01180e922f1e7d32e60cda1
+  - version: yoga-eol
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: af3c058f959ed036e01180e922f1e7d32e60cda1
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1

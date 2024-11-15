@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-glance
         hash: 0e90a9c98e637ef07366f267ba1fc962401e3c3d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 0e90a9c98e637ef07366f267ba1fc962401e3c3d
 repository-settings:
   openstack/puppet-glance: {}
 branches:

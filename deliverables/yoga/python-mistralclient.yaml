@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: c87342a3242cb4af07661e6399ef6d278f25e02b
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: 5cb379f94c71a6c65c9e3630d463f7da188da83a
 branches:
   - name: stable/yoga
     location: 4.4.0

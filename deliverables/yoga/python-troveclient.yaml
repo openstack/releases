@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: dbffc2f78f167591b0066ec256b80ff02f48543c
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: cf8c5f57cb0da76f55d51cf6b49958fa0ec3e4e3
 branches:
   - name: stable/yoga
     location: 7.2.0

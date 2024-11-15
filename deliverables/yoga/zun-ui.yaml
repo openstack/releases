@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/zun-ui
         hash: bbccc2399bc180ff5adb475c543bff28856e05b9
+  - version: yoga-eol
+    projects:
+      - repo: openstack/zun-ui
+        hash: bbccc2399bc180ff5adb475c543bff28856e05b9
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

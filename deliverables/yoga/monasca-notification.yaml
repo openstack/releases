@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-notification
         hash: 50dac47ff801b784b9ad3cb701f6c9b04d0fa350
+  - version: yoga-eol
+    projects:
+      - repo: openstack/monasca-notification
+        hash: 50dac47ff801b784b9ad3cb701f6c9b04d0fa350
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1
