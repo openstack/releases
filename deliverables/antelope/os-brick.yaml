@@ -31,7 +31,13 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 7ad0ed6e5be4443cf2578ff073f01966729275d4
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/os-brick
+        hash: 7ad0ed6e5be4443cf2578ff073f01966729275d4
 branches:
   - name: stable/2023.1
     location: 6.2.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/os-brick/2023.1.html
