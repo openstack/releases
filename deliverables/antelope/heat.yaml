@@ -25,7 +25,13 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 91709d22020c8cdba8fab19a00854e65bde90887
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/heat
+        hash: 81a8b93254842150db98b5fc1388188d67e223f0
 branches:
   - name: stable/2023.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/heat/2023.1.html

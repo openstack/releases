@@ -16,7 +16,13 @@ releases:
       - repo: openstack/heat-agents
         hash: e5d2863982f92c6fa3e326832735ecfd7672d824
     diff-start: 5.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/heat-agents
+        hash: a0142af37c758441430c243a626612632232f4f5
 branches:
   - name: stable/2023.1
     location: 6.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/heat-agents/2023.1.html
