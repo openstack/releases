@@ -15,7 +15,13 @@ releases:
       - repo: openstack/aodh
         hash: aa91a3b6141dd3177d581c5517ae9fe37e75ab4c
     diff-start: 15.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/aodh
+        hash: 61691e5d96fd97547807bece2910d4d982d457c1
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/aodh/2023.1.html
