@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: 78aa34f45930d3a3389bcf55becf6d84aac8ae51
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/taskflow
+        hash: 78aa34f45930d3a3389bcf55becf6d84aac8ae51
 branches:
   - name: stable/2023.1
     location: 5.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/taskflow/2023.1.html

@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: eeedfc902a5c6ffd8945322ab812e821cb708e40
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 5b6aa3100a40b95375f63748708925886d551a70
 branches:
   - name: stable/2023.1
     location: 2.1.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.upgradecheck/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.upgradecheck/2023.1.html

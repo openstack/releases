@@ -10,7 +10,13 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: fe10397ac05b0376a75be57d7c6f31dc5f470e9e
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/castellan
+        hash: f2451200513708322195c25bc97f5d56039ef73b
 branches:
   - name: stable/2023.1
     location: 4.1.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/castellan/2023.1.html

@@ -15,7 +15,13 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 7c5dfbac3a0e2a41b118c3887eecf65bd1e21612
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 332acc69796aab9111930008d9d87a04c50d99ba
 branches:
   - name: stable/2023.1
     location: 4.1.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/2023.1.html
