@@ -1,0 +1,12 @@
+---
+storyboard: openstack/networking-generic-switch
+team: ironic
+type: other
+release-model: cycle-with-intermediary
+releases:
+  - version: pike-eol
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: f3c9dcb08061e664def28fa0fd884cc43b02b5a6
+repository-settings:
+  openstack/networking-generic-switch: {}
