@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: 9c094d74c881443ff1912b3bf15395c47a11f7cc
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: 1cffaa4605b533a5df555f98bfad657c159e16dd
 branches:
   - name: stable/zed
     location: 4.0.2

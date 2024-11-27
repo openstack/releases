@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: 79bddab879b92b1b5019d878dae036beacdbbfa3
+  - version: zed-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: aea4e4544e114696496cbe4fade33fab5ca8ad79
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1

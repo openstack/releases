@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-mapr
         hash: 5d7cf1ccaf5a7f3b59e5a7f16fa32fe89a0d7a35
+  - version: zed-eol
+    projects:
+      - repo: openstack/sahara-plugin-mapr
+        hash: 409d2c2b31b16683ec17b7cae3a5d2cbb3739298
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

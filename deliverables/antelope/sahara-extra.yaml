@@ -17,6 +17,10 @@ releases:
       - repo: openstack/sahara-extra
         hash: cf5762829e5ac2f348d793f950f72dc234ce785e
     diff-start: ussuri-em
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/sahara-extra
+        hash: 658032f08536b6f3d7b47b1a92392b7b351928be
 branches:
   - name: stable/2023.1
     location: 17.0.0.0rc1

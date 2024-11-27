@@ -17,7 +17,12 @@ releases:
       - repo: openstack/sahara-dashboard
         hash: 2fbedc589de71681cb2010c6534fba13529047aa
     diff-start: 17.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 628ccfadc3922852fb02ad6c26f74ed8f77f7f75
 branches:
   - name: stable/2023.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/sahara-dashboard/2023.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sahara-dashboard/2023.1.html

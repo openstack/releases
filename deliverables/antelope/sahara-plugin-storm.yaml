@@ -17,6 +17,10 @@ releases:
       - repo: openstack/sahara-plugin-storm
         hash: 39af1159ead0d66612ca7b67baa78cd8fa108495
     diff-start: 8.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/sahara-plugin-storm
+        hash: 39af1159ead0d66612ca7b67baa78cd8fa108495
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1

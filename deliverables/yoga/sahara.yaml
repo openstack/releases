@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 1bad2d40b2bd1282e70fa527b31c50d7010d3f01
+  - version: yoga-eol
+    projects:
+      - repo: openstack/sahara
+        hash: 3a2adbd265d09cbe67cc95af584a67e6a9ec0948
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1
