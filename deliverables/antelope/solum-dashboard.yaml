@@ -17,6 +17,10 @@ releases:
       - repo: openstack/solum-dashboard
         hash: cf30defab9e28922bb017613ea07d766afa20dd8
     diff-start: 9.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/solum-dashboard
+        hash: 0a680f42a000f6343f615c84d48ed199c4e9b5dc
 branches:
   - name: stable/2023.1
     location: 10.0.0.0rc1
