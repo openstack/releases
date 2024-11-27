@@ -18,6 +18,10 @@ releases:
       - repo: openstack/networking-hyperv
         hash: 6702d260d3d4c881aa41c0c3a995e6f825d60898
     diff-start: 13.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: c109a91224473a3a817e7fd9a10b569d70e318d2
 branches:
   - name: stable/2023.1
     location: 14.0.0.0rc1

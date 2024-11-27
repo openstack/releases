@@ -17,6 +17,10 @@ releases:
       - repo: openstack/compute-hyperv
         hash: 4b80f61a5c4078ea6c2bbc922cc67faf23a12a19
     diff-start: 14.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: 9ea6aaa968eed486eb16fa7b297c942623ef4e66
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

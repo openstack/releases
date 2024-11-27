@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 53f3b50548cd68b36450e1846e0d6c81a1c30722
+  - version: xena-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 53f3b50548cd68b36450e1846e0d6c81a1c30722
 branches:
   - name: stable/xena
     location: 5.5.0

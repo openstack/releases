@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/networking-hyperv
         hash: 301623b02ad58264288a09ada1911d4d0fd8509b
+  - version: xena-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 301623b02ad58264288a09ada1911d4d0fd8509b
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

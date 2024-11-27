@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 04991fce4b44b662a74419bb09d9c8f4512391cc
+  - version: zed-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 026cada3cfaf391bea83c654af5f58f7bad615dd
 branches:
   - name: stable/zed
     location: 5.7.1

@@ -18,6 +18,10 @@ releases:
       - repo: openstack/networking-hyperv
         hash: f38702f4e666a342c05bb241f19d6cae1faec756
     diff-start: 12.0.0
+  - version: zed-eol
+    projects:
+      - repo: openstack/networking-hyperv
+        hash: 0f472897f566315b5ce99394fb05c8dabe8d6fe4
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

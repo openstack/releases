@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: cd4bbb6a8e34d26a3107f3d057176af910e418be
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: cd4bbb6a8e34d26a3107f3d057176af910e418be
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

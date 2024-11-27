@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: ae82a386b51f2d77fb60d15f61f1322679d08577
+  - version: victoria-eol
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: ae82a386b51f2d77fb60d15f61f1322679d08577
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
