@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 492377751883474110197213a3680012816986e2
+  - version: zed-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: e756c2345838c01124249c0f90609e6968cb8185
 branches:
   - name: stable/zed
     location: 10.0.0.0rc1

@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/murano-dashboard
         hash: b0c2429b705520edc50e60f0f17a1647cac685bc
+  - version: zed-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: 74a3fdd92c5ce3ceeeeb9b746096fcd23e2f3126
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1
