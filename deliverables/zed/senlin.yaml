@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/senlin
         hash: b6ef17b0f787fb7a0609ba36dc13097882a6a3ff
+  - version: zed-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 201847fa418137e61b7061adc4d0e964197cf65f
 branches:
   - name: stable/zed
     location: 14.0.0.0rc1

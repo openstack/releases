@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 3385d5a41d660c9b12a1b700752383befef2168d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 83a7d94b78e553730bc94d03646d2d59edd641bf
 branches:
   - name: stable/yoga
     location: 2.4.0

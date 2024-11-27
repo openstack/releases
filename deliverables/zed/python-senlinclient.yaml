@@ -17,6 +17,10 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 16ff6622338d595af0da6452e7489764cf19850f
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 45b5c191b83789c357634ab19617e9090d49f572
 branches:
   - name: stable/zed
     location: 2.5.0
