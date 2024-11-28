@@ -61,9 +61,7 @@ export PAGER=
 
 setup_temp_space 'list-eol-stale-branches'
 
-branch=$(series_to_branch "$series")
-
-function no_open_patches {
+function no_stable_open_patches {
     req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:stable/${eom_branch}"
     patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
     [ -z "${patches}" ]
@@ -75,7 +73,19 @@ function no_open_patches {
     return $no_opens
 }
 
-function eol_tag_matches_head {
+function no_unmaintained_open_patches {
+    req="${GERRIT_URL}/changes/?q=status:open+project:${repo}+branch:unmaintained/${eom_branch}"
+    patches=$(curl -s ${req} | sed 1d | jq --raw-output '.[] | .change_id')
+    [ -z "${patches}" ]
+    no_opens=$?
+    if [[ "$no_opens" -eq 1 ]]; then
+        echo "Patches remained open on stale branch (make sure to abandon them):"
+        echo "https://review.opendev.org/q/status:open+project:${repo}+branch:unmaintained/${eom_branch}"
+    fi
+    return $no_opens
+}
+
+function eol_tag_matches_stable_head {
     head=$(git log --oneline --decorate -1)
     [[ "$head" =~ "${eom_branch}-eol" ]] && [[ "$head" =~ "origin/stable/${eom_branch}" ]]
     matches=$?
@@ -100,14 +110,39 @@ function eol_tag_matches_head {
     return $matches
 }
 
-function is_eol {
+function eol_tag_matches_unmaintained_head {
+    head=$(git log --oneline --decorate -1)
+    [[ "$head" =~ "${eom_branch}-eol" ]] && [[ "$head" =~ "origin/unmaintained/${eom_branch}" ]]
+    matches=$?
+    if [[ "$matches" -eq 1 ]] ; then
+        tags=$(git tag)
+        [[ "$tags" =~ "${eom_branch}-eol" ]]
+        eol_tag_exists=$?
+        if [[ "$eol_tag_exists" -eq 0 ]]; then
+            echo "WARNING !!! unmaintained/${eom_branch} has patches on top of the ${eom_branch}-eol tag."
+            echo "Please check the branch and ${eom_branch}-eol tag manually."
+            echo "Do not delete the branch if you are not sure!"
+            read -p "> If you are sure the branch can be deleted, then press D + Enter: " DELETE
+            if [ "${DELETE,,}" == "d" ]; then
+                matches=0
+            else
+                echo "Skipping."
+            fi
+        else
+            echo "No ${eom_branch}-eol tag found! Branch cannot be deleted. Skipping."
+        fi
+    fi
+    return $matches
+}
+
+function is_stable_eol {
     ${TOOLSDIR}/delete_stable_branch.py check --quiet ${repo} ${eom_branch}
     if [[ $? -eq 0 ]]; then
         echo
         echo "${repo} contains eol stale branch (${eom_branch})"
         clone_repo ${repo} stable/${eom_branch}
         cd ${repo}
-        if no_open_patches && eol_tag_matches_head; then
+        if no_stable_open_patches && eol_tag_matches_stable_head; then
             read -p "> Do you want to delete the branch stable/${eom_branch} from ${repo} repository? [y/N]: " YN
             if [ "${YN,,}" == "y" ]; then
                 if [ -z "$gerrit_username" ]; then
@@ -120,14 +155,36 @@ function is_eol {
     fi
 }
 
-for eom_branch in "${eom_series[@]}"; do
-    repos=$(list-deliverables -r --series "${eom_branch}" --is-eol)
+function is_unmaintained_eol {
+    ${TOOLSDIR}/delete_unmaintained_branch.py check --quiet ${repo} ${eom_branch}
+    if [[ $? -eq 0 ]]; then
+        echo
+        echo "${repo} contains eol stale branch (${eom_branch})"
+        clone_repo ${repo} unmaintained/${eom_branch}
+        cd ${repo}
+        if no_unmaintained_open_patches && eol_tag_matches_unmaintained_head; then
+            read -p "> Do you want to delete the branch unmaintained/${eom_branch} from ${repo} repository? [y/N]: " YN
+            if [ "${YN,,}" == "y" ]; then
+                if [ -z "$gerrit_username" ]; then
+                    read -p "Gerrit username: " gerrit_username
+                fi
+                ${TOOLSDIR}/delete_unmaintained_branch.py delete ${gerrit_username} ${repo} ${eom_branch}
+            fi
+        fi
+        cd ..
+    fi
+}
+
+for eom_series in "${eom_series[@]}"; do
+    eom_branch=$(python -c "from openstack_releases import gitutils; print(gitutils.get_stable_branch_id(\"$eom_series\"))")
+    repos=$(list-deliverables -r --series "$eom_series" --is-eol)
 
     # Show the eol stale branches for each repository.
     for repo in ${repos}; do
         cd ${MYTMPDIR}
         echo
         echo " --- $repo ($eom_branch) --- "
-        is_eol "${repo}" "${eom_branch}"
+        is_stable_eol "${repo}" "${eom_branch}"
+        is_unmaintained_eol "${repo}" "${eom_branch}"
     done
 done
