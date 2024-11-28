@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/murano
         hash: 2d28f9e2affcb2dcff0508f70257605eaacf061a
+  - version: yoga-eol
+    projects:
+      - repo: openstack/murano
+        hash: 2d28f9e2affcb2dcff0508f70257605eaacf061a
 branches:
   - name: stable/yoga
     location: 13.0.0.0rc1

@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/murano-agent
         hash: 5252c151bd928dc9f04568d2bfcf7e44a81005f1
+  - version: yoga-eol
+    projects:
+      - repo: openstack/murano-agent
+        hash: 9edc5530560fa1365245b3b1d93479889a77fa1d
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 1f751d8f0e0776b73c21ea5615a2f105050e01a7
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: df29afd1b1c7a2ca82f34022288bda9c65e13ba3
 branches:
   - name: stable/yoga
     location: 2.4.1

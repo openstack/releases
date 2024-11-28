@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: f998f45a61959a1eb95ee30bdef86d0b973e37dd
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: f998f45a61959a1eb95ee30bdef86d0b973e37dd
 branches:
   - name: stable/zed
     location: 2.5.0
