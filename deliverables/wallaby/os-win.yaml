@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/os-win
         hash: 7c5ce17fd3e2d1107886c859abc62611684204b9
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/os-win
+        hash: 7c5ce17fd3e2d1107886c859abc62611684204b9
 branches:
   - name: stable/wallaby
     location: 5.4.0

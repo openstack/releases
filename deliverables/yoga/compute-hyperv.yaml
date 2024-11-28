@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/compute-hyperv
         hash: f9511ee6f24b25eb76e5d26845b8e432b220f345
+  - version: yoga-eol
+    projects:
+      - repo: openstack/compute-hyperv
+        hash: f9511ee6f24b25eb76e5d26845b8e432b220f345
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
