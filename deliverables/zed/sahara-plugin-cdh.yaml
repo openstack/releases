@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/sahara-plugin-cdh
         hash: 35cf0bca5a39a18596280fa60d1a0ad101fd05b6
+  - version: zed-eol
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 944faf42fc566d768badabe6faaefc9eae3c06e1
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

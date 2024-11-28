@@ -18,6 +18,10 @@ releases:
       - repo: openstack/sahara
         hash: 5e7258bcc8807493f08671be9b8f4f4c4232eb0a
     diff-start: 17.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/sahara
+        hash: d57584b779751d8314416dd68b4460f8a8f7dbec
 branches:
   - name: stable/2023.1
     location: 18.0.0.0rc1

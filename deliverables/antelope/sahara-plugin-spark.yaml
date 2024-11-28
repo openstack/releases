@@ -17,6 +17,10 @@ releases:
       - repo: openstack/sahara-plugin-spark
         hash: c68cb5e9da50822fcdf498db5c2c8adcd1b04acb
     diff-start: 8.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/sahara-plugin-spark
+        hash: 709a16908ce2af088d698ce900d41c721deef51b
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1

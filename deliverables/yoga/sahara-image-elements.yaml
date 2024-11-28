@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/sahara-image-elements
         hash: 16737f0579f89962381c337a37ff038526649742
+  - version: yoga-eol
+    projects:
+      - repo: openstack/sahara-image-elements
+        hash: 16737f0579f89962381c337a37ff038526649742
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1

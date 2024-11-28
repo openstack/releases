@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/sahara-dashboard
         hash: e37d8f91c28bc5d88d56013fa3897576c5c27ef4
+  - version: yoga-eol
+    projects:
+      - repo: openstack/sahara-dashboard
+        hash: 607492d660b99cf118092cadf5ce557775720e3b
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1

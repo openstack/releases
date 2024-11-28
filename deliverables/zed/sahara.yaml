@@ -22,6 +22,10 @@ releases:
     projects:
       - repo: openstack/sahara
         hash: 9a8ced98cbb1f93fde69749ebbe120bb95509460
+  - version: zed-eol
+    projects:
+      - repo: openstack/sahara
+        hash: 9a8ced98cbb1f93fde69749ebbe120bb95509460
 branches:
   - name: stable/zed
     location: 17.0.0.0rc1

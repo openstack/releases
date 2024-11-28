@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-saharaclient
         hash: d0c0eb588c4505a7ea0652ab2c45b73c459820a6
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/python-saharaclient
+        hash: a4d537c32549f7776b3536c908e7ff0282b98b62
 branches:
   - name: stable/2023.1
     location: 4.1.0
