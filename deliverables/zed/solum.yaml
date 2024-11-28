@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 7f8f3799c227ecdc8b7a72979712a693ce2a12d2
+  - version: zed-eol
+    projects:
+      - repo: openstack/solum
+        hash: 7f8f3799c227ecdc8b7a72979712a693ce2a12d2
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

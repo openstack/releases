@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/solum
         hash: 391e38a757151a8074037a9f8ae4c54af6af02d7
+  - version: yoga-eol
+    projects:
+      - repo: openstack/solum
+        hash: eefa6e3ea0176e1ca91b89085e65dcb011bd6410
 branches:
   - name: stable/yoga
     location: 12.0.0.0rc1
