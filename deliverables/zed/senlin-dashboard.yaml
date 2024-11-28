@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/senlin-dashboard
         hash: 44d20522c05fea725d7d597b9498bfaeed189e38
+  - version: zed-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: 02183504a09ed089d7a74ee2808b3eceda342cec
 branches:
   - name: stable/zed
     location: 6.0.0.0rc1

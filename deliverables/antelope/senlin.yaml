@@ -17,6 +17,10 @@ releases:
       - repo: openstack/senlin
         hash: d76152595f0fdd8bd69fe6e6336b1777d3365509
     diff-start: 14.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/senlin
+        hash: 22fd77946723e25e595676e61893c1f645709b2f
 branches:
   - name: stable/2023.1
     location: 15.0.0.0rc1
