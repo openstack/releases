@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: 2bd49fb9a4448c131d571d1e6317c6d62b434ed7
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: 2bd49fb9a4448c131d571d1e6317c6d62b434ed7
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

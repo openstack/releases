@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/ec2-api
         hash: d199bce02d7c2b5d079d51c464ae723e5bdf39ce
+  - version: xena-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: d199bce02d7c2b5d079d51c464ae723e5bdf39ce
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
