@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 55cd446b3c5f4a0d04878f7c1f5eba044f5911c3
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: 7b35627ae8e0dd50cc70b2a288c4c2e200b420c0
 branches:
   - name: stable/2023.1
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-prometheus-exporter/2023.1.html

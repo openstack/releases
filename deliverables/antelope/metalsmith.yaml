@@ -22,7 +22,13 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: b3787f95cd7dcd877df0283616ce9f67560f011f
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/metalsmith
+        hash: b3787f95cd7dcd877df0283616ce9f67560f011f
 branches:
   - name: stable/2023.1
     location: 1.10.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/metalsmith/2023.1.html
