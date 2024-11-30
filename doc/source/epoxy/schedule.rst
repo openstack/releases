@@ -206,3 +206,49 @@ Oslo Feature Freeze
 
 All new Oslo features must be proposed and substantially complete, with unit
 tests by the end of the week.
+
+
+Manila
+------
+
+.. _e-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2025.1 Epoxy must be approved by the end of
+the week.
+
+.. _e-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _e-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week. Collaborative
+review sessions must be proposed at this timeline, in order to speed up the
+review process.
+
+.. _e-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted in order to fast-track the closure of bugs.
+
+.. _e-manila-mid-cycle:
+
+Manila Mid Cycle
+^^^^^^^^^^^^^^^^
+
+Manila community mid cycle checkpoint on features and deliverables planned
+for the release.
