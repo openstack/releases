@@ -20,7 +20,13 @@ releases:
       - repo: openstack/mistral
         hash: 4289317a914cd2542a23ccc2f3cdcb0d7fd00676
     diff-start: 15.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/mistral
+        hash: af2b9c5cd8d3bca74f560491fb140809fc27931c
 branches:
   - name: stable/2023.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral/2023.1.html
