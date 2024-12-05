@@ -15,6 +15,12 @@ releases:
     projects:
       - repo: openstack/python-venusclient
         hash: 49ad5d9dfef1c82b15958c936c922166f21e38b9
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/python-venusclient
+        hash: 45a568c36f3df83d13d28200dd4c3742e0e2e20d
 branches:
   - name: stable/2023.1
     location: 2.0.1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
