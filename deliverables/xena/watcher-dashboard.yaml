@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 2ebb3b4e7849eda83903b5c3b87000ea20db2b43
+  - version: xena-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 2ebb3b4e7849eda83903b5c3b87000ea20db2b43
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

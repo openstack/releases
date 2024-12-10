@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 1c0c1bd902bc285d639b5555383c04cfc785c3f7
+  - version: zed-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 72175b4f2d0adadcbd71ad2fd2b0366fdbbcef75
 branches:
   - name: stable/zed
     location: 8.0.0.0rc1

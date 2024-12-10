@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-watcherclient
         hash: 1fc5643008a4c10896c3b392ce60d83bc11e58f0
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: 1f119f46ef8046ab158c37aa85c629d3f2ca19c5
 branches:
   - name: stable/xena
     location: 3.3.0
