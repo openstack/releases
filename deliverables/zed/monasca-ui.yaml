@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 83e40df5937e352af68f706181bce9a1f4bf7f35
+  - version: zed-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 83e40df5937e352af68f706181bce9a1f4bf7f35
 branches:
   - name: stable/zed
     location: 7.0.0.0rc1

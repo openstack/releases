@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 39d12d3d354fb3f56d8b6fbdbf6c9308af9d38b9
+  - version: zed-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 39d12d3d354fb3f56d8b6fbdbf6c9308af9d38b9
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

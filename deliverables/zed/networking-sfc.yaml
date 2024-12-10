@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 1917aa9411e19f62fee0c7668c446f32eeac774a
+  - version: zed-eol
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 1917aa9411e19f62fee0c7668c446f32eeac774a
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

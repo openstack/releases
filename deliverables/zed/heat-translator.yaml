@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 77876eca124325052404708acc1e945a4acd85c3
+  - version: zed-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: 77876eca124325052404708acc1e945a4acd85c3
 branches:
   - name: stable/zed
     location: 2.6.0

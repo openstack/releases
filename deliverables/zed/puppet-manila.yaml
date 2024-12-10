@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 974a264d0369ba7f7d36acec2498ddf717ea1175
+  - version: zed-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 974a264d0369ba7f7d36acec2498ddf717ea1175
 repository-settings:
   openstack/puppet-manila: {}
 branches:

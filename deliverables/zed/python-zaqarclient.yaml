@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: e388947aae2c1440ffc8c635d9dc2f702dc2cb27
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: e388947aae2c1440ffc8c635d9dc2f702dc2cb27
 branches:
   - name: stable/zed
     location: 2.4.0

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 3a1444840ef5eacc4620f4392d9a05c117a2af2b
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: 3a1444840ef5eacc4620f4392d9a05c117a2af2b
 branches:
   - name: stable/zed
     location: 4.8.0

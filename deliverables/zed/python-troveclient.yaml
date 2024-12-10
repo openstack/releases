@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-troveclient
         hash: 83f201e33a22c920c191c816feb9897de121e134
+  - version: zed-eol
+    projects:
+      - repo: openstack/python-troveclient
+        hash: 83f201e33a22c920c191c816feb9897de121e134
 branches:
   - name: stable/zed
     location: 8.0.0

@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 003b19317bde4cb212f78def0da3113b543138d3
+  - version: zed-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 003b19317bde4cb212f78def0da3113b543138d3
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1

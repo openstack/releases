@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-api
         hash: 85967690d897f66ccfa27e265cef71bf68d00c4c
+  - version: zed-eol
+    projects:
+      - repo: openstack/monasca-api
+        hash: 85967690d897f66ccfa27e265cef71bf68d00c4c
 branches:
   - name: stable/zed
     location: 9.0.0.0rc1
