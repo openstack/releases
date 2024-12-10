@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 46d2f173ef54f571dc0770a17bb1bac0e9ef87de
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 86ad8cdbb1c97e16448c709e9d8b36d174a1f5d5
 branches:
   - name: stable/wallaby
     location: 1.3.0

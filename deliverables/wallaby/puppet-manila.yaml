@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: a72a7d5ed9169da17741c22a01bbe191b4fbaf2a
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: a72a7d5ed9169da17741c22a01bbe191b4fbaf2a
 branches:
   - name: stable/wallaby
     location: 18.4.0

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: ab6cd112d7660bb67af23467bcd660814967aa2c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/watcher
+        hash: ab6cd112d7660bb67af23467bcd660814967aa2c
 branches:
   - name: stable/wallaby
     location: 6.0.0.0rc1

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 06350b08530b32c9a9faed2f945673fb19f67f83
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: d680f0df261f53269f05753715b1fae5db1807bb
 branches:
   - name: stable/wallaby
     location: 5.5.0

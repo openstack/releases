@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: ba9147143a921219dc49026c496735126c097845
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/adjutant
+        hash: ba9147143a921219dc49026c496735126c097845
 branches:
   - name: stable/wallaby
     location: 2.0.0.0rc1

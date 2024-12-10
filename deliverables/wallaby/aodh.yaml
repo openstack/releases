@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 9ac090bb37cb628c6867143312e84b57346bb97e
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/aodh
+        hash: 9ac090bb37cb628c6867143312e84b57346bb97e
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

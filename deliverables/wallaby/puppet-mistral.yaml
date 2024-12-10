@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: db6fc1380aebb113a80cc75e031c739a2f383565
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: db6fc1380aebb113a80cc75e031c739a2f383565
 branches:
   - name: stable/wallaby
     location: 18.4.0

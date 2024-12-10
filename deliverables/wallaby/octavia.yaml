@@ -45,6 +45,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: eef2305fff74979a14e1aa3d6be43bdac49698fb
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 72c34837af1faf6f424b3fe6b172071119e12e67
 branches:
   - name: stable/wallaby
     location: 8.0.0.0rc1

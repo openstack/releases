@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: e3401cf967f97500e8c144872e60346b652f7a9c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: e3401cf967f97500e8c144872e60346b652f7a9c
 branches:
   - name: stable/wallaby
     location: 4.2.0

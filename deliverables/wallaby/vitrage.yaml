@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: ae649c51e5f05f45882b989188d18a2f83443a6a
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: b769ae03c4babfa9bd8ef52f3bd284ae3db492b5
 branches:
   - name: stable/wallaby
     location: 7.4.0
