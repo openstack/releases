@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/ovn-octavia-provider
         hash: 2db264fc5893ae3c569de8b91c87d983063cc28f
+  - version: xena-eol
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 38679af8d2cacafba78a41048e81615ab6153a65
 branches:
   - name: stable/xena
     location: 1.1.1

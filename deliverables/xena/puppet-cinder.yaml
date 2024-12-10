@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: 8de77507c67f72948f5021b85cf02ae03c9bb89a
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: 8de77507c67f72948f5021b85cf02ae03c9bb89a
 branches:
   - name: stable/xena
     location: 19.4.0

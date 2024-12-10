@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: b3bb0e9b8582dfc09a8520d75722b990901dd91a
+  - version: xena-eol
+    projects:
+      - repo: openstack/heat-translator
+        hash: b3bb0e9b8582dfc09a8520d75722b990901dd91a
 branches:
   - name: stable/xena
     location: 2.4.1

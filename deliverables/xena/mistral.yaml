@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 78d225b32d221292c3458a605fb3e4da138e020a
+  - version: xena-eol
+    projects:
+      - repo: openstack/mistral
+        hash: 78d225b32d221292c3458a605fb3e4da138e020a
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

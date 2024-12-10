@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: 9f592c8530f462bdf89f92764d9c7f92e3ca6961
+  - version: xena-eol
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: df087fcc9ff7118d338c36bbb024b3791e244c5b
 branches:
   - name: stable/xena
     location: 3.0.0

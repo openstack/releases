@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 8dbed7e8a0973ae68c85514846b71506fe092068
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: 526b252bd36d9b6880ca4f9171abf736a8943e15
 branches:
   - name: stable/xena
     location: 4.3.0

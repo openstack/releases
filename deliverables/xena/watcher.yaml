@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: a1e38debf632097d1c37499c51cbcbab7dbcf9aa
+  - version: xena-eol
+    projects:
+      - repo: openstack/watcher
+        hash: a1e38debf632097d1c37499c51cbcbab7dbcf9aa
 branches:
   - name: stable/xena
     location: 7.0.0.0rc1

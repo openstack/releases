@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 7180e4c36bd3989036ee05474b57075a5dcbcf39
+  - version: xena-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 7180e4c36bd3989036ee05474b57075a5dcbcf39
 branches:
   - name: stable/xena
     location: 11.0.0.0rc1

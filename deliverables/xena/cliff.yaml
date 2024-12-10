@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/cliff
         hash: 85c27a68550003f7c30063d19cfc7f2cf842d569
+  - version: xena-eol
+    projects:
+      - repo: openstack/cliff
+        hash: 85c27a68550003f7c30063d19cfc7f2cf842d569
 branches:
   - name: stable/xena
     location: 3.9.0

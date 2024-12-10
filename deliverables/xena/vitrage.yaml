@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: f14468156c283c2293314c39553b269fca6c8a83
+  - version: xena-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: 50f0a00093c93ae1f5698c4398ca93c442ae0a2c
 branches:
   - name: stable/xena
     location: 7.5.0

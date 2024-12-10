@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-monascaclient
         hash: 708e3c20cfece65cfd56316e11cc257aeed78626
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-monascaclient
+        hash: 708e3c20cfece65cfd56316e11cc257aeed78626
 branches:
   - name: stable/xena
     location: 2.4.0

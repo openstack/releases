@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/monasca-persister
         hash: 19d29bfab93206a7d7652037465d449895b7d8ce
+  - version: xena-eol
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 640eb9b23e34a929d0d905d4ef2bd496126c373d
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1

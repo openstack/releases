@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: 549a624377020eee0737fb992139e169a519fd4c
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: f3e69182e6d37b92ea427bc253a1688e1711f18a
 branches:
   - location: 1.4.0
     name: stable/xena

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 608ec45cef72d822d1242e0aefcea7d044662adc
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: d869fabb320d6e770e201357c1a95b92c0741bbe
 branches:
   - name: stable/xena
     location: 4.3.0
