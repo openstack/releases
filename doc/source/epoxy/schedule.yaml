@@ -28,6 +28,8 @@ cycle:
     name: R-20
     x-project:
       - e-1
+    project-specific:
+      - e-nova-spec-review-day
   - start: '2024-11-18'
     end: '2024-11-22'
     name: R-19
@@ -44,6 +46,8 @@ cycle:
     name: R-16
     project-specific:
       - e-manila-bugsquash
+      - e-nova-spec-review-day
+      - e-nova-spec-soft-freeze
   - start: '2024-12-16'
     end: '2024-12-20'
     name: R-15
@@ -61,6 +65,9 @@ cycle:
     x-project:
       - e-2
       - e-mf
+    project-specific:
+      - e-nova-review-day
+      - e-nova-spec-freeze
   - start: '2025-01-13'
     end: '2025-01-17'
     name: R-11

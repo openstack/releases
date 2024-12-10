@@ -252,3 +252,39 @@ Manila Mid Cycle
 
 Manila community mid cycle checkpoint on features and deliverables planned
 for the release.
+
+
+Nova
+----
+
+.. _e-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 12 Nov 2024 and 11 Dec 2024, Nova specifications targeting 2025.1 Epoxy
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _e-nova-spec-soft-freeze:
+
+Nova Spec Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+After 12 December 2024 (23:59 UTC), no new specs will be accepted.
+
+.. _e-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2025.1 Epoxy must be
+approved by 9 January 2025 (23:59 UTC).
+
+.. _e-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 9 January 2025, Nova prioritized code changes will be reviewed by the Nova
+core team.
