@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-magnum
         hash: e166607f0aa5b5114d35bc96b4f98cc74a2054c6
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 5b62924d2670a17e5ef240082b0cfd42ffea8cdf
 repository-settings:
   openstack/puppet-magnum: {}
 branches:

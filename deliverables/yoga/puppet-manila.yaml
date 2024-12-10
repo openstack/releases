@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-manila
         hash: 24cf3b7f15ede1da37f5d1e649c5efaadd80442b
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-manila
+        hash: bdf22cafd3989e35e019848e821d6243f969e75f
 repository-settings:
   openstack/puppet-manila: {}
 branches:

@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: d9ddbd6d3e5aec42a8bc6b2e26c20f16c92b38a4
+  - version: yoga-eol
+    projects:
+      - repo: openstack/adjutant
+        hash: d9ddbd6d3e5aec42a8bc6b2e26c20f16c92b38a4
 branches:
   - name: stable/yoga
     location: 4.0.0.0rc1

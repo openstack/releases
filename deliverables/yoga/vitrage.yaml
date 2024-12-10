@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: c3c1e8463c61b0e11b4012ccade35beb8208ee64
+  - version: yoga-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: a35574d947496d89b081df890e5343fdf61fc2cd
 branches:
   - name: stable/yoga
     location: 8.0.0

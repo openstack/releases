@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-ui
         hash: 999262be05b5b1230b39778b63d192cee7508502
+  - version: yoga-eol
+    projects:
+      - repo: openstack/monasca-ui
+        hash: 0f1718dc975cd985bf372b3cc40ad0a395f123e6
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1

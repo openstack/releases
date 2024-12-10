@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 02ac4af451b1d6b3d031dc1ab26c648d3b3b0c68
+  - version: yoga-eol
+    projects:
+      - repo: openstack/aodh
+        hash: e560567859b8144c169145f43686ed33af82a167
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

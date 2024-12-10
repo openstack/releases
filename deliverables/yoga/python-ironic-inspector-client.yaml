@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: 9aaeb6551d5d00334099bc69ff4ee75752adb706
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: d26d23ed0aa4d9eda33dd43aae90eb50c1995a0e
 branches:
   - name: stable/yoga
     location: 4.7.1

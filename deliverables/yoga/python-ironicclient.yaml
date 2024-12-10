@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: a5ac9a572a49bf3ec9e0fd59c7e4a6ddbc716e7b
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: f7fff29238a903c5484d644c73cd6d0c922619c7
 branches:
   - name: stable/yoga
     location: 4.11.0

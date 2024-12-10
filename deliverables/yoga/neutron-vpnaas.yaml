@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: 52cfcb31096bd28adef62a38863cde59c2e5313f
+  - version: yoga-eol
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: a511fa10c988be5baa71d363572cd3859bec9410
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1

@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 8f1b0b92a78c86c6b90c2c5b119c02dd4fede01b
+  - version: yoga-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 971f99f584e014a231871c31b3adfaaf5a65c6f4
 branches:
   - name: stable/yoga
     location: 10.0.0.0rc1

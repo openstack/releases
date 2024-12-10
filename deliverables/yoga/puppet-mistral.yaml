@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-mistral
         hash: 7d052b5d26c81afb7fc61a38c8851556e7ed7e1d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-mistral
+        hash: 4baf14d624c8cb7eaf0560ed6b6c80a4e0892bee
 repository-settings:
   openstack/puppet-mistral: {}
 branches:

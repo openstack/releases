@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: f0b09bec09883680390d61860f91dc4322a9f084
+  - version: yoga-eol
+    projects:
+      - repo: openstack/monasca-agent
+        hash: f0b09bec09883680390d61860f91dc4322a9f084
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

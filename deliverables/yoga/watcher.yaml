@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: eafc615725cf87a9320c963b0864f7bba191e9f1
+  - version: yoga-eol
+    projects:
+      - repo: openstack/watcher
+        hash: eafc615725cf87a9320c963b0864f7bba191e9f1
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1

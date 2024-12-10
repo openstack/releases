@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-cinder
         hash: a4fa12dd7682680a5ac567ada165bdec98f4ca4a
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: a4fa12dd7682680a5ac567ada165bdec98f4ca4a
 repository-settings:
   openstack/puppet-cinder: {}
 branches:
