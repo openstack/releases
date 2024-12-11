@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: c424bb53a12b168222cea8de66ec94e87cd9238a
+  - version: victoria-eol
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: c424bb53a12b168222cea8de66ec94e87cd9238a
 branches:
   - name: stable/victoria
     location: 3.2.0

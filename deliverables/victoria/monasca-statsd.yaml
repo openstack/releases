@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: f8e71bf570b6ad0ab12f54f5dbe95c89809e9693
+  - version: victoria-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: f8e71bf570b6ad0ab12f54f5dbe95c89809e9693
 branches:
   - name: stable/victoria
     location: 2.1.0

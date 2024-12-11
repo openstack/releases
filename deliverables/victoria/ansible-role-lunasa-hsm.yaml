@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: 2cdda8466c4bd4a347e7ad8253bf1cfdcacf328b
+  - version: victoria-eol
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: 2cdda8466c4bd4a347e7ad8253bf1cfdcacf328b
 branches:
   - name: stable/victoria
     location: 1.0.0

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 637755a89ab0fe4abe4ab82af4e605b132bbcf65
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: d5343931851db9e1ec8d9e13365a88fe06cc83c7
 branches:
   - name: stable/victoria
     location: 4.1.0

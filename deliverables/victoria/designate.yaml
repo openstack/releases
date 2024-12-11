@@ -33,6 +33,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: b1cd253895b8cefad3a2fa662543f88185151309
+  - version: victoria-eol
+    projects:
+      - repo: openstack/designate
+        hash: 4e866731712726d6dc8108627cb5111c56ebe708
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

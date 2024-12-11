@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: 9cd8c2cf1ff1ea4c4a488ffa8b30f71548fa9f23
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: 5855782b82935a23ae0b2c85d7909cbdc1843cf5
 branches:
   - name: stable/victoria
     location: 1.1.0

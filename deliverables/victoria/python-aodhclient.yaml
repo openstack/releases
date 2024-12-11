@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 2dca78e03cd22194780290be99dbe4566c30c65d
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 2dca78e03cd22194780290be99dbe4566c30c65d
 branches:
   - name: stable/victoria
     location: 2.1.1

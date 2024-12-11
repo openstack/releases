@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: 261f6db38dcc08f0ef604615b75aa824cf0dc8b4
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 261f6db38dcc08f0ef604615b75aa824cf0dc8b4
 branches:
   - name: stable/victoria
     location: 3.1.1

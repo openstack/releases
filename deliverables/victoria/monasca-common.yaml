@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: b40c62a4f7456f1857ea080c682be1c736c3d6ec
+  - version: victoria-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: b40c62a4f7456f1857ea080c682be1c736c3d6ec
 branches:
   - name: stable/victoria
     location: 3.2.0

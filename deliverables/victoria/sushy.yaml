@@ -50,6 +50,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: 8007b11e0ca6203f699d3f9a297f970f3369a644
+  - version: victoria-eol
+    projects:
+      - repo: openstack/sushy
+        hash: 9a8a8b14cc4dc74e48a27604085ea89d755799cf
 branches:
   - name: stable/victoria
     location: 3.4.0
