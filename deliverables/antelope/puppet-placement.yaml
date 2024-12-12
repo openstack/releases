@@ -12,9 +12,16 @@ releases:
       - hash: 1fc14ce7fe9dcdb0c295c865ea0501d8be16360f
         repo: openstack/puppet-placement
     version: 9.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 1fc14ce7fe9dcdb0c295c865ea0501d8be16360f
 repository-settings:
   openstack/puppet-placement: {}
 branches:
   - name: stable/2023.1
     location: 9.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-placement/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-placement/2023.1.html

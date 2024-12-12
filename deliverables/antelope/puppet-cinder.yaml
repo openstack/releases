@@ -12,9 +12,15 @@ releases:
       - hash: d89784488a2f43fafe023187a3cb6e83db27edd6
         repo: openstack/puppet-cinder
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: d89784488a2f43fafe023187a3cb6e83db27edd6
 repository-settings:
   openstack/puppet-cinder: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/2023.1.html

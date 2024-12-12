@@ -12,9 +12,16 @@ releases:
       - hash: d213472f22035eee7a52c0299bf19e22cfe1a415
         repo: openstack/puppet-barbican
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: d213472f22035eee7a52c0299bf19e22cfe1a415
 repository-settings:
   openstack/puppet-barbican: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-barbican/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-barbican/2023.1.html

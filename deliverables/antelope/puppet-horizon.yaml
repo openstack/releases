@@ -12,9 +12,15 @@ releases:
       - hash: 44a4357dc8d18a6a3a4a61d100a020692f4f951a
         repo: openstack/puppet-horizon
     version: 22.1.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: 44a4357dc8d18a6a3a4a61d100a020692f4f951a
 repository-settings:
   openstack/puppet-horizon: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/2023.1.html

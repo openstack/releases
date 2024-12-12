@@ -12,9 +12,15 @@ releases:
       - hash: 02b01b0f3e4d16ec16c7e187ad12a203710ddc01
         repo: openstack/puppet-vswitch
     version: 18.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 02b01b0f3e4d16ec16c7e187ad12a203710ddc01
 repository-settings:
   openstack/puppet-vswitch: {}
 branches:
   - name: stable/2023.1
     location: 18.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/2023.1.html

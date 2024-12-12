@@ -12,9 +12,15 @@ releases:
       - hash: 0ff55d68c6fdfa8b827b4fcd16e35c9991ec0d63
         repo: openstack/puppet-neutron
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 47cfdd766b49a47973a5db84c5619a2d09e6b9b4
 repository-settings:
   openstack/puppet-neutron: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-neutron/2023.1.html

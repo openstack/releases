@@ -12,9 +12,15 @@ releases:
       - hash: 01839d8dcb7cb85b35c70371efa14bb2701f68ed
         repo: openstack/puppet-manila
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-manila
+        hash: 01839d8dcb7cb85b35c70371efa14bb2701f68ed
 repository-settings:
   openstack/puppet-manila: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-manila/2023.1.html

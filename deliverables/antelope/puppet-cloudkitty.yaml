@@ -12,9 +12,16 @@ releases:
       - hash: 597563f87d885e5b2602f7f1d05a38c374ae2c63
         repo: openstack/puppet-cloudkitty
     version: 11.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: 597563f87d885e5b2602f7f1d05a38c374ae2c63
 repository-settings:
   openstack/puppet-cloudkitty: {}
 branches:
   - name: stable/2023.1
     location: 11.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-cloudkitty/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-cloudkitty/2023.1.html

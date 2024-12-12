@@ -12,9 +12,16 @@ releases:
       - hash: ff57304f06f2df909d6ebe4b56fa947b17c80df3
         repo: openstack/puppet-openstack_extras
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: ff57304f06f2df909d6ebe4b56fa947b17c80df3
 repository-settings:
   openstack/puppet-openstack_extras: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-openstack_extras/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-openstack_extras/2023.1.html

@@ -12,9 +12,15 @@ releases:
       - hash: a7d3242553bb4f7cdc5f635462506827ad1998b8
         repo: openstack/puppet-tempest
     version: 22.1.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: a7d3242553bb4f7cdc5f635462506827ad1998b8
 repository-settings:
   openstack/puppet-tempest: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-tempest/2023.1.html

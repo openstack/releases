@@ -12,9 +12,15 @@ releases:
       - hash: 5bb54d75814fc392fbcaebae182f031416d877ca
         repo: openstack/puppet-swift
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 5bb54d75814fc392fbcaebae182f031416d877ca
 repository-settings:
   openstack/puppet-swift: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-swift/2023.1.html
