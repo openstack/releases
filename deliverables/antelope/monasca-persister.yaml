@@ -15,6 +15,12 @@ releases:
       - repo: openstack/monasca-persister
         hash: 1ea4e21eb231e4fe193e62f1b03b957c9d4281c8
     diff-start: 6.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/monasca-persister
+        hash: 1ea4e21eb231e4fe193e62f1b03b957c9d4281c8
 branches:
   - name: stable/2023.1
     location: 8.0.0.0rc1
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
