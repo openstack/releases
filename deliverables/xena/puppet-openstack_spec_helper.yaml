@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_spec_helper
         hash: 02b32ac014030f5ca37bd82759f90f4e671272b9
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 02b32ac014030f5ca37bd82759f90f4e671272b9
 branches:
   - name: stable/xena
     location:

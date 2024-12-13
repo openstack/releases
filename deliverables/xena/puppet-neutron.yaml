@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-neutron
         hash: 7008f718ee1b6765b5846644a3ec68048ae75107
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-neutron
+        hash: 7008f718ee1b6765b5846644a3ec68048ae75107
 branches:
   - name: stable/xena
     location: 19.4.0
