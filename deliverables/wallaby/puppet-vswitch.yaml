@@ -42,6 +42,10 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: 51e82ca53f11d55e20bed84a0dc9701b5c98b516
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: 51e82ca53f11d55e20bed84a0dc9701b5c98b516
 branches:
   - name: stable/wallaby
     location: 14.4.0

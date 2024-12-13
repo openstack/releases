@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_spec_helper
         hash: 96ba408d45560fbacd942fd482a60e82e56c5d61
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 96ba408d45560fbacd942fd482a60e82e56c5d61
 branches:
   - name: stable/wallaby
     location:
