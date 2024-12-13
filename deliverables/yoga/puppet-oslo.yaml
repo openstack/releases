@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-oslo
         hash: 0434216bea94c281228d3c0aeafd4f0619fde2b0
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 94db8ecb80181e55d624fedf75b063739aabf850
 repository-settings:
   openstack/puppet-oslo: {}
 branches:

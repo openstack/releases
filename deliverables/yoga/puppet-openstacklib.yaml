@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: be11e34c4c9a6a967c3eba429ab749adb6613989
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: 7de648e6ce05ead14e3b94453b801ae24cf32f16
 repository-settings:
   openstack/puppet-openstacklib: {}
 branches:

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_spec_helper
         hash: a8b9caa5a1a61e06789682c0895e7fb1b8ea4941
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: 2e5544603340169a0eaf8d4f094119220a25124c
 branches:
   - name: stable/yoga
     location:

@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-swift
         hash: c68816745156acf4b29197e5b35db9a505886ea5
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 010aa462c1e0e7b8a913d4ef6414e132991479cb
 repository-settings:
   openstack/puppet-swift: {}
 branches:

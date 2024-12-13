@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-vswitch
         hash: 3be618545f4edf2618644f2b2ed831de8446d59a
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: e482c1f32d450718a0f81af464ac12707c42c34a
 repository-settings:
   openstack/puppet-vswitch: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack_extras
         hash: 8840ae2f5a17952ac003b672cb98cf277767cdfe
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 770f4a208de0bac9f8ac394ae0eeb0e59badb849
 repository-settings:
   openstack/puppet-openstack_extras: {}
 branches:

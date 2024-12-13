@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-trove
         hash: 92e04d9f7f5c892e2d289dabe1891cb2a759f8f5
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 1dc4256e8bfa4452ffe0e35f968bea0b2a266b63
 repository-settings:
   openstack/puppet-trove: {}
 branches:
