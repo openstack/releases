@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-nova
         hash: eabbcd391ee1122db44ef27bb8ad1aa79da2d5dc
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-nova
+        hash: eabbcd391ee1122db44ef27bb8ad1aa79da2d5dc
 branches:
   - name: stable/xena
     location: 19.4.0

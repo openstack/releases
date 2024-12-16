@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/puppet-watcher
         hash: c0dffc21d1fde1df29bea0a583a5e9578a6dcc94
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: c0dffc21d1fde1df29bea0a583a5e9578a6dcc94
 branches:
   - name: stable/xena
     location: 19.4.0

@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstacklib
         hash: f8ead08cef0ed6267594527fbe7c4bfee5c2467e
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: f8ead08cef0ed6267594527fbe7c4bfee5c2467e
 branches:
   - name: stable/xena
     location: 19.4.0

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack-integration
         hash: 752d27d6bce91fb477de02343e420dc8db538719
+  - version: xena-eol
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 752d27d6bce91fb477de02343e420dc8db538719
 branches:
   - name: stable/xena
     location:
