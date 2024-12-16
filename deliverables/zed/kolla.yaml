@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 74926e7ac21133fb9e7c3d3313f6930fe83be761
+  - version: zed-eol
+    projects:
+      - repo: openstack/kolla
+        hash: ea0bfb6bc78caff014426aa690422ffea5f0dad4
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1

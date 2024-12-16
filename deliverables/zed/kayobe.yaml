@@ -78,6 +78,14 @@ releases:
         hash: 80ad5684d9c6bd1b4f10ab4721ec4727f1e4d95a
       - repo: openstack/kayobe-config-dev
         hash: 0f89c564bb675bdabb58b7756eb20c76437d630f
+  - version: zed-eol
+    projects:
+      - repo: openstack/kayobe
+        hash: 16ad6b7076bbc55b26aef2ee7b2420a6eebb1301
+      - repo: openstack/kayobe-config
+        hash: 81df7e2741751b1986fa261516178a100f0ea132
+      - repo: openstack/kayobe-config-dev
+        hash: ef8a1097cf265ff962411fde118795cf0f6c5af1
 branches:
   - name: stable/zed
     location: 13.0.0.0rc1

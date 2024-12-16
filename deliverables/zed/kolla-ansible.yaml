@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: ce531291345c7465160051bd7768bd7118a26ab7
+  - version: zed-eol
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: b1527cd9653c456f4dc94991d21690e93650bd0c
 branches:
   - name: stable/zed
     location: 15.0.0.0rc1
