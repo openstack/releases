@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/puppet-openstack-integration
         hash: 3cef1a78c1efde2db3e37fe23aa8253cf2e704e4
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 3cef1a78c1efde2db3e37fe23aa8253cf2e704e4
 branches:
   - name: stable/wallaby
     location:
