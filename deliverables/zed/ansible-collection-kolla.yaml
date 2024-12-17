@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/ansible-collection-kolla
         hash: 533e73925cdaabf8d37be20d91e41b6941dcf08a
+  - version: zed-eol
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: 7802f5f49344c13ed4645d4f906d6b187999b495
 branches:
   - name: stable/zed
     location: 2.0.0.0rc1
