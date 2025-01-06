@@ -78,6 +78,7 @@ _USES_PREVER = set([
     'cycle-with-milestones',
     'cycle-trailing',
     'cycle-with-rc',
+    'independent',
 ])
 
 _VALID_BRANCH_PREFIXES = set([
