@@ -11,6 +11,10 @@ releases:
       - hash: 0a8901e98804ca8d9ef68d3e913fa8f85b04b3ae
         repo: openstack/puppet-openstack-integration
     version: yoga-eom
+  - projects:
+      - hash: c1ce2c38f8704995f29baf47653c976b1869b1d5
+        repo: openstack/puppet-openstack-integration
+    version: yoga-eol
 branches:
   - name: stable/yoga
     location:

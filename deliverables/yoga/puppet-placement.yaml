@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-placement
         hash: 1b5a311449a9d12ac84adf015ab3e7e322fd7cfe
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 1d79a2e1c460074ba4312252b39b9e8cef66e1de
 repository-settings:
   openstack/puppet-placement: {}
 branches:

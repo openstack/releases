@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-tempest
         hash: c528f75776027112e76ef9652f545c6423445e7d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 05a515e299d7cda4dff4a425ef88c432d30c2dd0
 repository-settings:
   openstack/puppet-tempest: {}
 branches:

@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/puppet-watcher
         hash: bb092e8359e59b33a1c56e63912c8445bfe531d8
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: a154c0da1d9518c083bd967ca88b83615a886fef
 repository-settings:
   openstack/puppet-watcher: {}
 branches:

@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-ovn
         hash: d12f42696c47d7628a251180528ec1760da4cafd
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 271892ecce5396eb22ada4ba39527077c8591d49
 repository-settings:
   openstack/puppet-ovn: {}
 branches:

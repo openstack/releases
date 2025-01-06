@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/puppet-zaqar
         hash: b1afb21e9994a239352028fef89035d7338600fb
+  - version: yoga-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: 42b21f331d7e7cf752684e9ca527c580d10a9cc0
 repository-settings:
   openstack/puppet-zaqar: {}
 branches:
