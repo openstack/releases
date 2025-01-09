@@ -1,0 +1,13 @@
+---
+include-pypi-link: true
+launchpad: freezer
+release-model: cycle-with-intermediary
+team: freezer
+type: client-library
+repository-settings:
+  openstack/python-freezerclient: {}
+releases:
+  - version: 6.0.0
+    projects:
+      - repo: openstack/python-freezerclient
+        hash: 790273db20f5310baccff62dbc691c096b7d5145
