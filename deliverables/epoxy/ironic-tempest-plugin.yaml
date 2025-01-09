@@ -8,3 +8,8 @@ repository-settings:
   openstack/ironic-tempest-plugin: {}
 team: ironic
 type: tempest-plugin
+releases:
+  - version: 2.12.0
+    projects:
+      - repo: openstack/ironic-tempest-plugin
+        hash: 1d1656f8d69f3aa9bf0f53e7d74b84899e686139
