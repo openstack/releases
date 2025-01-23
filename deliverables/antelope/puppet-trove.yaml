@@ -12,9 +12,15 @@ releases:
       - hash: 95078cd0bc33d32278e1db8b86bf6d34d29f24ea
         repo: openstack/puppet-trove
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 95078cd0bc33d32278e1db8b86bf6d34d29f24ea
 repository-settings:
   openstack/puppet-trove: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-trove/2023.1.html

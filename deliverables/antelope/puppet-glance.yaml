@@ -12,9 +12,15 @@ releases:
       - hash: b2f76156754bb8f25209ab3c2dd6f408775ce4a9
         repo: openstack/puppet-glance
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-glance
+        hash: b2f76156754bb8f25209ab3c2dd6f408775ce4a9
 repository-settings:
   openstack/puppet-glance: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-glance/2023.1.html

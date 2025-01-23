@@ -8,6 +8,10 @@ releases:
       - hash: 6f10388b812f65118ff4866dfdb5ef15b93d2607
         repo: openstack/puppet-sahara
     version: 22.0.0
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/puppet-sahara
+        hash: cf963fe57e15a95e46d4f43446962ec6401126c6
 repository-settings:
   openstack/puppet-sahara:
     flags:

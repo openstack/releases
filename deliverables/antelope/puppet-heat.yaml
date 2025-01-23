@@ -12,9 +12,15 @@ releases:
       - hash: c889ac3eed6c49ea52cef95fc15abcb5119a6c53
         repo: openstack/puppet-heat
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-heat
+        hash: c889ac3eed6c49ea52cef95fc15abcb5119a6c53
 repository-settings:
   openstack/puppet-heat: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-heat/2023.1.html

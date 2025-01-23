@@ -8,9 +8,16 @@ releases:
       - hash: 51c191ab4ac658987d086dc11ce1e4d97560871a
         repo: openstack/puppet-openstacklib
     version: 22.0.0
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-openstacklib
+        hash: b6bdd628e380b57da818a31992daba8269bb20b3
 repository-settings:
   openstack/puppet-openstacklib: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-openstacklib/2023.1.html
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-openstacklib/2023.1.html

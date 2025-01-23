@@ -12,9 +12,15 @@ releases:
       - hash: ddfbf604c564b6e21fec744d683ebbc0605673be
         repo: openstack/puppet-watcher
     version: 22.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: ddfbf604c564b6e21fec744d683ebbc0605673be
 repository-settings:
   openstack/puppet-watcher: {}
 branches:
   - name: stable/2023.1
     location: 22.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-watcher/2023.1.html

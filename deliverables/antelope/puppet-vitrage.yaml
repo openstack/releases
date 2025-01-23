@@ -12,9 +12,15 @@ releases:
       - hash: b209ed5c691d86759099560440d05a96169de3d5
         repo: openstack/puppet-vitrage
     version: 12.0.1
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: b209ed5c691d86759099560440d05a96169de3d5
 repository-settings:
   openstack/puppet-vitrage: {}
 branches:
   - name: stable/2023.1
     location: 12.0.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/puppet-vitrage/2023.1.html

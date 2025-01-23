@@ -10,3 +10,10 @@ branches:
   - name: stable/2023.1
     location:
       openstack/puppet-openstack-integration: ba117fa5861886ec12884a8b6191930f09f4ea0c
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
+releases:
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 1f47845ddb868e3608ca40d91149a538dec6b58f
