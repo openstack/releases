@@ -1,7 +1,7 @@
 ---
 launchpad: kuryr
 release-model: cycle-with-intermediary
-team: kuryr
+team: zun
 type: library
 repository-settings:
   openstack/kuryr:
@@ -11,7 +11,13 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: deaf2f4f810afda8bb7fd8e6cd99be9a8b1ab264
+  - version: 2023.1-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: 1616fda8d29814c106ab7a95c5661887516f825a
 branches:
   - name: stable/2023.1
     location: 2.7.0
+  - name: unmaintained/2023.1
+    location: 2023.1-eom
 release-notes: https://docs.openstack.org/releasenotes/kuryr/2023.1.html
