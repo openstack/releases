@@ -39,6 +39,10 @@ releases:
       - repo: openstack/magnum
         hash: 35374b4380db673f9b61cb18da0f9382dcc00fce
     diff-start: 17.0.0
+  - version: 18.0.1
+    projects:
+      - repo: openstack/magnum
+        hash: b47479272a5ea0fc4b0cc81fd51f1ef6f20ccc9a
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
