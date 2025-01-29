@@ -98,30 +98,9 @@ supported between these (`SLURP`) releases, in addition to between
 adjacent major releases. For example the upgrade paths starting with
 the 2023.1 Antelope release look like this:
 
-.. graphviz::
-
-   digraph openstack_releases {
-     label="OpenStack Upgrade Paths"
-     splines=false;
-     nodesep=1;
-     rankdir="LR";
-     node [shape=box];
-
-     A [label="2023.1\nAntelope"];
-     C [label="2024.1\nCaracal"];
-     B [label="2023.2\nBobcat"];
-     E [label="2025.1\nEpoxy"];
-     D [label="2024.2\nDalmatian"];
-
-     A -> C [xlabel="SLURP"];
-     A -> B;
-     B -> C;
-
-     C -> E [xlabel="SLURP"];
-     C -> D;
-     D -> E;
-
-   }
+.. image:: _images/slurp.png
+   :width: 800
+   :alt: Slurp Upgrade Path
 
 .. _Skip Level Upgrade Release Process: https://governance.openstack.org/tc/resolutions/20220210-release-cadence-adjustment.html
 
