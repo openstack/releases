@@ -90,6 +90,7 @@ cycle:
     name: R-7
     x-project:
       - e-extra-acs
+      - f-election-nominations
     project-specific:
       - e-oslo-feature-freeze
   - start: '2025-02-17'
@@ -97,6 +98,7 @@ cycle:
     name: R-6
     x-project:
       - e-final-lib
+      - f-election-nominations
   - start: '2025-02-24'
     end: '2025-02-28'
     name: R-5
@@ -106,11 +108,14 @@ cycle:
       - e-final-clientlib
       - e-soft-sf
       - e-rf
+      - f-election-email-deadline
+      - f-election-campaigning
   - start: '2025-03-03'
     end: '2025-03-07'
     name: R-4
     x-project:
       - e-cycle-highlights
+      - f-election-voting
     project-specific:
       - e-manila-bugsquash
   - start: '2025-03-10'
@@ -119,14 +124,18 @@ cycle:
     x-project:
       - e-rc1
       - e-hard-sf
+      - f-election-voting
   - start: '2025-03-17'
     end: '2025-03-21'
     name: R-2
+    x-project:
+      - f-election-voting
   - start: '2025-03-24'
     end: '2025-03-28'
     name: R-1
     x-project:
       - e-finalrc
+      - f-election-close
   - start: '2025-03-31'
     end: '2025-04-04'
     name: R+0
