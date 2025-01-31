@@ -297,7 +297,8 @@ def main():
     if last_release:
         # Split last_version e.g. 2.1.0 to ['2', '1', '0'], but
         # do not split e.g. 2023.1-eom tag to ['2023', '1-eom']
-        if (f"{get_stable_branch_id(series)}-eol" == last_release['version'] or
+        if series != '_independent' and (
+                f"{get_stable_branch_id(series)}-eol" == last_release['version'] or
                 f"{get_stable_branch_id(series)}-eom" == last_release['version']):
             last_version = [last_release['version']]
         else:
@@ -312,7 +313,8 @@ def main():
     add_intermediate_branch = args.intermediate_branch
 
     # Validate new tag can be applied
-    if last_version and f'{get_stable_branch_id(series)}-eol' in last_version[0]:
+    if (last_version and series != '_independent' and
+            f'{get_stable_branch_id(series)}-eol' in last_version[0]):
         raise ValueError('Cannot create new release after EOL tagging.')
 
     if last_version is None:
@@ -417,7 +419,8 @@ def main():
         new_version = '{}-{}'.format(get_stable_branch_id(args.series), args.release_type)
 
     else:
-        if last_version and f'{get_stable_branch_id(series)}-eom' in last_version[0]:
+        if (last_version and series != '_independent' and
+                f'{get_stable_branch_id(series)}-eom' in last_version[0]):
             raise ValueError('Cannot create new release after EOM tagging.')
         increment = {
             'bugfix': (0, 0, 1),
