@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: e363f22fa9bc5a8d683518ba75c216a26acfc5fd
+  - version: victoria-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: e363f22fa9bc5a8d683518ba75c216a26acfc5fd
 branches:
   - name: stable/victoria
     location: 2.1.0

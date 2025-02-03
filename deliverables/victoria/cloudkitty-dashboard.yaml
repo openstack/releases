@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: 2a24f55f83a070c9f6207cb4caba314820665ce3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: a6b2a1d56bbb1bd9c657af46bb894499dd4f6bde
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

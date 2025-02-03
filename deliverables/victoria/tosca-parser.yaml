@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: ab76222e441c8b230753edc288e92f0429272a29
+  - version: victoria-eol
+    projects:
+      - repo: openstack/tosca-parser
+        hash: ab76222e441c8b230753edc288e92f0429272a29
 branches:
   - name: stable/victoria
     location: 2.1.1

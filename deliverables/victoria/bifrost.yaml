@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 1401541ebd38e4992ac170b3220c7bb59d1f3f28
+  - version: victoria-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 32a0510d9ebc136e7cc484376034d6ebe97c52b2
 branches:
   - name: bugfix/8.2
     location: 8.2.0

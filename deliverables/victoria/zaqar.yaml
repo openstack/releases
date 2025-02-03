@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 24786ee33d197c140b81c3dfb4fb58f42e1ea041
+  - version: victoria-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 24786ee33d197c140b81c3dfb4fb58f42e1ea041
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

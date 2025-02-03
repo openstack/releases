@@ -60,6 +60,10 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: b1d64f3169c206544648159e4844e98dd23dd395
+  - version: victoria-eol
+    projects:
+      - repo: openstack/cyborg
+        hash: 0eafc58ecae2694c6bea79186d6e2c321b62513b
 branches:
   - name: stable/victoria
     location: 5.0.0.0rc1

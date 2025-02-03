@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/designate-dashboard
         hash: 8553b4bffe250e933c7e7ed3b81e05905d85129a
+  - version: victoria-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: 8553b4bffe250e933c7e7ed3b81e05905d85129a
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1

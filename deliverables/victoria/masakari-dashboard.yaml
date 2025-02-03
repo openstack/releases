@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: 57610fce4bc25da2f04fd29d20fd899955782e47
+  - version: victoria-eol
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 37ed3a287abe4c5ac16bfaf015dfc40246ae4bfa
 branches:
   - name: stable/victoria
     location: 3.0.0.0rc1

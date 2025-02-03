@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 4c50d1aadb6faa52a422103aac35ef5b39b8185b
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 4c50d1aadb6faa52a422103aac35ef5b39b8185b
 branches:
   - name: stable/victoria
     location: 0.7.0

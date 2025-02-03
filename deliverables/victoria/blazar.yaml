@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 73f1f6c0b998086f535e376f912738da62cde5a3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/blazar
+        hash: 1893b6d5c3e6ce33e683a639986c656daa751376
 branches:
   - name: stable/victoria
     location: 6.0.0.0rc1

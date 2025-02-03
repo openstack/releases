@@ -41,6 +41,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: ab4f3667122f0d474f584bc4df3dbfb328d016fc
+  - version: victoria-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 7d217dd4ab20bd8b29ace86cf3eee79a76384828
 branches:
   - name: stable/victoria
     location: 13.0.0.0rc1
