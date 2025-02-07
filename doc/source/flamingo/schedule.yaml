@@ -1,0 +1,112 @@
+---
+start-week: '2025-04-07'
+release-week: '2025-09-29'
+cycle:
+  - start: '2025-03-31'
+    end: '2025-04-04'
+    x-project:
+      - e-final
+  - start: '2025-04-07'
+    end: '2025-04-11'
+    name: R-25
+  - start: '2025-04-14'
+    end: '2025-04-18'
+    name: R-24
+  - start: '2025-04-21'
+    end: '2025-04-25'
+    name: R-23
+  - start: '2025-04-28'
+    end: '2025-05-02'
+    name: R-22
+  - start: '2025-05-05'
+    end: '2025-05-09'
+    name: R-21
+  - start: '2025-05-12'
+    end: '2025-05-16'
+    name: R-20
+    x-project:
+      - f-1
+  - start: '2025-05-19'
+    end: '2025-05-23'
+    name: R-19
+  - start: '2025-05-26'
+    end: '2025-05-30'
+    name: R-18
+  - start: '2025-06-02'
+    end: '2025-06-06'
+    name: R-17
+    x-project:
+      - f-cycle-trail
+  - start: '2025-06-09'
+    end: '2025-06-13'
+    name: R-16
+  - start: '2025-06-16'
+    end: '2025-06-20'
+    name: R-15
+  - start: '2025-06-23'
+    end: '2025-06-27'
+    name: R-14
+  - start: '2025-06-30'
+    end: '2025-07-04'
+    name: R-13
+    x-project:
+      - f-2
+  - start: '2025-07-07'
+    end: '2025-07-11'
+    name: R-12
+  - start: '2025-07-14'
+    end: '2025-07-18'
+    name: R-11
+  - start: '2025-07-21'
+    end: '2025-07-25'
+    name: R-10
+  - start: '2025-07-28'
+    end: '2025-08-01'
+    name: R-9
+  - start: '2025-08-04'
+    end: '2025-08-08'
+    name: R-8
+  - start: '2025-08-11'
+    end: '2025-08-15'
+    name: R-7
+    x-project:
+      - f-extra-acs
+  - start: '2025-08-18'
+    end: '2025-08-22'
+    name: R-6
+    x-project:
+      - f-final-lib
+  - start: '2025-08-25'
+    end: '2025-08-29'
+    name: R-5
+    x-project:
+      - f-3
+      - f-ff
+      - f-final-clientlib
+      - f-soft-sf
+      - f-rf
+  - start: '2025-09-01'
+    end: '2025-09-05'
+    name: R-4
+    x-project:
+      - f-cycle-highlights
+  - start: '2025-09-08'
+    end: '2025-09-12'
+    name: R-3
+    x-project:
+      - f-rc1
+      - f-hard-sf
+  - start: '2025-09-15'
+    end: '2025-09-19'
+    name: R-2
+  - start: '2025-09-22'
+    end: '2025-09-26'
+    name: R-1
+    x-project:
+      - f-finalrc
+  - start: '2025-09-29'
+    end: '2025-10-03'
+    name: R+0
+    x-project:
+      - f-final
+

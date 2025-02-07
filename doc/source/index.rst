@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   flamingo/index
    epoxy/index
    dalmatian/index
    caracal/index
