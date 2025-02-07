@@ -400,6 +400,7 @@ Week before Milestone-2
    There should ideally be none.
 
    For deliverables defined in governance but not in deliverable files,
+   they might be listed in the TC list of 'inactive' projects. Otherwise
    they should either be tagged as a release management exception if they do
    not need to be released (see ``release-management`` key in the governance
    projects.yaml file) or an empty deliverable file should be added to the
