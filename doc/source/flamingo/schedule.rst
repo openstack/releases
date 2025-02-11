@@ -28,8 +28,8 @@ Cross-project events
 PTG (virtual)
 -------------
 
-From ... to ... we'll have a virtual PTG to plan the 2025.2 Flamingo
-release schedule.
+From April 7 to 11, 2025 we'll have a virtual PTG to plan the
+2025.2 Flamingo release schedule.
 
 .. _f-1:
 
