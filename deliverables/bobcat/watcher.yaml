@@ -16,6 +16,10 @@ releases:
       - repo: openstack/watcher
         hash: 1e11c490a7ec300974c589dff804858cdeb7860c
     diff-start: 10.0.0
+  - version: 11.0.1
+    projects:
+      - repo: openstack/watcher
+        hash: 090b695956955e07623c026ce55218b9e11872c3
 branches:
   - name: stable/2023.2
     location: 11.0.0.0rc1
