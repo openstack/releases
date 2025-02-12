@@ -28,6 +28,10 @@ releases:
     projects:
       - repo: openstack/mistral-dashboard
         hash: 7cee9c9cbfc0cd5c1b1027c6f4e9c87887c302bb
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: 7498e15fc74a42b6b67777f7663549d2b7ddaacd
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

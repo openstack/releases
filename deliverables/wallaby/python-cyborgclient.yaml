@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: dfc7a94281b512aa33027c4ddb7934cb71cef66b
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 92a02687e3b2cb1608ad12bff10c66504a07e273
 branches:
   - name: stable/wallaby
     location: 1.3.0

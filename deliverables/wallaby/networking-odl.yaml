@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: de67ad990945622b67573d35d3678d83e174b1a5
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/networking-odl
+        hash: de67ad990945622b67573d35d3678d83e174b1a5
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1

@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: c9609c43603df97678606ca922c73d8143b249ed
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/masakari
+        hash: 6079860bb0e65219d1cc4acbfcdfd7fb5f3585de
 branches:
   - name: stable/wallaby
     location: 11.0.0.0rc1

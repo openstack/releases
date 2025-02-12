@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 2247f1853f1c6a15b21103c9c2ac690919bfc123
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 16e40e07354c3c6c7844a7176f9e51775fc82890
 branches:
   - name: stable/wallaby
     location: 2.6.0

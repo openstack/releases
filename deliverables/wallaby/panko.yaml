@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/panko
         hash: 276d891675c692c146448180767f97362871b493
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/panko
+        hash: 5029f8e0882bbb3f922d666484b498502c7f25bc
 branches:
   - name: stable/wallaby
     location: 10.0.0.0rc1

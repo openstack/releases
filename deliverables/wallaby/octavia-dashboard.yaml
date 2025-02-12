@@ -29,6 +29,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 0affe1a7d0437876b3b6fd248e51ee04508a43a9
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 0affe1a7d0437876b3b6fd248e51ee04508a43a9
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 43b495a0e37d1bbf5b88ceb1f5edbf4c90cf67a7
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/zun
+        hash: 43b495a0e37d1bbf5b88ceb1f5edbf4c90cf67a7
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1

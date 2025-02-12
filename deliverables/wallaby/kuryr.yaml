@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: ab0929857feba2b498b90df6400bf80f1d68489f
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/kuryr
+        hash: ab0929857feba2b498b90df6400bf80f1d68489f
 branches:
   - name: stable/wallaby
     location: 2.3.0

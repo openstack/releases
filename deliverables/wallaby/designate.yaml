@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 66498722ddec222d2512b1396fb25d3d473e341e
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/designate
+        hash: 4d8b300c5463884e8b082b346394362d695c3760
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1

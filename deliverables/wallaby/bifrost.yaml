@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 80db3cd8a950548b44bee6662b74a92cb9a1e39f
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 448da161d5a569020137530a3a4caa417979d1de
 branches:
   - name: bugfix/10.0
     location: 10.0.0

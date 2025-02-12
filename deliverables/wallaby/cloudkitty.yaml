@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: c7851e917fcd1a09aa09dc2b9a0581ff98ab2276
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: db56c8ccbd79169d42abb90fbec45d6d8b6d365e
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1

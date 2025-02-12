@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 8636b3dbb5f4cf078f25dba21969d57426c7f42b
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: bf19cbc3276d219585189a8fdf073a8ce8228401
 branches:
   - name: stable/wallaby
     location: 1.6.0
