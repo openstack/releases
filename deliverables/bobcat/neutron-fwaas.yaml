@@ -16,6 +16,10 @@ releases:
       - repo: openstack/neutron-fwaas
         hash: 3fcf1b8246def319fd4cc4a840b9be0b951b54e9
     diff-start: 18.0.0
+  - version: 19.0.1
+    projects:
+      - repo: openstack/neutron-fwaas
+        hash: e838bd86c2532399bd7e6f0a2d18f69478648932
 branches:
   - name: stable/2023.2
     location: 19.0.0.0rc1
