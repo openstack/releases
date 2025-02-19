@@ -336,6 +336,11 @@ Week after milestone-1
 
 #. Review any remaining milestone-1 exceptions
 
+#. Ensure that all new-release patches in requirements repository for the
+   milestone-1 releases are merged. This should be an empty list:
+
+   https://review.opendev.org/q/project:openstack/requirements+branch:master+is:open+topic:new-release
+
 
 Between Milestone-1 and Milestone-2
 ===================================
@@ -557,6 +562,11 @@ Week after Milestone-2
 ======================
 
 #. Review any remaining milestone-2 exceptions
+
+#. Ensure that all new-release patches in requirements repository for the
+   milestone-2 releases are merged. This should be an empty list:
+
+   https://review.opendev.org/q/project:openstack/requirements+branch:master+is:open+topic:new-release
 
 #. Now that we are past MembershipFreeze, we should check if the OpenStack map
    will need to be updated to reflect future final release contents. If any
@@ -900,6 +910,11 @@ R-5 week (Milestone-3)
 
 #. Process any remaining library freeze exception.
 
+#. Ensure that all new-release patches in requirements repository for the
+   library releases are merged. This should be an empty list:
+
+   https://review.opendev.org/q/project:openstack/requirements+branch:master+is:open+topic:new-release
+
 #. Propose autoreleases (``process_auto_releases``) for
    ``cycle-with-intermediary`` client libraries which had commits that have
    not been included in a release.
@@ -1043,6 +1058,11 @@ R-4 week
 ========
 
 #. Process any remaining client library freeze exception.
+
+#. Ensure that all new-release patches in requirements repository for the
+   client library releases are merged. This should be an empty list:
+
+   https://review.opendev.org/q/project:openstack/requirements+branch:master+is:open+topic:new-release
 
 #. Early in the week, email openstack-discuss list to remind PTLs that
    cycle-highlights are due this week so that they can be included in
