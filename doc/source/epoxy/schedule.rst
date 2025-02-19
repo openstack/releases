@@ -289,6 +289,20 @@ Nova Implementation Review Day
 On 9 January 2025, Nova prioritized code changes will be reviewed by the Nova
 core team.
 
+
+OpenStackSDK
+------------
+
+.. _e-openstackclient-freeze:
+
+python-openstackclient Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new python-openstackclient features should be proposed and completed,
+with unit tests by the end of the week. Support for new microversions may be
+added after this date, but no breaking changes will be permitted.
+
+
 2025.2 TC and PTL Elections
 ===========================
 
