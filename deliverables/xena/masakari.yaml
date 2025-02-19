@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: c5e6334f892bbde9b2686cb65f0f44c98e4d2b8c
+  - version: xena-eol
+    projects:
+      - repo: openstack/masakari
+        hash: 9fecff7458684c24388a6768ae45ddc6ffc7f285
 branches:
   - name: stable/xena
     location: 12.0.0.0rc1

@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: e4baa9aff71fe3a98601107f66c64462d5755a9d
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 6f19e1d9a8c5b3fa675927d3a28a58172a4c5d5c
 branches:
   - name: stable/xena
     location: 7.1.0

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 034ae3ca30f5ace308104f856738dc05f78e66f1
+  - version: xena-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: ab80b4e6783c68a3636e5fb9b687e98f505efdfb
 branches:
   - name: stable/xena
     location: 2.5.0

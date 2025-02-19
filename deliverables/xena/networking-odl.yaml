@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/networking-odl
         hash: df16b1b4477463919587efcd83dd3bf58a268b01
+  - version: xena-eol
+    projects:
+      - repo: openstack/networking-odl
+        hash: f631fd0ae07c53553635aadf2d39e56fc7fb9d55
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1

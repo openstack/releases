@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 5dbc631d1273377413b3bcb4bde7af017b55b3a5
+  - version: xena-eol
+    projects:
+      - repo: openstack/metalsmith
+        hash: 25a0b41110e7ba184bb85c848d2f8d6f15917849
 branches:
   - name: stable/xena
     location: 1.5.1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: 39c9445d72d2956095353d83f80d215c3a95f42a
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 85c2ce1d348c314a4f9a4d5d7f97ce208f8057fe
 branches:
   - name: stable/xena
     location: 0.9.0

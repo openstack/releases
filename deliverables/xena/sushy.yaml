@@ -66,6 +66,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: 3c9e491407a3967d938ca098d0a5b295923b83b0
+  - version: xena-eol
+    projects:
+      - repo: openstack/sushy
+        hash: e4397013d074177a203da8b8678713e6487c2a7d
 branches:
   - name: stable/xena
     location: 3.12.0

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 755d679912e51383e3e5389ab57d0719fbc98877
+  - version: xena-eol
+    projects:
+      - repo: openstack/zun
+        hash: 755d679912e51383e3e5389ab57d0719fbc98877
 branches:
   - name: stable/xena
     location: 8.0.0.0rc1

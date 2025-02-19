@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 018b722f43c0d2ae59edee3051cf52160e0c73d9
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 74a16d0d1dc325416029e5c22ca7d7717659b39e
 branches:
   - name: stable/xena
     location: 4.3.0

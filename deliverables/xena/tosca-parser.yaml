@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 9dae032ff67ab3fe80759b379ded7ba0a9f75f8f
+  - version: xena-eol
+    projects:
+      - repo: openstack/tosca-parser
+        hash: 9dae032ff67ab3fe80759b379ded7ba0a9f75f8f
 branches:
   - name: stable/xena
     location: 2.4.1

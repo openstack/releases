@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: 3a25894763d21be9ac6ba6e28abda28bc20dd4a4
+  - version: xena-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: 3a25894763d21be9ac6ba6e28abda28bc20dd4a4
 branches:
   - name: stable/xena
     location: 3.4.0

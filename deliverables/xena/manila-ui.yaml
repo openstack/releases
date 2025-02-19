@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: df769444226347e41c6cb7304c72aa892dfe0e0e
+  - version: xena-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: df769444226347e41c6cb7304c72aa892dfe0e0e
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

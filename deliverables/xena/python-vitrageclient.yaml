@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: 4f45c3c5000ae27919bfb87c042eec4f0e78aeb8
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 9f32503a148c3856d89b4ab9ec36a13b5169278f
 branches:
   - name: stable/xena
     location: 4.4.0

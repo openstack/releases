@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 60148cd04b5234c57fa3aa20b38f9ab9e4a1fe60
+  - version: xena-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 60148cd04b5234c57fa3aa20b38f9ab9e4a1fe60
 branches:
   - name: stable/xena
     location: 2.3.0

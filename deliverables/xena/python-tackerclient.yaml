@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 98c1f145070022b5480cdd74e5e06c4ada860238
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 0f02dc24d35f319231f8677b9058feafd65c5a5c
 branches:
   - name: stable/xena
     location: 1.8.0
