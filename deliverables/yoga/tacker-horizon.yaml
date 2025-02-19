@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/tacker-horizon
         hash: 98d0ade5947021edd72e128ca9683e682d2c7072
+  - version: yoga-eol
+    projects:
+      - repo: openstack/tacker-horizon
+        hash: 98d0ade5947021edd72e128ca9683e682d2c7072
 branches:
   - name: stable/yoga
     location: 5.0.0.0rc1

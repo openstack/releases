@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 858aa4a34f88ffbb78d86f22baa630ffef0edcda
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: 83cabe03916114767b042935882f2fe6e0272091
 branches:
   - name: stable/yoga
     location: 1.7.0

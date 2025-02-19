@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/neutron-dynamic-routing
         hash: 0fad6a8b9bd8dfcf92c745c3cd5a2d9d9ed293fa
+  - version: yoga-eol
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 2fae75974fc7e463f269afc26b0b922fa7ba52d6
 branches:
   - name: stable/yoga
     location: 20.0.0.0rc1

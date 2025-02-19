@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 5ae8a7afc29290d88a10861685d91ac5c6add49e
+  - version: yoga-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: c145b3d2d6dc82cedb7d6c1aa99e7f7c9d2a263e
 branches:
   - name: stable/yoga
     location: 5.1.0

@@ -46,6 +46,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: fdbcb175b6941cd9e5be546b783194880a3fd322
+  - version: yoga-eol
+    projects:
+      - repo: openstack/sushy
+        hash: b7967fffb8a866f273229582ab14cb215c72f77a
 branches:
   - name: stable/yoga
     location: 4.1.1

@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 6d4275baee2628b0cdf48be006f5900ef8b70020
+  - version: yoga-eol
+    projects:
+      - repo: openstack/metalsmith
+        hash: d3e60cf6f14692683e3f421657cce4a7b2641b50
 branches:
   - name: stable/yoga
     location: 1.6.2

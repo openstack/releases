@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: 1b5c1c7821b51081d60d1b48b51fc2f047b606c8
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: 1a984e774779408dd4d150e436412032733db72d
 branches:
   - name: stable/yoga
     location: 1.10.0

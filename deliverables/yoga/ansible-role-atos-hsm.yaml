@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-atos-hsm
         hash: 6a028735e1340ececc01552c1091aaef69230895
+  - version: yoga-eol
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: 1ae83e5cb6fc11e23cf8e610b25f36c54968b89a
 branches:
   - name: stable/yoga
     location: 3.0.0.0rc1

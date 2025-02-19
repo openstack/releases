@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: f7a8f9c8076dc26936ce6ffaa2567f729c60d863
+  - version: yoga-eol
+    projects:
+      - repo: openstack/blazar-nova
+        hash: f7a8f9c8076dc26936ce6ffaa2567f729c60d863
 branches:
   - name: stable/yoga
     location: 2.4.0

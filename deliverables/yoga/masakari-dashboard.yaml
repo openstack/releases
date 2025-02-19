@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/masakari-dashboard
         hash: de7b74d28eea77555df23b364451b847aa966eaf
+  - version: yoga-eol
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: e09ff413e7b12ec51b5c618d6db99853f43c5669
 branches:
   - name: stable/yoga
     location: 6.0.0.0rc1

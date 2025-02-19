@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 0e02b352c954b742cae60757e8cebf3a6fc0dc44
+  - version: yoga-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 387194b1b70ff35bfc20615845297fbef83f04fc
 branches:
   - name: stable/yoga
     location: 2.6.0

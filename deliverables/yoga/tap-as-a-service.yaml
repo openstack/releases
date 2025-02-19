@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/tap-as-a-service
         hash: c6a4d8b2b419fd1d507127db4a00984a1ef25af4
+  - version: yoga-eol
+    projects:
+      - repo: openstack/tap-as-a-service
+        hash: bbdf6b7139ff46a5f792e25217be8a2b560fbf4a
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

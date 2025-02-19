@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: 5a92831b804ef84fee04c472e74006a7b42f8036
+  - version: yoga-eol
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: 47d34139930e9a55f9d4ab798a5cf15e402c3840
 branches:
   - name: stable/yoga
     location: 3.0.0.0rc1

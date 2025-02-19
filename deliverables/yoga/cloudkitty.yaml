@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 119e8577b842fb7027af32fae780d9e017317283
+  - version: yoga-eol
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 913f061b590a5d30c5324b61122bbb16857ec9dc
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1

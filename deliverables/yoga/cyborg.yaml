@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/cyborg
         hash: df5a1bdac86ab5f5d96d599ec452ba360ed9016a
+  - version: yoga-eol
+    projects:
+      - repo: openstack/cyborg
+        hash: 83d6a97ee73c9c6940c97346a9fdb0aed367b473
 branches:
   - name: stable/yoga
     location: 8.0.0.0rc1

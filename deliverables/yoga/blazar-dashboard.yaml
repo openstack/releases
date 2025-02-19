@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 1412bd666e47caf3b2f8a28bf7ffd594efe9fd4f
+  - version: yoga-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 634aec1ec805a463c1fc5623c3cd7c9087ec5cec
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

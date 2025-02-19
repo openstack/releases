@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: d9bd4c660ee10c8de39d4b83090aefb79933fc00
+  - version: yoga-eol
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: e93b33d044ce91eb1afb9f6c491df8cd0bae3844
 branches:
   - name: stable/yoga
     location: 16.0.0.0rc1

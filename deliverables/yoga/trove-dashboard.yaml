@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: e8d8432c63b59f9586283524aff95e3cb13d9f24
+  - version: yoga-eol
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: ed059ee78913b1ffe3a21ad63297869ef30a0d04
 branches:
   - name: stable/yoga
     location: 18.0.0.0rc1
