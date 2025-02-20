@@ -194,3 +194,15 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+OpenStackSDK
+------------
+
+.. _f-openstackclient-freeze:
+
+python-openstackclient Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new python-openstackclient features should be proposed and completed,
+with unit tests by the end of the week. Support for new microversions may be
+added after this date, but no breaking changes will be permitted.
+
