@@ -16,6 +16,10 @@ releases:
       - repo: openstack/blazar-dashboard
         hash: fa1a31a44874d785ad7dd4d550f34ea18cf0d910
     diff-start: 9.0.0
+  - version: 10.0.1
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 5e1793d28d8940923eb11afc858a6c09f9e52c3e
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1
