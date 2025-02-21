@@ -9,11 +9,6 @@ if [[ $# -gt 1 ]]; then
 fi
 
 BRANCH=${1:-master}
-if [ "$BRANCH" = "master" ]; then
-    SERIES=$(ls -1 deliverables | sort | tail -n 1)
-else
-    SERIES=$(basename $BRANCH)
-fi
 
 TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname $TOOLSDIR)
@@ -29,6 +24,12 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
         (cd $BASEDIR && tox -e venv --notest)
     fi
     source $BASEDIR/.tox/venv/bin/activate
+fi
+
+if [ "$BRANCH" = "master" ]; then
+    SERIES=$(python -c 'from openstack_releases import defaults; print(defaults.RELEASE)')
+else
+    SERIES=$(basename $BRANCH)
 fi
 
 echo "Finding $SERIES library repositories..."
