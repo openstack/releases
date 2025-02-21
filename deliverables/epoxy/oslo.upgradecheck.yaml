@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.upgradecheck: {}
+releases:
+  - version: 2.5.0
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 27366ba4256cb9a36ae25e601caa52cf2ccd483b
