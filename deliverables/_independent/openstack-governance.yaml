@@ -95,6 +95,10 @@ releases:
       - repo: openstack/governance
         hash: f75e0ea81be30bf02d6a3501e61e803547334c4f
         tarball-base: openstack-governance
+  - version: 0.18.0
+    projects:
+      - repo: openstack/governance
+        hash: b5e388784526ea65aa660689e7a8d8c12d5339e2
 repository-settings:
   openstack/governance:
     tarball-base: openstack-governance
