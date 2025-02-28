@@ -71,7 +71,7 @@ def compare_lower_bounds(start_reqs, hash_reqs, report):
                 # There was a minimum but it has been removed.
                 continue
 
-            if old_min.version not in req.specifier:
+            if old_min != new_min and old_min.version not in req.specifier:
                 # The old minimum is not in the new spec.
                 report(('Changed supported versions for dependency {} from {} '
                         'to {} without at least incrementing minor number').format(

@@ -187,11 +187,7 @@ class TestCompareLowerBounds(base.BaseTestCase):
             old, new, warnings.append,
         )
         print(warnings)
-        # NOTE(elod.illes) this should not drop an error as the two specifier equals
-        # but it drops: "Changed supported versions for dependency pbr from >2.1.0
-        # to >2.1.0 without at least incrementing minor number"
-        # self.assertEqual(0, len(warnings))
-        self.assertEqual(1, len(warnings))
+        self.assertEqual(0, len(warnings))
 
     def test_lower_comparator_with_lower_new_minimum_version(self):
         warnings = []
