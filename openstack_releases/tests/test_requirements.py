@@ -175,6 +175,40 @@ class TestCompareLowerBounds(base.BaseTestCase):
         print(warnings)
         self.assertEqual(1, len(warnings))
 
+    def test_lower_comparator_with_same_version(self):
+        warnings = []
+        old = {
+            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+        }
+        new = {
+            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+        }
+        requirements.compare_lower_bounds(
+            old, new, warnings.append,
+        )
+        print(warnings)
+        # NOTE(elod.illes) this should not drop an error as the two specifier equals
+        # but it drops: "Changed supported versions for dependency pbr from >2.1.0
+        # to >2.1.0 without at least incrementing minor number"
+        # self.assertEqual(0, len(warnings))
+        self.assertEqual(1, len(warnings))
+
+    def test_lower_comparator_with_lower_new_minimum_version(self):
+        warnings = []
+        old = {
+            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.2.0'),
+        }
+        new = {
+            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+        }
+        requirements.compare_lower_bounds(
+            old, new, warnings.append,
+        )
+        print(warnings)
+        # NOTE(elod.illes) a lower new minimum version should work and it
+        # works now
+        self.assertEqual(0, len(warnings))
+
 
 class TestFindBadLowerBoundsIncreases(base.BaseTestCase):
 
