@@ -1089,6 +1089,10 @@ R-4 week
 
         Please use ``$series-stable-branches`` as gerrit topic.
 
+     After the above command created the branch cut changes,
+     ``tools/bulk_review.sh`` script can be used to propose them in separate
+     patches, grouped by teams.
+
    - That patch will be used as a base
      to communicate with the team: if a team wants to wait for a specific patch
      to make it to the library, someone from the team can -1 the patch to have
