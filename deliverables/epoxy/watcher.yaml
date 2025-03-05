@@ -6,3 +6,12 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+cycle-highlights:
+  - |
+    With the introduction of testing on ubuntu 24.04, watcher now support python
+    3.12 and has removed support for 3.8. This involved enhancing compatibility
+    with modern versions of eventlet, SQLAlchemy and apscheduler on newer python
+    runtimes.
+  - |
+    A new Prometheus data source has been added, the obsolete Ceilometer API
+    data source has been removed, and the Monasca data source has been deprecated.
