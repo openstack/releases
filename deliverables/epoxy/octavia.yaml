@@ -7,3 +7,11 @@ team: octavia
 type: service
 repository-settings:
   openstack/octavia: {}
+cycle-highlights:
+  - |
+    In addition to SR-IOV support on Octavia Amphora load balancer VIP ports,
+    Octavia now supports using SR-IOV virtual functions for the backend member
+    networks.
+  - |
+    Users can now use custom neutron security groups with Octavia Amphora load
+    balancer VIP ports.
