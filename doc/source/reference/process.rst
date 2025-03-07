@@ -1102,7 +1102,7 @@ R-4 week
    the last 2 months. For this, use the following command, with YYYY-MM-DD
    being the day two months ago::
 
-     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD
+     tox -e venv -- list-deliverables --unreleased-since YYYY-MM-DD \
      --model cycle-with-intermediary \
      --type horizon-plugin --type other --type service
 
