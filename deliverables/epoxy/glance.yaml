@@ -5,6 +5,11 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - Added a new store weight mechanism, improving performance when using RBD.
+  - Added a safety check that makes sure image conversion outputs an image in
+    the desired format
+  - Removed Windows OS support
 repository-settings:
   openstack/glance: {}
 releases:
