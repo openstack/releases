@@ -11,3 +11,11 @@ cycle-highlights:
   - Add usecases of Ansible Driver enable to configurable more as a
     set of sample management driver scripts.
   - Update tacker installer for supporting the latest Ubuntu.
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 81cd4175678a88c0e1c550c3f3787df1589fc629
+branches:
+  - name: stable/2025.1
+    location: 13.0.0.0rc1
