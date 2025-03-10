@@ -34,3 +34,11 @@ cycle-highlights:
     Nova now supports a new console type called `spice-direct`  if you define
     a specific SPICE protocol native proxy URL (eg. a kerbside URL). Direct
     SPICE VDI consoles enable a much richer virtual desktop experience.
+releases:
+  - version: 31.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 6042300453411133652dd8d3b789f5057a084075
+branches:
+  - name: stable/2025.1
+    location: 31.0.0.0rc1
