@@ -5,3 +5,11 @@ team: skyline
 type: service
 repository-settings:
   openstack/skyline-console: {}
+releases:
+  - version: 6.0.0.0rc1
+    projects:
+      - repo: openstack/skyline-console
+        hash: f89e76b36ea840eaac8922920079c0d3b34e4984
+branches:
+  - name: stable/2025.1
+    location: 6.0.0.0rc1
