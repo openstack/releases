@@ -24,3 +24,11 @@ cycle-highlights:
     crashes, restarts or planned migrations of the underlying share servers.
 repository-settings:
   openstack/manila: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 49097adc3be9733ef9ee5ca44e29998897f97507
+branches:
+  - name: stable/2025.1
+    location: 20.0.0.0rc1
