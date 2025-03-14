@@ -5,3 +5,11 @@ team: heat
 type: horizon-plugin
 repository-settings:
   openstack/heat-dashboard: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/heat-dashboard
+        hash: 21a79fea267cfa205fa60b4aef84d148cf8e376e
+branches:
+  - name: stable/2025.1
+    location: 13.0.0.0rc1
