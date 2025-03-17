@@ -5,3 +5,11 @@ team: trove
 type: horizon-plugin
 repository-settings:
   openstack/trove-dashboard: {}
+releases:
+  - version: 24.0.0.0rc1
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 30fb72b1f58fb4980d9c2f23f4babdc678402b5f
+branches:
+  - name: stable/2025.1
+    location: 24.0.0.0rc1
