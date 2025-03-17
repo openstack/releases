@@ -6,3 +6,11 @@ team: mistral
 type: service
 repository-settings:
   openstack/mistral: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/mistral
+        hash: e9079fa11e6c5e18636e7238c2460cbf38ee5138
+branches:
+  - name: stable/2025.1
+    location: 20.0.0.0rc1
