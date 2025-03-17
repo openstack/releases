@@ -34,6 +34,17 @@ function usage {
     echo "PTLs and liaisons will be CC'd on the review"
 }
 
+
+# Activate venv if not yet activated as we need it for some commands
+TOOLSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASEDIR=$(dirname $TOOLSDIR)
+if [[ -z "$VIRTUAL_ENV" ]]; then
+    if [[ ! -d $BASEDIR/.tox/venv ]]; then
+        (cd $BASEDIR && tox -e venv --notest)
+    fi
+    source $BASEDIR/.tox/venv/bin/activate
+fi
+
 # NOTE: It might be worth switching getopt but I don't know if that is
 # available and the same on MacOS
 while getopts "t:s:b:" arg ; do
@@ -106,8 +117,12 @@ for team in "${!files_by_team_release[@]}" ; do
     git checkout $branch_name
     git show --stat
     echo
-    echo 'Push? (Ctrl-C to cancel)'
-    read
-    git review -y -t $topic
+    read -p "> Push? (press N to skip) " SKIP
+    if [ "${SKIP,,}" == "n" ]; then
+        echo "Skipping."
+    else
+        git review -y -t $topic
+    fi
+
 done
 git checkout master
