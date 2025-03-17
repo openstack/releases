@@ -6,3 +6,11 @@ team: cloudkitty
 type: service
 repository-settings:
   openstack/cloudkitty: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 0f0754dab8797d41a938257f3568800ea5f1a9f3
+branches:
+  - name: stable/2025.1
+    location: 22.0.0.0rc1
