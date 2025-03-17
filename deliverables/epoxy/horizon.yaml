@@ -5,8 +5,20 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Django-pyscss has been replaced with libsass
+  - Horizon now uses SDK instead of neutronclient for Neutron
+    Routers, Floating IPs, IP availability and Agents
+  - User Credentials panels have been added
 releases:
   - version: 25.2.0
     projects:
       - repo: openstack/horizon
         hash: 378addadbed2142f181a6e072caf2f80f538a582
+  - version: 25.3.0
+    projects:
+      - repo: openstack/horizon
+        hash: fa1e28805c8fb7e0af3c9b5dc5681feb11770d46
+branches:
+  - name: stable/2025.1
+    location: 25.3.0
