@@ -13,3 +13,11 @@ cycle-highlights:
     snapshots of a volume, instead of all of them.
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 26.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: 8d17d5b8b825f171e341c8bff07d8cd0d6162024
+branches:
+  - name: stable/2025.1
+    location: 26.0.0.0rc1
