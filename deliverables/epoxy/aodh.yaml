@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aodh: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/aodh
+        hash: 60ef9dd1b95d88d68d4f2f8d66fdb051b439cee6
+branches:
+  - name: stable/2025.1
+    location: 20.0.0.0rc1
