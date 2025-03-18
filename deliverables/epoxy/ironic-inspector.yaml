@@ -7,3 +7,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-inspector: {}
+releases:
+  - version: 12.4.0
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: e7adf5d6203829845cf6d10fd79ff5a8e20b2b5a
+branches:
+  - name: stable/2025.1
+    location: 12.4.0
