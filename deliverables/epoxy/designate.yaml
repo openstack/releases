@@ -7,3 +7,11 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+releases:
+  - version: 20.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: a265c5070bd0f83d9352218f9de9475416a132b1
+branches:
+  - name: stable/2025.1
+    location: 20.0.0.0rc1
