@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: c04eb5826c2b6e0bf8ea684f49ef1e14387f51a8
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: c04eb5826c2b6e0bf8ea684f49ef1e14387f51a8
 branches:
   - name: stable/wallaby
     location: 3.3.0

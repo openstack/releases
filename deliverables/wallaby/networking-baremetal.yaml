@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 3ce076d4528c936f8a996fe35c7b8b9da22ff0a3
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 6c597ec02e27c74938fb811ff3659579e80bf318
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1

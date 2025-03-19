@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: 097de21d696c031972e6f05c8d1bbd3caff320ad
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 097de21d696c031972e6f05c8d1bbd3caff320ad
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1

@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 74fd9813aed21589da79ce9e0fcea19345fca089
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 74fd9813aed21589da79ce9e0fcea19345fca089
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1

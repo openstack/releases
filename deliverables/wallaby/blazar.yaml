@@ -30,6 +30,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 95a3d4d821dfb8c4fe48aff7c59cd879df69810c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/blazar
+        hash: e47221b0f59032e67e12ad3b35ed069ad9210450
 branches:
   - name: stable/wallaby
     location: 7.0.0.0rc1

@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 4e05b128803b5a91ec596f9589052259e93a72c3
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/metalsmith
+        hash: 08c046c5cab456f698d6cbb239fd819012f21793
 branches:
   - name: stable/wallaby
     location: 1.4.2

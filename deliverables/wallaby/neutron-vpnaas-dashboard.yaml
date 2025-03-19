@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: 623a28e6848acb826269cdfe0b7367c982f79ac5
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 623a28e6848acb826269cdfe0b7367c982f79ac5
 branches:
   - name: stable/wallaby
     location: 4.0.0.0rc1

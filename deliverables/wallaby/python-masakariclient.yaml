@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 8764f02bae582586b07d8e67d1653d58ca083bb6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: b17bc0573d602eb73f68f196b42a5fe346ec61fc
 branches:
   - name: stable/wallaby
     location: 7.0.0

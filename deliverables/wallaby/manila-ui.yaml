@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: db23e837398c7196b6d1eb9b4f2f8fd5f3865b3d
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: db23e837398c7196b6d1eb9b4f2f8fd5f3865b3d
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1

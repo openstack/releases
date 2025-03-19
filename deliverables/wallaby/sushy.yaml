@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: a51ed88c4b3f66af522870b12f91eb57ed77af4c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/sushy
+        hash: b86e86537a21e84600f4288b4757b5fb1b13838e
 branches:
   - name: stable/wallaby
     location: 3.7.0

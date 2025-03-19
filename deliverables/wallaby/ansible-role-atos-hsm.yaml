@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-atos-hsm
         hash: 8618a22ada8ba2b8c5c51dfd17e6fdd07db1c3fc
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/ansible-role-atos-hsm
+        hash: 8618a22ada8ba2b8c5c51dfd17e6fdd07db1c3fc
 branches:
   - name: stable/wallaby
     location: 1.0.0

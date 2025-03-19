@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/python-pankoclient
         hash: e59560d364f12ba0521631f45a043a2da5d96686
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-pankoclient
+        hash: f11c99b0b7d702c8547f3f13fe5eeacbb219c9cc
 branches:
   - name: stable/wallaby
     location: 1.2.0
