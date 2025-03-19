@@ -4,24 +4,25 @@ release-model: cycle-with-rc
 team: manila
 type: service
 cycle-highlights:
-  - Users are now able to modify the access level of an access rule, switching
-    it from "read-only" to "read-write" or vice versa.
+  - Users are now able to modify the access level of an access rule,
+    switching it from "read-only" to "read-write" or vice versa.
   - Users can now set and modify share server characteristics via share
     network subnet metadata. Cloud administrators can define what modifications
     are permissible via the ``driver_updatable_subnet_metadata`` configuration
     option.
   - The NetApp ONTAP driver now supports Certificate Based Authentication.
-  - The configuration options for the standalone CephFS NFS Ganesha helper
-    are deprecated and will be removed in the future, along with the helper.
-    Operators are expected to migrate to use highly-available NFS-Ganesha
-    clusters (a.k.a "ceph nfs" service) instead.
-  - The NetApp ONTAP driver was improved to prevent future failures on HA
-    takeovers on the storage back end through improved provisioning.
-  - The CephFS driver will now report allocated capacity in gigabytes to the
-    scheduler calculations to ensure that shares are being evenly distributed
-    across backends.
+  - The configuration options for the standalone CephFS NFS Ganesha
+    helper are deprecated and will be removed in the future, along with
+    the helper. Operators are expected to migrate to use highly-available
+    NFS-Ganesha clusters (a.k.a "ceph nfs" service) instead.
+  - The NetApp ONTAP driver was improved to prevent future failures
+    on HA takeovers on the storage back end through improved provisioning.
+  - The CephFS driver will now report allocated capacity in gigabytes
+    to the scheduler calculations to ensure that shares are being evenly
+    distributed across backends.
   - We improved the durability of exports in the generic driver to sustain
-    crashes, restarts or planned migrations of the underlying share servers.
+    crashes, restarts or planned migrations of the underlying share
+    servers.
 repository-settings:
   openstack/manila: {}
 releases:
@@ -32,3 +33,4 @@ releases:
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/manila/2025.1.html
