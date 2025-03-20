@@ -15,28 +15,34 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: eeed59435c1e4038c30ad5a8169eb649542dee80
+  - version: 29.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 09ce4dede1594abd60775e16333a701d816a66af
 branches:
   - name: bugfix/27.0
     location: 27.0.0
   - name: bugfix/28.0
     location: 28.0.0
+  - name: stable/2025.1
+    location: 29.0.0
 cycle-highlights:
-  - Ironic has added a new bootc deploy interface to support the
-    deployment of `bootc container images <https://bootc-dev.github.io/bootc/>`_
+  - Ironic has added a new bootc deploy interface to support the deployment
+    of `bootc container images <https://bootc-dev.github.io/bootc/>`_
     directly to a host with no intermediate steps.
-  - Ironic now supports getting deployment artifacts and images from OCI
-    Container Registries.
-  - Ironic offers now graphical console of a host using the new
-    ``ironic-novncproxy`` service, showing the console in a NoVNC web browser
-    for hosts drivers with access to graphical console interface.
-    A special ``read-only`` mode is also available.
+  - Ironic now supports getting deployment artifacts and images from
+    OCI Container Registries.
+  - Ironic offers now graphical console of a host using the new ``ironic-novncproxy``
+    service, showing the console in a NoVNC web browser for hosts drivers
+    with access to graphical console interface. A special ``read-only``
+    mode is also available.
   - Ironic has now a schema validation framework for the API that validates
-    incoming requests and outgoing responses against a json schema at the
-    beginning and end phases of the requests pipeline.
+    incoming requests and outgoing responses against a json schema at
+    the beginning and end phases of the requests pipeline.
   - Ironic has retired the `ironic-lib <https://opendev.org/openstack/ironic-lib>`_
     library which is now not required anymore.
   - Ironic has removed the support for PostgreSQL, only mysql-compatible
     databases such as MySQL and MariaDB are now supported.
-  - Ironic is now a
-    `Distributed Project Leadership (DPL) <https://governance.openstack.org/tc/reference/distributed-project-leadership.html>`_
+  - Ironic is now a `Distributed Project Leadership (DPL)
+    <https://governance.openstack.org/tc/reference/distributed-project-leadership.html>`_
     project
