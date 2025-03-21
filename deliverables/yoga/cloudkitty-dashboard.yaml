@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: f3f3b9f2656c329ddc5d74179b5ceffb4fa8fb50
+  - version: yoga-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: 5771d5db1c90126eab977d0449c7fef2244c96db
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1

@@ -38,6 +38,10 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 2625c00375bb0ae407ecfb8ac60f80d6b10f5305
+  - version: yoga-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 888e17cbdb9cc06b17128f54f5bc382fbdc7c8b4
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

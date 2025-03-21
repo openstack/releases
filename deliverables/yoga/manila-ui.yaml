@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: 48e3c2b05102fc1033f7cc63e6e323ee97d9a3f3
+  - version: yoga-eol
+    projects:
+      - repo: openstack/manila-ui
+        hash: 0b5079c8f9cbe1a3c47557fe35813373f7530a5b
 branches:
   - name: stable/yoga
     location: 7.0.0.0rc1

@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: def1eac07d3e2fbcc9f8f07f926f20f88ddea990
+  - version: yoga-eol
+    projects:
+      - repo: openstack/blazar
+        hash: 18e7ae31652541b074cd63b26eaf3b1f9742fa1a
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

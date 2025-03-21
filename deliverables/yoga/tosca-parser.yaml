@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: d9a261faef6dcba7640ea382739d6e46ccbabb9d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/tosca-parser
+        hash: d9a261faef6dcba7640ea382739d6e46ccbabb9d
 branches:
   - name: stable/yoga
     location: 2.5.1

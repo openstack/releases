@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 2ed14802e4b953ac484e0fa9a20169bed86c918d
+  - version: yoga-eol
+    projects:
+      - repo: openstack/bifrost
+        hash: 1b1b48fe04f1f2753073a74595406642dc49a11d
 branches:
   - name: bugfix/12.0
     location: 12.0.0

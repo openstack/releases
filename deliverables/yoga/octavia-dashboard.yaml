@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: a0c9c12afdba96cff5e3ce617eb29943594b448c
+  - version: yoga-eol
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: e13258d01ad955a557a2c1b95f94030f4cb07b8f
 branches:
   - name: stable/yoga
     location: 9.0.0.0rc1

@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: d69802d14b3af5c466ff175ef9e209924332127a
+  - version: yoga-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 01cb2e09271c4a4d50f569a74874d2077b889b12
 branches:
   - name: stable/yoga
     location: 7.2.0
