@@ -5,6 +5,12 @@ team: masakari
 type: other
 repository-settings:
   openstack/masakari-monitors: {}
+cycle-highlights:
+  - |
+    A new host monitor. If Openstack is deployed on kubernetes, the driver
+    invokes the Kubernetes API to retrieve the status of the host. In case
+    of any node anomalies, it sends notifications to the masakari-api to
+    trigger instance HA workflow.
 releases:
   - version: 19.0.0.0rc1
     projects:
