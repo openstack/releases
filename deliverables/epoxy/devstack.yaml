@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack: 0423f8be8ae41b55ee3a00434f9f879b4c45f923
+    name: stable/2025.1
 repository-settings:
   openstack/devstack: {}
