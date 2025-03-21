@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/mistral-dashboard
         hash: 7268cad74d56241b64da353a1e20b2a4ef307348
+  - version: xena-eol
+    projects:
+      - repo: openstack/mistral-dashboard
+        hash: b706661ce92d1754c23d7bb23ab9f858bfb3fc7f
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1

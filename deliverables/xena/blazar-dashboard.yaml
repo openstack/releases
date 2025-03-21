@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 670ee4fab65b542df5cdb139c07f8d74e5296564
+  - version: xena-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 670ee4fab65b542df5cdb139c07f8d74e5296564
 branches:
   - name: stable/xena
     location: 6.0.0.0rc1

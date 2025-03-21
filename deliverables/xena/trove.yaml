@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 8d43fe17a20f62c46146810458fb0fd283c77b2a
+  - version: xena-eol
+    projects:
+      - repo: openstack/trove
+        hash: 64b4b73b9d7b5de1a926c2cd8c51ac7cd54e4a98
 branches:
   - name: stable/xena
     location: 16.0.0.0rc1

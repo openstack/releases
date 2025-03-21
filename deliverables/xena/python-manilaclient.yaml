@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 80093c0f7298b062c6916fafb32ff8b337d6a5f7
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: f14fc9ea8aa5caa4ce7b1f9fd31080c2a38d7f3c
 branches:
   - name: stable/xena
     location: 3.0.0

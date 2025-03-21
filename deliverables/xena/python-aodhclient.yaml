@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 17677567f7d58f8eb8885feda81fbffcba53311b
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 17677567f7d58f8eb8885feda81fbffcba53311b
 branches:
   - name: stable/xena
     location: 2.3.0

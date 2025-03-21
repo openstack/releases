@@ -80,6 +80,10 @@ releases:
     projects:
       - repo: openstack/openstack-ansible
         hash: b998cd9652169dd3f2dbbebfb92f22f091d593b5
+  - version: xena-eol
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: 52f79cd337409bd245f4b023a73382b6b2dee5a2
 branches:
   - name: stable/xena
     location: 24.0.0.0rc1

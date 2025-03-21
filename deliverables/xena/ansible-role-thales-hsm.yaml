@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/ansible-role-thales-hsm
         hash: 21aacdfdfec61e86fd22a34204b3de2685cbb452
+  - version: xena-eol
+    projects:
+      - repo: openstack/ansible-role-thales-hsm
+        hash: 21aacdfdfec61e86fd22a34204b3de2685cbb452
 branches:
   - name: stable/xena
     location: 2.0.0.0rc1

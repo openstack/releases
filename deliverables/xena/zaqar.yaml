@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: 87b4500b5ea8f80516cd40b305a292ed4eafca71
+  - version: xena-eol
+    projects:
+      - repo: openstack/zaqar
+        hash: 87b4500b5ea8f80516cd40b305a292ed4eafca71
 branches:
   - name: stable/xena
     location: 13.0.0.0rc1
