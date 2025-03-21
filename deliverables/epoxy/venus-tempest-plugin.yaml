@@ -8,3 +8,8 @@ repository-settings:
   openstack/venus-tempest-plugin: {}
 team: venus
 type: tempest-plugin
+releases:
+  - version: 3.4.0
+    projects:
+      - repo: openstack/venus-tempest-plugin
+        hash: b0dae6ef0cb8643c5b9dea9b74e53d097cd29c02
