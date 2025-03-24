@@ -1480,14 +1480,26 @@ R-1 week (Final RC deadline)
 
 #. Process any remaining stable branching exception.
 
-#. Notify the documentation
-   (Technical Writing SIG - https://wiki.openstack.org/wiki/Documentation)
-   team that it should be safe to apply
-   their process to create the new release series landing pages for
-   docs.openstack.org. Their process works better if they wait until
-   most of the projects have their stable branches created, but they
-   can do the work before the final release date to avoid having to
-   synchronize with the release team on that day.
+#. Notify the Technical Committee that it should be safe to apply
+   the Documentation Release process to create the new release series
+   landing pages for docs.openstack.org. The process works better if
+   they wait until most of the projects have their stable branches
+   created, but they can do the work before the final release date to
+   avoid having to synchronize with the release team on that day.
+
+   .. note::
+
+      This task was originally aimed towards the Documentation team,
+      but that team does not exist anymore. The task can be done by
+      following the ``Update www pages for end of release`` section
+      of the `Documentation Contributor Guide
+      <https://docs.openstack.org/doc-contrib-guide/release/taskdetail.html#update-www-pages-for-end-of-release>`_.
+
+      See example patches: https://review.opendev.org/q/topic:www-dalmatian-final
+
+      (Further information about Documentation can be seen at the
+      former `Technical Writing SIG's page
+      <https://wiki.openstack.org/wiki/Documentation>`_)
 
 #. On the day before the deadline for final release candidates,
    propose last-minute RCs where needed:
