@@ -27,6 +27,6 @@ if [ -z "$current_series" ]; then
 fi
 
 echo "Finding repos in the current series..."
-repos=$(list-deliverables --model cycle-with-rc -r)
+repos=$(list-deliverables --model cycle-with-rc --repos --except-type trailing)
 
 ${TOOLSDIR}/list_unreleased_changes.sh stable/${current_series} ${repos}
