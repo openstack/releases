@@ -12,8 +12,16 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import re
 import requests
-import wheel.bdist_wheel
+
+
+def _format_wheel_name(name):
+    return re.sub(r"[-]+", "_", name).lower()
+
+
+def _format_tarball_name(name):
+    return re.sub(r"[-.]+", "_", name).lower()
 
 
 def link_exists(url):
@@ -40,7 +48,7 @@ def tarball_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=base,
+        n=_format_tarball_name(base),
     )
 
 
@@ -51,7 +59,7 @@ def wheel_py3_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=wheel.bdist_wheel.safer_name(base),
+        n=_format_wheel_name(base),
     )
 
 
@@ -62,7 +70,7 @@ def wheel_both_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=wheel.bdist_wheel.safer_name(base),
+        n=_format_wheel_name(base),
     )
 
 
