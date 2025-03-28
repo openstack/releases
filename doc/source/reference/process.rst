@@ -1577,16 +1577,19 @@ R+0 week (Final Release)
 #. On release day freeze all other release activity by holding stable branch
    releases while coordinated release is underway.
 
+#. On Tuesday ask the infra team to prepare and merge the temporary semaphore
+   removal patch to speed up the release notes publishing at release day.
+
 #. Few hours before approving the release patch ensure that all the available
    release note landing pages are present
    (example: https://review.opendev.org/c/openstack/releases/+/786374)::
 
       tools/add_release_note_links.sh $SERIES
 
-#. On release day, approve the final release patch created earlier. Before
-   merging the patch ensure that used infras are operational, you can do that
-   by looking at https://status.python.org/ and by asking to our infra team
-   how is the situation of the openstack infra.
+#. On release day (around 10:00 UTC), approve the final release patch created
+   earlier. Before merging the patch ensure that used infras are operational,
+   you can do that by looking at https://status.python.org/ and by asking to
+   our infra team how is the situation of the openstack infra.
 
    .. note::
 
@@ -1606,6 +1609,14 @@ R+0 week (Final Release)
 
       ``process_auto_releases`` will ask you to enter a topic for the patches.
       Please use ``$series-final-missing-deliverables`` as topic.
+
+#. Before 13:00 UTC update the doc pages with the series marked as released.
+   (example: https://review.opendev.org/c/openstack/openstack-manuals/+/945319)
+
+   .. warning::
+
+      The doc pages need approximately 1 hour to refresh, so needs to be done
+      well in time
 
 #. Mark series as released on releases.o.o, by updating
    ``doc/source/$series/index.rst``, ``data\series_status.yaml``,  and
