@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/freezer-web-ui
         hash: 13963d4a00611f557c8979dd27e988eba6e832b1
+  - version: 16.0.0
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 13963d4a00611f557c8979dd27e988eba6e832b1
+    diff-start: 2023.1-eom
 branches:
   - name: stable/2025.1
     location: 16.0.0.0rc1

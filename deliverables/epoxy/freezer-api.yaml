@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/freezer-api
         hash: 8c0bb7ae7f1c0325de7e77c87ad53c06bd6092ef
+  - version: 16.0.0
+    projects:
+      - repo: openstack/freezer-api
+        hash: 8c0bb7ae7f1c0325de7e77c87ad53c06bd6092ef
+    diff-start: 2023.1-eom
 branches:
   - name: stable/2025.1
     location: 16.0.0.0rc1

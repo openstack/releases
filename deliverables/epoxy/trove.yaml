@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 62857880c3a5a0863eb4b7192b9f9abf1eae7594
+  - version: 23.0.0
+    projects:
+      - repo: openstack/trove
+        hash: 62857880c3a5a0863eb4b7192b9f9abf1eae7594
+    diff-start: 22.0.0
 branches:
   - name: stable/2025.1
     location: 23.0.0.0rc1
