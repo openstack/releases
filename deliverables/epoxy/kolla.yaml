@@ -3,5 +3,34 @@ launchpad: kolla
 release-model: cycle-with-rc
 team: kolla
 type: trailing
+cycle-highlights:
+  - |
+    Upgraded RabbitMQ to version 4.0.
+  - |
+    Upgraded Prometheus from v2 to v3.
+  - |
+    Added External Account Binding (EAB) support for Let's Encrypt.
+  - |
+    Added support for patching container images during builds.
+  - |
+    Added aarch64 iPXE support for Rocky and Ubuntu.
+  - |
+    Removed Swift container images and support for deploying Swift
+  - |
+    Added support for deploying ovn-sb-db-relay.
+  - |
+    Implemented oslo.messaging Queue Manager support for all RabbitMQ-based services.
+  - |
+    Implemented Layer 7 Healthchecks in HAProxy.
+  - |
+    Rewrote the kolla-ansible CLI in Python.
+  - |
+    Kayobe added support for Podman as an alternative container engine to Docker.
+  - |
+    Kayobe added variables for authentication configuration in the ``image-download`` role.
+  - |
+    Kayobe now has significantly improved performance for infrastructure VM deployments and removals.
+  - |
+    Kayobe can now run without root privileges on the control host.
 repository-settings:
   openstack/kolla: {}
