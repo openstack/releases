@@ -6,8 +6,8 @@ type: service
 repository-settings:
   openstack/tacker: {}
 cycle-highlights:
-  - Add a set of setup scripts for users enable to run complex E2E
-    tests or evaluate practical usecases.
+  - Add a set of setup scripts for users enable to run complex E2E tests
+    or evaluate practical usecases.
   - Add usecases of Ansible Driver enable to configurable more as a
     set of sample management driver scripts.
   - Update tacker installer for supporting the latest Ubuntu.
@@ -19,3 +19,4 @@ releases:
 branches:
   - name: stable/2025.1
     location: 13.0.0.0rc1
+release-notes: https://docs.openstack.org/releasenotes/tacker/2025.1.html
