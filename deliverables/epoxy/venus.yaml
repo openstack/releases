@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/venus
         hash: 7f21640bb8be69bf1c672cdd93060daeb0745db8
+  - version: 6.0.0
+    projects:
+      - repo: openstack/venus
+        hash: 7f21640bb8be69bf1c672cdd93060daeb0745db8
+    diff-start: 5.0.0
 branches:
   - name: stable/2025.1
     location: 6.0.0.0rc1

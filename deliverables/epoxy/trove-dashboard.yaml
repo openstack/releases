@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 30fb72b1f58fb4980d9c2f23f4babdc678402b5f
+  - version: 24.0.0
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 30fb72b1f58fb4980d9c2f23f4babdc678402b5f
+    diff-start: 23.0.0
 branches:
   - name: stable/2025.1
     location: 24.0.0.0rc1

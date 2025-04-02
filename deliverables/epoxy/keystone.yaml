@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: bd2b97a0412b8ea01ef47fd8c0c4908ca9fcee8a
+  - version: 27.0.0
+    projects:
+      - repo: openstack/keystone
+        hash: bd2b97a0412b8ea01ef47fd8c0c4908ca9fcee8a
+    diff-start: 26.0.0
 branches:
   - name: stable/2025.1
     location: 27.0.0.0rc1

@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/vitrage-dashboard
         hash: 5b912766cc272b63bd806e9734be539b27fe663c
+  - version: 8.0.0
+    projects:
+      - repo: openstack/vitrage-dashboard
+        hash: 5b912766cc272b63bd806e9734be539b27fe663c
+    diff-start: 7.0.0
 branches:
   - name: stable/2025.1
     location: 8.0.0.0rc1

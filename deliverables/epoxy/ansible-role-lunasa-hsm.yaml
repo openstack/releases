@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/ansible-role-lunasa-hsm
         hash: c867490aa781783ece914c5908269187168072c4
+  - version: 9.0.0
+    projects:
+      - repo: openstack/ansible-role-lunasa-hsm
+        hash: c867490aa781783ece914c5908269187168072c4
+    diff-start: 6.0.0
 branches:
   - name: stable/2025.1
     location: 9.0.0.0rc1

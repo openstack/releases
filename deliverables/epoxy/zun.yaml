@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: b480d7106e54f577d4d5819cbbce157f86f94fdb
+  - version: 15.0.0
+    projects:
+      - repo: openstack/zun
+        hash: b480d7106e54f577d4d5819cbbce157f86f94fdb
+    diff-start: 14.0.0
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
