@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-aodh: {}
+releases:
+  - projects:
+      - hash: 6b3a224464159507f82e776961e6dae4def89aa0
+        repo: openstack/puppet-aodh
+    version: 26.0.0
+branches:
+  - name: stable/2025.1
+    location: 26.0.0

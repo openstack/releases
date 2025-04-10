@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-keystone: {}
+releases:
+  - projects:
+      - hash: 3a0330fe5b17f998dcc1741aee545f3dff058e3c
+        repo: openstack/puppet-keystone
+    version: 26.0.0
+branches:
+  - name: stable/2025.1
+    location: 26.0.0
