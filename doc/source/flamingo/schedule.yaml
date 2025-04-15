@@ -34,6 +34,8 @@ cycle:
   - start: '2025-05-26'
     end: '2025-05-30'
     name: R-18
+    project-specific:
+      - f-manila-bugsquash
   - start: '2025-06-02'
     end: '2025-06-06'
     name: R-17
@@ -45,6 +47,8 @@ cycle:
   - start: '2025-06-16'
     end: '2025-06-20'
     name: R-15
+    project-specific:
+      - f-manila-spec-freeze
   - start: '2025-06-23'
     end: '2025-06-27'
     name: R-14
@@ -54,6 +58,8 @@ cycle:
     x-project:
       - f-2
       - f-mf
+    project-specific:
+      - f-manila-hackathon
   - start: '2025-07-07'
     end: '2025-07-11'
     name: R-12
@@ -66,9 +72,14 @@ cycle:
   - start: '2025-07-28'
     end: '2025-08-01'
     name: R-9
+    project-specific:
+      - f-manila-fpfreeze
+      - f-manila-new-driver-deadline
   - start: '2025-08-04'
     end: '2025-08-08'
     name: R-8
+    project-specific:
+      - f-manila-mid-cycle
   - start: '2025-08-11'
     end: '2025-08-15'
     name: R-7
@@ -95,6 +106,8 @@ cycle:
     name: R-4
     x-project:
       - f-cycle-highlights
+    project-specific:
+      - f-manila-bugsquash
   - start: '2025-09-08'
     end: '2025-09-12'
     name: R-3

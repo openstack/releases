@@ -206,3 +206,58 @@ All new python-openstackclient features should be proposed and completed,
 with unit tests by the end of the week. Support for new microversions may be
 added after this date, but no breaking changes will be permitted.
 
+
+Manila
+------
+
+.. _f-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2025.2 Flamingo must be approved by the end of
+the week.  Spec authors are encouraged to schedule collaborative review
+discussions through the
+`Manila Weekly IRC meetings <https://meetings.opendev.org/#Manila_Team_Meeting>`_.
+
+.. _f-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _f-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week. Collaborative
+review sessions must be proposed at this timeline, in order to speed up the
+review process.
+
+.. _f-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted to fast-track the closure of bugs.
+
+.. _f-manila-hackathon:
+
+Manila Hack-a-thon
+^^^^^^^^^^^^^^^^^^
+
+Manila community event promoted to accelerate the code implementation
+of tech debt items.
+
+.. _f-manila-mid-cycle:
+
+Manila Mid Cycle
+^^^^^^^^^^^^^^^^
+
+Manila community mid cycle checkpoint on features and deliverables planned
+for the release.
