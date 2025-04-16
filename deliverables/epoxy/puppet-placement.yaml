@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-placement: {}
+releases:
+  - projects:
+      - hash: 52453062e4750e6ae8ffbda598ba852c7c12d6b4
+        repo: openstack/puppet-placement
+    version: 13.0.0
+branches:
+  - name: stable/2025.1
+    location: 13.0.0

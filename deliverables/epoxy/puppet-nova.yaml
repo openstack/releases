@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-nova: {}
+releases:
+  - projects:
+      - hash: 38897ffd9154ada21d8073a4e5890733d33cfe35
+        repo: openstack/puppet-nova
+    version: 26.0.0
+branches:
+  - name: stable/2025.1
+    location: 26.0.0

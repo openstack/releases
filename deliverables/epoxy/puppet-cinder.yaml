@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-cinder: {}
+releases:
+  - projects:
+      - hash: feb86c9eb805db083aa22b9f7a3057521e896c7b
+        repo: openstack/puppet-cinder
+    version: 26.0.0
+branches:
+  - name: stable/2025.1
+    location: 26.0.0

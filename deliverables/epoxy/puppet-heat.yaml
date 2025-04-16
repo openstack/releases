@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-heat: {}
+releases:
+  - projects:
+      - hash: 9edb014f10ec8168dc560eedf1e9a327132439cb
+        repo: openstack/puppet-heat
+    version: 26.0.0
+branches:
+  - name: stable/2025.1
+    location: 26.0.0
