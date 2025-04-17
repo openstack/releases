@@ -17,6 +17,10 @@ releases:
       - repo: openstack/placement
         hash: 6ac0521e76eb7f688dd99d9dca18e3abd87d588e
     diff-start: 10.0.0
+  - version: 11.0.1
+    projects:
+      - repo: openstack/placement
+        hash: b798523e6514dcb9694628998fa9cba388699dac
 branches:
   - name: stable/2024.1
     location: 11.0.0.0rc1
