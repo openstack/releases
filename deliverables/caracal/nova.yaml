@@ -82,6 +82,10 @@ releases:
     projects:
       - repo: openstack/nova
         hash: da9e56c9af5de97c031334d1a6b72a79fc8adb4a
+  - version: 29.2.1
+    projects:
+      - repo: openstack/nova
+        hash: 1aeeb96ffa646f4b4ebd2af8336e9f6eba4e974a
 branches:
   - name: stable/2024.1
     location: 29.0.0.0rc1
