@@ -52,7 +52,8 @@ for team in ${OPENSTACK_TEAMS}; do
     echo "Checking repositories of team: ${team}"
 
     REPOS=$(list-deliverables --repos \
-            --series ${SERIES} --team ${team} | grep "^openstack/")
+            --series ${SERIES} --team ${team} \
+            --except-type tempest-plugin | grep "^openstack/")
 
     if [ -n "${REPOS}" ]; then
         echo "List of open and unreleased changes of team '${team}' " \
