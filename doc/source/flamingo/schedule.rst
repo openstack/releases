@@ -261,3 +261,39 @@ Manila Mid Cycle
 
 Manila community mid cycle checkpoint on features and deliverables planned
 for the release.
+
+Nova
+----
+
+.. _f-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 17 June 2025, Nova specifications targeting 2025.2 Flamingo
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _f-nova-spec-soft-freeze:
+
+Nova Spec Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+After 3 June 2025 (23:59 UTC), no new specs will be accepted.
+
+.. _f-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2025.2 Flamingo must be
+approved by 3 July 2025 (23:59 UTC).
+
+.. _f-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 5 August 2025, Nova prioritized code changes will be reviewed by the Nova
+core team.
+
