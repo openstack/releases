@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 2c817b3d7f01de44023f195c6e8de8853683a54a
+  - version: 17.0.2
+    projects:
+      - repo: openstack/designate
+        hash: eaecbaa8173a9c2efe1dccd2157928d2d0574133
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
