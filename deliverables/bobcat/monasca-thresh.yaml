@@ -17,6 +17,10 @@ releases:
       - repo: openstack/monasca-thresh
         hash: d256f05be6235dbaaff8ba738e6196b9c6241911
     diff-start: 2.5.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/monasca-thresh
+        hash: d256f05be6235dbaaff8ba738e6196b9c6241911
 branches:
   - name: stable/2023.2
     location: 9.0.0.0rc1
