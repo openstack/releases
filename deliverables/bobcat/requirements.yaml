@@ -11,3 +11,8 @@ branches:
   - name: stable/2023.2
     location:
       openstack/requirements: a3b055de9631c3149f721eebdd74740be06f5b75
+releases:
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/requirements
+        hash: 5df9e1dc718f0b1f719d32fc445160911c99470f
