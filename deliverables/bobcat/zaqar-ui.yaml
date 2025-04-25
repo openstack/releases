@@ -16,6 +16,10 @@ releases:
       - repo: openstack/zaqar-ui
         hash: dadee19db24ff1eb00c7b59b10d50ceed621e162
     diff-start: 14.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 80b151e9cf4581aee2e55f7e113cb60c7a44a2e6
 branches:
   - name: stable/2023.2
     location: 15.0.0.0rc1
