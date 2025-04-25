@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 30a7bfc3a5b1015d7ceb839848a08eaf13118cd5
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/openstacksdk
+        hash: ce55da7ede6dfe1012a4cd04410378c535b22632
 branches:
   - name: stable/2023.2
     location: 1.5.0
