@@ -16,8 +16,12 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: 09efb169ff926e351135f01b88fdfb3a08581811
     diff-start: 18.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: f6e7914df23356b0ccf107190bbcc1c187af1a0e
 branches:
   - name: stable/2023.2
     location: 19.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/networking-bagpipe/2023.2.html

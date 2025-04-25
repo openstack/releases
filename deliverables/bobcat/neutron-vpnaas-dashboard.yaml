@@ -15,8 +15,12 @@ releases:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: 8963c4ee73de773a8753763a08ccc1b5e1f31b82
     diff-start: 8.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: f369617faa47e202fe78cae584ac957912fd4bab
 branches:
   - name: stable/2023.2
     location: 9.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/2023.2.html
