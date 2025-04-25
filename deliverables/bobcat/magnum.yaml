@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 272fd686d8c8bf5954e9e7d3bc991ff27e46184d
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 9251728ecc030bb5d734c1a138eb9d295136da4b
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
