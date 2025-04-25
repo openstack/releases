@@ -25,6 +25,14 @@ releases:
       - repo: openstack/freezer-dr
         hash: ba060b277d6d109bd06539550de0c7d43ee7755b
     diff-start: 13.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/freezer
+        hash: 0aa944020b7ae80c5f65bc951b7a7ae2510de9f0
+      - repo: openstack/freezer-api
+        hash: 4659000ce229cf60e72ca284d4c158a2c1fb0a55
+      - repo: openstack/freezer-dr
+        hash: ba060b277d6d109bd06539550de0c7d43ee7755b
 branches:
   - name: stable/2023.2
     location: 15.0.0.0rc1

@@ -16,6 +16,10 @@ releases:
       - repo: openstack/freezer-web-ui
         hash: 33db4d1d81d01ce468a7c06223ff0ad4220b64a0
     diff-start: 12.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/freezer-web-ui
+        hash: 016ec30356294ce4e5296d5e380874be4a65e40e
 branches:
   - name: stable/2023.2
     location: 15.0.0.0rc1
