@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: d36c86ce4c8822de63a436cf109baddb313af40f
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 9210422eaaf356a8fd30d7d383828ddf1ec73d08
 branches:
   - name: stable/2023.2
     location: 10.4.1
