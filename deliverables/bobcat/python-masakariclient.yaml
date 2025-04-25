@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 8a832d984e66893a377c8bbeb94e14a792caaba0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 31e6ae3193f1d56c588d2d702e32ce7ce60c6a02
 branches:
   - name: stable/2023.2
     location: 8.2.0
