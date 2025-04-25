@@ -16,6 +16,10 @@ releases:
       - repo: openstack/heat-agents
         hash: 4323c9ba064265fb01c277a8a7e3a13a52e6865a
     diff-start: 6.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 61975f7df60650871b0d8d6f28dc1e7dbc194c58
 branches:
   - name: stable/2023.2
     location: 7.0.0.0rc1
