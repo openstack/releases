@@ -10,3 +10,8 @@ branches:
       openstack/devstack-plugin-container: f2fd4303cfbc89f43a3b90dcc74cc5e9289b5e52
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 0f77ff7162743054833a8303c61b72a80af94fcd

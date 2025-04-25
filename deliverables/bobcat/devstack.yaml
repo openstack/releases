@@ -10,3 +10,8 @@ branches:
     name: stable/2023.2
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/devstack
+        hash: daa3ed62d38daadecfecccc022655deb65e81141
