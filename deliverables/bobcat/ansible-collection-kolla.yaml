@@ -32,6 +32,10 @@ releases:
     projects:
       - repo: openstack/ansible-collection-kolla
         hash: d0f2345d2e7aae92be19d7632a1a94f241eec4de
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: d0f2345d2e7aae92be19d7632a1a94f241eec4de
 branches:
   - name: stable/2023.2
     location: 4.0.0.0rc1
