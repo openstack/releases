@@ -13,8 +13,12 @@ releases:
     projects:
       - repo: openstack/python-senlinclient
         hash: 1644b1bc334cf1d100556995758a64dfbf1df00f
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-senlinclient
+        hash: 901d6f624d9f4491b04ba2188e1799a9b2b9e8e9
 branches:
   - name: stable/2023.2
     location: 3.1.0
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/python-senlinclient/2023.2.html
