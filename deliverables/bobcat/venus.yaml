@@ -17,6 +17,10 @@ releases:
       - repo: openstack/venus
         hash: caaebe69fd5d01914411eee6f05de1be59fbcc76
     diff-start: 2.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/venus
+        hash: 4ab97fbf010592d4818ba9e1acaed999e6d312b1
 branches:
   - name: stable/2023.2
     location: 3.0.0.0rc1
