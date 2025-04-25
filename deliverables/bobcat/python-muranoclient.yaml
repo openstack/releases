@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-muranoclient
         hash: 3187cb89c29af7f4958251f7948d086b27d59a0a
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-muranoclient
+        hash: ed461a0291257a5021bd8aca8bd7f994da2599b9
 branches:
   - name: stable/2023.2
     location: 2.7.0

@@ -18,8 +18,12 @@ releases:
       - repo: openstack/murano-dashboard
         hash: 54e2ea8a71385b1c7624b3d2c8056bd8a2c2e2f7
     diff-start: 15.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/murano-dashboard
+        hash: d3c3c6217e7020e59fe5b58a6537a76c087b2a5c
 branches:
   - name: stable/2023.2
     location: 16.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/murano-dashboard/2023.2.html
