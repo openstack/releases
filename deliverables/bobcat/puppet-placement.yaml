@@ -8,6 +8,10 @@ releases:
       - hash: 45ec0662fb372d3c2cd7b0e1308537619e010a21
         repo: openstack/puppet-placement
     version: 10.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-placement
+        hash: 11af656c897304ede8803dda7363de9613c0a73f
 repository-settings:
   openstack/puppet-placement: {}
 branches:

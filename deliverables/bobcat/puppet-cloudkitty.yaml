@@ -8,6 +8,10 @@ releases:
       - hash: 6394817cb1f4eeeaccd08d04236dfab73a089ee4
         repo: openstack/puppet-cloudkitty
     version: 12.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-cloudkitty
+        hash: c0884cf1b6e860bfb9795110b78bfa1bc8ae295a
 repository-settings:
   openstack/puppet-cloudkitty: {}
 branches:

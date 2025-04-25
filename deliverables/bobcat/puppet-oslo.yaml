@@ -12,6 +12,10 @@ releases:
       - hash: 4788e5a9dfec5dc0fdd6150e018b7ace483304cc
         repo: openstack/puppet-oslo
     version: 23.0.1
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 4788e5a9dfec5dc0fdd6150e018b7ace483304cc
 repository-settings:
   openstack/puppet-oslo: {}
 branches:

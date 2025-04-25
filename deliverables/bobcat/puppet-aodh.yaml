@@ -8,6 +8,10 @@ releases:
       - hash: 564dff87ae0dc03e76eee6af8d57f72795d4bd8e
         repo: openstack/puppet-aodh
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: 973bc0579451d4c9adc76113419574ebc9a2e8a5
 repository-settings:
   openstack/puppet-aodh: {}
 branches:

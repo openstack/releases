@@ -12,6 +12,10 @@ releases:
       - hash: 8b5f560076ae2375b508f46f18ea88d8e0b24bc8
         repo: openstack/puppet-nova
     version: 23.1.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-nova
+        hash: 8b5f560076ae2375b508f46f18ea88d8e0b24bc8
 repository-settings:
   openstack/puppet-nova: {}
 branches:

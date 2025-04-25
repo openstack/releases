@@ -12,6 +12,10 @@ releases:
       - hash: 482a8065622ce0a225c18b5b38daeccbecc611dd
         repo: openstack/puppet-octavia
     version: 23.0.1
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-octavia
+        hash: 482a8065622ce0a225c18b5b38daeccbecc611dd
 repository-settings:
   openstack/puppet-octavia: {}
 branches:

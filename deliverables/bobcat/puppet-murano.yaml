@@ -8,6 +8,10 @@ releases:
       - hash: b5b3082b18f43a227ce83f4e6cac271f65e8778d
         repo: openstack/puppet-murano
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-murano
+        hash: ba615c6f8ef28ccec007b5b0c0035e509a42394e
 repository-settings:
   openstack/puppet-murano:
     flags:

@@ -12,3 +12,8 @@ branches:
       openstack/puppet-openstack_spec_helper: 56cf30b7e26d2c1a440a83f67ec4d7041dcf5cdb
 release-notes:
   https://docs.openstack.org/releasenotes/puppet-openstack_spec_helper/2023.2.html
+releases:
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-openstack_spec_helper
+        hash: d16556e82017f5d833b1b7af859ff35a5b531fb8

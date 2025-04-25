@@ -8,6 +8,10 @@ releases:
       - hash: 7bcaae05f631a3489223f47fabc5c1d3c151989c
         repo: openstack/puppet-barbican
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: 9541646d8e7c56ccf855dd86e9351e62781d84ff
 repository-settings:
   openstack/puppet-barbican: {}
 branches:
