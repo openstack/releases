@@ -54,6 +54,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: d1f105a6ed765e984394b5f482d19b2f601ea3f2
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/cinder
+        hash: d1f105a6ed765e984394b5f482d19b2f601ea3f2
 branches:
   - name: stable/2023.2
     location: 23.0.0.0rc1
