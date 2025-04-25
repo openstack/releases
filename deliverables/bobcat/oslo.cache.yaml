@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 06f76e582c96de0597d2a93efdc15dd75c7666c3
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: b2e51643b19e1ef1aa5db4711b493f556ba6e61e
 branches:
   - name: stable/2023.2
     location: 3.5.0

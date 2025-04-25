@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: c9ee0adcbd40914a30567e096fd5a7340c25166d
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: b01bbb9ee718baf9ea5ee8beaf150d0d849d57ee
 branches:
   - name: stable/2023.2
     location: 2.2.0
