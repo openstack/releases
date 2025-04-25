@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 7bbfa4f945a68738dcdae26e5c4f2f4f4a657429
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: bf628267fdcfe8c55b0d600c2b1a045a87f73a17
 branches:
   - name: stable/2023.2
     location: 2.9.0
