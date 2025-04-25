@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 6222e6a08c964354d8f3600eafc2017befd57930
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/ceilometer
+        hash: 6222e6a08c964354d8f3600eafc2017befd57930
 branches:
   - name: stable/2023.2
     location: 21.0.0.0rc1
