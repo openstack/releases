@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: bcb0eea32d726797a7a4b5fea5db768cecc28c93
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/release-test
+        hash: 0c08cfadb05d80ed0c995b99df1842d62f2b633f
 branches:
   - name: stable/2023.2
     location: 5.0.0
