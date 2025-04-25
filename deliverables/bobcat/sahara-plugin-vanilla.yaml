@@ -17,6 +17,10 @@ releases:
       - repo: openstack/sahara-plugin-vanilla
         hash: d93365f15187ddb0f618317ad6a1d45d700acef5
     diff-start: 8.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/sahara-plugin-vanilla
+        hash: d93365f15187ddb0f618317ad6a1d45d700acef5
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1
