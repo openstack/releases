@@ -17,6 +17,10 @@ releases:
       - repo: openstack/sahara-plugin-cdh
         hash: a888d6be6b50adc346f3c0d9cba7b7ab8274ba8a
     diff-start: 8.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/sahara-plugin-cdh
+        hash: 02fa9be0b2d958b546b847a71f7b2715a84ef5c1
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1
