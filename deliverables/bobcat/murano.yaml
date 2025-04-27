@@ -17,6 +17,10 @@ releases:
       - repo: openstack/murano
         hash: c898a310afbc27f12190446ef75d8b0bd12115eb
     diff-start: 15.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/murano
+        hash: f3254723a3e1611e5262fa08f3a940c65eb71f60
 branches:
   - name: stable/2023.2
     location: 16.0.0.0rc1
