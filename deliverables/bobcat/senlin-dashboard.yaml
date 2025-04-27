@@ -17,8 +17,12 @@ releases:
       - repo: openstack/senlin-dashboard
         hash: a2e6e8b89f9bc031445161dfded7ad632a9ecfe6
     diff-start: 7.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/senlin-dashboard
+        hash: cbdfbcddebb3efd5626e60cb05140491fcd9cf37
 branches:
   - name: stable/2023.2
     location: 8.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/senlin-dashboard/2023.2.html
