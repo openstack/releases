@@ -46,10 +46,12 @@ def main():
                            help='Find PTL details')
     who_group.add_argument('--liaisons', action='store_true', default=False,
                            help='Find Liaisons details')
-    who_group.add_argument('--all', action='store_true', default=True,
+    who_group.add_argument('--all', action='store_true', default=False,
                            help='Find Liaisons details')
     args = parser.parse_args()
 
+    if not (args.ptl or args.liaisons):
+        args.all = True
     gov_data = governance.Governance.from_remote_repo()
     liaison_data = liaisons.get_liaisons()
 
