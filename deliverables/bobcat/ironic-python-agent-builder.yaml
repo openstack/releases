@@ -16,8 +16,12 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent-builder
         hash: 14978002cc0cc1944652cce047460e54287a1533
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 14978002cc0cc1944652cce047460e54287a1533
 branches:
   - name: stable/2023.2
     location: 5.2.0
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/ironic-python-agent-builder/2023.2.html
