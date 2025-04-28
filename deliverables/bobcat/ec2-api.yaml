@@ -18,6 +18,10 @@ releases:
       - repo: openstack/ec2-api
         hash: 32740781f6050cbb08847066fc2fef996d93f2a1
     diff-start: 16.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/ec2-api
+        hash: 440d23ca3be45310db42c016f7347aec5b1daa59
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
