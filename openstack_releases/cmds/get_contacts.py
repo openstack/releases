@@ -58,22 +58,22 @@ def main():
     for team_name in args.team:
         contacts = set()
         if args.ptl or args.all:
-            team_data = gov_data.get_team(team_name)
-            if not team_data:
-                print('Unable to find team [%s] in governance data' %
-                      (args.team),
+            try:
+                team_data = gov_data.get_team(team_name)
+            except ValueError:
+                print('WARNING: Unable to find team [%s] in governance data' %
+                      team_name,
                       file=sys.stderr)
-                return 1
-
-            # Some teams may be PTL-less
-            if team_data.ptl.get('email', None):
-                contacts.add(Contact(team_data.ptl))
-            # At this point we consider this team as a team following the
-            # DPL governance model
             else:
-                rel_liaisons = team_data.liaisons['release']
-                for liaison in rel_liaisons:
-                    contacts.add(Contact(liaison))
+                # Some teams may be PTL-less
+                if team_data.ptl.get('email', None):
+                    contacts.add(Contact(team_data.ptl))
+                # At this point we consider this team as a team following the
+                # DPL governance model
+                else:
+                    rel_liaisons = team_data.liaisons['release']
+                    for liaison in rel_liaisons:
+                        contacts.add(Contact(liaison))
 
         if args.liaisons or args.all:
             for liaison in liaison_data.get(team_name.lower(), []):
