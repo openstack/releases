@@ -15,8 +15,12 @@ releases:
       - repo: openstack/kuryr-kubernetes
         hash: 4993c7a4b2d7e4b053832bf39602f2573fad6266
     diff-start: 8.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/kuryr-kubernetes
+        hash: 8c3c5378f3e48cf59ee8c7e38b66b7457356d106
 branches:
   - name: stable/2023.2
     location: 9.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/kuryr-kubernetes/2023.2.html
