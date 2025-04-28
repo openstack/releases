@@ -17,6 +17,10 @@ releases:
       - repo: openstack/solum
         hash: 42575ef1316983e4d48b89ecf9d8a71e899f18db
     diff-start: 14.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/solum
+        hash: 0f12e5223530e5c7b9535d04465149ee652fea74
 branches:
   - name: stable/2023.2
     location: 15.0.0.0rc1
