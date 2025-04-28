@@ -20,8 +20,12 @@ releases:
     projects:
       - repo: openstack/blazar-dashboard
         hash: 5e1793d28d8940923eb11afc858a6c09f9e52c3e
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/blazar-dashboard
+        hash: 5e1793d28d8940923eb11afc858a6c09f9e52c3e
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/blazar-dashboard/2023.2.html
