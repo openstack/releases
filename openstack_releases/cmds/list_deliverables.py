@@ -173,7 +173,7 @@ def main():
 
     series = args.series
     GET_REFS_API = 'https://opendev.org/api/v1/repos/{}/git/{}'
-    GET_COMMIT_API = 'https://opendev.org/api/v1/repos/{}/git/commits/{}'
+    GET_TAGS_API = 'https://opendev.org/api/v1/repos/{}/git/tags/{}'
 
     if args.missing_rc:
         model = 'cycle-with-rc'
@@ -294,9 +294,9 @@ def main():
                     release_tag = tagsjson
 
                 release_sha = release_tag['object']['sha']
-                api = GET_COMMIT_API.format(deliv.repos[0], release_sha)
-                release_commit = requests.get(api).json()['commit']
-                release_date[ver] = release_commit['author']['date'][0:10]
+                api = GET_TAGS_API.format(deliv.repos[0], release_sha)
+                release_tagger = requests.get(api).json()['tagger']
+                release_date[ver] = release_tagger['date'][0:10]
 
         if args.unreleased_since and deliv.is_released:
             if release_date[ver] >= args.unreleased_since:
