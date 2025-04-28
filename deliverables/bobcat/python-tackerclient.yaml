@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-tackerclient
         hash: e8460be8c53ad5dfbac720367cf0ae2c3291dc3b
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-tackerclient
+        hash: bd3efc1fa911e656ab5bf1d41b87479fe2723c59
 branches:
   - name: stable/2023.2
     location: 1.14.0

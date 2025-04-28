@@ -26,6 +26,10 @@ releases:
       - repo: openstack/tacker
         hash: 71938fe5c9f030daf42593f21dcbbe94c2097401
     diff-start: 9.0.0.0rc1
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/tacker
+        hash: 5d63109de801915a9b41c6723b9c50a75d2987a9
 branches:
   - name: stable/2023.2
     location: 10.0.0.0rc1
