@@ -15,6 +15,10 @@ releases:
       - repo: openstack/venus-dashboard
         hash: 2b9ff5f0d19f51b2e425afcadce7d5d0497ec5eb
     diff-start: 2.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/venus-dashboard
+        hash: 2b9ff5f0d19f51b2e425afcadce7d5d0497ec5eb
 branches:
   - name: stable/2023.2
     location: 3.0.0.0rc1
