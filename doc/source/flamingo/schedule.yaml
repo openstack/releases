@@ -41,6 +41,8 @@ cycle:
     name: R-17
     x-project:
       - f-cycle-trail
+    project-specific:
+      - f-nova-spec-soft-freeze
   - start: '2025-06-09'
     end: '2025-06-13'
     name: R-16
@@ -49,6 +51,7 @@ cycle:
     name: R-15
     project-specific:
       - f-manila-spec-freeze
+      - f-nova-spec-review-day
   - start: '2025-06-23'
     end: '2025-06-27'
     name: R-14
@@ -60,6 +63,7 @@ cycle:
       - f-mf
     project-specific:
       - f-manila-hackathon
+      - f-nova-spec-freeze
   - start: '2025-07-07'
     end: '2025-07-11'
     name: R-12
@@ -80,6 +84,7 @@ cycle:
     name: R-8
     project-specific:
       - f-manila-mid-cycle
+      - f-nova-review-day
   - start: '2025-08-11'
     end: '2025-08-15'
     name: R-7
@@ -127,4 +132,3 @@ cycle:
     name: R+0
     x-project:
       - f-final
-
