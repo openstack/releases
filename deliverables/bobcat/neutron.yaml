@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 7807f106ca226eb1ce80ff94bd0edf6b9272ff86
+  - version: 23.5.0
+    projects:
+      - repo: openstack/neutron
+        hash: feacf1d88b3c4c05a80107d2143b5139a2e2d16d
 cycle-highlights:
   - Limit the rate at which instances can query the metadata service
     in order to protect the OpenStack deployment from DoS or misbehaved
