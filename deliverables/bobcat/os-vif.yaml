@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: da742a849a1b8b2f3ca9485b38c5bb54c1bb6c75
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: 1948c0aa7c41d8624bf1b2e8eab8ee6eabe48568
 branches:
   - name: stable/2023.2
     location: 3.2.0
