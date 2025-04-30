@@ -15,8 +15,12 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: d4976152401907b94d50a1ec3ad473fbe7c32dad
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: 28481781daf5086dd066071716e9b9f89900a9b8
 branches:
   - name: stable/2023.2
     location: 11.0.0
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/python-neutronclient/2023.2.html
