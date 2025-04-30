@@ -15,6 +15,10 @@ releases:
       - repo: openstack/vitrage
         hash: ad67ad39064c2f3243637b38d11d609b83e87cb7
     diff-start: 10.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: ad67ad39064c2f3243637b38d11d609b83e87cb7
 branches:
   - name: stable/2023.2
     location: 11.0.0.0rc1
