@@ -15,8 +15,12 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 54fbfa8bc9c10feb48fbce843d6ba6fcf6533ece
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 1901092ed5865571ca31fb5ef2cae600f6d11d08
 branches:
   - name: stable/2023.2
     location: 4.4.0
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/python-swiftclient/2023.2.html
