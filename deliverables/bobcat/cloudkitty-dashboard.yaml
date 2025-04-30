@@ -16,8 +16,12 @@ releases:
       - repo: openstack/cloudkitty-dashboard
         hash: 4ed8863c1b15d489a2a78e767b737402647bc4da
     diff-start: 16.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: f48683d36d410888a5625e01206a935e512f3d9a
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
-release-notes: 
+release-notes:
   https://docs.openstack.org/releasenotes/cloudkitty-dashboard/2023.2.html
