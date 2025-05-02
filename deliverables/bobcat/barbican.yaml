@@ -15,6 +15,10 @@ releases:
       - repo: openstack/barbican
         hash: c8e3dc14e6225f1d400131434e8afec0aa410ae7
     diff-start: 16.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/barbican
+        hash: aa794d289714cbf5f4a21b1c23b7d3bb33bcf528
 branches:
   - name: stable/2023.2
     location: 17.0.0.0rc1
