@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: a68edea6e243b1bab88ab73558d5a81581cedac1
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/octavia
+        hash: 148abf84d18ddf7cc41818f1db7945f470701d45
 branches:
   - name: stable/2023.2
     location: 13.0.0.0rc1
