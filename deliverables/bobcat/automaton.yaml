@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 925577850dd413344c762032dfae5424b12aa10c
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/automaton
+        hash: da9fc22c9784255abcdd23f937b7a0ee971a7cb0
 branches:
   - name: stable/2023.2
     location: 3.2.0

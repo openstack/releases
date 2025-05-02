@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: a5941e8f845534e3604dacf2dfa9a87d224eeef8
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 45e375f0029dd3d2c40bf791570a52ef0676823d
 branches:
   - name: stable/2023.2
     location: 6.2.1

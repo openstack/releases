@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 4f97245a54d59eaf6212b61db59d4dbc66e730a8
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 619bc0b50eb660798ac21f6df027a3ff8e63c33c
 branches:
   - name: stable/2023.2
     location: 4.2.0

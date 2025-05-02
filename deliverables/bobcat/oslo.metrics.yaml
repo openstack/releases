@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.metrics
         hash: 5b478403278e69ca9fd822cb117c3e2aa49a6cda
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: 948495412891a6d8c0c4ba564279ab7bed7f8d47
 branches:
   - name: stable/2023.2
     location: 0.7.0

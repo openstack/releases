@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 37de6f3ef08c6521031e8c7f54737d331bf57f22
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: a16d21969a5015b2b438e64d7360fa0f8336e551
 branches:
   - name: stable/2023.2
     location: 4.2.1

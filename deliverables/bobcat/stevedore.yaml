@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 2d99cccf9a6c04509785e76a5c8e89ae2824c939
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/stevedore
+        hash: 523b7933cfc177163bae24136a260de394492104
 branches:
   - name: stable/2023.2
     location: 5.1.0
