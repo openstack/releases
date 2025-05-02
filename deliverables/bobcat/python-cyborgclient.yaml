@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cyborgclient
         hash: 51c06d55f1f44ff615e8def144356afe54ebcc2c
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/python-cyborgclient
+        hash: ac77eef4b69e793138813eb332ea8c4cfd8a4874
 branches:
   - name: stable/2023.2
     location: 2.2.1
