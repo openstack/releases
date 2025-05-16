@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.privsep: {}
+releases:
+  - version: 3.7.0
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 98a82b580d237fa22cd73545dd1172ae5692f943
