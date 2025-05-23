@@ -99,7 +99,7 @@ for team in "${!files_by_team_release[@]}" ; do
     git checkout -b $branch_name -t origin/master
 
     git add ${files_by_team_release[$team]}
-    git commit \
+    git commit -s\
         -m "[$team] $subject" \
         -m "$body"
 

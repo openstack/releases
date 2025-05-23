@@ -75,7 +75,7 @@ function update_gitreview {
 defaultbranch=$branch"
     echo "$grcontents" > .gitreview
     git add .gitreview
-    git commit -m "Update .gitreview for $branch"
+    git commit -s -m "Update .gitreview for $branch"
     git show
     local shortbranch=$(basename $branch)
     git review -t "create-${shortbranch}"
@@ -93,7 +93,7 @@ function update_upper_constraints {
     sed -i~ -e "s,-c.*{\(env:UPPER_CONSTRAINTS_FILE\)[^ ]*},-c{\1:$uc_url}," tox.ini
     if ! git diff --exit-code >/dev/null 2>&1 ; then
         git add tox.ini
-        git commit -m "Update UPPER_CONSTRAINTS_FILE for $branch"
+        git commit -s -m "Update UPPER_CONSTRAINTS_FILE for $branch"
         git show
         local shortbranch=$(basename $branch)
         git review -t "create-${shortbranch}"
