@@ -154,7 +154,8 @@ $(git log --oneline --no-merges ${prev_tag}..${end_sha})
     done
     git add .
     message="${commit//PROJECT/$repo}${change_list}"
-    git commit -s -m "$message"
+    git commit -s -m "$message" \
+        --trailer="Generated-By:openstack/releases:tools/process_auto_releases.sh"
     git log -1
     git review -t $topic
     git reset --hard HEAD~1 > /dev/null

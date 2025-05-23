@@ -101,7 +101,8 @@ for team in "${!files_by_team_release[@]}" ; do
     git add ${files_by_team_release[$team]}
     git commit -s\
         -m "[$team] $subject" \
-        -m "$body"
+        -m "$body" \
+        --trailer="Generated-By:openstack/releases:tools/bulk_review.sh"
 
     git stash
     git checkout master
