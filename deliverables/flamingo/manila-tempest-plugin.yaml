@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: manila-tempest-plugin
 team: manila
 type: tempest-plugin
+releases:
+  - version: 2.8.0
+    projects:
+      - repo: openstack/manila-tempest-plugin
+        hash: 315eb287379ce419e117c71a6fa74148ca166ca9
