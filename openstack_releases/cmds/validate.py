@@ -1196,9 +1196,9 @@ def validate_version_numbers(deliv, context):
                 context.error(
                     "LAST tag {} should match branch name (e.g {}-last for series {})".format(
                         release.version, gitutils.get_stable_branch_id(deliv.series), deliv.series))
-            if not (deliv.series_info.is_em or deliv.series_info.is_eom):
+            if not (deliv.series_info.is_em or deliv.series_info.is_eol or deliv.series_info.is_eom):
                 context.error(
-                    "LAST tag {} aren't allowed on a series ({}) that are not EM or Unmaintained".format(
+                    "LAST tag {} aren't allowed on a series ({}) that are not EM, EOL, or Unmaintained".format(
                         release.version, deliv.series))
             continue
 
