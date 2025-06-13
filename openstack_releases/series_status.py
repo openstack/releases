@@ -52,6 +52,10 @@ class Series(object):
         return self._data.get('eol-date', None)
 
     @property
+    def is_eol(self):
+        return self.status == 'end of life'
+
+    @property
     def is_em(self):
         return self.status == 'extended maintenance'
 
