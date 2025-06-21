@@ -37,6 +37,10 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 9d1a7de850ad06e9f8e242ecfeb070da22c688c4
+  - version: 25.2.0
+    projects:
+      - repo: openstack/cinder
+        hash: 7279ad6b80e20a5aa4b4fa1ad6b90ad366e63a5d
 branches:
   - name: stable/2024.2
     location: 25.0.0.0rc1
