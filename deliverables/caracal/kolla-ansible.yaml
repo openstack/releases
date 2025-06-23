@@ -57,7 +57,12 @@ releases:
     projects:
       - repo: openstack/kolla-ansible
         hash: 0b5bbea3ffbc1a9a3547e36ecb1ed739f7b75dd4
+  - version: 18.7.0
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: f5f4e1eb80544fe508f7cf9789dc0ee767676a06
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/kolla-ansible/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/kolla-ansible/2024.1.html
