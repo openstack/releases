@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 5369e1ed7e3d55c1461f118ab2774a5352757b04
+  - version: 14.7.3
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: a693084839521dc291ec611489fd2ae030435808
 branches:
   - name: stable/2024.1
     location: 14.7.0
