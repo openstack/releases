@@ -54,7 +54,12 @@ releases:
     projects:
       - repo: openstack/kayobe
         hash: 75e6ce36502886d0e1526371288aab177d3556a8
+  - version: 17.5.0
+    projects:
+      - repo: openstack/kayobe
+        hash: ede7b09d3f5a1d47baba73cef369064d683ace25
 branches:
   - name: stable/2024.2
     location: 17.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/kayobe/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/kayobe/2024.2.html

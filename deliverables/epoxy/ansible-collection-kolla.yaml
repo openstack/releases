@@ -16,6 +16,10 @@ releases:
     projects:
       - repo: openstack/ansible-collection-kolla
         hash: ecad94400eb7e78f8f44d7909e034ec5b0558dd1
+  - version: 7.1.0
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: 5cf9e2733d0b7ffc93f38c5f28d764550cd4773b
 branches:
   - name: stable/2025.1
     location: 7.0.0.0rc1
