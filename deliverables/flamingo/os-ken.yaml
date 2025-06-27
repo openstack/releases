@@ -6,3 +6,8 @@ team: neutron
 type: library
 repository-settings:
   openstack/os-ken: {}
+releases:
+  - version: 3.1.0
+    projects:
+      - repo: openstack/os-ken
+        hash: 6e296f97ee2845c968edd9a56be80f274b5c367c
