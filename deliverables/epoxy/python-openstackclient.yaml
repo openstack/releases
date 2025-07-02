@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 4b7e32ca37a34f47dd7800dfbf44817053b09efb
+  - version: 7.5.0
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: bc1930c20ede2018413dc5b89b5dd99c46fdd054
 branches:
   - name: stable/2025.1
     location: 7.4.0
