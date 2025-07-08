@@ -10,3 +10,8 @@ branches:
   - name: stable/2023.2
     location:
       openstack/puppet-openstack-integration: c8c85b1222f7491fb5be429b113f53fea6fdfc7e
+releases:
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-openstack-integration
+        hash: 079c55c99ae7924309a2e83b04807455b28b0d87

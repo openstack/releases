@@ -8,6 +8,10 @@ releases:
       - hash: 29789848df0196063d9828553a5d1401cf2c4d86
         repo: openstack/puppet-ovn
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-ovn
+        hash: 29ef37abb1ab7f94acde2080aec7384eb675718f
 repository-settings:
   openstack/puppet-ovn: {}
 branches:

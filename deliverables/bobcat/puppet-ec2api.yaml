@@ -8,6 +8,10 @@ releases:
       - hash: 308d969e68e32bb106ba03557c9daf7025497b1b
         repo: openstack/puppet-ec2api
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-ec2api
+        hash: 885dddef97dc9d576692a2c3fb7bb045b0712734
 repository-settings:
   openstack/puppet-ec2api:
     flags:

@@ -8,6 +8,10 @@ releases:
       - hash: 73955e07e3ec7c2fe87f1228fef3af7bea6457cd
         repo: openstack/puppet-gnocchi
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-gnocchi
+        hash: 078d1fd340345e6d0cbec349422b966f517004c1
 repository-settings:
   openstack/puppet-gnocchi: {}
 branches:

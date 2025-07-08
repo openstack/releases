@@ -8,6 +8,10 @@ releases:
       - hash: 3078e1211f6c826ed782fa61932c344b51eeb313
         repo: openstack/puppet-magnum
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: eb02a189103901f2a39e8b089b19532c3f126639
 repository-settings:
   openstack/puppet-magnum: {}
 branches:

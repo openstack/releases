@@ -8,6 +8,10 @@ releases:
       - hash: 2d8f3e3ef0ffd8b54ed0e81fa41521e01a941608
         repo: openstack/puppet-zaqar
     version: 23.0.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: f882848bd8a30dd8467448d04e5d41cfa36d1e59
 repository-settings:
   openstack/puppet-zaqar: {}
 branches:

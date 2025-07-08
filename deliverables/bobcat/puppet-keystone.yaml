@@ -12,6 +12,10 @@ releases:
       - hash: e9fad06dc978632941592bb81f9b4e7568322837
         repo: openstack/puppet-keystone
     version: 23.1.0
+  - version: 2023.2-eol
+    projects:
+      - repo: openstack/puppet-keystone
+        hash: e9fad06dc978632941592bb81f9b4e7568322837
 repository-settings:
   openstack/puppet-keystone: {}
 branches:
