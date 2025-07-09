@@ -12,6 +12,10 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: c0e02a64085a71af6d025316973795edb77e75c5
+  - version: 6.0.1
+    projects:
+      - repo: openstack/release-test
+        hash: 3bb6e745e210c822a3e7cf04ebab61e339229f37
 branches:
   - name: stable/2024.1
     location: 6.0.0
