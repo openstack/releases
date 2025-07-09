@@ -23,7 +23,12 @@ releases:
       - repo: openstack/designate
         hash: 018c7ee862d0bf31fa08ae92339c5f6f0b738a73
     diff-start: 17.0.0.0rc1
+  - version: 18.1.0
+    projects:
+      - repo: openstack/designate
+        hash: af7445fa0add6950f564cee6d9bbc052ba90d90c
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/designate/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/designate/2024.1.html
