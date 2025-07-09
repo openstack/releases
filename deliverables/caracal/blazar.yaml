@@ -20,7 +20,12 @@ releases:
       - repo: openstack/blazar
         hash: 6a2219a4eb54e49ff9730af51767940a730f7a4b
     diff-start: 12.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/blazar
+        hash: b5a6cbefd54073ca3e9199eeb525e53454b88777
 branches:
   - name: stable/2024.1
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar/2024.1.html
