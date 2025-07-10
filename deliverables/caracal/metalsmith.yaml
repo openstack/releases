@@ -14,7 +14,12 @@ releases:
     projects:
       - repo: openstack/metalsmith
         hash: 9601b89f74504c59338dfcf3baa437b7fcfc5a3b
+  - version: 2.1.2
+    projects:
+      - repo: openstack/metalsmith
+        hash: b07b2e7a500c75e3bc6e091a8bbb2a2032f8244f
 branches:
   - name: stable/2024.1
     location: 2.1.1
-release-notes: https://docs.openstack.org/releasenotes/metalsmith/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/metalsmith/2024.1.html
