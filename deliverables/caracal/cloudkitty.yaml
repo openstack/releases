@@ -16,6 +16,10 @@ releases:
       - repo: openstack/cloudkitty
         hash: 2a0904db00886602ef6376ebdd46057428741a34
     diff-start: 19.0.0
+  - version: 20.1.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 6641acb738c9376a532ae4d886397bc93374522a
 branches:
   - name: stable/2024.1
     location: 20.0.0.0rc1
@@ -28,4 +32,5 @@ cycle-highlights:
   - Add groupby options by different timeframes.
   - Optimize CloudKitty reprocessing process.
   - Patch for `use_all_resource_revisions` option.
-release-notes: https://docs.openstack.org/releasenotes/cloudkitty/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cloudkitty/2024.1.html
