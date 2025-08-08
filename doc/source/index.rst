@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   gazpacho/index
    flamingo/index
    epoxy/index
    dalmatian/index

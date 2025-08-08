@@ -1,4 +1,12 @@
 ---
+- name: gazpacho
+  release-id: 2026.1
+  status: future
+  slurp: yes
+  initial-release: 2026-04-01
+  next-phase:
+    status: development
+    date: 2025-10-01
 - name: flamingo
   release-id: 2025.2
   status: development
