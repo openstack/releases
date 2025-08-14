@@ -169,8 +169,10 @@ the date ranges during which each key was in general use.
   `key 0xf8675126e2411e7748dd46662fc2093e4682645f`_
 * 2024-10-07..2025-04-07 (2025.1/Epoxy Cycle key):
   `key 0x22284f69d9eccdf3df7819791c711af193ff8e54`_
-* 2025-04-07..present (2025.2/Flamingo Cycle key):
+* 2025-04-07..2025-10-06 (2025.2/Flamingo Cycle key):
   `key 0xc71b007ef97887fd8fb6365ceb4fd6d618e62181`_
+* 2025-10-06..present (2026.1/Gazpacho Cycle key):
+  `key 0xb8e9315f48553ec5aff9ffe5e69d97da9efb5aff`_
 
 .. Static key files are generated with the following command:
    ( gpg --fingerprint --keyid-format=0xlong \
@@ -197,6 +199,7 @@ the date ranges during which each key was in general use.
 .. _`key 0xf8675126e2411e7748dd46662fc2093e4682645f`: _static/0xf8675126e2411e7748dd46662fc2093e4682645f.txt
 .. _`key 0x22284f69d9eccdf3df7819791c711af193ff8e54`: _static/0x22284f69d9eccdf3df7819791c711af193ff8e54.txt
 .. _`key 0xc71b007ef97887fd8fb6365ceb4fd6d618e62181`: _static/0xc71b007ef97887fd8fb6365ceb4fd6d618e62181.txt
+.. _`key 0xb8e9315f48553ec5aff9ffe5e69d97da9efb5aff`: _static/0xb8e9315f48553ec5aff9ffe5e69d97da9efb5aff.txt
 
 .. _`centrally-managed OpenPGP keys`: https://docs.openstack.org/infra/system-config/signing.html
 .. _`OpenStack TaCT SIG`: https://governance.openstack.org/sigs/tact-sig.html
