@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/monasca-agent
         hash: 29be6e96a6c590221e7d2fd1e30dffc7aec519a9
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/monasca-agent
+        hash: 29be6e96a6c590221e7d2fd1e30dffc7aec519a9
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
