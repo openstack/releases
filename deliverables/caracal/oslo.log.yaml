@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: a6c4f8a9c62ae264f819716177f3da899eaf1a54
+  - version: 5.5.2
+    projects:
+      - repo: openstack/oslo.log
+        hash: b30225a96c6322a5c382328949492022f699a8cd
 branches:
   - name: stable/2024.1
     location: 5.5.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.log/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.log/2024.1.html
