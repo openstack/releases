@@ -90,6 +90,7 @@ cycle:
     name: R-7
     x-project:
       - f-extra-acs
+      - g-election-nominations
     project-specific:
       - f-openstackclient-freeze
   - start: '2025-08-18'
@@ -97,6 +98,7 @@ cycle:
     name: R-6
     x-project:
       - f-final-lib
+      - g-election-nominations
   - start: '2025-08-25'
     end: '2025-08-29'
     name: R-5
@@ -106,11 +108,14 @@ cycle:
       - f-final-clientlib
       - f-soft-sf
       - f-rf
+      - g-election-email-deadline
+      - g-election-campaigning
   - start: '2025-09-01'
     end: '2025-09-05'
     name: R-4
     x-project:
       - f-cycle-highlights
+      - g-election-voting
     project-specific:
       - f-manila-bugsquash
   - start: '2025-09-08'
@@ -119,14 +124,18 @@ cycle:
     x-project:
       - f-rc1
       - f-hard-sf
+      - g-election-voting
   - start: '2025-09-15'
     end: '2025-09-19'
     name: R-2
+    x-project:
+      - g-election-voting
   - start: '2025-09-22'
     end: '2025-09-26'
     name: R-1
     x-project:
       - f-finalrc
+      - g-election-close
   - start: '2025-09-29'
     end: '2025-10-03'
     name: R+0
