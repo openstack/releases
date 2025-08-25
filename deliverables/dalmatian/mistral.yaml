@@ -16,6 +16,10 @@ releases:
       - repo: openstack/mistral
         hash: a3e8f5b0437c2497b1f5e80e50fb873df38f9f53
     diff-start: 18.0.1
+  - version: 19.1.0
+    projects:
+      - repo: openstack/mistral
+        hash: cfc1b44046c242ad3679a60cc2abeb00f02e6658
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
