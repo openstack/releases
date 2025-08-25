@@ -297,3 +297,47 @@ Nova Implementation Review Day
 On 5 August 2025, Nova prioritized code changes will be reviewed by the Nova
 core team.
 
+
+2026.1 TC and PTL Elections
+===========================
+
+.. _g-election-email-deadline:
+
+2026.1 Election Email Deadline
+------------------------------
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date (August 20th, 2025
+at 00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+.. _g-election-nominations:
+
+2026.1 Election Nomination Begins
+---------------------------------
+Candidates interested in serving for the next calendar year (TC), or
+development cycle (PTL) should announce their candidacies and platforms during
+this week.  Please see the `Election site`_ for specific timing information.
+
+.. _g-election-campaigning:
+
+2026.1 Election Campaigning Begins
+----------------------------------
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.  Please see the `Election site`_ for
+specific timing information.
+
+.. _g-election-voting:
+
+2026.1 Election Polling Begins
+--------------------------------
+Election polling for open seats on the TC and any required PTL elections.
+Please see the `Election site`_ for specific timing information.
+
+.. _g-election-close:
+
+2026.1 Election Polling Ends
+----------------------------
+All polls close in the 2026.1 Election and results announced.  Please see the
+`Election site`_ for specific timing information.
+
+.. _Election site: https://governance.openstack.org/election/
