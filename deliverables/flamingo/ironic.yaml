@@ -6,6 +6,27 @@ team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+cycle-highlights:
+  - |
+    Ironic has transitioned from Eventlet to native OS threading, modernizing
+    the codebase architecture. While expected to have an overall positive
+    impact on performance, this may change the RAM and CPU usage patterns
+    on machines running Ironic services. For details on this change,
+    https://ironicbaremetal.org/blog/coming-soon-threading/ is a good
+    resource.
+  - |
+    Enhanced inspection capabilities with support for inspection hooks and
+    inspection rules in the Redfish inspect interface, enabling customized
+    hardware discovery and validation workflows during node inspection.
+  - |
+    Automated cleaning can now optionally be defined via runbooks, providing
+    a declarative alternative to the imperative in-band step detection model,
+    allowing operators to define standardized, reusable cleaning workflows
+    upfront when desired.
+  - |
+    Improved observability with step flow details now captured in node
+    history, providing operators with detailed insights into provisioning
+    and maintenance operations for troubleshooting and auditing.
 releases:
   - version: 30.0.0
     projects:
