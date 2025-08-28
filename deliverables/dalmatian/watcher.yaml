@@ -16,7 +16,12 @@ releases:
       - repo: openstack/watcher
         hash: a9dc3794a69cef47d3e4b91ac2248e5670d81429
     diff-start: 12.0.0.0rc1
+  - version: 13.1.0
+    projects:
+      - repo: openstack/watcher
+        hash: 456f42e1b9d9abf0f620185a040cecfa10ad6447
 branches:
   - name: stable/2024.2
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/watcher/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/watcher/2024.2.html
