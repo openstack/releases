@@ -3,5 +3,15 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - Manila now supports bring your own key (BYOK) encryption for share servers.
+    To achieve such behavior, the user must specify a Barbican encryption key
+    reference in UUID format while creating shares.
+  - The NetApp ONTAP driver now supports BYOK encryption for share servers.
+    This functionality is only available in multitenancy mode (DHSS=True).
+  - Added support to restoring share backups on a share different from its
+    source.
+  - The Dell Isilon Driver was rebranded to PowerScale.
+  - The Dell PowerScale driver now supports thin provisioning for shares.
 repository-settings:
   openstack/manila: {}
