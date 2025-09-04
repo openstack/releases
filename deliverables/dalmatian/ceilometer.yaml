@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ceilometer
         hash: ef27b49f6e74b8bd61c301bfd5af198e0f23d7cb
     diff-start: 22.0.0
+  - version: 23.0.1
+    projects:
+      - repo: openstack/ceilometer
+        hash: dc8b698a6dd3f7d8e82d1cc2763566d203b98725
 branches:
   - name: stable/2024.2
     location: 23.0.0.0rc1
