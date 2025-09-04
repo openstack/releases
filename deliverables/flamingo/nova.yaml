@@ -5,3 +5,40 @@ team: nova
 type: service
 repository-settings:
   openstack/nova: {}
+cycle-highlights:
+  - |
+    The libvirt guest XML now includes additional flavor and image metadata
+    fields so that it can be used during troubleshooting or services like
+    Ceilometer can retrieve accurate instance information directly, without
+    performing extra Nova API calls.
+  - |
+    Nova now supports a new default role ``manager`` which is scoped to the
+    project level. This role is part of the standard role hierarchy supported
+    by Keystone and allows trusted project users to perform project-level
+    management tasks (e.g., live migration) without requiring full admin
+    rights.
+  - |
+    Service-to-service APIs now use the ``service`` role, reducing unnecessary
+    privileges for cross-service communication.
+  - |
+    Nova now supports one-time use passthrough devices. Such devices are
+    allocated to a single instance, and when the instance is deleted,
+    the device stays in a reserved state instead of becoming automatically
+    available. This ensures operators can perform necessary security checks
+    or hardware resets before reusing the device.
+  - |
+    Completes SPICE direct consoles with USB controller config and sound device support.
+  - |
+    Nova now supports QEMU’s memory balloon autodeflate and free page reporting
+    features with the libvirt driver. These allow unused guest memory to be
+    automatically released back to the hypervisor, improving memory efficiency
+    and reducing the risk of the Out-of-Memory killer activating.
+  - |
+    Added support for AMD Secure Encrypted Virtualization – Encrypted State
+    (SEV-ES) with libvirt, extending confidential computing capabilities in
+    Nova to protect guest memory and CPU register state.
+  - |
+    Experimental feature: Nova API, metadata, and scheduler services can
+    run in native threading mode as an alternative to eventlet. Please try
+    it in non-production environment and share your success or failure with
+    us on the openstack-discuss mailing list or via the Nova bug tracker.
