@@ -15,7 +15,12 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: 39440b74e0c430010eed7c90546a285f99d6a37a
+  - version: 5.6.1
+    projects:
+      - repo: openstack/taskflow
+        hash: 24c888656164c0f8eaa93161d96991f966ce866c
 branches:
   - name: stable/2024.1
     location: 5.5.0
-release-notes: https://docs.openstack.org/releasenotes/taskflow/2024.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/taskflow/2024.1.html
