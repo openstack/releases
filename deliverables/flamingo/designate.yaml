@@ -7,3 +7,9 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+cycle-highlights:
+  - |
+    Designate now provides support for Service Binding (SVCB) and HTTPS
+    resource records, as specified in RFC 9460 and RFC 9461. These record
+    types significantly reduce the handshake latency for new endpoint
+    connections, resulting in improved page load performance for end-users.
