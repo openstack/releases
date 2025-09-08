@@ -30,3 +30,11 @@ cycle-highlights:
   - |
     Optional Monasca client integration reduces dependencies on
     retired components without breaking existing user configurations.
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: 61cca16dcdec1f09f3dd05206c4ffacb0a8b93a0
+branches:
+  - name: stable/2025.2
+    location: 15.0.0.0rc1
