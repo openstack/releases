@@ -13,3 +13,11 @@ cycle-highlights:
     resource records, as specified in RFC 9460 and RFC 9461. These record
     types significantly reduce the handshake latency for new endpoint
     connections, resulting in improved page load performance for end-users.
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: 035453ffd1ba0f574a1d7f23b458222c0fd8fc68
+branches:
+  - name: stable/2025.2
+    location: 21.0.0.0rc1
