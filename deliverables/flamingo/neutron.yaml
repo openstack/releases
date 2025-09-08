@@ -10,6 +10,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 47b54e94ae56c0ab1bcbbd8c51d35046b4b2fc37
+  - version: 27.0.0.0rc1
+    projects:
+      - repo: openstack/neutron
+        hash: 46f4ef447537d80bff2bb64da6a61fff40e8fcc3
 cycle-highlights:
   - Neutron API, RPC, agents (metadata, DHCP, L3, etc), workers and all
     associated code now runs in native threading mode instead of eventlet.
@@ -20,3 +24,6 @@ cycle-highlights:
     performance because it avoids conntrack.
   - The OVN agent has replaced the OVN Metadata Agent, the latter will
     be deprecated in a future release.
+branches:
+  - name: stable/2025.2
+    location: 27.0.0.0rc1
