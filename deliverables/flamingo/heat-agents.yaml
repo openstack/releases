@@ -6,3 +6,11 @@ team: heat
 type: other
 repository-settings:
   openstack/heat-agents: {}
+releases:
+  - version: 11.0.0.0rc1
+    projects:
+      - repo: openstack/heat-agents
+        hash: 60d3b04b49cc59c6cb6873af23beb1bd7a18236c
+branches:
+  - name: stable/2025.2
+    location: 11.0.0.0rc1
