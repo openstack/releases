@@ -5,3 +5,11 @@ team: zaqar
 type: service
 repository-settings:
   openstack/zaqar: {}
+releases:
+  - version: 21.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar
+        hash: 245ab78e066f4224f54b477143651b20eab8d3e7
+branches:
+  - name: stable/2025.2
+    location: 21.0.0.0rc1
