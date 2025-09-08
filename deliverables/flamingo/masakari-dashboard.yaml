@@ -6,3 +6,11 @@ type: horizon-plugin
 release-type: horizon
 repository-settings:
   openstack/masakari-dashboard: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 6ba6cb624135dbda7dd4808c10454cdff26cf38f
+branches:
+  - name: stable/2025.2
+    location: 13.0.0.0rc1
