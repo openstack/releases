@@ -5,3 +5,11 @@ team: cinder
 type: service
 repository-settings:
   openstack/cinder: {}
+releases:
+  - version: 27.0.0.0rc1
+    projects:
+      - repo: openstack/cinder
+        hash: c36f40684e140a1492b00dd4812e8dce17fb2ebf
+branches:
+  - name: stable/2025.2
+    location: 27.0.0.0rc1
