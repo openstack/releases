@@ -5,3 +5,11 @@ release-model: cycle-with-rc
 type: other
 repository-settings:
   openstack/ovn-octavia-provider: {}
+releases:
+  - version: 9.0.0.0rc1
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 45e9394992478316450c919c873f4fa5d76b8744
+branches:
+  - name: stable/2025.2
+    location: 9.0.0.0rc1
