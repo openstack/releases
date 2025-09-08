@@ -6,3 +6,11 @@ team: zaqar
 type: horizon-plugin
 repository-settings:
   openstack/zaqar-ui: {}
+releases:
+  - version: 19.0.0.0rc1
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 4ddd72d0d6be00cf10d78c0375d0d4682f04418f
+branches:
+  - name: stable/2025.2
+    location: 19.0.0.0rc1
