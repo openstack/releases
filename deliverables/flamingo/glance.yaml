@@ -5,5 +5,15 @@ launchpad: glance
 release-model: cycle-with-rc
 team: glance
 type: service
+cycle-highlights:
+  - Python 3.9 is no longer supported
+  - Added support for the new x-openstack-image-size header that allows
+    Glance to check the size of the uploaded data
+  - Added support for common configuration options in the Glance store
 repository-settings:
   openstack/glance: {}
+releases:
+  - version: 31.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 309e9356a67c5604bc7e5773bf11cd64d1c1379f
