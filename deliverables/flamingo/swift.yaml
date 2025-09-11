@@ -5,7 +5,14 @@ team: swift
 type: service
 repository-settings:
   openstack/swift: {}
+releases:
+  - version: 2.36.0
+    projects:
+      - repo: openstack/swift
+        hash: 82cb5a5d78b91c6af258cd8f06d30f69be90fa18
 branches:
+  - name: stable/2025.2
+    location: 2.36.0
   - name: feature/threaded
     location:
       openstack/swift: e10c2bafcb8fc80929bce3e064fee5f86a49e718
