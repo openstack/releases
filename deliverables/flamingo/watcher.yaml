@@ -6,3 +6,27 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+cycle-highlights:
+  - |
+    Volume migrations now use secure Cinder operations, eliminating
+    previous security vulnerabilities while maintaining full functionality.
+    Undocumented and unimplemented API endpoints have been removed for
+    improved security posture.
+  - |
+    Operators can now skip specific optimization actions with custom
+    status messages, providing granular control over infrastructure
+    changes during maintenance windows.
+  - |
+    Host Maintenance strategy now offers granular controls for
+    live and cold migration scenarios, giving operators precise
+    control over workload placement during maintenance.
+  - |
+    Watcher now integrates with Prometheus through the new Aetos
+    data source, providing secure multi-tenant monitoring with
+    Keystone authentication and role-based access control.
+  - |
+    Python 3.10 is now the minimum requirement, ensuring compatibility
+    with modern OpenStack deployments and improved performance.
+  - |
+    Optional Monasca client integration reduces dependencies on
+    retired components without breaking existing user configurations.
