@@ -47,6 +47,10 @@ releases:
     projects:
       - repo: openstack/kolla
         hash: 941ebde7cc2a9282aee507e74d0bcd18c47ff2db
+  - version: 20.2.0
+    projects:
+      - repo: openstack/kolla
+        hash: d26c62383a31ab45f47a45624668862b3d2473b5
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
