@@ -5,3 +5,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/automaton: {}
+releases:
+  - version: 3.3.0
+    projects:
+      - repo: openstack/automaton
+        hash: 10e8d117fc0046bac9f413fe2c20de8ed04d74c9
