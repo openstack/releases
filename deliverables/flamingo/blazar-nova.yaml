@@ -6,3 +6,11 @@ type: other
 release-type: python-pypi
 repository-settings:
   openstack/blazar-nova: {}
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 1bc12095a2a1a6a66d1f56d30420c72eaaf0d667
+branches:
+  - name: stable/2025.2
+    location: 8.0.0.0rc1
