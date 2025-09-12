@@ -6,3 +6,11 @@ team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - version: 19.3.0
+    projects:
+      - repo: openstack/bifrost
+        hash: ff3d9fb3c68583558eb8f853062860227a43688d
+branches:
+  - name: stable/2025.2
+    location: 19.3.0
