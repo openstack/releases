@@ -42,3 +42,11 @@ cycle-highlights:
     run in native threading mode as an alternative to eventlet. Please try
     it in non-production environment and share your success or failure with
     us on the openstack-discuss mailing list or via the Nova bug tracker.
+releases:
+  - version: 32.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 759e03c35d91dac4a04237d58493665c01952c9f
+branches:
+  - name: stable/2025.2
+    location: 32.0.0.0rc1
