@@ -5,3 +5,11 @@ team: tacker
 type: service
 repository-settings:
   openstack/tacker: {}
+releases:
+  - version: 14.0.0.0rc1
+    projects:
+      - repo: openstack/tacker
+        hash: 34d4b1bb060c93c01750ca7a0e3019e953e372ef
+branches:
+  - name: stable/2025.2
+    location: 14.0.0.0rc1
