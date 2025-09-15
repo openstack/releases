@@ -5,3 +5,11 @@ storyboard: openstack/vitrage
 release-model: cycle-with-rc
 repository-settings:
   openstack/vitrage: {}
+releases:
+  - version: 15.0.0.0rc1
+    projects:
+      - repo: openstack/vitrage
+        hash: 28b4803f70921b0290d3491345eea5e3132374dd
+branches:
+  - name: stable/2025.2
+    location: 15.0.0.0rc1
