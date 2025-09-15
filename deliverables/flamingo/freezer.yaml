@@ -5,3 +5,11 @@ team: freezer
 type: service
 repository-settings:
   openstack/freezer: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/freezer
+        hash: b9c07b4d6219179270b8cbb549960eabae30427b
+branches:
+  - name: stable/2025.2
+    location: 17.0.0.0rc1
