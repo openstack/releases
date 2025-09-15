@@ -7,3 +7,11 @@ team: octavia
 type: service
 repository-settings:
   openstack/octavia: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/octavia
+        hash: f6a639bb44127d9ba76b8c1cc72a4f16d75aeb6f
+branches:
+  - name: stable/2025.2
+    location: 17.0.0.0rc1
