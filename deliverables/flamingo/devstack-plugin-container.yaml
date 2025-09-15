@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/devstack-plugin-container: {}
+branches:
+  - name: stable/2025.2
+    location:
+      openstack/devstack-plugin-container: ef781f6cd072399f5c89bdad25321d9d11a9908d

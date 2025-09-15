@@ -6,3 +6,7 @@ type: other
 stable-branch-type: tagless
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+branches:
+  - name: stable/2025.2
+    location:
+      openstack/devstack-plugin-ceph: 536ebea559673d694c8f8deeafe1362e2c41c021
