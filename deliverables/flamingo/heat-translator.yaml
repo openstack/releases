@@ -6,3 +6,8 @@ team: tacker
 type: library
 repository-settings:
   openstack/heat-translator: {}
+releases:
+  - version: 3.3.0
+    projects:
+      - repo: openstack/heat-translator
+        hash: 098b9db0d478a1c3f713ec75d66e9926457c7374
