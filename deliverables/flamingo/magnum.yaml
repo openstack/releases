@@ -5,6 +5,14 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+cycle-highlights:
+  - |
+    Added a new API endpoint for credential rotation of an existing cluster.
+    This endpoint may be used to regularly rotate any Application Credentials or
+    Keystone Trusts as implemented by the driver. This can be used as a security
+    measure, to migrate cluster ownership to a different user account, or to
+    recreate credentials that have become invalidated by removal of roles from a
+    user.
 releases:
   - version: 21.0.0.0rc1
     projects:
