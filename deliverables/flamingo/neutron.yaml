@@ -15,15 +15,19 @@ releases:
       - repo: openstack/neutron
         hash: 46f4ef447537d80bff2bb64da6a61fff40e8fcc3
 cycle-highlights:
-  - Neutron API, RPC, agents (metadata, DHCP, L3, etc), workers and all
-    associated code now runs in native threading mode instead of eventlet.
-  - A new custom API policy rule ``context_with_global_access`` has been
-    added, which allows for roles such as ``auditor`` to be specified.
-  - Floating IP NAT rules in OVN can now be configured as stateless
-    with the ``stateless_nat_enabled`` option, which can potentially improve
-    performance because it avoids conntrack.
-  - The OVN agent has replaced the OVN Metadata Agent, the latter will
-    be deprecated in a future release.
+  - Neutron API, RPC, agents (metadata, DHCP, L3, etc), workers
+    and all associated code now runs in native threading mode
+    instead of eventlet.
+  - A new custom API policy rule ``context_with_global_access``
+    has been added, which allows for roles such as ``auditor`` to
+    be specified.
+  - Floating IP NAT rules in OVN can now be configured as
+    stateless with the ``stateless_nat_enabled`` option, which can
+    potentially improve performance because it avoids conntrack.
+  - The OVN agent has replaced the OVN Metadata Agent, the latter
+    will be deprecated in a future release.
 branches:
   - name: stable/2025.2
     location: 27.0.0.0rc1
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron/2025.2.html
