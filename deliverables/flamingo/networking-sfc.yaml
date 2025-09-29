@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/networking-sfc
         hash: 4a9c570891135768d1e3b17454ea6927822c2c89
+  - version: 21.0.0
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 4a9c570891135768d1e3b17454ea6927822c2c89
+    diff-start: 20.0.0
 branches:
   - name: stable/2025.2
     location: 21.0.0.0rc1

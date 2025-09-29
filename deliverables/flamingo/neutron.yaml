@@ -14,6 +14,11 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 46f4ef447537d80bff2bb64da6a61fff40e8fcc3
+  - version: 27.0.0
+    projects:
+      - repo: openstack/neutron
+        hash: 46f4ef447537d80bff2bb64da6a61fff40e8fcc3
+    diff-start: 26.0.0.0rc1
 cycle-highlights:
   - Neutron API, RPC, agents (metadata, DHCP, L3, etc), workers
     and all associated code now runs in native threading mode

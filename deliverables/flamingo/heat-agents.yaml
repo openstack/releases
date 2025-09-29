@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: 60d3b04b49cc59c6cb6873af23beb1bd7a18236c
+  - version: 11.0.0
+    projects:
+      - repo: openstack/heat-agents
+        hash: 60d3b04b49cc59c6cb6873af23beb1bd7a18236c
+    diff-start: 10.0.0
 branches:
   - name: stable/2025.2
     location: 11.0.0.0rc1

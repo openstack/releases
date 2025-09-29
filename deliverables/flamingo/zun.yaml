@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/zun
         hash: 023280e4227d78d56c4d511fe8ac647423fd9d65
+  - version: 16.0.0
+    projects:
+      - repo: openstack/zun
+        hash: 023280e4227d78d56c4d511fe8ac647423fd9d65
+    diff-start: 15.0.0
 branches:
   - name: stable/2025.2
     location: 16.0.0.0rc1

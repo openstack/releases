@@ -18,6 +18,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 035453ffd1ba0f574a1d7f23b458222c0fd8fc68
+  - version: 21.0.0
+    projects:
+      - repo: openstack/designate
+        hash: 035453ffd1ba0f574a1d7f23b458222c0fd8fc68
+    diff-start: 20.0.0
 branches:
   - name: stable/2025.2
     location: 21.0.0.0rc1

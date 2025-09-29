@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/tap-as-a-service
         hash: 257e89ca9fe02e784cd85066b3380318f28892bc
+  - version: 16.0.0
+    projects:
+      - repo: openstack/tap-as-a-service
+        hash: 257e89ca9fe02e784cd85066b3380318f28892bc
+    diff-start: 15.0.0
 branches:
   - name: stable/2025.2
     location: 16.0.0.0rc1

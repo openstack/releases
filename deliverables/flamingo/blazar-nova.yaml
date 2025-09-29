@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/blazar-nova
         hash: 1bc12095a2a1a6a66d1f56d30420c72eaaf0d667
+  - version: 8.0.0
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 1bc12095a2a1a6a66d1f56d30420c72eaaf0d667
+    diff-start: 7.0.0
 branches:
   - name: stable/2025.2
     location: 8.0.0.0rc1
