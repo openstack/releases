@@ -6,13 +6,14 @@ type: service
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:
-  - Horizon now uses SDK instead of neutronclient for RBAC policies,
-    QoS and Security groups
-  - User Credentials details page for TOTP now displays a generated
-    QR code to set up a new TOTP in an authentication app
+  - Horizon now uses SDK instead of neutronclient for RBAC
+    policies, QoS and Security groups
+  - User Credentials details page for TOTP now displays a
+    generated QR code to set up a new TOTP in an authentication
+    app
   - Region and domain selection is now always visible on the login
-    screen, independently of authentication methods, making multiple
-    regions and domains setups possible.
+    screen, independently of authentication methods, making
+    multiple regions and domains setups possible.
 releases:
   - version: 25.4.0
     projects:
@@ -29,3 +30,5 @@ releases:
 branches:
   - name: stable/2025.2
     location: 25.5.1
+release-notes:
+  https://docs.openstack.org/releasenotes/horizon/2025.2.html

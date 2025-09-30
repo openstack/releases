@@ -4,12 +4,28 @@ release-model: cycle-with-rc
 team: skyline
 type: service
 cycle-highlights:
-  - "Fully upgrade Fixed IP filtering capabilities, covering server lists, recycled servers, instance pages and server group detail pages, supporting precise frontend filtering to improve resource location efficiency."
-  - "Add a rescue feature for Nova instances, providing a fast recovery path for instance failure scenarios (e.g., system crashes, configuration anomalies) and improving instance lifecycle management."
-  - "Optimize architecture and cross-environment compatibility: convert asynchronous code to synchronous to simplify maintenance and update fastapi; resolve the issue of OpenSSL not supporting md4 by default in Ubuntu 24.04+ via Monkey patch to ensure normal yarn build."
-  - "Enhance user experience: persist menu collapse status via local storage; pause list auto-refresh when data fetch fails and update policy check error messages to reduce invalid operations."
-  - "Strengthen HTTPS communication security: enable TLSv1.2/TLSv1.3 for upstream endpoints to fix handshake errors caused by old TLS versions, complying with modern encryption standards."
-  - "Improve deployment configuration flexibility: add access_log_file and error_log_file parameters, supporting default, relative and absolute (e.g., Kubernetes containerized) log paths to adapt to diverse deployment needs."
+  - Fully upgrade Fixed IP filtering capabilities, covering server
+    lists, recycled servers, instance pages and server group
+    detail pages, supporting precise frontend filtering to improve
+    resource location efficiency.
+  - Add a rescue feature for Nova instances, providing a fast
+    recovery path for instance failure scenarios (e.g., system
+    crashes, configuration anomalies) and improving instance
+    lifecycle management.
+  - 'Optimize architecture and cross-environment compatibility: convert
+    asynchronous code to synchronous to simplify maintenance and update
+    fastapi; resolve the issue of OpenSSL not supporting md4 by default
+    in Ubuntu 24.04+ via Monkey patch to ensure normal yarn build.'
+  - 'Enhance user experience: persist menu collapse status via local
+    storage; pause list auto-refresh when data fetch fails and update
+    policy check error messages to reduce invalid operations.'
+  - 'Strengthen HTTPS communication security: enable TLSv1.2/TLSv1.3
+    for upstream endpoints to fix handshake errors caused by old TLS
+    versions, complying with modern encryption standards.'
+  - 'Improve deployment configuration flexibility: add access_log_file
+    and error_log_file parameters, supporting default, relative and
+    absolute (e.g., Kubernetes containerized) log paths to adapt to
+    diverse deployment needs.'
 repository-settings:
   openstack/skyline-apiserver: {}
 releases:
@@ -20,3 +36,5 @@ releases:
 branches:
   - name: stable/2025.2
     location: 7.0.0.0rc1
+release-notes:
+  https://docs.openstack.org/releasenotes/skyline-apiserver/2025.2.html
