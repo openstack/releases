@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/skyline-console
         hash: 12766cf8cf29efa611b59c7bb0f4d3ed372bc0c1
+  - version: 7.0.0
+    projects:
+      - repo: openstack/skyline-console
+        hash: 12766cf8cf29efa611b59c7bb0f4d3ed372bc0c1
+    diff-start: 6.0.0.0rc1
 branches:
   - name: stable/2025.2
     location: 7.0.0.0rc1

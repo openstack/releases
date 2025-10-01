@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/cloudkitty-dashboard
         hash: a9040c4e567844ec46524a64279333e97f1205a2
+  - version: 21.0.0
+    projects:
+      - repo: openstack/cloudkitty-dashboard
+        hash: a9040c4e567844ec46524a64279333e97f1205a2
+    diff-start: 20.0.0
 branches:
   - name: stable/2025.2
     location: 21.0.0.0rc1

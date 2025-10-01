@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: e15db25097af494a899f3f871f291f855eccbd31
+  - version: 16.0.0
+    projects:
+      - repo: openstack/blazar
+        hash: e15db25097af494a899f3f871f291f855eccbd31
+    diff-start: 15.0.0
 branches:
   - name: stable/2025.2
     location: 16.0.0.0rc1

@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: 4a0f64b5cbd48af7c44788e0f86e313a6e7865a5
+  - version: 14.0.0
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 4a0f64b5cbd48af7c44788e0f86e313a6e7865a5
+    diff-start: 13.0.0
 branches:
   - name: stable/2025.2
     location: 14.0.0.0rc1

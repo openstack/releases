@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas
         hash: e0b5e2001b594edd350f0d87869e117b8bb464a1
+  - version: 27.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas
+        hash: e0b5e2001b594edd350f0d87869e117b8bb464a1
+    diff-start: 26.0.0
 branches:
   - name: stable/2025.2
     location: 27.0.0.0rc1

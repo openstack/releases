@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/zaqar-ui
         hash: 4ddd72d0d6be00cf10d78c0375d0d4682f04418f
+  - version: 19.0.0
+    projects:
+      - repo: openstack/zaqar-ui
+        hash: 4ddd72d0d6be00cf10d78c0375d0d4682f04418f
+    diff-start: 18.0.0
 branches:
   - name: stable/2025.2
     location: 19.0.0.0rc1

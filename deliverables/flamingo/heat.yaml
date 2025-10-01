@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 7ffb5dd3c2d76299479d5b55041a021458e5f056
+  - version: 25.0.0
+    projects:
+      - repo: openstack/heat
+        hash: 7ffb5dd3c2d76299479d5b55041a021458e5f056
+    diff-start: 24.0.0
 branches:
   - name: stable/2025.2
     location: 25.0.0.0rc1

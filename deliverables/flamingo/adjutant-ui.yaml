@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant-ui
         hash: a2c9f79d96f01ff6cac222731f9f84c961fe807b
+  - version: 11.0.0
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: a2c9f79d96f01ff6cac222731f9f84c961fe807b
+    diff-start: 10.0.0
 branches:
   - name: stable/2025.2
     location: 11.0.0.0rc1
