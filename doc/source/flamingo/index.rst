@@ -2,7 +2,7 @@
 2025.2 Flamingo
 ===============
 
-Projected Release Date: 01 October, 2025
+Originally Released: 01 October, 2025
 
 .. toctree::
    :maxdepth: 1
