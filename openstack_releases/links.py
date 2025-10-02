@@ -16,11 +16,7 @@ import re
 import requests
 
 
-def _format_wheel_name(name):
-    return re.sub(r"[-]+", "_", name).lower()
-
-
-def _format_tarball_name(name):
+def _format_name(name):
     return re.sub(r"[-.]+", "_", name).lower()
 
 
@@ -48,7 +44,7 @@ def tarball_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=_format_tarball_name(base),
+        n=_format_name(base),
     )
 
 
@@ -59,7 +55,7 @@ def wheel_py3_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=_format_wheel_name(base),
+        n=_format_name(base),
     )
 
 
@@ -70,7 +66,7 @@ def wheel_both_url(version, project):
         s='https://tarballs.openstack.org',
         v=version,
         r=repo_base,
-        n=_format_wheel_name(base),
+        n=_format_name(base),
     )
 
 
