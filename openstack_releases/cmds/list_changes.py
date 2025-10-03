@@ -499,6 +499,8 @@ def main():
                          'Doc Requirements Changes %s' % git_range)
                 git_diff(workdir, project.repo.name, git_range, 'setup.cfg',
                          'setup.cfg Changes %s' % git_range)
+                git_diff(workdir, project.repo.name, git_range, 'pyproject.toml',
+                         'pyproject.toml Changes %s' % git_range)
                 git_diff(workdir, project.repo.name, git_range, 'bindep.txt',
                          'bindep.txt Changes %s' % git_range)
 
