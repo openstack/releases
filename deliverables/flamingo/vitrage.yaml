@@ -15,6 +15,10 @@ releases:
       - repo: openstack/vitrage
         hash: 28b4803f70921b0290d3491345eea5e3132374dd
     diff-start: 14.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/vitrage
+        hash: 89df4bd2ffda1a5ddea66cd828438a6a171a3b11
 branches:
   - name: stable/2025.2
     location: 15.0.0.0rc1
