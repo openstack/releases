@@ -15,6 +15,12 @@ releases:
       - repo: openstack/venus-dashboard
         hash: cc7900d53aa9a78ed98b0593a501e4fd528af732
     diff-start: 3.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/venus-dashboard
+        hash: cc7900d53aa9a78ed98b0593a501e4fd528af732
 branches:
   - name: stable/2024.1
     location: 4.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
