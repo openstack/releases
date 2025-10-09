@@ -31,8 +31,14 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 25b7d92ae288a31a937b156f1bf84b882857e982
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/trove
+        hash: 25b7d92ae288a31a937b156f1bf84b882857e982
 branches:
   - name: stable/2024.1
     location: 21.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/trove/2024.1.html
