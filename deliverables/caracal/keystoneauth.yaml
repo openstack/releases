@@ -24,7 +24,14 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: bd152b19f7d5b3029fa5741f8f1e40cd5d2f04b0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: bd152b19f7d5b3029fa5741f8f1e40cd5d2f04b0
 branches:
   - name: stable/2024.1
     location: 5.6.0
-release-notes: https://docs.openstack.org/releasenotes/keystoneauth/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/keystoneauth/2024.1.html

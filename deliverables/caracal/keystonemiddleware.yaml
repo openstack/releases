@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: b81c50fea9c444cb5e4d11fd0fd0fcae5c0d2c4f
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: eb7fc0461a1832c641f5812118d92d12506c1c17
 branches:
   - name: stable/2024.1
     location: 10.6.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/keystonemiddleware/2024.1.html
