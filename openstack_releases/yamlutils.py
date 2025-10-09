@@ -25,7 +25,14 @@ def dumps(obj):
     yaml.explicit_start = True
     yaml.indent(mapping=2, sequence=4, offset=2)
     yaml.dump(obj, stream)
-    return stream.getvalue()
+
+    # Remove trailing whitespace.
+    # NOTE(rpittau): This can be removed once the bug introduced
+    # in ruamel 0.18.13 is fixed.
+    yaml_output = stream.getvalue()
+    lines = yaml_output.split('\n')
+    cleaned_yaml_lines = [line.rstrip() for line in lines]
+    return '\n'.join(cleaned_yaml_lines)
 
 
 def loads(blob):
