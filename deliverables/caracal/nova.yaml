@@ -98,8 +98,14 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 41ae5b7f70481ad1a63eb1cbdba1e890be850ec5
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/nova
+        hash: 41ae5b7f70481ad1a63eb1cbdba1e890be850ec5
 branches:
   - name: stable/2024.1
     location: 29.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/nova/2024.1.html
