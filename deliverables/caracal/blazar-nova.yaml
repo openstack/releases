@@ -16,7 +16,14 @@ releases:
       - repo: openstack/blazar-nova
         hash: 1e3f3a4c47e1feea84d68d56822336dec2d9b1ca
     diff-start: 4.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/blazar-nova
+        hash: 6139b96abbc09cbc3760061f4a70c8e0c0c37b08
 branches:
   - name: stable/2024.1
     location: 5.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar-nova/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar-nova/2024.1.html
