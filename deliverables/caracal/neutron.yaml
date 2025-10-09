@@ -43,6 +43,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: bcbdd1c4501b219436228059523d9cdb2844b6ee
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/neutron
+        hash: bcbdd1c4501b219436228059523d9cdb2844b6ee
 cycle-highlights:
   - Support was added for the external-gateway-multihoming API
     extension. The L3 service plugins supporting it can now create
@@ -59,5 +63,7 @@ cycle-highlights:
 branches:
   - name: stable/2024.1
     location: 24.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/neutron/2024.1.html

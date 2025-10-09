@@ -15,8 +15,14 @@ releases:
       - repo: openstack/neutron-fwaas-dashboard
         hash: 3c7398727220a76be3e9be05e297c748cbf9d581
     diff-start: 6.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/neutron-fwaas-dashboard
+        hash: e550f79425c60c014f59f32a6b5057544101809d
 branches:
   - name: stable/2024.1
     location: 7.0.0.0rc1
-release-notes: 
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
   https://docs.openstack.org/releasenotes/neutron-fwaas-dashboard/2024.1.html

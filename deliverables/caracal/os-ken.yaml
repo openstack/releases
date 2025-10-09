@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 073d6f059471e99d1d652bc0a3f4ca7cf19612b8
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/os-ken
+        hash: 073d6f059471e99d1d652bc0a3f4ca7cf19612b8
 branches:
   - name: stable/2024.1
     location: 2.8.1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/os-ken/2024.1.html
