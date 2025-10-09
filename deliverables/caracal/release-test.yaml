@@ -16,6 +16,12 @@ releases:
     projects:
       - repo: openstack/release-test
         hash: 3bb6e745e210c822a3e7cf04ebab61e339229f37
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/release-test
+        hash: 0621d31ab6f191211bdf8139c34b5ba6d2177ac2
 branches:
   - name: stable/2024.1
     location: 6.0.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
