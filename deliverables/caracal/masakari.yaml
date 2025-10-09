@@ -15,7 +15,14 @@ releases:
       - repo: openstack/masakari
         hash: 8fbcb68ee6a680ad526bb46ab4b7a0c61290df23
     diff-start: 16.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/masakari
+        hash: 0734344441bb9137b46a8e7de3a226ee81f440c8
 branches:
   - name: stable/2024.1
     location: 17.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/masakari/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/masakari/2024.1.html
