@@ -15,7 +15,14 @@ releases:
       - repo: openstack/magnum-ui
         hash: 463d21c81321129a6d37c518d3039641b78b0311
     diff-start: 13.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/magnum-ui
+        hash: d6229fe6248f290c3c0a5e3f376ef5a6127bf78d
 branches:
   - name: stable/2024.1
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/magnum-ui/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/magnum-ui/2024.1.html
