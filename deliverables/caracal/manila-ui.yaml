@@ -20,8 +20,14 @@ releases:
     projects:
       - repo: openstack/manila-ui
         hash: f8e5bc9d831ac33b86b2981fedef98f0df2044a1
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/manila-ui
+        hash: f8e5bc9d831ac33b86b2981fedef98f0df2044a1
 branches:
   - name: stable/2024.1
     location: 11.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/manila-ui/2024.1.html

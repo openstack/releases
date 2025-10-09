@@ -4,28 +4,28 @@ release-model: cycle-with-rc
 team: manila
 type: service
 cycle-highlights:
-  - Creating share networks with Manila's UI Dashboard will now follow
-    a two-step workflow, as part of a change to support multiple share
-    network subnets.
-  - Users can specify a custom export location for their shares, making
-    mount paths predictable. A prefix should be configured by the administrators,
-    else Manila will use the project ID as a prefix to the custom mount
-    point name.
-  - While disabling a service, you can now specify a reason for it.
-    When the service is enabled again, the reason will be automatically
-    removed.
-  - Administrators are now able to configure metadata options that can
-    only be manipulated by more privileged users through a new config
-    option.
-  - Shares created using the CEPHFS protocol will now feature the backing
-    filesystem name in the share metadata, making it easier to mount
-    shares.
-  - A new driver-advantaged share backup implementation has been added
-    with NetApp ONTAP storage systems.
-  - Administrators can now enable a deferred approach for share and
-    share snapshot deletions. With this approach, user quotas are immediately
-    released while deletions are processed within back-end storage systems
-    in periodic intervals.
+  - Creating share networks with Manila's UI Dashboard will now
+    follow a two-step workflow, as part of a change to support
+    multiple share network subnets.
+  - Users can specify a custom export location for their shares,
+    making mount paths predictable. A prefix should be configured
+    by the administrators, else Manila will use the project ID as
+    a prefix to the custom mount point name.
+  - While disabling a service, you can now specify a reason for
+    it. When the service is enabled again, the reason will be
+    automatically removed.
+  - Administrators are now able to configure metadata options that
+    can only be manipulated by more privileged users through a new
+    config option.
+  - Shares created using the CEPHFS protocol will now feature the
+    backing filesystem name in the share metadata, making it
+    easier to mount shares.
+  - A new driver-advantaged share backup implementation has been
+    added with NetApp ONTAP storage systems.
+  - Administrators can now enable a deferred approach for share
+    and share snapshot deletions. With this approach, user quotas
+    are immediately released while deletions are processed within
+    back-end storage systems in periodic intervals.
 repository-settings:
   openstack/manila: {}
 releases:
@@ -58,7 +58,14 @@ releases:
     projects:
       - repo: openstack/manila
         hash: cc0f148566039d0c3577be22b6ba24e05c8631f4
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/manila
+        hash: f0f77217788384b91e5848e2d4b75ec4276274e5
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/manila/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/manila/2024.1.html
