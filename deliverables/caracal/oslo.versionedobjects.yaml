@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 25db0cf2f73fc7c4eaf054aa2c9fa58ea7f3fa3f
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: b63c1e90b1f823429b76c1cfc5e993eb2416e489
 branches:
   - name: stable/2024.1
     location: 3.3.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.versionedobjects/2024.1.html

@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.log
         hash: b30225a96c6322a5c382328949492022f699a8cd
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/oslo.log
+        hash: b30225a96c6322a5c382328949492022f699a8cd
 branches:
   - name: stable/2024.1
     location: 5.5.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.log/2024.1.html

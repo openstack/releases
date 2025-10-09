@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 0531fb289588056e583ab47c9677e5405df58b8e
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: b85be2a78efa532aa31fb3dcfee59676949a00f8
 branches:
   - name: stable/2024.1
     location: 6.3.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.i18n/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.i18n/2024.1.html

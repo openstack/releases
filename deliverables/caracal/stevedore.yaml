@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 21d601f3f568f2a8b1b6447931a73554eb60703a
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/stevedore
+        hash: 8eef76f62e9e9d67e5b60c2515bde0d0bfd43083
 branches:
   - name: stable/2024.1
     location: 5.2.0
-release-notes: https://docs.openstack.org/releasenotes/stevedore/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/stevedore/2024.1.html
