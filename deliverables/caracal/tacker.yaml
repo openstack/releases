@@ -7,17 +7,19 @@ repository-settings:
   openstack/tacker: {}
 cycle-highlights:
   - Introduce a sample of management driver for deploying Cilium.
-  - Update tacker-horizon for supporting NFV Orchestration API V2.0
-    operations.
-  - Drop legacy APIs introduced before ETSI NFV SOL standards support.
-  - Revise documentation for fixing lack of usecases or usages of support
-    tools, dropping descriptions of legacy features such as VNFFG, and
-    improving structure of the docs for maintaenance.
-  - Several bug fixes including Terraform infra-driver, invalid behavior
-    of placementConstraints or so.
+  - Update tacker-horizon for supporting NFV Orchestration API
+    V2.0 operations.
+  - Drop legacy APIs introduced before ETSI NFV SOL standards
+    support.
+  - Revise documentation for fixing lack of usecases or usages of
+    support tools, dropping descriptions of legacy features such
+    as VNFFG, and improving structure of the docs for
+    maintaenance.
+  - Several bug fixes including Terraform infra-driver, invalid
+    behavior of placementConstraints or so.
   - Terminate huge amount of useless logs in test results on zuul.
-  - Implementation of the secure role-based access control (sRBAC) in
-    NFV Orchestration API V1.0.
+  - Implementation of the secure role-based access control (sRBAC)
+    in NFV Orchestration API V1.0.
 releases:
   - version: 11.0.0.0rc1
     projects:
@@ -32,7 +34,14 @@ releases:
       - repo: openstack/tacker
         hash: 947777edf2b3ec403b96a181159c6dbc91060971
     diff-start: 10.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/tacker
+        hash: 947777edf2b3ec403b96a181159c6dbc91060971
 branches:
   - name: stable/2024.1
     location: 11.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/tacker/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/tacker/2024.1.html
