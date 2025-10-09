@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/devstack: f4f09416ca8de09820b52599c7bcd2911b407466
     name: stable/2024.1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 repository-settings:
   openstack/devstack: {}
+releases:
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/devstack
+        hash: 8977a58ccc421dce181ad795bb6e6074dc0f39ee

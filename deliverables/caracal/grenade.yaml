@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: 2523aa0b41578ba57e7dfd176a947ee3ced8de84
     name: stable/2024.1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/grenade
+        hash: 01729753720a5a2eca8b9094a2bca12c8e255a7b
