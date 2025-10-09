@@ -15,7 +15,14 @@ releases:
       - repo: openstack/zaqar
         hash: 4ad3b5695cfa36afb042d43af6125fe7e234472c
     diff-start: 17.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/zaqar
+        hash: fedcf22b531f72caae21f3190e6a1800f732fb1f
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/zaqar/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/zaqar/2024.1.html
