@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 6723871d4fa0723cd7ac0a4105b5c77f92c43059
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 4bf4e0a09a220ce892a7026e69fabf2f36b4d780
 branches:
   - name: stable/2024.1
     location: 6.3.0
-release-notes: https://docs.openstack.org/releasenotes/ironic-ui/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-ui/2024.1.html

@@ -26,7 +26,14 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: 2805e27a86eec3b44a345584d8e77ca9bd762c34
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/sushy
+        hash: 2805e27a86eec3b44a345584d8e77ca9bd762c34
 branches:
   - name: stable/2024.1
     location: 5.0.0
-release-notes: https://docs.openstack.org/releasenotes/sushy/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sushy/2024.1.html

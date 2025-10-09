@@ -36,6 +36,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: 1fb8c0c9840678baa9d4784b010215a220d2bb00
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 1fb8c0c9840678baa9d4784b010215a220d2bb00
 branches:
   - name: bugfix/9.8
     location: 9.8.0
@@ -43,5 +47,7 @@ branches:
     location: 9.9.0
   - name: stable/2024.1
     location: 9.10.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/ironic-python-agent/2024.1.html
