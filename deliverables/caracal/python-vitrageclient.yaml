@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/python-vitrageclient
         hash: f1c8eeb3478a90ae67a5b69cf75bea61d035051c
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/python-vitrageclient
+        hash: 825da3443513ab76dbcba985fc25e07d3a952bf2
 branches:
   - name: stable/2024.1
     location: 5.0.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-vitrageclient/2024.1.html
