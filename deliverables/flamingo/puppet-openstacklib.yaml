@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-openstacklib: {}
+releases:
+  - projects:
+      - hash: 8c525c0b2471a6afa1b9c22b09e93a5bf4097402
+        repo: openstack/puppet-openstacklib
+    version: 27.0.0
+branches:
+  - name: stable/2025.2
+    location: 27.0.0

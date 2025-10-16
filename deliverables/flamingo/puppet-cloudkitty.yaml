@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-cloudkitty: {}
+releases:
+  - projects:
+      - hash: 48edad10976fe521abd53a1f8dea768233bd9ad5
+        repo: openstack/puppet-cloudkitty
+    version: 16.0.0
+branches:
+  - name: stable/2025.2
+    location: 16.0.0

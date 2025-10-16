@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-manila: {}
+releases:
+  - projects:
+      - hash: 1258146d64a24eb8d2319bb14c3dd615b8d39134
+        repo: openstack/puppet-manila
+    version: 27.0.0
+branches:
+  - name: stable/2025.2
+    location: 27.0.0
