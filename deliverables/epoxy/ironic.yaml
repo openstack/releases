@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 067079718c2bf9759e383150c752697071ec9bc9
+  - version: 29.0.4
+    projects:
+      - repo: openstack/ironic
+        hash: 6dced2447f051af85aab07f8fb32df86ed5bf82c
 branches:
   - name: bugfix/27.0
     location: 27.0.0
@@ -39,23 +43,28 @@ branches:
   - name: stable/2025.1
     location: 29.0.0
 cycle-highlights:
-  - Ironic has added a new bootc deploy interface to support the deployment
-    of `bootc container images <https://bootc-dev.github.io/bootc/>`_
-    directly to a host with no intermediate steps.
-  - Ironic now supports getting deployment artifacts and images from
-    OCI Container Registries.
-  - Ironic offers now graphical console of a host using the new ``ironic-novncproxy``
-    service, showing the console in a NoVNC web browser for hosts drivers
-    with access to graphical console interface. A special ``read-only``
-    mode is also available.
-  - Ironic has now a schema validation framework for the API that validates
-    incoming requests and outgoing responses against a json schema at
-    the beginning and end phases of the requests pipeline.
-  - Ironic has retired the `ironic-lib <https://opendev.org/openstack/ironic-lib>`_
-    library which is now not required anymore.
-  - Ironic has removed the support for PostgreSQL, only mysql-compatible
-    databases such as MySQL and MariaDB are now supported.
+  - Ironic has added a new bootc deploy interface to support the
+    deployment of `bootc container images
+    <https://bootc-dev.github.io/bootc/>`_ directly to a host with
+    no intermediate steps.
+  - Ironic now supports getting deployment artifacts and images
+    from OCI Container Registries.
+  - Ironic offers now graphical console of a host using the new
+    ``ironic-novncproxy`` service, showing the console in a NoVNC
+    web browser for hosts drivers with access to graphical console
+    interface. A special ``read-only`` mode is also available.
+  - Ironic has now a schema validation framework for the API that
+    validates incoming requests and outgoing responses against a
+    json schema at the beginning and end phases of the requests
+    pipeline.
+  - Ironic has retired the `ironic-lib
+    <https://opendev.org/openstack/ironic-lib>`_ library which is
+    now not required anymore.
+  - Ironic has removed the support for PostgreSQL, only
+    mysql-compatible databases such as MySQL and MariaDB are now
+    supported.
   - Ironic is now a `Distributed Project Leadership (DPL)
     <https://governance.openstack.org/tc/reference/distributed-project-leadership.html>`_
     project
-release-notes: https://docs.openstack.org/releasenotes/ironic/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic/2025.1.html
