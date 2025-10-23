@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 87899ea392585dd03a3c76dfe279d3b889312503
+  - version: 19.1.2
+    projects:
+      - repo: openstack/bifrost
+        hash: 251d4f5b8a3ae9199dd4c696564108d1475c87fc
 branches:
   - name: stable/2024.2
     location: 19.1.0
-release-notes: https://docs.openstack.org/releasenotes/bifrost/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/bifrost/2024.2.html
