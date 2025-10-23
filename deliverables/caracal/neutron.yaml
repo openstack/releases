@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 3189df7757c84dc483d8bce6b2af1069e086d542
+  - version: 24.2.2
+    projects:
+      - repo: openstack/neutron
+        hash: bcbdd1c4501b219436228059523d9cdb2844b6ee
 cycle-highlights:
   - Support was added for the external-gateway-multihoming API
     extension. The L3 service plugins supporting it can now create
