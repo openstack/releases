@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-neutron: {}
+releases:
+  - projects:
+      - hash: 93a757f53a7ba45220f0a8955b9223ee4d139481
+        repo: openstack/puppet-neutron
+    version: 27.0.0
+branches:
+  - name: stable/2025.2
+    location: 27.0.0
