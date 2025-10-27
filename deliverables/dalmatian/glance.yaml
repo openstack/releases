@@ -38,6 +38,10 @@ releases:
       - repo: openstack/glance
         hash: 3ea17a13a00c7fa51acce919cf3de77bfa9cf0ee
     diff-start: 28.0.1
+  - version: 29.1.0
+    projects:
+      - repo: openstack/glance
+        hash: 097f38158189efc5c7d52fd56467455a58442c73
 branches:
   - name: stable/2024.2
     location: 29.0.0.0rc1
