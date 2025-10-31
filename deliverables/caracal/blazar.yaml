@@ -6,10 +6,11 @@ type: service
 repository-settings:
   openstack/blazar: {}
 cycle-highlights:
-  - Better handling of usage enforcement exceptions, to prevent leases
-    from going into error state when updates are denied by policy.
-  - Support for specifying a custom CA bundle, which can be used for
-    compatibility with internal TLS deployments.
+  - Better handling of usage enforcement exceptions, to prevent
+    leases from going into error state when updates are denied by
+    policy.
+  - Support for specifying a custom CA bundle, which can be used
+    for compatibility with internal TLS deployments.
 releases:
   - version: 13.0.0.0rc1
     projects:
@@ -24,8 +25,14 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: b5a6cbefd54073ca3e9199eeb525e53454b88777
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/blazar
+        hash: fb313a58e824b480ad524b6725c158c60e178caa
 branches:
   - name: stable/2024.1
     location: 13.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/blazar/2024.1.html
