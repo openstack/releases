@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-adjutantclient
         hash: fe0003b0c0db71e462ef926aa1aff75f0fa8f8ea
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/python-adjutantclient
+        hash: 6e60b2d2457ceaddd0519e46c9c9c8fcdbf9841f
 branches:
   - name: stable/2024.1
     location: 1.1.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
