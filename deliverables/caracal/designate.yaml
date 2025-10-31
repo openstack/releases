@@ -27,8 +27,14 @@ releases:
     projects:
       - repo: openstack/designate
         hash: af7445fa0add6950f564cee6d9bbc052ba90d90c
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/designate
+        hash: af7445fa0add6950f564cee6d9bbc052ba90d90c
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/designate/2024.1.html
