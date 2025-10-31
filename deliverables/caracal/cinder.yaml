@@ -56,7 +56,14 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 23b653d7111c17b62475c4bf8a524f5dcea521ec
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/cinder
+        hash: 23b653d7111c17b62475c4bf8a524f5dcea521ec
 branches:
   - name: stable/2024.1
     location: 24.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cinder/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/cinder/2024.1.html
