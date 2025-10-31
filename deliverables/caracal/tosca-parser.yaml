@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/tosca-parser
         hash: 283cb6a375070c844547e18e119bcad53e8489ca
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/tosca-parser
+        hash: fc18182c29b2190d7cab0024c62ea5b1d591849c
 branches:
   - name: stable/2024.1
     location: 2.10.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
