@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/watcher-dashboard
         hash: b77d5c2b17418b7068665658edf58809e4f91170
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/watcher-dashboard
+        hash: 2de738c65188d1fe9b5417d12a8581ee060a41f1
 branches:
   - name: stable/2023.1
     location: 9.0.0.0rc1
