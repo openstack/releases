@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/skyline-console
         hash: 91ff82d4323b716f2a0dfb5fedb746666322eff2
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/skyline-console
+        hash: 19eba48fcb3f2f69e711eb9e603489f2df736fbb
 branches:
   - name: stable/2024.1
     location: 4.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/skyline-console/2024.1.html
