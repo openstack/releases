@@ -20,9 +20,15 @@ releases:
     projects:
       - repo: openstack/cloudkitty
         hash: 6641acb738c9376a532ae4d886397bc93374522a
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 5870f9534f5925d35b559721a3d64e9a9fe34c80
 branches:
   - name: stable/2024.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 cycle-highlights:
   - Removal of Monasca fetcher and collector.
   - Add OpenSearch as a v2 storage backend.
