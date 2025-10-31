@@ -14,10 +14,17 @@ releases:
     projects:
       - repo: openstack/swift
         hash: d6a5b79784db3ceb3d4744b970028ceb15c302f3
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/swift
+        hash: 38b7cbb29a87e0a6df55f446e518f91a2681a122
 branches:
   - name: stable/2024.1
     location: 2.33.0
   - name: feature/mpu
     location:
       openstack/swift: 627448362abc1f83d9385165de232f47545f18e7
-release-notes: https://docs.openstack.org/releasenotes/swift/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/swift/2024.1.html
