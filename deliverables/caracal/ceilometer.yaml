@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: 3267979e9e9d46e9c46ae5703a3fb48929c0a9ec
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/ceilometer
+        hash: be268457e8aff4580e6cbb9f6158830d0f6a9294
 branches:
   - name: stable/2024.1
     location: 22.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/ceilometer/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/ceilometer/2024.1.html
