@@ -16,7 +16,7 @@ import textwrap
 from unittest import mock
 
 from oslotest import base
-import pkg_resources
+from packaging import requirements as pkg_requirements
 
 from openstack_releases import requirements
 
@@ -60,19 +60,19 @@ class TestGetMinSpecifier(base.BaseTestCase):
 
     def test_none(self):
         actual = requirements.get_min_specifier(
-            pkg_resources.Requirement.parse('pbr').specifier,
+            pkg_requirements.Requirement('pbr').specifier,
         )
         self.assertIsNone(actual)
 
     def test_greater(self):
         actual = requirements.get_min_specifier(
-            pkg_resources.Requirement.parse('pbr>1.6').specifier,
+            pkg_requirements.Requirement('pbr>1.6').specifier,
         )
         self.assertEqual('1.6', actual.version)
 
     def test_greater_equal(self):
         actual = requirements.get_min_specifier(
-            pkg_resources.Requirement.parse('pbr>=1.6').specifier,
+            pkg_requirements.Requirement('pbr>=1.6').specifier,
         )
         self.assertEqual('1.6', actual.version)
 
@@ -84,7 +84,7 @@ class TestCompareLowerBounds(base.BaseTestCase):
         old = {
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -95,7 +95,7 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_dropped_requirement(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr'),
         }
         new = {
         }
@@ -108,10 +108,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_no_lower(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -122,10 +122,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_new_lower(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.6'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.6'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -136,10 +136,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_raised_lower(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.5'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.5'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.6'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.6'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -150,10 +150,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_new_lower_format(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.6'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.6'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.6.0'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.6.0'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -164,10 +164,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_new_lower_comparator(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>=1.6'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>=1.6'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>1.6'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>1.6'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -178,10 +178,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_lower_comparator_with_same_version(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>2.1.0'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>2.1.0'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
@@ -192,10 +192,10 @@ class TestCompareLowerBounds(base.BaseTestCase):
     def test_lower_comparator_with_lower_new_minimum_version(self):
         warnings = []
         old = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.2.0'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>2.2.0'),
         }
         new = {
-            (None, 'pbr'): pkg_resources.Requirement.parse('pbr>2.1.0'),
+            (None, 'pbr'): pkg_requirements.Requirement('pbr>2.1.0'),
         }
         requirements.compare_lower_bounds(
             old, new, warnings.append,
