@@ -14,8 +14,14 @@ releases:
     projects:
       - repo: openstack/python-masakariclient
         hash: 7587ddaf4173d5c365c6fec5c8e7780ca6c91f58
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 976040aa107491d6480b5c5c960e58fdcb33d89e
 branches:
   - name: stable/2024.1
     location: 8.4.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-masakariclient/2024.1.html

@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/masakari-monitors
         hash: 782a940480c9a722bb158e4921203e60f078484f
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: 15b3a8ae96973b78b0213e4b5cd97ae5f8001680
 branches:
   - name: stable/2024.1
     location: 17.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/masakari-monitors/2024.1.html
