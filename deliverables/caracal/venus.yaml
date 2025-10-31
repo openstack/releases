@@ -17,6 +17,12 @@ releases:
       - repo: openstack/venus
         hash: cfa0ea6ac9275a66cacb1dcb1d9cf04726fa175a
     diff-start: 3.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/venus
+        hash: cfa0ea6ac9275a66cacb1dcb1d9cf04726fa175a
 branches:
   - name: stable/2024.1
     location: 4.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
