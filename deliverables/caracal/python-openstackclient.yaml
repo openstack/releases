@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/python-openstackclient
         hash: 685b7506a769debf90fa6c94fe07e9b1a0595a52
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/python-openstackclient
+        hash: 685b7506a769debf90fa6c94fe07e9b1a0595a52
 branches:
   - name: stable/2024.1
     location: 6.6.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-openstackclient/2024.1.html

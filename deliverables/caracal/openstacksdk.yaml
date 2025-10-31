@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 04cdd0a0615093526230a9d5c0ca401ff1f30ab0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 82cbbcfa0962e3155fe9d56760376ec29f3aa018
 branches:
   - name: stable/2024.1
     location: 3.0.0
-release-notes: https://docs.openstack.org/releasenotes/openstacksdk/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/openstacksdk/2024.1.html
