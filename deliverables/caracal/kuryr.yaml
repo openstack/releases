@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/kuryr
         hash: 7b30851a92d2b46f23602f324798f82bfcc33850
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/kuryr
+        hash: ccb85d13c955940770b0861257eb2b1d7247558e
 branches:
   - name: stable/2024.1
     location: 3.0.0
-release-notes: https://docs.openstack.org/releasenotes/kuryr/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/kuryr/2024.1.html
