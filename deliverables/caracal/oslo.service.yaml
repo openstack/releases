@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.service
         hash: 028809f769b36a4fb770374bb2901474b593bc18
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/oslo.service
+        hash: 028809f769b36a4fb770374bb2901474b593bc18
 branches:
   - name: stable/2024.1
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.service/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.service/2024.1.html

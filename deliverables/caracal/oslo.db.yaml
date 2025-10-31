@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: 3a314786ac6f0d4a153ad9c5adc0b283ef7eb7fa
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/oslo.db
+        hash: 3a314786ac6f0d4a153ad9c5adc0b283ef7eb7fa
 branches:
   - name: stable/2024.1
     location: 15.0.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.db/2024.1.html

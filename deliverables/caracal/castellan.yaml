@@ -14,7 +14,14 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: d578cbcce94fd1d7023feb15918c639b7c087d5f
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/castellan
+        hash: d155312846bac705770c13a6e20b4d7997435a50
 branches:
   - name: stable/2024.1
     location: 5.0.0
-release-notes: https://docs.openstack.org/releasenotes/castellan/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/castellan/2024.1.html
