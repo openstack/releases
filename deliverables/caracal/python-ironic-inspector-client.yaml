@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/python-ironic-inspector-client
         hash: de19267a1e235e05eacadbe2282d857e87096ad0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/python-ironic-inspector-client
+        hash: d7313314361b9db9ad023167cd3c8629aae36878
 branches:
   - name: stable/2024.1
     location: 5.1.0
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-ironic-inspector-client/2024.1.html
