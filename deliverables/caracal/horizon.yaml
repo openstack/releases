@@ -6,9 +6,10 @@ type: service
 repository-settings:
   openstack/horizon: {}
 cycle-highlights:
-  - Horizon and all horizon plugins now support the nodejs20 version
-    of nodejs.
-  - Horizon now uses Django 4.2 as default and dropped Django 3.2 support.
+  - Horizon and all horizon plugins now support the nodejs20
+    version of nodejs.
+  - Horizon now uses Django 4.2 as default and dropped Django 3.2
+    support.
 releases:
   - version: 23.4.0
     projects:
@@ -26,7 +27,14 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 70fbca648b8ea8a1a6540a126fc31e1f1c8027de
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/horizon
+        hash: 70fbca648b8ea8a1a6540a126fc31e1f1c8027de
 branches:
   - name: stable/2024.1
     location: 24.0.0
-release-notes: https://docs.openstack.org/releasenotes/horizon/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/horizon/2024.1.html
