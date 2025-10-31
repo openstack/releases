@@ -15,7 +15,14 @@ releases:
       - repo: openstack/barbican
         hash: b6edfda3443f80b20915e020143573b84114a252
     diff-start: 17.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/barbican
+        hash: 6945564c4c3c8203f779d17b41e4c38d30664d84
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/barbican/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/barbican/2024.1.html
