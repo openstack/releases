@@ -23,7 +23,14 @@ releases:
     projects:
       - repo: openstack/neutron-lib
         hash: 970c2bdebaa19c5ae63e616ba0648c8edaae2b2f
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/neutron-lib
+        hash: 970c2bdebaa19c5ae63e616ba0648c8edaae2b2f
 branches:
   - name: stable/2024.1
     location: 3.11.0
-release-notes: https://docs.openstack.org/releasenotes/neutron-lib/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron-lib/2024.1.html

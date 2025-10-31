@@ -17,7 +17,14 @@ releases:
       - repo: openstack/networking-sfc
         hash: ccb95f34073fc175c9d626afaeaa4daafd5366d3
     diff-start: 17.0.0
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/networking-sfc
+        hash: 693ef93d5080a47470f0d9aafbb5d3fcd3ab7eef
 branches:
   - name: stable/2024.1
     location: 18.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-sfc/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-sfc/2024.1.html
