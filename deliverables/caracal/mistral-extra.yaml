@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/mistral-extra
         hash: 2e2cf63ecb5e8e0255f649581b784f16460f8d27
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/mistral-extra
+        hash: cebacf3e972de8dbd72d05c9563f60501cfbca78
 branches:
   - name: stable/2024.1
     location: 13.2.0
-release-notes: https://docs.openstack.org/releasenotes/mistral-extra/2024.1.html
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/mistral-extra/2024.1.html
