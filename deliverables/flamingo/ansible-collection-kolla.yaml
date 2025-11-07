@@ -7,3 +7,11 @@ repository-settings:
   openstack/ansible-collection-kolla:
     flags:
       - no-artifact-build-job
+releases:
+  - version: 8.0.0.0rc1
+    projects:
+      - repo: openstack/ansible-collection-kolla
+        hash: 6c89efd62c230684ab32f1acf4d3aed9b9d1a319
+branches:
+  - name: stable/2025.2
+    location: 8.0.0.0rc1
