@@ -17,7 +17,7 @@
 import logging
 import os.path
 
-import pkg_resources
+from packaging import requirements as pkg_requirements
 
 from openstack_releases import gitutils
 from openstack_releases import processutils
@@ -153,7 +153,7 @@ def parse_requirements(body):
             continue
 
         try:
-            parsed_req = pkg_resources.Requirement.parse(line)
+            parsed_req = pkg_requirements.Requirement(line)
         except ValueError:
             LOG.warning('failed to parse %r', line)
         else:
