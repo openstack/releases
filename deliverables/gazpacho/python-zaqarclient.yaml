@@ -6,3 +6,8 @@ team: zaqar
 type: client-library
 repository-settings:
   openstack/python-zaqarclient: {}
+releases:
+  - version: 4.2.0
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 3483f5a33c3a0b2a7ba93dac708e87e7db0fcac1
