@@ -52,6 +52,8 @@ cycle:
   - start: '2025-12-15'
     end: '2025-12-19'
     name: R-15
+    project-specific:
+      - g-manila-spec-freeze
   - start: '2025-12-22'
     end: '2025-12-26'
     name: R-14
@@ -75,6 +77,9 @@ cycle:
   - start: '2026-01-26'
     end: '2026-01-30'
     name: R-9
+    project-specific:
+      - g-manila-fpfreeze
+      - g-manila-new-driver-deadline
   - start: '2026-02-02'
     end: '2026-02-06'
     name: R-8
@@ -83,6 +88,8 @@ cycle:
     name: R-7
     x-project:
       - g-extra-acs
+    project-specific:
+      - g-manila-mid-cycle
   - start: '2026-02-16'
     end: '2026-02-20'
     name: R-6
@@ -104,6 +111,8 @@ cycle:
     name: R-4
     x-project:
       - g-cycle-highlights
+    project-specific:
+      - g-manila-bugsquash
   - start: '2026-03-09'
     end: '2026-03-13'
     name: R-3
