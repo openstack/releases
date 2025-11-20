@@ -31,14 +31,21 @@ cycle:
   - start: '2025-11-17'
     end: '2025-11-21'
     name: R-19
+    project-specific:
+      - g-nova-spec-soft-freeze
   - start: '2025-11-24'
     end: '2025-11-28'
     name: R-18
+    project-specific:
+      - g-nova-spec-review-day
   - start: '2025-12-01'
     end: '2025-12-05'
     name: R-17
     x-project:
       - g-cycle-trail
+    project-specific:
+      - g-nova-spec-review-day
+      - g-nova-spec-freeze
   - start: '2025-12-08'
     end: '2025-12-12'
     name: R-16
@@ -60,6 +67,8 @@ cycle:
   - start: '2026-01-12'
     end: '2026-01-16'
     name: R-11
+    project-specific:
+      - g-nova-review-day
   - start: '2026-01-19'
     end: '2026-01-23'
     name: R-10
@@ -79,6 +88,8 @@ cycle:
     name: R-6
     x-project:
       - g-final-lib
+    project-specific:
+      - g-nova-review-day
   - start: '2026-02-23'
     end: '2026-02-27'
     name: R-5
@@ -112,4 +123,3 @@ cycle:
     name: R+0
     x-project:
       - g-final
-

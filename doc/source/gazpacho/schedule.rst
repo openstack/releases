@@ -194,3 +194,38 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Nova
+----
+
+.. _g-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 27 November 2025 and 02 December 2025, Nova specifications targeting 2026.1 Gazpacho
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _g-nova-spec-soft-freeze:
+
+Nova Spec Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+After 20 November 2025 (23:59 UTC), no new specs will be accepted.
+
+.. _g-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova Specs for features to be implemented in 2026.1 Gazpacho must be
+approved by 4 December 2025 (23:59 UTC).
+
+.. _g-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 15 January 2026 and 19 February 2026, Nova prioritized code changes will be reviewed by the Nova
+core team.
+
