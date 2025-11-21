@@ -204,6 +204,20 @@ def skip_em_eom_eol_tags(f):
     return decorated
 
 
+def skip_eom_tag_when_series_eom(f):
+    @functools.wraps(f)
+    def decorated(deliv, context):
+        eom = False
+        for release in deliv.releases:
+            if ('-eom' in release.version) and deliv.series_info.is_eom:
+                print('Skipping rule for EOM tagging, because series is EOM.')
+                eom = True
+                break
+        if not eom:
+            return f(deliv, context)
+    return decorated
+
+
 @skip_existing_tags
 @applies_to_cycle
 @applies_to_released
@@ -1421,6 +1435,7 @@ def validate_new_releases_in_open_series(deliv, context):
         print('OK')
 
 
+@skip_eom_tag_when_series_eom
 @applies_to_released
 def validate_release_branch_membership(deliv, context):
     "Commits being tagged need to be on the right branch."
