@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/monasca-common
         hash: ba47025c208111c018a3e6f13b57e8dd35b9013d
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/monasca-common
+        hash: 278a325352c0ac54c66e6e73f52a7d0ba25a85a3
 branches:
   - name: stable/2023.1
     location: 3.7.0
