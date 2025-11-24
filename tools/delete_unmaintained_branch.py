@@ -69,7 +69,7 @@ def is_branch_open(project_name, branch_id, quiet):
             print(f'unmaintained/{branch_id} exists in {project_name}.')
         return 0
     elif ((response.status_code == 404) and
-          (response_details['message'] == "The target couldn't be found.")):
+          (response_details['message'] == "not found")):
         if not quiet:
             print(f'unmaintained/{branch_id} does not exist in {project_name}.')
         return 1
