@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/monasca-statsd
         hash: ca8dfbd871a8f8004a3a91e55cbb5f68920c2306
+  - version: zed-eol
+    projects:
+      - repo: openstack/monasca-statsd
+        hash: b8aa0d29611ab437b2d4869f95b645e05b1e854e
 branches:
   - name: stable/zed
     location: 2.5.0
