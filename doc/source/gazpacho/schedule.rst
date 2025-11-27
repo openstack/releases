@@ -288,3 +288,14 @@ All new python-openstackclient features should be proposed and completed,
 with unit tests by the end of the week. Support for new microversions may be
 added after this date, but no breaking changes will be permitted.
 
+Oslo
+----
+
+.. _g-oslo-feature-freeze:
+
+Oslo Feature Freeze
+^^^^^^^^^^^^^^^^^^^
+
+All new Oslo features must be proposed and substantially complete, with unit
+tests by the end of the week.
+
