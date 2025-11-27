@@ -275,3 +275,16 @@ Manila Mid Cycle
 
 Manila community mid cycle checkpoint on features and deliverables planned
 for the release.
+
+OpenStackSDK
+------------
+
+.. _g-openstackclient-freeze:
+
+python-openstackclient Feature Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new python-openstackclient features should be proposed and completed,
+with unit tests by the end of the week. Support for new microversions may be
+added after this date, but no breaking changes will be permitted.
+
