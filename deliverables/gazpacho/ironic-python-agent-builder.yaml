@@ -7,3 +7,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/ironic-python-agent-builder: {}
+releases:
+  - version: 7.0.0
+    projects:
+      - repo: openstack/ironic-python-agent-builder
+        hash: 548bde7ecef4ad8c1f1aaf7c20a47d9fbc5354f6
