@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/networking-bgpvpn
         hash: 188121ae61f16656b721485147e6feb98201bb99
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/networking-bgpvpn
+        hash: 188121ae61f16656b721485147e6feb98201bb99
 branches:
   - name: stable/wallaby
     location: 14.0.0.0rc1

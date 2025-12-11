@@ -29,9 +29,14 @@ releases:
     projects:
       - repo: openstack/heat
         hash: edc6d60327491fa2f5395a488cff4e27536db006
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/heat
+        hash: 14b26c6b8a4c1bcdb45ea41e6feba19cdd677a47
 branches:
   - name: stable/wallaby
     location: 16.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/heat/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/heat/wallaby.html

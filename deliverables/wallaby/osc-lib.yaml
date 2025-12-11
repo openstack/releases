@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: ba61c4f5c32f99f45d67db3aba07eeaf4908661c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: b44c3c7749ac00957b52926fd5105925c718fb75
 branches:
   - name: stable/wallaby
     location: 2.3.1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/osc-lib/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/osc-lib/wallaby.html

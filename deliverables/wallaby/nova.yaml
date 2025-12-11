@@ -77,9 +77,14 @@ releases:
     projects:
       - repo: openstack/nova
         hash: 05848fbbb2132ef34df14da6f059d3165734e1ca
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/nova
+        hash: c1496c493a883506cb577f719c70c90abc1e749b
 branches:
   - name: stable/wallaby
     location: 23.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/nova/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/nova/wallaby.html

@@ -35,9 +35,14 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 6ee5ad91635b41c3ab891602942b1b809a25ace6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/barbican
+        hash: 6ee5ad91635b41c3ab891602942b1b809a25ace6
 branches:
   - name: stable/wallaby
     location: 12.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/barbican/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/barbican/wallaby.html

@@ -6,8 +6,8 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - New API /v2/images/<image-id>/tasks to get tasks associated with
-    image
+  - New API /v2/images/<image-id>/tasks to get tasks associated
+    with image
   - Support for distributed image import
   - Secure RBAC - Experimental support for project personas
   - Cleanup of stale files in staging area upon service startup
@@ -47,9 +47,14 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 883fc8a73c6db3aafeae947465ec9868d23c7538
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/glance
+        hash: 883fc8a73c6db3aafeae947465ec9868d23c7538
 branches:
   - name: stable/wallaby
     location: 22.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/glance/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/glance/wallaby.html

@@ -31,9 +31,14 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 8611c15308925621260f573c0f275a1dea9f80e0
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/tooz
+        hash: 0689f00089677b2a4c4d94f6f9dac7ee2acc904b
 branches:
   - name: stable/wallaby
     location: 2.8.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/tooz/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/tooz/wallaby.html

@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 4a3e5397e1278a891627452750e3e68ac1919de1
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/automaton
+        hash: 4a3e5397e1278a891627452750e3e68ac1919de1
 branches:
   - name: stable/wallaby
     location: 2.3.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/automaton/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/automaton/wallaby.html

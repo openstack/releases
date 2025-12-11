@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 99eee7a983a5e4528164812cef51fc7715ef2177
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: f09f4a19431bf51d92d097231bf5238125bef2c6
 branches:
   - name: stable/wallaby
     location: 5.1.0

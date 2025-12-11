@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: d0252f62f3b61253d0bcd953329f7b52e53c6e81
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 2bf17532df4bfebc8c4c8075c8188bff8e534dfe
 branches:
   - name: stable/wallaby
     location: 2.7.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.cache/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.cache/wallaby.html

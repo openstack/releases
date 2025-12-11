@@ -56,9 +56,14 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: f6b44fc201c3e679d70367fd588304d7a8cbf420
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/cinder
+        hash: 9875e4bc1d6b21be24253a52b5e40deb24748744
 branches:
   - name: stable/wallaby
     location: 18.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/cinder/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cinder/wallaby.html

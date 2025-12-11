@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 7fb94507056499878be5c03c7972ac8449873816
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 7fb94507056499878be5c03c7972ac8449873816
 branches:
   - name: stable/wallaby
     location: 1.3.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.limit/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.limit/wallaby.html
