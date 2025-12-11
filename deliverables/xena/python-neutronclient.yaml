@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: c4d823cbcc35b2cc6cdb8af1d8f3345c24f8b323
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: aa21151152eb3720fd6d86466a40d5c076f25987
 branches:
   - name: stable/xena
     location: 7.6.0

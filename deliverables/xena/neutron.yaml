@@ -6,19 +6,21 @@ release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
 cycle-highlights:
-  - Distributed DHCP service is now available as an neutron-ovs-agent
-    extension. It provides basic DHCP functionality locally on compute
-    nodes where VMs are and no DHCP agents are needed in such case.
-  - Support stateless security groups with the latest OVN 21.06+. The
-    ``stateful=False`` security groups are mapped to the new ``allow-stateless``
-    OVN ACL verb.
-  - ECMP routes are now supported by Neutron. Multiple routes with the
-    same destination address are now consolidated into a single ECMP
-    route.
-  - A new quota driver is added ``DbQuotaNoLockDriver``. This driver
-    does not create a unique lock per (resource, project_id). Such locks
-    could lead to a database deadlock state if the number of server
-    requests exceeds the number of resolved resource creations.
+  - Distributed DHCP service is now available as an
+    neutron-ovs-agent extension. It provides basic DHCP
+    functionality locally on compute nodes where VMs are and no
+    DHCP agents are needed in such case.
+  - Support stateless security groups with the latest OVN 21.06+.
+    The ``stateful=False`` security groups are mapped to the new
+    ``allow-stateless`` OVN ACL verb.
+  - ECMP routes are now supported by Neutron. Multiple routes with
+    the same destination address are now consolidated into a
+    single ECMP route.
+  - A new quota driver is added ``DbQuotaNoLockDriver``. This
+    driver does not create a unique lock per (resource,
+    project_id). Such locks could lead to a database deadlock
+    state if the number of server requests exceeds the number of
+    resolved resource creations.
 releases:
   - version: 19.0.0.0rc1
     projects:
@@ -69,9 +71,14 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: f99ec47c4c437fb8bb967d4b5705edb02993bd72
+  - version: xena-eol
+    projects:
+      - repo: openstack/neutron
+        hash: 3438f982606348b37879c6ebb847cd0146dc660a
 branches:
   - name: stable/xena
     location: 19.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/neutron/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron/xena.html

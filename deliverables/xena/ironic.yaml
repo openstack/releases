@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: febf9d895d9d4c62a713e88a3d2af089e8831094
+  - version: xena-eol
+    projects:
+      - repo: openstack/ironic
+        hash: 62c7535fb3d6f0350f293dce6703974f3d3e4234
 branches:
   - name: bugfix/18.0
     location: 18.0.0
@@ -49,12 +53,13 @@ branches:
   - name: unmaintained/xena
     location: xena-eom
 cycle-highlights:
-  - New ``custom-agent`` deployment interface for where the agent provides
-    knowledge of all deployment steps.
-  - Redfish BIOS firmware setting description registry is now available
-    as part of the detail list.
-  - Substantial API improvements in node list retrieval performance,
-    support for ``boot_mode`` and ``secure_boot`` state visibility on
-    a bare metal node as well as capability to set these states as API
-    actions.
-release-notes: https://docs.openstack.org/releasenotes/ironic/xena.html
+  - New ``custom-agent`` deployment interface for where the agent
+    provides knowledge of all deployment steps.
+  - Redfish BIOS firmware setting description registry is now
+    available as part of the detail list.
+  - Substantial API improvements in node list retrieval
+    performance, support for ``boot_mode`` and ``secure_boot``
+    state visibility on a bare metal node as well as capability to
+    set these states as API actions.
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic/xena.html

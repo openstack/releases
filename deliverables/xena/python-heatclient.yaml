@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-heatclient
         hash: fa7745bb5d464cc10df119098bac97cad17043c7
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-heatclient
+        hash: fa7745bb5d464cc10df119098bac97cad17043c7
 branches:
   - name: stable/xena
     location: 2.4.0

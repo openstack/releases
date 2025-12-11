@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: fd2be9ac0f1cae20ba7fd3d7c26629fd52696c7f
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: 4c7b771f84a8f988e6275fc3faa9e53fbcde0bd7
 branches:
   - name: stable/xena
     location: 1.4.0

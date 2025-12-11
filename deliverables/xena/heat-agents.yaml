@@ -24,9 +24,14 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: efce207ae7681ddc9044a2d2a19ffa1f1bcc31d2
+  - version: xena-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 7be035e255ceb2fc50819d30864db70054b7d778
 branches:
   - name: stable/xena
     location: 3.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/heat-agents/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/heat-agents/xena.html

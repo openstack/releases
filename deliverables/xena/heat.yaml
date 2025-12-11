@@ -37,9 +37,14 @@ releases:
     projects:
       - repo: openstack/heat
         hash: be70cee559d30e73c36199ee3609bfeff266b473
+  - version: xena-eol
+    projects:
+      - repo: openstack/heat
+        hash: fc8346756413375ccafcce0c906b7b34a5b38ca0
 branches:
   - name: stable/xena
     location: 17.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/heat/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/heat/xena.html

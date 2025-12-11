@@ -19,9 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 3e37257ebad00129ca1468a969f054a2d6d95b76
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: b713a3eb04a17b59ee1a31f325d40c4e37ff7664
 branches:
   - name: stable/xena
     location: 1.4.0
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.limit/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.limit/xena.html

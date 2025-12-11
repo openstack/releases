@@ -24,6 +24,10 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 3ce34d83e275aba742cde5907e53f2010a451848
+  - version: xena-eol
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: d190d47a10cb8b69148c1dadadfb25bbd76d049e
 branches:
   - name: stable/xena
     location: 3.0.0.0rc1

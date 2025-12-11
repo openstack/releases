@@ -44,9 +44,14 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 4fc2ea4a85bbca25fae84a7506bf78f08d6485bf
+  - version: xena-eol
+    projects:
+      - repo: openstack/glance
+        hash: e113723f3fa85cfbbab9447b39e5106d4603f285
 branches:
   - name: stable/xena
     location: 23.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/glance/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/glance/xena.html

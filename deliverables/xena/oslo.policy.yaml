@@ -31,9 +31,14 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: ff2a39fc619baafa956bee74a2574f5438d40767
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 928dd71c9d0f0c07d33af27708f3f760ba88578c
 branches:
   - name: stable/xena
     location: 3.8.2
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.policy/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.policy/xena.html

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: f0ccd09ad5976cc67eaca244c820a7106aecf4c5
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: f0ccd09ad5976cc67eaca244c820a7106aecf4c5
 branches:
   - name: stable/xena
     location: 3.5.0

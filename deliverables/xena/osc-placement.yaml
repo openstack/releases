@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: bf3a355928019216b4142d23000f802fbabee813
+  - version: xena-eol
+    projects:
+      - repo: openstack/osc-placement
+        hash: 3b2505ad1685d4924bfa18d5232609aaf3c960c5
 branches:
   - name: stable/xena
     location: 3.1.1
