@@ -26,6 +26,15 @@ function usage {
     echo "Example: $0 ussuri-c-w-i # Adds reviewers for a specific topic"
 }
 
+function get_series_from_path {
+    local path=$1
+    if [[ $path =~ ^deliverables/([^/]+)/.*yaml$ ]]; then
+        series="${BASH_REMATCH[1]}"
+    else
+        series=""
+    fi
+}
+
 # Validate topic was provided
 if [ $# -gt 1 ]; then
     usage
@@ -44,6 +53,8 @@ if [[ -z "$VIRTUAL_ENV" ]]; then
     fi
     source ./.tox/venv/bin/activate
 fi
+
+UNMAINTAINED=$(list-eom-series)
 
 # Make sure we have a gerrit user for authenticated commands
 GERRIT_ID=${GERRIT_USER}
@@ -78,6 +89,10 @@ for review in $reviews; do
 
     # Extract the owning teams for each deliverable in this patch
     for file in $deliverable_files; do
+        get_series_from_path $file
+        if [[ $UNMAINTAINED =~ $series ]]; then
+            continue
+        fi
         team=$(grep team $file | sed 's/team: //g')
         if [[ "$team" == "$last_team" ]]; then
             continue
