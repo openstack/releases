@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/debtcollector
         hash: ecf43400479cd1ca2a32d1d984dbc73a5a2a84c3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/debtcollector
+        hash: add7ec4b5580dcaa69d93ed066f0b2499077b3cd
 branches:
   - name: stable/victoria
     location: 2.2.0

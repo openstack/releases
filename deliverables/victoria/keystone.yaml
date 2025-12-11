@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 329e397917a7b6e77f8c86ce010169e07301dc6c
+  - version: victoria-eol
+    projects:
+      - repo: openstack/keystone
+        hash: 2569b29ed31519507bb6c188bbbddf5a30bd22a9
 branches:
   - name: stable/victoria
     location: 18.0.0.0rc1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/keystone/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/keystone/victoria.html

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 6b43b405b718918a51ffeec597d426da14ab4f77
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 269fc9c7a1900997d89ff34526d5384e833ed5c2
 branches:
   - name: stable/victoria
     location: 4.1.1

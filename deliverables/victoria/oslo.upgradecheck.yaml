@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: 912d6544ada2f25f8d2d8e94d240050f06a805e4
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: d91ae94cbef77a0b5721d45174cd8d2410da6001
 branches:
   - name: stable/victoria
     location: 1.1.1

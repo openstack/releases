@@ -43,9 +43,14 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 7163fdf06b7738c4548f42ec03db6fd2068d5c99
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 1079e9128da14f83417b0b052d12878184ba4c13
 branches:
   - name: stable/victoria
     location: 3.5.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.policy/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.policy/victoria.html

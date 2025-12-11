@@ -18,16 +18,22 @@ releases:
     projects:
       - repo: openstack/swift
         hash: f80dce1f1921ec7812893bb22243b86aa7356f93
+  - version: victoria-eol
+    projects:
+      - repo: openstack/swift
+        hash: 11aab2ceeda8910b0f1615849fce373e897347b9
 branches:
   - name: stable/victoria
     location: 2.26.0
   - name: unmaintained/victoria
     location: victoria-eom
 cycle-highlights:
-  - Improved time-to-first-byte latencies when reading erasure-coded
-    data.
-  - Increased isolation between background daemons and proxy-servers
-    when running with a separate replication network.
-  - We're beginning to see non-trivial production clusters transition
-    from running Swift under Python 2 to Python 3.
-release-notes: https://docs.openstack.org/releasenotes/swift/victoria.html
+  - Improved time-to-first-byte latencies when reading
+    erasure-coded data.
+  - Increased isolation between background daemons and
+    proxy-servers when running with a separate replication
+    network.
+  - We're beginning to see non-trivial production clusters
+    transition from running Swift under Python 2 to Python 3.
+release-notes:
+  https://docs.openstack.org/releasenotes/swift/victoria.html

@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 4f386b7a7e2131ffa1d093bcc31a2a309eebbc26
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: 693f5326a852de06afeb7145ae57254df6e24010
 branches:
   - name: stable/victoria
     location: 5.0.1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.i18n/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.i18n/victoria.html

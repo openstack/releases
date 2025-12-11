@@ -28,9 +28,14 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: d93e4d290133be2cee89b0931258b8e4d1f675d5
+  - version: victoria-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 29e7a0ff9e0f98813eaa28960f1803ae46afd6b2
 branches:
   - name: stable/victoria
     location: 4.2.1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/keystoneauth/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/keystoneauth/victoria.html

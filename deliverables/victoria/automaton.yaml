@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/automaton
         hash: 88775e51f76f680828163d0bd543b7c7dee49224
+  - version: victoria-eol
+    projects:
+      - repo: openstack/automaton
+        hash: c7131da55133c9003d0bef85b9dced78db7d6ce1
 branches:
   - name: stable/victoria
     location: 2.2.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/automaton/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/automaton/victoria.html

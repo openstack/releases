@@ -28,9 +28,14 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: 2ebe47f69fafaaa3354fb77020b2e73700f52f31
+  - version: victoria-eol
+    projects:
+      - repo: openstack/os-vif
+        hash: fa405312427f4143adb5c0af1cb41802cf142714
 branches:
   - name: stable/victoria
     location: 2.2.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/os-vif/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-vif/victoria.html

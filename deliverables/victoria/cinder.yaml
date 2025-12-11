@@ -4,14 +4,15 @@ release-model: cycle-with-rc
 team: cinder
 type: service
 cycle-highlights:
-  - Improved handling around the configured default volume-type and
-    added new Block Storage API calls with microversion 3.62 that enable
-    setting a project-level default volume-type for individual projects.
-  - Added some new backend drivers, and many current drivers have added
-    support for more features.  For example, the NFS driver now supports
-    volume encryption.
-  - Support was added to cinder backup to use the popular Zstandard
-    compression algorithm.
+  - Improved handling around the configured default volume-type
+    and added new Block Storage API calls with microversion 3.62
+    that enable setting a project-level default volume-type for
+    individual projects.
+  - Added some new backend drivers, and many current drivers have
+    added support for more features.  For example, the NFS driver
+    now supports volume encryption.
+  - Support was added to cinder backup to use the popular
+    Zstandard compression algorithm.
 repository-settings:
   openstack/cinder: {}
 releases:
@@ -56,9 +57,14 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: ed500fc9a3adca11ed2d184b78f35ac2133ada44
+  - version: victoria-eol
+    projects:
+      - repo: openstack/cinder
+        hash: 2eed8c8096cc774ed736e3e4278772ca37006b30
 branches:
   - name: stable/victoria
     location: 17.0.0.0rc1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/cinder/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cinder/victoria.html

@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 0b30c20c3d4e877844f192827334554986d9e2dc
+  - version: victoria-eol
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: f2c2c7ed48d3c862fadc0bfc3e37970e83681812
 branches:
   - name: bugfix/2.1
     location: 2.1.0

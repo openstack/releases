@@ -31,9 +31,14 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: a7a96dac184c93a723fcbdbf4b167148dbfe7f53
+  - version: victoria-eol
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 08ab27e3098e6e286d99c9cf6498c4de32d2fedd
 branches:
   - name: stable/victoria
     location: 0.49.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/openstacksdk/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/openstacksdk/victoria.html

@@ -10,7 +10,8 @@ repository-settings:
 branches:
   - name: stable/victoria
     location:
-      openstack/requirements: fc679c617443a8f99601c67454842dd51d02b94c
+      openstack/requirements:
+        fc679c617443a8f99601c67454842dd51d02b94c
   - name: unmaintained/victoria
     location: victoria-eom
 releases:
@@ -18,3 +19,7 @@ releases:
     projects:
       - repo: openstack/requirements
         hash: a88a0be4666544c304fdb6f77eecc5800fd89b11
+  - version: victoria-eol
+    projects:
+      - repo: openstack/requirements
+        hash: b5edee25cbc19763b08dc3f7f2e3ef1127e8ff5d
