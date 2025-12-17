@@ -68,8 +68,14 @@ releases:
       - hash: 1dd445ff188ea847bef14a2faab2465f5809ace0
         repo: openstack/openstack-ansible
     version: 29.2.4
+  - version: 2024.1-eom
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: aa30ab4f2aab1ea157ada366b9c2d44de6bef129
 branches:
   - name: stable/2024.1
     location: 29.0.0.0rc1
+  - name: unmaintained/2024.1
+    location: 2024.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/openstack-ansible/2024.1.html
