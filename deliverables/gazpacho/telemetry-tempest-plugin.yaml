@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: telemetry_tempest_plugin
 team: Telemetry
 type: tempest-plugin
+releases:
+  - version: 2.8.0
+    projects:
+      - repo: openstack/telemetry-tempest-plugin
+        hash: 39ba35f2c761d9cc993923d5d8b48d53fee3b3a4
