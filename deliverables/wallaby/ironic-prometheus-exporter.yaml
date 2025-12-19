@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/ironic-prometheus-exporter
         hash: 6c44a6408f89693806954f1685f36e3cbaee983f
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/ironic-prometheus-exporter
+        hash: d88f61424c029fe39df4ff600f2a7ac39762d9b0
 branches:
   - name: stable/wallaby
     location: 2.2.0

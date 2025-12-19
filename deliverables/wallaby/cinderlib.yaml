@@ -18,9 +18,14 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: 03441bf1baef2f99fe1a6c754f9098e58fd9f54d
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/cinderlib
+        hash: 592cc260c93f93966d37b5b7867df73daedf1ed9
 branches:
   - location: 4.0.0
     name: stable/wallaby
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/cinderlib/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cinderlib/wallaby.html

@@ -26,9 +26,14 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 3775cf425396776ae401a5560ae1dfa55a429116
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/castellan
+        hash: ce7ad477ae740ca0b43441829d4a456bf9322656
 branches:
   - name: stable/wallaby
     location: 3.7.1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/castellan/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/castellan/wallaby.html

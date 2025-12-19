@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 1634c00ce251e80581a337522c85c1d5836bbf16
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: b62b41f265f89d4ee706e6acf727f06da4652f00
 branches:
   - name: stable/wallaby
     location: 2.5.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.privsep/wallaby.html

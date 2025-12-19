@@ -19,9 +19,14 @@ releases:
     projects:
       - repo: openstack/heat-agents
         hash: ed16cc7dd7ac774e20cf5d63b97b1ae42393c458
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/heat-agents
+        hash: 70ad0a61a38886c67758b9088eab419a6f279787
 branches:
   - name: stable/wallaby
     location: 2.2.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/heat-agents/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/heat-agents/wallaby.html

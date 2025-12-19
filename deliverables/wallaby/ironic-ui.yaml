@@ -19,9 +19,14 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 98f31e49e2c916bc56baaaffe717ca3ab7adce87
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 92d0ad3e7c63eabca69097df5b2664651dd47668
 branches:
   - name: stable/wallaby
     location: 4.3.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/ironic-ui/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-ui/wallaby.html

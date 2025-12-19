@@ -10,7 +10,8 @@ repository-settings:
 branches:
   - name: stable/wallaby
     location:
-      openstack/requirements: 040e24a73f93c5f1c81fc2312a3552f4cb972cc5
+      openstack/requirements:
+        040e24a73f93c5f1c81fc2312a3552f4cb972cc5
   - name: unmaintained/wallaby
     location: wallaby-eom
 releases:
@@ -18,3 +19,7 @@ releases:
     projects:
       - repo: openstack/requirements
         hash: 015717ea1bcc3aa5060bf2257f8438d7b8655621
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/requirements
+        hash: 7e8c973dce0b460d62c7c4a5041cacace670d99e

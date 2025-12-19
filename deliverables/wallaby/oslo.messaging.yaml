@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: 51121d125525e67deae62490b7002a11ccd5ff4c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: b368c16db83b580bc7bd5dac5fe52221a88f5bd8
 branches:
   - name: stable/wallaby
     location: 12.7.1

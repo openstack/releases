@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.upgradecheck
         hash: 9561ecb1627059c7131545b24c2f45fbb59daa2c
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.upgradecheck
+        hash: d3895b0e18539c393329452ef578007a2e1a14d4
 branches:
   - name: stable/wallaby
     location: 1.3.0

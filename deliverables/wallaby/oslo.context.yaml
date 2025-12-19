@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: b124eb7df2617be56a23819f670bd6e054f87ce7
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: d72463851b3930b620f34b8d374bf8a88c5ed27c
 branches:
   - name: stable/wallaby
     location: 3.2.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.context/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.context/wallaby.html

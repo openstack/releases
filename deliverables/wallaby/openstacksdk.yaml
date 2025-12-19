@@ -39,9 +39,14 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: f48f90bee4557851e06890c029c56a9d6545207a
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/openstacksdk
+        hash: 79e610b2c00c50850a377f0df242180442db6c9f
 branches:
   - name: stable/wallaby
     location: 0.55.0
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/openstacksdk/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/openstacksdk/wallaby.html

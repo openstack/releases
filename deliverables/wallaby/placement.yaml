@@ -29,9 +29,14 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 56d0f5b261a29599909ac578d8b09cb1a075fdb6
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/placement
+        hash: 2d930759274d4cad7a900da7029887f50707658a
 branches:
   - name: stable/wallaby
     location: 5.0.0.0rc1
   - name: unmaintained/wallaby
     location: wallaby-eom
-release-notes: https://docs.openstack.org/releasenotes/placement/wallaby.html
+release-notes:
+  https://docs.openstack.org/releasenotes/placement/wallaby.html

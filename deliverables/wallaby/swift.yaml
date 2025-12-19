@@ -18,17 +18,23 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 16dbcae9df9773f2b2bfea41fd4156e16aa14b37
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/swift
+        hash: 69da1ab55a3be2f4f22a653397e0c8c145e040c5
 branches:
   - name: stable/wallaby
     location: 2.27.0
   - name: unmaintained/wallaby
     location: wallaby-eom
 cycle-highlights:
-  - Static large object segments can now be deleted asynchronously;
-    multipart uploads deleted through the S3 API will always be deleted
-    asynchronously.
-  - Numerous sharding improvements, including the ability to cache shard
-    ranges for listings and support for operator-driven shrinking.
-  - Several part-power-increase improvements, which ensure small clusters
-    are capabale of growing to be large clusters.
-release-notes: https://docs.openstack.org/releasenotes/swift/wallaby.html
+  - Static large object segments can now be deleted
+    asynchronously; multipart uploads deleted through the S3 API
+    will always be deleted asynchronously.
+  - Numerous sharding improvements, including the ability to cache
+    shard ranges for listings and support for operator-driven
+    shrinking.
+  - Several part-power-increase improvements, which ensure small
+    clusters are capabale of growing to be large clusters.
+release-notes:
+  https://docs.openstack.org/releasenotes/swift/wallaby.html

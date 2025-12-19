@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: c3e3c2b0a784cd384257185e43117a4dcceeb1ff
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: c3e3c2b0a784cd384257185e43117a4dcceeb1ff
 branches:
   - name: stable/wallaby
     location: 3.11.1

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 3fe898ba4d170c2131cf857045d70e24ab376471
+  - version: wallaby-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 3fe898ba4d170c2131cf857045d70e24ab376471
 branches:
   - name: stable/wallaby
     location: 4.2.0
