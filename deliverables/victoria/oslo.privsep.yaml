@@ -31,9 +31,14 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 7c62c75df26b4ea44bae23b921b2264d9f8c9432
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 8ce45c1e02181e51267c500a32bc163ef46adf29
 branches:
   - name: stable/victoria
     location: 2.4.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.privsep/victoria.html

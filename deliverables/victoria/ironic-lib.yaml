@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 34a23d908eae584de4f187acfd62830da6ea7f7a
+  - version: victoria-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: a7c0d71d3b82a89dcd51064fe18ea86b3df1c5e0
 branches:
   - name: stable/victoria
     location: 4.4.0

@@ -27,6 +27,10 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 8b3deb7b5adfed68b2f2d742743383f5f8503e82
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 187c019d135b7db33699cd15d24881038a67e9b9
 branches:
   - name: stable/victoria
     location: 2.3.0

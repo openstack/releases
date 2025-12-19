@@ -35,9 +35,14 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: 3739d1462ad59b1a839048a16ad84e08598ca4a0
+  - version: victoria-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 3739d1462ad59b1a839048a16ad84e08598ca4a0
 branches:
   - name: stable/victoria
     location: 4.5.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/taskflow/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/taskflow/victoria.html

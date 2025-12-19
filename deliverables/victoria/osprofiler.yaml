@@ -35,9 +35,14 @@ releases:
     projects:
       - repo: openstack/osprofiler
         hash: 80c4f13c2147d0f05a53ab0710d229d40fcda962
+  - version: victoria-eol
+    projects:
+      - repo: openstack/osprofiler
+        hash: b843887a6c0a0992ac2e824bf84c1333b19e4cdf
 branches:
   - name: stable/victoria
     location: 3.4.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/osprofiler/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/osprofiler/victoria.html

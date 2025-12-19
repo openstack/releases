@@ -44,6 +44,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: c5e06744f9fc071e7cd8361077f4f6e37fffb76d
+  - version: victoria-eol
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: c5e06744f9fc071e7cd8361077f4f6e37fffb76d
 branches:
   - name: bugfix/6.2
     location: 6.2.0

@@ -34,6 +34,10 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: d7562c119bec7c29e136ce193e8546eea74c7854
+  - version: victoria-eol
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 9eb4a81f6922535a0c2eecf59be8bc3d2f4407c6
 branches:
   - name: stable/victoria
     location: 1.5.0

@@ -51,9 +51,14 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 78a0ea24a586139343c98821f9914901f1b5ec5b
+  - version: victoria-eol
+    projects:
+      - repo: openstack/os-brick
+        hash: 54142da612d0477d80537dbc09858a3e0d58f7c4
 branches:
   - location: 4.0.0
     name: stable/victoria
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/os-brick/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-brick/victoria.html

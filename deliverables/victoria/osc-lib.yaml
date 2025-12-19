@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: 2b6cfe24164eb5484d58a2653122cc1b31fb5e12
+  - version: victoria-eol
+    projects:
+      - repo: openstack/osc-lib
+        hash: 4d153ff6c876c82393d4b5ec626efb1c839302e4
 branches:
   - name: stable/victoria
     location: 2.2.1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/osc-lib/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/osc-lib/victoria.html

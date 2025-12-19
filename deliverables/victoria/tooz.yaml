@@ -43,9 +43,14 @@ releases:
     projects:
       - repo: openstack/tooz
         hash: 8ca40da4bbe813a76cd48d3e8e54b78d10f25765
+  - version: victoria-eol
+    projects:
+      - repo: openstack/tooz
+        hash: 7a0e60a1f6bdc444b29ef78f2aefa067dfca8a06
 branches:
   - name: stable/victoria
     location: 2.7.1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/tooz/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/tooz/victoria.html

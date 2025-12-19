@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-neutronclient
         hash: af15f09b8039ba833429aeeb4bcaf62630a450a3
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-neutronclient
+        hash: af15f09b8039ba833429aeeb4bcaf62630a450a3
 branches:
   - name: stable/victoria
     location: 7.2.1

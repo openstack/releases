@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: a2a8b1ff181a8e6357d7c8dda8431878d7e3b000
+  - version: victoria-eol
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 953d79701047eae514b128e5ae99c6108840011e
 branches:
   - name: stable/victoria
     location: 17.2.1

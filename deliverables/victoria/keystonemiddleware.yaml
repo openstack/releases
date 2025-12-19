@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 3b403b91b3337d75799c30d7f9defb6ccecf3b6c
+  - version: victoria-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: b433e49844ec9cf7a741a970ac7f06f530fa4755
 branches:
   - name: stable/victoria
     location: 9.1.0

@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 9b8c708c7d6d760583e78d3ec5a1f7c287d0bde8
+  - version: victoria-eol
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 7b17140fa4a75cd8e4e9cd2c87003ddb4610436f
 branches:
   - name: stable/victoria
     location: 1.2.1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.limit/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.limit/victoria.html

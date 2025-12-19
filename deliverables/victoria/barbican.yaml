@@ -23,9 +23,14 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: 3eed79c48f4d035ae9d28209d96576271aa0683f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/barbican
+        hash: 89fd9913ae24906eb051b6f853dfca43c688c140
 branches:
   - name: stable/victoria
     location: 11.0.0.0rc1
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/barbican/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/barbican/victoria.html

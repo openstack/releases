@@ -27,4 +27,9 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: dcf2a4b5e567acdff2f36dc154d20721062d2898
-release-notes: https://docs.openstack.org/releasenotes/cinderlib/victoria.html
+  - version: victoria-eol
+    projects:
+      - repo: openstack/cinderlib
+        hash: c87d7023f2d77e4d2aaa54c26ca857fb9d39c6aa
+release-notes:
+  https://docs.openstack.org/releasenotes/cinderlib/victoria.html

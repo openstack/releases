@@ -31,6 +31,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: e43a56fb9b772703214e39f3371cc2ff00e06d4d
+  - version: victoria-eol
+    projects:
+      - repo: openstack/glance_store
+        hash: e75a7d5cbb4c6993259c346ebdaf16ed8899f96c
 branches:
   - name: stable/victoria
     location: 2.3.0

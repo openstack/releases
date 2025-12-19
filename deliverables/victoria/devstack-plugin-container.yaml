@@ -6,7 +6,8 @@ type: other
 stable-branch-type: tagless
 branches:
   - location:
-      openstack/devstack-plugin-container: 74bf39e6a6ba5a83b1f30b7213b0e2d5545cf1c0
+      openstack/devstack-plugin-container:
+        74bf39e6a6ba5a83b1f30b7213b0e2d5545cf1c0
     name: stable/victoria
   - name: unmaintained/victoria
     location: victoria-eom
@@ -17,3 +18,7 @@ releases:
     projects:
       - repo: openstack/devstack-plugin-container
         hash: a4c0ad5d223c908b2fdbcfea18d3c8b086a9bc1f
+  - version: victoria-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: b22e3bee8fd09b1595dd02a809a442785b77631b

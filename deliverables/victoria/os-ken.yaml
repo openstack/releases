@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 5e9a961cbb865ee29b41155bbea20f6f4dcb4350
+  - version: victoria-eol
+    projects:
+      - repo: openstack/os-ken
+        hash: 6079795b016dddb617698895c100d276e731af14
 branches:
   - name: stable/victoria
     location: 1.2.0
   - name: unmaintained/victoria
     location: victoria-eom
-release-notes: https://docs.openstack.org/releasenotes/os-ken/victoria.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-ken/victoria.html

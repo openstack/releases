@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/osc-placement
         hash: 5bad74bef7447a982fe102882237431a2e766ce7
+  - version: victoria-eol
+    projects:
+      - repo: openstack/osc-placement
+        hash: dba73857cfd8bf6629d9bb06051d640cedbdbf51
 branches:
   - name: stable/victoria
     location: 2.1.0
