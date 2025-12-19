@@ -10,7 +10,8 @@ repository-settings:
 branches:
   - name: stable/xena
     location:
-      openstack/requirements: 51fa0f216cc4a8b391bb68c504127219c115652f
+      openstack/requirements:
+        51fa0f216cc4a8b391bb68c504127219c115652f
   - name: unmaintained/xena
     location: xena-eom
 releases:
@@ -18,3 +19,7 @@ releases:
     projects:
       - repo: openstack/requirements
         hash: 4beb369bc42eed6a2155206588bc0a2860a94ebc
+  - version: xena-eol
+    projects:
+      - repo: openstack/requirements
+        hash: b53e02c75bd4f5e7802a076e204defba924ef300

@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 7187c672d41fc54a0368b766c0fa7a59677964d8
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.context
+        hash: ae4bc7a331b57f3f2ee8cbc2888b5e251ce05350
 branches:
   - name: stable/xena
     location: 3.3.1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.context/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.context/xena.html

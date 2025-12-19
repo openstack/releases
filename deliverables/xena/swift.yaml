@@ -22,9 +22,14 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 6fb3011a7f25803f399f9f7f8402521bca164183
+  - version: xena-eol
+    projects:
+      - repo: openstack/swift
+        hash: 4e35060889940f237b2136b7c5291fada9c875e5
 branches:
   - name: stable/xena
     location: 2.28.0
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/swift/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/swift/xena.html

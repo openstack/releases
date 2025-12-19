@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 9d39bbf441c54de8089021a7ba4335bfdd6fad04
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: 5555099f0dd56372f5eff52bf5ff2285f56a16ca
 branches:
   - name: stable/xena
     location: 2.6.2
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.privsep/xena.html

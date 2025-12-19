@@ -35,9 +35,14 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: 70493735d2f99523c4a23ecbeed15969b2e81f6b
+  - version: xena-eol
+    projects:
+      - repo: openstack/os-brick
+        hash: 134d2f034aebd6c4238615aa859d2fc56c37f990
 branches:
   - location: 5.0.0
     name: stable/xena
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/os-brick/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-brick/xena.html

@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 5f5e43b2902512288ee8aac1a0968a56bd3cbf8c
+  - version: xena-eol
+    projects:
+      - repo: openstack/keystone
+        hash: bede4b2ef6177f74cb29aa8f7475107741b7866e
 branches:
   - name: stable/xena
     location: 20.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/keystone/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/keystone/xena.html

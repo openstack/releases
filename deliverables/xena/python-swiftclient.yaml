@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-swiftclient
         hash: 8bd346f3b9abda7282fffb6bbe7341577ca1dff1
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-swiftclient
+        hash: 8bd346f3b9abda7282fffb6bbe7341577ca1dff1
 branches:
   - name: stable/xena
     location: 3.12.0

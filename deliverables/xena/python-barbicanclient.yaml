@@ -18,6 +18,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: caedb02bc39ad97538eae8371c758db18f118faa
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 6a002a7b7db98ee9a4edd1832c02c2628bed8f92
 branches:
   - name: stable/xena
     location: 5.2.0

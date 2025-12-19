@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-novaclient
         hash: 88d9268b5f3663c8dfea0bd267ed14c5b9348f3b
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-novaclient
+        hash: 3ff72545d34a8801f57e74f5de200f1e079f87bb
 branches:
   - name: stable/xena
     location: 17.6.0

@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/keystonemiddleware
         hash: 8de54a8193985a33d6e7524010e85fde727fe0d2
+  - version: xena-eol
+    projects:
+      - repo: openstack/keystonemiddleware
+        hash: 8808c68d03c8da4e9b0e9257474053ba15978d6a
 branches:
   - name: stable/xena
     location: 9.3.0

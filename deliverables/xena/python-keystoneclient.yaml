@@ -19,6 +19,10 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 0678eac95aa98b50a5fd0fb9fa55031508c99d26
+  - version: xena-eol
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 0678eac95aa98b50a5fd0fb9fa55031508c99d26
 branches:
   - name: stable/xena
     location: 4.3.0

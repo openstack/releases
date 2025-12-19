@@ -39,9 +39,14 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: d1c52bab523e151f9e94ee6bed27c964d7f57a18
+  - version: xena-eol
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 518623e8837353aecafb9cec4d7e6e073667c4b3
 branches:
   - name: stable/xena
     location: 12.9.1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/oslo.messaging/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.messaging/xena.html

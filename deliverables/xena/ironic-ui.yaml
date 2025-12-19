@@ -24,9 +24,14 @@ releases:
     projects:
       - repo: openstack/ironic-ui
         hash: 3cd772a7be210ab217b7ae147057aefb6af5cde5
+  - version: xena-eol
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 3cd772a7be210ab217b7ae147057aefb6af5cde5
 branches:
   - name: stable/xena
     location: 5.0.0.0rc1
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/ironic-ui/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ironic-ui/xena.html

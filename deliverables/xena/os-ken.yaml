@@ -27,9 +27,14 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 32c3cac164da0ef0759f8fc0f35b78ecbaa8148a
+  - version: xena-eol
+    projects:
+      - repo: openstack/os-ken
+        hash: e80f7cdf835e5b62e6596cddbb8e2786898a3dd7
 branches:
   - name: stable/xena
     location: 2.1.0
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/os-ken/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-ken/xena.html

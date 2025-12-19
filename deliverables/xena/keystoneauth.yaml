@@ -20,9 +20,14 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 6d3c4817f2741d1cc527470091bb6a39e8480da0
+  - version: xena-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: ce12e8bef8195021ea820a0fcd46be9ccc9781e5
 branches:
   - name: stable/xena
     location: 4.4.0
   - name: unmaintained/xena
     location: xena-eom
-release-notes: https://docs.openstack.org/releasenotes/keystoneauth/xena.html
+release-notes:
+  https://docs.openstack.org/releasenotes/keystoneauth/xena.html

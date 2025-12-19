@@ -40,6 +40,10 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: 5acb4d6ddb2e99390ba4c7e039720f9e38a52d8c
+  - version: xena-eol
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: 823f1f68cc1e465c0193d7e7f34b0a5e8f1eb329
 branches:
   - name: bugfix/8.0
     location: 8.0.0
