@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-
 import datetime
 import os
+import subprocess
 import sys
 
 from sphinx.util import logging
@@ -64,8 +63,9 @@ html_static_path = ['static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = '%sdoc' % project
 
-git_cmd = "git log --pretty=format:'%ad, commit %h' --date=local -n1"
-html_last_updated_fmt = os.popen(git_cmd).read()
+git_cmd = ["git", "log", "--pretty=format:'%ad, commit %h'", "--date=local", "-n1"]
+html_last_updated_fmt = subprocess.run(
+    git_cmd, capture_output=True, text=True, check=True).stdout
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
