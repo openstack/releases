@@ -35,18 +35,25 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: bb31ca3daed4d01ef43060d4d43737bcb124e8e6
+  - version: 25.2.2
+    projects:
+      - repo: openstack/neutron
+        hash: fe9da5e7bc30e9eddfb417f1fae9aadb787f1fe6
 cycle-highlights:
-  - Manager role support was added to the Neutron APIs, meeting the
-    next phase of the Secure RBAC community goals.
-  - All supported mechanism drivers (ML2/OVS, ML2/OVN) can now use the
-    WSGI API module, completing the first phase of eventlet library
-    deprecation.
-  - Changed from using ``subquery`` to ``selectin`` for the DB load
-    strategy, which should increase performance and reduce complexity.
-  - OVN routers can now be attached to tunnelled external gateway networks.
-  - Support was added for nested SNAT in the ML2/OVN driver, bringing
-    it in line with existing behavior in other drivers.
+  - Manager role support was added to the Neutron APIs, meeting
+    the next phase of the Secure RBAC community goals.
+  - All supported mechanism drivers (ML2/OVS, ML2/OVN) can now use
+    the WSGI API module, completing the first phase of eventlet
+    library deprecation.
+  - Changed from using ``subquery`` to ``selectin`` for the DB
+    load strategy, which should increase performance and reduce
+    complexity.
+  - OVN routers can now be attached to tunnelled external gateway
+    networks.
+  - Support was added for nested SNAT in the ML2/OVN driver,
+    bringing it in line with existing behavior in other drivers.
 branches:
   - name: stable/2024.2
     location: 25.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron/2024.2.html
