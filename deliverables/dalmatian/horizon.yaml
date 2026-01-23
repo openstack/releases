@@ -7,8 +7,8 @@ repository-settings:
   openstack/horizon: {}
 cycle-highlights:
   - Horizon now uses new pytest-based integration tests jobs.
-  - Horizon now uses SDK instead of neutronclient for Neutron networks,
-    subnets, trunks, ports and subnetpools.
+  - Horizon now uses SDK instead of neutronclient for Neutron
+    networks, subnets, trunks, ports and subnetpools.
 releases:
   - version: 25.0.0
     projects:
@@ -22,7 +22,12 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: 1fa625858d41fa709004e93ae39f1a603cc8b428
+  - version: 25.1.2
+    projects:
+      - repo: openstack/horizon
+        hash: ef95cbcfae7569ba75e4a1516dae59d091c41ff5
 branches:
   - name: stable/2024.2
     location: 25.1.0
-release-notes: https://docs.openstack.org/releasenotes/horizon/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/horizon/2024.2.html
