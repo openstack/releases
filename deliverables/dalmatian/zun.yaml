@@ -15,7 +15,12 @@ releases:
       - repo: openstack/zun
         hash: 2681091ffa9cb626bc74cae74685e65204432990
     diff-start: 13.0.0
+  - version: 14.0.1
+    projects:
+      - repo: openstack/zun
+        hash: 49566b75957a604f85b308069623b9e9bfb43ae7
 branches:
   - name: stable/2024.2
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/zun/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/zun/2024.2.html
