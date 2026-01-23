@@ -21,7 +21,12 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 8e02055af0e0c8840076a3b76cbf1c254882ed44
+  - version: 15.1.0
+    projects:
+      - repo: openstack/octavia
+        hash: ac102c9a4dfd60deac936310952cb34a938df595
 branches:
   - name: stable/2024.2
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/octavia/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/octavia/2024.2.html
