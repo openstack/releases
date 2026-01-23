@@ -22,7 +22,12 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: d8b9778b786d3d318cd0549606f0c1a81b90b9ca
+  - version: 5.2.2
+    projects:
+      - repo: openstack/sushy
+        hash: 02347b630ac88c43c7386b6d5a5aa8c90fc8dc1c
 branches:
   - name: stable/2024.2
     location: 5.2.0
-release-notes: https://docs.openstack.org/releasenotes/sushy/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/sushy/2024.2.html
