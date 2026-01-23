@@ -16,7 +16,12 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: bb3e3da5144432a07ddb7403e259eca6d29f8d80
+  - version: 3.7.1
+    projects:
+      - repo: openstack/os-vif
+        hash: a19f532ab171ff342f26f7af94befc796d069738
 branches:
   - name: stable/2024.2
     location: 3.7.0
-release-notes: https://docs.openstack.org/releasenotes/os-vif/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-vif/2024.2.html
