@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: cfc1b44046c242ad3679a60cc2abeb00f02e6658
+  - version: 19.1.1
+    projects:
+      - repo: openstack/mistral
+        hash: cc997d3b3b3b5274104c79f22e006e9bfa04be4f
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/mistral/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/mistral/2024.2.html
