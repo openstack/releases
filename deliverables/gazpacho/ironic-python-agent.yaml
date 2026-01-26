@@ -12,6 +12,12 @@ releases:
     projects:
       - repo: openstack/ironic-python-agent
         hash: fac7bee8a5b515a0d49a9e55d83dd9b81ed920dc
+  - version: 11.4.0
+    projects:
+      - repo: openstack/ironic-python-agent
+        hash: a17666cbfad1539e1d5906744ab888544885d9fe
 branches:
   - name: bugfix/11.3
     location: 11.3.0
+  - name: bugfix/11.4
+    location: 11.4.0
