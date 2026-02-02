@@ -22,6 +22,7 @@ updates.
    :maxdepth: 1
    :hidden:
 
+   hibiscus/index
    gazpacho/index
    flamingo/index
    epoxy/index

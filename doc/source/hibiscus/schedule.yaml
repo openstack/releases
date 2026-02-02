@@ -1,0 +1,112 @@
+---
+start-week: '2026-04-06'
+release-week: '2026-09-28'
+cycle:
+  - start: '2026-03-30'
+    end: '2026-04-03'
+    x-project:
+      - g-final
+  - start: '2026-04-06'
+    end: '2026-04-10'
+    name: R-25
+  - start: '2026-04-13'
+    end: '2026-04-17'
+    name: R-24
+  - start: '2026-04-20'
+    end: '2026-04-24'
+    name: R-23
+  - start: '2026-04-27'
+    end: '2026-05-01'
+    name: R-22
+  - start: '2026-05-04'
+    end: '2026-05-08'
+    name: R-21
+  - start: '2026-05-11'
+    end: '2026-05-15'
+    name: R-20
+    x-project:
+      - h-1
+  - start: '2026-05-18'
+    end: '2026-05-22'
+    name: R-19
+  - start: '2026-05-25'
+    end: '2026-05-29'
+    name: R-18
+  - start: '2026-06-01'
+    end: '2026-06-05'
+    name: R-17
+    x-project:
+      - h-cycle-trail
+  - start: '2026-06-08'
+    end: '2026-06-12'
+    name: R-16
+  - start: '2026-06-15'
+    end: '2026-06-19'
+    name: R-15
+  - start: '2026-06-22'
+    end: '2026-06-26'
+    name: R-14
+  - start: '2026-06-29'
+    end: '2026-07-03'
+    name: R-13
+    x-project:
+      - h-2
+      - h-mf
+  - start: '2026-07-06'
+    end: '2026-07-10'
+    name: R-12
+  - start: '2026-07-13'
+    end: '2026-07-17'
+    name: R-11
+  - start: '2026-07-20'
+    end: '2026-07-24'
+    name: R-10
+  - start: '2026-07-27'
+    end: '2026-07-31'
+    name: R-9
+  - start: '2026-08-03'
+    end: '2026-08-07'
+    name: R-8
+  - start: '2026-08-10'
+    end: '2026-08-14'
+    name: R-7
+    x-project:
+      - h-extra-acs
+  - start: '2026-08-17'
+    end: '2026-08-21'
+    name: R-6
+    x-project:
+      - h-final-lib
+  - start: '2026-08-24'
+    end: '2026-08-28'
+    name: R-5
+    x-project:
+      - h-3
+      - h-ff
+      - h-final-clientlib
+      - h-soft-sf
+      - h-rf
+  - start: '2026-08-31'
+    end: '2026-09-04'
+    name: R-4
+    x-project:
+      - h-cycle-highlights
+  - start: '2026-09-07'
+    end: '2026-09-11'
+    name: R-3
+    x-project:
+      - h-rc1
+      - h-hard-sf
+  - start: '2026-09-14'
+    end: '2026-09-18'
+    name: R-2
+  - start: '2026-09-21'
+    end: '2026-09-25'
+    name: R-1
+    x-project:
+      - h-finalrc
+  - start: '2026-09-28'
+    end: '2026-10-02'
+    name: R+0
+    x-project:
+      - h-final
