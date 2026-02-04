@@ -18,7 +18,6 @@
 import argparse
 import atexit
 import glob
-import json
 import logging
 import os
 import os.path
@@ -29,10 +28,10 @@ import sys
 import tempfile
 
 from openstack_governance import governance
-import requests
 
 from openstack_releases import defaults
 from openstack_releases import deliverable
+from openstack_releases import gerritutils
 from openstack_releases import gitutils
 from openstack_releases import hound
 from openstack_releases import liaisons
@@ -133,27 +132,10 @@ def git_diff(workdir, repo, git_range, file_pattern, title=''):
             print()
 
 
-def gerrit_query(*query):
-    url = 'https://review.openstack.org/changes/?q=' + '+'.join(query)
-    response = requests.get(url)
-    if (response.status_code // 100) != 2:
-        raise RuntimeError(
-            'Bad HTTP response from gerrit %s: %s' %
-            (url, response.status_code)
-        )
-    elif response.content[:4] == b")]}'":
-        content = response.content[5:].decode('utf-8')
-        return json.loads(content)
-    else:
-        print('could not parse response from %s' % url)
-        print(repr(content))
-        raise RuntimeError('failed to parse gerrit response')
-
-
 def list_gerrit_patches(title, template, query):
     header('{}: "{}"'.format(title, query))
     try:
-        reviews = gerrit_query(query)
+        reviews = gerritutils.gerrit_query(query)
     except Exception as err:
         print(err)
     else:

@@ -16,9 +16,9 @@ import operator
 import requests
 
 import openstack_releases
-from openstack_releases.cmds.list_changes import gerrit_query
 from openstack_releases import defaults
 from openstack_releases import deliverable
+from openstack_releases import gerritutils
 from openstack_releases import schema
 from openstack_releases import series_status
 
@@ -310,7 +310,7 @@ def main():
 
         if args.no_merge_since:
             query = f'project:openstack%2F{deliv.name}+branch:master+mergedafter:{args.no_merge_since}'
-            patches = gerrit_query(query)
+            patches = gerritutils.gerrit_query(query)
             if len(patches) > 0:
                 continue
 
