@@ -88,6 +88,7 @@ cycle:
     name: R-7
     x-project:
       - g-extra-acs
+      - h-election-nominations
     project-specific:
       - g-manila-mid-cycle
       - g-openstackclient-freeze
@@ -97,6 +98,7 @@ cycle:
     name: R-6
     x-project:
       - g-final-lib
+      - h-election-nominations
     project-specific:
       - g-nova-review-day
   - start: '2026-02-23'
@@ -108,11 +110,14 @@ cycle:
       - g-final-clientlib
       - g-soft-sf
       - g-rf
+      - h-election-email-deadline
+      - h-election-campaigning
   - start: '2026-03-02'
     end: '2026-03-06'
     name: R-4
     x-project:
       - g-cycle-highlights
+      - h-election-voting
     project-specific:
       - g-manila-bugsquash
   - start: '2026-03-09'
@@ -121,14 +126,18 @@ cycle:
     x-project:
       - g-rc1
       - g-hard-sf
+      - h-election-voting
   - start: '2026-03-16'
     end: '2026-03-20'
     name: R-2
+    x-project:
+      - h-election-voting
   - start: '2026-03-23'
     end: '2026-03-27'
     name: R-1
     x-project:
       - g-finalrc
+      - h-election-close
   - start: '2026-03-30'
     end: '2026-04-03'
     name: R+0

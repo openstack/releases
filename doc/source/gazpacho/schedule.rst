@@ -299,3 +299,47 @@ Oslo Feature Freeze
 All new Oslo features must be proposed and substantially complete, with unit
 tests by the end of the week.
 
+
+2026.2 TC and PTL Elections
+===========================
+
+.. _h-election-email-deadline:
+
+2026.2 Election Email Deadline
+------------------------------
+Contributors that will be in the electorate for the upcoming election
+should confirm their gerrit email addresses by this date (February 18th, 2026
+at 00:00 UTC). Electorate rolls are generated after this date and ballots will
+be sent to the listed gerrit email address.
+
+.. _h-election-nominations:
+
+2026.2 Election Nomination Opens
+--------------------------------
+Candidates interested in serving for the next calendar year (TC), or
+development cycle (PTL) should announce their candidacies and platforms during
+this week.  Please see the `Election site`_ for specific timing information.
+
+.. _h-election-campaigning:
+
+2026.2 Election Campaigning Opens
+---------------------------------
+The electorate has time to ask candidates questions about their platforms
+and debate topics before polling begins.  Please see the `Election site`_ for
+specific timing information.
+
+.. _h-election-voting:
+
+2026.2 Election Polling Opens
+-----------------------------
+Election polling for open seats on the TC and any required PTL elections.
+Please see the `Election site`_ for specific timing information.
+
+.. _h-election-close:
+
+2026.2 Election Polling Ends
+----------------------------
+All polls close in the 2026.2 Election and results announced.  Please see the
+`Election site`_ for specific timing information.
+
+.. _Election site: https://governance.openstack.org/election/
