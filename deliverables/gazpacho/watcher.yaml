@@ -6,3 +6,34 @@ type: service
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+cycle-highlights:
+  - |
+    Zone migration strategies now have enhanced testing enabled, supporting
+    cross-zone instance movements for improved workload distribution and
+    high availability scenarios.
+  - |
+    ActionPlan cancellation behavior has been standardized across threading
+    and eventlet modes, ensuring consistent and predictable handling of
+    in-flight operations during maintenance activities.
+  - |
+    The API, Decision Engine, and Applier now all support native threading
+    as an alternative to Eventlet. This experimental native threading mode,
+    enables better operational visibility and health tracking of Watcher's
+    execution components.
+  - |
+    Nova client integration has been modernized with wrapper classes that
+    provide cleaner interfaces and handle OpenStack extension attributes
+    transparently. Finally, the migration to openstacksdk is now complete.
+  - |
+    A new automatic skipping mechanism has been included into all Watcher
+    action types. This feature identifies non-viable execution conditions
+    upfront, marking actions as skipped to prevent unnecessary 'Failed'
+    actions and ensure more accurate reporting of optimization results.
+  - |
+    Watcher now supports deploying multiple instances in active-active
+    configurations for both the Decision Engine and the Applier services.
+    This enhancement is underpinned by the introduction of dedicated service
+    monitors designed to track the health of each instance and trigger
+    automated recovery workflows, such as re-queuing pending audits or
+    cancelling stale action plans, to ensure continuous optimization without
+    manual intervention.
