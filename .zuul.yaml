@@ -2,7 +2,9 @@
     name: releases-tox-list-changes
     parent: openstack-tox
     post-run: playbooks/releases-tox-list-changes/post.yaml
-    timeout: 3600
+    # NOTE(elod.illes): opendev.org has 2 mins lags time to time so as
+    # a temporary workaround the timeout is increased +2 hrs
+    timeout: 10800
     vars:
       tox_envlist: list-changes
     irrelevant-files:
