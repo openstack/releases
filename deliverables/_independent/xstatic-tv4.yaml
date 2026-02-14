@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+releases:
+  - version: 1.2.7.1
+    projects:
+      - repo: openstack/xstatic-tv4
+        hash: 2b9b31becc8f083e4234c36629a37f5b86331984
+repository-settings:
+  openstack/xstatic-tv4:
+    tarball-base: XStatic-tv4

@@ -1,0 +1,14 @@
+---
+launchpad: horizon
+team: horizon
+type: other
+release-type: xstatic
+include-pypi-link: true
+releases:
+  - version: 1.2.1.1
+    projects:
+      - repo: openstack/xstatic-objectpath
+        hash: 19ca3d57d8b3e6b7125f20c8dd04326583ec5d08
+repository-settings:
+  openstack/xstatic-objectpath:
+    tarball-base: XStatic-objectpath
