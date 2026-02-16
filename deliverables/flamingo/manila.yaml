@@ -32,6 +32,10 @@ releases:
       - repo: openstack/manila
         hash: 1e090676e20fbbac3fa15e7b775a1b787fc40d17
     diff-start: 20.0.0.0rc1
+  - version: 21.0.1
+    projects:
+      - repo: openstack/manila
+        hash: f0db62c9c2ac8f8ef6f446aefd0363c07e11d664
 branches:
   - name: stable/2025.2
     location: 21.0.0.0rc1
