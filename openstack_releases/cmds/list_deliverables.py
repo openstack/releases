@@ -16,6 +16,7 @@ import operator
 import requests
 
 import openstack_releases
+from openstack_releases.cmds.list_changes import gerrit_query
 from openstack_releases import defaults
 from openstack_releases import deliverable
 from openstack_releases import schema
@@ -140,6 +141,11 @@ def main():
     grp.add_argument(
         '--unreleased-since',
         help=('limit the list to deliverables not released in the cycle '
+              'since a given YYYY-MM-DD date'),
+    )
+    grp.add_argument(
+        '--no-merge-since',
+        help=('limit the list to deliverables that have not merged any patch '
               'since a given YYYY-MM-DD date'),
     )
     grp.add_argument(
@@ -300,6 +306,12 @@ def main():
 
         if args.unreleased_since and deliv.is_released:
             if release_date[ver] >= args.unreleased_since:
+                continue
+
+        if args.no_merge_since:
+            query = f'project:openstack%2F{deliv.name}+branch:master+mergedafter:{args.no_merge_since}'
+            patches = gerrit_query(query)
+            if len(patches) > 0:
                 continue
 
         if csvfile:
