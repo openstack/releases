@@ -5,3 +5,8 @@ team: masakari
 type: client-library
 repository-settings:
   openstack/python-masakariclient: {}
+releases:
+  - version: 8.8.0
+    projects:
+      - repo: openstack/python-masakariclient
+        hash: 59dc1c5b5a8a7aa32482ed07c16fd90fbee405f9
