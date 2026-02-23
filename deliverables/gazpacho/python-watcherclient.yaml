@@ -6,3 +6,8 @@ team: watcher
 type: client-library
 repository-settings:
   openstack/python-watcherclient: {}
+releases:
+  - version: 4.10.0
+    projects:
+      - repo: openstack/python-watcherclient
+        hash: c6e08c3f08dc214199e228d151365488f9855da6
