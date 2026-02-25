@@ -314,31 +314,31 @@ be sent to the listed gerrit email address.
 
 .. _h-election-nominations:
 
-2026.2 Election Nomination Opens
---------------------------------
+2026.2 Election Nomination Open
+-------------------------------
 Candidates interested in serving for the next calendar year (TC), or
 development cycle (PTL) should announce their candidacies and platforms during
 this week.  Please see the `Election site`_ for specific timing information.
 
 .. _h-election-campaigning:
 
-2026.2 Election Campaigning Opens
----------------------------------
+2026.2 Election Campaigning Open
+--------------------------------
 The electorate has time to ask candidates questions about their platforms
 and debate topics before polling begins.  Please see the `Election site`_ for
 specific timing information.
 
 .. _h-election-voting:
 
-2026.2 Election Polling Opens
------------------------------
+2026.2 Election Polling Open
+----------------------------
 Election polling for open seats on the TC and any required PTL elections.
 Please see the `Election site`_ for specific timing information.
 
 .. _h-election-close:
 
-2026.2 Election Polling Ends
-----------------------------
+2026.2 Election Polling Closes
+------------------------------
 All polls close in the 2026.2 Election and results announced.  Please see the
 `Election site`_ for specific timing information.
 
