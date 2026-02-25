@@ -6,3 +6,8 @@ team: ironic
 type: horizon-plugin
 repository-settings:
   openstack/ironic-ui: {}
+releases:
+  - version: 6.7.0
+    projects:
+      - repo: openstack/ironic-ui
+        hash: 7906524daa0b3fb6d8c3caa060fd5352a3963c55
