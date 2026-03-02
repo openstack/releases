@@ -6,6 +6,40 @@ team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+cycle-highlights:
+  - |
+    Ironic now supports NFS and CIFS/SMB transport protocols for Redfish
+    Virtual Media boot with automatic protocol detection from BMC
+    capabilities. Operators can configure shares via new [nfs] and [cifs]
+    configuration sections, with per-node overrides available through
+    driver_info.
+  - |
+    Two new deploy interfaces have been added. The autodetect deploy
+    interface eliminates manual specification by selecting the most suitable
+    concrete interface based on image metadata and node configuration. The
+    noop deploy interface allows nodes to be marked active without
+    performing OS deployment, enabling adoption of pre-existing deployments
+    and tracking of externally managed nodes in Ironic's inventory.
+  - |
+    A new standalone networking service enables Ironic to manage physical
+    network switch configurations for bare metal nodes without requiring
+    Neutron. Running independently from the main conductor, this service
+    enables network management for standalone Ironic deployments.
+  - |
+    The networking-generic-switch and networking-baremetal projects now
+    support VXLAN and Geneve overlay networks for bare metal nodes.
+    Networking-baremetal facilitates the attachment with OVN, and pairs
+    with netowrking-generic-switch to facilitate VXLAN VNI attachments.
+    See documentation for these projects for more detailed information.
+  - |
+    Trait-based port scheduling enables more flexible and automated
+    network configuration, allowing ports to be scheduled based on traits
+    and physical network attributes, improving multi-network bare metal
+    deployments.
+  - |
+    Redfish inspection has reached parity with in-band agent inspection
+    by gaining the ability to inspect PCI bus, disk controllers, LLDP,
+    and more system and NIC details.
 releases:
   - version: 33.0.0
     projects:
