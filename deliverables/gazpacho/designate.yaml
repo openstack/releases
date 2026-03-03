@@ -7,3 +7,8 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+cycle-highlights:
+  - |
+    Designate completed the migration from eventlet to native Python
+    threading across all services as part of the broader OpenStack
+    de-eventlet effort.
