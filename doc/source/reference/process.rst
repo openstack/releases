@@ -418,6 +418,23 @@ Week before Milestone-2
    $series directory, or marked release-model:abandoned if present in the
    _independent directory.
 
+#. Propose DNM changes on libraries and client libraries where no patches
+   merged recently (since YYYY-MM-DD date; for example since 30 days ago)
+   to check that tests are still passing with the current set of
+   dependencies.
+
+   Get the list of deliverables for the current series::
+
+     tox -e venv -- list-deliverables --series <SERIES> \
+     --no-merge-since YYYY-MM-DD \
+     --type library --type client-library >/tmp/deliverables.log
+
+   Edit the generated file (/tmp/deliverables.log) to remove tox’s logs.
+
+   Generate the ``do-not-merge`` patches with the following script::
+
+     tools/repository_test_generator.sh $(cat /tmp/deliverables.log)
+
 #. Send the following weekly email content::
 
     Development Focus
@@ -757,6 +774,21 @@ R-7 week (Extra-AC deadline week)
    error. A recheck of failed patches will clear that up once the template is
    defined, but it is best if any errors can be avoided to make sure the
    patches get approved in a timely manner.
+
+#. Propose DNM changes on repositories where no patches merged recently
+   (since YYYY-MM-DD date; for example since 30 days ago) to check that
+   tests are still passing with the current set of dependencies.
+
+   Get the list of deliverables for the current series::
+
+     tox -e venv -- list-deliverables --series <SERIES> \
+     --no-merge-since YYYY-MM-DD >/tmp/deliverables.log
+
+   Edit the generated file (/tmp/deliverables.log) to remove tox’s logs.
+
+   Generate the ``do-not-merge`` patches with the following script::
+
+     tools/repository_test_generator.sh $(cat /tmp/deliverables.log)
 
 #. Send the following weekly email content::
 
