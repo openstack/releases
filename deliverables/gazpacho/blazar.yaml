@@ -5,3 +5,11 @@ team: blazar
 type: service
 repository-settings:
   openstack/blazar: {}
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/blazar
+        hash: 5ffbc853108b4d968d8a5b96fc3c5ba0aff33d29
+branches:
+  - name: stable/2026.1
+    location: 17.0.0.0rc1
