@@ -37,3 +37,11 @@ cycle-highlights:
     automated recovery workflows, such as re-queuing pending audits or
     cancelling stale action plans, to ensure continuous optimization without
     manual intervention.
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: 336ef36001c50f623b04f52967e2b39b31115d6f
+branches:
+  - name: stable/2026.1
+    location: 16.0.0.0rc1
