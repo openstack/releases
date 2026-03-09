@@ -53,3 +53,11 @@ cycle-highlights:
     as an alternative to eventlet. Please try it in non-production environment
     and share your success or failure with us on the openstack-discuss mailing
     list or via the Nova bug tracker.
+releases:
+  - version: 33.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: d5c64e7aba09052601b59bf1297187d85da6b90b
+branches:
+  - name: stable/2026.1
+    location: 33.0.0.0rc1
