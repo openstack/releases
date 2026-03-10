@@ -6,3 +6,8 @@ team: ironic
 type: other
 repository-settings:
   openstack/bifrost: {}
+releases:
+  - version: 20.0.0
+    projects:
+      - repo: openstack/bifrost
+        hash: 01d8fcac7847a08fdb8050bde88f2b771b53d831
