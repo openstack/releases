@@ -5,3 +5,11 @@ team: Telemetry
 type: service
 repository-settings:
   openstack/aetos: {}
+releases:
+  - version: 2.0.0.0rc1
+    projects:
+      - repo: openstack/aetos
+        hash: 0977b0c3b3430db8a43dc1b4a6f0b1c94bec6bc9
+branches:
+  - name: stable/2026.1
+    location: 2.0.0.0rc1
