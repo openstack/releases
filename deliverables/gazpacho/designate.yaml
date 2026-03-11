@@ -12,3 +12,11 @@ cycle-highlights:
     Designate completed the migration from eventlet to native Python
     threading across all services as part of the broader OpenStack
     de-eventlet effort.
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/designate
+        hash: ee2add08760a436d0173535699a6016ef18e03ae
+branches:
+  - name: stable/2026.1
+    location: 22.0.0.0rc1
