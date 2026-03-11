@@ -5,3 +5,11 @@ team: magnum
 type: service
 repository-settings:
   openstack/magnum: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/magnum
+        hash: af5b7a0b81c0775f830fd4186666b51653ee8d62
+branches:
+  - name: stable/2026.1
+    location: 22.0.0.0rc1
