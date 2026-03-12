@@ -5,6 +5,14 @@ team: freezer
 type: service
 repository-settings:
   openstack/freezer: {}
+cycle-highlights:
+  - |
+    Deprecated Python clients for interaction with services has been replaced
+    with openstacksdk.
+  - |
+    A naming of temporary resources created by Freezer for the purpose of
+    backup/restoration process have been aligned and significantly refactored,
+    to allow simpler tracing of the resource source and purpuse.
 releases:
   - version: 18.0.0.0rc1
     projects:
