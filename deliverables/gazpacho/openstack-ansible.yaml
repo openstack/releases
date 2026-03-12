@@ -6,3 +6,17 @@ team: OpenStackAnsible
 type: trailing
 repository-settings:
   openstack/openstack-ansible: {}
+cycle-highlights:
+  - |
+    Ansible Core version has been upgraded to 2.19 release.
+  - |
+    Implemented usage of OpenBao (Hashicorp Vault) as a PKI provider for
+    TLS self-signed certificates.
+  - |
+    Group names defenitions were changed to contain only underscore as a
+    separator. This was made in order to conform with group naming
+    convention.
+  - |
+    Added ability to use ``uv`` as a Python package installer into
+    virtualenvs. Wheels build and virtalenv creation is still handled
+    in "old" fashion.
