@@ -5,6 +5,20 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - Horizon now supports Nova live migration with microversion 2.30.
+  - New configuration option is added to avoid doing full listing of
+    containers and objects in the Swift panel that can cause high resource
+    consumption in Horizon.
+  - Key Pairs page is rewritten in Python/Django keeping full functionality
+    of the AngularJS implementation.
+  - Integration tests for region selection and switching are added.
+  - Multi-realm federation tests are added.
+  - Old integration tests are removed.
+  - Horizon now uses py313 jobs for Django check and gate queue.
+  - Horizon now works with Selenium 4.41.0.
+  - Horizon now works with Font Awesome 6.2.
+  - Horizon's XStatic dependencies are repackaged to work with XStatic 2.0.0.
 releases:
   - version: 25.6.0
     projects:
