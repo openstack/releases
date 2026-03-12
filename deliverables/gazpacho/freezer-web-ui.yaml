@@ -6,6 +6,10 @@ team: freezer
 type: horizon-plugin
 repository-settings:
   openstack/freezer-web-ui: {}
+cycle-highlights:
+  - |
+    Freezer UI was moved in Horizon from it's own "Disaster Recovery" dashboard
+    under "Backup and Recovery" section inside of the "Project" dashboard.
 releases:
   - version: 18.0.0.0rc1
     projects:

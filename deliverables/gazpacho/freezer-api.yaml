@@ -5,6 +5,11 @@ team: freezer
 type: service
 repository-settings:
   openstack/freezer-api: {}
+cycle-highlights:
+  - |
+    Freezer API now defaults to SQLAlchemy as the storage driver.
+    Elasticsearch DB storage is deprecated and will be removed in the next
+    release.
 releases:
   - version: 18.0.0.0rc1
     projects:
