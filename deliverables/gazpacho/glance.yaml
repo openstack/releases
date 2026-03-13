@@ -12,3 +12,10 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 01ead31b80b2973b2b196aad2fcde0a3947287d6
+  - version: 32.0.0.0rc1
+    projects:
+      - repo: openstack/glance
+        hash: 011776ae9f3aba04dce7b6b3ad24004f5406b82a
+branches:
+  - name: stable/2026.1
+    location: 32.0.0.0rc1
