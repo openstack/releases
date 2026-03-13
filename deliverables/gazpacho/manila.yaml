@@ -4,32 +4,45 @@ release-model: cycle-with-rc
 team: manila
 type: service
 cycle-highlights:
-  - A new environment variable named ``OS_MANILA_DISABLE_EVENTLET_PATCHING``
-    was introduced to allow running the manila scheduler, data and share
-    services in native threading mode instead of eventlet's green threads. The
-    ``manila-api`` service is unaffected when deployed behind an external WSGI
-    server. This option is being introduced as a **technology preview**. A
-    future release of Manila will remove eventlet entirely and rely on native
-    threads. We do not recommend using this in production environments yet.
-  - Users can now set and unset metadata on share replicas. Such metadata can
-    be used by the storage driver to determine replication strategies.
-  - Introduced support for QoS type and QoS type specs. Administrators can now
-    define performance limits such as throughput or IOPS throttling using
-    either share type extra-specs or the new dedicated QoS type entities.
-  - The Dell PowerScale driver now offers supports for deduplication,
-    manage, unmanage, shrinking shares and mounting snapshots.
-  - Users can now specify a custom export location when managing a share. This
-    ensures that the share retains a predictable mount path after being adopted
-    by Manila.
+  - A new environment variable named
+    ``OS_MANILA_DISABLE_EVENTLET_PATCHING`` was introduced to
+    allow running the manila scheduler, data and share services in
+    native threading mode instead of eventlet's green threads. The
+    ``manila-api`` service is unaffected when deployed behind an
+    external WSGI server. This option is being introduced as a
+    **technology preview**. A future release of Manila will remove
+    eventlet entirely and rely on native threads. We do not
+    recommend using this in production environments yet.
+  - Users can now set and unset metadata on share replicas. Such
+    metadata can be used by the storage driver to determine
+    replication strategies.
+  - Introduced support for QoS type and QoS type specs.
+    Administrators can now define performance limits such as
+    throughput or IOPS throttling using either share type
+    extra-specs or the new dedicated QoS type entities.
+  - The Dell PowerScale driver now offers supports for
+    deduplication, manage, unmanage, shrinking shares and mounting
+    snapshots.
+  - Users can now specify a custom export location when managing a
+    share. This ensures that the share retains a predictable mount
+    path after being adopted by Manila.
   - A back end driver for HPE Alletra MP B10000 is now available.
-  - The NetApp ONTAP driver now supports synchronous replication policies and
-    aggregate level encryption.
-  - It is now possible to boot the the generic driver's service instances
-    from a cinder volume in DHSS=True mode using either an image or a
-    cinder volume.
+  - The NetApp ONTAP driver now supports synchronous replication
+    policies and aggregate level encryption.
+  - It is now possible to boot the the generic driver's service
+    instances from a cinder volume in DHSS=True mode using either
+    an image or a cinder volume.
   - The Manila V1 API has been removed.
   - The Manila shell utility has been removed.
-  - The Manila UI now supports manipulating metadata for share snapshots,
-    share networks and export locations.
+  - The Manila UI now supports manipulating metadata for share
+    snapshots, share networks and export locations.
 repository-settings:
   openstack/manila: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/manila
+        hash: 08ccc06b6e3b319ec9fd5f55d7336c5e3089f28e
+branches:
+  - name: stable/2026.1
+    location: 22.0.0.0rc1
