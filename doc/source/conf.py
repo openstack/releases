@@ -21,6 +21,7 @@ extensions = [
     'sphinxcontrib.datatemplates',
     'ics',
     'reviewinbox',
+    'signingkeys',
 ]
 
 config_generator_config_file = 'config-generator.conf'

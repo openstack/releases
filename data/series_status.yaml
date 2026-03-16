@@ -6,6 +6,10 @@
   next-phase:
     status: maintained
     date: 2026-09-30
+  signing-key:
+    key: 30566c450e41d7c91e442dfb231f942f608ddeff
+    start: 2026-04-10
+    end: present
 - name: gazpacho
   release-id: 2026.1
   status: maintained
@@ -14,6 +18,10 @@
   next-phase:
     status: unmaintained
     date: 2027-10-27
+  signing-key:
+    key: b8e9315f48553ec5aff9ffe5e69d97da9efb5aff
+    start: 2025-10-06
+    end: 2026-04-10
 - name: flamingo
   release-id: 2025.2
   status: maintained
@@ -21,6 +29,10 @@
   next-phase:
     status: end of life
     date: 2027-04-28
+  signing-key:
+    key: c71b007ef97887fd8fb6365ceb4fd6d618e62181
+    start: 2025-04-07
+    end: 2025-10-06
 - name: epoxy
   release-id: 2025.1
   status: maintained
@@ -29,6 +41,10 @@
   next-phase:
     status: unmaintained
     date: 2026-10-02
+  signing-key:
+    key: 22284f69d9eccdf3df7819791c711af193ff8e54
+    start: 2024-10-07
+    end: 2025-04-07
 - name: dalmatian
   release-id: 2024.2
   status: maintained
@@ -36,6 +52,10 @@
   next-phase:
     status: end of life
     date: 2026-04-29
+  signing-key:
+    key: f8675126e2411e7748dd46662fc2093e4682645f
+    start: 2024-04-08
+    end: 2024-10-07
 - name: caracal
   release-id: 2024.1
   status: unmaintained
@@ -43,11 +63,19 @@
   initial-release: 2024-04-03
   next-phase:
     status: end of life
+  signing-key:
+    key: 2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
+    start: 2023-10-09
+    end: 2024-04-08
 - name: bobcat
   release-id: 2023.2
   status: end of life
   initial-release: 2023-10-04
   eol-date: 2025-04-30
+  signing-key:
+    key: 815afec729392386480e076dcc0dfe2d21c023c9
+    start: 2023-03-31
+    end: 2023-10-09
 - name: antelope
   release-id: 2023.1
   status: unmaintained
@@ -55,60 +83,116 @@
   initial-release: 2023-03-22
   next-phase:
     status: end of life
+  signing-key:
+    key: a7475c5f2122fec3f90343223fe3bf5aad1080e4
+    start: 2022-10-07
+    end: 2023-03-31
 - name: zed
   status: unmaintained
   initial-release: 2022-10-05
   next-phase:
     status: end of life
+  signing-key:
+    key: a63ea142678138d1bb15f2e303bdfd64dd164087
+    start: 2022-04-09
+    end: 2022-10-07
 - name: yoga
   status: unmaintained
   initial-release: 2022-03-30
   next-phase:
     status: end of life
+  signing-key:
+    key: 01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+    start: 2021-10-27
+    end: 2022-04-09
 - name: xena
   status: end of life
   initial-release: 2021-10-06
   eol-date: 2025-12-19
+  signing-key:
+    key: 4c29ff0e437f3351fd82bdf47c5a3bc787dc7035
+    start: 2021-05-06
+    end: 2021-10-27
 - name: wallaby
   status: end of life
   initial-release: 2021-04-14
   eol-date: 2025-12-19
+  signing-key:
+    key: 5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+    start: 2020-10-30
+    end: 2021-05-06
 - name: victoria
   status: end of life
   initial-release: 2020-10-14
   eol-date: 2025-12-19
+  signing-key:
+    key: 2426b928085a020d8a90d0d879ab7008d0896c8a
+    start: 2020-05-21
+    end: 2020-10-30
 - name: ussuri
   status: end of life
   initial-release: 2020-05-13
   eol-date: 2024-02-20
+  signing-key:
+    key: bba3b1e67a7303dd1769d34595bf2e4d09004514
+    start: 2019-10-29
+    end: 2020-05-21
 - name: train
   status: end of life
   initial-release: 2019-10-16
   eol-date: 2024-02-20
+  signing-key:
+    key: cdc08088c3cb45a9be08332b2354069e5b504663
+    start: 2019-06-11
+    end: 2019-10-29
 - name: stein
   status: end of life
   initial-release: 2019-04-10
   eol-date: 2024-01-04
+  signing-key:
+    key: 27023b1ffccd8e3ae9a5ce95d943d5d270273ada
+    start: 2018-09-05
+    end: 2019-06-11
 - name: rocky
   status: end of life
   initial-release: 2018-08-30
   eol-date: 2023-08-16
+  signing-key:
+    key: c31292066be772022438222c184fd3e1edf21a78
+    start: 2018-03-19
+    end: 2018-09-05
 - name: queens
   status: end of life
   initial-release: 2018-02-28
   eol-date: 2023-01-18
+  signing-key:
+    key: 4c8b8b5a694f612544b3b4bac52f01a3fbdb9949
+    start: 2017-09-15
+    end: 2018-03-19
 - name: pike
   status: end of life
   initial-release: 2017-08-30
   eol-date: 2022-10-13
+  signing-key:
+    key: c96bfb160752606daa0de2fa05eb5792c876df9a
+    start: 2017-03-24
+    end: 2017-09-15
 - name: ocata
   status: end of life
   initial-release: 2017-02-22
   eol-date: 2021-06-15
+  signing-key:
+    key: d47bab1b7dc2e262a4f6171e8b1b03fd54e2ac07
+    start: 2016-11-22
+    end: 2017-03-24
 - name: newton
   status: end of life
   initial-release: 2016-10-06
   eol-date: 2017-10-25
+  signing-key:
+    key: 80fcce3dc49bd7836fc2464664dbb05acc5e7c28
+    start: 2016-08-03
+    end: 2016-11-22
 - name: mitaka
   status: end of life
   initial-release: 2016-04-07

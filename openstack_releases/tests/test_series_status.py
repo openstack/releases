@@ -33,6 +33,10 @@ class TestConstructSeriesStatus(base.BaseTestCase):
       next-phase:
         status: development
         date: 2018-08-30
+      signing-key:
+        key: 12345678901234567890
+        start: 2018-08-30
+        end: 2019-06-01
     - name: rocky
       status: development
       initial-release: 2018-08-30

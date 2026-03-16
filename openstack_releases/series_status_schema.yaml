@@ -51,3 +51,20 @@ items:
             - end of life
         date:
           type: "date"
+    signing-key:
+      type: "object"
+      additionalProperties: false
+      properties:
+        required:
+          - key
+          - start
+          - end
+        key:
+          type: "string"
+        start:
+          type: "date"
+        end:
+          oneOf:
+          - type: date
+          - type: string
+            enum: ["present"]
