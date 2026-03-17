@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: zun-tempest-plugin
 team: zun
 type: tempest-plugin
+releases:
+  - version: 4.13.0
+    projects:
+      - repo: openstack/zun-tempest-plugin
+        hash: d8595f07c74f1314f15beb8e42ca68d2b552a036
