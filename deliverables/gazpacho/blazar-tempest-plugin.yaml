@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: blazar_tempest_plugin
 team: blazar
 type: tempest-plugin
+releases:
+  - version: 0.18.0
+    projects:
+      - repo: openstack/blazar-tempest-plugin
+        hash: fee48c7ba8316fae17d1dd7e2cfba5896edece64
