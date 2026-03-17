@@ -2,8 +2,33 @@
 launchpad: openstack-cyborg
 team: cyborg
 type: service
-storyboard: 968
+cycle-highlights:
+  - |
+    Cyborg services have migrated to native Python threading, modernising
+    the service architecture and positioning the project for long-term
+    sustainability within the OpenStack ecosystem.
+  - |
+    The cyborg-agent now validates its Placement resource provider at
+    startup with automatic retry and backoff, and supports explicit
+    resource provider naming to simplify deployments where accelerator
+    and compute hostnames differ.
+  - |
+    Cyborg has adopted current oslo.db database APIs, aligning the
+    project's data layer with the wider OpenStack ecosystem and ensuring
+    continued long-term supportability.
+  - |
+    A new driver configuration guide covers all supported accelerator
+    types — FPGA, GPU, NIC, QAT, SSD, and PCI passthrough — providing
+    ready-to-use configuration examples for common deployments.
 release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+releases:
+  - version: 16.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 26dec650a90fe7874b6014ae492ec8cc872552e2
+branches:
+  - name: stable/2026.1
+    location: 16.0.0.0rc1
