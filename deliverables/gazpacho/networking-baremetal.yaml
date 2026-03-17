@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: f6f8e7d98adbc30b476670faf762faa1ceccbd7b
+  - version: 7.2.0
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 8356d4f6e63aaf71f59287d404c71c1b2eff2a10
+branches:
+  - name: stable/2026.1
+    location: 7.2.0
