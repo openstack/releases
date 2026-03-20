@@ -5,5 +5,9 @@ type: other
 include-pypi-link: true
 release-model: cycle-with-intermediary
 stable-branch-type: tagless
+branches:
+  - name: stable/2026.1
+    location:
+      openstack/requirements: 754ae37e67ba08c1695698ea7a8ebe52efa711d9
 repository-settings:
   openstack/requirements: {}
