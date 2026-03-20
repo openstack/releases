@@ -8,3 +8,8 @@ repository-settings:
   openstack/heat-tempest-plugin: {}
 team: heat
 type: tempest-plugin
+releases:
+  - version: 2.7.0
+    projects:
+      - repo: openstack/heat-tempest-plugin
+        hash: 7495223039ca5874cd511238b2de72e3471856d4
