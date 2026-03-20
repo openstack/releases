@@ -10,3 +10,10 @@ releases:
     projects:
       - repo: openstack/swift
         hash: 555026d200337b39c97eb9dafd26901ff40c7a1d
+  - version: 2.37.1
+    projects:
+      - repo: openstack/swift
+        hash: ceefd82d5b110a6e7d6c26f29b0c130065860df3
+branches:
+  - name: stable/2026.1
+    location: 2.37.1
