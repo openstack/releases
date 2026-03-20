@@ -40,6 +40,10 @@ releases:
       - repo: openstack/watcher
         hash: 61cca16dcdec1f09f3dd05206c4ffacb0a8b93a0
     diff-start: 14.0.0
+  - version: 15.1.0
+    projects:
+      - repo: openstack/watcher
+        hash: 398f603b61f10568c4e432cb46c66d3ebbd42b9a
 branches:
   - name: stable/2025.2
     location: 15.0.0.0rc1
