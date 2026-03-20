@@ -4,10 +4,16 @@ uid                              OpenStack Infra (2026.1/Gazpacho Cycle) <infra-
 sig 3        0xE69D97DA9EFB5AFF 2025-08-14  [self-signature]
 sig          0x48F9961143495829 2025-08-14  Jeremy Stanley <fungi@yuggoth.org>
 sig          0xEB4FD6D618E62181 2025-08-14  OpenStack Infra (2025.2/Flamingo Cycle) <infra-root@openstack.org>
-sub   ed25519/0x85E1426370940CEB 2025-08-14 [S]
+sub   ed25519/0x85E1426370940CEB 2025-08-14 [S] [revoked: 2026-01-09]
 sig          0xE69D97DA9EFB5AFF 2025-08-14  [self-signature]
+sig          0xE69D97DA9EFB5AFF 2026-01-09  [self-signature]
+rev          0xE69D97DA9EFB5AFF 2026-01-09  [self-signature]
+      reason for revocation: Key is superseded
+         revocation comment: Unscheduled subkey rotation after possible (though unlikely) exposure.
 sub   cv25519/0xBD46FA97DEC56D02 2025-08-14 [E] [expires: 2026-05-11]
 sig          0xE69D97DA9EFB5AFF 2025-08-14  [self-signature]
+sub   ed25519/0x90364272486FD056 2026-01-09 [S]
+sig          0xE69D97DA9EFB5AFF 2026-01-09  [self-signature]
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -37,9 +43,25 @@ nZfanvta/3YgBBkWCAAdFiEEiI8cl/qoMuE2EANFheFCY3CUDOsFAmiePuUACgkQ
 heFCY3CUDOutFwEAgEckR564m8oeOiR2OqDlu5LVjopoawHKESzRFBok7jUA/3zb
 j//3NcmuZ1wUcPkjE3/O8xg3/Gjfz4eormzfuYcENiABAJE8z0GeBcPC1DTWlsCj
 8Y4SpuEoNvtO+rGRiOppFtN6AQD6q/HIKCP3G6DoZvcSm9AwVujc00vKiiwV5rEG
-Tc+XCLg4BGiePVcSCisGAQQBl1UBBQEBB0Dsiiby9kUHTzuqq/pLAf9sMqvy0+jH
-IcvuD52YdOnOMgMBCAeIfgQYFggAJhYhBLjpMV9IVT7Fr/n/5eadl9qe+1r/BQJo
-nj1XAhsMBQkBY/UAAAoJEOadl9qe+1r/kvABAMNVfiBPD6PH/8qh7O6aowD6PQBV
-5rpWM/qn5BFcPoRsAP9V7OG2Xb7WgRiTFqrD+EWhUO/NevyqagiONj8UwM96Bw==
-=ceA1
+Tc+XCIi+BCgWCABmFiEEuOkxX0hVPsWv+f/l5p2X2p77Wv8FAmlhIXNIHQFVbnNj
+aGVkdWxlZCBzdWJrZXkgcm90YXRpb24gYWZ0ZXIgcG9zc2libGUgKHRob3VnaCB1
+bmxpa2VseSkgZXhwb3N1cmUuAAoJEOadl9qe+1r/JwMA/Aq6/iEcvQ55Vd8dU2lc
+rQeDNUAdZbJozWuDaHrhuulRAP0WQsRIA1a99Vams4i+UURQlpQ+Uu648N7OZega
+936KAIj1BBgWCAAmAhsCFiEEuOkxX0hVPsWv+f/l5p2X2p77Wv8FAmlhICkFCQDE
+MsQAgQkQ5p2X2p77Wv92IAQZFggAHRYhBIiPHJf6qDLhNhADRYXhQmNwlAzrBQJo
+nj7lAAoJEIXhQmNwlAzrrRcBAIBHJEeeuJvKHjokdjqg5buS1Y6KaGsByhEs0RQa
+JO41AP9824//9zXJrmdcFHD5IxN/zvMYN/xo38+HqK5s37mHBH0AAQDeUoOrxJSb
+U5CasZ++XKHjqOPtR6uLonrNtUdQZCBG2AD/TPFg5CFLpbf/2rIvhrx6dORdbPIW
+J4ouN1fXgwe0OwC4OARonj1XEgorBgEEAZdVAQUBAQdA7Iom8vZFB087qqv6SwH/
+bDKr8tPoxyHL7g+dmHTpzjIDAQgHiH4EGBYIACYWIQS46TFfSFU+xa/5/+XmnZfa
+nvta/wUCaJ49VwIbDAUJAWP1AAAKCRDmnZfanvta/5LwAQDDVX4gTw+jx//Koezu
+mqMA+j0AVea6VjP6p+QRXD6EbAD/Vezhtl2+1oEYkxaqw/hFoVDvzXr8qmoIjjY/
+FMDPege4MwRpYSF/FgkrBgEEAdpHDwEBB0DnsYFqrFdwvZzjrM3BDeSSzAqxTLOR
+SrVIwSzUnFBmP4jvBBgWCAAgFiEEuOkxX0hVPsWv+f/l5p2X2p77Wv8FAmlhIX8C
+GwIAgQkQ5p2X2p77Wv92IAQZFggAHRYhBMJoMp1V2nv2Ju4FOJA2QnJIb9BWBQJp
+YSF/AAoJEJA2QnJIb9BWRAoA/3Hic4WUBTkskWxazpmtEPo9E/RA1C57zlJ6fv5N
+zp6XAP9FfL8BsV1o6kv9qL1f8d8iKUz/NqciGMhSGFwOmgGbCCwkAPoCzPHdOGuo
+QtCXOOKaMiZmkO9pageoq7sWQaCuZZZ1xgEA97nSRR5lMSV8I3FPsdXGxGcJz8hv
+zU0Y97QiG02vyAo=
+=JJvM
 -----END PGP PUBLIC KEY BLOCK-----

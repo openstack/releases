@@ -179,7 +179,7 @@ the date ranges during which each key was in general use.
 
 .. Static key files are generated with the following command:
    ( gpg --fingerprint --keyid-format=0xlong \
-   --list-options=no-show-uid-validity --list-sigs \
+   --list-options=no-show-uid-validity,show-unusable-subkeys --list-sigs \
    0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ; gpg \
    --armor --export 0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28 ) > \
    doc/source/static/0x80fcce3dc49bd7836fc2464664dbb05acc5e7c28.txt
