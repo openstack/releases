@@ -8,21 +8,25 @@ releases:
     projects:
       - repo: openstack/whereto
         hash: caaac8bc093f6c6860ec90e99ae4a7c4ecc2e423
-  - projects:
+  - version: 0.2.0
+    projects:
       - hash: 5e8fd69c3b1feaf78655ff7af06ebb16804087d4
         repo: openstack/whereto
-    version: 0.2.0
-  - projects:
+  - version: 0.3.0
+    projects:
       - hash: 7e37a20c79ff02615fbee1acc9d449195b36001a
         repo: openstack/whereto
-    version: 0.3.0
-  - projects:
+  - version: 0.4.0
+    projects:
       - hash: 98a91c0a3c986b25472b6d5b09eaebd08fd24782
         repo: openstack/whereto
-    version: 0.4.0
-  - projects:
+  - version: 0.5.0
+    projects:
       - hash: 061b8cedde04a41d28f431d812ee0c5fc329ee14
         repo: openstack/whereto
-    version: 0.5.0
+  - version: 0.6.0
+    projects:
+      - hash: cd0502b34afbe654a4cfa7cd83924edd860b441c
+        repo: openstack/whereto
 repository-settings:
   openstack/whereto: {}
