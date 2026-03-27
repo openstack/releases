@@ -17,6 +17,11 @@ releases:
     projects:
       - repo: openstack/designate
         hash: ee2add08760a436d0173535699a6016ef18e03ae
+  - version: 22.0.0
+    projects:
+      - repo: openstack/designate
+        hash: ee2add08760a436d0173535699a6016ef18e03ae
+    diff-start: 21.0.0
 branches:
   - name: stable/2026.1
     location: 22.0.0.0rc1

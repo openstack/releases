@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/adjutant
         hash: a05246e017d49b355521b39850957e11d1f91b86
+  - version: 12.0.0
+    projects:
+      - repo: openstack/adjutant
+        hash: a05246e017d49b355521b39850957e11d1f91b86
+    diff-start: 11.0.0
 branches:
   - name: stable/2026.1
     location: 12.0.0.0rc1

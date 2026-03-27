@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 049e41eb53ca1665b7c4c0f673ee5507eb0b1754
+  - version: 22.0.0
+    projects:
+      - repo: openstack/aodh
+        hash: 049e41eb53ca1665b7c4c0f673ee5507eb0b1754
+    diff-start: 21.0.0
 branches:
   - name: stable/2026.1
     location: 22.0.0.0rc1

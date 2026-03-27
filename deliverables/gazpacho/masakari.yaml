@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/masakari
         hash: bd31be2e61b8516b9e0614f1e304c60506886ba2
+  - version: 21.0.0
+    projects:
+      - repo: openstack/masakari
+        hash: bd31be2e61b8516b9e0614f1e304c60506886ba2
+    diff-start: 20.0.0
 branches:
   - name: stable/2026.1
     location: 21.0.0.0rc1

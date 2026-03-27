@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: a2259575a69a7dc3700a6b3d74b98deea41f2859
+  - version: 22.0.0
+    projects:
+      - repo: openstack/mistral
+        hash: a2259575a69a7dc3700a6b3d74b98deea41f2859
+    diff-start: 21.0.0
 branches:
   - name: stable/2026.1
     location: 22.0.0.0rc1
