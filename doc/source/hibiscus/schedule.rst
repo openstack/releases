@@ -23,6 +23,16 @@ April 2, 2026 - September 30, 2026 (26 weeks)
 Cross-project events
 ====================
 
+.. _h-ptg:
+
+2026.2 Hibiscus Project Team Gathering
+----------------------------------------------
+
+The week of April 20-24 is the 2026.2 Hibiscus cycle's Project Team
+Gathering week. This is when project teams meet virtually to discuss
+and agree on the possible cycle content. See details at
+https://openinfra.org/ptg/ and https://ptg.opendev.org/.
+
 .. _h-1:
 
 Hibiscus-1 milestone
