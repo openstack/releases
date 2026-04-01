@@ -1,19 +1,19 @@
 ---
 - name: hibiscus
   release-id: 2026.2
-  status: future
+  status: development
   initial-release: 2026-09-30
   next-phase:
-    status: development
-    date: 2026-04-01
+    status: maintained
+    date: 2026-09-30
 - name: gazpacho
   release-id: 2026.1
-  status: development
+  status: maintained
   slurp: yes
   initial-release: 2026-04-01
   next-phase:
-    status: maintained
-    date: 2026-04-01
+    status: unmaintained
+    date: 2027-10-27
 - name: flamingo
   release-id: 2025.2
   status: maintained
