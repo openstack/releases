@@ -18,6 +18,11 @@ releases:
     projects:
       - repo: openstack/freezer
         hash: 7d1916a7dfdf84fe7bae892abf3bc5e1a51e4603
+  - version: 18.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: 7d1916a7dfdf84fe7bae892abf3bc5e1a51e4603
+    diff-start: 17.0.0
 branches:
   - name: stable/2026.1
     location: 18.0.0.0rc1

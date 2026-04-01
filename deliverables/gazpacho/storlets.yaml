@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/storlets
         hash: a49d377dc3ed55fc60c108f5a15ecd2bd708a6c0
+  - version: 17.0.0
+    projects:
+      - repo: openstack/storlets
+        hash: a49d377dc3ed55fc60c108f5a15ecd2bd708a6c0
+    diff-start: 16.0.0
 branches:
   - name: stable/2026.1
     location: 17.0.0.0rc1

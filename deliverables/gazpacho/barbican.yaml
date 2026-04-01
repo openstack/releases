@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/barbican
         hash: f8a331a40eb21e6c8f37e07794d57aa98b120af9
+  - version: 22.0.0
+    projects:
+      - repo: openstack/barbican
+        hash: f8a331a40eb21e6c8f37e07794d57aa98b120af9
+    diff-start: 21.0.0
 branches:
   - name: stable/2026.1
     location: 22.0.0.0rc1

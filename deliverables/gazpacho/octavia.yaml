@@ -12,6 +12,11 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 6bad959e12075dd15f80f2b51259430955448db1
+  - version: 18.0.0
+    projects:
+      - repo: openstack/octavia
+        hash: 6bad959e12075dd15f80f2b51259430955448db1
+    diff-start: 17.0.0.0rc1
 branches:
   - name: stable/2026.1
     location: 18.0.0.0rc1

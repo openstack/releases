@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/tacker
         hash: 98a82a5c99bef19f8d5a6a4b3712873c64229688
+  - version: 15.0.0
+    projects:
+      - repo: openstack/tacker
+        hash: 98a82a5c99bef19f8d5a6a4b3712873c64229688
+    diff-start: 14.0.0
 branches:
   - name: stable/2026.1
     location: 15.0.0.0rc1
