@@ -1569,7 +1569,7 @@ R-1 week (Final RC deadline)
     what they will be discussing there, by creating and filling team etherpads.
     You can access the list of PTG etherpads at:
 
-    http://ptg.openstack.org/etherpads.html
+    https://ptg.opendev.org/etherpads.html
 
     General Information
     -------------------
