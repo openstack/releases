@@ -25,27 +25,22 @@
       jobs:
         - releases-tox-validate
         - releases-tox-list-changes
-        - openstack-tox-py38:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
-        - openstack-tox-py39:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
-        - openstack-tox-py310:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
         - openstack-tox-py311:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
         - openstack-tox-py312:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py313:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py314:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
