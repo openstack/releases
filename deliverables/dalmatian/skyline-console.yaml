@@ -31,6 +31,10 @@ releases:
       - repo: openstack/skyline-console
         hash: 5501bad74a522df44e2fbaa67796856782c70dcd
     diff-start: 4.0.0.0rc1
+  - version: 5.0.1
+    projects:
+      - repo: openstack/skyline-console
+        hash: 7b25e4a526d4704013f3858ffcf7d3ebc827a0fe
 branches:
   - name: stable/2024.2
     location: 5.0.0.0rc1
