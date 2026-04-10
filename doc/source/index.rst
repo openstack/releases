@@ -172,9 +172,9 @@ the date ranges during which each key was in general use.
   `key 0x22284f69d9eccdf3df7819791c711af193ff8e54`_
 * 2025-04-07..2025-10-06 (2025.2/Flamingo Cycle key):
   `key 0xc71b007ef97887fd8fb6365ceb4fd6d618e62181`_
-* 2025-10-06..2026-04-06 (2026.1/Gazpacho Cycle key):
+* 2025-10-06..2026-04-10 (2026.1/Gazpacho Cycle key):
   `key 0xb8e9315f48553ec5aff9ffe5e69d97da9efb5aff`_
-* 2026-04-06..present (2026.2/Hibiscus Cycle key):
+* 2026-04-10..present (2026.2/Hibiscus Cycle key):
   `key 0x30566c450e41d7c91e442dfb231f942f608ddeff`_
 
 .. Static key files are generated with the following command:
