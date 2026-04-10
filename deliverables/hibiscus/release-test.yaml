@@ -7,3 +7,8 @@ release-model: cycle-with-intermediary
 repository-settings:
   openstack/release-test:
     tarball-base: openstack-release-test
+releases:
+  - version: 8.4.0
+    projects:
+      - repo: openstack/release-test
+        hash: a802a845378a1c63037b5c4ca8632e34e2ff0053
