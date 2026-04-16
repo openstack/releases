@@ -16,6 +16,10 @@ releases:
       - repo: openstack/neutron-dynamic-routing
         hash: 06232f0b2c555578bb983c5cefcd8a573761f87a
     diff-start: 24.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/neutron-dynamic-routing
+        hash: 1d3ecd2cf3ebc82267406d59e06f3f3b97ffdcd4
 branches:
   - name: stable/2024.2
     location: 25.0.0.0rc1
