@@ -15,7 +15,12 @@ releases:
       - repo: openstack/aodh
         hash: 946cbc196d7f18761542c7e75e296eb524fdf2ea
     diff-start: 18.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/aodh
+        hash: faef3b0c7a84704c10d99754179989e656db5c53
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/aodh/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/aodh/2024.2.html
