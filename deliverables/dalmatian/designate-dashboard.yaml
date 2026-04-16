@@ -16,6 +16,10 @@ releases:
       - repo: openstack/designate-dashboard
         hash: db8894f0cc0526485c8578d57689a197a9081425
     diff-start: 18.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/designate-dashboard
+        hash: e7f1583643792b858142bcd4a7d99950646e6ffd
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
