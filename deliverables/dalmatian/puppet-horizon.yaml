@@ -10,7 +10,12 @@ releases:
       - hash: c3eacbed0699b75b37f888ccf9aa3267e2aef61d
         repo: openstack/puppet-horizon
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-horizon
+        hash: a552f718a48ad74e2929569990641522088d0869
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-horizon/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-horizon/2024.2.html

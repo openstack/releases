@@ -10,7 +10,12 @@ releases:
       - hash: fcf3fd4699290b180440bc775a5daadd4e25fd2d
         repo: openstack/puppet-cinder
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-cinder
+        hash: ccc8c96ee85fb0eff22dc86e5c2f188efc6d7806
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-cinder/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-cinder/2024.2.html

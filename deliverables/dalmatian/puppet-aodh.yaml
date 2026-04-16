@@ -10,7 +10,12 @@ releases:
       - hash: 105c5ca8f7d8d9a81c627d1a7141117221d89df5
         repo: openstack/puppet-aodh
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-aodh
+        hash: b91977c3cb9a3adb341f83f2936305106aadd20e
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-aodh/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-aodh/2024.2.html

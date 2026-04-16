@@ -10,7 +10,12 @@ releases:
       - hash: 430536d6c8f4f94e29d00c41ce0c31c0064a058c
         repo: openstack/puppet-swift
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-swift
+        hash: 1d6fd21fb0752bd610f15ae119a195977290a510
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-swift/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-swift/2024.2.html

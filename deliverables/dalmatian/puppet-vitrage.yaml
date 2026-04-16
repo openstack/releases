@@ -10,7 +10,12 @@ releases:
       - hash: 4e5bcf66e852d377b4176132e525e5d78db643d0
         repo: openstack/puppet-vitrage
     version: 15.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-vitrage
+        hash: 996ba16b73d0fbba63a28e857438884ea0945002
 branches:
   - name: stable/2024.2
     location: 15.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-vitrage/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-vitrage/2024.2.html

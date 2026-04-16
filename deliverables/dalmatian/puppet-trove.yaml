@@ -10,7 +10,12 @@ releases:
       - hash: c5930224d3236e392cb7384388d7559d02759f8e
         repo: openstack/puppet-trove
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-trove
+        hash: 4765f0a796aa7460312ac26e98872174bbd40b4f
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-trove/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-trove/2024.2.html

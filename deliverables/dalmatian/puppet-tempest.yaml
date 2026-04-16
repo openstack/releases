@@ -14,7 +14,12 @@ releases:
       - hash: a078702a5a698779440e951b78b96952d665d2c3
         repo: openstack/puppet-tempest
     version: 25.1.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-tempest
+        hash: 1f7e48518f6859889e1f873b6a363ee833b0031e
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-tempest/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-tempest/2024.2.html

@@ -10,7 +10,12 @@ releases:
       - hash: 4014784b53838fb0403ca98256b5d83fddf73abd
         repo: openstack/puppet-glance
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-glance
+        hash: 36ed7731903637ce6048f8946babe0678c12a3be
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-glance/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-glance/2024.2.html

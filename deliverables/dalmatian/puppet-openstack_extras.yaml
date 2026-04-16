@@ -10,6 +10,10 @@ releases:
       - hash: 1c6486d27a52154212bdc9164a4153a1d136f98a
         repo: openstack/puppet-openstack_extras
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-openstack_extras
+        hash: 824b3cf1a976162b71ab020617695b55f2e3d373
 branches:
   - name: stable/2024.2
     location: 25.0.0
