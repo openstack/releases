@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 48dbe7808f1ee8a48d68357e3cdf216d8f67f2dd
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.cache
+        hash: a7ddce62f5db3ebcd033cd82d50545f1075c5333
 branches:
   - name: stable/2024.2
     location: 3.8.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.cache/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.cache/2024.2.html

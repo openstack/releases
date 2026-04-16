@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: 145e0455d75fe11d55595e1c5dedcde0a1acdc05
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.utils
+        hash: 145e0455d75fe11d55595e1c5dedcde0a1acdc05
 branches:
   - name: stable/2024.2
     location: 7.3.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.utils/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.utils/2024.2.html

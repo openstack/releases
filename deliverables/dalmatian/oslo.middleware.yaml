@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 67a0a3906c074e942d1f671cb9d5a6e91c8537a8
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: 84328017caf79fb28fc1069d470aeb9c32f8f5d9
 branches:
   - name: stable/2024.2
     location: 6.2.0

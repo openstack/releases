@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: 2c3ce5179db91927705219e1f928c1691e6c81e8
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: cf8d7d0734ff1342fbdb67913e7b95417fc23399
 branches:
   - name: stable/2024.2
     location: 4.5.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.vmware/2024.2.html

@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/oslo.versionedobjects
         hash: 6af8327f31fa5d2bbf8838255f1bdacf8c6104f3
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.versionedobjects
+        hash: 719d41881fc785d25d3c2402021ee144804e1e3f
 branches:
   - name: stable/2024.2
     location: 3.4.0
