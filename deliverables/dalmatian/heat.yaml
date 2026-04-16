@@ -17,7 +17,12 @@ releases:
       - repo: openstack/heat
         hash: 0adfd85b1d9a8e1a0ce9ff007dc630d045b8e570
     diff-start: 22.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/heat
+        hash: 4cf5bf6e1a180ff1b25897ad92c66c173bdf505f
 branches:
   - name: stable/2024.2
     location: 23.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/heat/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/heat/2024.2.html
