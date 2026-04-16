@@ -10,3 +10,8 @@ branches:
       openstack/devstack-plugin-ceph: 3f9e35a9654c036c8cab98ec0077ea1fcd756912
 repository-settings:
   openstack/devstack-plugin-ceph: {}
+releases:
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/devstack-plugin-ceph
+        hash: 9f60356a2701fef5de09fabe0592b3e6c598de67

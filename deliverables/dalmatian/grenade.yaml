@@ -10,3 +10,8 @@ branches:
     name: stable/2024.2
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/grenade
+        hash: 96846cf447de49b884e8278fd3001badac8ee522
