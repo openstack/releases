@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/mistral-lib
         hash: 1a002b875f9bfb608d8b3df3df05039b44871fde
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/mistral-lib
+        hash: 144b6ba809da79aac55a3de27ffd9f8ac1e331e6
 branches:
   - name: stable/2024.2
     location: 3.0.0
-release-notes: https://docs.openstack.org/releasenotes/mistral-lib/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/mistral-lib/2024.2.html
