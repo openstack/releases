@@ -19,7 +19,12 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 2a35b519eb2d50b5ebcd8dd08650b95ef37dfad4
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/vitrage
+        hash: 2a35b519eb2d50b5ebcd8dd08650b95ef37dfad4
 branches:
   - name: stable/2024.2
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/vitrage/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage/2024.2.html
