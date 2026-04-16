@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/ironic-lib
         hash: 1ca3c8cf1a90ccaed619df8b4ba97dbf9e386b98
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/ironic-lib
+        hash: 1d5c9853f1f507cf5ebad665a8c35a945cc52aed
 branches:
   - name: stable/2024.2
     location: 6.2.0
