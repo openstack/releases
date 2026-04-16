@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 4439db2ff023bdd65b4e965c7a5670b4a3da2923
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 234ddb43e7b1e720701a3d063a4ad08bb76ff7b3
 branches:
   - name: stable/2024.2
     location: 4.7.0
