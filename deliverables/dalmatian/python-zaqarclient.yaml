@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: c0522e2419a982f52bd5155461b1a7315986a2f1
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 23e2491aa029c58fa87c6fe835275932296f240b
 branches:
   - name: stable/2024.2
     location: 2.8.0
