@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/python-barbicanclient
         hash: 39e46755e312e380b4b7540775ae589ed785796a
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-barbicanclient
+        hash: 44fa3ca8fc1a08b98e8351abe7b803cb4b1b2239
 branches:
   - name: stable/2024.2
     location: 7.0.0
