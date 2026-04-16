@@ -11,3 +11,8 @@ branches:
   - name: stable/2024.2
     location:
       openstack/requirements: 2d001bc6c78793fb2a80c9070572a9dc20ce482e
+releases:
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/requirements
+        hash: 9cc6272c9527bc175aedc478acb8e5fca4567ba7
