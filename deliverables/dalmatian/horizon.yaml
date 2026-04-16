@@ -26,6 +26,10 @@ releases:
     projects:
       - repo: openstack/horizon
         hash: ef95cbcfae7569ba75e4a1516dae59d091c41ff5
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/horizon
+        hash: 5a19ebd6a7bca7e904809d14f64c79eed3351472
 branches:
   - name: stable/2024.2
     location: 25.1.0
