@@ -105,7 +105,7 @@ class SigningKeysDirective(Directive):
         thead = nodes.thead()
         tgroup += thead
         header_row = nodes.row()
-        for h in ["Validity", "Series", "Cycle Key"]:
+        for h in ["Dates Used", "Series", "Cycle Key"]:
             entry = nodes.entry()
             entry += nodes.paragraph(text=h)
             header_row += entry
