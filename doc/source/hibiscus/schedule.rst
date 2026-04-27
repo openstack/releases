@@ -197,3 +197,39 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Nova
+----
+
+.. _h-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 21 May 2026 and 04 June 2026, Nova specifications targeting 2026.2 Hibiscus
+implementation will be prioritized for reviews by the Nova core team.
+
+
+.. _h-nova-spec-soft-freeze:
+
+Nova Spec Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+After 28 May 2026 (23:59 UTC), no new specs or specless blueprints will be
+accepted.
+
+.. _h-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova specs and specless blueprints for features to be implemented in
+2026.2 Hibiscus must be approved by 11 June 2026 (23:59 UTC). This deadline
+applies to all feature designs, whether they require a formal spec or not.
+
+.. _h-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 04 August 2026 and 20 August 2026, Nova prioritized code changes will be reviewed by the Nova
+core team.

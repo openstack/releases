@@ -31,17 +31,25 @@ cycle:
   - start: '2026-05-18'
     end: '2026-05-22'
     name: R-19
+    project-specific:
+      - h-nova-spec-review-day
   - start: '2026-05-25'
     end: '2026-05-29'
     name: R-18
+    project-specific:
+      - h-nova-spec-soft-freeze
   - start: '2026-06-01'
     end: '2026-06-05'
     name: R-17
     x-project:
       - h-cycle-trail
+    project-specific:
+      - h-nova-spec-review-day
   - start: '2026-06-08'
     end: '2026-06-12'
     name: R-16
+    project-specific:
+      - h-nova-spec-freeze
   - start: '2026-06-15'
     end: '2026-06-19'
     name: R-15
@@ -69,6 +77,8 @@ cycle:
   - start: '2026-08-03'
     end: '2026-08-07'
     name: R-8
+    project-specific:
+      - h-nova-review-day
   - start: '2026-08-10'
     end: '2026-08-14'
     name: R-7
@@ -79,6 +89,8 @@ cycle:
     name: R-6
     x-project:
       - h-final-lib
+    project-specific:
+      - h-nova-review-day
   - start: '2026-08-24'
     end: '2026-08-28'
     name: R-5
