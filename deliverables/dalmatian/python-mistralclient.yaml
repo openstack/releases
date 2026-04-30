@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-mistralclient
         hash: 926301e46b3cce45528572a13966107035ea4a30
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-mistralclient
+        hash: b59e54fd07d5c82c35792381b878284bbf50b34e
 branches:
   - name: stable/2024.2
     location: 5.3.0
