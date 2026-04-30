@@ -6,17 +6,17 @@ type: service
 repository-settings:
   openstack/skyline-apiserver: {}
 cycle-highlights:
-  - Support ``Masakari`` project. The skyline-apiserver adds it's policy
-    and config. The skyline-console adds it's UI.
-  - Support ``Designate`` project. The skyline-apiserver adds it's policy
-    and config. The skyline-console adds it's UI.
-  - Support editable policy files. Add policy yaml file name and path
-    options in config file, users can edit and modify the policy as
-    needed.
-  - Admin user can set ``default_project`` for user. So that when users
-    login, skyline will choose this project to authorize.
-  - Region as optional field when users login. Skyline will choose the
-    ``default_region`` from config file.
+  - Support ``Masakari`` project. The skyline-apiserver adds it's
+    policy and config. The skyline-console adds it's UI.
+  - Support ``Designate`` project. The skyline-apiserver adds it's
+    policy and config. The skyline-console adds it's UI.
+  - Support editable policy files. Add policy yaml file name and
+    path options in config file, users can edit and modify the
+    policy as needed.
+  - Admin user can set ``default_project`` for user. So that when
+    users login, skyline will choose this project to authorize.
+  - Region as optional field when users login. Skyline will choose
+    the ``default_region`` from config file.
 releases:
   - version: 5.0.0.0rc1
     projects:
@@ -27,6 +27,10 @@ releases:
       - repo: openstack/skyline-apiserver
         hash: 4e06ed4a5ab1ad454fcd1f245af982c7a9cfb759
     diff-start: 4.0.1
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/skyline-apiserver
+        hash: 0e891e9299889814a585ec22807d8cb59c88797a
 branches:
   - name: stable/2024.2
     location: 5.0.0.0rc1
