@@ -16,6 +16,10 @@ releases:
       - repo: openstack/masakari-dashboard
         hash: 30139f0865a7d26f3eae3fc7c8985285a10157b6
     diff-start: 10.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/masakari-dashboard
+        hash: 5359702bfe6ab9f8cbd868c1558553f4ce417839
 branches:
   - name: stable/2024.2
     location: 11.0.0.0rc1
