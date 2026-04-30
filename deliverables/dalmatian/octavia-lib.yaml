@@ -12,7 +12,12 @@ releases:
     projects:
       - repo: openstack/octavia-lib
         hash: c9017dff2f5fcd7d331388017da14d332cd15073
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/octavia-lib
+        hash: 6ed849c03b8d070c114bf6c9f0819a20b0e2bb96
 branches:
   - name: stable/2024.2
     location: 3.6.0
-release-notes: https://docs.openstack.org/releasenotes/octavia-lib/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/octavia-lib/2024.2.html
