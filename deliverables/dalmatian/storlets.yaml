@@ -15,7 +15,12 @@ releases:
       - repo: openstack/storlets
         hash: a4a60484cae11b378083046451f62a2731675958
     diff-start: 13.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/storlets
+        hash: 467130d3614aca1ee543da379116fb20ce625f6d
 branches:
   - name: stable/2024.2
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/storlets/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/storlets/2024.2.html
