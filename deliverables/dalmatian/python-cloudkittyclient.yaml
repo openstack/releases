@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-cloudkittyclient
         hash: 79a4606ce2841bbe9a33492dfa62f5ac49f0ed07
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: c5f5380c8f5f2a7b178cc7f41c23a63879183996
 branches:
   - name: stable/2024.2
     location: 5.2.0
