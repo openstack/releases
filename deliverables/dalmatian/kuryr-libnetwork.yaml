@@ -15,6 +15,10 @@ releases:
       - repo: openstack/kuryr-libnetwork
         hash: a4b276cfff1b2d88a58fd6c6a1c99e3761984ebd
     diff-start: 13.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: dccf32dcd47d50aa7f734e7ef9973b4446f1d26c
 branches:
   - name: stable/2024.2
     location: 14.0.0.0rc1
