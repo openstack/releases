@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-blazarclient
         hash: e1f6650eee3fb460f4083269562496cc54383a89
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-blazarclient
+        hash: 59dd89d4588ed5a50aaea487ed5255372b94601f
 branches:
   - name: stable/2024.2
     location: 4.1.0
