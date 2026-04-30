@@ -11,6 +11,10 @@ releases:
     projects:
       - repo: openstack/python-brick-cinderclient-ext
         hash: fbefcb4ab7353d9b89f543e91adc54d9ce8d405e
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-brick-cinderclient-ext
+        hash: 5a957cdb21a129b24333c1f718db97b9dc4d09d9
 branches:
   - name: stable/2024.2
     location: 2.4.0
