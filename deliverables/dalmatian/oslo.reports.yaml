@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: a0cde114559f0047a2ff5e9e8df40906c59478d5
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.reports
+        hash: 14e57d5ac81b310c305587108c9596bb93b3ecd8
 branches:
   - name: stable/2024.2
     location: 3.4.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.reports/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.reports/2024.2.html

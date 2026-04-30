@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/taskflow
         hash: a8b48d6e02fad5dc3d6792a3a34f0beec394939d
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/taskflow
+        hash: 4ce79d9601fa0e9fdf02fbd66e41b9b1c28305f0
 branches:
   - name: stable/2024.2
     location: 5.9.1
-release-notes: https://docs.openstack.org/releasenotes/taskflow/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/taskflow/2024.2.html

@@ -11,7 +11,12 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: c42ef394dd70503fc0b12a6a2d84f1173fd2bcd7
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: f8db079f9e47913c5b21bf41a20c42252a474dd2
 branches:
   - name: stable/2024.2
     location: 7.3.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.rootwrap/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.rootwrap/2024.2.html
