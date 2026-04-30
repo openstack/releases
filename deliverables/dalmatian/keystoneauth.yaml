@@ -20,7 +20,12 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: a6cf0cfa6ddf023fea11532c96367fcd09e145f5
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/keystoneauth
+        hash: a6cf0cfa6ddf023fea11532c96367fcd09e145f5
 branches:
   - name: stable/2024.2
     location: 5.8.0
-release-notes: https://docs.openstack.org/releasenotes/keystoneauth/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/keystoneauth/2024.2.html
