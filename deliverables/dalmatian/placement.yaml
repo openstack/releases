@@ -25,6 +25,10 @@ releases:
     projects:
       - repo: openstack/placement
         hash: 8345235b183c5fcf4dc5c9f7b075fd99168db022
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/placement
+        hash: 42e8db0f9fa20e488ef3b726115dfa7466581c2a
 branches:
   - name: stable/2024.2
     location: 12.0.0.0rc1
