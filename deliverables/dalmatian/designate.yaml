@@ -21,6 +21,10 @@ releases:
     projects:
       - repo: openstack/designate
         hash: 5bfc35864c28a97ded6104dea05fa9691a7f14d8
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/designate
+        hash: 9d3ff3b26c5e12eb2ad3948761f67b1a86db911c
 branches:
   - name: stable/2024.2
     location: 19.0.0.0rc1
