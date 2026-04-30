@@ -20,6 +20,10 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: 456f42e1b9d9abf0f620185a040cecfa10ad6447
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/watcher
+        hash: 56dae6071e1b105c7905975b93e46171e9721be1
 branches:
   - name: stable/2024.2
     location: 13.0.0.0rc1
