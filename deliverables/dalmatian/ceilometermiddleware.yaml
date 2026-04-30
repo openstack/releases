@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/ceilometermiddleware
         hash: dec181727cda490bdd128211362dacac3ea8641f
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/ceilometermiddleware
+        hash: 51f055724c5e2784edc998a5df392849808a088e
 branches:
   - name: stable/2024.2
     location: 3.5.0

@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/python-observabilityclient
         hash: e64b943b77e0c6f2939d7aa6a58d42fc38d6b81b
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/python-observabilityclient
+        hash: df8e8b42a4eb8f458a66813236848ae82f4f6eea
 branches:
   - name: stable/2024.2
     location: 0.3.0
