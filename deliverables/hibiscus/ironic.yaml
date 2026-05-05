@@ -6,3 +6,8 @@ team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+releases:
+  - version: 36.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 1114d43ca8cde969e87dd99f5c70cc9c5a57fe93
