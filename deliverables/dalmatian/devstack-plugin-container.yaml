@@ -10,3 +10,8 @@ branches:
       openstack/devstack-plugin-container: 3e2a0ffe4fd01db7687e4ef23ab23c4ae0bacb50
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: 0460e139b761b5d0b75107031a50157bebbfcfd2
