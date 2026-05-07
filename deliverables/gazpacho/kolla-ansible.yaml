@@ -5,3 +5,11 @@ team: kolla
 type: trailing
 repository-settings:
   openstack/kolla-ansible: {}
+releases:
+  - version: 22.0.0.0rc1
+    projects:
+      - repo: openstack/kolla-ansible
+        hash: 627ed9b9a8f8dcb7885de00a956c65bbbb369af0
+branches:
+  - name: stable/2026.1
+    location: 22.0.0.0rc1
