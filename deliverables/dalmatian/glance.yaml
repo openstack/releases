@@ -6,14 +6,15 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - Added support of new add/get location APIs which replaces the image-update
-    (old location-add) mechanism for consumers like cinder and nova
-    to address ``OSSN-0090`` and ``OSSN-0065``.
-  - Removed deprecated ``location_strategy`` functionality which was
-    used to prioritize location order for downloading the image.
-  - Deprecated ``metadata_encryption_key`` config option since it's
-    related functionality doesn't serve the purpose of encryption of
-    location metadata.
+  - Added support of new add/get location APIs which replaces the
+    image-update (old location-add) mechanism for consumers like
+    cinder and nova to address ``OSSN-0090`` and ``OSSN-0065``.
+  - Removed deprecated ``location_strategy`` functionality which
+    was used to prioritize location order for downloading the
+    image.
+  - Deprecated ``metadata_encryption_key`` config option since
+    it's related functionality doesn't serve the purpose of
+    encryption of location metadata.
 repository-settings:
   openstack/glance: {}
 releases:
@@ -46,7 +47,12 @@ releases:
     projects:
       - repo: openstack/glance
         hash: 76b1f02e53641becf8ec969d56c282c70828f9ca
+  - version: 29.2.1
+    projects:
+      - repo: openstack/glance
+        hash: 2fb395a36db30d8b6a11ad2cfe4c62a035b979f6
 branches:
   - name: stable/2024.2
     location: 29.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/glance/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/glance/2024.2.html
