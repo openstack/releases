@@ -17,6 +17,10 @@ releases:
       - repo: openstack/cyborg
         hash: e408b4c1b7e233a954da1ab5b6119014f8d95b26
     diff-start: 14.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/cyborg
+        hash: 5c7bde4256b0e6fe4ba94fb5ba42a1c9116821af
 branches:
   - name: stable/2025.2
     location: 15.0.0.0rc1
