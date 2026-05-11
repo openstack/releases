@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.metrics: {}
+releases:
+  - version: 0.16.0
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: 12405b3c87702ea41643e1b04f0068a228eb5ce7
