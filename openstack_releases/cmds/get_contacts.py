@@ -19,6 +19,7 @@ data from release_liaisons.yaml
 """
 
 import argparse
+import pathlib
 import sys
 
 from openstack_governance import governance
@@ -48,11 +49,23 @@ def main():
                            help='Find Liaisons details')
     who_group.add_argument('--all', action='store_true', default=False,
                            help='Find Liaisons details')
+    parser.add_argument('--governance-repo',
+                        type=lambda p: pathlib.Path(p).absolute(),
+                        help='Path to local governance repo')
     args = parser.parse_args()
 
     if not (args.ptl or args.liaisons):
         args.all = True
-    gov_data = governance.Governance.from_remote_repo()
+
+    if args.governance_repo:
+        if not args.governance_repo.exists():
+            print(f'ERROR: {args.governance_repo} is not a valid directory',
+                  file=sys.stderr)
+            sys.exit(1)
+        gov_data = governance.Governance.from_local_repo(
+            str(args.governance_repo))
+    else:
+        gov_data = governance.Governance.from_remote_repo()
     liaison_data = liaisons.get_liaisons()
 
     for team_name in args.team:
