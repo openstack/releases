@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-designate: {}
+releases:
+  - projects:
+      - hash: 08ac932e93887510d53a27916211d871ed953b3f
+        repo: openstack/puppet-designate
+    version: 28.0.0
+branches:
+  - name: stable/2026.1
+    location: 28.0.0
