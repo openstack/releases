@@ -50,6 +50,7 @@ cycle:
     name: R-16
     project-specific:
       - h-nova-spec-freeze
+      - h-manila-spec-freeze
   - start: '2026-06-15'
     end: '2026-06-19'
     name: R-15
@@ -68,12 +69,17 @@ cycle:
   - start: '2026-07-13'
     end: '2026-07-17'
     name: R-11
+    project-specific:
+      - h-manila-bugsquash
   - start: '2026-07-20'
     end: '2026-07-24'
     name: R-10
   - start: '2026-07-27'
     end: '2026-07-31'
     name: R-9
+    project-specific:
+      - h-manila-fpfreeze
+      - h-manila-new-driver-deadline
   - start: '2026-08-03'
     end: '2026-08-07'
     name: R-8
@@ -85,6 +91,7 @@ cycle:
     x-project:
       - h-extra-acs
     project-specific:
+      - h-manila-mid-cycle
       - h-openstackclient-freeze
       - h-oslo-feature-freeze
   - start: '2026-08-17'
@@ -108,6 +115,8 @@ cycle:
     name: R-4
     x-project:
       - h-cycle-highlights
+    project-specific:
+      - h-manila-bugsquash
   - start: '2026-09-07'
     end: '2026-09-11'
     name: R-3

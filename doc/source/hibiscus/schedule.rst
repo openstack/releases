@@ -197,6 +197,52 @@ For examples of previous release highlights:
 Project-specific events
 =======================
 
+Manila
+------
+
+.. _h-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2026.2 Hibiscus must be approved by the end of
+the week.
+
+.. _h-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _h-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week. Collaborative
+review sessions will happen in the mid cycle, in order to speed up the
+review process.
+
+.. _h-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted to fast-track the closure of bugs.
+
+.. _h-manila-mid-cycle:
+
+Manila Mid Cycle
+^^^^^^^^^^^^^^^^
+
+Manila community mid cycle checkpoint on features and deliverables planned
+for the release.
+
+
 Nova
 ----
 
