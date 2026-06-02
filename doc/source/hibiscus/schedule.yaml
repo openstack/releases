@@ -84,6 +84,8 @@ cycle:
     name: R-7
     x-project:
       - h-extra-acs
+    project-specific:
+      - h-openstackclient-freeze
   - start: '2026-08-17'
     end: '2026-08-21'
     name: R-6
