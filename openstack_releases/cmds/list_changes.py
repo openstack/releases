@@ -34,7 +34,6 @@ from openstack_releases import deliverable
 from openstack_releases import gerritutils
 from openstack_releases import gitutils
 from openstack_releases import hound
-from openstack_releases import liaisons
 from openstack_releases import release_notes
 from openstack_releases import yamlutils
 
@@ -235,8 +234,6 @@ def main():
         False,
     )
 
-    liaison_data = liaisons.get_liaisons()
-
     # Remove any inherited PAGER environment variable to avoid
     # blocking the output waiting for input.
     os.environ['PAGER'] = ''
@@ -265,7 +262,7 @@ def main():
             if team:
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
-                for liaison in liaison_data.get(team.name.lower(), []):
+                for liaison in team.liasons:
                     print('  Liaison: %(name)s (%(irc)s)' % liaison)
                 team_deliv = team.deliverables.get(deliv.name)
                 if team_deliv:

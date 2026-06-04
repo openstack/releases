@@ -105,11 +105,6 @@ def main():
                               _SERIES_SCHEMA, args.debug)
         )
 
-        errors.extend(
-            validate_one_file('data/release_liaisons.yaml',
-                              _LIAISONS_SCHEMA, args.debug)
-        )
-
     filenames = args.input or sorted(glob.glob('deliverables/*/*.yaml'))
 
     for filename in filenames:

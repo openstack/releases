@@ -138,9 +138,8 @@ Week after previous release
     ================
 
     If anyone should be added as a release liaison, or removed, just submit a patch
-    to update the data/release_liaisons.yaml file in the openstack/releases repo
+    to update the 'reference/projects.yaml' file in the 'openstack/governance' repo
     with current information for your team.
-
 
     Please contact us at any point with any questions. We can be reached on the
     openstack-discuss mailing list with the [release] tag, or on IRC in the
@@ -174,7 +173,7 @@ Week after previous release
     delegated to release liaisons. Now is a good time to review release
     liaison information for your team and make sure it is up to date:
 
-    https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml
+    https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml
 
     By default, all your team deliverables from the $PREVIOUS_SERIES release are
     continued in $SERIES with a similar release model.
@@ -1383,11 +1382,9 @@ R-2 week
 
    .. note::
 
-      Information about PTLs could be easily retrieved either from the
+      Information about PTLs can be easily retrieved either from the
       `governance project
-      <https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml>`__
-      or from the `release project
-      <https://opendev.org/openstack/releases/src/branch/master/data/release_liaisons.yaml>`__.
+      <https://opendev.org/openstack/governance/src/branch/master/reference/projects.yaml>`__.
 
    - At this point all projects should have their branches created,
      as doing the branching first is a prerequisite to allow us to branch

@@ -14,8 +14,7 @@
 
 """Get the PTL and release liaison information.
 
-Grab the PTL's contact details from the governance repo; and Liaisons
-data from release_liaisons.yaml
+Grab the PTL and/or Release Liaisons' contact details from the governance repo.
 """
 
 import argparse
@@ -24,14 +23,25 @@ import sys
 
 from openstack_governance import governance
 
-from openstack_releases import liaisons
 
-
-class Contact(object):
+class Contact:
     def __init__(self, contact_data):
-        self.name = contact_data['name']
-        self.irc = contact_data['irc']
-        self.email = contact_data['email']
+        self.name = contact_data['name'].strip()
+        self.irc = contact_data['irc'].strip()
+        self.email = contact_data['email'].strip()
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Contact):
+            return NotImplemented
+
+        return (
+            other.name == self.name and
+            other.irc == self.irc and
+            other.email == self.email
+        )
+
+    def __hash__(self) -> int:
+        return hash((self.name, self.irc, self.email))
 
     def __str__(self):
         return ("Name     : {0.name}\n" +
@@ -48,7 +58,7 @@ def main():
     who_group.add_argument('--liaisons', action='store_true', default=False,
                            help='Find Liaisons details')
     who_group.add_argument('--all', action='store_true', default=False,
-                           help='Find Liaisons details')
+                           help='Find both PTL and Liaisons details')
     parser.add_argument('--governance-repo',
                         type=lambda p: pathlib.Path(p).absolute(),
                         help='Path to local governance repo')
@@ -66,7 +76,6 @@ def main():
             str(args.governance_repo))
     else:
         gov_data = governance.Governance.from_remote_repo()
-    liaison_data = liaisons.get_liaisons()
 
     for team_name in args.team:
         contacts = set()
@@ -78,18 +87,15 @@ def main():
                       team_name,
                       file=sys.stderr)
             else:
-                # Some teams may be PTL-less
-                if team_data.ptl.get('email', None):
+                if team_data.leadership_type == 'ptl':
                     contacts.add(Contact(team_data.ptl))
-                # At this point we consider this team as a team following the
-                # DPL governance model
-                else:
+                else:  # leadership_type == 'distributed'
                     rel_liaisons = team_data.liaisons['release']
                     for liaison in rel_liaisons:
                         contacts.add(Contact(liaison))
 
         if args.liaisons or args.all:
-            for liaison in liaison_data.get(team_name.lower(), []):
+            for liaison in team_data.liaisons.get('release', []):
                 contacts.add(Contact(liaison))
 
         team_header = '%s Contacts:' % team_name.title()
