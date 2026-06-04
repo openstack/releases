@@ -262,7 +262,7 @@ def main():
             if team:
                 print('found team %s' % team_name)
                 print('  PTL    : %(name)s (%(irc)s)' % team.ptl)
-                for liaison in team.liasons:
+                for liaison in team.liaisons:
                     print('  Liaison: %(name)s (%(irc)s)' % liaison)
                 team_deliv = team.deliverables.get(deliv.name)
                 if team_deliv:
