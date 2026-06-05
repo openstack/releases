@@ -378,6 +378,11 @@ Between Milestone-1 and Milestone-2
     tooling for your deliverables. See the MembershipFreeze description for
     more details: https://releases.openstack.org/$SERIES/schedule.html#$S-mf
 
+    Note that deliverables which will not be included in the final release
+    should have their deliverable files removed from
+    https://opendev.org/openstack/releases/src/branch/master/deliverables/$series
+    instead.
+
     Finally, now may be a good time for teams to check on any stable
     releases that need to be done for your deliverables. If you have
     bugfixes that have been backported, but no stable release getting
