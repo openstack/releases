@@ -79,24 +79,25 @@ def main():
 
     for team_name in args.team:
         contacts = set()
+        try:
+            team_data = gov_data.get_team(team_name)
+        except ValueError:
+            print('WARNING: Unable to find team [%s] in governance data' %
+                  team_name,
+                  file=sys.stderr)
+            continue
         if args.ptl or args.all:
-            try:
-                team_data = gov_data.get_team(team_name)
-            except ValueError:
-                print('WARNING: Unable to find team [%s] in governance data' %
-                      team_name,
-                      file=sys.stderr)
-            else:
-                if team_data.leadership_type == 'ptl':
-                    contacts.add(Contact(team_data.ptl))
-                else:  # leadership_type == 'distributed'
-                    rel_liaisons = team_data.liaisons['release']
-                    for liaison in rel_liaisons:
-                        contacts.add(Contact(liaison))
+            if team_data.leadership_type == 'ptl':
+                contacts.add(Contact(team_data.ptl))
+            else:  # leadership_type == 'distributed'
+                rel_liaisons = team_data.liaisons['release']
+                for liaison in rel_liaisons:
+                    contacts.add(Contact(liaison))
 
         if args.liaisons or args.all:
-            for liaison in team_data.liaisons.get('release', []):
-                contacts.add(Contact(liaison))
+            if 'release' in team_data.liaisons:
+                for liaison in team_data.liaisons['release']:
+                    contacts.add(Contact(liaison))
 
         team_header = '%s Contacts:' % team_name.title()
         print()
