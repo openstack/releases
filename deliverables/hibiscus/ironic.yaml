@@ -11,3 +11,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: 1114d43ca8cde969e87dd99f5c70cc9c5a57fe93
+  - version: 37.0.0
+    projects:
+      - repo: openstack/ironic
+        hash: 31a6daca48fee0c75e84562ed7bd46d03a3006e4
+branches:
+  - name: bugfix/37.0
+    location: 37.0.0
