@@ -20,3 +20,11 @@ cycle-highlights:
     Added ability to use ``uv`` as a Python package installer into
     virtualenvs. Wheels build and virtalenv creation is still handled
     in "old" fashion.
+releases:
+  - version: 33.0.0.0rc1
+    projects:
+      - repo: openstack/openstack-ansible
+        hash: e167fe2fb544d98adda3b5573a0f500d6821b29e
+branches:
+  - name: stable/2026.1
+    location: 33.0.0.0rc1
