@@ -35,6 +35,10 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 312aa6a86ac8e62f6ed4f1e9473fdabbbb7a4b1e
+  - version: yoga-eol
+    projects:
+      - repo: openstack/magnum
+        hash: 5ea6e0835e0e1ed36d9c5db8a3c9768a5b42b880
 branches:
   - name: stable/yoga
     location: 14.0.0.0rc1
