@@ -39,6 +39,10 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: d7f4cf2842e814c0e66c861708e24789c47e13ea
+  - version: 26.0.4
+    projects:
+      - repo: openstack/neutron
+        hash: 68346f102f34be9345e8e590b68622101a9c4922
 cycle-highlights:
   - The Linux Bridge ML2 driver has been removed, users are advised
     to migrate to OVN.
