@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.rootwrap: {}
+releases:
+  - version: 7.10.0
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: 1dd8ccac370e399fe59f3cb520d322e0b678861a
