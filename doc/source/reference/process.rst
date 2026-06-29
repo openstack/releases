@@ -1342,7 +1342,7 @@ R-2 week
    - You can preview unreleased changes by using::
 
       $ tox -e venv -- list-deliverables --type tempest-plugin
-      $ tools/list_unreleased_changes.sh wallaby <tempest-plugin-projects>
+      $ tools/list_unreleased_changes.sh $series <tempest-plugin-projects>
 
    - Process auto release for those who need to be released::
 

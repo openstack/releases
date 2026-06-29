@@ -255,8 +255,30 @@ def branch_exists(workdir, repo, prefix, identifier):
 
 
 def stable_branch_exists(workdir, repo, series):
-    "Does the stable/series branch exist?"
-    return branch_exists(workdir, repo, 'stable', series)
+    """Does the stable branch for the given series exist?
+
+    Accepts either a series name (e.g. 'gazpacho') or a release-id
+    (e.g. '2026.1'). A series name is resolved to the full branch
+    name via get_full_branch_name(); a release-id is checked
+    directly as stable/<release-id>.
+
+    :param workdir: The working directory for the local clone.
+    :param repo: The name of the repo.
+    :param series: A series name or release-id.
+    :returns: The full branch name if found, empty string otherwise.
+    """
+    try:
+        full_branch = get_full_branch_name(series)
+    except (KeyError, TypeError):
+        full_branch = None
+    if full_branch:
+        prefix, identifier = full_branch.split('/', 1)
+        if branch_exists(workdir, repo, prefix, identifier):
+            return full_branch
+        return ''
+    if branch_exists(workdir, repo, 'stable', series):
+        return 'stable/%s' % series
+    return ''
 
 
 def check_branch_sha(workdir, repo, series, sha):

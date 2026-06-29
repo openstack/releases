@@ -62,7 +62,7 @@ def main():
                         help="show dates in the change log")
     parser.add_argument("--series", "-s",
                         default="",
-                        help="release series name, such as 'kilo'",
+                        help="release series name, such as 'gazpacho'",
                         )
     parser.add_argument("--stable",
                         default=False,

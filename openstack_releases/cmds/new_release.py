@@ -472,16 +472,12 @@ def main():
             # Figure out the hash for the HEAD of the branch.
             gitutils.clone_repo(workdir, repo)
 
-            branches = gitutils.get_branches(workdir, repo)
             version = 'master'
             if series != '_independent':
-                version = 'origin/unmaintained/%s' % get_stable_branch_id(series)
-                if not any(branch for branch in branches
-                           if branch.endswith(version)):
-                    version = 'origin/stable/%s' % get_stable_branch_id(series)
-                    if not any(branch for branch in branches
-                               if branch.endswith(version)):
-                        version = 'master'
+                branch = gitutils.stable_branch_exists(
+                    workdir, repo, series)
+                if branch:
+                    version = 'origin/%s' % branch
 
             sha = gitutils.sha_for_tag(workdir, repo, version)
 

@@ -29,4 +29,4 @@ fi
 
 repos="$(list-deliverables --repos --series $SERIES)"
 
-$TOOLSDIR/list_unreleased_changes.sh stable/$SERIES $repos
+$TOOLSDIR/list_unreleased_changes.sh $SERIES $repos

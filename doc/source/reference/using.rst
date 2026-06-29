@@ -141,7 +141,7 @@ Use the ``venv`` tox environment to run the tool, like this:
 
    $ tox -e venv -- new-release SERIES DELIVERABLE TYPE
 
-The SERIES value should be the release series, such as "pike".
+The SERIES value should be the release series name, such as "gazpacho".
 
 The DELIVERABLE value should be the deliverable name, such as
 "oslo.config" or "cinder".
@@ -162,15 +162,15 @@ a change to the minimum allowed version of a dependency.
 new-series automatically includes a stable branch for the first
 release candidate.
 
-If the most recent release of cinder during the pike series is
+If the most recent release of cinder during the gazpacho series is
 11.0.0.0b3 then running:
 
 ::
 
-   $ tox -e venv -- new-release pike cinder rc
+   $ tox -e venv -- new-release gazpacho cinder rc
 
 detects that this is the first release candidate and updates the file
-deliverables/pike/cinder.yaml with the new release and a new stable
+deliverables/gazpacho/cinder.yaml with the new release and a new stable
 branch.
 
 If a deliverable includes multiple git repositories, all of the
@@ -960,18 +960,21 @@ commit the changes, and push the patch to gerrit.
 tools/list_unreleased_changes.sh
 --------------------------------
 
-Given a branch and one or more repositories, produce a list of the
+Given a series and one or more repositories, produce a list of the
 changes in those repositories since their last tag on that
 branch. This is useful for deciding if a project needs to prepare a
 release, and for predicting what the next release version should be by
 looking at the commit logs.
 
+The series argument accepts a series name (e.g. ``gazpacho``),
+a release-id (e.g. ``2026.1``), or ``stable/<release-id>``.
+
 ::
 
-  ./tools/list_unreleased_changes.sh master openstack/oslo.config
+  ./tools/list_unreleased_changes.sh gazpacho openstack/oslo.config
 
 Print the list of changes in ``openstack/oslo.config`` along the
-master branch.
+branch for the gazpacho series.
 
 tools/list_unreleased_changes_for_team.sh
 -----------------------------------------
@@ -984,11 +987,11 @@ the commit logs.
 
 ::
 
-  ./tools/list_unreleased_changes_for_team.sh stein oslo
+  ./tools/list_unreleased_changes_for_team.sh gazpacho oslo
 
 Print the list of changes in Oslo team repositories along the branch
-for the stein release ('master' before the release and 'stable/stein'
-after the release).
+for the gazpacho release ('master' before the release and
+'stable/2026.1' after the release).
 
 tools/list_library_unreleased_changes.sh
 ----------------------------------------
@@ -999,20 +1002,20 @@ project.
 list_stable_unreleased_changes.sh
 ---------------------------------
 
-Runs list_unreleased_changes.sh with the given branch for all
+Runs list_unreleased_changes.sh with the given series for all
 repositories.
 
 
 ::
 
-  ./list_stable_unreleased_changes.sh stable/liberty
+  ./list_stable_unreleased_changes.sh epoxy
 
 
 is equivalent to:
 
 ::
 
-  ./list_unreleased_changes.sh stable/liberty $(list-deliverables --repos --series liberty)
+  ./list_unreleased_changes.sh epoxy $(list-deliverables --repos --series epoxy)
 
 list-eom-series
 ---------------

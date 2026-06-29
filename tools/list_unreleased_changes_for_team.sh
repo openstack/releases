@@ -16,7 +16,7 @@
 
 if [[ $# -lt 2 ]]; then
     echo "Usage: $(basename $0) <series> <team>"
-    echo "series should be e.g. 'stein' or 'rocky'"
+    echo "series should be a series name, e.g. 'gazpacho'"
     echo "team should be e.g. glance"
     exit 1
 fi
