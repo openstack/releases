@@ -1,0 +1,13 @@
+---
+launchpad: grian-ui
+release-model: cycle-with-intermediary
+team: Telemetry
+release-type: horizon
+type: horizon-plugin
+repository-settings:
+  openstack/grian-ui: {}
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/grian-ui
+        hash: 7590259f25e7106b824df8853a600f4ae618dbe1
