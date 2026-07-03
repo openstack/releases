@@ -162,17 +162,6 @@ def get_last_release(release_history, deliverable, release_type):
     return None
 
 
-def get_stable_branch_id(series):
-    """Retrieve the stable branch ID of the series.
-
-    Returns the release-id if the series has such field, otherwise
-    returns the series name. This is needed for the new stable branch
-    naming style: stable/2023.1 (versus the old style: stable/zed).
-    """
-    series_status_data = series_status.SeriesStatus.default()
-    return series_status_data[series].release_id
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -298,8 +287,8 @@ def main():
         # Split last_version e.g. 2.1.0 to ['2', '1', '0'], but
         # do not split e.g. 2023.1-eom tag to ['2023', '1-eom']
         if series != '_independent' and (
-                f"{get_stable_branch_id(series)}-eol" == last_release['version'] or
-                f"{get_stable_branch_id(series)}-eom" == last_release['version']):
+                f"{series_status.get_stable_branch_id(series)}-eol" == last_release['version'] or
+                f"{series_status.get_stable_branch_id(series)}-eom" == last_release['version']):
             last_version = [last_release['version']]
         else:
             last_version = last_release['version'].split('.')
@@ -314,7 +303,7 @@ def main():
 
     # Validate new tag can be applied
     if (last_version and series != '_independent' and
-            f'{get_stable_branch_id(series)}-eol' in last_version[0]):
+            f'{series_status.get_stable_branch_id(series)}-eol' in last_version[0]):
         raise ValueError('Cannot create new release after EOL tagging.')
 
     if last_version is None:
@@ -416,11 +405,11 @@ def main():
         }
         increment = None
         new_version_parts = None
-        new_version = '{}-{}'.format(get_stable_branch_id(args.series), args.release_type)
+        new_version = '{}-{}'.format(series_status.get_stable_branch_id(args.series), args.release_type)
 
     else:
         if (last_version and series != '_independent' and
-                f'{get_stable_branch_id(series)}-eom' in last_version[0]):
+                f'{series_status.get_stable_branch_id(series)}-eom' in last_version[0]):
             raise ValueError('Cannot create new release after EOM tagging.')
         increment = {
             'bugfix': (0, 0, 1),
@@ -555,7 +544,7 @@ def main():
     deliverable_info['releases'].append(new_release_info)
 
     if add_stable_branch:
-        branch_name = 'stable/{}'.format(get_stable_branch_id(series))
+        branch_name = 'stable/{}'.format(series_status.get_stable_branch_id(series))
 
         # First check if this branch is already defined
         if 'branches' in deliverable_info:
@@ -595,7 +584,7 @@ def main():
 
     if is_eom:
         add_unmaintained_branch = True
-        branch_name = 'unmaintained/{}'.format(get_stable_branch_id(series))
+        branch_name = 'unmaintained/{}'.format(series_status.get_stable_branch_id(series))
 
         # First check if this branch is already defined
         if 'branches' in deliverable_info:

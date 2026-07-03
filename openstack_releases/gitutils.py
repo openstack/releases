@@ -30,30 +30,6 @@ LOG = logging.getLogger(__name__)
 GIT_TAG_TEMPLATE = 'https://opendev.org/%s/src/tag/%s'
 
 
-def get_stable_branch_id(series):
-    """Retrieve the stable branch ID of the series.
-
-    Returns the release-id if the series has such field, otherwise
-    returns the series name. This is needed for the new stable branch
-    naming style: stable/2023.1 (versus the old style: stable/zed).
-    """
-    series_status_data = series_status.SeriesStatus.default()
-    return series_status_data[series].release_id
-
-
-def get_full_branch_name(series):
-    """Retrieve the full branch name for the series.
-
-    Returns stable/<release-id> if the series is still maintained
-    or returns unmaintained/<release-id> if the series already went
-    to Unmaintained.
-    """
-    series_status_data = series_status.SeriesStatus.default()
-    return '%s/%s' % (
-        'unmaintained' if series_status_data[series].is_eom else 'stable',
-        series_status_data[series].release_id)
-
-
 def find_modified_deliverable_files():
     "Return a list of files modified by the most recent commit."
     results = processutils.check_output(
@@ -259,7 +235,7 @@ def stable_branch_exists(workdir, repo, series):
 
     Accepts either a series name (e.g. 'gazpacho') or a release-id
     (e.g. '2026.1'). A series name is resolved to the full branch
-    name via get_full_branch_name(); a release-id is checked
+    name via series_status.get_full_branch_name(); a release-id is checked
     directly as stable/<release-id>.
 
     :param workdir: The working directory for the local clone.
@@ -268,7 +244,7 @@ def stable_branch_exists(workdir, repo, series):
     :returns: The full branch name if found, empty string otherwise.
     """
     try:
-        full_branch = get_full_branch_name(series)
+        full_branch = series_status.get_full_branch_name(series)
     except (KeyError, TypeError):
         full_branch = None
     if full_branch:
@@ -295,7 +271,7 @@ def check_branch_sha(workdir, repo, series, sha):
     if stable/N exists we could not create stable/N-1).
 
     """
-    remote_match = 'remotes/origin/%s' % get_full_branch_name(series)
+    remote_match = 'remotes/origin/%s' % series_status.get_full_branch_name(series)
     try:
         containing_branches = _filter_branches(
             processutils.check_output(

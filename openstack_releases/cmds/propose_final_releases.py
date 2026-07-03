@@ -30,17 +30,6 @@ from openstack_releases import yamlutils
 PRE_RELEASE = re.compile('(a|b|rc)')
 
 
-def get_stable_branch_id(series):
-    """Retrieve the stable branch ID of the series.
-
-    Returns the release-id if the series has such field, otherwise
-    returns the series name. This is needed for the new stable branch
-    naming style: stable/2023.1 (versus the old style: stable/zed).
-    """
-    series_status_data = series_status.SeriesStatus.default()
-    return series_status_data[series].release_id
-
-
 def get_prior_branch_point(workdir, repo, branch):
     """Return the tag of the base of the branch.
 
@@ -192,7 +181,7 @@ def main():
             (latest_release.version.split('.')[:-1] + ['0'])[:3]
         )
 
-        branch = 'stable/{}'.format(get_stable_branch_id(args.prior_series))
+        branch = 'stable/{}'.format(series_status.get_stable_branch_id(args.prior_series))
         diff_start = get_prior_branch_point(
             workdir, projects[0].repo.name, branch,
         )

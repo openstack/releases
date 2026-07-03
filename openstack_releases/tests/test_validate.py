@@ -875,7 +875,7 @@ class TestValidateReleaseBranchMembership(base.BaseTestCase):
         self.assertEqual(0, len(self.ctx.warnings))
         self.assertEqual(0, len(self.ctx.errors))
 
-    @mock.patch('openstack_releases.gitutils.get_full_branch_name')
+    @mock.patch('openstack_releases.series_status.get_full_branch_name')
     def test_not_descendent(self, get_full_branch_name):
         get_full_branch_name.configure_mock(
             return_value='stable/meiji',
