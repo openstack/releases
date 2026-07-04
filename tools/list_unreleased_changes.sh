@@ -15,10 +15,12 @@
 # Provide a list of the unreleased changes in the given repositories
 
 if [[ $# -lt 2 ]]; then
-    echo "Usage: $(basename $0) <branch> <repo> [<repo>...]"
+    echo "Usage: $(basename $0) <series> <repo> [<repo>...]"
+    echo "series can be a series name, release-id, or stable/<release-id>"
     echo "repo should be e.g. openstack/glance"
     echo
-    echo "Example: $(basename $0) victoria oslo.rootwrap"
+    echo "Example: $(basename $0) gazpacho oslo.rootwrap"
+    echo "Example: $(basename $0) stable/2026.1 oslo.rootwrap"
     echo "Example: $(basename $0) independent reno bugfix"
     echo
     echo "For further details about how to use the command:"

@@ -24,6 +24,7 @@ from reno import config as reno_config
 from reno import formatter
 from reno import loader
 
+from openstack_releases import gitutils
 from openstack_releases import rst2txt
 from openstack_releases import yamlutils
 
@@ -352,7 +353,7 @@ def generate_release_notes(repo, repo_path,
         )
         branch = None
         if is_stable and series:
-            branch = 'origin/stable/%s' % series
+            branch = 'origin/stable/%s' % gitutils.get_stable_branch_id(series)
         cfg.override(branch=branch)
         ldr = loader.Loader(conf=cfg, ignore_cache=True)
         if end_revision in ldr.versions:

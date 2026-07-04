@@ -180,7 +180,8 @@ def main():
         help="Output format")
     parser.add_argument(
         'branch',
-        help=('Branch to analyze'),
+        help=('Series to analyze. Accepts a series name (e.g. gazpacho), '
+              'a release-id (e.g. 2026.1), or stable/<release-id>'),
     )
     parser.add_argument(
         'repos',
@@ -260,10 +261,9 @@ def main():
         # Determine which branch we should actually be looking
         # at. Assume any series for which there is no stable
         # branch will be on 'master'.
-        branch = args.branch.replace('stable/', '')
-        if gitutils.stable_branch_exists(workdir, repo, branch):
-            branch = 'stable/' + branch
-        else:
+        series = args.branch.replace('stable/', '')
+        branch = gitutils.stable_branch_exists(workdir, repo, series)
+        if not branch:
             branch = 'master'
 
         if branch != 'master':

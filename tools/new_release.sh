@@ -21,7 +21,7 @@ set -e
 function usage {
     echo "Usage: $(basename $0) <series> <deliverable> <updatetype>"
     echo
-    echo "Example: $(basename $0) mitaka oslo.rootwrap feature"
+    echo "Example: $(basename $0) gazpacho oslo.rootwrap feature"
     echo "Example: $(basename $0) independent reno bugfix"
     echo
     echo "For further details about how to use the 'new-release' command:"
