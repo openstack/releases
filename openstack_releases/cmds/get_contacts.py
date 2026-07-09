@@ -27,7 +27,7 @@ from openstack_governance import governance
 class Contact:
     def __init__(self, contact_data):
         self.name = contact_data['name'].strip()
-        self.irc = contact_data['irc'].strip()
+        self.irc = contact_data['irc'].strip() if contact_data['irc'] else None
         self.email = contact_data['email'].strip()
 
     def __eq__(self, other: object) -> bool:
