@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: df4ca29933debba232ab70992362d7a31b3b35e9
+  - version: zed-eol
+    projects:
+      - repo: openstack/cinderlib
+        hash: 6210535b90a43b4bd6990784e12d112a6dfa289f
 branches:
   - name: stable/zed
     location: 5.0.0

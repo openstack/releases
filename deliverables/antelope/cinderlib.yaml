@@ -14,6 +14,10 @@ releases:
     projects:
       - repo: openstack/cinderlib
         hash: 493fd58f1c7dd1ccd20bf727adc00ef7f2155a76
+  - version: 2023.1-eol
+    projects:
+      - repo: openstack/cinderlib
+        hash: 39cf1d6bfcc2ed75e83208d31201808e5d47ba4e
 branches:
   - name: stable/2023.1
     location: 5.1.0
