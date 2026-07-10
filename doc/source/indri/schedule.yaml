@@ -1,0 +1,111 @@
+---
+start-week: '2026-10-05'
+release-week: '2027-03-22'
+cycle:
+  - start: '2026-09-28'
+    end: '2026-10-02'
+    x-project:
+      - h-final
+  - start: '2026-10-05'
+    end: '2026-10-09'
+    name: R-24
+  - start: '2026-10-12'
+    end: '2026-10-16'
+    name: R-23
+    x-project:
+      - i-vptg
+  - start: '2026-10-19'
+    end: '2026-10-23'
+    name: R-22
+  - start: '2026-10-26'
+    end: '2026-10-30'
+    name: R-21
+  - start: '2026-11-02'
+    end: '2026-11-06'
+    name: R-20
+  - start: '2026-11-09'
+    end: '2026-11-13'
+    name: R-19
+  - start: '2026-11-16'
+    end: '2026-11-20'
+    name: R-18
+    x-project:
+      - i-1
+  - start: '2026-11-23'
+    end: '2026-11-27'
+    name: R-17
+  - start: '2026-11-30'
+    end: '2026-12-04'
+    name: R-16
+    x-project:
+      - i-cycle-trail
+  - start: '2026-12-07'
+    end: '2026-12-11'
+    name: R-15
+  - start: '2026-12-14'
+    end: '2026-12-18'
+    name: R-14
+  - start: '2026-12-21'
+    end: '2026-12-25'
+    name: R-13
+  - start: '2026-12-28'
+    end: '2027-01-01'
+    name: R-12
+  - start: '2027-01-04'
+    end: '2027-01-08'
+    name: R-11
+  - start: '2027-01-11'
+    end: '2027-01-15'
+    name: R-10
+    x-project:
+      - i-2
+      - i-mf
+  - start: '2027-01-18'
+    end: '2027-01-22'
+    name: R-9
+  - start: '2027-01-25'
+    end: '2027-01-29'
+    name: R-8
+  - start: '2027-02-01'
+    end: '2027-02-05'
+    name: R-7
+    x-project:
+      - i-extra-acs
+  - start: '2027-02-08'
+    end: '2027-02-12'
+    name: R-6
+    x-project:
+      - i-final-lib
+  - start: '2027-02-15'
+    end: '2027-02-19'
+    name: R-5
+    x-project:
+      - i-3
+      - i-ff
+      - i-final-clientlib
+      - i-soft-sf
+      - i-rf
+  - start: '2027-02-22'
+    end: '2027-02-26'
+    name: R-4
+    x-project:
+      - i-cycle-highlights
+  - start: '2027-03-01'
+    end: '2027-03-05'
+    name: R-3
+    x-project:
+      - i-rc1
+      - i-hard-sf
+  - start: '2027-03-08'
+    end: '2027-03-12'
+    name: R-2
+  - start: '2027-03-15'
+    end: '2027-03-19'
+    name: R-1
+    x-project:
+      - i-finalrc
+  - start: '2027-03-22'
+    end: '2027-03-26'
+    name: R+0
+    x-project:
+      - i-final
