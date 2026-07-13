@@ -5,4 +5,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/cursive: {}
-releases: []
+releases:
+  - version: 0.2.4
+    projects:
+      - repo: openstack/cursive
+        hash: bc57af218cfd4b8e187ca93ecfd569c447259d8d
