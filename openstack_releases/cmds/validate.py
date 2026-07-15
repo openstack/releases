@@ -42,6 +42,7 @@ from openstack_releases import project_config
 from openstack_releases import puppetutils
 from openstack_releases import pythonutils
 from openstack_releases import requirements
+from openstack_releases import series_sorting
 from openstack_releases import series_status
 from openstack_releases import versionutils
 from openstack_releases import xstaticutils
@@ -237,11 +238,12 @@ def validate_series_open(deliv, context):
     # NOTE(dhellmann): When projects switch from _independent to
     # cycle-based models, we don't want to require a
     # stable/_independent branch, so ignore those files.
-    all_deliverable_files = [
-        name
-        for name in sorted(glob.glob(pattern))
-        if '/_independent/' not in name
-    ]
+    all_deliverable_files = sorted(
+        (name
+         for name in glob.glob(pattern)
+         if '/_independent/' not in name),
+        key=series_sorting.keyfunc
+    )
     idx = all_deliverable_files.index(context.filename)
     if idx == 0:
         # This is the first cycle-based deliverable file.
