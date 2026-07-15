@@ -69,3 +69,19 @@ class TestSeries_Sorting(base.BaseTestCase):
                               "elephant", "aardvark"]
         self.assertEqual(sorted(test_series_list, key=series_sorting.keyfunc),
                          sorted_series_list)
+
+    def test_with_deliverable_paths(self):
+        test_series_list = [
+            "deliverables/antelope/nova.yaml",
+            "deliverables/victoria/nova.yaml",
+            "deliverables/zed/nova.yaml",
+            "deliverables/bobcat/nova.yaml",
+        ]
+        sorted_series_list = [
+            "deliverables/victoria/nova.yaml",
+            "deliverables/zed/nova.yaml",
+            "deliverables/antelope/nova.yaml",
+            "deliverables/bobcat/nova.yaml",
+        ]
+        self.assertEqual(sorted(test_series_list, key=series_sorting.keyfunc),
+                         sorted_series_list)
