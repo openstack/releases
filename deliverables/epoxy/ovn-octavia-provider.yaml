@@ -15,6 +15,10 @@ releases:
       - repo: openstack/ovn-octavia-provider
         hash: ab524c10c965af20eaad3ee8f6afaa8ad59a7342
     diff-start: 7.0.0
+  - version: 8.1.0
+    projects:
+      - repo: openstack/ovn-octavia-provider
+        hash: 3fa13a76a36cef8daf02d9f03cf7ed2011c45201
 branches:
   - name: stable/2025.1
     location: 8.0.0.0rc1
