@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/python-ironicclient
         hash: adb3f5f77a86e379c84c22cfca55148ba93ec4e6
+  - version: 5.10.3
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 26afab98a666e86ec8083c1798cb4eab6cc86ee1
 branches:
   - name: stable/2025.1
     location: 5.10.0
