@@ -15,7 +15,12 @@ releases:
       - repo: openstack/blazar
         hash: dbdf1b894ff898bf4909789704120056677f3796
     diff-start: 14.0.0
+  - version: 15.1.0
+    projects:
+      - repo: openstack/blazar
+        hash: 5c67ccd5c9f0d371303aa90128a088ad1dfa90db
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/blazar/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/blazar/2025.1.html
