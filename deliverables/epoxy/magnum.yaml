@@ -20,7 +20,12 @@ releases:
       - repo: openstack/magnum
         hash: 8bf001235786592de4c48892ce6aca8b7c38e0d5
     diff-start: 20.0.0
+  - version: 20.0.2
+    projects:
+      - repo: openstack/magnum
+        hash: 907b8427132069d447cdd63f6dbe10d125138d1f
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/magnum/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/magnum/2025.1.html
