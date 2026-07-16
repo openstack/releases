@@ -15,7 +15,12 @@ releases:
       - repo: openstack/ovn-bgp-agent
         hash: 7c28babdf742deba0ad4ba01734ef1b9c1a6225e
     diff-start: 3.0.0
+  - version: 4.0.1
+    projects:
+      - repo: openstack/ovn-bgp-agent
+        hash: 2237aaa74242801c3fcb00979f1bb7a8e993b172
 branches:
   - name: stable/2025.1
     location: 4.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/ovn-bgp-agent/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/ovn-bgp-agent/2025.1.html
