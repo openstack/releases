@@ -43,14 +43,21 @@ releases:
     projects:
       - repo: openstack/neutron
         hash: 68346f102f34be9345e8e590b68622101a9c4922
+  - version: 26.0.5
+    projects:
+      - repo: openstack/neutron
+        hash: e3ea5df10f49cc50cb9c7f8648b061d0768932c5
 cycle-highlights:
-  - The Linux Bridge ML2 driver has been removed, users are advised
-    to migrate to OVN.
+  - The Linux Bridge ML2 driver has been removed, users are
+    advised to migrate to OVN.
   - VLAN QinQ (802.1ad) networks are now supported for OVN.
-  - Conntrackd support was added to HA routers when using the L3 agent.
-  - The Distributed Metadata Path extension is now available for the
-    OVS Agent, if it is enabled the Neutron Metadata Agent is not necessary.
+  - Conntrackd support was added to HA routers when using the L3
+    agent.
+  - The Distributed Metadata Path extension is now available for
+    the OVS Agent, if it is enabled the Neutron Metadata Agent is
+    not necessary.
 branches:
   - name: stable/2025.1
     location: 26.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/neutron/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/neutron/2025.1.html
