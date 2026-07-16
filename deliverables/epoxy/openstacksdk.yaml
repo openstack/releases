@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/openstacksdk
         hash: 6438e3b653a64a790f4ec9b30c9ebd0e63ae6055
+  - version: 4.4.1
+    projects:
+      - repo: openstack/openstacksdk
+        hash: cbaef3a0a277a57929e6e6ce27656046e6cb37eb
 branches:
   - name: stable/2025.1
     location: 4.4.0
-release-notes: https://docs.openstack.org/releasenotes/openstacksdk/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/openstacksdk/2025.1.html
