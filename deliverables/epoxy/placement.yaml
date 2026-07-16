@@ -17,7 +17,12 @@ releases:
       - repo: openstack/placement
         hash: 476a14dc0f270784c095c34b789994a1805ae872
     diff-start: 12.0.0
+  - version: 13.0.1
+    projects:
+      - repo: openstack/placement
+        hash: a716a7d647d7ece518ac64ca8fb3fc40e823275c
 branches:
   - name: stable/2025.1
     location: 13.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/placement/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/placement/2025.1.html
