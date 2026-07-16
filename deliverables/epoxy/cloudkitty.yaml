@@ -16,7 +16,12 @@ releases:
       - repo: openstack/cloudkitty
         hash: 0f0754dab8797d41a938257f3568800ea5f1a9f3
     diff-start: 21.0.0
+  - version: 22.1.0
+    projects:
+      - repo: openstack/cloudkitty
+        hash: 2fee74e2c6b1701811351cc224a865ced1c6eec3
 branches:
   - name: stable/2025.1
     location: 22.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cloudkitty/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cloudkitty/2025.1.html
