@@ -4,12 +4,13 @@ release-model: cycle-with-rc
 team: cinder
 type: service
 cycle-highlights:
-  - Features and bug fixes to many of our supported drivers, including
-    NetApp, PowerMax, LightBits, Fujitsu, PowerFlex, 3par, StorPool,
-    Pure Storage, Nimble, and Hitachi.
-  - Brick saw several improvements related to multipath setup and management.
-  - Ceph backup driver can now be configured to keep the last n snapshots
-    of a volume, instead of all of them.
+  - Features and bug fixes to many of our supported drivers,
+    including NetApp, PowerMax, LightBits, Fujitsu, PowerFlex,
+    3par, StorPool, Pure Storage, Nimble, and Hitachi.
+  - Brick saw several improvements related to multipath setup and
+    management.
+  - Ceph backup driver can now be configured to keep the last n
+    snapshots of a volume, instead of all of them.
 repository-settings:
   openstack/cinder: {}
 releases:
@@ -34,7 +35,12 @@ releases:
     projects:
       - repo: openstack/cinder
         hash: 037449166765d0a77afddf3b7f6b3d1f87c41c09
+  - version: 26.3.0
+    projects:
+      - repo: openstack/cinder
+        hash: 6cefd2f133d10627a667d56d806d4ca40534a6cb
 branches:
   - name: stable/2025.1
     location: 26.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/cinder/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/cinder/2025.1.html
