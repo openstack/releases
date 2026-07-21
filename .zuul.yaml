@@ -41,6 +41,7 @@
               - ^deliverables/.*$
               - ^doc/.*$
         - openstack-tox-py314:
+            voting: true
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
