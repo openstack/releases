@@ -27,7 +27,12 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: a89ba8f6ce29d6946a05c36132243cdf6360cca9
+  - version: 3.0.2
+    projects:
+      - repo: openstack/os-ken
+        hash: 7dbd116e5104c9c8bd8879b31ddbce91648b6803
 branches:
   - name: stable/2025.1
     location: 3.0.1
-release-notes: https://docs.openstack.org/releasenotes/os-ken/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/os-ken/2025.1.html
