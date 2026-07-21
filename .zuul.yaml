@@ -60,22 +60,22 @@
       jobs:
         - releases-tox-validate:
             timeout: 10800
-        - openstack-tox-py38:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
-        - openstack-tox-py39:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
-        - openstack-tox-py310:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
         - openstack-tox-py311:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py312:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py313:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
+        - openstack-tox-py314:
             irrelevant-files:
               - ^data/.*$
               - ^deliverables/.*$
