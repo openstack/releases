@@ -15,6 +15,10 @@ releases:
       - repo: openstack/zaqar
         hash: 245ab78e066f4224f54b477143651b20eab8d3e7
     diff-start: 20.0.0
+  - version: 21.0.1
+    projects:
+      - repo: openstack/zaqar
+        hash: 46ff729c00787108be7ea3ab45a81a8d9396d74e
 branches:
   - name: stable/2025.2
     location: 21.0.0.0rc1
