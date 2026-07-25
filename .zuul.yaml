@@ -81,6 +81,11 @@
               - ^data/.*$
               - ^deliverables/.*$
               - ^doc/.*$
+        - openstack-tox-pep8:
+            irrelevant-files:
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
     release-post:
       jobs:
         - tag-releases
