@@ -23,7 +23,12 @@ releases:
     projects:
       - repo: openstack/oslo.messaging
         hash: c0c38ad7b2b410d6ec8596bda69592ea3cfcf3f3
+  - version: 16.1.2
+    projects:
+      - repo: openstack/oslo.messaging
+        hash: 5ae4ef6975799e281fa6be00ac10073aa1947d05
 branches:
   - name: stable/2025.1
     location: 16.1.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.messaging/2025.1.html
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.messaging/2025.1.html
