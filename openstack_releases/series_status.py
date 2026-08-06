@@ -121,3 +121,27 @@ class SeriesStatus(collections.abc.Mapping):
 
     def __getitem__(self, series):
         return self._data[series]
+
+
+def get_stable_branch_id(series):
+    """Retrieve the stable branch ID of the series.
+
+    Returns the release-id if the series has such field, otherwise
+    returns the series name. This is needed for the new stable branch
+    naming style: stable/2023.1 (versus the old style: stable/zed).
+    """
+    series_status_data = SeriesStatus.default()
+    return series_status_data[series].release_id
+
+
+def get_full_branch_name(series):
+    """Retrieve the full branch name for the series.
+
+    Returns stable/<release-id> if the series is still maintained
+    or returns unmaintained/<release-id> if the series already went
+    to Unmaintained.
+    """
+    series_status_data = SeriesStatus.default()
+    return '%s/%s' % (
+        'unmaintained' if series_status_data[series].is_eom else 'stable',
+        series_status_data[series].release_id)

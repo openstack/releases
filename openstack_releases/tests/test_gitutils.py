@@ -17,10 +17,11 @@ from unittest import mock
 from oslotest import base
 
 from openstack_releases import gitutils
+from openstack_releases import series_status
 
 
 @mock.patch.object(gitutils, 'branch_exists')
-@mock.patch.object(gitutils, 'get_full_branch_name')
+@mock.patch.object(series_status, 'get_full_branch_name')
 class TestStableBranchExists(base.BaseTestCase):
 
     def test_series_name_resolves_to_stable_branch(

@@ -16,6 +16,7 @@ import datetime
 import os
 import os.path
 import textwrap
+from unittest import mock
 
 import fixtures
 from oslotest import base
@@ -114,3 +115,45 @@ class TestSeries(base.BaseTestCase):
             'initial-release': datetime.date(2010, 10, 21),
         })
         self.assertIsNone(s.eol_date)
+
+
+class TestGetStableBranchId(base.BaseTestCase):
+
+    def _make_status(self, series_data):
+        data = [dict(d, name=name) for name, d in series_data.items()]
+        return series_status.SeriesStatus(data)
+
+    @mock.patch.object(series_status.SeriesStatus, 'default')
+    def test_returns_release_id(self, mock_default):
+        mock_default.return_value = self._make_status({
+            'gazpacho': {
+                'status': 'maintained',
+                'initial-release': '2026-04-01',
+                'release-id': '2026.1',
+            },
+        })
+        self.assertEqual('2026.1',
+                         series_status.get_stable_branch_id('gazpacho'))
+
+    @mock.patch.object(series_status.SeriesStatus, 'default')
+    def test_falls_back_to_series_name(self, mock_default):
+        mock_default.return_value = self._make_status({
+            'zed': {
+                'status': 'end of life',
+                'initial-release': '2022-10-05',
+            },
+        })
+        self.assertEqual('zed',
+                         series_status.get_stable_branch_id('zed'))
+
+    @mock.patch.object(series_status.SeriesStatus, 'default')
+    def test_unknown_series_raises(self, mock_default):
+        mock_default.return_value = self._make_status({
+            'gazpacho': {
+                'status': 'maintained',
+                'initial-release': '2026-04-01',
+                'release-id': '2026.1',
+            },
+        })
+        self.assertRaises(KeyError,
+                          series_status.get_stable_branch_id, 'nonexistent')
