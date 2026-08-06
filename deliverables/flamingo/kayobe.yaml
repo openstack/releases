@@ -44,6 +44,10 @@ releases:
         hash: 03aba5ecb1090cd9bc7e2d0f0e587b3b26107320
       - repo: openstack/kayobe-config-dev
         hash: 93379cf3f614a2967b2a656914f647823ef0b508
+  - version: 19.2.0
+    projects:
+      - repo: openstack/kayobe
+        hash: 74dbf8fcfc1d5e2651d5834ef8feb96ab7f23dce
 branches:
   - name: stable/2025.2
     location: 19.0.0.0rc1
