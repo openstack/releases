@@ -17,6 +17,10 @@ releases:
       - repo: openstack/octavia-dashboard
         hash: 01eefc170bf85645a807c0996289e03af17c00f5
     diff-start: 14.0.0
+  - version: 15.0.1
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 8ddb21a591f6f7233c5a2ef18addf2fda7f7bdd9
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
