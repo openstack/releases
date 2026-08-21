@@ -9,6 +9,10 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
+
+import os
+
+
 _series_data = [
     ["austin", "bexar", "cactus", "diablo", "essex", "folsom", "grizzly",
      "havana", "icehouse", "juno", "kilo", "liberty", "mitaka", "newton",
@@ -23,6 +27,10 @@ def keyfunc(series_name):
 
     # NOTE(tonyb): Create a private copy to avoid mutating input variable
     _series_name = series_name.lower()
+    # NOTE(elod.illes): handle deliverables/<series>/<deliverable>.yaml
+    # sorting as well
+    if os.sep in _series_name:
+        _series_name = os.path.basename(os.path.dirname(_series_name))
     # This for/else statement looks for a series_name in series_data.  If it
     # is found stop looking (via break), because we have all the information
     # we need.  If the series name isn't found, i.e a run through the entire
