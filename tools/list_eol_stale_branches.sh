@@ -176,7 +176,7 @@ function is_unmaintained_eol {
 }
 
 for eom_series in "${eom_series[@]}"; do
-    eom_branch=$(python -c "from openstack_releases import gitutils; print(gitutils.get_stable_branch_id(\"$eom_series\"))")
+    eom_branch=$(python -c "from openstack_releases import series_status; print(series_status.get_stable_branch_id(\"$eom_series\"))")
     repos=$(list-deliverables -r --series "$eom_series" --is-eol)
 
     # Show the eol stale branches for each repository.
