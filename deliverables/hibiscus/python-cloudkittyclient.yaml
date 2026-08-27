@@ -6,3 +6,8 @@ team: cloudkitty
 type: client-library
 repository-settings:
   openstack/python-cloudkittyclient: {}
+releases:
+  - version: 6.2.0
+    projects:
+      - repo: openstack/python-cloudkittyclient
+        hash: cc2785d30f12fb730a59ad5181134c612768b4b9
