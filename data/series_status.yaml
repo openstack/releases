@@ -7,6 +7,10 @@
   next-phase:
     status: development
     date: 2026-10-01
+  signing-key:
+    key: 7f0f63951535b4d12d3fa55dece58d3984d688d7
+    start: 2026-10-05
+    end: 2027-03-29
 - name: hibiscus
   release-id: 2026.2
   status: development
@@ -17,7 +21,7 @@
   signing-key:
     key: 30566c450e41d7c91e442dfb231f942f608ddeff
     start: 2026-04-10
-    end: present
+    end: 2026-10-05
 - name: gazpacho
   release-id: 2026.1
   status: maintained
