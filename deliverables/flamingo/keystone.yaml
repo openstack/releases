@@ -23,6 +23,10 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 3dfbbe7b9bd11dcd64420da0e4eda48b637f4a70
+  - version: 28.1.0
+    projects:
+      - repo: openstack/keystone
+        hash: c0f8139167179f4ffe7749516105958a2ecdc2b0
 branches:
   - name: stable/2025.2
     location: 28.0.0.0rc1
