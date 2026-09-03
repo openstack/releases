@@ -3,6 +3,31 @@ launchpad: watcher
 release-model: cycle-with-rc
 team: watcher
 type: service
+cycle-highlights:
+  - |
+    The VM Workload Consolidation strategy now considers reserved capacity in
+    addition to live usage when consolidating workloads, and accounts for
+    boot-from-volume and ephemeral/swap disks more accurately, producing
+    migration plans that succeed more often.
+  - |
+    Concurrency fixes prevent optimization work from stalling or silently
+    dropping cluster updates, and new caching speeds up how quickly Watcher
+    evaluates cloud resources.
+  - |
+    All Watcher services now run on native Python threading by default, a
+    major step in the community-wide move away from the legacy Eventlet
+    library.
+  - |
+    Event-driven optimization triggers are now protected by access-control
+    policy by default, and service logs no longer risk exposing messaging
+    credentials.
+  - |
+    Operators can save default strategy settings directly on an audit template
+    so routine runs work as intended without re-entering parameters.
+  - |
+    Two new actions expand Watcher's automation: delete permanently removes an
+    instance and its resources, while shelve reclaims a host's compute capacity
+    while preserving the instance's data.
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
