@@ -1014,11 +1014,11 @@ R-5 week (Milestone-3)
     Those should be released ASAP, and in all cases before $rc1-deadline, so
     that we have a release to include in the final $series release.
 
-#. On Friday, remind the requirements team to freeze changes to
-   ``openstack/requirements`` by applying -2 to all
-   open patches. Ensure that reviewers do not approve changes created
-   by the proposal bot, but do approve changes for new OpenStack deliverable
-   releases.
+#. On Friday, remind the Requirements team to -2 all ``openstack/requirements``
+   master branch constraints changes except those created for new OpenStack
+   deliverable releases. Ensure that reviewers do not approve bulk changes
+   created by the Proposal Bot account, and follow a freeze exception process
+   for any specific requests.
 
 #. At the end of the week, send weekly email content for R-4 week.
 
