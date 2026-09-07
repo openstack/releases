@@ -6,3 +6,11 @@ release-type: horizon
 type: horizon-plugin
 repository-settings:
   openstack/adjutant-ui: {}
+releases:
+  - version: 13.0.0.0rc1
+    projects:
+      - repo: openstack/adjutant-ui
+        hash: 8a95ed51d69c4678291fe65ad2d4d680a8ccd1ba
+branches:
+  - name: stable/2026.2
+    location: 13.0.0.0rc1
