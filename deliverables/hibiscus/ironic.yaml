@@ -6,6 +6,29 @@ team: ironic
 type: service
 repository-settings:
   openstack/ironic: {}
+cycle-highlights:
+  - |
+    Ironic developers have coordinated with Nova to significantly improve
+    performance of the resource tracking in nova-compute services running the
+    Ironic driver.
+  - |
+    Ironic has weathered more security bugs in the 2026.2 cycle than any other
+    6 month period in the project's history. This has led to a significant
+    amount of stability and hardening improvements in this cycle.
+  - |
+    Substantial gains on improving TLS controls for Post-Quantum cryptography
+    policy enforcement.
+  - |
+    Added a container console provider that manages graphical console
+    containers directly through compatible container engines.
+  - |
+    Traits supported by a runbook are no longer implied by their name, but
+    instead are treated as a list that can be managed via API.
+  - |
+    Ironic's dedicated firmware interface is now the recommended path for
+    managing device firmware updates. The legacy firmware update methods
+    previously available through the management interface have been deprecated
+    for removal in a future release.
 releases:
   - version: 36.0.0
     projects:
