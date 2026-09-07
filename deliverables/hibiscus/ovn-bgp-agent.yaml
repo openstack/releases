@@ -5,3 +5,11 @@ type: other
 release-model: cycle-with-rc
 repository-settings:
   openstack/ovn-bgp-agent: {}
+releases:
+  - version: 7.0.0.0rc1
+    projects:
+      - repo: openstack/ovn-bgp-agent
+        hash: 8e1b2914c70a617f2d3bb83c099f130e83f717b1
+branches:
+  - name: stable/2026.2
+    location: 7.0.0.0rc1
