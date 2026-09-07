@@ -5,3 +5,11 @@ team: zun
 type: other
 repository-settings:
   openstack/kuryr-libnetwork: {}
+releases:
+  - version: 18.0.0.0rc1
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: 0e41a69f2c52bf88c312bb3cb35c7f195ff63530
+branches:
+  - name: stable/2026.2
+    location: 18.0.0.0rc1
