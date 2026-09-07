@@ -61,3 +61,11 @@ cycle-highlights:
     operators to re-perform the required operations and adjust the
     ``graceful_shutdown_timeout`` and ``manager_shutdown_timeout`` settings
     as needed.
+releases:
+  - version: 34.0.0.0rc1
+    projects:
+      - repo: openstack/nova
+        hash: 5e835dee087c60042e3292ed4336e7ec0993f2ef
+branches:
+  - name: stable/2026.2
+    location: 34.0.0.0rc1
