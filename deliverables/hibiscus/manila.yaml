@@ -3,5 +3,39 @@ launchpad: manila
 release-model: cycle-with-rc
 team: manila
 type: service
+cycle-highlights:
+  - All Manila services now use python's native threading by default
+    instead of `eventlet`. The deprecated oslo service eventlet
+    concurrency backend can be used but support will be removed in a
+    future release. Set ``OS_MANILA_DISABLE_EVENTLET_PATCHING=False``
+    to force the legacy behavior while migrating to the native threading
+    backend.
+  - Share migration APIs have graduated from experimental status.
+    Migration actions no longer require the
+    ``X-OpenStack-Manila-API-Experimental`` header.
+  - Drivers can now perform asynchronous revert-to-snapshot operations by
+    returning a new in-progress status.
+  - New share drivers for Weka and Lustre parallel filesystems are now
+    available, expanding Manila's support for high-performance parallel
+    filesystem workloads such as AI/ML and HPC.
+  - The Dell PowerStore driver now supports manage and unmanage operations
+    for both shares and snapshots.
+  - The Dell PowerScale driver now supports asynchronous revert-to-snapshot
+    operations.
+  - The HPE Alletra MP B10000 driver now supports snapshot lifecycle
+    operations including creation, deletion, revert, and mounting.
+  - Mountable snapshots can now inherit access rules from their parent
+    share via the ``snapshot_inherit_share_access_support`` extra spec.
+  - Manila now prevents resource locks to be filtered by a project UUID in case
+    the requester is not an admininistrator or a member of the project they are
+    attempting to look up.
+  - TLS certificate verification is now enabled by default in the Pure
+    Storage FlashBlade, Hitachi HSP, and NetApp ONTAP drivers. Operators
+    using self-signed certificates must supply a CA bundle or install the
+    certificate in the system trust store before upgrading.
+  - RBAC policy scope enforcement is now always active following the
+    removal of the ``[oslo_policy] enforce_scope`` option. Deployments
+    that had not yet completed the RBAC transition should review their
+    policy configuration before upgrading.
 repository-settings:
   openstack/manila: {}
