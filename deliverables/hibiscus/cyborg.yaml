@@ -2,7 +2,33 @@
 launchpad: openstack-cyborg
 team: cyborg
 type: service
+cycle-highlights:
+  - |
+    Cyborg strengthened multi-tenant security and operator control for
+    accelerator resources and addressed CVE-2026-40213 and CVE-2026-40214 by
+    scoping requests to projects, requiring service-token validation, and
+    tightening access to hardware management APIs.
+  - |
+    New opt-in persona-based policy defaults for reader, member, manager,
+    service, and admin roles aligned Cyborg with OpenStack's secure RBAC model
+    and provided a migration path before the planned 2027.1 default change.
+  - |
+    Operators gained safer upgrade tooling and finer-grained control over
+    which Intel SR-IOV NIC devices Cyborg managed, while Cyborg restored
+    standards-compliant API microversion handling for OpenStack clients.
+  - |
+    The generic PCI driver returned to fully supported status, while expanded
+    testing and documentation improved release confidence and made Cyborg
+    easier to deploy, upgrade, and use.
 release-model: cycle-with-rc
 repository-settings:
   openstack/cyborg:
     tarball-base: openstack-cyborg
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/cyborg
+        hash: 50d3301eaa2e581118f0ca8aceabec14e85eefff
+branches:
+  - name: stable/2026.2
+    location: 17.0.0.0rc1
