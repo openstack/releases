@@ -31,3 +31,11 @@ cycle-highlights:
 repository-settings:
   openstack/watcher:
     tarball-base: python-watcher
+releases:
+  - version: 17.0.0.0rc1
+    projects:
+      - repo: openstack/watcher
+        hash: ff8c48bcecc0a3a44a203f5376d2137b87817125
+branches:
+  - name: stable/2026.2
+    location: 17.0.0.0rc1
