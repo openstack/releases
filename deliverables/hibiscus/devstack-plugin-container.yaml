@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/devstack-plugin-container: 208a5ceb542dcbabc2673fdbdc88d96698a3b2fc
+    name: stable/2026.2
 repository-settings:
   openstack/devstack-plugin-container: {}
