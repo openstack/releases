@@ -5,6 +5,29 @@ type: service
 release-model: cycle-with-rc
 repository-settings:
   openstack/neutron: {}
+cycle-highlights:
+  - A new EVPN service plugin and OVN agent extension were added to provision
+    BGP EVPN Type-5 route advertisements, enabling tenant network prefixes to
+    be advertised into the data center fabric via FRR.
+  - A new Private VLAN (PVLAN) service plugin provides an alternative port
+    isolation model using promiscuous, isolated, and community ports on
+    PVLAN-enabled networks.
+  - The L3 Agent Scheduler API is now supported for ML2/OVN, including the
+    ``ha_chassis_priority`` field for gateway failover ordering within an
+    HA_Chassis_Group.
+  - A new ``security-groups-default-statefulness`` API extension allows
+    configuring the default ``stateful`` attribute for new security groups
+    on a per-project or system-wide basis.
+  - OVN BGP integration was extended to allow tenant network addresses to be
+    directly routable from the underlay when the ``leak_routes`` attribute of
+    a subnet is set to True.
+  - Indirect floating IPs are now supported for OVN routers when the
+    ``floating-ip-router-writable`` extension is enabled.
+  - An OVN agent extension was added to support separate logical switches
+    per VLAN segment, allowing multiple segments per host for routed networks.
+  - The memory footprint in ML2/OVS HA router deployments was improved by
+    using a shell script for keepalived state change monitoring instead of
+    a daemon, resulting in over a 15x reduction.
 releases:
   - version: 29.0.0.0b1
     projects:
