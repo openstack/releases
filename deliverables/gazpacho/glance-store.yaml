@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/glance_store
         hash: 032d273acc57f9010123f184cb112979f37391a5
+  - version: 5.4.1
+    projects:
+      - repo: openstack/glance_store
+        hash: e262b506a4a89217005d5a00ada23b2aa6f00e06
 branches:
   - name: stable/2026.1
     location: 5.4.0
