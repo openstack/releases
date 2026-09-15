@@ -5,6 +5,30 @@ team: freezer
 type: service
 repository-settings:
   openstack/freezer: {}
+cycle-highlights:
+  - |
+    Work on the Centralized Scheduler has been finalized this cycle.
+    Now, Scheduler is capable of running on the control plane with
+    ``service`` credentials, while managing and lifecycling backups
+    with ``cindernative``, ``glance`` and ``nova`` modes.
+    It is possible to run multiple instances of the Freezer Scheduler
+    with the same ``client_id`` for HA purpuses, while balancing jobs
+    between them with one of ``tooz``-compatible coordination backends.
+  - |
+    Freezer v1 API has been finally removed. This allowed to implement
+    secure RBAC policies and connect backup resources to the project
+    instead of individual users.
+  - |
+    Pyhton Freezer Client has been refactored and now installable as plugin
+    to the OpenStack Client. It means, that users can use ``openstack backup``
+    commands to interact with Freezer.
+  - |
+    Horizon Plugin for Freezer has been refactored with regard to UI/UX
+    and it allows to actually create and manage resources.
+  - |
+    A lot of bug fixes and new features has been added both to API and
+    scheduler parts. Make sure to check Upgrade and Deprecation release
+    notes carefully during the upgrade.
 releases:
   - version: 19.0.0.0rc1
     projects:
