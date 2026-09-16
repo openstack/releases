@@ -7,6 +7,43 @@ team: designate
 type: service
 repository-settings:
   openstack/designate: {}
+cycle-highlights:
+  - |
+    Security & Maintenance Toil: Designate fixed OSSA-2026-034
+    (CVE-2026-71193, CVE-2026-71194), a cross-tenant zone ownership bypass
+    that let a tenant create a subzone, superzone, or duplicate of another
+    tenant's zone by scheduling it to a different pool, enabling DNS
+    traffic hijacking and denial of service. Zone ownership conflict
+    checks now search across all pools, and the previously-unscoped mDNS
+    record/NOTIFY lookups that made the bypass exploitable have been
+    scoped by pool.
+  - |
+    Beyond the advisory, the team put significant effort into security
+    hardening this cycle. A shared-zone availability bug that let one
+    project's malformed TXT record silently block zone publication for
+    every other tenant sharing that zone was fixed with stricter record
+    validation and defense-in-depth error handling in mDNS. TSIG key
+    scope/resource_id validation was added to prevent silent
+    authentication failures, TSIG keys are now required for zones
+    scheduled to non-default pools, and deployments can now reject
+    empty TSIG secrets. Designate also gained post-quantum-cryptography
+    (PQC) readiness tooling, including a fix for a certificate
+    validation bypass in the NSD4 backend and a new configurable check
+    mode that can block service startup on quantum-vulnerable
+    certificate algorithms or outdated TLS versions.
+  - |
+    Designate added support for split-horizon DNS deployments through
+    a new BIND9-based backend with per-view TSIG keys. The worker can
+    now sign outgoing NOTIFY and SOA-polling messages with a pool- or
+    nameserver-specific TSIG key, ensuring these reach the correct
+    view in split-horizon topologies regardless of the worker's
+    source IP.
+  - |
+    Designate gained support for TLSA records (RFC 6698), used for
+    DANE certificate pinning.
+  - |
+    The zone import API now also accepts JSON payloads carrying zone
+    attributes (such as pool_id) alongside zonefile content.
 releases:
   - version: 23.0.0.0rc1
     projects:
