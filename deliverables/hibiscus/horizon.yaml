@@ -5,6 +5,51 @@ team: horizon
 type: service
 repository-settings:
   openstack/horizon: {}
+cycle-highlights:
+  - |
+    Horizon is ready for the new secure RBAC defaults: oslo.policy's
+    ``enforce_scope`` and ``enforce_new_defaults`` are now enabled by default
+    and domain-scoped tokens are no longer preferred. Deployments should
+    review their policy configuration before upgrading.
+  - |
+    De-angularization of the dashboard continued. The Key Pairs panel now
+    uses the Python/Django implementation by default, at feature parity with
+    the deprecated AngularJS one, and the Python Images table gained search
+    filters, activate/deactivate actions and a new image metadata form.
+  - |
+    Instance passwords can now be changed directly from the dashboard. This
+    requires the QEMU Guest Agent to be installed and running inside the
+    guest operating system.
+  - |
+    A new ``/auth/switch_name/<project-name>`` endpoint allows switching
+    project by name rather than by UUID, with an optional ``domain_id``
+    query parameter.
+  - |
+    The drop-down menus at the top of the window were re-arranged and
+    grouped for a more consistent navigation experience.
+  - |
+    The admin Hypervisors page is much faster in deployments that expose vGPU
+    resource providers, and the new ``SHOW_RESOURCE_PROVIDER_SUMMARY`` option
+    lets operators hide the resource provider overview entirely on clouds
+    with many hypervisor nodes.
+  - |
+    The migration to openstacksdk progressed further. The last remaining
+    neutronclient calls were removed, and flavors, key pairs, availability
+    zones and Nova services are now retrieved through the SDK.
+  - |
+    Horizon now officially supports Python 3.14, with a voting
+    ``openstack-tox-py314`` job. Python 3.9 and 3.10 support was dropped, the
+    Django 5.2 job is voting, a non-voting Django 6.0 job was added and the
+    Django constraint was removed from ``requirements.txt``.
+  - |
+    Horizon no longer depends on Enmerkar for translation message
+    extraction. The extraction logic now lives in Horizon itself, removing
+    an unmaintained dependency from the translation toolchain.
+  - |
+    Packaging and developer tooling were modernised: setup and coverage
+    configuration moved to ``pyproject.toml`` and linters now run through
+    pre-commit. The same ``pyproject.toml`` layout is documented for
+    Horizon plugins.
 releases:
   - version: 26.0.0
     projects:
