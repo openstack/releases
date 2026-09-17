@@ -7,6 +7,16 @@ team: glance
 type: service
 repository-settings:
   openstack/glance: {}
+cycle-highlights:
+  - Shipped fixes for CVE-2026-71196, CVE-2026-71197, CVE-2026-71198
+    and OSSA-2026-038
+  - Eventlet removed completely
+  - Filesystem store timeouts handling
+  - New APIs for cache clean and prune
+  - S3 Credential free location URL
+  - Download images from preferred stores
+  - New API for list cached nodes
+  - Parallel image import support
 releases:
   - version: 33.0.0.0b2
     projects:
