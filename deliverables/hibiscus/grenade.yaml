@@ -4,5 +4,9 @@ release-model: untagged
 team: Quality Assurance
 type: other
 stable-branch-type: tagless
+branches:
+  - location:
+      openstack/grenade: 2e29b32887f2c7623eb6bdbc7dee35bd976919e5
+    name: stable/2026.2
 repository-settings:
   openstack/grenade: {}
