@@ -11,6 +11,11 @@ releases:
     projects:
       - repo: openstack/networking-bagpipe
         hash: c5461f556dc3b203f1f34d71accfe6078e7b3ecc
+  - version: 25.0.0
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: c5461f556dc3b203f1f34d71accfe6078e7b3ecc
+    diff-start: 24.0.0
 branches:
   - name: stable/2026.2
     location: 25.0.0.0rc1

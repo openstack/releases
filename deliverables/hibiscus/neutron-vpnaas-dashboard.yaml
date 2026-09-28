@@ -10,6 +10,11 @@ releases:
     projects:
       - repo: openstack/neutron-vpnaas-dashboard
         hash: dae6a7ac1608a1d1e05b0dccf166d8534211ac4f
+  - version: 15.0.0
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: dae6a7ac1608a1d1e05b0dccf166d8534211ac4f
+    diff-start: 14.0.0
 branches:
   - name: stable/2026.2
     location: 15.0.0.0rc1
