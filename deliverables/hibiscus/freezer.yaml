@@ -34,6 +34,11 @@ releases:
     projects:
       - repo: openstack/freezer
         hash: ed2edc10cb9102b8d5b15baed97bda1d12ac9d47
+  - version: 19.0.0
+    projects:
+      - repo: openstack/freezer
+        hash: ed2edc10cb9102b8d5b15baed97bda1d12ac9d47
+    diff-start: 18.0.0
 branches:
   - name: stable/2026.2
     location: 19.0.0.0rc1
