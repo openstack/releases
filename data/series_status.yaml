@@ -1,23 +1,23 @@
 ---
 - name: indri
   release-id: 2027.1
-  status: future
+  status: development
   slurp: yes
   initial-release: 2027-03-24
   next-phase:
-    status: development
-    date: 2026-10-01
+    status: maintained
+    date: 2027-03-24
   signing-key:
     key: 7f0f63951535b4d12d3fa55dece58d3984d688d7
     start: 2026-10-05
     end: 2027-03-29
 - name: hibiscus
   release-id: 2026.2
-  status: development
+  status: maintained
   initial-release: 2026-09-30
   next-phase:
-    status: maintained
-    date: 2026-09-30
+    status: end of life
+    date: 2028-04-26
   signing-key:
     key: 30566c450e41d7c91e442dfb231f942f608ddeff
     start: 2026-04-10

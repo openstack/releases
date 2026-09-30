@@ -2,7 +2,7 @@
 2026.2 Hibiscus
 ===============
 
-Projected Release Date: September 30th, 2026
+Originally Released: September 30th, 2026
 
 .. toctree::
    :maxdepth: 1
