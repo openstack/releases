@@ -28,7 +28,7 @@ import requests
 
 MINIMAL_DATE = datetime.datetime.strptime("2018-11-1", "%Y-%m-%d")
 BASE_URL = "http://lists.openstack.org/pipermail/openstack-discuss"
-DEFAULT_SEARCHING_PATTERN = '.?\[release\].*'  # noqa
+DEFAULT_SEARCHING_PATTERN = r'.?\[release\].*'
 
 
 def get(url):
@@ -55,9 +55,7 @@ def is_sent_by(author, authors):
     """
     if not authors:
         return True
-    if author.lower() in [auth.lower() for auth in authors]:
-        return True
-    return False
+    return author.lower() in [auth.lower() for auth in authors]
 
 
 def search(month_url, topic, authors):
@@ -129,7 +127,7 @@ def mailing_list_url(string):
 
 def main():
     """Main entrypoint."""
-    epilog = textwrap.dedent("""
+    epilog = textwrap.dedent(r"""
     Topic:\n
         Various topic can be used to looking for specific topics, by example
         topic can be set to `.?\[oslo\].*` to search all emails related to
@@ -162,7 +160,7 @@ def main():
         ```
         $ {cmd} --topic ".?\[release\] Release countdown.*" --starting-date 2020-5-1
         ```
-    """.format(cmd=sys.argv[0]))  # noqa
+    """.format(cmd=sys.argv[0]))
     parser = argparse.ArgumentParser(
         description='Search emails on the mailing list by topic and authors',
         formatter_class=argparse.RawDescriptionHelpFormatter,
