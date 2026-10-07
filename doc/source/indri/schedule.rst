@@ -118,8 +118,8 @@ feature freeze.
 
 .. _i-soft-sf:
 
-Soft StringFreeze
------------------
+Soft String Freeze
+------------------
 
 You are no longer allowed to accept proposed changes containing modifications
 in user-facing strings. Such changes should be rejected by the review team and
@@ -128,7 +128,7 @@ is published).
 
 .. _i-rf:
 
-Requirements freeze
+Requirements Freeze
 -------------------
 
 After the Indri-3 milestone, only critical requirements and constraints
@@ -147,8 +147,8 @@ The week of 1 March, 2027 is the target date for projects following the
 
 .. _i-hard-sf:
 
-Hard StringFreeze
------------------
+Hard String Freeze
+------------------
 
 This happens when the RC1 for the project is tagged. At this point, ideally
 no strings are changed (or added, or removed), to give translators time to
