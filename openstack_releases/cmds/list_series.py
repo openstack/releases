@@ -12,6 +12,7 @@
 
 import os
 
+from openstack_releases import series_sorting
 from openstack_releases import series_status
 
 
@@ -24,6 +25,16 @@ def eom():
     for serie in series:
         if series.get(serie).is_eom:
             print(serie)
+
+
+def inbetween_eol():
+    series = series_status.SeriesStatus.from_directory(ROOT_DIR)
+    found_1st_unmaintained_series = False
+    for current_series in sorted(series, key=series_sorting.keyfunc):
+        if series.get(current_series).is_eom:
+            found_1st_unmaintained_series = True
+        elif found_1st_unmaintained_series and not series.get(current_series).is_maintained:
+            print(current_series)
 
 
 def maintained():
