@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/stevedore: {}
+releases:
+  - version: 5.10.0
+    projects:
+      - repo: openstack/stevedore
+        hash: c9f616a6d47e1751c9f54a16d6e2be1f866d5320
