@@ -5,3 +5,8 @@ release-model: cycle-with-intermediary
 type: library
 repository-settings:
   openstack/ovsdbapp: {}
+releases:
+  - version: 3.0.0
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: c2fe08688728c0f4f784451bc5f604402393508e
