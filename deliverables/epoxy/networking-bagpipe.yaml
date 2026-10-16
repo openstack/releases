@@ -16,8 +16,14 @@ releases:
       - repo: openstack/networking-bagpipe
         hash: 5e24f349630eca73f51706ba61ce6f6af6774eda
     diff-start: 21.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/networking-bagpipe
+        hash: 97806ea5264b6ae3bdb346e3ec1ea69a6b6f3e6c
 branches:
   - name: stable/2025.1
     location: 22.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/networking-bagpipe/2025.1.html

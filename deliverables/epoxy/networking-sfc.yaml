@@ -17,7 +17,14 @@ releases:
       - repo: openstack/networking-sfc
         hash: 8f4e780eca38ca0942f93d04f164579c50c59e2b
     diff-start: 19.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/networking-sfc
+        hash: e0ba5dc9b7a00fe753c727351b2324e332472544
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/networking-sfc/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/networking-sfc/2025.1.html
