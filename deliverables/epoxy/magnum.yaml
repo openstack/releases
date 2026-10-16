@@ -24,8 +24,14 @@ releases:
     projects:
       - repo: openstack/magnum
         hash: 907b8427132069d447cdd63f6dbe10d125138d1f
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/magnum
+        hash: d8277d26472a51bb682331b23df425dd16268d14
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/magnum/2025.1.html
