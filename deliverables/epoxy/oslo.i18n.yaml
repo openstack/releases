@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.i18n
         hash: 162e0fad89e1ed2a51f557e5b109f5c9888697d5
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.i18n
+        hash: a40591cbcf8f8014d04a59b40e97bfd974eabd87
 branches:
   - name: stable/2025.1
     location: 6.5.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.i18n/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.i18n/2025.1.html

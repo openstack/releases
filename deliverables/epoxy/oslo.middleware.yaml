@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.middleware
         hash: 8af99870c19c71d27971330d3d38ff8daf2459b7
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.middleware
+        hash: a254c0d4061553f87083725862f2fdf56b231530
 branches:
   - name: stable/2025.1
     location: 6.3.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.middleware/2025.1.html

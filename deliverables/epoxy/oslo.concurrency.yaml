@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.concurrency
         hash: 6250095b8d4f62e1ecd560809ef510dfb93e4d38
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.concurrency
+        hash: 6d10b792e66e506fc31d03eeac000e02158b988d
 branches:
   - name: stable/2025.1
     location: 7.1.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.concurrency/2025.1.html

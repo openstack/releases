@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/oslo.vmware
         hash: face67836e6d9c7eb63cb52e8120b8c9a51d9821
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.vmware
+        hash: 67ab1dfad0287faa50de807a1e507fe80d4366b5
 branches:
   - name: stable/2025.1
     location: 4.6.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.vmware/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.vmware/2025.1.html

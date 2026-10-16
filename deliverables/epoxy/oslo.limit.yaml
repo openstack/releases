@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.limit
         hash: 8ada297e6a82f7e50bf746453b8dd21716743798
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.limit
+        hash: 067e0c31b1ed12e2d623603ae9694539d741dcab
 branches:
   - name: stable/2025.1
     location: 2.6.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.limit/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.limit/2025.1.html

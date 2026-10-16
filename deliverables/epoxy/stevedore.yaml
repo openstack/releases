@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/stevedore
         hash: 27e27c116c0e8b84415d683e958780f4607ca3cc
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/stevedore
+        hash: 167ffbde359765efc45c8a692f7da9b8a4e6228d
 branches:
   - name: stable/2025.1
     location: 5.4.1
-release-notes: https://docs.openstack.org/releasenotes/stevedore/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/stevedore/2025.1.html

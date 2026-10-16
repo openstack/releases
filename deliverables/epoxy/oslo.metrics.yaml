@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.metrics
         hash: c64d51c1d5423b8d7442b3a349562340d4f7e3f5
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.metrics
+        hash: 9587c7c09776cd5b0c7200d98c347c0d00cb03ac
 branches:
   - name: stable/2025.1
     location: 0.11.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.metrics/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.metrics/2025.1.html
