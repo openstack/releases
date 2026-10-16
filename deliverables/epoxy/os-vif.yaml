@@ -16,7 +16,14 @@ releases:
     projects:
       - repo: openstack/os-vif
         hash: acdd9747a2ece3e50ab2979d623af853b718c74e
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/os-vif
+        hash: c82ff9b5094c519aa13af71a7234cbcdb9d1de46
 branches:
   - name: stable/2025.1
     location: 4.1.0
-release-notes: https://docs.openstack.org/releasenotes/os-vif/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/os-vif/2025.1.html

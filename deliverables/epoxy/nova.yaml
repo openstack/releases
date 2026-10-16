@@ -64,8 +64,14 @@ releases:
     projects:
       - repo: openstack/nova
         hash: e2ebb330dfc7336a995d455861b52066e270f8ca
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/nova
+        hash: ce37978276744e92d91251210a1d9c2784eea375
 branches:
   - name: stable/2025.1
     location: 31.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/nova/2025.1.html
