@@ -24,7 +24,13 @@ releases:
     projects:
       - repo: openstack/mistral
         hash: 9f1c266dd3886b231466965f574fd5216537206a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/mistral
+        hash: 9f1c266dd3886b231466965f574fd5216537206a
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes: https://docs.openstack.org/releasenotes/mistral/2025.1.html
