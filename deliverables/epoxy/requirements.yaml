@@ -11,3 +11,10 @@ branches:
   - name: stable/2025.1
     location:
       openstack/requirements: 4a006431f60be70eea411a5c5f2e9119b8cdb567
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+releases:
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/requirements
+        hash: 15c9f43128af646e6a41adae1ee71eb633c23e66
