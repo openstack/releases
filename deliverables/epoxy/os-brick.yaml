@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/os-brick
         hash: eb1854e64363ebf9f6e435b3702182c693b7bf5a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/os-brick
+        hash: eb1854e64363ebf9f6e435b3702182c693b7bf5a
 branches:
   - name: stable/2025.1
     location: 6.11.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/os-brick/2025.1.html
