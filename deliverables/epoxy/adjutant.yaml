@@ -16,6 +16,12 @@ releases:
       - repo: openstack/adjutant
         hash: c999b09c8e881ada6d1560c94181d3c4b0666460
     diff-start: 9.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/adjutant
+        hash: cdc009329e0035c79d388537862be971c3568b48
 branches:
   - name: stable/2025.1
     location: 10.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
