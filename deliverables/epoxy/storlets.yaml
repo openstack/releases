@@ -15,7 +15,14 @@ releases:
       - repo: openstack/storlets
         hash: 59ba49cb406e54327a18d56d5aa1decd82b23f45
     diff-start: 14.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/storlets
+        hash: 281bb85737abb048a86b6f82afad923bc3b74e04
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/storlets/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/storlets/2025.1.html
