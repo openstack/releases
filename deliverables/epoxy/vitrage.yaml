@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/vitrage
         hash: 8f3fc1eb416656d7d68810eff3cfef7fc9672008
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/vitrage
+        hash: 8f3fc1eb416656d7d68810eff3cfef7fc9672008
 branches:
   - name: stable/2025.1
     location: 14.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/vitrage/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/vitrage/2025.1.html
