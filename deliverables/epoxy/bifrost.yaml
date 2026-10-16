@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/bifrost
         hash: 1333833ca6c0a13ae6a2369b7e37868da11e9923
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/bifrost
+        hash: 8bc0af6a55315967b979feb734bbf1aee4e685bb
 branches:
   - name: stable/2025.1
     location: 19.2.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/bifrost/2025.1.html
