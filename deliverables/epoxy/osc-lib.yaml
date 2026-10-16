@@ -11,7 +11,14 @@ releases:
     projects:
       - repo: openstack/osc-lib
         hash: d3fdae809577c5d9f0e4fef2ba501ed214be7238
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/osc-lib
+        hash: 7a69176b65ab04dfabf9a5a38f5f6a87187fa9ce
 branches:
   - name: stable/2025.1
     location: 3.2.0
-release-notes: https://docs.openstack.org/releasenotes/osc-lib/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/osc-lib/2025.1.html
