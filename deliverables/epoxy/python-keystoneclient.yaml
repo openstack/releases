@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-keystoneclient
         hash: 0d43c46ffa4d3a62d7c00cfcbdaa1ab8449b2b3a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-keystoneclient
+        hash: 30233773757e349739dd9dab71aeeece51399f88
 branches:
   - name: stable/2025.1
     location: 5.6.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom

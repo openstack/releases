@@ -20,7 +20,14 @@ releases:
     projects:
       - repo: openstack/keystoneauth
         hash: 60f441aa2951284cb258aa6c9c0b6584e0da1913
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/keystoneauth
+        hash: 7472cfd32d58f673aaaedfaf1f60df219fda46fe
 branches:
   - name: stable/2025.1
     location: 5.10.0
-release-notes: https://docs.openstack.org/releasenotes/keystoneauth/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/keystoneauth/2025.1.html
