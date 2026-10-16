@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/heat-translator
         hash: 5964e3a1fd1c248f64881528d2ae2b0b81e75b0d
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/heat-translator
+        hash: 9146fa2e1286412bf20b413b37b47d1c7b11bc0e
 branches:
   - name: stable/2025.1
     location: 3.2.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
