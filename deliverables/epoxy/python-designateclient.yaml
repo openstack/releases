@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/python-designateclient
         hash: 0230443cf7494b8bda0f172bbeb4cced71921d7b
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-designateclient
+        hash: 8f03dcf57dc368530313fda918ddf212e9079d28
 branches:
   - name: stable/2025.1
     location: 6.2.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-designateclient/2025.1.html
