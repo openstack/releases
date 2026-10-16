@@ -37,8 +37,14 @@ releases:
     projects:
       - repo: openstack/octavia
         hash: 9994bc7d4bc51771fd24384f8e5edb480063d929
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/octavia
+        hash: c7df0b3f8b1f20817fc9d0a2248436a784a935ef
 branches:
   - name: stable/2025.1
     location: 16.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/octavia/2025.1.html
