@@ -16,8 +16,14 @@ releases:
     projects:
       - repo: openstack/python-aodhclient
         hash: 5c3a66cce31f2a53c85f9fc34647397fac7cddb1
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-aodhclient
+        hash: 01a691bc75af4d21fe335a220e2bc620d019ef67
 branches:
   - name: stable/2025.1
     location: 3.7.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-aodhclient/2025.1.html
