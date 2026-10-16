@@ -6,10 +6,10 @@ release-model: cycle-with-rc
 team: glance
 type: service
 cycle-highlights:
-  - Added a new store weight mechanism, improving performance when using
-    RBD.
-  - Added a safety check that makes sure image conversion outputs an
-    image in the desired format
+  - Added a new store weight mechanism, improving performance when
+    using RBD.
+  - Added a safety check that makes sure image conversion outputs
+    an image in the desired format
   - Removed Windows OS support
 repository-settings:
   openstack/glance: {}
@@ -35,7 +35,14 @@ releases:
     projects:
       - repo: openstack/glance
         hash: bb0d59fff722dbccb5a3e7696eada3d8d372ba8d
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/glance
+        hash: a160d42e94dc5ea70cf3aa6d76e6bfaa39e47069
 branches:
   - name: stable/2025.1
     location: 30.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/glance/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/glance/2025.1.html
