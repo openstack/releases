@@ -31,8 +31,14 @@ releases:
     projects:
       - repo: openstack/zaqar
         hash: c4d8f5b176e61e8b0dc4164d9d14cddcc6ee934d
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/zaqar
+        hash: c4d8f5b176e61e8b0dc4164d9d14cddcc6ee934d
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/zaqar/2025.1.html
