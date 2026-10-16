@@ -27,8 +27,14 @@ releases:
     projects:
       - repo: openstack/python-manilaclient
         hash: 7240adb833687339a866ca5bdec728331c2961cd
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-manilaclient
+        hash: 7240adb833687339a866ca5bdec728331c2961cd
 branches:
   - name: stable/2025.1
     location: 5.4.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-manilaclient/2025.1.html

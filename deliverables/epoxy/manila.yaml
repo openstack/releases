@@ -55,8 +55,14 @@ releases:
     projects:
       - repo: openstack/manila
         hash: 3296e23f0b67581019f7fe5ef0cebf9fa793058a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/manila
+        hash: 3296e23f0b67581019f7fe5ef0cebf9fa793058a
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/manila/2025.1.html
