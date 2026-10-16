@@ -29,7 +29,13 @@ releases:
     projects:
       - repo: openstack/heat
         hash: 7a5aae58f924c832d616dfa119d90c084b2b4666
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/heat
+        hash: 7a5aae58f924c832d616dfa119d90c084b2b4666
 branches:
   - name: stable/2025.1
     location: 24.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes: https://docs.openstack.org/releasenotes/heat/2025.1.html
