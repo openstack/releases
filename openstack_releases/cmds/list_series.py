@@ -22,9 +22,9 @@ ROOT_DIR = f'{BASE_PATH}/../../data'
 
 def eom():
     series = series_status.SeriesStatus.from_directory(ROOT_DIR)
-    for serie in series:
-        if series.get(serie).is_eom:
-            print(serie)
+    for current_series in sorted(series, key=series_sorting.keyfunc):
+        if series.get(current_series).is_eom:
+            print(current_series)
 
 
 def inbetween_eol():
