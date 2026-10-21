@@ -54,7 +54,7 @@ BASEDIR=$(dirname $TOOLSDIR)
 source $TOOLSDIR/functions
 enable_tox_venv
 
-eom_series=($(list-eom-series))
+eom_series=($(list-eom-series; list-inbetween-eol-series))
 
 # Make sure no pager is configured so the output is not blocked
 export PAGER=
