@@ -31,6 +31,8 @@ cycle:
     name: R-18
     x-project:
       - i-1
+    project-specific:
+      - i-cinder-spec-freeze
   - start: '2026-11-23'
     end: '2026-11-27'
     name: R-17
@@ -39,6 +41,8 @@ cycle:
     name: R-16
     x-project:
       - i-cycle-trail
+    project-specific:
+      - i-cinder-midcycle-1
   - start: '2026-12-07'
     end: '2026-12-11'
     name: R-15
@@ -60,12 +64,19 @@ cycle:
     x-project:
       - i-2
       - i-mf
+    project-specific:
+      - i-cinder-driver-deadline
   - start: '2027-01-18'
     end: '2027-01-22'
     name: R-9
+    project-specific:
+      - i-cinder-feature-checkpoint
+      - i-cinder-midcycle-2
   - start: '2027-01-25'
     end: '2027-01-29'
     name: R-8
+    project-specific:
+      - i-cinder-driver-features-declaration
   - start: '2027-02-01'
     end: '2027-02-05'
     name: R-7
@@ -85,6 +96,8 @@ cycle:
       - i-final-clientlib
       - i-soft-sf
       - i-rf
+    project-specific:
+      - i-cinder-ci-checkpoint
   - start: '2027-02-22'
     end: '2027-02-26'
     name: R-4
