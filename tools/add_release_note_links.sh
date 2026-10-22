@@ -17,19 +17,25 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 SERIES RELEASE_ID"
-    echo "Example: $0 antelope 2023.1"
+if [[ "$#" -ne 1 || "$1" =~ [^a-z] ]]; then
+    echo "Usage: $0 SERIES"
+    echo "Example: $0 antelope"
     exit 1
 fi
 
 SERIES="$1"
-RELEASE_ID="$2"
 
 # Set up and activate the virtualenv that contains the
 # edit-deliverable command.
 tox -e venv --notest
 source .tox/venv/bin/activate
+
+RELEASE_ID=$(get-series-id $SERIES)
+
+if [ -z "${RELEASE_ID:-}" ]; then
+    echo "Release '$SERIES' not recognized."
+    exit 1
+fi
 
 function url_exists {
     local url="$1"
