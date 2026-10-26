@@ -274,3 +274,40 @@ properly when the Cinder team does a final compliance check around the
 time of the third milestone.  See the `Driver Compliance
 <https://docs.openstack.org/cinder/latest/drivers-all-about.html#driver-compliance>`_
 section of the Cinder Documentation for details.
+
+Nova
+----
+
+.. _i-nova-spec-review-day:
+
+Nova Spec Review Day
+^^^^^^^^^^^^^^^^^^^^
+
+On 10 December 2026 and 12 January 2027, Nova specifications targeting
+2027.1 Indri implementation will be prioritized for reviews by the Nova core
+team.
+
+.. _i-nova-spec-soft-freeze:
+
+Nova Spec Soft Freeze
+^^^^^^^^^^^^^^^^^^^^^
+
+After 17 December 2026 (23:59 UTC), no new specs or specless blueprints will be
+accepted.
+
+.. _i-nova-spec-freeze:
+
+Nova Spec Freeze
+^^^^^^^^^^^^^^^^
+
+All Nova specs and specless blueprints for features to be implemented in
+2027.1 Indri must be approved by 14 January 2027 (23:59 UTC). This deadline
+applies to all feature designs, whether they require a formal spec or not.
+
+.. _i-nova-review-day:
+
+Nova Implementation Review Day
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On 04 February 2027 and 11 February 2027, Nova prioritized code changes will be
+reviewed by the Nova core team.
