@@ -46,9 +46,13 @@ cycle:
   - start: '2026-12-07'
     end: '2026-12-11'
     name: R-15
+    project-specific:
+      - i-nova-spec-review-day
   - start: '2026-12-14'
     end: '2026-12-18'
     name: R-14
+    project-specific:
+      - i-nova-spec-soft-freeze
   - start: '2026-12-21'
     end: '2026-12-25'
     name: R-13
@@ -65,6 +69,8 @@ cycle:
       - i-2
       - i-mf
     project-specific:
+      - i-nova-spec-review-day
+      - i-nova-spec-freeze
       - i-cinder-driver-deadline
   - start: '2027-01-18'
     end: '2027-01-22'
@@ -82,11 +88,15 @@ cycle:
     name: R-7
     x-project:
       - i-extra-acs
+    project-specific:
+      - i-nova-review-day
   - start: '2027-02-08'
     end: '2027-02-12'
     name: R-6
     x-project:
       - i-final-lib
+    project-specific:
+      - i-nova-review-day
   - start: '2027-02-15'
     end: '2027-02-19'
     name: R-5
