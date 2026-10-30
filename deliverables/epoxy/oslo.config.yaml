@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.config
         hash: 485b600b2c1d0db9e6b2b7f8b0ce2b0965d6ae3f
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.config
+        hash: 485b600b2c1d0db9e6b2b7f8b0ce2b0965d6ae3f
 branches:
   - name: stable/2025.1
     location: 9.7.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.config/2025.1.html

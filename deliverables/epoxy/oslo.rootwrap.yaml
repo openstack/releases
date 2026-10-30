@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/oslo.rootwrap
         hash: d8148bf54b7dc4ef17c51699da7d939d1e5a066f
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.rootwrap
+        hash: bff010ba0f68fd2a681fefd17b0121d7a14477de
 branches:
   - name: stable/2025.1
     location: 7.5.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.rootwrap/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.rootwrap/2025.1.html

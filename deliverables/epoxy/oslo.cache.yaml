@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/oslo.cache
         hash: 95213020f284ac2c06cc8e94e036291ff3e402ff
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.cache
+        hash: 95213020f284ac2c06cc8e94e036291ff3e402ff
 branches:
   - name: stable/2025.1
     location: 3.10.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.cache/2025.1.html

@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.policy
         hash: 3bb5d923dabcb6554c3e6aace8edd78085bb6037
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.policy
+        hash: 8a715ef4764ab7470f7682a39b48a4751a8a17a3
 branches:
   - name: stable/2025.1
     location: 4.5.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.policy/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.policy/2025.1.html

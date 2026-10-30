@@ -14,7 +14,14 @@ releases:
     projects:
       - repo: openstack/castellan
         hash: 660658fe1539ddbb959f0e73d0b0df35fd2e7571
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/castellan
+        hash: b0eba82d5d92136c446916d13fed0a6bd98f7fcf
 branches:
   - name: stable/2025.1
     location: 5.2.1
-release-notes: https://docs.openstack.org/releasenotes/castellan/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/castellan/2025.1.html

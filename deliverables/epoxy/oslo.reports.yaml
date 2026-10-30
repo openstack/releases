@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.reports
         hash: 2f5eb7c47cf770e6b872dda1466c099e3d316b1a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.reports
+        hash: c35453466634936c878153694fc858a2093d6058
 branches:
   - name: stable/2025.1
     location: 3.5.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.reports/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.reports/2025.1.html

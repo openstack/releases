@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.privsep
         hash: 959f01e9996873ffb863285d968faba68709d1ac
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.privsep
+        hash: a5ad512ebc3676758ebc64634a68ba1899df0ce6
 branches:
   - name: stable/2025.1
     location: 3.6.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.privsep/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.privsep/2025.1.html

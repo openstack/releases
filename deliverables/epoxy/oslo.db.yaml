@@ -27,8 +27,14 @@ releases:
     projects:
       - repo: openstack/oslo.db
         hash: a6659565e947ab16bdd9bb2b3fcf6bdaf396d8ab
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.db
+        hash: a6659565e947ab16bdd9bb2b3fcf6bdaf396d8ab
 branches:
   - name: stable/2025.1
     location: 17.2.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/oslo.db/2025.1.html

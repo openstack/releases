@@ -15,7 +15,14 @@ releases:
     projects:
       - repo: openstack/oslo.context
         hash: 52d21e66075b4e8865479b8f2459032e82ee2ff4
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.context
+        hash: 23c371851ae0211d6402af4de60f6b8464da55d5
 branches:
   - name: stable/2025.1
     location: 5.7.1
-release-notes: https://docs.openstack.org/releasenotes/oslo.context/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.context/2025.1.html

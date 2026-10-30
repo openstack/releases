@@ -21,9 +21,16 @@ releases:
     projects:
       - repo: openstack/oslo.utils
         hash: cb68378c3600730c1ae8282a776484793f6c80a7
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/oslo.utils
+        hash: bd64dd87797a0ef776e56cb81a006003413a0ab7
 repository-settings:
   openstack/oslo.utils: {}
 branches:
   - name: stable/2025.1
     location: 8.2.0
-release-notes: https://docs.openstack.org/releasenotes/oslo.utils/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/oslo.utils/2025.1.html
