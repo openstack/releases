@@ -15,8 +15,14 @@ releases:
     projects:
       - repo: openstack/python-octaviaclient
         hash: ce5246170e79bd5781be60b94374cd157b7d9492
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-octaviaclient
+        hash: 0ddbea8e523077e5026f7e2684a70ad9b05e9724
 branches:
   - name: stable/2025.1
     location: 3.10.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-octaviaclient/2025.1.html

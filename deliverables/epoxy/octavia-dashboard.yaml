@@ -21,8 +21,14 @@ releases:
     projects:
       - repo: openstack/octavia-dashboard
         hash: 8ddb21a591f6f7233c5a2ef18addf2fda7f7bdd9
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/octavia-dashboard
+        hash: 7901a541e1b0278da945c57bc2e10a218e582c53
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/octavia-dashboard/2025.1.html
