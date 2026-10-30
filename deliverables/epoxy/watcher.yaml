@@ -41,8 +41,14 @@ releases:
     projects:
       - repo: openstack/watcher
         hash: a5a9464fe7fbff91f723ec1676d7456847879768
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/watcher
+        hash: a5a9464fe7fbff91f723ec1676d7456847879768
 branches:
   - name: stable/2025.1
     location: 14.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/watcher/2025.1.html
