@@ -22,6 +22,12 @@ releases:
     projects:
       - repo: openstack/ovsdbapp
         hash: e1bd2142f8d7200ca9197c1a165d40fa0f4e24af
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/ovsdbapp
+        hash: 185db2dba930de6c573ca2ccaca4dfdda98e1957
 branches:
   - name: stable/2025.1
     location: 2.11.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom

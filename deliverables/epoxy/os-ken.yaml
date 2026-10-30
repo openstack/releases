@@ -31,8 +31,14 @@ releases:
     projects:
       - repo: openstack/os-ken
         hash: 7dbd116e5104c9c8bd8879b31ddbce91648b6803
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/os-ken
+        hash: 7dbd116e5104c9c8bd8879b31ddbce91648b6803
 branches:
   - name: stable/2025.1
     location: 3.0.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/os-ken/2025.1.html
