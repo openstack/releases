@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/blazar
         hash: 5c67ccd5c9f0d371303aa90128a088ad1dfa90db
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/blazar
+        hash: d5961774f62b14bbaf52862c8b0ffacb4ae4729d
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/blazar/2025.1.html
