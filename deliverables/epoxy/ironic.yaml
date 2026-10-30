@@ -51,6 +51,10 @@ releases:
     projects:
       - repo: openstack/ironic
         hash: a2ae2c7d68a9249a2a01e973bf9ed7f5bb9c3b5f
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/ironic
+        hash: a2ae2c7d68a9249a2a01e973bf9ed7f5bb9c3b5f
 branches:
   - name: bugfix/27.0
     location: 27.0.0
@@ -58,6 +62,8 @@ branches:
     location: 28.0.0
   - name: stable/2025.1
     location: 29.0.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 cycle-highlights:
   - Ironic has added a new bootc deploy interface to support the
     deployment of `bootc container images

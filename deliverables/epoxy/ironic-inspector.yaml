@@ -12,8 +12,14 @@ releases:
     projects:
       - repo: openstack/ironic-inspector
         hash: e7adf5d6203829845cf6d10fd79ff5a8e20b2b5a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/ironic-inspector
+        hash: 2482cbcce9c98e9d489eab7beddcb02196fcfbc4
 branches:
   - name: stable/2025.1
     location: 12.4.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/ironic-inspector/2025.1.html

@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/networking-baremetal
         hash: 8b92ad81c0bdbfde60a6f0c47ff0133c08bb617e
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/networking-baremetal
+        hash: 0f8ab8318214edeef1a2ef74d3e5796cfe963845
 branches:
   - name: stable/2025.1
     location: 6.5.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/networking-baremetal/2025.1.html

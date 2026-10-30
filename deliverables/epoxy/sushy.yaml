@@ -22,7 +22,14 @@ releases:
     projects:
       - repo: openstack/sushy
         hash: d8efa59767af4b106b6375f82abd1cb36a0e82fa
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/sushy
+        hash: d8ed1171f11e20b1d7a453a8ab5c9ba358d5207c
 branches:
   - name: stable/2025.1
     location: 5.5.0
-release-notes: https://docs.openstack.org/releasenotes/sushy/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/sushy/2025.1.html
