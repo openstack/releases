@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/ceilometer
         hash: f1d638faa195647f12d0e48baa39182e821838cc
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/ceilometer
+        hash: f1d638faa195647f12d0e48baa39182e821838cc
 branches:
   - name: stable/2025.1
     location: 24.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/ceilometer/2025.1.html

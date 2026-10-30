@@ -19,7 +19,14 @@ releases:
     projects:
       - repo: openstack/aodh
         hash: 9906657073a27e7a826e29b181d16d7609560373
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/aodh
+        hash: 9906657073a27e7a826e29b181d16d7609560373
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/aodh/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/aodh/2025.1.html

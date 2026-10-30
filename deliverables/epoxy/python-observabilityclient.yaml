@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/python-observabilityclient
         hash: df6c253a6c17672e861288dfdd22f056c6ce87a0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-observabilityclient
+        hash: 93a969a99f44765b0eeef568fafb9aa410e3c1a4
 branches:
   - name: stable/2025.1
     location: 0.4.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-observabilityclient/2025.1.html
