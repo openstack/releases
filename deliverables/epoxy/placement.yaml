@@ -21,8 +21,14 @@ releases:
     projects:
       - repo: openstack/placement
         hash: a716a7d647d7ece518ac64ca8fb3fc40e823275c
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/placement
+        hash: a716a7d647d7ece518ac64ca8fb3fc40e823275c
 branches:
   - name: stable/2025.1
     location: 13.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/placement/2025.1.html
