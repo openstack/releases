@@ -25,8 +25,14 @@ releases:
     projects:
       - repo: openstack/designate
         hash: b5255cf54363bdb0775b51cc0fbf38eeb28aecae
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/designate
+        hash: 1011e3f86ebde8fb6b7c41e171faa882d184781a
 branches:
   - name: stable/2025.1
     location: 20.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/designate/2025.1.html
