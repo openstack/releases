@@ -6,3 +6,8 @@ type: library
 release-model: cycle-with-intermediary
 repository-settings:
   openstack/tooz: {}
+releases:
+  - version: 9.2.0
+    projects:
+      - repo: openstack/tooz
+        hash: b813f80a27b0af23d060652adfc942f073396e23
