@@ -11,8 +11,14 @@ releases:
     projects:
       - repo: openstack/python-cinderclient
         hash: 63e3fa7b7d257de047e93881815c9ca5d133c0f6
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-cinderclient
+        hash: c7b69247112291c136b02ca8f6d1bf431ad1fa29
 branches:
   - name: stable/2025.1
     location: 9.7.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-cinderclient/2025.1.html
