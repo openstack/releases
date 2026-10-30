@@ -15,7 +15,14 @@ releases:
       - repo: openstack/zun
         hash: b480d7106e54f577d4d5819cbbce157f86f94fdb
     diff-start: 14.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/zun
+        hash: 9dc4c7d5b1f9cdb763e8589d153da95e4645aaf7
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/zun/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/zun/2025.1.html

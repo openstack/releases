@@ -15,7 +15,14 @@ releases:
       - repo: openstack/zun-ui
         hash: 2e5b8f33340befa942c8fb498629f7ba2cffe4c1
     diff-start: 14.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/zun-ui
+        hash: 1fcd413ed870838e34e6bd2512f889c5b8bebdee
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/zun-ui/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/zun-ui/2025.1.html

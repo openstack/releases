@@ -15,8 +15,14 @@ releases:
       - repo: openstack/kuryr-libnetwork
         hash: afc453d4b59d36808ed294bf27a586077620bd2b
     diff-start: 14.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/kuryr-libnetwork
+        hash: a964d202278ce2ed9df22f031a67d70bce29c24f
 branches:
   - name: stable/2025.1
     location: 15.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/kuryr-libnetwork/2025.1.html
