@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/python-zaqarclient
         hash: 0233b3be1a17f57977ef6e4ad8d897c3f9b63e6a
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-zaqarclient
+        hash: 0233b3be1a17f57977ef6e4ad8d897c3f9b63e6a
 branches:
   - name: stable/2025.1
     location: 3.0.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/python-zaqarclient/2025.1.html
