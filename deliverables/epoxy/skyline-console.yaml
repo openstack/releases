@@ -27,8 +27,14 @@ releases:
     projects:
       - repo: openstack/skyline-console
         hash: 7d2aa21801207153dd3c4ad8bfec5655c1ac656b
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/skyline-console
+        hash: 6b954478957f301ef419424c95a5623ec11e001c
 branches:
   - name: stable/2025.1
     location: 6.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/skyline-console/2025.1.html
