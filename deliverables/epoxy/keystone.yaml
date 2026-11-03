@@ -27,7 +27,14 @@ releases:
     projects:
       - repo: openstack/keystone
         hash: 89d7dc209ae02b2d88fc624ce4051c8e2e11258e
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/keystone
+        hash: a9de8c4c4d88b3f698de4a7170a0475bb5a02a41
 branches:
   - name: stable/2025.1
     location: 27.0.0.0rc1
-release-notes: https://docs.openstack.org/releasenotes/keystone/2025.1.html
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
+release-notes:
+  https://docs.openstack.org/releasenotes/keystone/2025.1.html
