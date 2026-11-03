@@ -11,6 +11,12 @@ releases:
     projects:
       - repo: openstack/python-glanceclient
         hash: 235814cf868e14062e1f2250f285031f74d88d1c
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/python-glanceclient
+        hash: 1752c16842ac49f93bc12c7a20c20fb60beffc2f
 branches:
   - name: stable/2025.1
     location: 4.8.0
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
