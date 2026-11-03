@@ -21,8 +21,14 @@ releases:
       - repo: openstack/masakari-monitors
         hash: 1f62741b170f005b88bee171e3fe19a0aba0893d
     diff-start: 18.0.0
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/masakari-monitors
+        hash: b7494cb61e8d87dddc2f8ac1f9bd1114bca2ad40
 branches:
   - name: stable/2025.1
     location: 19.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/masakari-monitors/2025.1.html
