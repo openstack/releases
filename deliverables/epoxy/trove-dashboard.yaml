@@ -19,8 +19,14 @@ releases:
     projects:
       - repo: openstack/trove-dashboard
         hash: 07cec834e59b7d9dcd4368b63710eda750beabbf
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/trove-dashboard
+        hash: 495085c62c39f9c3e0d426561c300bf8ef87b60e
 branches:
   - name: stable/2025.1
     location: 24.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/trove-dashboard/2025.1.html

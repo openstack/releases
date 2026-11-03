@@ -23,8 +23,14 @@ releases:
     projects:
       - repo: openstack/trove
         hash: 5fbdbd70cd214d4db55b0f3c0fe7d9b02ec0ae84
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/trove
+        hash: 808df1072ee39223877308a5e9a2b53de43e6c1d
 branches:
   - name: stable/2025.1
     location: 23.0.0.0rc1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 release-notes:
   https://docs.openstack.org/releasenotes/trove/2025.1.html
