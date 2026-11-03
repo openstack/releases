@@ -8,5 +8,12 @@ branches:
   - location:
       openstack/grenade: ec28e4caff89e17653c26202218d5adc60593e62
     name: stable/2025.1
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 repository-settings:
   openstack/grenade: {}
+releases:
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/grenade
+        hash: 4a6eb3826c4317769a6cad99e96a9f51feffce9d

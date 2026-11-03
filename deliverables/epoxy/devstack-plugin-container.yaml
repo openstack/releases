@@ -8,5 +8,12 @@ branches:
   - name: stable/2025.1
     location:
       openstack/devstack-plugin-container: a68e0b5447bc0b9f3cf6d975e5922656e5ae3248
+  - name: unmaintained/2025.1
+    location: 2025.1-eom
 repository-settings:
   openstack/devstack-plugin-container: {}
+releases:
+  - version: 2025.1-eom
+    projects:
+      - repo: openstack/devstack-plugin-container
+        hash: e861726d5514c8a2ca92b94e8535f9dde1ab1021
