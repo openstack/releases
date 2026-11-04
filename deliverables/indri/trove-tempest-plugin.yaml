@@ -9,3 +9,8 @@ repository-settings:
     tarball-base: trove_tempest_plugin
 team: trove
 type: tempest-plugin
+releases:
+  - version: 2.9.0
+    projects:
+      - repo: openstack/trove-tempest-plugin
+        hash: 5bdf4b4157b9ad0c57d3670d170c8308332885af
