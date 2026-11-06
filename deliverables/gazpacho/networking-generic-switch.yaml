@@ -15,6 +15,10 @@ releases:
     projects:
       - repo: openstack/networking-generic-switch
         hash: dac10872e2b0c94453866a4a262a4afb6eac4dab
+  - version: 9.1.1
+    projects:
+      - repo: openstack/networking-generic-switch
+        hash: 7f5c0cdfc891af78117b8cf2fef519b30f7258de
 branches:
   - name: stable/2026.1
     location: 9.1.0
