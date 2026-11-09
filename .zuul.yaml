@@ -19,38 +19,28 @@
 
 - project:
     templates:
-      - openstack-python3-jobs
       - build-openstack-docs-pti
     check:
       jobs:
         - releases-tox-validate
         - releases-tox-list-changes
+        - openstack-tox-py310:
+            irrelevant-files: &unit-irrelevant-files
+              - ^data/.*$
+              - ^deliverables/.*$
+              - ^doc/.*$
         - openstack-tox-py311:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py312:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py313:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py314:
-            voting: true
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
+        - openstack-tox-py315:
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-pep8:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-bashate:
             files:
               - ^.*\.sh$
@@ -61,31 +51,23 @@
       jobs:
         - releases-tox-validate:
             timeout: 10800
+        - openstack-tox-py310:
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py311:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py312:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py313:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-py314:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
+        - openstack-tox-py315:
+            irrelevant-files: *unit-irrelevant-files
         - openstack-tox-pep8:
-            irrelevant-files:
-              - ^data/.*$
-              - ^deliverables/.*$
-              - ^doc/.*$
+            irrelevant-files: *unit-irrelevant-files
+    post:
+      jobs:
+        - publish-openstack-python-branch-tarball
     release-post:
       jobs:
         - tag-releases
