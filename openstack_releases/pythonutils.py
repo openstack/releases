@@ -12,10 +12,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import configparser
 import json
 import logging
 import os
 import os.path
+import sys
 import time
 import xmlrpc.client
 
@@ -24,56 +26,62 @@ import requests
 
 from openstack_releases import processutils
 
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
+
 LOG = logging.getLogger(__name__)
 
 
-def get_sdist_name(workdir, repo):
-    "Find the name of the sdist."
+def get_sdist_name(workdir: str, repo: str) -> str | None:
+    """Find the name of the sdist."""
     dest = os.path.join(workdir, repo)
-    setup_path = os.path.join(dest, 'setup.py')
-    if not os.path.exists(setup_path):
-        LOG.debug('did not find %s, maybe %s is not a python project',
-                  setup_path, repo)
-        return None
-    use_tox = repo.endswith('/pbr')
-    if use_tox and not os.path.exists(os.path.join(dest, '.tox', 'venv')):
-        # Use tox to set up a virtualenv so we can install the
-        # dependencies for the package. This only seems to be
-        # necessary for pbr, but...
-        processutils.check_call(
-            ['tox', '-vv', 'devenv', '-c', 'tox.ini', 'pbrenv'],
-            cwd=dest,
-        )
-    if use_tox:
-        python = 'pbrenv/bin/python3'
-    else:
-        python = 'python3'
-    # Run it once and discard the result to ensure any setup_requires
-    # dependencies are installed.
-    cmd = [python, 'setup.py', '--name']
-    processutils.check_call(cmd, cwd=dest)
-    # Run it again to get a clean version of the name.
-    LOG.debug('Running: %s in %s' % (' '.join(cmd), dest))
-    out = processutils.check_output(cmd, cwd=dest).decode('utf-8')
-    LOG.debug('Results: %s' % (out,))
-    name = out.splitlines()[-1].strip()
-    return name
+
+    # prefer pyproject.toml files
+    pyproject_path = os.path.join(dest, 'pyproject.toml')
+    if os.path.exists(pyproject_path):
+        with open(pyproject_path, 'rb') as f:
+            metadata = tomllib.load(f)
+        name = metadata.get('project', {}).get('name')
+        if name:
+            return name
+
+    # ...with a setup.cfg fallback. We ignore setup.py since this should never
+    # have a name attribute set if using pbr
+    setupcfg_path = os.path.join(dest, 'setup.cfg')
+    if os.path.exists(setupcfg_path):
+        config = configparser.ConfigParser(interpolation=None)
+        config.read(setupcfg_path, encoding='utf-8')
+        name = config.get('metadata', 'name', fallback=None)
+        if name:
+            return name
+
+    LOG.debug(
+        'did not find a name in pyproject.toml or setup.cfg for %s', repo
+    )
+    return None
 
 
-def build_sdist(workdir, repo):
+def build_sdist(workdir: str, repo: str) -> None:
     """Build the sdist."""
     dest = os.path.join(workdir, repo)
 
     build_path = os.path.join(dest, 'dist')
     if os.path.exists(build_path):
         # sdist already built, skip rebuilding it
-        return
+        return None
 
-    setup_path = os.path.join(dest, 'setup.py')
-    if not os.path.exists(setup_path):
-        LOG.debug('did not find %s, maybe %s is not a python project',
-                  setup_path, repo)
-        return
+    if not any(
+        os.path.exists(os.path.join(dest, filename))
+        for filename in ('pyproject.toml', 'setup.cfg')
+    ):
+        LOG.debug(
+            'did not find pyproject.toml or setup.cfg; maybe %s is not '
+            'a python project?',
+            repo
+        )
+        return None
 
     # Set some flags to turn off pbr functionality that we don't need.
     flags = {
@@ -82,19 +90,21 @@ def build_sdist(workdir, repo):
         'SKIP_WRITE_GIT_CHANGELOG': '1',
     }
     cmd = ['python3', '-m', 'build', '--sdist', '--wheel']
-    processutils.check_call(
-        cmd,
-        cwd=dest,
-        env=flags)
+    processutils.check_call(cmd, cwd=dest, env=flags)
 
 
-def check_readme_format(workdir, repo):
-    "Verify that the README format looks OK."
+def check_readme_format(workdir: str, repo: str) -> None:
+    """Verify that the README format looks OK."""
     dest = os.path.join(workdir, repo)
-    setup_path = os.path.join(dest, 'setup.py')
-    if not os.path.exists(setup_path):
-        LOG.debug('did not find %s, maybe %s is not a python project',
-                  setup_path, repo)
+    if not any(
+        os.path.exists(os.path.join(dest, filename))
+        for filename in ('pyproject.toml', 'setup.cfg', 'setup.py')
+    ):
+        LOG.debug(
+            'did not find pyproject.toml or setup.py, maybe %s is not '
+            'a python project',
+            repo
+        )
         return None
 
     # Check if the sdist build has been done

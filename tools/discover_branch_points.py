@@ -27,16 +27,11 @@ from openstack_releases import deliverable
 
 
 def _get_current_version(reporoot, branch=None):
-    """Return the current version of the repository.
-
-    If the repo appears to contain a python project, use setup.py to
-    get the version so pbr (if used) can do its thing. Otherwise, use
-    git describe.
-
-    """
+    """Return the current version of the repository."""
     cmd = ['git', 'describe', '--tags']
     if branch is not None:
         cmd.append(branch)
+
     try:
         result = subprocess.check_output(cmd, cwd=reporoot).decode('utf-8').strip()
         if '-' in result:

@@ -909,8 +909,8 @@ def validate_pypi_readme(deliv, context):
     "Does the README look right for PyPI?"
 
     # Check out the repositories to the hash for the latest release on
-    # the branch so we can find the setup.py and README.rst there (if
-    # it exists), in case that has been removed from master after a
+    # the branch so we can find the pyproject.toml/setup.cfg and README.rst
+    # there (if it exists), in case that has been removed from master after a
     # project is retired. This also ensures we get the right name for
     # the branch, in case the sdist name changes over time.
     latest_release = deliv.releases[-1]
@@ -967,8 +967,8 @@ def validate_pypi_permissions(deliv, context):
     "Do we have permission to upload to PyPI?"
 
     # Check out the repositories to the hash for the latest release on
-    # the branch so we can find the setup.py there (if it exists), in
-    # case that has been removed from master after a project is
+    # the branch so we can find the pyproject.toml/setup.cfg there (if it
+    # exists), in case that has been removed from master after a project is
     # retired. This also ensures we get the right name for the branch,
     # in case the sdist name changes over time.
     latest_release = deliv.releases[-1]
