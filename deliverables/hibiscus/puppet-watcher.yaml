@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-watcher: {}
+releases:
+  - projects:
+      - hash: dcc8f553429aef9ee8001d3c9fc4b275bdf8ade8
+        repo: openstack/puppet-watcher
+    version: 29.0.0
+branches:
+  - name: stable/2026.2
+    location: 29.0.0

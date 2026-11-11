@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-mistral: {}
+releases:
+  - projects:
+      - hash: 861ca7c3f556c09aab194079838bc9427dce01f3
+        repo: openstack/puppet-mistral
+    version: 29.0.0
+branches:
+  - name: stable/2026.2
+    location: 29.0.0

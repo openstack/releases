@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-horizon: {}
+releases:
+  - projects:
+      - hash: 517c214f30bb195dc505e9d7c5c1a269704ac7a9
+        repo: openstack/puppet-horizon
+    version: 29.0.0
+branches:
+  - name: stable/2026.2
+    location: 29.0.0

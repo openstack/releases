@@ -5,3 +5,11 @@ team: Puppet OpenStack
 type: trailing
 repository-settings:
   openstack/puppet-zaqar: {}
+releases:
+  - projects:
+      - hash: c3ef8f600b16be45113ccf8029b1572800ccf17a
+        repo: openstack/puppet-zaqar
+    version: 29.0.0
+branches:
+  - name: stable/2026.2
+    location: 29.0.0
