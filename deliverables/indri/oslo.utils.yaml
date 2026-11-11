@@ -6,3 +6,8 @@ team: oslo
 type: library
 repository-settings:
   openstack/oslo.utils: {}
+releases:
+  - version: 10.3.0
+    projects:
+      - repo: openstack/oslo.utils
+        hash: c235a42180fd192aeec6059cb3ed6c49b326f908
