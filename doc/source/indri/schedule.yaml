@@ -33,6 +33,7 @@ cycle:
       - i-1
     project-specific:
       - i-cinder-spec-freeze
+      - i-manila-bugsquash
   - start: '2026-11-23'
     end: '2026-11-27'
     name: R-17
@@ -53,6 +54,7 @@ cycle:
     name: R-14
     project-specific:
       - i-nova-spec-soft-freeze
+      - i-manila-spec-freeze
   - start: '2026-12-21'
     end: '2026-12-25'
     name: R-13
@@ -78,6 +80,8 @@ cycle:
     project-specific:
       - i-cinder-feature-checkpoint
       - i-cinder-midcycle-2
+      - i-manila-fpfreeze
+      - i-manila-new-driver-deadline
   - start: '2027-01-25'
     end: '2027-01-29'
     name: R-8
@@ -90,6 +94,7 @@ cycle:
       - i-extra-acs
     project-specific:
       - i-nova-review-day
+      - i-manila-mid-cycle
   - start: '2027-02-08'
     end: '2027-02-12'
     name: R-6
