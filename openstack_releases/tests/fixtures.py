@@ -37,6 +37,19 @@ class GPGKeyFixture(fixtures.Fixture):
         # gpg commands do not complain about an excessively long
         # value.
         self.useFixture(fixtures.TempHomeDir('/tmp'))
+        # Pre-create the directory to prevent GnuPG 2.4.1+ from automagically
+        # enabling keyboxd on a fresh install.
+        os.makedirs(
+            os.path.join(os.environ['HOME'], '.gnupg'),
+            mode=0o700,
+            exist_ok=True,
+        )
+        # Ensure gpg is aware of the temporary home directory to isolate daemon
+        # sockets (e.g. keyboxd, gpg-agent) in case GnuPG changes its defaults
+        # or the user has `use-keyboxd` set in their global config.
+        self.useFixture(
+            fixtures.EnvironmentVariable('GNUPGHOME', os.environ['HOME'])
+        )
         tempdir = self.useFixture(fixtures.TempDir('/tmp'))
         gnupg_version_re = re.compile(r'^gpg\s.*\s([\d+])\.([\d+])\.([\d+])')
         gnupg_version = processutils.check_output(
