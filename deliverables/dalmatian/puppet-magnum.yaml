@@ -10,7 +10,12 @@ releases:
       - hash: bcc5d8bb869dfbb70a47ee67f4928072e7621349
         repo: openstack/puppet-magnum
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-magnum
+        hash: 6dc7b04fedbda26348218c67224559dd95175c1e
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-magnum/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-magnum/2024.2.html

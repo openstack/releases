@@ -10,7 +10,12 @@ releases:
       - hash: 7a07763b4adc51b56ecd810072dd9e9d6ccddbf2
         repo: openstack/puppet-watcher
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-watcher
+        hash: 2298fefac6720a19fd83f4d3d5f4523de80c1bb6
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-watcher/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-watcher/2024.2.html

@@ -10,6 +10,10 @@ releases:
       - hash: 6819e89534cf925ca81e05d7c88a29a3b1a1204b
         repo: openstack/puppet-barbican
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-barbican
+        hash: a86fc54cbf4afceb76cfd93ed7f21538f4684619
 branches:
   - name: stable/2024.2
     location: 25.0.0

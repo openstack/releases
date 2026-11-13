@@ -10,6 +10,10 @@ releases:
       - hash: e414001a2f2c9089f43223d78e1324e3b986c9c9
         repo: openstack/puppet-ceilometer
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-ceilometer
+        hash: 73c6a89330abed8a2edf1f93fbd65c14cf0d5233
 branches:
   - name: stable/2024.2
     location: 25.0.0

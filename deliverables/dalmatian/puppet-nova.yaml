@@ -10,7 +10,12 @@ releases:
       - hash: 1a386c186d64239e1c89567eff46e548c8ba25d6
         repo: openstack/puppet-nova
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-nova
+        hash: e8ac99333d7222f945e8371b70a9f366d5d162c0
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-nova/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-nova/2024.2.html

@@ -10,7 +10,12 @@ releases:
       - hash: c9fe3c109ff1f1ce70a644f2b23719014956702e
         repo: openstack/puppet-oslo
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-oslo
+        hash: 4cb1d4b80c5f573bc6c36f52b2e67f9f7658fbee
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-oslo/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-oslo/2024.2.html

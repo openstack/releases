@@ -10,7 +10,12 @@ releases:
       - hash: 59d2023af0beaf14b68976313e73ab78b84c3f73
         repo: openstack/puppet-vswitch
     version: 21.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-vswitch
+        hash: feb0a47e56b9126c2f05e18dcae6c606576fc7b7
 branches:
   - name: stable/2024.2
     location: 21.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-vswitch/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-vswitch/2024.2.html

@@ -10,7 +10,12 @@ releases:
       - hash: 8de13a890213e279ffe1da1fa67c86a07d71d23e
         repo: openstack/puppet-zaqar
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-zaqar
+        hash: e41f498a11eb93b16459b1ff1121834ecd48b00a
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-zaqar/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-zaqar/2024.2.html

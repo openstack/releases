@@ -10,7 +10,12 @@ releases:
       - hash: 4f9343ce7043e962bb1f476d5aefb12492e56bdb
         repo: openstack/puppet-ironic
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-ironic
+        hash: 95d0e7a2bcd6230004bd391559c1908fe0a168d3
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-ironic/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-ironic/2024.2.html

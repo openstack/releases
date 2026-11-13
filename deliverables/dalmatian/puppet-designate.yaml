@@ -10,6 +10,10 @@ releases:
       - hash: a18e6c75bf38f66b5d2be5ab50ece9d41aa17fdd
         repo: openstack/puppet-designate
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-designate
+        hash: 3887637744cae8a5afd189c6411ebbc8d2cc454c
 branches:
   - name: stable/2024.2
     location: 25.0.0

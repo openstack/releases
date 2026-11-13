@@ -10,7 +10,12 @@ releases:
       - hash: 390b5ffc3b325711278bed00122af8de65c885b8
         repo: openstack/puppet-heat
     version: 25.0.0
+  - version: 2024.2-eol
+    projects:
+      - repo: openstack/puppet-heat
+        hash: 3564c346ddc7fdc764f3fa77a53cedfb3623f679
 branches:
   - name: stable/2024.2
     location: 25.0.0
-release-notes: https://docs.openstack.org/releasenotes/puppet-heat/2024.2.html
+release-notes:
+  https://docs.openstack.org/releasenotes/puppet-heat/2024.2.html
