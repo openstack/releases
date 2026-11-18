@@ -6,3 +6,8 @@ team: ironic
 type: client-library
 repository-settings:
   openstack/python-ironicclient: {}
+releases:
+  - version: 6.4.0
+    projects:
+      - repo: openstack/python-ironicclient
+        hash: 2ddded30ccb7d64920e4db0bc9510c722bf5386d
