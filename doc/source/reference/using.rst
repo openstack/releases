@@ -346,7 +346,7 @@ The top level of a deliverable file is a mapping with keys:
   ``pypi-name``
     An optional name for the deliverable on pypi.python.org.  This
     value is only needed if the name on PyPI does not match the
-    canonicalized output of ``python setup.py --name``, such as if it
+    canonicalized output from ``importlib.metadata``, such as if it
     uses capitalized letters ("DragonFlow" instead of "dragonflow").
 
   ``tarball-base``
