@@ -311,3 +311,48 @@ Nova Implementation Review Day
 
 On 04 February 2027 and 11 February 2027, Nova prioritized code changes will be
 reviewed by the Nova core team.
+Manila
+------
+
+.. _i-manila-spec-freeze:
+
+Manila Spec Freeze
+^^^^^^^^^^^^^^^^^^
+
+All Manila specs targeted to 2027.1 Indri must be approved by the end of
+the week.
+
+.. _i-manila-new-driver-deadline:
+
+Manila New Driver Deadline
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By the end of the week all new backend drivers for Manila must be substantially
+complete, with unit tests, and passing 3rd party CI. Drivers do not have to
+actually merge until feature freeze.
+
+.. _i-manila-fpfreeze:
+
+Manila Feature Proposal Freeze
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+All new Manila features must be proposed and substantially completed, with
+unit, functional and integration tests by the end of the week. Collaborative
+review sessions will happen in the mid cycle, in order to speed up the
+review process.
+
+.. _i-manila-bugsquash:
+
+Manila Bugsquash
+^^^^^^^^^^^^^^^^
+
+Manila community event promoted to fast-track the closure of bugs.
+
+.. _i-manila-mid-cycle:
+
+Manila Mid Cycle
+^^^^^^^^^^^^^^^^
+
+Manila community mid cycle checkpoint on features and deliverables planned
+for the release.
+
