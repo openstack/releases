@@ -10,16 +10,12 @@
 
 build>=0.7.0
 pbr>=1.6
-keyring>=7.3
 requests>=2.5.2
 PyYAML>=3.1.0
-yamlordereddictloader
 prompt_toolkit>=2.0.7
 tqdm
-mwclient==0.8.1
 jsonschema>=3.2.0
 twine>=1.13.0
-wheel>=0.34.2
 ruamel.yaml>=0.15
 tenacity>=6.1.0
 tomli>=2.0.0; python_version < "3.11"
@@ -34,5 +30,3 @@ appdirs
 packaging>=16.5
 
 openstack-governance>=0.11.0  # Apache 2.0
-
-oslo.utils
