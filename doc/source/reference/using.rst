@@ -957,6 +957,27 @@ commit the changes, and push the patch to gerrit.
   tox -e venv -- propose-library-branches
   tox -e venv -- propose-library-branches pike
 
+list-deliverables
+-----------------
+
+List deliverables in a release series, optionally filtering by team,
+deliverable type, release model, or release status. This is useful for
+checking which deliverables still need a release or preparing reports for
+a project team.
+
+By default, the command prints deliverable names. It can also show
+repository names, release details and dates, or export results to CSV.
+For example, to list a team's deliverables and their latest versions::
+
+  tox -e venv -- list-deliverables --series indri --team oslo --verbose
+
+Results are specific to the selected series; previous series are not
+searched for releases. Options that display release dates require network
+access to OpenDev.
+
+Run ``tox -e venv -- list-deliverables --help`` for the available filters
+and output options.
+
 tools/list_unreleased_changes.sh
 --------------------------------
 
